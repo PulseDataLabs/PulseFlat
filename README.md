@@ -14,6 +14,7 @@ Sem servidor. Sem custo. Histórico versionado em CSV no próprio repositório.
 | `b3_fiis` | B3 API | JSON + Base64 | `b3_fiis_listados.csv` | Diário |
 | `b3_etfs` | B3 API | JSON + Base64 | `b3_etfs_listados.csv` | Diário |
 | `b3_carteiras` | B3 API | JSON + Base64 | `b3_carteiras_teoricas.csv` | Diário |
+| `b3_boletim_diario` | B3 Boletim Diário | API download + token | `data/b3_boletim_diario/` | Diário |
 
 ---
 
@@ -56,6 +57,10 @@ Categoria (RV/RF), ticker, nome, CNPJ, administrador, gestor, índice de referê
 
 **Índices:** IBOV, IBRA, IBrX 100, IBrX 50, IGC, ITAG, MLCX, SMLL, IVBX, IDIV, IFIX, IFNC, ICON, IEEX, IMAT, IMOB, INDX, UTIL, IGCT, IGNM, ISE, ICO2
 
+### `data/b3_boletim_diario/`
+Arquivos diários do Boletim Diário B3 (CSV/ZIP) baixados via token.  
+Os nomes seguem o retorno da API (ex: `LendingOpenPositionFile_YYYYMMDD_1.csv`).
+
 ---
 
 ## Estrutura do projeto
@@ -71,14 +76,16 @@ PulseFlat/
 │   ├── anbima_projecoes.csv
 │   ├── b3_fiis_listados.csv
 │   ├── b3_etfs_listados.csv
-│   └── b3_carteiras_teoricas.csv
+│   ├── b3_carteiras_teoricas.csv
+│   └── b3_boletim_diario/       # Downloads diários (arquivos do boletim)
 ├── scrapers/
 │   ├── __init__.py
 │   ├── anbima_indicadores.py
 │   ├── anbima_projecoes.py
 │   ├── b3_fiis.py
 │   ├── b3_etfs.py
-│   └── b3_carteiras.py
+│   ├── b3_carteiras.py
+│   └── b3_boletim_diario.py
 ├── utils/
 │   ├── __init__.py
 │   └── base.py                   # Utilitários compartilhados
@@ -125,7 +132,18 @@ python run_all.py anbima_projecoes
 python run_all.py b3_fiis
 python run_all.py b3_etfs
 python run_all.py b3_carteiras
+python run_all.py b3_boletim_diario
 ```
+
+---
+
+## Configuração do Boletim Diário B3 (opcional)
+
+O download usa token retornado pela API. Caso o endpoint exija CAPTCHA, configure:
+
+- `B3_RECAPTCHA_TOKEN` (token reCAPTCHA válido)
+- `B3_BOLETIM_DATE` (YYYY-MM-DD, opcional para backfill)
+- `B3_BOLETIM_FILES` (lista separada por vírgulas para sobrescrever os arquivos padrão)
 
 ---
 
@@ -185,3 +203,4 @@ if __name__ == "__main__":
 | B3 FIIs | https://www.b3.com.br/.../fii/fiis-listados/ |
 | B3 ETFs | https://www.b3.com.br/.../etf/renda-variavel/etfs-listados/ |
 | B3 Índices | https://www.b3.com.br/pt_br/market-data-e-indices/indices/ |
+| B3 Boletim Diário | https://www.b3.com.br/pt_br/market-data-e-indices/servicos-de-dados/market-data/consultas/boletim-diario/arquivos-para-download/ |
