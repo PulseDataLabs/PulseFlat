@@ -278,7 +278,8 @@ def main():
     if not registros:
         log.error("Nenhuma projeção capturada.")
         sys.exit(1)
-    salvar_csv(ARQUIVO, registros, CABECALHO)
+    salvar_csv(ARQUIVO, registros, CABECALHO,
+               chaves_dedup=["data_captura", "indice", "mes_referencia", "tipo_projecao"])
 
 
 if __name__ == "__main__":

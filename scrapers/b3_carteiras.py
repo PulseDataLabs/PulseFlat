@@ -138,7 +138,8 @@ def capturar() -> list[dict]:
 
 def main():
     log.info("=== B3 Carteiras Teóricas ===")
-    salvar_csv(ARQUIVO, capturar(), CABECALHO)
+    salvar_csv(ARQUIVO, capturar(), CABECALHO,
+               chaves_dedup=["data_captura", "indice", "codigo_ativo"])
 
 
 if __name__ == "__main__":

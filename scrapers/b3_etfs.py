@@ -109,7 +109,8 @@ def capturar() -> list[dict]:
 
 def main():
     log.info("=== B3 ETFs Listados ===")
-    salvar_csv(ARQUIVO, capturar(), CABECALHO)
+    salvar_csv(ARQUIVO, capturar(), CABECALHO,
+               chaves_dedup=["data_captura", "categoria_etf", "codigo_fundo"])
 
 
 if __name__ == "__main__":

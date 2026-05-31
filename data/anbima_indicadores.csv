@@ -1,20 +1,4 @@
 data_captura,hora_captura,data_referencia_pagina,indicador,categoria,valor,unidade
-2026-05-31,16:18:26,29/05/2026 15:51,Estimativa SELIC,Taxa de Juros,14.40,% a.a.
-2026-05-31,16:18:26,29/05/2026 15:51,Taxa SELIC (BC),Taxa de Juros,14.40,% a.a.
-2026-05-31,16:18:26,29/05/2026 15:51,DI-B3,Taxa de Juros,14.40,% a.a.
-2026-05-31,16:18:26,29/05/2026 15:51,IGP-M Número Índice,Índice de Preços,1.229.904,índice
-2026-05-31,16:18:26,29/05/2026 15:51,IGP-M Var % mês,Índice de Preços,0.84,%
-2026-05-31,16:18:26,29/05/2026 15:51,IPCA Número Índice,Índice de Preços,7.596.09,índice
-2026-05-31,16:18:26,29/05/2026 15:51,IPCA Var % mês,Índice de Preços,0.67,%
-2026-05-31,16:18:26,29/05/2026 15:51,IPCA Projeção,Índice de Preços,7.596,%
-2026-05-31,16:18:26,29/05/2026 15:51,Dólar Comercial Compra,Câmbio,5.0563,R$
-2026-05-31,16:18:26,29/05/2026 15:51,Dólar Comercial Venda,Câmbio,5.0569,R$
-2026-05-31,16:18:26,29/05/2026 15:51,Euro Compra,Câmbio,5.9042,R$
-2026-05-31,16:18:26,29/05/2026 15:51,Euro Venda,Câmbio,5.9060,R$
-2026-05-31,16:18:26,29/05/2026 15:51,TR,Taxa de Referência,0.1709,% mês
-2026-05-31,16:18:26,29/05/2026 15:51,TBF,Taxa de Referência,1.0460,% mês
-2026-05-31,16:18:26,29/05/2026 15:51,FDS (registro 1),FDS,0.088543,R$ cota
-2026-05-31,16:18:26,29/05/2026 15:51,FDS (registro 2),FDS,0.088503,R$ cota
 2026-05-31,18:21:08,29/05/2026 15:51,Estimativa SELIC,Taxa de Juros,14.40,% a.a.
 2026-05-31,18:21:08,29/05/2026 15:51,Taxa SELIC (BC),Taxa de Juros,14.40,% a.a.
 2026-05-31,18:21:08,29/05/2026 15:51,DI-B3,Taxa de Juros,14.40,% a.a.

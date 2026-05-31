@@ -134,7 +134,8 @@ def capturar() -> list[dict]:
 
 def main():
     log.info("=== ANBIMA Indicadores ===")
-    salvar_csv(ARQUIVO, capturar(), CABECALHO)
+    salvar_csv(ARQUIVO, capturar(), CABECALHO,
+               chaves_dedup=["data_captura", "indicador"])
 
 
 if __name__ == "__main__":

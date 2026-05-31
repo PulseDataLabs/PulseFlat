@@ -62,10 +62,23 @@ def nova_session() -> requests.Session:
     return s
 
 
-def salvar_csv(arquivo: Path, registros: list[dict], cabecalho: list[str]) -> None:
+def salvar_csv(
+    arquivo: Path,
+    registros: list[dict],
+    cabecalho: list[str],
+    chaves_dedup: list[str] | None = None,
+) -> None:
     """
-    Acrescenta registros ao CSV acumulativo (append).
-    Cria o arquivo com cabeçalho se ainda não existir.
+    Salva registros no CSV acumulativo com deduplicação automática.
+
+    Estratégia:
+    - Se `chaves_dedup` for fornecido, remove do CSV existente qualquer linha
+      cujo conjunto de chaves coincida com algum novo registro (ex: mesma
+      data_captura + mesmo indicador). Assim, re-execuções no mesmo dia
+      substituem a captura anterior em vez de duplicar.
+    - Se `chaves_dedup` for None, remove todas as linhas com a mesma
+      `data_captura` dos novos dados (dedup simples por dia).
+    - O histórico de dias anteriores é sempre preservado integralmente.
     """
     log = get_logger("utils.salvar_csv")
 
@@ -74,12 +87,45 @@ def salvar_csv(arquivo: Path, registros: list[dict], cabecalho: list[str]) -> No
         sys.exit(1)
 
     arquivo.parent.mkdir(parents=True, exist_ok=True)
-    novo = not arquivo.exists()
 
-    with open(arquivo, "a", newline="", encoding="utf-8") as f:
+    # Determina datas presentes nos novos dados (para dedup simples)
+    datas_novas = {r.get("data_captura") for r in registros}
+
+    # Determina chaves compostas dos novos dados (para dedup preciso)
+    chaves_novas: set[tuple] | None = None
+    if chaves_dedup:
+        chaves_novas = {
+            tuple(r.get(c, "") for c in chaves_dedup)
+            for r in registros
+        }
+
+    linhas_anteriores: list[dict] = []
+    substituidas = 0
+
+    if arquivo.exists():
+        with arquivo.open(newline="", encoding="utf-8") as f:
+            reader = csv.DictReader(f)
+            for linha in reader:
+                if chaves_novas is not None:
+                    chave = tuple(linha.get(c, "") for c in chaves_dedup)
+                    if chave in chaves_novas:
+                        substituidas += 1
+                        continue
+                else:
+                    if linha.get("data_captura") in datas_novas:
+                        substituidas += 1
+                        continue
+                linhas_anteriores.append(linha)
+
+    todas = linhas_anteriores + registros
+
+    with arquivo.open("w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=cabecalho, extrasaction="ignore")
-        if novo:
-            writer.writeheader()
-        writer.writerows(registros)
+        writer.writeheader()
+        writer.writerows(todas)
 
-    log.info(f"CSV atualizado → {arquivo}  ({len(registros)} linhas adicionadas)")
+    log.info(
+        f"CSV atualizado → {arquivo} | "
+        f"{len(registros)} novos registros salvos"
+        + (f" | {substituidas} linha(s) antigas substituídas" if substituidas else "")
+    )
