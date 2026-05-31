@@ -4,8 +4,8 @@ scrapers/b3_fiis.py
 Captura a lista completa de FIIs listados na B3 via API interna.
 
 Fonte:    https://www.b3.com.br/.../fii/fiis-listados/
-Endpoint: GET https://sistemaswebb3-listados.b3.com.br/fundsProxy/fundsCall/
-                GetListedFundsSupplement/<base64>
+Endpoint: GET https://sistemaswebb3-listados.b3.com.br/fundsListedProxy/Search/
+                GetListFunds/<base64>
 """
 
 import sys
@@ -17,8 +17,8 @@ from utils import get_logger, agora_brt, limpar, b64_encode_params, nova_session
 
 log = get_logger("b3_fiis")
 
-BASE_URL   = "https://sistemaswebb3-listados.b3.com.br/fundsProxy/fundsCall/GetListedFundsSupplement/"
-FUNDS_TYPE = "FII"
+BASE_URL  = "https://sistemaswebb3-listados.b3.com.br/fundsListedProxy/Search/GetListFunds/"
+TYPE_FUND = "FII"
 PAGE_SIZE  = 100
 ARQUIVO    = Path("data/b3_fiis_listados.csv")
 
@@ -34,31 +34,46 @@ CABECALHO = [
 def _url(page: int) -> str:
     return BASE_URL + b64_encode_params({
         "language": "pt-br", "pageNumber": page,
-        "pageSize": PAGE_SIZE, "fundsType": FUNDS_TYPE,
+        "pageSize": PAGE_SIZE, "typeFund": TYPE_FUND,
     })
 
 
-def _pagina(session, page: int) -> tuple[list, int]:
+def _pagina(session, page: int) -> tuple[list, int, int | None]:
     try:
         resp = session.get(_url(page), timeout=30)
         resp.raise_for_status()
         data = resp.json()
-        return data.get("results", []), data.get("total", 0)
+        resultados = data.get("results") or data.get("result") or data.get("data") or []
+        page_info = data.get("page") or {}
+        total = (
+            data.get("total")
+            or page_info.get("totalRecords")
+            or page_info.get("totalResults")
+            or page_info.get("total")
+            or len(resultados)
+        )
+        total_pages = page_info.get("totalPages")
+        return resultados, int(total or 0), int(total_pages) if total_pages else None
     except Exception as e:
         log.error(f"Página {page}: {e}")
-        return [], 0
+        return [], 0, None
 
 
 def _mapear(item: dict, data_captura: str, hora_captura: str) -> dict:
+    codigo = limpar(item.get("fundTicker") or item.get("ticker") or item.get("code") or item.get("symbol"))
+    if not codigo:
+        acronym = limpar(item.get("acronym") or item.get("acronymName") or item.get("fundAcronym"))
+        if acronym:
+            codigo = acronym if any(c.isdigit() for c in acronym) else f"{acronym}11"
     return {
         "data_captura":       data_captura,
         "hora_captura":       hora_captura,
-        "codigo_fundo":       limpar(item.get("fundTicker") or item.get("ticker") or item.get("code")),
-        "nome_fundo":         limpar(item.get("fundName")   or item.get("companyName")),
+        "codigo_fundo":       codigo,
+        "nome_fundo":         limpar(item.get("fundName")   or item.get("tradingName") or item.get("companyName")),
         "cnpj":               limpar(item.get("cnpj")),
-        "administrador":      limpar(item.get("administrator")),
-        "segmento":           limpar(item.get("fundSegment") or item.get("segment")),
-        "tipo":               limpar(item.get("fundType")    or item.get("type")),
+        "administrador":      limpar(item.get("administrator") or item.get("administratorName")),
+        "segmento":           limpar(item.get("fundSegment") or item.get("segment") or item.get("segmentName")),
+        "tipo":               limpar(item.get("fundType")    or item.get("type") or item.get("typeFund")),
         "mandato":            limpar(item.get("mandate")),
         "prazo_duracao":      limpar(item.get("term")),
         "gestao":             limpar(item.get("managementType") or item.get("management")),
@@ -73,12 +88,12 @@ def capturar() -> list[dict]:
     session = nova_session()
 
     log.info("Buscando página 1...")
-    primeira, total = _pagina(session, 1)
-    if total == 0:
+    primeira, total, total_pages = _pagina(session, 1)
+    if not primeira:
         log.error("Nenhum FII retornado.")
         sys.exit(1)
 
-    n_pag = (total + PAGE_SIZE - 1) // PAGE_SIZE
+    n_pag = total_pages or (total + PAGE_SIZE - 1) // PAGE_SIZE
     log.info(f"Total: {total} FIIs | {n_pag} páginas")
 
     todos = list(primeira)
