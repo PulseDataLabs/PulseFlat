@@ -1,0 +1,1530 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PulseFlat — Dados Financeiros Brasileiros</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@300;400;500&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+  <style>
+    /* ── Reset & Tokens ─────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #080c10;
+      --bg2:       #0d1218;
+      --bg3:       #111820;
+      --surface:   #141c26;
+      --border:    #1e2d3d;
+      --border2:   #243444;
+      --accent:    #00d4ff;
+      --accent2:   #0095c8;
+      --gold:      #f0b429;
+      --gold2:     #c8902a;
+      --green:     #00e5a0;
+      --red:       #ff4d6d;
+      --text:      #e8eef4;
+      --text2:     #8fa3b8;
+      --text3:     #4d6070;
+      --font-head: 'Syne', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --font-body: 'Lora', serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-body);
+      overflow-x: hidden;
+      cursor: default;
+    }
+
+    /* ── Noise texture overlay ──────────────────────────── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.6;
+    }
+
+    /* ── Grid background ────────────────────────────────── */
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(0,212,255,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,212,255,0.025) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ── NAV ────────────────────────────────────────────── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.25rem 3rem;
+      background: rgba(8,12,16,0.85);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-logo {
+      font-family: var(--font-head);
+      font-weight: 800;
+      font-size: 1.25rem;
+      letter-spacing: -0.03em;
+      color: var(--text);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .nav-logo .pulse-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 10px var(--accent);
+      animation: pulse-dot 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse-dot {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50%       { opacity: 0.4; transform: scale(0.7); }
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 400;
+      color: var(--text2);
+      text-decoration: none;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--accent); }
+
+    .nav-cta {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: var(--bg);
+      background: var(--accent);
+      padding: 0.5rem 1.2rem;
+      border-radius: 4px;
+      text-decoration: none;
+      letter-spacing: 0.05em;
+      transition: background 0.2s, transform 0.15s;
+    }
+
+    .nav-cta:hover { background: #33ddff; transform: translateY(-1px); }
+
+    /* ── HERO ───────────────────────────────────────────── */
+    .hero {
+      position: relative;
+      z-index: 1;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 8rem 2rem 6rem;
+      overflow: hidden;
+    }
+
+    /* Glow orbs */
+    .hero-orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(120px);
+      pointer-events: none;
+    }
+    .hero-orb-1 {
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(0,212,255,0.12), transparent 70%);
+      top: -100px; left: -150px;
+      animation: drift1 12s ease-in-out infinite alternate;
+    }
+    .hero-orb-2 {
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(240,180,41,0.08), transparent 70%);
+      bottom: -80px; right: -100px;
+      animation: drift2 15s ease-in-out infinite alternate;
+    }
+    .hero-orb-3 {
+      width: 300px; height: 300px;
+      background: radial-gradient(circle, rgba(0,229,160,0.06), transparent 70%);
+      top: 40%; left: 55%;
+      animation: drift3 10s ease-in-out infinite alternate;
+    }
+
+    @keyframes drift1 { from { transform: translate(0,0); } to { transform: translate(60px, 40px); } }
+    @keyframes drift2 { from { transform: translate(0,0); } to { transform: translate(-40px, -60px); } }
+    @keyframes drift3 { from { transform: translate(0,0); } to { transform: translate(30px, -30px); } }
+
+    /* Ticker bar */
+    .ticker-bar {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--text3);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 2.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      animation: fadeUp 0.8s ease both;
+    }
+
+    .ticker-bar::before, .ticker-bar::after {
+      content: '';
+      width: 40px; height: 1px;
+      background: var(--border2);
+    }
+
+    .status-dot {
+      display: inline-block;
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--green);
+      box-shadow: 0 0 8px var(--green);
+      animation: pulse-dot 1.5s ease-in-out infinite;
+      margin-right: 0.3rem;
+    }
+
+    .hero-title {
+      font-family: var(--font-head);
+      font-weight: 800;
+      font-size: clamp(3.5rem, 9vw, 7.5rem);
+      line-height: 0.92;
+      letter-spacing: -0.04em;
+      margin-bottom: 0.4rem;
+      animation: fadeUp 0.8s ease 0.1s both;
+    }
+
+    .hero-title .line-accent {
+      color: transparent;
+      -webkit-text-stroke: 1.5px var(--accent);
+      display: block;
+    }
+
+    .hero-title .line-solid {
+      color: var(--text);
+      display: block;
+    }
+
+    .hero-subtitle {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      color: var(--accent);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+      display: block;
+      animation: fadeUp 0.8s ease 0.2s both;
+    }
+
+    .hero-description {
+      max-width: 580px;
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: var(--text2);
+      margin-bottom: 3rem;
+      animation: fadeUp 0.8s ease 0.3s both;
+    }
+
+    .hero-ctas {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      animation: fadeUp 0.8s ease 0.4s both;
+    }
+
+    .btn-primary {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--bg);
+      background: var(--accent);
+      padding: 0.9rem 2rem;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+      box-shadow: 0 0 30px rgba(0,212,255,0.2);
+    }
+
+    .btn-primary:hover {
+      background: #33ddff;
+      transform: translateY(-2px);
+      box-shadow: 0 0 50px rgba(0,212,255,0.35);
+    }
+
+    .btn-secondary {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      font-weight: 400;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--text2);
+      background: transparent;
+      padding: 0.9rem 2rem;
+      border-radius: 4px;
+      border: 1px solid var(--border2);
+      text-decoration: none;
+      transition: border-color 0.2s, color 0.2s, transform 0.15s;
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    /* Hero stats strip */
+    .hero-stats {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      gap: 0;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      background: var(--bg2);
+      overflow: hidden;
+      animation: fadeUp 0.8s ease 0.5s both;
+    }
+
+    .stat-item {
+      flex: 1;
+      padding: 1.5rem 2rem;
+      border-right: 1px solid var(--border);
+      text-align: center;
+      position: relative;
+    }
+
+    .stat-item:last-child { border-right: none; }
+
+    .stat-item::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--accent), transparent);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .stat-item:hover::before { opacity: 1; }
+
+    .stat-value {
+      font-family: var(--font-head);
+      font-weight: 800;
+      font-size: 1.8rem;
+      color: var(--text);
+      display: block;
+      letter-spacing: -0.03em;
+    }
+
+    .stat-label {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      color: var(--text3);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-top: 0.3rem;
+      display: block;
+    }
+
+    /* ── SECTIONS ───────────────────────────────────────── */
+    section {
+      position: relative;
+      z-index: 1;
+    }
+
+    .container {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .section-label {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--accent);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .section-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    .section-title {
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+
+    .section-desc {
+      color: var(--text2);
+      font-size: 1rem;
+      line-height: 1.75;
+      max-width: 560px;
+    }
+
+    /* ── HOW IT WORKS ───────────────────────────────────── */
+    .how-section {
+      padding: 8rem 0;
+    }
+
+    .how-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+      margin-top: 4rem;
+    }
+
+    .pipeline {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .pipeline-step {
+      display: flex;
+      gap: 1.5rem;
+      align-items: flex-start;
+      padding: 1.5rem 0;
+      border-bottom: 1px solid var(--border);
+      position: relative;
+      transition: all 0.25s;
+    }
+
+    .pipeline-step:last-child { border-bottom: none; }
+    .pipeline-step:hover { background: transparent; }
+
+    .pipeline-step:hover .step-icon {
+      background: var(--accent);
+      color: var(--bg);
+      box-shadow: 0 0 20px rgba(0,212,255,0.4);
+    }
+
+    .step-icon {
+      width: 40px; height: 40px;
+      border-radius: 8px;
+      background: var(--surface);
+      border: 1px solid var(--border2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      flex-shrink: 0;
+      transition: all 0.25s;
+    }
+
+    .step-content {}
+
+    .step-title {
+      font-family: var(--font-head);
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 0.3rem;
+      color: var(--text);
+    }
+
+    .step-desc {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--text3);
+      line-height: 1.6;
+    }
+
+    /* Schedule card */
+    .schedule-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .schedule-header {
+      padding: 1.25rem 1.5rem;
+      border-bottom: 1px solid var(--border);
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--text3);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .schedule-row {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem 1.5rem;
+      border-bottom: 1px solid var(--border);
+      transition: background 0.2s;
+    }
+
+    .schedule-row:last-child { border-bottom: none; }
+    .schedule-row:hover { background: rgba(0,212,255,0.03); }
+
+    .schedule-time {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--accent);
+      min-width: 70px;
+    }
+
+    .schedule-name {
+      font-family: var(--font-head);
+      font-weight: 600;
+      font-size: 0.85rem;
+      flex: 1;
+    }
+
+    .schedule-tag {
+      font-family: var(--font-mono);
+      font-size: 0.6rem;
+      padding: 0.2rem 0.5rem;
+      border-radius: 3px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .tag-anbima { background: rgba(240,180,41,0.12); color: var(--gold); border: 1px solid rgba(240,180,41,0.2); }
+    .tag-b3     { background: rgba(0,212,255,0.08);  color: var(--accent); border: 1px solid rgba(0,212,255,0.15); }
+
+    /* ── DATASETS ───────────────────────────────────────── */
+    .datasets-section {
+      padding: 8rem 0;
+      background: var(--bg2);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .datasets-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: 3rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .datasets-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 1.5px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .dataset-card {
+      background: var(--bg2);
+      padding: 2rem;
+      transition: background 0.25s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .dataset-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transition: opacity 0.3s;
+      pointer-events: none;
+    }
+
+    .dataset-card.anbima-card::after { background: radial-gradient(circle at top right, rgba(240,180,41,0.05), transparent 60%); }
+    .dataset-card.b3-card::after     { background: radial-gradient(circle at top right, rgba(0,212,255,0.04), transparent 60%); }
+
+    .dataset-card:hover { background: var(--surface); }
+    .dataset-card:hover::after { opacity: 1; }
+
+    .card-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+    }
+
+    .card-icon {
+      width: 44px; height: 44px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+    }
+
+    .icon-anbima { background: rgba(240,180,41,0.1); border: 1px solid rgba(240,180,41,0.2); }
+    .icon-b3     { background: rgba(0,212,255,0.08); border: 1px solid rgba(0,212,255,0.15); }
+
+    .card-badge {
+      font-family: var(--font-mono);
+      font-size: 0.6rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .badge-daily   { background: rgba(0,229,160,0.1); color: var(--green); border: 1px solid rgba(0,229,160,0.2); }
+    .badge-dynamic { background: rgba(0,212,255,0.08); color: var(--accent); border: 1px solid rgba(0,212,255,0.15); }
+
+    .card-title {
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 1.05rem;
+      margin-bottom: 0.4rem;
+      letter-spacing: -0.01em;
+    }
+
+    .card-file {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      color: var(--text3);
+      margin-bottom: 1rem;
+    }
+
+    .card-desc {
+      font-size: 0.88rem;
+      line-height: 1.65;
+      color: var(--text2);
+      margin-bottom: 1.25rem;
+    }
+
+    .card-fields {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .field-tag {
+      font-family: var(--font-mono);
+      font-size: 0.58rem;
+      padding: 0.2rem 0.5rem;
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      color: var(--text3);
+      text-transform: lowercase;
+      letter-spacing: 0.04em;
+    }
+
+    .card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .card-source {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      color: var(--text3);
+    }
+
+    .download-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: var(--text2);
+      text-decoration: none;
+      padding: 0.45rem 0.9rem;
+      border: 1px solid var(--border2);
+      border-radius: 4px;
+      transition: all 0.2s;
+      letter-spacing: 0.04em;
+    }
+
+    .download-btn:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: rgba(0,212,255,0.05);
+    }
+
+    .download-btn svg {
+      width: 12px; height: 12px;
+    }
+
+    /* ── SCHEMA ─────────────────────────────────────────── */
+    .schema-section {
+      padding: 8rem 0;
+    }
+
+    .schema-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .schema-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .schema-card-header {
+      padding: 1rem 1.25rem;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .schema-card-title {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: var(--text2);
+    }
+
+    .schema-csv-name {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      color: var(--text3);
+    }
+
+    .schema-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .schema-table th {
+      font-family: var(--font-mono);
+      font-size: 0.6rem;
+      color: var(--text3);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 0.6rem 1.25rem;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+      background: var(--bg2);
+    }
+
+    .schema-table td {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      padding: 0.6rem 1.25rem;
+      border-bottom: 1px solid var(--border);
+      color: var(--text2);
+    }
+
+    .schema-table tr:last-child td { border-bottom: none; }
+    .schema-table tr:hover td { background: rgba(0,212,255,0.02); }
+
+    .schema-table td:first-child { color: var(--accent); }
+
+    .type-badge {
+      display: inline-block;
+      font-size: 0.58rem;
+      padding: 0.1rem 0.4rem;
+      background: var(--bg3);
+      border-radius: 3px;
+      color: var(--text3);
+      border: 1px solid var(--border);
+    }
+
+    /* ── SETUP ──────────────────────────────────────────── */
+    .setup-section {
+      padding: 8rem 0;
+      background: var(--bg2);
+      border-top: 1px solid var(--border);
+    }
+
+    .setup-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+      margin-top: 3rem;
+    }
+
+    .steps-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .setup-step {
+      display: flex;
+      gap: 1.25rem;
+      align-items: flex-start;
+    }
+
+    .step-num {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: var(--bg);
+      background: var(--accent);
+      width: 24px; height: 24px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .setup-step h4 {
+      font-family: var(--font-head);
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .setup-step p {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--text3);
+      line-height: 1.6;
+    }
+
+    .setup-step p code {
+      color: var(--accent);
+      background: rgba(0,212,255,0.07);
+      padding: 0.1rem 0.3rem;
+      border-radius: 3px;
+    }
+
+    /* Code block */
+    .code-block {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .code-header {
+      padding: 0.75rem 1.25rem;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .code-dot { width: 10px; height: 10px; border-radius: 50%; }
+    .cd-red   { background: #ff5f57; }
+    .cd-yellow{ background: #ffbd2e; }
+    .cd-green { background: #28c840; }
+
+    .code-filename {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      color: var(--text3);
+      margin-left: auto;
+    }
+
+    .code-body {
+      padding: 1.5rem;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      line-height: 1.8;
+      color: var(--text2);
+      overflow-x: auto;
+    }
+
+    .code-body .cm  { color: var(--text3); font-style: italic; }
+    .code-body .kw  { color: #c792ea; }
+    .code-body .str { color: var(--green); }
+    .code-body .var { color: var(--accent); }
+    .code-body .op  { color: var(--gold); }
+
+    /* ── FOOTER ─────────────────────────────────────────── */
+    footer {
+      position: relative;
+      z-index: 1;
+      border-top: 1px solid var(--border);
+      padding: 3rem 0;
+      background: var(--bg);
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    .footer-logo {
+      font-family: var(--font-head);
+      font-weight: 800;
+      font-size: 1rem;
+      letter-spacing: -0.03em;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .footer-links a {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--text3);
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: var(--accent); }
+
+    .footer-copy {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      color: var(--text3);
+    }
+
+    /* ── ANIMATIONS ─────────────────────────────────────── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ── RESPONSIVE ─────────────────────────────────────── */
+    @media (max-width: 900px) {
+      nav { padding: 1rem 1.5rem; }
+      .nav-links { display: none; }
+      .how-grid, .setup-grid, .schema-grid { grid-template-columns: 1fr; }
+      .hero-stats { flex-wrap: wrap; }
+      .stat-item { min-width: 50%; border-right: none; border-bottom: 1px solid var(--border); }
+      .datasets-header { flex-direction: column; align-items: flex-start; }
+    }
+
+    @media (max-width: 600px) {
+      .hero-title { font-size: 3rem; }
+      .container { padding: 0 1.25rem; }
+      .hero { padding: 7rem 1.25rem 4rem; }
+      .stat-item { min-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">
+    <span class="pulse-dot"></span>
+    PulseFlat
+  </a>
+  <ul class="nav-links">
+    <li><a href="#como-funciona">Pipeline</a></li>
+    <li><a href="#datasets">Datasets</a></li>
+    <li><a href="#schema">Schema</a></li>
+    <li><a href="#setup">Instalação</a></li>
+  </ul>
+  <a href="https://github.com/royopa/PulseFlat" class="nav-cta" target="_blank">
+    GitHub ↗
+  </a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-orb hero-orb-1"></div>
+  <div class="hero-orb hero-orb-2"></div>
+  <div class="hero-orb hero-orb-3"></div>
+
+  <div class="ticker-bar">
+    <span class="status-dot"></span>
+    Atualização automática · Seg–Sex · 09h30 & 10h00 BRT
+  </div>
+
+  <h1 class="hero-title">
+    <span class="line-solid">Pulse</span>
+    <span class="line-accent">Flat</span>
+  </h1>
+
+  <span class="hero-subtitle">Brazilian Financial Data Pipeline</span>
+
+  <p class="hero-description">
+    Pipeline open-source de captura diária dos principais indicadores do mercado financeiro
+    brasileiro. Dados da ANBIMA e B3, coletados automaticamente via GitHub Actions e
+    disponibilizados em CSV para importação direta em qualquer base de dados.
+  </p>
+
+  <div class="hero-ctas">
+    <a href="#datasets" class="btn-primary">Explorar datasets</a>
+    <a href="https://github.com/royopa/PulseFlat" class="btn-secondary" target="_blank">Ver no GitHub</a>
+  </div>
+</section>
+
+<!-- STATS STRIP -->
+<div class="hero-stats reveal">
+  <div class="stat-item">
+    <span class="stat-value">5</span>
+    <span class="stat-label">Datasets ativos</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-value">22</span>
+    <span class="stat-label">Índices B3 monitorados</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-value">2</span>
+    <span class="stat-label">Jobs por dia útil</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-value">100%</span>
+    <span class="stat-label">Gratuito & open-source</span>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<section class="how-section" id="como-funciona">
+  <div class="container">
+    <div class="section-label">Pipeline</div>
+    <h2 class="section-title">Como funciona</h2>
+    <p class="section-desc">
+      Dois jobs independentes rodam automaticamente todos os dias úteis, coletando,
+      processando e versionando os dados diretamente no repositório GitHub.
+    </p>
+
+    <div class="how-grid reveal">
+      <div class="pipeline">
+        <div class="pipeline-step">
+          <div class="step-icon">⏰</div>
+          <div class="step-content">
+            <div class="step-title">GitHub Actions dispara o job</div>
+            <div class="step-desc">Cron agendado para 09h30 (ANBIMA) e 10h00 (B3) no horário de Brasília, apenas em dias úteis (seg–sex).</div>
+          </div>
+        </div>
+        <div class="pipeline-step">
+          <div class="step-icon">🔗</div>
+          <div class="step-content">
+            <div class="step-title">Scraper acessa a fonte</div>
+            <div class="step-desc">ANBIMA via HTML scraping (com OAuth 2.0 opcional). B3 via API interna JSON + parâmetros Base64.</div>
+          </div>
+        </div>
+        <div class="pipeline-step">
+          <div class="step-icon">🧹</div>
+          <div class="step-content">
+            <div class="step-title">Dados são normalizados</div>
+            <div class="step-desc">Encoding, separadores decimais e campos ausentes padronizados. Sem dados duplicados.</div>
+          </div>
+        </div>
+        <div class="pipeline-step">
+          <div class="step-icon">📄</div>
+          <div class="step-content">
+            <div class="step-title">CSV acumulativo atualizado</div>
+            <div class="step-desc">Cada execução acrescenta linhas — o histórico nunca é apagado. Encoding UTF-8, decimal ponto.</div>
+          </div>
+        </div>
+        <div class="pipeline-step">
+          <div class="step-icon">✅</div>
+          <div class="step-content">
+            <div class="step-title">Commit automático no repositório</div>
+            <div class="step-desc">git add → git commit → git push. O CSV atualizado fica disponível imediatamente para download.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="schedule-card">
+        <div class="schedule-header">
+          🕐 &nbsp;Agenda de execução
+        </div>
+        <div class="schedule-row">
+          <span class="schedule-time">09h30</span>
+          <span class="schedule-name">ANBIMA Indicadores</span>
+          <span class="schedule-tag tag-anbima">ANBIMA</span>
+        </div>
+        <div class="schedule-row">
+          <span class="schedule-time">09h30</span>
+          <span class="schedule-name">ANBIMA Projeções IPCA/IGP-M</span>
+          <span class="schedule-tag tag-anbima">ANBIMA</span>
+        </div>
+        <div class="schedule-row">
+          <span class="schedule-time">10h00</span>
+          <span class="schedule-name">B3 FIIs Listados</span>
+          <span class="schedule-tag tag-b3">B3</span>
+        </div>
+        <div class="schedule-row">
+          <span class="schedule-time">10h00</span>
+          <span class="schedule-name">B3 ETFs Listados</span>
+          <span class="schedule-tag tag-b3">B3</span>
+        </div>
+        <div class="schedule-row">
+          <span class="schedule-time">10h00</span>
+          <span class="schedule-name">B3 Carteiras Teóricas (22 índices)</span>
+          <span class="schedule-tag tag-b3">B3</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DATASETS -->
+<section class="datasets-section" id="datasets">
+  <div class="container">
+    <div class="datasets-header reveal">
+      <div>
+        <div class="section-label">Downloads</div>
+        <h2 class="section-title">Datasets disponíveis</h2>
+        <p class="section-desc">CSVs acumulativos atualizados diariamente. Clique em Download para baixar o arquivo mais recente.</p>
+      </div>
+    </div>
+
+    <div class="datasets-grid reveal">
+
+      <!-- ANBIMA Indicadores -->
+      <div class="dataset-card anbima-card">
+        <div class="card-top">
+          <div class="card-icon icon-anbima">📊</div>
+          <span class="card-badge badge-daily">Diário · 2×</span>
+        </div>
+        <div class="card-title">ANBIMA Indicadores</div>
+        <div class="card-file">anbima_indicadores.csv</div>
+        <div class="card-desc">
+          Quadro completo de indicadores do mercado: taxa SELIC, DI-B3, índices de preços,
+          câmbio e taxas de referência. Atualizado duas vezes ao dia.
+        </div>
+        <div class="card-fields">
+          <span class="field-tag">selic</span>
+          <span class="field-tag">di-b3</span>
+          <span class="field-tag">igp-m</span>
+          <span class="field-tag">ipca</span>
+          <span class="field-tag">dólar</span>
+          <span class="field-tag">euro</span>
+          <span class="field-tag">tr</span>
+          <span class="field-tag">tbf</span>
+          <span class="field-tag">fds</span>
+        </div>
+        <div class="card-footer">
+          <span class="card-source">Fonte: ANBIMA</span>
+          <a href="https://raw.githubusercontent.com/royopa/PulseFlat/main/data/anbima_indicadores.csv"
+             class="download-btn" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+            </svg>
+            Download CSV
+          </a>
+        </div>
+      </div>
+
+      <!-- ANBIMA Projeções -->
+      <div class="dataset-card anbima-card">
+        <div class="card-top">
+          <div class="card-icon icon-anbima">🔮</div>
+          <span class="card-badge badge-dynamic">Sob divulgação</span>
+        </div>
+        <div class="card-title">ANBIMA Projeções</div>
+        <div class="card-file">anbima_projecoes.csv</div>
+        <div class="card-desc">
+          Projeções de IPCA e IGP-M coletadas junto às instituições do Comitê Macroeconômico
+          da ANBIMA para o mês corrente e seguinte.
+        </div>
+        <div class="card-fields">
+          <span class="field-tag">ipca corrente</span>
+          <span class="field-tag">ipca seguinte</span>
+          <span class="field-tag">igp-m corrente</span>
+          <span class="field-tag">igp-m seguinte</span>
+          <span class="field-tag">num_instituições</span>
+        </div>
+        <div class="card-footer">
+          <span class="card-source">Fonte: ANBIMA API</span>
+          <a href="https://raw.githubusercontent.com/royopa/PulseFlat/main/data/anbima_projecoes.csv"
+             class="download-btn" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+            </svg>
+            Download CSV
+          </a>
+        </div>
+      </div>
+
+      <!-- B3 FIIs -->
+      <div class="dataset-card b3-card">
+        <div class="card-top">
+          <div class="card-icon icon-b3">🏢</div>
+          <span class="card-badge badge-daily">Diário</span>
+        </div>
+        <div class="card-title">B3 FIIs Listados</div>
+        <div class="card-file">b3_fiis_listados.csv</div>
+        <div class="card-desc">
+          Lista completa de Fundos de Investimento Imobiliário listados na B3, com dados
+          cadastrais, administrador, segmento e patrimônio líquido.
+        </div>
+        <div class="card-fields">
+          <span class="field-tag">ticker</span>
+          <span class="field-tag">cnpj</span>
+          <span class="field-tag">administrador</span>
+          <span class="field-tag">segmento</span>
+          <span class="field-tag">cotistas</span>
+          <span class="field-tag">patrimônio</span>
+        </div>
+        <div class="card-footer">
+          <span class="card-source">Fonte: B3 API</span>
+          <a href="https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_fiis_listados.csv"
+             class="download-btn" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+            </svg>
+            Download CSV
+          </a>
+        </div>
+      </div>
+
+      <!-- B3 ETFs -->
+      <div class="dataset-card b3-card">
+        <div class="card-top">
+          <div class="card-icon icon-b3">📈</div>
+          <span class="card-badge badge-daily">Diário</span>
+        </div>
+        <div class="card-title">B3 ETFs Listados</div>
+        <div class="card-file">b3_etfs_listados.csv</div>
+        <div class="card-desc">
+          ETFs de Renda Variável e Renda Fixa listados na B3, com índice de referência,
+          administrador, gestor e patrimônio líquido.
+        </div>
+        <div class="card-fields">
+          <span class="field-tag">ticker</span>
+          <span class="field-tag">categoria_etf</span>
+          <span class="field-tag">índice_ref</span>
+          <span class="field-tag">gestor</span>
+          <span class="field-tag">renda variável</span>
+          <span class="field-tag">renda fixa</span>
+        </div>
+        <div class="card-footer">
+          <span class="card-source">Fonte: B3 API</span>
+          <a href="https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_etfs_listados.csv"
+             class="download-btn" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+            </svg>
+            Download CSV
+          </a>
+        </div>
+      </div>
+
+      <!-- B3 Carteiras -->
+      <div class="dataset-card b3-card" style="grid-column: 1 / -1;">
+        <div class="card-top">
+          <div class="card-icon icon-b3">🗂️</div>
+          <span class="card-badge badge-daily">Diário · 22 índices</span>
+        </div>
+        <div class="card-title">B3 Carteiras Teóricas</div>
+        <div class="card-file">b3_carteiras_teoricas.csv</div>
+        <div class="card-desc">
+          Composição diária das carteiras teóricas dos 22 principais índices da B3.
+          Permite acompanhar a evolução do peso de cada ativo ao longo do tempo e detectar entradas e saídas nas carteiras.
+        </div>
+        <div class="card-fields">
+          <span class="field-tag">IBOV</span>
+          <span class="field-tag">IBRA</span>
+          <span class="field-tag">IBrX 100</span>
+          <span class="field-tag">IBrX 50</span>
+          <span class="field-tag">SMLL</span>
+          <span class="field-tag">IDIV</span>
+          <span class="field-tag">IFIX</span>
+          <span class="field-tag">IFNC</span>
+          <span class="field-tag">ICON</span>
+          <span class="field-tag">IEEX</span>
+          <span class="field-tag">IMAT</span>
+          <span class="field-tag">IMOB</span>
+          <span class="field-tag">INDX</span>
+          <span class="field-tag">UTIL</span>
+          <span class="field-tag">IGC</span>
+          <span class="field-tag">ISE</span>
+          <span class="field-tag">ICO2</span>
+          <span class="field-tag">+ 5 índices</span>
+        </div>
+        <div class="card-footer">
+          <span class="card-source">Fonte: B3 API · ~1.000 linhas/dia</span>
+          <a href="https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_carteiras_teoricas.csv"
+             class="download-btn" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+            </svg>
+            Download CSV
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SCHEMA -->
+<section class="schema-section" id="schema">
+  <div class="container">
+    <div class="section-label reveal">Schema</div>
+    <h2 class="section-title reveal">Estrutura dos dados</h2>
+    <p class="section-desc reveal">Todos os CSVs seguem o padrão: UTF-8, separador vírgula, decimal ponto, datas YYYY-MM-DD.</p>
+
+    <div class="schema-grid reveal">
+
+      <div class="schema-card">
+        <div class="schema-card-header">
+          <span class="schema-card-title">ANBIMA Indicadores</span>
+          <span class="schema-csv-name">anbima_indicadores.csv</span>
+        </div>
+        <table class="schema-table">
+          <thead><tr><th>Campo</th><th>Tipo</th><th>Exemplo</th></tr></thead>
+          <tbody>
+            <tr><td>data_captura</td><td><span class="type-badge">date</span></td><td>2026-05-30</td></tr>
+            <tr><td>hora_captura</td><td><span class="type-badge">time</span></td><td>09:30:01</td></tr>
+            <tr><td>data_referencia_pagina</td><td><span class="type-badge">str</span></td><td>30/05/2026 09:12</td></tr>
+            <tr><td>indicador</td><td><span class="type-badge">str</span></td><td>Taxa SELIC (BC)</td></tr>
+            <tr><td>categoria</td><td><span class="type-badge">str</span></td><td>Taxa de Juros</td></tr>
+            <tr><td>valor</td><td><span class="type-badge">float</span></td><td>14.90</td></tr>
+            <tr><td>unidade</td><td><span class="type-badge">str</span></td><td>% a.a.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="schema-card">
+        <div class="schema-card-header">
+          <span class="schema-card-title">ANBIMA Projeções</span>
+          <span class="schema-csv-name">anbima_projecoes.csv</span>
+        </div>
+        <table class="schema-table">
+          <thead><tr><th>Campo</th><th>Tipo</th><th>Exemplo</th></tr></thead>
+          <tbody>
+            <tr><td>data_captura</td><td><span class="type-badge">date</span></td><td>2026-05-30</td></tr>
+            <tr><td>estrategia_coleta</td><td><span class="type-badge">str</span></td><td>api_oficial</td></tr>
+            <tr><td>indice</td><td><span class="type-badge">str</span></td><td>IPCA</td></tr>
+            <tr><td>mes_referencia</td><td><span class="type-badge">str</span></td><td>mai/26</td></tr>
+            <tr><td>tipo_projecao</td><td><span class="type-badge">str</span></td><td>corrente</td></tr>
+            <tr><td>valor_pct</td><td><span class="type-badge">float</span></td><td>0.64</td></tr>
+            <tr><td>num_instituicoes</td><td><span class="type-badge">int</span></td><td>42</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="schema-card">
+        <div class="schema-card-header">
+          <span class="schema-card-title">B3 FIIs / ETFs</span>
+          <span class="schema-csv-name">b3_fiis_listados.csv · b3_etfs_listados.csv</span>
+        </div>
+        <table class="schema-table">
+          <thead><tr><th>Campo</th><th>Tipo</th><th>Exemplo</th></tr></thead>
+          <tbody>
+            <tr><td>data_captura</td><td><span class="type-badge">date</span></td><td>2026-05-30</td></tr>
+            <tr><td>codigo_fundo</td><td><span class="type-badge">str</span></td><td>HGLG11</td></tr>
+            <tr><td>nome_fundo</td><td><span class="type-badge">str</span></td><td>CSHG LOGÍSTICA</td></tr>
+            <tr><td>cnpj</td><td><span class="type-badge">str</span></td><td>11.728.688/0001-23</td></tr>
+            <tr><td>administrador</td><td><span class="type-badge">str</span></td><td>Credit Suisse Hedging</td></tr>
+            <tr><td>cotistas</td><td><span class="type-badge">int</span></td><td>284391</td></tr>
+            <tr><td>patrimonio_liquido</td><td><span class="type-badge">float</span></td><td>4182340000.00</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="schema-card">
+        <div class="schema-card-header">
+          <span class="schema-card-title">B3 Carteiras Teóricas</span>
+          <span class="schema-csv-name">b3_carteiras_teoricas.csv</span>
+        </div>
+        <table class="schema-table">
+          <thead><tr><th>Campo</th><th>Tipo</th><th>Exemplo</th></tr></thead>
+          <tbody>
+            <tr><td>data_captura</td><td><span class="type-badge">date</span></td><td>2026-05-30</td></tr>
+            <tr><td>indice</td><td><span class="type-badge">str</span></td><td>IBOV</td></tr>
+            <tr><td>indice_nome</td><td><span class="type-badge">str</span></td><td>Ibovespa</td></tr>
+            <tr><td>codigo_ativo</td><td><span class="type-badge">str</span></td><td>PETR4</td></tr>
+            <tr><td>tipo_ativo</td><td><span class="type-badge">str</span></td><td>PN</td></tr>
+            <tr><td>quantidade_teorica</td><td><span class="type-badge">float</span></td><td>529660608</td></tr>
+            <tr><td>participacao_pct</td><td><span class="type-badge">float</span></td><td>6.854</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SETUP -->
+<section class="setup-section" id="setup">
+  <div class="container">
+    <div class="section-label reveal">Instalação</div>
+    <h2 class="section-title reveal">Comece em minutos</h2>
+    <p class="section-desc reveal">Clone, configure as secrets e os dados chegam sozinhos todo dia útil.</p>
+
+    <div class="setup-grid reveal">
+      <div class="steps-list">
+        <div class="setup-step">
+          <div class="step-num">1</div>
+          <div>
+            <h4>Clone o repositório</h4>
+            <p>Faça o fork ou clone direto do <code>br-financial-data</code> para sua conta GitHub.</p>
+          </div>
+        </div>
+        <div class="setup-step">
+          <div class="step-num">2</div>
+          <div>
+            <h4>Configure os Secrets (opcional)</h4>
+            <p>Para projeções via API oficial: <code>Settings → Secrets → Actions</code> e adicione <code>ANBIMA_CLIENT_ID</code> e <code>ANBIMA_CLIENT_SECRET</code>. Sem isso, o scraper usa scraping como fallback.</p>
+          </div>
+        </div>
+        <div class="setup-step">
+          <div class="step-num">3</div>
+          <div>
+            <h4>Habilite o GitHub Actions</h4>
+            <p>Na aba <code>Actions</code> do repositório, clique em <em>"Enable Actions"</em>. O pipeline já está configurado para rodar automaticamente.</p>
+          </div>
+        </div>
+        <div class="setup-step">
+          <div class="step-num">4</div>
+          <div>
+            <h4>Rode manualmente para testar</h4>
+            <p><code>Actions → Captura Diária → Run workflow</code> para verificar se tudo funciona antes de aguardar o agendamento.</p>
+          </div>
+        </div>
+        <div class="setup-step">
+          <div class="step-num">5</div>
+          <div>
+            <h4>Consuma os CSVs</h4>
+            <p>Aponte sua ferramenta de BI ou ETL para as URLs raw do GitHub. Os dados são atualizados automaticamente todo dia útil.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="code-block">
+        <div class="code-header">
+          <span class="code-dot cd-red"></span>
+          <span class="code-dot cd-yellow"></span>
+          <span class="code-dot cd-green"></span>
+          <span class="code-filename">terminal</span>
+        </div>
+        <div class="code-body">
+<span class="cm"># 1. Clone o repositório</span>
+<span class="kw">git</span> clone https://github.com/royopa/PulseFlat.git
+<span class="kw">cd</span> br-financial-data
+
+<span class="cm"># 2. Instale as dependências</span>
+<span class="kw">pip</span> install <span class="op">-r</span> requirements.txt
+
+<span class="cm"># 3. Configure credenciais ANBIMA (opcional)</span>
+<span class="kw">cp</span> .env.example .env
+<span class="cm"># Edite .env com seu client_id e client_secret</span>
+
+<span class="cm"># 4. Teste localmente — todos os scrapers</span>
+<span class="kw">python</span> run_all.py
+
+<span class="cm"># Ou rode um scraper específico</span>
+<span class="kw">python</span> run_all.py anbima
+<span class="kw">python</span> run_all.py b3_carteiras
+
+<span class="cm"># 5. URL raw para importar direto no seu BI:</span>
+<span class="str">https://raw.githubusercontent.com/royopa/
+  br-financial-data/main/data/
+  anbima_indicadores.csv</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <span class="pulse-dot" style="width:7px;height:7px;"></span>
+        PulseFlat
+      </div>
+      <ul class="footer-links">
+        <li><a href="#como-funciona">Pipeline</a></li>
+        <li><a href="#datasets">Datasets</a></li>
+        <li><a href="#schema">Schema</a></li>
+        <li><a href="https://github.com/royopa/PulseFlat" target="_blank">GitHub</a></li>
+      </ul>
+      <span class="footer-copy">Dados públicos · ANBIMA & B3 · Open-source</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Reveal on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        entry.target.style.transitionDelay = `${i * 0.05}s`;
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Smooth anchor scroll with offset for fixed nav
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        window.scrollTo({ top: target.offsetTop - 80, behavior: 'smooth' });
+      }
+    });
+  });
+</script>
+</body>
+</html>

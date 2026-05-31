@@ -1,4 +1,4 @@
-# 📊 br-financial-data
+# 📊 PulseFlat
 
 Pipeline automatizado de captura diária de dados financeiros brasileiros via **GitHub Actions**.  
 Sem servidor. Sem custo. Histórico versionado em CSV no próprio repositório.
@@ -61,7 +61,7 @@ Categoria (RV/RF), ticker, nome, CNPJ, administrador, gestor, índice de referê
 ## Estrutura do projeto
 
 ```
-br-financial-data/
+PulseFlat/
 ├── .github/
 │   └── workflows/
 │       └── captura_diaria.yml    # Agendamento GitHub Actions
@@ -108,8 +108,8 @@ br-financial-data/
 ## Instalação e uso local
 
 ```bash
-git clone https://github.com/SEU_USUARIO/br-financial-data.git
-cd br-financial-data
+git clone https://github.com/royopa/PulseFlat.git
+cd PulseFlat
 pip install -r requirements.txt
 
 # Todos os scrapers

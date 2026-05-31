@@ -1,0 +1,38 @@
+name: Captura Diária ANBIMA
+
+on:
+  schedule:
+    # 09:30 horário de Brasília (BRT = UTC-3) → 12:30 UTC
+    - cron: "30 12 * * 1-5"   # segunda a sexta
+
+  workflow_dispatch:            # permite rodar manualmente pelo GitHub
+
+jobs:
+  capturar:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write           # necessário para fazer commit do CSV
+
+    steps:
+      - name: Checkout do repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      - name: Instalar dependências
+        run: pip install -r requirements.txt
+
+      - name: Executar captura
+        run: python anbima_indicadores.py
+
+      - name: Commit e push do CSV atualizado
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/indicadores_anbima.csv
+          git diff --cached --quiet || git commit -m "chore: atualiza indicadores ANBIMA $(date +'%Y-%m-%d %H:%M BRT')"
+          git push
