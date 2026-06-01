@@ -33,6 +33,8 @@ SCRAPERS = [
      "descricao": "B3 — Carteiras Teóricas (22 índices)",                           "grupo": "b3"},
     {"id": "b3_boletim_diario",  "modulo": "scrapers.b3_boletim_diario",
      "descricao": "B3 — Boletim Diário (arquivos para download)",                   "grupo": "b3"},
+    {"id": "captura_downloads_migrados", "modulo": "scrapers.captura_downloads_migrados",
+     "descricao": "Migração captura_downloads — conjuntos requests em CSV",          "grupo": "migrados"},
 ]
 
 

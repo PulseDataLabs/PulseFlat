@@ -15,6 +15,7 @@ Sem servidor. Sem custo. Histórico versionado em CSV no próprio repositório.
 | `b3_etfs` | B3 API | JSON + Base64 | `b3_etfs_listados.csv` | Diário |
 | `b3_carteiras` | B3 API | JSON + Base64 | `b3_carteiras_teoricas.csv` | Diário |
 | `b3_boletim_diario` | B3 Boletim Diário | API download + token | `data/b3_boletim_diario/` | Diário |
+| `captura_downloads_migrados` | ANBIMA/BACEN/B3/CVM/Debêntures | Requests + parsing CSV/JSON/ZIP/TXT | `data/*.csv` (16 conjuntos migrados) | Diário |
 
 ---
 
@@ -60,6 +61,27 @@ Categoria (RV/RF), ticker, nome, CNPJ, administrador, gestor, índice de referê
 ### `data/b3_boletim_diario/`
 Arquivos diários do Boletim Diário B3 (CSV/ZIP) baixados via token.  
 Os nomes seguem o retorno da API (ex: `LendingOpenPositionFile_YYYYMMDD_1.csv`).
+
+### `captura_downloads_migrados` (novos CSVs)
+Conjuntos migrados do repositório `captura_downloads` (sem Selenium), todos com `data_captura` e `hora_captura`:
+
+- `anbima_mercado_secundario_debentures.csv`
+- `anbima_mercado_secundario_titulos_publicos.csv`
+- `anbima_ima_completo.csv`
+- `bacen_negociacao_tpf_extragrupo_mes_corrente.csv`
+- `bacen_negociacao_tpf_extragrupo_mes_anterior.csv`
+- `b3_instrumentos_listados.csv`
+- `b3_indicadores_financeiros.csv`
+- `b3_taxa_cambio_referencia.csv`
+- `b3_capital_social_empresas.csv`
+- `debentures_emissoes_caracteristicas.csv`
+- `debentures_mercado_secundario_precos_negociacao.csv`
+- `debentures_mercado_pu_historico.csv`
+- `cvm_cad_fi.csv`
+- `cvm_extrato_fi.csv`
+- `cvm_registro_fundo_classe.csv`
+- `b3_classificacao_setorial.csv`
+- `b3_titulos_negociaveis.csv`
 
 ---
 
@@ -125,6 +147,7 @@ python run_all.py
 # Por grupo
 python run_all.py anbima
 python run_all.py b3
+python run_all.py migrados
 
 # Scraper específico
 python run_all.py anbima_indicadores
@@ -133,6 +156,7 @@ python run_all.py b3_fiis
 python run_all.py b3_etfs
 python run_all.py b3_carteiras
 python run_all.py b3_boletim_diario
+python run_all.py captura_downloads_migrados
 ```
 
 ---
