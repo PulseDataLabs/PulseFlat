@@ -1,5 +1,9 @@
 data_captura,hora_captura,estrategia_coleta,indice,mes_referencia,tipo_projecao,valor_pct,data_divulgacao,num_instituicoes,observacao
-2026-05-31,18:21:09,scraping_indicadores,IGP-M,jun/26,fechado,0.40,,,Var % mês fechado
-2026-05-31,18:21:09,scraping_indicadores,IGP-M,jun/26,corrente,0.40,,,Projeção ANBIMA corrente
-2026-05-31,18:21:09,scraping_indicadores,IPCA,mai/26,fechado,0.50,,,Var % mês fechado
-2026-05-31,18:21:09,scraping_indicadores,IPCA,mai/26,corrente,0.50,,,Projeção ANBIMA corrente
+2026-05-31,19:46:01,scraping_indicadores,IGP-M,jun/26,fechado,0.40,,,Var % mês fechado
+2026-05-31,19:46:01,scraping_indicadores,IGP-M,jun/26,corrente,0.40,,,Projeção ANBIMA corrente
+2026-05-31,19:46:01,scraping_indicadores,IPCA,mai/26,fechado,0.50,,,Var % mês fechado
+2026-05-31,19:46:01,scraping_indicadores,IPCA,mai/26,corrente,0.50,,,Projeção ANBIMA corrente
+2026-06-01,12:17:33,scraping_indicadores,IGP-M,jun/26,fechado,0.40,,,Var % mês fechado
+2026-06-01,12:17:33,scraping_indicadores,IGP-M,jun/26,corrente,0.40,,,Projeção ANBIMA corrente
+2026-06-01,12:17:33,scraping_indicadores,IPCA,mai/26,fechado,0.50,,,Var % mês fechado
+2026-06-01,12:17:33,scraping_indicadores,IPCA,mai/26,corrente,0.50,,,Projeção ANBIMA corrente
