@@ -190,7 +190,7 @@ def _csv_rows(text: str) -> list[dict]:
 
     sample = "\n".join(lines[:40])
     try:
-        dialect = csv.Sniffer().sniff(sample, delimiters=";,|\t,")
+        dialect = csv.Sniffer().sniff(sample, delimiters=";,\t|")
         delim = dialect.delimiter
     except Exception:
         delim = ";" if ";" in lines[0] else ","
