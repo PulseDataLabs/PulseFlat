@@ -3,25 +3,23 @@ name: Executar Automação de Dados Diária
 on:
   schedule:
     # 12:30 UTC corresponde às 09:30 no horário de Brasília (UTC-3)
-    # Minuto: 30
-    # Hora: 12
-    # Dia do mês: * (todos)
-    # Mês: * (todos)
-    # Dia da semana: 1-5 (Segunda a Sexta)
     - cron: '30 12 * * 1-5'
   
-  # Mantém a opção de rodar manualmente pelo painel do GitHub se precisar
+  # Permite execução manual pelo painel do GitHub
   workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
+    # Dá permissão para o token do GitHub Actions fazer alterações no repositório (Push)
+    permissions:
+      contents: write
+
     steps:
     - name: Checkout do código
       uses: actions/checkout@v4
 
-    # Configura o fuso horário da máquina virtual para garantir que logs e execuções internas usem o horário do Brasil
     - name: Configurar Fuso Horário Local
       run: sudo timedatectl set-timezone America/Sao_Paulo
 
@@ -35,5 +33,22 @@ jobs:
         python -m pip install --upgrade pip
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
+    # Executa o script que vai atualizar ou criar os CSVs dentro de ./data
     - name: Executar script de processamento
-      run: python run_all.py
+      run: python main.py
+
+    # Identifica mudanças na pasta data/ e faz o push se houver novos dados
+    - name: Commitar e enviar novas alterações de dados
+      run: |
+        # Configura o Git com o usuário padrão do robô do GitHub
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        
+        # Adiciona apenas as modificações da pasta data
+        git add data/
+        
+        # O "|| echo" evita que o workflow falhe caso o script rode mas não mude nada nos arquivos
+        git commit -m "Bot: Atualização automática de dados [skip ci]" || echo "Nenhuma alteração nos dados hoje."
+        
+        # Envia as alterações de volta para a branch main
+        git push origin main

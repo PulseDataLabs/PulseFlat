@@ -216,3 +216,11 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+
+# Ignorar APENAS os arquivos locais gigantes que passam do limite do GitHub
+data/b3_cotahist_anual.csv
+data/debentures_mercado_pu_historico.csv
+
+# Se o cvm_registro_fundo_classe.csv (56MB) não precisar subir, adicione ele também:
+data/cvm_registro_fundo_classe.csv
