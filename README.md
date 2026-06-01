@@ -16,6 +16,7 @@ Sem servidor. Sem custo. Histórico versionado em CSV no próprio repositório.
 | `b3_carteiras` | B3 API | JSON + Base64 | `b3_carteiras_teoricas.csv` | Diário |
 | `b3_boletim_diario` | B3 Boletim Diário | API download + token | `data/b3_boletim_diario/` | Diário |
 | `captura_downloads_migrados` | ANBIMA/BACEN/B3/CVM/Debêntures | Requests + parsing CSV/JSON/ZIP/TXT | `data/*.csv` (16 conjuntos migrados) | Diário |
+| `brasa_migrados` | brasa (ANBIMA/B3/BCB/CVM) | Requests + parsing CSV/JSON/ZIP/XML/FWF/XLS | `data/*.csv` (15 conjuntos migrados) | Diário |
 
 ---
 
@@ -82,6 +83,25 @@ Conjuntos migrados do repositório `captura_downloads` (sem Selenium), todos com
 - `cvm_registro_fundo_classe.csv`
 - `b3_classificacao_setorial.csv`
 - `b3_titulos_negociaveis.csv`
+
+### `brasa_migrados` (novos CSVs)
+Conjuntos migrados do repositório `brasa` (somente requests, sem Selenium), todos com `data_captura` e `hora_captura`:
+
+- `anbima_indice_imab.csv`
+- `b3_bvbg028.csv`
+- `b3_bvbg086.csv`
+- `b3_bvbg087.csv`
+- `b3_cotahist_diario.csv`
+- `b3_cotahist_anual.csv`
+- `b3_indicadores_economicos_fwf.csv`
+- `b3_negocios_balcao.csv`
+- `bcb_sgs_series.csv`
+- `bcb_moedas_ptax.csv`
+- `cvm_cadastro_companhias_abertas.csv`
+- `b3_indices_precos_historicos.csv`
+- `b3_companhias_detalhes.csv`
+- `b3_companhias_info.csv`
+- `b3_dividendos_dinheiro.csv`
 
 ---
 
@@ -157,6 +177,7 @@ python run_all.py b3_etfs
 python run_all.py b3_carteiras
 python run_all.py b3_boletim_diario
 python run_all.py captura_downloads_migrados
+python run_all.py brasa_migrados
 ```
 
 ---
@@ -191,6 +212,18 @@ cp .env.example .env
 # Edite o .env com suas credenciais
 ```
 O `.env` está no `.gitignore` — nunca será commitado.
+
+---
+
+## Configuração opcional do `brasa_migrados`
+
+Você pode ajustar a janela e o escopo dos conjuntos com variáveis de ambiente:
+
+- `BRASA_BCB_SGS_CODES` (ex: `1,11,12,433`)
+- `BRASA_BCB_SGS_DAYS` (padrão: `45`)
+- `BRASA_BCB_PTAX_MOEDAS` (ex: `USD,EUR`)
+- `BRASA_BCB_PTAX_DAYS` (padrão: `7`)
+- `BRASA_B3_INDICES` (ex: `IBOV,IBRA,IFIX`)
 
 ---
 

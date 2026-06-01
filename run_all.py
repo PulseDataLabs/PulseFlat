@@ -35,6 +35,8 @@ SCRAPERS = [
      "descricao": "B3 — Boletim Diário (arquivos para download)",                   "grupo": "b3"},
     {"id": "captura_downloads_migrados", "modulo": "scrapers.captura_downloads_migrados",
      "descricao": "Migração captura_downloads — conjuntos requests em CSV",          "grupo": "migrados"},
+    {"id": "brasa_migrados", "modulo": "scrapers.brasa_migrados",
+     "descricao": "Migração brasa — conjuntos requests em CSV",                       "grupo": "migrados"},
 ]
 
 
