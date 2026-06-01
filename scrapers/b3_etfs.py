@@ -104,7 +104,7 @@ def _capturar_categoria(session, funds_type: str, label: str,
     todos = list(primeira)
     for p in range(2, n_pag + 1):
         log.info(f"[{label}] Página {p}/{n_pag}...")
-        resultados, _ = _pagina(session, funds_type, p)
+        resultados, *_ = _pagina(session, funds_type, p)
         todos.extend(resultados)
         time.sleep(0.3)
 

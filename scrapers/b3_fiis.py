@@ -99,7 +99,7 @@ def capturar() -> list[dict]:
     todos = list(primeira)
     for p in range(2, n_pag + 1):
         log.info(f"Página {p}/{n_pag}...")
-        resultados, _ = _pagina(session, p)
+        resultados, *_ = _pagina(session, p)
         todos.extend(resultados)
         time.sleep(0.3)
 

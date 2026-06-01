@@ -136,6 +136,61 @@ DATASETS = [
     },
 ]
 
+DATASETS = [
+    {
+        "id": "anbima_mercado_secundario_debentures",
+        "url": "https://www.anbima.com.br/informacoes/merc-sec-debentures/arqs/dbYYMMDD.txt",
+        "tipo": "texto_tabular",
+        "type_date": "dia_anterior",
+        "arquivo": Path("data/anbima_mercado_secundario_debentures.csv"),
+    },
+    {
+        "id": "anbima_mercado_secundario_titulos_publicos",
+        "url": "https://www.anbima.com.br/informacoes/merc-sec/arqs/msYYMMDD.txt",
+        "tipo": "texto_tabular",
+        "type_date": "dia_anterior",
+        "arquivo": Path("data/anbima_mercado_secundario_titulos_publicos.csv"),
+    },
+    {
+        "id": "anbima_ima_completo",
+        "url": "https://www.anbima.com.br/informacoes/ima/arqs/ima_completo.txt",
+        "tipo": "texto_tabular",
+        "arquivo": Path("data/anbima_ima_completo.csv"),
+    },
+    {
+        "id": "bacen_negociacao_tpf_extragrupo_mes_corrente",
+        "url": "https://www4.bcb.gov.br/pom/demab/negociacoes/download/NegEYYYYMM.ZIP",
+        "tipo": "zip_tabular",
+        "type_date": "mes_atual",
+        "arquivo": Path("data/bacen_negociacao_tpf_extragrupo_mes_corrente.csv"),
+    },
+    {
+        "id": "bacen_negociacao_tpf_extragrupo_mes_anterior",
+        "url": "https://www4.bcb.gov.br/pom/demab/negociacoes/download/NegEYYYYMM.ZIP",
+        "tipo": "zip_tabular",
+        "type_date": "mes_anterior",
+        "arquivo": Path("data/bacen_negociacao_tpf_extragrupo_mes_anterior.csv"),
+    },
+    {
+        "id": "b3_indicadores_financeiros",
+        "url": "https://sistemaswebb3-derivativos.b3.com.br/financialIndicatorsProxy/FinancialIndicators/GetFinancialIndicators/eyJsYW5ndWFnZSI6InB0LWJyIn0=",
+        "tipo": "json",
+        "arquivo": Path("data/b3_indicadores_financeiros.csv"),
+    },
+    {
+        "id": "b3_taxa_cambio_referencia",
+        "url": "https://sistemaswebb3-derivativos.b3.com.br/financialIndicatorsProxy/ReferenceExchangeRate/GetReferenceExchangeRate/eyJsYW5ndWFnZSI6InB0LWJyIn0=",
+        "tipo": "json",
+        "arquivo": Path("data/b3_taxa_cambio_referencia.csv"),
+    },
+    {
+        "id": "b3_capital_social_empresas",
+        "url": "https://sistemaswebb3-listados.b3.com.br/shareCapitalProxy/ShareCapitalCall/GetList/eyJuYW1lIjoiIiwicGFnZU51bWJlciI6MSwicGFnZVNpemUiOjEyMH0=",
+        "tipo": "json",
+        "arquivo": Path("data/b3_capital_social_empresas.csv"),
+    }
+]
+
 FIXOS = ["data_captura", "hora_captura", "conjunto", "arquivo_origem", "registro_hash"]
 
 
