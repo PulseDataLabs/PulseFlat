@@ -2,8 +2,19 @@ name: Executar Automação de Dados Diária
 
 on:
   schedule:
-    # 12:30 UTC corresponde às 09:30 no horário de Brasília (UTC-3)
+    # Horários convertidos para UTC (Horário de Brasília + 3 horas)
+    
+    # 06h00, 08h00 e 09h00 de Segunda a Sexta
+    - cron: '0 9,11,12 * * 1-5'
+    
+    # 09h30 de Segunda a Sexta
     - cron: '30 12 * * 1-5'
+    
+    # 18h00 de Segunda a Sexta
+    - cron: '0 21 * * 1-5'
+    
+    # 21h00 e 23h00 de Segunda a Sexta (No UTC vira 00h e 02h de Terça a Sábado)
+    - cron: '0 0,2 * * 2-6'
   
   # Permite execução manual pelo painel do GitHub
   workflow_dispatch:
@@ -26,7 +37,7 @@ jobs:
     - name: Configurar Python
       uses: actions/setup-python@v5
       with:
-        python-version: '3.11'
+        python-version: '3.13'
 
     - name: Instalar dependências
       run: |
