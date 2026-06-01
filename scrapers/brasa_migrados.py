@@ -18,6 +18,7 @@ import os
 import re
 import sys
 import time
+import unicodedata
 import zipfile
 from datetime import datetime, timedelta
 from pathlib import Path
@@ -294,8 +295,18 @@ def _xml_rows(content: bytes) -> list[dict]:
 
 
 def _xls_rows(content: bytes) -> list[dict]:
+    def _norm_sheet_name(name: str) -> str:
+        txt = unicodedata.normalize("NFKD", name)
+        txt = "".join(c for c in txt if not unicodedata.combining(c))
+        return txt.lower()
+
     book = xlrd.open_workbook(file_contents=content)
-    sheet = book.sheet_by_name("Historico") if "Historico" in book.sheet_names() else book.sheet_by_index(0)
+    target = None
+    for name in book.sheet_names():
+        if _norm_sheet_name(name) == "historico":
+            target = name
+            break
+    sheet = book.sheet_by_name(target) if target else book.sheet_by_index(0)
     headers = [_normalize_key(str(sheet.cell_value(0, c))) for c in range(sheet.ncols)]
     rows = []
     for r in range(1, sheet.nrows):
@@ -440,10 +451,16 @@ def _parse_env_str_list(name: str, default: list[str]) -> list[str]:
     return out or default
 
 
+def _parse_env_int(name: str, default: int) -> int:
+    raw = (os.getenv(name) or "").strip()
+    return int(raw) if raw.isdigit() else default
+
+
 def _download_bcb_sgs(session, cfg: dict) -> tuple[list[dict], str]:
     codes = _parse_env_int_list("BRASA_BCB_SGS_CODES", SGS_CODES_DEFAULT)
     end = datetime.now(FUSO).date()
-    start = end - timedelta(days=45)
+    lookback_days = _parse_env_int("BRASA_BCB_SGS_DAYS", 45)
+    start = end - timedelta(days=lookback_days)
     rows = []
     for code in codes:
         url = (
@@ -464,7 +481,8 @@ def _download_bcb_sgs(session, cfg: dict) -> tuple[list[dict], str]:
 def _download_bcb_ptax(session, cfg: dict) -> tuple[list[dict], str]:
     moedas = _parse_env_str_list("BRASA_BCB_PTAX_MOEDAS", PTAX_CURRENCIES_DEFAULT)
     end = datetime.now(FUSO).date()
-    start = end - timedelta(days=7)
+    lookback_days = _parse_env_int("BRASA_BCB_PTAX_DAYS", 7)
+    start = end - timedelta(days=lookback_days)
     rows = []
     for moeda in moedas:
         url = (
@@ -487,24 +505,31 @@ def _download_bcb_ptax(session, cfg: dict) -> tuple[list[dict], str]:
 
 def _b3_get_company_seeds(session) -> list[dict]:
     base = "https://sistemaswebb3-listados.b3.com.br/shareCapitalProxy/ShareCapitalCall/GetList/"
-    payload = {"name": "", "pageNumber": 1, "pageSize": 2000, "language": "pt-br"}
-    url = base + b64_encode_params(payload)
-    resp = session.get(url, timeout=120)
-    resp.raise_for_status()
-    data = resp.json() or {}
-    items = data.get("results") or data.get("result") or data.get("data") or []
     seeds = []
-    for it in items:
-        code_cvm = limpar(it.get("codeCVM") or it.get("codeCvm") or it.get("codCvm"))
-        trading_name = limpar(it.get("companyName") or it.get("tradingName") or it.get("name"))
-        issuing = limpar(it.get("issuingCompany") or it.get("code") or it.get("acronym"))
-        if not issuing and trading_name:
-            issuing = re.sub(r"\W+", "", trading_name.upper())[:5]
-        seeds.append({
-            "codeCVM": code_cvm,
-            "tradingName": trading_name,
-            "issuingCompany": issuing,
-        })
+    page = 1
+    while True:
+        payload = {"name": "", "pageNumber": page, "pageSize": 200, "language": "pt-br"}
+        url = base + b64_encode_params(payload)
+        resp = session.get(url, timeout=120)
+        resp.raise_for_status()
+        data = resp.json() or {}
+        items = data.get("results") or data.get("result") or data.get("data") or []
+        for it in items:
+            code_cvm = limpar(it.get("codeCVM") or it.get("codeCvm") or it.get("codCvm"))
+            trading_name = limpar(it.get("companyName") or it.get("tradingName") or it.get("name"))
+            issuing = limpar(it.get("issuingCompany") or it.get("code") or it.get("acronym"))
+            if not issuing and trading_name:
+                issuing = re.sub(r"\W+", "", trading_name.upper())
+            seeds.append({
+                "codeCVM": code_cvm,
+                "tradingName": trading_name,
+                "issuingCompany": issuing,
+            })
+        total_pages = (data.get("page") or {}).get("totalPages") or 1
+        if page >= int(total_pages):
+            break
+        page += 1
+        time.sleep(0.2)
     uniq = []
     seen = set()
     for s in seeds:

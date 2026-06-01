@@ -215,6 +215,18 @@ O `.env` está no `.gitignore` — nunca será commitado.
 
 ---
 
+## Configuração opcional do `brasa_migrados`
+
+Você pode ajustar a janela e o escopo dos conjuntos com variáveis de ambiente:
+
+- `BRASA_BCB_SGS_CODES` (ex: `1,11,12,433`)
+- `BRASA_BCB_SGS_DAYS` (padrão: `45`)
+- `BRASA_BCB_PTAX_MOEDAS` (ex: `USD,EUR`)
+- `BRASA_BCB_PTAX_DAYS` (padrão: `7`)
+- `BRASA_B3_INDICES` (ex: `IBOV,IBRA,IFIX`)
+
+---
+
 ## Adicionando um novo scraper
 
 1. Crie `scrapers/novo_fonte.py` seguindo o padrão:
