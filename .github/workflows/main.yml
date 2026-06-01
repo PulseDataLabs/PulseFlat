@@ -1,0 +1,39 @@
+name: Executar Automação de Dados Diária
+
+on:
+  schedule:
+    # 12:30 UTC corresponde às 09:30 no horário de Brasília (UTC-3)
+    # Minuto: 30
+    # Hora: 12
+    # Dia do mês: * (todos)
+    # Mês: * (todos)
+    # Dia da semana: 1-5 (Segunda a Sexta)
+    - cron: '30 12 * * 1-5'
+  
+  # Mantém a opção de rodar manualmente pelo painel do GitHub se precisar
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout do código
+      uses: actions/checkout@v4
+
+    # Configura o fuso horário da máquina virtual para garantir que logs e execuções internas usem o horário do Brasil
+    - name: Configurar Fuso Horário Local
+      run: sudo timedatectl set-timezone America/Sao_Paulo
+
+    - name: Configurar Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+
+    - name: Instalar dependências
+      run: |
+        python -m pip install --upgrade pip
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+    - name: Executar script de processamento
+      run: python run_all.py
