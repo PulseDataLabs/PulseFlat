@@ -84,6 +84,7 @@ BANNER = r"""
  ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝   ╚═╝  ╚═╝╚══════╝╚══════╝
 """
 SCRAPERS = [
+    # ── ANBIMA ──────────────────────────────────────────────────────────────────
     {
         "id": "anbima_indicadores",
         "modulo": "scrapers.anbima_indicadores",
@@ -121,6 +122,13 @@ SCRAPERS = [
         "grupo": "anbima",
     },
     {
+        "id": "anbima_indice_imab",
+        "modulo": "scrapers.anbima_indice_imab",
+        "descricao": "ANBIMA — Índice IMA-B Histórico (XLS)",
+        "grupo": "anbima",
+    },
+    # ── BCB ─────────────────────────────────────────────────────────────────────
+    {
         "id": "bcb_ptax",
         "modulo": "scrapers.bcb_ptax",
         "descricao": "BCB — PTAX (cotação USD/BRL compra e venda)",
@@ -133,11 +141,26 @@ SCRAPERS = [
         "grupo": "bcb",
     },
     {
+        "id": "bacen_negociacao_tpf",
+        "modulo": "scrapers.bacen_negociacao_tpf",
+        "descricao": "BCB — Negociação TPF Extra-grupo (ZIP mensal)",
+        "grupo": "bcb",
+    },
+    # ── IBGE ────────────────────────────────────────────────────────────────────
+    {
         "id": "ibge_sidra",
         "modulo": "scrapers.ibge_sidra",
         "descricao": "IBGE — SIDRA (metadados IPCA, IPCA-15, INPC, IPC-Br)",
         "grupo": "ibge",
     },
+    # ── CVM ─────────────────────────────────────────────────────────────────────
+    {
+        "id": "cvm_cadastro_companhias_abertas",
+        "modulo": "scrapers.cvm_cadastro_companhias_abertas",
+        "descricao": "CVM — Cadastro de Companhias Abertas",
+        "grupo": "cvm",
+    },
+    # ── B3 ──────────────────────────────────────────────────────────────────────
     {
         "id": "b3_fiis",
         "modulo": "scrapers.b3_fiis",
@@ -156,18 +179,8 @@ SCRAPERS = [
         "descricao": "B3 — Carteiras Teóricas (22 índices)",
         "grupo": "b3",
     },
-    {
-        "id": "b3_futuros_ajustes",
-        "modulo": "scrapers.b3_futuros_ajustes",
-        "descricao": "B3 — Futuros (ajustes de fechamento do pregão BM&F)",
-        "grupo": "b3",
-    },
-    {
-        "id": "b3_bmf_taxas_juros",
-        "modulo": "scrapers.b3_bmf_taxas_juros",
-        "descricao": "B3 — BM&F Taxas de Juros de Referência (DI, SELIC, Dólar, IPCA…)",
-        "grupo": "b3",
-    },
+    # b3_futuros_ajustes — DESATIVADO: fonte legada (www2.bmf.com.br) descontinuada dez/2025
+    # b3_bmf_taxas_juros — DESATIVADO: BDI API não retorna dados para nenhuma tabela candidata
     {
         "id": "b3_indicadores_financeiros",
         "modulo": "scrapers.b3_indicadores_financeiros",
@@ -180,41 +193,90 @@ SCRAPERS = [
         "descricao": "B3 — BDI DI Over (taxa overnight, volume, fator diário)",
         "grupo": "b3",
     },
+    {
+        "id": "b3_taxa_cambio_referencia",
+        "modulo": "scrapers.b3_taxa_cambio_referencia",
+        "descricao": "B3 — Taxa de Câmbio de Referência",
+        "grupo": "b3",
+    },
+    {
+        "id": "b3_capital_social_empresas",
+        "modulo": "scrapers.b3_capital_social_empresas",
+        "descricao": "B3 — Capital Social de Empresas Listadas",
+        "grupo": "b3",
+    },
+    {
+        "id": "b3_bvbg028",
+        "modulo": "scrapers.b3_bvbg028",
+        "descricao": "B3 — BVBG 028 (Operações com Ações)",
+        "grupo": "b3",
+    },
+    {
+        "id": "b3_bvbg086",
+        "modulo": "scrapers.b3_bvbg086",
+        "descricao": "B3 — BVBG 086 (Operações com Renda Fixa)",
+        "grupo": "b3",
+    },
+    {
+        "id": "b3_bvbg087",
+        "modulo": "scrapers.b3_bvbg087",
+        "descricao": "B3 — BVBG 087 (Operações com Derivativos)",
+        "grupo": "b3",
+    },
+    # b3_cotahist_diario — DESATIVADO
     # {
-    #    "id": "b3_bdi_trades_acoes",
-    #    "modulo": "scrapers.b3_bdi_trades_acoes",
-    #    "descricao": "B3 — BDI Trades Consolidados de Ações (OHLC, volume, oscilação)",
-    #    "grupo": "b3",
+    #     "id": "b3_cotahist_diario",
+    #     "modulo": "scrapers.b3_cotahist_diario",
+    #     "descricao": "B3 — COTAHIST Diário (cotações FWF)",
+    #     "grupo": "b3",
     # },
+    # b3_cotahist_anual — DESATIVADO
     # {
-    #     "id": "b3_boletim_diario",
-    #     "modulo": "scrapers.b3_boletim_diario",
-    #     "descricao": "B3 — Boletim Diário (arquivos para download)",
-    #     "grupo": "b3"
+    #     "id": "b3_cotahist_anual",
+    #     "modulo": "scrapers.b3_cotahist_anual",
+    #     "descricao": "B3 — COTAHIST Anual (cotações FWF)",
+    #     "grupo": "b3",
     # },
+    # b3_indicadores_economicos_fwf — DESATIVADO
     # {
-    #    "id": "cvm_fundos_cadastro",
-    #    "modulo": "scrapers.cvm_fundos_cadastro",
-    #    "descricao": "CVM — Cadastro de Fundos (cad_fi.csv)",
-    #    "grupo": "cvm",
+    #     "id": "b3_indicadores_economicos_fwf",
+    #     "modulo": "scrapers.b3_indicadores_economicos_fwf",
+    #     "descricao": "B3 — Indicadores Econômicos (FWF)",
+    #     "grupo": "b3",
     # },
+    # b3_negocios_balcao — DESATIVADO
     # {
-    #    "id": "cvm_fundos_informe_diario",
-    #    "modulo": "scrapers.cvm_fundos_informe_diario",
-    #    "descricao": "CVM — Informe Diário de Fundos (cota, PL, captação, resgates)",
-    #    "grupo": "cvm",
+    #     "id": "b3_negocios_balcao",
+    #     "modulo": "scrapers.b3_negocios_balcao",
+    #     "descricao": "B3 — Negócios de Balcão OTC",
+    #     "grupo": "b3",
     # },
     {
-        "id": "captura_downloads_migrados",
-        "modulo": "scrapers.captura_downloads_migrados",
-        "descricao": "Migração captura_downloads — conjuntos requests em CSV",
-        "grupo": "migrados",
+        "id": "b3_indices_precos_historicos",
+        "modulo": "scrapers.b3_indices_precos_historicos",
+        "descricao": "B3 — Índices de Preços Históricos",
+        "grupo": "b3",
     },
+    # b3_companhias_detalhes — DESATIVADO
     # {
-    #     "id": "brasa_migrados",
-    #     "modulo": "scrapers.brasa_migrados",
-    #     "descricao": "Migração brasa — conjuntos requests em CSV",
-    #     "grupo": "migrados"
+    #     "id": "b3_companhias_detalhes",
+    #     "modulo": "scrapers.b3_companhias_detalhes",
+    #     "descricao": "B3 — Detalhes de Companhias Listadas",
+    #     "grupo": "b3",
+    # },
+    # b3_companhias_info — DESATIVADO
+    # {
+    #     "id": "b3_companhias_info",
+    #     "modulo": "scrapers.b3_companhias_info",
+    #     "descricao": "B3 — Informações Complementares de Companhias",
+    #     "grupo": "b3",
+    # },
+    # b3_dividendos_dinheiro — DESATIVADO
+    # {
+    #     "id": "b3_dividendos_dinheiro",
+    #     "modulo": "scrapers.b3_dividendos_dinheiro",
+    #     "descricao": "B3 — Dividendos em Dinheiro",
+    #     "grupo": "b3",
     # },
 ]
 
@@ -224,16 +286,20 @@ SCRAPERS = [
 def _grupo_cor(grupo: str) -> str:
     return {
         "anbima":   "bright_yellow",
+        "bcb":      "bright_green",
+        "ibge":     "bright_magenta",
+        "cvm":      "bright_cyan",
         "b3":       "bright_blue",
-        "migrados": "bright_magenta",
     }.get(grupo, "white")
 
 
 def _grupo_icone(grupo: str) -> str:
     return {
         "anbima":   "◈",
+        "bcb":      "◆",
+        "ibge":     "⬡",
+        "cvm":      "⬢",
         "b3":       "◉",
-        "migrados": "◆",
     }.get(grupo, "●")
 
 

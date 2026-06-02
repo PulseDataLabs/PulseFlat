@@ -1,9 +1,13 @@
 """
 scrapers/b3_futuros_ajustes.py
 -------------------------------
-Ajustes de fechamento de contratos futuros (pregão) da B3/BM&F.
+⚠ DESATIVADO — A fonte legada (www2.bmf.com.br) foi descontinuada pela B3 em
+dez/2025. Os dados de ajustes de futuros não estão disponíveis em API pública
+conhecida. Mantido apenas como referência.
 
-Fonte: https://www2.bmf.com.br/pages/portal/bmfbovespa/lumis/lum-ajustes-do-pregao-ptBR.asp
+Ajustes de fechamento de contratos futuros (pregão) da B3/BM&F (fonte legada).
+
+Fonte: https://www2.bmf.com.br/pages/portal/bmfbovespa/lumis/lum-ajustes-do-pregao-ptBR.asp (OFFLINE)
 Campos: mercadoria, vencimento, preco_ajuste_anterior,
         preco_ajuste_atual, variacao, valor_ajuste_por_contrato_brl
 """
@@ -82,7 +86,20 @@ def capturar() -> list[dict]:
                 sys.exit(1)
             time.sleep(5)
 
-    tree = html.fromstring(resp.content)
+    if not resp.content.strip():
+        log.error(
+            "Fonte legada descontinuada (www2.bmf.com.br). "
+            "A página de ajustes de futuros não está mais disponível. "
+            "Desative este scraper em run_all.py."
+        )
+        sys.exit(1)
+
+    try:
+        tree = html.fromstring(resp.content)
+    except Exception:
+        log.error("HTML inválido da fonte legada (www2.bmf.com.br).")
+        sys.exit(1)
+
     xpath_td = '//*[@id="tblDadosAjustes"]/tbody/tr/td'
     celulas = tree.xpath(xpath_td)
 

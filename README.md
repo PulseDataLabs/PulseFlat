@@ -17,6 +17,7 @@ Sem servidor. Sem custo. Histórico versionado em CSV no próprio repositório.
 | `anbima_debentures` | ANBIMA | TXT delimitado (@) | `anbima_debentures.csv` |
 | `anbima_ima` | ANBIMA | TXT delimitado | `anbima_ima.csv` |
 | `anbima_550` | ANBIMA | TXT (Resolução 550) | `anbima_550.csv` |
+| `anbima_indice_imab` | ANBIMA | XLS histórico | `anbima_indice_imab.csv` |
 
 ### Grupo BCB
 
@@ -24,12 +25,19 @@ Sem servidor. Sem custo. Histórico versionado em CSV no próprio repositório.
 |---|---|---|---|
 | `bcb_ptax` | BCB | API REST (Olinda) | `bcb_ptax.csv` |
 | `bcb_sgs` | BCB | API REST (SGS) | `bcb_sgs.csv` |
+| `bacen_negociacao_tpf` | BCB | ZIP + CSV (DEMAB) | `bacen_negociacao_tpf_extragrupo_mes_corrente.csv`, `..._mes_anterior.csv` |
 
 ### Grupo IBGE
 
 | Scraper | Fonte | Método | CSV(s) gerado(s) |
 |---|---|---|---|
 | `ibge_sidra` | IBGE | API REST (SIDRA) | `ibge_sidra.csv` |
+
+### Grupo CVM
+
+| Scraper | Fonte | Método | CSV(s) gerado(s) |
+|---|---|---|---|
+| `cvm_cadastro_companhias_abertas` | CVM | CSV direto | `cvm_cadastro_companhias_abertas.csv` |
 
 ### Grupo B3
 
@@ -38,16 +46,16 @@ Sem servidor. Sem custo. Histórico versionado em CSV no próprio repositório.
 | `b3_fiis` | B3 | API JSON + Base64 | `b3_fiis_listados.csv` |
 | `b3_etfs` | B3 | API JSON + Base64 | `b3_etfs_listados.csv` |
 | `b3_carteiras` | B3 | API JSON + Base64 | `b3_carteiras_teoricas.csv` |
-| `b3_futuros_ajustes` | B3 | Scraping HTML | `b3_futuros_ajustes.csv` |
-| `b3_bmf_taxas_juros` | B3 | API (BDI / Hub de Dados) | `b3_bmf_taxas_juros.csv` |
 | `b3_indicadores_financeiros` | B3 | API JSON + Base64 | `b3_indicadores_financeiros.csv` |
 | `b3_bdi_di_over` | B3 | API POST (BDI) | `b3_bdi_di_over.csv` |
+| `b3_taxa_cambio_referencia` | B3 | API JSON + Base64 | `b3_taxa_cambio_referencia.csv` |
+| `b3_capital_social_empresas` | B3 | API JSON + Base64 | `b3_capital_social_empresas.csv` |
+| `b3_bvbg028` | B3 | ZIP + CSV (BVBG) | `b3_bvbg028.csv` |
+| `b3_bvbg086` | B3 | ZIP + CSV (BVBG) | `b3_bvbg086.csv` |
+| `b3_bvbg087` | B3 | ZIP + CSV (BVBG) | `b3_bvbg087.csv` |
+| `b3_indices_precos_historicos` | B3 | API JSON + Base64 | `b3_indices_precos_historicos.csv` |
 
-### Grupo Migrados
-
-| Scraper | Fonte | Método | CSV(s) gerado(s) |
-|---|---|---|---|
-| `captura_downloads_migrados` | ANBIMA / BCB / B3 | Requests + parsing CSV/ZIP/JSON/TXT | `anbima_ima_completo.csv`, `bacen_negociacao_tpf_extragrupo_mes_anterior.csv`, `b3_capital_social_empresas.csv`, `b3_taxa_cambio_referencia.csv` e outros |
+**Desativados:** `b3_cotahist_diario`, `b3_cotahist_anual`, `b3_indicadores_economicos_fwf`, `b3_negocios_balcao`, `b3_companhias_detalhes`, `b3_companhias_info`, `b3_dividendos_dinheiro`, `b3_futuros_ajustes` (fonte legada descontinuada), `b3_bmf_taxas_juros` (API BDI sem dados).
 
 ---
 
@@ -154,7 +162,7 @@ Sem servidor. Sem custo. Histórico versionado em CSV no próprio repositório.
 | periodo_referencia | Período de referência |
 | data_modificacao | Data da última modificação |
 
-**Tabelas:** 1737 (IPCA), 3065 (IPCA-15), 1621 (INPC), 3066 (IPC-Br).
+**Tabelas:** 1737 (IPCA), 3065 (IPCA-15), 1621 (INPC).
 
 ### `b3_fiis_listados.csv`
 Ticker, nome, CNPJ, administrador, segmento, tipo, mandato, prazo, gestão, cotistas, patrimônio líquido.
@@ -167,26 +175,8 @@ Categoria (RV/RF), ticker, nome, CNPJ, administrador, gestor, índice de referê
 
 **Índices:** IBOV, IBRA, IBrX 100, IBrX 50, IGC, ITAG, MLCX, SMLL, IVBX, IDIV, IFIX, IFNC, ICON, IEEX, IMAT, IMOB, INDX, UTIL, IGCT, IGNM, ISE, ICO2
 
-### `b3_futuros_ajustes.csv`
-| Campo | Descrição |
-|---|---|
-| data_captura / hora_captura | Data e hora da execução (BRT) |
-| data_referencia | Data de referência dos ajustes |
-| mercadoria | Código da mercadoria/contrato futuro |
-| vencimento | Mês/ano de vencimento |
-| preco_ajuste_anterior / preco_ajuste_atual | Preços de ajuste |
-| variacao | Variação percentual |
-| valor_ajuste_por_contrato_brl | Ajuste por contrato (R$) |
-
-### `b3_bmf_taxas_juros.csv`
-| Campo | Descrição |
-|---|---|
-| data_captura / hora_captura | Data e hora da execução (BRT) |
-| tabela_origem | Tabela de origem no BDI |
-| data_referencia | Data de referência |
-| curva | Nome da curva (DI x Pré, Cupom Cambial, etc.) |
-| prazo_dias | Prazo em dias úteis |
-| taxa | Taxa (% a.a.) |
+<!-- ### `b3_futuros_ajustes.csv` — DESATIVADO: fonte legada descontinuada dez/2025 -->
+<!-- ### `b3_bmf_taxas_juros.csv` — DESATIVADO: API BDI sem dados -->
 
 ### `b3_indicadores_financeiros.csv`
 | Campo | Descrição |
@@ -209,14 +199,86 @@ Categoria (RV/RF), ticker, nome, CNPJ, administrador, gestor, índice de referê
 | daily_factor | Fator diário |
 | selic_rate | Taxa SELIC no período |
 
-### `captura_downloads_migrados` (novos CSVs)
-Conjuntos migrados do repositório `captura_downloads` (sem Selenium), todos com `data_captura` e `hora_captura`:
+### `bacen_negociacao_tpf_extragrupo_mes_corrente.csv` / `..._mes_anterior.csv`
+| Campo | Descrição |
+|---|---|
+| data_captura / hora_captura | Data e hora da execução (BRT) |
+| data_negocio | Data de negociação |
+| titulo | Código do título público |
+| tipo_operacao | Tipo de operação (Compra, Venda) |
+| quantidade | Quantidade negociada |
+| preco | Preço de negociação |
+| valor | Valor financeiro da operação |
 
-- `anbima_ima_completo.csv`
-- `bacen_negociacao_tpf_extragrupo_mes_anterior.csv`
-- `b3_indicadores_financeiros.csv`
-- `b3_taxa_cambio_referencia.csv`
-- `b3_capital_social_empresas.csv`
+### `b3_taxa_cambio_referencia.csv`
+| Campo | Descrição |
+|---|---|
+| data_captura / hora_captura | Data e hora da execução (BRT) |
+| codigo_moeda | Código da moeda (ex: USD) |
+| taxa_compra | Taxa de câmbio de compra (R$) |
+| taxa_venda | Taxa de câmbio de venda (R$) |
+
+### `b3_capital_social_empresas.csv`
+| Campo | Descrição |
+|---|---|
+| data_captura / hora_captura | Data e hora da execução (BRT) |
+| cnpj | CNPJ da empresa |
+| empresa | Nome da empresa |
+| capital_social | Valor do capital social (R$) |
+| data_capital | Data de referência do capital social |
+
+### `anbima_indice_imab.csv`
+| Campo | Descrição |
+|---|---|
+| data_captura / hora_captura | Data e hora da execução (BRT) |
+| data | Data de referência |
+| indice | Nome do índice (IMA-B, IMA-B5, etc.) |
+| numero | Número do índice |
+| variacao | Variação percentual |
+
+### `b3_bvbg028.csv`, `b3_bvbg086.csv`, `b3_bvbg087.csv`
+Boletins diários de operações da B3 (Ações, RF, Derivativos) — arquivos BVBG.
+
+| Campo | Descrição |
+|---|---|
+| data_captura / hora_captura | Data e hora da execução (BRT) |
+| data_pregão | Data do pregão |
+| codigo | Código do ativo |
+| quantidade | Quantidade negociada |
+| preco | Preço de negociação |
+| tipo | Tipo de operação |
+
+<!-- ### `b3_cotahist_diario.csv` / `b3_cotahist_anual.csv` — DESATIVADOS -->
+<!-- ### `b3_indicadores_economicos_fwf.csv` — DESATIVADO -->
+<!-- ### `b3_negocios_balcao.csv` — DESATIVADO -->
+
+### `cvm_cadastro_companhias_abertas.csv`
+Cadastro de companhias abertas registradas na CVM.
+
+| Campo | Descrição |
+|---|---|
+| data_captura / hora_captura | Data e hora da execução (BRT) |
+| cnpj | CNPJ da companhia |
+| denominação_social | Razão social |
+| nome_de_pregao | Nome de pregão |
+| codigo_cvm | Código CVM |
+| situacao | Situação cadastral |
+
+### `b3_indices_precos_historicos.csv`
+Histórico de composição e preços de índices da B3.
+
+| Campo | Descrição |
+|---|---|
+| data_captura / hora_captura | Data e hora da execução (BRT) |
+| indice | Código do índice (IBOV, IBRA, IFIX, etc.) |
+| ano | Ano de referência |
+| ticker | Ticker do ativo |
+| peso | Peso no índice (%) |
+| quantidade_teorica | Quantidade teórica |
+
+<!-- ### `b3_companhias_detalhes.csv` — DESATIVADO -->
+<!-- ### `b3_companhias_info.csv` — DESATIVADO -->
+<!-- ### `b3_dividendos_dinheiro.csv` — DESATIVADO -->
 
 ---
 
@@ -235,15 +297,24 @@ PulseFlat/
 │   ├── anbima_debentures.csv
 │   ├── anbima_ima.csv
 │   ├── anbima_550.csv
+│   ├── anbima_indice_imab.csv
 │   ├── bcb_ptax.csv
 │   ├── bcb_sgs.csv
+│   ├── bacen_negociacao_tpf_extragrupo_mes_corrente.csv
+│   ├── bacen_negociacao_tpf_extragrupo_mes_anterior.csv
 │   ├── ibge_sidra.csv
+│   ├── cvm_cadastro_companhias_abertas.csv
 │   ├── b3_fiis_listados.csv
 │   ├── b3_etfs_listados.csv
 │   ├── b3_carteiras_teoricas.csv
 │   ├── b3_indicadores_financeiros.csv
 │   ├── b3_bdi_di_over.csv
-│   └── anbima_ima_completo.csv
+│   ├── b3_taxa_cambio_referencia.csv
+│   ├── b3_capital_social_empresas.csv
+│   ├── b3_bvbg028.csv
+│   ├── b3_bvbg086.csv
+│   ├── b3_bvbg087.csv
+│   ├── b3_indices_precos_historicos.csv
 ├── scrapers/
 │   ├── __init__.py
 │   ├── anbima_indicadores.py
@@ -252,20 +323,28 @@ PulseFlat/
 │   ├── anbima_debentures.py
 │   ├── anbima_ima.py
 │   ├── anbima_550.py
+│   ├── anbima_indice_imab.py
 │   ├── bcb_ptax.py
 │   ├── bcb_sgs.py
+│   ├── bacen_negociacao_tpf.py
 │   ├── ibge_sidra.py
+│   ├── cvm_cadastro_companhias_abertas.py
 │   ├── b3_fiis.py
 │   ├── b3_etfs.py
 │   ├── b3_carteiras.py
-│   ├── b3_futuros_ajustes.py
-│   ├── b3_bmf_taxas_juros.py
 │   ├── b3_indicadores_financeiros.py
 │   ├── b3_bdi_di_over.py
-│   └── captura_downloads_migrados.py
+│   ├── b3_taxa_cambio_referencia.py
+│   ├── b3_capital_social_empresas.py
+│   ├── b3_bvbg028.py
+│   ├── b3_bvbg086.py
+│   ├── b3_bvbg087.py
+│   ├── b3_indices_precos_historicos.py
 ├── utils/
 │   ├── __init__.py
-│   └── base.py                      # Utilitários compartilhados
+│   ├── base.py                      # Utilitários compartilhados
+│   ├── parsers.py                   # Parsing de CSV, JSON, ZIP, XLS, FWF, XML
+│   └── b3_helpers.py                # Helpers específicos B3 (company seeds)
 ├── tests/
 │   ├── __init__.py
 │   └── test_utils.py
@@ -312,8 +391,8 @@ python run_all.py
 python run_all.py anbima
 python run_all.py bcb
 python run_all.py ibge
+python run_all.py cvm
 python run_all.py b3
-python run_all.py migrados
 
 # Scraper específico
 python run_all.py anbima_indicadores
@@ -322,17 +401,23 @@ python run_all.py anbima_titulos_publicos
 python run_all.py anbima_debentures
 python run_all.py anbima_ima
 python run_all.py anbima_550
+python run_all.py anbima_indice_imab
 python run_all.py bcb_ptax
 python run_all.py bcb_sgs
+python run_all.py bacen_negociacao_tpf
 python run_all.py ibge_sidra
+python run_all.py cvm_cadastro_companhias_abertas
 python run_all.py b3_fiis
 python run_all.py b3_etfs
 python run_all.py b3_carteiras
-python run_all.py b3_futuros_ajustes
-python run_all.py b3_bmf_taxas_juros
 python run_all.py b3_indicadores_financeiros
 python run_all.py b3_bdi_di_over
-python run_all.py captura_downloads_migrados
+python run_all.py b3_taxa_cambio_referencia
+python run_all.py b3_capital_social_empresas
+python run_all.py b3_bvbg028
+python run_all.py b3_bvbg086
+python run_all.py b3_bvbg087
+python run_all.py b3_indices_precos_historicos
 ```
 
 ---
@@ -406,6 +491,8 @@ if __name__ == "__main__":
 | BCB PTAX | https://www.bcb.gov.br/estatisticas/fechamento_cambio |
 | BCB SGS | https://www.bcb.gov.br/estatisticas |
 | IBGE SIDRA | https://sidra.ibge.gov.br/ |
+| CVM Dados Abertos | https://dados.cvm.gov.br/dados/CIA_ABERTA/CAD/DADOS/ |
 | B3 FIIs | https://www.b3.com.br/pt_br/produtos-e-servicos/negociacao/renda-variavel/fundos-de-investimento-imobiliario-fiis/ |
 | B3 ETFs | https://www.b3.com.br/pt_br/produtos-e-servicos/negociacao/renda-variavel/etfs/ |
 | B3 Índices | https://www.b3.com.br/pt_br/market-data-e-indices/indices/ |
+| B3 BVBG | https://www.b3.com.br/pesquisapregao/ |

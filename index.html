@@ -535,6 +535,7 @@
     .tag-bcb    { background: rgba(0,229,160,0.1);   color: var(--green); border: 1px solid rgba(0,229,160,0.15); }
     .tag-ibge   { background: rgba(187,134,252,0.1); color: #bb86fc; border: 1px solid rgba(187,134,252,0.2); }
     .tag-migrados{ background: rgba(240,180,41,0.08); color: var(--gold2); border: 1px solid rgba(240,180,41,0.15); }
+    .tag-cvm    { background: rgba(0,212,255,0.1);  color: var(--accent2); border: 1px solid rgba(0,212,255,0.15); }
 
     /* ── DATASETS ───────────────────────────────────────── */
     .datasets-section {
@@ -1026,7 +1027,7 @@
 <!-- STATS STRIP -->
 <div class="hero-stats reveal">
   <div class="stat-item">
-    <span class="stat-value">18</span>
+    <span class="stat-value">25</span>
     <span class="stat-label">CSVs gerados</span>
   </div>
   <div class="stat-item">
@@ -1034,7 +1035,7 @@
     <span class="stat-label">Índices B3 monitorados</span>
   </div>
   <div class="stat-item">
-    <span class="stat-value">5</span>
+    <span class="stat-value">6</span>
     <span class="stat-label">Fontes de dados</span>
   </div>
   <div class="stat-item">
@@ -1100,42 +1101,63 @@
           <span class="schedule-time">06h00</span>
           <span class="schedule-name">Pipeline completo</span>
           <span class="schedule-tag tag-anbima">ANBIMA</span>
+          <span class="schedule-tag tag-bcb">BCB</span>
+          <span class="schedule-tag tag-ibge">IBGE</span>
+          <span class="schedule-tag tag-cvm">CVM</span>
           <span class="schedule-tag tag-b3">B3</span>
         </div>
         <div class="schedule-row">
           <span class="schedule-time">08h00</span>
           <span class="schedule-name">Pipeline completo</span>
           <span class="schedule-tag tag-anbima">ANBIMA</span>
+          <span class="schedule-tag tag-bcb">BCB</span>
+          <span class="schedule-tag tag-ibge">IBGE</span>
+          <span class="schedule-tag tag-cvm">CVM</span>
           <span class="schedule-tag tag-b3">B3</span>
         </div>
         <div class="schedule-row">
           <span class="schedule-time">09h00</span>
           <span class="schedule-name">Pipeline completo</span>
           <span class="schedule-tag tag-anbima">ANBIMA</span>
+          <span class="schedule-tag tag-bcb">BCB</span>
+          <span class="schedule-tag tag-ibge">IBGE</span>
+          <span class="schedule-tag tag-cvm">CVM</span>
           <span class="schedule-tag tag-b3">B3</span>
         </div>
         <div class="schedule-row">
           <span class="schedule-time">09h30</span>
           <span class="schedule-name">Pipeline completo</span>
           <span class="schedule-tag tag-anbima">ANBIMA</span>
+          <span class="schedule-tag tag-bcb">BCB</span>
+          <span class="schedule-tag tag-ibge">IBGE</span>
+          <span class="schedule-tag tag-cvm">CVM</span>
           <span class="schedule-tag tag-b3">B3</span>
         </div>
         <div class="schedule-row">
           <span class="schedule-time">18h00</span>
           <span class="schedule-name">Pipeline completo</span>
           <span class="schedule-tag tag-anbima">ANBIMA</span>
+          <span class="schedule-tag tag-bcb">BCB</span>
+          <span class="schedule-tag tag-ibge">IBGE</span>
+          <span class="schedule-tag tag-cvm">CVM</span>
           <span class="schedule-tag tag-b3">B3</span>
         </div>
         <div class="schedule-row">
           <span class="schedule-time">21h00</span>
           <span class="schedule-name">Fechamento</span>
           <span class="schedule-tag tag-anbima">ANBIMA</span>
+          <span class="schedule-tag tag-bcb">BCB</span>
+          <span class="schedule-tag tag-ibge">IBGE</span>
+          <span class="schedule-tag tag-cvm">CVM</span>
           <span class="schedule-tag tag-b3">B3</span>
         </div>
         <div class="schedule-row">
           <span class="schedule-time">23h00</span>
           <span class="schedule-name">Fechamento</span>
           <span class="schedule-tag tag-anbima">ANBIMA</span>
+          <span class="schedule-tag tag-bcb">BCB</span>
+          <span class="schedule-tag tag-ibge">IBGE</span>
+          <span class="schedule-tag tag-cvm">CVM</span>
           <span class="schedule-tag tag-b3">B3</span>
         </div>
       </div>
@@ -1496,13 +1518,13 @@
         <div class="card-title">IBGE SIDRA — Metadados</div>
         <div class="card-file">ibge_sidra.csv</div>
         <div class="card-desc">
-          Metadados das tabelas do IBGE SIDRA: IPCA, IPCA-15, INPC e IPC-Br — períodos disponíveis e datas de modificação.
+          Metadados das tabelas do IBGE SIDRA: IPCA, IPCA-15 e INPC — períodos disponíveis e datas de modificação.
         </div>
         <div class="card-fields">
           <span class="field-tag">ipca</span>
           <span class="field-tag">ipca-15</span>
           <span class="field-tag">inpc</span>
-          <span class="field-tag">ipc-br</span>
+
         </div>
         <div class="card-footer">
           <span class="card-source">Fonte: IBGE · SIDRA</span>
@@ -1513,57 +1535,7 @@
         </div>
       </div>
 
-      <!-- B3 Futuros Ajustes -->
-      <div class="dataset-card b3-card">
-        <div class="card-top">
-          <div class="card-icon icon-b3">📉</div>
-          <span class="card-badge badge-daily">Diário</span>
-        </div>
-        <div class="card-title">B3 Futuros — Ajustes</div>
-        <div class="card-file">b3_futuros_ajustes.csv</div>
-        <div class="card-desc">
-          Ajustes de fechamento de contratos futuros BM&F: preço de ajuste anterior e atual, variação e valor por contrato.
-        </div>
-        <div class="card-fields">
-          <span class="field-tag">contrato futuro</span>
-          <span class="field-tag">preço ajuste</span>
-          <span class="field-tag">variação</span>
-          <span class="field-tag">mercadoria</span>
-        </div>
-        <div class="card-footer">
-          <span class="card-source">Fonte: B3 BM&F</span>
-          <a href="https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_futuros_ajustes.csv" class="download-btn" target="_blank">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
-            Download CSV
-          </a>
-        </div>
-      </div>
-
-      <!-- B3 BM&F Taxas de Juros -->
-      <div class="dataset-card b3-card">
-        <div class="card-top">
-          <div class="card-icon icon-b3">💰</div>
-          <span class="card-badge badge-daily">Diário</span>
-        </div>
-        <div class="card-title">B3 BM&F — Taxas de Juros</div>
-        <div class="card-file">b3_bmf_taxas_juros.csv</div>
-        <div class="card-desc">
-          Taxas de referência BM&F para swaps: curvas DI x Pré, Cupom Cambial, IPCA e SELIC com prazos em dias úteis.
-        </div>
-        <div class="card-fields">
-          <span class="field-tag">di x pré</span>
-          <span class="field-tag">cupom cambial</span>
-          <span class="field-tag">ipca</span>
-          <span class="field-tag">prazo</span>
-        </div>
-        <div class="card-footer">
-          <span class="card-source">Fonte: B3 · BDI</span>
-          <a href="https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_bmf_taxas_juros.csv" class="download-btn" target="_blank">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
-            Download CSV
-          </a>
-        </div>
-      </div>
+      
 
       <!-- B3 Indicadores Financeiros -->
       <div class="dataset-card b3-card">
@@ -1617,6 +1589,237 @@
           </a>
         </div>
       </div>
+
+      <!-- B3 Taxa Câmbio Referência -->
+      <div class="dataset-card b3-card">
+        <div class="card-top">
+          <div class="card-icon icon-b3">💱</div>
+          <span class="card-badge badge-daily">Diário</span>
+        </div>
+        <div class="card-title">B3 — Taxa de Câmbio de Referência</div>
+        <div class="card-file">b3_taxa_cambio_referencia.csv</div>
+        <div class="card-desc">
+          Taxas de câmbio de referência divulgadas pela B3: compra e venda por moeda.
+        </div>
+        <div class="card-fields">
+          <span class="field-tag">câmbio</span>
+          <span class="field-tag">taxa compra</span>
+          <span class="field-tag">taxa venda</span>
+          <span class="field-tag">moeda</span>
+        </div>
+        <div class="card-footer">
+          <span class="card-source">Fonte: B3 API</span>
+          <a href="https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_taxa_cambio_referencia.csv" class="download-btn" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            Download CSV
+          </a>
+        </div>
+      </div>
+
+      <!-- B3 Capital Social -->
+      <div class="dataset-card b3-card">
+        <div class="card-top">
+          <div class="card-icon icon-b3">🏢</div>
+          <span class="card-badge badge-daily">Diário</span>
+        </div>
+        <div class="card-title">B3 — Capital Social de Empresas</div>
+        <div class="card-file">b3_capital_social_empresas.csv</div>
+        <div class="card-desc">
+          Capital social de empresas listadas na B3: CNPJ, valor do capital e data de referência.
+        </div>
+        <div class="card-fields">
+          <span class="field-tag">cnpj</span>
+          <span class="field-tag">empresa</span>
+          <span class="field-tag">capital social</span>
+        </div>
+        <div class="card-footer">
+          <span class="card-source">Fonte: B3 API</span>
+          <a href="https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_capital_social_empresas.csv" class="download-btn" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            Download CSV
+          </a>
+        </div>
+      </div>
+
+      <!-- BCB Negociação TPF -->
+      <div class="dataset-card">
+        <div class="card-top">
+          <div class="card-icon icon-bcb">📋</div>
+          <span class="card-badge badge-daily">Diário</span>
+        </div>
+        <div class="card-title">BCB — Negociação TPF Extra-grupo</div>
+        <div class="card-file">bacen_negociacao_tpf_extragrupo_mes_corrente.csv</div>
+        <div class="card-desc">
+          Operações de compra e venda de Títulos Públicos Federais extra-grupo realizadas no mercado aberto (BCB/DEMAB).
+        </div>
+        <div class="card-fields">
+          <span class="field-tag">título público</span>
+          <span class="field-tag">compra/venda</span>
+          <span class="field-tag">quantidade</span>
+          <span class="field-tag">preço</span>
+        </div>
+        <div class="card-footer">
+          <span class="card-source">Fonte: BCB · DEMAB</span>
+          <a href="https://raw.githubusercontent.com/royopa/PulseFlat/main/data/bacen_negociacao_tpf_extragrupo_mes_anterior.csv" class="download-btn" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            Download CSV
+          </a>
+        </div>
+      </div>
+
+      <!-- ANBIMA IMA-B -->
+      <div class="dataset-card anbima-card">
+        <div class="card-top">
+          <div class="card-icon icon-anbima">📈</div>
+          <span class="card-badge badge-daily">Diário</span>
+        </div>
+        <div class="card-title">ANBIMA — Índice IMA-B</div>
+        <div class="card-file">anbima_indice_imab.csv</div>
+        <div class="card-desc">
+          Histórico completo do IMA-B (Índice de Mercado ANBIMA), incluindo subíndices como IMA-B5, IMA-B5+, IMA-C e IMA-S.
+        </div>
+        <div class="card-fields">
+          <span class="field-tag">ima-b</span>
+          <span class="field-tag">índice</span>
+          <span class="field-tag">rentabilidade</span>
+        </div>
+        <div class="card-footer">
+          <span class="card-source">Fonte: ANBIMA · S3</span>
+          <a href="https://raw.githubusercontent.com/royopa/PulseFlat/main/data/anbima_indice_imab.csv" class="download-btn" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            Download CSV
+          </a>
+        </div>
+      </div>
+
+      <!-- CVM Companhias Abertas -->
+      <div class="dataset-card">
+        <div class="card-top">
+          <div class="card-icon">🏛️</div>
+          <span class="card-badge badge-daily">Diário</span>
+        </div>
+        <div class="card-title">CVM — Cadastro de Companhias Abertas</div>
+        <div class="card-file">cvm_cadastro_companhias_abertas.csv</div>
+        <div class="card-desc">
+          Cadastro completo de companhias abertas registradas na CVM: CNPJ, razão social, nome de pregão, situação cadastral e código CVM.
+        </div>
+        <div class="card-fields">
+          <span class="field-tag">cnpj</span>
+          <span class="field-tag">companhia aberta</span>
+          <span class="field-tag">cadastro cvm</span>
+        </div>
+        <div class="card-footer">
+          <span class="card-source">Fonte: CVM · Dados Abertos</span>
+          <a href="https://raw.githubusercontent.com/royopa/PulseFlat/main/data/cvm_cadastro_companhias_abertas.csv" class="download-btn" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            Download CSV
+          </a>
+        </div>
+      </div>
+
+      <!-- B3 BVBG 028 -->
+      <div class="dataset-card b3-card">
+        <div class="card-top">
+          <div class="card-icon icon-b3">📄</div>
+          <span class="card-badge badge-daily">Diário</span>
+        </div>
+        <div class="card-title">B3 — BVBG 028 (Operações com Ações)</div>
+        <div class="card-file">b3_bvbg028.csv</div>
+        <div class="card-desc">
+          Boletim diário de operações com ações da B3, com dados de pregão, ativos, quantidades e preços.
+        </div>
+        <div class="card-fields">
+          <span class="field-tag">ações</span>
+          <span class="field-tag">pregão</span>
+          <span class="field-tag">boletim</span>
+        </div>
+        <div class="card-footer">
+          <span class="card-source">Fonte: B3 · BVBG</span>
+          <a href="https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_bvbg028.csv" class="download-btn" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            Download CSV
+          </a>
+        </div>
+      </div>
+
+      <!-- B3 BVBG 086 -->
+      <div class="dataset-card b3-card">
+        <div class="card-top">
+          <div class="card-icon icon-b3">📄</div>
+          <span class="card-badge badge-daily">Diário</span>
+        </div>
+        <div class="card-title">B3 — BVBG 086 (Operações RF)</div>
+        <div class="card-file">b3_bvbg086.csv</div>
+        <div class="card-desc">
+          Boletim diário de operações com renda fixa da B3.
+        </div>
+        <div class="card-fields">
+          <span class="field-tag">renda fixa</span>
+          <span class="field-tag">pregão</span>
+        </div>
+        <div class="card-footer">
+          <span class="card-source">Fonte: B3 · BVBG</span>
+          <a href="https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_bvbg086.csv" class="download-btn" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            Download CSV
+          </a>
+        </div>
+      </div>
+
+      <!-- B3 BVBG 087 -->
+      <div class="dataset-card b3-card">
+        <div class="card-top">
+          <div class="card-icon icon-b3">📄</div>
+          <span class="card-badge badge-daily">Diário</span>
+        </div>
+        <div class="card-title">B3 — BVBG 087 (Derivativos)</div>
+        <div class="card-file">b3_bvbg087.csv</div>
+        <div class="card-desc">
+          Boletim diário de operações com derivativos da B3.
+        </div>
+        <div class="card-fields">
+          <span class="field-tag">derivativos</span>
+          <span class="field-tag">pregão</span>
+        </div>
+        <div class="card-footer">
+          <span class="card-source">Fonte: B3 · BVBG</span>
+          <a href="https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_bvbg087.csv" class="download-btn" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            Download CSV
+          </a>
+        </div>
+      </div>
+
+
+
+      <!-- B3 Índices Preços Históricos -->
+      <div class="dataset-card b3-card">
+        <div class="card-top">
+          <div class="card-icon icon-b3">📈</div>
+          <span class="card-badge badge-daily">Diário</span>
+        </div>
+        <div class="card-title">B3 — Índices de Preços Históricos</div>
+        <div class="card-file">b3_indices_precos_historicos.csv</div>
+        <div class="card-desc">
+          Composição histórica e pesos de índices B3 (IBOV, IBRA, IFIX, IDIV, SMLL) com dados dos últimos 2 anos.
+        </div>
+        <div class="card-fields">
+          <span class="field-tag">ibov</span>
+          <span class="field-tag">ibra</span>
+          <span class="field-tag">ifix</span>
+          <span class="field-tag">idiv</span>
+          <span class="field-tag">smll</span>
+        </div>
+        <div class="card-footer">
+          <span class="card-source">Fonte: B3 API</span>
+          <a href="https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_indices_precos_historicos.csv" class="download-btn" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            Download CSV
+          </a>
+        </div>
+      </div>
+
+
 
     </div>
   </div>
@@ -1777,6 +1980,114 @@
             <tr><td>nome_serie</td><td><span class="type-badge">str</span></td><td>IPCA por item</td></tr>
             <tr><td>periodo_referencia</td><td><span class="type-badge">str</span></td><td>mai/2026</td></tr>
             <tr><td>data_modificacao</td><td><span class="type-badge">str</span></td><td>09/06/2026</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="schema-card">
+        <div class="schema-card-header">
+          <span class="schema-card-title">B3 Taxa Câmbio / Capital Social</span>
+          <span class="schema-csv-name">b3_taxa_cambio_referencia.csv · b3_capital_social_empresas.csv</span>
+        </div>
+        <table class="schema-table">
+          <thead><tr><th>Campo</th><th>Tipo</th><th>Exemplo</th></tr></thead>
+          <tbody>
+            <tr><td>data_captura</td><td><span class="type-badge">date</span></td><td>2026-05-30</td></tr>
+            <tr><td>codigo_moeda</td><td><span class="type-badge">str</span></td><td>USD</td></tr>
+            <tr><td>taxa_compra</td><td><span class="type-badge">float</span></td><td>5.02</td></tr>
+            <tr><td>taxa_venda</td><td><span class="type-badge">float</span></td><td>5.03</td></tr>
+            <tr><td>empresa</td><td><span class="type-badge">str</span></td><td>PETROBRAS</td></tr>
+            <tr><td>capital_social</td><td><span class="type-badge">float</span></td><td>855000000000.00</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="schema-card">
+        <div class="schema-card-header">
+          <span class="schema-card-title">BCB Negociação TPF</span>
+          <span class="schema-csv-name">bacen_negociacao_tpf_extragrupo_mes_corrente.csv</span>
+        </div>
+        <table class="schema-table">
+          <thead><tr><th>Campo</th><th>Tipo</th><th>Exemplo</th></tr></thead>
+          <tbody>
+            <tr><td>data_captura</td><td><span class="type-badge">date</span></td><td>2026-05-30</td></tr>
+            <tr><td>data_negocio</td><td><span class="type-badge">date</span></td><td>2026-05-29</td></tr>
+            <tr><td>titulo</td><td><span class="type-badge">str</span></td><td>LTN</td></tr>
+            <tr><td>tipo_operacao</td><td><span class="type-badge">str</span></td><td>Venda</td></tr>
+            <tr><td>quantidade</td><td><span class="type-badge">int</span></td><td>50000</td></tr>
+            <tr><td>preco</td><td><span class="type-badge">float</span></td><td>978.45</td></tr>
+            <tr><td>valor</td><td><span class="type-badge">float</span></td><td>48922500.00</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="schema-card">
+        <div class="schema-card-header">
+          <span class="schema-card-title">ANBIMA IMA-B Histórico</span>
+          <span class="schema-csv-name">anbima_indice_imab.csv</span>
+        </div>
+        <table class="schema-table">
+          <thead><tr><th>Campo</th><th>Tipo</th><th>Exemplo</th></tr></thead>
+          <tbody>
+            <tr><td>data_captura</td><td><span class="type-badge">date</span></td><td>2026-05-30</td></tr>
+            <tr><td>data</td><td><span class="type-badge">date</span></td><td>2026-05-29</td></tr>
+            <tr><td>indice</td><td><span class="type-badge">str</span></td><td>IMA-B</td></tr>
+            <tr><td>numero</td><td><span class="type-badge">float</span></td><td>4521.89</td></tr>
+            <tr><td>variacao</td><td><span class="type-badge">float</span></td><td>0.12</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="schema-card">
+        <div class="schema-card-header">
+          <span class="schema-card-title">CVM Cadastro Companhias</span>
+          <span class="schema-csv-name">cvm_cadastro_companhias_abertas.csv</span>
+        </div>
+        <table class="schema-table">
+          <thead><tr><th>Campo</th><th>Tipo</th><th>Exemplo</th></tr></thead>
+          <tbody>
+            <tr><td>data_captura</td><td><span class="type-badge">date</span></td><td>2026-05-30</td></tr>
+            <tr><td>cnpj</td><td><span class="type-badge">str</span></td><td>33.000.167/0001-01</td></tr>
+            <tr><td>denominacao_social</td><td><span class="type-badge">str</span></td><td>PETROBRAS</td></tr>
+            <tr><td>nome_de_pregao</td><td><span class="type-badge">str</span></td><td>PETROBRAS</td></tr>
+            <tr><td>codigo_cvm</td><td><span class="type-badge">int</span></td><td>165</td></tr>
+            <tr><td>situacao</td><td><span class="type-badge">str</span></td><td>ATIVO</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="schema-card">
+        <div class="schema-card-header">
+          <span class="schema-card-title">B3 BVBG (Boletins)</span>
+          <span class="schema-csv-name">b3_bvbg028.csv · b3_bvbg086.csv · b3_bvbg087.csv</span>
+        </div>
+        <table class="schema-table">
+          <thead><tr><th>Campo</th><th>Tipo</th><th>Exemplo</th></tr></thead>
+          <tbody>
+            <tr><td>data_captura</td><td><span class="type-badge">date</span></td><td>2026-05-30</td></tr>
+            <tr><td>data_pregão</td><td><span class="type-badge">date</span></td><td>2026-05-29</td></tr>
+            <tr><td>codigo</td><td><span class="type-badge">str</span></td><td>PETR4</td></tr>
+            <tr><td>quantidade</td><td><span class="type-badge">int</span></td><td>50000</td></tr>
+            <tr><td>preco</td><td><span class="type-badge">float</span></td><td>38.50</td></tr>
+            <tr><td>tipo</td><td><span class="type-badge">str</span></td><td>Compra</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="schema-card">
+        <div class="schema-card-header">
+          <span class="schema-card-title">B3 Índices de Preços Históricos</span>
+          <span class="schema-csv-name">b3_indices_precos_historicos.csv</span>
+        </div>
+        <table class="schema-table">
+          <thead><tr><th>Campo</th><th>Tipo</th><th>Exemplo</th></tr></thead>
+          <tbody>
+            <tr><td>data_captura</td><td><span class="type-badge">date</span></td><td>2026-05-30</td></tr>
+            <tr><td>indice</td><td><span class="type-badge">str</span></td><td>IBOV</td></tr>
+            <tr><td>ano</td><td><span class="type-badge">int</span></td><td>2026</td></tr>
+            <tr><td>ticker</td><td><span class="type-badge">str</span></td><td>PETR4</td></tr>
+            <tr><td>peso</td><td><span class="type-badge">float</span></td><td>8.45</td></tr>
+            <tr><td>quantidade_teorica</td><td><span class="type-badge">float</span></td><td>529660608</td></tr>
           </tbody>
         </table>
       </div>

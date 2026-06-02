@@ -39,7 +39,7 @@ SERIES = {
     1737: "IPCA — Variação por item",
     3065: "IPCA-15 — Variação por item",
     1621: "INPC — Variação por item",
-    3066: "IPC-Br — Variação por item",
+    # 3066 — IPC-Br removido: API retorna 500 consistentemente
 }
 
 URL_PERIODOS = "https://servicodados.ibge.gov.br/api/v3/agregados/{}/periodos"
@@ -75,6 +75,15 @@ def _buscar_periodos(serie_id: int, data_captura: str, hora_captura: str) -> lis
             resp.raise_for_status()
             dados = resp.json()
             break
+        except requests.HTTPError as e:
+            if e.response is not None and e.response.status_code >= 500:
+                log.warning(f"[tabela {serie_id}] Erro {e.response.status_code} do servidor — ignorando.")
+                return []
+            log.warning(f"[tabela {serie_id}] Tentativa {tentativa}/3: {e}")
+            if tentativa == 3:
+                log.error(f"[tabela {serie_id}] Falha definitiva — ignorando.")
+                return []
+            time.sleep(3)
         except requests.RequestException as e:
             log.warning(f"[tabela {serie_id}] Tentativa {tentativa}/3: {e}")
             if tentativa == 3:
