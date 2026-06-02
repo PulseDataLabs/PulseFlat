@@ -84,11 +84,30 @@ BANNER = r"""
  ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝   ╚═╝  ╚═╝╚══════╝╚══════╝
 """
 SCRAPERS = [
+    # ── Testes ──────────────────────────────────────────────────────────────────
+    {
+        "id": "teste_json",
+        "modulo": "scrapers.teste_json",
+        "descricao": "Teste — JSON Placeholder posts",
+        "grupo": "teste",
+    },
+    {
+        "id": "teste_csv",
+        "modulo": "scrapers.teste_csv",
+        "descricao": "Teste — CSV hw_200 dataset",
+        "grupo": "teste",
+    },
     # ── ANBIMA ──────────────────────────────────────────────────────────────────
     {
         "id": "anbima_indicadores",
         "modulo": "scrapers.anbima_indicadores",
-        "descricao": "ANBIMA — Indicadores (SELIC, DI, IGP-M, IPCA, Câmbio, TR, FDS)",
+        "descricao": "ANBIMA — Indicadores (SELIC, DI, IGP-M, IPCA, Câmbio, TR, FDS) (HTML)",
+        "grupo": "anbima",
+    },
+    {
+        "id": "anbima_indicadores_xls",
+        "modulo": "scrapers.anbima_indicadores_xls",
+        "descricao": "ANBIMA — Indicadores Financeiros (XLS)",
         "grupo": "anbima",
     },
     {
@@ -160,6 +179,51 @@ SCRAPERS = [
         "descricao": "CVM — Cadastro de Companhias Abertas",
         "grupo": "cvm",
     },
+    # cvm_fundos_cadastro — DESATIVADO: Arquivo gerado é muito grande para o GitHub
+    # {
+    #     "id": "cvm_fundos_cadastro",
+    #     "modulo": "scrapers.cvm_fundos_cadastro",
+    #     "descricao": "CVM — Cadastro de Fundos (cad_fi.csv)",
+    #     "grupo": "cvm",
+    # },
+    # cvm_fundos_informe_diario — DESATIVADO: Arquivo gerado é muito grande para o GitHub
+    # {
+    #     "id": "cvm_fundos_informe_diario",
+    #     "modulo": "scrapers.cvm_fundos_informe_diario",
+    #     "descricao": "CVM — Informe Diário de Fundos (ZIP)",
+    #     "grupo": "cvm",
+    # },
+    {
+        "id": "cvm_fundos_extrato",
+        "modulo": "scrapers.cvm_fundos_extrato",
+        "descricao": "CVM — Extrato de Informações de Fundos",
+        "grupo": "cvm",
+    },
+    {
+        "id": "cvm_fundos_classe",
+        "modulo": "scrapers.cvm_fundos_classe",
+        "descricao": "CVM — Fundos, Classes e Subclasses CVM175 (ZIP)",
+        "grupo": "cvm",
+    },
+    # ── Debêntures ──────────────────────────────────────────────────────────────
+    {
+        "id": "debentures_emissoes_caracteristicas",
+        "modulo": "scrapers.debentures_emissoes_caracteristicas",
+        "descricao": "Debêntures — Características de Emissões",
+        "grupo": "debentures",
+    },
+    {
+        "id": "debentures_mercado_secundario_precos_negociacao",
+        "modulo": "scrapers.debentures_mercado_secundario_precos_negociacao",
+        "descricao": "Debêntures — Preços de Negociação",
+        "grupo": "debentures",
+    },
+    {
+        "id": "debentures_mercado_pu_historico",
+        "modulo": "scrapers.debentures_mercado_pu_historico",
+        "descricao": "Debêntures — PU Histórico",
+        "grupo": "debentures",
+    },
     # ── B3 ──────────────────────────────────────────────────────────────────────
     {
         "id": "b3_fiis",
@@ -174,13 +238,65 @@ SCRAPERS = [
         "grupo": "b3",
     },
     {
-        "id": "b3_carteiras",
-        "modulo": "scrapers.b3_carteiras",
-        "descricao": "B3 — Carteiras Teóricas (22 índices)",
+        "id": "b3_etfs_listados_download",
+        "modulo": "scrapers.b3_etfs_listados_download",
+        "descricao": "B3 — ETFs Listados (CSV Base64)",
         "grupo": "b3",
     },
-    # b3_futuros_ajustes — DESATIVADO: fonte legada (www2.bmf.com.br) descontinuada dez/2025
-    # b3_bmf_taxas_juros — DESATIVADO: BDI API não retorna dados para nenhuma tabela candidata
+    {
+        "id": "b3_carteiras",
+        "modulo": "scrapers.b3_carteiras",
+        "descricao": "B3 — Carteiras Teóricas (22 índices) (JSON API)",
+        "grupo": "b3",
+    },
+    {
+        "id": "b3_carteira_teorica_ibsd",
+        "modulo": "scrapers.b3_carteira_teorica_ibsd",
+        "descricao": "B3 — Carteira Teórica IBSD (CSV Base64)",
+        "grupo": "b3",
+    },
+    {
+        "id": "b3_carteira_teorica_smll",
+        "modulo": "scrapers.b3_carteira_teorica_smll",
+        "descricao": "B3 — Carteira Teórica SMLL (CSV Base64)",
+        "grupo": "b3",
+    },
+    {
+        "id": "b3_carteira_teorica_bdrx",
+        "modulo": "scrapers.b3_carteira_teorica_bdrx",
+        "descricao": "B3 — Carteira Teórica BDRX (CSV Base64)",
+        "grupo": "b3",
+    },
+    {
+        "id": "b3_carteira_teorica_isee",
+        "modulo": "scrapers.b3_carteira_teorica_isee",
+        "descricao": "B3 — Carteira Teórica ISEE (CSV Base64)",
+        "grupo": "b3",
+    },
+    {
+        "id": "b3_carteira_teorica_ibxl",
+        "modulo": "scrapers.b3_carteira_teorica_ibxl",
+        "descricao": "B3 — Carteira Teórica IBXL (CSV Base64)",
+        "grupo": "b3",
+    },
+    {
+        "id": "b3_carteira_teorica_ibov_download",
+        "modulo": "scrapers.b3_carteira_teorica_ibov_download",
+        "descricao": "B3 — Carteira Teórica IBOV (CSV Base64)",
+        "grupo": "b3",
+    },
+    {
+        "id": "b3_carteira_teorica_ifnc",
+        "modulo": "scrapers.b3_carteira_teorica_ifnc",
+        "descricao": "B3 — Carteira Teórica IFNC (CSV Base64)",
+        "grupo": "b3",
+    },
+    {
+        "id": "b3_carteira_teorica_agfs_iagro",
+        "modulo": "scrapers.b3_carteira_teorica_agfs_iagro",
+        "descricao": "B3 — Carteira Teórica AGFS - IAGRO (CSV Base64)",
+        "grupo": "b3",
+    },
     {
         "id": "b3_indicadores_financeiros",
         "modulo": "scrapers.b3_indicadores_financeiros",
@@ -223,61 +339,24 @@ SCRAPERS = [
         "descricao": "B3 — BVBG 087 (Operações com Derivativos)",
         "grupo": "b3",
     },
-    # b3_cotahist_diario — DESATIVADO
-    # {
-    #     "id": "b3_cotahist_diario",
-    #     "modulo": "scrapers.b3_cotahist_diario",
-    #     "descricao": "B3 — COTAHIST Diário (cotações FWF)",
-    #     "grupo": "b3",
-    # },
-    # b3_cotahist_anual — DESATIVADO
-    # {
-    #     "id": "b3_cotahist_anual",
-    #     "modulo": "scrapers.b3_cotahist_anual",
-    #     "descricao": "B3 — COTAHIST Anual (cotações FWF)",
-    #     "grupo": "b3",
-    # },
-    # b3_indicadores_economicos_fwf — DESATIVADO
-    # {
-    #     "id": "b3_indicadores_economicos_fwf",
-    #     "modulo": "scrapers.b3_indicadores_economicos_fwf",
-    #     "descricao": "B3 — Indicadores Econômicos (FWF)",
-    #     "grupo": "b3",
-    # },
-    # b3_negocios_balcao — DESATIVADO
-    # {
-    #     "id": "b3_negocios_balcao",
-    #     "modulo": "scrapers.b3_negocios_balcao",
-    #     "descricao": "B3 — Negócios de Balcão OTC",
-    #     "grupo": "b3",
-    # },
     {
         "id": "b3_indices_precos_historicos",
         "modulo": "scrapers.b3_indices_precos_historicos",
         "descricao": "B3 — Índices de Preços Históricos",
         "grupo": "b3",
     },
-    # b3_companhias_detalhes — DESATIVADO
-    # {
-    #     "id": "b3_companhias_detalhes",
-    #     "modulo": "scrapers.b3_companhias_detalhes",
-    #     "descricao": "B3 — Detalhes de Companhias Listadas",
-    #     "grupo": "b3",
-    # },
-    # b3_companhias_info — DESATIVADO
-    # {
-    #     "id": "b3_companhias_info",
-    #     "modulo": "scrapers.b3_companhias_info",
-    #     "descricao": "B3 — Informações Complementares de Companhias",
-    #     "grupo": "b3",
-    # },
-    # b3_dividendos_dinheiro — DESATIVADO
-    # {
-    #     "id": "b3_dividendos_dinheiro",
-    #     "modulo": "scrapers.b3_dividendos_dinheiro",
-    #     "descricao": "B3 — Dividendos em Dinheiro",
-    #     "grupo": "b3",
-    # },
+    {
+        "id": "b3_classificacao_setorial",
+        "modulo": "scrapers.b3_classificacao_setorial",
+        "descricao": "B3 — Classificação Setorial (ZIP)",
+        "grupo": "b3",
+    },
+    {
+        "id": "b3_titulos_negociaveis",
+        "modulo": "scrapers.b3_titulos_negociaveis",
+        "descricao": "B3 — Títulos Negociáveis (ZIP)",
+        "grupo": "b3",
+    },
 ]
 
 
@@ -290,6 +369,8 @@ def _grupo_cor(grupo: str) -> str:
         "ibge":     "bright_magenta",
         "cvm":      "bright_cyan",
         "b3":       "bright_blue",
+        "debentures": "yellow",
+        "teste":      "grey50",
     }.get(grupo, "white")
 
 
@@ -300,6 +381,8 @@ def _grupo_icone(grupo: str) -> str:
         "ibge":     "⬡",
         "cvm":      "⬢",
         "b3":       "◉",
+        "debentures": "❖",
+        "teste":      "⚙",
     }.get(grupo, "●")
 
 

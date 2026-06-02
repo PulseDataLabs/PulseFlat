@@ -124,6 +124,26 @@ def salvar_csv(
         writer.writeheader()
         writer.writerows(todas)
 
+    # Atualiza data/last_updates.json com a data mais recente
+    try:
+        last_updates_path = arquivo.parent / "last_updates.json"
+        last_updates = {}
+        if last_updates_path.exists():
+            try:
+                with last_updates_path.open("r", encoding="utf-8") as lf:
+                    last_updates = json.load(lf)
+            except Exception:
+                pass
+        
+        if registros:
+            datas = [r.get("data_captura") for r in registros if r.get("data_captura")]
+            if datas:
+                last_updates[arquivo.name] = max(datas)
+                with last_updates_path.open("w", encoding="utf-8") as lf:
+                    json.dump(last_updates, lf, indent=2, ensure_ascii=False)
+    except Exception as e:
+        log.warning(f"Não foi possível atualizar last_updates.json: {e}")
+
     log.info(
         f"CSV atualizado → {arquivo} | "
         f"{len(registros)} novos registros salvos"

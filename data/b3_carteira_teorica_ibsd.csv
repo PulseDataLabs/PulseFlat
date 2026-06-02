@@ -1,0 +1,22 @@
+data_captura,hora_captura,conjunto,arquivo_origem,registro_hash,a_o,c_digo,none,part,qtde_te_rica,tipo
+2026-06-02,18:40:59,b3___carteira_teórica___ibsd,,d4a0a35b6edd1eaa1c0cded7,BBSEGURIDADE,BBSE3,[''],"6,814",1.791.598.595,ON  ATZ NM
+2026-06-02,18:40:59,b3___carteira_teórica___ibsd,,e9d34342e2f56cf3e5991f16,BRADESCO,BBDC4,[''],"5,543",2.920.065.718,PN  EJ  N1
+2026-06-02,18:40:59,b3___carteira_teórica___ibsd,,56d980dd928dbc0c76a44efd,BRADESPAR,BRAP4,[''],"5,233",2.107.691.594,PN      N1
+2026-06-02,18:40:59,b3___carteira_teórica___ibsd,,bc3052e1814614bae855db68,BRASIL,BBAS3,[''],"5,605",2.586.290.917,ON  EJ  NM
+2026-06-02,18:40:59,b3___carteira_teórica___ibsd,,6ba399d960ff04ac420ce08f,CEMIG,CMIG4,[''],"5,437",4.632.523.939,PN      N1
+2026-06-02,18:40:59,b3___carteira_teórica___ibsd,,5da7a680d87030f161bf013b,COPASA,CSMG3,[''],"5,586",985.606.457,ON      NM
+2026-06-02,18:40:59,b3___carteira_teórica___ibsd,,95065126208b293f6f3e1566,COPEL,CPLE3,[''],"5,059",3.233.534.262,ON      NM
+2026-06-02,18:40:59,b3___carteira_teórica___ibsd,,079cff3e185cf73c83470b76,CPFL ENERGIA,CPFE3,[''],"5,067",1.089.183.119,ON      NM
+2026-06-02,18:40:59,b3___carteira_teórica___ibsd,,6852135d2101c6e20b6b4495,CSNMINERACAO,CMIN3,[''],"5,456",11.069.884.484,ON      N2
+2026-06-02,18:40:59,b3___carteira_teórica___ibsd,,b4aeff0483dbbd29d5907a44,CURY S/A,CURY3,[''],"4,180",1.229.288.838,ON      NM
+2026-06-02,18:40:59,b3___carteira_teórica___ibsd,,166b0eae4e638a9958dfa04e,DIRECIONAL,DIRR3,[''],"4,533",3.122.578.062,ON      NM
+2026-06-02,18:40:59,b3___carteira_teórica___ibsd,,5d321d819ae62f49ec6550c4,GERDAU MET,GOAU4,[''],"5,593",5.156.606.874,PN      N1
+2026-06-02,18:40:59,b3___carteira_teórica___ibsd,,58922865a847539c1a966878,ISA ENERGIA,ISAE4,[''],"5,174",1.774.129.556,PN      N1
+2026-06-02,18:40:59,b3___carteira_teórica___ibsd,,33f3cb06dfbc087b4be28c98,ITAUSA,ITSA4,[''],"5,310",3.833.307.725,PN  EJ  N1
+2026-06-02,18:40:59,b3___carteira_teórica___ibsd,,5efe71f4818185c97aeb8a96,MARCOPOLO,POMO4,[''],"4,677",7.039.102.787,PN      N2
+2026-06-02,18:40:59,b3___carteira_teórica___ibsd,,84d519f4dd087eeb204a0e73,MARFRIG,MBRF3,[''],"4,201",2.444.476.759,ON      NM
+2026-06-02,18:40:59,b3___carteira_teórica___ibsd,,b399503861f3325832aab50b,PETROBRAS,PETR4,[''],"4,931",1.086.785.387,PN  EJ  N2
+2026-06-02,18:40:59,b3___carteira_teórica___ibsd,,205d4f336fecbdd4ccb0f17d,TAESA,TAEE11,[''],"5,806",1.374.800.337,UNT     N2
+2026-06-02,18:40:59,b3___carteira_teórica___ibsd,,fb0981b7ace6729ca53e47df,VALE,VALE3,[''],"5,795",653.379.561,ON      NM
+2026-06-02,18:40:59,b3___carteira_teórica___ibsd,,5243d5e3cde7144dd2c0ce01,,Quantidade Teórica Total,,"100,000",58.130.834.971,
+2026-06-02,18:40:59,b3___carteira_teórica___ibsd,,62068353d2eb577a917c1e2f,,Redutor,,,"461.165.196,98974012",

@@ -120,3 +120,34 @@ def test_bcb_sgs_erro_parcial(requests_mock, monkeypatch):
     assert "11" not in codigos_capturados
     assert len(codigos_capturados) == len(bcb_sgs.SERIES) - 1
 
+
+def test_generic_scraper_json(requests_mock, tmp_path):
+    """Deve baixar, processar e salvar corretamente dados de um recurso json genérico."""
+    from scrapers.generic_scraper import run_resource
+
+    mock_data = [
+        {"id": 1, "title": "Post 1", "body": "Body 1", "userId": 10},
+        {"id": 2, "title": "Post 2", "body": "Body 2", "userId": 20}
+    ]
+
+    requests_mock.get(
+        "https://jsonplaceholder.typicode.com/posts/",
+        json=mock_data,
+        status_code=200
+    )
+
+    out_file = tmp_path / "teste_json.csv"
+    run_resource("teste_json", output_file_override=out_file)
+
+    assert out_file.exists()
+    import csv
+    with open(out_file, encoding="utf-8") as f:
+        rows = list(csv.DictReader(f))
+
+    assert len(rows) == 2
+    assert rows[0]["id"] == "1"
+    assert rows[0]["title"] == "Post 1"
+    assert rows[0]["body"] == "Body 1"
+    assert rows[0]["userid"] == "10"
+
+

@@ -1,0 +1,126 @@
+resources:
+  ##############################################################################
+  # Bases Testes
+  ##############################################################################
+  - name: teste_json
+    url: https://jsonplaceholder.typicode.com/posts/
+    file_name: 'teste_json.json'
+    type_response: json
+  - name: teste_csv
+    url: 'https://people.sc.fsu.edu/~jburkardt/data/csv/hw_200.csv'
+    file_name: 'teste_csv.csv'
+    type_response: csv
+  ##############################################################################
+  # Bases B3 - Carteiras Teóricas CSV
+  ##############################################################################
+  - name: B3 - Carteira Teórica - IBSD
+    url: 'https://sistemaswebb3-listados.b3.com.br/indexProxy/indexCall/GetDownloadPortfolioDay/eyJpbmRleCI6IklCU0QiLCJsYW5ndWFnZSI6InB0LWJyIn0='
+    file_name: 'b3_carteira_teorica_ibsd.csv.base64'
+    type_response: base64
+  - name: B3 - Carteira Teórica - SMLL
+    url: 'https://sistemaswebb3-listados.b3.com.br/indexProxy/indexCall/GetDownloadPortfolioDay/eyJpbmRleCI6IlNNTEwiLCJsYW5ndWFnZSI6InB0LWJyIn0='
+    file_name: 'b3_carteira_teorica_smll.csv.base64'
+    type_response: base64
+  - name: B3 - Carteira Teórica - BDRX
+    url: 'https://sistemaswebb3-listados.b3.com.br/indexProxy/indexCall/GetDownloadPortfolioDay/eyJpbmRleCI6IkJEUlgiLCJsYW5ndWFnZSI6InB0LWJyIn0='
+    file_name: 'b3_carteira_teorica_bdrx.csv.base64'
+    type_response: base64
+  - name: B3 - Carteira Teórica - ISEE
+    url: 'https://sistemaswebb3-listados.b3.com.br/indexProxy/indexCall/GetDownloadPortfolioDay/eyJpbmRleCI6IklTRUUiLCJsYW5ndWFnZSI6InB0LWJyIn0='
+    file_name: 'b3_carteira_teorica_isee.csv.base64'
+    type_response: base64
+  - name: B3 - Carteira Teórica - IBXL
+    url: 'https://sistemaswebb3-listados.b3.com.br/indexProxy/indexCall/GetDownloadPortfolioDay/eyJpbmRleCI6IklCWEwiLCJsYW5ndWFnZSI6InB0LWJyIn0='
+    file_name: 'b3_carteira_teorica_ibxl.csv.base64'
+    type_response: base64
+  - name: B3 - Carteira Teórica - IBOV
+    url: 'https://sistemaswebb3-listados.b3.com.br/indexProxy/indexCall/GetDownloadPortfolioDay/eyJpbmRleCI6IklCT1YiLCJsYW5ndWFnZSI6InB0LWJyIn0='
+    file_name: 'b3_carteira_teorica_ibov.csv.base64'
+    type_response: base64
+  - name: B3 - Carteira Teórica - IFNC
+    url: 'https://sistemaswebb3-listados.b3.com.br/indexProxy/indexCall/GetDownloadPortfolioDay/eyJpbmRleCI6IklGTkMiLCJsYW5ndWFnZSI6InB0LWJyIn0='
+    file_name: 'b3_carteira_teorica_ifnc.csv.base64'
+    type_response: base64
+  - name: B3 - Carteira Teórica - AGFS - IAGRO
+    url: 'https://sistemaswebb3-listados.b3.com.br/indexProxy/indexCall/GetDownloadPortfolioDay/eyJpbmRleCI6IkFHRlMiLCJsYW5ndWFnZSI6InB0LWJyIn0='
+    file_name: 'b3_carteira_teorica_agfs_iagro.csv.base64'
+    type_response: base64
+  ##############################################################################
+  # Bases B3 - Carteiras Teóricas JSON
+  ##############################################################################
+  - name: B3 - Indicadores Financeiros
+    url: 'https://sistemaswebb3-derivativos.b3.com.br/financialIndicatorsProxy/FinancialIndicators/GetFinancialIndicators/eyJsYW5ndWFnZSI6InB0LWJyIn0='
+    file_name: 'b3_indicadores_financeiros.json'
+    type_response: json
+  - name: B3 - Taxa de Câmbio de Referência
+    url: 'https://sistemaswebb3-derivativos.b3.com.br/financialIndicatorsProxy/ReferenceExchangeRate/GetReferenceExchangeRate/eyJsYW5ndWFnZSI6InB0LWJyIn0='
+    file_name: 'b3_taxa_cambio_referencia.json'
+    type_response: json
+  - name: B3 - Capital Social Empresas
+    url: 'https://sistemaswebb3-listados.b3.com.br/shareCapitalProxy/ShareCapitalCall/GetList/eyJuYW1lIjoiIiwicGFnZU51bWJlciI6MSwicGFnZVNpemUiOjEyMH0='
+    file_name: 'b3_capital_social_empresas.json'
+    type_response: json
+  #- name: B3 - Carteira Teórica - IBOV
+  #  url: 'https://sistemaswebb3-listados.b3.com.br/indexProxy/indexCall/GetPortfolioDay/eyJsYW5ndWFnZSI6InB0LWJyIiwicGFnZU51bWJlciI6MSwicGFnZVNpemUiOjEyMCwiaW5kZXgiOiJJQk9WIiwic2VnbWVudCI6IjEifQ=='
+  #  file_name: 'b3_carteira_teorica_ibov.json'
+  #  type_response: json
+  ##############################################################################
+  # Bases ANBIMA
+  ##############################################################################
+  - name: ANBIMA - IMA Completo
+    url: https://www.anbima.com.br/informacoes/ima/arqs/ima_completo.txt
+    file_name: 'anbima_ima_completo.txt'
+    type_response: txt
+  - name: ANBIMA - Indicadores Financeiros
+    url: https://www.anbima.com.br/informacoes/indicadores/arqs/indicadores.xls
+    file_name: anbima_indicadores.xls
+    type_response: xls
+  ##############################################################################
+  # Bases Debêntures
+  ##############################################################################
+  - name: Debêntures - Características de Emissões
+    url: https://www.debentures.com.br/exploreosnd/consultaadados/emissoesdedebentures/caracteristicas_e.asp?tip_deb=publicas&op_exc=Nada
+    file_name: 'debentures_emissoes_caracteristicas.csv'
+    type_response: csv
+  - name: Debêntures - Preços de Negociação
+    url: 'https://www.debentures.com.br/exploreosnd/consultaadados/mercadosecundario/precosdenegociacao_e.asp?op_exc=Nada&emissor=&isin=&ativo=&dt_ini=20250101&dt_fim=YYYYMMDD'
+    file_name: 'debentures_mercado_secundario_precos_negociacao.csv'
+    type_response: csv
+  - name: Debêntures - PU Histórico
+    url: 'https://www.debentures.com.br/exploreosnd/consultaadados/emissoesdedebentures/puhistorico_e.asp?op_exc=Nada&ativo=&dt_ini=01/01/2025&dt_fim=DD/MM/YYYY&Submit.x=16&Submit.y=14'
+    file_name: 'debentures_mercado_pu_historico.csv'
+    type_response: csv
+  ##############################################################################
+  # Bases CVM
+  ##############################################################################
+  - name: CVM - Fundos de Investimento - Não Adaptados RCVM175
+    url: https://dados.cvm.gov.br/dados/FI/CAD/DADOS/cad_fi.csv
+    file_name: 'cad_fi.csv'
+    type_response: csv
+  - name: CVM - Extrato das Informações
+    url: https://dados.cvm.gov.br/dados/FI/DOC/EXTRATO/DADOS/extrato_fi.csv
+    file_name: 'extrato_fi.csv'
+    type_response: csv
+  - name: CVM - Fundos de Investimento, Classes e Subclasses de Cotas CVM175
+    url: https://dados.cvm.gov.br/dados/FI/CAD/DADOS/registro_fundo_classe.zip
+    file_name: 'registro_fundo_classe.zip'
+    type_response: zip
+  ##############################################################################
+  # Bases B3
+  ##############################################################################
+  - name: B3 - Classificação Setorial
+    url: https://bvmf.bmfbovespa.com.br/InstDados/InformacoesEmpresas/ClassifSetorial.zip
+    file_name: b3_classificacao_setorial.zip
+    type_response: zip
+  - name: B3 - Títulos Negociáveis
+    url: https://bvmf.bmfbovespa.com.br/suplemento/ExecutaAcaoDownload.asp?arquivo=Titulos_Negociaveis.zip&server=L
+    file_name: b3_titulos_negociaveis.zip
+    type_response: zip
+  - name: B3 - Classificação Setorial
+    url: https://bvmf.bmfbovespa.com.br/InstDados/InformacoesEmpresas/ClassifSetorial.zip
+    file_name: b3_classificacao_setorial.zip
+    type_response: zip
+  - name: B3 - ETFs listados
+    url: https://sistemaswebb3-listados.b3.com.br/fundsProxy/fundsCall/GetListFundDownload/eyJ0eXBlRnVuZCI6MjAsInBhZ2VOdW1iZXIiOjEsInBhZ2VTaXplIjo2MH0=
+    file_name: b3_etfs_listados.csv.base64
+    type_response: base64

@@ -1,4 +1,10 @@
+<p align="center">
+  <img src="logo.png" alt="PulseFlat Logo" width="280">
+</p>
+
 # PulseFlat
+
+> 🚀 **Página do Projeto:** [https://royopa.github.io/PulseFlat/](https://royopa.github.io/PulseFlat/)
 
 Pipeline automatizado de captura diária de dados financeiros brasileiros via **GitHub Actions**.  
 Sem servidor. Sem custo. Histórico versionado em CSV no próprio repositório.

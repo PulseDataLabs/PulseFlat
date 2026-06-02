@@ -973,6 +973,38 @@
       .hero { padding: 7rem 1.25rem 4rem; }
       .stat-item { min-width: 100%; }
     }
+
+    /* Last capture date indicator */
+    .card-last-update {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      color: var(--accent);
+      background: rgba(0, 212, 255, 0.05);
+      border: 1px solid rgba(0, 212, 255, 0.12);
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      margin-top: -0.5rem;
+      margin-bottom: 1rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      align-self: flex-start;
+    }
+    .card-last-update::before {
+      content: "";
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      background-color: var(--accent);
+      border-radius: 50%;
+      box-shadow: 0 0 6px var(--accent);
+    }
+
+    /* Floating animation for logo */
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50%      { transform: translateY(-8px); }
+    }
   </style>
 </head>
 <body>
@@ -980,7 +1012,7 @@
 <!-- NAV -->
 <nav>
   <a href="#" class="nav-logo">
-    <span class="pulse-dot"></span>
+    <img src="logo.png" alt="PulseFlat Logo" style="height: 24px; border-radius: 4px;">
     PulseFlat
   </a>
   <ul class="nav-links">
@@ -999,6 +1031,10 @@
   <div class="hero-orb hero-orb-1"></div>
   <div class="hero-orb hero-orb-2"></div>
   <div class="hero-orb hero-orb-3"></div>
+
+  <div class="hero-logo-container" style="display: flex; justify-content: center; margin-bottom: 2rem; animation: float 6s ease-in-out infinite;">
+    <img src="logo.png" alt="PulseFlat Logo" style="width: 120px; height: 120px; border-radius: 16px; box-shadow: 0 0 30px rgba(0, 212, 255, 0.25); border: 1px solid rgba(0, 212, 255, 0.15);">
+  </div>
 
   <div class="ticker-bar">
     <span class="status-dot"></span>
@@ -2221,6 +2257,38 @@
       }
     });
   });
+
+  // Load and render last capture dates dynamically
+  async function loadLastUpdates() {
+    try {
+      const response = await fetch('./data/last_updates.json');
+      if (!response.ok) throw new Error('Não foi possível carregar last_updates.json');
+      const updates = await response.json();
+
+      document.querySelectorAll('.dataset-card').forEach(card => {
+        const fileElement = card.querySelector('.card-file');
+        if (!fileElement) return;
+
+        const fileName = fileElement.textContent.trim();
+        const dateStr = updates[fileName];
+
+        if (dateStr) {
+          const parts = dateStr.split('-');
+          const formattedDate = parts.length === 3 ? `${parts[2]}/${parts[1]}/${parts[0]}` : dateStr;
+
+          const updateBadge = document.createElement('div');
+          updateBadge.className = 'card-last-update';
+          updateBadge.innerHTML = `Captura mais recente: ${formattedDate}`;
+
+          fileElement.parentNode.insertBefore(updateBadge, fileElement.nextSibling);
+        }
+      });
+    } catch (err) {
+      console.warn('Erro ao carregar datas das capturas:', err);
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', loadLastUpdates);
 </script>
 </body>
 </html>
