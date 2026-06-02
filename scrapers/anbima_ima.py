@@ -20,7 +20,7 @@ from pathlib import Path
 import requests
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from utils import get_logger, agora_brt, limpar, salvar_csv
+from utils import get_logger, agora_brt, limpar, nova_session, salvar_csv
 
 log = get_logger("anbima_ima")
 
@@ -62,11 +62,11 @@ COLUNAS_ARQUIVO = [
 
 def capturar() -> list[dict]:
     log.info(f"Buscando IMA ANBIMA: {URL}")
+    session = nova_session()
 
     for tentativa in range(1, 4):
         try:
-            resp = requests.get(URL, timeout=30,
-                                headers={"User-Agent": "Mozilla/5.0"})
+            resp = session.get(URL, timeout=30)
             resp.raise_for_status()
             break
         except requests.RequestException as e:

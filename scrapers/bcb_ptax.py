@@ -15,7 +15,7 @@ from pathlib import Path
 import requests
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from utils import get_logger, agora_brt, limpar, salvar_csv
+from utils import get_logger, agora_brt, limpar, nova_session, salvar_csv
 
 log = get_logger("bcb_ptax")
 
@@ -49,13 +49,13 @@ def _url_hoje() -> str:
 def capturar() -> list[dict]:
     url = _url_hoje()
     log.info(f"Consultando PTAX: {url}")
+    session = nova_session()
 
     for tentativa in range(1, 4):
         try:
-            resp = requests.get(
+            resp = session.get(
                 url,
                 timeout=30,
-                headers={"Accept": "application/json", "User-Agent": "Mozilla/5.0"},
             )
             resp.raise_for_status()
             break

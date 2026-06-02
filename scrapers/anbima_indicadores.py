@@ -16,7 +16,7 @@ import requests
 from bs4 import BeautifulSoup
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from utils import get_logger, agora_brt, salvar_csv
+from utils import get_logger, agora_brt, nova_session, salvar_csv
 
 log = get_logger("anbima_indicadores")
 
@@ -48,10 +48,11 @@ def _extrair_data_ref(soup: BeautifulSoup) -> str:
 
 def capturar() -> list[dict]:
     log.info(f"Acessando {URL}")
+    session = nova_session()
 
     for tentativa in range(1, 4):
         try:
-            resp = requests.get(URL, headers={"User-Agent": "Mozilla/5.0"}, timeout=30)
+            resp = session.get(URL, timeout=30)
             resp.encoding = "iso-8859-1"
             resp.raise_for_status()
             break

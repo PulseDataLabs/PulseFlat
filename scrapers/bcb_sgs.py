@@ -25,7 +25,7 @@ from pathlib import Path
 import requests
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from utils import get_logger, agora_brt, limpar, salvar_csv
+from utils import get_logger, agora_brt, limpar, nova_session, salvar_csv
 
 log = get_logger("bcb_sgs")
 
@@ -59,13 +59,12 @@ URL_TPL = (
 )
 
 
-def _buscar_serie(codigo: int, nome: str, inicio: str, fim: str,
+def _buscar_serie(session, codigo: int, nome: str, inicio: str, fim: str,
                   data_captura: str, hora_captura: str) -> list[dict]:
     url = URL_TPL.format(codigo=codigo, inicio=inicio, fim=fim)
     for tentativa in range(1, 4):
         try:
-            resp = requests.get(url, timeout=30,
-                                headers={"Accept": "application/json"})
+            resp = session.get(url, timeout=30)
             resp.raise_for_status()
             dados = resp.json()
             break
@@ -94,11 +93,12 @@ def capturar() -> list[dict]:
     inicio = (hoje - timedelta(days=40)).strftime("%d/%m/%Y")
     fim = hoje.strftime("%d/%m/%Y")
     data_captura, hora_captura = agora_brt()
+    session = nova_session()
 
     todos = []
     for codigo, nome in SERIES.items():
         log.info(f"Buscando série {codigo} — {nome}")
-        registros = _buscar_serie(codigo, nome, inicio, fim,
+        registros = _buscar_serie(session, codigo, nome, inicio, fim,
                                   data_captura, hora_captura)
         log.info(f"  → {len(registros)} pontos")
         todos.extend(registros)

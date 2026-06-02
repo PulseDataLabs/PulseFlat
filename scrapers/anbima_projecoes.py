@@ -64,7 +64,7 @@ except ImportError:
     pass
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from utils import get_logger, agora_brt, limpar, salvar_csv
+from utils import get_logger, agora_brt, limpar, nova_session, salvar_csv
 
 log = get_logger("anbima_projecoes")
 
@@ -95,11 +95,11 @@ CABECALHO = [
 # ESTRATÉGIA A — API Oficial OAuth 2.0
 # ════════════════════════════════════════════════════════
 
-def _obter_token(client_id: str, client_secret: str) -> str | None:
+def _obter_token(session, client_id: str, client_secret: str) -> str | None:
     """Troca client_id + client_secret por access_token OAuth 2.0."""
     credencial = b64encode(f"{client_id}:{client_secret}".encode()).decode()
     try:
-        resp = requests.post(
+        resp = session.post(
             ANBIMA_OAUTH_URL,
             headers={
                 "Content-Type":  "application/json",
@@ -133,15 +133,15 @@ def _mapear_api(item: dict, data_captura: str, hora_captura: str) -> dict:
     }
 
 
-def capturar_via_api(client_id: str, client_secret: str) -> list[dict]:
+def capturar_via_api(session, client_id: str, client_secret: str) -> list[dict]:
     log.info("[API Oficial] Iniciando captura...")
-    token = _obter_token(client_id, client_secret)
+    token = _obter_token(session, client_id, client_secret)
     if not token:
         return []
 
     data_captura, hora_captura = agora_brt()
     try:
-        resp = requests.get(
+        resp = session.get(
             ANBIMA_PROJECOES_URL,
             headers={"Authorization": f"Bearer {token}", "Accept": "application/json"},
             timeout=30,
@@ -169,7 +169,7 @@ def capturar_via_api(client_id: str, client_secret: str) -> list[dict]:
 # ESTRATÉGIA B — Scraping da página de indicadores
 # ════════════════════════════════════════════════════════
 
-def capturar_via_scraping() -> list[dict]:
+def capturar_via_scraping(session) -> list[dict]:
     """
     Extrai projeções vigentes da página de indicadores da ANBIMA.
     Atualizada 2x/dia e inclui projeções do mês corrente e seguinte.
@@ -179,9 +179,8 @@ def capturar_via_scraping() -> list[dict]:
 
     for tentativa in range(1, 4):
         try:
-            resp = requests.get(
+            resp = session.get(
                 URL_INDICADORES,
-                headers={"User-Agent": "Mozilla/5.0"},
                 timeout=30,
             )
             resp.encoding = "iso-8859-1"
@@ -260,16 +259,17 @@ def capturar_via_scraping() -> list[dict]:
 def capturar() -> list[dict]:
     client_id     = os.getenv("ANBIMA_CLIENT_ID", "").strip()
     client_secret = os.getenv("ANBIMA_CLIENT_SECRET", "").strip()
+    session = nova_session()
 
     if client_id and client_secret:
         log.info("Credenciais encontradas → usando API oficial.")
-        registros = capturar_via_api(client_id, client_secret)
+        registros = capturar_via_api(session, client_id, client_secret)
         if registros:
             return registros
         log.warning("API oficial sem dados → usando scraping como fallback.")
 
     log.info("Usando scraping da página de indicadores.")
-    return capturar_via_scraping()
+    return capturar_via_scraping(session)
 
 
 def main():

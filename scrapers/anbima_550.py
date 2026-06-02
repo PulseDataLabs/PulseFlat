@@ -16,7 +16,7 @@ from pathlib import Path
 import requests
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from utils import get_logger, agora_brt, limpar, salvar_csv
+from utils import get_logger, agora_brt, limpar, nova_session, salvar_csv
 
 log = get_logger("anbima_550")
 
@@ -34,14 +34,14 @@ CABECALHO = [
 ]
 
 
-def _url_referencia() -> tuple[str, date]:
+def _url_referencia(session) -> tuple[str, date]:
     for delta in range(1, 6):
         ref = date.today() - timedelta(days=delta)
         if ref.weekday() >= 5:
             continue
         url = URL_TPL.format(yyyymmdd=ref.strftime("%Y%m%d"))
         try:
-            resp = requests.head(url, timeout=15)
+            resp = session.head(url, timeout=15)
             if resp.status_code == 200:
                 return url, ref
         except Exception:
@@ -51,13 +51,13 @@ def _url_referencia() -> tuple[str, date]:
 
 
 def capturar() -> list[dict]:
-    url, data_ref = _url_referencia()
+    session = nova_session()
+    url, data_ref = _url_referencia(session)
     log.info(f"Buscando ANBIMA 550: {url}")
 
     for tentativa in range(1, 4):
         try:
-            resp = requests.get(url, timeout=30,
-                                headers={"User-Agent": "Mozilla/5.0"})
+            resp = session.get(url, timeout=30)
             resp.raise_for_status()
             break
         except requests.RequestException as e:
