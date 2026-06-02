@@ -103,7 +103,7 @@ Sem servidor. Sem custo. Histórico versionado em CSV no próprio repositório.
 ### `anbima_debentures.csv`
 | Campo | Descrição |
 |---|---|
-| data_captura / hora_captura | Data e hora da execução (BRT) |
+| data_referencia | Data de referência da cotação |
 | codigo | Código da debênture |
 | nome_emissor | Nome do emissor |
 | dt_repactuacao_vencimento | Data de repactuação/vencimento |

@@ -15,15 +15,14 @@ from pathlib import Path
 import requests
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from utils import get_logger, agora_brt, limpar, nova_session, salvar_csv
+from utils import get_logger, limpar, nova_session, salvar_csv
 
 log = get_logger("anbima_debentures")
 
 ARQUIVO = Path("data/anbima_debentures.csv")
 
 CABECALHO = [
-    "data_captura",
-    "hora_captura",
+    "data_referencia",
     "codigo",
     "nome_emissor",
     "dt_repactuacao_vencimento",
@@ -89,7 +88,7 @@ def capturar() -> list[dict]:
     linhas = texto.splitlines()
     dados_linhas = [l for l in linhas[3:] if l.strip() and "@" in l]
 
-    data_captura, hora_captura = agora_brt()
+    data_referencia = data_ref.strftime("%Y-%m-%d")
     registros = []
 
     COLUNAS = [
@@ -103,7 +102,7 @@ def capturar() -> list[dict]:
         partes = linha.split("@")
         if len(partes) < len(COLUNAS):
             partes += [""] * (len(COLUNAS) - len(partes))
-        registro = {"data_captura": data_captura, "hora_captura": hora_captura}
+        registro = {"data_referencia": data_referencia}
         for col, val in zip(COLUNAS, partes):
             registro[col] = limpar(val.replace(",", "."))
         registros.append(registro)
@@ -119,7 +118,7 @@ def capturar() -> list[dict]:
 def main():
     log.info("=== ANBIMA — Debêntures ===")
     salvar_csv(ARQUIVO, capturar(), CABECALHO,
-               chaves_dedup=["data_captura", "codigo"])
+               chaves_dedup=["data_referencia", "codigo"])
 
 
 if __name__ == "__main__":
