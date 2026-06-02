@@ -59,7 +59,7 @@ def capturar() -> tuple[list[dict], list[str]]:
 def main():
     log.info("=== B3 — Índices de Preços Históricos ===")
     rows, header = capturar()
-    salvar_csv(ARQUIVO, rows, header, chaves_dedup=["data_captura", "conjunto", "registro_hash"])
+    salvar_csv(ARQUIVO, rows, header, chaves_dedup=["indice", "ano", "day"])
     log.info(f"{len(rows)} registro(s) salvo(s)")
 
 

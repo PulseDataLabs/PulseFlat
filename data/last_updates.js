@@ -5,7 +5,7 @@ window.PULSEFLAT_LAST_UPDATES = {
   "bcb_sgs.csv": "2026-06-02",
   "teste_csv.csv": "2026-06-02",
   "anbima_ima_completo.csv": "2026-06-01",
-  "b3_indices_precos_historicos.csv": "2026-06-01",
+  "b3_indices_precos_historicos.csv": "2026-06-02",
   "b3_capital_social_empresas.csv": "2026-06-01",
   "anbima_indice_imab.csv": "2026-06-01",
   "b3_bvbg028.csv": "2026-06-01",
