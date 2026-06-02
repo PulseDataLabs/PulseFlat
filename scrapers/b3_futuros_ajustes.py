@@ -29,7 +29,7 @@ ARQUIVO = Path("data/b3_futuros_ajustes.csv")
 
 CABECALHO = [
     "data_captura",
-    "hora_captura",
+    
     "data_referencia",
     "mercadoria",
     "vencimento",
@@ -119,7 +119,7 @@ def capturar() -> list[dict]:
         "preco_ajuste_atual", "variacao", "valor_ajuste_por_contrato_brl",
     ]
 
-    data_captura, hora_captura = agora_brt()
+    data_captura, _ = agora_brt()
     registros = []
     mercadoria_atual = ""
 
@@ -129,7 +129,6 @@ def capturar() -> list[dict]:
             break
         if linha[0]:
             mercadoria_atual = linha[0]
-        registro = {"data_captura": data_captura, "hora_captura": hora_captura,
                     "data_referencia": data_ref.strftime("%Y-%m-%d"),
                     "mercadoria": mercadoria_atual}
         for col, val in zip(COLUNAS[1:], linha[1:]):

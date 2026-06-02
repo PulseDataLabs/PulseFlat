@@ -50,7 +50,7 @@ INDICES = [
 ]
 
 CABECALHO = [
-    "data_captura", "hora_captura",
+    "data_captura", 
     "indice", "indice_nome",
     "codigo_ativo", "nome_ativo", "tipo_ativo",
     "quantidade_teorica", "participacao_pct",
@@ -78,11 +78,10 @@ def _pagina(session, index: str, segment: str, page: int) -> tuple[list, int]:
         return [], 0
 
 
-def _mapear(item: dict, data_captura: str, hora_captura: str,
+def _mapear(item: dict, data_captura: str,
             index: str, label: str) -> dict:
     return {
         "data_captura":       data_captura,
-        "hora_captura":       hora_captura,
         "indice":             index,
         "indice_nome":        label,
         "codigo_ativo":       limpar(item.get("cod")          or item.get("ticker")        or item.get("code")),
@@ -96,7 +95,7 @@ def _mapear(item: dict, data_captura: str, hora_captura: str,
 
 
 def _capturar_indice(session, index: str, segment: str, label: str,
-                     data_captura: str, hora_captura: str) -> list[dict]:
+                     data_captura: str) -> list[dict]:
     log.info(f"[{index}] Capturando...")
     primeira, total = _pagina(session, index, segment, 1)
     if not primeira:
@@ -114,16 +113,16 @@ def _capturar_indice(session, index: str, segment: str, label: str,
         todos.extend(resultados)
         time.sleep(0.3)
 
-    return [_mapear(i, data_captura, hora_captura, index, label) for i in todos]
+    return [_mapear(i, data_captura, index, label) for i in todos]
 
 
 def capturar() -> list[dict]:
-    data_captura, hora_captura = agora_brt()
+    data_captura, _ = agora_brt()
     session = nova_session()
     todos, erros = [], []
 
     for index, segment, label in INDICES:
-        registros = _capturar_indice(session, index, segment, label, data_captura, hora_captura)
+        registros = _capturar_indice(session, index, segment, label, data_captura)
         if registros:
             todos.extend(registros)
         else:

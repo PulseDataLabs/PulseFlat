@@ -23,7 +23,7 @@ ARQUIVO = Path("data/b3_bdi_di_over.csv")
 
 CABECALHO = [
     "data_captura",
-    "hora_captura",
+    
     "rpt_dt",
     "number_of_operations",
     "financial_volume",
@@ -74,7 +74,7 @@ def capturar() -> list[dict]:
     str_data = data_ref.strftime("%Y-%m-%d")
     log.info(f"Buscando DI Over B3 (ref: {str_data})...")
 
-    data_captura, hora_captura = agora_brt()
+    data_captura, _ = agora_brt()
     todos = []
     pagina = 1
 
@@ -93,7 +93,6 @@ def capturar() -> list[dict]:
             n_ops = item.get("tckr_symb") or item.get("number_of_operations", "")
             todos.append({
                 "data_captura":       data_captura,
-                "hora_captura":       hora_captura,
                 "rpt_dt":             limpar(str(item.get("rpt_dt", ""))),
                 "number_of_operations": limpar(str(n_ops)),
                 "financial_volume":   limpar(str(item.get("financial_volume", ""))),

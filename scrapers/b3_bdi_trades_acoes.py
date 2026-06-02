@@ -25,7 +25,7 @@ ARQUIVO = Path("data/b3_bdi_trades_acoes.csv")
 
 CABECALHO = [
     "data_captura",
-    "hora_captura",
+    
     "rpt_dt",
     "tckr_symb",
     "isin",
@@ -86,7 +86,7 @@ def capturar() -> list[dict]:
     str_data = data_ref.strftime("%Y-%m-%d")
     log.info(f"Buscando trades consolidados ações B3 (ref: {str_data})...")
 
-    data_captura, hora_captura = agora_brt()
+    data_captura, _ = agora_brt()
     todos = []
     pagina = 1
 
@@ -103,7 +103,6 @@ def capturar() -> list[dict]:
         for item in rows:
             todos.append({
                 "data_captura":  data_captura,
-                "hora_captura":  hora_captura,
                 "rpt_dt":        limpar(str(item.get("rpt_dt", ""))),
                 "tckr_symb":     limpar(item.get("tckr_symb", "")),
                 "isin":          limpar(item.get("isin", "")),

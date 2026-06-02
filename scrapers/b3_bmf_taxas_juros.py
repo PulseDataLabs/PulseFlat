@@ -37,7 +37,7 @@ TABELAS_CANDIDATAS = [
 
 CABECALHO = [
     "data_captura",
-    "hora_captura",
+    
     "tabela_origem",
     "data_referencia",
     "curva",
@@ -119,7 +119,7 @@ def capturar() -> list[dict]:
         )
         sys.exit(1)
 
-    data_captura, hora_captura = agora_brt()
+    data_captura, _ = agora_brt()
     todos = []
     pagina = 1
 
@@ -141,7 +141,6 @@ def capturar() -> list[dict]:
 
             todos.append({
                 "data_captura":    data_captura,
-                "hora_captura":    hora_captura,
                 "tabela_origem":   tabela,
                 "data_referencia": limpar(str(item.get("rpt_dt", str_data))),
                 "curva":           limpar(str(curva)),

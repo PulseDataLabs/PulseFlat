@@ -23,7 +23,7 @@ PAGE_SIZE  = 100
 ARQUIVO    = Path("data/b3_fiis_listados.csv")
 
 CABECALHO = [
-    "data_captura", "hora_captura",
+    "data_captura", 
     "codigo_fundo", "nome_fundo", "cnpj",
     "administrador", "segmento", "tipo",
     "mandato", "prazo_duracao", "gestao",
@@ -59,7 +59,7 @@ def _pagina(session, page: int) -> tuple[list, int, int | None]:
         return [], 0, None
 
 
-def _mapear(item: dict, data_captura: str, hora_captura: str) -> dict:
+def _mapear(item: dict, data_captura: str) -> dict:
     codigo = limpar(item.get("fundTicker") or item.get("ticker") or item.get("code") or item.get("symbol"))
     if not codigo:
         acronym = limpar(item.get("acronym") or item.get("acronymName") or item.get("fundAcronym"))
@@ -67,7 +67,6 @@ def _mapear(item: dict, data_captura: str, hora_captura: str) -> dict:
             codigo = acronym if any(c.isdigit() for c in acronym) else f"{acronym}11"
     return {
         "data_captura":       data_captura,
-        "hora_captura":       hora_captura,
         "codigo_fundo":       codigo,
         "nome_fundo":         limpar(item.get("fundName")   or item.get("tradingName") or item.get("companyName")),
         "cnpj":               limpar(item.get("cnpj")),
@@ -84,7 +83,7 @@ def _mapear(item: dict, data_captura: str, hora_captura: str) -> dict:
 
 
 def capturar() -> list[dict]:
-    data_captura, hora_captura = agora_brt()
+    data_captura, _ = agora_brt()
     session = nova_session()
 
     log.info("Buscando página 1...")
@@ -103,7 +102,7 @@ def capturar() -> list[dict]:
         todos.extend(resultados)
         time.sleep(0.3)
 
-    registros = [_mapear(i, data_captura, hora_captura) for i in todos]
+    registros = [_mapear(i, data_captura) for i in todos]
     log.info(f"{len(registros)} FIIs capturados.")
     return registros
 

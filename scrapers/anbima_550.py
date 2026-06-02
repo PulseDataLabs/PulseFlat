@@ -25,7 +25,7 @@ URL_TPL = "https://www.anbima.com.br/informacoes/res-550/arqs/{yyyymmdd}_550.tex
 
 CABECALHO = [
     "data_captura",
-    "hora_captura",
+    
     "titulo",
     "vencimento",
     "preco_unitario",
@@ -80,7 +80,7 @@ def capturar() -> list[dict]:
     # Skiprows=2, skipfooter=4
     linhas_dados = linhas[2:-4] if len(linhas) > 6 else linhas[2:]
 
-    data_captura, hora_captura = agora_brt()
+    data_captura, _ = agora_brt()
     registros = []
 
     for linha in linhas_dados:
@@ -89,7 +89,6 @@ def capturar() -> list[dict]:
             continue
         registros.append({
             "data_captura":    data_captura,
-            "hora_captura":    hora_captura,
             "titulo":          limpar(partes[0]),
             "vencimento":      limpar(partes[1]),
             "preco_unitario":  limpar(partes[2].replace(".", "").replace(",", ".")),

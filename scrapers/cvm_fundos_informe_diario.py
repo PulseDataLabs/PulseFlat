@@ -26,7 +26,7 @@ ARQUIVO = Path("data/cvm_fundos_informe_diario.csv")
 
 CABECALHO = [
     "data_captura",
-    "hora_captura",
+    
     "tp_fundo_classe",
     "cnpj_fundo_classe",
     "id_subclasse",
@@ -101,7 +101,7 @@ def capturar() -> list[dict]:
 
     import csv
     reader = csv.DictReader(StringIO(texto), delimiter=";")
-    data_captura, hora_captura = agora_brt()
+    data_captura, _ = agora_brt()
 
     CAMPOS = {
         "TP_FUNDO_CLASSE": "tp_fundo_classe",
@@ -118,7 +118,6 @@ def capturar() -> list[dict]:
 
     registros = []
     for row in reader:
-        registro = {"data_captura": data_captura, "hora_captura": hora_captura}
         for campo_csv, campo_nosso in CAMPOS.items():
             registro[campo_nosso] = limpar(row.get(campo_csv, ""))
         registros.append(registro)

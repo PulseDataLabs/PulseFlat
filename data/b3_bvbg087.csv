@@ -1,2 +1,2 @@
-data_captura,hora_captura,conjunto,arquivo_origem,registro_hash,tamanho_bytes
-2026-06-01,22:11:19,b3_bvbg087,IR260529.zip,8d4596bbc8a2f7c6f99c8626,24492
+data_captura,conjunto,arquivo_origem,registro_hash,tamanho_bytes
+2026-06-01,b3_bvbg087,IR260529.zip,8d4596bbc8a2f7c6f99c8626,24492

@@ -70,7 +70,7 @@ Sem servidor. Sem custo. Histórico versionado em CSV no próprio repositório.
 ### `anbima_indicadores.csv`
 | Campo | Descrição |
 |---|---|
-| data_captura / hora_captura | Data e hora da execução (BRT) |
+| data_captura | Data da execução (BRT) |
 | data_referencia_pagina | Data/hora da última atualização na página |
 | indicador | Nome do indicador (ex: Taxa SELIC (BC)) |
 | categoria | Grupo: Taxa de Juros, Câmbio, Índice de Preços, etc. |
@@ -96,7 +96,7 @@ Sem servidor. Sem custo. Histórico versionado em CSV no próprio repositório.
 ### `anbima_titulos_publicos.csv`
 | Campo | Descrição |
 |---|---|
-| data_captura / hora_captura | Data e hora da execução (BRT) |
+| data_captura | Data da execução (BRT) |
 | titulo | Nome do título público |
 | data_referencia | Data de referência da cotação |
 | codigo_selic | Código SELIC do ativo |
@@ -121,7 +121,7 @@ Sem servidor. Sem custo. Histórico versionado em CSV no próprio repositório.
 ### `anbima_ima.csv`
 | Campo | Descrição |
 |---|---|
-| data_captura / hora_captura | Data e hora da execução (BRT) |
+| data_captura | Data da execução (BRT) |
 | data_referencia | Data de referência |
 | indice | Nome do índice (IMA-Geral, IRF-M, IDA, etc.) |
 | numero_indice | Número do índice |
@@ -132,7 +132,7 @@ Sem servidor. Sem custo. Histórico versionado em CSV no próprio repositório.
 ### `anbima_550.csv`
 | Campo | Descrição |
 |---|---|
-| data_captura / hora_captura | Data e hora da execução (BRT) |
+| data_captura | Data da execução (BRT) |
 | titulo | Nome do ativo |
 | vencimento | Data de vencimento |
 | preco_unitario | Preço unitário (R$) |
@@ -142,7 +142,7 @@ Sem servidor. Sem custo. Histórico versionado em CSV no próprio repositório.
 ### `bcb_ptax.csv`
 | Campo | Descrição |
 |---|---|
-| data_captura / hora_captura | Data e hora da execução (BRT) |
+| data_captura | Data da execução (BRT) |
 | data_hora_cotacao | Data/hora da cotação PTAX |
 | cotacao_compra | Cotação de compra (R$/US$) |
 | cotacao_venda | Cotação de venda (R$/US$) |
@@ -150,7 +150,7 @@ Sem servidor. Sem custo. Histórico versionado em CSV no próprio repositório.
 ### `bcb_sgs.csv`
 | Campo | Descrição |
 |---|---|
-| data_captura / hora_captura | Data e hora da execução (BRT) |
+| data_captura | Data da execução (BRT) |
 | codigo_serie | Código da série SGS (ex: 11, 432, 433) |
 | nome_serie | Nome descritivo da série |
 | data | Data do valor |
@@ -161,7 +161,7 @@ Sem servidor. Sem custo. Histórico versionado em CSV no próprio repositório.
 ### `ibge_sidra.csv`
 | Campo | Descrição |
 |---|---|
-| data_captura / hora_captura | Data e hora da execução (BRT) |
+| data_captura | Data da execução (BRT) |
 | serie_id | Código da tabela SIDRA |
 | nome_serie | Nome da série |
 | fonte | Fonte dos dados |
@@ -187,7 +187,7 @@ Categoria (RV/RF), ticker, nome, CNPJ, administrador, gestor, índice de referê
 ### `b3_indicadores_financeiros.csv`
 | Campo | Descrição |
 |---|---|
-| data_captura / hora_captura | Data e hora da execução (BRT) |
+| data_captura | Data da execução (BRT) |
 | security_identification_code | Código do indicador |
 | description | Descrição do indicador |
 | group_description | Grupo (Interest Rates, Exchange Rates, etc.) |
@@ -197,7 +197,7 @@ Categoria (RV/RF), ticker, nome, CNPJ, administrador, gestor, índice de referê
 ### `b3_bdi_di_over.csv`
 | Campo | Descrição |
 |---|---|
-| data_captura / hora_captura | Data e hora da execução (BRT) |
+| data_captura | Data da execução (BRT) |
 | rpt_dt | Data de referência |
 | number_of_operations | Número de operações |
 | financial_volume | Volume financeiro (R$) |
@@ -208,7 +208,7 @@ Categoria (RV/RF), ticker, nome, CNPJ, administrador, gestor, índice de referê
 ### `bacen_negociacao_tpf_extragrupo_mes_corrente.csv` / `..._mes_anterior.csv`
 | Campo | Descrição |
 |---|---|
-| data_captura / hora_captura | Data e hora da execução (BRT) |
+| data_captura | Data da execução (BRT) |
 | data_negocio | Data de negociação |
 | titulo | Código do título público |
 | tipo_operacao | Tipo de operação (Compra, Venda) |
@@ -219,7 +219,7 @@ Categoria (RV/RF), ticker, nome, CNPJ, administrador, gestor, índice de referê
 ### `b3_taxa_cambio_referencia.csv`
 | Campo | Descrição |
 |---|---|
-| data_captura / hora_captura | Data e hora da execução (BRT) |
+| data_captura | Data da execução (BRT) |
 | codigo_moeda | Código da moeda (ex: USD) |
 | taxa_compra | Taxa de câmbio de compra (R$) |
 | taxa_venda | Taxa de câmbio de venda (R$) |
@@ -227,7 +227,7 @@ Categoria (RV/RF), ticker, nome, CNPJ, administrador, gestor, índice de referê
 ### `b3_capital_social_empresas.csv`
 | Campo | Descrição |
 |---|---|
-| data_captura / hora_captura | Data e hora da execução (BRT) |
+| data_captura | Data da execução (BRT) |
 | cnpj | CNPJ da empresa |
 | empresa | Nome da empresa |
 | capital_social | Valor do capital social (R$) |
@@ -236,7 +236,7 @@ Categoria (RV/RF), ticker, nome, CNPJ, administrador, gestor, índice de referê
 ### `anbima_indice_imab.csv`
 | Campo | Descrição |
 |---|---|
-| data_captura / hora_captura | Data e hora da execução (BRT) |
+| data_captura | Data da execução (BRT) |
 | data | Data de referência |
 | indice | Nome do índice (IMA-B, IMA-B5, etc.) |
 | numero | Número do índice |
@@ -247,7 +247,7 @@ Boletins diários de operações da B3 (Ações, RF, Derivativos) — arquivos B
 
 | Campo | Descrição |
 |---|---|
-| data_captura / hora_captura | Data e hora da execução (BRT) |
+| data_captura | Data da execução (BRT) |
 | data_pregão | Data do pregão |
 | codigo | Código do ativo |
 | quantidade | Quantidade negociada |
@@ -263,7 +263,7 @@ Cadastro de companhias abertas registradas na CVM.
 
 | Campo | Descrição |
 |---|---|
-| data_captura / hora_captura | Data e hora da execução (BRT) |
+| data_captura | Data da execução (BRT) |
 | cnpj | CNPJ da companhia |
 | denominação_social | Razão social |
 | nome_de_pregao | Nome de pregão |
@@ -275,7 +275,7 @@ Histórico de composição e preços de índices da B3.
 
 | Campo | Descrição |
 |---|---|
-| data_captura / hora_captura | Data e hora da execução (BRT) |
+| data_captura | Data da execução (BRT) |
 | indice | Código do índice (IBOV, IBRA, IFIX, etc.) |
 | ano | Ano de referência |
 | ticker | Ticker do ativo |
@@ -468,7 +468,7 @@ O `.env` está no `.gitignore` — nunca será commitado.
 from utils import get_logger, agora_brt, salvar_csv
 
 ARQUIVO   = Path("data/novo_fonte.csv")
-CABECALHO = ["data_captura", "hora_captura", ...]
+CABECALHO = ["data_captura", ...]
 
 def capturar() -> list[dict]: ...
 

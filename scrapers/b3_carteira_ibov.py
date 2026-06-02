@@ -26,7 +26,7 @@ PAGE_SIZE = 120
 
 CABECALHO = [
     "data_captura",
-    "hora_captura",
+    
     "indice",
     "codigo",
     "acao",
@@ -48,7 +48,7 @@ def _url_pagina(page: int) -> str:
 
 def capturar() -> list[dict]:
     session = nova_session()
-    data_captura, hora_captura = agora_brt()
+    data_captura, _ = agora_brt()
     todos = []
     pagina = 1
 
@@ -70,7 +70,6 @@ def capturar() -> list[dict]:
         for item in resultados:
             todos.append({
                 "data_captura": data_captura,
-                "hora_captura": hora_captura,
                 "indice":       INDICE,
                 "codigo":       limpar(item.get("cod") or item.get("ticker") or item.get("code", "")),
                 "acao":         limpar(item.get("asset") or item.get("name") or item.get("assetName", "")),

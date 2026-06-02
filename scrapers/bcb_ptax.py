@@ -23,7 +23,7 @@ ARQUIVO = Path("data/bcb_ptax.csv")
 
 CABECALHO = [
     "data_captura",
-    "hora_captura",
+    
     "data_hora_cotacao",
     "cotacao_compra",
     "cotacao_venda",
@@ -71,12 +71,11 @@ def capturar() -> list[dict]:
         log.error("Nenhum dado retornado pela API PTAX.")
         sys.exit(1)
 
-    data_captura, hora_captura = agora_brt()
+    data_captura, _ = agora_brt()
     registros = []
     for item in dados:
         registros.append({
             "data_captura":      data_captura,
-            "hora_captura":      hora_captura,
             "data_hora_cotacao": limpar(item.get("dataHoraCotacao")),
             "cotacao_compra":    limpar(item.get("cotacaoCompra")),
             "cotacao_venda":     limpar(item.get("cotacaoVenda")),

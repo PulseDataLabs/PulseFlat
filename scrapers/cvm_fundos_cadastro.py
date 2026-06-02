@@ -25,7 +25,7 @@ URL = "https://dados.cvm.gov.br/dados/FI/CAD/DADOS/cad_fi.csv"
 
 CABECALHO = [
     "data_captura",
-    "hora_captura",
+    
     "tp_fundo",
     "cnpj_fundo",
     "denom_social",
@@ -84,7 +84,7 @@ def capturar() -> list[dict]:
 
     import csv
     reader = csv.DictReader(StringIO(texto), delimiter=";")
-    data_captura, hora_captura = agora_brt()
+    data_captura, _ = agora_brt()
 
     # Mapeamento de colunas do CSV para nosso schema (lowercase)
     CAMPOS_CSV = {
@@ -120,7 +120,6 @@ def capturar() -> list[dict]:
 
     registros = []
     for row in reader:
-        registro = {"data_captura": data_captura, "hora_captura": hora_captura}
         for campo_csv, campo_nosso in CAMPOS_CSV.items():
             registro[campo_nosso] = limpar(row.get(campo_csv, ""))
         registros.append(registro)

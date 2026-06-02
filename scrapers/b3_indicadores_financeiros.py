@@ -31,7 +31,7 @@ URL = (
 
 CABECALHO = [
     "data_captura",
-    "hora_captura",
+    
     "security_identification_code",
     "description",
     "group_description",
@@ -80,13 +80,12 @@ def capturar() -> list[dict]:
         log.error("API B3 retornou lista vazia.")
         sys.exit(1)
 
-    data_captura, hora_captura = agora_brt()
+    data_captura, _ = agora_brt()
     registros = []
 
     for item in dados:
         registros.append({
             "data_captura":                data_captura,
-            "hora_captura":                hora_captura,
             "security_identification_code": limpar(item.get("securityIdentificationCode", "")),
             "description":                 limpar(item.get("description", "")),
             "group_description":           limpar(item.get("groupDescription", "")),

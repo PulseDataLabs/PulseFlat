@@ -43,7 +43,6 @@ def test_bcb_ptax_sucesso(requests_mock):
     assert reg["cotacao_venda"] == "5.254"
     assert reg["data_hora_cotacao"] == "2026-06-01 13:15:00.000"
     assert "data_captura" in reg
-    assert "hora_captura" in reg
 
 
 def test_bcb_ptax_erro_conexao(requests_mock):
@@ -89,7 +88,6 @@ def test_bcb_sgs_sucesso(requests_mock, monkeypatch):
         assert "codigo_serie" in reg
         assert "nome_serie" in reg
         assert "data_captura" in reg
-        assert "hora_captura" in reg
 
 
 def test_bcb_sgs_erro_parcial(requests_mock, monkeypatch):

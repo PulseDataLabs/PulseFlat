@@ -29,7 +29,7 @@ URL = "https://www.anbima.com.br/informacoes/ima/arqs/ima_completo.txt"
 
 CABECALHO = [
     "data_captura",
-    "hora_captura",
+    
     "data_referencia",
     "indice",
     "numero_indice",
@@ -98,7 +98,7 @@ def capturar() -> list[dict]:
     # As 3 primeiras linhas são cabeçalho do arquivo
     dados_linhas = dados_linhas[3:]
 
-    data_captura, hora_captura = agora_brt()
+    data_captura, _ = agora_brt()
     registros = []
 
     for linha in dados_linhas:
@@ -107,7 +107,6 @@ def capturar() -> list[dict]:
         partes = linha.split("@")
         if len(partes) < len(COLUNAS_ARQUIVO):
             partes += [""] * (len(COLUNAS_ARQUIVO) - len(partes))
-        registro = {"data_captura": data_captura, "hora_captura": hora_captura}
         for col, val in zip(COLUNAS_ARQUIVO, partes):
             registro[col] = limpar(val.replace(",", ".")).replace("--", "")
         registros.append(registro)

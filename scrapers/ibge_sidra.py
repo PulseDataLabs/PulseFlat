@@ -27,7 +27,7 @@ ARQUIVO = Path("data/ibge_sidra.csv")
 
 CABECALHO = [
     "data_captura",
-    "hora_captura",
+    
     "serie_id",
     "nome_serie",
     "fonte",
@@ -66,7 +66,7 @@ def _buscar_meta(serie_id: int) -> tuple[str, str]:
         return SERIES.get(serie_id, f"Série {serie_id}"), "IBGE"
 
 
-def _buscar_periodos(serie_id: int, data_captura: str, hora_captura: str) -> list[dict]:
+def _buscar_periodos(serie_id: int, data_captura: str) -> list[dict]:
     url = URL_PERIODOS.format(serie_id)
     for tentativa in range(1, 4):
         try:
@@ -98,7 +98,6 @@ def _buscar_periodos(serie_id: int, data_captura: str, hora_captura: str) -> lis
         periodo = literals[1] if len(literals) > 1 else limpar(str(literals))
         registros.append({
             "data_captura":      data_captura,
-            "hora_captura":      hora_captura,
             "serie_id":          str(serie_id),
             "nome_serie":        nome,
             "fonte":             fonte,
@@ -109,11 +108,11 @@ def _buscar_periodos(serie_id: int, data_captura: str, hora_captura: str) -> lis
 
 
 def capturar() -> list[dict]:
-    data_captura, hora_captura = agora_brt()
+    data_captura, _ = agora_brt()
     todos = []
     for serie_id in SERIES:
         log.info(f"Buscando metadados SIDRA tabela {serie_id}...")
-        registros = _buscar_periodos(serie_id, data_captura, hora_captura)
+        registros = _buscar_periodos(serie_id, data_captura)
         log.info(f"  → {len(registros)} períodos")
         todos.extend(registros)
         time.sleep(1)

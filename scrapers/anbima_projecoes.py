@@ -79,7 +79,7 @@ ARQUIVO = Path("data/anbima_projecoes.csv")
 
 CABECALHO = [
     "data_captura",
-    "hora_captura",
+    
     "estrategia_coleta",      # "api_oficial" | "scraping_indicadores"
     "indice",                 # IPCA | IGP-M
     "mes_referencia",         # ex: "mai/26"
@@ -118,10 +118,9 @@ def _obter_token(session, client_id: str, client_secret: str) -> str | None:
         return None
 
 
-def _mapear_api(item: dict, data_captura: str, hora_captura: str) -> dict:
+def _mapear_api(item: dict, data_captura: str) -> dict:
     return {
         "data_captura":      data_captura,
-        "hora_captura":      hora_captura,
         "estrategia_coleta": "api_oficial",
         "indice":            limpar(item.get("indice") or item.get("index", "")).upper(),
         "mes_referencia":    limpar(item.get("referenceMonth") or item.get("mesReferencia") or item.get("mes_referencia", "")),
@@ -139,7 +138,7 @@ def capturar_via_api(session, client_id: str, client_secret: str) -> list[dict]:
     if not token:
         return []
 
-    data_captura, hora_captura = agora_brt()
+    data_captura, _ = agora_brt()
     try:
         resp = session.get(
             ANBIMA_PROJECOES_URL,
@@ -160,7 +159,7 @@ def capturar_via_api(session, client_id: str, client_secret: str) -> list[dict]:
     else:
         itens = []
 
-    registros = [_mapear_api(i, data_captura, hora_captura) for i in itens]
+    registros = [_mapear_api(i, data_captura) for i in itens]
     log.info(f"[API Oficial] {len(registros)} projeções capturadas.")
     return registros
 
@@ -175,7 +174,7 @@ def capturar_via_scraping(session) -> list[dict]:
     Atualizada 2x/dia e inclui projeções do mês corrente e seguinte.
     """
     log.info(f"[Scraping] Acessando {URL_INDICADORES}")
-    data_captura, hora_captura = agora_brt()
+    data_captura, _ = agora_brt()
 
     for tentativa in range(1, 4):
         try:
@@ -199,7 +198,6 @@ def capturar_via_scraping(session) -> list[dict]:
     def add(indice, mes_ref, tipo, valor, data_div="", obs=""):
         registros.append({
             "data_captura":      data_captura,
-            "hora_captura":      hora_captura,
             "estrategia_coleta": "scraping_indicadores",
             "indice":            indice,
             "mes_referencia":    mes_ref,

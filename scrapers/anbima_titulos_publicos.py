@@ -25,7 +25,7 @@ ARQUIVO = Path("data/anbima_titulos_publicos.csv")
 
 CABECALHO = [
     "data_captura",
-    "hora_captura",
+    
     "titulo",
     "data_referencia",
     "codigo_selic",
@@ -96,7 +96,7 @@ def capturar() -> list[dict]:
     # Pula cabeçalho (3 linhas) e remove rodapé vazio
     dados_linhas = [l for l in linhas[3:] if l.strip() and "@" in l]
 
-    data_captura, hora_captura = agora_brt()
+    data_captura, _ = agora_brt()
     registros = []
 
     COLUNAS = [
@@ -110,7 +110,6 @@ def capturar() -> list[dict]:
         partes = linha.split("@")
         if len(partes) < len(COLUNAS):
             partes += [""] * (len(COLUNAS) - len(partes))
-        registro = {"data_captura": data_captura, "hora_captura": hora_captura}
         for col, val in zip(COLUNAS, partes):
             registro[col] = limpar(val.replace(",", "."))
         registros.append(registro)

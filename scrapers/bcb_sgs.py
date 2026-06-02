@@ -33,7 +33,7 @@ ARQUIVO = Path("data/bcb_sgs.csv")
 
 CABECALHO = [
     "data_captura",
-    "hora_captura",
+    
     "codigo_serie",
     "nome_serie",
     "data",
@@ -60,7 +60,7 @@ URL_TPL = (
 
 
 def _buscar_serie(session, codigo: int, nome: str, inicio: str, fim: str,
-                  data_captura: str, hora_captura: str) -> list[dict]:
+                  data_captura: str) -> list[dict]:
     url = URL_TPL.format(codigo=codigo, inicio=inicio, fim=fim)
     for tentativa in range(1, 4):
         try:
@@ -79,7 +79,6 @@ def _buscar_serie(session, codigo: int, nome: str, inicio: str, fim: str,
     for item in dados:
         registros.append({
             "data_captura":  data_captura,
-            "hora_captura":  hora_captura,
             "codigo_serie":  str(codigo),
             "nome_serie":    nome,
             "data":          limpar(item.get("data")),
@@ -92,14 +91,14 @@ def capturar() -> list[dict]:
     hoje = date.today()
     inicio = (hoje - timedelta(days=40)).strftime("%d/%m/%Y")
     fim = hoje.strftime("%d/%m/%Y")
-    data_captura, hora_captura = agora_brt()
+    data_captura, _ = agora_brt()
     session = nova_session()
 
     todos = []
     for codigo, nome in SERIES.items():
         log.info(f"Buscando série {codigo} — {nome}")
         registros = _buscar_serie(session, codigo, nome, inicio, fim,
-                                  data_captura, hora_captura)
+                                  data_captura)
         log.info(f"  → {len(registros)} pontos")
         todos.extend(registros)
         time.sleep(0.5)

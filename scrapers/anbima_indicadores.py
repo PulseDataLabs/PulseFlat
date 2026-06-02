@@ -25,7 +25,7 @@ ARQUIVO = Path("data/anbima_indicadores.csv")
 
 CABECALHO = [
     "data_captura",
-    "hora_captura",
+    
     "data_referencia_pagina",
     "indicador",
     "categoria",
@@ -64,7 +64,7 @@ def capturar() -> list[dict]:
             time.sleep(5)
 
     soup = BeautifulSoup(resp.text, "html.parser")
-    data_captura, hora_captura = agora_brt()
+    data_captura, _ = agora_brt()
     data_ref = _extrair_data_ref(soup)
     texto    = soup.get_text(" ", strip=True)
     registros = []
@@ -72,7 +72,6 @@ def capturar() -> list[dict]:
     def add(indicador, categoria, valor, unidade=""):
         registros.append({
             "data_captura":           data_captura,
-            "hora_captura":           hora_captura,
             "data_referencia_pagina": data_ref,
             "indicador":              indicador,
             "categoria":              categoria,

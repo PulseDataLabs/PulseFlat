@@ -29,7 +29,7 @@ CATEGORIAS = [
 ]
 
 CABECALHO = [
-    "data_captura", "hora_captura", "categoria_etf",
+    "data_captura", "categoria_etf",
     "codigo_fundo", "nome_fundo", "cnpj",
     "administrador", "gestor", "indice_referencia",
     "segmento", "tipo", "prazo_duracao",
@@ -65,7 +65,7 @@ def _pagina(session, funds_type: str, page: int) -> tuple[list, int, int | None]
         return [], 0, None
 
 
-def _mapear(item: dict, data_captura: str, hora_captura: str, label: str) -> dict:
+def _mapear(item: dict, data_captura: str, label: str) -> dict:
     codigo = limpar(item.get("fundTicker") or item.get("ticker") or item.get("code") or item.get("symbol"))
     if not codigo:
         acronym = limpar(item.get("acronym") or item.get("acronymName") or item.get("fundAcronym"))
@@ -73,7 +73,6 @@ def _mapear(item: dict, data_captura: str, hora_captura: str, label: str) -> dic
             codigo = acronym if any(c.isdigit() for c in acronym) else f"{acronym}11"
     return {
         "data_captura":       data_captura,
-        "hora_captura":       hora_captura,
         "categoria_etf":      label,
         "codigo_fundo":       codigo,
         "nome_fundo":         limpar(item.get("fundName")   or item.get("tradingName") or item.get("companyName")),
@@ -91,7 +90,7 @@ def _mapear(item: dict, data_captura: str, hora_captura: str, label: str) -> dic
 
 
 def _capturar_categoria(session, funds_type: str, label: str,
-                         data_captura: str, hora_captura: str) -> list[dict]:
+                         data_captura: str) -> list[dict]:
     log.info(f"[{label}] Buscando página 1...")
     primeira, total, total_pages = _pagina(session, funds_type, 1)
     if not primeira:
@@ -108,15 +107,15 @@ def _capturar_categoria(session, funds_type: str, label: str,
         todos.extend(resultados)
         time.sleep(0.3)
 
-    return [_mapear(i, data_captura, hora_captura, label) for i in todos]
+    return [_mapear(i, data_captura, label) for i in todos]
 
 
 def capturar() -> list[dict]:
-    data_captura, hora_captura = agora_brt()
+    data_captura, _ = agora_brt()
     session = nova_session()
     todos = []
     for funds_type, label in CATEGORIAS:
-        todos.extend(_capturar_categoria(session, funds_type, label, data_captura, hora_captura))
+        todos.extend(_capturar_categoria(session, funds_type, label, data_captura))
         time.sleep(0.5)
     log.info(f"{len(todos)} ETFs capturados (RV + RF).")
     return todos

@@ -54,7 +54,7 @@ def test_b64_encode_sem_espacos():
 # Testes de deduplicação do salvar_csv
 # ─────────────────────────────────────────────
 
-CABECALHO_TESTE = ["data_captura", "hora_captura", "indicador", "valor"]
+CABECALHO_TESTE = ["data_captura", "indicador", "valor"]
 
 
 def _ler_csv(arquivo: Path) -> list[dict]:
@@ -65,8 +65,7 @@ def _ler_csv(arquivo: Path) -> list[dict]:
 def test_salvar_csv_primeira_escrita(tmp_path):
     """Deve criar o arquivo com cabeçalho na primeira execução."""
     arquivo = tmp_path / "test.csv"
-    dados = [{"data_captura": "2025-06-01", "hora_captura": "09:30:00",
-              "indicador": "SELIC", "valor": "13.75"}]
+    dados = [{"data_captura": "2025-06-01", "indicador": "SELIC", "valor": "13.75"}]
 
     salvar_csv(arquivo, dados, CABECALHO_TESTE, chaves_dedup=["data_captura", "indicador"])
 
@@ -80,13 +79,11 @@ def test_salvar_csv_acumula_dias_distintos(tmp_path):
     arquivo = tmp_path / "test.csv"
 
     salvar_csv(arquivo,
-               [{"data_captura": "2025-06-01", "hora_captura": "09:30:00",
-                 "indicador": "SELIC", "valor": "13.75"}],
+               [{"data_captura": "2025-06-01", "indicador": "SELIC", "valor": "13.75"}],
                CABECALHO_TESTE, chaves_dedup=["data_captura", "indicador"])
 
     salvar_csv(arquivo,
-               [{"data_captura": "2025-06-02", "hora_captura": "09:30:00",
-                 "indicador": "SELIC", "valor": "13.80"}],
+               [{"data_captura": "2025-06-02", "indicador": "SELIC", "valor": "13.80"}],
                CABECALHO_TESTE, chaves_dedup=["data_captura", "indicador"])
 
     linhas = _ler_csv(arquivo)
@@ -101,16 +98,13 @@ def test_salvar_csv_dedup_mesmo_dia_mesma_chave(tmp_path):
 
     # Primeira execução
     salvar_csv(arquivo,
-               [{"data_captura": "2025-06-01", "hora_captura": "09:30:00",
-                 "indicador": "SELIC", "valor": "13.75"},
-                {"data_captura": "2025-06-01", "hora_captura": "09:30:00",
-                 "indicador": "DI", "valor": "13.65"}],
+               [{"data_captura": "2025-06-01", "indicador": "SELIC", "valor": "13.75"},
+                {"data_captura": "2025-06-01", "indicador": "DI", "valor": "13.65"}],
                CABECALHO_TESTE, chaves_dedup=["data_captura", "indicador"])
 
     # Segunda execução no mesmo dia
     salvar_csv(arquivo,
-               [{"data_captura": "2025-06-01", "hora_captura": "14:00:00",
-                 "indicador": "SELIC", "valor": "13.80"}],
+               [{"data_captura": "2025-06-01", "indicador": "SELIC", "valor": "13.80"}],
                CABECALHO_TESTE, chaves_dedup=["data_captura", "indicador"])
 
     linhas = _ler_csv(arquivo)
@@ -118,7 +112,6 @@ def test_salvar_csv_dedup_mesmo_dia_mesma_chave(tmp_path):
 
     selic = next(l for l in linhas if l["indicador"] == "SELIC")
     assert selic["valor"] == "13.80", "Deve manter o valor mais recente"
-    assert selic["hora_captura"] == "14:00:00", "Deve manter a hora mais recente"
 
     di = next(l for l in linhas if l["indicador"] == "DI")
     assert di["valor"] == "13.65", "DI não deve ter sido alterado"
@@ -129,20 +122,17 @@ def test_salvar_csv_dedup_simples_sem_chaves(tmp_path):
     arquivo = tmp_path / "test.csv"
 
     salvar_csv(arquivo,
-               [{"data_captura": "2025-06-01", "hora_captura": "09:30:00",
-                 "indicador": "SELIC", "valor": "13.75"}],
+               [{"data_captura": "2025-06-01", "indicador": "SELIC", "valor": "13.75"}],
                CABECALHO_TESTE)
 
     salvar_csv(arquivo,
-               [{"data_captura": "2025-06-01", "hora_captura": "14:00:00",
-                 "indicador": "SELIC", "valor": "13.80"},
-                {"data_captura": "2025-06-01", "hora_captura": "14:00:00",
-                 "indicador": "DI", "valor": "13.65"}],
+               [{"data_captura": "2025-06-01", "indicador": "SELIC", "valor": "13.80"},
+                {"data_captura": "2025-06-01", "indicador": "DI", "valor": "13.65"}],
                CABECALHO_TESTE)
 
     linhas = _ler_csv(arquivo)
     assert len(linhas) == 2, "Deve substituir todas as linhas do mesmo dia"
-    assert all(l["hora_captura"] == "14:00:00" for l in linhas)
+    assert all(l["data_captura"] == "2025-06-01" for l in linhas)
 
 
 def test_salvar_csv_preserva_historico_anterior(tmp_path):
@@ -151,14 +141,12 @@ def test_salvar_csv_preserva_historico_anterior(tmp_path):
 
     for dia in ["2025-05-28", "2025-05-29", "2025-05-30"]:
         salvar_csv(arquivo,
-                   [{"data_captura": dia, "hora_captura": "09:30:00",
-                     "indicador": "SELIC", "valor": "13.75"}],
+                   [{"data_captura": dia, "indicador": "SELIC", "valor": "13.75"}],
                    CABECALHO_TESTE, chaves_dedup=["data_captura", "indicador"])
 
     # Re-execução apenas no último dia
     salvar_csv(arquivo,
-               [{"data_captura": "2025-05-30", "hora_captura": "14:00:00",
-                 "indicador": "SELIC", "valor": "13.80"}],
+               [{"data_captura": "2025-05-30", "indicador": "SELIC", "valor": "13.80"}],
                CABECALHO_TESTE, chaves_dedup=["data_captura", "indicador"])
 
     linhas = _ler_csv(arquivo)
