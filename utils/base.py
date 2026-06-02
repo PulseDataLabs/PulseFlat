@@ -141,8 +141,13 @@ def salvar_csv(
                 last_updates[arquivo.name] = max(datas)
                 with last_updates_path.open("w", encoding="utf-8") as lf:
                     json.dump(last_updates, lf, indent=2, ensure_ascii=False)
+                
+                # Salva também como last_updates.js para carregamento local offline (file://)
+                last_updates_js_path = arquivo.parent / "last_updates.js"
+                with last_updates_js_path.open("w", encoding="utf-8") as lf:
+                    lf.write(f"window.PULSEFLAT_LAST_UPDATES = {json.dumps(last_updates, indent=2, ensure_ascii=False)};\n")
     except Exception as e:
-        log.warning(f"Não foi possível atualizar last_updates.json: {e}")
+        log.warning(f"Não foi possível atualizar last_updates.json/js: {e}")
 
     log.info(
         f"CSV atualizado → {arquivo} | "

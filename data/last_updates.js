@@ -1,4 +1,4 @@
-{
+window.PULSEFLAT_LAST_UPDATES = {
   "anbima_titulos_publicos.csv": "2026-06-02",
   "anbima_550.csv": "2026-06-02",
   "teste_json.csv": "2026-06-02",
@@ -27,4 +27,4 @@
   "b3_taxa_cambio_referencia.csv": "2026-06-01",
   "b3_indicadores_financeiros.csv": "2026-06-02",
   "anbima_debentures.csv": "2026-06-02"
-}
+};

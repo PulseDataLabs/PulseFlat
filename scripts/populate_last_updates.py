@@ -78,8 +78,14 @@ def main():
         with output_path.open("w", encoding="utf-8") as f:
             json.dump(last_updates, f, indent=2, ensure_ascii=False)
         log.info(f"Sucesso! Mapeamento atualizado salvo em {output_path}")
+
+        # Salva no arquivo JS para carregamento estático offline (file://)
+        js_path = data_dir / "last_updates.js"
+        with js_path.open("w", encoding="utf-8") as f:
+            f.write(f"window.PULSEFLAT_LAST_UPDATES = {json.dumps(last_updates, indent=2, ensure_ascii=False)};\n")
+        log.info(f"Sucesso! Mapeamento estático JS salvo em {js_path}")
     except Exception as e:
-        log.error(f"Erro ao salvar last_updates.json: {e}")
+        log.error(f"Erro ao salvar arquivos de metadados: {e}")
         sys.exit(1)
 
 

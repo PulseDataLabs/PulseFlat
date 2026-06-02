@@ -2233,6 +2233,7 @@
   </div>
 </footer>
 
+<script src="./data/last_updates.js"></script>
 <script>
   // Reveal on scroll
   const observer = new IntersectionObserver((entries) => {
@@ -2260,32 +2261,41 @@
 
   // Load and render last capture dates dynamically
   async function loadLastUpdates() {
-    try {
-      const response = await fetch('./data/last_updates.json');
-      if (!response.ok) throw new Error('Não foi possível carregar last_updates.json');
-      const updates = await response.json();
-
-      document.querySelectorAll('.dataset-card').forEach(card => {
-        const fileElement = card.querySelector('.card-file');
-        if (!fileElement) return;
-
-        const fileName = fileElement.textContent.trim();
-        const dateStr = updates[fileName];
-
-        if (dateStr) {
-          const parts = dateStr.split('-');
-          const formattedDate = parts.length === 3 ? `${parts[2]}/${parts[1]}/${parts[0]}` : dateStr;
-
-          const updateBadge = document.createElement('div');
-          updateBadge.className = 'card-last-update';
-          updateBadge.innerHTML = `Captura mais recente: ${formattedDate}`;
-
-          fileElement.parentNode.insertBefore(updateBadge, fileElement.nextSibling);
+    let updates = window.PULSEFLAT_LAST_UPDATES;
+    if (!updates) {
+      try {
+        const response = await fetch('./data/last_updates.json');
+        if (response.ok) {
+          updates = await response.json();
         }
-      });
-    } catch (err) {
-      console.warn('Erro ao carregar datas das capturas:', err);
+      } catch (err) {
+        console.warn('Erro ao carregar last_updates.json:', err);
+      }
     }
+
+    if (!updates) {
+      console.warn('Metadados de última captura não encontrados.');
+      return;
+    }
+
+    document.querySelectorAll('.dataset-card').forEach(card => {
+      const fileElement = card.querySelector('.card-file');
+      if (!fileElement) return;
+
+      const fileName = fileElement.textContent.trim();
+      const dateStr = updates[fileName];
+
+      if (dateStr) {
+        const parts = dateStr.split('-');
+        const formattedDate = parts.length === 3 ? `${parts[2]}/${parts[1]}/${parts[0]}` : dateStr;
+
+        const updateBadge = document.createElement('div');
+        updateBadge.className = 'card-last-update';
+        updateBadge.innerHTML = `Captura mais recente: ${formattedDate}`;
+
+        fileElement.parentNode.insertBefore(updateBadge, fileElement.nextSibling);
+      }
+    });
   }
 
   document.addEventListener('DOMContentLoaded', loadLastUpdates);
