@@ -15,6 +15,26 @@ from zoneinfo import ZoneInfo
 
 import requests
 
+# Patch global do requests para impor limite e padrão de timeout (evita travamentos longos)
+_orig_request = requests.Session.request
+
+def _patched_request(self, method, url, *args, **kwargs):
+    timeout = kwargs.get("timeout")
+    if timeout is None:
+        kwargs["timeout"] = (10, 30)
+    elif isinstance(timeout, (int, float)):
+        conn = min(timeout, 10)
+        read = min(timeout, 30)
+        kwargs["timeout"] = (conn, read)
+    elif isinstance(timeout, tuple):
+        conn, read = timeout
+        conn_val = min(conn, 10) if conn is not None else 10
+        read_val = min(read, 30) if read is not None else 30
+        kwargs["timeout"] = (conn_val, read_val)
+    return _orig_request(self, method, url, *args, **kwargs)
+
+requests.Session.request = _patched_request
+
 FUSO = ZoneInfo("America/Sao_Paulo")
 
 HEADERS_HTTP = {
