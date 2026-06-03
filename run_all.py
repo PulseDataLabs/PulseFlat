@@ -91,12 +91,7 @@ SCRAPERS = [
         "descricao": "ANBIMA — Indicadores (SELIC, DI, IGP-M, IPCA, Câmbio, TR, FDS) (HTML)",
         "grupo": "anbima",
     },
-    {
-        "id": "anbima_indicadores_xls",
-        "modulo": "scrapers.anbima_indicadores_xls",
-        "descricao": "ANBIMA — Indicadores Financeiros (XLS)",
-        "grupo": "anbima",
-    },
+
     {
         "id": "anbima_projecoes",
         "modulo": "scrapers.anbima_projecoes",
