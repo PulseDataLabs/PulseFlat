@@ -418,8 +418,8 @@ Múltiplas execuções automáticas ao longo do dia (horário BRT, seg–sex):
 | 09h00 | `0 12 * * 1-5` | Todos os scrapers |
 | 09h30 | `30 12 * * 1-5` | Todos os scrapers |
 | 18h00 | `0 21 * * 1-5` | Todos os scrapers |
-| 21h00 | `0 0 * * 2-6` | Fechamento |
-| 23h00 | `0 2 * * 2-6` | Fechamento |
+| 21h00 | `0 0 * * 2-6` | Todos os scrapers |
+| 23h00 | `0 2 * * 2-6` | Todos os scrapers |
 
 **Execução manual:** Actions → Executar Automação de Dados Diária → Run workflow
 
