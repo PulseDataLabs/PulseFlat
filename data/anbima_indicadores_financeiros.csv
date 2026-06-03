@@ -1,0 +1,26 @@
+data_captura,conjunto,arquivo_origem,registro_hash,campo,indicador
+2026-06-03,anbima___indicadores_financeiros,,c71d91f2b4bf04a7c00040f8,Taxa % a.a.,
+2026-06-03,anbima___indicadores_financeiros,,df192140d46fcf41e0c2bc3a,14.4,Estimativa SELIC1
+2026-06-03,anbima___indicadores_financeiros,,011cf2548c4b11e548fa78a1,14.4,Taxa SELIC do BC2
+2026-06-03,anbima___indicadores_financeiros,,01e9ffff7727ab47afcf9401,14.4,DI-B33
+2026-06-03,anbima___indicadores_financeiros,,0e74e8f00f71a361ed1910a9,Números Índices / Variações Mensais,
+2026-06-03,anbima___indicadores_financeiros,,e7d20dc2cf7584e3a9a00290,1229.904,IGP-M (mai/26)5
+2026-06-03,anbima___indicadores_financeiros,,a7b2ed4be6a020b5b41aa66d,0.84,
+2026-06-03,anbima___indicadores_financeiros,,43cf856e4e4755ae93551ad7,0.4,IGP-M1
+2026-06-03,anbima___indicadores_financeiros,,cd3bb5c8ce50f755d81413fe,7596.09,IPCA (abr/26)6
+2026-06-03,anbima___indicadores_financeiros,,da3dc9399f936c0b54dd4b88,0.67,
+2026-06-03,anbima___indicadores_financeiros,,7fe113e1671519b30c9c5857,0.5,IPCA1
+2026-06-03,anbima___indicadores_financeiros,,2ac8f80839c850b4861b0e1c,R$ / US$,
+2026-06-03,anbima___indicadores_financeiros,,feedf5211b697fa9373796da,5.0154,Dolar Comercial Compra2
+2026-06-03,anbima___indicadores_financeiros,,43c43c7ec8e6f43b611e6b48,5.016,Dólar Comercial Venda2
+2026-06-03,anbima___indicadores_financeiros,,ce0a3436a630fce5476d8624,R$ / EUR$,
+2026-06-03,anbima___indicadores_financeiros,,22a6438911b19c7fc9f3385d,5.8379,Euro Compra2
+2026-06-03,anbima___indicadores_financeiros,,55551beda301e6b457e73e21,5.8396,Euro Venda2
+2026-06-03,anbima___indicadores_financeiros,,da87916fe52d45805dc2109a,Rend. Mês (%),
+2026-06-03,anbima___indicadores_financeiros,,1ddbd44eca75e4a1399d4c13,0.1709,TR2
+2026-06-03,anbima___indicadores_financeiros,,0fd5a11823860cdc0b952343,1.046,TBF2
+2026-06-03,anbima___indicadores_financeiros,,0dee4f4a6db374ea7a72e67f,Valor da Cota R$,
+2026-06-03,anbima___indicadores_financeiros,,966970c0133a8c9e53dc733a,0.088624,FDS4
+2026-06-03,anbima___indicadores_financeiros,,0ca99abc2bfe3989229652da,0.088584,FDS4
+2026-06-03,anbima___indicadores_financeiros,,deadfddfa4f98ca820680349,,"Fontes: ANBIMA1, BACEN2, B33, CEF4, FGV5 e IBGE6"
+2026-06-03,anbima___indicadores_financeiros,,4b226e216d7450a572031e8d,,Elaboração: ANBIMA

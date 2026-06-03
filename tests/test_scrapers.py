@@ -245,6 +245,61 @@ def test_anbima_ima_completo_sucesso(requests_mock, monkeypatch):
     assert reg2["numero_indice"] == "24436.46503800"
 
 
+def test_anbima_indicadores_sucesso(requests_mock):
+    """Deve capturar, parsear e limpar corretamente os indicadores do HTML da ANBIMA."""
+    import scrapers.anbima_indicadores as ai
+
+    mock_html = """
+    <html>
+    <body>
+        Data e Hora da Última Atualização: 03/06/2026 - 09:30 h
+        Estimativa SELIC 1 03/06/2026 14,40
+        Taxa SELIC do BC 2 02/06/2026 14,40
+        DI-B3 3 02/06/2026 14,40
+        IGP-M (mai/26) 5 Número Índice 1.229,904 Var % no mês 0,84
+        IGP-M 1 Projeção (jun/26) 0,40
+        IPCA (abr/26) 6 Número Índice 7.596,09 Var % no mês 0,67
+        IPCA 1 Projeção (mai/26) 0,50
+        Dolar Comercial Compra 2 02/06/2026 5,0154
+        Dólar Comercial Venda 2 02/06/2026 5,0160
+        Euro Compra 2 02/06/2026 5,8379
+        Euro Venda 2 02/06/2026 5,8396
+        TR 2 01/06/2026 0,1709
+        TBF 2 01/06/2026 1,0460
+        FDS 4 02/06/2026 0,088624
+        FDS 4 01/06/2026 0,088584
+    </body>
+    </html>
+    """
+
+    requests_mock.get(ai.URL, content=mock_html.encode("iso-8859-1"), status_code=200)
+
+    registros = ai.capturar()
+    
+    assert len(registros) == 17
+    
+    # Valida IGP-M Número Índice
+    igpm_idx = next(r for r in registros if r["indicador"] == "IGP-M Número Índice")
+    assert igpm_idx["valor"] == "1229.904"
+    assert igpm_idx["data_referencia"] == "2026-05-01"
+    
+    # Valida IPCA Número Índice
+    ipca_idx = next(r for r in registros if r["indicador"] == "IPCA Número Índice")
+    assert ipca_idx["valor"] == "7596.09"
+    assert ipca_idx["data_referencia"] == "2026-04-01"
+
+    # Valida Estimativa SELIC
+    selic = next(r for r in registros if r["indicador"] == "Estimativa SELIC")
+    assert selic["valor"] == "14.40"
+    assert selic["data_referencia"] == "2026-06-03"
+
+    # Valida Dólar Comercial Compra
+    dolar = next(r for r in registros if r["indicador"] == "Dólar Comercial Compra")
+    assert dolar["valor"] == "5.0154"
+    assert dolar["data_referencia"] == "2026-06-02"
+
+
+
 
 
 

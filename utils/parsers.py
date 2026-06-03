@@ -82,6 +82,13 @@ def normalize_keys(row: dict) -> dict:
     return out
 
 
+def sanitize_xls_header(key: str) -> str:
+    if key.startswith("data_e_hora") or "atualiza" in key:
+        return "indicador"
+    return key
+
+
+
 def csv_rows(text: str, delimiter: str | None = None) -> list[dict]:
     text = text.replace("\x00", "").strip()
     if not text:
@@ -202,7 +209,7 @@ def _xls_rows_xlrd(content: bytes) -> list[dict]:
             target = name
             break
     sheet = book.sheet_by_name(target) if target else book.sheet_by_index(0)
-    headers = [normalize_key(str(sheet.cell_value(0, c))) for c in range(sheet.ncols)]
+    headers = [sanitize_xls_header(normalize_key(str(sheet.cell_value(0, c)))) for c in range(sheet.ncols)]
     rows = []
     for r in range(1, sheet.nrows):
         item = {}
@@ -234,7 +241,7 @@ def _xls_rows_openpyxl(content: bytes) -> list[dict]:
             target = name
             break
     ws = wb[target] if target else wb.active
-    headers = [normalize_key(str(c.value or "")) for c in next(ws.iter_rows(min_row=1, max_row=1))]
+    headers = [sanitize_xls_header(normalize_key(str(c.value or ""))) for c in next(ws.iter_rows(min_row=1, max_row=1))]
     rows = []
     for row in ws.iter_rows(min_row=2, values_only=True):
         item = {}

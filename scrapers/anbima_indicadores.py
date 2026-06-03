@@ -37,7 +37,10 @@ CABECALHO = [
 def _limpar_valor(texto: str) -> str:
     if not texto:
         return ""
-    return re.sub(r"[%\s]", "", texto.strip().replace("\xa0", "").replace(",", "."))
+    texto_limpo = texto.strip().replace("\xa0", "")
+    if "," in texto_limpo:
+        texto_limpo = texto_limpo.replace(".", "").replace(",", ".")
+    return re.sub(r"[%\s]", "", texto_limpo)
 
 
 def _extrair_data_ref(soup: BeautifulSoup) -> str:

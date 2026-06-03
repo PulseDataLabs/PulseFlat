@@ -166,5 +166,9 @@ window.PULSEFLAT_LAST_UPDATES = {
   "bacen_negociacao_tpf_extragrupo_mes_corrente.csv": {
     "min": "2026-06-02",
     "max": "2026-06-03"
+  },
+  "anbima_indicadores_financeiros.csv": {
+    "min": "2026-06-03",
+    "max": "2026-06-03"
   }
 };

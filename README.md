@@ -18,6 +18,7 @@ Sem servidor. Sem custo. Histórico versionado em CSV no próprio repositório.
 | Scraper | Fonte | Método | CSV(s) gerado(s) |
 |---|---|---|---|
 | `anbima_indicadores` | ANBIMA | Scraping HTML | `anbima_indicadores.csv` |
+| `anbima_indicadores_xls` | ANBIMA | XLS direto | `anbima_indicadores_financeiros.csv` |
 | `anbima_projecoes` | ANBIMA | API OAuth 2.0 / Scraping | `anbima_projecoes.csv` |
 | `anbima_titulos_publicos` | ANBIMA | TXT delimitado (@) | `anbima_titulos_publicos.csv` |
 | `anbima_debentures` | ANBIMA | TXT delimitado (@) | `anbima_debentures.csv` |
@@ -328,6 +329,7 @@ PulseFlat/
 ├── data/                            # CSVs acumulativos e instantâneos (gerados automaticamente)
 │   ├── .gitkeep
 │   ├── anbima_indicadores.csv
+│   ├── anbima_indicadores_financeiros.csv
 │   ├── anbima_projecoes.csv
 │   ├── anbima_titulos_publicos.csv
 │   ├── anbima_debentures.csv

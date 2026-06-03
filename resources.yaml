@@ -70,7 +70,7 @@ resources:
     type_response: txt
   - name: ANBIMA - Indicadores Financeiros
     url: https://www.anbima.com.br/informacoes/indicadores/arqs/indicadores.xls
-    file_name: anbima_indicadores.xls
+    file_name: anbima_indicadores_financeiros.xls
     type_response: xls
   ##############################################################################
   # Bases Debêntures
