@@ -4,3 +4,7 @@ python-dotenv
 xlrd
 rich
 bizdays
+openpyxl
+PyYAML
+pytest
+requests-mock
