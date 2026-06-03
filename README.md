@@ -60,7 +60,7 @@ Sem servidor. Sem custo. Histórico versionado em CSV no próprio repositório.
 
 | Scraper | Fonte | Método | CSV(s) gerado(s) |
 |---|---|---|---|
-| `b3_fiis` | B3 | API JSON + Base64 | `b3_fiis_listados.csv` |
+| `b3_fiis` | B3 | API JSON + Base64 | `b3_fiis_listados.csv` (sem acúmulo) |
 | `b3_etfs` | B3 | API JSON + Base64 | `b3_etfs_listados.csv` (sem acúmulo) |
 | `b3_etfs_listados_download` | B3 | API JSON + Base64 | `b3_etfs_listados.csv` (sem acúmulo) |
 | `b3_carteiras` | B3 | API JSON + Base64 | `b3_carteiras_teoricas.csv` |

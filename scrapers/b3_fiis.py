@@ -109,8 +109,7 @@ def capturar() -> list[dict]:
 
 def main():
     log.info("=== B3 FIIs Listados ===")
-    salvar_csv(ARQUIVO, capturar(), CABECALHO,
-               chaves_dedup=["data_captura", "codigo_fundo"])
+    salvar_csv(ARQUIVO, capturar(), CABECALHO, acumular=False)
 
 
 if __name__ == "__main__":
