@@ -18,6 +18,11 @@ from xml.etree import ElementTree as ET
 from bizdays import Calendar
 
 import openpyxl
+import warnings
+
+# Silencia avisos irritantes de formatação/estilos ausentes do openpyxl
+warnings.filterwarnings("ignore", category=UserWarning, module="openpyxl")
+
 import xlrd
 
 from .base import FUSO, agora_brt, get_logger, limpar
