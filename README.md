@@ -93,6 +93,7 @@ Sem servidor. Sem custo. Histórico versionado em CSV no próprio repositório.
 | Campo | Descrição |
 |---|---|
 | data_captura | Data da execução (BRT) |
+| data_referencia | Data de referência do valor/indicador (ex: data do dia para taxas, 1º dia do mês de referência para IGP-M/IPCA) |
 | data_referencia_pagina | Data/hora da última atualização na página |
 | indicador | Nome do indicador (ex: Taxa SELIC (BC)) |
 | categoria | Grupo: Taxa de Juros, Câmbio, Índice de Preços, etc. |
