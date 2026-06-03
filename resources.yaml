@@ -84,6 +84,7 @@ resources:
     url: 'https://www.debentures.com.br/exploreosnd/consultaadados/mercadosecundario/precosdenegociacao_e.asp?op_exc=Nada&emissor=&isin=&ativo=&dt_ini=20250101&dt_fim=YYYYMMDD'
     file_name: 'debentures_mercado_secundario_precos_negociacao.csv'
     type_response: csv
+    acumular: false
   ##############################################################################
   # Bases CVM
   ##############################################################################

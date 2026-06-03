@@ -107,7 +107,7 @@ window.PULSEFLAT_LAST_UPDATES = {
     "max": "2026-06-03"
   },
   "debentures_mercado_secundario_precos_negociacao.csv": {
-    "min": "2026-06-02",
+    "min": "2026-06-03",
     "max": "2026-06-03"
   },
   "debentures_mercado_pu_historico.csv": "2026-06-02",
