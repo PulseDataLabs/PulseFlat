@@ -45,7 +45,7 @@ Sem servidor. Sem custo. Histórico versionado em CSV no próprio repositório.
 |---|---|---|---|
 | `cvm_cadastro_companhias_abertas` | CVM | CSV direto | `cvm_cadastro_companhias_abertas.csv` (sem acúmulo) |
 | `cvm_fundos_cadastro` | CVM | CSV direto | `cvm_fundos_cadastro.csv` (sem acúmulo) |
-| `cvm_fundos_informe_diario` | CVM | ZIP + CSV | `cvm_fundos_informe_diario.csv` |
+| `cvm_fundos_informe_diario` | CVM | ZIP + CSV | `cvm_fundos_informe_diario.csv` (sem acúmulo) |
 | `cvm_fundos_extrato` | CVM | CSV direto | `cvm_fundos_extrato.csv` (sem acúmulo) |
 | `cvm_fundos_classe` | CVM | ZIP + CSV | `cvm_fundos_classe.csv` (sem acúmulo) |
 
@@ -54,7 +54,7 @@ Sem servidor. Sem custo. Histórico versionado em CSV no próprio repositório.
 | Scraper | Fonte | Método | CSV(s) gerado(s) |
 |---|---|---|---|
 | `debentures_emissoes_caracteristicas` | SND | HTML direto | `debentures_emissoes_caracteristicas.csv` (sem acúmulo) |
-| `debentures_mercado_secundario_precos_negociacao` | SND | HTML direto | `debentures_mercado_secundario_precos_negociacao.csv` |
+| `debentures_mercado_secundario_precos_negociacao` | SND | HTML direto | `debentures_mercado_secundario_precos_negociacao.csv` (sem acúmulo) |
 
 ### Grupo B3
 

@@ -50,12 +50,23 @@ def clean_csv_text(text: str) -> str:
     lines = [ln.strip() for ln in text.splitlines() if ln.strip()]
     if not lines:
         return ""
-    # Se a primeira linha não possuir delimitador (; ou ,), é provável que seja um cabeçalho descritivo (título),
-    # então nós a descartamos para que o DictReader leia a linha seguinte como o cabeçalho real.
-    first_line = lines[0]
-    if ";" not in first_line and "," not in first_line:
-        log.info(f"Descartando linha de título do CSV: '{first_line}'")
-        return "\n".join(lines[1:])
+    
+    # Loop para descartar linhas de cabeçalho descritivo/título até encontrar o cabeçalho real
+    idx = 0
+    for i, line in enumerate(lines[:10]):  # analisa apenas as primeiras 10 linhas
+        # Conta os delimitadores mais comuns
+        num_delimiters = sum(line.count(d) for d in (";", ",", "\t", "|"))
+        # Se a linha tem muitos delimitadores, ela provavelmente é o cabeçalho real das colunas
+        if num_delimiters >= 4:
+            idx = i
+            break
+    else:
+        # Fallback se não encontrar nenhuma linha com pelo menos 4 delimitadores
+        idx = 0
+    
+    if idx > 0:
+        log.info(f"Descartadas {idx} linhas de título descritivo do CSV.")
+        return "\n".join(lines[idx:])
     return "\n".join(lines)
 
 
@@ -189,7 +200,9 @@ def run_resource(resource_name: str, output_file_override: Path = None):
         if type_response == "json":
             rows = json_rows(resp.json())
         elif type_response == "csv":
-            rows = csv_rows(decode_bytes(content))
+            decoded_text = decode_bytes(content)
+            decoded_text = clean_csv_text(decoded_text)
+            rows = csv_rows(decoded_text)
         elif type_response == "base64":
             content_str = content.decode("utf-8", errors="ignore").strip()
             # Remove aspas se a resposta JSON encapsular o base64
