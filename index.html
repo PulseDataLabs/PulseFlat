@@ -694,8 +694,16 @@
       letter-spacing: 0.1em;
     }
 
-    .badge-daily   { background: rgba(0,229,160,0.1); color: var(--green); border: 1px solid rgba(0,229,160,0.2); }
-    .badge-dynamic { background: rgba(0,212,255,0.08); color: var(--accent); border: 1px solid rgba(0,212,255,0.15); }
+    .card-badges {
+      display: flex;
+      gap: 0.35rem;
+      align-items: center;
+    }
+
+    .badge-daily      { background: rgba(0,229,160,0.1); color: var(--green); border: 1px solid rgba(0,229,160,0.2); }
+    .badge-dynamic    { background: rgba(0,212,255,0.08); color: var(--accent); border: 1px solid rgba(0,212,255,0.15); }
+    .badge-cumulative { background: rgba(0,212,255,0.08); color: var(--accent); border: 1px solid rgba(0,212,255,0.15); }
+    .badge-snapshot   { background: rgba(240,180,41,0.08); color: #f0b429; border: 1px solid rgba(240,180,41,0.15); }
 
     .card-title {
       font-family: var(--font-head);
@@ -2826,7 +2834,20 @@
   function initDatasetFilters() {
     const cards = document.querySelectorAll('.dataset-card');
     
-    // Map each card to its data source based on file name prefix
+    // Map each card to its data source based on file name prefix and add accumulation badges
+    const nonAccumulating = new Set([
+      'bcb_ptax.csv',
+      'bcb_sgs.csv',
+      'ibge_sidra.csv',
+      'cvm_cadastro_companhias_abertas.csv',
+      'cvm_fundos_cadastro.csv',
+      'cvm_fundos_extrato.csv',
+      'cvm_fundos_classe.csv',
+      'debentures_emissoes_caracteristicas.csv',
+      'b3_classificacao_setorial.csv',
+      'b3_titulos_negociaveis.csv'
+    ]);
+
     cards.forEach(card => {
       const fileElement = card.querySelector('.card-file');
       if (!fileElement) return;
@@ -2849,6 +2870,28 @@
       }
 
       card.setAttribute('data-source-mapped', source);
+
+      // Add cumulative or snapshot badge
+      const cardTop = card.querySelector('.card-top');
+      if (cardTop) {
+        const badgesContainer = document.createElement('div');
+        badgesContainer.className = 'card-badges';
+
+        const existingBadges = cardTop.querySelectorAll('.card-badge');
+        existingBadges.forEach(badge => badgesContainer.appendChild(badge));
+
+        const accBadge = document.createElement('span');
+        accBadge.className = 'card-badge';
+        if (nonAccumulating.has(fileName)) {
+          accBadge.textContent = 'Snapshot';
+          accBadge.classList.add('badge-snapshot');
+        } else {
+          accBadge.textContent = 'Acumulado';
+          accBadge.classList.add('badge-cumulative');
+        }
+        badgesContainer.appendChild(accBadge);
+        cardTop.appendChild(badgesContainer);
+      }
     });
 
     // Handle filter button clicks
