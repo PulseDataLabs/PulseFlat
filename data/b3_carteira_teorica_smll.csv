@@ -1,225 +1,110 @@
-data_captura,conjunto,arquivo_origem,registro_hash,c_digo_a_o_tipo_qtde_te_rica_part,none,a_o,c_digo,part,qtde_te_rica,tipo
-2026-06-02,b3___carteira_teórica___smll,,6dbd6b967a7c3af22093d448,TTEN3;3TENTOS;ON      NM;113.066.386;0,['516;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,65633da4f22ceb8256bfe0fa,ABCB4;ABC BRASIL;PN      N2;76.369.069;0,['555;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,f61bf6e2c04c6ca364fb8f0b,ALOS3;ALLOS;ON      NM;478.558.715;3,['966;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,f54d92d3e30a6eb870e1bc83,ALPA4;ALPARGATAS;PN      N1;128.924.117;0,['467;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,15ee5792116a90469589ee57,ALUP11;ALUPAR;UNT     N2;157.537.587;1,['500;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,4bfa29d85c83bfa25e8e6041,ANIM3;ANIMA;ON      NM;256.720.485;0,['245;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,8b79b552a852362bd6968dbd,ARML3;ARMAC;ON      NM;172.086.226;0,['180;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,806b30d880f86bff35197418,ASAI3;ASSAI;ON      NM;1.338.623.499;3,['434;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,8d9884f0dc646cabd87ee66f,AURE3;AUREN;ON      NM;317.799.925;1,['143;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,44339ca7548ba8a0eeee1c76,AZZA3;AZZAS 2154;ON  ATZ NM;109.571.260;0,['614;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,121afe06a709db19ded999f1,BRSR6;BANRISUL;PNB     N1;202.536.440;0,['880;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,aa4a87d201dd1d413fb2af64,BMOB3;BEMOBI TECH;ON      NM;79.319.310;0,['584;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,9b9e0cb5e73226b76ea5c37c,BLAU3;BLAU;ON      NM;38.584.960;0,['123;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,1fdcecc99c16ad6a5ada36a5,SOJA3;BOA SAFRA;ON      NM;58.542.883;0,['109;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,04a5d0616390d18af3c3e938,BRBI11;BR PARTNERS;UNT     N2;47.238.057;0,['225;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,eec1b186506e063130d436ac,BRAP4;BRADESPAR;PN      N1;250.914.708;1,['712;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,56b9ecf7f55fa7b09103d79f,SAUD3;BRADSAUDE;ON      NM;251.735.971;1,['006;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,e21d7b25c7dd5e3b531f70dd,BRKM5;BRASKEM;PNA     N1;265.709.734;0,['811;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,9acb413637dd5c43ef834ec4,BRAV3;BRAVA;ON      NM;462.883.017;2,['868;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,34f08b79488d53aa92ce3f95,CAML3;CAMIL;ON  ED  NM;96.218.424;0,['157;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,cd5d4794bf2750334983aa48,BHIA3;CASAS BAHIA;ON  ATZ NM;143.421.097;0,['056;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,eb1b8ff73f4cbedcf9d6e680,CBAV3;CBA;ON      NM;204.441.277;0,['653;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,87ccd03b967266b26701281c,CEAB3;CEA MODAS;ON      NM;204.964.309;0,['693;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,7aff1a9a929a43af970391b0,COGN3;COGNA ON;ON      NM;1.915.914.094;1,['412;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,e9ab5345ba8a03d6efe30867,CSMG3;COPASA;ON      NM;188.467.895;2,['935;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,bf57ddbd385b008e78641d6d,CSAN3;COSAN;ON  ATZ NM;2.242.671.999;2,['595;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,8aad786858befe5515d52f40,CURY3;CURY S/A;ON      NM;160.988.231;1,['504;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,9709fd94f45d8d50d1f1f9dc,CVCB3;CVC BRASIL;ON      NM;408.009.727;0,['189;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,e5be4a6fe5c6023ffe5f1707,CYRE3;CYRELA REALT;ON      NM;281.609.283;1,['880;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,3a0e1c9bd59505ad7e4c3d4c,DASA3;DASA;ON      NM;177.124.938;0,['160;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,07d9335b42ada913d5bafe56,DESK3;DESKTOP;ON      NM;34.835.856;0,['189;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,61b494b95f6c05f3c44b32ee,DXCO3;DEXCO;ON      NM;336.842.147;0,['476;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,673eec00572cb2d4569beafa,PNVL3;DIMED;ON      NM;82.405.671;0,['280;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,7c668193af1887a94d3f90b1,DIRR3;DIRECIONAL;ON      NM;327.091.595;1,['305;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,bbda1678a34aba510afe86c4,ECOR3;ECORODOVIAS;ON      NM;328.954.615;0,['721;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,caf2a0399497c7f613dd50a3,EVEN3;EVEN;ON  ED  NM;185.333.384;0,['311;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,649e75178806756429ac7dbb,EZTC3;EZTEC;ON      NM;121.216.090;0,['472;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,f03972bbb5e4a851f3a8a3b3,FESA4;FERBASA;PN      N1;147.407.600;0,['271;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,619e6374c91a14c40f0daccd,FLRY3;FLEURY;ON      NM;447.150.822;2,['042;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,3b470ff94d91d59c53e00a46,FRAS3;FRAS-LE;ON      N1;107.111.030;0,['690;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,8d01a209d44710e1c4110f60,GFSA3;GAFISA;ON      NM;193.423.606;0,['064;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,6646154ae74eca9cee864343,GOAU4;GERDAU MET;PN      N1;830.837.767;2,['476;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,86b9962b7e7ef1bd7cf73afe,GGPS3;GPS;ON      NM;314.841.214;1,['151;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,33264a52ab5685b5b217693d,GRND3;GRENDENE;ON  EDJ NM;236.867.166;0,['280;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,df6501759b46829179bb212f,GMAT3;GRUPO MATEUS;ON      NM;457.961.064;0,['565;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,02d6fec37a32b595f5793ce9,SBFG3;GRUPO SBF;ON      NM;128.452.352;0,['436;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,90ad502af8e3b3e394697642,HAPV3;HAPVIDA;ON      NM;271.662.290;0,['989;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,9327b4f9bb2ead600439e6cd,HBOR3;HELBOR;ON      NM;65.595.478;0,['047;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,b9bc0e66f810500f1d06bc62,HBSA3;HIDROVIAS;ON      NM;543.551.243;0,['516;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,4fe2d5fbf2b3b9ca26bf3213,HYPE3;HYPERA;ON      NM;321.083.946;2,['053;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,cda9e7f34f4156cf78b89809,IGTI11;IGUATEMI S.A;UNT     N1;205.800.982;1,['576;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,cfd642307e0df875093c7bf4,INTB3;INTELBRAS;ON      NM;113.898.409;0,['472;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,ffc9c39fac23f87eb53f8352,MYPK3;IOCHP-MAXION;ON      NM;138.703.243;0,['374;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,60df3f979e2e3a445db1767f,RANI3;IRANI;ON      NM;100.436.772;0,['238;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,724e722e5fd650fe34bf1b52,IRBR3;IRBBRASIL RE;ON  EJ  NM;81.534.304;1,['249;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,55eb1515bafe421addd7f624,JHSF3;JHSF PART;ON  ED  NM;260.721.097;0,['874;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,f786e38a2ae6d9f208f15abc,JSLG3;JSL;ON      NM;84.133.393;0,['153;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,9cf7dd8c5d7095216eb156e9,KEPL3;KEPLER WEBER;ON      NM;173.082.697;0,['335;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,fe3deee994be917339a16175,LAVV3;LAVVI;ON      NM;74.230.129;0,['252;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,3c8b27b87bafc71b90e96d4e,LOGG3;LOG COM PROP;ON      NM;51.533.220;0,['440;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,7c549dd395f4aec26dc6c76e,LREN3;LOJAS RENNER;ON      NM;982.593.716;4,['403;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,bb8b21cbd07025b94c29d081,LWSA3;LWSA;ON      NM;374.338.847;0,['430;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,2c553221cc37f23ab70f45a0,MDIA3;M.DIASBRANCO;ON  ED  NM;64.887.799;0,['371;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,d4fb1be4e865b29cf2d0a0b5,MGLU3;MAGAZ LUIZA;ON      NM;373.155.063;0,['648;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,8b72c02ae601cc4aa63554fa,POMO3;MARCOPOLO;ON      N2;203.825.655;0,['360;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,2e8f5ea614059a43963e1bc3,POMO4;MARCOPOLO;PN      N2;728.266.241;1,['330;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,aff93712b5d0a63632ef89e3,CASH3;MELIUZ;ON      NM;93.078.828;0,['121;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,2c290513a4d078f4b2d9a68d,LEVE3;METAL LEVE;ON      NM;52.865.876;0,['525;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,277eb90d1089db0de1d7ac11,MILS3;MILLS;ON      NM;108.722.880;0,['496;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,ad3d8fcbf6555dc0c5e59960,BEEF3;MINERVA;ON      NM;454.804.863;0,['475;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,4d4ebef70ccb3a734687a3fa,MDNE3;MOURA DUBEUX;ON      NM;62.112.530;0,['510;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,41d896d9274f4a9e1fb9df01,MOVI3;MOVIDA;ON      NM;156.159.722;0,['444;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,0373f059fab4f22b04a0db90,MRVE3;MRV;ON      NM;374.681.353;0,['639;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,4edcb3787229373e38c936c7,MULT3;MULTIPLAN;ON      N2;320.022.221;2,['797;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,eba42c53b70328ecb825e0dc,NATU3;NATURA;ON      NM;838.359.453;2,['461;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,dda31f2ace4807d19b10816a,ONCO3;ONCOCLINICAS;ON      NM;1.054.759.992;0,['387;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,edc54268a89ba5f08a49e301,ORVR3;ORIZON;ON      NM;54.399.873;1,['297;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,b0486a563da5e9e76e2ffc01,PGMN3;PAGUE MENOS;ON      NM;303.890.693;0,['372;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,02a9d21d09c17b510f936bc1,RECV3;PETRORECSA;ON      NM;274.624.898;0,['919;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,9b5af84d80582829adfcd171,AUAU3;PETZCOBASI;ON      NM;205.617.553;0,['201;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,fde9e32d53c2ec5ffacd90b8,PLPL3;PLANOEPLANO;ON      NM;54.395.641;0,['151;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,c380aa07cc91df8813ac1b9b,POSI3;POSITIVO TEC;ON      NM;72.078.995;0,['088;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,ce036aa31b5759d540795800,PRNR3;PRINER;ON      NM;55.925.047;0,['317;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,091697b3e114537d2bc6ebb1,QUAL3;QUALICORP;ON      NM;279.655.194;0,['133;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,e1c4c6bc6c64e359bf86619f,LJQQ3;QUERO-QUERO;ON      NM;195.194.199;0,['083;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,7fd198406f40f31c4fbcd804,RAPT4;RANDON PART;PN      N1;176.793.154;0,['271;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,b7704e8719d93a8b667454a5,RCSL4;RECRUSUL;PN;74.949.368;0,['012;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,88d97e0c0367fefe117e2dbd,RIAA3;RIACHUELO;ON      NM;84.545.496;0,['222;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,70756a9861121c83ba596b19,SAPR11;SANEPAR;UNT     N2;201.077.478;2,['203;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,38707dd823aa9a0478577598,SMTO3;SAO MARTINHO;ON      NM;123.583.436;0,['635;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,26f69dc80cd083c835a2155d,SEER3;SER EDUCA;ON      NM;50.527.159;0,['172;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,d7e72aa6facf7403c508f311,CSNA3;SID NACIONAL;ON;727.975.012;1,['422;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,2e5dd6b7bd931f4055ea68c9,SIMH3;SIMPAR;ON      NM;135.653.148;0,['367;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,a1613b8a7d1e05d3e9b8a520,SLCE3;SLC AGRICOLA;ON      NM;220.403.658;1,['000;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,8ab43f3755f69d9b33eee9af,SMFT3;SMART FIT;ON      NM;556.651.316;3,['047;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,bf4b6cba3137eb00656368c9,SYNE3;SYN PROP TEC;ON      NM;59.381.237;0,['067;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,8daaa22c50b9d268326afa8d,TAEE11;TAESA;UNT     N2;218.568.234;2,['536;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,fcb543f9785f6424ea88d6de,TGMA3;TEGMA;ON      NM;31.994.720;0,['290;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,e6c91cd4d5f940d3f4543476,TEND3;TENDA;ON      NM;114.768.786;1,['116;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,3d9e13e86c3c7e6b1a85064e,TOTS3;TOTVS;ON      NM;533.997.411;5,['496;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,54acd3030a358e1bd5e36943,TFCO4;TRACK FIELD;PN      N2;49.474.393;0,['224;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,29319f7fa4b6e3c25271ff94,TUPY3;TUPY;ON      NM;130.913.780;0,['499;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,b0556c4e0d9e17fdb184d659,UNIP6;UNIPAR;PNB;49.483.367;0,['908;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,08c9cda5382917a6568a02ee,USIM5;USIMINAS;PNA     N1;518.256.757;1,['715;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,c7b76379d4345083a71d8249,VLID3;VALID;ON      NM;75.830.365;0,['398;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,fc79ed58451ced914fa6e1db,VAMO3;VAMOS;ON      NM;448.052.066;0,['401;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,c92b5d9ffd04443a96b192a2,VTRU3;VITRUEDUCA;ON      NM;140.102.964;0,['543;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,c9db8e0006b370651e079934,VIVA3;VIVARA S.A.;ON      NM;123.698.325;0,['795;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,fd93ef4787d6581c03ff4b83,VULC3;VULCABRAS;ON      NM;110.618.680;0,['496;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,c8a4adc45a973eafc08884d9,YDUQ3;YDUQS PART;ON      NM;261.365.845;0,['738;'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,d627cea4300e11951eb251d7,Quantidade Teórica Total;;;30.554.336.092;100,['000'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,e36b9cf9a5be12ba03e3a145,Redutor;;;148.144.924,['57229495'],,,,,
-2026-06-02,b3___carteira_teórica___smll,,c26e816dad95eebcd14063da,,[''],3TENTOS,TTEN3,"0,516",113.066.386,ON      NM
-2026-06-02,b3___carteira_teórica___smll,,7fda04cc01c1f477862db30f,,[''],ABC BRASIL,ABCB4,"0,555",76.369.069,PN      N2
-2026-06-02,b3___carteira_teórica___smll,,a6076d7ee1e6b8314b77c3b2,,[''],ALLOS,ALOS3,"3,966",478.558.715,ON      NM
-2026-06-02,b3___carteira_teórica___smll,,c3961632c7a0e98b4086e5ae,,[''],ALPARGATAS,ALPA4,"0,467",128.924.117,PN      N1
-2026-06-02,b3___carteira_teórica___smll,,c0d8056cfe92dcb56a9b0af4,,[''],ALUPAR,ALUP11,"1,500",157.537.587,UNT     N2
-2026-06-02,b3___carteira_teórica___smll,,7d9be22fc4f7d855ac9f5e2a,,[''],ANIMA,ANIM3,"0,245",256.720.485,ON      NM
-2026-06-02,b3___carteira_teórica___smll,,ce691c245c9742b3b6411b00,,[''],ARMAC,ARML3,"0,180",172.086.226,ON      NM
-2026-06-02,b3___carteira_teórica___smll,,016c1131fa86658fb358003f,,[''],ASSAI,ASAI3,"3,434",1.338.623.499,ON      NM
-2026-06-02,b3___carteira_teórica___smll,,960a08c9348498ec2b9eab22,,[''],AUREN,AURE3,"1,143",317.799.925,ON      NM
-2026-06-02,b3___carteira_teórica___smll,,578a6f3bfafc0274d63d3ab8,,[''],AZZAS 2154,AZZA3,"0,614",109.571.260,ON  ATZ NM
-2026-06-02,b3___carteira_teórica___smll,,e7a6ca41c69981fbeee3bd96,,[''],BANRISUL,BRSR6,"0,880",202.536.440,PNB     N1
-2026-06-02,b3___carteira_teórica___smll,,d2a9d18c8332322e8f8df51b,,[''],BEMOBI TECH,BMOB3,"0,584",79.319.310,ON      NM
-2026-06-02,b3___carteira_teórica___smll,,9c4706c009be952157603c1e,,[''],BLAU,BLAU3,"0,123",38.584.960,ON      NM
-2026-06-02,b3___carteira_teórica___smll,,4e6ea647e36b4dd810fdd80d,,[''],BOA SAFRA,SOJA3,"0,109",58.542.883,ON      NM
-2026-06-02,b3___carteira_teórica___smll,,25376fb32e59751bb089cb2e,,[''],BR PARTNERS,BRBI11,"0,225",47.238.057,UNT     N2
-2026-06-02,b3___carteira_teórica___smll,,59c95e30638a64ef5d676277,,[''],BRADESPAR,BRAP4,"1,712",250.914.708,PN      N1
-2026-06-02,b3___carteira_teórica___smll,,4c1115f5c206641c153c785e,,[''],BRADSAUDE,SAUD3,"1,006",251.735.971,ON      NM
-2026-06-02,b3___carteira_teórica___smll,,477572c522ca925a181f2f52,,[''],BRASKEM,BRKM5,"0,811",265.709.734,PNA     N1
-2026-06-02,b3___carteira_teórica___smll,,f2bb7f5a86e0a5bb0e5739b8,,[''],BRAVA,BRAV3,"2,868",462.883.017,ON      NM
-2026-06-02,b3___carteira_teórica___smll,,264da0687b6ef99e66099b1a,,[''],CAMIL,CAML3,"0,157",96.218.424,ON  ED  NM
-2026-06-02,b3___carteira_teórica___smll,,78ab3c7ca6d656fca8bce1a3,,[''],CASAS BAHIA,BHIA3,"0,056",143.421.097,ON  ATZ NM
-2026-06-02,b3___carteira_teórica___smll,,62c97891b6d98e710d88c5ed,,[''],CBA,CBAV3,"0,653",204.441.277,ON      NM
-2026-06-02,b3___carteira_teórica___smll,,22a588a4d16165f7843198ac,,[''],CEA MODAS,CEAB3,"0,693",204.964.309,ON      NM
-2026-06-02,b3___carteira_teórica___smll,,7552dbfa15b39c45d452cce2,,[''],COGNA ON,COGN3,"1,412",1.915.914.094,ON      NM
-2026-06-02,b3___carteira_teórica___smll,,5ebbf553308888690086b773,,[''],COPASA,CSMG3,"2,935",188.467.895,ON      NM
-2026-06-02,b3___carteira_teórica___smll,,1a45f9a8596c0f48b5c017d2,,[''],COSAN,CSAN3,"2,595",2.242.671.999,ON  ATZ NM
-2026-06-02,b3___carteira_teórica___smll,,c422f1cdf6d00899c5880490,,[''],CURY S/A,CURY3,"1,504",160.988.231,ON      NM
-2026-06-02,b3___carteira_teórica___smll,,205b1bb20eb1ada9c3e36b33,,[''],CVC BRASIL,CVCB3,"0,189",408.009.727,ON      NM
-2026-06-02,b3___carteira_teórica___smll,,bfcebe0a1b1b06da8383ae7a,,[''],CYRELA REALT,CYRE3,"1,880",281.609.283,ON      NM
-2026-06-02,b3___carteira_teórica___smll,,29b3b8c1df42acb2cbf2efd9,,[''],DASA,DASA3,"0,160",177.124.938,ON      NM
-2026-06-02,b3___carteira_teórica___smll,,28d7434678756fa351163d59,,[''],DESKTOP,DESK3,"0,189",34.835.856,ON      NM
-2026-06-02,b3___carteira_teórica___smll,,502dcf871337f0b5d9f06c7a,,[''],DEXCO,DXCO3,"0,476",336.842.147,ON      NM
-2026-06-02,b3___carteira_teórica___smll,,e4ef912f1cf8c8060a5c5358,,[''],DIMED,PNVL3,"0,280",82.405.671,ON      NM
-2026-06-02,b3___carteira_teórica___smll,,c6795a8e6ac6e3ed5e5dd1d0,,[''],DIRECIONAL,DIRR3,"1,305",327.091.595,ON      NM
-2026-06-02,b3___carteira_teórica___smll,,5abea51b337771b4bf8ea31b,,[''],ECORODOVIAS,ECOR3,"0,721",328.954.615,ON      NM
-2026-06-02,b3___carteira_teórica___smll,,6680b29921f7aac128307919,,[''],EVEN,EVEN3,"0,311",185.333.384,ON  ED  NM
-2026-06-02,b3___carteira_teórica___smll,,ac58597b5cea9825a6e3cec5,,[''],EZTEC,EZTC3,"0,472",121.216.090,ON      NM
-2026-06-02,b3___carteira_teórica___smll,,04894467bd464c6241de7b68,,[''],FERBASA,FESA4,"0,271",147.407.600,PN      N1
-2026-06-02,b3___carteira_teórica___smll,,b730a525c2d88483c027b978,,[''],FLEURY,FLRY3,"2,042",447.150.822,ON      NM
-2026-06-02,b3___carteira_teórica___smll,,7023ffc4eba6902de7dabfbb,,[''],FRAS-LE,FRAS3,"0,690",107.111.030,ON      N1
-2026-06-02,b3___carteira_teórica___smll,,d7ff9c488b07b9c607bbd34e,,[''],GAFISA,GFSA3,"0,064",193.423.606,ON      NM
-2026-06-02,b3___carteira_teórica___smll,,2a7d8aa140c316837ca8e8eb,,[''],GERDAU MET,GOAU4,"2,476",830.837.767,PN      N1
-2026-06-02,b3___carteira_teórica___smll,,26b4170beb27d36113584014,,[''],GPS,GGPS3,"1,151",314.841.214,ON      NM
-2026-06-02,b3___carteira_teórica___smll,,f3dde920a856a4fc147785e2,,[''],GRENDENE,GRND3,"0,280",236.867.166,ON  EDJ NM
-2026-06-02,b3___carteira_teórica___smll,,db41ca4a84da2a5628e6c1f9,,[''],GRUPO MATEUS,GMAT3,"0,565",457.961.064,ON      NM
-2026-06-02,b3___carteira_teórica___smll,,13d5f427ac500d0558a42db1,,[''],GRUPO SBF,SBFG3,"0,436",128.452.352,ON      NM
-2026-06-02,b3___carteira_teórica___smll,,34fe5ad1996f2f036344f0e3,,[''],HAPVIDA,HAPV3,"0,989",271.662.290,ON      NM
-2026-06-02,b3___carteira_teórica___smll,,c36d299dbe7a38e88e78cacd,,[''],HELBOR,HBOR3,"0,047",65.595.478,ON      NM
-2026-06-02,b3___carteira_teórica___smll,,3d5d2d375cab3692ba7bd0fc,,[''],HIDROVIAS,HBSA3,"0,516",543.551.243,ON      NM
-2026-06-02,b3___carteira_teórica___smll,,eff734fe4774815e745cbdbe,,[''],HYPERA,HYPE3,"2,053",321.083.946,ON      NM
-2026-06-02,b3___carteira_teórica___smll,,a6b664538c9cfb2a4a9e70d9,,[''],IGUATEMI S.A,IGTI11,"1,576",205.800.982,UNT     N1
-2026-06-02,b3___carteira_teórica___smll,,0467a9b276747fdd240e0c26,,[''],INTELBRAS,INTB3,"0,472",113.898.409,ON      NM
-2026-06-02,b3___carteira_teórica___smll,,bdb2529d0b72ad6bdca0f1b5,,[''],IOCHP-MAXION,MYPK3,"0,374",138.703.243,ON      NM
-2026-06-02,b3___carteira_teórica___smll,,4df1be90de4ac639c6abf2b9,,[''],IRANI,RANI3,"0,238",100.436.772,ON      NM
-2026-06-02,b3___carteira_teórica___smll,,e2cb1b71893b8fa1da42a2d1,,[''],IRBBRASIL RE,IRBR3,"1,249",81.534.304,ON  EJ  NM
-2026-06-02,b3___carteira_teórica___smll,,bf5cef5e68219effdc171eb5,,[''],JHSF PART,JHSF3,"0,874",260.721.097,ON  ED  NM
-2026-06-02,b3___carteira_teórica___smll,,1eee05998605414de7d23076,,[''],JSL,JSLG3,"0,153",84.133.393,ON      NM
-2026-06-02,b3___carteira_teórica___smll,,589e40343d3087fb25377652,,[''],KEPLER WEBER,KEPL3,"0,335",173.082.697,ON      NM
-2026-06-02,b3___carteira_teórica___smll,,8e16fd47d290ff761a384c3b,,[''],LAVVI,LAVV3,"0,252",74.230.129,ON      NM
-2026-06-02,b3___carteira_teórica___smll,,114bfe5981d679e660f1b95f,,[''],LOG COM PROP,LOGG3,"0,440",51.533.220,ON      NM
-2026-06-02,b3___carteira_teórica___smll,,3b86f797f80ae87db046ed7e,,[''],LOJAS RENNER,LREN3,"4,403",982.593.716,ON      NM
-2026-06-02,b3___carteira_teórica___smll,,37522f799bd2ac8fb05e16ef,,[''],LWSA,LWSA3,"0,430",374.338.847,ON      NM
-2026-06-02,b3___carteira_teórica___smll,,f3da6074b9c9851a2ff0c01a,,[''],M.DIASBRANCO,MDIA3,"0,371",64.887.799,ON  ED  NM
-2026-06-02,b3___carteira_teórica___smll,,eea941b8f21b4e31374b1322,,[''],MAGAZ LUIZA,MGLU3,"0,648",373.155.063,ON      NM
-2026-06-02,b3___carteira_teórica___smll,,c192ed9f62c74f27e199633f,,[''],MARCOPOLO,POMO3,"0,360",203.825.655,ON      N2
-2026-06-02,b3___carteira_teórica___smll,,c5fb4ba2223c0b278755921c,,[''],MARCOPOLO,POMO4,"1,330",728.266.241,PN      N2
-2026-06-02,b3___carteira_teórica___smll,,20ccb267a24b328f334d33bd,,[''],MELIUZ,CASH3,"0,121",93.078.828,ON      NM
-2026-06-02,b3___carteira_teórica___smll,,9961e2436c8c02fb70ae3e31,,[''],METAL LEVE,LEVE3,"0,525",52.865.876,ON      NM
-2026-06-02,b3___carteira_teórica___smll,,3f42260da41a2067e23ebaa9,,[''],MILLS,MILS3,"0,496",108.722.880,ON      NM
-2026-06-02,b3___carteira_teórica___smll,,3249a64c44acb834eb1b00db,,[''],MINERVA,BEEF3,"0,475",454.804.863,ON      NM
-2026-06-02,b3___carteira_teórica___smll,,a6d67134b4e7881f6d4faa6f,,[''],MOURA DUBEUX,MDNE3,"0,510",62.112.530,ON      NM
-2026-06-02,b3___carteira_teórica___smll,,d250b7ed0c073ed4ccb6789f,,[''],MOVIDA,MOVI3,"0,444",156.159.722,ON      NM
-2026-06-02,b3___carteira_teórica___smll,,bbd8236a4b9a174ed9db2817,,[''],MRV,MRVE3,"0,639",374.681.353,ON      NM
-2026-06-02,b3___carteira_teórica___smll,,c1df1e82dbd2492a2dca7d21,,[''],MULTIPLAN,MULT3,"2,797",320.022.221,ON      N2
-2026-06-02,b3___carteira_teórica___smll,,0e6998c15c180d5386da8b2d,,[''],NATURA,NATU3,"2,461",838.359.453,ON      NM
-2026-06-02,b3___carteira_teórica___smll,,aced4a555f90290476d4a185,,[''],ONCOCLINICAS,ONCO3,"0,387",1.054.759.992,ON      NM
-2026-06-02,b3___carteira_teórica___smll,,eb9ca99fa30dcd414e7618dd,,[''],ORIZON,ORVR3,"1,297",54.399.873,ON      NM
-2026-06-02,b3___carteira_teórica___smll,,3e077374add3ada3f73e8a78,,[''],PAGUE MENOS,PGMN3,"0,372",303.890.693,ON      NM
-2026-06-02,b3___carteira_teórica___smll,,126b370582a9ceac6e9639af,,[''],PETRORECSA,RECV3,"0,919",274.624.898,ON      NM
-2026-06-02,b3___carteira_teórica___smll,,679eda37a67a7bcddf314fa6,,[''],PETZCOBASI,AUAU3,"0,201",205.617.553,ON      NM
-2026-06-02,b3___carteira_teórica___smll,,3280d04caa425be86a1cfbce,,[''],PLANOEPLANO,PLPL3,"0,151",54.395.641,ON      NM
-2026-06-02,b3___carteira_teórica___smll,,386dbbbb204e294b13416170,,[''],POSITIVO TEC,POSI3,"0,088",72.078.995,ON      NM
-2026-06-02,b3___carteira_teórica___smll,,edebab86b530fa7f882aa0db,,[''],PRINER,PRNR3,"0,317",55.925.047,ON      NM
-2026-06-02,b3___carteira_teórica___smll,,0fa7bfeeabb3a6e3dc2913fd,,[''],QUALICORP,QUAL3,"0,133",279.655.194,ON      NM
-2026-06-02,b3___carteira_teórica___smll,,db6263229f9e676c32eec6b9,,[''],QUERO-QUERO,LJQQ3,"0,083",195.194.199,ON      NM
-2026-06-02,b3___carteira_teórica___smll,,f57158c6de817d30f5a4548c,,[''],RANDON PART,RAPT4,"0,271",176.793.154,PN      N1
-2026-06-02,b3___carteira_teórica___smll,,ee84908a6336e83fcda4c9fb,,[''],RECRUSUL,RCSL4,"0,012",74.949.368,PN
-2026-06-02,b3___carteira_teórica___smll,,a78c4c0a704e24784a203728,,[''],RIACHUELO,RIAA3,"0,222",84.545.496,ON      NM
-2026-06-02,b3___carteira_teórica___smll,,05be4ccf419f5c7377440590,,[''],SANEPAR,SAPR11,"2,203",201.077.478,UNT     N2
-2026-06-02,b3___carteira_teórica___smll,,71099287128225510bf5626d,,[''],SAO MARTINHO,SMTO3,"0,635",123.583.436,ON      NM
-2026-06-02,b3___carteira_teórica___smll,,b49bca211d85f1288e0b1d69,,[''],SER EDUCA,SEER3,"0,172",50.527.159,ON      NM
-2026-06-02,b3___carteira_teórica___smll,,47cf77be4cff6c45c7c14cea,,[''],SID NACIONAL,CSNA3,"1,422",727.975.012,ON
-2026-06-02,b3___carteira_teórica___smll,,5336acb211798ae9048a3614,,[''],SIMPAR,SIMH3,"0,367",135.653.148,ON      NM
-2026-06-02,b3___carteira_teórica___smll,,1d6f370df802ed0f22cb1e8b,,[''],SLC AGRICOLA,SLCE3,"1,000",220.403.658,ON      NM
-2026-06-02,b3___carteira_teórica___smll,,31370284612a581a0e6d4fe1,,[''],SMART FIT,SMFT3,"3,047",556.651.316,ON      NM
-2026-06-02,b3___carteira_teórica___smll,,2607c9a8ea514bf0ec64e9e9,,[''],SYN PROP TEC,SYNE3,"0,067",59.381.237,ON      NM
-2026-06-02,b3___carteira_teórica___smll,,693cf1d41932b8e9ae999814,,[''],TAESA,TAEE11,"2,536",218.568.234,UNT     N2
-2026-06-02,b3___carteira_teórica___smll,,0215f4f930b360b26bcda37e,,[''],TEGMA,TGMA3,"0,290",31.994.720,ON      NM
-2026-06-02,b3___carteira_teórica___smll,,f0ff73f8aed287fb384d17d9,,[''],TENDA,TEND3,"1,116",114.768.786,ON      NM
-2026-06-02,b3___carteira_teórica___smll,,b8f3abf08dbea15104a940b0,,[''],TOTVS,TOTS3,"5,496",533.997.411,ON      NM
-2026-06-02,b3___carteira_teórica___smll,,7395492f0611bd5774ed7221,,[''],TRACK FIELD,TFCO4,"0,224",49.474.393,PN      N2
-2026-06-02,b3___carteira_teórica___smll,,0b08f6cadf01068fc5e9b368,,[''],TUPY,TUPY3,"0,499",130.913.780,ON      NM
-2026-06-02,b3___carteira_teórica___smll,,abb191697265d841676de272,,[''],UNIPAR,UNIP6,"0,908",49.483.367,PNB
-2026-06-02,b3___carteira_teórica___smll,,4663dd804162a011adaf6229,,[''],USIMINAS,USIM5,"1,715",518.256.757,PNA     N1
-2026-06-02,b3___carteira_teórica___smll,,368f4b3a6ca038d6a2ea8832,,[''],VALID,VLID3,"0,398",75.830.365,ON      NM
-2026-06-02,b3___carteira_teórica___smll,,dfa2d535ac0e91edcba0369d,,[''],VAMOS,VAMO3,"0,401",448.052.066,ON      NM
-2026-06-02,b3___carteira_teórica___smll,,0da5ba526958e98cc6ce8430,,[''],VITRUEDUCA,VTRU3,"0,543",140.102.964,ON      NM
-2026-06-02,b3___carteira_teórica___smll,,998fc5a6ea5afc6fc126235c,,[''],VIVARA S.A.,VIVA3,"0,795",123.698.325,ON      NM
-2026-06-02,b3___carteira_teórica___smll,,07e9799e90b9a1c90d80a58b,,[''],VULCABRAS,VULC3,"0,496",110.618.680,ON      NM
-2026-06-02,b3___carteira_teórica___smll,,270cfa65ef7f010e65e3d05b,,[''],YDUQS PART,YDUQ3,"0,738",261.365.845,ON      NM
-2026-06-02,b3___carteira_teórica___smll,,d937150e324db33c72d2d2fa,,,,Quantidade Teórica Total,"100,000",30.554.336.092,
-2026-06-02,b3___carteira_teórica___smll,,7147c68cc771bcc580b8df52,,,,Redutor,,"148.144.924,57229495",
+data_captura,indice,indice_nome,codigo_ativo,nome_ativo,tipo_ativo,quantidade_teorica,participacao_pct,reducao_capital,segmento
+2026-06-03,SMLL,Small Cap,TTEN3,3TENTOS,ON      NM,113.066.386,"0,504",,
+2026-06-03,SMLL,Small Cap,ABCB4,ABC BRASIL,PN      N2,76.369.069,"0,553",,
+2026-06-03,SMLL,Small Cap,ALOS3,ALLOS,ON      NM,478.558.715,"3,905",,
+2026-06-03,SMLL,Small Cap,ALPA4,ALPARGATAS,PN      N1,128.924.117,"0,464",,
+2026-06-03,SMLL,Small Cap,ALUP11,ALUPAR,UNT     N2,157.537.587,"1,530",,
+2026-06-03,SMLL,Small Cap,ANIM3,ANIMA,ON      NM,256.720.485,"0,241",,
+2026-06-03,SMLL,Small Cap,ARML3,ARMAC,ON      NM,172.086.226,"0,178",,
+2026-06-03,SMLL,Small Cap,ASAI3,ASSAI,ON      NM,1.338.623.499,"3,578",,
+2026-06-03,SMLL,Small Cap,AURE3,AUREN,ON      NM,317.799.925,"1,151",,
+2026-06-03,SMLL,Small Cap,AZZA3,AZZAS 2154,ON  ATZ NM,109.571.260,"0,615",,
+2026-06-03,SMLL,Small Cap,BRSR6,BANRISUL,PNB     N1,202.536.440,"0,880",,
+2026-06-03,SMLL,Small Cap,BMOB3,BEMOBI TECH,ON      NM,79.319.310,"0,581",,
+2026-06-03,SMLL,Small Cap,BLAU3,BLAU,ON      NM,38.584.960,"0,120",,
+2026-06-03,SMLL,Small Cap,SOJA3,BOA SAFRA,ON      NM,58.542.883,"0,111",,
+2026-06-03,SMLL,Small Cap,BRBI11,BR PARTNERS,UNT     N2,47.238.057,"0,218",,
+2026-06-03,SMLL,Small Cap,BRAP4,BRADESPAR,PN      N1,250.914.708,"1,750",,
+2026-06-03,SMLL,Small Cap,SAUD3,BRADSAUDE,ON      NM,251.735.971,"0,987",,
+2026-06-03,SMLL,Small Cap,BRKM5,BRASKEM,PNA     N1,265.709.734,"0,786",,
+2026-06-03,SMLL,Small Cap,BRAV3,BRAVA,ON      NM,462.883.017,"2,812",,
+2026-06-03,SMLL,Small Cap,CAML3,CAMIL,ON  ED  NM,96.218.424,"0,152",,
+2026-06-03,SMLL,Small Cap,BHIA3,CASAS BAHIA,ON  ATZ NM,143.421.097,"0,055",,
+2026-06-03,SMLL,Small Cap,CBAV3,CBA,ON      NM,204.441.277,"0,651",,
+2026-06-03,SMLL,Small Cap,CEAB3,CEA MODAS,ON      NM,204.964.309,"0,694",,
+2026-06-03,SMLL,Small Cap,COGN3,COGNA ON,ON      NM,1.915.914.094,"1,409",,
+2026-06-03,SMLL,Small Cap,CSMG3,COPASA,ON      NM,188.467.895,"2,947",,
+2026-06-03,SMLL,Small Cap,CSAN3,COSAN,ON  ATZ NM,2.242.671.999,"2,570",,
+2026-06-03,SMLL,Small Cap,CURY3,CURY S/A,ON      NM,160.988.231,"1,489",,
+2026-06-03,SMLL,Small Cap,CVCB3,CVC BRASIL,ON      NM,408.009.727,"0,186",,
+2026-06-03,SMLL,Small Cap,CYRE3,CYRELA REALT,ON      NM,281.609.283,"1,859",,
+2026-06-03,SMLL,Small Cap,DASA3,DASA,ON      NM,177.124.938,"0,161",,
+2026-06-03,SMLL,Small Cap,DESK3,DESKTOP,ON      NM,34.835.856,"0,186",,
+2026-06-03,SMLL,Small Cap,DXCO3,DEXCO,ON      NM,336.842.147,"0,473",,
+2026-06-03,SMLL,Small Cap,PNVL3,DIMED,ON      NM,82.405.671,"0,279",,
+2026-06-03,SMLL,Small Cap,DIRR3,DIRECIONAL,ON      NM,327.091.595,"1,290",,
+2026-06-03,SMLL,Small Cap,ECOR3,ECORODOVIAS,ON      NM,328.954.615,"0,723",,
+2026-06-03,SMLL,Small Cap,EVEN3,EVEN,ON  ED  NM,185.333.384,"0,307",,
+2026-06-03,SMLL,Small Cap,EZTC3,EZTEC,ON      NM,121.216.090,"0,470",,
+2026-06-03,SMLL,Small Cap,FESA4,FERBASA,PN      N1,147.407.600,"0,282",,
+2026-06-03,SMLL,Small Cap,FLRY3,FLEURY,ON      NM,447.150.822,"2,024",,
+2026-06-03,SMLL,Small Cap,FRAS3,FRAS-LE,ON      N1,107.111.030,"0,690",,
+2026-06-03,SMLL,Small Cap,GFSA3,GAFISA,ON      NM,193.423.606,"0,061",,
+2026-06-03,SMLL,Small Cap,GOAU4,GERDAU MET,PN      N1,830.837.767,"2,594",,
+2026-06-03,SMLL,Small Cap,GGPS3,GPS,ON      NM,314.841.214,"1,104",,
+2026-06-03,SMLL,Small Cap,GRND3,GRENDENE,ON      NM,236.867.166,"0,272",,
+2026-06-03,SMLL,Small Cap,GMAT3,GRUPO MATEUS,ON      NM,457.961.064,"0,569",,
+2026-06-03,SMLL,Small Cap,SBFG3,GRUPO SBF,ON      NM,128.452.352,"0,430",,
+2026-06-03,SMLL,Small Cap,HAPV3,HAPVIDA,ON      NM,271.662.290,"0,981",,
+2026-06-03,SMLL,Small Cap,HBOR3,HELBOR,ON      NM,65.595.478,"0,045",,
+2026-06-03,SMLL,Small Cap,HBSA3,HIDROVIAS,ON      NM,543.551.243,"0,508",,
+2026-06-03,SMLL,Small Cap,HYPE3,HYPERA,ON      NM,321.083.946,"2,058",,
+2026-06-03,SMLL,Small Cap,IGTI11,IGUATEMI S.A,UNT     N1,205.800.982,"1,563",,
+2026-06-03,SMLL,Small Cap,INTB3,INTELBRAS,ON      NM,113.898.409,"0,467",,
+2026-06-03,SMLL,Small Cap,MYPK3,IOCHP-MAXION,ON      NM,138.703.243,"0,387",,
+2026-06-03,SMLL,Small Cap,RANI3,IRANI,ON      NM,100.436.772,"0,233",,
+2026-06-03,SMLL,Small Cap,IRBR3,IRBBRASIL RE,ON  EJ  NM,81.534.304,"1,244",,
+2026-06-03,SMLL,Small Cap,JHSF3,JHSF PART,ON  ED  NM,260.721.097,"0,858",,
+2026-06-03,SMLL,Small Cap,JSLG3,JSL,ON      NM,84.133.393,"0,153",,
+2026-06-03,SMLL,Small Cap,KEPL3,KEPLER WEBER,ON      NM,173.082.697,"0,329",,
+2026-06-03,SMLL,Small Cap,LAVV3,LAVVI,ON      NM,74.230.129,"0,253",,
+2026-06-03,SMLL,Small Cap,LOGG3,LOG COM PROP,ON      NM,51.533.220,"0,461",,
+2026-06-03,SMLL,Small Cap,LREN3,LOJAS RENNER,ON      NM,982.593.716,"4,504",,
+2026-06-03,SMLL,Small Cap,LWSA3,LWSA,ON      NM,374.338.847,"0,415",,
+2026-06-03,SMLL,Small Cap,MGLU3,MAGAZ LUIZA,ON      NM,373.155.063,"0,626",,
+2026-06-03,SMLL,Small Cap,POMO3,MARCOPOLO,ON      N2,203.825.655,"0,351",,
+2026-06-03,SMLL,Small Cap,POMO4,MARCOPOLO,PN      N2,728.266.241,"1,280",,
+2026-06-03,SMLL,Small Cap,CASH3,MELIUZ,ON      NM,93.078.828,"0,112",,
+2026-06-03,SMLL,Small Cap,LEVE3,METAL LEVE,ON      NM,52.865.876,"0,518",,
+2026-06-03,SMLL,Small Cap,MILS3,MILLS,ON      NM,108.722.880,"0,491",,
+2026-06-03,SMLL,Small Cap,BEEF3,MINERVA,ON      NM,454.804.863,"0,470",,
+2026-06-03,SMLL,Small Cap,MDNE3,MOURA DUBEUX,ON      NM,62.112.530,"0,512",,
+2026-06-03,SMLL,Small Cap,MOVI3,MOVIDA,ON      NM,156.159.722,"0,453",,
+2026-06-03,SMLL,Small Cap,MRVE3,MRV,ON      NM,374.681.353,"0,656",,
+2026-06-03,SMLL,Small Cap,MULT3,MULTIPLAN,ON      N2,320.022.221,"2,781",,
+2026-06-03,SMLL,Small Cap,NATU3,NATURA,ON      NM,838.359.453,"2,441",,
+2026-06-03,SMLL,Small Cap,ONCO3,ONCOCLINICAS,ON      NM,1.054.759.992,"0,396",,
+2026-06-03,SMLL,Small Cap,ORVR3,ORIZON,ON      NM,54.399.873,"1,253",,
+2026-06-03,SMLL,Small Cap,PGMN3,PAGUE MENOS,ON      NM,303.890.693,"0,381",,
+2026-06-03,SMLL,Small Cap,RECV3,PETRORECSA,ON      NM,274.624.898,"0,900",,
+2026-06-03,SMLL,Small Cap,AUAU3,PETZCOBASI,ON      NM,205.617.553,"0,197",,
+2026-06-03,SMLL,Small Cap,PLPL3,PLANOEPLANO,ON      NM,54.395.641,"0,149",,
+2026-06-03,SMLL,Small Cap,POSI3,POSITIVO TEC,ON      NM,72.078.995,"0,086",,
+2026-06-03,SMLL,Small Cap,PRNR3,PRINER,ON      NM,55.925.047,"0,313",,
+2026-06-03,SMLL,Small Cap,QUAL3,QUALICORP,ON      NM,279.655.194,"0,136",,
+2026-06-03,SMLL,Small Cap,LJQQ3,QUERO-QUERO,ON      NM,195.194.199,"0,082",,
+2026-06-03,SMLL,Small Cap,RAPT4,RANDON PART,PN      N1,176.793.154,"0,268",,
+2026-06-03,SMLL,Small Cap,RCSL4,RECRUSUL,PN,74.949.368,"0,012",,
+2026-06-03,SMLL,Small Cap,RIAA3,RIACHUELO,ON      NM,84.545.496,"0,221",,
+2026-06-03,SMLL,Small Cap,SAPR11,SANEPAR,UNT     N2,201.077.478,"2,212",,
+2026-06-03,SMLL,Small Cap,SMTO3,SAO MARTINHO,ON      NM,123.583.436,"0,638",,
+2026-06-03,SMLL,Small Cap,SEER3,SER EDUCA,ON      NM,50.527.159,"0,175",,
+2026-06-03,SMLL,Small Cap,CSNA3,SID NACIONAL,ON,727.975.012,"1,533",,
+2026-06-03,SMLL,Small Cap,SIMH3,SIMPAR,ON      NM,135.653.148,"0,363",,
+2026-06-03,SMLL,Small Cap,SLCE3,SLC AGRICOLA,ON      NM,220.403.658,"0,995",,
+2026-06-03,SMLL,Small Cap,SMFT3,SMART FIT,ON      NM,556.651.316,"3,058",,
+2026-06-03,SMLL,Small Cap,SYNE3,SYN PROP TEC,ON      NM,59.381.237,"0,063",,
+2026-06-03,SMLL,Small Cap,TAEE11,TAESA,UNT     N2,218.568.234,"2,534",,
+2026-06-03,SMLL,Small Cap,TGMA3,TEGMA,ON      NM,31.994.720,"0,290",,
+2026-06-03,SMLL,Small Cap,TEND3,TENDA,ON      NM,114.768.786,"1,132",,
+2026-06-03,SMLL,Small Cap,TOTS3,TOTVS,ON      NM,533.997.411,"5,427",,
+2026-06-03,SMLL,Small Cap,TFCO4,TRACK FIELD,PN      N2,49.474.393,"0,221",,
+2026-06-03,SMLL,Small Cap,TUPY3,TUPY,ON      NM,130.913.780,"0,502",,
+2026-06-03,SMLL,Small Cap,UNIP6,UNIPAR,PNB,49.483.367,"0,897",,
+2026-06-03,SMLL,Small Cap,USIM5,USIMINAS,PNA     N1,518.256.757,"1,843",,
+2026-06-03,SMLL,Small Cap,VLID3,VALID,ON      NM,75.830.365,"0,387",,
+2026-06-03,SMLL,Small Cap,VAMO3,VAMOS,ON      NM,448.052.066,"0,393",,
+2026-06-03,SMLL,Small Cap,VTRU3,VITRUEDUCA,ON      NM,140.102.964,"0,543",,
+2026-06-03,SMLL,Small Cap,VIVA3,VIVARA S.A.,ON      NM,123.698.325,"0,781",,
+2026-06-03,SMLL,Small Cap,VULC3,VULCABRAS,ON      NM,110.618.680,"0,486",,
+2026-06-03,SMLL,Small Cap,YDUQ3,YDUQS PART,ON      NM,261.365.845,"0,724",,

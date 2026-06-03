@@ -1,143 +1,69 @@
-data_captura,conjunto,arquivo_origem,registro_hash,c_digo_a_o_tipo_qtde_te_rica_part,none,a_o,c_digo,part,qtde_te_rica,tipo
-2026-06-02,b3___carteira_teórica___isee,,8ea737f78a9a35b8a9d9b70d,TTEN3;3TENTOS;ON      NM;196.230.382;0,['373;'],,,,,
-2026-06-02,b3___carteira_teórica___isee,,c196e88556601a31d6fc68a3,ALOS3;ALLOS;ON      NM;694.638.242;2,['400;'],,,,,
-2026-06-02,b3___carteira_teórica___isee,,e29c216111181a15a4325a2a,ASAI3;ASSAI;ON      NM;2.323.838.173;2,['485;'],,,,,
-2026-06-02,b3___carteira_teórica___isee,,9e9d50f1a3779443b93fa720,AURE3;AUREN;ON      NM;551.658.995;0,['827;'],,,,,
-2026-06-02,b3___carteira_teórica___isee,,3cc4f05ff1c9472ecc1cfb0b,AXIA3;AXIA ENERGIA;ON      N1;363.868.018;2,['314;'],,,,,
-2026-06-02,b3___carteira_teórica___isee,,ba6397e2bdbfcd8436e6f640,AZZA3;AZZAS 2154;ON  ATZ NM;190.187.736;0,['444;'],,,,,
-2026-06-02,b3___carteira_teórica___isee,,8073ca2010b4aed4cb69e48b,B3SA3;B3;ON      NM;1.323.509.106;2,['675;'],,,,,
-2026-06-02,b3___carteira_teórica___isee,,11334c126f06355935f9e964,BBDC4;BRADESCO;PN  EJ  N1;1.328.005.438;2,['887;'],,,,,
-2026-06-02,b3___carteira_teórica___isee,,b295b3b50688b857c2981fdd,SAUD3;BRADSAUDE;ON      NM;437.006.354;0,['728;'],,,,,
-2026-06-02,b3___carteira_teórica___isee,,2fc6bb31aa4c334ef450ea9f,BBAS3;BRASIL;ON  EJ  NM;1.132.348.436;2,['811;'],,,,,
-2026-06-02,b3___carteira_teórica___isee,,f5abc30a1660bd7015af6953,BRKM5;BRASKEM;PNA     N1;461.210.215;0,['587;'],,,,,
-2026-06-02,b3___carteira_teórica___isee,,16616c330130026c02395827,BPAC11;BTGP BANCO;UNT     N2;371.521.227;2,['437;'],,,,,
-2026-06-02,b3___carteira_teórica___isee,,a97147a6a01080bc39263f35,CBAV3;CBA;ON      NM;354.870.089;0,['472;'],,,,,
-2026-06-02,b3___carteira_teórica___isee,,f3bd7ea64bc425ffeb7b9ccb,CEAB3;CEA MODAS;ON      NM;355.805.805;0,['501;'],,,,,
-2026-06-02,b3___carteira_teórica___isee,,a23a86216a1c3270d2bc83dc,CMIG4;CEMIG;PN      N1;1.918.066.460;2,['579;'],,,,,
-2026-06-02,b3___carteira_teórica___isee,,1d530e1ba96afdcfb3f8fe94,COGN3;COGNA ON;ON      NM;3.325.780.141;1,['022;'],,,,,
-2026-06-02,b3___carteira_teórica___isee,,67f566c555c8d95bce9b0a95,CSMG3;COPASA;ON      NM;327.174.776;2,['124;'],,,,,
-2026-06-02,b3___carteira_teórica___isee,,d2b3451d1489df7c783e0e74,CPLE3;COPEL;ON      NM;1.571.935.612;2,['816;'],,,,,
-2026-06-02,b3___carteira_teórica___isee,,08418c62d771cdc0e7c618a4,CSAN3;COSAN;ON  ATZ NM;3.893.161.614;1,['878;'],,,,,
-2026-06-02,b3___carteira_teórica___isee,,0b43ca8e0a0550bbc369f2c5,CPFE3;CPFL ENERGIA;ON      NM;325.902.232;1,['737;'],,,,,
-2026-06-02,b3___carteira_teórica___isee,,c8774988e35b9344204e6f3a,CYRE3;CYRELA REALT;ON      NM;488.855.319;1,['360;'],,,,,
-2026-06-02,b3___carteira_teórica___isee,,68bdeea84d7eab6ca9c9cf90,DXCO3;DEXCO;ON      NM;584.594.471;0,['345;'],,,,,
-2026-06-02,b3___carteira_teórica___isee,,3de9de5af688275830065ab6,ECOR3;ECORODOVIAS;ON      NM;570.975.854;0,['522;'],,,,,
-2026-06-02,b3___carteira_teórica___isee,,5e532f4f397764f4efc408c0,ENEV3;ENEVA;ON      NM;796.582.660;2,['465;'],,,,,
-2026-06-02,b3___carteira_teórica___isee,,8eab27976575ae5aa819f8e7,EGIE3;ENGIE BRASIL;ON      NM;620.276.240;2,['530;'],,,,,
-2026-06-02,b3___carteira_teórica___isee,,e8eb511040b94d82fb52afd4,EQTL3;EQUATORIAL;ON  ATZ NM;550.431.147;2,['630;'],,,,,
-2026-06-02,b3___carteira_teórica___isee,,2b74861670e87247afa04d03,FLRY3;FLEURY;ON      NM;776.232.011;1,['478;'],,,,,
-2026-06-02,b3___carteira_teórica___isee,,be7312020b2578283911228a,HBSA3;HIDROVIAS;ON      NM;943.420.596;0,['373;'],,,,,
-2026-06-02,b3___carteira_teórica___isee,,c96325a9f704b59f9e592cf0,IGTI11;IGUATEMI S.A;UNT     N1;357.242.057;1,['140;'],,,,,
-2026-06-02,b3___carteira_teórica___isee,,392e87c0f7956ca5f62f59fd,MYPK3;IOCHP-MAXION;ON      NM;240.711.044;0,['271;'],,,,,
-2026-06-02,b3___carteira_teórica___isee,,9de86ed7cfb2b2d7f5953da6,RANI3;IRANI;ON      NM;174.353.893;0,['172;'],,,,,
-2026-06-02,b3___carteira_teórica___isee,,6b4fe5354d92e3d38205d34f,ISAE4;ISA ENERGIA;PN      N1;721.420.355;2,['410;'],,,,,
-2026-06-02,b3___carteira_teórica___isee,,44d48ad5fc00f8c4d19daddc,ITSA4;ITAUSA;PN  EJ  N1;1.798.590.837;2,['854;'],,,,,
-2026-06-02,b3___carteira_teórica___isee,,32891f0f22c442a070898911,ITUB4;ITAUUNIBANCO;PN  EJ  N1;587.397.066;2,['875;'],,,,,
-2026-06-02,b3___carteira_teórica___isee,,44afa2defb8b608c8517ec25,JSLG3;JSL;ON      NM;146.050.921;0,['110;'],,,,,
-2026-06-02,b3___carteira_teórica___isee,,f4abc70f87b2b50ff3538805,KLBN11;KLABIN S/A;UNT     N2;1.387.523.101;2,['871;'],,,,,
-2026-06-02,b3___carteira_teórica___isee,,361ff650acd219461c15d909,LREN3;LOJAS RENNER;ON      NM;1.705.729.023;3,['186;'],,,,,
-2026-06-02,b3___carteira_teórica___isee,,ada9bf3c9a2a46c6c84cfe57,MDIA3;M.DIASBRANCO;ON  ED  NM;112.635.826;0,['269;'],,,,,
-2026-06-02,b3___carteira_teórica___isee,,c7e69c36350b6d3d50346a4c,MGLU3;MAGAZ LUIZA;ON      NM;647.745.807;0,['469;'],,,,,
-2026-06-02,b3___carteira_teórica___isee,,3cb19bf7429a36cfdd21768d,MBRF3;MARFRIG;ON      NM;1.229.222.092;2,['420;'],,,,,
-2026-06-02,b3___carteira_teórica___isee,,fb91f6776dbf31b1ba209515,MILS3;MILLS;ON      NM;188.732.232;0,['359;'],,,,,
-2026-06-02,b3___carteira_teórica___isee,,d706274d21913bea6ec57b9b,BEEF3;MINERVA;ON      NM;789.469.017;0,['343;'],,,,,
-2026-06-02,b3___carteira_teórica___isee,,498490fa5d72b781484cfe4c,MTRE3;MITRE REALTY;ON  ED  NM;108.756.239;0,['049;'],,,,,
-2026-06-02,b3___carteira_teórica___isee,,77c99e8289508bd12494ab79,MOTV3;MOTIVA SA;ON      NM;1.466.984.391;2,['578;'],,,,,
-2026-06-02,b3___carteira_teórica___isee,,e595fe6a92d6edd98d325af8,MOVI3;MOVIDA;ON      NM;271.055.524;0,['322;'],,,,,
-2026-06-02,b3___carteira_teórica___isee,,c09985b59711574c2535b1d7,MRVE3;MRV;ON      NM;650.337.423;0,['463;'],,,,,
-2026-06-02,b3___carteira_teórica___isee,,50f6bb007644debf54439004,NATU3;NATURA;ON      NM;1.455.310.725;1,['780;'],,,,,
-2026-06-02,b3___carteira_teórica___isee,,05818d00e9717da587a917f5,OPCT3;OCEANPACT;ON      NM;220.079.493;0,['292;'],,,,,
-2026-06-02,b3___carteira_teórica___isee,,e41927459787226d2bcb9229,PGMN3;PAGUE MENOS;ON      NM;527.482.874;0,['269;'],,,,,
-2026-06-02,b3___carteira_teórica___isee,,6536b8f382f189b4fd99b824,PSSA3;PORTO SEGURO;ON      NM;310.433.955;1,['853;'],,,,,
-2026-06-02,b3___carteira_teórica___isee,,e74405310543cd0fc45bb4e9,PTBL3;PORTOBELLO;ON      NM;77.697.402;0,['018;'],,,,,
-2026-06-02,b3___carteira_teórica___isee,,764fbce042fc0ded9e0f94d9,LJQQ3;QUERO-QUERO;ON      NM;338.658.494;0,['060;'],,,,,
-2026-06-02,b3___carteira_teórica___isee,,a59abf27239402c1c1d929be,RADL3;RAIADROGASIL;ON      NM;1.091.103.273;2,['423;'],,,,,
-2026-06-02,b3___carteira_teórica___isee,,e1622a0afd80141b7a166525,RIAA3;RIACHUELO;ON      NM;146.745.458;0,['161;'],,,,,
-2026-06-02,b3___carteira_teórica___isee,,a34726f9d9442a7f6d80265c,RAIL3;RUMO S.A.;ON      NM;1.403.211.381;2,['429;'],,,,,
-2026-06-02,b3___carteira_teórica___isee,,3062b07507b70f1d67ab3d81,SBSP3;SABESP;ON      NM;571.637.160;1,['939;'],,,,,
-2026-06-02,b3___carteira_teórica___isee,,c0228b3e24cc4557c0c5c6b5,SAPR11;SANEPAR;UNT     N2;349.056.396;1,['594;'],,,,,
-2026-06-02,b3___carteira_teórica___isee,,d0ff4c804bf3912967fe1d92,SANB11;SANTANDER BR;UNT;625.533.827;2,['117;'],,,,,
-2026-06-02,b3___carteira_teórica___isee,,b953bc95d0ad085962b262dc,SIMH3;SIMPAR;ON      NM;235.478.961;0,['266;'],,,,,
-2026-06-02,b3___carteira_teórica___isee,,44fb0007ebb2ba5ace45547a,SLCE3;SLC AGRICOLA;ON      NM;382.588.416;0,['723;'],,,,,
-2026-06-02,b3___carteira_teórica___isee,,9642eb9fe852caf539c50672,TGMA3;TEGMA;ON      NM;55.538.056;0,['210;'],,,,,
-2026-06-02,b3___carteira_teórica___isee,,195cc5c8ff4634a946986b8e,VIVT3;TELEF BRASIL;ON  ERJ;700.607.763;2,['897;'],,,,,
-2026-06-02,b3___carteira_teórica___isee,,87c5888051e9cca9b4dcc0d3,TIMS3;TIM;ON      NM;1.046.246.213;2,['834;'],,,,,
-2026-06-02,b3___carteira_teórica___isee,,6f540bfe9ca06e4a879077de,UGPA3;ULTRAPAR;ON      NM;717.507.077;2,['267;'],,,,,
-2026-06-02,b3___carteira_teórica___isee,,379cdd194e76faddee0eff75,USIM5;USIMINAS;PNA     N1;899.648.779;1,['241;'],,,,,
-2026-06-02,b3___carteira_teórica___isee,,fa5581a69e8da553b457ae6b,VAMO3;VAMOS;ON      NM;777.673.168;0,['290;'],,,,,
-2026-06-02,b3___carteira_teórica___isee,,3112e07790339dfa2426ae2a,VBBR3;VIBRA;ON      NM;600.796.360;2,['234;'],,,,,
-2026-06-02,b3___carteira_teórica___isee,,b5b47cb5cbdf255924a79cbe,WEGE3;WEG;ON      NM;487.858.156;2,['609;'],,,,,
-2026-06-02,b3___carteira_teórica___isee,,db45c87a6001d095fddf6572,YDUQ3;YDUQS PART;ON      NM;453.659.637;0,['533;'],,,,,
-2026-06-02,b3___carteira_teórica___isee,,bd634fde1fbff78a1890648d,Quantidade Teórica Total;;;52.836.597.221;100,['000'],,,,,
-2026-06-02,b3___carteira_teórica___isee,,0ec1b341d7349ef35ecb2c3c,Redutor;;;193.773.538,['15329211'],,,,,
-2026-06-02,b3___carteira_teórica___isee,,92e8795b1781c018e936d109,,[''],3TENTOS,TTEN3,"0,373",196.230.382,ON      NM
-2026-06-02,b3___carteira_teórica___isee,,45cdd2c77ce79b1d0eebb423,,[''],ALLOS,ALOS3,"2,400",694.638.242,ON      NM
-2026-06-02,b3___carteira_teórica___isee,,da19bd7b0a4a01a2a44de2e1,,[''],ASSAI,ASAI3,"2,485",2.323.838.173,ON      NM
-2026-06-02,b3___carteira_teórica___isee,,1d8adceea07aae57b1dad618,,[''],AUREN,AURE3,"0,827",551.658.995,ON      NM
-2026-06-02,b3___carteira_teórica___isee,,c382bf6bb78e703e6bac8935,,[''],AXIA ENERGIA,AXIA3,"2,314",363.868.018,ON      N1
-2026-06-02,b3___carteira_teórica___isee,,ce50a3beae7806985a6ca29c,,[''],AZZAS 2154,AZZA3,"0,444",190.187.736,ON  ATZ NM
-2026-06-02,b3___carteira_teórica___isee,,7de932cf79345b80c640536a,,[''],B3,B3SA3,"2,675",1.323.509.106,ON      NM
-2026-06-02,b3___carteira_teórica___isee,,5b352be4390bcb8d8e0f913a,,[''],BRADESCO,BBDC4,"2,887",1.328.005.438,PN  EJ  N1
-2026-06-02,b3___carteira_teórica___isee,,0310b45c58ef0161ee2a7e18,,[''],BRADSAUDE,SAUD3,"0,728",437.006.354,ON      NM
-2026-06-02,b3___carteira_teórica___isee,,68b7852ce986cfbf968fc489,,[''],BRASIL,BBAS3,"2,811",1.132.348.436,ON  EJ  NM
-2026-06-02,b3___carteira_teórica___isee,,e565f7dd59f63f4b1769fff5,,[''],BRASKEM,BRKM5,"0,587",461.210.215,PNA     N1
-2026-06-02,b3___carteira_teórica___isee,,93748fe03bc13b98b09a004d,,[''],BTGP BANCO,BPAC11,"2,437",371.521.227,UNT     N2
-2026-06-02,b3___carteira_teórica___isee,,4f2bc0adba05d6dd2bdcf195,,[''],CBA,CBAV3,"0,472",354.870.089,ON      NM
-2026-06-02,b3___carteira_teórica___isee,,2d9256f1bff5f690a6ad6a00,,[''],CEA MODAS,CEAB3,"0,501",355.805.805,ON      NM
-2026-06-02,b3___carteira_teórica___isee,,8d4effad68dd87ff52cf0cb0,,[''],CEMIG,CMIG4,"2,579",1.918.066.460,PN      N1
-2026-06-02,b3___carteira_teórica___isee,,01170779f41eea8f2be054a0,,[''],COGNA ON,COGN3,"1,022",3.325.780.141,ON      NM
-2026-06-02,b3___carteira_teórica___isee,,711bebcf5824c7a6b4a59ecb,,[''],COPASA,CSMG3,"2,124",327.174.776,ON      NM
-2026-06-02,b3___carteira_teórica___isee,,be9e5f37eadc95e9bed815eb,,[''],COPEL,CPLE3,"2,816",1.571.935.612,ON      NM
-2026-06-02,b3___carteira_teórica___isee,,5bc7d826f047f27746d74cc0,,[''],COSAN,CSAN3,"1,878",3.893.161.614,ON  ATZ NM
-2026-06-02,b3___carteira_teórica___isee,,5905c96cce603e67fdc0bf9f,,[''],CPFL ENERGIA,CPFE3,"1,737",325.902.232,ON      NM
-2026-06-02,b3___carteira_teórica___isee,,ca3aa6036f873e0234a2992a,,[''],CYRELA REALT,CYRE3,"1,360",488.855.319,ON      NM
-2026-06-02,b3___carteira_teórica___isee,,0fab440715c54a9cea068a21,,[''],DEXCO,DXCO3,"0,345",584.594.471,ON      NM
-2026-06-02,b3___carteira_teórica___isee,,723a8b69a332654914e3ee5b,,[''],ECORODOVIAS,ECOR3,"0,522",570.975.854,ON      NM
-2026-06-02,b3___carteira_teórica___isee,,f8000ad15ccfda52744cdca6,,[''],ENEVA,ENEV3,"2,465",796.582.660,ON      NM
-2026-06-02,b3___carteira_teórica___isee,,a90bf4df1357b66477bad776,,[''],ENGIE BRASIL,EGIE3,"2,530",620.276.240,ON      NM
-2026-06-02,b3___carteira_teórica___isee,,ee3b66daa0f0cea11146bc5a,,[''],EQUATORIAL,EQTL3,"2,630",550.431.147,ON  ATZ NM
-2026-06-02,b3___carteira_teórica___isee,,110ae62875355f3e42bd9608,,[''],FLEURY,FLRY3,"1,478",776.232.011,ON      NM
-2026-06-02,b3___carteira_teórica___isee,,8d7eb215c8152030d95f7de7,,[''],HIDROVIAS,HBSA3,"0,373",943.420.596,ON      NM
-2026-06-02,b3___carteira_teórica___isee,,782a692bcd16a1378f46d815,,[''],IGUATEMI S.A,IGTI11,"1,140",357.242.057,UNT     N1
-2026-06-02,b3___carteira_teórica___isee,,4686c8ea8f85743ef09867dc,,[''],IOCHP-MAXION,MYPK3,"0,271",240.711.044,ON      NM
-2026-06-02,b3___carteira_teórica___isee,,58a5da29f70a1aa34b7ab199,,[''],IRANI,RANI3,"0,172",174.353.893,ON      NM
-2026-06-02,b3___carteira_teórica___isee,,8863d4373c997860de6797e5,,[''],ISA ENERGIA,ISAE4,"2,410",721.420.355,PN      N1
-2026-06-02,b3___carteira_teórica___isee,,8657eae9ca0966531362f949,,[''],ITAUSA,ITSA4,"2,854",1.798.590.837,PN  EJ  N1
-2026-06-02,b3___carteira_teórica___isee,,aa366bd24a28df5c6a3606cb,,[''],ITAUUNIBANCO,ITUB4,"2,875",587.397.066,PN  EJ  N1
-2026-06-02,b3___carteira_teórica___isee,,0ef354c2c6efa18ddc3ae38c,,[''],JSL,JSLG3,"0,110",146.050.921,ON      NM
-2026-06-02,b3___carteira_teórica___isee,,6a00af0e4aa5f5e1c5a747a8,,[''],KLABIN S/A,KLBN11,"2,871",1.387.523.101,UNT     N2
-2026-06-02,b3___carteira_teórica___isee,,fda21097106581bc45bac6a2,,[''],LOJAS RENNER,LREN3,"3,186",1.705.729.023,ON      NM
-2026-06-02,b3___carteira_teórica___isee,,6f54a3952adb7bfb4f45897a,,[''],M.DIASBRANCO,MDIA3,"0,269",112.635.826,ON  ED  NM
-2026-06-02,b3___carteira_teórica___isee,,f8f6c1a8fbee43649c33f65d,,[''],MAGAZ LUIZA,MGLU3,"0,469",647.745.807,ON      NM
-2026-06-02,b3___carteira_teórica___isee,,17cc3b4cdc78285de14de6c5,,[''],MARFRIG,MBRF3,"2,420",1.229.222.092,ON      NM
-2026-06-02,b3___carteira_teórica___isee,,baf2d8a2ee09ff4c09077844,,[''],MILLS,MILS3,"0,359",188.732.232,ON      NM
-2026-06-02,b3___carteira_teórica___isee,,fbc768f16cca366166d1c315,,[''],MINERVA,BEEF3,"0,343",789.469.017,ON      NM
-2026-06-02,b3___carteira_teórica___isee,,6699023d878aa53448cc3e83,,[''],MITRE REALTY,MTRE3,"0,049",108.756.239,ON  ED  NM
-2026-06-02,b3___carteira_teórica___isee,,b570a1ea694ff047decfc1d6,,[''],MOTIVA SA,MOTV3,"2,578",1.466.984.391,ON      NM
-2026-06-02,b3___carteira_teórica___isee,,3a27324b692e55cff2ebd4bb,,[''],MOVIDA,MOVI3,"0,322",271.055.524,ON      NM
-2026-06-02,b3___carteira_teórica___isee,,1338c2d3eebfccba729cff6f,,[''],MRV,MRVE3,"0,463",650.337.423,ON      NM
-2026-06-02,b3___carteira_teórica___isee,,acecd2b69b488aeec605e12b,,[''],NATURA,NATU3,"1,780",1.455.310.725,ON      NM
-2026-06-02,b3___carteira_teórica___isee,,3d5295ee94c483941fdbaad5,,[''],OCEANPACT,OPCT3,"0,292",220.079.493,ON      NM
-2026-06-02,b3___carteira_teórica___isee,,e06e37819ab58905b4d23c8c,,[''],PAGUE MENOS,PGMN3,"0,269",527.482.874,ON      NM
-2026-06-02,b3___carteira_teórica___isee,,cec407dc678c2c26be1d28f6,,[''],PORTO SEGURO,PSSA3,"1,853",310.433.955,ON      NM
-2026-06-02,b3___carteira_teórica___isee,,b286b10e0083874d1854a5ee,,[''],PORTOBELLO,PTBL3,"0,018",77.697.402,ON      NM
-2026-06-02,b3___carteira_teórica___isee,,cab0d734e981a1a254c1a4dc,,[''],QUERO-QUERO,LJQQ3,"0,060",338.658.494,ON      NM
-2026-06-02,b3___carteira_teórica___isee,,51ef57c73858c8df6d6ba4b7,,[''],RAIADROGASIL,RADL3,"2,423",1.091.103.273,ON      NM
-2026-06-02,b3___carteira_teórica___isee,,ad58da98b8f72a0a58b010e8,,[''],RIACHUELO,RIAA3,"0,161",146.745.458,ON      NM
-2026-06-02,b3___carteira_teórica___isee,,2b82d0bfdefb958f38d0233d,,[''],RUMO S.A.,RAIL3,"2,429",1.403.211.381,ON      NM
-2026-06-02,b3___carteira_teórica___isee,,4d0a41e629e58e77719aec5a,,[''],SABESP,SBSP3,"1,939",571.637.160,ON      NM
-2026-06-02,b3___carteira_teórica___isee,,c24269a113a546698dbf2c36,,[''],SANEPAR,SAPR11,"1,594",349.056.396,UNT     N2
-2026-06-02,b3___carteira_teórica___isee,,11124801fa38591041f185c8,,[''],SANTANDER BR,SANB11,"2,117",625.533.827,UNT
-2026-06-02,b3___carteira_teórica___isee,,b1555c9cadd13dcbc0724ef8,,[''],SIMPAR,SIMH3,"0,266",235.478.961,ON      NM
-2026-06-02,b3___carteira_teórica___isee,,a7a2df12f718c3a9903c8a72,,[''],SLC AGRICOLA,SLCE3,"0,723",382.588.416,ON      NM
-2026-06-02,b3___carteira_teórica___isee,,231a77d78cfbe19077614d8e,,[''],TEGMA,TGMA3,"0,210",55.538.056,ON      NM
-2026-06-02,b3___carteira_teórica___isee,,6a51a14930231da2149494e8,,[''],TELEF BRASIL,VIVT3,"2,897",700.607.763,ON  ERJ
-2026-06-02,b3___carteira_teórica___isee,,565fe3590e4da1ea98f20995,,[''],TIM,TIMS3,"2,834",1.046.246.213,ON      NM
-2026-06-02,b3___carteira_teórica___isee,,cf4aa54f20b7637065aebdd3,,[''],ULTRAPAR,UGPA3,"2,267",717.507.077,ON      NM
-2026-06-02,b3___carteira_teórica___isee,,53ffdf0bf72491c8f018b551,,[''],USIMINAS,USIM5,"1,241",899.648.779,PNA     N1
-2026-06-02,b3___carteira_teórica___isee,,c6af5e9c0d930e55691ee007,,[''],VAMOS,VAMO3,"0,290",777.673.168,ON      NM
-2026-06-02,b3___carteira_teórica___isee,,8cc23fe4973f17408ce7963f,,[''],VIBRA,VBBR3,"2,234",600.796.360,ON      NM
-2026-06-02,b3___carteira_teórica___isee,,be101bb6f67624c94779fc4d,,[''],WEG,WEGE3,"2,609",487.858.156,ON      NM
-2026-06-02,b3___carteira_teórica___isee,,8c7f259d2ca3eaacc50f1105,,[''],YDUQS PART,YDUQ3,"0,533",453.659.637,ON      NM
-2026-06-02,b3___carteira_teórica___isee,,0851cb88252e9aee916a74ae,,,,Quantidade Teórica Total,"100,000",52.836.597.221,
-2026-06-02,b3___carteira_teórica___isee,,42f241586a494af74932251f,,,,Redutor,,"193.773.538,15329211",
+data_captura,indice,indice_nome,codigo_ativo,nome_ativo,tipo_ativo,quantidade_teorica,participacao_pct,reducao_capital,segmento
+2026-06-03,ISEE,ISEE,TTEN3,3TENTOS,ON      NM,196.230.382,"0,364",,
+2026-06-03,ISEE,ISEE,ALOS3,ALLOS,ON      NM,694.638.242,"2,358",,
+2026-06-03,ISEE,ISEE,ASAI3,ASSAI,ON      NM,2.323.838.173,"2,584",,
+2026-06-03,ISEE,ISEE,AURE3,AUREN,ON      NM,551.658.995,"0,831",,
+2026-06-03,ISEE,ISEE,AXIA3,AXIA ENERGIA,ON      N1,363.868.018,"2,341",,
+2026-06-03,ISEE,ISEE,AZZA3,AZZAS 2154,ON  ATZ NM,190.187.736,"0,444",,
+2026-06-03,ISEE,ISEE,B3SA3,B3,ON      NM,1.323.509.106,"2,647",,
+2026-06-03,ISEE,ISEE,BBDC4,BRADESCO,PN  EJ  N1,1.328.005.438,"2,896",,
+2026-06-03,ISEE,ISEE,SAUD3,BRADSAUDE,ON      NM,437.006.354,"0,712",,
+2026-06-03,ISEE,ISEE,BBAS3,BRASIL,ON  EJ  NM,1.132.348.436,"2,767",,
+2026-06-03,ISEE,ISEE,BRKM5,BRASKEM,PNA     N1,461.210.215,"0,567",,
+2026-06-03,ISEE,ISEE,BPAC11,BTGP BANCO,UNT     N2,371.521.227,"2,430",,
+2026-06-03,ISEE,ISEE,CBAV3,CBA,ON      NM,354.870.089,"0,470",,
+2026-06-03,ISEE,ISEE,CEAB3,CEA MODAS,ON      NM,355.805.805,"0,501",,
+2026-06-03,ISEE,ISEE,CMIG4,CEMIG,PN      N1,1.918.066.460,"2,592",,
+2026-06-03,ISEE,ISEE,COGN3,COGNA ON,ON      NM,3.325.780.141,"1,017",,
+2026-06-03,ISEE,ISEE,CSMG3,COPASA,ON      NM,327.174.776,"2,128",,
+2026-06-03,ISEE,ISEE,CPLE3,COPEL,ON      NM,1.571.935.612,"2,829",,
+2026-06-03,ISEE,ISEE,CSAN3,COSAN,ON  ATZ NM,3.893.161.614,"1,856",,
+2026-06-03,ISEE,ISEE,CPFE3,CPFL ENERGIA,ON      NM,325.902.232,"1,742",,
+2026-06-03,ISEE,ISEE,CYRE3,CYRELA REALT,ON      NM,488.855.319,"1,342",,
+2026-06-03,ISEE,ISEE,DXCO3,DEXCO,ON      NM,584.594.471,"0,342",,
+2026-06-03,ISEE,ISEE,ECOR3,ECORODOVIAS,ON      NM,570.975.854,"0,522",,
+2026-06-03,ISEE,ISEE,ENEV3,ENEVA,ON      NM,796.582.660,"2,481",,
+2026-06-03,ISEE,ISEE,EGIE3,ENGIE BRASIL,ON      NM,620.276.240,"2,586",,
+2026-06-03,ISEE,ISEE,EQTL3,EQUATORIAL,ON  ATZ NM,550.431.147,"2,642",,
+2026-06-03,ISEE,ISEE,FLRY3,FLEURY,ON      NM,776.232.011,"1,462",,
+2026-06-03,ISEE,ISEE,HBSA3,HIDROVIAS,ON      NM,943.420.596,"0,366",,
+2026-06-03,ISEE,ISEE,IGTI11,IGUATEMI S.A,UNT     N1,357.242.057,"1,128",,
+2026-06-03,ISEE,ISEE,MYPK3,IOCHP-MAXION,ON      NM,240.711.044,"0,279",,
+2026-06-03,ISEE,ISEE,RANI3,IRANI,ON      NM,174.353.893,"0,168",,
+2026-06-03,ISEE,ISEE,ISAE4,ISA ENERGIA,PN      N1,721.420.355,"2,437",,
+2026-06-03,ISEE,ISEE,ITSA4,ITAUSA,PN  EJ  N1,1.798.590.837,"2,850",,
+2026-06-03,ISEE,ISEE,ITUB4,ITAUUNIBANCO,PN  EJ  N1,587.397.066,"2,855",,
+2026-06-03,ISEE,ISEE,JSLG3,JSL,ON      NM,146.050.921,"0,111",,
+2026-06-03,ISEE,ISEE,KLBN11,KLABIN S/A,UNT     N2,1.387.523.101,"2,882",,
+2026-06-03,ISEE,ISEE,LREN3,LOJAS RENNER,ON      NM,1.705.729.023,"3,252",,
+2026-06-03,ISEE,ISEE,MGLU3,MAGAZ LUIZA,ON      NM,647.745.807,"0,452",,
+2026-06-03,ISEE,ISEE,MBRF3,MARFRIG,ON      NM,1.229.222.092,"2,394",,
+2026-06-03,ISEE,ISEE,MILS3,MILLS,ON      NM,188.732.232,"0,355",,
+2026-06-03,ISEE,ISEE,BEEF3,MINERVA,ON      NM,789.469.017,"0,339",,
+2026-06-03,ISEE,ISEE,MTRE3,MITRE REALTY,ON  ED  NM,108.756.239,"0,047",,
+2026-06-03,ISEE,ISEE,MOTV3,MOTIVA SA,ON      NM,1.466.984.391,"2,550",,
+2026-06-03,ISEE,ISEE,MOVI3,MOVIDA,ON      NM,271.055.524,"0,327",,
+2026-06-03,ISEE,ISEE,MRVE3,MRV,ON      NM,650.337.423,"0,474",,
+2026-06-03,ISEE,ISEE,NATU3,NATURA,ON      NM,1.455.310.725,"1,763",,
+2026-06-03,ISEE,ISEE,OPCT3,OCEANPACT,ON      NM,220.079.493,"0,291",,
+2026-06-03,ISEE,ISEE,PGMN3,PAGUE MENOS,ON      NM,527.482.874,"0,275",,
+2026-06-03,ISEE,ISEE,PSSA3,PORTO SEGURO,ON      NM,310.433.955,"1,859",,
+2026-06-03,ISEE,ISEE,PTBL3,PORTOBELLO,ON      NM,77.697.402,"0,017",,
+2026-06-03,ISEE,ISEE,LJQQ3,QUERO-QUERO,ON      NM,338.658.494,"0,059",,
+2026-06-03,ISEE,ISEE,RADL3,RAIADROGASIL,ON      NM,1.091.103.273,"2,426",,
+2026-06-03,ISEE,ISEE,RIAA3,RIACHUELO,ON      NM,146.745.458,"0,160",,
+2026-06-03,ISEE,ISEE,RAIL3,RUMO S.A.,ON      NM,1.403.211.381,"2,446",,
+2026-06-03,ISEE,ISEE,SBSP3,SABESP,ON      NM,571.637.160,"1,945",,
+2026-06-03,ISEE,ISEE,SAPR11,SANEPAR,UNT     N2,349.056.396,"1,597",,
+2026-06-03,ISEE,ISEE,SANB11,SANTANDER BR,UNT,625.533.827,"2,103",,
+2026-06-03,ISEE,ISEE,SIMH3,SIMPAR,ON      NM,235.478.961,"0,262",,
+2026-06-03,ISEE,ISEE,SLCE3,SLC AGRICOLA,ON      NM,382.588.416,"0,718",,
+2026-06-03,ISEE,ISEE,TGMA3,TEGMA,ON      NM,55.538.056,"0,210",,
+2026-06-03,ISEE,ISEE,VIVT3,TELEF BRASIL,ON  ERJ,700.607.763,"2,909",,
+2026-06-03,ISEE,ISEE,TIMS3,TIM,ON      NM,1.046.246.213,"2,830",,
+2026-06-03,ISEE,ISEE,UGPA3,ULTRAPAR,ON      NM,717.507.077,"2,266",,
+2026-06-03,ISEE,ISEE,USIM5,USIMINAS,PNA     N1,899.648.779,"1,331",,
+2026-06-03,ISEE,ISEE,VAMO3,VAMOS,ON      NM,777.673.168,"0,284",,
+2026-06-03,ISEE,ISEE,VBBR3,VIBRA,ON      NM,600.796.360,"2,224",,
+2026-06-03,ISEE,ISEE,WEGE3,WEG,ON      NM,487.858.156,"2,517",,
+2026-06-03,ISEE,ISEE,YDUQ3,YDUQS PART,ON      NM,453.659.637,"0,523",,
