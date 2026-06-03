@@ -110,6 +110,7 @@ def capturar() -> list[dict]:
         partes = linha.split("@")
         if len(partes) < len(COLUNAS):
             partes += [""] * (len(COLUNAS) - len(partes))
+        registro = {"data_captura": data_captura}
         for col, val in zip(COLUNAS, partes):
             registro[col] = limpar(val.replace(",", "."))
         registros.append(registro)

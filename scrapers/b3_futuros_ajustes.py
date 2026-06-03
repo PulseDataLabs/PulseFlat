@@ -129,8 +129,11 @@ def capturar() -> list[dict]:
             break
         if linha[0]:
             mercadoria_atual = linha[0]
-                    "data_referencia": data_ref.strftime("%Y-%m-%d"),
-                    "mercadoria": mercadoria_atual}
+        registro = {
+            "data_captura": data_captura,
+            "data_referencia": data_ref.strftime("%Y-%m-%d"),
+            "mercadoria": mercadoria_atual
+        }
         for col, val in zip(COLUNAS[1:], linha[1:]):
             registro[col] = val
         registros.append(registro)

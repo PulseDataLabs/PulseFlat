@@ -120,6 +120,7 @@ def capturar() -> list[dict]:
 
     registros = []
     for row in reader:
+        registro = {"data_captura": data_captura}
         for campo_csv, campo_nosso in CAMPOS_CSV.items():
             registro[campo_nosso] = limpar(row.get(campo_csv, ""))
         registros.append(registro)

@@ -179,20 +179,18 @@ SCRAPERS = [
         "descricao": "CVM — Cadastro de Companhias Abertas",
         "grupo": "cvm",
     },
-    # cvm_fundos_cadastro — DESATIVADO: Arquivo gerado é muito grande para o GitHub
-    # {
-    #     "id": "cvm_fundos_cadastro",
-    #     "modulo": "scrapers.cvm_fundos_cadastro",
-    #     "descricao": "CVM — Cadastro de Fundos (cad_fi.csv)",
-    #     "grupo": "cvm",
-    # },
-    # cvm_fundos_informe_diario — DESATIVADO: Arquivo gerado é muito grande para o GitHub
-    # {
-    #     "id": "cvm_fundos_informe_diario",
-    #     "modulo": "scrapers.cvm_fundos_informe_diario",
-    #     "descricao": "CVM — Informe Diário de Fundos (ZIP)",
-    #     "grupo": "cvm",
-    # },
+    {
+        "id": "cvm_fundos_cadastro",
+        "modulo": "scrapers.cvm_fundos_cadastro",
+        "descricao": "CVM — Cadastro de Fundos (cad_fi.csv)",
+        "grupo": "cvm",
+    },
+    {
+        "id": "cvm_fundos_informe_diario",
+        "modulo": "scrapers.cvm_fundos_informe_diario",
+        "descricao": "CVM — Informe Diário de Fundos (ZIP)",
+        "grupo": "cvm",
+    },
     {
         "id": "cvm_fundos_extrato",
         "modulo": "scrapers.cvm_fundos_extrato",

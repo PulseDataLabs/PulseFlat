@@ -13,7 +13,7 @@
   "bacen_negociacao_tpf_extragrupo_mes_anterior.csv": "2026-06-01",
   "anbima_ima.csv": "2026-06-02",
   "b3_carteiras_teoricas.csv": "2026-06-02",
-  "cvm_cadastro_companhias_abertas.csv": "2026-06-01",
+  "cvm_cadastro_companhias_abertas.csv": "2026-06-02",
   "ibge_sidra.csv": "2026-06-02",
   "b3_bvbg086.csv": "2026-06-01",
   "b3_fiis_listados.csv": "2026-06-02",
@@ -29,5 +29,9 @@
   "anbima_debentures.csv": "2026-06-02",
   "debentures_emissoes_caracteristicas.csv": "2026-06-02",
   "debentures_mercado_secundario_precos_negociacao.csv": "2026-06-02",
-  "debentures_mercado_pu_historico.csv": "2026-06-02"
+  "debentures_mercado_pu_historico.csv": "2026-06-02",
+  "extrato_fi.csv": "2026-06-02",
+  "registro_fundo_classe.csv": "2026-06-02",
+  "cvm_fundos_cadastro.csv": "2026-06-02",
+  "cvm_fundos_informe_diario.csv": "2026-06-02"
 }
