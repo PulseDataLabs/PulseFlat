@@ -21,7 +21,7 @@ Sem servidor. Sem custo. Histórico versionado em CSV no próprio repositório.
 | `anbima_projecoes` | ANBIMA | API OAuth 2.0 / Scraping | `anbima_projecoes.csv` |
 | `anbima_titulos_publicos` | ANBIMA | TXT delimitado (@) | `anbima_titulos_publicos.csv` |
 | `anbima_debentures` | ANBIMA | TXT delimitado (@) | `anbima_debentures.csv` |
-| `anbima_ima` | ANBIMA | TXT delimitado | `anbima_ima.csv` |
+| `anbima_ima_completo` | ANBIMA | TXT delimitado | `anbima_ima_completo.csv` |
 | `anbima_550` | ANBIMA | TXT (Resolução 550) | `anbima_550.csv` |
 | `anbima_indice_imab` | ANBIMA | XLS histórico | `anbima_indice_imab.csv` |
 
@@ -144,7 +144,7 @@ Sem servidor. Sem custo. Histórico versionado em CSV no próprio repositório.
 | pu | Preço unitário (R$) |
 | duration | Duration do ativo (dias úteis) |
 
-### `anbima_ima.csv`
+### `anbima_ima_completo.csv`
 | Campo | Descrição |
 |---|---|
 | data_captura | Data da execução (BRT) |
@@ -331,7 +331,7 @@ PulseFlat/
 │   ├── anbima_projecoes.csv
 │   ├── anbima_titulos_publicos.csv
 │   ├── anbima_debentures.csv
-│   ├── anbima_ima.csv
+│   ├── anbima_ima_completo.csv
 │   ├── anbima_550.csv
 │   ├── anbima_indice_imab.csv
 │   ├── bcb_ptax.csv
@@ -366,7 +366,7 @@ PulseFlat/
 │   ├── anbima_projecoes.py
 │   ├── anbima_titulos_publicos.py
 │   ├── anbima_debentures.py
-│   ├── anbima_ima.py
+│   ├── anbima_ima_completo.py
 │   ├── anbima_550.py
 │   ├── anbima_indice_imab.py
 │   ├── bcb_ptax.py

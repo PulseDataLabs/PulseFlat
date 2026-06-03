@@ -1,6 +1,6 @@
 """
-scrapers/anbima_ima.py
------------------------
+scrapers/anbima_ima_completo.py
+-------------------------------
 Índices de mercado ANBIMA (IMA, IDA, IDKA) — dados mark-to-market diários.
 
 Fonte: https://www.anbima.com.br/informacoes/ima/arqs/ima_completo.txt
@@ -14,7 +14,7 @@ Campos: DATA_REFERENCIA, INDICE, NUMERO_INDICE, VARIACAO_DIARIA,
 
 import sys
 import time
-from io import StringIO
+from datetime import datetime, date, timedelta
 from pathlib import Path
 
 import requests
@@ -22,14 +22,13 @@ import requests
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from utils import get_logger, agora_brt, limpar, nova_session, salvar_csv
 
-log = get_logger("anbima_ima")
+log = get_logger("anbima_ima_completo")
 
-ARQUIVO = Path("data/anbima_ima.csv")
+ARQUIVO = Path("data/anbima_ima_completo.csv")
 URL = "https://www.anbima.com.br/informacoes/ima/arqs/ima_completo.txt"
 
 CABECALHO = [
     "data_captura",
-    
     "data_referencia",
     "indice",
     "numero_indice",
@@ -58,6 +57,23 @@ COLUNAS_ARQUIVO = [
     "quant_negociada_1000_titulos", "valor_negociado_rs_mil",
     "pmr", "convexidade", "yield_", "redemption_yield",
 ]
+
+
+def obter_d1_util() -> str:
+    """Retorna a data do dia útil anterior (D-1) no formato DD/MM/YYYY."""
+    data_hoje_str, _ = agora_brt()
+    hoje = datetime.strptime(data_hoje_str, "%Y-%m-%d").date()
+    ref = hoje - timedelta(days=1)
+    while ref.weekday() >= 5:  # Pula fins de semana (Sábado=5, Domingo=6)
+        ref -= timedelta(days=1)
+    return ref.strftime("%d/%m/%Y")
+
+
+def _formatar_data_iso(data_str: str) -> str:
+    parts = data_str.split("/")
+    if len(parts) == 3:
+        return f"{parts[2]}-{parts[1]}-{parts[0]}"
+    return data_str
 
 
 def capturar() -> list[dict]:
@@ -98,6 +114,19 @@ def capturar() -> list[dict]:
     # As 3 primeiras linhas são cabeçalho do arquivo
     dados_linhas = dados_linhas[3:]
 
+    # Validar que a data de referência no arquivo corresponde ao D-1 útil esperado
+    d1_util_str = obter_d1_util()
+    log.info(f"D-1 útil esperado: {d1_util_str}")
+    
+    primeira_linha_valida = next((l for l in dados_linhas if "@" in l), None)
+    if primeira_linha_valida:
+        p = primeira_linha_valida.split("@")
+        if len(p) > 1:
+            file_date = p[1].strip()
+            if file_date != d1_util_str:
+                log.error(f"Abortando: data do arquivo ({file_date}) não corresponde ao D-1 útil ({d1_util_str}).")
+                sys.exit(1)
+
     data_captura, _ = agora_brt()
     registros = []
 
@@ -105,11 +134,16 @@ def capturar() -> list[dict]:
         if "@" not in linha:
             continue
         partes = linha.split("@")
-        if len(partes) < len(COLUNAS_ARQUIVO):
-            partes += [""] * (len(COLUNAS_ARQUIVO) - len(partes))
+        if len(partes) < len(COLUNAS_ARQUIVO) + 1:
+            partes += [""] * (len(COLUNAS_ARQUIVO) + 1 - len(partes))
+            
         registro = {"data_captura": data_captura}
-        for col, val in zip(COLUNAS_ARQUIVO, partes):
-            registro[col] = limpar(val.replace(",", ".")).replace("--", "")
+        # Zipa pulando o primeiro elemento (partes[0]), que é o tipo de registro
+        for col, val in zip(COLUNAS_ARQUIVO, partes[1:]):
+            val_clean = limpar(val.replace(",", ".")).replace("--", "")
+            if col == "data_referencia":
+                val_clean = _formatar_data_iso(val_clean)
+            registro[col] = val_clean
         registros.append(registro)
 
     if not registros:
@@ -121,7 +155,7 @@ def capturar() -> list[dict]:
 
 
 def main():
-    log.info("=== ANBIMA IMA/IDA — Índices de Renda Fixa ===")
+    log.info("=== ANBIMA IMA Completo ===")
     salvar_csv(ARQUIVO, capturar(), CABECALHO,
                chaves_dedup=["data_captura", "data_referencia", "indice"])
 

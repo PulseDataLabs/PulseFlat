@@ -116,8 +116,8 @@ SCRAPERS = [
         "grupo": "anbima",
     },
     {
-        "id": "anbima_ima",
-        "modulo": "scrapers.anbima_ima",
+        "id": "anbima_ima_completo",
+        "modulo": "scrapers.anbima_ima_completo",
         "descricao": "ANBIMA — Índices IMA/IDA (mark-to-market diário)",
         "grupo": "anbima",
     },

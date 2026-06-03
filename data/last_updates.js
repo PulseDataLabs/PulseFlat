@@ -15,7 +15,7 @@ window.PULSEFLAT_LAST_UPDATES = {
   "teste_csv.csv": "2026-06-02",
   "anbima_ima_completo.csv": {
     "min": "2026-06-01",
-    "max": "2026-06-01"
+    "max": "2026-06-03"
   },
   "b3_indices_precos_historicos.csv": {
     "min": "2026-06-02",
@@ -43,7 +43,7 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "anbima_ima.csv": {
     "min": "2026-06-01",
-    "max": "2026-06-02"
+    "max": "2026-06-03"
   },
   "b3_carteiras_teoricas.csv": {
     "min": "2026-06-01",

@@ -209,5 +209,42 @@ def test_b3_classificacao_setorial_sucesso(requests_mock):
     assert emp["segmento_listagem"] == "N2"
 
 
+def test_anbima_ima_completo_sucesso(requests_mock, monkeypatch):
+    """Deve capturar, validar D-1 e parsear com sucesso o arquivo IMA Completo da ANBIMA."""
+    import scrapers.anbima_ima_completo as aic
+    
+    # Mock de obter_d1_util para retornar uma data fixa
+    monkeypatch.setattr(aic, "obter_d1_util", lambda: "02/06/2026")
+    
+    # Mock do conteúdo do arquivo txt
+    mock_txt = (
+        "0@ANBIMA - Associação Brasileira das Entidades dos Mercados Financeiros e de Capitais\n"
+        "1@TOTAIS\n"
+        "1@Data de Referência@INDICE@Número Índice@Variação Diária(%)@Variação Mensal(%)@Variação Anual(%)\n"
+        "1@02/06/2026@IRF-M 1@20154,43293200@0,0569@0,0806@5,5163\n"
+        "1@02/06/2026@IRF-M 1+@24436,46503800@0,0386@0,0518@3,9291\n"
+    )
+    
+    requests_mock.get(aic.URL, text=mock_txt, status_code=200)
+    
+    registros = aic.capturar()
+    
+    assert len(registros) == 2
+    
+    reg1 = registros[0]
+    assert reg1["data_referencia"] == "2026-06-02"
+    assert reg1["indice"] == "IRF-M 1"
+    assert reg1["numero_indice"] == "20154.43293200"
+    assert reg1["variacao_diaria"] == "0.0569"
+    assert reg1["variacao_mensal"] == "0.0806"
+    assert reg1["variacao_anual"] == "5.5163"
+    
+    reg2 = registros[1]
+    assert reg2["data_referencia"] == "2026-06-02"
+    assert reg2["indice"] == "IRF-M 1+"
+    assert reg2["numero_indice"] == "24436.46503800"
+
+
+
 
 
