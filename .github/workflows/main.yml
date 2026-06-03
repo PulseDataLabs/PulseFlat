@@ -19,9 +19,6 @@ on:
   # Permite execução manual pelo painel do GitHub
   workflow_dispatch:
 
-env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -32,13 +29,13 @@ jobs:
 
     steps:
     - name: Checkout do código
-      uses: actions/checkout@v4
+      uses: actions/checkout@v6
 
     - name: Configurar Fuso Horário Local
       run: sudo timedatectl set-timezone America/Sao_Paulo
 
     - name: Configurar Python
-      uses: actions/setup-python@v5
+      uses: actions/setup-python@v6
       with:
         python-version: '3.13'
 
