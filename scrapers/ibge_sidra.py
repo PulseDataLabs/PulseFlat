@@ -27,7 +27,6 @@ ARQUIVO = Path("data/ibge_sidra.csv")
 
 CABECALHO = [
     "data_captura",
-    
     "serie_id",
     "nome_serie",
     "fonte",
