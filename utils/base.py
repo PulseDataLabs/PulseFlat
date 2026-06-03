@@ -138,16 +138,27 @@ def salvar_csv(
                 pass
         
         if registros:
-            datas = [r.get("data_captura") for r in registros if r.get("data_captura")]
-            if datas:
-                last_updates[arquivo.name] = max(datas)
-                with last_updates_path.open("w", encoding="utf-8") as lf:
-                    json.dump(last_updates, lf, indent=2, ensure_ascii=False)
-                
-                # Salva também como last_updates.js para carregamento local offline (file://)
-                last_updates_js_path = arquivo.parent / "last_updates.js"
-                with last_updates_js_path.open("w", encoding="utf-8") as lf:
-                    lf.write(f"window.PULSEFLAT_LAST_UPDATES = {json.dumps(last_updates, indent=2, ensure_ascii=False)};\n")
+            # Identifica a coluna de data no cabeçalho
+            date_col = None
+            for candidate in ["data_captura", "data_referencia", "data", "rpt_dt"]:
+                if candidate in cabecalho:
+                    date_col = candidate
+                    break
+            
+            if date_col:
+                datas = [r.get(date_col) for r in todas if r.get(date_col)]
+                if datas:
+                    last_updates[arquivo.name] = {
+                        "min": min(datas),
+                        "max": max(datas)
+                    }
+                    with last_updates_path.open("w", encoding="utf-8") as lf:
+                        json.dump(last_updates, lf, indent=2, ensure_ascii=False)
+                    
+                    # Salva também como last_updates.js para carregamento local offline (file://)
+                    last_updates_js_path = arquivo.parent / "last_updates.js"
+                    with last_updates_js_path.open("w", encoding="utf-8") as lf:
+                        lf.write(f"window.PULSEFLAT_LAST_UPDATES = {json.dumps(last_updates, indent=2, ensure_ascii=False)};\n")
     except Exception as e:
         log.warning(f"Não foi possível atualizar last_updates.json/js: {e}")
 

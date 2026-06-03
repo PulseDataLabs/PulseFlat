@@ -2819,15 +2819,38 @@
       if (!fileElement) return;
 
       const fileName = fileElement.textContent.trim();
-      const dateStr = updates[fileName];
+      const entry = updates[fileName];
 
-      if (dateStr) {
-        const parts = dateStr.split('-');
-        const formattedDate = parts.length === 3 ? `${parts[2]}/${parts[1]}/${parts[0]}` : dateStr;
+      if (entry) {
+        let minDate = '';
+        let maxDate = '';
+
+        if (typeof entry === 'object' && entry !== null) {
+          minDate = entry.min || '';
+          maxDate = entry.max || '';
+        } else if (typeof entry === 'string') {
+          maxDate = entry;
+        }
+
+        const format = (dStr) => {
+          if (!dStr) return '';
+          // Remove time part if exists (e.g. YYYY-MM-DD HH:MM:SS)
+          const cleanDate = dStr.split(' ')[0];
+          const parts = cleanDate.split('-');
+          return parts.length === 3 ? `${parts[2]}/${parts[1]}/${parts[0]}` : dStr;
+        };
+
+        const minFmt = format(minDate);
+        const maxFmt = format(maxDate);
 
         const updateBadge = document.createElement('div');
         updateBadge.className = 'card-last-update';
-        updateBadge.innerHTML = `Captura mais recente: ${formattedDate}`;
+
+        if (minFmt && minFmt !== maxFmt) {
+          updateBadge.innerHTML = `Histórico: ${minFmt} a ${maxFmt}`;
+        } else if (maxFmt) {
+          updateBadge.innerHTML = `Captura mais recente: ${maxFmt}`;
+        }
 
         fileElement.parentNode.insertBefore(updateBadge, fileElement.nextSibling);
       }

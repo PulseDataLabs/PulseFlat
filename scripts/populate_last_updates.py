@@ -60,7 +60,7 @@ def main():
                     log.warning(f"  Nenhuma coluna de data encontrada em {csv_file.name}. Pulando.")
                     continue
 
-                # Extrai todas as datas e encontra a mais recente
+                # Extrai todas as datas e encontra a mais antiga e a mais recente
                 datas = []
                 for row in reader:
                     val = row.get(date_col)
@@ -68,9 +68,13 @@ def main():
                         datas.append(val.strip())
 
                 if datas:
+                    min_date = min(datas)
                     max_date = max(datas)
-                    last_updates[csv_file.name] = max_date
-                    log.info(f"  Data mais recente: {max_date}")
+                    last_updates[csv_file.name] = {
+                        "min": min_date,
+                        "max": max_date
+                    }
+                    log.info(f"  Data: {min_date} a {max_date}")
                 else:
                     log.warning(f"  Nenhum registro com data em {csv_file.name}.")
         except Exception as e:
