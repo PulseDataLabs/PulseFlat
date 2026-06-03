@@ -27,6 +27,25 @@ from utils.parsers import (
 log = get_logger("generic_scraper")
 
 
+def _limpar_int(valor) -> str:
+    if valor is None:
+        return ""
+    texto = str(valor).strip()
+    clean = texto.replace(".", "").replace(" ", "")
+    if "," in clean:
+        clean = clean.split(",")[0]
+    return clean
+
+
+def _limpar_float(valor) -> str:
+    if valor is None:
+        return ""
+    texto = str(valor).strip()
+    if "," in texto:
+        texto = texto.replace(".", "").replace(",", ".")
+    return texto.replace("%", "").strip()
+
+
 def clean_csv_text(text: str) -> str:
     lines = [ln.strip() for ln in text.splitlines() if ln.strip()]
     if not lines:
@@ -161,9 +180,9 @@ def run_resource(resource_name: str, output_file_override: Path = None):
                 "codigo_ativo":       parts[0],
                 "nome_ativo":         parts[1],
                 "tipo_ativo":         parts[2],
-                "quantidade_teorica": parts[3],
-                "participacao_pct":   parts[4],
-                "reducao_capital":    parts[5] if len(parts) > 5 else "",
+                "quantidade_teorica": _limpar_int(parts[3]),
+                "participacao_pct":   _limpar_float(parts[4]),
+                "reducao_capital":    _limpar_float(parts[5]) if len(parts) > 5 else "",
                 "segmento":           parts[6] if len(parts) > 6 else "",
             })
     else:

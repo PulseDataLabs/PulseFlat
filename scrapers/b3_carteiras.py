@@ -78,6 +78,25 @@ def _pagina(session, index: str, segment: str, page: int) -> tuple[list, int]:
         return [], 0
 
 
+def _limpar_int(valor) -> str:
+    if valor is None:
+        return ""
+    texto = str(valor).strip()
+    clean = texto.replace(".", "").replace(" ", "")
+    if "," in clean:
+        clean = clean.split(",")[0]
+    return clean
+
+
+def _limpar_float(valor) -> str:
+    if valor is None:
+        return ""
+    texto = str(valor).strip()
+    if "," in texto:
+        texto = texto.replace(".", "").replace(",", ".")
+    return texto.replace("%", "").strip()
+
+
 def _mapear(item: dict, data_captura: str,
             index: str, label: str) -> dict:
     return {
@@ -87,9 +106,9 @@ def _mapear(item: dict, data_captura: str,
         "codigo_ativo":       limpar(item.get("cod")          or item.get("ticker")        or item.get("code")),
         "nome_ativo":         limpar(item.get("asset")        or item.get("companyName")   or item.get("name")),
         "tipo_ativo":         limpar(item.get("type")         or item.get("typeStock")),
-        "quantidade_teorica": limpar(item.get("theoricalQty") or item.get("quantity")      or item.get("qtyTheoretical")),
-        "participacao_pct":   limpar(item.get("part")         or item.get("participation") or item.get("weight")),
-        "reducao_capital":    limpar(item.get("reductionPct") or item.get("capitalReduction")),
+        "quantidade_teorica": _limpar_int(limpar(item.get("theoricalQty") or item.get("quantity")      or item.get("qtyTheoretical"))),
+        "participacao_pct":   _limpar_float(limpar(item.get("part")         or item.get("participation") or item.get("weight"))),
+        "reducao_capital":    _limpar_float(limpar(item.get("reductionPct") or item.get("capitalReduction"))),
         "segmento":           limpar(item.get("segment")      or item.get("setor")),
     }
 
