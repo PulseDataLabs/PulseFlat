@@ -158,5 +158,9 @@
   "b3_indicadores_financeiros.csv": {
     "min": "2026-06-01",
     "max": "2026-06-03"
+  },
+  "b3_bdi_trades_acoes.csv": {
+    "min": "2026-06-03",
+    "max": "2026-06-03"
   }
 }
