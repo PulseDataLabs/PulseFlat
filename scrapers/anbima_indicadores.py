@@ -42,8 +42,11 @@ def _limpar_valor(texto: str) -> str:
 
 def _extrair_data_ref(soup: BeautifulSoup) -> str:
     texto = soup.get_text(" ", strip=True)
-    m = re.search(r"(\d{2}/\d{2}/\d{4})\s*[-–]\s*(\d{2}:\d{2})", texto)
-    return f"{m.group(1)} {m.group(2)}" if m else "N/A"
+    m = re.search(r"(\d{2})/(\d{2})/(\d{4})\s*[-–]\s*(\d{2}:\d{2})", texto)
+    if m:
+        dia, mes, ano, hora = m.group(1), m.group(2), m.group(3), m.group(4)
+        return f"{ano}-{mes}-{dia} {hora}:00"
+    return "N/A"
 
 
 def capturar() -> list[dict]:

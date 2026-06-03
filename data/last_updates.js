@@ -17,7 +17,7 @@ window.PULSEFLAT_LAST_UPDATES = {
   "ibge_sidra.csv": "2026-06-02",
   "b3_bvbg086.csv": "2026-06-02",
   "b3_fiis_listados.csv": "2026-06-02",
-  "anbima_indicadores.csv": "2026-06-02",
+  "anbima_indicadores.csv": "2026-06-03",
   "anbima_projecoes.csv": "2026-06-02",
   "b3_bdi_di_over.csv": "2026-06-02",
   "b3_carteira_ibov.csv": "2026-06-01",
