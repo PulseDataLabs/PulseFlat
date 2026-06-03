@@ -79,7 +79,7 @@ ARQUIVO = Path("data/anbima_projecoes.csv")
 
 CABECALHO = [
     "data_captura",
-    
+    "data_referencia",
     "estrategia_coleta",      # "api_oficial" | "scraping_indicadores"
     "indice",                 # IPCA | IGP-M
     "mes_referencia",         # ex: "mai/26"
@@ -89,6 +89,26 @@ CABECALHO = [
     "num_instituicoes",       # nº de instituições (disponível via API)
     "observacao",
 ]
+
+MESES_MAP = {
+    "jan": "01", "fev": "02", "mar": "03", "abr": "04",
+    "mai": "05", "jun": "06", "jul": "07", "ago": "08",
+    "set": "09", "out": "10", "nov": "11", "dez": "12",
+}
+
+def _converter_mes_ano(texto_mes_ano: str) -> str:
+    if not texto_mes_ano:
+        return ""
+    m = re.search(r"([a-z]{3})[a-z]*\s*/\s*(\d{2,4})", texto_mes_ano.lower())
+    if m:
+        mes_str = m.group(1)
+        ano_str = m.group(2)
+        if len(ano_str) == 2:
+            ano_str = "20" + ano_str
+        mes_num = MESES_MAP.get(mes_str)
+        if mes_num:
+            return f"{ano_str}-{mes_num}-01"
+    return ""
 
 
 # ════════════════════════════════════════════════════════
@@ -119,11 +139,13 @@ def _obter_token(session, client_id: str, client_secret: str) -> str | None:
 
 
 def _mapear_api(item: dict, data_captura: str) -> dict:
+    mes_ref = limpar(item.get("referenceMonth") or item.get("mesReferencia") or item.get("mes_referencia", ""))
     return {
         "data_captura":      data_captura,
+        "data_referencia":   _converter_mes_ano(mes_ref),
         "estrategia_coleta": "api_oficial",
         "indice":            limpar(item.get("indice") or item.get("index", "")).upper(),
-        "mes_referencia":    limpar(item.get("referenceMonth") or item.get("mesReferencia") or item.get("mes_referencia", "")),
+        "mes_referencia":    mes_ref,
         "tipo_projecao":     limpar(item.get("projectionType") or item.get("tipoProjecao", "")),
         "valor_pct":         limpar(item.get("projection")     or item.get("projecao") or item.get("value", "")).replace(",", "."),
         "data_divulgacao":   limpar(item.get("releaseDate")    or item.get("dataReferencia", "")),
@@ -198,6 +220,7 @@ def capturar_via_scraping(session) -> list[dict]:
     def add(indice, mes_ref, tipo, valor, data_div="", obs=""):
         registros.append({
             "data_captura":      data_captura,
+            "data_referencia":   _converter_mes_ano(mes_ref),
             "estrategia_coleta": "scraping_indicadores",
             "indice":            indice,
             "mes_referencia":    mes_ref,

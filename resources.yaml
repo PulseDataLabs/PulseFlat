@@ -6,34 +6,42 @@ resources:
     url: 'https://sistemaswebb3-listados.b3.com.br/indexProxy/indexCall/GetDownloadPortfolioDay/eyJpbmRleCI6IklCU0QiLCJsYW5ndWFnZSI6InB0LWJyIn0='
     file_name: 'b3_carteira_teorica_ibsd.csv.base64'
     type_response: base64
+    acumular: true
   - name: B3 - Carteira Teórica - SMLL
     url: 'https://sistemaswebb3-listados.b3.com.br/indexProxy/indexCall/GetDownloadPortfolioDay/eyJpbmRleCI6IlNNTEwiLCJsYW5ndWFnZSI6InB0LWJyIn0='
     file_name: 'b3_carteira_teorica_smll.csv.base64'
     type_response: base64
+    acumular: true
   - name: B3 - Carteira Teórica - BDRX
     url: 'https://sistemaswebb3-listados.b3.com.br/indexProxy/indexCall/GetDownloadPortfolioDay/eyJpbmRleCI6IkJEUlgiLCJsYW5ndWFnZSI6InB0LWJyIn0='
     file_name: 'b3_carteira_teorica_bdrx.csv.base64'
     type_response: base64
+    acumular: true
   - name: B3 - Carteira Teórica - ISEE
     url: 'https://sistemaswebb3-listados.b3.com.br/indexProxy/indexCall/GetDownloadPortfolioDay/eyJpbmRleCI6IklTRUUiLCJsYW5ndWFnZSI6InB0LWJyIn0='
     file_name: 'b3_carteira_teorica_isee.csv.base64'
     type_response: base64
+    acumular: true
   - name: B3 - Carteira Teórica - IBXL
     url: 'https://sistemaswebb3-listados.b3.com.br/indexProxy/indexCall/GetDownloadPortfolioDay/eyJpbmRleCI6IklCWEwiLCJsYW5ndWFnZSI6InB0LWJyIn0='
     file_name: 'b3_carteira_teorica_ibxl.csv.base64'
     type_response: base64
+    acumular: true
   - name: B3 - Carteira Teórica - IBOV
     url: 'https://sistemaswebb3-listados.b3.com.br/indexProxy/indexCall/GetDownloadPortfolioDay/eyJpbmRleCI6IklCT1YiLCJsYW5ndWFnZSI6InB0LWJyIn0='
     file_name: 'b3_carteira_teorica_ibov.csv.base64'
     type_response: base64
+    acumular: true
   - name: B3 - Carteira Teórica - IFNC
     url: 'https://sistemaswebb3-listados.b3.com.br/indexProxy/indexCall/GetDownloadPortfolioDay/eyJpbmRleCI6IklGTkMiLCJsYW5ndWFnZSI6InB0LWJyIn0='
     file_name: 'b3_carteira_teorica_ifnc.csv.base64'
     type_response: base64
+    acumular: true
   - name: B3 - Carteira Teórica - AGFS - IAGRO
     url: 'https://sistemaswebb3-listados.b3.com.br/indexProxy/indexCall/GetDownloadPortfolioDay/eyJpbmRleCI6IkFHRlMiLCJsYW5ndWFnZSI6InB0LWJyIn0='
     file_name: 'b3_carteira_teorica_agfs_iagro.csv.base64'
     type_response: base64
+    acumular: true
   ##############################################################################
   # Bases B3 - Carteiras Teóricas JSON
   ##############################################################################
@@ -110,3 +118,4 @@ resources:
     url: https://sistemaswebb3-listados.b3.com.br/fundsProxy/fundsCall/GetListFundDownload/eyJ0eXBlRnVuZCI6MjAsInBhZ2VOdW1iZXIiOjEsInBhZ2VTaXplIjo2MH0=
     file_name: b3_etfs_listados.csv.base64
     type_response: base64
+    acumular: false

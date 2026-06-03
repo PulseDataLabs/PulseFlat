@@ -61,8 +61,8 @@ Sem servidor. Sem custo. Histórico versionado em CSV no próprio repositório.
 | Scraper | Fonte | Método | CSV(s) gerado(s) |
 |---|---|---|---|
 | `b3_fiis` | B3 | API JSON + Base64 | `b3_fiis_listados.csv` |
-| `b3_etfs` | B3 | API JSON + Base64 | `b3_etfs_listados.csv` |
-| `b3_etfs_listados_download` | B3 | API JSON + Base64 | `b3_etfs_listados.csv` |
+| `b3_etfs` | B3 | API JSON + Base64 | `b3_etfs_listados.csv` (sem acúmulo) |
+| `b3_etfs_listados_download` | B3 | API JSON + Base64 | `b3_etfs_listados.csv` (sem acúmulo) |
 | `b3_carteiras` | B3 | API JSON + Base64 | `b3_carteiras_teoricas.csv` |
 | `b3_carteira_teorica_ibov` | B3 | API JSON + Base64 | `b3_carteira_teorica_ibov.csv` |
 | `b3_carteira_teorica_smll` | B3 | API JSON + Base64 | `b3_carteira_teorica_smll.csv` |
@@ -105,6 +105,8 @@ Sem servidor. Sem custo. Histórico versionado em CSV no próprio repositório.
 ### `anbima_projecoes.csv`
 | Campo | Descrição |
 |---|---|
+| data_captura | Data da execução (BRT) |
+| data_referencia | Data de referência (1º dia do mês de referência, ex: 2026-06-01 para jun/26) |
 | estrategia_coleta | `api_oficial` ou `scraping_indicadores` |
 | indice | IPCA ou IGP-M |
 | mes_referencia | Mês/ano da projeção (ex: mai/26) |
@@ -112,6 +114,7 @@ Sem servidor. Sem custo. Histórico versionado em CSV no próprio repositório.
 | valor_pct | Valor em % (separador decimal: ponto) |
 | data_divulgacao | Data de divulgação da projeção |
 | num_instituicoes | Nº de instituições (disponível via API) |
+| observacao | Observação descritiva da projeção |
 
 **IGP-M:** divulgado ~3x/mês nos dias de prévia e fechado pela FGV  
 **IPCA:** divulgado ~2x/mês no dia do IPCA fechado e do IPCA-15 pelo IBGE

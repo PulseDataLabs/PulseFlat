@@ -46,15 +46,18 @@ def main():
                 if not reader.fieldnames:
                     continue
 
-                # Identifica a coluna de data de captura (geralmente data_captura)
+                # Identifica a coluna de data (geralmente data_captura, fallback para data_referencia ou data ou rpt_dt)
                 date_col = None
-                for col in reader.fieldnames:
-                    if col.lower() == "data_captura":
-                        date_col = col
+                for candidate in ["data_captura", "data_referencia", "data", "rpt_dt"]:
+                    for col in reader.fieldnames:
+                        if col.lower() == candidate:
+                            date_col = col
+                            break
+                    if date_col:
                         break
 
                 if not date_col:
-                    log.warning(f"  Coluna data_captura não encontrada em {csv_file.name}. Pulando.")
+                    log.warning(f"  Nenhuma coluna de data encontrada em {csv_file.name}. Pulando.")
                     continue
 
                 # Extrai todas as datas e encontra a mais recente
