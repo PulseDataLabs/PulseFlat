@@ -1441,6 +1441,83 @@
         </div>
       </div>
 
+      <!-- Debêntures - Características de Emissões -->
+      <div class="dataset-card">
+        <div class="card-top">
+          <div class="card-icon">📋</div>
+          <span class="card-badge badge-daily">Diário</span>
+        </div>
+        <div class="card-title">Debêntures - Características de Emissões</div>
+        <div class="card-file">debentures_emissoes_caracteristicas.csv</div>
+        <div class="card-desc">
+          Características completas e dados cadastrais das emissões de debêntures públicas registradas no SND.
+        </div>
+        <div class="card-fields">
+          <span class="field-tag">código isin</span>
+          <span class="field-tag">emissor</span>
+          <span class="field-tag">data emissão</span>
+          <span class="field-tag">vencimento</span>
+        </div>
+        <div class="card-footer">
+          <span class="card-source">Fonte: SND/Debêntures</span>
+          <a href="https://raw.githubusercontent.com/royopa/PulseFlat/main/data/debentures_emissoes_caracteristicas.csv" class="download-btn" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            Download CSV
+          </a>
+        </div>
+      </div>
+
+      <!-- Debêntures - Preços de Negociação (Mercado Secundário) -->
+      <div class="dataset-card">
+        <div class="card-top">
+          <div class="card-icon">💸</div>
+          <span class="card-badge badge-daily">Diário</span>
+        </div>
+        <div class="card-title">Debêntures - Preços de Negociação</div>
+        <div class="card-file">debentures_mercado_secundario_precos_negociacao.csv</div>
+        <div class="card-desc">
+          Preços e taxas de negociação diária de debêntures no mercado secundário (SND), com volumes e PU médio.
+        </div>
+        <div class="card-fields">
+          <span class="field-tag">pu médio</span>
+          <span class="field-tag">taxa média</span>
+          <span class="field-tag">volume</span>
+          <span class="field-tag">nº negócios</span>
+        </div>
+        <div class="card-footer">
+          <span class="card-source">Fonte: SND/Debêntures</span>
+          <a href="https://raw.githubusercontent.com/royopa/PulseFlat/main/data/debentures_mercado_secundario_precos_negociacao.csv" class="download-btn" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            Download CSV
+          </a>
+        </div>
+      </div>
+
+      <!-- Debêntures - PU Histórico -->
+      <div class="dataset-card">
+        <div class="card-top">
+          <div class="card-icon">📈</div>
+          <span class="card-badge badge-daily">Diário</span>
+        </div>
+        <div class="card-title">Debêntures - PU Histórico</div>
+        <div class="card-file">debentures_mercado_pu_historico.csv</div>
+        <div class="card-desc">
+          Histórico de Preço Unitário (PU) diário das debêntures capturadas na plataforma Debêntures.com.br.
+        </div>
+        <div class="card-fields">
+          <span class="field-tag">ativo</span>
+          <span class="field-tag">data</span>
+          <span class="field-tag">pu</span>
+        </div>
+        <div class="card-footer">
+          <span class="card-source">Fonte: SND/Debêntures</span>
+          <a href="https://raw.githubusercontent.com/royopa/PulseFlat/main/data/debentures_mercado_pu_historico.csv" class="download-btn" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            Download CSV
+          </a>
+        </div>
+      </div>
+
       <!-- ANBIMA IMA -->
       <div class="dataset-card anbima-card">
         <div class="card-top">
@@ -1979,6 +2056,42 @@
             <tr><td>tx_indicativa</td><td><span class="type-badge">float</span></td><td>14.50</td></tr>
             <tr><td>pu</td><td><span class="type-badge">float</span></td><td>1023.45</td></tr>
             <tr><td>duration</td><td><span class="type-badge">float</span></td><td>1260</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="schema-card">
+        <div class="schema-card-header">
+          <span class="schema-card-title">Debêntures - SND</span>
+          <span class="schema-csv-name">debentures_mercado_secundario_precos_negociacao.csv · debentures_mercado_pu_historico.csv</span>
+        </div>
+        <table class="schema-table">
+          <thead><tr><th>Campo</th><th>Tipo</th><th>Exemplo</th></tr></thead>
+          <tbody>
+            <tr><td>data_captura</td><td><span class="type-badge">date</span></td><td>2026-05-30</td></tr>
+            <tr><td>codigo</td><td><span class="type-badge">str</span></td><td>PETR26</td></tr>
+            <tr><td>data</td><td><span class="type-badge">date</span></td><td>2026-05-29</td></tr>
+            <tr><td>pu_medio</td><td><span class="type-badge">float</span></td><td>1015.42</td></tr>
+            <tr><td>taxa_medio</td><td><span class="type-badge">float</span></td><td>14.25</td></tr>
+            <tr><td>volume_financeiro</td><td><span class="type-badge">float</span></td><td>1500000.00</td></tr>
+            <tr><td>numero_negocios</td><td><span class="type-badge">int</span></td><td>35</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="schema-card">
+        <div class="schema-card-header">
+          <span class="schema-card-title">Debêntures - Características</span>
+          <span class="schema-csv-name">debentures_emissoes_caracteristicas.csv</span>
+        </div>
+        <table class="schema-table">
+          <thead><tr><th>Campo</th><th>Tipo</th><th>Exemplo</th></tr></thead>
+          <tbody>
+            <tr><td>data_captura</td><td><span class="type-badge">date</span></td><td>2026-05-30</td></tr>
+            <tr><td>c_digo_isin</td><td><span class="type-badge">str</span></td><td>BRVALEDEB1A0</td></tr>
+            <tr><td>emissor</td><td><span class="type-badge">str</span></td><td>VALE S.A.</td></tr>
+            <tr><td>data_emissao</td><td><span class="type-badge">date</span></td><td>2021-05-15</td></tr>
+            <tr><td>data_vencimento</td><td><span class="type-badge">date</span></td><td>2028-05-15</td></tr>
           </tbody>
         </table>
       </div>

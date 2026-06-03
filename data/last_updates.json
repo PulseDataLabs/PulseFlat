@@ -26,5 +26,8 @@
   "b3_carteira_teorica_ibsd.csv": "2026-06-02",
   "b3_taxa_cambio_referencia.csv": "2026-06-01",
   "b3_indicadores_financeiros.csv": "2026-06-02",
-  "anbima_debentures.csv": "2026-06-02"
+  "anbima_debentures.csv": "2026-06-02",
+  "debentures_emissoes_caracteristicas.csv": "2026-06-02",
+  "debentures_mercado_secundario_precos_negociacao.csv": "2026-06-02",
+  "debentures_mercado_pu_historico.csv": "2026-06-02"
 }

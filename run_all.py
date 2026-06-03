@@ -559,6 +559,16 @@ def _imprimir_resultados(resultados: list):
 def main():
     filtro = sys.argv[1].lower() if len(sys.argv) > 1 else None
 
+    # Se for execução automática geral (sem filtros) e for fim de semana, aborta
+    if filtro is None:
+        from zoneinfo import ZoneInfo
+        from datetime import datetime
+        fuso = ZoneInfo("America/Sao_Paulo")
+        hoje = datetime.now(fuso)
+        if hoje.weekday() >= 5:  # 5 = Sábado, 6 = Domingo
+            log.info(f"Hoje é {hoje.strftime('%A')} (fim de semana). Execução automática ignorada.")
+            sys.exit(0)
+
     selecionados = [
         s for s in SCRAPERS
         if filtro is None or filtro == s["id"] or filtro == s["grupo"]
