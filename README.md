@@ -166,6 +166,8 @@ Sem servidor. Sem custo. Histórico versionado em CSV no próprio repositório.
 | posicao_custodia | Posição em custódia |
 
 ### `bcb_ptax.csv`
+Cotações do dólar PTAX. Snapshot contendo a série histórica diária de compra e venda completa desde **01/01/2020** (arquivo não acumulativo, reescrito por completo a cada execução).
+
 | Campo | Descrição |
 |---|---|
 | data_captura | Data da execução (BRT) |

@@ -19,7 +19,7 @@ Fonte: https://api.bcb.gov.br/dados/serie/bcdata.sgs.{codigo}/dados
 
 import sys
 import time
-from datetime import date, timedelta
+from datetime import date
 from pathlib import Path
 
 import requests
@@ -89,7 +89,6 @@ def _buscar_serie(session, codigo: int, nome: str, inicio: str, fim: str,
 
 def capturar() -> list[dict]:
     hoje = date.today()
-    # inicio = (hoje - timedelta(days=40)).strftime("%d/%m/%Y")
     inicio = '01/01/2020'
     fim = hoje.strftime("%d/%m/%Y")
     data_captura, _ = agora_brt()

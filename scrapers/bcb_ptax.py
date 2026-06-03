@@ -9,7 +9,7 @@ Campos: cotacao_compra, cotacao_venda, data_hora_cotacao
 
 import sys
 import time
-from datetime import date, timedelta
+from datetime import date
 from pathlib import Path
 
 import requests
@@ -39,7 +39,6 @@ URL_TPL = (
 
 def _url_hoje() -> str:
     hoje = date.today()
-    # inicio = hoje - timedelta(days=1)
     inicio = date(2020, 1, 1)
     return URL_TPL.format(
         inicio=inicio.strftime("%m-%d-%Y"),
