@@ -162,4 +162,52 @@ def test_generic_scraper_json(requests_mock, tmp_path, monkeypatch):
     assert rows[0]["userid"] == "10"
 
 
+def test_b3_classificacao_setorial_sucesso(requests_mock):
+    import openpyxl
+    import zipfile
+    import io
+    import scrapers.b3_classificacao_setorial as bcs
+
+    # Crie um arquivo Excel mock em memória
+    wb = openpyxl.Workbook()
+    ws = wb.active
+    ws.title = "Plan3"
+    
+    # Adiciona linhas no formato esperado (com 6 linhas de cabeçalho descritivo inicial)
+    for _ in range(6):
+        ws.append([None, None, None, None, None, None, None])
+    ws.append(['SETOR ECONÔMICO', 'SUBSETOR', 'SEGMENTO', 'LISTAGEM', None, None, None])
+    ws.append([None, None, None, 'CÓDIGO', 'SEGMENTO', None, None])
+    ws.append(['Petróleo, Gás e Biocombustíveis', 'Petróleo, Gás e Biocombustíveis', 'Exploração, Refino e Distribuição', None, None, None, None])
+    ws.append([None, None, 'PETROBRAS', 'PETR', 'N2', None, None])
+    
+    excel_io = io.BytesIO()
+    wb.save(excel_io)
+    excel_bytes = excel_io.getvalue()
+    
+    # Crie um arquivo ZIP mock em memória contendo o Excel
+    zip_io = io.BytesIO()
+    with zipfile.ZipFile(zip_io, 'w') as zf:
+        zf.writestr('Setorial B3.xlsx', excel_bytes)
+    zip_bytes = zip_io.getvalue()
+    
+    # Mock do download
+    requests_mock.get(
+        bcs.URL,
+        content=zip_bytes,
+        status_code=200
+    )
+    
+    empresas = bcs.capturar()
+    assert len(empresas) == 1
+    emp = empresas[0]
+    assert emp["setor_economico"] == "Petróleo, Gás e Biocombustíveis"
+    assert emp["subsetor"] == "Petróleo, Gás e Biocombustíveis"
+    assert emp["segmento"] == "Exploração, Refino e Distribuição"
+    assert emp["nome_empresa"] == "PETROBRAS"
+    assert emp["codigo"] == "PETR"
+    assert emp["segmento_listagem"] == "N2"
+
+
+
 
