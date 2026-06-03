@@ -15,6 +15,8 @@ from zoneinfo import ZoneInfo
 
 import requests
 
+import time
+
 # Patch global do requests para impor limite e padrão de timeout (evita travamentos longos)
 _orig_request = requests.Session.request
 
@@ -31,7 +33,23 @@ def _patched_request(self, method, url, *args, **kwargs):
         conn_val = min(conn, 10) if conn is not None else 10
         read_val = min(read, 30) if read is not None else 30
         kwargs["timeout"] = (conn_val, read_val)
-    return _orig_request(self, method, url, *args, **kwargs)
+
+    # Resiliência global: 2 tentativas (original + 1 retry rápido de 1s) para falhas transitórias
+    # Ignora ConnectTimeout para evitar esticar tempo quando IPs/servidores estão bloqueados
+    max_attempts = 2
+    for attempt in range(1, max_attempts + 1):
+        try:
+            resp = _orig_request(self, method, url, *args, **kwargs)
+            if resp.status_code in (502, 503, 504) and attempt < max_attempts:
+                time.sleep(1.0)
+                continue
+            return resp
+        except requests.exceptions.ConnectTimeout as e:
+            raise e
+        except requests.RequestException as e:
+            if attempt == max_attempts:
+                raise e
+            time.sleep(1.0)
 
 requests.Session.request = _patched_request
 
