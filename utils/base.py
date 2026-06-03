@@ -67,11 +67,13 @@ def salvar_csv(
     registros: list[dict],
     cabecalho: list[str],
     chaves_dedup: list[str] | None = None,
+    acumular: bool = True,
 ) -> None:
     """
     Salva registros no CSV acumulativo com deduplicação automática.
 
     Estratégia:
+    - Se `acumular` for False, sobrescreve o arquivo existente apenas com os novos registros.
     - Se `chaves_dedup` for fornecido, remove do CSV existente qualquer linha
       cujo conjunto de chaves coincida com algum novo registro (ex: mesma
       data_captura + mesmo indicador). Assim, re-execuções no mesmo dia
@@ -102,7 +104,7 @@ def salvar_csv(
     linhas_anteriores: list[dict] = []
     substituidas = 0
 
-    if arquivo.exists():
+    if acumular and arquivo.exists():
         with arquivo.open(newline="", encoding="utf-8") as f:
             reader = csv.DictReader(f)
             for linha in reader:

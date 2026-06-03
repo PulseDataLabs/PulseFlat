@@ -1,16 +1,5 @@
 resources:
   ##############################################################################
-  # Bases Testes
-  ##############################################################################
-  - name: teste_json
-    url: https://jsonplaceholder.typicode.com/posts/
-    file_name: 'teste_json.json'
-    type_response: json
-  - name: teste_csv
-    url: 'https://people.sc.fsu.edu/~jburkardt/data/csv/hw_200.csv'
-    file_name: 'teste_csv.csv'
-    type_response: csv
-  ##############################################################################
   # Bases B3 - Carteiras Teóricas CSV
   ##############################################################################
   - name: B3 - Carteira Teórica - IBSD
@@ -82,13 +71,10 @@ resources:
     url: https://www.debentures.com.br/exploreosnd/consultaadados/emissoesdedebentures/caracteristicas_e.asp?tip_deb=publicas&op_exc=Nada
     file_name: 'debentures_emissoes_caracteristicas.csv'
     type_response: csv
+    acumular: false
   - name: Debêntures - Preços de Negociação
     url: 'https://www.debentures.com.br/exploreosnd/consultaadados/mercadosecundario/precosdenegociacao_e.asp?op_exc=Nada&emissor=&isin=&ativo=&dt_ini=20250101&dt_fim=YYYYMMDD'
     file_name: 'debentures_mercado_secundario_precos_negociacao.csv'
-    type_response: csv
-  - name: Debêntures - PU Histórico
-    url: 'https://www.debentures.com.br/exploreosnd/consultaadados/emissoesdedebentures/puhistorico_e.asp?op_exc=Nada&ativo=&dt_ini=01/01/2025&dt_fim=DD/MM/YYYY&Submit.x=16&Submit.y=14'
-    file_name: 'debentures_mercado_pu_historico.csv'
     type_response: csv
   ##############################################################################
   # Bases CVM
@@ -101,10 +87,12 @@ resources:
     url: https://dados.cvm.gov.br/dados/FI/DOC/EXTRATO/DADOS/extrato_fi.csv
     file_name: 'extrato_fi.csv'
     type_response: csv
+    acumular: false
   - name: CVM - Fundos de Investimento, Classes e Subclasses de Cotas CVM175
     url: https://dados.cvm.gov.br/dados/FI/CAD/DADOS/registro_fundo_classe.zip
     file_name: 'registro_fundo_classe.zip'
     type_response: zip
+    acumular: false
   ##############################################################################
   # Bases B3
   ##############################################################################
@@ -112,14 +100,12 @@ resources:
     url: https://bvmf.bmfbovespa.com.br/InstDados/InformacoesEmpresas/ClassifSetorial.zip
     file_name: b3_classificacao_setorial.zip
     type_response: zip
+    acumular: false
   - name: B3 - Títulos Negociáveis
     url: https://bvmf.bmfbovespa.com.br/suplemento/ExecutaAcaoDownload.asp?arquivo=Titulos_Negociaveis.zip&server=L
     file_name: b3_titulos_negociaveis.zip
     type_response: zip
-  - name: B3 - Classificação Setorial
-    url: https://bvmf.bmfbovespa.com.br/InstDados/InformacoesEmpresas/ClassifSetorial.zip
-    file_name: b3_classificacao_setorial.zip
-    type_response: zip
+    acumular: false
   - name: B3 - ETFs listados
     url: https://sistemaswebb3-listados.b3.com.br/fundsProxy/fundsCall/GetListFundDownload/eyJ0eXBlRnVuZCI6MjAsInBhZ2VOdW1iZXIiOjEsInBhZ2VTaXplIjo2MH0=
     file_name: b3_etfs_listados.csv.base64

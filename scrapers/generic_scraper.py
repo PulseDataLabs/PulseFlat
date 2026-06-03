@@ -157,10 +157,12 @@ def run_resource(resource_name: str, output_file_override: Path = None):
             header.append(col)
 
     # Salva no arquivo CSV acumulativo
+    acumular = res.get("acumular", True)
     salvar_csv(
         arquivo_saida,
         enriched,
         header,
         chaves_dedup=["data_captura", "conjunto", "registro_hash"],
+        acumular=acumular,
     )
     log.info(f"Sucesso: {len(enriched)} registros salvos em {arquivo_saida}")

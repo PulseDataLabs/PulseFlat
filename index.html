@@ -564,6 +564,82 @@
       overflow: hidden;
     }
 
+    .datasets-filter {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 2.5rem;
+      justify-content: center;
+    }
+
+    .filter-btn {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      color: var(--text2);
+      padding: 0.6rem 1.2rem;
+      border-radius: 30px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+      user-select: none;
+    }
+
+    .filter-btn:hover {
+      border-color: var(--border2);
+      color: var(--text);
+      transform: translateY(-2px);
+    }
+
+    .filter-btn.active {
+      background: rgba(0, 212, 255, 0.1);
+      border-color: var(--accent);
+      color: var(--accent);
+      box-shadow: 0 0 15px rgba(0, 212, 255, 0.15);
+    }
+
+    .filter-btn.active[data-source="anbima"] {
+      background: rgba(240, 180, 41, 0.1);
+      border-color: var(--gold);
+      color: var(--gold);
+      box-shadow: 0 0 15px rgba(240, 180, 41, 0.15);
+    }
+    
+    .filter-btn.active[data-source="cvm"] {
+      background: rgba(0, 229, 160, 0.1);
+      border-color: var(--green);
+      color: var(--green);
+      box-shadow: 0 0 15px rgba(0, 229, 160, 0.15);
+    }
+
+    .filter-btn.active[data-source="bcb"] {
+      background: rgba(0, 149, 200, 0.1);
+      border-color: var(--accent2);
+      color: var(--accent2);
+      box-shadow: 0 0 15px rgba(0, 149, 200, 0.15);
+    }
+
+    .filter-btn.active[data-source="ibge"] {
+      background: rgba(255, 77, 109, 0.1);
+      border-color: var(--red);
+      color: var(--red);
+      box-shadow: 0 0 15px rgba(255, 77, 109, 0.15);
+    }
+
+    .filter-btn.active[data-source="debentures"] {
+      background: rgba(240, 180, 41, 0.1);
+      border-color: var(--gold);
+      color: var(--gold);
+      box-shadow: 0 0 15px rgba(240, 180, 41, 0.15);
+    }
+
+    .dataset-card.filtered-out {
+      display: none !important;
+    }
+
     .dataset-card {
       background: var(--bg2);
       padding: 2rem;
@@ -1038,7 +1114,7 @@
 
   <div class="ticker-bar">
     <span class="status-dot"></span>
-    Atualização automática · Seg–Sex · 09h30 & 10h00 BRT
+    Atualização automática · Seg–Sex · 06h às 23h BRT
   </div>
 
   <h1 class="hero-title">
@@ -1210,6 +1286,16 @@
         <h2 class="section-title">Datasets disponíveis</h2>
         <p class="section-desc">CSVs acumulativos atualizados diariamente. Clique em Download para baixar o arquivo mais recente.</p>
       </div>
+    </div>
+
+    <div class="datasets-filter reveal">
+      <button class="filter-btn active" data-source="all">🌐 Todas as Fontes</button>
+      <button class="filter-btn" data-source="anbima">◈ ANBIMA</button>
+      <button class="filter-btn" data-source="b3">◉ B3</button>
+      <button class="filter-btn" data-source="cvm">⬢ CVM</button>
+      <button class="filter-btn" data-source="bcb">◆ Banco Central</button>
+      <button class="filter-btn" data-source="ibge">⬡ IBGE</button>
+      <button class="filter-btn" data-source="debentures">❖ SND (Debêntures)</button>
     </div>
 
     <div class="datasets-grid reveal">
@@ -1388,6 +1474,247 @@
         </div>
       </div>
 
+      <!-- B3 Classificação Setorial -->
+      <div class="dataset-card b3-card">
+        <div class="card-top">
+          <div class="card-icon icon-b3">🗂️</div>
+          <span class="card-badge badge-daily">Diário</span>
+        </div>
+        <div class="card-title">B3 Classificação Setorial</div>
+        <div class="card-file">b3_classificacao_setorial.csv</div>
+        <div class="card-desc">
+          Classificação setorial completa das empresas listadas na B3 (setor econômico, subsetor e segmento de atuação).
+        </div>
+        <div class="card-fields">
+          <span class="field-tag">setor</span>
+          <span class="field-tag">subsetor</span>
+          <span class="field-tag">segmento</span>
+        </div>
+        <div class="card-footer">
+          <span class="card-source">Fonte: B3</span>
+          <a href="https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_classificacao_setorial.csv" class="download-btn" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            Download CSV
+          </a>
+        </div>
+      </div>
+
+      <!-- B3 Carteira Teórica - IBOV -->
+      <div class="dataset-card b3-card">
+        <div class="card-top">
+          <div class="card-icon icon-b3">◉</div>
+          <span class="card-badge badge-daily">Diário</span>
+        </div>
+        <div class="card-title">B3 Carteira - IBOV</div>
+        <div class="card-file">b3_carteira_teorica_ibov.csv</div>
+        <div class="card-desc">
+          Carteira teórica detalhada do índice Ibovespa (IBOV) com os ativos constituintes, suas quantidades e pesos.
+        </div>
+        <div class="card-fields">
+          <span class="field-tag">código</span>
+          <span class="field-tag">ação</span>
+          <span class="field-tag">tipo</span>
+          <span class="field-tag">quantidade</span>
+          <span class="field-tag">part_pct</span>
+        </div>
+        <div class="card-footer">
+          <span class="card-source">Fonte: B3 API</span>
+          <a href="https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_carteira_teorica_ibov.csv" class="download-btn" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            Download CSV
+          </a>
+        </div>
+      </div>
+
+      <!-- B3 Carteira Teórica - SMLL -->
+      <div class="dataset-card b3-card">
+        <div class="card-top">
+          <div class="card-icon icon-b3">◉</div>
+          <span class="card-badge badge-daily">Diário</span>
+        </div>
+        <div class="card-title">B3 Carteira - SMLL</div>
+        <div class="card-file">b3_carteira_teorica_smll.csv</div>
+        <div class="card-desc">
+          Carteira teórica detalhada do índice Small Caps (SMLL) da B3 com os ativos constituintes e seus pesos.
+        </div>
+        <div class="card-fields">
+          <span class="field-tag">código</span>
+          <span class="field-tag">ação</span>
+          <span class="field-tag">tipo</span>
+          <span class="field-tag">quantidade</span>
+          <span class="field-tag">part_pct</span>
+        </div>
+        <div class="card-footer">
+          <span class="card-source">Fonte: B3 API</span>
+          <a href="https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_carteira_teorica_smll.csv" class="download-btn" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            Download CSV
+          </a>
+        </div>
+      </div>
+
+      <!-- B3 Carteira Teórica - BDRX -->
+      <div class="dataset-card b3-card">
+        <div class="card-top">
+          <div class="card-icon icon-b3">◉</div>
+          <span class="card-badge badge-daily">Diário</span>
+        </div>
+        <div class="card-title">B3 Carteira - BDRX</div>
+        <div class="card-file">b3_carteira_teorica_bdrx.csv</div>
+        <div class="card-desc">
+          Carteira teórica detalhada do índice de BDRs (BDRX) da B3 com os ativos constituintes e seus pesos.
+        </div>
+        <div class="card-fields">
+          <span class="field-tag">código</span>
+          <span class="field-tag">ação</span>
+          <span class="field-tag">tipo</span>
+          <span class="field-tag">quantidade</span>
+          <span class="field-tag">part_pct</span>
+        </div>
+        <div class="card-footer">
+          <span class="card-source">Fonte: B3 API</span>
+          <a href="https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_carteira_teorica_bdrx.csv" class="download-btn" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            Download CSV
+          </a>
+        </div>
+      </div>
+
+      <!-- B3 Carteira Teórica - ISEE -->
+      <div class="dataset-card b3-card">
+        <div class="card-top">
+          <div class="card-icon icon-b3">◉</div>
+          <span class="card-badge badge-daily">Diário</span>
+        </div>
+        <div class="card-title">B3 Carteira - ISEE</div>
+        <div class="card-file">b3_carteira_teorica_isee.csv</div>
+        <div class="card-desc">
+          Carteira teórica detalhada do índice de Sustentabilidade Empresarial (ISEE) da B3 com ativos e pesos.
+        </div>
+        <div class="card-fields">
+          <span class="field-tag">código</span>
+          <span class="field-tag">ação</span>
+          <span class="field-tag">tipo</span>
+          <span class="field-tag">quantidade</span>
+          <span class="field-tag">part_pct</span>
+        </div>
+        <div class="card-footer">
+          <span class="card-source">Fonte: B3 API</span>
+          <a href="https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_carteira_teorica_isee.csv" class="download-btn" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            Download CSV
+          </a>
+        </div>
+      </div>
+
+      <!-- B3 Carteira Teórica - IBXL -->
+      <div class="dataset-card b3-card">
+        <div class="card-top">
+          <div class="card-icon icon-b3">◉</div>
+          <span class="card-badge badge-daily">Diário</span>
+        </div>
+        <div class="card-title">B3 Carteira - IBXL</div>
+        <div class="card-file">b3_carteira_teorica_ibxl.csv</div>
+        <div class="card-desc">
+          Carteira teórica detalhada do índice IBrX 50 (IBXL) da B3 com os ativos constituintes e seus pesos.
+        </div>
+        <div class="card-fields">
+          <span class="field-tag">código</span>
+          <span class="field-tag">ação</span>
+          <span class="field-tag">tipo</span>
+          <span class="field-tag">quantidade</span>
+          <span class="field-tag">part_pct</span>
+        </div>
+        <div class="card-footer">
+          <span class="card-source">Fonte: B3 API</span>
+          <a href="https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_carteira_teorica_ibxl.csv" class="download-btn" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            Download CSV
+          </a>
+        </div>
+      </div>
+
+      <!-- B3 Carteira Teórica - IFNC -->
+      <div class="dataset-card b3-card">
+        <div class="card-top">
+          <div class="card-icon icon-b3">◉</div>
+          <span class="card-badge badge-daily">Diário</span>
+        </div>
+        <div class="card-title">B3 Carteira - IFNC</div>
+        <div class="card-file">b3_carteira_teorica_ifnc.csv</div>
+        <div class="card-desc">
+          Carteira teórica detalhada do índice do Setor Financeiro (IFNC) da B3 com ativos constituintes e seus pesos.
+        </div>
+        <div class="card-fields">
+          <span class="field-tag">código</span>
+          <span class="field-tag">ação</span>
+          <span class="field-tag">tipo</span>
+          <span class="field-tag">quantidade</span>
+          <span class="field-tag">part_pct</span>
+        </div>
+        <div class="card-footer">
+          <span class="card-source">Fonte: B3 API</span>
+          <a href="https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_carteira_teorica_ifnc.csv" class="download-btn" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            Download CSV
+          </a>
+        </div>
+      </div>
+
+      <!-- B3 Carteira Teórica - AGFS (IAGRO) -->
+      <div class="dataset-card b3-card">
+        <div class="card-top">
+          <div class="card-icon icon-b3">◉</div>
+          <span class="card-badge badge-daily">Diário</span>
+        </div>
+        <div class="card-title">B3 Carteira - AGFS (IAGRO)</div>
+        <div class="card-file">b3_carteira_teorica_agfs_iagro.csv</div>
+        <div class="card-desc">
+          Carteira teórica detalhada do índice do Agronegócio (AGFS / IAGRO) da B3 com ativos constituintes e seus pesos.
+        </div>
+        <div class="card-fields">
+          <span class="field-tag">código</span>
+          <span class="field-tag">ação</span>
+          <span class="field-tag">tipo</span>
+          <span class="field-tag">quantidade</span>
+          <span class="field-tag">part_pct</span>
+        </div>
+        <div class="card-footer">
+          <span class="card-source">Fonte: B3 API</span>
+          <a href="https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_carteira_teorica_agfs_iagro.csv" class="download-btn" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            Download CSV
+          </a>
+        </div>
+      </div>
+
+      <!-- B3 Carteira Teórica - IBSD -->
+      <div class="dataset-card b3-card">
+        <div class="card-top">
+          <div class="card-icon icon-b3">◉</div>
+          <span class="card-badge badge-daily">Diário</span>
+        </div>
+        <div class="card-title">B3 Carteira - IBSD</div>
+        <div class="card-file">b3_carteira_teorica_ibsd.csv</div>
+        <div class="card-desc">
+          Carteira teórica detalhada do índice de Dividendos Setoriais (IBSD) da B3 com ativos constituintes e seus pesos.
+        </div>
+        <div class="card-fields">
+          <span class="field-tag">código</span>
+          <span class="field-tag">ação</span>
+          <span class="field-tag">tipo</span>
+          <span class="field-tag">quantidade</span>
+          <span class="field-tag">part_pct</span>
+        </div>
+        <div class="card-footer">
+          <span class="card-source">Fonte: B3 API</span>
+          <a href="https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_carteira_teorica_ibsd.csv" class="download-btn" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            Download CSV
+          </a>
+        </div>
+      </div>
+
       <!-- ANBIMA Títulos Públicos -->
       <div class="dataset-card anbima-card">
         <div class="card-top">
@@ -1493,30 +1820,7 @@
         </div>
       </div>
 
-      <!-- Debêntures - PU Histórico -->
-      <div class="dataset-card">
-        <div class="card-top">
-          <div class="card-icon">📈</div>
-          <span class="card-badge badge-daily">Diário</span>
-        </div>
-        <div class="card-title">Debêntures - PU Histórico</div>
-        <div class="card-file">debentures_mercado_pu_historico.csv</div>
-        <div class="card-desc">
-          Histórico de Preço Unitário (PU) diário das debêntures capturadas na plataforma Debêntures.com.br.
-        </div>
-        <div class="card-fields">
-          <span class="field-tag">ativo</span>
-          <span class="field-tag">data</span>
-          <span class="field-tag">pu</span>
-        </div>
-        <div class="card-footer">
-          <span class="card-source">Fonte: SND/Debêntures</span>
-          <a href="https://raw.githubusercontent.com/royopa/PulseFlat/main/data/debentures_mercado_pu_historico.csv" class="download-btn" target="_blank">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
-            Download CSV
-          </a>
-        </div>
-      </div>
+
 
       <!-- ANBIMA IMA -->
       <div class="dataset-card anbima-card">
@@ -2022,6 +2326,23 @@
         </table>
       </div>
 
+      <div class="schema-card">
+        <div class="schema-card-header">
+          <span class="schema-card-title">B3 Carteiras Teóricas (Individuais)</span>
+          <span class="schema-csv-name">b3_carteira_teorica_ibov.csv · b3_carteira_teorica_smll.csv · b3_carteira_teorica_bdrx.csv · b3_carteira_teorica_isee.csv · b3_carteira_teorica_ibxl.csv · b3_carteira_teorica_ifnc.csv · b3_carteira_teorica_agfs_iagro.csv · b3_carteira_teorica_ibsd.csv</span>
+        </div>
+        <table class="schema-table">
+          <thead><tr><th>Campo</th><th>Tipo</th><th>Exemplo</th></tr></thead>
+          <tbody>
+            <tr><td>data_captura</td><td><span class="type-badge">date</span></td><td>2026-05-30</td></tr>
+            <tr><td>c_digo</td><td><span class="type-badge">str</span></td><td>PETR4</td></tr>
+            <tr><td>a_o</td><td><span class="type-badge">str</span></td><td>PETROBRAS</td></tr>
+            <tr><td>tipo</td><td><span class="type-badge">str</span></td><td>PN</td></tr>
+            <tr><td>qtde_te_rica</td><td><span class="type-badge">int</span></td><td>451028340</td></tr>
+            <tr><td>part</td><td><span class="type-badge">float</span></td><td>7.258</td></tr>
+          </tbody>
+        </table>
+      </div>
 
       <div class="schema-card">
         <div class="schema-card-header">
@@ -2063,7 +2384,7 @@
       <div class="schema-card">
         <div class="schema-card-header">
           <span class="schema-card-title">Debêntures - SND</span>
-          <span class="schema-csv-name">debentures_mercado_secundario_precos_negociacao.csv · debentures_mercado_pu_historico.csv</span>
+          <span class="schema-csv-name">debentures_mercado_secundario_precos_negociacao.csv</span>
         </div>
         <table class="schema-table">
           <thead><tr><th>Campo</th><th>Tipo</th><th>Exemplo</th></tr></thead>
@@ -2092,6 +2413,45 @@
             <tr><td>emissor</td><td><span class="type-badge">str</span></td><td>VALE S.A.</td></tr>
             <tr><td>data_emissao</td><td><span class="type-badge">date</span></td><td>2021-05-15</td></tr>
             <tr><td>data_vencimento</td><td><span class="type-badge">date</span></td><td>2028-05-15</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="schema-card">
+        <div class="schema-card-header">
+          <span class="schema-card-title">ANBIMA IMA</span>
+          <span class="schema-csv-name">anbima_ima.csv</span>
+        </div>
+        <table class="schema-table">
+          <thead><tr><th>Campo</th><th>Tipo</th><th>Exemplo</th></tr></thead>
+          <tbody>
+            <tr><td>data_captura</td><td><span class="type-badge">date</span></td><td>2026-05-30</td></tr>
+            <tr><td>data_referencia</td><td><span class="type-badge">date</span></td><td>2026-05-29</td></tr>
+            <tr><td>indice</td><td><span class="type-badge">str</span></td><td>IMA-Geral</td></tr>
+            <tr><td>numero_indice</td><td><span class="type-badge">float</span></td><td>1254.32</td></tr>
+            <tr><td>variacao_diaria</td><td><span class="type-badge">float</span></td><td>0.15</td></tr>
+            <tr><td>variacao_mensal</td><td><span class="type-badge">float</span></td><td>1.24</td></tr>
+            <tr><td>variacao_anual</td><td><span class="type-badge">float</span></td><td>5.42</td></tr>
+            <tr><td>duration_du</td><td><span class="type-badge">float</span></td><td>842</td></tr>
+            <tr><td>peso_geral</td><td><span class="type-badge">float</span></td><td>100.00</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="schema-card">
+        <div class="schema-card-header">
+          <span class="schema-card-title">ANBIMA 550</span>
+          <span class="schema-csv-name">anbima_550.csv</span>
+        </div>
+        <table class="schema-table">
+          <thead><tr><th>Campo</th><th>Tipo</th><th>Exemplo</th></tr></thead>
+          <tbody>
+            <tr><td>data_captura</td><td><span class="type-badge">date</span></td><td>2026-05-30</td></tr>
+            <tr><td>titulo</td><td><span class="type-badge">str</span></td><td>LTN 010127</td></tr>
+            <tr><td>vencimento</td><td><span class="type-badge">date</span></td><td>2027-01-01</td></tr>
+            <tr><td>preco_unitario</td><td><span class="type-badge">float</span></td><td>987.45</td></tr>
+            <tr><td>preco_retorno</td><td><span class="type-badge">float</span></td><td>987.45</td></tr>
+            <tr><td>posicao_custodia</td><td><span class="type-badge">float</span></td><td>1500000.00</td></tr>
           </tbody>
         </table>
       </div>
@@ -2146,6 +2506,43 @@
             <tr><td>taxa_venda</td><td><span class="type-badge">float</span></td><td>5.03</td></tr>
             <tr><td>empresa</td><td><span class="type-badge">str</span></td><td>PETROBRAS</td></tr>
             <tr><td>capital_social</td><td><span class="type-badge">float</span></td><td>855000000000.00</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="schema-card">
+        <div class="schema-card-header">
+          <span class="schema-card-title">B3 BDI DI Over</span>
+          <span class="schema-csv-name">b3_bdi_di_over.csv</span>
+        </div>
+        <table class="schema-table">
+          <thead><tr><th>Campo</th><th>Tipo</th><th>Exemplo</th></tr></thead>
+          <tbody>
+            <tr><td>data_captura</td><td><span class="type-badge">date</span></td><td>2026-05-30</td></tr>
+            <tr><td>rpt_dt</td><td><span class="type-badge">date</span></td><td>2026-05-29</td></tr>
+            <tr><td>number_of_operations</td><td><span class="type-badge">int</span></td><td>1254</td></tr>
+            <tr><td>financial_volume</td><td><span class="type-badge">float</span></td><td>45289000000.00</td></tr>
+            <tr><td>average</td><td><span class="type-badge">float</span></td><td>13.65</td></tr>
+            <tr><td>daily_factor</td><td><span class="type-badge">float</span></td><td>1.00050787</td></tr>
+            <tr><td>selic_rate</td><td><span class="type-badge">float</span></td><td>13.75</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="schema-card">
+        <div class="schema-card-header">
+          <span class="schema-card-title">B3 Indicadores Financeiros</span>
+          <span class="schema-csv-name">b3_indicadores_financeiros.csv</span>
+        </div>
+        <table class="schema-table">
+          <thead><tr><th>Campo</th><th>Tipo</th><th>Exemplo</th></tr></thead>
+          <tbody>
+            <tr><td>data_captura</td><td><span class="type-badge">date</span></td><td>2026-05-30</td></tr>
+            <tr><td>security_identification_code</td><td><span class="type-badge">str</span></td><td>CDI</td></tr>
+            <tr><td>description</td><td><span class="type-badge">str</span></td><td>Taxa CDI</td></tr>
+            <tr><td>group_description</td><td><span class="type-badge">str</span></td><td>Interest Rates</td></tr>
+            <tr><td>value</td><td><span class="type-badge">float</span></td><td>13.65</td></tr>
+            <tr><td>rate</td><td><span class="type-badge">float</span></td><td>13.65</td></tr>
           </tbody>
         </table>
       </div>
@@ -2218,6 +2615,21 @@
             <tr><td>quantidade</td><td><span class="type-badge">int</span></td><td>50000</td></tr>
             <tr><td>preco</td><td><span class="type-badge">float</span></td><td>38.50</td></tr>
             <tr><td>tipo</td><td><span class="type-badge">str</span></td><td>Compra</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="schema-card">
+        <div class="schema-card-header">
+          <span class="schema-card-title">B3 Classificação Setorial</span>
+          <span class="schema-csv-name">b3_classificacao_setorial.csv</span>
+        </div>
+        <table class="schema-table">
+          <thead><tr><th>Campo</th><th>Tipo</th><th>Exemplo</th></tr></thead>
+          <tbody>
+            <tr><td>data_captura</td><td><span class="type-badge">date</span></td><td>2026-05-30</td></tr>
+            <tr><td>arquivo_origem</td><td><span class="type-badge">str</span></td><td>Setorial B3 15-09-2022 (português).xlsx</td></tr>
+            <tr><td>tamanho_bytes</td><td><span class="type-badge">int</span></td><td>45019</td></tr>
           </tbody>
         </table>
       </div>
@@ -2410,7 +2822,66 @@
     });
   }
 
-  document.addEventListener('DOMContentLoaded', loadLastUpdates);
+  // Initialize dataset filtering by source
+  function initDatasetFilters() {
+    const cards = document.querySelectorAll('.dataset-card');
+    
+    // Map each card to its data source based on file name prefix
+    cards.forEach(card => {
+      const fileElement = card.querySelector('.card-file');
+      if (!fileElement) return;
+
+      const fileName = fileElement.textContent.trim().toLowerCase();
+      let source = 'other';
+
+      if (fileName.startsWith('anbima_')) {
+        source = 'anbima';
+      } else if (fileName.startsWith('b3_')) {
+        source = 'b3';
+      } else if (fileName.startsWith('bcb_') || fileName.startsWith('bacen_')) {
+        source = 'bcb';
+      } else if (fileName.startsWith('cvm_')) {
+        source = 'cvm';
+      } else if (fileName.startsWith('ibge_')) {
+        source = 'ibge';
+      } else if (fileName.startsWith('debentures_')) {
+        source = 'debentures';
+      }
+
+      card.setAttribute('data-source-mapped', source);
+    });
+
+    // Handle filter button clicks
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const selectedFilter = btn.getAttribute('data-source');
+        
+        cards.forEach(card => {
+          const cardSource = card.getAttribute('data-source-mapped');
+          if (selectedFilter === 'all' || cardSource === selectedFilter) {
+            card.classList.remove('filtered-out');
+            // Trigger visual fade-in animation
+            card.style.opacity = '0';
+            setTimeout(() => {
+              card.style.opacity = '1';
+              card.style.transition = 'opacity 0.3s ease';
+            }, 10);
+          } else {
+            card.classList.add('filtered-out');
+          }
+        });
+      });
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', async () => {
+    await loadLastUpdates();
+    initDatasetFilters();
+  });
 </script>
 </body>
 </html>

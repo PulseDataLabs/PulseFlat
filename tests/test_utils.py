@@ -157,3 +157,25 @@ def test_salvar_csv_preserva_historico_anterior(tmp_path):
     assert por_data["2025-05-28"]["valor"] == "13.75", "Dias anteriores não devem mudar"
     assert por_data["2025-05-29"]["valor"] == "13.75", "Dias anteriores não devem mudar"
 
+
+def test_salvar_csv_sem_acumular(tmp_path):
+    """Quando acumular=False, deve sobrescrever completamente o arquivo contendo apenas os novos dados."""
+    arquivo = tmp_path / "test.csv"
+
+    # Primeira execução
+    salvar_csv(arquivo,
+               [{"data_captura": "2025-06-01", "indicador": "SELIC", "valor": "13.75"}],
+               CABECALHO_TESTE)
+
+    # Segunda execução sem acúmulo
+    salvar_csv(arquivo,
+               [{"data_captura": "2025-06-02", "indicador": "DI", "valor": "13.65"}],
+               CABECALHO_TESTE,
+               acumular=False)
+
+    linhas = _ler_csv(arquivo)
+    assert len(linhas) == 1, "Deve conter apenas o novo registro"
+    assert linhas[0]["indicador"] == "DI"
+    assert linhas[0]["valor"] == "13.65"
+    assert linhas[0]["data_captura"] == "2025-06-02"
+

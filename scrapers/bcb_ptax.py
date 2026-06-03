@@ -33,15 +33,16 @@ URL_TPL = (
     "https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/"
     "CotacaoDolarPeriodo(dataInicial=@dataInicial,dataFinalCotacao=@dataFinalCotacao)"
     "?@dataInicial=%27{inicio}%27&@dataFinalCotacao=%27{fim}%27"
-    "&$top=100&$format=json&$select=cotacaoCompra,cotacaoVenda,dataHoraCotacao"
+    "&$format=json&$select=cotacaoCompra,cotacaoVenda,dataHoraCotacao"
 )
 
 
 def _url_hoje() -> str:
     hoje = date.today()
-    ontem = hoje - timedelta(days=1)
+    # inicio = hoje - timedelta(days=1)
+    inicio = date(2020, 1, 1)
     return URL_TPL.format(
-        inicio=ontem.strftime("%m-%d-%Y"),
+        inicio=inicio.strftime("%m-%d-%Y"),
         fim=hoje.strftime("%m-%d-%Y"),
     )
 
@@ -51,22 +52,28 @@ def capturar() -> list[dict]:
     log.info(f"Consultando PTAX: {url}")
     session = nova_session()
 
-    for tentativa in range(1, 4):
-        try:
-            resp = session.get(
-                url,
-                timeout=30,
-            )
-            resp.raise_for_status()
-            break
-        except requests.RequestException as e:
-            log.warning(f"Tentativa {tentativa}/3: {e}")
-            if tentativa == 3:
-                log.error("Falha ao acessar API PTAX.")
-                sys.exit(1)
-            time.sleep(5)
+    dados = []
+    proxima_url = url
 
-    dados = resp.json().get("value", [])
+    while proxima_url:
+        log.info(f"Buscando página PTAX: {proxima_url}")
+        for tentativa in range(1, 4):
+            try:
+                resp = session.get(proxima_url, timeout=30)
+                resp.raise_for_status()
+                break
+            except requests.RequestException as e:
+                log.warning(f"Tentativa {tentativa}/3: {e}")
+                if tentativa == 3:
+                    log.error("Falha ao acessar API PTAX.")
+                    sys.exit(1)
+                time.sleep(5)
+
+        res_json = resp.json()
+        pagina_dados = res_json.get("value", [])
+        dados.extend(pagina_dados)
+        proxima_url = res_json.get("@odata.nextLink")
+
     if not dados:
         log.error("Nenhum dado retornado pela API PTAX.")
         sys.exit(1)
@@ -88,7 +95,8 @@ def capturar() -> list[dict]:
 def main():
     log.info("=== BCB PTAX (USD/BRL) ===")
     salvar_csv(ARQUIVO, capturar(), CABECALHO,
-               chaves_dedup=["data_captura", "data_hora_cotacao"])
+               chaves_dedup=["data_captura", "data_hora_cotacao"],
+               acumular=False)
 
 
 if __name__ == "__main__":

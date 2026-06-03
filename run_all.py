@@ -84,19 +84,6 @@ BANNER = r"""
  ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝   ╚═╝  ╚═╝╚══════╝╚══════╝
 """
 SCRAPERS = [
-    # ── Testes ──────────────────────────────────────────────────────────────────
-    {
-        "id": "teste_json",
-        "modulo": "scrapers.teste_json",
-        "descricao": "Teste — JSON Placeholder posts",
-        "grupo": "teste",
-    },
-    {
-        "id": "teste_csv",
-        "modulo": "scrapers.teste_csv",
-        "descricao": "Teste — CSV hw_200 dataset",
-        "grupo": "teste",
-    },
     # ── ANBIMA ──────────────────────────────────────────────────────────────────
     {
         "id": "anbima_indicadores",
@@ -216,12 +203,6 @@ SCRAPERS = [
         "descricao": "Debêntures — Preços de Negociação",
         "grupo": "debentures",
     },
-    {
-        "id": "debentures_mercado_pu_historico",
-        "modulo": "scrapers.debentures_mercado_pu_historico",
-        "descricao": "Debêntures — PU Histórico",
-        "grupo": "debentures",
-    },
     # ── B3 ──────────────────────────────────────────────────────────────────────
     {
         "id": "b3_fiis",
@@ -278,8 +259,8 @@ SCRAPERS = [
         "grupo": "b3",
     },
     {
-        "id": "b3_carteira_teorica_ibov_download",
-        "modulo": "scrapers.b3_carteira_teorica_ibov_download",
+        "id": "b3_carteira_teorica_ibov",
+        "modulo": "scrapers.b3_carteira_teorica_ibov",
         "descricao": "B3 — Carteira Teórica IBOV (CSV Base64)",
         "grupo": "b3",
     },

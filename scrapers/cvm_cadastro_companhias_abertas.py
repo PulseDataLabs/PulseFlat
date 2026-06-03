@@ -37,7 +37,7 @@ def capturar() -> tuple[list[dict], list[str]]:
 def main():
     log.info("=== CVM — Cadastro de Companhias Abertas ===")
     rows, header = capturar()
-    salvar_csv(ARQUIVO, rows, header, chaves_dedup=["data_captura", "conjunto", "registro_hash"])
+    salvar_csv(ARQUIVO, rows, header, chaves_dedup=["data_captura", "conjunto", "registro_hash"], acumular=False)
     log.info(f"{len(rows)} registro(s) salvo(s)")
 
 

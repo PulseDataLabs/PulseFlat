@@ -134,7 +134,8 @@ def capturar() -> list[dict]:
 def main():
     log.info("=== CVM — Informe Diário de Fundos ===")
     salvar_csv(ARQUIVO, capturar(), CABECALHO,
-               chaves_dedup=["data_captura", "cnpj_fundo_classe", "dt_comptc"])
+               chaves_dedup=["data_captura", "cnpj_fundo_classe", "dt_comptc"],
+               acumular=False)
 
 
 if __name__ == "__main__":

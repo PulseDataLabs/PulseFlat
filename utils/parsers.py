@@ -87,12 +87,15 @@ def csv_rows(text: str, delimiter: str | None = None) -> list[dict]:
         return []
 
     if delimiter is None:
-        sample = "\n".join(lines[:40])
-        try:
-            dialect = csv.Sniffer().sniff(sample, delimiters=";,\t|")
-            delimiter = dialect.delimiter
-        except Exception:
-            delimiter = ";" if ";" in lines[0] else ","
+        if ";" in lines[0] and "," not in lines[0]:
+            delimiter = ";"
+        else:
+            sample = "\n".join(lines[:40])
+            try:
+                dialect = csv.Sniffer().sniff(sample, delimiters=";,\t|")
+                delimiter = dialect.delimiter
+            except Exception:
+                delimiter = ";" if ";" in lines[0] else ","
 
     try:
         reader = csv.DictReader(io.StringIO("\n".join(lines)), delimiter=delimiter)

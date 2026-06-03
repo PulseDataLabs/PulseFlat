@@ -128,7 +128,8 @@ def capturar() -> list[dict]:
 def main():
     log.info("=== IBGE SIDRA — Metadados ===")
     salvar_csv(ARQUIVO, capturar(), CABECALHO,
-               chaves_dedup=["data_captura", "serie_id", "periodo_referencia"])
+               chaves_dedup=["data_captura", "serie_id", "periodo_referencia"],
+               acumular=False)
 
 
 if __name__ == "__main__":

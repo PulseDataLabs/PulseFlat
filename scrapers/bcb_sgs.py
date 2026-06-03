@@ -89,7 +89,8 @@ def _buscar_serie(session, codigo: int, nome: str, inicio: str, fim: str,
 
 def capturar() -> list[dict]:
     hoje = date.today()
-    inicio = (hoje - timedelta(days=40)).strftime("%d/%m/%Y")
+    # inicio = (hoje - timedelta(days=40)).strftime("%d/%m/%Y")
+    inicio = '01/01/2020'
     fim = hoje.strftime("%d/%m/%Y")
     data_captura, _ = agora_brt()
     session = nova_session()
@@ -114,7 +115,8 @@ def capturar() -> list[dict]:
 def main():
     log.info("=== BCB SGS — Séries Temporais ===")
     salvar_csv(ARQUIVO, capturar(), CABECALHO,
-               chaves_dedup=["data_captura", "codigo_serie", "data"])
+               chaves_dedup=["data_captura", "codigo_serie", "data"],
+               acumular=False)
 
 
 if __name__ == "__main__":

@@ -119,9 +119,22 @@ def test_bcb_sgs_erro_parcial(requests_mock, monkeypatch):
     assert len(codigos_capturados) == len(bcb_sgs.SERIES) - 1
 
 
-def test_generic_scraper_json(requests_mock, tmp_path):
+def test_generic_scraper_json(requests_mock, tmp_path, monkeypatch):
     """Deve baixar, processar e salvar corretamente dados de um recurso json genérico."""
+    import yaml
     from scrapers.generic_scraper import run_resource
+
+    mock_config = {
+        "resources": [
+            {
+                "name": "teste_json",
+                "url": "https://jsonplaceholder.typicode.com/posts/",
+                "file_name": "teste_json.json",
+                "type_response": "json"
+            }
+        ]
+    }
+    monkeypatch.setattr(yaml, "safe_load", lambda f: mock_config)
 
     mock_data = [
         {"id": 1, "title": "Post 1", "body": "Body 1", "userId": 10},
@@ -147,5 +160,6 @@ def test_generic_scraper_json(requests_mock, tmp_path):
     assert rows[0]["title"] == "Post 1"
     assert rows[0]["body"] == "Body 1"
     assert rows[0]["userid"] == "10"
+
 
 
