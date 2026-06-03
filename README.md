@@ -176,6 +176,8 @@ Cotações do dólar PTAX. Snapshot contendo a série histórica diária de comp
 | cotacao_venda | Cotação de venda (R$/US$) |
 
 ### `bcb_sgs.csv`
+Séries temporais do Banco Central via SGS. Snapshot contendo a série histórica diária de compra/venda do dólar e taxas SELIC, CDI, IPCA, IGP-M completa desde **01/01/2020** (arquivo não acumulativo, reescrito por completo a cada execução).
+
 | Campo | Descrição |
 |---|---|
 | data_captura | Data da execução (BRT) |
