@@ -1,3 +1,4 @@
-data_captura,hora_captura,rpt_dt,number_of_operations,financial_volume,average,daily_factor,selic_rate
-2026-06-01,23:37:15,2026-05-29T00:00:00,3,2646973,14.4,1.000534,14.4
-2026-06-02,23:49:59,2026-06-01T00:00:00,3,2724759,14.4,1.000534,14.4
+data_captura,rpt_dt,number_of_operations,financial_volume,average,daily_factor,selic_rate
+2026-06-01,2026-05-29T00:00:00,3,2646973,14.4,1.000534,14.4
+2026-06-02,2026-06-01T00:00:00,3,2724759,14.4,1.000534,14.4
+2026-06-03,2026-06-02T00:00:00,3,2984561,14.4,1.000534,14.4
