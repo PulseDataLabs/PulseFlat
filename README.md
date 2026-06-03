@@ -29,21 +29,32 @@ Sem servidor. Sem custo. Histórico versionado em CSV no próprio repositório.
 
 | Scraper | Fonte | Método | CSV(s) gerado(s) |
 |---|---|---|---|
-| `bcb_ptax` | BCB | API REST (Olinda) | `bcb_ptax.csv` |
-| `bcb_sgs` | BCB | API REST (SGS) | `bcb_sgs.csv` |
+| `bcb_ptax` | BCB | API REST (Olinda) | `bcb_ptax.csv` (sem acúmulo) |
+| `bcb_sgs` | BCB | API REST (SGS) | `bcb_sgs.csv` (sem acúmulo) |
 | `bacen_negociacao_tpf` | BCB | ZIP + CSV (DEMAB) | `bacen_negociacao_tpf_extragrupo_mes_corrente.csv`, `..._mes_anterior.csv` |
 
 ### Grupo IBGE
 
 | Scraper | Fonte | Método | CSV(s) gerado(s) |
 |---|---|---|---|
-| `ibge_sidra` | IBGE | API REST (SIDRA) | `ibge_sidra.csv` |
+| `ibge_sidra` | IBGE | API REST (SIDRA) | `ibge_sidra.csv` (sem acúmulo) |
 
 ### Grupo CVM
 
 | Scraper | Fonte | Método | CSV(s) gerado(s) |
 |---|---|---|---|
-| `cvm_cadastro_companhias_abertas` | CVM | CSV direto | `cvm_cadastro_companhias_abertas.csv` |
+| `cvm_cadastro_companhias_abertas` | CVM | CSV direto | `cvm_cadastro_companhias_abertas.csv` (sem acúmulo) |
+| `cvm_fundos_cadastro` | CVM | CSV direto | `cvm_fundos_cadastro.csv` (sem acúmulo) |
+| `cvm_fundos_informe_diario` | CVM | ZIP + CSV | `cvm_fundos_informe_diario.csv` |
+| `cvm_fundos_extrato` | CVM | CSV direto | `cvm_fundos_extrato.csv` (sem acúmulo) |
+| `cvm_fundos_classe` | CVM | ZIP + CSV | `cvm_fundos_classe.csv` (sem acúmulo) |
+
+### Grupo SND / Debêntures
+
+| Scraper | Fonte | Método | CSV(s) gerado(s) |
+|---|---|---|---|
+| `debentures_emissoes_caracteristicas` | SND | HTML direto | `debentures_emissoes_caracteristicas.csv` (sem acúmulo) |
+| `debentures_mercado_secundario_precos_negociacao` | SND | HTML direto | `debentures_mercado_secundario_precos_negociacao.csv` |
 
 ### Grupo B3
 
@@ -51,7 +62,16 @@ Sem servidor. Sem custo. Histórico versionado em CSV no próprio repositório.
 |---|---|---|---|
 | `b3_fiis` | B3 | API JSON + Base64 | `b3_fiis_listados.csv` |
 | `b3_etfs` | B3 | API JSON + Base64 | `b3_etfs_listados.csv` |
+| `b3_etfs_listados_download` | B3 | API JSON + Base64 | `b3_etfs_listados.csv` |
 | `b3_carteiras` | B3 | API JSON + Base64 | `b3_carteiras_teoricas.csv` |
+| `b3_carteira_teorica_ibov` | B3 | API JSON + Base64 | `b3_carteira_teorica_ibov.csv` |
+| `b3_carteira_teorica_smll` | B3 | API JSON + Base64 | `b3_carteira_teorica_smll.csv` |
+| `b3_carteira_teorica_bdrx` | B3 | API JSON + Base64 | `b3_carteira_teorica_bdrx.csv` |
+| `b3_carteira_teorica_isee` | B3 | API JSON + Base64 | `b3_carteira_teorica_isee.csv` |
+| `b3_carteira_teorica_ibxl` | B3 | API JSON + Base64 | `b3_carteira_teorica_ibxl.csv` |
+| `b3_carteira_teorica_ifnc` | B3 | API JSON + Base64 | `b3_carteira_teorica_ifnc.csv` |
+| `b3_carteira_teorica_agfs_iagro` | B3 | API JSON + Base64 | `b3_carteira_teorica_agfs_iagro.csv` |
+| `b3_carteira_teorica_ibsd` | B3 | API JSON + Base64 | `b3_carteira_teorica_ibsd.csv` |
 | `b3_indicadores_financeiros` | B3 | API JSON + Base64 | `b3_indicadores_financeiros.csv` |
 | `b3_bdi_di_over` | B3 | API POST (BDI) | `b3_bdi_di_over.csv` |
 | `b3_taxa_cambio_referencia` | B3 | API JSON + Base64 | `b3_taxa_cambio_referencia.csv` |
@@ -60,6 +80,8 @@ Sem servidor. Sem custo. Histórico versionado em CSV no próprio repositório.
 | `b3_bvbg086` | B3 | ZIP + CSV (BVBG) | `b3_bvbg086.csv` |
 | `b3_bvbg087` | B3 | ZIP + CSV (BVBG) | `b3_bvbg087.csv` |
 | `b3_indices_precos_historicos` | B3 | API JSON + Base64 | `b3_indices_precos_historicos.csv` |
+| `b3_classificacao_setorial` | B3 | ZIP + XLSX | `b3_classificacao_setorial.csv` (sem acúmulo) |
+| `b3_titulos_negociaveis` | B3 | ZIP + CSV | `b3_titulos_negociaveis.csv` (sem acúmulo) |
 
 **Desativados:** `b3_cotahist_diario`, `b3_cotahist_anual`, `b3_indicadores_economicos_fwf`, `b3_negocios_balcao`, `b3_companhias_detalhes`, `b3_companhias_info`, `b3_dividendos_dinheiro`, `b3_futuros_ajustes` (fonte legada descontinuada), `b3_bmf_taxas_juros` (API BDI sem dados).
 
@@ -295,7 +317,7 @@ PulseFlat/
 ├── .github/
 │   └── workflows/
 │       └── captura_diaria.yml       # Agendamento GitHub Actions
-├── data/                            # CSVs acumulativos (gerados automaticamente)
+├── data/                            # CSVs acumulativos e instantâneos (gerados automaticamente)
 │   ├── .gitkeep
 │   ├── anbima_indicadores.csv
 │   ├── anbima_projecoes.csv
@@ -310,9 +332,16 @@ PulseFlat/
 │   ├── bacen_negociacao_tpf_extragrupo_mes_anterior.csv
 │   ├── ibge_sidra.csv
 │   ├── cvm_cadastro_companhias_abertas.csv
+│   ├── cvm_fundos_cadastro.csv
+│   ├── cvm_fundos_informe_diario.csv
+│   ├── cvm_fundos_extrato.csv
+│   ├── cvm_fundos_classe.csv
+│   ├── debentures_emissoes_caracteristicas.csv
+│   ├── debentures_mercado_secundario_precos_negociacao.csv
 │   ├── b3_fiis_listados.csv
 │   ├── b3_etfs_listados.csv
 │   ├── b3_carteiras_teoricas.csv
+│   ├── b3_carteira_teorica_*.csv     # Carteiras teóricas individuais B3
 │   ├── b3_indicadores_financeiros.csv
 │   ├── b3_bdi_di_over.csv
 │   ├── b3_taxa_cambio_referencia.csv
@@ -321,6 +350,8 @@ PulseFlat/
 │   ├── b3_bvbg086.csv
 │   ├── b3_bvbg087.csv
 │   ├── b3_indices_precos_historicos.csv
+│   ├── b3_classificacao_setorial.csv
+│   ├── b3_titulos_negociaveis.csv
 ├── scrapers/
 │   ├── __init__.py
 │   ├── anbima_indicadores.py
@@ -335,9 +366,17 @@ PulseFlat/
 │   ├── bacen_negociacao_tpf.py
 │   ├── ibge_sidra.py
 │   ├── cvm_cadastro_companhias_abertas.py
+│   ├── cvm_fundos_cadastro.py
+│   ├── cvm_fundos_informe_diario.py
+│   ├── cvm_fundos_extrato.py
+│   ├── cvm_fundos_classe.py
+│   ├── debentures_emissoes_caracteristicas.py
+│   ├── debentures_mercado_secundario_precos_negociacao.py
 │   ├── b3_fiis.py
 │   ├── b3_etfs.py
 │   ├── b3_carteiras.py
+│   ├── b3_carteira_teorica_ibov.py
+│   ├── b3_carteira_teorica_*.py
 │   ├── b3_indicadores_financeiros.py
 │   ├── b3_bdi_di_over.py
 │   ├── b3_taxa_cambio_referencia.py
@@ -346,6 +385,8 @@ PulseFlat/
 │   ├── b3_bvbg086.py
 │   ├── b3_bvbg087.py
 │   ├── b3_indices_precos_historicos.py
+│   ├── b3_classificacao_setorial.py
+│   ├── b3_titulos_negociaveis.py
 ├── utils/
 │   ├── __init__.py
 │   ├── base.py                      # Utilitários compartilhados
@@ -353,6 +394,7 @@ PulseFlat/
 │   └── b3_helpers.py                # Helpers específicos B3 (company seeds)
 ├── tests/
 │   ├── __init__.py
+│   ├── test_scrapers.py
 │   └── test_utils.py
 ├── scripts/
 │   └── limpar_duplicatas.py         # Limpeza única de duplicatas históricas
@@ -398,24 +440,26 @@ python run_all.py anbima
 python run_all.py bcb
 python run_all.py ibge
 python run_all.py cvm
+python run_all.py debentures
 python run_all.py b3
 
 # Scraper específico
-python run_all.py anbima_indicadores
-python run_all.py anbima_projecoes
-python run_all.py anbima_titulos_publicos
-python run_all.py anbima_debentures
-python run_all.py anbima_ima
-python run_all.py anbima_550
 python run_all.py anbima_indice_imab
 python run_all.py bcb_ptax
 python run_all.py bcb_sgs
 python run_all.py bacen_negociacao_tpf
 python run_all.py ibge_sidra
 python run_all.py cvm_cadastro_companhias_abertas
+python run_all.py cvm_fundos_cadastro
+python run_all.py cvm_fundos_informe_diario
+python run_all.py cvm_fundos_extrato
+python run_all.py cvm_fundos_classe
+python run_all.py debentures_emissoes_caracteristicas
+python run_all.py debentures_mercado_secundario_precos_negociacao
 python run_all.py b3_fiis
 python run_all.py b3_etfs
 python run_all.py b3_carteiras
+python run_all.py b3_carteira_teorica_ibov
 python run_all.py b3_indicadores_financeiros
 python run_all.py b3_bdi_di_over
 python run_all.py b3_taxa_cambio_referencia
@@ -424,6 +468,8 @@ python run_all.py b3_bvbg028
 python run_all.py b3_bvbg086
 python run_all.py b3_bvbg087
 python run_all.py b3_indices_precos_historicos
+python run_all.py b3_classificacao_setorial
+python run_all.py b3_titulos_negociaveis
 ```
 
 ---
