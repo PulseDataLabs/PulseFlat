@@ -364,8 +364,6 @@ def salvar_csv(
                     return 'ibge'
                 elif filename.startswith('debentures_'):
                     return 'debentures'
-                elif filename.startswith('s_p_') or filename.startswith('moodys_'):
-                    return 'ratings'
                 elif filename.startswith('yahoo_') or filename.startswith('investing_') or filename.startswith('onu_'):
                     return 'misc'
                 return 'other'
