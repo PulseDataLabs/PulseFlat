@@ -16,6 +16,8 @@ import requests
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from utils import get_logger, agora_brt, limpar, salvar_csv
+import pandas as pd
+from scrapers.utils.base import BaseScraper
 
 log = get_logger("b3_bdi_di_over")
 
@@ -111,12 +113,30 @@ def capturar() -> list[dict]:
     log.info(f"{len(todos)} registros DI Over capturados.")
     return todos
 
+class B3BdiDiOverScraper(BaseScraper):
+    name = "b3_bdi_di_over"
+    accumulate = True
+    chaves_dedup = ['data_captura', 'rpt_dt']
+    
+    # Catálogo de Metadados
+    title = 'B3 BDI — DI Over'
+    description = 'Taxa DI Over overnight: número de operações, volume financeiro, taxa média, fator diário e SELIC.'
+    icon = '🏦'
+    icon_class = 'icon-b3'
+    badge = 'Diário'
+    badge_class = 'badge-daily'
+    tags = ['di over', 'taxa média', 'volume', 'selic']
+    source = 'B3 · BDI'
 
-def main():
-    log.info("=== B3 BDI — DI Over ===")
-    salvar_csv(ARQUIVO, capturar(), CABECALHO,
-               chaves_dedup=["data_captura", "rpt_dt"])
+    def fetch(self) -> pd.DataFrame:
+        log.info("=== B3 BDI — DI Over ===")
+        # Reordena para garantir o cabeçalho original
+        df = pd.DataFrame(capturar())
+        if not df.empty:
+            colunas = [c for c in CABECALHO if c in df.columns]
+            return df[colunas]
+        return df
 
 
 if __name__ == "__main__":
-    main()
+    B3BdiDiOverScraper().run()

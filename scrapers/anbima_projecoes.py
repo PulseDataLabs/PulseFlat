@@ -65,6 +65,8 @@ except ImportError:
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from utils import get_logger, agora_brt, limpar, nova_session, salvar_csv
+import pandas as pd
+from scrapers.utils.base import BaseScraper
 
 log = get_logger("anbima_projecoes")
 
@@ -292,16 +294,34 @@ def capturar() -> list[dict]:
     log.info("Usando scraping da página de indicadores.")
     return capturar_via_scraping(session)
 
+class AnbimaProjecoesScraper(BaseScraper):
+    name = "anbima_projecoes"
+    accumulate = True
+    chaves_dedup = ['data_captura', 'indice', 'mes_referencia', 'tipo_projecao']
+    
+    # Catálogo de Metadados
+    title = 'ANBIMA Projeções'
+    description = 'Projeções de IPCA e IGP-M coletadas junto às instituições do Comitê Macroeconômico da ANBIMA para o mês corrente e seguinte.'
+    icon = '🔮'
+    icon_class = 'icon-anbima'
+    badge = 'Sob divulgação'
+    badge_class = 'badge-dynamic'
+    tags = ['ipca corrente', 'ipca seguinte', 'igp-m corrente', 'igp-m seguinte', 'num_instituições']
+    source = 'ANBIMA API'
 
-def main():
-    log.info("=== ANBIMA Projeções IPCA e IGP-M ===")
-    registros = capturar()
-    if not registros:
-        log.error("Nenhuma projeção capturada.")
-        sys.exit(1)
-    salvar_csv(ARQUIVO, registros, CABECALHO,
-               chaves_dedup=["data_captura", "indice", "mes_referencia", "tipo_projecao"])
+    def fetch(self) -> pd.DataFrame:
+        log.info("=== ANBIMA Projeções IPCA e IGP-M ===")
+        registros = capturar()
+        if not registros:
+            log.error("Nenhuma projeção capturada.")
+            sys.exit(1)
+        # Reordena para garantir o cabeçalho original
+        df = pd.DataFrame(registros)
+        if not df.empty:
+            colunas = [c for c in CABECALHO if c in df.columns]
+            return df[colunas]
+        return df
 
 
 if __name__ == "__main__":
-    main()
+    AnbimaProjecoesScraper().run()

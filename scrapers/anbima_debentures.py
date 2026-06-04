@@ -16,6 +16,8 @@ import requests
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from utils import get_logger, limpar, nova_session, salvar_csv
+import pandas as pd
+from scrapers.utils.base import BaseScraper
 
 log = get_logger("anbima_debentures")
 
@@ -114,12 +116,30 @@ def capturar() -> list[dict]:
     log.info(f"{len(registros)} debêntures capturadas (ref: {data_ref}).")
     return registros
 
+class AnbimaDebenturesScraper(BaseScraper):
+    name = "anbima_debentures"
+    accumulate = True
+    chaves_dedup = ['data_referencia', 'codigo']
+    
+    # Catálogo de Metadados
+    title = 'ANBIMA Debêntures'
+    description = 'Preços e taxas indicativas de debêntures, com PU, duration, índice de correção e intervalo indicativo.'
+    icon = '📜'
+    icon_class = 'icon-anbima'
+    badge = 'Diário'
+    badge_class = 'badge-daily'
+    tags = ['pu', 'duration', 'índice correção', 'tx_indicativa']
+    source = 'ANBIMA'
 
-def main():
-    log.info("=== ANBIMA — Debêntures ===")
-    salvar_csv(ARQUIVO, capturar(), CABECALHO,
-               chaves_dedup=["data_referencia", "codigo"])
+    def fetch(self) -> pd.DataFrame:
+        log.info("=== ANBIMA — Debêntures ===")
+        # Reordena para garantir o cabeçalho original
+        df = pd.DataFrame(capturar())
+        if not df.empty:
+            colunas = [c for c in CABECALHO if c in df.columns]
+            return df[colunas]
+        return df
 
 
 if __name__ == "__main__":
-    main()
+    AnbimaDebenturesScraper().run()

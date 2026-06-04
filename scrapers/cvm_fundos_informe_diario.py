@@ -19,6 +19,8 @@ import requests
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from utils import get_logger, agora_brt, limpar, salvar_csv
+import pandas as pd
+from scrapers.utils.base import BaseScraper
 
 log = get_logger("cvm_fundos_informe_diario")
 
@@ -130,13 +132,30 @@ def capturar() -> list[dict]:
     log.info(f"{len(registros)} registros do informe diário CVM capturados.")
     return registros
 
+class CvmFundosInformeDiarioScraper(BaseScraper):
+    name = "cvm_fundos_informe_diario"
+    accumulate = False
+    chaves_dedup = ['data_captura', 'cnpj_fundo_classe', 'dt_comptc']
+    
+    # Catálogo de Metadados
+    title = 'CVM — Informe Diário de Fundos'
+    description = 'Desempenho diário de fundos de investimento: valor da cota, PL, captações, resgates e cotistas.'
+    icon = '📋'
+    icon_class = 'icon-cvm'
+    badge = 'Diário'
+    badge_class = 'badge-daily'
+    tags = ['fundos', 'cota', 'patrimônio', 'captação', 'resgate']
+    source = 'CVM'
 
-def main():
-    log.info("=== CVM — Informe Diário de Fundos ===")
-    salvar_csv(ARQUIVO, capturar(), CABECALHO,
-               chaves_dedup=["data_captura", "cnpj_fundo_classe", "dt_comptc"],
-               acumular=False)
+    def fetch(self) -> pd.DataFrame:
+        log.info("=== CVM — Informe Diário de Fundos ===")
+        # Reordena para garantir o cabeçalho original
+        df = pd.DataFrame(capturar())
+        if not df.empty:
+            colunas = [c for c in CABECALHO if c in df.columns]
+            return df[colunas]
+        return df
 
 
 if __name__ == "__main__":
-    main()
+    CvmFundosInformeDiarioScraper().run()

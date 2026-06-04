@@ -16,6 +16,8 @@ import requests
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from utils import get_logger, agora_brt, limpar, nova_session, salvar_csv
+import pandas as pd
+from scrapers.utils.base import BaseScraper
 
 log = get_logger("bcb_ptax")
 
@@ -102,13 +104,30 @@ def capturar() -> list[dict]:
     log.info(f"{len(registros)} cotações PTAX capturadas.")
     return registros
 
+class BcbPtaxScraper(BaseScraper):
+    name = "bcb_ptax"
+    accumulate = False
+    chaves_dedup = ['data_captura', 'data_hora_cotacao']
+    
+    # Catálogo de Metadados
+    title = 'BCB PTAX'
+    description = 'Cotações históricas diárias oficiais de compra e venda do dólar comercial (USD/BRL) publicadas pelo Banco Central do Brasil.'
+    icon = '💵'
+    icon_class = 'icon-bcb'
+    badge = 'Diário'
+    badge_class = 'badge-daily'
+    tags = ['dólar', 'ptax', 'cotação', 'compra', 'venda', 'bcb']
+    source = 'BCB'
 
-def main():
-    log.info("=== BCB PTAX (USD/BRL) ===")
-    salvar_csv(ARQUIVO, capturar(), CABECALHO,
-               chaves_dedup=["data_captura", "data_hora_cotacao"],
-               acumular=False)
+    def fetch(self) -> pd.DataFrame:
+        log.info("=== BCB PTAX (USD/BRL) ===")
+        # Reordena para garantir o cabeçalho original
+        df = pd.DataFrame(capturar())
+        if not df.empty:
+            colunas = [c for c in CABECALHO if c in df.columns]
+            return df[colunas]
+        return df
 
 
 if __name__ == "__main__":
-    main()
+    BcbPtaxScraper().run()

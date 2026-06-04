@@ -17,6 +17,8 @@ import requests
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from utils import get_logger, agora_brt, limpar, nova_session, salvar_csv
+import pandas as pd
+from scrapers.utils.base import BaseScraper
 
 log = get_logger("anbima_550")
 
@@ -103,12 +105,30 @@ def capturar() -> list[dict]:
     log.info(f"{len(registros)} ativos ANBIMA 550 capturados (ref: {data_ref}).")
     return registros
 
+class Anbima550Scraper(BaseScraper):
+    name = "anbima_550"
+    accumulate = True
+    chaves_dedup = ['data_captura', 'titulo', 'vencimento']
+    
+    # Catálogo de Metadados
+    title = 'ANBIMA Resolução 550'
+    description = 'Ativos de renda fixa da Resolução ANBIMA 550: preço unitário, preço de retorno e posição em custódia.'
+    icon = '📋'
+    icon_class = 'icon-anbima'
+    badge = 'Diário'
+    badge_class = 'badge-daily'
+    tags = ['preço_unitário', 'preço_retorno', 'custódia']
+    source = 'ANBIMA'
 
-def main():
-    log.info("=== ANBIMA 550 — Renda Fixa ===")
-    salvar_csv(ARQUIVO, capturar(), CABECALHO,
-               chaves_dedup=["data_captura", "titulo", "vencimento"])
+    def fetch(self) -> pd.DataFrame:
+        log.info("=== ANBIMA 550 — Renda Fixa ===")
+        # Reordena para garantir o cabeçalho original
+        df = pd.DataFrame(capturar())
+        if not df.empty:
+            colunas = [c for c in CABECALHO if c in df.columns]
+            return df[colunas]
+        return df
 
 
 if __name__ == "__main__":
-    main()
+    Anbima550Scraper().run()

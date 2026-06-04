@@ -18,6 +18,8 @@ import requests
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from utils import get_logger, agora_brt, limpar, nova_session, salvar_csv
+import pandas as pd
+from scrapers.utils.base import BaseScraper
 
 log = get_logger("anbima_titulos_publicos")
 
@@ -122,12 +124,30 @@ def capturar() -> list[dict]:
     log.info(f"{len(registros)} títulos públicos capturados (ref: {data_ref}).")
     return registros
 
+class AnbimaTitulosPublicosScraper(BaseScraper):
+    name = "anbima_titulos_publicos"
+    accumulate = True
+    chaves_dedup = ['data_captura', 'titulo', 'data_vencimento']
+    
+    # Catálogo de Metadados
+    title = 'ANBIMA Títulos Públicos'
+    description = 'Preços e taxas indicativas de títulos públicos federais (LTN, NTN, LFT), incluindo PU, duration e desvio padrão.'
+    icon = '🏛️'
+    icon_class = 'icon-anbima'
+    badge = 'Diário'
+    badge_class = 'badge-daily'
+    tags = ['ltn', 'ntn', 'lft', 'pu', 'tx_indicativa']
+    source = 'ANBIMA'
 
-def main():
-    log.info("=== ANBIMA — Títulos Públicos ===")
-    salvar_csv(ARQUIVO, capturar(), CABECALHO,
-               chaves_dedup=["data_captura", "titulo", "data_vencimento"])
+    def fetch(self) -> pd.DataFrame:
+        log.info("=== ANBIMA — Títulos Públicos ===")
+        # Reordena para garantir o cabeçalho original
+        df = pd.DataFrame(capturar())
+        if not df.empty:
+            colunas = [c for c in CABECALHO if c in df.columns]
+            return df[colunas]
+        return df
 
 
 if __name__ == "__main__":
-    main()
+    AnbimaTitulosPublicosScraper().run()

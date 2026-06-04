@@ -16,6 +16,8 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from utils import get_logger, agora_brt, limpar, b64_encode_params, nova_session, salvar_csv
+import pandas as pd
+from scrapers.utils.base import BaseScraper
 
 log = get_logger("b3_etfs")
 
@@ -120,11 +122,30 @@ def capturar() -> list[dict]:
     log.info(f"{len(todos)} ETFs capturados (RV + RF).")
     return todos
 
+class B3EtfsScraper(BaseScraper):
+    name = "b3_etfs"
+    accumulate = False
+    chaves_dedup = None
+    
+    # Catálogo de Metadados
+    title = 'B3 ETFs Listados'
+    description = 'ETFs de Renda Variável e Renda Fixa listados na B3, com índice de referência, administrador, gestor e patrimônio líquido.'
+    icon = '📈'
+    icon_class = 'icon-b3'
+    badge = 'Diário'
+    badge_class = 'badge-daily'
+    tags = ['ticker', 'categoria_etf', 'índice_ref', 'gestor', 'renda variável', 'renda fixa']
+    source = 'B3 API'
 
-def main():
-    log.info("=== B3 ETFs Listados ===")
-    salvar_csv(ARQUIVO, capturar(), CABECALHO, acumular=False)
+    def fetch(self) -> pd.DataFrame:
+        log.info("=== B3 ETFs Listados ===")
+        # Reordena para garantir o cabeçalho original
+        df = pd.DataFrame(capturar())
+        if not df.empty:
+            colunas = [c for c in CABECALHO if c in df.columns]
+            return df[colunas]
+        return df
 
 
 if __name__ == "__main__":
-    main()
+    B3EtfsScraper().run()

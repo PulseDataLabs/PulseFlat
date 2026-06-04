@@ -18,6 +18,8 @@ import requests
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from utils import get_logger, agora_brt, limpar, salvar_csv
+import pandas as pd
+from scrapers.utils.base import BaseScraper
 
 log = get_logger("b3_indicadores_financeiros")
 
@@ -97,12 +99,30 @@ def capturar() -> list[dict]:
     log.info(f"{len(registros)} indicadores B3 capturados.")
     return registros
 
+class B3IndicadoresFinanceirosScraper(BaseScraper):
+    name = "b3_indicadores_financeiros"
+    accumulate = True
+    chaves_dedup = ['data_captura', 'security_identification_code']
+    
+    # Catálogo de Metadados
+    title = 'B3 Indicadores Financeiros'
+    description = 'Indicadores financeiros da B3 via API de derivativos: SELIC, CDI, IPCA, IGP-M, câmbio e taxas de juros.'
+    icon = '📊'
+    icon_class = 'icon-b3'
+    badge = 'Diário'
+    badge_class = 'badge-daily'
+    tags = ['selic', 'cdi', 'ipca', 'igp-m', 'câmbio']
+    source = 'B3 API'
 
-def main():
-    log.info("=== B3 — Indicadores Financeiros ===")
-    salvar_csv(ARQUIVO, capturar(), CABECALHO,
-               chaves_dedup=["data_captura", "security_identification_code"])
+    def fetch(self) -> pd.DataFrame:
+        log.info("=== B3 — Indicadores Financeiros ===")
+        # Reordena para garantir o cabeçalho original
+        df = pd.DataFrame(capturar())
+        if not df.empty:
+            colunas = [c for c in CABECALHO if c in df.columns]
+            return df[colunas]
+        return df
 
 
 if __name__ == "__main__":
-    main()
+    B3IndicadoresFinanceirosScraper().run()

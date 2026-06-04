@@ -18,6 +18,8 @@ import requests
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from utils import get_logger, agora_brt, limpar, salvar_csv
+import pandas as pd
+from scrapers.utils.base import BaseScraper
 
 log = get_logger("b3_bdi_trades_acoes")
 
@@ -129,12 +131,30 @@ def capturar() -> list[dict]:
     log.info(f"{len(todos)} trades consolidados capturados (ref: {data_ref}).")
     return todos
 
+class B3BdiTradesAcoesScraper(BaseScraper):
+    name = "b3_bdi_trades_acoes"
+    accumulate = True
+    chaves_dedup = ['data_captura', 'tckr_symb', 'rpt_dt']
+    
+    # Catálogo de Metadados
+    title = 'B3 BDI — Negócios de Ações'
+    description = 'Resumo de negócios diários consolidados de ações negociadas no mercado de bolsa da B3, com preços e volumes.'
+    icon = '📈'
+    icon_class = 'icon-b3'
+    badge = 'Diário'
+    badge_class = 'badge-daily'
+    tags = ['ações', 'volume', 'preço', 'bdi', 'negócios']
+    source = 'B3 BDI'
 
-def main():
-    log.info("=== B3 BDI — Trades Consolidados de Ações ===")
-    salvar_csv(ARQUIVO, capturar(), CABECALHO,
-               chaves_dedup=["data_captura", "tckr_symb", "rpt_dt"])
+    def fetch(self) -> pd.DataFrame:
+        log.info("=== B3 BDI — Trades Consolidados de Ações ===")
+        # Reordena para garantir o cabeçalho original
+        df = pd.DataFrame(capturar())
+        if not df.empty:
+            colunas = [c for c in CABECALHO if c in df.columns]
+            return df[colunas]
+        return df
 
 
 if __name__ == "__main__":
-    main()
+    B3BdiTradesAcoesScraper().run()

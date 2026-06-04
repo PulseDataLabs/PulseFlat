@@ -14,6 +14,8 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from utils.base import get_logger, nova_session, salvar_csv
 from utils.parsers import date_ref, replace_date_vars, rows_from_zip, enriquecer, read_existing_header
+import pandas as pd
+from scrapers.utils.base import BaseScraper
 
 log = get_logger("bacen_negociacao_tpf")
 
@@ -61,11 +63,25 @@ def capturar() -> list[dict]:
 
     return registros
 
+class BacenNegociacaoTpfScraper(BaseScraper):
+    name = "bacen_negociacao_tpf"
+    accumulate = True
+    chaves_dedup = ['data_captura', 'conjunto', 'registro_hash']
+    
+    # Catálogo de Metadados
+    title = 'BCB — Negociação TPF Extra-grupo'
+    description = 'Operações de compra e venda de Títulos Públicos Federais extra-grupo realizadas no mercado aberto (BCB/DEMAB).'
+    icon = '📋'
+    icon_class = 'icon-bcb'
+    badge = 'Diário'
+    badge_class = 'badge-daily'
+    tags = ['título público', 'compra/venda', 'quantidade', 'preço']
+    source = 'BCB · DEMAB'
 
-def main():
-    log.info("=== BCB — Negociacao TPF Extra-grupo ===")
-    capturar()
+    def fetch(self) -> pd.DataFrame:
+        log.info("=== BCB — Negociacao TPF Extra-grupo ===")
+        capturar()
 
 
 if __name__ == "__main__":
-    main()
+    BacenNegociacaoTpfScraper().run()

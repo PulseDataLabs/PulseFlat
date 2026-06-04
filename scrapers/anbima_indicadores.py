@@ -17,6 +17,8 @@ from bs4 import BeautifulSoup
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from utils import get_logger, agora_brt, nova_session, salvar_csv
+import pandas as pd
+from scrapers.utils.base import BaseScraper
 
 log = get_logger("anbima_indicadores")
 
@@ -178,12 +180,30 @@ def capturar() -> list[dict]:
     log.info(f"{len(registros)} indicadores capturados (ref: {data_ref_pag})")
     return registros
 
+class AnbimaIndicadoresScraper(BaseScraper):
+    name = "anbima_indicadores"
+    accumulate = True
+    chaves_dedup = ['data_captura', 'indicador']
+    
+    # Catálogo de Metadados
+    title = 'ANBIMA Indicadores'
+    description = 'Quadro completo de indicadores do mercado: taxa SELIC, DI-B3, índices de preços, câmbio e taxas de referência. Atualizado duas vezes ao dia.'
+    icon = '📊'
+    icon_class = 'icon-anbima'
+    badge = 'Diário · 2×'
+    badge_class = 'badge-daily'
+    tags = ['selic', 'di-b3', 'igp-m', 'ipca', 'dólar', 'euro', 'tr', 'tbf', 'fds']
+    source = 'ANBIMA'
 
-def main():
-    log.info("=== ANBIMA Indicadores ===")
-    salvar_csv(ARQUIVO, capturar(), CABECALHO,
-               chaves_dedup=["data_captura", "indicador"])
+    def fetch(self) -> pd.DataFrame:
+        log.info("=== ANBIMA Indicadores ===")
+        # Reordena para garantir o cabeçalho original
+        df = pd.DataFrame(capturar())
+        if not df.empty:
+            colunas = [c for c in CABECALHO if c in df.columns]
+            return df[colunas]
+        return df
 
 
 if __name__ == "__main__":
-    main()
+    AnbimaIndicadoresScraper().run()

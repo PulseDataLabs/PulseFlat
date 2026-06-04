@@ -13,6 +13,8 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from utils import get_logger, agora_brt, limpar, b64_encode_params, nova_session, salvar_csv
+import pandas as pd
+from scrapers.utils.base import BaseScraper
 
 log = get_logger("b3_carteiras")
 
@@ -153,12 +155,30 @@ def capturar() -> list[dict]:
         log.warning(f"Sem dados: {', '.join(erros)}")
     return todos
 
+class B3CarteirasScraper(BaseScraper):
+    name = "b3_carteiras"
+    accumulate = True
+    chaves_dedup = ['data_captura', 'indice', 'codigo_ativo']
+    
+    # Catálogo de Metadados
+    title = 'B3 Carteiras Teóricas'
+    description = 'Composição diária das carteiras teóricas dos 22 principais índices da B3. Permite acompanhar a evolução do peso de cada ativo ao longo do tempo e detectar entradas e saídas nas carteiras.'
+    icon = '🗂️'
+    icon_class = 'icon-b3'
+    badge = 'Diário · 22 índices'
+    badge_class = 'badge-daily'
+    tags = ['IBOV', 'IBRA', 'IBrX 100', 'IBrX 50', 'SMLL', 'IDIV', 'IFIX', 'IFNC', 'ICON', 'IEEX', 'IMAT', 'IMOB', 'INDX', 'UTIL', 'IGC', 'ISE', 'ICO2', '+ 5 índices']
+    source = 'B3 API · ~1.000 linhas/dia'
 
-def main():
-    log.info("=== B3 Carteiras Teóricas ===")
-    salvar_csv(ARQUIVO, capturar(), CABECALHO,
-               chaves_dedup=["data_captura", "indice", "codigo_ativo"])
+    def fetch(self) -> pd.DataFrame:
+        log.info("=== B3 Carteiras Teóricas ===")
+        # Reordena para garantir o cabeçalho original
+        df = pd.DataFrame(capturar())
+        if not df.empty:
+            colunas = [c for c in CABECALHO if c in df.columns]
+            return df[colunas]
+        return df
 
 
 if __name__ == "__main__":
-    main()
+    B3CarteirasScraper().run()

@@ -22,6 +22,8 @@ from lxml import html
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from utils import get_logger, agora_brt, limpar, salvar_csv
+import pandas as pd
+from scrapers.utils.base import BaseScraper
 
 log = get_logger("b3_futuros_ajustes")
 
@@ -145,12 +147,30 @@ def capturar() -> list[dict]:
     log.info(f"{len(registros)} ajustes capturados (ref: {data_ref}).")
     return registros
 
+class B3FuturosAjustesScraper(BaseScraper):
+    name = "b3_futuros_ajustes"
+    accumulate = True
+    chaves_dedup = ['data_captura', 'mercadoria', 'vencimento']
+    
+    # Catálogo de Metadados
+    title = 'B3 Futuros — Ajustes de Fechamento'
+    description = 'Preços de ajuste de fechamento diários para contratos futuros de juros (DI), dólar, índice Ibovespa e commodities.'
+    icon = '📉'
+    icon_class = 'icon-b3'
+    badge = 'Diário'
+    badge_class = 'badge-daily'
+    tags = ['futuros', 'ajustes', 'commodities', 'b3', 'bm&f']
+    source = 'B3'
 
-def main():
-    log.info("=== B3 Futuros — Ajustes de Fechamento ===")
-    salvar_csv(ARQUIVO, capturar(), CABECALHO,
-               chaves_dedup=["data_captura", "mercadoria", "vencimento"])
+    def fetch(self) -> pd.DataFrame:
+        log.info("=== B3 Futuros — Ajustes de Fechamento ===")
+        # Reordena para garantir o cabeçalho original
+        df = pd.DataFrame(capturar())
+        if not df.empty:
+            colunas = [c for c in CABECALHO if c in df.columns]
+            return df[colunas]
+        return df
 
 
 if __name__ == "__main__":
-    main()
+    B3FuturosAjustesScraper().run()

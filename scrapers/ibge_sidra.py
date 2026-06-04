@@ -20,6 +20,8 @@ import requests
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from utils import get_logger, agora_brt, limpar, salvar_csv
+import pandas as pd
+from scrapers.utils.base import BaseScraper
 
 log = get_logger("ibge_sidra")
 
@@ -123,13 +125,30 @@ def capturar() -> list[dict]:
     log.info(f"Total IBGE SIDRA: {len(todos)} registros.")
     return todos
 
+class IbgeSidraScraper(BaseScraper):
+    name = "ibge_sidra"
+    accumulate = False
+    chaves_dedup = ['data_captura', 'serie_id', 'periodo_referencia']
+    
+    # Catálogo de Metadados
+    title = 'IBGE SIDRA — Metadados'
+    description = 'Metadados das tabelas do IBGE SIDRA: IPCA, IPCA-15 e INPC — períodos disponíveis e datas de modificação.'
+    icon = '📊'
+    icon_class = 'icon-ibge'
+    badge = 'Diário'
+    badge_class = 'badge-daily'
+    tags = ['ipca', 'ipca-15', 'inpc']
+    source = 'IBGE · SIDRA'
 
-def main():
-    log.info("=== IBGE SIDRA — Metadados ===")
-    salvar_csv(ARQUIVO, capturar(), CABECALHO,
-               chaves_dedup=["data_captura", "serie_id", "periodo_referencia"],
-               acumular=False)
+    def fetch(self) -> pd.DataFrame:
+        log.info("=== IBGE SIDRA — Metadados ===")
+        # Reordena para garantir o cabeçalho original
+        df = pd.DataFrame(capturar())
+        if not df.empty:
+            colunas = [c for c in CABECALHO if c in df.columns]
+            return df[colunas]
+        return df
 
 
 if __name__ == "__main__":
-    main()
+    IbgeSidraScraper().run()

@@ -177,20 +177,6 @@
     "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/anbima_indice_imab.csv"
   },
   {
-    "title": "B3 Carteiras",
-    "file": "b3_carteiras.csv",
-    "description": "Sem descrição fornecida.",
-    "icon": "📊",
-    "iconClass": "icon-b3",
-    "badge": "Diário",
-    "badgeClass": "badge-daily",
-    "tags": [
-      "b3"
-    ],
-    "source": "B3",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_carteiras.csv"
-  },
-  {
     "title": "B3 Classificação Setorial",
     "file": "b3_classificacao_setorial.csv",
     "description": "Classificação setorial completa das empresas listadas na B3 (setor econômico, subsetor e segmento de atuação).",
@@ -205,34 +191,6 @@
     ],
     "source": "B3",
     "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_classificacao_setorial.csv"
-  },
-  {
-    "title": "B3 Etfs",
-    "file": "b3_etfs.csv",
-    "description": "Sem descrição fornecida.",
-    "icon": "📊",
-    "iconClass": "icon-b3",
-    "badge": "Diário",
-    "badgeClass": "badge-daily",
-    "tags": [
-      "b3"
-    ],
-    "source": "B3",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_etfs.csv"
-  },
-  {
-    "title": "B3 Fiis",
-    "file": "b3_fiis.csv",
-    "description": "Sem descrição fornecida.",
-    "icon": "📊",
-    "iconClass": "icon-b3",
-    "badge": "Diário",
-    "badgeClass": "badge-daily",
-    "tags": [
-      "b3"
-    ],
-    "source": "B3",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_fiis.csv"
   },
   {
     "title": "B3 Futuros — Ajustes de Fechamento",
@@ -416,6 +374,25 @@
   },
   {
     "title": "B3 ETFs Listados",
+    "file": "b3_etfs.csv",
+    "description": "ETFs de Renda Variável e Renda Fixa listados na B3, com índice de referência, administrador, gestor e patrimônio líquido.",
+    "icon": "📈",
+    "iconClass": "icon-b3",
+    "badge": "Diário",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "ticker",
+      "categoria_etf",
+      "índice_ref",
+      "gestor",
+      "renda variável",
+      "renda fixa"
+    ],
+    "source": "B3 API",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_etfs.csv"
+  },
+  {
+    "title": "B3 ETFs Listados",
     "file": "b3_etfs_listados.csv",
     "description": "ETFs de Renda Variável e Renda Fixa listados na B3, com índice de referência, administrador, gestor e patrimônio líquido.",
     "icon": "📈",
@@ -432,6 +409,25 @@
     ],
     "source": "B3 API",
     "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_etfs_listados.csv"
+  },
+  {
+    "title": "B3 FIIs Listados",
+    "file": "b3_fiis.csv",
+    "description": "Lista completa de Fundos de Investimento Imobiliário listados na B3, com dados cadastrais, administrador, segmento e patrimônio líquido.",
+    "icon": "🏢",
+    "iconClass": "icon-b3",
+    "badge": "Diário",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "ticker",
+      "cnpj",
+      "administrador",
+      "segmento",
+      "cotistas",
+      "patrimônio"
+    ],
+    "source": "B3 API",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_fiis.csv"
   },
   {
     "title": "B3 FIIs Listados",
@@ -540,6 +536,37 @@
   },
   {
     "title": "B3 Carteiras Teóricas",
+    "file": "b3_carteiras.csv",
+    "description": "Composição diária das carteiras teóricas dos 22 principais índices da B3. Permite acompanhar a evolução do peso de cada ativo ao longo do tempo e detectar entradas e saídas nas carteiras.",
+    "icon": "🗂️",
+    "iconClass": "icon-b3",
+    "badge": "Diário · 22 índices",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "IBOV",
+      "IBRA",
+      "IBrX 100",
+      "IBrX 50",
+      "SMLL",
+      "IDIV",
+      "IFIX",
+      "IFNC",
+      "ICON",
+      "IEEX",
+      "IMAT",
+      "IMOB",
+      "INDX",
+      "UTIL",
+      "IGC",
+      "ISE",
+      "ICO2",
+      "+ 5 índices"
+    ],
+    "source": "B3 API · ~1.000 linhas/dia",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_carteiras.csv"
+  },
+  {
+    "title": "B3 Carteiras Teóricas",
     "file": "b3_carteiras_teoricas.csv",
     "description": "Composição diária das carteiras teóricas dos 22 principais índices da B3. Permite acompanhar a evolução do peso de cada ativo ao longo do tempo e detectar entradas e saídas nas carteiras.",
     "icon": "🗂️",
@@ -623,20 +650,6 @@
     "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_bdi_di_over.csv"
   },
   {
-    "title": "Bacen Negociacao Tpf",
-    "file": "bacen_negociacao_tpf.csv",
-    "description": "Sem descrição fornecida.",
-    "icon": "📊",
-    "iconClass": "icon-bcb",
-    "badge": "Diário",
-    "badgeClass": "badge-daily",
-    "tags": [
-      "bcb"
-    ],
-    "source": "BCB",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/bacen_negociacao_tpf.csv"
-  },
-  {
     "title": "BCB PTAX",
     "file": "bcb_ptax.csv",
     "description": "Cotações históricas diárias oficiais de compra e venda do dólar comercial (USD/BRL) publicadas pelo Banco Central do Brasil.",
@@ -705,6 +718,23 @@
     ],
     "source": "BCB API (Olinda)",
     "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/bacen_parcelas_capital_basileia.csv"
+  },
+  {
+    "title": "BCB — Negociação TPF Extra-grupo",
+    "file": "bacen_negociacao_tpf.csv",
+    "description": "Operações de compra e venda de Títulos Públicos Federais extra-grupo realizadas no mercado aberto (BCB/DEMAB).",
+    "icon": "📋",
+    "iconClass": "icon-bcb",
+    "badge": "Diário",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "título público",
+      "compra/venda",
+      "quantidade",
+      "preço"
+    ],
+    "source": "BCB · DEMAB",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/bacen_negociacao_tpf.csv"
   },
   {
     "title": "BCB — Negociação TPF Extra-grupo",

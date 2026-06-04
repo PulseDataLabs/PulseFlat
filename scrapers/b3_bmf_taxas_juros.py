@@ -18,6 +18,8 @@ import requests
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from utils import get_logger, agora_brt, limpar, salvar_csv
+import pandas as pd
+from scrapers.utils.base import BaseScraper
 
 log = get_logger("b3_bmf_taxas_juros")
 
@@ -159,12 +161,30 @@ def capturar() -> list[dict]:
     log.info(f"{len(todos)} taxas swap capturadas via tabela '{tabela}' (ref: {data_ref}).")
     return todos
 
+class B3BmfTaxasJurosScraper(BaseScraper):
+    name = "b3_bmf_taxas_juros"
+    accumulate = True
+    chaves_dedup = ['data_captura', 'data_referencia', 'curva', 'prazo_dias']
+    
+    # Catálogo de Metadados
+    title = 'B3 BDI — Taxas de Swap'
+    description = 'Taxas de mercado e de referência para swaps e taxas referenciais da BM&F por prazo em dias corridos e úteis.'
+    icon = '📊'
+    icon_class = 'icon-b3'
+    badge = 'Diário'
+    badge_class = 'badge-daily'
+    tags = ['taxas', 'swap', 'juros', 'bm&f', 'curva']
+    source = 'B3 BDI'
 
-def main():
-    log.info("=== B3 BM&F — Taxas de Mercado para Swaps ===")
-    salvar_csv(ARQUIVO, capturar(), CABECALHO,
-               chaves_dedup=["data_captura", "data_referencia", "curva", "prazo_dias"])
+    def fetch(self) -> pd.DataFrame:
+        log.info("=== B3 BM&F — Taxas de Mercado para Swaps ===")
+        # Reordena para garantir o cabeçalho original
+        df = pd.DataFrame(capturar())
+        if not df.empty:
+            colunas = [c for c in CABECALHO if c in df.columns]
+            return df[colunas]
+        return df
 
 
 if __name__ == "__main__":
-    main()
+    B3BmfTaxasJurosScraper().run()
