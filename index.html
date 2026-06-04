@@ -1434,41 +1434,11 @@
       <button class="filter-btn" data-source="misc">⚡ Outros</button>
     </div>
 
-        <div class="card-footer">
-          <span class="card-source">Fonte: CVM</span>
-          <a href="https://raw.githubusercontent.com/royopa/PulseFlat/main/data/registro_fundo_classe.csv" class="download-btn" target="_blank">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
-            Download CSV
-          </a>
-        </div>
+    <div class="datasets-grid reveal" id="datasets-container">
+      <div style="grid-column: 1 / -1; text-align: center; padding: 3rem; color: var(--text2);">
+        <p>Carregando catálogo de datasets...</p>
       </div>
-
-      <!-- CVM Informe Diário de Fundos -->
-      <div class="dataset-card">
-        <div class="card-top">
-          <div class="card-icon icon-cvm">📋</div>
-          <span class="card-badge badge-daily">Diário</span>
-        </div>
-        <div class="card-title">CVM — Informe Diário de Fundos</div>
-        <div class="card-file">cvm_fundos_informe_diario.csv</div>
-        <div class="card-desc">
-          Desempenho diário de fundos de investimento: valor da cota, PL, captações, resgates e cotistas.
-        </div>
-        <div class="card-fields">
-          <span class="field-tag">fundos</span>
-          <span class="field-tag">cota</span>
-          <span class="field-tag">patrimônio</span>
-          <span class="field-tag">captação</span>
-          <span class="field-tag">resgate</span>
-        </div>
-        <div class="card-footer">
-          <span class="card-source">Fonte: CVM</span>
-          <a href="https://raw.githubusercontent.com/royopa/PulseFlat/main/data/cvm_fundos_informe_diario.csv" class="download-btn" target="_blank">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
-            Download CSV
-          </a>
-        </div>
-      </div>
+    </div>
     </div>
   </div>
 </section>
@@ -1600,6 +1570,77 @@
   let activeSourceFilter = 'all';
   let activeSearchQuery = '';
   let activeSchemaSearchQuery = '';
+  let allDatasets = [];
+
+  // Load datasets dynamically from datasets.json and render them
+  async function loadAndRenderDatasets() {
+    try {
+      const response = await fetch('./data/datasets.json');
+      if (response.ok) {
+        allDatasets = await response.json();
+        renderDatasets();
+      } else {
+        throw new Error('Falha ao carregar datasets.json');
+      }
+    } catch (err) {
+      console.error('Erro ao carregar datasets.json:', err);
+      const container = document.getElementById('datasets-container');
+      if (container) {
+        container.innerHTML = `<div style="grid-column: 1 / -1; text-align: center; padding: 3rem; color: var(--red);">Erro ao carregar catálogo de datasets.</div>`;
+      }
+    }
+  }
+
+  function renderDatasets() {
+    const container = document.getElementById('datasets-container');
+    if (!container) return;
+
+    if (allDatasets.length === 0) {
+      container.innerHTML = `<div style="grid-column: 1 / -1; text-align: center; padding: 3rem; color: var(--text2);">Nenhum dataset encontrado.</div>`;
+      return;
+    }
+
+    let html = '';
+    allDatasets.forEach(dataset => {
+      let cardClass = '';
+      const lowerFile = dataset.file.toLowerCase();
+      if (lowerFile.startsWith('anbima_') || lowerFile.startsWith('debentures_')) {
+        cardClass = 'anbima-card';
+      } else if (lowerFile.startsWith('b3_')) {
+        cardClass = 'b3-card';
+      }
+
+      const tagsHtml = (dataset.tags || []).map(t => `<span class="field-tag">${t}</span>`).join('');
+      const badgeClass = dataset.badgeClass || 'badge-daily';
+      const badgeText = dataset.badge || 'Diário';
+      const iconClass = dataset.iconClass || '';
+      const iconText = dataset.icon || '📊';
+
+      html += `
+        <div class="dataset-card ${cardClass}">
+          <div class="card-top">
+            <div class="card-icon ${iconClass}">${iconText}</div>
+            <span class="card-badge ${badgeClass}">${badgeText}</span>
+          </div>
+          <div class="card-title">${dataset.title}</div>
+          <div class="card-file">${dataset.file}</div>
+          <div class="card-desc">${dataset.description || 'Sem descrição.'}</div>
+          <div class="card-fields">
+            ${tagsHtml}
+          </div>
+          <div class="card-footer">
+            <span class="card-source">Fonte: ${dataset.source || 'Desconhecida'}</span>
+            <a href="${dataset.url}" class="download-btn" target="_blank">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+              Download CSV
+            </a>
+          </div>
+        </div>
+      `;
+    });
+
+    container.innerHTML = html;
+  }
   // Reveal on scroll
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry, i) => {
@@ -2060,6 +2101,7 @@
   }
 
   document.addEventListener('DOMContentLoaded', async () => {
+    await loadAndRenderDatasets();
     await loadLastUpdates();
     await loadSchemas();
     initDatasetFilters();
