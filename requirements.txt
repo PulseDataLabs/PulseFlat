@@ -9,3 +9,4 @@ PyYAML
 pytest
 requests-mock
 pandas
+curl-cffi

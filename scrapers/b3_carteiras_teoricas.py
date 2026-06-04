@@ -1,5 +1,5 @@
 """
-scrapers/b3_carteiras.py
+scrapers/b3_carteiras_teoricas.py
 ------------------------
 Captura a composição das carteiras teóricas dos principais índices da B3.
 
@@ -16,7 +16,7 @@ from utils import get_logger, agora_brt, limpar, b64_encode_params, nova_session
 import pandas as pd
 from scrapers.utils.base import BaseScraper
 
-log = get_logger("b3_carteiras")
+log = get_logger("b3_carteiras_teoricas")
 
 BASE_URL  = "https://sistemaswebb3-listados.b3.com.br/indexProxy/indexCall/GetPortfolioDay/"
 PAGE_SIZE = 120
@@ -155,8 +155,8 @@ def capturar() -> list[dict]:
         log.warning(f"Sem dados: {', '.join(erros)}")
     return todos
 
-class B3CarteirasScraper(BaseScraper):
-    name = "b3_carteiras"
+class B3CarteirasTeoricasScraper(BaseScraper):
+    name = "b3_carteiras_teoricas"
     group = "b3"
     enabled = True
     phase = 1
@@ -184,4 +184,4 @@ class B3CarteirasScraper(BaseScraper):
 
 
 if __name__ == "__main__":
-    B3CarteirasScraper().run()
+    B3CarteirasTeoricasScraper().run()

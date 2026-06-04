@@ -87,10 +87,11 @@ class InvestingEtfScraper(BaseScraper):
     accumulate = False
 
     def fetch(self) -> pd.DataFrame:
+        from curl_cffi import requests
         session = requests.Session()
 
         self.logger.info(f"Acessando {URL}")
-        resp = session.get(URL, headers=HEADERS, timeout=60)
+        resp = session.get(URL, headers=HEADERS, impersonate="chrome", timeout=60)
         resp.raise_for_status()
 
         df = _parse_html_table(resp.text)

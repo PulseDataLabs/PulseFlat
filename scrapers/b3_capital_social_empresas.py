@@ -92,7 +92,7 @@ class B3CapitalSocialEmpresasScraper(BaseScraper):
         # Reordena para garantir o cabeçalho original
         df = pd.DataFrame(rows)
         if not df.empty:
-            colunas = [c for c in CABECALHO if c in df.columns]
+            colunas = [c for c in header if c in df.columns]
             return df[colunas]
         return df
 
