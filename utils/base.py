@@ -222,6 +222,99 @@ def salvar_csv(
     except Exception as e:
         log.warning(f"Não foi possível atualizar last_updates.json/js: {e}")
 
+    # Atualiza data/schemas.json com a estrutura mais recente deste arquivo
+    try:
+        import re
+        schemas_path = arquivo.parent / "schemas.json"
+        schemas = []
+        if schemas_path.exists():
+            try:
+                with schemas_path.open("r", encoding="utf-8") as sf:
+                    schemas = json.load(sf)
+            except Exception:
+                pass
+
+        # Identifica o tipo dos campos com base no nome
+        def get_type_badge(col_name):
+            col_name = col_name.lower()
+            if col_name.startswith("dt_") or col_name.endswith("_dt") or "data" in col_name or "date" in col_name:
+                return "date"
+            if col_name.startswith("vr_") or col_name.startswith("vl_") or col_name.endswith("_val") or "preco" in col_name or "taxa" in col_name or "saldo" in col_name or "patrimonio" in col_name or col_name in ("ret_dia_perc", "ret_mes_perc", "ret_ano_perc", "ret_12_meses_perc", "vol_aa_perc", "taxa_juros_aa_perc_compra_d1", "taxa_juros_aa_perc_venda_d0"):
+                return "float"
+            if col_name.startswith("qt_") or col_name.startswith("nr_") or "quantidade" in col_name or "numero" in col_name or col_name in ("id_registro_fundo", "id_registro_classe", "prazo", "prazo_dias", "Ordem", "page_number"):
+                return "int"
+            return "str"
+
+        # Colunas úteis
+        filtered_cols = [c for c in cabecalho if c not in ("conjunto", "arquivo_origem", "registro_hash", "dt_captura")]
+        
+        # Pega a primeira linha como exemplo
+        first_reg = registros[0] if registros else {}
+        fields = []
+        for c in filtered_cols:
+            t_badge = get_type_badge(c)
+            ex_val = str(first_reg.get(c, ""))
+            if ex_val == "nan" or ex_val == "None":
+                ex_val = ""
+            fields.append({
+                "name": c,
+                "type": t_badge,
+                "example": ex_val
+            })
+
+        # Procura a entrada correspondente no schemas.json
+        found = False
+        for s in schemas:
+            files_declared = [f.strip() for f in re.split(r'·| e ', s.get("files", ""))]
+            if arquivo.name in files_declared:
+                if len(files_declared) > 1:
+                    # Mescla: preserva os campos existentes pertencentes a outros arquivos no grupo
+                    new_names = {f["name"] for f in fields}
+                    merged_fields = fields.copy()
+                    for existing_field in s.get("fields", []):
+                        if existing_field["name"] not in new_names:
+                            merged_fields.append(existing_field)
+                    s["fields"] = merged_fields
+                else:
+                    s["fields"] = fields
+                found = True
+                break
+
+        if not found:
+            # Adiciona nova entrada
+            def get_source_from_filename(filename: str) -> str:
+                filename = filename.lower()
+                if filename.startswith('anbima_'):
+                    return 'anbima'
+                elif filename.startswith('b3_'):
+                    return 'b3'
+                elif filename.startswith('bcb_') or filename.startswith('bacen_'):
+                    return 'bcb'
+                elif filename.startswith('cvm_') or filename.startswith('registro_'):
+                    return 'cvm'
+                elif filename.startswith('ibge_'):
+                    return 'ibge'
+                elif filename.startswith('debentures_'):
+                    return 'debentures'
+                elif filename.startswith('s_p_') or filename.startswith('moodys_'):
+                    return 'ratings'
+                elif filename.startswith('yahoo_') or filename.startswith('investing_') or filename.startswith('onu_'):
+                    return 'misc'
+                return 'other'
+
+            guessed_title = arquivo.name.replace(".csv", "").replace("_", " ").title()
+            schemas.append({
+                "title": guessed_title,
+                "files": arquivo.name,
+                "source": get_source_from_filename(arquivo.name),
+                "fields": fields
+            })
+
+        with schemas_path.open("w", encoding="utf-8") as sf:
+            json.dump(schemas, sf, indent=2, ensure_ascii=False)
+    except Exception as e:
+        log.warning(f"Não foi possível atualizar schemas.json: {e}")
+
     log.info(
         f"CSV atualizado → {arquivo} | "
         f"{len(registros)} novos registros salvos"

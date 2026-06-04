@@ -489,22 +489,22 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-05-30"
+        "example": "2026-06-04"
       },
       {
         "name": "data_hora_cotacao",
-        "type": "str",
-        "example": "2026-05-29 13:30:00"
+        "type": "date",
+        "example": "2020-01-02 13:11:10.762"
       },
       {
         "name": "cotacao_compra",
-        "type": "float",
-        "example": "5.02"
+        "type": "str",
+        "example": "4.0207"
       },
       {
         "name": "cotacao_venda",
-        "type": "float",
-        "example": "5.03"
+        "type": "str",
+        "example": "4.0213"
       },
       {
         "name": "codigo_serie",
