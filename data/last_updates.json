@@ -37,7 +37,7 @@
   },
   "anbima_indice_imab.csv": {
     "min": "2026-06-01",
-    "max": "2026-06-03"
+    "max": "2026-06-04"
   },
   "debentures_emissoes_caracteristicas.csv": {
     "min": "2026-06-04",
@@ -69,7 +69,7 @@
   },
   "b3_carteiras_teoricas.csv": {
     "min": "2026-06-01",
-    "max": "2026-06-03"
+    "max": "2026-06-04"
   },
   "cvm_cadastro_companhias_abertas.csv": {
     "min": "2026-06-03",
@@ -164,8 +164,8 @@
     "max": "2026-06-04"
   },
   "s_p_ratings_brasil.csv": {
-    "min": "2026-06-03",
-    "max": "2026-06-03"
+    "min": "2026-06-04",
+    "max": "2026-06-04"
   },
   "s_p_acoes_ratings.csv": {
     "min": "2026-06-04",
@@ -176,8 +176,8 @@
     "max": "2026-06-04"
   },
   "moodys_local_ratings.csv": {
-    "min": "2026-06-03",
-    "max": "2026-06-03"
+    "min": "2026-06-04",
+    "max": "2026-06-04"
   },
   "onu_pacto_global.csv": {
     "min": "2026-06-04",
@@ -200,6 +200,14 @@
     "max": "2026-06-04"
   },
   "b3_etfs.csv": {
+    "min": "2026-06-04",
+    "max": "2026-06-04"
+  },
+  "b3_bmf_taxas_juros.csv": {
+    "min": "2026-06-04",
+    "max": "2026-06-04"
+  },
+  "fitch_ratings_brasil.csv": {
     "min": "2026-06-04",
     "max": "2026-06-04"
   }

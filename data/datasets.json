@@ -651,37 +651,6 @@
   },
   {
     "title": "B3 Carteiras Teóricas",
-    "file": "b3_carteiras.csv",
-    "description": "Composição diária das carteiras teóricas dos 22 principais índices da B3. Permite acompanhar a evolução do peso de cada ativo ao longo do tempo e detectar entradas e saídas nas carteiras.",
-    "icon": "🗂️",
-    "iconClass": "icon-b3",
-    "badge": "Diário · 22 índices",
-    "badgeClass": "badge-daily",
-    "tags": [
-      "IBOV",
-      "IBRA",
-      "IBrX 100",
-      "IBrX 50",
-      "SMLL",
-      "IDIV",
-      "IFIX",
-      "IFNC",
-      "ICON",
-      "IEEX",
-      "IMAT",
-      "IMOB",
-      "INDX",
-      "UTIL",
-      "IGC",
-      "ISE",
-      "ICO2",
-      "+ 5 índices"
-    ],
-    "source": "B3 API · ~1.000 linhas/dia",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_carteiras.csv"
-  },
-  {
-    "title": "B3 Carteiras Teóricas",
     "file": "b3_carteiras_teoricas.csv",
     "description": "Composição diária das carteiras teóricas dos 22 principais índices da B3. Permite acompanhar a evolução do peso de cada ativo ao longo do tempo e detectar entradas e saídas nas carteiras.",
     "icon": "🗂️",
@@ -710,6 +679,37 @@
     ],
     "source": "B3 API · ~1.000 linhas/dia",
     "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_carteiras_teoricas.csv"
+  },
+  {
+    "title": "B3 Carteiras Teóricas",
+    "file": "b3_carteiras.csv",
+    "description": "Composição diária das carteiras teóricas dos 22 principais índices da B3. Permite acompanhar a evolução do peso de cada ativo ao longo do tempo e detectar entradas e saídas nas carteiras.",
+    "icon": "🗂️",
+    "iconClass": "icon-b3",
+    "badge": "Diário · 22 índices",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "IBOV",
+      "IBRA",
+      "IBrX 100",
+      "IBrX 50",
+      "SMLL",
+      "IDIV",
+      "IFIX",
+      "IFNC",
+      "ICON",
+      "IEEX",
+      "IMAT",
+      "IMOB",
+      "INDX",
+      "UTIL",
+      "IGC",
+      "ISE",
+      "ICO2",
+      "+ 5 índices"
+    ],
+    "source": "B3 API · ~1.000 linhas/dia",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_carteiras.csv"
   },
   {
     "title": "B3 BDI — Negócios de Ações",
@@ -937,6 +937,24 @@
     ],
     "source": "CVM · Dados Abertos",
     "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/cvm_cadastro_companhias_abertas.csv"
+  },
+  {
+    "title": "Fitch Ratings — Emissores Brasil",
+    "file": "fitch_ratings_brasil.csv",
+    "description": "Ratings de crédito de longo e curto prazo atribuídos pela Fitch Ratings a emissores corporativos, financeiros e soberanos no Brasil.",
+    "icon": "📊",
+    "iconClass": "icon-fitch",
+    "badge": "Diário",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "ratings",
+      "fitch",
+      "crédito",
+      "emissores",
+      "corporativos"
+    ],
+    "source": "Fitch Ratings",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/fitch_ratings_brasil.csv"
   },
   {
     "title": "IBGE SIDRA — Metadados",

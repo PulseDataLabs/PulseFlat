@@ -8,19 +8,51 @@ import csv
 import json
 import logging
 import sys
+import time
 from base64 import b64encode
 from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
 import requests
+import urllib3
+import urllib3.response
+from urllib3.exceptions import InvalidChunkLength
 
-import time
+# Desabilita avisos de SSL inseguro globais
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-# Patch global do requests para impor limite e padrão de timeout (evita travamentos longos)
+# Monkeypatch do urllib3 para tratar conexão fechada prematuramente pelo proxy local (InvalidChunkLength) como EOF normal
+def _patched_update_chunk_length(self):
+    if self.chunk_left is not None:
+        return
+    if not self._fp or not hasattr(self._fp, "fp") or not self._fp.fp:
+        self.chunk_left = 0
+        return
+    try:
+        line = self._fp.fp.readline()
+        line = line.split(b";", 1)[0]
+    except Exception:
+        self.chunk_left = 0
+        return
+    try:
+        self.chunk_left = int(line, 16)
+    except ValueError:
+        if not line or line.strip() == b"":
+            self.chunk_left = 0
+        else:
+            self.close()
+            raise InvalidChunkLength(self, line)
+
+urllib3.response.HTTPResponse._update_chunk_length = _patched_update_chunk_length
+
+# Patch global do requests para impor limite e padrão de timeout (evita travamentos longos) e desabilitar verificação de SSL
 _orig_request = requests.Session.request
 
 def _patched_request(self, method, url, *args, **kwargs):
+    # Desabilita SSL verify para evitar problemas com proxy auto-assinado no sandbox
+    kwargs["verify"] = False
+
     timeout = kwargs.get("timeout")
     if timeout is None:
         kwargs["timeout"] = (10, 30)

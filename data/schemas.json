@@ -148,7 +148,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-05-30"
+        "example": "2026-06-04"
       },
       {
         "name": "indice",
@@ -163,22 +163,37 @@
       {
         "name": "codigo_ativo",
         "type": "str",
-        "example": "PETR4"
+        "example": "ALOS3"
+      },
+      {
+        "name": "nome_ativo",
+        "type": "str",
+        "example": "ALLOS"
       },
       {
         "name": "tipo_ativo",
         "type": "str",
-        "example": "PN"
+        "example": "ON      NM"
       },
       {
         "name": "quantidade_teorica",
-        "type": "float",
-        "example": "529660608"
+        "type": "int",
+        "example": "478558715"
       },
       {
         "name": "participacao_pct",
-        "type": "float",
-        "example": "6.854"
+        "type": "str",
+        "example": "0.552"
+      },
+      {
+        "name": "reducao_capital",
+        "type": "str",
+        "example": ""
+      },
+      {
+        "name": "segmento",
+        "type": "str",
+        "example": ""
       }
     ]
   },
@@ -195,12 +210,12 @@
       {
         "name": "indice",
         "type": "str",
-        "example": "ISEE"
+        "example": "AGFS"
       },
       {
         "name": "indice_nome",
         "type": "str",
-        "example": "ISEE"
+        "example": "AGFS"
       },
       {
         "name": "codigo_ativo",
@@ -220,12 +235,12 @@
       {
         "name": "quantidade_teorica",
         "type": "int",
-        "example": "196230382"
+        "example": "216464847"
       },
       {
         "name": "participacao_pct",
         "type": "str",
-        "example": "0.361"
+        "example": "3.864"
       },
       {
         "name": "reducao_capital",
@@ -1371,27 +1386,57 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-05-30"
+        "example": "2026-06-04"
       },
       {
-        "name": "data",
+        "name": "data_de_refer_ncia",
         "type": "date",
-        "example": "2026-05-29"
+        "example": "2001-12-04 00:00:00"
       },
       {
-        "name": "indice",
+        "name": "duration_d_u",
         "type": "str",
-        "example": "IMA-B"
+        "example": ""
       },
       {
-        "name": "numero",
-        "type": "float",
-        "example": "4521.89"
+        "name": "n_mero_ndice",
+        "type": "str",
+        "example": "532.621995"
       },
       {
-        "name": "variacao",
-        "type": "float",
-        "example": "0.12"
+        "name": "ndice",
+        "type": "str",
+        "example": "IMA-GERAL"
+      },
+      {
+        "name": "pmr",
+        "type": "str",
+        "example": ""
+      },
+      {
+        "name": "varia_o_12_meses",
+        "type": "str",
+        "example": ""
+      },
+      {
+        "name": "varia_o_24_meses",
+        "type": "str",
+        "example": ""
+      },
+      {
+        "name": "varia_o_di_ria",
+        "type": "str",
+        "example": "0.0708"
+      },
+      {
+        "name": "varia_o_no_ano",
+        "type": "str",
+        "example": ""
+      },
+      {
+        "name": "varia_o_no_m_s",
+        "type": "str",
+        "example": ""
       }
     ]
   },
@@ -2084,22 +2129,22 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-06-03"
+        "example": "2026-06-04"
       },
       {
         "name": "tabela_origem",
         "type": "str",
-        "example": "SwapRates"
+        "example": "DerivativesMarketSwapRates"
       },
       {
         "name": "data_referencia",
         "type": "date",
-        "example": "2026-06-02"
+        "example": "2026-06-03"
       },
       {
         "name": "curva",
         "type": "str",
-        "example": "PRExDI"
+        "example": "DI1"
       },
       {
         "name": "prazo_dias",
@@ -2109,7 +2154,7 @@
       {
         "name": "taxa",
         "type": "float",
-        "example": "14.15"
+        "example": "13.65"
       },
       {
         "name": "base",
@@ -2739,7 +2784,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-06-03"
+        "example": "2026-06-04"
       },
       {
         "name": "Tipo de Rating",
@@ -2753,12 +2798,12 @@
       },
       {
         "name": "Data da Ação de Rating",
-        "type": "str",
+        "type": "date",
         "example": "2026-04-20"
       },
       {
         "name": "Data da ÚltimaRevisão",
-        "type": "str",
+        "type": "date",
         "example": "2026-04-20"
       },
       {
@@ -2773,7 +2818,7 @@
       },
       {
         "name": "Data do CreditWatch/ Perspectiva",
-        "type": "str",
+        "type": "date",
         "example": "2026-04-20"
       },
       {
@@ -2784,7 +2829,7 @@
       {
         "name": "link",
         "type": "str",
-        "example": "https://brazil.ratings.spglobal.com/r..."
+        "example": "https://brazil.ratings.spglobal.com/ratings/pt/regulatory/org-details/sectorCode/UTIL/entityId/1001151"
       }
     ]
   },
@@ -2863,7 +2908,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-06-03"
+        "example": "2026-06-04"
       },
       {
         "name": "no_setor",
@@ -2878,17 +2923,17 @@
       {
         "name": "no_tipo_rating",
         "type": "str",
-        "example": "Avaliações de Qualidade de Gestor de ..."
+        "example": "Avaliações de Qualidade de Gestor de Investimentos"
       },
       {
         "name": "de_instrumento",
         "type": "str",
-        "example": ""
+        "example": "N/A"
       },
       {
         "name": "de_objeto",
         "type": "str",
-        "example": "Avaliação de Qualidade de Gestor de I..."
+        "example": "Avaliação de Qualidade de Gestor de Investimentos (MQ)"
       },
       {
         "name": "de_rating_br",
@@ -2908,7 +2953,7 @@
       {
         "name": "dh_atu_arquivo",
         "type": "str",
-        "example": "2026-06-03"
+        "example": "2026-06-04"
       }
     ]
   },
@@ -3194,6 +3239,53 @@
         "name": "patrimonio_liquido",
         "type": "float",
         "example": ""
+      }
+    ]
+  },
+  {
+    "title": "Fitch Ratings Brasil",
+    "files": "fitch_ratings_brasil.csv",
+    "source": "other",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-06-04"
+      },
+      {
+        "name": "nome",
+        "type": "str",
+        "example": "Petróleo Brasileiro S.A. - Petrobras"
+      },
+      {
+        "name": "link",
+        "type": "str",
+        "example": "https://www.fitchratings.com/entity/petroleo-brasileiro-sa-petrobras-80124508"
+      },
+      {
+        "name": "Tipo de Rating",
+        "type": "str",
+        "example": "Local Currency LT"
+      },
+      {
+        "name": "Rating",
+        "type": "str",
+        "example": "BB"
+      },
+      {
+        "name": "Data da Ação de Rating",
+        "type": "date",
+        "example": "2025-11-12"
+      },
+      {
+        "name": "CreditWatch/ Perspectiva",
+        "type": "str",
+        "example": "Estável"
+      },
+      {
+        "name": "Data do CreditWatch/ Perspectiva",
+        "type": "date",
+        "example": "2025-11-12"
       }
     ]
   }

@@ -150,7 +150,7 @@ def capturar() -> list[dict]:
 class B3FuturosAjustesScraper(BaseScraper):
     name = "b3_futuros_ajustes"
     group = "b3"
-    enabled = True
+    enabled = False
     phase = 1
     accumulate = True
     chaves_dedup = ['data_captura', 'mercadoria', 'vencimento']
