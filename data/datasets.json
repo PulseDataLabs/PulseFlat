@@ -939,24 +939,6 @@
     "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/cvm_cadastro_companhias_abertas.csv"
   },
   {
-    "title": "Fitch Ratings — Emissores Brasil",
-    "file": "fitch_ratings_brasil.csv",
-    "description": "Ratings de crédito de longo e curto prazo atribuídos pela Fitch Ratings a emissores corporativos, financeiros e soberanos no Brasil.",
-    "icon": "📊",
-    "iconClass": "icon-fitch",
-    "badge": "Diário",
-    "badgeClass": "badge-daily",
-    "tags": [
-      "ratings",
-      "fitch",
-      "crédito",
-      "emissores",
-      "corporativos"
-    ],
-    "source": "Fitch Ratings",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/fitch_ratings_brasil.csv"
-  },
-  {
     "title": "IBGE SIDRA — Metadados",
     "file": "ibge_sidra.csv",
     "description": "Metadados das tabelas do IBGE SIDRA: IPCA, IPCA-15 e INPC — períodos disponíveis e datas de modificação.",
@@ -988,76 +970,6 @@
     ],
     "source": "Investing.com",
     "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/investing_etf.csv"
-  },
-  {
-    "title": "Moody's Local — Classificações Vigentes",
-    "file": "moodys_local_ratings.csv",
-    "description": "Classificações de risco de crédito (ratings) vigentes e perspectivas locais emitidas pela Moody's Local para emissores brasileiros.",
-    "icon": "📊",
-    "iconClass": "icon-ratings",
-    "badge": "Diário",
-    "badgeClass": "badge-daily",
-    "tags": [
-      "ratings",
-      "moody's",
-      "risco",
-      "crédito",
-      "perspectiva"
-    ],
-    "source": "Moody's Local",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/moodys_local_ratings.csv"
-  },
-  {
-    "title": "S&P Global — Ações de Ratings",
-    "file": "s_p_acoes_ratings.csv",
-    "description": "Histórico das últimas ações de rating publicadas pela S&P Global (elevações, rebaixamentos e revisões) para o Brasil.",
-    "icon": "📊",
-    "iconClass": "icon-ratings",
-    "badge": "Diário",
-    "badgeClass": "badge-daily",
-    "tags": [
-      "ratings",
-      "ações",
-      "revisão",
-      "s&p",
-      "crédito"
-    ],
-    "source": "S&P Global",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/s_p_acoes_ratings.csv"
-  },
-  {
-    "title": "S&P Global — Entidades Brasil",
-    "file": "s_p_entidades_brasil.csv",
-    "description": "Lista de entidades e emissores corporativos do mercado brasileiro avaliados e monitorados pela S&P Global.",
-    "icon": "📊",
-    "iconClass": "icon-ratings",
-    "badge": "Diário",
-    "badgeClass": "badge-daily",
-    "tags": [
-      "s&p",
-      "entidades",
-      "emissores",
-      "cadastro"
-    ],
-    "source": "S&P Global",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/s_p_entidades_brasil.csv"
-  },
-  {
-    "title": "S&P Global — Ratings Brasil",
-    "file": "s_p_ratings_brasil.csv",
-    "description": "Classificações de risco de crédito (ratings) e perspectivas na Escala Nacional Brasil vigentes pela S&P Global.",
-    "icon": "📊",
-    "iconClass": "icon-ratings",
-    "badge": "Diário",
-    "badgeClass": "badge-daily",
-    "tags": [
-      "ratings",
-      "risco",
-      "s&p",
-      "crédito"
-    ],
-    "source": "S&P Global",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/s_p_ratings_brasil.csv"
   },
   {
     "title": "Debêntures - Características de Emissões",

@@ -35,8 +35,6 @@ def get_source_class(source_name: str) -> str:
         return "icon-cvm"
     if "ibge" in src:
         return "icon-ibge"
-    if "ratings" in src or "s&p" in src or "moody" in src:
-        return "icon-ratings"
     return "icon-misc"
 
 

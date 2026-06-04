@@ -273,9 +273,6 @@ def main(group: Optional[str] = None, scraper: Optional[str] = None, parallel: b
     # Executa Fase 2
     if phase2_targets:
         logger.info(f"=== FASE 2: Executando {len(phase2_targets)} scrapers dependentes ===")
-        if "s_p_entidades_brasil" in results and not results["s_p_entidades_brasil"][0]:
-            logger.warning("Aviso: s_p_entidades_brasil falhou na Fase 1. A Fase 2 pode falhar ou usar dados antigos.")
-            
         phase2_results = run_scrapers_subset(phase2_targets, parallel, max_workers)
         results.update(phase2_results)
 

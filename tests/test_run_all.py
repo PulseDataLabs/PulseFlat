@@ -23,7 +23,6 @@ def test_discover_scrapers_structure():
     # Valida se alguns dos scrapers principais estão presentes
     assert "bcb_ptax" in scrapers
     assert "bcb_sgs" in scrapers
-    assert "s_p_ratings_brasil" in scrapers
     
     # Valida estrutura de chaves internas
     for module_name, info in scrapers.items():
@@ -42,8 +41,6 @@ def test_discover_scrapers_phases():
     """Garante que as fases de precedência de dependências foram carregadas corretamente."""
     scrapers = discover_scrapers()
     
-    # S&P Ratings Brasil deve ser da Fase 2 (depende de S&P Entidades)
-    assert scrapers["s_p_ratings_brasil"]["phase"] == 2
-    
-    # Outros scrapers normais (como bcb_ptax) devem ser da Fase 1
-    assert scrapers["bcb_ptax"]["phase"] == 1
+    # Todos os scrapers remanescentes devem ser da Fase 1
+    for name, info in scrapers.items():
+        assert info["phase"] == 1

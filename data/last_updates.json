@@ -155,28 +155,12 @@
     "min": "2026-06-03",
     "max": "2026-06-04"
   },
-  "s_p_entidades_brasil.csv": {
-    "min": "2026-06-04",
-    "max": "2026-06-04"
-  },
   "investing_etf.csv": {
-    "min": "2026-06-04",
-    "max": "2026-06-04"
-  },
-  "s_p_ratings_brasil.csv": {
-    "min": "2026-06-04",
-    "max": "2026-06-04"
-  },
-  "s_p_acoes_ratings.csv": {
     "min": "2026-06-04",
     "max": "2026-06-04"
   },
   "bacen_negociacao_tpf_extragrupo.csv": {
     "min": "2026-06-03",
-    "max": "2026-06-04"
-  },
-  "moodys_local_ratings.csv": {
-    "min": "2026-06-04",
     "max": "2026-06-04"
   },
   "onu_pacto_global.csv": {
@@ -204,10 +188,6 @@
     "max": "2026-06-04"
   },
   "b3_bmf_taxas_juros.csv": {
-    "min": "2026-06-04",
-    "max": "2026-06-04"
-  },
-  "fitch_ratings_brasil.csv": {
     "min": "2026-06-04",
     "max": "2026-06-04"
   }
