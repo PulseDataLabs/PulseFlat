@@ -85,6 +85,16 @@ class SPAcoesRatingsScraper(BaseScraper):
         self.logger.info(f"Acessando {BASE_URL}")
 
         resp = session.get(BASE_URL, params=PARAMS, headers=HEADERS, timeout=60)
+
+        if resp.status_code == 403:
+            self.logger.warning(
+                "Acesso bloqueado (403 Forbidden) pela S&P Global. "
+                "O site exige autenticação ou bloqueia bots. "
+                "Configure USER_STANDARDPOORS / PASS_STANDARDPOORS ou "
+                "utilize Playwright/Selenium."
+            )
+            return pd.DataFrame()
+
         resp.raise_for_status()
 
         df = _parse_table(resp.text)

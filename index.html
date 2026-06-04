@@ -636,6 +636,20 @@
       box-shadow: 0 0 15px rgba(240, 180, 41, 0.15);
     }
 
+    .filter-btn.active[data-source="ratings"] {
+      background: rgba(187, 134, 252, 0.1);
+      border-color: #bb86fc;
+      color: #bb86fc;
+      box-shadow: 0 0 15px rgba(187, 134, 252, 0.15);
+    }
+
+    .filter-btn.active[data-source="misc"] {
+      background: rgba(0, 229, 160, 0.1);
+      border-color: var(--green);
+      color: var(--green);
+      box-shadow: 0 0 15px rgba(0, 229, 160, 0.15);
+    }
+
     .dataset-card.filtered-out {
       display: none !important;
     }
@@ -684,6 +698,8 @@
     .icon-bcb    { background: rgba(0,229,160,0.08); border: 1px solid rgba(0,229,160,0.15); }
     .icon-ibge   { background: rgba(187,134,252,0.08); border: 1px solid rgba(187,134,252,0.15); }
     .icon-migrados{ background: rgba(240,180,41,0.08); border: 1px solid rgba(240,180,41,0.15); }
+    .icon-ratings { background: rgba(187,134,252,0.08); border: 1px solid rgba(187,134,252,0.15); }
+    .icon-misc    { background: rgba(0,229,160,0.08); border: 1px solid rgba(0,229,160,0.15); }
 
     .card-badge {
       font-family: var(--font-mono);
@@ -1300,6 +1316,8 @@
       <button class="filter-btn" data-source="bcb">◆ Banco Central</button>
       <button class="filter-btn" data-source="ibge">⬡ IBGE</button>
       <button class="filter-btn" data-source="debentures">❖ SND (Debêntures)</button>
+      <button class="filter-btn" data-source="ratings">★ Ratings</button>
+      <button class="filter-btn" data-source="misc">⚡ Outros</button>
     </div>
 
     <div class="datasets-grid reveal">
@@ -2241,6 +2259,292 @@
 
 
 
+      <!-- ANBIMA IDkA -->
+      <div class="dataset-card anbima-card">
+        <div class="card-top">
+          <div class="card-icon icon-anbima">📊</div>
+          <span class="card-badge badge-daily">Diário</span>
+        </div>
+        <div class="card-title">ANBIMA — IDkA</div>
+        <div class="card-file">anbima_idka.csv</div>
+        <div class="card-desc">
+          Índice de Duração Constante ANBIMA para títulos prefixados e indexados à inflação (IPCA), contendo retornos e volatilidade.
+        </div>
+        <div class="card-fields">
+          <span class="field-tag">idka</span>
+          <span class="field-tag">prefixado</span>
+          <span class="field-tag">ipca</span>
+          <span class="field-tag">duração</span>
+          <span class="field-tag">retornos</span>
+        </div>
+        <div class="card-footer">
+          <span class="card-source">Fonte: ANBIMA API</span>
+          <a href="https://raw.githubusercontent.com/royopa/PulseFlat/main/data/anbima_idka.csv" class="download-btn" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            Download CSV
+          </a>
+        </div>
+      </div>
+
+      <!-- ANBIMA Matriz de Probabilidade de Resgate -->
+      <div class="dataset-card anbima-card">
+        <div class="card-top">
+          <div class="card-icon icon-anbima">📉</div>
+          <span class="card-badge badge-daily">Mensal</span>
+        </div>
+        <div class="card-title">ANBIMA — Probabilidade de Resgate</div>
+        <div class="card-file">anbima_matriz_probabilidade_resgate.csv</div>
+        <div class="card-desc">
+          Matriz histórica de probabilidade de resgate de fundos de investimento por classe de ativos e segmento de investidor.
+        </div>
+        <div class="card-fields">
+          <span class="field-tag">resgates</span>
+          <span class="field-tag">fundos</span>
+          <span class="field-tag">probabilidade</span>
+          <span class="field-tag">segmentos</span>
+        </div>
+        <div class="card-footer">
+          <span class="card-source">Fonte: ANBIMA</span>
+          <a href="https://raw.githubusercontent.com/royopa/PulseFlat/main/data/anbima_matriz_probabilidade_resgate.csv" class="download-btn" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            Download CSV
+          </a>
+        </div>
+      </div>
+
+      <!-- ANBIMA Ranking Global -->
+      <div class="dataset-card anbima-card">
+        <div class="card-top">
+          <div class="card-icon icon-anbima">🏆</div>
+          <span class="card-badge badge-daily">Mensal</span>
+        </div>
+        <div class="card-title">ANBIMA — Ranking Global</div>
+        <div class="card-file">anbima_ranking_global.csv</div>
+        <div class="card-desc">
+          Ranking mensal dos maiores administradores e gestores de fundos de investimento por patrimônio líquido e custódia.
+        </div>
+        <div class="card-fields">
+          <span class="field-tag">ranking</span>
+          <span class="field-tag">gestoras</span>
+          <span class="field-tag">administradores</span>
+          <span class="field-tag">patrimônio</span>
+        </div>
+        <div class="card-footer">
+          <span class="card-source">Fonte: ANBIMA Strapi API</span>
+          <a href="https://raw.githubusercontent.com/royopa/PulseFlat/main/data/anbima_ranking_global.csv" class="download-btn" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            Download CSV
+          </a>
+        </div>
+      </div>
+
+      <!-- B3 Séries Históricas -->
+      <div class="dataset-card b3-card">
+        <div class="card-top">
+          <div class="card-icon icon-b3">📅</div>
+          <span class="card-badge badge-daily">Diário</span>
+        </div>
+        <div class="card-title">B3 — Séries Históricas RF</div>
+        <div class="card-file">b3_series_historicas.csv</div>
+        <div class="card-desc">
+          Dados de negociações consolidadas e histórico de ativos de renda fixa negociados e registrados no ambiente B3.
+        </div>
+        <div class="card-fields">
+          <span class="field-tag">bdi</span>
+          <span class="field-tag">renda fixa</span>
+          <span class="field-tag">títulos</span>
+          <span class="field-tag">histórico</span>
+        </div>
+        <div class="card-footer">
+          <span class="card-source">Fonte: B3 API</span>
+          <a href="https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_series_historicas.csv" class="download-btn" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            Download CSV
+          </a>
+        </div>
+      </div>
+
+      <!-- BACEN Balancetes de Bancos -->
+      <div class="dataset-card">
+        <div class="card-top">
+          <div class="card-icon icon-bcb">🏦</div>
+          <span class="card-badge badge-daily">Mensal</span>
+        </div>
+        <div class="card-title">BACEN — Balancetes de Bancos</div>
+        <div class="card-file">bacen_balancetes_bancos.csv</div>
+        <div class="card-desc">
+          Indicação da data mais recente com balancetes contábeis individuais disponíveis para consulta no Banco Central.
+        </div>
+        <div class="card-fields">
+          <span class="field-tag">balancetes</span>
+          <span class="field-tag">contabilidade</span>
+          <span class="field-tag">bancos</span>
+          <span class="field-tag">referência</span>
+        </div>
+        <div class="card-footer">
+          <span class="card-source">Fonte: BCB API</span>
+          <a href="https://raw.githubusercontent.com/royopa/PulseFlat/main/data/bacen_balancetes_bancos.csv" class="download-btn" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            Download CSV
+          </a>
+        </div>
+      </div>
+
+      <!-- BACEN Conglomerados -->
+      <div class="dataset-card">
+        <div class="card-top">
+          <div class="card-icon icon-bcb">🕸️</div>
+          <span class="card-badge badge-daily">Trimestral</span>
+        </div>
+        <div class="card-title">BACEN — Conglomerados</div>
+        <div class="card-file">bacen_conglomerados.csv</div>
+        <div class="card-desc">
+          Relação contendo dados cadastrais e financeiros de conglomerados prudenciais e instituições ativas no Brasil.
+        </div>
+        <div class="card-fields">
+          <span class="field-tag">conglomerados</span>
+          <span class="field-tag">prudencial</span>
+          <span class="field-tag">financeiras</span>
+          <span class="field-tag">cadastro</span>
+        </div>
+        <div class="card-footer">
+          <span class="card-source">Fonte: BCB API</span>
+          <a href="https://raw.githubusercontent.com/royopa/PulseFlat/main/data/bacen_conglomerados.csv" class="download-btn" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            Download CSV
+          </a>
+        </div>
+      </div>
+
+      <!-- BACEN Capital Basileia -->
+      <div class="dataset-card">
+        <div class="card-top">
+          <div class="card-icon icon-bcb">🛡️</div>
+          <span class="card-badge badge-daily">Trimestral</span>
+        </div>
+        <div class="card-title">BACEN — Capital Basileia</div>
+        <div class="card-file">bacen_parcelas_capital_basileia.csv</div>
+        <div class="card-desc">
+          Demonstrações prudenciais de parcelas de capital e patrimônio de referência sob as regras do acordo de Basileia III.
+        </div>
+        <div class="card-fields">
+          <span class="field-tag">basileia</span>
+          <span class="field-tag">capital</span>
+          <span class="field-tag">patrimônio</span>
+          <span class="field-tag">risco</span>
+        </div>
+        <div class="card-footer">
+          <span class="card-source">Fonte: BCB API (Olinda)</span>
+          <a href="https://raw.githubusercontent.com/royopa/PulseFlat/main/data/bacen_parcelas_capital_basileia.csv" class="download-btn" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            Download CSV
+          </a>
+        </div>
+      </div>
+
+      <!-- Yahoo Finance Series -->
+      <div class="dataset-card">
+        <div class="card-top">
+          <div class="card-icon icon-misc">🌍</div>
+          <span class="card-badge badge-daily">Diário</span>
+        </div>
+        <div class="card-title">Yahoo Finance — Séries Globais</div>
+        <div class="card-file">yahoo_finance_series.csv</div>
+        <div class="card-desc">
+          Preços de fechamento diários de ativos globais de referência (IBOVESPA, Dólar BRL=X, Ouro GC=F, Treasury 10Y).
+        </div>
+        <div class="card-fields">
+          <span class="field-tag">ibovespa</span>
+          <span class="field-tag">dólar</span>
+          <span class="field-tag">ouro</span>
+          <span class="field-tag">treasury</span>
+        </div>
+        <div class="card-footer">
+          <span class="card-source">Fonte: Yahoo Finance API</span>
+          <a href="https://raw.githubusercontent.com/royopa/PulseFlat/main/data/yahoo_finance_series.csv" class="download-btn" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            Download CSV
+          </a>
+        </div>
+      </div>
+
+      <!-- Investing.com ETFs -->
+      <div class="dataset-card">
+        <div class="card-top">
+          <div class="card-icon icon-misc">⚡</div>
+          <span class="card-badge badge-daily">Tempo Real</span>
+        </div>
+        <div class="card-title">Investing.com — Cotações ETFs</div>
+        <div class="card-file">investing_etf.csv</div>
+        <div class="card-desc">
+          Cotações diárias dos fundos de índice (ETFs) mais negociados do Brasil, com preço, variação e volume de pregão.
+        </div>
+        <div class="card-fields">
+          <span class="field-tag">etfs</span>
+          <span class="field-tag">bova11</span>
+          <span class="field-tag">cotações</span>
+          <span class="field-tag">volume</span>
+        </div>
+        <div class="card-footer">
+          <span class="card-source">Fonte: Investing.com</span>
+          <a href="https://raw.githubusercontent.com/royopa/PulseFlat/main/data/investing_etf.csv" class="download-btn" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            Download CSV
+          </a>
+        </div>
+      </div>
+
+      <!-- S&P Entidades Brasil -->
+      <div class="dataset-card">
+        <div class="card-top">
+          <div class="card-icon icon-ratings">🏢</div>
+          <span class="card-badge badge-daily">Diário</span>
+        </div>
+        <div class="card-title">S&P Global — Entidades Brasil</div>
+        <div class="card-file">s_p_entidades_brasil.csv</div>
+        <div class="card-desc">
+          Lista de entidades e emissores corporativos do mercado brasileiro avaliados e monitorados pela S&P Global.
+        </div>
+        <div class="card-fields">
+          <span class="field-tag">s&p</span>
+          <span class="field-tag">entidades</span>
+          <span class="field-tag">emissores</span>
+          <span class="field-tag">cadastro</span>
+        </div>
+        <div class="card-footer">
+          <span class="card-source">Fonte: S&P Global</span>
+          <a href="https://raw.githubusercontent.com/royopa/PulseFlat/main/data/s_p_entidades_brasil.csv" class="download-btn" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            Download CSV
+          </a>
+        </div>
+      </div>
+
+      <!-- S&P Ratings Brasil -->
+      <div class="dataset-card">
+        <div class="card-top">
+          <div class="card-icon icon-ratings">⭐</div>
+          <span class="card-badge badge-daily">Diário</span>
+        </div>
+        <div class="card-title">S&P Global — Ratings Brasil</div>
+        <div class="card-file">s_p_ratings_brasil.csv</div>
+        <div class="card-desc">
+          Classificações de risco de crédito (ratings) e perspectivas na Escala Nacional Brasil vigentes pela S&P Global.
+        </div>
+        <div class="card-fields">
+          <span class="field-tag">ratings</span>
+          <span class="field-tag">risco</span>
+          <span class="field-tag">s&p</span>
+          <span class="field-tag">crédito</span>
+        </div>
+        <div class="card-footer">
+          <span class="card-source">Fonte: S&P Global</span>
+          <a href="https://raw.githubusercontent.com/royopa/PulseFlat/main/data/s_p_ratings_brasil.csv" class="download-btn" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            Download CSV
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -2877,7 +3181,9 @@
       'b3_classificacao_setorial.csv',
       'b3_titulos_negociaveis.csv',
       'b3_etfs_listados.csv',
-      'b3_fiis_listados.csv'
+      'b3_fiis_listados.csv',
+      'bacen_balancetes_bancos.csv',
+      's_p_entidades_brasil.csv'
     ]);
 
     cards.forEach(card => {
@@ -2899,6 +3205,10 @@
         source = 'ibge';
       } else if (fileName.startsWith('debentures_')) {
         source = 'debentures';
+      } else if (fileName.startsWith('s_p_') || fileName.startsWith('moodys_')) {
+        source = 'ratings';
+      } else if (fileName.startsWith('yahoo_') || fileName.startsWith('investing_')) {
+        source = 'misc';
       }
 
       card.setAttribute('data-source-mapped', source);

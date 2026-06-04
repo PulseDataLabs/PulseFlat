@@ -23,10 +23,8 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from scrapers.utils.base import BaseScraper
 
 
-BASE_URL = "https://www.anbima.com.br"
-RANKING_URL = (
-    f"{BASE_URL}/pt_br/informar/ranking/fundos-de-investimento/global.htm"
-)
+STRAPI_HOST = "https://data-strapi.prd.anbima.com.br"
+STRAPI_API_URL = f"{STRAPI_HOST}/api/ranking-global-de-adm-de-fundo?populate[template][populate][publication_document][populate]=*"
 
 HEADERS = {
     "User-Agent": (
@@ -34,30 +32,31 @@ HEADERS = {
         "AppleWebKit/537.36 (KHTML, like Gecko) "
         "Chrome/120.0.0.0 Safari/537.36"
     ),
-    "Referer": BASE_URL,
+    "Referer": "https://www.anbima.com.br",
 }
 
 
 def _get_download_url(session: requests.Session) -> str:
-    """Navega na página HTML e extrai a URL de download do arquivo Excel."""
-    resp = session.get(RANKING_URL, headers=HEADERS, timeout=60)
+    """Busca a URL do arquivo Excel via API do Strapi da ANBIMA."""
+    resp = session.get(STRAPI_API_URL, headers=HEADERS, timeout=60)
     resp.raise_for_status()
-    soup = BeautifulSoup(resp.text, "html.parser")
+    data = resp.json()
 
-    # Tenta o link com texto "Baixar" — padrão atual da página
-    for a in soup.find_all("a"):
-        text = a.get_text(strip=True)
-        href = a.get("href", "")
-        if "Baixar" in text and href:
-            return href if href.startswith("http") else BASE_URL + href
+    try:
+        template = data["data"]["attributes"]["template"]
+        pub_docs = template["publication_document"]
+        if not pub_docs:
+            raise ValueError("publication_document está vazio.")
 
-    # Fallback: procura qualquer .xls/.xlsx nos links
-    for a in soup.find_all("a", href=True):
-        href = a["href"]
-        if re.search(r"\.xlsx?", href, re.IGNORECASE):
-            return href if href.startswith("http") else BASE_URL + href
+        pub_doc = pub_docs[0]
+        files = pub_doc["file"]["data"]
+        if not files:
+            raise ValueError("Nenhum arquivo encontrado em publication_document.")
 
-    raise RuntimeError("URL de download do ranking global não encontrada na página.")
+        url_path = files[0]["attributes"]["url"]
+        return STRAPI_HOST + url_path
+    except (KeyError, IndexError, TypeError, ValueError) as e:
+        raise RuntimeError(f"Erro ao extrair URL de download da API do Strapi: {e}") from e
 
 
 def _extract_date_from_filename(file_name: str) -> datetime.date:
@@ -70,12 +69,13 @@ def _extract_date_from_filename(file_name: str) -> datetime.date:
 
 def _read_sheet(content: bytes, sheet_name: str, data_referencia: datetime.date) -> pd.DataFrame:
     """Lê uma aba específica do Excel e retorna DataFrame normalizado."""
+    engine = "xlrd" if content.startswith(b"\xd0\xcf\x11\xe0") else "openpyxl"
     df = pd.read_excel(
         BytesIO(content),
         sheet_name=sheet_name,
         skiprows=8,
         skipfooter=2,
-        engine="openpyxl",
+        engine=engine,
     )
     df = df.dropna(how="all")
     df.columns = [str(c).strip() for c in df.columns]

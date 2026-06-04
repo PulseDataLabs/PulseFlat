@@ -24,6 +24,9 @@ Sem servidor. Sem custo. Histórico versionado em CSV no próprio repositório.
 | `anbima_ima_completo` | ANBIMA | TXT delimitado | `anbima_ima_completo.csv` |
 | `anbima_550` | ANBIMA | TXT (Resolução 550) | `anbima_550.csv` |
 | `anbima_indice_imab` | ANBIMA | XLS histórico | `anbima_indice_imab.csv` |
+| `anbima_idka` | ANBIMA | API pública | `anbima_idka.csv` |
+| `anbima_ranking_global` | ANBIMA | API Strapi | `anbima_ranking_global.csv` |
+| `anbima_matriz_probabilidade_resgate` | ANBIMA | Scraping HTML | `anbima_matriz_probabilidade_resgate.csv` |
 
 ### Grupo BCB
 
@@ -32,6 +35,9 @@ Sem servidor. Sem custo. Histórico versionado em CSV no próprio repositório.
 | `bcb_ptax` | BCB | API REST (Olinda) | `bcb_ptax.csv` (sem acúmulo) |
 | `bcb_sgs` | BCB | API REST (SGS) | `bcb_sgs.csv` (sem acúmulo) |
 | `bacen_negociacao_tpf` | BCB | ZIP + CSV (DEMAB) | `bacen_negociacao_tpf_extragrupo_mes_corrente.csv`, `..._mes_anterior.csv` |
+| `bacen_balancetes_bancos` | BCB | API Documentos | `bacen_balancetes_bancos.csv` (sem acúmulo) |
+| `bacen_conglomerados` | BCB | API OData | `bacen_conglomerados.csv` |
+| `bacen_parcelas_capital_basileia` | BCB | API OData | `bacen_parcelas_capital_basileia.csv` |
 
 ### Grupo IBGE
 
@@ -82,6 +88,25 @@ Sem servidor. Sem custo. Histórico versionado em CSV no próprio repositório.
 | `b3_indices_precos_historicos` | B3 | API JSON + Base64 | `b3_indices_precos_historicos.csv` |
 | `b3_classificacao_setorial` | B3 | ZIP + XLSX | `b3_classificacao_setorial.csv` (sem acúmulo) |
 | `b3_titulos_negociaveis` | B3 | ZIP + CSV | `b3_titulos_negociaveis.csv` (sem acúmulo) |
+| `b3_series_historicas` | B3 | API JSON + Download | `b3_series_historicas.csv` |
+
+### Grupo Ratings (Agências de Classificação)
+
+| Scraper | Fonte | Método | CSV(s) gerado(s) |
+|---|---|---|---|
+| `s_p_entidades_brasil` | S&P Global | Scraping HTML | `s_p_entidades_brasil.csv` |
+| `s_p_ratings_brasil` | S&P Global | Scraping HTML | `s_p_ratings_brasil.csv` |
+| `s_p_entidades_global` | S&P Global | Scraping HTML | (Exige credenciais ou browser) |
+| `s_p_ratings_global` | S&P Global | Scraping HTML | (Exige credenciais ou browser) |
+| `s_p_acoes_ratings` | S&P Global | Scraping HTML | (Exige credenciais ou browser) |
+| `moodys_local_ratings` | Moody's Local | Scraping HTML | (Bloqueado por anti-bot) |
+
+### Grupo Outros / Diversos (Misc)
+
+| Scraper | Fonte | Método | CSV(s) gerado(s) |
+|---|---|---|---|
+| `yahoo_finance_series` | Yahoo Finance | API yfinance | `yahoo_finance_series.csv` |
+| `investing_etf` | Investing.com | Scraping HTML | `investing_etf.csv` |
 
 **Desativados:** `b3_cotahist_diario`, `b3_cotahist_anual`, `b3_indicadores_economicos_fwf`, `b3_negocios_balcao`, `b3_companhias_detalhes`, `b3_companhias_info`, `b3_dividendos_dinheiro`, `b3_futuros_ajustes` (fonte legada descontinuada), `b3_bmf_taxas_juros` (API BDI sem dados).
 
@@ -315,6 +340,134 @@ Histórico de composição e preços de índices da B3.
 <!-- ### `b3_companhias_detalhes.csv` — DESATIVADO -->
 <!-- ### `b3_companhias_info.csv` — DESATIVADO -->
 <!-- ### `b3_dividendos_dinheiro.csv` — DESATIVADO -->
+
+### `anbima_idka.csv`
+Índice de Duração Constante ANBIMA (prefixado e inflação).
+
+| Campo | Descrição |
+|---|---|
+| data_captura | Data da execução (BRT) |
+| dt_referencia | Data de referência |
+| no_indexador | Tipo de indexador (ex: PREFIXADO, IPCA) |
+| no_indice | Nome do índice IDkA (ex: IDkA Pré 3M, IDkA IPCA 2A) |
+| nu_indice | Número índice |
+| ret_dia_perc | Retorno diário (%) |
+| ret_mes_perc | Retorno mensal (%) |
+| ret_ano_perc | Retorno anual (%) |
+| ret_12_meses_perc | Retorno acumulado 12 meses (%) |
+| vol_aa_perc | Volatilidade ao ano (%) |
+| taxa_juros_aa_perc_compra_d1 | Taxa de juros de compra D+1 (% a.a.) |
+| taxa_juros_aa_perc_venda_d0 | Taxa de juros de venda D+0 (% a.a.) |
+
+### `anbima_matriz_probabilidade_resgate.csv`
+Probabilidade histórica de resgates de fundos de investimento.
+
+| Campo | Descrição |
+|---|---|
+| data_captura | Data da execução (BRT) |
+| dt_referencia | Data de referência do relatório |
+| data | Data da observação |
+| periodo | Mês/ano da observação |
+| classe | Classe do fundo (Ações, RF, Multimercado, etc.) |
+| segmento_investidor | Segmento do investidor (Varejo, Private, etc.) |
+| tipo_metodologia | Tipo de metodologia estatística utilizada |
+| metrica | Métrica calculada (ex: EWMA_97) |
+| prazo | Prazo em dias |
+| valor | Probabilidade calculada |
+
+### `anbima_ranking_global.csv`
+Ranking mensal de administradores e gestores de fundos ANBIMA.
+
+| Campo | Descrição |
+|---|---|
+| data_captura | Data da execução (BRT) |
+| dt_referencia | Mês de referência do ranking |
+| tipo_ativo | Descrição da tabela/aba analisada (ex: Ativos de RF, RV) |
+| Unnamed: X | Nome da instituição e valores de custódia e lastro |
+
+### `bacen_balancetes_bancos.csv`
+Última data de publicação dos balancetes de bancos comerciais e múltiplos.
+
+| Campo | Descrição |
+|---|---|
+| data_captura | Data da execução (BRT) |
+| data | Data do último balancete publicado pelo BACEN |
+
+### `bacen_conglomerados.csv`
+Dados cadastrais e financeiros de conglomerados financeiros no Brasil.
+
+| Campo | Descrição |
+|---|---|
+| data_captura | Data da execução (BRT) |
+| dt_referencia | Mês de referência dos dados |
+
+### `bacen_parcelas_capital_basileia.csv`
+Parcelas de capital e patrimônio de referência sob as regras de Basileia III.
+
+| Campo | Descrição |
+|---|---|
+| data_captura | Data da execução (BRT) |
+| TipoInstituicao | Código do tipo de instituição |
+| CodInst | Código cadastral da instituição financeira |
+| AnoMes | Mês/Ano de referência (ex: 202512) |
+| NomeRelatorio | Nome do relatório (ex: Informações de Capital) |
+| NumeroRelatorio | Número identificador do relatório |
+| Grupo | Grupo de contas prudenciais |
+| Conta | Código da conta do patrimônio |
+| NomeColuna | Nome abreviado da coluna |
+| DescricaoColuna | Descrição completa da conta prudencial |
+| Saldo | Valor do saldo em conta (R$) |
+| tipo_instituicao_label | Descrição legível da instituição |
+
+### `yahoo_finance_series.csv`
+Preços diários de ativos e índices de referência globais e nacionais.
+
+| Campo | Descrição |
+|---|---|
+| data_captura | Data da execução (BRT) |
+| dt_ref | Data da cotação |
+| ticker | Ticker de mercado (ex: ^BVSP, BRL=X, GC=F) |
+| label | Descrição legível (IBOVESPA, Câmbio Dólar, Ouro, etc.) |
+| vr_fechamento | Preço de fechamento da cotação |
+
+### `investing_etf.csv`
+Cotações diárias dos ETFs mais negociados no Brasil.
+
+| Campo | Descrição |
+|---|---|
+| data_captura | Data da execução (BRT) |
+| nome | Nome completo do ETF |
+| ticker | Código de negociação (ex: BOVA11) |
+| link | Link do ativo no Investing.com |
+| vr_ultimo | Último preço cotado |
+| vr_variacao_pct | Variação percentual no dia |
+| qt_volume | Volume de negociação |
+| hr_atualizacao | Hora da última atualização |
+
+### `s_p_entidades_brasil.csv`
+Cadastro de entidades brasileiras avaliadas pela S&P Global.
+
+| Campo | Descrição |
+|---|---|
+| data_captura | Data da execução (BRT) |
+| dt_captura | Data de captura dos dados |
+| nome | Razão social do emissor |
+| link | Link do emissor no portal da S&P |
+
+### `s_p_ratings_brasil.csv`
+Histórico de ratings vigentes atribuídos pela S&P na Escala Nacional Brasil.
+
+| Campo | Descrição |
+|---|---|
+| data_captura | Data da execução (BRT) |
+| dt_captura | Data de captura dos dados |
+| Tipo de Rating | Tipo de rating (ex: Escala Nacional Brasil de Longo Prazo) |
+| Rating | Classificação de risco de crédito (ex: brAAA) |
+| Data da Ação de Rating | Data em que o rating foi definido ou revisado |
+| Data da ÚltimaRevisão | Data da última revisão periódica da agência |
+| CreditWatch/ Perspectiva | Perspectiva atribuída (ex: Stable, Positive) |
+| nome | Razão social do emissor |
+| link | Link para detalhes no portal da S&P |
 
 ---
 

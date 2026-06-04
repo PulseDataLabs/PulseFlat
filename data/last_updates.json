@@ -159,7 +159,43 @@
     "min": "2026-06-01",
     "max": "2026-06-03"
   },
-  "b3_bdi_trades_acoes.csv": {
+  "anbima_idka.csv": {
+    "min": "2026-06-03",
+    "max": "2026-06-03"
+  },
+  "anbima_ranking_global.csv": {
+    "min": "2026-06-03",
+    "max": "2026-06-03"
+  },
+  "anbima_matriz_probabilidade_resgate.csv": {
+    "min": "2026-06-03",
+    "max": "2026-06-03"
+  },
+  "bacen_balancetes_bancos.csv": {
+    "min": "2026-06-03",
+    "max": "2026-06-03"
+  },
+  "bacen_conglomerados.csv": {
+    "min": "2026-06-03",
+    "max": "2026-06-03"
+  },
+  "yahoo_finance_series.csv": {
+    "min": "2026-06-03",
+    "max": "2026-06-03"
+  },
+  "bacen_parcelas_capital_basileia.csv": {
+    "min": "2026-06-03",
+    "max": "2026-06-03"
+  },
+  "s_p_entidades_brasil.csv": {
+    "min": "2026-06-03",
+    "max": "2026-06-03"
+  },
+  "investing_etf.csv": {
+    "min": "2026-06-03",
+    "max": "2026-06-03"
+  },
+  "s_p_ratings_brasil.csv": {
     "min": "2026-06-03",
     "max": "2026-06-03"
   }

@@ -1,23 +1,22 @@
 #!/usr/bin/env python
 # coding: utf-8
 """
-Scraper: BACEN – Parcelas de Capital (Basileia) via IFData
-Fonte:   https://www3.bcb.gov.br/ifdata
+Scraper: BACEN – Parcelas de Capital (Basileia) via IFData / OData
+Fonte:   https://olinda.bcb.gov.br/olinda/servico/IFDATA/versao/v1/odata/
 Saída:   data/bacen_parcelas_capital_basileia.csv
 
-O site IFData não disponibiliza endpoint REST público para download direto.
-A estratégia é consultar a API interna que o próprio site usa para popular
-as tabelas de dados, filtrando pelo relatório "Resumo" (parcelas de capital).
+Usa a API pública OData do BCB (Olinda) para obter dados do relatório
+"Informações de Capital" (Relatório 5) do IFData.
 
 Dois conjuntos são capturados:
-  - Conglomerados Prudenciais e Instituições Independentes
-  - Instituições Individuais
+  - Conglomerados Prudenciais (TipoInstituicao=1)
+  - Instituições Individuais   (TipoInstituicao=3)
 """
 import os
 import sys
 import datetime
-import re
-from dateutil.relativedelta import relativedelta
+import time
+from io import StringIO
 
 import pandas as pd
 import requests
@@ -26,9 +25,12 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from scrapers.utils.base import BaseScraper
 
 
-# API interna do IFData (descoberta via DevTools)
-IFDATA_API = "https://www3.bcb.gov.br/ifdata/rest"
-PERIODOS_URL = f"{IFDATA_API}/periodos"
+# API OData do BCB (Olinda) – IFData
+ODATA_BASE = (
+    "https://olinda.bcb.gov.br/olinda/servico/IFDATA/versao/v1/odata/"
+    "IfDataValores(AnoMes=@AnoMes,TipoInstituicao=@TipoInstituicao,"
+    "Relatorio=@Relatorio)"
+)
 
 HEADERS = {
     "User-Agent": (
@@ -36,46 +38,77 @@ HEADERS = {
         "AppleWebKit/537.36 (KHTML, like Gecko) "
         "Chrome/120.0.0.0 Safari/537.36"
     ),
-    "Accept": "application/json, text/plain, */*",
-    "Referer": "https://www3.bcb.gov.br/ifdata/",
+    "Accept": "text/csv, application/json, */*",
 }
 
-# Tipos de instituição: código usado na API → label descritivo
+# Tipos de instituição: código OData → label descritivo
 TIPOS_INST = [
-    {"codigo": "b", "label": "conglomerados_prudenciais"},
-    {"codigo": "n", "label": "instituicoes_individuais"},
+    {"codigo": 1, "label": "conglomerados_prudenciais"},
+    {"codigo": 3, "label": "instituicoes_individuais"},
 ]
 
-# Relatório de interesse: Resumo das parcelas de capital
-RELATORIO_CODIGO = "c"  # código "c" = Capital (Resumo) na API do IFData
+# Relatório: '5' = Informações de Capital
+RELATORIO = "'5'"
+
+# Períodos de referência trimestrais (março, junho, setembro, dezembro)
+MESES_TRIMESTRAIS = [3, 6, 9, 12]
 
 
-def _get_ultimo_periodo(session: requests.Session) -> str:
-    """Retorna o código do período mais recente disponível no IFData."""
-    resp = session.get(PERIODOS_URL, headers=HEADERS, timeout=30)
-    resp.raise_for_status()
-    periodos = resp.json()
-    # A lista vem ordenada do mais recente para o mais antigo
-    return periodos[0] if periodos else None
+def _get_periodos_recentes(n_trimestres: int = 4) -> list[int]:
+    """Gera os últimos n_trimestres períodos trimestrais no formato YYYYMM."""
+    hoje = datetime.date.today()
+    periodos = []
+    for i in range(n_trimestres):
+        # Anda para trás mês a mês procurando trimestral
+        dt = hoje.replace(day=1)
+        months_back = i * 3
+        year = dt.year
+        month = dt.month - months_back
+        while month <= 0:
+            month += 12
+            year -= 1
+        # Encontra o trimestre mais próximo para trás
+        while month not in MESES_TRIMESTRAIS:
+            month -= 1
+            if month <= 0:
+                month = 12
+                year -= 1
+        periodos.append(year * 100 + month)
+    return sorted(set(periodos), reverse=True)
 
 
-def _download_relatorio(
-    session: requests.Session, periodo: str, tipo_codigo: str
+def _download_relatorio_odata(
+    session: requests.Session, periodo: int, tipo_codigo: int, logger
 ) -> pd.DataFrame:
-    """Baixa o CSV de um relatório específico via endpoint de exportação."""
-    url = (
-        f"{IFDATA_API}/dados/{periodo}/{tipo_codigo}/{RELATORIO_CODIGO}"
-        f"?formato=csv"
-    )
-    resp = session.get(url, headers=HEADERS, timeout=60)
+    """Baixa os dados de um relatório via OData API."""
+    params = {
+        "@AnoMes": str(periodo),
+        "@TipoInstituicao": str(tipo_codigo),
+        "@Relatorio": RELATORIO,
+        "$format": "text/csv",
+    }
+    url = ODATA_BASE
+    logger.info(f"  Consultando OData: periodo={periodo}, tipo={tipo_codigo}")
+    resp = session.get(url, params=params, headers=HEADERS, timeout=120)
+
+    if resp.status_code == 404:
+        logger.warning(f"  Período {periodo} não disponível (404)")
+        return pd.DataFrame()
     if resp.status_code != 200:
+        logger.warning(f"  Status {resp.status_code} para periodo={periodo}")
         return pd.DataFrame()
 
-    from io import StringIO
+    content = resp.text.strip()
+    if not content or "<!DOCTYPE" in content[:100]:
+        logger.warning(f"  Resposta vazia ou HTML para periodo={periodo}")
+        return pd.DataFrame()
+
     try:
-        df = pd.read_csv(StringIO(resp.text), sep=";", encoding="utf-8")
-    except Exception:
-        df = pd.read_csv(StringIO(resp.text), sep=",", encoding="utf-8")
+        df = pd.read_csv(StringIO(content))
+    except Exception as e:
+        logger.warning(f"  Erro ao parsear CSV: {e}")
+        return pd.DataFrame()
+
     return df
 
 
@@ -85,33 +118,49 @@ class BacenParcelasCapitalBasileiaScraper(BaseScraper):
     def fetch(self) -> pd.DataFrame:
         session = requests.Session()
 
-        periodo = _get_ultimo_periodo(session)
-        if not periodo:
-            raise RuntimeError("Não foi possível obter o período mais recente do IFData.")
-
-        self.logger.info(f"Período IFData: {periodo}")
-
-        # Converte o período (ex.: "202312") para date
-        try:
-            dt_ref = datetime.datetime.strptime(str(periodo), "%Y%m").date()
-        except ValueError:
-            dt_ref = datetime.date.today().replace(day=1)
+        # Tenta os últimos 4 trimestres
+        periodos = _get_periodos_recentes(4)
+        self.logger.info(f"Períodos a consultar: {periodos}")
 
         frames = []
-        for tipo in TIPOS_INST:
-            self.logger.info(f"Baixando tipo: {tipo['label']}")
-            df = _download_relatorio(session, periodo, tipo["codigo"])
-            if df.empty:
-                self.logger.warning(f"Sem dados para {tipo['label']}")
-                continue
-            df.insert(0, "dt_referencia", dt_ref)
-            df.insert(1, "tipo_instituicao", tipo["label"])
-            frames.append(df)
+        for periodo in periodos:
+            for tipo in TIPOS_INST:
+                self.logger.info(
+                    f"Baixando: periodo={periodo}, tipo={tipo['label']}"
+                )
+                df = _download_relatorio_odata(
+                    session, periodo, tipo["codigo"], self.logger
+                )
+                if df.empty:
+                    self.logger.warning(
+                        f"Sem dados para {tipo['label']} em {periodo}"
+                    )
+                    continue
+
+                # Adiciona colunas de contexto
+                df["tipo_instituicao_label"] = tipo["label"]
+                frames.append(df)
+
+                # Rate limiting: espera 1s entre requisições
+                time.sleep(1)
+
+            # Se já temos dados do período mais recente, podemos parar
+            if frames:
+                self.logger.info(
+                    f"Dados obtidos para periodo={periodo}. "
+                    "Finalizando coleta."
+                )
+                break
 
         if not frames:
-            raise RuntimeError("Nenhum dado retornado do IFData.")
+            raise RuntimeError(
+                "Nenhum dado retornado da API OData do BCB (IFData). "
+                "Verifique se a API está disponível."
+            )
 
-        return pd.concat(frames, ignore_index=True)
+        df_final = pd.concat(frames, ignore_index=True)
+        self.logger.info(f"Total de {len(df_final)} registros obtidos.")
+        return df_final
 
 
 if __name__ == "__main__":

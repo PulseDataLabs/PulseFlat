@@ -47,6 +47,12 @@ RENAME_MAP = {
 
 def _find_download_url(session: requests.Session) -> str:
     resp = session.get(BASE_URL, headers=HEADERS, timeout=60)
+    if resp.status_code == 403:
+        raise RuntimeError(
+            "Acesso bloqueado (403 Forbidden) pela Moody's Local. "
+            "O site bloqueia requisições automatizadas. "
+            "Considere usar Playwright/Selenium para este scraper."
+        )
     resp.raise_for_status()
     soup = BeautifulSoup(resp.text, "html.parser")
 
@@ -65,7 +71,12 @@ class MoodysLocalRatingsScraper(BaseScraper):
     def fetch(self) -> pd.DataFrame:
         session = requests.Session()
 
-        download_url = _find_download_url(session)
+        try:
+            download_url = _find_download_url(session)
+        except RuntimeError as e:
+            self.logger.warning(str(e))
+            return pd.DataFrame()
+
         self.logger.info(f"Baixando: {download_url}")
 
         resp = session.get(download_url, headers=HEADERS, timeout=120)
