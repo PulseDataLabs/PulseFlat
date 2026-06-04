@@ -120,6 +120,9 @@ def _parse_table(html: str) -> pd.DataFrame:
 
 class SPAcoesRatingsScraper(BaseScraper):
     name = "s_p_acoes_ratings"
+    group = "ratings"
+    enabled = True
+    phase = 1
     chaves_dedup = ["descricao", "classe", "tipo_rating", "data_acao"]
 
     def fetch(self) -> pd.DataFrame:

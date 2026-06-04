@@ -46,6 +46,9 @@ EMISSORES_FIXOS = [
 
 class SPEntidadesBrasilScraper(BaseScraper):
     name = "s_p_entidades_brasil"
+    group = "ratings"
+    enabled = True
+    phase = 1
     chaves_dedup = ["link"]
     accumulate = False
 

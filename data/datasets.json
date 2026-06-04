@@ -177,6 +177,23 @@
     "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/anbima_indice_imab.csv"
   },
   {
+    "title": "B3 Boletim Diário",
+    "file": "b3_boletim_diario.csv",
+    "description": "Downloads dos arquivos consolidados do boletim diário de derivativos e posições em aberto da B3.",
+    "icon": "📂",
+    "iconClass": "icon-b3",
+    "badge": "Diário",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "boletim",
+      "derivativos",
+      "posição em aberto",
+      "B3"
+    ],
+    "source": "B3",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_boletim_diario.csv"
+  },
+  {
     "title": "B3 Classificação Setorial",
     "file": "b3_classificacao_setorial.csv",
     "description": "Classificação setorial completa das empresas listadas na B3 (setor econômico, subsetor e segmento de atuação).",
@@ -191,6 +208,76 @@
     ],
     "source": "B3",
     "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_classificacao_setorial.csv"
+  },
+  {
+    "title": "B3 Companhias Detalhes",
+    "file": "b3_companhias_detalhes.csv",
+    "description": "Dados capturados.",
+    "icon": "📊",
+    "iconClass": "icon-misc",
+    "badge": "Diário",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "b3"
+    ],
+    "source": "B3",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_companhias_detalhes.csv"
+  },
+  {
+    "title": "B3 Companhias Info",
+    "file": "b3_companhias_info.csv",
+    "description": "Dados capturados.",
+    "icon": "📊",
+    "iconClass": "icon-misc",
+    "badge": "Diário",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "b3"
+    ],
+    "source": "B3",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_companhias_info.csv"
+  },
+  {
+    "title": "B3 Cotahist Anual",
+    "file": "b3_cotahist_anual.csv",
+    "description": "Dados capturados.",
+    "icon": "📊",
+    "iconClass": "icon-misc",
+    "badge": "Diário",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "b3"
+    ],
+    "source": "B3",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_cotahist_anual.csv"
+  },
+  {
+    "title": "B3 Cotahist Diario",
+    "file": "b3_cotahist_diario.csv",
+    "description": "Dados capturados.",
+    "icon": "📊",
+    "iconClass": "icon-misc",
+    "badge": "Diário",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "b3"
+    ],
+    "source": "B3",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_cotahist_diario.csv"
+  },
+  {
+    "title": "B3 Dividendos Dinheiro",
+    "file": "b3_dividendos_dinheiro.csv",
+    "description": "Dados capturados.",
+    "icon": "📊",
+    "iconClass": "icon-misc",
+    "badge": "Diário",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "b3"
+    ],
+    "source": "B3",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_dividendos_dinheiro.csv"
   },
   {
     "title": "B3 Futuros — Ajustes de Fechamento",
@@ -209,6 +296,34 @@
     ],
     "source": "B3",
     "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_futuros_ajustes.csv"
+  },
+  {
+    "title": "B3 Indicadores Economicos Fwf",
+    "file": "b3_indicadores_economicos_fwf.csv",
+    "description": "Dados capturados.",
+    "icon": "📊",
+    "iconClass": "icon-misc",
+    "badge": "Diário",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "b3"
+    ],
+    "source": "B3",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_indicadores_economicos_fwf.csv"
+  },
+  {
+    "title": "B3 Negocios Balcao",
+    "file": "b3_negocios_balcao.csv",
+    "description": "Dados capturados.",
+    "icon": "📊",
+    "iconClass": "icon-misc",
+    "badge": "Diário",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "b3"
+    ],
+    "source": "B3",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_negocios_balcao.csv"
   },
   {
     "title": "B3 — Títulos Negociáveis",
@@ -812,7 +927,7 @@
     "file": "cvm_cadastro_companhias_abertas.csv",
     "description": "Cadastro completo de companhias abertas registradas na CVM: CNPJ, razão social, nome de pregão, situação cadastral e código CVM.",
     "icon": "🏛️",
-    "iconClass": "",
+    "iconClass": "icon-cvm",
     "badge": "Diário",
     "badgeClass": "badge-daily",
     "tags": [

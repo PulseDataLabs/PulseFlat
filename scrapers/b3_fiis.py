@@ -110,6 +110,9 @@ def capturar() -> list[dict]:
 
 class B3FiisScraper(BaseScraper):
     name = "b3_fiis"
+    group = "b3"
+    enabled = True
+    phase = 1
     accumulate = False
     chaves_dedup = None
     

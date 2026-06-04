@@ -121,6 +121,9 @@ def _parse_ratings_next_data(html: str) -> list[dict]:
 
 class SPRatingsBrasilScraper(BaseScraper):
     name = "s_p_ratings_brasil"
+    group = "ratings"
+    enabled = True
+    phase = 2
     chaves_dedup = [
         "link",
         "Tipo de Rating",

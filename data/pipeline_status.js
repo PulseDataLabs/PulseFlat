@@ -1,6 +1,6 @@
 window.PULSEFLAT_PIPELINE_STATUS = {
-  "timestamp": "2026-06-04T07:10:53.123367",
-  "elapsed_seconds": 44.635876178741455,
+  "timestamp": "2026-06-04T07:37:05.736080",
+  "elapsed_seconds": 41.366085052490234,
   "status": "success",
   "summary": {
     "total": 46,
@@ -11,9 +11,9 @@ window.PULSEFLAT_PIPELINE_STATUS = {
   "scrapers": {
     "onu_pacto_global": {
       "status": "success",
-      "elapsed_seconds": 44.635298013687134,
+      "elapsed_seconds": 41.365647077560425,
       "error": null,
-      "timestamp": "2026-06-04T07:10:53.123576"
+      "timestamp": "2026-06-04T07:37:05.736163"
     },
     "anbima_indicadores": {
       "status": "unknown",

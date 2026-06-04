@@ -101,6 +101,9 @@ def capturar() -> list[dict]:
 
 class B3IndicadoresFinanceirosScraper(BaseScraper):
     name = "b3_indicadores_financeiros"
+    group = "b3"
+    enabled = True
+    phase = 1
     accumulate = True
     chaves_dedup = ['data_captura', 'security_identification_code']
     

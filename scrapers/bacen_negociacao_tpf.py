@@ -65,6 +65,9 @@ def capturar() -> list[dict]:
 
 class BacenNegociacaoTpfScraper(BaseScraper):
     name = "bacen_negociacao_tpf"
+    group = "bcb"
+    enabled = True
+    phase = 1
     accumulate = True
     chaves_dedup = ['data_captura', 'conjunto', 'registro_hash']
     

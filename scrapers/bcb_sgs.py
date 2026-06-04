@@ -114,6 +114,9 @@ def capturar() -> list[dict]:
 
 class BcbSgsScraper(BaseScraper):
     name = "bcb_sgs"
+    group = "bcb"
+    enabled = True
+    phase = 1
     accumulate = False
     chaves_dedup = ['data_captura', 'codigo_serie', 'data']
     

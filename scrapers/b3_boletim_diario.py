@@ -119,6 +119,9 @@ def capturar() -> tuple[int, int]:
 
 class B3BoletimDiarioScraper(BaseScraper):
     name = "b3_boletim_diario"
+    group = "b3"
+    enabled = False
+    phase = 1
     accumulate = True
     chaves_dedup = None
     

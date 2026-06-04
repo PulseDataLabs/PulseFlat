@@ -6,6 +6,9 @@ from scrapers.generic_scraper import GenericScraper
 
 
 class DebenturesEmissoesCaracteristicasScraper(GenericScraper):
+    group = "anbima"
+    enabled = True
+    phase = 1
     resource_name = "Debêntures - Características de Emissões"
 
 

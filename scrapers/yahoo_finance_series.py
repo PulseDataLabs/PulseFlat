@@ -78,6 +78,9 @@ def _fetch_ticker(session: requests.Session, ticker: str, label: str, dt_ini: in
 
 class YahooFinanceSeriesScraper(BaseScraper):
     name = "yahoo_finance_series"
+    group = "misc"
+    enabled = True
+    phase = 1
 
     def fetch(self) -> pd.DataFrame:
         hoje = datetime.date.today()

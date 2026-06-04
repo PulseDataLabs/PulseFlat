@@ -6,6 +6,9 @@ from scrapers.generic_scraper import GenericScraper
 
 
 class CvmFundosClasseScraper(GenericScraper):
+    group = "cvm"
+    enabled = True
+    phase = 1
     resource_name = "CVM - Fundos de Investimento, Classes e Subclasses de Cotas CVM175"
 
 

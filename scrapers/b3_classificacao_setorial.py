@@ -126,6 +126,9 @@ def capturar() -> list[dict]:
 
 class B3ClassificacaoSetorialScraper(BaseScraper):
     name = "b3_classificacao_setorial"
+    group = "b3"
+    enabled = False
+    phase = 1
     accumulate = False
     chaves_dedup = ['data_captura', 'codigo']
     

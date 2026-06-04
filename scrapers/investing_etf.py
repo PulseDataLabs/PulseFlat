@@ -81,6 +81,9 @@ def _parse_html_table(html: str) -> pd.DataFrame:
 
 class InvestingEtfScraper(BaseScraper):
     name = "investing_etf"
+    group = "misc"
+    enabled = True
+    phase = 1
     accumulate = False
 
     def fetch(self) -> pd.DataFrame:

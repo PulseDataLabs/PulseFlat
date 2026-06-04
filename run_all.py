@@ -33,72 +33,41 @@ logging.basicConfig(
 )
 logger = logging.getLogger("run_all")
 
-# ---------------------------------------------------------------------------
-# Registro de scrapers
-# Formato: { "nome_do_modulo": "grupo" }
-# ---------------------------------------------------------------------------
-SCRAPERS: dict[str, str] = {
-    # ── ANBIMA ──────────────────────────────────────────────────────────────
-    "anbima_indicadores":                   "anbima",
-    "anbima_projecoes":                     "anbima",
-    "anbima_titulos_publicos":              "anbima",
-    "anbima_debentures":                    "anbima",
-    "anbima_ima_completo":                  "anbima",
-    "anbima_550":                           "anbima",
-    "anbima_idka":                          "anbima",   # novo
-    "anbima_ranking_global":               "anbima",   # novo
-    "anbima_matriz_probabilidade_resgate": "anbima",   # novo
-    "anbima_indice_imab":                   "anbima",   # novo
-    "debentures_emissoes_caracteristicas": "anbima",   # novo
-    "debentures_mercado_secundario_precos_negociacao": "anbima", # novo
 
-    # ── B3 ──────────────────────────────────────────────────────────────────
-    "b3_fiis":                              "b3",
-    "b3_etfs":                              "b3",
-    "b3_carteiras":                         "b3",
-    "b3_futuros_ajustes":                   "b3",
-    "b3_indicadores_financeiros":           "b3",
-    "b3_bdi_di_over":                       "b3",
-    "b3_bdi_trades_acoes":                  "b3",
-    "b3_bmf_taxas_juros":                   "b3",
-    "b3_series_historicas":                 "b3",       # novo
-    "b3_carteira_teorica_ibov":             "b3",       # novo
-    "b3_carteira_teorica_smll":             "b3",       # novo
-    "b3_carteira_teorica_bdrx":             "b3",       # novo
-    "b3_carteira_teorica_isee":             "b3",       # novo
-    "b3_carteira_teorica_ibxl":             "b3",       # novo
-    "b3_carteira_teorica_ifnc":             "b3",       # novo
-    "b3_carteira_teorica_agfs_iagro":       "b3",       # novo
-    "b3_carteira_teorica_ibsd":             "b3",       # novo
-    "b3_titulos_negociaveis":               "b3",       # novo
-
-    # ── BCB / BACEN ─────────────────────────────────────────────────────────
-    "bcb_ptax":                             "bcb",
-    "bcb_sgs":                              "bcb",
-    "bacen_balancetes_bancos":              "bcb",      # novo
-    "bacen_conglomerados":                  "bcb",      # novo
-    "bacen_parcelas_capital_basileia":      "bcb",      # novo
-    "bacen_negociacao_tpf":                 "bcb",      # novo
-
-    # ── IBGE ────────────────────────────────────────────────────────────────
-    "ibge_sidra":                           "ibge",
-
-    # ── CVM ─────────────────────────────────────────────────────────────────
-    "cvm_fundos_informe_diario":            "cvm",
-    "cvm_fundos_classe":                    "cvm",      # novo
-
-    # ── RATINGS ─────────────────────────────────────────────────────────────
-    # A ordem importa: entidades devem rodar antes de ratings
-    "s_p_entidades_brasil":                "ratings",  # novo
-    "s_p_ratings_brasil":                  "ratings",  # novo
-    "s_p_acoes_ratings":                   "ratings",  # novo
-    "moodys_local_ratings":                "ratings",  # novo
-
-    # ── MISC ────────────────────────────────────────────────────────────────
-    "yahoo_finance_series":                "misc",     # novo
-    "investing_etf":                       "misc",     # novo
-    "onu_pacto_global":                    "misc",     # novo
-}
+def discover_scrapers() -> dict[str, dict]:
+    """
+    Varre o diretório scrapers/ e descobre dinamicamente os scrapers registrados.
+    Retorna um dicionário: { "nome_do_modulo": { "group": ..., "enabled": ..., "phase": ..., "title": ... } }
+    """
+    scrapers = {}
+    scrapers_dir = Path(__file__).resolve().parent / "scrapers"
+    
+    for file_path in scrapers_dir.glob("*.py"):
+        module_name = file_path.stem
+        if module_name in ("__init__", "generic_scraper"):
+            continue
+            
+        try:
+            mod = importlib.import_module(f"scrapers.{module_name}")
+            class_name = "".join(word.capitalize() for word in module_name.split("_")) + "Scraper"
+            
+            if hasattr(mod, class_name):
+                cls = getattr(mod, class_name)
+                group = getattr(cls, "group", "misc")
+                enabled = getattr(cls, "enabled", True)
+                phase = getattr(cls, "phase", 1)
+                
+                scrapers[module_name] = {
+                    "group": group,
+                    "enabled": enabled,
+                    "phase": phase,
+                    "class_name": class_name,
+                    "title": getattr(cls, "title", module_name.replace("_", " ").title())
+                }
+        except Exception as e:
+            logger.warning(f"Erro ao carregar metadados do scraper {module_name}: {e}")
+            
+    return scrapers
 
 
 def run_scraper(module_name: str) -> tuple[bool, float, Optional[str]]:
@@ -165,13 +134,16 @@ def save_pipeline_status(results: dict[str, tuple[bool, float, Optional[str]]], 
     status_path = root_dir / "data" / "pipeline_status.json"
     status_js_path = root_dir / "data" / "pipeline_status.js"
     
+    scrapers_registry = discover_scrapers()
+    active_scrapers = {k: v for k, v in scrapers_registry.items() if v["enabled"]}
+    
     # Inicializa ou carrega o status existente
     status_data = {
         "timestamp": datetime.now().isoformat(),
         "elapsed_seconds": total_elapsed,
         "status": "success",
         "summary": {
-            "total": len(SCRAPERS),
+            "total": len(active_scrapers),
             "success": 0,
             "failed": 0,
             "drifts": 0
@@ -216,12 +188,11 @@ def save_pipeline_status(results: dict[str, tuple[bool, float, Optional[str]]], 
         }
 
     # Recalcula o resumo
-    total_scrapers = len(SCRAPERS)
     success_count = 0
     failed_count = 0
     
     # Preenche scrapers que ainda não rodaram se não estiverem no JSON
-    for name in SCRAPERS:
+    for name in active_scrapers:
         if name not in status_data["scrapers"]:
             status_data["scrapers"][name] = {
                 "status": "unknown",
@@ -236,7 +207,7 @@ def save_pipeline_status(results: dict[str, tuple[bool, float, Optional[str]]], 
         elif stat == "error":
             failed_count += 1
 
-    status_data["summary"]["total"] = total_scrapers
+    status_data["summary"]["total"] = len(active_scrapers)
     status_data["summary"]["success"] = success_count
     status_data["summary"]["failed"] = failed_count
     status_data["summary"]["drifts"] = len(status_data["drifts"])
@@ -267,27 +238,29 @@ def save_pipeline_status(results: dict[str, tuple[bool, float, Optional[str]]], 
 def main(group: Optional[str] = None, scraper: Optional[str] = None, parallel: bool = True, max_workers: int = 4) -> None:
     start_time = time.time()
     
+    scrapers_registry = discover_scrapers()
+    
     if scraper:
-        if scraper not in SCRAPERS:
+        if scraper not in scrapers_registry:
             logger.error(f"Scraper '{scraper}' não encontrado no registro.")
             sys.exit(1)
-        targets = {scraper: SCRAPERS[scraper]}
+        targets = {scraper: scrapers_registry[scraper]}
     else:
+        # Executa apenas os habilitados se rodar tudo ou por grupo
         targets = {
-            name: grp for name, grp in SCRAPERS.items()
-            if group is None or grp == group
+            name: info for name, info in scrapers_registry.items()
+            if info["enabled"] and (group is None or info["group"] == group)
         }
         
     if not targets:
         logger.error(
-            f"Nenhum scraper selecionado. Grupo '{group}' ou Scraper '{scraper}' inválido."
+            f"Nenhum scraper selecionado. Grupo '{group}' ou Scraper '{scraper}' inválido ou desabilitado."
         )
         sys.exit(1)
 
-    # Separação por Fases de Dependência
-    phase2_names = ["s_p_ratings_brasil"]
-    phase1_targets = [name for name in targets if name not in phase2_names]
-    phase2_targets = [name for name in targets if name in phase2_names]
+    # Separação por Fases de Dependência dinamicamente
+    phase1_targets = [name for name, info in targets.items() if info["phase"] == 1]
+    phase2_targets = [name for name, info in targets.items() if info["phase"] == 2]
 
     results: dict[str, tuple[bool, float, Optional[str]]] = {}
 
@@ -333,15 +306,21 @@ def main(group: Optional[str] = None, scraper: Optional[str] = None, parallel: b
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="PulseFlat – orquestrador de scrapers")
+    
+    # Carrega metadados dinamicamente para definir opções da linha de comando
+    scrapers_registry = discover_scrapers()
+    available_groups = sorted({s["group"] for s in scrapers_registry.values() if s["enabled"]})
+    available_scrapers = sorted(scrapers_registry.keys())
+
     parser.add_argument(
         "--group",
-        choices=sorted(set(SCRAPERS.values())),
+        choices=available_groups,
         help="Executa apenas os scrapers de um grupo",
     )
     parser.add_argument(
         "--scraper",
-        choices=sorted(SCRAPERS.keys()),
-        help="Executa apenas um scraper específico",
+        choices=available_scrapers,
+        help="Executa apenas um scraper específico (mesmo se desabilitado por padrão)",
     )
     parser.add_argument(
         "--parallel",

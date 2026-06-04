@@ -54,6 +54,9 @@ def parse_un_date(date_str: str) -> str:
 
 class OnuPactoGlobalScraper(BaseScraper):
     name = "onu_pacto_global"
+    group = "misc"
+    enabled = True
+    phase = 1
     accumulate = False  # Sobrescreve diariamente para manter a lista ativa atualizada
 
     def fetch(self) -> pd.DataFrame:

@@ -139,6 +139,9 @@ def _read_sheet(content: bytes, sheet_name: str, data_referencia: datetime.date)
 
 class AnbimaRankingGlobalScraper(BaseScraper):
     name = "anbima_ranking_global"
+    group = "anbima"
+    enabled = True
+    phase = 1
 
     def fetch(self) -> pd.DataFrame:
         session = requests.Session()

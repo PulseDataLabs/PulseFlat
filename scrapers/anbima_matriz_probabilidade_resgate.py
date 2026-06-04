@@ -44,6 +44,9 @@ def _ultimo_dia_mes_anterior() -> datetime.date:
 
 class AnbimaMatrizProbabilidadeResgateScraper(BaseScraper):
     name = "anbima_matriz_probabilidade_resgate"
+    group = "anbima"
+    enabled = True
+    phase = 1
 
     def fetch(self) -> pd.DataFrame:
         data_ref = _ultimo_dia_mes_anterior()

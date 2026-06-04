@@ -59,6 +59,9 @@ def capturar() -> tuple[list[dict], list[str]]:
 
 class B3IndicesPrecosHistoricosScraper(BaseScraper):
     name = "b3_indices_precos_historicos"
+    group = "b3"
+    enabled = False
+    phase = 1
     accumulate = True
     chaves_dedup = ['indice', 'ano', 'day']
     

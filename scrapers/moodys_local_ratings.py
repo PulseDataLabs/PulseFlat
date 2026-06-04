@@ -48,6 +48,9 @@ RENAME_MAP = {
 
 class MoodysLocalRatingsScraper(BaseScraper):
     name = "moodys_local_ratings"
+    group = "ratings"
+    enabled = True
+    phase = 1
     accumulate = False  # Sobrescreve o arquivo com a lista vigente atualizada
 
     def fetch(self) -> pd.DataFrame:

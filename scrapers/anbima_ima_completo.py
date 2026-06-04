@@ -157,6 +157,9 @@ def capturar() -> list[dict]:
 
 class AnbimaImaCompletoScraper(BaseScraper):
     name = "anbima_ima_completo"
+    group = "anbima"
+    enabled = True
+    phase = 1
     accumulate = True
     chaves_dedup = ['data_captura', 'data_referencia', 'indice']
     

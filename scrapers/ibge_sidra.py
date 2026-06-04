@@ -127,6 +127,9 @@ def capturar() -> list[dict]:
 
 class IbgeSidraScraper(BaseScraper):
     name = "ibge_sidra"
+    group = "ibge"
+    enabled = True
+    phase = 1
     accumulate = False
     chaves_dedup = ['data_captura', 'serie_id', 'periodo_referencia']
     

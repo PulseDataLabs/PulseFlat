@@ -133,6 +133,9 @@ def capturar() -> list[dict]:
 
 class B3BdiTradesAcoesScraper(BaseScraper):
     name = "b3_bdi_trades_acoes"
+    group = "b3"
+    enabled = True
+    phase = 1
     accumulate = True
     chaves_dedup = ['data_captura', 'tckr_symb', 'rpt_dt']
     

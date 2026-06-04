@@ -40,6 +40,9 @@ HEADERS = {
 
 class B3SeriesHistoricasScraper(BaseScraper):
     name = "b3_series_historicas"
+    group = "b3"
+    enabled = True
+    phase = 1
 
     def fetch(self) -> pd.DataFrame:
         data_final = datetime.date.today()

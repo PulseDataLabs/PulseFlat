@@ -163,6 +163,9 @@ def capturar() -> list[dict]:
 
 class B3BmfTaxasJurosScraper(BaseScraper):
     name = "b3_bmf_taxas_juros"
+    group = "b3"
+    enabled = True
+    phase = 1
     accumulate = True
     chaves_dedup = ['data_captura', 'data_referencia', 'curva', 'prazo_dias']
     

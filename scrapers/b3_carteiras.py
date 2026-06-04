@@ -157,6 +157,9 @@ def capturar() -> list[dict]:
 
 class B3CarteirasScraper(BaseScraper):
     name = "b3_carteiras"
+    group = "b3"
+    enabled = True
+    phase = 1
     accumulate = True
     chaves_dedup = ['data_captura', 'indice', 'codigo_ativo']
     

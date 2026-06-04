@@ -15,7 +15,7 @@ from pathlib import Path
 ROOT_DIR = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT_DIR))
 
-from run_all import SCRAPERS
+from run_all import discover_scrapers
 from scrapers.utils.base import BaseScraper
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
@@ -60,7 +60,9 @@ def generate():
     processed_files = set()
 
     # 2. Itera sobre cada scraper registrado em run_all.py
-    for module_name, group in SCRAPERS.items():
+    scrapers_registry = discover_scrapers()
+    for module_name, info in scrapers_registry.items():
+        group = info["group"]
         logger.info(f"Processando metadados do módulo: {module_name} (Grupo: {group})")
 
         # Dados extraídos do scraper

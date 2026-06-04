@@ -106,6 +106,9 @@ def capturar() -> list[dict]:
 
 class BcbPtaxScraper(BaseScraper):
     name = "bcb_ptax"
+    group = "bcb"
+    enabled = True
+    phase = 1
     accumulate = False
     chaves_dedup = ['data_captura', 'data_hora_cotacao']
     

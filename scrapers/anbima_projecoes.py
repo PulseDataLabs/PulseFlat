@@ -296,6 +296,9 @@ def capturar() -> list[dict]:
 
 class AnbimaProjecoesScraper(BaseScraper):
     name = "anbima_projecoes"
+    group = "anbima"
+    enabled = True
+    phase = 1
     accumulate = True
     chaves_dedup = ['data_captura', 'indice', 'mes_referencia', 'tipo_projecao']
     

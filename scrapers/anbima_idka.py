@@ -41,6 +41,9 @@ URL_TEMPLATE = (
 
 class AnbimaIdkaScraper(BaseScraper):
     name = "anbima_idka"
+    group = "anbima"
+    enabled = True
+    phase = 1
     title = "ANBIMA IDkA"
     description = "Índice de Duração Constante ANBIMA (prefixado e inflação), apresentando retornos diários, mensais, anuais e volatilidade."
     icon = "📈"

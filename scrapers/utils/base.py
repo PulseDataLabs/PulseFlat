@@ -18,6 +18,11 @@ class BaseScraper:
     tags: list[str] = []
     source: str = ""
 
+    # Controle do Pipeline
+    group: str = ""
+    enabled: bool = True
+    phase: int = 1
+
     def __init__(self):
         if not self.name:
             self.name = self.__class__.__name__.lower().replace("scraper", "")

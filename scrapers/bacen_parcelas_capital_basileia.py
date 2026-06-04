@@ -114,6 +114,9 @@ def _download_relatorio_odata(
 
 class BacenParcelasCapitalBasileiaScraper(BaseScraper):
     name = "bacen_parcelas_capital_basileia"
+    group = "bcb"
+    enabled = True
+    phase = 1
 
     def fetch(self) -> pd.DataFrame:
         session = requests.Session()

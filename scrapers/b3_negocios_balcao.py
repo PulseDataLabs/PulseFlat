@@ -54,6 +54,9 @@ def capturar() -> tuple[list[dict], list[str]]:
 
 class B3NegociosBalcaoScraper(BaseScraper):
     name = "b3_negocios_balcao"
+    group = "b3"
+    enabled = False
+    phase = 1
     accumulate = True
     chaves_dedup = ['data_captura', 'conjunto', 'registro_hash']
     

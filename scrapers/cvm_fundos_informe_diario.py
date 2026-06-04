@@ -134,6 +134,9 @@ def capturar() -> list[dict]:
 
 class CvmFundosInformeDiarioScraper(BaseScraper):
     name = "cvm_fundos_informe_diario"
+    group = "cvm"
+    enabled = True
+    phase = 1
     accumulate = False
     chaves_dedup = ['data_captura', 'cnpj_fundo_classe', 'dt_comptc']
     

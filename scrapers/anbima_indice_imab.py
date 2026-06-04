@@ -38,6 +38,9 @@ def capturar() -> tuple[list[dict], list[str]]:
 
 class AnbimaIndiceImabScraper(BaseScraper):
     name = "anbima_indice_imab"
+    group = "anbima"
+    enabled = True
+    phase = 1
     accumulate = True
     chaves_dedup = ['data_captura', 'conjunto', 'registro_hash']
     

@@ -37,6 +37,9 @@ def capturar() -> tuple[list[dict], list[str]]:
 
 class CvmCadastroCompanhiasAbertasScraper(BaseScraper):
     name = "cvm_cadastro_companhias_abertas"
+    group = "cvm"
+    enabled = False
+    phase = 1
     accumulate = False
     chaves_dedup = ['data_captura', 'conjunto', 'registro_hash']
     

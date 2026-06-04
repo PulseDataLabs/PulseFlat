@@ -115,6 +115,9 @@ def capturar() -> list[dict]:
 
 class B3BdiDiOverScraper(BaseScraper):
     name = "b3_bdi_di_over"
+    group = "b3"
+    enabled = True
+    phase = 1
     accumulate = True
     chaves_dedup = ['data_captura', 'rpt_dt']
     

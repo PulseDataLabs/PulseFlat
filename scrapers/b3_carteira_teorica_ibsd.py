@@ -6,6 +6,9 @@ from scrapers.generic_scraper import GenericScraper
 
 
 class B3CarteiraTeoricaIbsdScraper(GenericScraper):
+    group = "b3"
+    enabled = True
+    phase = 1
     resource_name = "B3 - Carteira Teórica - IBSD"
 
 

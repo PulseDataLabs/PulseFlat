@@ -42,6 +42,9 @@ HEADERS = {
 
 class BacenBalancetesBancosScraper(BaseScraper):
     name = "bacen_balancetes_bancos"
+    group = "bcb"
+    enabled = True
+    phase = 1
     accumulate = False  # Sobrescreve diariamente para manter apenas o balancete mais recente
 
     def fetch(self) -> pd.DataFrame:

@@ -47,6 +47,9 @@ def _try_download(session: requests.Session, yyyymm: str) -> bytes | None:
 
 class BacenConglomeradosScraper(BaseScraper):
     name = "bacen_conglomerados"
+    group = "bcb"
+    enabled = True
+    phase = 1
 
     def fetch(self) -> pd.DataFrame:
         session = requests.Session()
