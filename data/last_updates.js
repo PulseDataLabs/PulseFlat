@@ -1,31 +1,31 @@
 window.PULSEFLAT_LAST_UPDATES = {
   "anbima_titulos_publicos.csv": {
     "min": "2026-06-01",
-    "max": "2026-06-03"
+    "max": "2026-06-04"
   },
   "anbima_550.csv": {
     "min": "2026-06-01",
-    "max": "2026-06-03"
+    "max": "2026-06-04"
   },
   "b3_carteira_teorica_ifnc.csv": {
     "min": "2026-06-03",
-    "max": "2026-06-03"
+    "max": "2026-06-04"
   },
   "b3_carteira_teorica_bdrx.csv": {
     "min": "2026-06-03",
-    "max": "2026-06-03"
+    "max": "2026-06-04"
   },
   "bcb_sgs.csv": {
-    "min": "2026-06-03",
-    "max": "2026-06-03"
+    "min": "2026-06-04",
+    "max": "2026-06-04"
   },
   "b3_carteira_teorica_smll.csv": {
     "min": "2026-06-03",
-    "max": "2026-06-03"
+    "max": "2026-06-04"
   },
   "anbima_ima_completo.csv": {
     "min": "2026-06-01",
-    "max": "2026-06-03"
+    "max": "2026-06-04"
   },
   "b3_indices_precos_historicos.csv": {
     "min": "2026-06-03",
@@ -40,12 +40,12 @@ window.PULSEFLAT_LAST_UPDATES = {
     "max": "2026-06-03"
   },
   "debentures_emissoes_caracteristicas.csv": {
-    "min": "2026-06-03",
-    "max": "2026-06-03"
+    "min": "2026-06-04",
+    "max": "2026-06-04"
   },
   "b3_carteira_teorica_ibxl.csv": {
     "min": "2026-06-03",
-    "max": "2026-06-03"
+    "max": "2026-06-04"
   },
   "registro_fundo_classe.csv": {
     "min": "2026-06-04",
@@ -56,16 +56,16 @@ window.PULSEFLAT_LAST_UPDATES = {
     "max": "2026-06-03"
   },
   "anbima_debentures.csv": {
-    "min": "2026-06-01",
-    "max": "2026-06-02"
+    "min": "2026-06-04",
+    "max": "2026-06-04"
   },
   "b3_carteira_teorica_ibov.csv": {
     "min": "2026-06-03",
-    "max": "2026-06-03"
+    "max": "2026-06-04"
   },
   "b3_carteira_teorica_agfs_iagro.csv": {
     "min": "2026-06-03",
-    "max": "2026-06-03"
+    "max": "2026-06-04"
   },
   "b3_carteiras_teoricas.csv": {
     "min": "2026-06-01",
@@ -76,8 +76,8 @@ window.PULSEFLAT_LAST_UPDATES = {
     "max": "2026-06-03"
   },
   "ibge_sidra.csv": {
-    "min": "2026-06-03",
-    "max": "2026-06-03"
+    "min": "2026-06-04",
+    "max": "2026-06-04"
   },
   "b3_fiis_listados.csv": {
     "min": "2026-06-03",
@@ -89,19 +89,19 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "anbima_indicadores.csv": {
     "min": "2026-06-01",
-    "max": "2026-06-03"
+    "max": "2026-06-04"
   },
   "anbima_projecoes.csv": {
     "min": "2026-06-01",
-    "max": "2026-06-03"
+    "max": "2026-06-04"
   },
   "b3_bdi_di_over.csv": {
     "min": "2026-06-01",
-    "max": "2026-06-03"
+    "max": "2026-06-04"
   },
   "debentures_mercado_secundario_precos_negociacao.csv": {
-    "min": "2026-06-03",
-    "max": "2026-06-03"
+    "min": "2026-06-04",
+    "max": "2026-06-04"
   },
   "bcb_ptax.csv": {
     "min": "2026-06-04",
@@ -109,11 +109,11 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "b3_carteira_teorica_ibsd.csv": {
     "min": "2026-06-03",
-    "max": "2026-06-03"
+    "max": "2026-06-04"
   },
   "b3_carteira_teorica_isee.csv": {
     "min": "2026-06-03",
-    "max": "2026-06-03"
+    "max": "2026-06-04"
   },
   "b3_taxa_cambio_referencia.csv": {
     "min": "2026-06-01",
@@ -125,27 +125,27 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "b3_indicadores_financeiros.csv": {
     "min": "2026-06-01",
-    "max": "2026-06-03"
+    "max": "2026-06-04"
   },
   "anbima_idka.csv": {
     "min": "2026-06-03",
-    "max": "2026-06-03"
+    "max": "2026-06-04"
   },
   "anbima_ranking_global.csv": {
     "min": "2026-06-03",
-    "max": "2026-06-03"
+    "max": "2026-06-04"
   },
   "anbima_matriz_probabilidade_resgate.csv": {
     "min": "2026-06-03",
-    "max": "2026-06-03"
+    "max": "2026-06-04"
   },
   "bacen_balancetes_bancos.csv": {
-    "min": "2026-06-03",
-    "max": "2026-06-03"
+    "min": "2026-06-04",
+    "max": "2026-06-04"
   },
   "bacen_conglomerados.csv": {
     "min": "2026-06-03",
-    "max": "2026-06-03"
+    "max": "2026-06-04"
   },
   "yahoo_finance_series.csv": {
     "min": "2026-06-03",
@@ -153,7 +153,7 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "bacen_parcelas_capital_basileia.csv": {
     "min": "2026-06-03",
-    "max": "2026-06-03"
+    "max": "2026-06-04"
   },
   "s_p_entidades_brasil.csv": {
     "min": "2026-06-04",
@@ -168,12 +168,12 @@ window.PULSEFLAT_LAST_UPDATES = {
     "max": "2026-06-03"
   },
   "s_p_acoes_ratings.csv": {
-    "min": "2026-06-03",
-    "max": "2026-06-03"
+    "min": "2026-06-04",
+    "max": "2026-06-04"
   },
   "bacen_negociacao_tpf_extragrupo.csv": {
     "min": "2026-06-03",
-    "max": "2026-06-03"
+    "max": "2026-06-04"
   },
   "moodys_local_ratings.csv": {
     "min": "2026-06-03",
@@ -185,6 +185,22 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "b3_bdi_trades_acoes.csv": {
     "min": "2026-06-03",
-    "max": "2026-06-03"
+    "max": "2026-06-04"
+  },
+  "b3_fiis.csv": {
+    "min": "2026-06-04",
+    "max": "2026-06-04"
+  },
+  "b3_carteiras.csv": {
+    "min": "2026-06-04",
+    "max": "2026-06-04"
+  },
+  "cvm_fundos_informe_diario.csv": {
+    "min": "2026-06-04",
+    "max": "2026-06-04"
+  },
+  "b3_etfs.csv": {
+    "min": "2026-06-04",
+    "max": "2026-06-04"
   }
 };
