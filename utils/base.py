@@ -53,6 +53,8 @@ def _patched_request(self, method, url, *args, **kwargs):
 
 requests.Session.request = _patched_request
 
+DRIFTS = []
+
 FUSO = ZoneInfo("America/Sao_Paulo")
 
 HEADERS_HTTP = {
@@ -131,13 +133,47 @@ def salvar_csv(
       substituem a captura anterior em vez de duplicar.
     - Se `chaves_dedup` for None, remove todas as linhas com a mesma
       `data_captura` dos novos dados (dedup simples por dia).
-    - O histórico de dias anteriores é sempre preservado integralmente.
+      - O histórico de dias anteriores é sempre preservado integralmente.
     """
     log = get_logger("utils.salvar_csv")
 
     if not registros:
         log.warning("Nenhum registro para salvar — abortando.")
         sys.exit(1)
+
+    # --- Detecção de Schema Drift ---
+    try:
+        schemas_path = arquivo.parent / "schemas.json"
+        if schemas_path.exists() and registros:
+            with schemas_path.open("r", encoding="utf-8") as sf:
+                schemas = json.load(sf)
+            
+            # Pega colunas úteis da nova execução
+            filtered_cols = [c for c in cabecalho if c not in ("conjunto", "arquivo_origem", "registro_hash", "dt_captura")]
+            
+            import re
+            for s in schemas:
+                files_declared = [f.strip() for f in re.split(r'·| e ', s.get("files", ""))]
+                if arquivo.name in files_declared:
+                    existing_cols = [f["name"] for f in s.get("fields", [])]
+                    added = [c for c in filtered_cols if c not in existing_cols]
+                    removed = []
+                    if len(files_declared) == 1:
+                        removed = [c for c in existing_cols if c not in filtered_cols]
+                    
+                    if added or removed:
+                        drift_info = {
+                            "file": arquivo.name,
+                            "added": added,
+                            "removed": removed,
+                            "timestamp": datetime.now().isoformat()
+                        }
+                        DRIFTS.append(drift_info)
+                        log.warning(f"SCHEMA DRIFT detectado em {arquivo.name}: Adicionadas: {added} | Removidas: {removed}")
+                    break
+    except Exception as e:
+        log.warning(f"Erro ao detectar schema drift para {arquivo.name}: {e}")
+    # --------------------------------
 
     arquivo.parent.mkdir(parents=True, exist_ok=True)
 

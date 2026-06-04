@@ -160,8 +160,8 @@ window.PULSEFLAT_LAST_UPDATES = {
     "max": "2026-06-04"
   },
   "investing_etf.csv": {
-    "min": "2026-06-03",
-    "max": "2026-06-03"
+    "min": "2026-06-04",
+    "max": "2026-06-04"
   },
   "s_p_ratings_brasil.csv": {
     "min": "2026-06-03",
@@ -180,8 +180,8 @@ window.PULSEFLAT_LAST_UPDATES = {
     "max": "2026-06-03"
   },
   "onu_pacto_global.csv": {
-    "min": "2026-06-03",
-    "max": "2026-06-03"
+    "min": "2026-06-04",
+    "max": "2026-06-04"
   },
   "b3_bdi_trades_acoes.csv": {
     "min": "2026-06-03",

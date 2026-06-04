@@ -869,22 +869,22 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-06-03"
+        "example": "2026-06-04"
       },
       {
         "name": "name",
         "type": "str",
-        "example": "Banco do Brasil S.A."
+        "example": "Atina Industria e Comercio e Ativos Naturais LTDA"
       },
       {
         "name": "type",
         "type": "str",
-        "example": "Company"
+        "example": "Small or Medium-sized Enterprise"
       },
       {
         "name": "sector",
         "type": "str",
-        "example": "Banks"
+        "example": "Diversified Industrials"
       },
       {
         "name": "country",
@@ -893,13 +893,13 @@
       },
       {
         "name": "joined_on",
-        "type": "date",
-        "example": "2003-11-20"
+        "type": "str",
+        "example": "2026-05-29"
       },
       {
         "name": "link",
         "type": "str",
-        "example": "https://unglobalcompact.org/what-is-gc/participants/1089"
+        "example": "https://unglobalcompact.org/what-is-gc/participants/211096-Atina-Industria-e-Comercio-e-Ativos-Naturais-LTDA"
       }
     ]
   },
@@ -2270,7 +2270,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-06-03"
+        "example": "2026-06-04"
       },
       {
         "name": "nome",
@@ -2285,17 +2285,17 @@
       {
         "name": "link",
         "type": "str",
-        "example": "https://br.investing.com/etfs/ishares..."
+        "example": "https://br.investing.com/etfs/ishares-ibovespa"
       },
       {
         "name": "vr_ultimo",
         "type": "float",
-        "example": "167,17"
+        "example": "167.28"
       },
       {
         "name": "vr_variacao_pct",
         "type": "float",
-        "example": "-2,42%"
+        "example": "-2.42%"
       },
       {
         "name": "qt_volume",
@@ -2305,7 +2305,7 @@
       {
         "name": "hr_atualizacao",
         "type": "str",
-        "example": "17:18:37"
+        "example": "03/06"
       }
     ]
   },

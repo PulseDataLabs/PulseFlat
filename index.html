@@ -1106,6 +1106,90 @@
       0%, 100% { transform: translateY(0); }
       50%      { transform: translateY(-8px); }
     }
+
+    /* ── SEARCH INPUTS ──────────────────────────────────── */
+    .search-wrapper input {
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .search-wrapper input:focus {
+      border-color: var(--accent) !important;
+      box-shadow: 0 0 10px rgba(0, 212, 255, 0.25);
+    }
+
+    /* ── COPY BUTTON ────────────────────────────────────── */
+    .copy-btn {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      color: var(--text2);
+      padding: 0.5rem 0.8rem;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      font-family: var(--font-mono);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .copy-btn:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: rgba(0, 212, 255, 0.05);
+      transform: translateY(-1px);
+    }
+    
+    .copy-btn:active {
+      transform: translateY(0);
+    }
+
+    /* ── PIPELINE HEALTH DROPDOWN ───────────────────────── */
+    .pipeline-health-container {
+      position: relative;
+    }
+    
+    .health-dropdown-content {
+      display: none;
+      position: absolute;
+      top: calc(100% + 10px);
+      right: 0;
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1rem;
+      min-width: 250px;
+      z-index: 100;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.55);
+      font-family: var(--font-sans);
+    }
+    
+    .pipeline-health-container:hover .health-dropdown-content {
+      display: block;
+    }
+    
+    .dropdown-header {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      color: var(--text2);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.5rem;
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.05em;
+    }
+    
+    #health-details {
+      font-size: 0.8rem;
+      color: var(--text1);
+      line-height: 1.4;
+    }
+    
+    .status-item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.35rem;
+    }
   </style>
 </head>
 <body>
@@ -1122,9 +1206,20 @@
     <li><a href="#schema">Schema</a></li>
     <li><a href="#setup">Instalação</a></li>
   </ul>
-  <a href="https://github.com/royopa/PulseFlat" class="nav-cta" target="_blank">
-    GitHub ↗
-  </a>
+  <div style="display: flex; align-items: center; gap: 1rem;">
+    <!-- PIPELINE HEALTH BADGE -->
+    <div id="pipeline-health" class="pipeline-health-container" style="display: flex; align-items: center; gap: 0.5rem; padding: 0.3rem 0.8rem; border-radius: 20px; background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border); font-family: var(--font-mono); font-size: 0.7rem; cursor: pointer;">
+      <span id="health-dot" style="width: 8px; height: 8px; border-radius: 50%; background: #999; display: inline-block; box-shadow: 0 0 8px #999; transition: all 0.3s;"></span>
+      <span id="health-text" style="color: var(--text2); transition: all 0.3s;">Pipeline: offline</span>
+      <div id="health-dropdown" class="health-dropdown-content">
+        <div class="dropdown-header">Status Geral</div>
+        <div id="health-details">Carregando informações...</div>
+      </div>
+    </div>
+    <a href="https://github.com/royopa/PulseFlat" class="nav-cta" target="_blank">
+      GitHub ↗
+    </a>
+  </div>
 </nav>
 
 <!-- HERO -->
@@ -1306,6 +1401,13 @@
         <div class="section-label">Downloads</div>
         <h2 class="section-title">Datasets disponíveis</h2>
         <p class="section-desc">CSVs atualizados diariamente. Clique em Download para baixar o arquivo mais recente.</p>
+      </div>
+    </div>
+
+    <!-- Busca de Datasets -->
+    <div class="datasets-search-container reveal" style="margin-top: 1.5rem; margin-bottom: 2rem; display: flex; justify-content: center; width: 100%;">
+      <div class="search-wrapper" style="position: relative; width: 100%; max-width: 500px;">
+        <input type="text" id="dataset-search" placeholder="🔍 Pesquisar datasets por nome, arquivo, descrição ou tags..." style="width: 100%; padding: 0.75rem 1.5rem; border-radius: 30px; border: 1px solid var(--border); background: var(--bg2); color: var(--text1); font-size: 0.95rem; outline: none; transition: all 0.3s;" />
       </div>
     </div>
 
@@ -2726,6 +2828,13 @@
     <h2 class="section-title reveal">Estrutura dos dados</h2>
     <p class="section-desc reveal">Todos os CSVs seguem o padrão: UTF-8, separador vírgula, decimal ponto, datas YYYY-MM-DD.</p>
 
+    <!-- Busca de Schemas -->
+    <div class="schema-search-container reveal" style="margin-bottom: 2rem; display: flex; justify-content: center; width: 100%;">
+      <div class="search-wrapper" style="position: relative; width: 100%; max-width: 500px;">
+        <input type="text" id="schema-search" placeholder="🔍 Pesquisar colunas (ex: cnpj, taxa, valor, data...)" style="width: 100%; padding: 0.75rem 1.5rem; border-radius: 30px; border: 1px solid var(--border); background: var(--bg2); color: var(--text1); font-size: 0.95rem; outline: none; transition: all 0.3s;" />
+      </div>
+    </div>
+
     <div class="schema-grid reveal" id="schema-grid">
       <!-- Carregado dinamicamente via JS -->
     </div>
@@ -2834,7 +2943,11 @@
 </footer>
 
 <script src="./data/last_updates.js"></script>
+<script src="./data/pipeline_status.js"></script>
 <script>
+  let activeSourceFilter = 'all';
+  let activeSearchQuery = '';
+  let activeSchemaSearchQuery = '';
   // Reveal on scroll
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry, i) => {
@@ -2995,6 +3108,37 @@
       }
     });
 
+    // Filter functions
+    function applyDatasetFilters() {
+      cards.forEach(card => {
+        const cardSource = card.getAttribute('data-source-mapped');
+        const sourceMatch = (activeSourceFilter === 'all' || cardSource === activeSourceFilter);
+        
+        let searchMatch = true;
+        if (activeSearchQuery) {
+          const title = (card.querySelector('.card-title')?.textContent || '').toLowerCase();
+          const file = (card.querySelector('.card-file')?.textContent || '').toLowerCase();
+          const desc = (card.querySelector('.card-desc')?.textContent || '').toLowerCase();
+          const tags = Array.from(card.querySelectorAll('.field-tag')).map(t => t.textContent.toLowerCase()).join(' ');
+          const source = (card.querySelector('.card-source')?.textContent || '').toLowerCase();
+          
+          const text = `${title} ${file} ${desc} ${tags} ${source}`;
+          searchMatch = text.includes(activeSearchQuery);
+        }
+        
+        if (sourceMatch && searchMatch) {
+          card.classList.remove('filtered-out');
+          card.style.opacity = '0';
+          setTimeout(() => {
+            card.style.opacity = '1';
+            card.style.transition = 'opacity 0.3s ease';
+          }, 10);
+        } else {
+          card.classList.add('filtered-out');
+        }
+      });
+    }
+
     // Handle filter button clicks
     const filterButtons = document.querySelectorAll('.filter-btn');
     filterButtons.forEach(btn => {
@@ -3002,37 +3146,49 @@
         filterButtons.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
 
-        const selectedFilter = btn.getAttribute('data-source');
-        
-        cards.forEach(card => {
-          const cardSource = card.getAttribute('data-source-mapped');
-          if (selectedFilter === 'all' || cardSource === selectedFilter) {
-            card.classList.remove('filtered-out');
-            card.style.opacity = '0';
-            setTimeout(() => {
-              card.style.opacity = '1';
-              card.style.transition = 'opacity 0.3s ease';
-            }, 10);
-          } else {
-            card.classList.add('filtered-out');
-          }
-        });
-
-        const schemaCards = document.querySelectorAll('.schema-card');
-        schemaCards.forEach(card => {
-          const cardSource = card.getAttribute('data-source-mapped');
-          if (selectedFilter === 'all' || cardSource === selectedFilter) {
-            card.classList.remove('filtered-out');
-            card.style.opacity = '0';
-            setTimeout(() => {
-              card.style.opacity = '1';
-              card.style.transition = 'opacity 0.3s ease';
-            }, 10);
-          } else {
-            card.classList.add('filtered-out');
-          }
-        });
+        activeSourceFilter = btn.getAttribute('data-source');
+        applyDatasetFilters();
+        applySchemaFilters();
       });
+    });
+
+    // Handle dataset search input
+    const datasetSearchInput = document.getElementById('dataset-search');
+    if (datasetSearchInput) {
+      datasetSearchInput.addEventListener('input', (e) => {
+        activeSearchQuery = e.target.value.toLowerCase().trim();
+        applyDatasetFilters();
+      });
+    }
+  }
+
+  // Schema filter function
+  function applySchemaFilters() {
+    const schemaCards = document.querySelectorAll('.schema-card');
+    schemaCards.forEach(card => {
+      const cardSource = card.getAttribute('data-source-mapped');
+      const sourceMatch = (activeSourceFilter === 'all' || cardSource === activeSourceFilter);
+      
+      let searchMatch = true;
+      if (activeSchemaSearchQuery) {
+        const title = (card.querySelector('.schema-card-title')?.textContent || '').toLowerCase();
+        const files = (card.querySelector('.schema-csv-name')?.textContent || '').toLowerCase();
+        const columns = Array.from(card.querySelectorAll('.schema-table tbody tr td:first-child')).map(td => td.textContent.toLowerCase()).join(' ');
+        
+        const text = `${title} ${files} ${columns}`;
+        searchMatch = text.includes(activeSchemaSearchQuery);
+      }
+      
+      if (sourceMatch && searchMatch) {
+        card.classList.remove('filtered-out');
+        card.style.opacity = '0';
+        setTimeout(() => {
+          card.style.opacity = '1';
+          card.style.transition = 'opacity 0.3s ease';
+        }, 10);
+      } else {
+        card.classList.add('filtered-out');
+      }
     });
   }
 
@@ -3075,9 +3231,179 @@
           </div>`;
       }).join('');
 
+      // Wire schema search event listener and initial filter
+      const schemaSearchInput = document.getElementById('schema-search');
+      if (schemaSearchInput) {
+        schemaSearchInput.addEventListener('input', (e) => {
+          activeSchemaSearchQuery = e.target.value.toLowerCase().trim();
+          applySchemaFilters();
+        });
+      }
+      applySchemaFilters();
+
     } catch (err) {
       console.error('Erro ao carregar os schemas:', err);
       container.innerHTML = `<div class="error-msg">Erro ao carregar as estruturas de dados.</div>`;
+    }
+  }
+
+  // Pandas import snippet copy-to-clipboard buttons initialization
+  function initPandasCopyButtons() {
+    document.querySelectorAll('.dataset-card').forEach(card => {
+      const downloadBtn = card.querySelector('.download-btn');
+      if (!downloadBtn) return;
+      
+      const csvUrl = downloadBtn.getAttribute('href');
+      if (!csvUrl) return;
+
+      const copyBtn = document.createElement('button');
+      copyBtn.className = 'copy-btn';
+      copyBtn.title = 'Copiar código de importação do Pandas';
+      copyBtn.innerHTML = `
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 12px; height: 12px;">
+          <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+          <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"></path>
+        </svg>
+        Pandas
+      `;
+      
+      copyBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const code = `import pandas as pd\ndf = pd.read_csv("${csvUrl}")`;
+        
+        navigator.clipboard.writeText(code).then(() => {
+          const originalText = copyBtn.innerHTML;
+          copyBtn.innerHTML = `
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 12px; height: 12px; color: #00e5a0;">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            Copiado!
+          `;
+          copyBtn.style.borderColor = '#00e5a0';
+          copyBtn.style.color = '#00e5a0';
+          
+          setTimeout(() => {
+            copyBtn.innerHTML = originalText;
+            copyBtn.style.borderColor = '';
+            copyBtn.style.color = '';
+          }, 2000);
+        }).catch(err => {
+          console.error('Erro ao copiar:', err);
+        });
+      });
+      
+      // Wrap copy and download buttons in a container for correct layout alignment
+      const wrapper = document.createElement('div');
+      wrapper.style.display = 'flex';
+      wrapper.style.gap = '0.5rem';
+      
+      downloadBtn.parentNode.insertBefore(wrapper, downloadBtn);
+      wrapper.appendChild(copyBtn);
+      wrapper.appendChild(downloadBtn);
+    });
+  }
+
+  // Load and render pipeline health status dynamically
+  async function loadPipelineStatus() {
+    let statusData = window.PULSEFLAT_PIPELINE_STATUS;
+    if (!statusData) {
+      try {
+        const response = await fetch('./data/pipeline_status.json');
+        if (response.ok) {
+          statusData = await response.json();
+        }
+      } catch (err) {
+        console.warn('Erro ao carregar pipeline_status.json:', err);
+      }
+    }
+    
+    if (!statusData) {
+      return;
+    }
+    
+    const healthDot = document.getElementById('health-dot');
+    const healthText = document.getElementById('health-text');
+    const healthDetails = document.getElementById('health-details');
+    
+    if (!healthDot || !healthText) return;
+    
+    const status = statusData.status || 'success';
+    const summary = statusData.summary || {};
+    const timestamp = statusData.timestamp || '';
+    
+    let dotColor = '#00e5a0'; // green
+    let dotShadow = '0 0 8px #00e5a0';
+    let statusText = 'Online';
+    
+    if (status === 'error') {
+      dotColor = '#ff3b30'; // red
+      dotShadow = '0 0 8px #ff3b30';
+      statusText = 'Erro no Pipeline';
+    } else if (status === 'warning') {
+      dotColor = '#ffcc00'; // yellow
+      dotShadow = '0 0 8px #ffcc00';
+      statusText = 'Aviso';
+    }
+    
+    healthDot.style.background = dotColor;
+    healthDot.style.boxShadow = dotShadow;
+    healthText.textContent = `Pipeline: ${statusText}`;
+    
+    // Details dropdown
+    let failedScrapersHtml = '';
+    const errorScrapers = [];
+    if (statusData.scrapers) {
+      for (const [name, info] of Object.entries(statusData.scrapers)) {
+        if (info.status === 'error') {
+          errorScrapers.push(name);
+        }
+      }
+    }
+    
+    if (errorScrapers.length > 0) {
+      failedScrapersHtml = `
+        <div style="margin-top: 0.5rem; border-top: 1px solid var(--border); padding-top: 0.5rem;">
+          <strong style="color: #ff3b30; font-size: 0.75rem;">Falhas:</strong>
+          <ul style="margin: 0.25rem 0 0 1rem; padding: 0; font-size: 0.7rem; color: var(--text2); list-style: square;">
+            ${errorScrapers.map(name => `<li>${name}</li>`).join('')}
+          </ul>
+        </div>
+      `;
+    }
+    
+    let driftHtml = '';
+    const driftsCount = summary.drifts || 0;
+    if (driftsCount > 0) {
+      driftHtml = `
+        <div style="margin-top: 0.5rem; border-top: 1px solid var(--border); padding-top: 0.5rem; color: #ffcc00; font-size: 0.7rem;">
+          ⚠️ ${driftsCount} schema drift(s) detectado(s)
+        </div>
+      `;
+    }
+
+    const dateFormatted = timestamp ? new Date(timestamp).toLocaleString('pt-BR') : 'Desconhecido';
+    
+    if (healthDetails) {
+      healthDetails.innerHTML = `
+        <div class="status-item">
+          <span>Total de Scrapers:</span>
+          <strong>${summary.total || 0}</strong>
+        </div>
+        <div class="status-item" style="color: #00e5a0;">
+          <span>Sucesso:</span>
+          <strong>${summary.success || 0}</strong>
+        </div>
+        <div class="status-item" style="color: #ff3b30;">
+          <span>Falhas:</span>
+          <strong>${summary.failed || 0}</strong>
+        </div>
+        <div class="status-item" style="font-size: 0.7rem; color: var(--text3); margin-top: 0.5rem;">
+          <span>Última Execução:</span>
+          <span>${dateFormatted}</span>
+        </div>
+        ${failedScrapersHtml}
+        ${driftHtml}
+      `;
     }
   }
 
@@ -3085,6 +3411,8 @@
     await loadLastUpdates();
     await loadSchemas();
     initDatasetFilters();
+    initPandasCopyButtons();
+    await loadPipelineStatus();
   });
 </script>
 </body>
