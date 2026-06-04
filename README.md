@@ -11,700 +11,165 @@ Sem servidor. Sem custo. Histórico versionado em CSV no próprio repositório.
 
 ---
 
-## Scrapers
+## Recursos e Diferenciais do Projeto
 
-### Grupo ANBIMA
-
-| Scraper | Fonte | Método | CSV(s) gerado(s) |
-|---|---|---|---|
-| `anbima_indicadores` | ANBIMA | Scraping HTML | `anbima_indicadores.csv` |
-| `anbima_projecoes` | ANBIMA | API OAuth 2.0 / Scraping | `anbima_projecoes.csv` |
-| `anbima_titulos_publicos` | ANBIMA | TXT delimitado (@) | `anbima_titulos_publicos.csv` |
-| `anbima_debentures` | ANBIMA | TXT delimitado (@) | `anbima_debentures.csv` |
-| `anbima_ima_completo` | ANBIMA | TXT delimitado | `anbima_ima_completo.csv` |
-| `anbima_550` | ANBIMA | TXT (Resolução 550) | `anbima_550.csv` |
-| `anbima_indice_imab` | ANBIMA | XLS histórico | `anbima_indice_imab.csv` |
-| `anbima_idka` | ANBIMA | API pública | `anbima_idka.csv` |
-| `anbima_ranking_global` | ANBIMA | API Strapi | `anbima_ranking_global.csv` |
-| `anbima_matriz_probabilidade_resgate` | ANBIMA | Scraping HTML | `anbima_matriz_probabilidade_resgate.csv` |
-
-### Grupo BCB
-
-| Scraper | Fonte | Método | CSV(s) gerado(s) |
-|---|---|---|---|
-| `bcb_ptax` | BCB | API REST (Olinda) | `bcb_ptax.csv` (sem acúmulo) |
-| `bcb_sgs` | BCB | API REST (SGS) | `bcb_sgs.csv` (sem acúmulo) |
-| `bacen_negociacao_tpf` | BCB | ZIP + CSV (DEMAB) | `bacen_negociacao_tpf_extragrupo.csv` |
-| `bacen_balancetes_bancos` | BCB | API Documentos | `bacen_balancetes_bancos.csv` (sem acúmulo) |
-| `bacen_conglomerados` | BCB | API OData | `bacen_conglomerados.csv` |
-| `bacen_parcelas_capital_basileia` | BCB | API OData | `bacen_parcelas_capital_basileia.csv` |
-
-### Grupo IBGE
-
-| Scraper | Fonte | Método | CSV(s) gerado(s) |
-|---|---|---|---|
-| `ibge_sidra` | IBGE | API REST (SIDRA) | `ibge_sidra.csv` (sem acúmulo) |
-
-### Grupo CVM
-
-| Scraper | Fonte | Método | CSV(s) gerado(s) |
-|---|---|---|---|
-| `cvm_cadastro_companhias_abertas` | CVM | CSV direto | `cvm_cadastro_companhias_abertas.csv` (sem acúmulo) |
-| `cvm_fundos_informe_diario` | CVM | ZIP + CSV | `cvm_fundos_informe_diario.csv` (sem acúmulo) |
-| `cvm_fundos_classe` | CVM | ZIP + CSV | `cvm_fundos_classe.csv` (sem acúmulo) |
-
-### Grupo SND / Debêntures
-
-| Scraper | Fonte | Método | CSV(s) gerado(s) |
-|---|---|---|---|
-| `debentures_emissoes_caracteristicas` | SND | HTML direto | `debentures_emissoes_caracteristicas.csv` (sem acúmulo) |
-| `debentures_mercado_secundario_precos_negociacao` | SND | HTML direto | `debentures_mercado_secundario_precos_negociacao.csv` (sem acúmulo) |
-
-### Grupo B3
-
-| Scraper | Fonte | Método | CSV(s) gerado(s) |
-|---|---|---|---|
-| `b3_fiis` | B3 | API JSON + Base64 | `b3_fiis_listados.csv` (sem acúmulo) |
-| `b3_etfs` | B3 | API JSON + Base64 | `b3_etfs_listados.csv` (sem acúmulo) |
-| `b3_carteiras` | B3 | API JSON + Base64 | `b3_carteiras_teoricas.csv` |
-| `b3_carteira_teorica_ibov` | B3 | API JSON + Base64 | `b3_carteira_teorica_ibov.csv` |
-| `b3_carteira_teorica_smll` | B3 | API JSON + Base64 | `b3_carteira_teorica_smll.csv` |
-| `b3_carteira_teorica_bdrx` | B3 | API JSON + Base64 | `b3_carteira_teorica_bdrx.csv` |
-| `b3_carteira_teorica_isee` | B3 | API JSON + Base64 | `b3_carteira_teorica_isee.csv` |
-| `b3_carteira_teorica_ibxl` | B3 | API JSON + Base64 | `b3_carteira_teorica_ibxl.csv` |
-| `b3_carteira_teorica_ifnc` | B3 | API JSON + Base64 | `b3_carteira_teorica_ifnc.csv` |
-| `b3_carteira_teorica_agfs_iagro` | B3 | API JSON + Base64 | `b3_carteira_teorica_agfs_iagro.csv` |
-| `b3_carteira_teorica_ibsd` | B3 | API JSON + Base64 | `b3_carteira_teorica_ibsd.csv` |
-| `b3_indicadores_financeiros` | B3 | API JSON + Base64 | `b3_indicadores_financeiros.csv` |
-| `b3_bdi_di_over` | B3 | API POST (BDI) | `b3_bdi_di_over.csv` |
-| `b3_taxa_cambio_referencia` | B3 | API JSON + Base64 | `b3_taxa_cambio_referencia.csv` |
-| `b3_capital_social_empresas` | B3 | API JSON + Base64 | `b3_capital_social_empresas.csv` |
-| `b3_indices_precos_historicos` | B3 | API JSON + Base64 | `b3_indices_precos_historicos.csv` |
-| `b3_classificacao_setorial` | B3 | ZIP + XLSX | `b3_classificacao_setorial.csv` (sem acúmulo) |
-| `b3_titulos_negociaveis` | B3 | ZIP + CSV | `b3_titulos_negociaveis.csv` (sem acúmulo) |
-| `b3_series_historicas` | B3 | API JSON + Download | `b3_series_historicas.csv` |
-
-### Grupo Ratings (Agências de Classificação)
-
-| Scraper | Fonte | Método | CSV(s) gerado(s) |
-|---|---|---|---|
-| `s_p_entidades_brasil` | S&P Global | Scraping HTML | `s_p_entidades_brasil.csv` |
-| `s_p_ratings_brasil` | S&P Global | Scraping HTML | `s_p_ratings_brasil.csv` |
-| `s_p_acoes_ratings` | S&P Global | Scraping HTML | `s_p_acoes_ratings.csv` |
-| `moodys_local_ratings` | Moody's Local | Scraping HTML | (Bloqueado por anti-bot) |
-
-### Grupo Outros / Diversos (Misc)
-
-| Scraper | Fonte | Método | CSV(s) gerado(s) |
-|---|---|---|---|
-| `yahoo_finance_series` | Yahoo Finance | API yfinance | `yahoo_finance_series.csv` |
-| `investing_etf` | Investing.com | Scraping HTML | `investing_etf.csv` (sem acúmulo) |
-| `onu_pacto_global` | ONU Pacto Global | Crawling HTML | `onu_pacto_global.csv` (sem acúmulo) |
-
-**Desativados:** `b3_cotahist_diario`, `b3_cotahist_anual`, `b3_indicadores_economicos_fwf`, `b3_negocios_balcao`, `b3_companhias_detalhes`, `b3_companhias_info`, `b3_dividendos_dinheiro`, `b3_futuros_ajustes` (fonte legada descontinuada), `b3_bmf_taxas_juros` (API BDI sem dados).
+*   **Arquitetura Baseada em Classes**: Implementação de uma classe base sólida (`BaseScraper`) para gerenciar automaticamente a execução, o ciclo de vida dos scrapers, e a sanitização padrão de dados.
+*   **Limpeza Inteligente de Tipagem**: Conversão automática de datas brasileiras (`DD/MM/YYYY` ou `DD/MM/YY` para o padrão ISO `YYYY-MM-DD`) e normalização de floats com vírgula para ponto (ex: `"5,3656"` para `5.3656`).
+*   **Execução Paralela**: Orquestrador (`run_all.py`) integrado com `ThreadPoolExecutor`, permitindo processamento concorrente seguro de scrapers independentes e organizando a execução em fases (fase 1: independentes; fase 2: dependentes).
+*   **Monitoramento de Schema Drift**: Validação dinâmica de colunas na persistência do arquivo contra schemas conhecidos, logando discrepâncias de colunas novas ou removidas.
+*   **Dashboard Dinâmico e Otimizado**: Interface HTML enriquecida que carrega e renderiza dados sob demanda a partir de JSONs estáticos (`datasets.json`, `schemas.json`, `pipeline_status.json`), apresentando busca instantânea debouncada (delay de 100ms), filtragem por fontes de dados, visualização de tabelas e snippets copy-paste prontos para Pandas.
+*   **Carregamento Ultra Rápido**: Otimizações de front-end com tags `<link rel="preload">` e CSS Containment (`content-visibility: auto` e `contain-intrinsic-size: 500px`) para garantir rolagem de página suave e tempo mínimo até a interatividade (LCP/FCP baixos).
 
 ---
 
-## Dados capturados
-
-### `anbima_indicadores.csv`
-| Campo | Descrição |
-|---|---|
-| data_captura | Data da execução (BRT) |
-| data_referencia | Data de referência do valor/indicador (ex: data do dia para taxas, 1º dia do mês de referência para IGP-M/IPCA) |
-| data_referencia_pagina | Data/hora da última atualização na página |
-| indicador | Nome do indicador (ex: Taxa SELIC (BC)) |
-| categoria | Grupo: Taxa de Juros, Câmbio, Índice de Preços, etc. |
-| valor | Valor numérico (ponto como separador decimal) |
-| unidade | % a.a., R$, % mês, índice, R$ cota |
-
-**Indicadores:** SELIC (Estimativa e BC), DI-B3, IGP-M (índice, var.%, projeção), IPCA (índice, var.%, projeção), Dólar Comercial (compra/venda), Euro (compra/venda), TR, TBF, FDS.
-
-### `anbima_projecoes.csv`
-| Campo | Descrição |
-|---|---|
-| data_captura | Data da execução (BRT) |
-| data_referencia | Data de referência (1º dia do mês de referência, ex: 2026-06-01 para jun/26) |
-| estrategia_coleta | `api_oficial` ou `scraping_indicadores` |
-| indice | IPCA ou IGP-M |
-| mes_referencia | Mês/ano da projeção (ex: mai/26) |
-| tipo_projecao | corrente / seguinte / posterior / fechado |
-| valor_pct | Valor em % (separador decimal: ponto) |
-| data_divulgacao | Data de divulgação da projeção |
-| num_instituicoes | Nº de instituições (disponível via API) |
-| observacao | Observação descritiva da projeção |
-
-**IGP-M:** divulgado ~3x/mês nos dias de prévia e fechado pela FGV  
-**IPCA:** divulgado ~2x/mês no dia do IPCA fechado e do IPCA-15 pelo IBGE
-
-### `anbima_titulos_publicos.csv`
-| Campo | Descrição |
-|---|---|
-| data_captura | Data da execução (BRT) |
-| titulo | Nome do título público |
-| data_referencia | Data de referência da cotação |
-| codigo_selic | Código SELIC do ativo |
-| data_base_emissao | Data base de emissão |
-| data_vencimento | Data de vencimento |
-| tx_compra / tx_venda / tx_indicativa | Taxas de compra, venda e indicativa (% a.a.) |
-| pu | Preço unitário (R$) |
-| desvio_padrao | Desvio padrão das taxas |
-
-### `anbima_debentures.csv`
-| Campo | Descrição |
-|---|---|
-| data_referencia | Data de referência da cotação |
-| codigo | Código da debênture |
-| nome_emissor | Nome do emissor |
-| dt_repactuacao_vencimento | Data de repactuação/vencimento |
-| indice_correcao | Índice de correção (CDI, IPCA, etc.) |
-| tx_compra / tx_venda / tx_indicativa | Taxas de compra, venda e indicativa |
-| pu | Preço unitário (R$) |
-| duration | Duration do ativo (dias úteis) |
-
-### `anbima_ima_completo.csv`
-| Campo | Descrição |
-|---|---|
-| data_captura | Data da execução (BRT) |
-| data_referencia | Data de referência |
-| indice | Nome do índice (IMA-Geral, IRF-M, IDA, etc.) |
-| numero_indice | Número do índice |
-| variacao_diaria / _mensal / _anual | Variações percentuais |
-| duration_du | Duration em dias úteis |
-| peso_geral | Peso do subíndice no índice geral (%) |
-
-### `anbima_550.csv`
-| Campo | Descrição |
-|---|---|
-| data_captura | Data da execução (BRT) |
-| titulo | Nome do ativo |
-| vencimento | Data de vencimento |
-| preco_unitario | Preço unitário (R$) |
-| preco_retorno | Preço de retorno |
-| posicao_custodia | Posição em custódia |
-
-### `bcb_ptax.csv`
-Cotações do dólar PTAX. Snapshot contendo a série histórica diária de compra e venda completa desde **01/01/2020** (arquivo não acumulativo, reescrito por completo a cada execução).
-
-| Campo | Descrição |
-|---|---|
-| data_captura | Data da execução (BRT) |
-| data_hora_cotacao | Data/hora da cotação PTAX |
-| cotacao_compra | Cotação de compra (R$/US$) |
-| cotacao_venda | Cotação de venda (R$/US$) |
-
-### `bcb_sgs.csv`
-Séries temporais do Banco Central via SGS. Snapshot contendo a série histórica diária de compra/venda do dólar e taxas SELIC, CDI, IPCA, IGP-M completa desde **01/01/2020** (arquivo não acumulativo, reescrito por completo a cada execução).
-
-| Campo | Descrição |
-|---|---|
-| data_captura | Data da execução (BRT) |
-| codigo_serie | Código da série SGS (ex: 11, 432, 433) |
-| nome_serie | Nome descritivo da série |
-| data | Data do valor |
-| valor | Valor da série |
-
-**Séries:** SELIC diária, SELIC acumulada mês, CDI diário, CDI acumulado mês, IPCA mensal, IPCA acumulado 12m, IGP-M mensal, IGP-M acumulado 12m, Dólar venda.
-
-### `ibge_sidra.csv`
-| Campo | Descrição |
-|---|---|
-| data_captura | Data da execução (BRT) |
-| serie_id | Código da tabela SIDRA |
-| nome_serie | Nome da série |
-| fonte | Fonte dos dados |
-| periodo_referencia | Período de referência |
-| data_modificacao | Data da última modificação |
-
-**Tabelas:** 1737 (IPCA), 3065 (IPCA-15), 1621 (INPC).
-
-### `b3_fiis_listados.csv`
-Ticker, nome, CNPJ, administrador, segmento, tipo, mandato, prazo, gestão, cotistas, patrimônio líquido.
-
-### `b3_etfs_listados.csv`
-Categoria (RV/RF), ticker, nome, CNPJ, administrador, gestor, índice de referência, segmento, cotistas, patrimônio.
-
-### `b3_carteiras_teoricas.csv`
-22 índices B3 · ticker, nome, tipo, quantidade teórica, peso (%), segmento — por ativo/índice/data.
-
-**Índices:** IBOV, IBRA, IBrX 100, IBrX 50, IGC, ITAG, MLCX, SMLL, IVBX, IDIV, IFIX, IFNC, ICON, IEEX, IMAT, IMOB, INDX, UTIL, IGCT, IGNM, ISE, ICO2
-
-<!-- ### `b3_futuros_ajustes.csv` — DESATIVADO: fonte legada descontinuada dez/2025 -->
-<!-- ### `b3_bmf_taxas_juros.csv` — DESATIVADO: API BDI sem dados -->
-
-### `b3_indicadores_financeiros.csv`
-| Campo | Descrição |
-|---|---|
-| data_captura | Data da execução (BRT) |
-| security_identification_code | Código do indicador |
-| description | Descrição do indicador |
-| group_description | Grupo (Interest Rates, Exchange Rates, etc.) |
-| value | Valor numérico |
-| rate | Taxa associada |
-
-### `b3_bdi_di_over.csv`
-| Campo | Descrição |
-|---|---|
-| data_captura | Data da execução (BRT) |
-| rpt_dt | Data de referência |
-| number_of_operations | Número de operações |
-| financial_volume | Volume financeiro (R$) |
-| average | Taxa média (% a.d.) |
-| daily_factor | Fator diário |
-| selic_rate | Taxa SELIC no período |
-
-### `bacen_negociacao_tpf_extragrupo.csv`
-| Campo | Descrição |
-|---|---|
-| data_captura | Data da execução (BRT) |
-| data_negocio | Data de negociação |
-| titulo | Código do título público |
-| tipo_operacao | Tipo de operação (Compra, Venda) |
-| quantidade | Quantidade negociada |
-| preco | Preço de negociação |
-| valor | Valor financeiro da operação |
-
-### `b3_taxa_cambio_referencia.csv`
-| Campo | Descrição |
-|---|---|
-| data_captura | Data da execução (BRT) |
-| codigo_moeda | Código da moeda (ex: USD) |
-| taxa_compra | Taxa de câmbio de compra (R$) |
-| taxa_venda | Taxa de câmbio de venda (R$) |
-
-### `b3_capital_social_empresas.csv`
-| Campo | Descrição |
-|---|---|
-| data_captura | Data da execução (BRT) |
-| cnpj | CNPJ da empresa |
-| empresa | Nome da empresa |
-| capital_social | Valor do capital social (R$) |
-| data_capital | Data de referência do capital social |
-
-### `anbima_indice_imab.csv`
-| Campo | Descrição |
-|---|---|
-| data_captura | Data da execução (BRT) |
-| data | Data de referência |
-| indice | Nome do índice (IMA-B, IMA-B5, etc.) |
-| numero | Número do índice |
-| variacao | Variação percentual |
-
-### `onu_pacto_global.csv`
-Participantes do Brasil no Pacto Global da ONU.
-
-| Campo | Descrição |
-|---|---|
-| data_captura | Data da execução (BRT) |
-| name | Nome do participante |
-| type | Tipo de organização |
-| sector | Setor de atuação |
-| country | País (Brasil) |
-| joined_on | Data de ingresso (YYYY-MM-DD) |
-| link | Link do perfil do participante |
-
-<!-- ### `b3_cotahist_diario.csv` / `b3_cotahist_anual.csv` — DESATIVADOS -->
-<!-- ### `b3_indicadores_economicos_fwf.csv` — DESATIVADO -->
-<!-- ### `b3_negocios_balcao.csv` — DESATIVADO -->
-
-### `cvm_cadastro_companhias_abertas.csv`
-Cadastro de companhias abertas registradas na CVM.
-
-| Campo | Descrição |
-|---|---|
-| data_captura | Data da execução (BRT) |
-| cnpj | CNPJ da companhia |
-| denominação_social | Razão social |
-| nome_de_pregao | Nome de pregão |
-| codigo_cvm | Código CVM |
-| situacao | Situação cadastral |
-
-### `b3_indices_precos_historicos.csv`
-Histórico de composição e preços de índices da B3.
-
-| Campo | Descrição |
-|---|---|
-| data_captura | Data da execução (BRT) |
-| indice | Código do índice (IBOV, IBRA, IFIX, etc.) |
-| ano | Ano de referência |
-| ticker | Ticker do ativo |
-| peso | Peso no índice (%) |
-| quantidade_teorica | Quantidade teórica |
-
-<!-- ### `b3_companhias_detalhes.csv` — DESATIVADO -->
-<!-- ### `b3_companhias_info.csv` — DESATIVADO -->
-<!-- ### `b3_dividendos_dinheiro.csv` — DESATIVADO -->
-
-### `anbima_idka.csv`
-Índice de Duração Constante ANBIMA (prefixado e inflação).
-
-| Campo | Descrição |
-|---|---|
-| data_captura | Data da execução (BRT) |
-| dt_referencia | Data de referência |
-| no_indexador | Tipo de indexador (ex: PREFIXADO, IPCA) |
-| no_indice | Nome do índice IDkA (ex: IDkA Pré 3M, IDkA IPCA 2A) |
-| nu_indice | Número índice |
-| ret_dia_perc | Retorno diário (%) |
-| ret_mes_perc | Retorno mensal (%) |
-| ret_ano_perc | Retorno anual (%) |
-| ret_12_meses_perc | Retorno acumulado 12 meses (%) |
-| vol_aa_perc | Volatilidade ao ano (%) |
-| taxa_juros_aa_perc_compra_d1 | Taxa de juros de compra D+1 (% a.a.) |
-| taxa_juros_aa_perc_venda_d0 | Taxa de juros de venda D+0 (% a.a.) |
-
-### `anbima_matriz_probabilidade_resgate.csv`
-Probabilidade histórica de resgates de fundos de investimento.
-
-| Campo | Descrição |
-|---|---|
-| data_captura | Data da execução (BRT) |
-| dt_referencia | Data de referência do relatório |
-| data | Data da observação |
-| periodo | Mês/ano da observação |
-| classe | Classe do fundo (Ações, RF, Multimercado, etc.) |
-| segmento_investidor | Segmento do investidor (Varejo, Private, etc.) |
-| tipo_metodologia | Tipo de metodologia estatística utilizada |
-| metrica | Métrica calculada (ex: EWMA_97) |
-| prazo | Prazo em dias |
-| valor | Probabilidade calculada |
-
-### `anbima_ranking_global.csv`
-Ranking mensal de administradores e gestores de fundos ANBIMA.
-
-| Campo | Descrição |
-|---|---|
-| data_captura | Data da execução (BRT) |
-| dt_referencia | Mês de referência do ranking |
-| tipo_ativo | Descrição da tabela/aba analisada (ex: Ativos de RF, RV) |
-| Unnamed: X | Nome da instituição e valores de custódia e lastro |
-
-### `bacen_balancetes_bancos.csv`
-Última data de publicação dos balancetes de bancos comerciais e múltiplos.
-
-| Campo | Descrição |
-|---|---|
-| data_captura | Data da execução (BRT) |
-| data | Data do último balancete publicado pelo BACEN |
-
-### `bacen_conglomerados.csv`
-Dados cadastrais e financeiros de conglomerados financeiros no Brasil.
-
-| Campo | Descrição |
-|---|---|
-| data_captura | Data da execução (BRT) |
-| dt_referencia | Mês de referência dos dados |
-
-### `bacen_parcelas_capital_basileia.csv`
-Parcelas de capital e patrimônio de referência sob as regras de Basileia III.
-
-| Campo | Descrição |
-|---|---|
-| data_captura | Data da execução (BRT) |
-| TipoInstituicao | Código do tipo de instituição |
-| CodInst | Código cadastral da instituição financeira |
-| AnoMes | Mês/Ano de referência (ex: 202512) |
-| NomeRelatorio | Nome do relatório (ex: Informações de Capital) |
-| NumeroRelatorio | Número identificador do relatório |
-| Grupo | Grupo de contas prudenciais |
-| Conta | Código da conta do patrimônio |
-| NomeColuna | Nome abreviado da coluna |
-| DescricaoColuna | Descrição completa da conta prudencial |
-| Saldo | Valor do saldo em conta (R$) |
-| tipo_instituicao_label | Descrição legível da instituição |
-
-### `yahoo_finance_series.csv`
-Preços diários de ativos e índices de referência globais e nacionais.
-
-| Campo | Descrição |
-|---|---|
-| data_captura | Data da execução (BRT) |
-| dt_ref | Data da cotação |
-| ticker | Ticker de mercado (ex: ^BVSP, BRL=X, GC=F) |
-| label | Descrição legível (IBOVESPA, Câmbio Dólar, Ouro, etc.) |
-| vr_fechamento | Preço de fechamento da cotação |
-
-### `investing_etf.csv`
-Cotações diárias dos ETFs mais negociados no Brasil.
-
-| Campo | Descrição |
-|---|---|
-| data_captura | Data da execução (BRT) |
-| nome | Nome completo do ETF |
-| ticker | Código de negociação (ex: BOVA11) |
-| link | Link do ativo no Investing.com |
-| vr_ultimo | Último preço cotado |
-| vr_variacao_pct | Variação percentual no dia |
-| qt_volume | Volume de negociação |
-| hr_atualizacao | Hora da última atualização |
-
-### `s_p_entidades_brasil.csv`
-Cadastro de entidades brasileiras avaliadas pela S&P Global.
-
-| Campo | Descrição |
-|---|---|
-| data_captura | Data da execução (BRT) |
-| dt_captura | Data de captura dos dados |
-| nome | Razão social do emissor |
-| link | Link do emissor no portal da S&P |
-
-### `s_p_ratings_brasil.csv`
-Histórico de ratings vigentes atribuídos pela S&P na Escala Nacional Brasil.
-
-| Campo | Descrição |
-|---|---|
-| data_captura | Data da execução (BRT) |
-| dt_captura | Data de captura dos dados |
-| Tipo de Rating | Tipo de rating (ex: Escala Nacional Brasil de Longo Prazo) |
-| Rating | Classificação de risco de crédito (ex: brAAA) |
-| Data da Ação de Rating | Data em que o rating foi definido ou revisado |
-| Data da ÚltimaRevisão | Data da última revisão periódica da agência |
-| CreditWatch/ Perspectiva | Perspectiva atribuída (ex: Stable, Positive) |
-| nome | Razão social do emissor |
-| link | Link para detalhes no portal da S&P |
-
-### `s_p_acoes_ratings.csv`
-Histórico de ações de classificação de risco (Ratings Actions) nos últimos 7 dias da S&P Global.
-
-| Campo | Descrição |
-|---|---|
-| data_captura | Data da execução (BRT) |
-| dt_captura | Data de captura dos dados |
-| descricao | Nome completo e descrição da emissão/ativo avaliado |
-| classe | Série ou classe do papel |
-| data_vencimento | Data de vencimento do papel |
-| tipo_rating | Tipo de rating (ex: Escala Nacional Brasil de Longo Prazo) |
-| data_acao | Data/hora em que a ação de rating foi divulgada |
-| rating_novo | Nova classificação atribuída (ex: brAA-) |
-| creditwatch_perspectiva_novo | Nova perspectiva atribuída |
-| rating_anterior | Classificação anterior (ex: brAA) |
-| creditwatch_perspectiva_anterior | Perspectiva anterior |
-| acao | Tipo de ação executada (ex: Revised, Affirmed) |
-
----
-
-## Estrutura do projeto
+## Estrutura do Projeto
 
 ```
 PulseFlat/
 ├── .github/
 │   └── workflows/
-│       └── captura_diaria.yml       # Agendamento GitHub Actions
-├── data/                            # CSVs acumulativos e instantâneos (gerados automaticamente)
-│   ├── .gitkeep
-│   ├── anbima_indicadores.csv
-│   ├── anbima_projecoes.csv
-│   ├── anbima_titulos_publicos.csv
-│   ├── anbima_debentures.csv
-│   ├── anbima_ima_completo.csv
-│   ├── anbima_550.csv
-│   ├── anbima_indice_imab.csv
-│   ├── bcb_ptax.csv
-│   ├── bcb_sgs.csv
-│   ├── bacen_negociacao_tpf_extragrupo.csv
-│   ├── ibge_sidra.csv
-│   ├── cvm_cadastro_companhias_abertas.csv
-│   ├── cvm_fundos_informe_diario.csv
-│   ├── cvm_fundos_classe.csv
-│   ├── debentures_emissoes_caracteristicas.csv
-│   ├── debentures_mercado_secundario_precos_negociacao.csv
-│   ├── b3_fiis_listados.csv
-│   ├── b3_etfs_listados.csv
-│   ├── b3_carteiras_teoricas.csv
-│   ├── b3_carteira_teorica_*.csv     # Carteiras teóricas individuais B3
-│   ├── b3_indicadores_financeiros.csv
-│   ├── b3_bdi_di_over.csv
-│   ├── b3_taxa_cambio_referencia.csv
-│   ├── b3_capital_social_empresas.csv
-│   ├── b3_indices_precos_historicos.csv
-│   ├── b3_classificacao_setorial.csv
-│   ├── b3_titulos_negociaveis.csv
-│   ├── onu_pacto_global.csv
-├── scrapers/
+│       └── captura_diaria.yml       # Agendamento do pipeline no GitHub Actions
+├── data/                            # Datasets, schemas e metadados de controle
+│   ├── datasets.json                # Catálogo estruturado de metadados dos datasets
+│   ├── schemas.json                 # Definição e mapeamento de campos e tipos
+│   ├── pipeline_status.json / .js   # Logs de saúde e duração da última execução
+│   ├── last_updates.json / .js      # Período de cobertura temporal mínima/máxima de cada CSV
+│   └── *.csv                        # Séries temporais de dados financeiros
+├── scrapers/                        # Módulos de captura
+│   ├── utils/
+│   │   ├── __init__.py
+│   │   └── base.py                  # Classe infraestrutural BaseScraper
+│   ├── generic_scraper.py           # Scraper base genérico parametrizado por YAML
+│   ├── *.py                         # Scripts específicos de coleta por dataset
+├── utils/                           # Utilitários compartilhados auxiliares
 │   ├── __init__.py
-│   ├── anbima_indicadores.py
-│   ├── anbima_projecoes.py
-│   ├── anbima_titulos_publicos.py
-│   ├── anbima_debentures.py
-│   ├── anbima_ima_completo.py
-│   ├── anbima_550.py
-│   ├── anbima_indice_imab.py
-│   ├── bcb_ptax.py
-│   ├── bcb_sgs.py
-│   ├── bacen_negociacao_tpf.py
-│   ├── ibge_sidra.py
-│   ├── cvm_cadastro_companhias_abertas.py
-│   ├── cvm_fundos_informe_diario.py
-│   ├── cvm_fundos_classe.py
-│   ├── debentures_emissoes_caracteristicas.py
-│   ├── debentures_mercado_secundario_precos_negociacao.py
-│   ├── b3_fiis.py
-│   ├── b3_etfs.py
-│   ├── b3_carteiras.py
-│   ├── b3_carteira_teorica_ibov.py
-│   ├── b3_carteira_teorica_*.py
-│   ├── b3_indicadores_financeiros.py
-│   ├── b3_bdi_di_over.py
-│   ├── b3_taxa_cambio_referencia.py
-│   ├── b3_capital_social_empresas.py
-│   ├── b3_indices_precos_historicos.py
-│   ├── b3_classificacao_setorial.py
-│   ├── b3_titulos_negociaveis.py
-│   ├── onu_pacto_global.py
-├── utils/
-│   ├── __init__.py
-│   ├── base.py                      # Utilitários compartilhados
-│   ├── parsers.py                   # Parsing de CSV, JSON, ZIP, XLS, FWF, XML
-│   └── b3_helpers.py                # Helpers específicos B3 (company seeds)
-├── tests/
-│   ├── __init__.py
+│   ├── base.py                      # Funções genéricas e salvamento de CSVs
+│   ├── parsers.py                   # Parsers robustos para ZIP, Excel, XLS, CSV, FWF, XML
+│   └── b3_helpers.py                # Helpers específicos para seeds da B3
+├── tests/                           # Suíte de testes automatizados
 │   ├── test_scrapers.py
 │   └── test_utils.py
-├── scripts/
-│   └── limpar_duplicatas.py         # Limpeza única de duplicatas históricas
-├── run_all.py                       # Orquestrador
-├── requirements.txt
-├── .env.example                     # Template de credenciais
+├── run_all.py                       # Orquestrador CLI central do projeto
+├── requirements.txt                 # Dependências do Python
+├── .env.example                     # Template de variáveis de ambiente
 ├── .gitignore
 └── README.md
 ```
 
 ---
 
-## Agendamento (GitHub Actions)
+## Funcionamento e Execução do Orquestrador (`run_all.py`)
 
-Múltiplas execuções automáticas ao longo do dia (horário BRT, seg–sex):
+O script `run_all.py` atua como o cérebro do pipeline. Ele importa e executa os scrapers em paralelo ou de forma sequencial, monitorando tempos de execução e erros.
 
-| Horário BRT | Cron (UTC) | Escopo |
-|---|---|---|
-| 06h00 | `0 9 * * 1-5` | Todos os scrapers |
-| 08h00 | `0 11 * * 1-5` | Todos os scrapers |
-| 09h00 | `0 12 * * 1-5` | Todos os scrapers |
-| 09h30 | `30 12 * * 1-5` | Todos os scrapers |
-| 18h00 | `0 21 * * 1-5` | Todos os scrapers |
-| 21h00 | `0 0 * * 2-6` | Todos os scrapers |
-| 23h00 | `0 2 * * 2-6` | Todos os scrapers |
+### Fases de Execução
+Para evitar falhas de dependência (como scrapers que requerem o cadastro de emissores atualizado de outros scripts), a execução é segmentada em duas fases:
+1.  **Fase 1 (Independentes)**: Executa a maioria dos scrapers de forma concorrente.
+2.  **Fase 2 (Dependentes)**: Executa scrapers como `s_p_ratings_brasil` após a conclusão bem-sucedida de seus pré-requisitos (`s_p_entidades_brasil`).
 
-**Execução manual:** Actions → Executar Automação de Dados Diária → Run workflow
+### CLI Options e Exemplos
+
+```bash
+# Executa todos os scrapers registrados (padrão paralelo com 4 workers)
+python run_all.py
+
+# Executa os scrapers sequencialmente (bom para depuração de rede)
+python run_all.py --sequential
+
+# Executa os scrapers em paralelo definindo o número máximo de threads
+python run_all.py --parallel --max-workers 8
+
+# Filtra execução para um grupo específico
+python run_all.py --group anbima
+python run_all.py --group b3
+python run_all.py --group bcb
+python run_all.py --group cvm
+python run_all.py --group ibge
+python run_all.py --group ratings
+python run_all.py --group misc
+
+# Executa apenas um único scraper específico pelo nome do módulo
+python run_all.py --scraper anbima_indicadores
+```
 
 ---
 
-## Instalação e uso local
+## Infraestrutura do `BaseScraper`
 
+Todos os novos scrapers herdam de `BaseScraper` localizado em [scrapers/utils/base.py](file:///Users/rodrigo/projects/PulseFlat/scrapers/utils/base.py). Esta classe abstrai a complexidade do pipeline:
+
+```python
+from scrapers.utils.base import BaseScraper
+import pandas as pd
+
+class MeuScraperScraper(BaseScraper):
+    # O nome do scraper determina o arquivo CSV final (data/meu_scraper.csv)
+    name = "meu_scraper"
+    
+    # Define se os dados capturados acumulam ao longo dos dias ou substituem o CSV por completo
+    accumulate = True
+    
+    # Chaves para evitar duplicados em re-execuções no mesmo dia
+    chaves_dedup = ["data_captura", "ticker"]
+
+    def fetch(self) -> pd.DataFrame:
+        # 1. Faz chamadas de API ou extração
+        # 2. Retorna um Pandas DataFrame
+        dados = [{"ticker": "PETR4", "preco": "42,50", "data": "04/06/2026"}]
+        return pd.DataFrame(dados)
+```
+
+### Sanitizações e Fluxos Automáticos na Execução (`run()`)
+*   **Tratamento de Dados**: Se a coluna `data_captura` estiver ausente, ela é gerada dinamicamente.
+*   **Limpeza de Formatos**: Converte strings de data de `DD/MM/YYYY` ou `DD/MM/YY` para `YYYY-MM-DD` automaticamente. Substitui separadores decimais de vírgula por ponto (ex: `"12,34"` vira `"12.34"`).
+*   **Preenchimento de NaNs**: Valores nulos do Pandas (`NaN`, `None`, `NaT`) são limpos para string vazia `""` para manter a integridade dos CSVs.
+*   **Monitoramento de Schema**: Verifica se houve adição ou remoção de campos em relação ao schema registrado em `data/schemas.json`, emitindo alertas de *Schema Drift*.
+
+---
+
+## Instalação e Uso Local
+
+### 1. Clonar o Repositório e Instalar Dependências
 ```bash
 git clone https://github.com/royopa/PulseFlat.git
 cd PulseFlat
 pip install -r requirements.txt
-
-# Todos os scrapers
-python run_all.py
-
-# Por grupo
-python run_all.py anbima
-python run_all.py bcb
-python run_all.py ibge
-python run_all.py cvm
-python run_all.py debentures
-python run_all.py b3
-
-# Scraper específico
-python run_all.py anbima_indice_imab
-python run_all.py bcb_ptax
-python run_all.py bcb_sgs
-python run_all.py bacen_negociacao_tpf
-python run_all.py ibge_sidra
-python run_all.py cvm_cadastro_companhias_abertas
-python run_all.py cvm_fundos_informe_diario
-python run_all.py cvm_fundos_classe
-python run_all.py debentures_emissoes_caracteristicas
-python run_all.py debentures_mercado_secundario_precos_negociacao
-python run_all.py b3_fiis
-python run_all.py b3_etfs
-python run_all.py b3_carteiras
-python run_all.py b3_carteira_teorica_ibov
-python run_all.py b3_indicadores_financeiros
-python run_all.py b3_bdi_di_over
-python run_all.py b3_taxa_cambio_referencia
-python run_all.py b3_capital_social_empresas
-python run_all.py b3_indices_precos_historicos
-python run_all.py b3_classificacao_setorial
-python run_all.py b3_titulos_negociaveis
-python run_all.py onu_pacto_global
 ```
 
----
-
-## Configuração do Boletim Diário B3 (opcional)
-
-O download usa token retornado pela API. Caso o endpoint exija CAPTCHA, configure:
-
-- `B3_RECAPTCHA_TOKEN` (token reCAPTCHA válido)
-- `B3_BOLETIM_DATE` (YYYY-MM-DD, opcional para backfill)
-- `B3_BOLETIM_FILES` (lista separada por vírgulas para sobrescrever os arquivos padrão)
-
----
-
-## Configuração das credenciais ANBIMA (opcional)
-
-O scraper de projeções usa **scraping como fallback automático** — funciona sem configuração.  
-Para usar a API oficial com dados mais ricos (histórico, nº de instituições):
-
-### 1. Obter as credenciais
-- Cadastre-se em [developers.anbima.com.br](https://developers.anbima.com.br)
-- Para acesso em produção: `anbimafeed@anbima.com.br`
-
-### 2. Configurar no GitHub
-**Settings → Secrets and variables → Actions → New repository secret**
-- `ANBIMA_CLIENT_ID`
-- `ANBIMA_CLIENT_SECRET`
-
-### 3. Configurar localmente
+### 2. Variáveis de Ambiente (Opcional)
+Crie um arquivo `.env` a partir do template `.env.example`:
 ```bash
 cp .env.example .env
-# Edite o .env com suas credenciais
 ```
-O `.env` está no `.gitignore` — nunca será commitado.
+Edite as credenciais caso queira usar as APIs oficiais da ANBIMA e B3:
+*   `ANBIMA_CLIENT_ID` / `ANBIMA_CLIENT_SECRET`: Acesso à API REST oficial da ANBIMA (há fallback de scraping web caso não configurado).
+*   `B3_RECAPTCHA_TOKEN`: Token para contornar desafios de download em relatórios diários da B3.
 
 ---
 
-## Adicionando um novo scraper
+## Suíte de Testes
 
-1. Crie `scrapers/novo_fonte.py` seguindo o padrão:
-```python
-from utils import get_logger, agora_brt, salvar_csv
+O projeto utiliza `pytest` para testes automatizados rápidos de integridade e regressão:
 
-ARQUIVO   = Path("data/novo_fonte.csv")
-CABECALHO = ["data_captura", ...]
-
-def capturar() -> list[dict]: ...
-
-def main():
-    salvar_csv(ARQUIVO, capturar(), CABECALHO)
-
-if __name__ == "__main__":
-    main()
+```bash
+# Executa todos os testes unitários
+python -m pytest tests/ -v
 ```
 
-2. Adicione em `SCRAPERS` no `run_all.py`
-3. Adicione o CSV no `git add` do job correspondente em `captura_diaria.yml`
+Os testes estão distribuídos em:
+*   [tests/test_scrapers.py](file:///Users/rodrigo/projects/PulseFlat/tests/test_scrapers.py): Valida a resposta mockada das APIs do Banco Central (PTAX, SGS), scrapers baseados em JSON e arquivos ZIP da B3.
+*   [tests/test_utils.py](file:///Users/rodrigo/projects/PulseFlat/tests/test_utils.py): Valida a lógica do salvamento deduplicado de arquivos CSV, tratamento de fuso horário, e codificadores JSON Base64 da B3.
 
 ---
 
-## Fontes oficiais
+## Fontes Oficiais de Dados
 
-| Dados | URL |
-|---|---|
-| ANBIMA Indicadores | https://www.anbima.com.br/informacoes/indicadores/ |
-| ANBIMA Projeções | https://www.anbima.com.br/pt_br/informar/projecoes-ipca-e-igp-m.htm |
-| ANBIMA API Developers | https://developers.anbima.com.br |
-| ANBIMA Títulos Públicos | https://www.anbima.com.br/informacoes/merc-sec/ |
-| ANBIMA Debêntures | https://www.anbima.com.br/informacoes/merc-sec-debentures/ |
-| ANBIMA IMA | https://www.anbima.com.br/informacoes/ima/ |
-| BCB PTAX | https://www.bcb.gov.br/estatisticas/fechamento_cambio |
-| BCB SGS | https://www.bcb.gov.br/estatisticas |
-| IBGE SIDRA | https://sidra.ibge.gov.br/ |
-| CVM Dados Abertos | https://dados.cvm.gov.br/dados/CIA_ABERTA/CAD/DADOS/ |
-| B3 FIIs | https://www.b3.com.br/pt_br/produtos-e-servicos/negociacao/renda-variavel/fundos-de-investimento-imobiliario-fiis/ |
-| B3 ETFs | https://www.b3.com.br/pt_br/produtos-e-servicos/negociacao/renda-variavel/etfs/ |
-| B3 Índices | https://www.b3.com.br/pt_br/market-data-e-indices/indices/ |
-| ONU Pacto Global | https://unglobalcompact.org/what-is-gc/participants/ |
+| Grupo | Fonte Primária | Dados Disponibilizados |
+|---|---|---|
+| **ANBIMA** | [Portal ANBIMA](https://www.anbima.com.br) | Taxas indicativas, Projeções de Inflação (IPCA/IGPM), Títulos Públicos, Debêntures, Índices IMA/IDkA. |
+| **BCB** | [Banco Central do Brasil](https://www.bcb.gov.br) | Cotações diárias do Dólar (PTAX), séries do Sistema de Gerenciamento de Séries (SGS), negociação de títulos públicos (DEMAB), balancetes cadastrais de bancos e dados de Basileia III. |
+| **CVM** | [Portal Brasileiro de Dados Abertos](https://dados.cvm.gov.br) | Cadastro geral de companhias abertas, informes diários e dados de cotas e classes de fundos de investimento. |
+| **B3** | [B3 Market Data](https://www.b3.com.br) | FIIs e ETFs listados, composição histórica das carteiras teóricas dos índices (IBOV, SMLL, ISEE, BDRX, IFNC, etc.), taxas DI Over e taxas de câmbio de referência. |
+| **IBGE** | [IBGE SIDRA API](https://sidra.ibge.gov.br) | Índices oficiais de inflação do Brasil (IPCA, IPCA-15, INPC). |
+| **Ratings** | [S&P Global](https://www.spglobal.com) / [Moody's Local](https://www.moodyslocal.com) | Classificação de ratings corporativos e histórico de Ratings Actions na Escala Nacional Brasil. |
+| **Misc** | [Yahoo Finance](https://finance.yahoo.com) / [ONU](https://unglobalcompact.org) | Cotações históricas globais e lista de empresas brasileiras participantes do Pacto Global da ONU. |

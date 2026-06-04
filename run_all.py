@@ -311,6 +311,15 @@ def main(group: Optional[str] = None, scraper: Optional[str] = None, parallel: b
     # Salva status do pipeline
     save_pipeline_status(results, total_elapsed)
 
+    # Se executou todo o pipeline, regenera o catálogo de datasets dinamicamente
+    if not group and not scraper:
+        try:
+            logger.info("=== Atualizando o catálogo de datasets dinamicamente ===")
+            from scripts.generate_catalog import generate
+            generate()
+        except Exception as e:
+            logger.warning(f"Aviso: Não foi possível regenerar o catálogo de datasets: {e}")
+
     # Resumo final
     ok = [n for n, r in results.items() if r[0]]
     fail = [n for n, r in results.items() if not r[0]]
@@ -352,7 +361,18 @@ if __name__ == "__main__":
         default=4,
         help="Número máximo de threads para execução paralela (padrão: 4)",
     )
+    parser.add_argument(
+        "--generate-catalog",
+        action="store_true",
+        help="Gera e atualiza o arquivo data/datasets.json a partir dos scrapers",
+    )
     args = parser.parse_args()
+
+    if args.generate_catalog:
+        from scripts.generate_catalog import generate
+        generate()
+        sys.exit(0)
+
     main(
         group=args.group,
         scraper=args.scraper,

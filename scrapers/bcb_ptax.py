@@ -21,6 +21,18 @@ log = get_logger("bcb_ptax")
 
 ARQUIVO = Path("data/bcb_ptax.csv")
 
+METADATA = {
+    "title": "BCB PTAX",
+    "description": "Cotações históricas diárias oficiais de compra e venda do dólar comercial (USD/BRL) publicadas pelo Banco Central do Brasil.",
+    "icon": "💵",
+    "icon_class": "icon-bcb",
+    "badge": "Diário",
+    "badge_class": "badge-daily",
+    "tags": ["dólar", "ptax", "cotação", "compra", "venda", "bcb"],
+    "source": "BCB",
+    "file": "bcb_ptax.csv",
+}
+
 CABECALHO = [
     "data_captura",
     

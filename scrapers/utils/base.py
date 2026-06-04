@@ -8,6 +8,16 @@ class BaseScraper:
     accumulate: bool = True
     chaves_dedup: list[str] | None = None
 
+    # Metadados para o catálogo global
+    title: str = ""
+    description: str = ""
+    icon: str = "📊"
+    icon_class: str = ""
+    badge: str = ""
+    badge_class: str = ""
+    tags: list[str] = []
+    source: str = ""
+
     def __init__(self):
         if not self.name:
             self.name = self.__class__.__name__.lower().replace("scraper", "")

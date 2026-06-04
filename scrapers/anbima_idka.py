@@ -41,6 +41,14 @@ URL_TEMPLATE = (
 
 class AnbimaIdkaScraper(BaseScraper):
     name = "anbima_idka"
+    title = "ANBIMA IDkA"
+    description = "Índice de Duração Constante ANBIMA (prefixado e inflação), apresentando retornos diários, mensais, anuais e volatilidade."
+    icon = "📈"
+    icon_class = "icon-anbima"
+    badge = "Diário"
+    badge_class = "badge-daily"
+    tags = ["idka", "prefixado", "inflação", "duracao constante", "anbima"]
+    source = "ANBIMA"
 
     def fetch(self) -> pd.DataFrame:
         # Usa a data útil anterior (D-1) como referência
