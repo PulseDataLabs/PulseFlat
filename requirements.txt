@@ -8,3 +8,4 @@ openpyxl
 PyYAML
 pytest
 requests-mock
+pandas
