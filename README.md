@@ -2,27 +2,98 @@
   <img src="logo.png" alt="PulseFlat Logo" width="280">
 </p>
 
-# PulseFlat
+<h1 align="center">PulseFlat</h1>
 
-> 🚀 **Página do Projeto:** [https://royopa.github.io/PulseFlat/](https://royopa.github.io/PulseFlat/)
+<p align="center">
+  <strong>Pipeline Serverless e Automatizado de Captura de Dados Financeiros Brasileiros</strong>
+</p>
 
-Pipeline automatizado de captura diária de dados financeiros brasileiros via **GitHub Actions**.  
-Sem servidor. Sem custo. Histórico versionado em CSV no próprio repositório.
+<p align="center">
+  <a href="https://github.com/royopa/PulseFlat/actions/workflows/main.yml"><img src="https://github.com/royopa/PulseFlat/actions/workflows/main.yml/badge.svg" alt="Build Status"></a>
+  <img src="https://img.shields.io/badge/python-3.11%20%7C%203.12%20%7C%203.13-blue.svg" alt="Python Versions">
+  <img src="https://img.shields.io/badge/license-MIT-green.svg" alt="License">
+  <img src="https://img.shields.io/badge/data-63%20datasets-orange.svg" alt="Data Count">
+  <a href="https://royopa.github.io/PulseFlat/"><img src="https://img.shields.io/badge/dashboard-live-brightgreen.svg" alt="Live Dashboard"></a>
+</p>
+
+<p align="center">
+  <a href="#-recursos-e-diferenciais">Recursos</a> •
+  <a href="#-arquitetura-do-pipeline">Arquitetura</a> •
+  <a href="#-funcionamento-do-orquestrador">Funcionamento</a> •
+  <a href="#-estrutura-do-projeto">Estrutura</a> •
+  <a href="#-guia-do-desenvolvedor">Desenvolvedor</a> •
+  <a href="#-fontes-e-datasets">Datasets</a>
+</p>
 
 ---
 
-## Recursos e Diferenciais do Projeto
-
-*   **Arquitetura Baseada em Classes**: Implementação de uma classe base sólida (`BaseScraper`) para gerenciar automaticamente a execução, o ciclo de vida dos scrapers, e a sanitização padrão de dados.
-*   **Limpeza Inteligente de Tipagem**: Conversão automática de datas brasileiras (`DD/MM/YYYY` ou `DD/MM/YY` para o padrão ISO `YYYY-MM-DD`) e normalização de floats com vírgula para ponto (ex: `"5,3656"` para `5.3656`).
-*   **Execução Paralela**: Orquestrador (`run_all.py`) integrado com `ThreadPoolExecutor`, permitindo processamento concorrente seguro de scrapers independentes e organizando a execução em fases (fase 1: independentes; fase 2: dependentes).
-*   **Monitoramento de Schema Drift**: Validação dinâmica de colunas na persistência do arquivo contra schemas conhecidos, logando discrepâncias de colunas novas ou removidas.
-*   **Dashboard Dinâmico e Otimizado**: Interface HTML enriquecida que carrega e renderiza dados sob demanda a partir de JSONs estáticos (`datasets.json`, `schemas.json`, `pipeline_status.json`), apresentando busca instantânea debouncada (delay de 100ms), filtragem por fontes de dados, visualização de tabelas e snippets copy-paste prontos para Pandas.
-*   **Carregamento Ultra Rápido**: Otimizações de front-end com tags `<link rel="preload">` e CSS Containment (`content-visibility: auto` e `contain-intrinsic-size: 500px`) para garantir rolagem de página suave e tempo mínimo até a interatividade (LCP/FCP baixos).
+**PulseFlat** é um pipeline de ETL (Extração, Transformação e Carga) serverless projetado para coletar, tratar e disponibilizar dados financeiros brasileiros históricos de fontes oficiais diariamente. Ele funciona 100% de forma automatizada via **GitHub Actions**, versionando o histórico diretamente no repositório em formato CSV plano, sem custos com banco de dados ou servidores.
 
 ---
 
-## Estrutura do Projeto
+## 🚀 Recursos e Diferenciais
+
+*   **OOP & Abstração Sólida**: Scrapers estruturados sob uma classe base robusta (`BaseScraper`) que gerencia nativamente o ciclo de vida da execução, tratamento de exceções *thread-safe* e logs padronizados.
+*   **Descoberta Dinâmica (Reflection)**: O orquestrador detecta scrapers dinamicamente inspecionando a pasta `scrapers/` no momento da execução, eliminando a necessidade de registros estáticos ou configurações hardcoded.
+*   **Sanitização Automática de Dados**: Limpeza inteligente embutida que padroniza formatos de data brasileiros (`DD/MM/YYYY` ou `DD/MM/YY` para ISO `YYYY-MM-DD`) e normaliza representações decimais com vírgula para floats com ponto.
+*   **Execução Concorrente Multicondicional**: Orquestrador inteligente capaz de paralelizar a execução de scripts independentes e enfileirar sequencialmente os scripts dependentes.
+*   **Monitoramento de Schema Drift**: Proteção na persistência de arquivos contra mudanças repentinas nas estruturas originais de dados (emite logs detalhados sobre colunas adicionadas ou removidas).
+*   **Frontend Otimizado (Zero CLS/LCP Baixo)**: Dashboard interativo desenvolvido em vanilla HTML/CSS que consome os JSONs estáticos diretamente do repositório, com recursos avançados de preloading, busca instantânea debouncada e renderização adiada via CSS Containment (`content-visibility`).
+
+---
+
+## 📐 Arquitetura do Pipeline
+
+A fluxo de processamento e disponibilização de dados funciona conforme a estrutura abaixo:
+
+```mermaid
+graph TD
+    A[GitHub Actions Cron / Trigger] --> B[run_all.py Orchestrator]
+    B -->|Dynamic Discovery| C[scrapers/ folder]
+    B -->|Executes Phase 1| D[Independent Scrapers]
+    B -->|Executes Phase 2| E[Dependent Scrapers]
+    D --> F[data/*.csv files]
+    E --> F
+    B -->|Calls generate_catalog.py| G[data/datasets.json]
+    F & G --> H[git push origin main]
+    H --> I[GitHub Pages / index.html]
+```
+
+---
+
+## ⚙️ Funcionamento do Orquestrador (`run_all.py`)
+
+O orquestrador `run_all.py` varre a pasta `scrapers/`, importa as classes e lê os metadados diretamente de seus atributos de classe:
+*   `group` (grupo a que pertence: `anbima`, `bcb`, `b3`, `cvm`, `ibge`, `ratings`, `misc`).
+*   `enabled` (indica se deve rodar no pipeline diário principal).
+*   `phase` (ordem de dependência: Phase 1 para independentes; Phase 2 para dependentes que dependem do resultado da Phase 1).
+
+### CLI Options e Exemplos de Uso
+
+```bash
+# Executa todos os scrapers ativos em paralelo (padrão: 4 workers)
+python run_all.py
+
+# Executa os scrapers sequencialmente (ideal para depuração de rede)
+python run_all.py --sequential
+
+# Executa em paralelo especificando um limite de threads
+python run_all.py --parallel --max-workers 8
+
+# Executa apenas scrapers pertencentes a um grupo específico
+python run_all.py --group bcb
+python run_all.py --group ratings
+
+# Executa manualmente um scraper específico (mesmo se desabilitado por padrão)
+python run_all.py --scraper anbima_indicadores
+
+# Apenas regenera o catálogo data/datasets.json a partir dos metadados das classes
+python run_all.py --generate-catalog
+```
+
+---
+
+## 📂 Estrutura do Projeto
 
 ```
 PulseFlat/
@@ -40,7 +111,7 @@ PulseFlat/
 │   │   ├── __init__.py
 │   │   └── base.py                  # Classe infraestrutural BaseScraper
 │   ├── generic_scraper.py           # Scraper base genérico parametrizado por YAML
-│   ├── *.py                         # Scripts específicos de coleta por dataset
+│   └── *.py                         # Scripts específicos de coleta por dataset
 ├── utils/                           # Utilitários compartilhados auxiliares
 │   ├── __init__.py
 │   ├── base.py                      # Funções genéricas e salvamento de CSVs
@@ -61,121 +132,88 @@ PulseFlat/
 
 ---
 
-## Funcionamento e Execução do Orquestrador (`run_all.py`)
+## 💻 Guia do Desenvolvedor
 
-O script `run_all.py` atua como o cérebro do pipeline. Ele utiliza um **mecanismo de descoberta dinâmica (Dynamic Discovery)** que varre recursivamente a pasta `scrapers/`, importa as classes que herdam de `BaseScraper` e carrega suas configurações diretamente dos atributos da classe (`group`, `enabled`, `phase`). Para incluir um novo scraper, basta criar um arquivo Python na pasta `scrapers/` com uma subclasse de `BaseScraper`.
+### Instalação Local
 
-### Fases de Execução
-Para evitar falhas de dependência (como scrapers que requerem o cadastro de emissores atualizado de outros scripts), a execução é segmentada em duas fases:
-1.  **Fase 1 (Independentes)**: Executa a maioria dos scrapers de forma concorrente.
-2.  **Fase 2 (Dependentes)**: Executa scrapers como `s_p_ratings_brasil` após a conclusão bem-sucedida de seus pré-requisitos (`s_p_entidades_brasil`).
+1.  **Clone o repositório:**
+    ```bash
+    git clone https://github.com/royopa/PulseFlat.git
+    cd PulseFlat
+    ```
 
-### CLI Options e Exemplos
+2.  **Instale as dependências:**
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-```bash
-# Executa todos os scrapers registrados (padrão paralelo com 4 workers)
-python run_all.py
+3.  **Configure o arquivo de variáveis de ambiente:**
+    ```bash
+    cp .env.example .env
+    ```
+    *(Edite o `.env` com suas chaves caso precise utilizar APIs oficiais da ANBIMA ou B3).*
 
-# Executa os scrapers sequencialmente (bom para depuração de rede)
-python run_all.py --sequential
+### Criando um Novo Scraper
 
-# Executa os scrapers em paralelo definindo o número máximo de threads
-python run_all.py --parallel --max-workers 8
-
-# Filtra execução para um grupo específico
-python run_all.py --group anbima
-python run_all.py --group b3
-python run_all.py --group bcb
-python run_all.py --group cvm
-python run_all.py --group ibge
-python run_all.py --group ratings
-python run_all.py --group misc
-
-# Executa apenas um único scraper específico pelo nome do módulo
-python run_all.py --scraper anbima_indicadores
-```
-
----
-
-## Infraestrutura do `BaseScraper`
-
-Todos os novos scrapers herdam de `BaseScraper` localizado em [scrapers/utils/base.py](file:///Users/rodrigo/projects/PulseFlat/scrapers/utils/base.py). Esta classe abstrai a complexidade do pipeline:
+Basta criar um novo arquivo Python dentro de `scrapers/` herdando de `BaseScraper`. O orquestrador o detectará automaticamente:
 
 ```python
 from scrapers.utils.base import BaseScraper
 import pandas as pd
 
-class MeuScraperScraper(BaseScraper):
-    # O nome do scraper determina o arquivo CSV final (data/meu_scraper.csv)
-    name = "meu_scraper"
+class MeuNovoScraper(BaseScraper):
+    # Propriedades de Orquestração
+    name = "meu_novo_scraper"
+    group = "misc"
+    enabled = True
+    phase = 1
     
-    # Define se os dados capturados acumulam ao longo dos dias ou substituem o CSV por completo
+    # Propriedades de Persistência
     accumulate = True
-    
-    # Chaves para evitar duplicados em re-execuções no mesmo dia
     chaves_dedup = ["data_captura", "ticker"]
+    
+    # Propriedades do Catálogo (Metadados do Dashboard)
+    title = "Meu Novo Dataset"
+    description = "Coleta dados de teste diariamente."
+    icon = "📊"
+    icon_class = "icon-misc"
+    badge = "Diário"
+    badge_class = "badge-daily"
+    tags = ["teste", "novo"]
+    source = "Minha Fonte"
 
     def fetch(self) -> pd.DataFrame:
-        # 1. Faz chamadas de API ou extração
-        # 2. Retorna um Pandas DataFrame
-        dados = [{"ticker": "PETR4", "preco": "42,50", "data": "04/06/2026"}]
+        # A lógica do scraper deve ir aqui, retornando um Pandas DataFrame
+        dados = [{"ticker": "ABCD3", "preco": "10,50", "data": "04/06/2026"}]
         return pd.DataFrame(dados)
 ```
 
-### Sanitizações e Fluxos Automáticos na Execução (`run()`)
-*   **Tratamento de Dados**: Se a coluna `data_captura` estiver ausente, ela é gerada dinamicamente.
-*   **Limpeza de Formatos**: Converte strings de data de `DD/MM/YYYY` ou `DD/MM/YY` para `YYYY-MM-DD` automaticamente. Substitui separadores decimais de vírgula por ponto (ex: `"12,34"` vira `"12.34"`).
-*   **Preenchimento de NaNs**: Valores nulos do Pandas (`NaN`, `None`, `NaT`) são limpos para string vazia `""` para manter a integridade dos CSVs.
-*   **Monitoramento de Schema**: Verifica se houve adição ou remoção de campos em relação ao schema registrado em `data/schemas.json`, emitindo alertas de *Schema Drift*.
+### Executando Testes
 
----
-
-## Instalação e Uso Local
-
-### 1. Clonar o Repositório e Instalar Dependências
-```bash
-git clone https://github.com/royopa/PulseFlat.git
-cd PulseFlat
-pip install -r requirements.txt
-```
-
-### 2. Variáveis de Ambiente (Opcional)
-Crie um arquivo `.env` a partir do template `.env.example`:
-```bash
-cp .env.example .env
-```
-Edite as credenciais caso queira usar as APIs oficiais da ANBIMA e B3:
-*   `ANBIMA_CLIENT_ID` / `ANBIMA_CLIENT_SECRET`: Acesso à API REST oficial da ANBIMA (há fallback de scraping web caso não configurado).
-*   `B3_RECAPTCHA_TOKEN`: Token para contornar desafios de download em relatórios diários da B3.
-
----
-
-## Suíte de Testes
-
-O projeto utiliza `pytest` para testes automatizados rápidos de integridade e regressão:
+A suíte de testes utiliza `pytest` com `requests-mock` para testar os parsers e APIs mockadas de forma rápida e offline:
 
 ```bash
-# Executa todos os testes unitários
 python -m pytest tests/ -v
 ```
 
-Os testes estão distribuídos em:
-*   [tests/test_base_scraper.py](file:///Users/rodrigo/projects/PulseFlat/tests/test_base_scraper.py): Garante o funcionamento de rotinas de sanitização decimal, normalização de datas e ciclo de vida geral do `BaseScraper`.
-*   [tests/test_parsers.py](file:///Users/rodrigo/projects/PulseFlat/tests/test_parsers.py): Valida parsers específicos de ZIP, XML, JSON, CSV, e FWF em condições normais e casos de erro.
-*   [tests/test_run_all.py](file:///Users/rodrigo/projects/PulseFlat/tests/test_run_all.py): Valida o mecanismo de descoberta dinâmica de scrapers, leitura correta de metadados e fatiamento em fases.
-*   [tests/test_scrapers.py](file:///Users/rodrigo/projects/PulseFlat/tests/test_scrapers.py): Valida a resposta mockada de APIs de terceiros (BCB PTAX, SGS, B3 Classificação Setorial, ANBIMA) sob bibliotecas de mock (`requests-mock`).
-*   [tests/test_utils.py](file:///Users/rodrigo/projects/PulseFlat/tests/test_utils.py): Valida lógica de persistência incremental de arquivos CSV com detecção de duplicados, timezone e codificação Base64.
+---
+
+## 📊 Fontes e Datasets
+
+Os scrapers estão classificados nos seguintes grupos de dados principais:
+
+| Grupo | Fonte Primária | Exemplos de Dados Disponibilizados | Frequência |
+|---|---|---|---|
+| **ANBIMA** | [Portal ANBIMA](https://www.anbima.com.br) | Taxas indicativas, Projeções de Inflação (IPCA/IGPM), Títulos Públicos, Debêntures, Índices IMA/IDkA. | Diária |
+| **BCB** | [Banco Central do Brasil](https://www.bcb.gov.br) | Cotações diárias do Dólar (PTAX), Séries SGS (SELIC, CDI, Inflação), Negociação de títulos públicos (DEMAB), Balancetes cadastrais de bancos. | Diária |
+| **CVM** | [Portal Brasileiro de Dados Abertos](https://dados.cvm.gov.br) | Cadastro geral de companhias abertas, informes diários e dados de cotas/classes de fundos. | Diária |
+| **B3** | [B3 Market Data](https://www.b3.com.br) | FIIs/ETFs listados, composição das carteiras teóricas de índices (IBOV, SMLL, ISEE, BDRX, IFNC), taxas DI Over. | Diária |
+| **IBGE** | [IBGE SIDRA API](https://sidra.ibge.gov.br) | Índices oficiais de inflação do Brasil (IPCA, IPCA-15, INPC). | Mensal |
+| **Ratings** | [S&P Global](https://www.spglobal.com) / [Moody's](https://www.moodyslocal.com) | Classificação de ratings corporativos e histórico de Ratings Actions na Escala Nacional Brasil. | Diária |
+| **Misc** | [Yahoo Finance](https://finance.yahoo.com) / [ONU](https://unglobalcompact.org) | Cotações históricas de índices globais e lista de empresas brasileiras participantes do Pacto Global da ONU. | Diária |
 
 ---
 
-## Fontes Oficiais de Dados
+## 📄 Licença
 
-| Grupo | Fonte Primária | Dados Disponibilizados |
-|---|---|---|
-| **ANBIMA** | [Portal ANBIMA](https://www.anbima.com.br) | Taxas indicativas, Projeções de Inflação (IPCA/IGPM), Títulos Públicos, Debêntures, Índices IMA/IDkA. |
-| **BCB** | [Banco Central do Brasil](https://www.bcb.gov.br) | Cotações diárias do Dólar (PTAX), séries do Sistema de Gerenciamento de Séries (SGS), negociação de títulos públicos (DEMAB), balancetes cadastrais de bancos e dados de Basileia III. |
-| **CVM** | [Portal Brasileiro de Dados Abertos](https://dados.cvm.gov.br) | Cadastro geral de companhias abertas, informes diários e dados de cotas e classes de fundos de investimento. |
-| **B3** | [B3 Market Data](https://www.b3.com.br) | FIIs e ETFs listados, composição histórica das carteiras teóricas dos índices (IBOV, SMLL, ISEE, BDRX, IFNC, etc.), taxas DI Over e taxas de câmbio de referência. |
-| **IBGE** | [IBGE SIDRA API](https://sidra.ibge.gov.br) | Índices oficiais de inflação do Brasil (IPCA, IPCA-15, INPC). |
-| **Ratings** | [S&P Global](https://www.spglobal.com) / [Moody's Local](https://www.moodyslocal.com) | Classificação de ratings corporativos e histórico de Ratings Actions na Escala Nacional Brasil. |
-| **Misc** | [Yahoo Finance](https://finance.yahoo.com) / [ONU](https://unglobalcompact.org) | Cotações históricas globais e lista de empresas brasileiras participantes do Pacto Global da ONU. |
+Este projeto é de código aberto e está licenciado sob os termos da licença **MIT**.
