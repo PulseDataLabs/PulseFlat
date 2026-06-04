@@ -72,9 +72,7 @@ SCRAPERS: dict[str, str] = {
 
     # ── RATINGS ─────────────────────────────────────────────────────────────
     # A ordem importa: entidades devem rodar antes de ratings
-    "s_p_entidades_global":                "ratings",  # novo
     "s_p_entidades_brasil":                "ratings",  # novo
-    "s_p_ratings_global":                  "ratings",  # novo
     "s_p_ratings_brasil":                  "ratings",  # novo
     "s_p_acoes_ratings":                   "ratings",  # novo
     "moodys_local_ratings":                "ratings",  # novo

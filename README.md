@@ -96,8 +96,6 @@ Sem servidor. Sem custo. Histórico versionado em CSV no próprio repositório.
 |---|---|---|---|
 | `s_p_entidades_brasil` | S&P Global | Scraping HTML | `s_p_entidades_brasil.csv` |
 | `s_p_ratings_brasil` | S&P Global | Scraping HTML | `s_p_ratings_brasil.csv` |
-| `s_p_entidades_global` | S&P Global | Scraping HTML | (Exige credenciais ou browser) |
-| `s_p_ratings_global` | S&P Global | Scraping HTML | (Exige credenciais ou browser) |
 | `s_p_acoes_ratings` | S&P Global | Scraping HTML | (Exige credenciais ou browser) |
 | `moodys_local_ratings` | Moody's Local | Scraping HTML | (Bloqueado por anti-bot) |
 
@@ -670,7 +668,7 @@ O `.env` está no `.gitignore` — nunca será commitado.
 
 ## Configuração das credenciais S&P Global (opcional)
 
-Os scrapers globais da S&P (`s_p_entidades_global.py`, `s_p_ratings_global.py` e `s_p_acoes_ratings.py`) são bloqueados por proteção anti-bot (Akamai WAF) ao tentar realizar login por requisições HTTP diretas.
+O scraper de ações de rating da S&P (`s_p_acoes_ratings.py`) é bloqueado por proteção anti-bot (Akamai WAF) ao tentar realizar login por requisições HTTP diretas.
 
 Para contornar essa restrição localmente ou na nuvem:
 
@@ -685,7 +683,7 @@ Edite o arquivo `.env` local adicionando a seguinte variável:
 SP_GLOBAL_COOKIES="sua_string_de_cookies_aqui"
 ```
 
-Os scrapers lerão esses cookies automaticamente e contornarão a validação do Akamai WAF.
+O scraper lerá esses cookies automaticamente e contornará a validação do Akamai WAF.
 
 ---
 
