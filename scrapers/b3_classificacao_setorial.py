@@ -17,6 +17,8 @@ import requests
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from utils import get_logger, agora_brt, limpar, nova_session, salvar_csv
+import pandas as pd
+from scrapers.utils.base import BaseScraper
 
 log = get_logger("b3_classificacao_setorial")
 
@@ -122,18 +124,31 @@ def capturar() -> list[dict]:
     log.info(f"{len(companies)} empresas processadas da classificação setorial.")
     return companies
 
+class B3ClassificacaoSetorialScraper(BaseScraper):
+    name = "b3_classificacao_setorial"
+    accumulate = False
+    chaves_dedup = ['data_captura', 'codigo']
+    
+    # Catálogo de Metadados
+    title = 'B3 Classificação Setorial'
+    description = 'Classificação setorial completa das empresas listadas na B3 (setor econômico, subsetor e segmento de atuação).'
+    icon = '🗂️'
+    icon_class = 'icon-b3'
+    badge = 'Diário'
+    badge_class = 'badge-daily'
+    tags = ['setor', 'subsetor', 'segmento']
+    source = 'B3'
 
-def main():
-    log.info("=== B3 — Classificação Setorial ===")
-    registros = capturar()
-    salvar_csv(
-        ARQUIVO,
-        registros,
-        CABECALHO,
-        chaves_dedup=["data_captura", "codigo"],
-        acumular=False,
-    )
+    def fetch(self) -> pd.DataFrame:
+        log.info("=== B3 — Classificação Setorial ===")
+        registros = capturar()
+        # Reordena para garantir o cabeçalho original
+        df = pd.DataFrame(registros)
+        if not df.empty:
+            colunas = [c for c in CABECALHO if c in df.columns]
+            return df[colunas]
+        return df
 
 
 if __name__ == "__main__":
-    main()
+    B3ClassificacaoSetorialScraper().run()

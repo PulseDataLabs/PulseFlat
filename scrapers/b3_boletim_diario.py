@@ -13,6 +13,8 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from utils import get_logger, agora_brt, nova_session
+import pandas as pd
+from scrapers.utils.base import BaseScraper
 
 log = get_logger("b3_boletim_diario")
 
@@ -115,14 +117,28 @@ def capturar() -> tuple[int, int]:
 
     return ok, erro
 
+class B3BoletimDiarioScraper(BaseScraper):
+    name = "b3_boletim_diario"
+    accumulate = True
+    chaves_dedup = None
+    
+    # Catálogo de Metadados
+    title = 'B3 Boletim Diário'
+    description = 'Downloads dos arquivos consolidados do boletim diário de derivativos e posições em aberto da B3.'
+    icon = '📂'
+    icon_class = 'icon-b3'
+    badge = 'Diário'
+    badge_class = 'badge-daily'
+    tags = ['boletim', 'derivativos', 'posição em aberto', 'B3']
+    source = 'B3'
 
-def main():
-    log.info("=== B3 Boletim Diário (arquivos para download) ===")
-    ok, erro = capturar()
-    log.info(f"{ok} arquivo(s) baixado(s) | {erro} erro(s)")
-    if erro or ok == 0:
-        sys.exit(1)
+    def fetch(self) -> pd.DataFrame:
+        log.info("=== B3 Boletim Diário (arquivos para download) ===")
+        ok, erro = capturar()
+        log.info(f"{ok} arquivo(s) baixado(s) | {erro} erro(s)")
+        if erro or ok == 0:
+            raise RuntimeError('Execução do scraper falhou')
 
 
 if __name__ == "__main__":
-    main()
+    B3BoletimDiarioScraper().run()

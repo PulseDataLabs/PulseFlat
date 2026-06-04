@@ -14,6 +14,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from utils.base import b64_encode_params, get_logger, nova_session, salvar_csv
 from utils.b3_helpers import get_company_seeds
 from utils.parsers import json_rows, enriquecer, read_existing_header
+import pandas as pd
+from scrapers.utils.base import BaseScraper
 
 log = get_logger("b3_companhias_detalhes")
 
@@ -53,13 +55,31 @@ def capturar() -> tuple[list[dict], list[str]]:
             header.append(col)
     return enriched, header
 
+class B3CompanhiasDetalhesScraper(BaseScraper):
+    name = "b3_companhias_detalhes"
+    accumulate = True
+    chaves_dedup = ['data_captura', 'conjunto', 'registro_hash']
+    
+    # Catálogo de Metadados
+    title = 'B3 Companhias Detalhes'
+    description = 'Dados capturados.'
+    icon = '📊'
+    icon_class = 'icon-misc'
+    badge = 'Diário'
+    badge_class = 'badge-daily'
+    tags = ['b3']
+    source = 'B3'
 
-def main():
-    log.info("=== B3 — Detalhes de Companhias Listadas ===")
-    rows, header = capturar()
-    salvar_csv(ARQUIVO, rows, header, chaves_dedup=["data_captura", "conjunto", "registro_hash"])
-    log.info(f"{len(rows)} registro(s) salvo(s)")
+    def fetch(self) -> pd.DataFrame:
+        log.info("=== B3 — Detalhes de Companhias Listadas ===")
+        rows, header = capturar()
+        # Reordena para garantir o cabeçalho original
+        df = pd.DataFrame(rows)
+        if not df.empty:
+            colunas = [c for c in CABECALHO if c in df.columns]
+            return df[colunas]
+        return df
 
 
 if __name__ == "__main__":
-    main()
+    B3CompanhiasDetalhesScraper().run()
