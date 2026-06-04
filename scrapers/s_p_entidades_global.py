@@ -21,6 +21,9 @@ import datetime
 import pandas as pd
 import requests
 from bs4 import BeautifulSoup
+from dotenv import load_dotenv
+
+load_dotenv()
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from scrapers.utils.base import BaseScraper
@@ -83,15 +86,25 @@ class SPEntidadesGlobalScraper(BaseScraper):
     def fetch(self) -> pd.DataFrame:
         email = os.environ.get("USER_STANDARDPOORS", "")
         password = os.environ.get("PASS_STANDARDPOORS", "")
+        cookie_str = os.environ.get("SP_GLOBAL_COOKIES", "")
 
         session = requests.Session()
 
-        if email and password:
-            self.logger.info("Tentando autenticação na S&P Global...")
-            _login(session, email, password)
+        if cookie_str:
+            self.logger.info("Utilizando cookies de sessão fornecidos em SP_GLOBAL_COOKIES...")
+            cookies = {}
+            for item in cookie_str.split(";"):
+                if "=" in item:
+                    k, v = item.split("=", 1)
+                    cookies[k.strip()] = v.strip()
+            session.cookies.update(cookies)
+        elif email and password:
+            self.logger.info("Tentando autenticação na S&P Global via login...")
+            if not _login(session, email, password):
+                self.logger.warning("Falha ao autenticar na S&P Global (Login rejeitado ou bloqueado pelo WAF).")
         else:
             self.logger.warning(
-                "Credenciais USER_STANDARDPOORS / PASS_STANDARDPOORS não definidas. "
+                "Credenciais USER_STANDARDPOORS / PASS_STANDARDPOORS ou SP_GLOBAL_COOKIES não definidas. "
                 "A captura pode ser incompleta."
             )
 

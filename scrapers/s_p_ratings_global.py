@@ -19,6 +19,9 @@ import datetime
 import pandas as pd
 import requests
 from bs4 import BeautifulSoup
+from dotenv import load_dotenv
+
+load_dotenv()
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from scrapers.utils.base import BaseScraper
@@ -125,6 +128,16 @@ class SPRatingsGlobalScraper(BaseScraper):
             return pd.DataFrame()
 
         session = requests.Session()
+        cookie_str = os.environ.get("SP_GLOBAL_COOKIES", "")
+        if cookie_str:
+            self.logger.info("Utilizando cookies de sessão fornecidos em SP_GLOBAL_COOKIES...")
+            cookies = {}
+            for item in cookie_str.split(";"):
+                if "=" in item:
+                    k, v = item.split("=", 1)
+                    cookies[k.strip()] = v.strip()
+            session.cookies.update(cookies)
+
         frames = []
         total = len(df_entidades)
 

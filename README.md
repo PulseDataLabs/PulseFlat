@@ -668,6 +668,27 @@ O `.env` está no `.gitignore` — nunca será commitado.
 
 ---
 
+## Configuração das credenciais S&P Global (opcional)
+
+Os scrapers globais da S&P (`s_p_entidades_global.py`, `s_p_ratings_global.py` e `s_p_acoes_ratings.py`) são bloqueados por proteção anti-bot (Akamai WAF) ao tentar realizar login por requisições HTTP diretas.
+
+Para contornar essa restrição localmente ou na nuvem:
+
+### 1. Obter os cookies de sessão autenticada
+1. Faça login manualmente no portal da S&P Global: [https://www.spglobal.com/ratings/pt/user-management/sign-in](https://www.spglobal.com/ratings/pt/user-management/sign-in).
+2. Abra as Ferramentas de Desenvolvedor (F12) no navegador, vá na aba **Rede** (Network) e recarregue qualquer página de dados S&P.
+3. Copie o valor do cabeçalho `Cookie` completo (uma longa string contendo chaves como `JSESSIONID`, `okta_session`, etc.).
+
+### 2. Configurar no `.env` do projeto
+Edite o arquivo `.env` local adicionando a seguinte variável:
+```bash
+SP_GLOBAL_COOKIES="sua_string_de_cookies_aqui"
+```
+
+Os scrapers lerão esses cookies automaticamente e contornarão a validação do Akamai WAF.
+
+---
+
 ## Adicionando um novo scraper
 
 1. Crie `scrapers/novo_fonte.py` seguindo o padrão:
