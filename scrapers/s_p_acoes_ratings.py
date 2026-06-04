@@ -24,7 +24,7 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from scrapers.utils.base import BaseScraper
 
 
-BASE_URL = "https://www.spglobal.com/ratings/pt/regulatory/ratings-actions"
+BASE_URL = "https://brazil.ratings.spglobal.com/ratings/pt/regulatory/ratings-actions"
 
 HEADERS = {
     "User-Agent": (
@@ -33,7 +33,7 @@ HEADERS = {
         "Chrome/120.0.0.0 Safari/537.36"
     ),
     "Accept-Language": "pt-BR,pt;q=0.9",
-    "Referer": "https://www.spglobal.com/ratings/pt/regulatory/",
+    "Referer": "https://brazil.ratings.spglobal.com/ratings/pt/regulatory/",
 }
 
 # Parâmetros de filtro (últimos 7 dias, Brasil)
@@ -57,6 +57,31 @@ def _parse_table(html: str) -> pd.DataFrame:
     col_names: List[str] = []
     if header_ul:
         col_names = [span.get_text(strip=True) for span in header_ul.find_all("span")]
+        if len(col_names) == 10:
+            col_names = [
+                "descricao",
+                "classe",
+                "data_vencimento",
+                "tipo_rating",
+                "data_acao",
+                "rating_novo",
+                "creditwatch_perspectiva_novo",
+                "rating_anterior",
+                "creditwatch_perspectiva_anterior",
+                "acao"
+            ]
+        else:
+            seen = {}
+            new_names = []
+            for name in col_names:
+                clean_name = name.lower().replace(" ", "_").replace("/", "_").replace("ç", "c").replace("ã", "a").replace("ê", "e")
+                if clean_name in seen:
+                    seen[clean_name] += 1
+                    new_names.append(f"{clean_name}_{seen[clean_name]}")
+                else:
+                    seen[clean_name] = 1
+                    new_names.append(clean_name)
+            col_names = new_names
 
     rows = container.select(
         "div.table-module__content div.table-module__row.ratingsActions-table-module__row"
@@ -85,28 +110,9 @@ class SPAcoesRatingsScraper(BaseScraper):
 
     def fetch(self) -> pd.DataFrame:
         session = requests.Session()
-        cookie_str = os.environ.get("SP_GLOBAL_COOKIES", "")
-        if cookie_str:
-            self.logger.info("Utilizando cookies de sessão fornecidos em SP_GLOBAL_COOKIES...")
-            cookies = {}
-            for item in cookie_str.split(";"):
-                if "=" in item:
-                    k, v = item.split("=", 1)
-                    cookies[k.strip()] = v.strip()
-            session.cookies.update(cookies)
         self.logger.info(f"Acessando {BASE_URL}")
 
         resp = session.get(BASE_URL, params=PARAMS, headers=HEADERS, timeout=60)
-
-        if resp.status_code == 403:
-            self.logger.warning(
-                "Acesso bloqueado (403 Forbidden) pela S&P Global. "
-                "O site exige autenticação ou bloqueia bots. "
-                "Configure USER_STANDARDPOORS / PASS_STANDARDPOORS ou "
-                "utilize Playwright/Selenium."
-            )
-            return pd.DataFrame()
-
         resp.raise_for_status()
 
         df = _parse_table(resp.text)

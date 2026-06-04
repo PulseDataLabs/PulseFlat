@@ -198,5 +198,9 @@ window.PULSEFLAT_LAST_UPDATES = {
   "s_p_ratings_brasil.csv": {
     "min": "2026-06-03",
     "max": "2026-06-03"
+  },
+  "s_p_acoes_ratings.csv": {
+    "min": "2026-06-03",
+    "max": "2026-06-03"
   }
 };

@@ -96,7 +96,7 @@ Sem servidor. Sem custo. Histórico versionado em CSV no próprio repositório.
 |---|---|---|---|
 | `s_p_entidades_brasil` | S&P Global | Scraping HTML | `s_p_entidades_brasil.csv` |
 | `s_p_ratings_brasil` | S&P Global | Scraping HTML | `s_p_ratings_brasil.csv` |
-| `s_p_acoes_ratings` | S&P Global | Scraping HTML | (Exige credenciais ou browser) |
+| `s_p_acoes_ratings` | S&P Global | Scraping HTML | `s_p_acoes_ratings.csv` |
 | `moodys_local_ratings` | Moody's Local | Scraping HTML | (Bloqueado por anti-bot) |
 
 ### Grupo Outros / Diversos (Misc)
@@ -467,6 +467,24 @@ Histórico de ratings vigentes atribuídos pela S&P na Escala Nacional Brasil.
 | nome | Razão social do emissor |
 | link | Link para detalhes no portal da S&P |
 
+### `s_p_acoes_ratings.csv`
+Histórico de ações de classificação de risco (Ratings Actions) nos últimos 7 dias da S&P Global.
+
+| Campo | Descrição |
+|---|---|
+| data_captura | Data da execução (BRT) |
+| dt_captura | Data de captura dos dados |
+| descricao | Nome completo e descrição da emissão/ativo avaliado |
+| classe | Série ou classe do papel |
+| data_vencimento | Data de vencimento do papel |
+| tipo_rating | Tipo de rating (ex: Escala Nacional Brasil de Longo Prazo) |
+| data_acao | Data/hora em que a ação de rating foi divulgada |
+| rating_novo | Nova classificação atribuída (ex: brAA-) |
+| creditwatch_perspectiva_novo | Nova perspectiva atribuída |
+| rating_anterior | Classificação anterior (ex: brAA) |
+| creditwatch_perspectiva_anterior | Perspectiva anterior |
+| acao | Tipo de ação executada (ex: Revised, Affirmed) |
+
 ---
 
 ## Estrutura do projeto
@@ -663,27 +681,6 @@ cp .env.example .env
 # Edite o .env com suas credenciais
 ```
 O `.env` está no `.gitignore` — nunca será commitado.
-
----
-
-## Configuração das credenciais S&P Global (opcional)
-
-O scraper de ações de rating da S&P (`s_p_acoes_ratings.py`) é bloqueado por proteção anti-bot (Akamai WAF) ao tentar realizar login por requisições HTTP diretas.
-
-Para contornar essa restrição localmente ou na nuvem:
-
-### 1. Obter os cookies de sessão autenticada
-1. Faça login manualmente no portal da S&P Global: [https://www.spglobal.com/ratings/pt/user-management/sign-in](https://www.spglobal.com/ratings/pt/user-management/sign-in).
-2. Abra as Ferramentas de Desenvolvedor (F12) no navegador, vá na aba **Rede** (Network) e recarregue qualquer página de dados S&P.
-3. Copie o valor do cabeçalho `Cookie` completo (uma longa string contendo chaves como `JSESSIONID`, `okta_session`, etc.).
-
-### 2. Configurar no `.env` do projeto
-Edite o arquivo `.env` local adicionando a seguinte variável:
-```bash
-SP_GLOBAL_COOKIES="sua_string_de_cookies_aqui"
-```
-
-O scraper lerá esses cookies automaticamente e contornará a validação do Akamai WAF.
 
 ---
 
