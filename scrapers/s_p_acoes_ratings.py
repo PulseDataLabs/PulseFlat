@@ -60,6 +60,7 @@ def _parse_table(html: str) -> pd.DataFrame:
         if len(col_names) == 10:
             col_names = [
                 "descricao",
+                "link_descricao",
                 "classe",
                 "data_vencimento",
                 "tipo_rating",
@@ -82,6 +83,7 @@ def _parse_table(html: str) -> pd.DataFrame:
                     seen[clean_name] = 1
                     new_names.append(clean_name)
             col_names = new_names
+            col_names.insert(1, "link_descricao")
 
     rows = container.select(
         "div.table-module__content div.table-module__row.ratingsActions-table-module__row"
@@ -92,9 +94,20 @@ def _parse_table(html: str) -> pd.DataFrame:
         if not cols:
             continue
         values = []
-        for col in cols[: len(col_names)]:
+        for i, col in enumerate(cols[: len(col_names) - 1]):
             texts = [p.get_text(strip=True) for p in col.find_all("p")]
-            values.append(" ".join(t for t in texts if t))
+            val = " ".join(t for t in texts if t)
+            if i == 0:
+                values.append(val)
+                a_tag = col.find("a")
+                link_val = ""
+                if a_tag:
+                    href = a_tag.get("href", "")
+                    if href:
+                        link_val = href if href.startswith("http") else f"https://brazil.ratings.spglobal.com{href}"
+                values.append(link_val)
+            else:
+                values.append(val)
         if len(values) < len(col_names):
             values += [""] * (len(col_names) - len(values))
         data.append(values)
