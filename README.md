@@ -28,7 +28,7 @@ Sem servidor. Sem custo. Histórico versionado em CSV no próprio repositório.
 PulseFlat/
 ├── .github/
 │   └── workflows/
-│       └── captura_diaria.yml       # Agendamento do pipeline no GitHub Actions
+│       └── main.yml                 # Agendamento do pipeline no GitHub Actions
 ├── data/                            # Datasets, schemas e metadados de controle
 │   ├── datasets.json                # Catálogo estruturado de metadados dos datasets
 │   ├── schemas.json                 # Definição e mapeamento de campos e tipos
@@ -47,8 +47,11 @@ PulseFlat/
 │   ├── parsers.py                   # Parsers robustos para ZIP, Excel, XLS, CSV, FWF, XML
 │   └── b3_helpers.py                # Helpers específicos para seeds da B3
 ├── tests/                           # Suíte de testes automatizados
-│   ├── test_scrapers.py
-│   └── test_utils.py
+│   ├── test_base_scraper.py         # Testes de sanitização e ciclo da classe base
+│   ├── test_parsers.py              # Testes para os parsers auxiliares (ZIP, FWF, etc.)
+│   ├── test_run_all.py              # Testes da CLI e do mecanismo de descoberta dinâmica
+│   ├── test_scrapers.py             # Testes mockados de scrapers individuais
+│   └── test_utils.py                # Testes de persistência de arquivos e helpers
 ├── run_all.py                       # Orquestrador CLI central do projeto
 ├── requirements.txt                 # Dependências do Python
 ├── .env.example                     # Template de variáveis de ambiente
@@ -60,7 +63,7 @@ PulseFlat/
 
 ## Funcionamento e Execução do Orquestrador (`run_all.py`)
 
-O script `run_all.py` atua como o cérebro do pipeline. Ele importa e executa os scrapers em paralelo ou de forma sequencial, monitorando tempos de execução e erros.
+O script `run_all.py` atua como o cérebro do pipeline. Ele utiliza um **mecanismo de descoberta dinâmica (Dynamic Discovery)** que varre recursivamente a pasta `scrapers/`, importa as classes que herdam de `BaseScraper` e carrega suas configurações diretamente dos atributos da classe (`group`, `enabled`, `phase`). Para incluir um novo scraper, basta criar um arquivo Python na pasta `scrapers/` com uma subclasse de `BaseScraper`.
 
 ### Fases de Execução
 Para evitar falhas de dependência (como scrapers que requerem o cadastro de emissores atualizado de outros scripts), a execução é segmentada em duas fases:
@@ -157,8 +160,11 @@ python -m pytest tests/ -v
 ```
 
 Os testes estão distribuídos em:
-*   [tests/test_scrapers.py](file:///Users/rodrigo/projects/PulseFlat/tests/test_scrapers.py): Valida a resposta mockada das APIs do Banco Central (PTAX, SGS), scrapers baseados em JSON e arquivos ZIP da B3.
-*   [tests/test_utils.py](file:///Users/rodrigo/projects/PulseFlat/tests/test_utils.py): Valida a lógica do salvamento deduplicado de arquivos CSV, tratamento de fuso horário, e codificadores JSON Base64 da B3.
+*   [tests/test_base_scraper.py](file:///Users/rodrigo/projects/PulseFlat/tests/test_base_scraper.py): Garante o funcionamento de rotinas de sanitização decimal, normalização de datas e ciclo de vida geral do `BaseScraper`.
+*   [tests/test_parsers.py](file:///Users/rodrigo/projects/PulseFlat/tests/test_parsers.py): Valida parsers específicos de ZIP, XML, JSON, CSV, e FWF em condições normais e casos de erro.
+*   [tests/test_run_all.py](file:///Users/rodrigo/projects/PulseFlat/tests/test_run_all.py): Valida o mecanismo de descoberta dinâmica de scrapers, leitura correta de metadados e fatiamento em fases.
+*   [tests/test_scrapers.py](file:///Users/rodrigo/projects/PulseFlat/tests/test_scrapers.py): Valida a resposta mockada de APIs de terceiros (BCB PTAX, SGS, B3 Classificação Setorial, ANBIMA) sob bibliotecas de mock (`requests-mock`).
+*   [tests/test_utils.py](file:///Users/rodrigo/projects/PulseFlat/tests/test_utils.py): Valida lógica de persistência incremental de arquivos CSV com detecção de duplicados, timezone e codificação Base64.
 
 ---
 
