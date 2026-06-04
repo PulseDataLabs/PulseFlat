@@ -210,12 +210,12 @@
       {
         "name": "indice",
         "type": "str",
-        "example": "AGFS"
+        "example": "ISEE"
       },
       {
         "name": "indice_nome",
         "type": "str",
-        "example": "AGFS"
+        "example": "ISEE"
       },
       {
         "name": "codigo_ativo",
@@ -235,12 +235,12 @@
       {
         "name": "quantidade_teorica",
         "type": "int",
-        "example": "216464847"
+        "example": "196230382"
       },
       {
         "name": "participacao_pct",
         "type": "str",
-        "example": "3.864"
+        "example": "0.361"
       },
       {
         "name": "reducao_capital",
