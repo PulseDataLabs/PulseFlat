@@ -20,9 +20,13 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from scrapers.utils.base import BaseScraper
 
 
+import re
+from dotenv import load_dotenv
+
+load_dotenv()
+
 BASE_URL = "https://brazil.ratings.spglobal.com"
 TOKEN_URL = f"{BASE_URL}/api/tokenClient"
-API_URL = "https://api.use1.prod.ratings.spglobal.com/rbz-nsrbrazilapi/extoauthv2/brazilRatings/getEntitySearchRequest?apikey=510153a9-99b2-4028-b1e4-b27d45fde011"
 
 HEADERS_BASE = {
     "User-Agent": (
@@ -45,9 +49,50 @@ class SPEntidadesBrasilScraper(BaseScraper):
     chaves_dedup = ["link"]
     accumulate = False
 
+    def _get_api_key(self) -> str:
+        """
+        Recupera a API Key a partir do ambiente ou do HTML da página pública da S&P.
+        Isso elimina chaves hardcodadas no código e protege contra vazamento de credenciais.
+        """
+        # 1. Tenta obter da variável de ambiente
+        api_key = os.environ.get("SP_GLOBAL_API_KEY")
+        if api_key:
+            self.logger.info("Utilizando SP_GLOBAL_API_KEY da variável de ambiente.")
+            return api_key
+
+        # 2. Busca dinamicamente do HTML da página pública
+        self.logger.info("Buscando API Key de forma dinâmica da página pública...")
+        try:
+            r = requests.get(
+                BASE_URL,
+                headers={
+                    "User-Agent": HEADERS_BASE["User-Agent"]
+                },
+                timeout=30
+            )
+            if r.status_code == 200:
+                match = re.search(r'"NEXT_PUBLIC_API_KEY"\s*:\s*"([^"]+)"', r.text)
+                if match:
+                    key = match.group(1)
+                    self.logger.info("API Key obtida dinamicamente com sucesso.")
+                    return key
+        except Exception as e:
+            self.logger.error(f"Erro ao obter API Key dinamicamente: {e}")
+
+        # Se falhar, retorna string vazia
+        self.logger.warning("Não foi possível carregar a API Key.")
+        return ""
+
     def fetch(self) -> pd.DataFrame:
         session = requests.Session()
         
+        api_key = self._get_api_key()
+        if not api_key:
+            self.logger.error("Abortando fetch: API Key não disponível.")
+            return pd.DataFrame()
+
+        api_url = f"https://api.use1.prod.ratings.spglobal.com/rbz-nsrbrazilapi/extoauthv2/brazilRatings/getEntitySearchRequest?apikey={api_key}"
+
         self.logger.info("Obtendo token de autorização da S&P...")
         try:
             token_resp = session.get(TOKEN_URL, headers=HEADERS_BASE, timeout=30)
@@ -89,7 +134,7 @@ class SPEntidadesBrasilScraper(BaseScraper):
                 }
                 
                 try:
-                    resp = session.post(API_URL, json=payload, headers=api_headers, timeout=30)
+                    resp = session.post(api_url, json=payload, headers=api_headers, timeout=30)
                     if resp.status_code != 200:
                         self.logger.warning(f"Erro na busca do termo {term} página {page}: status {resp.status_code}")
                         break
