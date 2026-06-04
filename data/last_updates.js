@@ -149,7 +149,7 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "yahoo_finance_series.csv": {
     "min": "2026-06-03",
-    "max": "2026-06-03"
+    "max": "2026-06-04"
   },
   "bacen_parcelas_capital_basileia.csv": {
     "min": "2026-06-03",

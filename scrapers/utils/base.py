@@ -34,12 +34,42 @@ class BaseScraper:
             # Limpa NaN para strings vazias
             df_cleaned = df.fillna("")
 
-            # Formata tipos datetime para string YYYY-MM-DD
+            # Formata tipos e limpa dados (datas e números BR)
+            import re
+
+            def clean_value(val):
+                if val is None or pd.isna(val):
+                    return ""
+                val_str = str(val).strip()
+                if not val_str:
+                    return ""
+
+                # 1. Limpa formatos de data BR (DD/MM/YYYY -> YYYY-MM-DD)
+                match = re.match(r'^(\d{2})/(\d{2})/(\d{4})$', val_str)
+                if match:
+                    d, m, y = match.groups()
+                    return f"{y}-{m}-{d}"
+                match_short = re.match(r'^(\d{2})/(\d{2})/(\d{2})$', val_str)
+                if match_short:
+                    d, m, y = match_short.groups()
+                    return f"20{y}-{m}-{d}"
+
+                # 2. Limpa formatos numéricos BR (5,3656 -> 5.3656)
+                if ',' in val_str and val_str.count(',') == 1:
+                    clean_num = val_str.replace('.', '').replace(',', '').replace('%', '').replace('-', '').replace('+', '').strip()
+                    if clean_num.isdigit():
+                        parts = val_str.split(',')
+                        left = parts[0].replace('.', '')
+                        right = parts[1]
+                        return f"{left}.{right}"
+
+                return val_str
+
             for col in df_cleaned.columns:
                 if pd.api.types.is_datetime64_any_dtype(df_cleaned[col]):
                     df_cleaned[col] = df_cleaned[col].dt.strftime("%Y-%m-%d")
                 else:
-                    df_cleaned[col] = df_cleaned[col].astype(str).str.strip()
+                    df_cleaned[col] = df_cleaned[col].apply(clean_value)
 
             registros = df_cleaned.to_dict(orient="records")
             cabecalho = list(df_cleaned.columns)

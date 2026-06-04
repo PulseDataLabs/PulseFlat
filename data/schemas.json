@@ -2317,12 +2317,12 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-06-03"
+        "example": "2026-06-04"
       },
       {
         "name": "dt_ref",
         "type": "date",
-        "example": "2026-05-04"
+        "example": "2026-05-05"
       },
       {
         "name": "ticker",
@@ -2337,7 +2337,7 @@
       {
         "name": "vr_fechamento",
         "type": "float",
-        "example": "185600.0"
+        "example": "186754.0"
       }
     ]
   }
