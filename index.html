@@ -700,6 +700,7 @@
     .icon-migrados{ background: rgba(240,180,41,0.08); border: 1px solid rgba(240,180,41,0.15); }
     .icon-ratings { background: rgba(187,134,252,0.08); border: 1px solid rgba(187,134,252,0.15); }
     .icon-misc    { background: rgba(0,229,160,0.08); border: 1px solid rgba(0,229,160,0.15); }
+    .icon-cvm     { background: rgba(0,212,255,0.08); border: 1px solid rgba(0,212,255,0.15); }
 
     .card-badge {
       font-family: var(--font-mono);
@@ -2525,6 +2526,195 @@
           </a>
         </div>
       </div>
+
+      <!-- Moody's Local Ratings -->
+      <div class="dataset-card">
+        <div class="card-top">
+          <div class="card-icon icon-ratings">🏢</div>
+          <span class="card-badge badge-daily">Diário</span>
+        </div>
+        <div class="card-title">Moody's Local — Classificações Vigentes</div>
+        <div class="card-file">moodys_local_ratings.csv</div>
+        <div class="card-desc">
+          Classificações de risco de crédito (ratings) vigentes e perspectivas locais emitidas pela Moody's Local para emissores brasileiros.
+        </div>
+        <div class="card-fields">
+          <span class="field-tag">ratings</span>
+          <span class="field-tag">moody's</span>
+          <span class="field-tag">risco</span>
+          <span class="field-tag">crédito</span>
+          <span class="field-tag">perspectiva</span>
+        </div>
+        <div class="card-footer">
+          <span class="card-source">Fonte: Moody's Local</span>
+          <a href="https://raw.githubusercontent.com/royopa/PulseFlat/main/data/moodys_local_ratings.csv" class="download-btn" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            Download CSV
+          </a>
+        </div>
+      </div>
+
+      <!-- B3 BDI Trades Ações -->
+      <div class="dataset-card b3-card">
+        <div class="card-top">
+          <div class="card-icon icon-b3">📈</div>
+          <span class="card-badge badge-daily">Diário</span>
+        </div>
+        <div class="card-title">B3 BDI — Negócios de Ações</div>
+        <div class="card-file">b3_bdi_trades_acoes.csv</div>
+        <div class="card-desc">
+          Resumo de negócios diários consolidados de ações negociadas no mercado de bolsa da B3, com preços e volumes.
+        </div>
+        <div class="card-fields">
+          <span class="field-tag">ações</span>
+          <span class="field-tag">volume</span>
+          <span class="field-tag">preço</span>
+          <span class="field-tag">bdi</span>
+          <span class="field-tag">negócios</span>
+        </div>
+        <div class="card-footer">
+          <span class="card-source">Fonte: B3 BDI</span>
+          <a href="https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_bdi_trades_acoes.csv" class="download-btn" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            Download CSV
+          </a>
+        </div>
+      </div>
+
+      <!-- B3 BDI Taxas Swap -->
+      <div class="dataset-card b3-card">
+        <div class="card-top">
+          <div class="card-icon icon-b3">📊</div>
+          <span class="card-badge badge-daily">Diário</span>
+        </div>
+        <div class="card-title">B3 BDI — Taxas de Swap</div>
+        <div class="card-file">b3_bmf_taxas_juros.csv</div>
+        <div class="card-desc">
+          Taxas de mercado e de referência para swaps e taxas referenciais da BM&F por prazo em dias corridos e úteis.
+        </div>
+        <div class="card-fields">
+          <span class="field-tag">taxas</span>
+          <span class="field-tag">swap</span>
+          <span class="field-tag">juros</span>
+          <span class="field-tag">bm&f</span>
+          <span class="field-tag">curva</span>
+        </div>
+        <div class="card-footer">
+          <span class="card-source">Fonte: B3 BDI</span>
+          <a href="https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_bmf_taxas_juros.csv" class="download-btn" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            Download CSV
+          </a>
+        </div>
+      </div>
+
+      <!-- B3 Futuros Ajustes -->
+      <div class="dataset-card b3-card">
+        <div class="card-top">
+          <div class="card-icon icon-b3">📉</div>
+          <span class="card-badge badge-daily">Diário</span>
+        </div>
+        <div class="card-title">B3 Futuros — Ajustes de Fechamento</div>
+        <div class="card-file">b3_futuros_ajustes.csv</div>
+        <div class="card-desc">
+          Preços de ajuste de fechamento diários para contratos futuros de juros (DI), dólar, índice Ibovespa e commodities.
+        </div>
+        <div class="card-fields">
+          <span class="field-tag">futuros</span>
+          <span class="field-tag">ajustes</span>
+          <span class="field-tag">commodities</span>
+          <span class="field-tag">b3</span>
+          <span class="field-tag">bm&f</span>
+        </div>
+        <div class="card-footer">
+          <span class="card-source">Fonte: B3</span>
+          <a href="https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_futuros_ajustes.csv" class="download-btn" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            Download CSV
+          </a>
+        </div>
+      </div>
+
+      <!-- B3 Títulos Negociáveis -->
+      <div class="dataset-card b3-card">
+        <div class="card-top">
+          <div class="card-icon icon-b3">📜</div>
+          <span class="card-badge badge-daily">Diário</span>
+        </div>
+        <div class="card-title">B3 — Títulos Negociáveis</div>
+        <div class="card-file">b3_titulos_negociaveis.csv</div>
+        <div class="card-desc">
+          Lista consolidada de títulos públicos federais e privados autorizados e negociados no ambiente de balcão e bolsa da B3.
+        </div>
+        <div class="card-fields">
+          <span class="field-tag">títulos</span>
+          <span class="field-tag">b3</span>
+          <span class="field-tag">negociáveis</span>
+          <span class="field-tag">balcão</span>
+          <span class="field-tag">cadastro</span>
+        </div>
+        <div class="card-footer">
+          <span class="card-source">Fonte: B3</span>
+          <a href="https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_titulos_negociaveis.csv" class="download-btn" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            Download CSV
+          </a>
+        </div>
+      </div>
+
+      <!-- CVM Classes e Subclasses -->
+      <div class="dataset-card">
+        <div class="card-top">
+          <div class="card-icon icon-cvm">🗂️</div>
+          <span class="card-badge badge-daily">Diário</span>
+        </div>
+        <div class="card-title">CVM — Classes e Subclasses de Cotas</div>
+        <div class="card-file">registro_fundo_classe.csv</div>
+        <div class="card-desc">
+          Cadastro de classes e subclasses de cotas de fundos sob as novas regras da RCVM 175.
+        </div>
+        <div class="card-fields">
+          <span class="field-tag">cvm 175</span>
+          <span class="field-tag">fundos</span>
+          <span class="field-tag">classes</span>
+          <span class="field-tag">subclasses</span>
+          <span class="field-tag">cotas</span>
+        </div>
+        <div class="card-footer">
+          <span class="card-source">Fonte: CVM</span>
+          <a href="https://raw.githubusercontent.com/royopa/PulseFlat/main/data/registro_fundo_classe.csv" class="download-btn" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            Download CSV
+          </a>
+        </div>
+      </div>
+
+      <!-- CVM Informe Diário de Fundos -->
+      <div class="dataset-card">
+        <div class="card-top">
+          <div class="card-icon icon-cvm">📋</div>
+          <span class="card-badge badge-daily">Diário</span>
+        </div>
+        <div class="card-title">CVM — Informe Diário de Fundos</div>
+        <div class="card-file">cvm_fundos_informe_diario.csv</div>
+        <div class="card-desc">
+          Desempenho diário de fundos de investimento: valor da cota, PL, captações, resgates e cotistas.
+        </div>
+        <div class="card-fields">
+          <span class="field-tag">fundos</span>
+          <span class="field-tag">cota</span>
+          <span class="field-tag">patrimônio</span>
+          <span class="field-tag">captação</span>
+          <span class="field-tag">resgate</span>
+        </div>
+        <div class="card-footer">
+          <span class="card-source">Fonte: CVM</span>
+          <a href="https://raw.githubusercontent.com/royopa/PulseFlat/main/data/cvm_fundos_informe_diario.csv" class="download-btn" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            Download CSV
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -3158,7 +3348,8 @@
       'bcb_sgs.csv',
       'ibge_sidra.csv',
       'cvm_cadastro_companhias_abertas.csv',
-      'cvm_fundos_classe.csv',
+      'registro_fundo_classe.csv',
+      'cvm_fundos_informe_diario.csv',
       'debentures_emissoes_caracteristicas.csv',
       'b3_classificacao_setorial.csv',
       'b3_titulos_negociaveis.csv',
@@ -3184,7 +3375,7 @@
         source = 'b3';
       } else if (fileName.startsWith('bcb_') || fileName.startsWith('bacen_')) {
         source = 'bcb';
-      } else if (fileName.startsWith('cvm_')) {
+      } else if (fileName.startsWith('cvm_') || fileName.startsWith('registro_')) {
         source = 'cvm';
       } else if (fileName.startsWith('ibge_')) {
         source = 'ibge';
@@ -3192,7 +3383,7 @@
         source = 'debentures';
       } else if (fileName.startsWith('s_p_') || fileName.startsWith('moodys_')) {
         source = 'ratings';
-      } else if (fileName.startsWith('yahoo_') || fileName.startsWith('investing_')) {
+      } else if (fileName.startsWith('yahoo_') || fileName.startsWith('investing_') || fileName.startsWith('onu_')) {
         source = 'misc';
       }
 

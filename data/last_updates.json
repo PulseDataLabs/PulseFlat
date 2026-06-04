@@ -48,8 +48,8 @@
     "max": "2026-06-03"
   },
   "registro_fundo_classe.csv": {
-    "min": "2026-06-02",
-    "max": "2026-06-02"
+    "min": "2026-06-04",
+    "max": "2026-06-04"
   },
   "b3_etfs_listados.csv": {
     "min": "2026-06-03",
@@ -120,8 +120,8 @@
     "max": "2026-06-03"
   },
   "b3_titulos_negociaveis.csv": {
-    "min": "2026-06-02",
-    "max": "2026-06-02"
+    "min": "2026-06-04",
+    "max": "2026-06-04"
   },
   "b3_indicadores_financeiros.csv": {
     "min": "2026-06-01",
