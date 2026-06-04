@@ -37,11 +37,14 @@ SCRAPERS: dict[str, str] = {
     "anbima_projecoes":                     "anbima",
     "anbima_titulos_publicos":              "anbima",
     "anbima_debentures":                    "anbima",
-    "anbima_ima":                           "anbima",
+    "anbima_ima_completo":                  "anbima",
     "anbima_550":                           "anbima",
     "anbima_idka":                          "anbima",   # novo
     "anbima_ranking_global":               "anbima",   # novo
     "anbima_matriz_probabilidade_resgate": "anbima",   # novo
+    "anbima_indice_imab":                   "anbima",   # novo
+    "debentures_emissoes_caracteristicas": "anbima",   # novo
+    "debentures_mercado_secundario_precos_negociacao": "anbima", # novo
 
     # ── B3 ──────────────────────────────────────────────────────────────────
     "b3_fiis":                              "b3",
@@ -49,12 +52,19 @@ SCRAPERS: dict[str, str] = {
     "b3_carteiras":                         "b3",
     "b3_futuros_ajustes":                   "b3",
     "b3_indicadores_financeiros":           "b3",
-    "b3_bdi_indicadores_economicos":        "b3",
     "b3_bdi_di_over":                       "b3",
     "b3_bdi_trades_acoes":                  "b3",
-    "b3_carteira_ibov":                     "b3",
     "b3_bmf_taxas_juros":                   "b3",
     "b3_series_historicas":                 "b3",       # novo
+    "b3_carteira_teorica_ibov":             "b3",       # novo
+    "b3_carteira_teorica_smll":             "b3",       # novo
+    "b3_carteira_teorica_bdrx":             "b3",       # novo
+    "b3_carteira_teorica_isee":             "b3",       # novo
+    "b3_carteira_teorica_ibxl":             "b3",       # novo
+    "b3_carteira_teorica_ifnc":             "b3",       # novo
+    "b3_carteira_teorica_agfs_iagro":       "b3",       # novo
+    "b3_carteira_teorica_ibsd":             "b3",       # novo
+    "b3_titulos_negociaveis":               "b3",       # novo
 
     # ── BCB / BACEN ─────────────────────────────────────────────────────────
     "bcb_ptax":                             "bcb",
@@ -62,13 +72,14 @@ SCRAPERS: dict[str, str] = {
     "bacen_balancetes_bancos":              "bcb",      # novo
     "bacen_conglomerados":                  "bcb",      # novo
     "bacen_parcelas_capital_basileia":      "bcb",      # novo
+    "bacen_negociacao_tpf":                 "bcb",      # novo
 
     # ── IBGE ────────────────────────────────────────────────────────────────
     "ibge_sidra":                           "ibge",
 
     # ── CVM ─────────────────────────────────────────────────────────────────
-    "cvm_fundos_cadastro":                  "cvm",
     "cvm_fundos_informe_diario":            "cvm",
+    "cvm_fundos_classe":                    "cvm",      # novo
 
     # ── RATINGS ─────────────────────────────────────────────────────────────
     # A ordem importa: entidades devem rodar antes de ratings
@@ -80,6 +91,7 @@ SCRAPERS: dict[str, str] = {
     # ── MISC ────────────────────────────────────────────────────────────────
     "yahoo_finance_series":                "misc",     # novo
     "investing_etf":                       "misc",     # novo
+    "onu_pacto_global":                    "misc",     # novo
 }
 
 

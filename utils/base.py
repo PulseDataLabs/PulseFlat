@@ -100,6 +100,19 @@ def nova_session() -> requests.Session:
     return s
 
 
+def read_existing_header(arquivo: Path) -> list[str]:
+    """Lê o cabeçalho existente de um arquivo CSV."""
+    if not arquivo.exists() or arquivo.stat().st_size == 0:
+        return []
+    try:
+        with arquivo.open("r", encoding="utf-8", newline="") as f:
+            reader = csv.reader(f)
+            header = next(reader, [])
+            return [col.strip() for col in header if col.strip()]
+    except Exception:
+        return []
+
+
 def salvar_csv(
     arquivo: Path,
     registros: list[dict],
@@ -127,6 +140,15 @@ def salvar_csv(
         sys.exit(1)
 
     arquivo.parent.mkdir(parents=True, exist_ok=True)
+
+    # Se acumular e o arquivo existir, mescla o cabeçalho existente para preservar colunas antigas e a ordem
+    if acumular and arquivo.exists():
+        header_existente = read_existing_header(arquivo)
+        merged = []
+        for col in header_existente + cabecalho:
+            if col and col not in merged:
+                merged.append(col)
+        cabecalho = merged
 
     # Determina datas presentes nos novos dados (para dedup simples)
     datas_novas = {r.get("data_captura") for r in registros}

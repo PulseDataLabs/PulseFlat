@@ -34,7 +34,7 @@ Sem servidor. Sem custo. Histórico versionado em CSV no próprio repositório.
 |---|---|---|---|
 | `bcb_ptax` | BCB | API REST (Olinda) | `bcb_ptax.csv` (sem acúmulo) |
 | `bcb_sgs` | BCB | API REST (SGS) | `bcb_sgs.csv` (sem acúmulo) |
-| `bacen_negociacao_tpf` | BCB | ZIP + CSV (DEMAB) | `bacen_negociacao_tpf_extragrupo_mes_corrente.csv`, `..._mes_anterior.csv` |
+| `bacen_negociacao_tpf` | BCB | ZIP + CSV (DEMAB) | `bacen_negociacao_tpf_extragrupo.csv` |
 | `bacen_balancetes_bancos` | BCB | API Documentos | `bacen_balancetes_bancos.csv` (sem acúmulo) |
 | `bacen_conglomerados` | BCB | API OData | `bacen_conglomerados.csv` |
 | `bacen_parcelas_capital_basileia` | BCB | API OData | `bacen_parcelas_capital_basileia.csv` |
@@ -50,9 +50,7 @@ Sem servidor. Sem custo. Histórico versionado em CSV no próprio repositório.
 | Scraper | Fonte | Método | CSV(s) gerado(s) |
 |---|---|---|---|
 | `cvm_cadastro_companhias_abertas` | CVM | CSV direto | `cvm_cadastro_companhias_abertas.csv` (sem acúmulo) |
-| `cvm_fundos_cadastro` | CVM | CSV direto | `cvm_fundos_cadastro.csv` (sem acúmulo) |
 | `cvm_fundos_informe_diario` | CVM | ZIP + CSV | `cvm_fundos_informe_diario.csv` (sem acúmulo) |
-| `cvm_fundos_extrato` | CVM | CSV direto | `cvm_fundos_extrato.csv` (sem acúmulo) |
 | `cvm_fundos_classe` | CVM | ZIP + CSV | `cvm_fundos_classe.csv` (sem acúmulo) |
 
 ### Grupo SND / Debêntures
@@ -68,7 +66,6 @@ Sem servidor. Sem custo. Histórico versionado em CSV no próprio repositório.
 |---|---|---|---|
 | `b3_fiis` | B3 | API JSON + Base64 | `b3_fiis_listados.csv` (sem acúmulo) |
 | `b3_etfs` | B3 | API JSON + Base64 | `b3_etfs_listados.csv` (sem acúmulo) |
-| `b3_etfs_listados_download` | B3 | API JSON + Base64 | `b3_etfs_listados.csv` (sem acúmulo) |
 | `b3_carteiras` | B3 | API JSON + Base64 | `b3_carteiras_teoricas.csv` |
 | `b3_carteira_teorica_ibov` | B3 | API JSON + Base64 | `b3_carteira_teorica_ibov.csv` |
 | `b3_carteira_teorica_smll` | B3 | API JSON + Base64 | `b3_carteira_teorica_smll.csv` |
@@ -82,9 +79,6 @@ Sem servidor. Sem custo. Histórico versionado em CSV no próprio repositório.
 | `b3_bdi_di_over` | B3 | API POST (BDI) | `b3_bdi_di_over.csv` |
 | `b3_taxa_cambio_referencia` | B3 | API JSON + Base64 | `b3_taxa_cambio_referencia.csv` |
 | `b3_capital_social_empresas` | B3 | API JSON + Base64 | `b3_capital_social_empresas.csv` |
-| `b3_bvbg028` | B3 | ZIP + CSV (BVBG) | `b3_bvbg028.csv` |
-| `b3_bvbg086` | B3 | ZIP + CSV (BVBG) | `b3_bvbg086.csv` |
-| `b3_bvbg087` | B3 | ZIP + CSV (BVBG) | `b3_bvbg087.csv` |
 | `b3_indices_precos_historicos` | B3 | API JSON + Base64 | `b3_indices_precos_historicos.csv` |
 | `b3_classificacao_setorial` | B3 | ZIP + XLSX | `b3_classificacao_setorial.csv` (sem acúmulo) |
 | `b3_titulos_negociaveis` | B3 | ZIP + CSV | `b3_titulos_negociaveis.csv` (sem acúmulo) |
@@ -104,7 +98,8 @@ Sem servidor. Sem custo. Histórico versionado em CSV no próprio repositório.
 | Scraper | Fonte | Método | CSV(s) gerado(s) |
 |---|---|---|---|
 | `yahoo_finance_series` | Yahoo Finance | API yfinance | `yahoo_finance_series.csv` |
-| `investing_etf` | Investing.com | Scraping HTML | `investing_etf.csv` |
+| `investing_etf` | Investing.com | Scraping HTML | `investing_etf.csv` (sem acúmulo) |
+| `onu_pacto_global` | ONU Pacto Global | Crawling HTML | `onu_pacto_global.csv` (sem acúmulo) |
 
 **Desativados:** `b3_cotahist_diario`, `b3_cotahist_anual`, `b3_indicadores_economicos_fwf`, `b3_negocios_balcao`, `b3_companhias_detalhes`, `b3_companhias_info`, `b3_dividendos_dinheiro`, `b3_futuros_ajustes` (fonte legada descontinuada), `b3_bmf_taxas_juros` (API BDI sem dados).
 
@@ -258,7 +253,7 @@ Categoria (RV/RF), ticker, nome, CNPJ, administrador, gestor, índice de referê
 | daily_factor | Fator diário |
 | selic_rate | Taxa SELIC no período |
 
-### `bacen_negociacao_tpf_extragrupo_mes_corrente.csv` / `..._mes_anterior.csv`
+### `bacen_negociacao_tpf_extragrupo.csv`
 | Campo | Descrição |
 |---|---|
 | data_captura | Data da execução (BRT) |
@@ -295,17 +290,18 @@ Categoria (RV/RF), ticker, nome, CNPJ, administrador, gestor, índice de referê
 | numero | Número do índice |
 | variacao | Variação percentual |
 
-### `b3_bvbg028.csv`, `b3_bvbg086.csv`, `b3_bvbg087.csv`
-Boletins diários de operações da B3 (Ações, RF, Derivativos) — arquivos BVBG.
+### `onu_pacto_global.csv`
+Participantes do Brasil no Pacto Global da ONU.
 
 | Campo | Descrição |
 |---|---|
 | data_captura | Data da execução (BRT) |
-| data_pregão | Data do pregão |
-| codigo | Código do ativo |
-| quantidade | Quantidade negociada |
-| preco | Preço de negociação |
-| tipo | Tipo de operação |
+| name | Nome do participante |
+| type | Tipo de organização |
+| sector | Setor de atuação |
+| country | País (Brasil) |
+| joined_on | Data de ingresso (YYYY-MM-DD) |
+| link | Link do perfil do participante |
 
 <!-- ### `b3_cotahist_diario.csv` / `b3_cotahist_anual.csv` — DESATIVADOS -->
 <!-- ### `b3_indicadores_economicos_fwf.csv` — DESATIVADO -->
@@ -505,13 +501,10 @@ PulseFlat/
 │   ├── anbima_indice_imab.csv
 │   ├── bcb_ptax.csv
 │   ├── bcb_sgs.csv
-│   ├── bacen_negociacao_tpf_extragrupo_mes_corrente.csv
-│   ├── bacen_negociacao_tpf_extragrupo_mes_anterior.csv
+│   ├── bacen_negociacao_tpf_extragrupo.csv
 │   ├── ibge_sidra.csv
 │   ├── cvm_cadastro_companhias_abertas.csv
-│   ├── cvm_fundos_cadastro.csv
 │   ├── cvm_fundos_informe_diario.csv
-│   ├── cvm_fundos_extrato.csv
 │   ├── cvm_fundos_classe.csv
 │   ├── debentures_emissoes_caracteristicas.csv
 │   ├── debentures_mercado_secundario_precos_negociacao.csv
@@ -523,12 +516,10 @@ PulseFlat/
 │   ├── b3_bdi_di_over.csv
 │   ├── b3_taxa_cambio_referencia.csv
 │   ├── b3_capital_social_empresas.csv
-│   ├── b3_bvbg028.csv
-│   ├── b3_bvbg086.csv
-│   ├── b3_bvbg087.csv
 │   ├── b3_indices_precos_historicos.csv
 │   ├── b3_classificacao_setorial.csv
 │   ├── b3_titulos_negociaveis.csv
+│   ├── onu_pacto_global.csv
 ├── scrapers/
 │   ├── __init__.py
 │   ├── anbima_indicadores.py
@@ -543,9 +534,7 @@ PulseFlat/
 │   ├── bacen_negociacao_tpf.py
 │   ├── ibge_sidra.py
 │   ├── cvm_cadastro_companhias_abertas.py
-│   ├── cvm_fundos_cadastro.py
 │   ├── cvm_fundos_informe_diario.py
-│   ├── cvm_fundos_extrato.py
 │   ├── cvm_fundos_classe.py
 │   ├── debentures_emissoes_caracteristicas.py
 │   ├── debentures_mercado_secundario_precos_negociacao.py
@@ -558,12 +547,10 @@ PulseFlat/
 │   ├── b3_bdi_di_over.py
 │   ├── b3_taxa_cambio_referencia.py
 │   ├── b3_capital_social_empresas.py
-│   ├── b3_bvbg028.py
-│   ├── b3_bvbg086.py
-│   ├── b3_bvbg087.py
 │   ├── b3_indices_precos_historicos.py
 │   ├── b3_classificacao_setorial.py
 │   ├── b3_titulos_negociaveis.py
+│   ├── onu_pacto_global.py
 ├── utils/
 │   ├── __init__.py
 │   ├── base.py                      # Utilitários compartilhados
@@ -627,9 +614,7 @@ python run_all.py bcb_sgs
 python run_all.py bacen_negociacao_tpf
 python run_all.py ibge_sidra
 python run_all.py cvm_cadastro_companhias_abertas
-python run_all.py cvm_fundos_cadastro
 python run_all.py cvm_fundos_informe_diario
-python run_all.py cvm_fundos_extrato
 python run_all.py cvm_fundos_classe
 python run_all.py debentures_emissoes_caracteristicas
 python run_all.py debentures_mercado_secundario_precos_negociacao
@@ -641,12 +626,10 @@ python run_all.py b3_indicadores_financeiros
 python run_all.py b3_bdi_di_over
 python run_all.py b3_taxa_cambio_referencia
 python run_all.py b3_capital_social_empresas
-python run_all.py b3_bvbg028
-python run_all.py b3_bvbg086
-python run_all.py b3_bvbg087
 python run_all.py b3_indices_precos_historicos
 python run_all.py b3_classificacao_setorial
 python run_all.py b3_titulos_negociaveis
+python run_all.py onu_pacto_global
 ```
 
 ---
@@ -724,4 +707,4 @@ if __name__ == "__main__":
 | B3 FIIs | https://www.b3.com.br/pt_br/produtos-e-servicos/negociacao/renda-variavel/fundos-de-investimento-imobiliario-fiis/ |
 | B3 ETFs | https://www.b3.com.br/pt_br/produtos-e-servicos/negociacao/renda-variavel/etfs/ |
 | B3 Índices | https://www.b3.com.br/pt_br/market-data-e-indices/indices/ |
-| B3 BVBG | https://www.b3.com.br/pesquisapregao/ |
+| ONU Pacto Global | https://unglobalcompact.org/what-is-gc/participants/ |

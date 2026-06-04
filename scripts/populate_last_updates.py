@@ -37,6 +37,9 @@ def main():
         except Exception as e:
             log.warning(f"Erro ao ler last_updates.json existente: {e}. Criando um novo.")
 
+    # Remove chaves de arquivos que não existem mais no disco
+    last_updates = {k: v for k, v in last_updates.items() if (data_dir / k).exists()}
+
     # Varre todos os arquivos .csv
     for csv_file in data_dir.glob("*.csv"):
         log.info(f"Processando {csv_file.name}...")

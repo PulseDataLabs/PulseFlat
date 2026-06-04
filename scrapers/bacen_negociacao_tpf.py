@@ -18,15 +18,12 @@ from utils.parsers import date_ref, replace_date_vars, rows_from_zip, enriquecer
 log = get_logger("bacen_negociacao_tpf")
 
 URL_TPLT = "https://www4.bcb.gov.br/pom/demab/negociacoes/download/NegEYYYYMM.ZIP"
-ARQUIVOS = [
-    {
-        "id": "bacen_negociacao_tpf_extragrupo_mes_corrente",
-        "arquivo": Path("data/bacen_negociacao_tpf_extragrupo_mes_corrente.csv"),
-    },
-    {
-        "id": "bacen_negociacao_tpf_extragrupo_mes_anterior",
-        "arquivo": Path("data/bacen_negociacao_tpf_extragrupo_mes_anterior.csv"),
-    },
+OUTPUT_FILE = Path("data/bacen_negociacao_tpf_extragrupo.csv")
+DATASET_ID = "bacen_negociacao_tpf_extragrupo"
+
+ARQUIVOS_CONFIG = [
+    {"tipo": "corrente", "ref": None},
+    {"tipo": "anterior", "ref": "mes_anterior"},
 ]
 
 
@@ -34,17 +31,13 @@ def capturar() -> list[dict]:
     session = nova_session()
     registros = []
 
-    for cfg in ARQUIVOS:
-        dataset_id = cfg["id"]
-        arquivo = cfg["arquivo"]
-
-        if "anterior" in dataset_id:
-            dt = date_ref("mes_anterior")
-        else:
-            dt = date_ref(None)
+    for cfg in ARQUIVOS_CONFIG:
+        tipo = cfg["tipo"]
+        ref = cfg["ref"]
+        dt = date_ref(ref)
 
         url = replace_date_vars(URL_TPLT, dt)
-        log.info(f"[{dataset_id}] Baixando {url}")
+        log.info(f"[{DATASET_ID}][{tipo}] Baixando {url}")
 
         try:
             resp = session.get(url, timeout=120)
@@ -53,18 +46,18 @@ def capturar() -> list[dict]:
             if not rows:
                 raise RuntimeError("Sem linhas apos processamento")
 
-            enriched, header_novo = enriquecer(dataset_id, rows)
-            header_existente = read_existing_header(arquivo)
+            enriched, header_novo = enriquecer(DATASET_ID, rows)
+            header_existente = read_existing_header(OUTPUT_FILE)
             header = []
             for col in header_existente + header_novo:
                 if col and col not in header:
                     header.append(col)
 
-            salvar_csv(arquivo, enriched, header, chaves_dedup=["data_captura", "conjunto", "registro_hash"])
-            log.info(f"[{dataset_id}] {len(enriched)} linha(s) salvas")
+            salvar_csv(OUTPUT_FILE, enriched, header, chaves_dedup=["data_captura", "conjunto", "registro_hash"])
+            log.info(f"[{DATASET_ID}][{tipo}] {len(enriched)} linha(s) salvas")
             registros.extend(enriched)
         except Exception as e:
-            log.error(f"[{dataset_id}] Falha: {e}")
+            log.error(f"[{DATASET_ID}][{tipo}] Falha: {e}")
 
     return registros
 

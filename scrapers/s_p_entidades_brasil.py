@@ -5,31 +5,26 @@ Scraper: S&P Global – Entidades com rating no Brasil
 Fonte:   https://brazil.ratings.spglobal.com/ratings/pt/regulatory/consolidated-search-entity/
 Saída:   data/s_p_entidades_brasil.csv
 
-Busca cada emissor na API de busca da S&P Brasil e retorna nome + link.
-A lista de emissores é lida de EMISSORES_BASE abaixo (ajuste conforme necessário)
-ou pode ser passada via arquivo CSV com coluna 'nome'.
-
-Credenciais esperadas nas variáveis de ambiente:
-  USER_STANDARDPOORS=<email>
-  PASS_STANDARDPOORS=<senha>
+Busca todos os emissores utilizando a API de busca da S&P Brasil.
 """
 import os
 import sys
 import datetime
-from urllib.parse import quote
+import string
+import time
 
 import pandas as pd
 import requests
-from bs4 import BeautifulSoup
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from scrapers.utils.base import BaseScraper
 
 
 BASE_URL = "https://brazil.ratings.spglobal.com"
-SEARCH_URL = f"{BASE_URL}/ratings/pt/regulatory/consolidated-search-entity/searchTerm"
+TOKEN_URL = f"{BASE_URL}/api/tokenClient"
+API_URL = "https://api.use1.prod.ratings.spglobal.com/rbz-nsrbrazilapi/extoauthv2/brazilRatings/getEntitySearchRequest?apikey=510153a9-99b2-4028-b1e4-b27d45fde011"
 
-HEADERS = {
+HEADERS_BASE = {
     "User-Agent": (
         "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
         "AppleWebKit/537.36 (KHTML, like Gecko) "
@@ -39,90 +34,114 @@ HEADERS = {
     "Referer": BASE_URL,
 }
 
-# Emissores mapeados manualmente (fallback / complemento)
 EMISSORES_FIXOS = [
-    {"nome": "Banco Toyota do Brasil S.A.", "entity_id": "1000627"},
-    {"nome": "Banco Mercantil", "entity_id": "1001476"},
+    {"nome": "Banco Toyota do Brasil S.A.", "entity_id": "1000627", "sector_code": "FI"},
+    {"nome": "Banco Mercantil", "entity_id": "1001476", "sector_code": "FI"},
 ]
-
-ENTITY_BASE_URL = f"{BASE_URL}/ratings/pt/regulatory/org-details/sectorCode/FI/entityId/"
-
-
-def _buscar_emissor(session: requests.Session, nome: str) -> dict | None:
-    url = f"{SEARCH_URL}/{quote(nome.strip())}"
-    resp = session.get(url, headers=HEADERS, timeout=30)
-    if resp.status_code != 200:
-        return None
-
-    soup = BeautifulSoup(resp.text, "html.parser")
-
-    # Verifica mensagem "sem resultado"
-    msg_sem_resultado = soup.select_one("div#maindiv.results-header h3.text-red")
-    if msg_sem_resultado and "Não foram encontrados" in msg_sem_resultado.get_text():
-        return None
-
-    # Extrai primeira linha de resultado
-    linha = soup.select_one("div.table-module__row")
-    if not linha:
-        return None
-
-    link_el = linha.select_one("a.entity-results-table-content-font")
-    if not link_el:
-        return None
-
-    nome_encontrado = link_el.get_text(strip=True)
-    href = link_el.get("href", "")
-    if not href.startswith("http"):
-        href = BASE_URL + href
-
-    return {"nome": nome_encontrado, "link": href}
 
 
 class SPEntidadesBrasilScraper(BaseScraper):
     name = "s_p_entidades_brasil"
+    chaves_dedup = ["link"]
+    accumulate = False
 
     def fetch(self) -> pd.DataFrame:
         session = requests.Session()
+        
+        self.logger.info("Obtendo token de autorização da S&P...")
+        try:
+            token_resp = session.get(TOKEN_URL, headers=HEADERS_BASE, timeout=30)
+            if token_resp.status_code != 200:
+                self.logger.error(f"Falha ao obter token: status {token_resp.status_code}")
+                return pd.DataFrame()
+            token = token_resp.json().get("token")
+        except Exception as e:
+            self.logger.error(f"Erro ao obter token: {e}")
+            return pd.DataFrame()
 
-        # Carrega lista de emissores de arquivo externo (se existir)
-        emissores_path = os.path.join(
-            os.path.dirname(__file__), "config", "s_p_emissores_brasil.txt"
-        )
-        if os.path.exists(emissores_path):
-            with open(emissores_path, encoding="utf-8") as f:
-                nomes = [line.strip() for line in f if line.strip()]
-        else:
-            self.logger.warning(
-                f"Arquivo {emissores_path} não encontrado. "
-                "Usando apenas os emissores fixos mapeados."
-            )
-            nomes = []
+        if not token:
+            self.logger.error("Token vazio retornado pela API.")
+            return pd.DataFrame()
 
-        resultados = []
+        api_headers = {
+            "User-Agent": HEADERS_BASE["User-Agent"],
+            "Content-Type": "application/json; charset=utf-8",
+            "Authorization": f"Bearer {token}",
+            "Access-Control-Allow-Origin": "*"
+        }
 
-        for nome in nomes:
-            self.logger.info(f"Buscando: {nome}")
-            res = _buscar_emissor(session, nome)
-            if res:
-                resultados.append(res)
-            else:
-                self.logger.warning(f"Emissor não encontrado: {nome}")
+        # Conjunto de termos de busca para garantir a cobertura completa
+        search_terms = list(string.ascii_uppercase) + [str(i) for i in range(10)]
+        resultados = {}
 
-        # Adiciona emissores fixos (sem duplicar por link)
-        links_existentes = {r["link"] for r in resultados}
-        for e in EMISSORES_FIXOS:
-            link = f"{ENTITY_BASE_URL}{e['entity_id']}"
-            if link not in links_existentes:
-                resultados.append({"nome": e["nome"], "link": link})
+        self.logger.info(f"Iniciando busca abrangente por {len(search_terms)} termos...")
+        
+        for term in search_terms:
+            page = 0
+            page_length = 100
+            
+            while True:
+                payload = {
+                    "searchTerm": term,
+                    "locale": "pt_LA",
+                    "pageNumber": page,
+                    "pageLength": page_length
+                }
+                
+                try:
+                    resp = session.post(API_URL, json=payload, headers=api_headers, timeout=30)
+                    if resp.status_code != 200:
+                        self.logger.warning(f"Erro na busca do termo {term} página {page}: status {resp.status_code}")
+                        break
+                        
+                    data = resp.json()
+                    total_records = data.get("totalNumberOfRecords", 0)
+                    details = data.get("entitySearchDetails", [])
+                    
+                    if not details:
+                        break
+                        
+                    for entity in details:
+                        org_id = entity.get("orgId")
+                        org_name = entity.get("orgName")
+                        sector_code = entity.get("sectorCode") or "CORP"
+                        
+                        if org_id and org_name:
+                            # Constrói o link de detalhes de forma consistente
+                            link = f"{BASE_URL}/ratings/pt/regulatory/org-details/sectorCode/{sector_code}/entityId/{org_id}"
+                            resultados[link] = org_name
+                            
+                    if (page + 1) * page_length >= total_records:
+                        break
+                        
+                    page += 1
+                    time.sleep(0.1)
+                except Exception as e:
+                    self.logger.error(f"Erro ao processar termo {term} página {page}: {e}")
+                    break
 
-        if not resultados:
-            return pd.DataFrame(columns=["dt_captura", "nome", "link"])
+        # Mescla os emissores fixos como garantia
+        for emissor in EMISSORES_FIXOS:
+            link = f"{BASE_URL}/ratings/pt/regulatory/org-details/sectorCode/{emissor['sector_code']}/entityId/{emissor['entity_id']}"
+            if link not in resultados:
+                resultados[link] = emissor["nome"]
 
-        df = pd.DataFrame(resultados).drop_duplicates("link")
-        df.insert(0, "dt_captura", datetime.date.today())
-        return df
+        self.logger.info(f"Busca finalizada. Total de entidades únicas encontradas: {len(resultados)}")
+
+        # Converte para DataFrame no formato esperado
+        rows = []
+        today_str = datetime.date.today().strftime("%Y-%m-%d")
+        for link, nome in resultados.items():
+            rows.append({
+                "dt_captura": today_str,
+                "nome": nome,
+                "link": link
+            })
+
+        return pd.DataFrame(rows)
 
 
 if __name__ == "__main__":
     scraper = SPEntidadesBrasilScraper()
     scraper.run()
+

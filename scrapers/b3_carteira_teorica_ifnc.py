@@ -2,11 +2,15 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from scrapers.generic_scraper import run_resource
+from scrapers.generic_scraper import GenericScraper
+
+
+class B3CarteiraTeoricaIfncScraper(GenericScraper):
+    resource_name = "B3 - Carteira Teórica - IFNC"
 
 
 def main():
-    run_resource("B3 - Carteira Teórica - IFNC")
+    B3CarteiraTeoricaIfncScraper().run()
 
 
 if __name__ == "__main__":

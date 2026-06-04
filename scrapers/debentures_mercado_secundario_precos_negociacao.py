@@ -2,11 +2,15 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from scrapers.generic_scraper import run_resource
+from scrapers.generic_scraper import GenericScraper
+
+
+class DebenturesMercadoSecundarioPrecosNegociacaoScraper(GenericScraper):
+    resource_name = "Debêntures - Preços de Negociação"
 
 
 def main():
-    run_resource("Debêntures - Preços de Negociação")
+    DebenturesMercadoSecundarioPrecosNegociacaoScraper().run()
 
 
 if __name__ == "__main__":

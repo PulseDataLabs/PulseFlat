@@ -1,7 +1,7 @@
 """
 scrapers/generic_scraper.py
 ----------------------------
-Scraper genérico e robusto que consome as definições de resources.yaml.
+Scraper genérico e robusto baseado em classes que consome as definições de resources.yaml.
 """
 
 import base64
@@ -9,8 +9,10 @@ import sys
 import time
 from pathlib import Path
 import yaml
+import pandas as pd
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from scrapers.utils.base import BaseScraper
 from utils.base import get_logger, nova_session, salvar_csv, agora_brt
 from utils.parsers import (
     decode_bytes,
@@ -51,17 +53,13 @@ def clean_csv_text(text: str) -> str:
     if not lines:
         return ""
     
-    # Loop para descartar linhas de cabeçalho descritivo/título até encontrar o cabeçalho real
     idx = 0
-    for i, line in enumerate(lines[:10]):  # analisa apenas as primeiras 10 linhas
-        # Conta os delimitadores mais comuns
+    for i, line in enumerate(lines[:10]):
         num_delimiters = sum(line.count(d) for d in (";", ",", "\t", "|"))
-        # Se a linha tem muitos delimitadores, ela provavelmente é o cabeçalho real das colunas
         if num_delimiters >= 4:
             idx = i
             break
     else:
-        # Fallback se não encontrar nenhuma linha com pelo menos 4 delimitadores
         idx = 0
     
     if idx > 0:
@@ -70,202 +68,172 @@ def clean_csv_text(text: str) -> str:
     return "\n".join(lines)
 
 
-def run_resource(resource_name: str, output_file_override: Path = None):
-    # Carrega definições do resources.yaml
-    yaml_path = Path(__file__).resolve().parents[1] / "resources.yaml"
-    if not yaml_path.exists():
-        log.error(f"Arquivo resources.yaml não encontrado em {yaml_path}")
-        sys.exit(1)
+class GenericScraper(BaseScraper):
+    resource_name = ""
 
-    with yaml_path.open("r", encoding="utf-8") as f:
-        config = yaml.safe_load(f)
+    def __init__(self, resource_name=None):
+        if resource_name:
+            self.resource_name = resource_name
 
-    resources = config.get("resources", [])
-    res = next((r for r in resources if r.get("name") == resource_name), None)
-    if not res:
-        log.error(f"Recurso '{resource_name}' não encontrado no resources.yaml")
-        sys.exit(1)
+        yaml_path = Path(__file__).resolve().parents[1] / "resources.yaml"
+        if not yaml_path.exists():
+            raise RuntimeError(f"Arquivo resources.yaml não encontrado em {yaml_path}")
 
-    url_template = res.get("url")
-    file_name = res.get("file_name")
-    type_response = res.get("type_response")
+        with yaml_path.open("r", encoding="utf-8") as f:
+            config = yaml.safe_load(f)
 
-    # Determina o arquivo de saída
-    if output_file_override:
-        arquivo_saida = output_file_override
-    else:
-        # Se não houver override, salva na pasta data/ com o nome baseado no file_name
+        resources = config.get("resources", [])
+        self.res_config = next((r for r in resources if r.get("name") == self.resource_name), None)
+        if not self.res_config:
+            raise ValueError(f"Recurso '{self.resource_name}' não encontrado no resources.yaml")
+
+        file_name = self.res_config.get("file_name")
         base_name = Path(file_name).name
-        # Remove a extensão .base64 se existir
         if base_name.endswith(".base64"):
             base_name = base_name[:-7]
-        # Altera a extensão final para .csv
         if not base_name.endswith(".csv"):
             ext = Path(base_name).suffix
             if ext:
                 base_name = base_name.replace(ext, ".csv")
             else:
                 base_name += ".csv"
-        arquivo_saida = Path(__file__).resolve().parents[1] / "data" / base_name
 
-    # Substitui as variáveis de data na URL
-    dt = date_ref(None)
-    url = replace_date_vars(url_template, dt)
+        self.name = base_name.replace(".csv", "")
+        self.accumulate = self.res_config.get("acumular", True)
 
-    log.info(f"Iniciando captura do recurso: {resource_name}")
-    log.info(f"URL de download: {url}")
-    log.info(f"Arquivo de destino: {arquivo_saida}")
+        is_portfolio = self.resource_name.startswith("B3 - Carteira Teórica")
+        if is_portfolio:
+            self.chaves_dedup = ["data_captura", "indice", "codigo_ativo"]
+        else:
+            self.chaves_dedup = ["data_captura", "conjunto", "registro_hash"]
 
-    session = nova_session()
+        super().__init__()
 
-    # Download com retries
-    resp = None
-    for tentativa in range(1, 4):
-        try:
-            resp = session.get(url, timeout=120)
-            resp.raise_for_status()
-            break
-        except Exception as e:
-            log.warning(f"Tentativa {tentativa}/3 falhou: {e}")
-            if tentativa == 3:
-                log.error("Todas as tentativas de download falharam.")
-                raise e
-            time.sleep(5)
+    def fetch(self) -> pd.DataFrame:
+        url_template = self.res_config.get("url")
+        file_name = self.res_config.get("file_name")
+        type_response = self.res_config.get("type_response")
 
-    if not resp or not resp.content:
-        log.error("Resposta vazia recebida do servidor.")
-        sys.exit(1)
+        dt = date_ref(None)
+        url = replace_date_vars(url_template, dt)
 
-    content = resp.content
-    # Evita processar strings como 'null' vindas de endpoints da B3
-    if content.strip() == b"null":
-        log.warning(f"O servidor retornou 'null' para a URL {url}. Encerrando sem registros.")
-        return
+        self.logger.info(f"URL de download: {url}")
 
-    is_portfolio = resource_name.startswith("B3 - Carteira Teórica")
+        session = nova_session()
+        resp = None
+        for tentativa in range(1, 4):
+            try:
+                resp = session.get(url, timeout=120)
+                resp.raise_for_status()
+                break
+            except Exception as e:
+                self.logger.warning(f"Tentativa {tentativa}/3 falhou: {e}")
+                if tentativa == 3:
+                    raise e
+                time.sleep(5)
 
-    # Parse conforme o tipo de resposta
-    rows = []
-    if is_portfolio:
-        content_str = content.decode("utf-8", errors="ignore").strip()
-        if content_str.startswith('"') and content_str.endswith('"'):
-            content_str = content_str[1:-1]
-        try:
-            decoded_bytes = base64.b64decode(content_str)
-        except Exception as e:
-            log.error(f"Falha ao decodificar conteúdo base64: {e}")
-            sys.exit(1)
-        decoded_text = decode_bytes(decoded_bytes)
-        
-        # Determina o código e o nome amigável do índice
-        base_name = Path(file_name).name
-        key = base_name.replace("b3_carteira_teorica_", "").split(".")[0]
-        MAP_INDICES = {
-            "ibov": ("IBOV", "Ibovespa"),
-            "smll": ("SMLL", "Small Cap"),
-            "bdrx": ("BDRX", "BDRX"),
-            "isee": ("ISEE", "ISEE"),
-            "ibxl": ("IBXL", "IBrX 50"),
-            "ifnc": ("IFNC", "Índice Financeiro"),
-            "agfs_iagro": ("AGFS", "AGFS"),
-            "ibsd": ("IBSD", "IBSD"),
-        }
-        index_code, index_name = MAP_INDICES.get(key, (key.upper(), key.upper()))
-        data_captura, _ = agora_brt()
+        if not resp or not resp.content:
+            raise RuntimeError("Resposta vazia recebida do servidor.")
 
-        lines = [ln.strip() for ln in decoded_text.splitlines() if ln.strip()]
-        for ln in lines:
-            parts = [p.strip() for p in ln.split(";")]
-            if len(parts) < 5:
-                continue
-            # Ignora cabeçalhos estruturais e de legenda
-            if parts[0].lower() in ("código", "cdigo", "codigo") or "carteira" in parts[0].lower() or "dia" in parts[0].lower():
-                continue
-            if "total" in parts[0].lower() or "redutor" in parts[0].lower():
-                continue
+        content = resp.content
+        if content.strip() == b"null":
+            self.logger.warning(f"O servidor retornou 'null' para a URL {url}. Encerrando sem registros.")
+            return pd.DataFrame()
 
-            rows.append({
-                "data_captura":       data_captura,
-                "indice":             index_code,
-                "indice_nome":        index_name,
-                "codigo_ativo":       parts[0],
-                "nome_ativo":         parts[1],
-                "tipo_ativo":         parts[2],
-                "quantidade_teorica": _limpar_int(parts[3]),
-                "participacao_pct":   _limpar_float(parts[4]),
-                "reducao_capital":    _limpar_float(parts[5]) if len(parts) > 5 else "",
-                "segmento":           parts[6] if len(parts) > 6 else "",
-            })
-    else:
-        if type_response == "json":
-            rows = json_rows(resp.json())
-        elif type_response == "csv":
-            decoded_text = decode_bytes(content)
-            decoded_text = clean_csv_text(decoded_text)
-            rows = csv_rows(decoded_text)
-        elif type_response == "base64":
+        is_portfolio = self.resource_name.startswith("B3 - Carteira Teórica")
+        rows = []
+
+        if is_portfolio:
             content_str = content.decode("utf-8", errors="ignore").strip()
-            # Remove aspas se a resposta JSON encapsular o base64
             if content_str.startswith('"') and content_str.endswith('"'):
                 content_str = content_str[1:-1]
             try:
                 decoded_bytes = base64.b64decode(content_str)
             except Exception as e:
-                log.error(f"Falha ao decodificar conteúdo base64: {e}")
+                self.logger.error(f"Falha ao decodificar conteúdo base64: {e}")
                 sys.exit(1)
             decoded_text = decode_bytes(decoded_bytes)
-            decoded_text = clean_csv_text(decoded_text)
-            rows = csv_rows(decoded_text)
-        elif type_response == "txt":
-            # Se for TXT genérico, converte para linhas
-            rows = [{"linha": ln} for ln in decode_bytes(content).splitlines() if ln.strip()]
-        elif type_response == "xls":
-            rows = xls_rows(content)
-        elif type_response == "zip":
-            rows = rows_from_zip(content)
+            
+            base_name = Path(file_name).name
+            key = base_name.replace("b3_carteira_teorica_", "").split(".")[0]
+            MAP_INDICES = {
+                "ibov": ("IBOV", "Ibovespa"),
+                "smll": ("SMLL", "Small Cap"),
+                "bdrx": ("BDRX", "BDRX"),
+                "isee": ("ISEE", "ISEE"),
+                "ibxl": ("IBXL", "IBrX 50"),
+                "ifnc": ("IFNC", "Índice Financeiro"),
+                "agfs_iagro": ("AGFS", "AGFS"),
+                "ibsd": ("IBSD", "IBSD"),
+            }
+            index_code, index_name = MAP_INDICES.get(key, (key.upper(), key.upper()))
+            data_captura, _ = agora_brt()
+
+            lines = [ln.strip() for ln in decoded_text.splitlines() if ln.strip()]
+            for ln in lines:
+                parts = [p.strip() for p in ln.split(";")]
+                if len(parts) < 5:
+                    continue
+                if parts[0].lower() in ("código", "cdigo", "codigo") or "carteira" in parts[0].lower() or "dia" in parts[0].lower():
+                    continue
+                if "total" in parts[0].lower() or "redutor" in parts[0].lower():
+                    continue
+
+                rows.append({
+                    "data_captura":       data_captura,
+                    "indice":             index_code,
+                    "indice_nome":        index_name,
+                    "codigo_ativo":       parts[0],
+                    "nome_ativo":         parts[1],
+                    "tipo_ativo":         parts[2],
+                    "quantidade_teorica": _limpar_int(parts[3]),
+                    "participacao_pct":   _limpar_float(parts[4]),
+                    "reducao_capital":    _limpar_float(parts[5]) if len(parts) > 5 else "",
+                    "segmento":           parts[6] if len(parts) > 6 else "",
+                })
         else:
-            log.error(f"Tipo de resposta não suportado: {type_response}")
-            sys.exit(1)
+            if type_response == "json":
+                rows = json_rows(resp.json())
+            elif type_response == "csv":
+                decoded_text = decode_bytes(content)
+                decoded_text = clean_csv_text(decoded_text)
+                rows = csv_rows(decoded_text)
+            elif type_response == "base64":
+                content_str = content.decode("utf-8", errors="ignore").strip()
+                if content_str.startswith('"') and content_str.endswith('"'):
+                    content_str = content_str[1:-1]
+                try:
+                    decoded_bytes = base64.b64decode(content_str)
+                except Exception as e:
+                    self.logger.error(f"Falha ao decodificar conteúdo base64: {e}")
+                    sys.exit(1)
+                decoded_text = decode_bytes(decoded_bytes)
+                decoded_text = clean_csv_text(decoded_text)
+                rows = csv_rows(decoded_text)
+            elif type_response == "txt":
+                rows = [{"linha": ln} for ln in decode_bytes(content).splitlines() if ln.strip()]
+            elif type_response == "xls":
+                rows = xls_rows(content)
+            elif type_response == "zip":
+                rows = rows_from_zip(content)
+            else:
+                self.logger.error(f"Tipo de resposta não suportado: {type_response}")
+                sys.exit(1)
 
-    if not rows:
-        log.warning("Nenhum registro encontrado após o parsing.")
-        return
+        if not rows:
+            self.logger.warning("Nenhum registro encontrado após o parsing.")
+            return pd.DataFrame()
 
-    if is_portfolio:
-        CABECALHO_INDIVIDUAL = [
-            "data_captura", "indice", "indice_nome",
-            "codigo_ativo", "nome_ativo", "tipo_ativo",
-            "quantidade_teorica", "participacao_pct",
-            "reducao_capital", "segmento",
-        ]
-        acumular = res.get("acumular", True)
-        salvar_csv(
-            arquivo_saida,
-            rows,
-            CABECALHO_INDIVIDUAL,
-            chaves_dedup=["data_captura", "indice", "codigo_ativo"],
-            acumular=acumular,
-        )
-        log.info(f"Sucesso: {len(rows)} registros de carteira salvos em {arquivo_saida}")
-        return
+        if is_portfolio:
+            return pd.DataFrame(rows)
 
-    # Enriquecimento dos dados
-    dataset_id = resource_name.lower().replace(" ", "_").replace("-", "_")
-    enriched, header_novo = enriquecer(dataset_id, rows)
-    header_existente = read_existing_header(arquivo_saida)
+        dataset_id = self.resource_name.lower().replace(" ", "_").replace("-", "_")
+        enriched, _ = enriquecer(dataset_id, rows)
+        return pd.DataFrame(enriched)
 
-    header = []
-    for col in header_existente + header_novo:
-        if col and col not in header:
-            header.append(col)
 
-    # Salva no arquivo CSV acumulativo
-    acumular = res.get("acumular", True)
-    salvar_csv(
-        arquivo_saida,
-        enriched,
-        header,
-        chaves_dedup=["data_captura", "conjunto", "registro_hash"],
-        acumular=acumular,
-    )
-    log.info(f"Sucesso: {len(enriched)} registros salvos em {arquivo_saida}")
+def run_resource(resource_name: str, output_file_override: Path = None):
+    scraper = GenericScraper(resource_name)
+    if output_file_override:
+        scraper.output_file = output_file_override
+    scraper.run()

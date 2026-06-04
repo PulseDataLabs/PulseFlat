@@ -6,15 +6,16 @@ Fonte:   https://moodyslocal.com.br/
 Saída:   data/moodys_local_ratings.csv
 
 A página disponibiliza um link direto para download do Excel de ratings.
-O scraper faz parse do HTML para encontrar o link e baixa via requests.
+O scraper faz parse do HTML para encontrar o link usando curl_cffi para contornar
+o Cloudflare e processa a planilha usando openpyxl em modo leitura otimizado.
 """
 import os
 import sys
 import re
+import datetime
 from io import BytesIO
 
 import pandas as pd
-import requests
 from bs4 import BeautifulSoup
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -45,64 +46,107 @@ RENAME_MAP = {
 }
 
 
-def _find_download_url(session: requests.Session) -> str:
-    resp = session.get(BASE_URL, headers=HEADERS, timeout=60)
-    if resp.status_code == 403:
-        raise RuntimeError(
-            "Acesso bloqueado (403 Forbidden) pela Moody's Local. "
-            "O site bloqueia requisições automatizadas. "
-            "Considere usar Playwright/Selenium para este scraper."
-        )
-    resp.raise_for_status()
-    soup = BeautifulSoup(resp.text, "html.parser")
-
-    for a in soup.find_all("a", href=True):
-        text = a.get_text(strip=True)
-        href = a["href"]
-        if "Lista de Classificações Vigentes" in text or re.search(r"MOODYS.*\.xlsx?", href, re.IGNORECASE):
-            return href if href.startswith("http") else BASE_URL.rstrip("/") + "/" + href.lstrip("/")
-
-    raise RuntimeError("Link de download da Moody's Local não encontrado.")
-
-
 class MoodysLocalRatingsScraper(BaseScraper):
     name = "moodys_local_ratings"
+    accumulate = False  # Sobrescreve o arquivo com a lista vigente atualizada
 
     def fetch(self) -> pd.DataFrame:
+        from curl_cffi import requests
+        from openpyxl import load_workbook
+
         session = requests.Session()
 
+        self.logger.info(f"Acessando {BASE_URL} para buscar o link do Excel...")
         try:
-            download_url = _find_download_url(session)
-        except RuntimeError as e:
-            self.logger.warning(str(e))
+            resp = session.get(BASE_URL, impersonate="chrome", timeout=60)
+            resp.raise_for_status()
+        except Exception as e:
+            self.logger.error(f"Erro ao acessar Moody's Local: {e}")
             return pd.DataFrame()
 
-        self.logger.info(f"Baixando: {download_url}")
+        soup = BeautifulSoup(resp.text, "html.parser")
+        download_url = None
 
-        resp = session.get(download_url, headers=HEADERS, timeout=120)
-        resp.raise_for_status()
+        for a in soup.find_all("a", href=True):
+            text = a.get_text(strip=True)
+            href = a["href"]
+            if "Lista de Classificações Vigentes" in text or re.search(r"MOODYS_LOCAL_BRAZIL.*\.xlsx?", href, re.IGNORECASE):
+                download_url = href if href.startswith("http") else BASE_URL.rstrip("/") + "/" + href.lstrip("/")
+                break
 
-        xlsx_bytes = BytesIO(resp.content)
+        if not download_url:
+            self.logger.error("Link de download da Moody's Local não encontrado na página principal.")
+            return pd.DataFrame()
 
-        # Linha 0: metadados (data de atualização está no cabeçalho das colunas)
-        df_meta = pd.read_excel(xlsx_bytes, engine="openpyxl", nrows=1)
-        xlsx_bytes.seek(0)
-
-        # Dados reais a partir da linha 3 (skiprows=3)
-        df = pd.read_excel(xlsx_bytes, engine="openpyxl", skiprows=3)
-
-        # Extrai a data de atualização da linha de metadados
+        self.logger.info(f"Baixando arquivo Excel: {download_url}")
         try:
-            data_atualizacao = df_meta.columns[7]
-            if hasattr(data_atualizacao, "date"):
-                data_atualizacao = data_atualizacao.date()
-        except (IndexError, AttributeError):
-            import datetime
-            data_atualizacao = datetime.date.today()
+            resp_file = session.get(download_url, impersonate="chrome", timeout=120)
+            resp_file.raise_for_status()
+        except Exception as e:
+            self.logger.error(f"Erro ao baixar o Excel: {e}")
+            return pd.DataFrame()
 
-        df["dh_atu_arquivo"] = data_atualizacao
+        xlsx_bytes = BytesIO(resp_file.content)
+
+        self.logger.info("Carregando planilha em modo read_only...")
+        try:
+            wb = load_workbook(filename=xlsx_bytes, read_only=True, data_only=True)
+            sheet = wb.active
+        except Exception as e:
+            self.logger.error(f"Erro ao carregar planilha com openpyxl: {e}")
+            return pd.DataFrame()
+
+        self.logger.info("Processando linhas da planilha de ratings...")
+        headers = None
+        data_rows = []
+        file_date = None
+
+        try:
+            for row in sheet.iter_rows(values_only=True):
+                # Busca Data de Atualização nos metadados
+                if file_date is None:
+                    for idx, cell in enumerate(row):
+                        if cell and "Data de Atualização" in str(cell):
+                            if idx + 1 < len(row):
+                                val = row[idx + 1]
+                                if val:
+                                    file_date = str(val).split()[0]
+                                    break
+
+                # Busca linha do cabeçalho
+                if headers is None:
+                    if "Emissor" in row and "Rating / Avaliação" in row:
+                        headers = [str(cell).strip() if cell is not None else "" for cell in row]
+                        # Remove colunas em branco no final
+                        while headers and headers[-1] == "":
+                            headers.pop()
+                        continue
+                else:
+                    # Condição de parada: se a coluna Emissor (index 1) estiver em branco
+                    emissor_val = row[1] if len(row) > 1 else None
+                    if emissor_val is None or str(emissor_val).strip() in ("", "None", "-"):
+                        break
+
+                    cleaned_row = list(row[:len(headers)])
+                    if len(cleaned_row) < len(headers):
+                        cleaned_row += [None] * (len(headers) - len(cleaned_row))
+                    data_rows.append(cleaned_row)
+        finally:
+            wb.close()
+
+        if not data_rows or not headers:
+            self.logger.warning("Nenhum dado extraído do Excel.")
+            return pd.DataFrame()
+
+        self.logger.info(f"Total de {len(data_rows)} ratings extraídos.")
+
+        df = pd.DataFrame(data_rows, columns=headers)
+        df["dh_atu_arquivo"] = file_date or datetime.date.today().strftime("%Y-%m-%d")
         df.rename(columns=RENAME_MAP, inplace=True)
-        df.dropna(how="all", inplace=True)
+
+        # Filtra apenas as colunas configuradas em RENAME_MAP mais a data de atualização
+        keep_cols = list(RENAME_MAP.values()) + ["dh_atu_arquivo"]
+        df = df[[c for c in keep_cols if c in df.columns]]
 
         return df
 
@@ -110,3 +154,4 @@ class MoodysLocalRatingsScraper(BaseScraper):
 if __name__ == "__main__":
     scraper = MoodysLocalRatingsScraper()
     scraper.run()
+
