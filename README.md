@@ -9,11 +9,11 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/royopa/PulseFlat/actions/workflows/main.yml"><img src="https://github.com/royopa/PulseFlat/actions/workflows/main.yml/badge.svg" alt="Build Status"></a>
+  <a href="https://github.com/PulseDataLabs/PulseFlat/actions/workflows/main.yml"><img src="https://github.com/PulseDataLabs/PulseFlat/actions/workflows/main.yml/badge.svg" alt="Build Status"></a>
   <img src="https://img.shields.io/badge/python-3.11%20%7C%203.12%20%7C%203.13-blue.svg" alt="Python Versions">
   <img src="https://img.shields.io/badge/license-MIT-green.svg" alt="License">
   <img src="https://img.shields.io/badge/data-63%20datasets-orange.svg" alt="Data Count">
-  <a href="https://royopa.github.io/PulseFlat/"><img src="https://img.shields.io/badge/dashboard-live-brightgreen.svg" alt="Live Dashboard"></a>
+  <a href="https://pulsedatalabs.github.io/PulseFlat/"><img src="https://img.shields.io/badge/dashboard-live-brightgreen.svg" alt="Live Dashboard"></a>
 </p>
 
 <p align="center">
@@ -138,7 +138,7 @@ PulseFlat/
 
 1.  **Clone o repositório:**
     ```bash
-    git clone https://github.com/royopa/PulseFlat.git
+    git clone https://github.com/PulseDataLabs/PulseFlat.git
     cd PulseFlat
     ```
 
