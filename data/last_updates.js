@@ -25,7 +25,7 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "anbima_ima_completo.csv": {
     "min": "2026-06-01",
-    "max": "2026-06-04"
+    "max": "2026-06-05"
   },
   "b3_indices_precos_historicos.csv": {
     "min": "2026-06-03",
@@ -97,7 +97,7 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "b3_bdi_di_over.csv": {
     "min": "2026-06-01",
-    "max": "2026-06-04"
+    "max": "2026-06-05"
   },
   "debentures_mercado_secundario_precos_negociacao.csv": {
     "min": "2026-06-05",
@@ -129,7 +129,7 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "anbima_idka.csv": {
     "min": "2026-06-03",
-    "max": "2026-06-04"
+    "max": "2026-06-05"
   },
   "anbima_ranking_global.csv": {
     "min": "2026-06-03",
@@ -169,7 +169,7 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "b3_bdi_trades_acoes.csv": {
     "min": "2026-06-03",
-    "max": "2026-06-04"
+    "max": "2026-06-05"
   },
   "b3_fiis.csv": {
     "min": "2026-06-05",

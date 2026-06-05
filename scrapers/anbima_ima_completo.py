@@ -14,13 +14,14 @@ Campos: DATA_REFERENCIA, INDICE, NUMERO_INDICE, VARIACAO_DIARIA,
 
 import sys
 import time
-from datetime import datetime, date, timedelta
+from datetime import datetime, date
 from pathlib import Path
 
 import requests
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from utils import get_logger, agora_brt, limpar, nova_session, salvar_csv
+from utils.parsers import _CAL
 import pandas as pd
 from scrapers.utils.base import BaseScraper
 
@@ -65,9 +66,7 @@ def obter_d1_util() -> str:
     """Retorna a data do dia útil anterior (D-1) no formato DD/MM/YYYY."""
     data_hoje_str, _ = agora_brt()
     hoje = datetime.strptime(data_hoje_str, "%Y-%m-%d").date()
-    ref = hoje - timedelta(days=1)
-    while ref.weekday() >= 5:  # Pula fins de semana (Sábado=5, Domingo=6)
-        ref -= timedelta(days=1)
+    ref = _CAL.offset(hoje, -1)
     return ref.strftime("%d/%m/%Y")
 
 

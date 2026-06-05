@@ -8,14 +8,15 @@ Saída:   data/anbima_idka.csv
 import os
 import sys
 import csv
-import datetime
 import shutil
+from datetime import date
 
 import pandas as pd
 import requests
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from scrapers.utils.base import BaseScraper
+from utils.parsers import date_ref
 
 
 COLUMNS = [
@@ -55,7 +56,8 @@ class AnbimaIdkaScraper(BaseScraper):
 
     def fetch(self) -> pd.DataFrame:
         # Usa a data útil anterior (D-1) como referência
-        dt_ref = (datetime.date.today() - datetime.timedelta(days=1)).strftime("%d/%m/%Y")
+        dt = date_ref("dia_anterior")
+        dt_ref = dt.strftime("%d/%m/%Y")
         url = URL_TEMPLATE.format(dt=dt_ref)
 
         self.logger.info(f"Baixando IDkA para {dt_ref}: {url}")
@@ -78,9 +80,9 @@ class AnbimaIdkaScraper(BaseScraper):
         # Primeira linha contém a data de referência: "Data de Referência: DD/MM/YYYY"
         data_line = lines[0].split(" ")[-1].strip()
         try:
-            dt_referencia = datetime.datetime.strptime(data_line, "%d/%m/%Y").date()
+            dt_referencia = date(*map(int, reversed(data_line.split("/"))))
         except ValueError:
-            dt_referencia = datetime.date.today() - datetime.timedelta(days=1)
+            dt_referencia = dt.date()
 
         # Lê CSV pulando as 2 primeiras linhas e as 3 últimas (rodapé)
         from io import StringIO

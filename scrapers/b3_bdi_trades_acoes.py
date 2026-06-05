@@ -11,13 +11,14 @@ Campos: RPT_DT, TCKR_SYMB, ISIN, SGMT_NM, MKT, OPEN_PRIC, MIN_PRIC,
 
 import sys
 import time
-from datetime import date, timedelta
+from datetime import date
 from pathlib import Path
 
 import requests
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from utils import get_logger, agora_brt, limpar, salvar_csv
+from utils.parsers import _CAL
 import pandas as pd
 from scrapers.utils.base import BaseScraper
 
@@ -76,11 +77,7 @@ def _buscar_pagina(url: str) -> list[dict]:
 
 
 def _data_referencia() -> date:
-    for delta in range(1, 6):
-        ref = date.today() - timedelta(days=delta)
-        if ref.weekday() < 5:
-            return ref
-    return date.today() - timedelta(days=1)
+    return _CAL.offset(date.today(), -1)
 
 
 def capturar() -> list[dict]:

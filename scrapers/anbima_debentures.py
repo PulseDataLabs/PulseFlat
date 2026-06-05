@@ -9,13 +9,14 @@ Fonte: https://www.anbima.com.br/informacoes/merc-sec-debentures/arqs/db{YYMMDD}
 
 import sys
 import time
-from datetime import date, timedelta
+from datetime import date
 from pathlib import Path
 
 import requests
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from utils import get_logger, limpar, nova_session, salvar_csv
+from utils.parsers import _CAL
 import pandas as pd
 from scrapers.utils.base import BaseScraper
 
@@ -47,9 +48,7 @@ URL_TPL = "https://www.anbima.com.br/informacoes/merc-sec-debentures/arqs/db{yym
 
 def _url_referencia(session) -> tuple[str, date]:
     for delta in range(1, 6):
-        ref = date.today() - timedelta(days=delta)
-        if ref.weekday() >= 5:
-            continue
+        ref = _CAL.offset(date.today(), -delta)
         url = URL_TPL.format(yymmdd=ref.strftime("%y%m%d"))
         try:
             resp = session.head(url, timeout=15)
@@ -57,7 +56,7 @@ def _url_referencia(session) -> tuple[str, date]:
                 return url, ref
         except Exception:
             pass
-    ref = date.today() - timedelta(days=1)
+    ref = _CAL.offset(date.today(), -1)
     return URL_TPL.format(yymmdd=ref.strftime("%y%m%d")), ref
 
 
