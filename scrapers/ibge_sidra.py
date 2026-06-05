@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# coding: utf-8
 """
 scrapers/ibge_sidra.py
 -----------------------
@@ -22,8 +24,12 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from utils import get_logger, agora_brt, limpar, salvar_csv
 import pandas as pd
 from scrapers.utils.base import BaseScraper
+from scripts.utils.ux import (
+    banner, section, print_start, print_done, print_info, print_warn, print_fail,
+    print_summary, ColorLogger, ICON,
+)
 
-log = get_logger("ibge_sidra")
+log = ColorLogger("ibge_sidra")
 
 ARQUIVO = Path("data/ibge_sidra.csv")
 
@@ -78,17 +84,17 @@ def _buscar_periodos(serie_id: int, data_captura: str) -> list[dict]:
             break
         except requests.HTTPError as e:
             if e.response is not None and e.response.status_code >= 500:
-                log.warning(f"[tabela {serie_id}] Erro {e.response.status_code} do servidor — ignorando.")
+                print_warn(f"[tabela {serie_id}] Erro {e.response.status_code} do servidor — ignorando.")
                 return []
-            log.warning(f"[tabela {serie_id}] Tentativa {tentativa}/3: {e}")
+            print_warn(f"[tabela {serie_id}] Tentativa {tentativa}/3: {e}")
             if tentativa == 3:
-                log.error(f"[tabela {serie_id}] Falha definitiva — ignorando.")
+                print_warn(f"[tabela {serie_id}] Falha definitiva — ignorando.")
                 return []
             time.sleep(3)
         except requests.RequestException as e:
-            log.warning(f"[tabela {serie_id}] Tentativa {tentativa}/3: {e}")
+            print_warn(f"[tabela {serie_id}] Tentativa {tentativa}/3: {e}")
             if tentativa == 3:
-                log.error(f"[tabela {serie_id}] Falha definitiva — ignorando.")
+                print_warn(f"[tabela {serie_id}] Falha definitiva — ignorando.")
                 return []
             time.sleep(3)
 
@@ -111,19 +117,28 @@ def _buscar_periodos(serie_id: int, data_captura: str) -> list[dict]:
 def capturar() -> list[dict]:
     data_captura, _ = agora_brt()
     todos = []
-    for serie_id in SERIES:
-        log.info(f"Buscando metadados SIDRA tabela {serie_id}...")
+    total = len(SERIES)
+
+    for idx, (serie_id, nome_serie) in enumerate(SERIES.items(), 1):
+        print_start(f"[{idx}/{total}] tabela {serie_id} — {nome_serie}", icon="search")
+        t0 = time.time()
         registros = _buscar_periodos(serie_id, data_captura)
-        log.info(f"  → {len(registros)} períodos")
+        elapsed = time.time() - t0
+
+        if not registros:
+            print_warn(f"tabela {serie_id}: 0 períodos retornados.")
+        else:
+            print_done(f"tabela {serie_id}: {len(registros)} períodos", elapsed=elapsed)
+
         todos.extend(registros)
-        time.sleep(1)
 
     if not todos:
-        log.error("Nenhum dado retornado do IBGE SIDRA.")
+        print_fail("Nenhum dado retornado do IBGE SIDRA.")
         sys.exit(1)
 
-    log.info(f"Total IBGE SIDRA: {len(todos)} registros.")
+    print_done(f"Total: {len(todos)} registros capturados.")
     return todos
+
 
 class IbgeSidraScraper(BaseScraper):
     name = "ibge_sidra"
@@ -132,7 +147,7 @@ class IbgeSidraScraper(BaseScraper):
     phase = 1
     accumulate = False
     chaves_dedup = ['data_captura', 'serie_id', 'periodo_referencia']
-    
+
     # Catálogo de Metadados
     title = 'IBGE SIDRA — Metadados'
     description = 'Metadados das tabelas do IBGE SIDRA: IPCA, IPCA-15 e INPC — períodos disponíveis e datas de modificação.'
@@ -144,8 +159,11 @@ class IbgeSidraScraper(BaseScraper):
     source = 'IBGE · SIDRA'
 
     def fetch(self) -> pd.DataFrame:
-        log.info("=== IBGE SIDRA — Metadados ===")
-        # Reordena para garantir o cabeçalho original
+        # Mostra banner apenas quando executado standalone (não via run_all.py)
+        is_pipeline = any("run_all" in str(getattr(m, "__file__", "")) for m in sys.modules.values())
+        if not is_pipeline:
+            banner("IBGE SIDRA — Metadados", "Captura períodos e datas de modificação")
+
         df = pd.DataFrame(capturar())
         if not df.empty:
             colunas = [c for c in CABECALHO if c in df.columns]
