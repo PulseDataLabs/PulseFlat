@@ -7,7 +7,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-06-04"
+        "example": "2026-06-05"
       },
       {
         "name": "data_referencia",
@@ -49,7 +49,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-06-04"
+        "example": "2026-06-05"
       },
       {
         "name": "data_referencia",
@@ -148,7 +148,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-06-04"
+        "example": "2026-06-05"
       },
       {
         "name": "indice",
@@ -205,17 +205,17 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-06-04"
+        "example": "2026-06-05"
       },
       {
         "name": "indice",
         "type": "str",
-        "example": "AGFS"
+        "example": "ISEE"
       },
       {
         "name": "indice_nome",
         "type": "str",
-        "example": "AGFS"
+        "example": "ISEE"
       },
       {
         "name": "codigo_ativo",
@@ -235,12 +235,12 @@
       {
         "name": "quantidade_teorica",
         "type": "int",
-        "example": "216464847"
+        "example": "196230382"
       },
       {
         "name": "participacao_pct",
         "type": "str",
-        "example": "3.864"
+        "example": "0.361"
       },
       {
         "name": "reducao_capital",
@@ -262,7 +262,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-06-04"
+        "example": "2026-06-05"
       },
       {
         "name": "titulo",
@@ -429,7 +429,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-06-04"
+        "example": "2026-06-05"
       }
     ]
   },
@@ -491,7 +491,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-06-04"
+        "example": "2026-06-05"
       }
     ]
   },
@@ -923,7 +923,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-06-04"
+        "example": "2026-06-05"
       }
     ]
   },
@@ -1037,7 +1037,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-06-04"
+        "example": "2026-06-05"
       },
       {
         "name": "titulo",
@@ -1074,7 +1074,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-06-04"
+        "example": "2026-06-05"
       },
       {
         "name": "codigo_serie",
@@ -1121,7 +1121,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-06-04"
+        "example": "2026-06-05"
       },
       {
         "name": "serie_id",
@@ -1237,7 +1237,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-06-04"
+        "example": "2026-06-05"
       },
       {
         "name": "security_identification_code",
@@ -1279,7 +1279,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-06-04"
+        "example": "2026-06-05"
       },
       {
         "name": "codigo",
@@ -1386,7 +1386,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-06-04"
+        "example": "2026-06-05"
       },
       {
         "name": "data_de_refer_ncia",
@@ -1564,7 +1564,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-06-04"
+        "example": "2026-06-05"
       },
       {
         "name": "name",
@@ -1673,7 +1673,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-06-04"
+        "example": "2026-06-05"
       },
       {
         "name": "dt_referencia",
@@ -1730,7 +1730,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-06-04"
+        "example": "2026-06-05"
       },
       {
         "name": "dt_referencia",
@@ -2129,7 +2129,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-06-04"
+        "example": "2026-06-05"
       },
       {
         "name": "tabela_origem",
@@ -2139,7 +2139,7 @@
       {
         "name": "data_referencia",
         "type": "date",
-        "example": "2026-06-03"
+        "example": "2026-06-04"
       },
       {
         "name": "curva",
@@ -2255,7 +2255,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-06-04"
+        "example": "2026-06-05"
       },
       {
         "name": "none",
@@ -2272,7 +2272,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-06-04"
+        "example": "2026-06-05"
       },
       {
         "name": "data_base",
@@ -2339,7 +2339,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-06-04"
+        "example": "2026-06-05"
       },
       {
         "name": "dt_referencia",
@@ -2391,7 +2391,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-06-04"
+        "example": "2026-06-05"
       },
       {
         "name": "TipoInstituicao",
@@ -2608,7 +2608,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-06-04"
+        "example": "2026-06-05"
       },
       {
         "name": "cnpj_fundo",
@@ -2700,7 +2700,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-06-04"
+        "example": "2026-06-05"
       },
       {
         "name": "tp_fundo_classe",
@@ -2720,22 +2720,22 @@
       {
         "name": "dt_comptc",
         "type": "date",
-        "example": "2026-05-04"
+        "example": "2026-06-01"
       },
       {
         "name": "vl_total",
         "type": "float",
-        "example": "1115965.87"
+        "example": "1127873.60"
       },
       {
         "name": "vl_quota",
         "type": "float",
-        "example": "43.090269900000"
+        "example": "43.453590600000"
       },
       {
         "name": "vl_patrim_liq",
         "type": "float",
-        "example": "1183843.89"
+        "example": "1191031.59"
       },
       {
         "name": "captc_dia",
@@ -2809,12 +2809,12 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-06-04"
+        "example": "2026-06-05"
       },
       {
         "name": "dt_ref",
         "type": "date",
-        "example": "2026-05-05"
+        "example": "2026-05-06"
       },
       {
         "name": "ticker",
@@ -2829,7 +2829,7 @@
       {
         "name": "vr_fechamento",
         "type": "float",
-        "example": "186754.0"
+        "example": "187691.0"
       }
     ]
   },
@@ -2841,7 +2841,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-06-04"
+        "example": "2026-06-05"
       },
       {
         "name": "codigo_fundo",
@@ -2970,7 +2970,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-06-04"
+        "example": "2026-06-05"
       },
       {
         "name": "categoria_etf",
