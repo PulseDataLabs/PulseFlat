@@ -14,6 +14,8 @@
   <img src="https://img.shields.io/badge/license-MIT-green.svg" alt="License">
   <img src="https://img.shields.io/badge/data-63%20datasets-orange.svg" alt="Data Count">
   <a href="https://pulsedatalabs.github.io/PulseFlat/"><img src="https://img.shields.io/badge/dashboard-live-brightgreen.svg" alt="Live Dashboard"></a>
+  <img src="https://img.shields.io/github/last-commit/PulseDataLabs/PulseFlat" alt="Last Commit">
+  <img src="https://img.shields.io/badge/atualização-diária-blue.svg" alt="Atualização Diária">
 </p>
 
 <p align="center">
@@ -21,6 +23,7 @@
   <a href="#-arquitetura-do-pipeline">Arquitetura</a> •
   <a href="#-funcionamento-do-orquestrador">Funcionamento</a> •
   <a href="#-estrutura-do-projeto">Estrutura</a> •
+  <a href="#-para-analistas-consuma-os-dados-sem-código">Analistas</a> •
   <a href="#-guia-do-desenvolvedor">Desenvolvedor</a> •
   <a href="#-fontes-e-datasets">Datasets</a>
 </p>
@@ -28,6 +31,10 @@
 ---
 
 **PulseFlat** é um pipeline de ETL (Extração, Transformação e Carga) serverless projetado para coletar, tratar e disponibilizar dados financeiros brasileiros históricos de fontes oficiais diariamente. Ele funciona 100% de forma automatizada via **GitHub Actions**, versionando o histórico diretamente no repositório em formato CSV plano, sem custos com banco de dados ou servidores.
+
+**PulseDataLabs** nasceu da missão de democratizar o acesso a dados financeiros brasileiros de qualidade. Acreditamos que informações financeiras confiáveis não deveriam ser um privilégio de grandes instituições — por isso construímos o PulseFlat como um projeto 100% open-source.
+
+> 💡 Quer apenas consumir os dados sem instalar nada? Acesse o **[dashboard online](https://pulsedatalabs.github.io/PulseFlat/)** ou veja o guia rápido na seção [Para Analistas](#-para-analistas-consuma-os-dados-sem-código).
 
 ---
 
@@ -132,6 +139,34 @@ PulseFlat/
 
 ---
 
+## 📊 Para Analistas: Consuma os Dados Sem Código
+
+Você não precisa instalar nada para usar os dados do PulseFlat. Todas as coletas são feitas automaticamente e os CSVs ficam disponíveis em URLs públicas.
+
+### Importar no Excel ou Google Sheets
+
+```
+=IMPORTDATA("https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/anbima_indicadores.csv")
+```
+
+Basta copiar a URL de qualquer dataset (lista completa no [dashboard](https://pulsedatalabs.github.io/PulseFlat/)) e usar a função `IMPORTDATA` no Google Sheets ou *Dados → De Texto/CSV* no Excel.
+
+### Download Direto
+
+Acesse o [dashboard interativo](https://pulsedatalabs.github.io/PulseFlat/#datasets), encontre o dataset desejado e clique em **Download CSV**. Pronto — o arquivo mais recente será baixado.
+
+### URL Raw para Ferramentas de BI
+
+No Power BI, Tableau ou Metabase, aponte a fonte de dados para a URL raw do GitHub:
+
+```
+https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/anbima_indicadores.csv
+```
+
+Os dados são atualizados automaticamente até 7 vezes por dia útil (06h–23h, seg–sex).
+
+---
+
 ## 💻 Guia do Desenvolvedor
 
 ### Instalação Local
@@ -213,6 +248,23 @@ Os scrapers estão classificados nos seguintes grupos de dados principais:
 
 ---
 
+## 🤝 Contribuindo
+
+Contribuições são bem-vindas! Se você encontrou um bug, tem uma ideia para um novo scraper ou quer melhorar a documentação:
+
+1. Abra uma [issue](https://github.com/PulseDataLabs/PulseFlat/issues) para discutir a mudança
+2. Faça um fork do repositório
+3. Crie um branch (`git checkout -b feature/minha-feature`)
+4. Commit suas mudanças (`git commit -m 'feat: adiciona scraper X'`)
+5. Push para o branch (`git push origin feature/minha-feature`)
+6. Abra um Pull Request
+
+Veja o [guia do desenvolvedor](#-guia-do-desenvolvedor) para entender a arquitetura e como criar novos scrapers.
+
+---
+
 ## 📄 Licença
 
-Este projeto é de código aberto e está licenciado sob os termos da licença **MIT**.
+Este projeto é de código aberto e está licenciado sob os termos da licença **MIT** — você pode usar, modificar e distribuir livremente, mesmo para fins comerciais.
+
+Dúvidas ou sugestões? Abra uma [issue](https://github.com/PulseDataLabs/PulseFlat/issues) ou entre em contato pelo GitHub da [PulseDataLabs](https://github.com/PulseDataLabs).

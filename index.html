@@ -6,7 +6,7 @@
   <title>PulseFlat — Dados Financeiros Brasileiros</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@300;400;500&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@300;400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   
   <!-- Preloads para dados do pipeline -->
   <link rel="preload" href="./data/datasets.json" as="fetch" crossorigin />
@@ -33,10 +33,10 @@
       --red:       #ff4d6d;
       --text:      #e8eef4;
       --text2:     #8fa3b8;
-      --text3:     #4d6070;
+      --text3:     #6a8096;
       --font-head: 'Syne', sans-serif;
       --font-mono: 'JetBrains Mono', monospace;
-      --font-body: 'Lora', serif;
+      --font-body: 'Inter', sans-serif;
     }
 
     html { scroll-behavior: smooth; }
@@ -46,7 +46,7 @@
       color: var(--text);
       font-family: var(--font-body);
       overflow-x: hidden;
-      cursor: default;
+
     }
 
     /* ── Noise texture overlay ──────────────────────────── */
@@ -112,6 +112,14 @@
       50%       { opacity: 0.4; transform: scale(0.7); }
     }
 
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
     .nav-links {
       display: flex;
       gap: 2rem;
@@ -145,6 +153,17 @@
     }
 
     .nav-cta:hover { background: #33ddff; transform: translateY(-1px); }
+
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--text);
+      font-size: 1.5rem;
+      cursor: pointer;
+      padding: 0.25rem;
+      line-height: 1;
+    }
 
     /* ── HERO ───────────────────────────────────────────── */
     .hero {
@@ -1064,7 +1083,10 @@
     /* ── RESPONSIVE ─────────────────────────────────────── */
     @media (max-width: 900px) {
       nav { padding: 1rem 1.5rem; }
-      .nav-links { display: none; }
+      .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: rgba(8,12,16,0.98); border-bottom: 1px solid var(--border); padding: 1.5rem 2rem; gap: 1.5rem; backdrop-filter: blur(16px); }
+      .nav-links.open { display: flex; }
+      .nav-links a { font-size: 0.85rem; }
+      .nav-toggle { display: flex !important; }
       .how-grid, .setup-grid, .schema-grid { grid-template-columns: 1fr; }
       .hero-stats { flex-wrap: wrap; }
       .stat-item { min-width: 50%; border-right: none; border-bottom: 1px solid var(--border); }
@@ -1232,6 +1254,35 @@
       color: var(--text2);
       line-height: 1.5;
     }
+
+    /* ── SKELETON LOADER ────────────────────────────────── */
+    @keyframes shimmer {
+      0% { background-position: -400px 0; }
+      100% { background-position: 400px 0; }
+    }
+
+    .skeleton {
+      background: linear-gradient(90deg, var(--bg3) 25%, var(--surface) 50%, var(--bg3) 75%);
+      background-size: 800px 100%;
+      animation: shimmer 1.5s ease-in-out infinite;
+      border-radius: 6px;
+    }
+
+    .skeleton-card {
+      background: var(--bg2);
+      padding: 2rem;
+    }
+
+    .skeleton-line {
+      height: 14px;
+      margin-bottom: 12px;
+      width: 100%;
+    }
+
+    .skeleton-line:first-child { width: 40%; height: 20px; }
+    .skeleton-line:nth-child(2) { width: 30%; }
+    .skeleton-line:nth-child(4) { width: 70%; }
+    .skeleton-line:last-child { width: 50%; margin-top: 20px; margin-bottom: 0; }
   </style>
 </head>
 <body>
@@ -1242,7 +1293,9 @@
     <img src="logo.png" alt="PulseFlat Logo" style="height: 24px; border-radius: 4px;">
     PulseFlat
   </a>
-  <ul class="nav-links">
+  <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menu de navegação" aria-expanded="false">☰</button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#sobre">Sobre</a></li>
     <li><a href="#como-funciona">Pipeline</a></li>
     <li><a href="#datasets">Datasets</a></li>
     <li><a href="#schema">Schema</a></li>
@@ -1284,17 +1337,19 @@
     <span class="line-accent">Flat</span>
   </h1>
 
-  <span class="hero-subtitle">Brazilian Financial Data Pipeline</span>
+  <span class="hero-subtitle">Pipeline de Dados Financeiros Brasileiros</span>
 
   <p class="hero-description">
-    Pipeline open-source de captura diária dos principais indicadores do mercado financeiro
-    brasileiro. Dados da ANBIMA e B3, coletados automaticamente via GitHub Actions e
-    disponibilizados em CSV para importação direta em qualquer base de dados.
+    Dados financeiros brasileiros confiáveis, atualizados diariamente e 100% gratuitos.
+    O PulseFlat coleta automaticamente indicadores da ANBIMA, B3, BCB, CVM e IBGE —
+    padroniza, versiona e disponibiliza em CSV para você importar direto no seu
+    Excel, Google Sheets, Python ou ferramenta de BI favorita.
   </p>
 
   <div class="hero-ctas">
     <a href="#datasets" class="btn-primary">Explorar datasets</a>
     <a href="https://github.com/PulseDataLabs/PulseFlat" class="btn-secondary" target="_blank">Ver no GitHub</a>
+    <a href="https://github.com/PulseDataLabs/PulseFlat/issues" class="btn-secondary" target="_blank">Sugerir dataset</a>
   </div>
 </section>
 
@@ -1313,6 +1368,42 @@
     <span class="stat-label">Execuções por dia útil</span>
   </div>
 </div>
+
+<!-- SOBRE -->
+<section class="how-section" id="sobre" style="padding: 6rem 0;">
+  <div class="container">
+    <div class="section-label reveal">Sobre</div>
+    <h2 class="section-title reveal">Por que PulseFlat?</h2>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 2rem;" class="reveal">
+      <div>
+        <p style="font-size: 1rem; line-height: 1.8; color: var(--text2); margin-bottom: 1.5rem;">
+          A <strong style="color: var(--text);">PulseDataLabs</strong> nasceu da missão de democratizar o acesso a dados financeiros brasileiros de qualidade. Acreditamos que informações financeiras confiáveis não deveriam ser um privilégio de grandes instituições.
+        </p>
+        <p style="font-size: 1rem; line-height: 1.8; color: var(--text2);">
+          Por isso, construímos o PulseFlat: um pipeline open-source que coleta, padroniza e disponibiliza gratuitamente dezenas de indicadores do mercado financeiro brasileiro — da ANBIMA, B3, BCB, CVM e IBGE — atualizados automaticamente todos os dias úteis.
+        </p>
+      </div>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; align-content: start;">
+        <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1.5rem; text-align: center;">
+          <span style="font-family: var(--font-head); font-weight: 800; font-size: 2rem; color: var(--accent); display: block;">100%</span>
+          <span style="font-family: var(--font-mono); font-size: 0.65rem; color: var(--text3); text-transform: uppercase; letter-spacing: 0.1em;">Open-source</span>
+        </div>
+        <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1.5rem; text-align: center;">
+          <span style="font-family: var(--font-head); font-weight: 800; font-size: 2rem; color: var(--green); display: block;">Zero</span>
+          <span style="font-family: var(--font-mono); font-size: 0.65rem; color: var(--text3); text-transform: uppercase; letter-spacing: 0.1em;">Custo de infra</span>
+        </div>
+        <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1.5rem; text-align: center;">
+          <span style="font-family: var(--font-head); font-weight: 800; font-size: 2rem; color: var(--gold); display: block;">7×</span>
+          <span style="font-family: var(--font-mono); font-size: 0.65rem; color: var(--text3); text-transform: uppercase; letter-spacing: 0.1em;">Atualizações/dia</span>
+        </div>
+        <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1.5rem; text-align: center;">
+          <span style="font-family: var(--font-head); font-weight: 800; font-size: 2rem; color: var(--accent); display: block;">5</span>
+          <span style="font-family: var(--font-mono); font-size: 0.65rem; color: var(--text3); text-transform: uppercase; letter-spacing: 0.1em;">Fontes oficiais</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- HOW IT WORKS -->
 <section class="how-section" id="como-funciona">
@@ -1449,25 +1540,28 @@
     <!-- Busca de Datasets -->
     <div class="datasets-search-container reveal" style="margin-top: 1.5rem; margin-bottom: 2rem; display: flex; justify-content: center; width: 100%;">
       <div class="search-wrapper" style="position: relative; width: 100%; max-width: 500px;">
-        <input type="text" id="dataset-search" placeholder="🔍 Pesquisar datasets por nome, arquivo, descrição ou tags..." style="width: 100%; padding: 0.75rem 1.5rem; border-radius: 30px; border: 1px solid var(--border); background: var(--bg2); color: var(--text1); font-size: 0.95rem; outline: none; transition: all 0.3s;" />
+        <input type="text" id="dataset-search" placeholder="🔍 Pesquisar datasets por nome, arquivo, descrição ou tags..." aria-label="Pesquisar datasets" style="width: 100%; padding: 0.75rem 1.5rem; border-radius: 30px; border: 1px solid var(--border); background: var(--bg2); color: var(--text1); font-size: 0.95rem; outline: none; transition: all 0.3s;" />
       </div>
     </div>
 
     <div class="datasets-filter reveal">
-      <button class="filter-btn active" data-source="all">🌐 Todas as Fontes</button>
-      <button class="filter-btn" data-source="anbima">◈ ANBIMA</button>
-      <button class="filter-btn" data-source="b3">◉ B3</button>
-      <button class="filter-btn" data-source="cvm">⬢ CVM</button>
-      <button class="filter-btn" data-source="bcb">◆ Banco Central</button>
-      <button class="filter-btn" data-source="ibge">⬡ IBGE</button>
-      <button class="filter-btn" data-source="debentures">❖ SND (Debêntures)</button>
-      <button class="filter-btn" data-source="misc">⚡ Outros</button>
+      <button class="filter-btn active" data-source="all" aria-pressed="true">🌐 Todas as Fontes</button>
+      <button class="filter-btn" data-source="anbima" aria-pressed="false">◈ ANBIMA</button>
+      <button class="filter-btn" data-source="b3" aria-pressed="false">◉ B3</button>
+      <button class="filter-btn" data-source="cvm" aria-pressed="false">⬢ CVM</button>
+      <button class="filter-btn" data-source="bcb" aria-pressed="false">◆ Banco Central</button>
+      <button class="filter-btn" data-source="ibge" aria-pressed="false">⬡ IBGE</button>
+      <button class="filter-btn" data-source="debentures" aria-pressed="false">❖ SND (Debêntures)</button>
+      <button class="filter-btn" data-source="misc" aria-pressed="false">⚡ Outros</button>
     </div>
 
     <div class="datasets-grid reveal" id="datasets-container">
-      <div style="grid-column: 1 / -1; text-align: center; padding: 3rem; color: var(--text2);">
-        <p>Carregando catálogo de datasets...</p>
-      </div>
+      <div class="skeleton-card"><div class="skeleton skeleton-line"></div><div class="skeleton skeleton-line"></div><div class="skeleton skeleton-line"></div><div class="skeleton skeleton-line"></div></div>
+      <div class="skeleton-card"><div class="skeleton skeleton-line"></div><div class="skeleton skeleton-line"></div><div class="skeleton skeleton-line"></div><div class="skeleton skeleton-line"></div></div>
+      <div class="skeleton-card"><div class="skeleton skeleton-line"></div><div class="skeleton skeleton-line"></div><div class="skeleton skeleton-line"></div><div class="skeleton skeleton-line"></div></div>
+      <div class="skeleton-card"><div class="skeleton skeleton-line"></div><div class="skeleton skeleton-line"></div><div class="skeleton skeleton-line"></div><div class="skeleton skeleton-line"></div></div>
+      <div class="skeleton-card"><div class="skeleton skeleton-line"></div><div class="skeleton skeleton-line"></div><div class="skeleton skeleton-line"></div><div class="skeleton skeleton-line"></div></div>
+      <div class="skeleton-card"><div class="skeleton skeleton-line"></div><div class="skeleton skeleton-line"></div><div class="skeleton skeleton-line"></div><div class="skeleton skeleton-line"></div></div>
     </div>
     </div>
   </div>
@@ -1483,7 +1577,7 @@
     <!-- Busca de Schemas -->
     <div class="schema-search-container reveal" style="margin-bottom: 2rem; display: flex; justify-content: center; width: 100%;">
       <div class="search-wrapper" style="position: relative; width: 100%; max-width: 500px;">
-        <input type="text" id="schema-search" placeholder="🔍 Pesquisar colunas (ex: cnpj, taxa, valor, data...)" style="width: 100%; padding: 0.75rem 1.5rem; border-radius: 30px; border: 1px solid var(--border); background: var(--bg2); color: var(--text1); font-size: 0.95rem; outline: none; transition: all 0.3s;" />
+        <input type="text" id="schema-search" placeholder="🔍 Pesquisar colunas (ex: cnpj, taxa, valor, data...)" aria-label="Pesquisar colunas dos schemas" style="width: 100%; padding: 0.75rem 1.5rem; border-radius: 30px; border: 1px solid var(--border); background: var(--bg2); color: var(--text1); font-size: 0.95rem; outline: none; transition: all 0.3s;" />
       </div>
     </div>
 
@@ -1584,12 +1678,14 @@
         PulseFlat
       </div>
       <ul class="footer-links">
+        <li><a href="#sobre">Sobre</a></li>
         <li><a href="#como-funciona">Pipeline</a></li>
         <li><a href="#datasets">Datasets</a></li>
         <li><a href="#schema">Schema</a></li>
         <li><a href="https://github.com/PulseDataLabs/PulseFlat" target="_blank">GitHub</a></li>
+        <li><a href="https://github.com/PulseDataLabs/PulseFlat/issues" target="_blank">Contato</a></li>
       </ul>
-      <span class="footer-copy">Dados públicos · ANBIMA & B3 · Open-source</span>
+      <span class="footer-copy">© PulseDataLabs · Código aberto sob licença MIT · <a href="https://github.com/PulseDataLabs/PulseFlat/issues" style="color: inherit; text-decoration: underline; text-underline-offset: 3px;">Reportar problema</a></span>
     </div>
   </div>
 </footer>
@@ -1698,6 +1794,24 @@
 
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
+  // Mobile nav toggle
+  const navToggle = document.getElementById('nav-toggle');
+  const navLinks = document.getElementById('nav-links');
+  if (navToggle && navLinks) {
+    navToggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', isOpen);
+      navToggle.textContent = isOpen ? '✕' : '☰';
+    });
+    document.querySelectorAll('#nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+        navToggle.textContent = '☰';
+      });
+    });
+  }
+
   // Smooth anchor scroll with offset for fixed nav
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
@@ -1705,6 +1819,8 @@
       if (target) {
         e.preventDefault();
         window.scrollTo({ top: target.offsetTop - 80, behavior: 'smooth' });
+      } else if (this.getAttribute('href') !== '#') {
+        console.warn('Anchor target not found:', this.getAttribute('href'));
       }
     });
   });
@@ -1876,8 +1992,9 @@
     const filterButtons = document.querySelectorAll('.filter-btn');
     filterButtons.forEach(btn => {
       btn.addEventListener('click', () => {
-        filterButtons.forEach(b => b.classList.remove('active'));
+        filterButtons.forEach(b => { b.classList.remove('active'); b.setAttribute('aria-pressed', 'false'); });
         btn.classList.add('active');
+        btn.setAttribute('aria-pressed', 'true');
 
         activeSourceFilter = btn.getAttribute('data-source');
         applyDatasetFilters();
