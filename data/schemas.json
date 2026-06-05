@@ -2762,7 +2762,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-06-04"
+        "example": "2026-06-05"
       },
       {
         "name": "nome",
