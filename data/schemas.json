@@ -12,12 +12,12 @@
       {
         "name": "data_referencia",
         "type": "date",
-        "example": "2026-06-03"
+        "example": "2026-06-05"
       },
       {
         "name": "data_referencia_pagina",
         "type": "date",
-        "example": "2026-06-03 15:37:00"
+        "example": "2026-06-05 09:36:00"
       },
       {
         "name": "indicador",
@@ -2344,7 +2344,7 @@
       {
         "name": "dt_referencia",
         "type": "date",
-        "example": "2026-04-01"
+        "example": "2026-05-01"
       },
       {
         "name": "BANCO CENTRAL DO BRASIL - BACEN",
@@ -2767,37 +2767,37 @@
       {
         "name": "nome",
         "type": "str",
-        "example": "iShares Ibovespa ETF"
+        "example": "Trend ETF LBMA Ouro"
       },
       {
         "name": "ticker",
         "type": "str",
-        "example": "BOVA11"
+        "example": "GOLD11"
       },
       {
         "name": "link",
         "type": "str",
-        "example": "https://br.investing.com/etfs/ishares-ibovespa"
+        "example": "https://br.investing.com/etfs/gold11"
       },
       {
         "name": "vr_ultimo",
         "type": "float",
-        "example": "167.28"
+        "example": "23.180"
       },
       {
         "name": "vr_variacao_pct",
         "type": "float",
-        "example": "-2.42%"
+        "example": "-0.81%"
       },
       {
         "name": "qt_volume",
         "type": "int",
-        "example": "5,47M"
+        "example": "1,13M"
       },
       {
         "name": "hr_atualizacao",
         "type": "str",
-        "example": "03/06"
+        "example": "12:21:52"
       }
     ]
   },
