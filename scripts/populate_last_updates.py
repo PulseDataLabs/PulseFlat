@@ -1,23 +1,39 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
+# coding: utf-8
 """
 scripts/populate_last_updates.py
 ---------------------------------
-Varre o diretório data/, abre cada arquivo CSV, encontra a data_captura mais recente,
-e salva o mapeamento no arquivo data/last_updates.json.
+Varre o diretório data/, abre cada arquivo CSV, encontra a data_captura
+mais recente, e salva o mapeamento em data/last_updates.json.
+
+Uso:
+    python scripts/populate_last_updates.py
+    python scripts/populate_last_updates.py --dry-run
+    python scripts/populate_last_updates.py --quiet
 """
 
 import csv
 import json
-import logging
 import sys
+import time
+import argparse
 from pathlib import Path
 
-# Configura logger
-logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
-log = logging.getLogger("populate_last_updates")
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+
+from scripts.utils.ux import (
+    banner, section, print_start, print_done, print_fail, print_warn, print_info,
+    print_summary, add_common_args, apply_common_args, ColorLogger,
+)
+
+log = ColorLogger("populate_last_updates")
 
 
-def main():
+def main(dry_run: bool = False) -> None:
+    t0 = time.time()
+    banner("Atualizar Últimas Datas", "Varre CSVs → last_updates.json")
+    section("Processando arquivos", "file")
+
     root_dir = Path(__file__).resolve().parents[1]
     data_dir = root_dir / "data"
     output_path = data_dir / "last_updates.json"
@@ -28,28 +44,35 @@ def main():
 
     last_updates = {}
 
-    # Se já existir last_updates.json, começa com os dados dele
     if output_path.exists():
         try:
             with output_path.open("r", encoding="utf-8") as f:
                 last_updates = json.load(f)
-            log.info("Carregado last_updates.json existente.")
+            print_info("Carregado last_updates.json existente.")
         except Exception as e:
-            log.warning(f"Erro ao ler last_updates.json existente: {e}. Criando um novo.")
+            print_warn(f"Erro ao ler last_updates.json: {e}. Criando novo.")
 
-    # Remove chaves de arquivos que não existem mais no disco
     last_updates = {k: v for k, v in last_updates.items() if (data_dir / k).exists()}
 
-    # Varre todos os arquivos .csv
-    for csv_file in data_dir.glob("*.csv"):
-        log.info(f"Processando {csv_file.name}...")
+    csv_files = sorted(data_dir.glob("*.csv"))
+    total_files = len(csv_files)
+    total_ok = 0
+    total_fail = 0
+    total_warn = 0
+    total_atualizados = 0
+
+    for idx, csv_file in enumerate(csv_files, 1):
+        nome = csv_file.name
+        print_start(f"[{idx}/{total_files}] {nome}", icon="file")
+
         try:
             with csv_file.open("r", newline="", encoding="utf-8") as f:
                 reader = csv.DictReader(f)
                 if not reader.fieldnames:
+                    print_warn(f"{nome}: sem colunas.")
+                    total_warn += 1
                     continue
 
-                # Identifica a coluna de data (geralmente data_captura, fallback para data_referencia ou data ou rpt_dt)
                 date_col = None
                 for candidate in ["data_captura", "data_referencia", "data", "rpt_dt"]:
                     for col in reader.fieldnames:
@@ -60,10 +83,10 @@ def main():
                         break
 
                 if not date_col:
-                    log.warning(f"  Nenhuma coluna de data encontrada em {csv_file.name}. Pulando.")
+                    print_warn(f"{nome}: nenhuma coluna de data encontrada.")
+                    total_warn += 1
                     continue
 
-                # Extrai todas as datas e encontra a mais antiga e a mais recente
                 datas = []
                 for row in reader:
                     val = row.get(date_col)
@@ -73,31 +96,68 @@ def main():
                 if datas:
                     min_date = min(datas)
                     max_date = max(datas)
-                    last_updates[csv_file.name] = {
-                        "min": min_date,
-                        "max": max_date
-                    }
-                    log.info(f"  Data: {min_date} a {max_date}")
+                    last_updates[nome] = {"min": min_date, "max": max_date}
+                    print_done(f"{nome}: {min_date} a {max_date}")
+                    total_ok += 1
+                    total_atualizados += 1
                 else:
-                    log.warning(f"  Nenhum registro com data em {csv_file.name}.")
+                    print_warn(f"{nome}: nenhum registro com data.")
+                    total_warn += 1
+
         except Exception as e:
-            log.error(f"Erro ao processar {csv_file.name}: {e}")
+            print_fail(f"{nome}: {e}")
+            total_fail += 1
 
-    # Salva no arquivo JSON
-    try:
-        with output_path.open("w", encoding="utf-8") as f:
-            json.dump(last_updates, f, indent=2, ensure_ascii=False)
-        log.info(f"Sucesso! Mapeamento atualizado salvo em {output_path}")
+    if not dry_run:
+        try:
+            output_path.parent.mkdir(parents=True, exist_ok=True)
+            with output_path.open("w", encoding="utf-8") as f:
+                json.dump(last_updates, f, indent=2, ensure_ascii=False)
+            print_done("last_updates.json salvo.")
 
-        # Salva no arquivo JS para carregamento estático offline (file://)
-        js_path = data_dir / "last_updates.js"
-        with js_path.open("w", encoding="utf-8") as f:
-            f.write(f"window.PULSEFLAT_LAST_UPDATES = {json.dumps(last_updates, indent=2, ensure_ascii=False)};\n")
-        log.info(f"Sucesso! Mapeamento estático JS salvo em {js_path}")
-    except Exception as e:
-        log.error(f"Erro ao salvar arquivos de metadados: {e}")
-        sys.exit(1)
+            js_path = data_dir / "last_updates.js"
+            with js_path.open("w", encoding="utf-8") as f:
+                f.write(
+                    f"window.PULSEFLAT_LAST_UPDATES = "
+                    f"{json.dumps(last_updates, indent=2, ensure_ascii=False)};\n"
+                )
+            print_done("last_updates.js salvo.")
+        except Exception as e:
+            print_fail(f"Erro ao salvar arquivos de metadados: {e}")
+            sys.exit(1)
+
+    elapsed = time.time() - t0
+    print_summary(
+        "Atualização concluída",
+        total=total_files,
+        success=total_ok,
+        failed=total_fail,
+        skipped=total_warn,
+        elapsed=elapsed,
+        details=[
+            ("file", "CSVs processados", str(total_ok)),
+            ("package", "Arquivos atualizados", str(total_atualizados)),
+        ],
+    )
 
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser(
+        description="📄 Atualiza last_updates.json com datas dos CSVs",
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog="""
+exemplos:
+  python scripts/populate_last_updates.py
+  python scripts/populate_last_updates.py --dry-run
+  python scripts/populate_last_updates.py --quiet
+  python scripts/populate_last_updates.py --verbose
+        """,
+    )
+    add_common_args(parser)
+    args = parser.parse_args()
+
+    if args.dry_run:
+        log.info("Modo dry-run: nenhum arquivo será salvo.")
+
+    apply_common_args(args)
+    main(dry_run=args.dry_run)

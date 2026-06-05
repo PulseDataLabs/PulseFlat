@@ -22,7 +22,6 @@ import argparse
 import importlib
 import json
 import logging
-import os
 import sys
 import traceback
 import time
@@ -31,60 +30,7 @@ from datetime import datetime
 from pathlib import Path
 from typing import Optional
 
-# ── ANSI / Cores ──────────────────────────────────────────────────────────────
-# Detecta se o terminal suporta cores (desativa em CI sem TTY ou em Windows sem
-# suporte a ANSI, mas mantém ativo no GitHub Actions que suporta via $TERM)
-_CI       = os.environ.get("CI", "")
-_NO_COLOR = os.environ.get("NO_COLOR", "")
-_TERM     = os.environ.get("TERM", "")
-USE_COLOR = (
-    sys.stdout.isatty() or bool(_CI)
-) and not _NO_COLOR and _TERM != "dumb"
-
-
-def _c(code: str, text: str) -> str:
-    """Aplica código ANSI se cores estiverem habilitadas."""
-    return f"\033[{code}m{text}\033[0m" if USE_COLOR else text
-
-
-# Paleta
-def bold(t):    return _c("1",      t)
-def dim(t):     return _c("2",      t)
-def green(t):   return _c("32",     t)
-def yellow(t):  return _c("33",     t)
-def red(t):     return _c("31",     t)
-def cyan(t):    return _c("36",     t)
-def blue(t):    return _c("34",     t)
-def magenta(t): return _c("35",     t)
-def white(t):   return _c("97",     t)
-def b_green(t): return _c("1;32",   t)
-def b_yellow(t):return _c("1;33",   t)
-def b_red(t):   return _c("1;31",   t)
-def b_cyan(t):  return _c("1;36",   t)
-def b_white(t): return _c("1;97",   t)
-
-# Ícones por grupo
-GROUP_ICON = {
-    "anbima":  "🟡",
-    "b3":      "🔵",
-    "bcb":     "🟢",
-    "cvm":     "🟣",
-    "ibge":    "🔴",
-    "ratings": "⚪",
-    "misc":    "🟤",
-}
-
-GROUP_COLOR = {
-    "anbima":  yellow,
-    "b3":      cyan,
-    "bcb":     green,
-    "cvm":     magenta,
-    "ibge":    red,
-    "ratings": white,
-    "misc":    blue,
-}
-
-# ── Logger minimalista (sem timestamp redundante — o banner já mostra a hora) ─
+# ── Logger minimalista ────────────────────────────────────────────────
 logging.basicConfig(
     level=logging.INFO,
     format="%(message)s",
@@ -97,11 +43,17 @@ logging.getLogger("urllib3").setLevel(logging.WARNING)
 logging.getLogger("requests").setLevel(logging.WARNING)
 
 
+# ── UX compartilhada (cores, ícones, helpers visuais) ────────────────
+from scripts.utils.ux import (
+    USE_COLOR, IS_TTY,
+    bold, dim, green, yellow, red, cyan, blue, magenta, white,
+    b_green, b_yellow, b_red, b_cyan, b_white,
+    _line, _progress_bar,
+    GROUP_ICON, GROUP_COLOR,
+)
+
+
 # ── Helpers visuais ───────────────────────────────────────────────────────────
-
-def _line(char: str = "─", width: int = 72) -> str:
-    return dim(char * width)
-
 
 def _banner() -> None:
     """Imprime o cabeçalho do pipeline."""
@@ -156,16 +108,6 @@ def _scraper_fail(name: str, group: str, elapsed: float, idx: int, total: int) -
         + b_red(f"{name:<40}")
         + b_red("  ✖  ") + dim(t)
     )
-
-
-def _progress_bar(done: int, total: int, width: int = 30) -> str:
-    """Retorna uma barra de progresso ASCII colorida."""
-    if total == 0:
-        return ""
-    filled = int(width * done / total)
-    bar    = "█" * filled + "░" * (width - filled)
-    pct    = int(100 * done / total)
-    return cyan(bar) + dim(f"  {pct:3d}%  ({done}/{total})")
 
 
 def _summary_table(
