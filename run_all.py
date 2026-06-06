@@ -16,6 +16,8 @@ Uso:
   python run_all.py --sequential           # execução sequencial (debug)
   python run_all.py --parallel --max-workers 8
   python run_all.py --generate-catalog     # só regenera datasets.json
+  python run_all.py --check-holes          # verifica buracos nas séries temporais
+  python run_all.py --check-holes --fail-on-holes  # falha se houver buracos
 """
 
 import argparse
@@ -394,11 +396,13 @@ def list_scrapers(registry: dict[str, dict]) -> None:
 # ── Orquestrador principal ────────────────────────────────────────────────────
 
 def main(
-    group:       Optional[str] = None,
-    scraper:     Optional[str] = None,
-    parallel:    bool = True,
-    max_workers: int  = 4,
-    list_only:   bool = False,
+    group:         Optional[str] = None,
+    scraper:       Optional[str] = None,
+    parallel:      bool = True,
+    max_workers:   int  = 4,
+    list_only:     bool = False,
+    check_holes:   bool = False,
+    fail_on_holes: bool = False,
 ) -> None:
     _banner()
     t0       = time.time()
@@ -476,6 +480,17 @@ def main(
         except Exception as e:
             print(yellow(f"  ⚠  Não foi possível gerar market_latest: {e}"))
 
+        if check_holes:
+            try:
+                from scripts.verificar_buracos import main as check_holes_fn
+                check_holes_fn(fail_on_holes=fail_on_holes, quiet=not IS_TTY)
+                print(f"  {dim('🔍 Verificação de buracos concluída')}")
+            except SystemExit:
+                if fail_on_holes:
+                    raise
+            except Exception as e:
+                print(yellow(f"  ⚠  Erro na verificação de buracos: {e}"))
+
     # Tabela resumo final
     _summary_table(results, registry, total_elapsed)
 
@@ -513,6 +528,10 @@ exemplos:
     parser.add_argument("--max-workers", type=int, default=4,  metavar="N",   help="Threads para modo paralelo (padrão: 4)")
     parser.add_argument("--list",        action="store_true",                 help="Lista todos os scrapers disponíveis e sai")
     parser.add_argument("--generate-catalog", action="store_true",            help="Regenera datasets.json e sai")
+    parser.add_argument("--check-holes", action="store_true",
+        help="Executa verificação de buracos (dias úteis faltantes) após a coleta")
+    parser.add_argument("--fail-on-holes", action="store_true",
+        help="Falha se a verificação de buracos encontrar datas faltantes (exit code 1)")
 
     args = parser.parse_args()
 
@@ -530,4 +549,6 @@ exemplos:
         parallel=args.parallel,
         max_workers=args.max_workers,
         list_only=args.list,
+        check_holes=args.check_holes,
+        fail_on_holes=args.fail_on_holes,
     )

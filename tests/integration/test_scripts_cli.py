@@ -21,6 +21,7 @@ SCRIPTS = [
     ("populate_last_updates", SCRIPTS_DIR / "populate_last_updates.py"),
     ("generate_catalog", SCRIPTS_DIR / "generate_catalog.py"),
     ("generate_market_latest", SCRIPTS_DIR / "generate_market_latest.py"),
+    ("verificar_buracos", SCRIPTS_DIR / "verificar_buracos.py"),
 ]
 RUN_ALL = Path(__file__).resolve().parents[2] / "run_all.py"
 
@@ -154,3 +155,41 @@ class TestErrorHandling:
         for name, path in SCRIPTS:
             result = run_script(path, "--help")
             assert "exemplos" in result.stdout.lower() or "example" in result.stdout.lower()
+
+
+class TestVerificarBuracosFlags:
+    """Testes específicos para verificar_buracos.py."""
+
+    VERIFICAR_PATH = SCRIPTS_DIR / "verificar_buracos.py"
+
+    def test_list_flag(self):
+        result = run_script(self.VERIFICAR_PATH, "--list", "--no-color")
+        assert result.returncode == 0
+        assert "habilitados" in result.stdout.lower()
+        assert ".csv" in result.stdout
+
+    def test_csv_filter(self):
+        result = run_script(
+            self.VERIFICAR_PATH, "--csv", "anbima_ima_completo.csv", "--no-color",
+        )
+        assert result.returncode == 0
+        assert "anbima_ima_completo.csv" in result.stdout
+
+    def test_threshold_flag(self):
+        result = run_script(self.VERIFICAR_PATH, "--threshold", "5", "--no-color", "--dry-run")
+        assert result.returncode == 0
+
+    def test_fail_on_holes_does_not_crash(self):
+        result = run_script(
+            self.VERIFICAR_PATH, "--csv", "anbima_ima_completo.csv",
+            "--fail-on-holes", "--no-color",
+        )
+        # Should exit cleanly (0 or 1 depending on holes found)
+        assert result.returncode in (0, 1)
+
+    def test_verbose_shows_entity_details(self):
+        result = run_script(
+            self.VERIFICAR_PATH, "--csv", "anbima_ima_completo.csv",
+            "--verbose", "--no-color",
+        )
+        assert result.returncode == 0

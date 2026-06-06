@@ -45,6 +45,7 @@
 *   **Sanitização Automática de Dados**: Limpeza inteligente embutida que padroniza formatos de data brasileiros (`DD/MM/YYYY` ou `DD/MM/YY` para ISO `YYYY-MM-DD`) e normaliza representações decimais com vírgula para floats com ponto.
 *   **Execução Concorrente Multicondicional**: Orquestrador inteligente capaz de paralelizar a execução de scripts independentes e enfileirar sequencialmente os scripts dependentes.
 *   **Monitoramento de Schema Drift**: Proteção na persistência de arquivos contra mudanças repentinas nas estruturas originais de dados (emite logs detalhados sobre colunas adicionadas ou removidas).
+*   **Validação de Integridade Temporal**: Verificação automática de "buracos" (dias úteis faltantes) em séries temporais, usando a biblioteca `bizdays` para garantir continuidade nas datas de referência entre a menor e a maior data de cada entidade.
 *   **Frontend Otimizado (Zero CLS/LCP Baixo)**: Dashboard interativo desenvolvido em vanilla HTML/CSS que consome os JSONs estáticos diretamente do repositório, com recursos avançados de preloading, busca instantânea debouncada e renderização adiada via CSS Containment (`content-visibility`).
 *   **Terminal UX colorido**: Progresso com ícones Unicode, timing por etapa e cores ANSI via módulo compartilhado `scripts/utils/ux.py` reutilizável entre scrapers e scripts de pós-processamento.
 
@@ -64,6 +65,8 @@ graph TD
     E --> F
     B -->|Calls generate_catalog.py| G[data/datasets.json]
     B -->|Calls generate_market_latest.py| H[data/market_latest.json]
+    B -->|Calls verificar_buracos.py| K[Valida continuidade temporal]
+    K -->|bizdays.Calendar| L[Relatório de buracos]
     F & G & H --> I[git push origin main]
     I --> J[GitHub Pages / index.html]
 ```
@@ -98,9 +101,45 @@ python run_all.py --scraper anbima_indicadores
 
 # Apenas regenera o catálogo data/datasets.json a partir dos metadados das classes
 python run_all.py --generate-catalog
+
+# Executa verificação de buracos ao final (dias úteis faltantes)
+python run_all.py --check-holes
+python run_all.py --check-holes --fail-on-holes
 ```
 
 > **Scripts individuais** aceitam `--quiet`, `--verbose`, `--no-color` e `--dry-run` via `scripts.utils.ux.add_common_args()`.
+
+### Verificando Integridade Temporal
+
+O script `scripts/verificar_buracos.py` valida se as séries temporais nos CSVs não possuem "buracos" (dias úteis faltantes entre a menor e a maior data de referência):
+
+```bash
+# Verifica todos os CSVs de série temporal configurados
+python scripts/verificar_buracos.py
+
+# Verifica apenas CSVs específicos
+python scripts/verificar_buracos.py --csv anbima_ima_completo.csv anbima_idka.csv
+
+# Falha com exit code 1 se encontrar buracos (útil para CI)
+python scripts/verificar_buracos.py --fail-on-holes
+
+# Ignora entidades com menos de N datas (padrão: 3)
+python scripts/verificar_buracos.py --threshold 5
+
+# Lista os CSVs habilitados para verificação e suas configurações
+python scripts/verificar_buracos.py --list
+
+# Modo detalhado: mostra cada entidade com buracos e as datas faltantes
+python scripts/verificar_buracos.py --verbose
+
+# Pode ser executado ao final do pipeline via run_all.py
+python run_all.py --check-holes
+python run_all.py --check-holes --fail-on-holes
+```
+
+A verificação usa a `bizdays.Calendar` (feriados brasileiros 2024–2028 já definidos em `utils/parsers.py`) e faz agrupamento por entidade — cada índice, ativo ou ticker tem sua sequência de datas verificada independentemente.
+
+CSVs de snapshot (carteiras teóricas, classificações setoriais, cadastros) não são verificados, pois seus dados representam o estado em um ponto do tempo, não uma série temporal contínua.
 
 Ao final de uma execução completa (todos os grupos), o orquestrador executa automaticamente:
 - **`scripts/generate_catalog.py`** — regenera `data/datasets.json` com os metadados atualizados
@@ -127,6 +166,7 @@ PulseFlat/
 │   ├── generate_market_latest.py    # Gera market_latest.json com últimos indicadores
 │   ├── populate_last_updates.py     # Atualiza last_updates.json
 │   ├── limpar_duplicatas.py         # Remove duplicatas de CSVs
+│   ├── verificar_buracos.py         # Valida continuidade das datas em séries temporais
 │   └── utils/ux.py                  # UX compartilhada (cores, ícones, CLI args)
 ├── scrapers/                        # Módulos de captura
 │   ├── utils/

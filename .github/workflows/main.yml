@@ -49,6 +49,10 @@ jobs:
       # O "|| true" força o terminal a entender que a execução terminou com sucesso mesmo se o Python falhar
       run: python run_all.py || true
 
+    # Verifica integridade das séries temporais (não falha o pipeline por padrão)
+    - name: Verificar integridade das séries temporais
+      run: python scripts/verificar_buracos.py --fail-on-holes || true
+
     # Identifica mudanças na pasta data/ e faz o push se houver novos dados
     - name: Commitar e enviar novas alterações de dados
       run: |
