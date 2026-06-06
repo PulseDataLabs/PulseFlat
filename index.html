@@ -1169,6 +1169,71 @@
       transform: translateY(0);
     }
 
+    /* ── FOCUS VISIBLE ──────────────────────────────────── */
+    :focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+    .filter-btn:focus-visible,
+    .btn-primary:focus-visible,
+    .btn-secondary:focus-visible,
+    .download-btn:focus-visible,
+    .copy-btn:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+    input:focus-visible {
+      outline: 2px solid var(--accent) !important;
+      outline-offset: -1px;
+    }
+
+    /* ── EMPTY STATE ────────────────────────────────────── */
+    .empty-state {
+      grid-column: 1 / -1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    .empty-state-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      opacity: 0.5;
+    }
+    .empty-state-title {
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--text2);
+      margin-bottom: 0.5rem;
+    }
+    .empty-state-desc {
+      font-size: 0.9rem;
+      color: var(--text3);
+      line-height: 1.6;
+      max-width: 360px;
+      margin-bottom: 1.5rem;
+    }
+    .empty-state-btn {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      color: var(--accent);
+      background: transparent;
+      border: 1px solid var(--border2);
+      padding: 0.6rem 1.4rem;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .empty-state-btn:hover {
+      border-color: var(--accent);
+      background: rgba(0,212,255,0.05);
+    }
+
     /* ── PIPELINE HEALTH DROPDOWN ───────────────────────── */
     .pipeline-health-container {
       position: relative;
@@ -1772,7 +1837,7 @@
             <span class="card-source">Fonte: ${dataset.source || 'Desconhecida'}</span>
             <a href="${dataset.url}" class="download-btn" target="_blank">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
-              Download CSV
+              CSV
             </a>
           </div>
         </div>
@@ -1957,8 +2022,43 @@
       }
     });
 
+    // Empty state helpers
+    function showEmptyState() {
+      let el = document.getElementById('dataset-empty-state');
+      if (el) return;
+      el = document.createElement('div');
+      el.id = 'dataset-empty-state';
+      el.className = 'empty-state';
+      el.innerHTML = `
+        <div class="empty-state-icon">🔍</div>
+        <div class="empty-state-title">Nenhum dataset encontrado</div>
+        <div class="empty-state-desc">Nenhum dataset corresponde ao filtro ou busca atual. Tente alterar a fonte ou limpar os termos.</div>
+        <button class="empty-state-btn" id="clear-filters-btn">Limpar filtros</button>
+      `;
+      document.getElementById('datasets-container').appendChild(el);
+      document.getElementById('clear-filters-btn').addEventListener('click', clearAllFilters);
+    }
+    function hideEmptyState() {
+      const el = document.getElementById('dataset-empty-state');
+      if (el) el.remove();
+    }
+    function clearAllFilters() {
+      const searchInput = document.getElementById('dataset-search');
+      if (searchInput) { searchInput.value = ''; activeSearchQuery = ''; }
+      document.querySelectorAll('.filter-btn').forEach(b => {
+        b.classList.remove('active');
+        b.setAttribute('aria-pressed', 'false');
+      });
+      const allBtn = document.querySelector('.filter-btn[data-source="all"]');
+      if (allBtn) { allBtn.classList.add('active'); allBtn.setAttribute('aria-pressed', 'true'); }
+      activeSourceFilter = 'all';
+      applyDatasetFilters();
+      applySchemaFilters();
+    }
+
     // Filter functions
     function applyDatasetFilters() {
+      let anyVisible = false;
       cards.forEach(card => {
         const cardSource = card.getAttribute('data-source-mapped');
         const sourceMatch = (activeSourceFilter === 'all' || cardSource === activeSourceFilter);
@@ -1975,17 +2075,25 @@
           searchMatch = text.includes(activeSearchQuery);
         }
         
-        if (sourceMatch && searchMatch) {
+        const visible = sourceMatch && searchMatch;
+        if (visible) {
           card.classList.remove('filtered-out');
           card.style.opacity = '0';
           setTimeout(() => {
             card.style.opacity = '1';
             card.style.transition = 'opacity 0.3s ease';
           }, 10);
+          anyVisible = true;
         } else {
           card.classList.add('filtered-out');
         }
       });
+      
+      if (!anyVisible && allDatasets.length > 0) {
+        showEmptyState();
+      } else {
+        hideEmptyState();
+      }
     }
 
     // Handle filter button clicks

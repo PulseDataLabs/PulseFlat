@@ -46,6 +46,7 @@
 *   **Execução Concorrente Multicondicional**: Orquestrador inteligente capaz de paralelizar a execução de scripts independentes e enfileirar sequencialmente os scripts dependentes.
 *   **Monitoramento de Schema Drift**: Proteção na persistência de arquivos contra mudanças repentinas nas estruturas originais de dados (emite logs detalhados sobre colunas adicionadas ou removidas).
 *   **Frontend Otimizado (Zero CLS/LCP Baixo)**: Dashboard interativo desenvolvido em vanilla HTML/CSS que consome os JSONs estáticos diretamente do repositório, com recursos avançados de preloading, busca instantânea debouncada e renderização adiada via CSS Containment (`content-visibility`).
+*   **Terminal UX colorido**: Progresso com ícones Unicode, timing por etapa e cores ANSI via módulo compartilhado `scripts/utils/ux.py` reutilizável entre scrapers e scripts de pós-processamento.
 
 ---
 
@@ -97,6 +98,8 @@ python run_all.py --scraper anbima_indicadores
 # Apenas regenera o catálogo data/datasets.json a partir dos metadados das classes
 python run_all.py --generate-catalog
 ```
+
+> **Scripts individuais** aceitam `--quiet`, `--verbose`, `--no-color` e `--dry-run` via `scripts.utils.ux.add_common_args()`.
 
 ---
 
@@ -221,6 +224,23 @@ class MeuNovoScraper(BaseScraper):
         # A lógica do scraper deve ir aqui, retornando um Pandas DataFrame
         dados = [{"ticker": "ABCD3", "preco": "10,50", "data": "04/06/2026"}]
         return pd.DataFrame(dados)
+```
+
+Para loops com progresso colorido, use as funções do módulo `scripts/utils/ux.py`:
+
+```python
+from scripts.utils.ux import print_done, print_warn
+
+    def fetch(self) -> pd.DataFrame:
+        import time
+        for i, ticker in enumerate(tickers, 1):
+            t0 = time.time()
+            try:
+                df = baixar(ticker)
+                print_done(f"({i}/{len(tickers)}) {ticker}", elapsed=time.time() - t0)
+            except Exception as e:
+                print_warn(f"({i}/{len(tickers)}) {ticker}: {e}")
+        return pd.concat(frames, ignore_index=True)
 ```
 
 ### Executando Testes
