@@ -63,8 +63,9 @@ graph TD
     D --> F[data/*.csv files]
     E --> F
     B -->|Calls generate_catalog.py| G[data/datasets.json]
-    F & G --> H[git push origin main]
-    H --> I[GitHub Pages / index.html]
+    B -->|Calls generate_market_latest.py| H[data/market_latest.json]
+    F & G & H --> I[git push origin main]
+    I --> J[GitHub Pages / index.html]
 ```
 
 ---
@@ -101,6 +102,10 @@ python run_all.py --generate-catalog
 
 > **Scripts individuais** aceitam `--quiet`, `--verbose`, `--no-color` e `--dry-run` via `scripts.utils.ux.add_common_args()`.
 
+Ao final de uma execução completa (todos os grupos), o orquestrador executa automaticamente:
+- **`scripts/generate_catalog.py`** — regenera `data/datasets.json` com os metadados atualizados
+- **`scripts/generate_market_latest.py`** — extrai os últimos valores de CDI, SELIC, IPCA, IGP-M, PTAX, IBOV e IMA-GERAL para `data/market_latest.json`, alimentando o ticker em tempo real no dashboard
+
 ---
 
 ## 📂 Estrutura do Projeto
@@ -112,10 +117,17 @@ PulseFlat/
 │       └── main.yml                 # Agendamento do pipeline no GitHub Actions
 ├── data/                            # Datasets, schemas e metadados de controle
 │   ├── datasets.json                # Catálogo estruturado de metadados dos datasets
+│   ├── market_latest.json / .js     # Últimos valores de indicadores para o ticker do dashboard
 │   ├── schemas.json                 # Definição e mapeamento de campos e tipos
 │   ├── pipeline_status.json / .js   # Logs de saúde e duração da última execução
 │   ├── last_updates.json / .js      # Período de cobertura temporal mínima/máxima de cada CSV
 │   └── *.csv                        # Séries temporais de dados financeiros
+├── scripts/                         # Scripts de pós-processamento
+│   ├── generate_catalog.py          # Gera datasets.json a partir dos metadados
+│   ├── generate_market_latest.py    # Gera market_latest.json com últimos indicadores
+│   ├── populate_last_updates.py     # Atualiza last_updates.json
+│   ├── limpar_duplicatas.py         # Remove duplicatas de CSVs
+│   └── utils/ux.py                  # UX compartilhada (cores, ícones, CLI args)
 ├── scrapers/                        # Módulos de captura
 │   ├── utils/
 │   │   ├── __init__.py

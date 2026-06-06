@@ -13,6 +13,7 @@
   <link rel="preload" href="./data/schemas.json" as="fetch" crossorigin />
   <link rel="preload" href="./data/pipeline_status.json" as="fetch" crossorigin />
   <link rel="preload" href="./data/last_updates.json" as="fetch" crossorigin />
+  <link rel="preload" href="./data/market_latest.json" as="fetch" crossorigin />
 
   <style>
     /* ── Reset & Tokens ─────────────────────────────────── */
@@ -208,6 +209,68 @@
     @keyframes drift1 { from { transform: translate(0,0); } to { transform: translate(60px, 40px); } }
     @keyframes drift2 { from { transform: translate(0,0); } to { transform: translate(-40px, -60px); } }
     @keyframes drift3 { from { transform: translate(0,0); } to { transform: translate(30px, -30px); } }
+
+    /* Market ticker strip */
+    .market-ticker {
+      background: var(--bg2);
+      border-bottom: 1px solid var(--border);
+      border-top: 1px solid var(--border);
+      padding: 0.6rem 0;
+      overflow: hidden;
+      width: 100%;
+      margin-bottom: 1.5rem;
+    }
+
+    .market-ticker-track {
+      display: inline-flex;
+      gap: 2rem;
+      white-space: nowrap;
+      animation: marquee 60s linear infinite;
+    }
+
+    .market-ticker-track:hover {
+      animation-play-state: paused;
+    }
+
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    .ticker-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      flex-shrink: 0;
+    }
+
+    .ticker-label {
+      color: var(--text3);
+      font-size: 0.6rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .ticker-value {
+      color: var(--text);
+      font-weight: 700;
+      font-size: 0.85rem;
+    }
+
+    .ticker-change {
+      font-size: 0.65rem;
+      font-weight: 600;
+    }
+
+    .ticker-change.up   { color: var(--green); }
+    .ticker-change.down { color: var(--red); }
+
+    .ticker-sep {
+      color: var(--border2);
+      flex-shrink: 0;
+    }
 
     /* Ticker bar */
     .ticker-bar {
@@ -1392,6 +1455,10 @@
     <img src="logo.png" alt="PulseFlat Logo" style="width: 120px; height: 120px; border-radius: 16px; box-shadow: 0 0 30px rgba(0, 212, 255, 0.25); border: 1px solid rgba(0, 212, 255, 0.15);">
   </div>
 
+  <div id="market-ticker" class="market-ticker" style="display: none;">
+    <div class="market-ticker-track" id="market-ticker-track"></div>
+  </div>
+
   <div class="ticker-bar">
     <span class="status-dot"></span>
     Atualização automática · Seg–Sex · 06h às 23h BRT
@@ -1768,6 +1835,7 @@
 
 <script src="./data/last_updates.js"></script>
 <script src="./data/pipeline_status.js"></script>
+<script src="./data/market_latest.js"></script>
 <script>
   let activeSourceFilter = 'all';
   let activeSearchQuery = '';
@@ -2412,6 +2480,40 @@
     }
   }
 
+  // Load and render market ticker indicators dynamically
+  async function loadMarketLatest() {
+    let data = window.PULSEFLAT_MARKET_LATEST;
+    if (!data) {
+      try {
+        const r = await fetch('./data/market_latest.json');
+        if (r.ok) data = await r.json();
+      } catch (e) {
+        console.warn('Falha ao carregar market_latest.json:', e);
+      }
+    }
+    if (!data || !data.length) return;
+
+    const track = document.getElementById('market-ticker-track');
+    const container = document.getElementById('market-ticker');
+    if (!track || !container) return;
+
+    function itemHTML(d) {
+      const arrow = d.type === 'up' ? '▲' : d.type === 'down' ? '▼' : '—';
+      const change = d.change
+        ? `<span class="ticker-change ${d.type}">${d.change}</span>`
+        : '';
+      return `<div class="ticker-item">
+        <span class="ticker-label">${arrow} ${d.label}</span>
+        <span class="ticker-value">${d.value}</span>
+        ${change}
+      </div>
+      <span class="ticker-sep">·</span>`;
+    }
+
+    track.innerHTML = data.map(itemHTML).join('').repeat(2);
+    container.style.display = '';
+  }
+
   document.addEventListener('DOMContentLoaded', async () => {
     await loadAndRenderDatasets();
     await loadLastUpdates();
@@ -2419,6 +2521,7 @@
     initDatasetFilters();
     initPandasCopyButtons();
     await loadPipelineStatus();
+    await loadMarketLatest();
   });
 </script>
 </body>

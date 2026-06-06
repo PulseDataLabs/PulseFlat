@@ -20,6 +20,7 @@ SCRIPTS = [
     ("migrate_portfolio_numbers", SCRIPTS_DIR / "migrate_portfolio_numbers.py"),
     ("populate_last_updates", SCRIPTS_DIR / "populate_last_updates.py"),
     ("generate_catalog", SCRIPTS_DIR / "generate_catalog.py"),
+    ("generate_market_latest", SCRIPTS_DIR / "generate_market_latest.py"),
 ]
 RUN_ALL = Path(__file__).resolve().parents[2] / "run_all.py"
 

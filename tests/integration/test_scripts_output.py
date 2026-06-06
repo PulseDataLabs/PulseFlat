@@ -20,6 +20,7 @@ SCRIPTS = [
     ("migrate_portfolio_numbers", SCRIPTS_DIR / "migrate_portfolio_numbers.py"),
     ("populate_last_updates", SCRIPTS_DIR / "populate_last_updates.py"),
     ("generate_catalog", SCRIPTS_DIR / "generate_catalog.py"),
+    ("generate_market_latest", SCRIPTS_DIR / "generate_market_latest.py"),
 ]
 
 
@@ -57,7 +58,7 @@ class TestSectionOutput:
         assert "──" in result.stdout
 
     @pytest.mark.parametrize("name,path", [
-        (n, p) for n, p in SCRIPTS if n != "generate_catalog"
+        (n, p) for n, p in SCRIPTS if n not in ("generate_catalog", "generate_market_latest")
     ])
     def test_section_has_processando(self, name, path):
         result = run_script(path, "--dry-run", "--no-color")

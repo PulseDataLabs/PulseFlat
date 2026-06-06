@@ -97,7 +97,7 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "b3_bdi_di_over.csv": {
     "min": "2026-06-01",
-    "max": "2026-06-05"
+    "max": "2026-06-06"
   },
   "debentures_mercado_secundario_precos_negociacao.csv": {
     "min": "2026-06-06",

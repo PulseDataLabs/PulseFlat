@@ -469,6 +469,13 @@ def main(
         except Exception as e:
             print(yellow(f"  ⚠  Não foi possível regenerar o catálogo: {e}"))
 
+        try:
+            from scripts.generate_market_latest import generate as gen_market
+            gen_market()
+            print(f"  {dim('📈 market_latest.json atualizado')}")
+        except Exception as e:
+            print(yellow(f"  ⚠  Não foi possível gerar market_latest: {e}"))
+
     # Tabela resumo final
     _summary_table(results, registry, total_elapsed)
 
