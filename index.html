@@ -1640,10 +1640,21 @@
     <p class="section-desc reveal">Todos os CSVs seguem o padrão: UTF-8, separador vírgula, decimal ponto, datas YYYY-MM-DD.</p>
 
     <!-- Busca de Schemas -->
-    <div class="schema-search-container reveal" style="margin-bottom: 2rem; display: flex; justify-content: center; width: 100%;">
+    <div class="schema-search-container reveal" style="margin-bottom: 1.5rem; display: flex; justify-content: center; width: 100%;">
       <div class="search-wrapper" style="position: relative; width: 100%; max-width: 500px;">
         <input type="text" id="schema-search" placeholder="🔍 Pesquisar colunas (ex: cnpj, taxa, valor, data...)" aria-label="Pesquisar colunas dos schemas" style="width: 100%; padding: 0.75rem 1.5rem; border-radius: 30px; border: 1px solid var(--border); background: var(--bg2); color: var(--text1); font-size: 0.95rem; outline: none; transition: all 0.3s;" />
       </div>
+    </div>
+
+    <div class="datasets-filter reveal" style="margin-bottom: 2rem;">
+      <button class="filter-btn active" data-source="all" aria-pressed="true">🌐 Todas as Fontes</button>
+      <button class="filter-btn" data-source="anbima" aria-pressed="false">◈ ANBIMA</button>
+      <button class="filter-btn" data-source="b3" aria-pressed="false">◉ B3</button>
+      <button class="filter-btn" data-source="cvm" aria-pressed="false">⬢ CVM</button>
+      <button class="filter-btn" data-source="bcb" aria-pressed="false">◆ Banco Central</button>
+      <button class="filter-btn" data-source="ibge" aria-pressed="false">⬡ IBGE</button>
+      <button class="filter-btn" data-source="debentures" aria-pressed="false">❖ SND (Debêntures)</button>
+      <button class="filter-btn" data-source="misc" aria-pressed="false">⚡ Outros</button>
     </div>
 
     <div class="schema-grid reveal" id="schema-grid">
@@ -2123,6 +2134,7 @@
   // Schema filter function
   function applySchemaFilters() {
     const schemaCards = document.querySelectorAll('.schema-card');
+    let anyVisible = false;
     schemaCards.forEach(card => {
       const cardSource = card.getAttribute('data-source-mapped');
       const sourceMatch = (activeSourceFilter === 'all' || cardSource === activeSourceFilter);
@@ -2137,17 +2149,49 @@
         searchMatch = text.includes(activeSchemaSearchQuery);
       }
       
-      if (sourceMatch && searchMatch) {
+      const visible = sourceMatch && searchMatch;
+      if (visible) {
         card.classList.remove('filtered-out');
         card.style.opacity = '0';
         setTimeout(() => {
           card.style.opacity = '1';
           card.style.transition = 'opacity 0.3s ease';
         }, 10);
+        anyVisible = true;
       } else {
         card.classList.add('filtered-out');
       }
     });
+    
+    const grid = document.getElementById('schema-grid');
+    let emptyMsg = document.getElementById('schema-empty-state');
+    if (!anyVisible && schemaCards.length > 0) {
+      if (!emptyMsg) {
+        emptyMsg = document.createElement('div');
+        emptyMsg.id = 'schema-empty-state';
+        emptyMsg.className = 'empty-state';
+        emptyMsg.style.cssText = 'grid-column: 1 / -1;';
+        emptyMsg.innerHTML = `
+          <div class="empty-state-icon">🔍</div>
+          <div class="empty-state-title">Nenhuma estrutura encontrada</div>
+          <div class="empty-state-desc">Nenhum schema corresponde ao filtro ou busca atual. Tente alterar a fonte ou limpar os termos.</div>
+          <button class="empty-state-btn" id="schema-clear-filters-btn">Limpar filtros</button>
+        `;
+        grid.appendChild(emptyMsg);
+        document.getElementById('schema-clear-filters-btn').addEventListener('click', () => {
+          const s = document.getElementById('schema-search');
+          if (s) { s.value = ''; activeSchemaSearchQuery = ''; }
+          document.querySelectorAll('.filter-btn').forEach(b => { b.classList.remove('active'); b.setAttribute('aria-pressed', 'false'); });
+          const a = document.querySelector('.filter-btn[data-source="all"]');
+          if (a) { a.classList.add('active'); a.setAttribute('aria-pressed', 'true'); }
+          activeSourceFilter = 'all';
+          applySchemaFilters();
+        });
+      }
+      emptyMsg.style.display = '';
+    } else if (emptyMsg) {
+      emptyMsg.style.display = 'none';
+    }
   }
 
   // Load and render schemas dynamically
