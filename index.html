@@ -2502,7 +2502,8 @@
       const change = d.change
         ? `<span class="ticker-change ${d.type}">${d.change}</span>`
         : '';
-      return `<div class="ticker-item">
+      const refDate = d.reference_date ? `Referência: ${d.reference_date}` : '';
+      return `<div class="ticker-item" title="${refDate}">
         <span class="ticker-label">${arrow} ${d.label}</span>
         <span class="ticker-value">${d.value}</span>
         ${change}
