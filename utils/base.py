@@ -102,12 +102,17 @@ HEADERS_HTTP = {
 
 
 def get_logger(name: str) -> logging.Logger:
-    logging.basicConfig(
-        level=logging.INFO,
-        format="%(asctime)s [%(levelname)s] %(name)s — %(message)s",
-        handlers=[logging.StreamHandler(sys.stdout)],
-    )
-    return logging.getLogger(name)
+    """Retorna um logger. Usa ColorLogger de scripts.utils.ux se disponível."""
+    try:
+        from scripts.utils.ux import ColorLogger
+        return ColorLogger(name)
+    except Exception:
+        logging.basicConfig(
+            level=logging.INFO,
+            format="%(asctime)s [%(levelname)s] %(name)s — %(message)s",
+            handlers=[logging.StreamHandler(sys.stdout)],
+        )
+        return logging.getLogger(name)
 
 
 def agora_brt() -> tuple[str, str]:
@@ -147,6 +152,11 @@ def read_existing_header(arquivo: Path) -> list[str]:
         return []
 
 
+def _salvar_csv_logger():
+    from scripts.utils.ux import ColorLogger
+    return ColorLogger("utils.salvar_csv")
+
+
 def salvar_csv(
     arquivo: Path,
     registros: list[dict],
@@ -167,7 +177,7 @@ def salvar_csv(
       `data_captura` dos novos dados (dedup simples por dia).
       - O histórico de dias anteriores é sempre preservado integralmente.
     """
-    log = get_logger("utils.salvar_csv")
+    log = _salvar_csv_logger()
 
     if not registros:
         log.warning("Nenhum registro para salvar — abortando.")

@@ -1,7 +1,11 @@
-import logging
+import sys
+import time
 from pathlib import Path
 import pandas as pd
 from utils import salvar_csv, agora_brt
+
+from scripts.utils.ux import ColorLogger, banner, print_start, print_done, print_fail
+
 
 class BaseScraper:
     name: str = ""
@@ -26,7 +30,7 @@ class BaseScraper:
     def __init__(self):
         if not self.name:
             self.name = self.__class__.__name__.lower().replace("scraper", "")
-        self.logger = logging.getLogger(self.name)
+        self.logger = ColorLogger(self.name)
         root_dir = Path(__file__).resolve().parents[2]
         self.output_file = root_dir / "data" / f"{self.name}.csv"
 
@@ -34,22 +38,24 @@ class BaseScraper:
         raise NotImplementedError("Cada scraper deve implementar o método fetch.")
 
     def run(self) -> None:
-        self.logger.info(f"Iniciando scraper: {self.name}")
+        is_pipeline = any("run_all" in str(getattr(m, "__file__", "")) for m in sys.modules.values())
+
+        if not is_pipeline:
+            banner(self.title or self.name.replace("_", " ").title())
+
+        t0 = time.time()
         try:
             df = self.fetch()
             if df is None or (isinstance(df, pd.DataFrame) and df.empty):
                 self.logger.warning("Nenhum dado retornado para salvar.")
                 return
 
-            # Certifica de que a coluna de data de captura existe
             if "data_captura" not in df.columns and "dt_captura" not in df.columns:
                 data_captura, _ = agora_brt()
                 df.insert(0, "data_captura", data_captura)
 
-            # Limpa NaN para strings vazias
             df_cleaned = df.fillna("")
 
-            # Formata tipos e limpa dados (datas e números BR)
             import re
 
             def clean_value(val):
@@ -59,7 +65,6 @@ class BaseScraper:
                 if not val_str:
                     return ""
 
-                # 1. Limpa formatos de data BR (DD/MM/YYYY -> YYYY-MM-DD)
                 match = re.match(r'^(\d{2})/(\d{2})/(\d{4})$', val_str)
                 if match:
                     d, m, y = match.groups()
@@ -69,7 +74,6 @@ class BaseScraper:
                     d, m, y = match_short.groups()
                     return f"20{y}-{m}-{d}"
 
-                # 2. Limpa formatos numéricos BR (5,3656 -> 5.3656)
                 if ',' in val_str and val_str.count(',') == 1:
                     clean_num = val_str.replace('.', '').replace(',', '').replace('%', '').replace('-', '').replace('+', '').strip()
                     if clean_num.isdigit():
@@ -89,7 +93,6 @@ class BaseScraper:
             registros = df_cleaned.to_dict(orient="records")
             cabecalho = list(df_cleaned.columns)
 
-            # Garante que data_captura esteja preenchido para salvamento correto
             data_captura, _ = agora_brt()
             for r in registros:
                 if "data_captura" not in r:
@@ -109,6 +112,11 @@ class BaseScraper:
                 acumular=self.accumulate,
             )
 
+            elapsed = time.time() - t0
+            if not is_pipeline:
+                print_done(f"{len(registros)} registros salvos em {self.output_file.name}", elapsed=elapsed)
+
         except Exception as e:
+            elapsed = time.time() - t0
             self.logger.error(f"Erro ao executar scraper {self.name}: {e}", exc_info=True)
             raise e
