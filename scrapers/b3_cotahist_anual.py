@@ -69,14 +69,14 @@ class B3CotahistAnualScraper(BaseScraper):
     chaves_dedup = ['data_captura', 'conjunto', 'registro_hash']
     
     # Catálogo de Metadados
-    title = 'B3 Cotahist Anual'
-    description = 'Dados capturados.'
-    icon = '📊'
-    icon_class = 'icon-misc'
+    title = 'B3 — COTAHIST Anual'
+    description = 'Cotações históricas anuais de todos os ativos da B3 no formato COTAHIST de largura fixa — mesmo conteúdo do diário, consolidado por ano para backfill histórico.'
+    icon = '📅'
+    icon_class = 'icon-b3'
     badge = 'Diário'
     badge_class = 'badge-daily'
-    tags = ['b3']
-    source = 'B3'
+    tags = ['cotações anual', 'histórico', 'fwf', 'b3']
+    source = 'B3 · COTAHIST'
 
     def fetch(self) -> pd.DataFrame:
         log.info("=== B3 — COTAHIST Anual ===")

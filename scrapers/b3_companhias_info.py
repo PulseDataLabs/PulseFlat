@@ -71,14 +71,14 @@ class B3CompanhiasInfoScraper(BaseScraper):
     chaves_dedup = ['data_captura', 'conjunto', 'registro_hash']
     
     # Catálogo de Metadados
-    title = 'B3 Companhias Info'
-    description = 'Dados capturados.'
-    icon = '📊'
-    icon_class = 'icon-misc'
+    title = 'B3 — Informações de Companhias'
+    description = 'Informações complementares e proventos (dividendos em dinheiro, bonificações em ações, subscrições) de todas as companhias listadas na B3.'
+    icon = '📋'
+    icon_class = 'icon-b3'
     badge = 'Diário'
     badge_class = 'badge-daily'
-    tags = ['b3']
-    source = 'B3'
+    tags = ['proventos', 'dividendos', 'subscrições', 'b3']
+    source = 'B3 API'
 
     def fetch(self) -> pd.DataFrame:
         log.info("=== B3 — Informações de Companhias Listadas ===")

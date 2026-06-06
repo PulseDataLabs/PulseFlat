@@ -64,14 +64,14 @@ class B3CompanhiasDetalhesScraper(BaseScraper):
     chaves_dedup = ['data_captura', 'conjunto', 'registro_hash']
     
     # Catálogo de Metadados
-    title = 'B3 Companhias Detalhes'
-    description = 'Dados capturados.'
-    icon = '📊'
-    icon_class = 'icon-misc'
+    title = 'B3 — Detalhes de Companhias'
+    description = 'Detalhes cadastrais completos das companhias listadas na B3 via API JSON: segmento de listagem, CNPJ, setor, código CVM e dados de registro.'
+    icon = '🏢'
+    icon_class = 'icon-b3'
     badge = 'Diário'
     badge_class = 'badge-daily'
-    tags = ['b3']
-    source = 'B3'
+    tags = ['companhias', 'cadastro', 'cnpj', 'setor']
+    source = 'B3 API'
 
     def fetch(self) -> pd.DataFrame:
         log.info("=== B3 — Detalhes de Companhias Listadas ===")

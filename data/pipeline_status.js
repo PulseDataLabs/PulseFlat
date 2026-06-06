@@ -1,6 +1,6 @@
 window.PULSEFLAT_PIPELINE_STATUS = {
-  "timestamp": "2026-06-05T18:31:09.923770",
-  "elapsed_seconds": 212.451331615448,
+  "timestamp": "2026-06-05T22:30:49.133723",
+  "elapsed_seconds": 37.797361850738525,
   "status": "success",
   "summary": {
     "total": 41,
@@ -11,9 +11,9 @@ window.PULSEFLAT_PIPELINE_STATUS = {
   "scrapers": {
     "onu_pacto_global": {
       "status": "success",
-      "elapsed_seconds": 40.10682916641235,
+      "elapsed_seconds": 37.796841859817505,
       "error": null,
-      "timestamp": "2026-06-05T18:31:09.924295"
+      "timestamp": "2026-06-05T22:30:49.134101"
     },
     "anbima_indicadores": {
       "status": "success",
@@ -197,9 +197,9 @@ window.PULSEFLAT_PIPELINE_STATUS = {
     },
     "bcb_ptax": {
       "status": "success",
-      "elapsed_seconds": 0.27043724060058594,
+      "elapsed_seconds": 0.14699697494506836,
       "error": null,
-      "timestamp": "2026-06-05T18:31:09.924295"
+      "timestamp": "2026-06-05T22:21:35.816683"
     },
     "bcb_sgs": {
       "status": "success",
@@ -233,9 +233,9 @@ window.PULSEFLAT_PIPELINE_STATUS = {
     },
     "ibge_sidra": {
       "status": "success",
-      "elapsed_seconds": 4.037368059158325,
+      "elapsed_seconds": 0.7463150024414062,
       "error": null,
-      "timestamp": "2026-06-05T18:31:09.924295"
+      "timestamp": "2026-06-05T19:47:21.209705"
     },
     "cvm_fundos_informe_diario": {
       "status": "success",

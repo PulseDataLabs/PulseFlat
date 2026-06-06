@@ -61,14 +61,14 @@ class B3NegociosBalcaoScraper(BaseScraper):
     chaves_dedup = ['data_captura', 'conjunto', 'registro_hash']
     
     # Catálogo de Metadados
-    title = 'B3 Negocios Balcao'
-    description = 'Dados capturados.'
-    icon = '📊'
-    icon_class = 'icon-misc'
+    title = 'B3 — Negócios de Balcão (OTC)'
+    description = 'Negócios realizados em mercado de balcão da B3, incluindo operações com instrumentos de renda fixa, derivativos e títulos fora do ambiente de bolsa.'
+    icon = '🤝'
+    icon_class = 'icon-b3'
     badge = 'Diário'
     badge_class = 'badge-daily'
-    tags = ['b3']
-    source = 'B3'
+    tags = ['otc', 'balcão', 'negócios', 'b3']
+    source = 'B3 · OTC'
 
     def fetch(self) -> pd.DataFrame:
         log.info("=== B3 — Negócios de Balcão (OTC) ===")

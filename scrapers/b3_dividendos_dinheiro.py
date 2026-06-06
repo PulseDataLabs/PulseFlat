@@ -73,14 +73,14 @@ class B3DividendosDinheiroScraper(BaseScraper):
     chaves_dedup = ['data_captura', 'conjunto', 'registro_hash']
     
     # Catálogo de Metadados
-    title = 'B3 Dividendos Dinheiro'
-    description = 'Dados capturados.'
-    icon = '📊'
-    icon_class = 'icon-misc'
+    title = 'B3 — Dividendos em Dinheiro'
+    description = 'Histórico completo de dividendos em dinheiro pagos por companhias listadas na B3: valor por ação, data de pagamento, data ex e tipo de provento.'
+    icon = '💰'
+    icon_class = 'icon-b3'
     badge = 'Diário'
     badge_class = 'badge-daily'
-    tags = ['b3']
-    source = 'B3'
+    tags = ['dividendos', 'proventos', 'dinheiro', 'b3']
+    source = 'B3 API'
 
     def fetch(self) -> pd.DataFrame:
         log.info("=== B3 — Dividendos em Dinheiro ===")

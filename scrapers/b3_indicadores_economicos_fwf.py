@@ -67,14 +67,14 @@ class B3IndicadoresEconomicosFwfScraper(BaseScraper):
     chaves_dedup = ['data_captura', 'conjunto', 'registro_hash']
     
     # Catálogo de Metadados
-    title = 'B3 Indicadores Economicos Fwf'
-    description = 'Dados capturados.'
+    title = 'B3 — Indicadores Econômicos'
+    description = 'Indicadores macroeconômicos diários divulgados pela B3 em formato de largura fixa (FWF): taxas de juros, índices de inflação e parâmetros de mercado.'
     icon = '📊'
-    icon_class = 'icon-misc'
+    icon_class = 'icon-b3'
     badge = 'Diário'
     badge_class = 'badge-daily'
-    tags = ['b3']
-    source = 'B3'
+    tags = ['indicadores', 'macroeconômicos', 'fwf', 'b3']
+    source = 'B3 · FWF'
 
     def fetch(self) -> pd.DataFrame:
         log.info("=== B3 — Indicadores Econômicos (FWF) ===")

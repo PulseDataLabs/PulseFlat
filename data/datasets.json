@@ -210,76 +210,6 @@
     "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_classificacao_setorial.csv"
   },
   {
-    "title": "B3 Companhias Detalhes",
-    "file": "b3_companhias_detalhes.csv",
-    "description": "Dados capturados.",
-    "icon": "📊",
-    "iconClass": "icon-misc",
-    "badge": "Diário",
-    "badgeClass": "badge-daily",
-    "tags": [
-      "b3"
-    ],
-    "source": "B3",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_companhias_detalhes.csv"
-  },
-  {
-    "title": "B3 Companhias Info",
-    "file": "b3_companhias_info.csv",
-    "description": "Dados capturados.",
-    "icon": "📊",
-    "iconClass": "icon-misc",
-    "badge": "Diário",
-    "badgeClass": "badge-daily",
-    "tags": [
-      "b3"
-    ],
-    "source": "B3",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_companhias_info.csv"
-  },
-  {
-    "title": "B3 Cotahist Anual",
-    "file": "b3_cotahist_anual.csv",
-    "description": "Dados capturados.",
-    "icon": "📊",
-    "iconClass": "icon-misc",
-    "badge": "Diário",
-    "badgeClass": "badge-daily",
-    "tags": [
-      "b3"
-    ],
-    "source": "B3",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_cotahist_anual.csv"
-  },
-  {
-    "title": "B3 Cotahist Diario",
-    "file": "b3_cotahist_diario.csv",
-    "description": "Dados capturados.",
-    "icon": "📊",
-    "iconClass": "icon-misc",
-    "badge": "Diário",
-    "badgeClass": "badge-daily",
-    "tags": [
-      "b3"
-    ],
-    "source": "B3",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_cotahist_diario.csv"
-  },
-  {
-    "title": "B3 Dividendos Dinheiro",
-    "file": "b3_dividendos_dinheiro.csv",
-    "description": "Dados capturados.",
-    "icon": "📊",
-    "iconClass": "icon-misc",
-    "badge": "Diário",
-    "badgeClass": "badge-daily",
-    "tags": [
-      "b3"
-    ],
-    "source": "B3",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_dividendos_dinheiro.csv"
-  },
-  {
     "title": "B3 Futuros — Ajustes de Fechamento",
     "file": "b3_futuros_ajustes.csv",
     "description": "Preços de ajuste de fechamento diários para contratos futuros de juros (DI), dólar, índice Ibovespa e commodities.",
@@ -296,34 +226,6 @@
     ],
     "source": "B3",
     "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_futuros_ajustes.csv"
-  },
-  {
-    "title": "B3 Indicadores Economicos Fwf",
-    "file": "b3_indicadores_economicos_fwf.csv",
-    "description": "Dados capturados.",
-    "icon": "📊",
-    "iconClass": "icon-misc",
-    "badge": "Diário",
-    "badgeClass": "badge-daily",
-    "tags": [
-      "b3"
-    ],
-    "source": "B3",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_indicadores_economicos_fwf.csv"
-  },
-  {
-    "title": "B3 Negocios Balcao",
-    "file": "b3_negocios_balcao.csv",
-    "description": "Dados capturados.",
-    "icon": "📊",
-    "iconClass": "icon-misc",
-    "badge": "Diário",
-    "badgeClass": "badge-daily",
-    "tags": [
-      "b3"
-    ],
-    "source": "B3",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_negocios_balcao.csv"
   },
   {
     "title": "B3 — Títulos Negociáveis",
@@ -598,6 +500,57 @@
     "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_capital_social_empresas.csv"
   },
   {
+    "title": "B3 — Detalhes de Companhias",
+    "file": "b3_companhias_detalhes.csv",
+    "description": "Detalhes cadastrais completos das companhias listadas na B3 via API JSON: segmento de listagem, CNPJ, setor, código CVM e dados de registro.",
+    "icon": "🏢",
+    "iconClass": "icon-b3",
+    "badge": "Diário",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "companhias",
+      "cadastro",
+      "cnpj",
+      "setor"
+    ],
+    "source": "B3 API",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_companhias_detalhes.csv"
+  },
+  {
+    "title": "B3 — Dividendos em Dinheiro",
+    "file": "b3_dividendos_dinheiro.csv",
+    "description": "Histórico completo de dividendos em dinheiro pagos por companhias listadas na B3: valor por ação, data de pagamento, data ex e tipo de provento.",
+    "icon": "💰",
+    "iconClass": "icon-b3",
+    "badge": "Diário",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "dividendos",
+      "proventos",
+      "dinheiro",
+      "b3"
+    ],
+    "source": "B3 API",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_dividendos_dinheiro.csv"
+  },
+  {
+    "title": "B3 — Informações de Companhias",
+    "file": "b3_companhias_info.csv",
+    "description": "Informações complementares e proventos (dividendos em dinheiro, bonificações em ações, subscrições) de todas as companhias listadas na B3.",
+    "icon": "📋",
+    "iconClass": "icon-b3",
+    "badge": "Diário",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "proventos",
+      "dividendos",
+      "subscrições",
+      "b3"
+    ],
+    "source": "B3 API",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_companhias_info.csv"
+  },
+  {
     "title": "B3 — Séries Históricas RF",
     "file": "b3_series_historicas.csv",
     "description": "Dados de negociações consolidadas e histórico de ativos de renda fixa negociados e registrados no ambiente B3.",
@@ -763,6 +716,75 @@
     ],
     "source": "B3 · BDI",
     "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_bdi_di_over.csv"
+  },
+  {
+    "title": "B3 — COTAHIST Anual",
+    "file": "b3_cotahist_anual.csv",
+    "description": "Cotações históricas anuais de todos os ativos da B3 no formato COTAHIST de largura fixa — mesmo conteúdo do diário, consolidado por ano para backfill histórico.",
+    "icon": "📅",
+    "iconClass": "icon-b3",
+    "badge": "Diário",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "cotações anual",
+      "histórico",
+      "fwf",
+      "b3"
+    ],
+    "source": "B3 · COTAHIST",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_cotahist_anual.csv"
+  },
+  {
+    "title": "B3 — COTAHIST Diário",
+    "file": "b3_cotahist_diario.csv",
+    "description": "Cotações históricas diárias de todos os ativos da B3 (ações, BDRs, ETFs, FIIs) no formato COTAHIST de largura fixa, incluindo abertura, máxima, mínima, média, fechamento, volume e quantidade de negócios.",
+    "icon": "📊",
+    "iconClass": "icon-b3",
+    "badge": "Diário",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "cotações",
+      "ações",
+      "abertura/fechamento",
+      "volume",
+      "fwf"
+    ],
+    "source": "B3 · COTAHIST",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_cotahist_diario.csv"
+  },
+  {
+    "title": "B3 — Indicadores Econômicos",
+    "file": "b3_indicadores_economicos_fwf.csv",
+    "description": "Indicadores macroeconômicos diários divulgados pela B3 em formato de largura fixa (FWF): taxas de juros, índices de inflação e parâmetros de mercado.",
+    "icon": "📊",
+    "iconClass": "icon-b3",
+    "badge": "Diário",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "indicadores",
+      "macroeconômicos",
+      "fwf",
+      "b3"
+    ],
+    "source": "B3 · FWF",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_indicadores_economicos_fwf.csv"
+  },
+  {
+    "title": "B3 — Negócios de Balcão (OTC)",
+    "file": "b3_negocios_balcao.csv",
+    "description": "Negócios realizados em mercado de balcão da B3, incluindo operações com instrumentos de renda fixa, derivativos e títulos fora do ambiente de bolsa.",
+    "icon": "🤝",
+    "iconClass": "icon-b3",
+    "badge": "Diário",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "otc",
+      "balcão",
+      "negócios",
+      "b3"
+    ],
+    "source": "B3 · OTC",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_negocios_balcao.csv"
   },
   {
     "title": "BCB PTAX",
