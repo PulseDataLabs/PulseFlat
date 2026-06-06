@@ -52,18 +52,23 @@ class BacenConglomeradosScraper(BaseScraper):
     phase = 1
 
     def fetch(self) -> pd.DataFrame:
+        from scripts.utils.ux import print_done, print_warn
+
         session = requests.Session()
 
-        # Tenta o mês anterior; se não disponível, tenta mais um mês atrás
         hoje = datetime.date.today()
+        content = None
         for meses_atras in (1, 2, 3):
             ref = hoje - relativedelta(months=meses_atras)
             yyyymm = ref.strftime("%Y%m")
-            self.logger.info(f"Tentando arquivo {yyyymm}CONGLOMERADO.zip")
-            content = _try_download(session, yyyymm)
-            if content:
+            t0 = time.time()
+            c = _try_download(session, yyyymm)
+            if c:
+                print_done(f"encontrado {yyyymm}CONGLOMERADO.zip", elapsed=time.time() - t0)
+                content = c
                 break
-        else:
+            print_warn(f"{yyyymm}CONGLOMERADO.zip não disponível", elapsed=time.time() - t0)
+        if not content:
             raise RuntimeError("Nenhum arquivo de conglomerados disponível nos últimos 3 meses.")
 
         # Extrai XLSX do ZIP em memória

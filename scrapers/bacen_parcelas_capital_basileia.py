@@ -78,9 +78,8 @@ def _get_periodos_recentes(n_trimestres: int = 4) -> list[int]:
 
 
 def _download_relatorio_odata(
-    session: requests.Session, periodo: int, tipo_codigo: int, logger
+    session: requests.Session, periodo: int, tipo_codigo: int,
 ) -> pd.DataFrame:
-    """Baixa os dados de um relatório via OData API."""
     params = {
         "@AnoMes": str(periodo),
         "@TipoInstituicao": str(tipo_codigo),
@@ -88,28 +87,21 @@ def _download_relatorio_odata(
         "$format": "text/csv",
     }
     url = ODATA_BASE
-    logger.info(f"  Consultando OData: periodo={periodo}, tipo={tipo_codigo}")
     resp = session.get(url, params=params, headers=HEADERS, timeout=120)
 
     if resp.status_code == 404:
-        logger.warning(f"  Período {periodo} não disponível (404)")
         return pd.DataFrame()
     if resp.status_code != 200:
-        logger.warning(f"  Status {resp.status_code} para periodo={periodo}")
         return pd.DataFrame()
 
     content = resp.text.strip()
     if not content or "<!DOCTYPE" in content[:100]:
-        logger.warning(f"  Resposta vazia ou HTML para periodo={periodo}")
         return pd.DataFrame()
 
     try:
-        df = pd.read_csv(StringIO(content))
-    except Exception as e:
-        logger.warning(f"  Erro ao parsear CSV: {e}")
+        return pd.read_csv(StringIO(content))
+    except Exception:
         return pd.DataFrame()
-
-    return df
 
 
 class BacenParcelasCapitalBasileiaScraper(BaseScraper):
@@ -119,40 +111,30 @@ class BacenParcelasCapitalBasileiaScraper(BaseScraper):
     phase = 1
 
     def fetch(self) -> pd.DataFrame:
+        from scripts.utils.ux import print_done, print_warn
+
         session = requests.Session()
 
-        # Tenta os últimos 4 trimestres
         periodos = _get_periodos_recentes(4)
-        self.logger.info(f"Períodos a consultar: {periodos}")
 
         frames = []
         for periodo in periodos:
             for tipo in TIPOS_INST:
-                self.logger.info(
-                    f"Baixando: periodo={periodo}, tipo={tipo['label']}"
-                )
+                t0 = time.time()
                 df = _download_relatorio_odata(
-                    session, periodo, tipo["codigo"], self.logger
+                    session, periodo, tipo["codigo"],
                 )
                 if df.empty:
-                    self.logger.warning(
-                        f"Sem dados para {tipo['label']} em {periodo}"
-                    )
+                    print_warn(f"sem dados: {tipo['label']} {periodo}", elapsed=time.time() - t0)
                     continue
 
-                # Adiciona colunas de contexto
                 df["tipo_instituicao_label"] = tipo["label"]
                 frames.append(df)
+                print_done(f"{tipo['label']} {periodo}", elapsed=time.time() - t0)
 
-                # Rate limiting: espera 1s entre requisições
                 time.sleep(1)
 
-            # Se já temos dados do período mais recente, podemos parar
             if frames:
-                self.logger.info(
-                    f"Dados obtidos para periodo={periodo}. "
-                    "Finalizando coleta."
-                )
                 break
 
         if not frames:
@@ -161,9 +143,7 @@ class BacenParcelasCapitalBasileiaScraper(BaseScraper):
                 "Verifique se a API está disponível."
             )
 
-        df_final = pd.concat(frames, ignore_index=True)
-        self.logger.info(f"Total de {len(df_final)} registros obtidos.")
-        return df_final
+        return pd.concat(frames, ignore_index=True)
 
 
 if __name__ == "__main__":

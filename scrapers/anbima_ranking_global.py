@@ -12,6 +12,7 @@ requests seguindo os redirects, lê a aba "Pag 4 - Por Ativos RF" e
 import os
 import re
 import sys
+import time
 import datetime
 from io import BytesIO
 
@@ -144,18 +145,19 @@ class AnbimaRankingGlobalScraper(BaseScraper):
     phase = 1
 
     def fetch(self) -> pd.DataFrame:
+        from scripts.utils.ux import print_done, print_warn
+
         session = requests.Session()
 
+        t0 = time.time()
         download_url = _get_download_url(session)
-        self.logger.info(f"Baixando arquivo: {download_url}")
-
         resp = session.get(download_url, headers=HEADERS, timeout=120)
         resp.raise_for_status()
         content = resp.content
+        print_done("arquivo baixado", elapsed=time.time() - t0)
 
         file_name = download_url.split("/")[-1].split("?")[0]
         data_referencia = _extract_date_from_filename(file_name)
-        self.logger.info(f"Data de referência: {data_referencia}")
 
         engine = "xlrd" if content.startswith(b"\xd0\xcf\x11\xe0") else "openpyxl"
         xl = pd.ExcelFile(BytesIO(content), engine=engine)
@@ -163,18 +165,18 @@ class AnbimaRankingGlobalScraper(BaseScraper):
 
         dfs = []
         for sheet_name in sheets:
-            self.logger.info(f"Processando aba: {sheet_name}")
+            t0 = time.time()
             try:
                 sheet_df = _read_sheet(content, sheet_name, data_referencia)
                 dfs.append(sheet_df)
+                print_done(f"aba: {sheet_name}", elapsed=time.time() - t0)
             except Exception as e:
-                self.logger.error(f"Erro ao processar aba {sheet_name}: {e}")
+                print_warn(f"aba {sheet_name}: {e}", elapsed=time.time() - t0)
 
         if not dfs:
             raise RuntimeError("Nenhuma aba pôde ser processada com sucesso.")
 
-        df = pd.concat(dfs, ignore_index=True)
-        return df
+        return pd.concat(dfs, ignore_index=True)
 
 
 if __name__ == "__main__":

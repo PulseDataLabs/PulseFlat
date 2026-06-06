@@ -45,6 +45,8 @@ class B3SeriesHistoricasScraper(BaseScraper):
     phase = 1
 
     def fetch(self) -> pd.DataFrame:
+        from scripts.utils.ux import print_start, print_done, print_warn
+
         data_final = datetime.date.today()
         session = requests.Session()
         resp = None
@@ -54,8 +56,6 @@ class B3SeriesHistoricasScraper(BaseScraper):
                 data_inicial = data_final - datetime.timedelta(days=7)
                 dt_ini_str = data_inicial.strftime("%Y-%m-%d")
                 dt_fim_str = data_final.strftime("%Y-%m-%d")
-
-                self.logger.info(f"Tentativa {attempt + 1}: Período {dt_ini_str} → {dt_fim_str}")
 
                 params = {
                     "fileName": "ConsolidatedRecords",
@@ -67,24 +67,24 @@ class B3SeriesHistoricasScraper(BaseScraper):
 
                 retries_429 = 0
                 while True:
-                    time.sleep(6)  # Garante intervalo mínimo de 6s para evitar limite de taxa
+                    time.sleep(6)
                     resp = session.get(REQUEST_URL, params=params, headers=HEADERS, timeout=120)
                     if resp.status_code == 429 and retries_429 < 3:
                         retries_429 += 1
-                        self.logger.warning(f"Limite de requisições atingido (429). Aguardando 11 segundos (tentativa {retries_429}/3)...")
+                        print_warn(f"limite 429 ({retries_429}/3), aguardando 11s")
                         time.sleep(11)
                         continue
                     break
 
                 if resp.status_code == 404:
-                    self.logger.warning(f"Dados não disponíveis para {dt_fim_str}. Retrocedendo 1 dia...")
+                    print_warn(f"dados não disponíveis para {dt_fim_str}, retrocedendo 1 dia")
                     data_final -= datetime.timedelta(days=1)
                     time.sleep(1)
                     continue
                 resp.raise_for_status()
                 break
             else:
-                self.logger.warning("Não foi possível encontrar um período de dados disponível na B3.")
+                print_warn("nenhum período disponível na B3")
                 return pd.DataFrame()
 
             content_type = resp.headers.get("Content-Type", "")
@@ -92,7 +92,7 @@ class B3SeriesHistoricasScraper(BaseScraper):
                 data = resp.json()
                 token = data.get("token")
                 if not token:
-                    self.logger.warning(f"Token de download não encontrado na resposta: {data}")
+                    print_warn("token de download não encontrado")
                     return pd.DataFrame()
                 time.sleep(6)  # Garante intervalo mínimo para o download
                 resp = session.get(DOWNLOAD_URL, params={"token": token}, headers=HEADERS, timeout=120)
@@ -112,7 +112,7 @@ class B3SeriesHistoricasScraper(BaseScraper):
             df.insert(0, "dt_captura", data_final)
             return df
         except Exception as e:
-            self.logger.warning(f"Erro ao baixar séries históricas da B3: {e}")
+            print_warn(f"erro ao baixar: {e}")
             return pd.DataFrame()
 
 

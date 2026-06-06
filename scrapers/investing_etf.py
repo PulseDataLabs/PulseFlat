@@ -90,20 +90,16 @@ class InvestingEtfScraper(BaseScraper):
         from curl_cffi import requests
         session = requests.Session()
 
-        self.logger.info(f"Acessando {URL}")
         resp = session.get(URL, headers=HEADERS, impersonate="chrome", timeout=60)
         resp.raise_for_status()
 
         df = _parse_html_table(resp.text)
 
         if df.empty:
-            self.logger.warning(
-                "Tabela não encontrada no HTML estático. "
-                "A página pode exigir JavaScript. Retornando DataFrame vazio."
-            )
+            from scripts.utils.ux import print_warn
+            print_warn("tabela não encontrada — página pode exigir JavaScript")
             return pd.DataFrame(columns=["nome", "ticker", "link"])
 
-        self.logger.info(f"{len(df)} ETFs capturados.")
         return df
 
 

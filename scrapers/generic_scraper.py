@@ -63,7 +63,6 @@ def clean_csv_text(text: str) -> str:
         idx = 0
     
     if idx > 0:
-        log.info(f"Descartadas {idx} linhas de título descritivo do CSV.")
         return "\n".join(lines[idx:])
     return "\n".join(lines)
 
@@ -110,6 +109,8 @@ class GenericScraper(BaseScraper):
         super().__init__()
 
     def fetch(self) -> pd.DataFrame:
+        from scripts.utils.ux import print_done, print_warn
+
         url_template = self.res_config.get("url")
         file_name = self.res_config.get("file_name")
         type_response = self.res_config.get("type_response")
@@ -117,17 +118,17 @@ class GenericScraper(BaseScraper):
         dt = date_ref(None)
         url = replace_date_vars(url_template, dt)
 
-        self.logger.info(f"URL de download: {url}")
-
         session = nova_session()
         resp = None
+        t0 = time.time()
         for tentativa in range(1, 4):
             try:
                 resp = session.get(url, timeout=120)
                 resp.raise_for_status()
+                print_done("download concluído", elapsed=time.time() - t0)
                 break
             except Exception as e:
-                self.logger.warning(f"Tentativa {tentativa}/3 falhou: {e}")
+                print_warn(f"tentativa {tentativa}/3: {e}")
                 if tentativa == 3:
                     raise e
                 time.sleep(5)
@@ -137,7 +138,7 @@ class GenericScraper(BaseScraper):
 
         content = resp.content
         if content.strip() == b"null":
-            self.logger.warning(f"O servidor retornou 'null' para a URL {url}. Encerrando sem registros.")
+            print_warn("servidor retornou 'null' — encerrando sem registros")
             return pd.DataFrame()
 
         is_portfolio = self.resource_name.startswith("B3 - Carteira Teórica")
@@ -150,8 +151,7 @@ class GenericScraper(BaseScraper):
             try:
                 decoded_bytes = base64.b64decode(content_str)
             except Exception as e:
-                self.logger.error(f"Falha ao decodificar conteúdo base64: {e}")
-                sys.exit(1)
+                raise RuntimeError(f"Falha ao decodificar conteúdo base64: {e}")
             decoded_text = decode_bytes(decoded_bytes)
             
             base_name = Path(file_name).name
@@ -205,8 +205,7 @@ class GenericScraper(BaseScraper):
                 try:
                     decoded_bytes = base64.b64decode(content_str)
                 except Exception as e:
-                    self.logger.error(f"Falha ao decodificar conteúdo base64: {e}")
-                    sys.exit(1)
+                    raise RuntimeError(f"Falha ao decodificar conteúdo base64: {e}")
                 decoded_text = decode_bytes(decoded_bytes)
                 decoded_text = clean_csv_text(decoded_text)
                 rows = csv_rows(decoded_text)
@@ -217,11 +216,10 @@ class GenericScraper(BaseScraper):
             elif type_response == "zip":
                 rows = rows_from_zip(content)
             else:
-                self.logger.error(f"Tipo de resposta não suportado: {type_response}")
-                sys.exit(1)
+                raise RuntimeError(f"Tipo de resposta não suportado: {type_response}")
 
         if not rows:
-            self.logger.warning("Nenhum registro encontrado após o parsing.")
+            print_warn("nenhum registro encontrado após o parsing")
             return pd.DataFrame()
 
         if is_portfolio:

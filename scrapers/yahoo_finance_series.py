@@ -83,6 +83,8 @@ class YahooFinanceSeriesScraper(BaseScraper):
     phase = 1
 
     def fetch(self) -> pd.DataFrame:
+        from scripts.utils.ux import print_done, print_warn
+
         hoje = datetime.date.today()
         dt_fim = int(datetime.datetime.combine(hoje, datetime.time()).timestamp())
         dt_ini = int(
@@ -93,15 +95,17 @@ class YahooFinanceSeriesScraper(BaseScraper):
 
         session = requests.Session()
         frames = []
+        n = len(TICKERS)
 
-        for ticker, label in TICKERS:
-            self.logger.info(f"Baixando {ticker} ({label})")
+        for i, (ticker, label) in enumerate(TICKERS, 1):
+            t0 = time.time()
             try:
                 df = _fetch_ticker(session, ticker, label, dt_ini, dt_fim)
                 if not df.empty:
                     frames.append(df)
+                print_done(f"({i}/{n}) {ticker} ({label})", elapsed=time.time() - t0)
             except Exception as e:
-                self.logger.warning(f"Erro ao baixar {ticker}: {e}")
+                print_warn(f"({i}/{n}) {ticker}: {e}")
 
         session.close()
 

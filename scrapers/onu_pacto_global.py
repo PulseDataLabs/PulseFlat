@@ -60,85 +60,88 @@ class OnuPactoGlobalScraper(BaseScraper):
     accumulate = False  # Sobrescreve diariamente para manter a lista ativa atualizada
 
     def fetch(self) -> pd.DataFrame:
+        from scripts.utils.ux import print_start, print_done, print_warn, print_fail
+
         session = requests.Session()
         page = 1
         data_rows = []
 
-        self.logger.info("Iniciando captura de participantes do Pacto Global (Brasil)...")
-
         while True:
-            url = f"{BASE_URL}/what-is-gc/participants/search?page={page}&search%5Bcountries%5D%5B%5D=24&search%5Bper_page%5D=50"
-            self.logger.info(f"Processando página {page}: {url}")
-            
+            t0 = time.time()
+            url = (
+                f"{BASE_URL}/what-is-gc/participants/search"
+                f"?page={page}&search%5Bcountries%5D%5B%5D=24&search%5Bper_page%5D=50"
+            )
+
             try:
                 resp = session.get(url, headers=HEADERS, timeout=45)
-                if resp.status_code != 200:
-                    self.logger.error(f"Erro ao carregar página {page}: status {resp.status_code}")
-                    break
-                    
-                soup = BeautifulSoup(resp.text, "html.parser")
-                table = soup.find("table")
-                if not table:
-                    self.logger.warning(f"Nenhuma tabela encontrada na página {page}.")
-                    break
-                    
-                tbody = table.find("tbody")
-                if not tbody:
-                    self.logger.warning(f"Corpo da tabela vazio na página {page}.")
-                    break
-                    
-                rows = tbody.find_all("tr")
-                if not rows:
-                    self.logger.info("Fim dos dados encontrados.")
-                    break
-                    
-                for tr in rows:
-                    th_name = tr.find("th", class_="name")
-                    if not th_name:
-                        continue
-                        
-                    a_name = th_name.find("a")
-                    if not a_name:
-                        continue
-                        
-                    name = a_name.get_text(strip=True)
-                    href = a_name.get("href", "")
-                    profile_link = BASE_URL + href if href else ""
-                    
-                    td_type = tr.find("td", class_="type")
-                    type_val = td_type.get_text(strip=True) if td_type else ""
-                    
-                    td_sector = tr.find("td", class_="sector")
-                    sector_val = td_sector.get_text(strip=True) if td_sector else ""
-                    
-                    td_country = tr.find("td", class_="country")
-                    country_val = td_country.get_text(strip=True) if td_country else ""
-                    
-                    td_joined = tr.find("td", class_="joined-on")
-                    joined_val = td_joined.get_text(strip=True) if td_joined else ""
-                    
-                    data_rows.append({
-                        "name": name,
-                        "type": type_val,
-                        "sector": sector_val,
-                        "country": country_val,
-                        "joined_on": parse_un_date(joined_val),
-                        "link": profile_link
-                    })
-                
-                # Verifica paginação
-                next_el = soup.find(class_="next_page")
-                if next_el and next_el.name == "a" and next_el.get("href"):
-                    page += 1
-                    time.sleep(0.2)  # Delay para respeitar o servidor
-                else:
-                    self.logger.info("Última página alcançada.")
-                    break
-            except Exception as e:
-                self.logger.error(f"Exceção ao processar página {page}: {e}")
+            except requests.RequestException as e:
+                print_fail(f"página {page}: {e}", elapsed=time.time() - t0)
                 break
 
-        self.logger.info(f"Extração concluída. Total de {len(data_rows)} participantes capturados.")
+            if resp.status_code != 200:
+                print_fail(f"página {page}: status {resp.status_code}", elapsed=time.time() - t0)
+                break
+
+            soup = BeautifulSoup(resp.text, "html.parser")
+            table = soup.find("table")
+            if not table:
+                print_warn(f"página {page}: nenhuma tabela encontrada.")
+                break
+
+            tbody = table.find("tbody")
+            if not tbody:
+                print_warn(f"página {page}: corpo da tabela vazio.")
+                break
+
+            rows = tbody.find_all("tr")
+            if not rows:
+                break
+
+            for tr in rows:
+                th_name = tr.find("th", class_="name")
+                if not th_name:
+                    continue
+
+                a_name = th_name.find("a")
+                if not a_name:
+                    continue
+
+                name = a_name.get_text(strip=True)
+                href = a_name.get("href", "")
+                profile_link = BASE_URL + href if href else ""
+
+                td_type = tr.find("td", class_="type")
+                type_val = td_type.get_text(strip=True) if td_type else ""
+
+                td_sector = tr.find("td", class_="sector")
+                sector_val = td_sector.get_text(strip=True) if td_sector else ""
+
+                td_country = tr.find("td", class_="country")
+                country_val = td_country.get_text(strip=True) if td_country else ""
+
+                td_joined = tr.find("td", class_="joined-on")
+                joined_val = td_joined.get_text(strip=True) if td_joined else ""
+
+                data_rows.append({
+                    "name": name,
+                    "type": type_val,
+                    "sector": sector_val,
+                    "country": country_val,
+                    "joined_on": parse_un_date(joined_val),
+                    "link": profile_link,
+                })
+
+            elapsed = time.time() - t0
+            print_done(f"página {page}: {len(rows)} participantes  (total: {len(data_rows)})", elapsed=elapsed)
+
+            next_el = soup.find(class_="next_page")
+            if next_el and next_el.name == "a" and next_el.get("href"):
+                page += 1
+                time.sleep(0.2)
+            else:
+                break
+
         return pd.DataFrame(data_rows)
 
 

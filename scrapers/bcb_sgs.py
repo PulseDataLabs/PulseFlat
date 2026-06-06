@@ -29,8 +29,6 @@ from utils import get_logger, agora_brt, limpar, nova_session, salvar_csv
 import pandas as pd
 from scrapers.utils.base import BaseScraper
 
-log = get_logger("bcb_sgs")
-
 ARQUIVO = Path("data/bcb_sgs.csv")
 
 CABECALHO = [
@@ -61,55 +59,50 @@ URL_TPL = (
 )
 
 
-def _buscar_serie(session, codigo: int, nome: str, inicio: str, fim: str,
-                  data_captura: str) -> list[dict]:
-    url = URL_TPL.format(codigo=codigo, inicio=inicio, fim=fim)
-    for tentativa in range(1, 4):
-        try:
-            resp = session.get(url, timeout=30)
-            resp.raise_for_status()
-            dados = resp.json()
-            break
-        except requests.RequestException as e:
-            log.warning(f"[série {codigo}] Tentativa {tentativa}/3: {e}")
-            if tentativa == 3:
-                log.error(f"[série {codigo}] Falha definitiva — ignorando.")
-                return []
-            time.sleep(3)
-
-    registros = []
-    for item in dados:
-        registros.append({
-            "data_captura":  data_captura,
-            "codigo_serie":  str(codigo),
-            "nome_serie":    nome,
-            "data":          limpar(item.get("data")),
-            "valor":         limpar(item.get("valor")),
-        })
-    return registros
-
-
 def capturar() -> list[dict]:
+    from scripts.utils.ux import print_done, print_warn
+
     hoje = date.today()
     inicio = '01/01/2020'
     fim = hoje.strftime("%d/%m/%Y")
     data_captura, _ = agora_brt()
-    session = nova_session()
 
+    session = nova_session()
     todos = []
-    for codigo, nome in SERIES.items():
-        log.info(f"Buscando série {codigo} — {nome}")
-        registros = _buscar_serie(session, codigo, nome, inicio, fim,
-                                  data_captura)
-        log.info(f"  → {len(registros)} pontos")
-        todos.extend(registros)
+    n = len(SERIES)
+    for i, (codigo, nome) in enumerate(SERIES.items(), 1):
+        t0 = time.time()
+        url = URL_TPL.format(codigo=codigo, inicio=inicio, fim=fim)
+
+        registros = []
+        for tentativa in range(1, 4):
+            try:
+                resp = session.get(url, timeout=30)
+                resp.raise_for_status()
+                dados = resp.json()
+                for item in dados:
+                    registros.append({
+                        "data_captura": data_captura,
+                        "codigo_serie": str(codigo),
+                        "nome_serie": nome,
+                        "data": limpar(item.get("data")),
+                        "valor": limpar(item.get("valor")),
+                    })
+                break
+            except requests.RequestException as e:
+                if tentativa == 3:
+                    print_warn(f"({i}/{n}) série {codigo}: falha — ignorando")
+                    break
+                time.sleep(3)
+
+        if registros:
+            print_done(f"({i}/{n}) série {codigo}", elapsed=time.time() - t0)
+            todos.extend(registros)
         time.sleep(0.5)
 
     if not todos:
-        log.error("Nenhum dado capturado do BCB SGS.")
-        sys.exit(1)
+        raise RuntimeError("Nenhum dado capturado do BCB SGS.")
 
-    log.info(f"Total BCB SGS: {len(todos)} registros.")
     return todos
 
 class BcbSgsScraper(BaseScraper):
@@ -131,8 +124,6 @@ class BcbSgsScraper(BaseScraper):
     source = 'BCB · SGS'
 
     def fetch(self) -> pd.DataFrame:
-        log.info("=== BCB SGS — Séries Temporais ===")
-        # Reordena para garantir o cabeçalho original
         df = pd.DataFrame(capturar())
         if not df.empty:
             colunas = [c for c in CABECALHO if c in df.columns]

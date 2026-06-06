@@ -60,8 +60,6 @@ class AnbimaIdkaScraper(BaseScraper):
         dt_ref = dt.strftime("%d/%m/%Y")
         url = URL_TEMPLATE.format(dt=dt_ref)
 
-        self.logger.info(f"Baixando IDkA para {dt_ref}: {url}")
-
         headers = {
             "User-Agent": (
                 "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "

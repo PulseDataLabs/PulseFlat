@@ -53,11 +53,9 @@ class AnbimaMatrizProbabilidadeResgateScraper(BaseScraper):
         file_name = f"report_fliq_{data_ref.strftime('%Y%m')}.csv"
         url = f"{BASE_URL}/{file_name}"
 
-        self.logger.info(f"Baixando: {url}")
         resp = requests.get(url, headers=HEADERS, timeout=120)
 
         if resp.status_code == 404 or "NoSuchKey" in resp.text:
-            # Tenta o mês anterior ao anterior
             mes = data_ref.month - 1
             ano = data_ref.year
             if mes == 0:
@@ -67,7 +65,8 @@ class AnbimaMatrizProbabilidadeResgateScraper(BaseScraper):
             data_ref = datetime.date(ano, mes, ultimo_dia)
             file_name = f"report_fliq_{data_ref.strftime('%Y%m')}.csv"
             url = f"{BASE_URL}/{file_name}"
-            self.logger.warning(f"Arquivo não disponível, tentando mês anterior: {url}")
+            from scripts.utils.ux import print_warn
+            print_warn("arquivo não encontrado, tentando mês anterior")
             resp = requests.get(url, headers=HEADERS, timeout=120)
 
         resp.raise_for_status()
