@@ -156,8 +156,8 @@ window.PULSEFLAT_LAST_UPDATES = {
     "max": "2026-06-05"
   },
   "investing_etf.csv": {
-    "min": "2026-06-06",
-    "max": "2026-06-06"
+    "min": "2026-06-08",
+    "max": "2026-06-08"
   },
   "bacen_negociacao_tpf_extragrupo.csv": {
     "min": "2026-06-03",
