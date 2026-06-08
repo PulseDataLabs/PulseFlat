@@ -2,7 +2,7 @@
   {
     "label": "CDI",
     "value": "14,40%",
-    "reference_date": "2026-06-03",
+    "reference_date": "2026-06-05",
     "type": "neutral"
   },
   {
@@ -25,17 +25,17 @@
   },
   {
     "label": "PTAX USD Venda",
-    "value": "5,1244",
-    "reference_date": "2026-06-05",
+    "value": "5,1695",
+    "reference_date": "2026-06-08",
     "type": "up",
-    "change": "+1,64%"
+    "change": "+0,88%"
   },
   {
     "label": "PTAX USD Compra",
-    "value": "5,1238",
-    "reference_date": "2026-06-05",
+    "value": "5,1689",
+    "reference_date": "2026-06-08",
     "type": "up",
-    "change": "+1,64%"
+    "change": "+0,88%"
   },
   {
     "label": "IBOVESPA",
