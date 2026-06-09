@@ -2,13 +2,13 @@ window.PULSEFLAT_MARKET_LATEST = [
   {
     "label": "CDI",
     "value": "14,40%",
-    "reference_date": "2026-06-05",
+    "reference_date": "2026-06-08",
     "type": "neutral"
   },
   {
     "label": "SELIC",
     "value": "14,40%",
-    "reference_date": "2026-06-05",
+    "reference_date": "2026-06-08",
     "type": "neutral"
   },
   {
@@ -46,8 +46,8 @@ window.PULSEFLAT_MARKET_LATEST = [
   },
   {
     "label": "IMA-GERAL",
-    "value": "10.037,98",
-    "reference_date": "2026-06-05",
+    "value": "10.028,87",
+    "reference_date": "2026-06-08",
     "type": "neutral"
   }
 ];
