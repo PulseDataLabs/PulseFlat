@@ -1,103 +1,103 @@
 {
-  "timestamp": "2026-06-09T00:42:04.399485",
-  "elapsed_seconds": 93.0465760231018,
+  "timestamp": "2026-06-09T12:43:42.764849",
+  "elapsed_seconds": 146.18484115600586,
   "status": "error",
   "summary": {
     "total": 41,
-    "success": 38,
-    "failed": 3,
+    "success": 37,
+    "failed": 4,
     "drifts": 0
   },
   "scrapers": {
     "onu_pacto_global": {
       "status": "success",
-      "elapsed_seconds": 36.07505178451538,
+      "elapsed_seconds": 45.2258083820343,
       "error": null,
-      "timestamp": "2026-06-09T00:42:04.399623"
+      "timestamp": "2026-06-09T12:43:42.765036"
     },
     "anbima_indicadores": {
       "status": "success",
-      "elapsed_seconds": 0.15536856651306152,
+      "elapsed_seconds": 0.16529130935668945,
       "error": null,
-      "timestamp": "2026-06-09T00:42:04.399623"
+      "timestamp": "2026-06-09T12:43:42.765036"
     },
     "anbima_projecoes": {
       "status": "success",
-      "elapsed_seconds": 0.14579415321350098,
+      "elapsed_seconds": 0.2915079593658447,
       "error": null,
-      "timestamp": "2026-06-09T00:42:04.399623"
+      "timestamp": "2026-06-09T12:43:42.765036"
     },
     "anbima_titulos_publicos": {
       "status": "success",
-      "elapsed_seconds": 0.08965539932250977,
+      "elapsed_seconds": 0.1924436092376709,
       "error": null,
-      "timestamp": "2026-06-09T00:42:04.399623"
+      "timestamp": "2026-06-09T12:43:42.765036"
     },
     "anbima_debentures": {
       "status": "success",
-      "elapsed_seconds": 0.45824456214904785,
+      "elapsed_seconds": 1.0489981174468994,
       "error": null,
-      "timestamp": "2026-06-09T00:42:04.399623"
+      "timestamp": "2026-06-09T12:43:42.765036"
     },
     "anbima_ima_completo": {
       "status": "success",
-      "elapsed_seconds": 0.337723970413208,
+      "elapsed_seconds": 0.5943813323974609,
       "error": null,
-      "timestamp": "2026-06-09T00:42:04.399623"
+      "timestamp": "2026-06-09T12:43:42.765036"
     },
     "anbima_550": {
       "status": "success",
-      "elapsed_seconds": 0.38910627365112305,
+      "elapsed_seconds": 0.5750300884246826,
       "error": null,
-      "timestamp": "2026-06-09T00:42:04.399623"
+      "timestamp": "2026-06-09T12:43:42.765036"
     },
     "anbima_idka": {
       "status": "success",
-      "elapsed_seconds": 0.3383662700653076,
+      "elapsed_seconds": 0.5776383876800537,
       "error": null,
-      "timestamp": "2026-06-09T00:42:04.399623"
+      "timestamp": "2026-06-09T12:43:42.765036"
     },
     "anbima_ranking_global": {
       "status": "success",
-      "elapsed_seconds": 1.2287485599517822,
+      "elapsed_seconds": 2.3755080699920654,
       "error": null,
-      "timestamp": "2026-06-09T00:42:04.399623"
+      "timestamp": "2026-06-09T12:43:42.765036"
     },
     "anbima_matriz_probabilidade_resgate": {
       "status": "success",
-      "elapsed_seconds": 1.9952034950256348,
+      "elapsed_seconds": 1.9796504974365234,
       "error": null,
-      "timestamp": "2026-06-09T00:42:04.399623"
+      "timestamp": "2026-06-09T12:43:42.765036"
     },
     "anbima_indice_imab": {
       "status": "success",
-      "elapsed_seconds": 1.8267567157745361,
+      "elapsed_seconds": 3.038724899291992,
       "error": null,
-      "timestamp": "2026-06-09T00:42:04.399623"
+      "timestamp": "2026-06-09T12:43:42.765036"
     },
     "debentures_emissoes_caracteristicas": {
       "status": "success",
-      "elapsed_seconds": 11.228055238723755,
+      "elapsed_seconds": 14.10749340057373,
       "error": null,
-      "timestamp": "2026-06-09T00:42:04.399623"
+      "timestamp": "2026-06-09T12:43:42.765036"
     },
     "debentures_mercado_secundario_precos_negociacao": {
       "status": "success",
-      "elapsed_seconds": 10.50316047668457,
+      "elapsed_seconds": 5.385682821273804,
       "error": null,
-      "timestamp": "2026-06-09T00:42:04.399623"
+      "timestamp": "2026-06-09T12:43:42.765036"
     },
     "b3_fiis": {
       "status": "success",
-      "elapsed_seconds": 3.1946358680725098,
+      "elapsed_seconds": 3.2072715759277344,
       "error": null,
-      "timestamp": "2026-06-09T00:42:04.399623"
+      "timestamp": "2026-06-09T12:43:42.765036"
     },
     "b3_etfs": {
       "status": "success",
-      "elapsed_seconds": 2.038079023361206,
+      "elapsed_seconds": 2.6509244441986084,
       "error": null,
-      "timestamp": "2026-06-09T00:42:04.399623"
+      "timestamp": "2026-06-09T12:43:42.765036"
     },
     "b3_carteiras": {
       "status": "unknown",
@@ -113,159 +113,159 @@
     },
     "b3_indicadores_financeiros": {
       "status": "success",
-      "elapsed_seconds": 0.40557360649108887,
+      "elapsed_seconds": 0.44623565673828125,
       "error": null,
-      "timestamp": "2026-06-09T00:42:04.399623"
+      "timestamp": "2026-06-09T12:43:42.765036"
     },
     "b3_bdi_di_over": {
       "status": "success",
-      "elapsed_seconds": 1.852654218673706,
+      "elapsed_seconds": 2.1465723514556885,
       "error": null,
-      "timestamp": "2026-06-09T00:42:04.399623"
+      "timestamp": "2026-06-09T12:43:42.765036"
     },
     "b3_bdi_trades_acoes": {
       "status": "success",
-      "elapsed_seconds": 85.46543574333191,
+      "elapsed_seconds": 79.12538981437683,
       "error": null,
-      "timestamp": "2026-06-09T00:42:04.399623"
+      "timestamp": "2026-06-09T12:43:42.765036"
     },
     "b3_bmf_taxas_juros": {
       "status": "success",
-      "elapsed_seconds": 4.166609525680542,
+      "elapsed_seconds": 4.03568172454834,
       "error": null,
-      "timestamp": "2026-06-09T00:42:04.399623"
+      "timestamp": "2026-06-09T12:43:42.765036"
     },
     "b3_series_historicas": {
       "status": "success",
-      "elapsed_seconds": 35.62738537788391,
+      "elapsed_seconds": 137.92633771896362,
       "error": null,
-      "timestamp": "2026-06-09T00:42:04.399623"
+      "timestamp": "2026-06-09T12:43:42.765036"
     },
     "b3_carteira_teorica_ibov": {
       "status": "success",
-      "elapsed_seconds": 0.22078537940979004,
+      "elapsed_seconds": 0.26990675926208496,
       "error": null,
-      "timestamp": "2026-06-09T00:42:04.399623"
+      "timestamp": "2026-06-09T12:43:42.765036"
     },
     "b3_carteira_teorica_smll": {
       "status": "success",
-      "elapsed_seconds": 0.5044064521789551,
+      "elapsed_seconds": 0.39653468132019043,
       "error": null,
-      "timestamp": "2026-06-09T00:42:04.399623"
+      "timestamp": "2026-06-09T12:43:42.765036"
     },
     "b3_carteira_teorica_bdrx": {
       "status": "success",
-      "elapsed_seconds": 0.46766138076782227,
+      "elapsed_seconds": 0.42682957649230957,
       "error": null,
-      "timestamp": "2026-06-09T00:42:04.399623"
+      "timestamp": "2026-06-09T12:43:42.765036"
     },
     "b3_carteira_teorica_isee": {
       "status": "success",
-      "elapsed_seconds": 0.6695024967193604,
+      "elapsed_seconds": 0.2695024013519287,
       "error": null,
-      "timestamp": "2026-06-09T00:42:04.399623"
+      "timestamp": "2026-06-09T12:43:42.765036"
     },
     "b3_carteira_teorica_ibxl": {
       "status": "success",
-      "elapsed_seconds": 0.31766223907470703,
+      "elapsed_seconds": 0.3080480098724365,
       "error": null,
-      "timestamp": "2026-06-09T00:42:04.399623"
+      "timestamp": "2026-06-09T12:43:42.765036"
     },
     "b3_carteira_teorica_ifnc": {
       "status": "success",
-      "elapsed_seconds": 0.3277862071990967,
+      "elapsed_seconds": 0.2691640853881836,
       "error": null,
-      "timestamp": "2026-06-09T00:42:04.399623"
+      "timestamp": "2026-06-09T12:43:42.765036"
     },
     "b3_carteira_teorica_agfs_iagro": {
       "status": "success",
-      "elapsed_seconds": 0.6444869041442871,
+      "elapsed_seconds": 0.5018999576568604,
       "error": null,
-      "timestamp": "2026-06-09T00:42:04.399623"
+      "timestamp": "2026-06-09T12:43:42.765036"
     },
     "b3_carteira_teorica_ibsd": {
       "status": "success",
-      "elapsed_seconds": 0.34137392044067383,
+      "elapsed_seconds": 0.4650731086730957,
       "error": null,
-      "timestamp": "2026-06-09T00:42:04.399623"
+      "timestamp": "2026-06-09T12:43:42.765036"
     },
     "b3_titulos_negociaveis": {
       "status": "success",
-      "elapsed_seconds": 6.172004461288452,
+      "elapsed_seconds": 10.609254121780396,
       "error": null,
-      "timestamp": "2026-06-09T00:42:04.399623"
+      "timestamp": "2026-06-09T12:43:42.765036"
     },
     "bcb_ptax": {
       "status": "success",
-      "elapsed_seconds": 0.7381300926208496,
+      "elapsed_seconds": 1.3690361976623535,
       "error": null,
-      "timestamp": "2026-06-09T00:42:04.399623"
+      "timestamp": "2026-06-09T12:43:42.765036"
     },
     "bcb_sgs": {
       "status": "success",
-      "elapsed_seconds": 49.5757417678833,
+      "elapsed_seconds": 9.261204481124878,
       "error": null,
-      "timestamp": "2026-06-09T00:42:04.399623"
+      "timestamp": "2026-06-09T12:43:42.765036"
     },
     "bacen_balancetes_bancos": {
       "status": "success",
-      "elapsed_seconds": 6.17797064781189,
+      "elapsed_seconds": 8.375134229660034,
       "error": null,
-      "timestamp": "2026-06-09T00:42:04.399623"
+      "timestamp": "2026-06-09T12:43:42.765036"
     },
     "bacen_conglomerados": {
       "status": "error",
-      "elapsed_seconds": 0.000370025634765625,
+      "elapsed_seconds": 0.0005047321319580078,
       "error": "Traceback (most recent call last):\n  File \"/home/runner/work/PulseFlat/PulseFlat/scrapers/utils/base.py\", line 48, in run\n    df = self.fetch()\n  File \"/home/runner/work/PulseFlat/PulseFlat/scrapers/bacen_conglomerados.py\", line 64, in fetch\n    t0 = time.time()\n         ^^^^\nNameError: name 'time' is not defined. Did you forget to import 'time'?\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/PulseFlat/PulseFlat/run_all.py\", line 213, in run_scraper\n    getattr(mod, class_name)().run()\n    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\n  File \"/home/runner/work/PulseFlat/PulseFlat/scrapers/utils/base.py\", line 121, in run\n    self.logger.error(f\"Erro ao executar scraper {self.name}: {e}\", exc_info=True)\n    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: ColorLogger.error() got an unexpected keyword argument 'exc_info'\n",
-      "timestamp": "2026-06-09T00:42:04.399623"
+      "timestamp": "2026-06-09T12:43:42.765036"
     },
     "bacen_parcelas_capital_basileia": {
       "status": "error",
-      "elapsed_seconds": 0.7418327331542969,
+      "elapsed_seconds": 0.9789204597473145,
       "error": "Traceback (most recent call last):\n  File \"/home/runner/work/PulseFlat/PulseFlat/scrapers/utils/base.py\", line 48, in run\n    df = self.fetch()\n  File \"/home/runner/work/PulseFlat/PulseFlat/scrapers/bacen_parcelas_capital_basileia.py\", line 128, in fetch\n    print_warn(f\"sem dados: {tipo['label']} {periodo}\", elapsed=time.time() - t0)\n    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: print_warn() got an unexpected keyword argument 'elapsed'\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/PulseFlat/PulseFlat/run_all.py\", line 213, in run_scraper\n    getattr(mod, class_name)().run()\n    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\n  File \"/home/runner/work/PulseFlat/PulseFlat/scrapers/utils/base.py\", line 121, in run\n    self.logger.error(f\"Erro ao executar scraper {self.name}: {e}\", exc_info=True)\n    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: ColorLogger.error() got an unexpected keyword argument 'exc_info'\n",
-      "timestamp": "2026-06-09T00:42:04.399623"
+      "timestamp": "2026-06-09T12:43:42.765036"
     },
     "bacen_negociacao_tpf": {
       "status": "success",
-      "elapsed_seconds": 1.5052759647369385,
+      "elapsed_seconds": 2.2833869457244873,
       "error": null,
-      "timestamp": "2026-06-09T00:42:04.399623"
+      "timestamp": "2026-06-09T12:43:42.765036"
     },
     "ibge_sidra": {
       "status": "success",
-      "elapsed_seconds": 4.443519115447998,
+      "elapsed_seconds": 6.313713550567627,
       "error": null,
-      "timestamp": "2026-06-09T00:42:04.399623"
+      "timestamp": "2026-06-09T12:43:42.765036"
     },
     "cvm_fundos_informe_diario": {
       "status": "success",
-      "elapsed_seconds": 2.0840752124786377,
+      "elapsed_seconds": 16.668673753738403,
       "error": null,
-      "timestamp": "2026-06-09T00:42:04.399623"
+      "timestamp": "2026-06-09T12:43:42.765036"
     },
     "cvm_fundos_classe": {
       "status": "success",
-      "elapsed_seconds": 21.57308268547058,
+      "elapsed_seconds": 38.441330909729004,
       "error": null,
-      "timestamp": "2026-06-09T00:42:04.399623"
+      "timestamp": "2026-06-09T12:43:42.765036"
     },
     "yahoo_finance_series": {
       "status": "error",
-      "elapsed_seconds": 0.0003192424774169922,
+      "elapsed_seconds": 0.00038504600524902344,
       "error": "Traceback (most recent call last):\n  File \"/home/runner/work/PulseFlat/PulseFlat/scrapers/utils/base.py\", line 48, in run\n    df = self.fetch()\n  File \"/home/runner/work/PulseFlat/PulseFlat/scrapers/yahoo_finance_series.py\", line 101, in fetch\n    t0 = time.time()\n         ^^^^\nNameError: name 'time' is not defined. Did you forget to import 'time'?\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/PulseFlat/PulseFlat/run_all.py\", line 213, in run_scraper\n    getattr(mod, class_name)().run()\n    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\n  File \"/home/runner/work/PulseFlat/PulseFlat/scrapers/utils/base.py\", line 121, in run\n    self.logger.error(f\"Erro ao executar scraper {self.name}: {e}\", exc_info=True)\n    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: ColorLogger.error() got an unexpected keyword argument 'exc_info'\n",
-      "timestamp": "2026-06-09T00:42:04.399623"
+      "timestamp": "2026-06-09T12:43:42.765036"
     },
     "investing_etf": {
-      "status": "success",
-      "elapsed_seconds": 1.9499366283416748,
-      "error": null,
-      "timestamp": "2026-06-09T00:42:04.399623"
+      "status": "error",
+      "elapsed_seconds": 0.29990148544311523,
+      "error": "Traceback (most recent call last):\n  File \"/home/runner/work/PulseFlat/PulseFlat/scrapers/utils/base.py\", line 48, in run\n    df = self.fetch()\n  File \"/home/runner/work/PulseFlat/PulseFlat/scrapers/investing_etf.py\", line 94, in fetch\n    resp.raise_for_status()\n    ~~~~~~~~~~~~~~~~~~~~~^^\n  File \"/opt/hostedtoolcache/Python/3.13.13/x64/lib/python3.13/site-packages/curl_cffi/requests/models.py\", line 193, in raise_for_status\n    raise HTTPError(f\"HTTP Error {self.status_code}: {self.reason}\", 0, self)\ncurl_cffi.requests.exceptions.HTTPError: HTTP Error 403: \n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/PulseFlat/PulseFlat/run_all.py\", line 213, in run_scraper\n    getattr(mod, class_name)().run()\n    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\n  File \"/home/runner/work/PulseFlat/PulseFlat/scrapers/utils/base.py\", line 121, in run\n    self.logger.error(f\"Erro ao executar scraper {self.name}: {e}\", exc_info=True)\n    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: ColorLogger.error() got an unexpected keyword argument 'exc_info'\n",
+      "timestamp": "2026-06-09T12:43:42.765036"
     },
     "b3_carteiras_teoricas": {
       "status": "success",
-      "elapsed_seconds": 15.001148700714111,
+      "elapsed_seconds": 17.126967906951904,
       "error": null,
-      "timestamp": "2026-06-09T00:42:04.399623"
+      "timestamp": "2026-06-09T12:43:42.765036"
     }
   },
   "drifts": {}

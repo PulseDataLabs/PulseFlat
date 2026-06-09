@@ -126,5 +126,21 @@
   "onu_pacto_global.csv": {
     "min": "2026-06-09",
     "max": "2026-06-09"
+  },
+  "anbima_idka.csv": {
+    "min": "2026-06-03",
+    "max": "2026-06-09"
+  },
+  "anbima_ima_completo.csv": {
+    "min": "2026-06-01",
+    "max": "2026-06-09"
+  },
+  "cvm_fundos_informe_diario.csv": {
+    "min": "2026-06-09",
+    "max": "2026-06-09"
+  },
+  "registro_fundo_classe.csv": {
+    "min": "2026-06-09",
+    "max": "2026-06-09"
   }
 }
