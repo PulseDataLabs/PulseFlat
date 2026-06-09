@@ -2798,5 +2798,174 @@
         "example": "https://unglobalcompact.org/what-is-gc/participants/211873-B2HR-INTELIGENCIA-EM-GESTAO-DE-PESSOAS-LTDA"
       }
     ]
+  },
+  {
+    "title": "Anbima Idka",
+    "files": "anbima_idka.csv",
+    "source": "anbima",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-06-09"
+      },
+      {
+        "name": "dt_referencia",
+        "type": "date",
+        "example": ""
+      },
+      {
+        "name": "no_indexador",
+        "type": "str",
+        "example": "PREFIXADO"
+      },
+      {
+        "name": "no_indice",
+        "type": "str",
+        "example": "IDkA Pré 3M"
+      },
+      {
+        "name": "nu_indice",
+        "type": "str",
+        "example": "7569.631454"
+      },
+      {
+        "name": "ret_dia_perc",
+        "type": "float",
+        "example": "0.0616"
+      },
+      {
+        "name": "ret_mes_perc",
+        "type": "float",
+        "example": "0.2582"
+      },
+      {
+        "name": "ret_ano_perc",
+        "type": "float",
+        "example": "5.8392"
+      },
+      {
+        "name": "ret_12_meses_perc",
+        "type": "float",
+        "example": "14.6694"
+      },
+      {
+        "name": "vol_aa_perc",
+        "type": "float",
+        "example": "0.0770"
+      },
+      {
+        "name": "taxa_juros_aa_perc_compra_d1",
+        "type": "float",
+        "example": "14.1602"
+      },
+      {
+        "name": "taxa_juros_aa_perc_venda_d0",
+        "type": "float",
+        "example": "14.1182"
+      }
+    ]
+  },
+  {
+    "title": "Anbima Ima Completo",
+    "files": "anbima_ima_completo.csv",
+    "source": "anbima",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-06-09"
+      },
+      {
+        "name": "data_referencia",
+        "type": "date",
+        "example": "2026-06-08"
+      },
+      {
+        "name": "indice",
+        "type": "str",
+        "example": "IRF-M 1"
+      },
+      {
+        "name": "numero_indice",
+        "type": "int",
+        "example": "20164.00343000"
+      },
+      {
+        "name": "variacao_diaria",
+        "type": "str",
+        "example": "0.0217"
+      },
+      {
+        "name": "variacao_mensal",
+        "type": "str",
+        "example": "0.1281"
+      },
+      {
+        "name": "variacao_anual",
+        "type": "str",
+        "example": "5.5664"
+      },
+      {
+        "name": "variacao_ultimos_12_meses",
+        "type": "str",
+        "example": "14.3156"
+      },
+      {
+        "name": "variacao_ultimos_24_meses",
+        "type": "str",
+        "example": "27.5797"
+      },
+      {
+        "name": "duration_du",
+        "type": "str",
+        "example": "93"
+      },
+      {
+        "name": "peso_geral",
+        "type": "str",
+        "example": "6.26"
+      },
+      {
+        "name": "carteira_a_mercado_rs_mil",
+        "type": "str",
+        "example": "514122894"
+      },
+      {
+        "name": "numero_operacoes",
+        "type": "int",
+        "example": "174"
+      },
+      {
+        "name": "quant_negociada_1000_titulos",
+        "type": "str",
+        "example": "14355.43"
+      },
+      {
+        "name": "valor_negociado_rs_mil",
+        "type": "str",
+        "example": "13624800.16"
+      },
+      {
+        "name": "pmr",
+        "type": "str",
+        "example": "133.923583670786"
+      },
+      {
+        "name": "convexidade",
+        "type": "str",
+        "example": "0.453039730685563"
+      },
+      {
+        "name": "yield_",
+        "type": "str",
+        "example": "14.3505447174704"
+      },
+      {
+        "name": "redemption_yield",
+        "type": "str",
+        "example": "14.3519082715146"
+      }
+    ]
   }
 ]
