@@ -373,7 +373,7 @@ def _extract_multi_value(
             if not raw_val:
                 continue
             out = _build_base(idef)
-            out["indicador"] = label_base
+            out["indicador"] = f"{label_base} — {col_label}"
             out["valor"] = _fmt_pct(raw_val) if col_fmt == "pct" else _fmt_val(raw_val)
             out["unidade"] = col_label
             out["data_referencia"] = _ref_date(idef, latest)

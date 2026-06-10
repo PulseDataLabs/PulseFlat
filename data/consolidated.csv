@@ -16,22 +16,22 @@ anbima_indicadores.csv,ANBIMA Indicadores,ANBIMA,Índice de Preços,indicador,IP
 anbima_indicadores.csv,ANBIMA Indicadores,ANBIMA,Taxa de Referência,indicador,TBF,"1,09",% mês,2026-06-08,2026-06-09,valor
 anbima_indicadores.csv,ANBIMA Indicadores,ANBIMA,Taxa de Referência,indicador,TR,"0,1726",% mês,2026-06-08,2026-06-09,valor
 anbima_indicadores.csv,ANBIMA Indicadores,ANBIMA,Taxa de Juros,indicador,Taxa SELIC (BC),"14,40",% a.a.,2026-06-09,2026-06-09,valor
-anbima_indice_imab.csv,ANBIMA IMA-B,ANBIMA,IMA-B,indicador,IMA - Geral,10.033,Número-índice,2026-06-09,2026-06-09,n_mero_ndice
-anbima_indice_imab.csv,ANBIMA IMA-B,ANBIMA,IMA-B,indicador,IMA - Geral,"0,04%",Variação diária,2026-06-09,2026-06-09,varia_o_di_ria
-anbima_indice_imab.csv,ANBIMA IMA-B,ANBIMA,IMA-B,indicador,IMA - Geral,"487,00",Duration (d.u.),2026-06-09,2026-06-09,duration_d_u
-anbima_indice_imab.csv,ANBIMA IMA-B,ANBIMA,IMA-B,indicador,IMA-GERAL,9.573,Número-índice,2025-12-26,2026-06-01,n_mero_ndice
-anbima_indice_imab.csv,ANBIMA IMA-B,ANBIMA,IMA-B,indicador,IMA-GERAL,"0,15%",Variação diária,2025-12-26,2026-06-01,varia_o_di_ria
-anbima_indice_imab.csv,ANBIMA IMA-B,ANBIMA,IMA-B,indicador,IMA-GERAL,"520,00",Duration (d.u.),2025-12-26,2026-06-01,duration_d_u
-anbima_titulos_publicos.csv,ANBIMA Títulos Públicos,ANBIMA,Títulos Públicos,indicador,100000 (LTN),"14,42%",Taxa indicativa,2026-06-09,2026-06-10,tx_indicativa
-anbima_titulos_publicos.csv,ANBIMA Títulos Públicos,ANBIMA,Títulos Públicos,indicador,100000 (LTN),"991,49",PU,2026-06-09,2026-06-10,pu
-anbima_titulos_publicos.csv,ANBIMA Títulos Públicos,ANBIMA,Títulos Públicos,indicador,210100 (LFT),"0,00%",Taxa indicativa,2026-06-09,2026-06-10,tx_indicativa
-anbima_titulos_publicos.csv,ANBIMA Títulos Públicos,ANBIMA,Títulos Públicos,indicador,210100 (LFT),19.171,PU,2026-06-09,2026-06-10,pu
-anbima_titulos_publicos.csv,ANBIMA Títulos Públicos,ANBIMA,Títulos Públicos,indicador,760199 (NTN-B),"11,04%",Taxa indicativa,2026-06-09,2026-06-10,tx_indicativa
-anbima_titulos_publicos.csv,ANBIMA Títulos Públicos,ANBIMA,Títulos Públicos,indicador,760199 (NTN-B),4.765,PU,2026-06-09,2026-06-10,pu
-anbima_titulos_publicos.csv,ANBIMA Títulos Públicos,ANBIMA,Títulos Públicos,indicador,770100 (NTN-C),"8,16%",Taxa indicativa,2026-06-09,2026-06-10,tx_indicativa
-anbima_titulos_publicos.csv,ANBIMA Títulos Públicos,ANBIMA,Títulos Públicos,indicador,770100 (NTN-C),7.975,PU,2026-06-09,2026-06-10,pu
-anbima_titulos_publicos.csv,ANBIMA Títulos Públicos,ANBIMA,Títulos Públicos,indicador,950199 (NTN-F),"14,38%",Taxa indicativa,2026-06-09,2026-06-10,tx_indicativa
-anbima_titulos_publicos.csv,ANBIMA Títulos Públicos,ANBIMA,Títulos Públicos,indicador,950199 (NTN-F),1.020,PU,2026-06-09,2026-06-10,pu
+anbima_indice_imab.csv,ANBIMA IMA-B,ANBIMA,IMA-B,indicador,IMA - Geral — Duration (d.u.),"487,00",Duration (d.u.),2026-06-09,2026-06-09,duration_d_u
+anbima_indice_imab.csv,ANBIMA IMA-B,ANBIMA,IMA-B,indicador,IMA - Geral — Número-índice,10.033,Número-índice,2026-06-09,2026-06-09,n_mero_ndice
+anbima_indice_imab.csv,ANBIMA IMA-B,ANBIMA,IMA-B,indicador,IMA - Geral — Variação diária,"0,04%",Variação diária,2026-06-09,2026-06-09,varia_o_di_ria
+anbima_indice_imab.csv,ANBIMA IMA-B,ANBIMA,IMA-B,indicador,IMA-GERAL — Duration (d.u.),"520,00",Duration (d.u.),2025-12-26,2026-06-01,duration_d_u
+anbima_indice_imab.csv,ANBIMA IMA-B,ANBIMA,IMA-B,indicador,IMA-GERAL — Número-índice,9.573,Número-índice,2025-12-26,2026-06-01,n_mero_ndice
+anbima_indice_imab.csv,ANBIMA IMA-B,ANBIMA,IMA-B,indicador,IMA-GERAL — Variação diária,"0,15%",Variação diária,2025-12-26,2026-06-01,varia_o_di_ria
+anbima_titulos_publicos.csv,ANBIMA Títulos Públicos,ANBIMA,Títulos Públicos,indicador,100000 (LTN) — PU,"991,49",PU,2026-06-09,2026-06-10,pu
+anbima_titulos_publicos.csv,ANBIMA Títulos Públicos,ANBIMA,Títulos Públicos,indicador,100000 (LTN) — Taxa indicativa,"14,42%",Taxa indicativa,2026-06-09,2026-06-10,tx_indicativa
+anbima_titulos_publicos.csv,ANBIMA Títulos Públicos,ANBIMA,Títulos Públicos,indicador,210100 (LFT) — PU,19.171,PU,2026-06-09,2026-06-10,pu
+anbima_titulos_publicos.csv,ANBIMA Títulos Públicos,ANBIMA,Títulos Públicos,indicador,210100 (LFT) — Taxa indicativa,"0,00%",Taxa indicativa,2026-06-09,2026-06-10,tx_indicativa
+anbima_titulos_publicos.csv,ANBIMA Títulos Públicos,ANBIMA,Títulos Públicos,indicador,760199 (NTN-B) — PU,4.765,PU,2026-06-09,2026-06-10,pu
+anbima_titulos_publicos.csv,ANBIMA Títulos Públicos,ANBIMA,Títulos Públicos,indicador,760199 (NTN-B) — Taxa indicativa,"11,04%",Taxa indicativa,2026-06-09,2026-06-10,tx_indicativa
+anbima_titulos_publicos.csv,ANBIMA Títulos Públicos,ANBIMA,Títulos Públicos,indicador,770100 (NTN-C) — PU,7.975,PU,2026-06-09,2026-06-10,pu
+anbima_titulos_publicos.csv,ANBIMA Títulos Públicos,ANBIMA,Títulos Públicos,indicador,770100 (NTN-C) — Taxa indicativa,"8,16%",Taxa indicativa,2026-06-09,2026-06-10,tx_indicativa
+anbima_titulos_publicos.csv,ANBIMA Títulos Públicos,ANBIMA,Títulos Públicos,indicador,950199 (NTN-F) — PU,1.020,PU,2026-06-09,2026-06-10,pu
+anbima_titulos_publicos.csv,ANBIMA Títulos Públicos,ANBIMA,Títulos Públicos,indicador,950199 (NTN-F) — Taxa indicativa,"14,38%",Taxa indicativa,2026-06-09,2026-06-10,tx_indicativa
 b3_bdi_di_over.csv,B3 DI Over,B3,,indicador,DI Over (SELIC equivalente),"14,40%",,2026-06-09,2026-06-10,average
 b3_bdi_di_over.csv,B3 DI Over,B3,,indicador,DI Over — Volume financeiro,3.035.921,,2026-06-09,2026-06-10,financial_volume
 b3_bmf_taxas_juros.csv,B3 BMF Taxas,B3,Taxas de Juros,indicador,DI1,"13,65%",,2026-06-09,2026-06-10,taxa
