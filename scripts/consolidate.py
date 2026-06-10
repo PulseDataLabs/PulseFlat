@@ -95,7 +95,7 @@ DATASET_LABEL = {
     "b3_taxa_cambio_referencia.csv": "B3 Taxa Câmbio",
     "bcb_ptax.csv": "BCB PTAX",
     "yahoo_finance_series.csv": "Yahoo Finance",
-    "anbima_titulos_publicos.csv": "ANBIMA Títulos Públicos",
+
     "anbima_idka.csv": "ANBIMA IDkA",
     "anbima_indice_imab.csv": "ANBIMA IMA-B",
 }
@@ -216,19 +216,6 @@ INDICATOR_DEFS = [
         ],
         "date_col": "data_referencia",
         "category": "Índices de Mercado",
-    },
-    # ── ANBIMA Títulos Públicos ───────────────────────────────────
-    {
-        "dataset": "anbima_titulos_publicos.csv",
-        "source": "ANBIMA",
-        "indicator_col": "codigo_selic",
-        "value_cols": [
-            ("tx_indicativa", "Taxa indicativa", "pct"),
-            ("pu", "PU", "number"),
-        ],
-        "date_col": "data_referencia",
-        "note_col": "titulo",
-        "category": "Títulos Públicos",
     },
     # ── ANBIMA IDkA ────────────────────────────────────────────────
     {
