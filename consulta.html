@@ -370,9 +370,6 @@
       font-family: var(--font-mono); font-size: 0.72rem; color: var(--text2);
       font-weight: 500;
     }
-    .dataset-cell {
-      font-family: var(--font-mono); font-size: 0.7rem; color: var(--text3);
-    }
     .indicador-cell {
       font-weight: 500; color: var(--text);
     }
@@ -542,7 +539,6 @@
               <th>Indicador</th>
               <th>Valor</th>
               <th>Fonte</th>
-              <th>Dataset</th>
             </tr>
           </thead>
           <tbody></tbody>
@@ -665,7 +661,6 @@
       const indicador = r.indicador || '—';
       const valor     = r.valor || '—';
       const fonte     = r.fonte || '';
-      const dataset   = r.dataset || '';
       const dataRef   = r.data_referencia || '';
 
       return [
@@ -673,7 +668,6 @@
         { display: `<span class="indicador-cell">${indicador}</span>`, filter: indicador },
         { display: `<span class="valor-cell">${valor}</span>`,         filter: valor },
         { display: `<span class="fonte-cell">${fonte}</span>`,        filter: fonte },
-        { display: `<span class="dataset-cell">${dataset}</span>`,    filter: dataset },
       ];
     });
 
@@ -710,7 +704,6 @@
         { data: 1, render: { _: 'display', filter: 'filter', sort: 'filter' } },
         { data: 2, render: { _: 'display', filter: 'filter', sort: 'filter' } },
         { data: 3, render: { _: 'display', filter: 'filter', sort: 'filter' } },
-        { data: 4, render: { _: 'display', filter: 'filter', sort: 'filter' } },
       ],
     });
 
