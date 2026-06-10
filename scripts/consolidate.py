@@ -88,16 +88,14 @@ def _safe(val: str) -> str:
 DATASET_LABEL = {
     "bcb_sgs.csv": "BCB SGS",
     "anbima_indicadores.csv": "ANBIMA Indicadores",
-    "anbima_ima_completo.csv": "ANBIMA IMA Completo",
     "b3_bdi_di_over.csv": "B3 DI Over",
     "b3_bmf_taxas_juros.csv": "B3 BMF Taxas",
     "b3_indicadores_financeiros.csv": "B3 Indicadores Financeiros",
     "b3_taxa_cambio_referencia.csv": "B3 Taxa Câmbio",
     "bcb_ptax.csv": "BCB PTAX",
     "yahoo_finance_series.csv": "Yahoo Finance",
-
-    "anbima_idka.csv": "ANBIMA IDkA",
     "anbima_indice_imab.csv": "ANBIMA IMA-B",
+    "anbima_titulos_publicos.csv": "ANBIMA Títulos Públicos",
 }
 
 
@@ -200,36 +198,18 @@ INDICATOR_DEFS = [
         "category_col": "categoria",
         "unit_col": "unidade",
     },
-    # ── ANBIMA IMA Completo ───────────────────────────────────────
+    # ── ANBIMA Títulos Públicos ───────────────────────────────────
     {
-        "dataset": "anbima_ima_completo.csv",
+        "dataset": "anbima_titulos_publicos.csv",
         "source": "ANBIMA",
-        "indicator_col": "indice",
+        "indicator_col": "codigo_selic",
         "value_cols": [
-            ("numero_indice", "Número-índice", "number"),
-            ("variacao_diaria", "Variação diária", "pct"),
-            ("variacao_mensal", "Variação mensal", "pct"),
-            ("variacao_anual", "Variação anual", "pct"),
-            ("variacao_ultimos_12_meses", "Variação 12m", "pct"),
-            ("duration_du", "Duration (d.u.)", "number"),
-            ("yield_", "Yield", "pct"),
+            ("tx_indicativa", "Taxa indicativa", "pct"),
+            ("pu", "PU", "number"),
         ],
         "date_col": "data_referencia",
-        "category": "Índices de Mercado",
-    },
-    # ── ANBIMA IDkA ────────────────────────────────────────────────
-    {
-        "dataset": "anbima_idka.csv",
-        "source": "ANBIMA",
-        "indicator_col": "no_indice",
-        "value_cols": [
-            ("nu_indice", "Número-índice", "number"),
-            ("ret_dia_perc", "Retorno diário", "pct"),
-            ("ret_mes_perc", "Retorno mensal", "pct"),
-            ("taxa_juros_aa_perc_compra_d1", "Taxa compra (% a.a.)", "pct"),
-        ],
-        "date_col": "dt_referencia",
-        "category": "IDkA",
+        "note_col": "titulo",
+        "category": "Títulos Públicos",
     },
     # ── ANBIMA IMA-B ───────────────────────────────────────────────
     {

@@ -1,112 +1,4 @@
 dataset,dataset_label,fonte,categoria,tipo,indicador,valor,unidade,data_referencia,captura_em,metrica
-anbima_idka.csv,ANBIMA IDkA,ANBIMA,IDkA,indicador,IDkA IPCA 10A,10.638,Número-índice,2026-06-03,2026-06-03,nu_indice
-anbima_idka.csv,ANBIMA IDkA,ANBIMA,IDkA,indicador,IDkA IPCA 10A,"-0,45%",Retorno diário,2026-06-03,2026-06-03,ret_dia_perc
-anbima_idka.csv,ANBIMA IDkA,ANBIMA,IDkA,indicador,IDkA IPCA 10A,"-0,96%",Retorno mensal,2026-06-03,2026-06-03,ret_mes_perc
-anbima_idka.csv,ANBIMA IDkA,ANBIMA,IDkA,indicador,IDkA IPCA 10A,"7,61%",Taxa compra (% a.a.),2026-06-03,2026-06-03,taxa_juros_aa_perc_compra_d1
-anbima_idka.csv,ANBIMA IDkA,ANBIMA,IDkA,indicador,IDkA IPCA 15A,11.606,Número-índice,2026-06-03,2026-06-03,nu_indice
-anbima_idka.csv,ANBIMA IDkA,ANBIMA,IDkA,indicador,IDkA IPCA 15A,"-0,48%",Retorno diário,2026-06-03,2026-06-03,ret_dia_perc
-anbima_idka.csv,ANBIMA IDkA,ANBIMA,IDkA,indicador,IDkA IPCA 15A,"-1,07%",Retorno mensal,2026-06-03,2026-06-03,ret_mes_perc
-anbima_idka.csv,ANBIMA IDkA,ANBIMA,IDkA,indicador,IDkA IPCA 15A,"7,35%",Taxa compra (% a.a.),2026-06-03,2026-06-03,taxa_juros_aa_perc_compra_d1
-anbima_idka.csv,ANBIMA IDkA,ANBIMA,IDkA,indicador,IDkA IPCA 20A,13.110,Número-índice,2026-06-03,2026-06-03,nu_indice
-anbima_idka.csv,ANBIMA IDkA,ANBIMA,IDkA,indicador,IDkA IPCA 20A,"-0,49%",Retorno diário,2026-06-03,2026-06-03,ret_dia_perc
-anbima_idka.csv,ANBIMA IDkA,ANBIMA,IDkA,indicador,IDkA IPCA 20A,"-1,15%",Retorno mensal,2026-06-03,2026-06-03,ret_mes_perc
-anbima_idka.csv,ANBIMA IDkA,ANBIMA,IDkA,indicador,IDkA IPCA 20A,"7,21%",Taxa compra (% a.a.),2026-06-03,2026-06-03,taxa_juros_aa_perc_compra_d1
-anbima_idka.csv,ANBIMA IDkA,ANBIMA,IDkA,indicador,IDkA IPCA 2A,10.605,Número-índice,2026-06-03,2026-06-03,nu_indice
-anbima_idka.csv,ANBIMA IDkA,ANBIMA,IDkA,indicador,IDkA IPCA 2A,"-0,01%",Retorno diário,2026-06-03,2026-06-03,ret_dia_perc
-anbima_idka.csv,ANBIMA IDkA,ANBIMA,IDkA,indicador,IDkA IPCA 2A,"-0,03%",Retorno mensal,2026-06-03,2026-06-03,ret_mes_perc
-anbima_idka.csv,ANBIMA IDkA,ANBIMA,IDkA,indicador,IDkA IPCA 2A,"8,01%",Taxa compra (% a.a.),2026-06-03,2026-06-03,taxa_juros_aa_perc_compra_d1
-anbima_idka.csv,ANBIMA IDkA,ANBIMA,IDkA,indicador,IDkA IPCA 30A,17.118,Número-índice,2026-06-03,2026-06-03,nu_indice
-anbima_idka.csv,ANBIMA IDkA,ANBIMA,IDkA,indicador,IDkA IPCA 30A,"-0,49%",Retorno diário,2026-06-03,2026-06-03,ret_dia_perc
-anbima_idka.csv,ANBIMA IDkA,ANBIMA,IDkA,indicador,IDkA IPCA 30A,"-1,28%",Retorno mensal,2026-06-03,2026-06-03,ret_mes_perc
-anbima_idka.csv,ANBIMA IDkA,ANBIMA,IDkA,indicador,IDkA IPCA 30A,"7,07%",Taxa compra (% a.a.),2026-06-03,2026-06-03,taxa_juros_aa_perc_compra_d1
-anbima_idka.csv,ANBIMA IDkA,ANBIMA,IDkA,indicador,IDkA IPCA 3A,10.933,Número-índice,2026-06-03,2026-06-03,nu_indice
-anbima_idka.csv,ANBIMA IDkA,ANBIMA,IDkA,indicador,IDkA IPCA 3A,"-0,11%",Retorno diário,2026-06-03,2026-06-03,ret_dia_perc
-anbima_idka.csv,ANBIMA IDkA,ANBIMA,IDkA,indicador,IDkA IPCA 3A,"-0,24%",Retorno mensal,2026-06-03,2026-06-03,ret_mes_perc
-anbima_idka.csv,ANBIMA IDkA,ANBIMA,IDkA,indicador,IDkA IPCA 3A,"8,10%",Taxa compra (% a.a.),2026-06-03,2026-06-03,taxa_juros_aa_perc_compra_d1
-anbima_idka.csv,ANBIMA IDkA,ANBIMA,IDkA,indicador,IDkA IPCA 5A,10.750,Número-índice,2026-06-03,2026-06-03,nu_indice
-anbima_idka.csv,ANBIMA IDkA,ANBIMA,IDkA,indicador,IDkA IPCA 5A,"-0,27%",Retorno diário,2026-06-03,2026-06-03,ret_dia_perc
-anbima_idka.csv,ANBIMA IDkA,ANBIMA,IDkA,indicador,IDkA IPCA 5A,"-0,58%",Retorno mensal,2026-06-03,2026-06-03,ret_mes_perc
-anbima_idka.csv,ANBIMA IDkA,ANBIMA,IDkA,indicador,IDkA IPCA 5A,"8,03%",Taxa compra (% a.a.),2026-06-03,2026-06-03,taxa_juros_aa_perc_compra_d1
-anbima_idka.csv,ANBIMA IDkA,ANBIMA,IDkA,indicador,IDkA Pré 1A,8.462,Número-índice,2026-06-03,2026-06-03,nu_indice
-anbima_idka.csv,ANBIMA IDkA,ANBIMA,IDkA,indicador,IDkA Pré 1A,"0,05%",Retorno diário,2026-06-03,2026-06-03,ret_dia_perc
-anbima_idka.csv,ANBIMA IDkA,ANBIMA,IDkA,indicador,IDkA Pré 1A,"-0,02%",Retorno mensal,2026-06-03,2026-06-03,ret_mes_perc
-anbima_idka.csv,ANBIMA IDkA,ANBIMA,IDkA,indicador,IDkA Pré 1A,"13,98%",Taxa compra (% a.a.),2026-06-03,2026-06-03,taxa_juros_aa_perc_compra_d1
-anbima_idka.csv,ANBIMA IDkA,ANBIMA,IDkA,indicador,IDkA Pré 2A,9.629,Número-índice,2026-06-03,2026-06-03,nu_indice
-anbima_idka.csv,ANBIMA IDkA,ANBIMA,IDkA,indicador,IDkA Pré 2A,"-0,04%",Retorno diário,2026-06-03,2026-06-03,ret_dia_perc
-anbima_idka.csv,ANBIMA IDkA,ANBIMA,IDkA,indicador,IDkA Pré 2A,"-0,25%",Retorno mensal,2026-06-03,2026-06-03,ret_mes_perc
-anbima_idka.csv,ANBIMA IDkA,ANBIMA,IDkA,indicador,IDkA Pré 2A,"13,98%",Taxa compra (% a.a.),2026-06-03,2026-06-03,taxa_juros_aa_perc_compra_d1
-anbima_idka.csv,ANBIMA IDkA,ANBIMA,IDkA,indicador,IDkA Pré 3A,10.343,Número-índice,2026-06-03,2026-06-03,nu_indice
-anbima_idka.csv,ANBIMA IDkA,ANBIMA,IDkA,indicador,IDkA Pré 3A,"-0,16%",Retorno diário,2026-06-03,2026-06-03,ret_dia_perc
-anbima_idka.csv,ANBIMA IDkA,ANBIMA,IDkA,indicador,IDkA Pré 3A,"-0,43%",Retorno mensal,2026-06-03,2026-06-03,ret_mes_perc
-anbima_idka.csv,ANBIMA IDkA,ANBIMA,IDkA,indicador,IDkA Pré 3A,"14,04%",Taxa compra (% a.a.),2026-06-03,2026-06-03,taxa_juros_aa_perc_compra_d1
-anbima_idka.csv,ANBIMA IDkA,ANBIMA,IDkA,indicador,IDkA Pré 3M,7.558,Número-índice,2026-06-03,2026-06-03,nu_indice
-anbima_idka.csv,ANBIMA IDkA,ANBIMA,IDkA,indicador,IDkA Pré 3M,"0,06%",Retorno diário,2026-06-03,2026-06-03,ret_dia_perc
-anbima_idka.csv,ANBIMA IDkA,ANBIMA,IDkA,indicador,IDkA Pré 3M,"0,11%",Retorno mensal,2026-06-03,2026-06-03,ret_mes_perc
-anbima_idka.csv,ANBIMA IDkA,ANBIMA,IDkA,indicador,IDkA Pré 3M,"14,13%",Taxa compra (% a.a.),2026-06-03,2026-06-03,taxa_juros_aa_perc_compra_d1
-anbima_idka.csv,ANBIMA IDkA,ANBIMA,IDkA,indicador,IDkA Pré 5A,10.940,Número-índice,2026-06-03,2026-06-03,nu_indice
-anbima_idka.csv,ANBIMA IDkA,ANBIMA,IDkA,indicador,IDkA Pré 5A,"-0,43%",Retorno diário,2026-06-03,2026-06-03,ret_dia_perc
-anbima_idka.csv,ANBIMA IDkA,ANBIMA,IDkA,indicador,IDkA Pré 5A,"-0,66%",Retorno mensal,2026-06-03,2026-06-03,ret_mes_perc
-anbima_idka.csv,ANBIMA IDkA,ANBIMA,IDkA,indicador,IDkA Pré 5A,"14,14%",Taxa compra (% a.a.),2026-06-03,2026-06-03,taxa_juros_aa_perc_compra_d1
-anbima_ima_completo.csv,ANBIMA IMA Completo,ANBIMA,Índices de Mercado,indicador,IMA-B,11.247,Número-índice,2026-06-09,2026-06-10,numero_indice
-anbima_ima_completo.csv,ANBIMA IMA Completo,ANBIMA,Índices de Mercado,indicador,IMA-B,"0,06%",Variação diária,2026-06-09,2026-06-10,variacao_diaria
-anbima_ima_completo.csv,ANBIMA IMA Completo,ANBIMA,Índices de Mercado,indicador,IMA-B,"-2,23%",Variação mensal,2026-06-09,2026-06-10,variacao_mensal
-anbima_ima_completo.csv,ANBIMA IMA Completo,ANBIMA,Índices de Mercado,indicador,IMA-B,"2,83%",Variação anual,2026-06-09,2026-06-10,variacao_anual
-anbima_ima_completo.csv,ANBIMA IMA Completo,ANBIMA,Índices de Mercado,indicador,IMA-B,"8,45%",Variação 12m,2026-06-09,2026-06-10,variacao_ultimos_12_meses
-anbima_ima_completo.csv,ANBIMA IMA Completo,ANBIMA,Índices de Mercado,indicador,IMA-B,1.516,Duration (d.u.),2026-06-09,2026-06-10,duration_du
-anbima_ima_completo.csv,ANBIMA IMA Completo,ANBIMA,Índices de Mercado,indicador,IMA-B,"8,55%",Yield,2026-06-09,2026-06-10,yield_
-anbima_ima_completo.csv,ANBIMA IMA Completo,ANBIMA,Índices de Mercado,indicador,IMA-B 5,11.221,Número-índice,2026-06-09,2026-06-10,numero_indice
-anbima_ima_completo.csv,ANBIMA IMA Completo,ANBIMA,Índices de Mercado,indicador,IMA-B 5,"0,01%",Variação diária,2026-06-09,2026-06-10,variacao_diaria
-anbima_ima_completo.csv,ANBIMA IMA Completo,ANBIMA,Índices de Mercado,indicador,IMA-B 5,"-0,75%",Variação mensal,2026-06-09,2026-06-10,variacao_mensal
-anbima_ima_completo.csv,ANBIMA IMA Completo,ANBIMA,Índices de Mercado,indicador,IMA-B 5,"5,45%",Variação anual,2026-06-09,2026-06-10,variacao_anual
-anbima_ima_completo.csv,ANBIMA IMA Completo,ANBIMA,Índices de Mercado,indicador,IMA-B 5,"11,55%",Variação 12m,2026-06-09,2026-06-10,variacao_ultimos_12_meses
-anbima_ima_completo.csv,ANBIMA IMA Completo,ANBIMA,Índices de Mercado,indicador,IMA-B 5,"458,00",Duration (d.u.),2026-06-09,2026-06-10,duration_du
-anbima_ima_completo.csv,ANBIMA IMA Completo,ANBIMA,Índices de Mercado,indicador,IMA-B 5,"9,31%",Yield,2026-06-09,2026-06-10,yield_
-anbima_ima_completo.csv,ANBIMA IMA Completo,ANBIMA,Índices de Mercado,indicador,IMA-B 5+,12.204,Número-índice,2026-06-09,2026-06-10,numero_indice
-anbima_ima_completo.csv,ANBIMA IMA Completo,ANBIMA,Índices de Mercado,indicador,IMA-B 5+,"0,11%",Variação diária,2026-06-09,2026-06-10,variacao_diaria
-anbima_ima_completo.csv,ANBIMA IMA Completo,ANBIMA,Índices de Mercado,indicador,IMA-B 5+,"-3,42%",Variação mensal,2026-06-09,2026-06-10,variacao_mensal
-anbima_ima_completo.csv,ANBIMA IMA Completo,ANBIMA,Índices de Mercado,indicador,IMA-B 5+,"0,78%",Variação anual,2026-06-09,2026-06-10,variacao_anual
-anbima_ima_completo.csv,ANBIMA IMA Completo,ANBIMA,Índices de Mercado,indicador,IMA-B 5+,"6,02%",Variação 12m,2026-06-09,2026-06-10,variacao_ultimos_12_meses
-anbima_ima_completo.csv,ANBIMA IMA Completo,ANBIMA,Índices de Mercado,indicador,IMA-B 5+,2.383,Duration (d.u.),2026-06-09,2026-06-10,duration_du
-anbima_ima_completo.csv,ANBIMA IMA Completo,ANBIMA,Índices de Mercado,indicador,IMA-B 5+,"7,94%",Yield,2026-06-09,2026-06-10,yield_
-anbima_ima_completo.csv,ANBIMA IMA Completo,ANBIMA,Índices de Mercado,indicador,IMA-GERAL,10.033,Número-índice,2026-06-09,2026-06-10,numero_indice
-anbima_ima_completo.csv,ANBIMA IMA Completo,ANBIMA,Índices de Mercado,indicador,IMA-GERAL,"0,04%",Variação diária,2026-06-09,2026-06-10,variacao_diaria
-anbima_ima_completo.csv,ANBIMA IMA Completo,ANBIMA,Índices de Mercado,indicador,IMA-GERAL,"-0,69%",Variação mensal,2026-06-09,2026-06-10,variacao_mensal
-anbima_ima_completo.csv,ANBIMA IMA Completo,ANBIMA,Índices de Mercado,indicador,IMA-GERAL,"4,57%",Variação anual,2026-06-09,2026-06-10,variacao_anual
-anbima_ima_completo.csv,ANBIMA IMA Completo,ANBIMA,Índices de Mercado,indicador,IMA-GERAL,"12,48%",Variação 12m,2026-06-09,2026-06-10,variacao_ultimos_12_meses
-anbima_ima_completo.csv,ANBIMA IMA Completo,ANBIMA,Índices de Mercado,indicador,IMA-GERAL,"487,00",Duration (d.u.),2026-06-09,2026-06-10,duration_du
-anbima_ima_completo.csv,ANBIMA IMA Completo,ANBIMA,Índices de Mercado,indicador,IMA-GERAL-EX-C,9.890,Número-índice,2026-06-09,2026-06-10,numero_indice
-anbima_ima_completo.csv,ANBIMA IMA Completo,ANBIMA,Índices de Mercado,indicador,IMA-GERAL-EX-C,"0,04%",Variação diária,2026-06-09,2026-06-10,variacao_diaria
-anbima_ima_completo.csv,ANBIMA IMA Completo,ANBIMA,Índices de Mercado,indicador,IMA-GERAL-EX-C,"-0,70%",Variação mensal,2026-06-09,2026-06-10,variacao_mensal
-anbima_ima_completo.csv,ANBIMA IMA Completo,ANBIMA,Índices de Mercado,indicador,IMA-GERAL-EX-C,"4,55%",Variação anual,2026-06-09,2026-06-10,variacao_anual
-anbima_ima_completo.csv,ANBIMA IMA Completo,ANBIMA,Índices de Mercado,indicador,IMA-GERAL-EX-C,"12,55%",Variação 12m,2026-06-09,2026-06-10,variacao_ultimos_12_meses
-anbima_ima_completo.csv,ANBIMA IMA Completo,ANBIMA,Índices de Mercado,indicador,IMA-GERAL-EX-C,"482,00",Duration (d.u.),2026-06-09,2026-06-10,duration_du
-anbima_ima_completo.csv,ANBIMA IMA Completo,ANBIMA,Índices de Mercado,indicador,IMA-S,8.630,Número-índice,2026-06-09,2026-06-10,numero_indice
-anbima_ima_completo.csv,ANBIMA IMA Completo,ANBIMA,Índices de Mercado,indicador,IMA-S,"0,05%",Variação diária,2026-06-09,2026-06-10,variacao_diaria
-anbima_ima_completo.csv,ANBIMA IMA Completo,ANBIMA,Índices de Mercado,indicador,IMA-S,"0,32%",Variação mensal,2026-06-09,2026-06-10,variacao_mensal
-anbima_ima_completo.csv,ANBIMA IMA Completo,ANBIMA,Índices de Mercado,indicador,IMA-S,"6,11%",Variação anual,2026-06-09,2026-06-10,variacao_anual
-anbima_ima_completo.csv,ANBIMA IMA Completo,ANBIMA,Índices de Mercado,indicador,IMA-S,"14,96%",Variação 12m,2026-06-09,2026-06-10,variacao_ultimos_12_meses
-anbima_ima_completo.csv,ANBIMA IMA Completo,ANBIMA,Índices de Mercado,indicador,IMA-S,"1,00",Duration (d.u.),2026-06-09,2026-06-10,duration_du
-anbima_ima_completo.csv,ANBIMA IMA Completo,ANBIMA,Índices de Mercado,indicador,IRF-M,22.197,Número-índice,2026-06-09,2026-06-10,numero_indice
-anbima_ima_completo.csv,ANBIMA IMA Completo,ANBIMA,Índices de Mercado,indicador,IRF-M,"-0,02%",Variação diária,2026-06-09,2026-06-10,variacao_diaria
-anbima_ima_completo.csv,ANBIMA IMA Completo,ANBIMA,Índices de Mercado,indicador,IRF-M,"-1,53%",Variação mensal,2026-06-09,2026-06-10,variacao_mensal
-anbima_ima_completo.csv,ANBIMA IMA Completo,ANBIMA,Índices de Mercado,indicador,IRF-M,"2,73%",Variação anual,2026-06-09,2026-06-10,variacao_anual
-anbima_ima_completo.csv,ANBIMA IMA Completo,ANBIMA,Índices de Mercado,indicador,IRF-M,"11,38%",Variação 12m,2026-06-09,2026-06-10,variacao_ultimos_12_meses
-anbima_ima_completo.csv,ANBIMA IMA Completo,ANBIMA,Índices de Mercado,indicador,IRF-M,"582,00",Duration (d.u.),2026-06-09,2026-06-10,duration_du
-anbima_ima_completo.csv,ANBIMA IMA Completo,ANBIMA,Índices de Mercado,indicador,IRF-M,"14,77%",Yield,2026-06-09,2026-06-10,yield_
-anbima_ima_completo.csv,ANBIMA IMA Completo,ANBIMA,Índices de Mercado,indicador,IRF-M 1,20.171,Número-índice,2026-06-09,2026-06-10,numero_indice
-anbima_ima_completo.csv,ANBIMA IMA Completo,ANBIMA,Índices de Mercado,indicador,IRF-M 1,"0,04%",Variação diária,2026-06-09,2026-06-10,variacao_diaria
-anbima_ima_completo.csv,ANBIMA IMA Completo,ANBIMA,Índices de Mercado,indicador,IRF-M 1,"0,17%",Variação mensal,2026-06-09,2026-06-10,variacao_mensal
-anbima_ima_completo.csv,ANBIMA IMA Completo,ANBIMA,Índices de Mercado,indicador,IRF-M 1,"5,61%",Variação anual,2026-06-09,2026-06-10,variacao_anual
-anbima_ima_completo.csv,ANBIMA IMA Completo,ANBIMA,Índices de Mercado,indicador,IRF-M 1,"14,27%",Variação 12m,2026-06-09,2026-06-10,variacao_ultimos_12_meses
-anbima_ima_completo.csv,ANBIMA IMA Completo,ANBIMA,Índices de Mercado,indicador,IRF-M 1,"92,00",Duration (d.u.),2026-06-09,2026-06-10,duration_du
-anbima_ima_completo.csv,ANBIMA IMA Completo,ANBIMA,Índices de Mercado,indicador,IRF-M 1,"14,38%",Yield,2026-06-09,2026-06-10,yield_
-anbima_ima_completo.csv,ANBIMA IMA Completo,ANBIMA,Índices de Mercado,indicador,IRF-M 1+,23.899,Número-índice,2026-06-09,2026-06-10,numero_indice
-anbima_ima_completo.csv,ANBIMA IMA Completo,ANBIMA,Índices de Mercado,indicador,IRF-M 1+,"-0,05%",Variação diária,2026-06-09,2026-06-10,variacao_diaria
-anbima_ima_completo.csv,ANBIMA IMA Completo,ANBIMA,Índices de Mercado,indicador,IRF-M 1+,"-2,20%",Variação mensal,2026-06-09,2026-06-10,variacao_mensal
-anbima_ima_completo.csv,ANBIMA IMA Completo,ANBIMA,Índices de Mercado,indicador,IRF-M 1+,"1,64%",Variação anual,2026-06-09,2026-06-10,variacao_anual
-anbima_ima_completo.csv,ANBIMA IMA Completo,ANBIMA,Índices de Mercado,indicador,IRF-M 1+,"10,21%",Variação 12m,2026-06-09,2026-06-10,variacao_ultimos_12_meses
-anbima_ima_completo.csv,ANBIMA IMA Completo,ANBIMA,Índices de Mercado,indicador,IRF-M 1+,"779,00",Duration (d.u.),2026-06-09,2026-06-10,duration_du
-anbima_ima_completo.csv,ANBIMA IMA Completo,ANBIMA,Índices de Mercado,indicador,IRF-M 1+,"14,93%",Yield,2026-06-09,2026-06-10,yield_
 anbima_indicadores.csv,ANBIMA Indicadores,ANBIMA,Taxa de Juros,indicador,DI-B3,"14,40",% a.a.,2026-06-09,2026-06-09,valor
 anbima_indicadores.csv,ANBIMA Indicadores,ANBIMA,Câmbio,indicador,Dólar Comercial Compra,"5,17",R$,2026-06-09,2026-06-09,valor
 anbima_indicadores.csv,ANBIMA Indicadores,ANBIMA,Câmbio,indicador,Dólar Comercial Venda,"5,17",R$,2026-06-09,2026-06-09,valor
@@ -130,6 +22,16 @@ anbima_indice_imab.csv,ANBIMA IMA-B,ANBIMA,IMA-B,indicador,IMA - Geral,"487,00",
 anbima_indice_imab.csv,ANBIMA IMA-B,ANBIMA,IMA-B,indicador,IMA-GERAL,9.573,Número-índice,2025-12-26,2026-06-01,n_mero_ndice
 anbima_indice_imab.csv,ANBIMA IMA-B,ANBIMA,IMA-B,indicador,IMA-GERAL,"0,15%",Variação diária,2025-12-26,2026-06-01,varia_o_di_ria
 anbima_indice_imab.csv,ANBIMA IMA-B,ANBIMA,IMA-B,indicador,IMA-GERAL,"520,00",Duration (d.u.),2025-12-26,2026-06-01,duration_d_u
+anbima_titulos_publicos.csv,ANBIMA Títulos Públicos,ANBIMA,Títulos Públicos,indicador,100000 (LTN),"14,42%",Taxa indicativa,2026-06-09,2026-06-10,tx_indicativa
+anbima_titulos_publicos.csv,ANBIMA Títulos Públicos,ANBIMA,Títulos Públicos,indicador,100000 (LTN),"991,49",PU,2026-06-09,2026-06-10,pu
+anbima_titulos_publicos.csv,ANBIMA Títulos Públicos,ANBIMA,Títulos Públicos,indicador,210100 (LFT),"0,00%",Taxa indicativa,2026-06-09,2026-06-10,tx_indicativa
+anbima_titulos_publicos.csv,ANBIMA Títulos Públicos,ANBIMA,Títulos Públicos,indicador,210100 (LFT),19.171,PU,2026-06-09,2026-06-10,pu
+anbima_titulos_publicos.csv,ANBIMA Títulos Públicos,ANBIMA,Títulos Públicos,indicador,760199 (NTN-B),"11,04%",Taxa indicativa,2026-06-09,2026-06-10,tx_indicativa
+anbima_titulos_publicos.csv,ANBIMA Títulos Públicos,ANBIMA,Títulos Públicos,indicador,760199 (NTN-B),4.765,PU,2026-06-09,2026-06-10,pu
+anbima_titulos_publicos.csv,ANBIMA Títulos Públicos,ANBIMA,Títulos Públicos,indicador,770100 (NTN-C),"8,16%",Taxa indicativa,2026-06-09,2026-06-10,tx_indicativa
+anbima_titulos_publicos.csv,ANBIMA Títulos Públicos,ANBIMA,Títulos Públicos,indicador,770100 (NTN-C),7.975,PU,2026-06-09,2026-06-10,pu
+anbima_titulos_publicos.csv,ANBIMA Títulos Públicos,ANBIMA,Títulos Públicos,indicador,950199 (NTN-F),"14,38%",Taxa indicativa,2026-06-09,2026-06-10,tx_indicativa
+anbima_titulos_publicos.csv,ANBIMA Títulos Públicos,ANBIMA,Títulos Públicos,indicador,950199 (NTN-F),1.020,PU,2026-06-09,2026-06-10,pu
 b3_bdi_di_over.csv,B3 DI Over,B3,,indicador,DI Over (SELIC equivalente),"14,40%",,2026-06-09,2026-06-10,average
 b3_bdi_di_over.csv,B3 DI Over,B3,,indicador,DI Over — Volume financeiro,3.035.921,,2026-06-09,2026-06-10,financial_volume
 b3_bmf_taxas_juros.csv,B3 BMF Taxas,B3,Taxas de Juros,indicador,DI1,"13,65%",,2026-06-09,2026-06-10,taxa

@@ -2146,7 +2146,7 @@
       {
         "name": "data_referencia",
         "type": "date",
-        "example": "20260609"
+        "example": "2026-06-09"
       },
       {
         "name": "codigo_selic",
@@ -2156,12 +2156,12 @@
       {
         "name": "data_base_emissao",
         "type": "date",
-        "example": "20230106"
+        "example": "2023-01-06"
       },
       {
         "name": "data_vencimento",
         "type": "date",
-        "example": "20260701"
+        "example": "2026-07-01"
       },
       {
         "name": "tx_compra",

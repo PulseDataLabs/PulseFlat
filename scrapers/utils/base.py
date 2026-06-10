@@ -74,6 +74,11 @@ class BaseScraper:
                     d, m, y = match_short.groups()
                     return f"20{y}-{m}-{d}"
 
+                match_yyyymmdd = re.match(r'^(\d{4})(\d{2})(\d{2})$', val_str)
+                if match_yyyymmdd:
+                    y, m, d = match_yyyymmdd.groups()
+                    return f"{y}-{m}-{d}"
+
                 if ',' in val_str and val_str.count(',') == 1:
                     clean_num = val_str.replace('.', '').replace(',', '').replace('%', '').replace('-', '').replace('+', '').strip()
                     if clean_num.isdigit():
