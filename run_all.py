@@ -480,6 +480,13 @@ def main(
         except Exception as e:
             print(yellow(f"  ⚠  Não foi possível gerar market_latest: {e}"))
 
+        try:
+            from scripts.consolidate import generate as gen_consolidated
+            gen_consolidated()
+            print(f"  {dim('📊 consolidated.json/csv/js atualizados')}")
+        except Exception as e:
+            print(yellow(f"  ⚠  Não foi possível gerar dados consolidados: {e}"))
+
         if check_holes:
             try:
                 from scripts.verificar_buracos import main as check_holes_fn

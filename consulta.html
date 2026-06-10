@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Consulta de indicadores financeiros brasileiros consolidados — ANBIMA, B3, BCB, BACEN, CVM, IBGE" />
+  <meta property="og:title" content="PulseFlat — Consulta" />
+  <meta property="og:description" content="Busque indicadores por dataset, fonte, indicador. Dados consolidados do pipeline PulseFlat." />
+  <title>Consulta — PulseFlat | Pulse Data Labs</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@300;400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="preload" href="./data/consolidated.json" as="fetch" crossorigin />
+  <link rel="stylesheet" href="https://cdn.datatables.net/2.2.2/css/dataTables.dataTables.min.css" />
+  <link rel="stylesheet" href="https://cdn.datatables.net/responsive/3.0.4/css/responsive.dataTables.min.css" />
+  <link rel="stylesheet" href="https://cdn.datatables.net/buttons/3.2.2/css/buttons.dataTables.min.css" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg:        #080c10;
+      --bg2:       #0a1020;
+      --bg3:       #0d1520;
+      --surface:   #111c2a;
+      --surface2:  #162030;
+      --border:    #1e2d3d;
+      --border2:   #243444;
+      --accent:    #00d4ff;
+      --accent2:   #0095c8;
+      --accent-dim: rgba(0,212,255,0.08);
+      --gold:      #f0b429;
+      --gold2:     #c8902a;
+      --gold-dim:  rgba(240,180,41,0.1);
+      --green:     #00e5a0;
+      --green-dim: rgba(0,229,160,0.1);
+      --red:       #ff4d6d;
+      --red-dim:   rgba(255,77,109,0.1);
+      --text:      #e8eef4;
+      --text2:     #8fa3b8;
+      --text3:     #566878;
+      --font-head: 'Syne', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --font-body: 'Inter', sans-serif;
+      --radius:    8px;
+      --radius-sm: 5px;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-body);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { color: #66e5ff; }
+
+    .skip-link {
+      position: absolute; top: -100%; left: 50%; transform: translateX(-50%);
+      background: var(--accent); color: var(--bg);
+      padding: 0.75rem 1.5rem; border-radius: 0 0 var(--radius) var(--radius);
+      font-family: var(--font-mono); font-size: 0.8rem; font-weight: 500;
+      z-index: 1000; transition: top 0.2s;
+    }
+    .skip-link:focus { top: 0; }
+
+    nav {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 2rem; height: 60px;
+      background: rgba(8,12,16,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      position: sticky; top: 0; z-index: 100;
+    }
+    .nav-logo {
+      display: flex; align-items: center; gap: 0.6rem;
+      font-family: var(--font-head); font-weight: 700; font-size: 1rem;
+      color: var(--text); text-decoration: none;
+      letter-spacing: -0.01em;
+    }
+    .nav-logo img { height: 28px; width: auto; }
+    .nav-links { display: flex; gap: 0.25rem; list-style: none; align-items: center; }
+    .nav-links a {
+      font-family: var(--font-mono); font-size: 0.78rem;
+      color: var(--text2); padding: 0.4rem 0.75rem; border-radius: var(--radius-sm);
+      transition: color 0.2s, background 0.2s;
+    }
+    .nav-links a:hover { color: var(--text); background: var(--surface); }
+    .nav-links a.active { color: var(--accent); }
+
+    .nav-cta {
+      display: inline-flex; align-items: center; gap: 0.3rem;
+      padding: 0.4rem 1rem;
+      background: var(--accent); color: var(--bg); border-radius: var(--radius-sm);
+      font-family: var(--font-mono); font-size: 0.75rem; font-weight: 600;
+      transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+      box-shadow: 0 0 0 0 rgba(0,212,255,0);
+    }
+    .nav-cta:hover {
+      background: #33ddff; color: var(--bg);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 16px rgba(0,212,255,0.25);
+    }
+
+    .page-header {
+      background: linear-gradient(180deg, var(--bg2) 0%, var(--bg) 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 2.5rem 2rem 2rem;
+    }
+    .page-header-inner {
+      max-width: 1300px; margin: 0 auto;
+      display: flex; align-items: flex-end; justify-content: space-between;
+      flex-wrap: wrap; gap: 1.5rem;
+    }
+    .page-eyebrow {
+      font-family: var(--font-mono); font-size: 0.7rem; font-weight: 500;
+      color: var(--accent); letter-spacing: 0.1em; text-transform: uppercase;
+      margin-bottom: 0.5rem;
+      display: flex; align-items: center; gap: 0.4rem;
+    }
+    .page-eyebrow::before {
+      content: ''; display: inline-block;
+      width: 20px; height: 1px; background: var(--accent);
+    }
+    .page-header h1 {
+      font-family: var(--font-head); font-size: 2rem; font-weight: 800;
+      color: var(--text); line-height: 1.1; letter-spacing: -0.02em;
+    }
+    .page-header p {
+      color: var(--text2); font-size: 0.9rem; margin-top: 0.4rem;
+      max-width: 480px;
+    }
+
+    .stats-row {
+      display: flex; gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .stat-card {
+      flex: 1; background: var(--surface);
+      padding: 0.875rem 1.25rem;
+      display: flex; flex-direction: column; gap: 0.1rem;
+      position: relative; overflow: hidden;
+      transition: background 0.2s;
+    }
+    .stat-card::after {
+      content: ''; position: absolute; bottom: 0; left: 0; right: 0;
+      height: 2px; background: currentColor; opacity: 0;
+      transition: opacity 0.2s;
+    }
+    .stat-card:hover { background: var(--surface2); }
+    .stat-card:hover::after { opacity: 0.4; }
+    .stat-card.anbima { color: var(--gold); }
+    .stat-card.b3 { color: var(--accent); }
+    .stat-card.bcb { color: var(--green); }
+    .stat-card.total { color: var(--text); }
+    .stat-card.registros { color: var(--text2); }
+
+    .stat-value {
+      font-family: var(--font-mono); font-size: 1.35rem; font-weight: 600;
+      color: currentColor; line-height: 1;
+    }
+    .stat-label {
+      font-family: var(--font-mono); font-size: 0.65rem; font-weight: 500;
+      color: var(--text3); text-transform: uppercase; letter-spacing: 0.07em;
+    }
+    .stat-dot {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: currentColor; opacity: 0.6;
+      position: absolute; top: 0.875rem; right: 0.875rem;
+    }
+
+    .filter-section {
+      max-width: 1300px; margin: 0 auto;
+      padding: 1.5rem 2rem 0;
+    }
+    .filter-bar {
+      display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap;
+      padding: 1rem 1.25rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+    .search-wrapper {
+      flex: 1; min-width: 220px;
+      position: relative;
+    }
+    .search-icon {
+      position: absolute; left: 0.75rem; top: 50%; transform: translateY(-50%);
+      color: var(--text3); pointer-events: none;
+      display: flex; align-items: center;
+    }
+    .search-wrapper input {
+      width: 100%;
+      background: var(--bg3); border: 1px solid var(--border);
+      color: var(--text); padding: 0.5rem 0.75rem 0.5rem 2.25rem;
+      border-radius: var(--radius-sm);
+      font-family: var(--font-mono); font-size: 0.8rem;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .search-wrapper input:focus {
+      outline: none; border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(0,212,255,0.1);
+    }
+    .search-wrapper input::placeholder { color: var(--text3); }
+
+    .filter-divider {
+      width: 1px; height: 28px; background: var(--border);
+      flex-shrink: 0;
+    }
+    .source-filters {
+      display: flex; gap: 0.4rem; align-items: center; flex-wrap: wrap;
+    }
+    .source-chip {
+      display: inline-flex; align-items: center; gap: 0.35rem;
+      padding: 0.35rem 0.75rem;
+      border: 1px solid transparent; border-radius: 999px;
+      font-family: var(--font-mono); font-size: 0.72rem; font-weight: 500;
+      cursor: pointer; transition: all 0.15s; user-select: none;
+    }
+    .source-chip input[type="checkbox"] { display: none; }
+    .source-chip .chip-dot {
+      width: 6px; height: 6px; border-radius: 50%;
+    }
+    .source-chip.checked { background: var(--accent-dim); border-color: var(--accent); color: var(--accent); }
+    .source-chip .chip-dot { background: var(--accent); }
+    .source-chip:hover { opacity: 0.85; }
+
+    .filter-count {
+      font-family: var(--font-mono); font-size: 0.72rem; color: var(--text3);
+      margin-left: auto; white-space: nowrap;
+    }
+    .filter-count span { color: var(--accent); font-weight: 500; }
+
+    .table-section {
+      max-width: 1300px; margin: 0 auto;
+      padding: 1rem 2rem 4rem;
+    }
+    .table-container {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
+    table.dataTable {
+      background: transparent !important;
+      font-size: 0.84rem;
+      border-collapse: collapse !important;
+      margin: 0 !important;
+    }
+    table.dataTable thead th {
+      background: var(--bg3) !important;
+      color: var(--text3) !important;
+      border-bottom: 1px solid var(--border2) !important;
+      border-top: none !important;
+      font-family: var(--font-mono); font-size: 0.68rem;
+      text-transform: uppercase; letter-spacing: 0.07em;
+      padding: 0.65rem 1rem !important;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+    table.dataTable thead th.sorting::after,
+    table.dataTable thead th.sorting_asc::after,
+    table.dataTable thead th.sorting_desc::after {
+      opacity: 0.4 !important;
+    }
+    table.dataTable thead th.sorting_asc::after { opacity: 0.9 !important; color: var(--accent) !important; }
+    table.dataTable thead th.sorting_desc::after { opacity: 0.9 !important; color: var(--accent) !important; }
+
+    table.dataTable tbody td {
+      border-bottom: 1px solid rgba(30,45,61,0.5) !important;
+      border-top: none !important;
+      padding: 0.6rem 1rem !important;
+      vertical-align: middle;
+    }
+    table.dataTable tbody tr { background: transparent !important; }
+    table.dataTable tbody tr:last-child td { border-bottom: none !important; }
+    table.dataTable tbody tr:hover td { background: rgba(0,212,255,0.025) !important; }
+
+    .dataTables_wrapper { color: var(--text) !important; }
+    .dataTables_wrapper .dataTables_filter { display: none !important; }
+    .dataTables_wrapper .dataTables_length label {
+      color: var(--text3) !important;
+      font-family: var(--font-mono); font-size: 0.72rem;
+      display: flex; align-items: center; gap: 0.4rem;
+    }
+    .dataTables_wrapper .dataTables_length select {
+      background: #111c2a !important;
+      border: 1px solid var(--border) !important;
+      color: #e8eef4 !important;
+      border-radius: var(--radius-sm);
+      padding: 0.25rem 0.4rem !important;
+      font-family: var(--font-mono); font-size: 0.72rem;
+    }
+    .dataTables_wrapper .dataTables_length select option {
+      background: #111c2a;
+      color: #e8eef4;
+    }
+    .dataTables_wrapper .dataTables_info {
+      color: var(--text3) !important;
+      font-family: var(--font-mono); font-size: 0.7rem !important;
+    }
+    .dataTables_wrapper .dataTables_paginate {
+      font-family: var(--font-mono); font-size: 0.75rem;
+    }
+    .dataTables_wrapper .dataTables_paginate .paginate_button {
+      background: transparent !important;
+      color: var(--text2) !important;
+      border: 1px solid var(--border) !important;
+      border-radius: var(--radius-sm) !important;
+      margin: 0 0.1rem; padding: 0.3rem 0.65rem !important;
+      transition: all 0.15s;
+    }
+    .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+      background: var(--surface2) !important;
+      color: var(--accent) !important;
+      border-color: var(--border2) !important;
+    }
+    .dataTables_wrapper .dataTables_paginate .paginate_button.current,
+    .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+      background: var(--accent) !important;
+      color: var(--bg) !important;
+      border-color: var(--accent) !important;
+      font-weight: 600;
+    }
+    .dataTables_wrapper .dataTables_paginate .paginate_button.disabled {
+      opacity: 0.3; cursor: default !important;
+    }
+    .dataTables_wrapper .dt-layout-row {
+      margin: 0 !important;
+      padding: 0.6rem 1rem;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 0.5rem;
+      border-top: 1px solid var(--border);
+    }
+    .dataTables_wrapper .dt-layout-row:first-child {
+      border-top: none; border-bottom: 1px solid var(--border);
+      background: var(--bg3);
+    }
+    .dataTables_wrapper .dt-layout-cell { padding: 0 !important; }
+
+    .dt-buttons { display: flex; gap: 0.4rem; }
+    .dt-button {
+      background: var(--surface2) !important;
+      color: var(--text2) !important;
+      border: 1px solid var(--border) !important;
+      border-radius: var(--radius-sm) !important;
+      padding: 0.3rem 0.75rem !important;
+      font-family: var(--font-mono) !important; font-size: 0.72rem !important;
+      cursor: pointer; transition: all 0.15s;
+    }
+    .dt-button:hover {
+      background: var(--border2) !important;
+      color: var(--accent) !important;
+      border-color: var(--accent2) !important;
+    }
+
+    .source-badge {
+      display: inline-flex; align-items: center; gap: 0.3rem;
+      padding: 0.2rem 0.6rem; border-radius: 999px;
+      font-family: var(--font-mono); font-size: 0.68rem; font-weight: 500;
+      white-space: nowrap;
+      background: var(--accent-dim); color: var(--accent);
+    }
+    .source-badge .badge-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--accent); }
+
+    .fonte-cell {
+      font-family: var(--font-mono); font-size: 0.72rem; color: var(--text2);
+      font-weight: 500;
+    }
+    .dataset-cell {
+      font-family: var(--font-mono); font-size: 0.7rem; color: var(--text3);
+    }
+    .indicador-cell {
+      font-weight: 500; color: var(--text);
+    }
+    .valor-cell {
+      font-family: var(--font-mono); font-size: 0.85rem; font-weight: 500;
+      color: var(--gold);
+    }
+    .unidade-cell {
+      font-family: var(--font-mono); font-size: 0.72rem; color: var(--text3);
+    }
+    .date-cell {
+      font-family: var(--font-mono); font-size: 0.72rem; color: var(--text3);
+      white-space: nowrap;
+    }
+    .metrica-cell {
+      font-family: var(--font-mono); font-size: 0.68rem; color: var(--text3);
+      text-transform: lowercase;
+    }
+
+    .loading-state { text-align: center; padding: 5rem 1rem; }
+    .spinner {
+      width: 32px; height: 32px;
+      border: 2px solid var(--border);
+      border-top-color: var(--accent);
+      border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+      margin: 0 auto 1rem;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .loading-text { font-family: var(--font-mono); font-size: 0.8rem; color: var(--text3); }
+
+    .error-state { text-align: center; padding: 4rem 1rem; }
+    .error-icon { font-size: 2rem; margin-bottom: 0.75rem; }
+    .error-msg { font-family: var(--font-mono); font-size: 0.82rem; color: var(--red); }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 1.75rem 2rem;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 1rem;
+    }
+    .footer-brand {
+      display: flex; align-items: center; gap: 0.5rem;
+      font-family: var(--font-mono); font-size: 0.72rem; color: var(--text3);
+    }
+    .footer-brand-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); opacity: 0.5; }
+    .footer-links {
+      display: flex; gap: 1.25rem;
+      font-family: var(--font-mono); font-size: 0.72rem;
+    }
+    .footer-links a { color: var(--text3); transition: color 0.2s; }
+    .footer-links a:hover { color: var(--accent); }
+
+    @media (max-width: 900px) {
+      .page-header-inner { flex-direction: column; align-items: flex-start; }
+      .stats-row { flex-wrap: wrap; }
+      .stat-card { min-width: calc(50% - 1px); }
+    }
+    @media (max-width: 768px) {
+      nav { padding: 0 1rem; }
+      .nav-links { gap: 0; }
+      .nav-links li:not(:last-child) { display: none; }
+      .page-header { padding: 1.75rem 1rem 1.5rem; }
+      .page-header h1 { font-size: 1.5rem; }
+      .filter-section { padding: 1rem 1rem 0; }
+      .table-section { padding: 0.75rem 1rem 3rem; }
+      .filter-divider { display: none; }
+      .filter-count { display: none; }
+      footer { flex-direction: column; align-items: flex-start; padding: 1.5rem 1rem; }
+    }
+    @media (max-width: 480px) {
+      .stat-card { min-width: calc(50% - 1px); }
+      .source-filters { gap: 0.3rem; }
+      .source-chip { padding: 0.3rem 0.55rem; font-size: 0.68rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+  <nav>
+    <a href="index.html" class="nav-logo" aria-label="PulseFlat — Página inicial">
+      <span style="font-family: var(--font-head); font-weight: 800;">Pulse<span style="color: var(--accent);">Flat</span></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Início</a></li>
+      <li><a href="consulta.html" class="active" aria-current="page">Consulta</a></li>
+      <li>
+        <a href="https://github.com/PulseDataLabs/PulseFlat" class="nav-cta" target="_blank" rel="noopener">
+          GitHub ↗
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <main id="main-content">
+
+    <header class="page-header">
+      <div class="page-header-inner">
+        <div class="page-title-group">
+          <div class="page-eyebrow">Indicadores financeiros</div>
+          <h1>Consulta Consolidada</h1>
+          <p>Últimos valores de indicadores ANBIMA, B3, BCB, BACEN, CVM e mais</p>
+        </div>
+        <div class="stats-row" id="stats-row" aria-label="Estatísticas">
+          <div class="stat-card registros">
+            <div class="stat-dot"></div>
+            <div class="stat-value" id="stat-total">—</div>
+            <div class="stat-label">Registros</div>
+          </div>
+          <div class="stat-card total">
+            <div class="stat-dot"></div>
+            <div class="stat-value" id="stat-indicadores">—</div>
+            <div class="stat-label">Indicadores</div>
+          </div>
+          <div class="stat-card anbima">
+            <div class="stat-dot"></div>
+            <div class="stat-value" id="stat-anbima">—</div>
+            <div class="stat-label">ANBIMA</div>
+          </div>
+          <div class="stat-card b3">
+            <div class="stat-dot"></div>
+            <div class="stat-value" id="stat-b3">—</div>
+            <div class="stat-label">B3</div>
+          </div>
+          <div class="stat-card bcb">
+            <div class="stat-dot"></div>
+            <div class="stat-value" id="stat-bcb">—</div>
+            <div class="stat-label">BCB / BACEN</div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="filter-section" aria-label="Filtros">
+      <div class="filter-bar">
+        <div class="search-wrapper">
+          <span class="search-icon" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+              <circle cx="6.5" cy="6.5" r="5" stroke="#566878" stroke-width="1.5"/>
+              <path d="M10 10L14 14" stroke="#566878" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <input type="text" id="search-input"
+            placeholder="Buscar por indicador, dataset, fonte…"
+            autocomplete="off"
+            aria-label="Buscar indicadores"
+          />
+        </div>
+        <div class="filter-divider" aria-hidden="true"></div>
+        <div class="source-filters" role="group" aria-label="Filtrar por fonte" id="source-filters">
+        </div>
+        <div class="filter-count" id="filter-count" aria-live="polite">
+          <span id="filtered-n">—</span> resultado(s)
+        </div>
+      </div>
+    </section>
+
+    <section class="table-section" aria-label="Tabela de indicadores">
+      <div class="table-container">
+        <div id="loading" class="loading-state">
+          <div class="spinner" role="status" aria-label="Carregando"></div>
+          <p class="loading-text">Carregando dados…</p>
+        </div>
+        <div id="error" class="error-state" style="display:none;">
+          <div class="error-icon" aria-hidden="true">⚠</div>
+          <p class="error-msg" id="error-msg"></p>
+        </div>
+        <table id="consolidated-table" class="display responsive" style="width:100%; display:none;">
+          <thead>
+            <tr>
+              <th>Indicador</th>
+              <th>Valor</th>
+              <th>Unidade</th>
+              <th>Fonte</th>
+              <th>Dataset</th>
+              <th>Data Ref.</th>
+              <th>Categoria</th>
+              <th>Métrica</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-brand">
+      <div class="footer-brand-dot"></div>
+      © 2026 Pulse Data Labs
+    </div>
+    <div class="footer-links">
+      <a href="index.html">PulseFlat</a>
+      <a href="https://pulsedatalabs.github.io" target="_blank" rel="noopener">pulsedatalabs.github.io</a>
+      <a href="https://github.com/PulseDataLabs/PulseFlat" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.datatables.net/2.2.2/js/dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/responsive/3.0.4/js/dataTables.responsive.min.js"></script>
+  <script src="https://cdn.datatables.net/buttons/3.2.2/js/dataTables.buttons.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+  <script src="https://cdn.datatables.net/buttons/3.2.2/js/buttons.html5.min.js"></script>
+  <script>
+  (async function () {
+    const $table   = $('#consolidated-table');
+    const $tbody   = $table.find('tbody');
+    const $loading = $('#loading');
+    const $error   = $('#error');
+    const $errMsg  = $('#error-msg');
+    const $search  = $('#search-input');
+    const $filterArea = $('#source-filters');
+
+    let tableApi = null;
+    let allData  = [];
+
+    /* ── Load data ── */
+    try {
+      const resp = await fetch('./data/consolidated.json');
+      if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+      allData = await resp.json();
+    } catch (err) {
+      // try JS fallback
+      if (window.PULSEFLAT_CONSOLIDATED) {
+        allData = window.PULSEFLAT_CONSOLIDATED;
+      } else {
+        $loading.hide();
+        $errMsg.text('Erro ao carregar dados: ' + err.message);
+        $error.show();
+        return;
+      }
+    }
+
+    if (!allData.length) {
+      $loading.hide();
+      $errMsg.text('Nenhum dado encontrado.');
+      $error.show();
+      return;
+    }
+
+    /* ── Stats ── */
+    const sources     = [...new Set(allData.map(r => r.fonte))].sort();
+    const indicadores = [...new Set(allData.map(r => r.indicador))];
+    const fonteCounts = {};
+    allData.forEach(r => { fonteCounts[r.fonte] = (fonteCounts[r.fonte] || 0) + 1; });
+
+    document.getElementById('stat-total').textContent      = allData.length.toLocaleString('pt-BR');
+    document.getElementById('stat-indicadores').textContent = indicadores.length.toLocaleString('pt-BR');
+
+    // Top 3 sources for stats
+    const topSources = Object.entries(fonteCounts)
+      .sort((a, b) => b[1] - a[1])
+      .slice(0, 3);
+    const statsMap = { 'ANBIMA': 'stat-anbima', 'B3': 'stat-b3' };
+    topSources.forEach(([src, cnt]) => {
+      const elId = statsMap[src];
+      if (elId) document.getElementById(elId).textContent = cnt.toLocaleString('pt-BR');
+    });
+    const statBcb = document.getElementById('stat-bcb');
+    const bcbCount = (fonteCounts['BCB'] || 0) + (fonteCounts['BACEN'] || 0);
+    statBcb.textContent = bcbCount.toLocaleString('pt-BR');
+
+    /* ── Source filter chips ── */
+    const SOURCE_COLORS = {
+      'ANBIMA': { color: '#f0b429' },
+      'B3':     { color: '#00d4ff' },
+      'BCB':    { color: '#00e5a0' },
+      'BACEN':  { color: '#5b9bd5' },
+      'CVM':    { color: '#b388ff' },
+      'Debêntures': { color: '#ff8a65' },
+      'Yahoo Finance': {color: '#78909c' },
+      'Investing.com': {color: '#4db6ac' },
+      'ONU':   { color: '#81c784' },
+    };
+
+    sources.forEach(src => {
+      const chipColor = SOURCE_COLORS[src]?.color || '#8fa3b8';
+      const $chip = $(`
+        <label class="source-chip checked" data-source="${src}" style="border-color: ${chipColor}; color: ${chipColor};">
+          <input type="checkbox" value="${src}" checked />
+          <span class="chip-dot" style="background: ${chipColor};"></span>
+          ${src}
+        </label>
+      `);
+      $chip.on('click', function () {
+        const $c = $(this);
+        const checked = $c.find('input')[0].checked;
+        $c.toggleClass('checked', checked);
+        if (checked) {
+          $c.css({ 'border-color': chipColor, 'color': chipColor, 'background': 'rgba(0,212,255,0.08)' });
+        } else {
+          $c.css({ 'border-color': 'var(--border)', 'color': '', 'background': '' });
+        }
+        applyFilters();
+      });
+      $chip.css({ 'border-color': chipColor, 'color': chipColor, 'background': 'rgba(0,212,255,0.08)' });
+      $filterArea.append($chip);
+    });
+
+    /* ── Build table data ── */
+    const tableData = allData.map(r => {
+      const indicador = r.indicador || '—';
+      const valor     = r.valor || '—';
+      const unidade   = r.unidade || '';
+      const fonte     = r.fonte || '';
+      const dataset   = r.dataset || '';
+      const dataRef   = r.data_referencia || '';
+      const categoria = r.categoria || '';
+      const metrica   = r.metrica || '';
+
+      return [
+        { display: `<span class="indicador-cell">${indicador}</span>`, filter: indicador },
+        { display: `<span class="valor-cell">${valor}</span>`,         filter: valor },
+        { display: `<span class="unidade-cell">${unidade || '—'}</span>`, filter: unidade },
+        { display: `<span class="fonte-cell">${fonte}</span>`,        filter: fonte },
+        { display: `<span class="dataset-cell">${dataset}</span>`,    filter: dataset },
+        { display: `<span class="date-cell">${dataRef || '—'}</span>`, filter: dataRef, sort: dataRef },
+        { display: `<span style="font-size:0.72rem;color:var(--text3)">${categoria || '—'}</span>`, filter: categoria },
+        { display: `<span class="metrica-cell">${metrica || '—'}</span>`, filter: metrica },
+      ];
+    });
+
+    $loading.hide();
+    $table.show();
+
+    tableApi = $table.DataTable({
+      responsive: true,
+      pageLength: 50,
+      lengthMenu: [[25, 50, 100, 250, -1], [25, 50, 100, 250, 'Todos']],
+      order: [[0, 'asc']],
+      data: tableData,
+      language: {
+        url: 'https://cdn.datatables.net/plug-ins/2.2.2/i18n/pt-BR.json'
+      },
+      buttons: [
+        { extend: 'excelHtml5', text: '↓ Excel', title: 'pulseflat_consulta',
+          exportOptions: { columns: ':all', orthogonal: 'filter' } }
+      ],
+      dom: '<"dt-layout-row"<"dt-layout-cell"B><"dt-layout-cell"l>>' +
+           '<"dt-layout-row"tr>' +
+           '<"dt-layout-row"<"dt-layout-cell"i><"dt-layout-cell"p>>',
+      columnDefs: [{
+        targets: '_all',
+        render: function(data) {
+          if (data && typeof data === 'object') {
+            return data.display !== undefined ? data.display : data;
+          }
+          return data;
+        }
+      }],
+      columns: [
+        { data: 0, render: { _: 'display', filter: 'filter', sort: 'filter' } },
+        { data: 1, render: { _: 'display', filter: 'filter', sort: 'filter' } },
+        { data: 2, render: { _: 'display', filter: 'filter', sort: 'filter' } },
+        { data: 3, render: { _: 'display', filter: 'filter', sort: 'filter' } },
+        { data: 4, render: { _: 'display', filter: 'filter', sort: 'filter' } },
+        { data: 5, render: { _: 'display', filter: 'filter', sort: 'sort' } },
+        { data: 6, render: { _: 'display', filter: 'filter', sort: 'filter' } },
+        { data: 7, render: { _: 'display', filter: 'filter', sort: 'filter' } },
+      ],
+    });
+
+    function updateCount() {
+      const n = tableApi ? tableApi.rows({ search: 'applied' }).count() : allData.length;
+      document.getElementById('filtered-n').textContent = n.toLocaleString('pt-BR');
+    }
+    tableApi.on('draw', updateCount);
+    updateCount();
+
+    /* ── Source filter (col 3 = fonte) ── */
+    $.fn.dataTable.ext.search.push(function (_settings, _display, _idx, rowData) {
+      const selected = [];
+      $('.source-chip input[type="checkbox"]').each(function () {
+        if (this.checked) selected.push(this.value);
+      });
+      if (!selected.length) return true;
+      const fonte = rowData[3] && rowData[3].filter ? rowData[3].filter : '';
+      return selected.includes(fonte);
+    });
+
+    function applyFilters() {
+      const q = ($search.val() || '').trim();
+      tableApi.search(q).draw();
+    }
+
+    $search.on('input', applyFilters);
+
+  })();
+  </script>
+</body>
+</html>
