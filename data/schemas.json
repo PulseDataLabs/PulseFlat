@@ -37,7 +37,7 @@
       {
         "name": "quantidade_teorica",
         "type": "int",
-        "example": "76369069"
+        "example": "7636-90-69"
       },
       {
         "name": "participacao_pct",
@@ -359,7 +359,7 @@
       {
         "name": "security_identification_code",
         "type": "str",
-        "example": "10014464"
+        "example": "1001-44-64"
       },
       {
         "name": "description",
@@ -379,12 +379,12 @@
       {
         "name": "rate",
         "type": "str",
-        "example": "27.56"
+        "example": "25.55"
       },
       {
         "name": "last_update",
         "type": "date",
-        "example": "2026-06-09"
+        "example": "2026-06-10"
       }
     ]
   },
@@ -696,7 +696,7 @@
       {
         "name": "cnpj",
         "type": "str",
-        "example": "00000000"
+        "example": "0000-00-00"
       },
       {
         "name": "agencia",
@@ -1955,7 +1955,7 @@
       {
         "name": "data_referencia_pagina",
         "type": "date",
-        "example": "2026-06-10 09:30:00"
+        "example": "2026-06-10 15:22:00"
       },
       {
         "name": "indicador",
@@ -2746,7 +2746,7 @@
       {
         "name": "quantidade_teorica",
         "type": "int",
-        "example": "20895848"
+        "example": "2089-58-48"
       },
       {
         "name": "participacao_pct",
