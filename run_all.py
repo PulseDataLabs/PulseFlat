@@ -481,9 +481,10 @@ def main(
             print(yellow(f"  ⚠  Não foi possível gerar market_latest: {e}"))
 
         try:
-            from scripts.consolidate import generate as gen_consolidated
+            from scripts.consolidate import generate as gen_consolidated, generate_pivoted
             gen_consolidated()
-            print(f"  {dim('📊 consolidated.json/csv/js atualizados')}")
+            generate_pivoted()
+            print(f"  {dim('📊 consolidated.json/csv/js + pivoted atualizados')}")
         except Exception as e:
             print(yellow(f"  ⚠  Não foi possível gerar dados consolidados: {e}"))
 

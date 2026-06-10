@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Consulta de indicadores financeiros brasileiros consolidados — ANBIMA, B3, BCB, BACEN, CVM, IBGE" />
+  <meta name="description" content="Consulta de indicadores financeiros brasileiros consolidados — ANBIMA, B3, BCB" />
   <meta property="og:title" content="PulseFlat — Consulta" />
-  <meta property="og:description" content="Busque indicadores por dataset, fonte, indicador. Dados consolidados do pipeline PulseFlat." />
+  <meta property="og:description" content="Indicadores financeiros pivotados por data. Dados consolidados do pipeline PulseFlat." />
   <title>Consulta — PulseFlat | Pulse Data Labs</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@300;400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="preload" href="./data/consolidated.json" as="fetch" crossorigin />
+  <link rel="preload" href="./data/consolidated_pivoted.json" as="fetch" crossorigin />
   <link rel="stylesheet" href="https://cdn.datatables.net/2.2.2/css/dataTables.dataTables.min.css" />
   <link rel="stylesheet" href="https://cdn.datatables.net/responsive/3.0.4/css/responsive.dataTables.min.css" />
   <link rel="stylesheet" href="https://cdn.datatables.net/buttons/3.2.2/css/buttons.dataTables.min.css" />
@@ -107,7 +107,7 @@
       padding: 2.5rem 2rem 2rem;
     }
     .page-header-inner {
-      max-width: 1300px; margin: 0 auto;
+      max-width: 1400px; margin: 0 auto;
       display: flex; align-items: flex-end; justify-content: space-between;
       flex-wrap: wrap; gap: 1.5rem;
     }
@@ -172,7 +172,7 @@
     }
 
     .filter-section {
-      max-width: 1300px; margin: 0 auto;
+      max-width: 1400px; margin: 0 auto;
       padding: 1.5rem 2rem 0;
     }
     .filter-bar {
@@ -234,14 +234,14 @@
     .filter-count span { color: var(--accent); font-weight: 500; }
 
     .table-section {
-      max-width: 1300px; margin: 0 auto;
+      max-width: 1400px; margin: 0 auto;
       padding: 1rem 2rem 4rem;
     }
     .table-container {
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      overflow: hidden;
+      overflow-x: auto;
     }
 
     table.dataTable {
@@ -257,7 +257,7 @@
       border-top: none !important;
       font-family: var(--font-mono); font-size: 0.68rem;
       text-transform: uppercase; letter-spacing: 0.07em;
-      padding: 0.65rem 1rem !important;
+      padding: 0.65rem 0.75rem !important;
       font-weight: 500;
       white-space: nowrap;
     }
@@ -272,7 +272,7 @@
     table.dataTable tbody td {
       border-bottom: 1px solid rgba(30,45,61,0.5) !important;
       border-top: none !important;
-      padding: 0.6rem 1rem !important;
+      padding: 0.6rem 0.75rem !important;
       vertical-align: middle;
     }
     table.dataTable tbody tr { background: transparent !important; }
@@ -357,15 +357,6 @@
       border-color: var(--accent2) !important;
     }
 
-    .source-badge {
-      display: inline-flex; align-items: center; gap: 0.3rem;
-      padding: 0.2rem 0.6rem; border-radius: 999px;
-      font-family: var(--font-mono); font-size: 0.68rem; font-weight: 500;
-      white-space: nowrap;
-      background: var(--accent-dim); color: var(--accent);
-    }
-    .source-badge .badge-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--accent); }
-
     .fonte-cell {
       font-family: var(--font-mono); font-size: 0.72rem; color: var(--text2);
       font-weight: 500;
@@ -373,13 +364,17 @@
     .indicador-cell {
       font-weight: 500; color: var(--text);
     }
-    .valor-cell {
-      font-family: var(--font-mono); font-size: 0.85rem; font-weight: 500;
-      color: var(--gold);
-    }
     .date-cell {
       font-family: var(--font-mono); font-size: 0.72rem; color: var(--text3);
       white-space: nowrap;
+    }
+    .metric-cell {
+      font-family: var(--font-mono); font-size: 0.85rem; font-weight: 500;
+      color: var(--gold);
+      text-align: right;
+    }
+    .dataset-cell {
+      font-family: var(--font-mono); font-size: 0.68rem; color: var(--text3);
     }
 
     .loading-state { text-align: center; padding: 5rem 1rem; }
@@ -489,7 +484,7 @@
             <div class="stat-value" id="stat-b3">—</div>
             <div class="stat-label">B3</div>
           </div>
-              <div class="stat-card bcb">
+          <div class="stat-card bcb">
             <div class="stat-dot"></div>
             <div class="stat-value" id="stat-bcb">—</div>
             <div class="stat-label">BCB</div>
@@ -534,11 +529,11 @@
         </div>
         <table id="consolidated-table" class="display responsive" style="width:100%; display:none;">
           <thead>
-            <tr>
+            <tr id="table-header-row">
               <th>Data Ref.</th>
               <th>Indicador</th>
-              <th>Valor</th>
               <th>Fonte</th>
+              <th>Dataset</th>
             </tr>
           </thead>
           <tbody></tbody>
@@ -569,6 +564,7 @@
   <script>
   (async function () {
     const $table   = $('#consolidated-table');
+    const $thead   = $('#table-header-row');
     const $tbody   = $table.find('tbody');
     const $loading = $('#loading');
     const $error   = $('#error');
@@ -579,15 +575,17 @@
     let tableApi = null;
     let allData  = [];
 
+    /* ── Fixed column keys ── */
+    const FIXED_KEYS = ['data_referencia', 'indicador', 'fonte', 'dataset_label', 'categoria'];
+
     /* ── Load data ── */
     try {
-      const resp = await fetch('./data/consolidated.json');
+      const resp = await fetch('./data/consolidated_pivoted.json');
       if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
       allData = await resp.json();
     } catch (err) {
-      // try JS fallback
-      if (window.PULSEFLAT_CONSOLIDATED) {
-        allData = window.PULSEFLAT_CONSOLIDATED;
+      if (window.PULSEFLAT_PIVOTED) {
+        allData = window.PULSEFLAT_PIVOTED;
       } else {
         $loading.hide();
         $errMsg.text('Erro ao carregar dados: ' + err.message);
@@ -603,6 +601,30 @@
       return;
     }
 
+    /* ── Discover metric columns (union across all rows) ── */
+    const metricKeySet = new Set();
+    allData.forEach(r => {
+      Object.keys(r).forEach(k => {
+        if (!FIXED_KEYS.includes(k)) metricKeySet.add(k);
+      });
+    });
+    const metricKeys = [...metricKeySet];
+    // Sort so "Valor" comes first, then alphabetical
+    metricKeys.sort((a, b) => (a === 'Valor' ? -1 : b === 'Valor' ? 1 : a.localeCompare(b)));
+    const metricLabels = metricKeys.map(k => ({ key: k, label: k }));
+
+    /* ── Build table header dynamically ── */
+    metricLabels.forEach(m => {
+      $thead.append(`<th>${m.label}</th>`);
+    });
+
+    /* ── Format helpers ── */
+    function fmtDate(d) {
+      if (!d) return '—';
+      const m = d.match(/^(\d{4})-(\d{2})-(\d{2})/);
+      return m ? `${m[3]}/${m[2]}/${m[1]}` : d;
+    }
+
     /* ── Stats ── */
     const sources     = [...new Set(allData.map(r => r.fonte))].sort();
     const indicadores = [...new Set(allData.map(r => r.indicador))];
@@ -612,7 +634,6 @@
     document.getElementById('stat-total').textContent      = allData.length.toLocaleString('pt-BR');
     document.getElementById('stat-indicadores').textContent = indicadores.length.toLocaleString('pt-BR');
 
-    // Source stat cards
     const statsMap = { 'ANBIMA': 'stat-anbima', 'B3': 'stat-b3', 'BCB': 'stat-bcb' };
     Object.entries(statsMap).forEach(([src, elId]) => {
       document.getElementById(elId).textContent = (fonteCounts[src] || 0).toLocaleString('pt-BR');
@@ -651,28 +672,34 @@
     });
 
     /* ── Build table data ── */
-    function fmtDate(d) {
-      if (!d) return '—';
-      const m = d.match(/^(\d{4})-(\d{2})-(\d{2})/);
-      return m ? `${m[3]}/${m[2]}/${m[1]}` : d;
-    }
-
     const tableData = allData.map(r => {
-      const indicador = r.indicador || '—';
-      const valor     = r.valor || '—';
-      const fonte     = r.fonte || '';
-      const dataRef   = r.data_referencia || '';
-
-      return [
-        { display: `<span class="date-cell">${fmtDate(dataRef)}</span>`, filter: fmtDate(dataRef), sort: dataRef || '' },
-        { display: `<span class="indicador-cell">${indicador}</span>`, filter: indicador },
-        { display: `<span class="valor-cell">${valor}</span>`,         filter: valor },
-        { display: `<span class="fonte-cell">${fonte}</span>`,        filter: fonte },
+      const row = [
+        { display: `<span class="date-cell">${fmtDate(r.data_referencia)}</span>`, sort: r.data_referencia || '' },
+        { display: `<span class="indicador-cell">${r.indicador || '—'}</span>`, filter: r.indicador || '' },
+        { display: `<span class="fonte-cell">${r.fonte || ''}</span>`, filter: r.fonte || '' },
+        { display: `<span class="dataset-cell">${r.dataset_label || ''}</span>`, filter: r.dataset_label || '' },
       ];
+      metricLabels.forEach(m => {
+        const val = r[m.key] || '—';
+        row.push({ display: `<span class="metric-cell">${val}</span>`, filter: val });
+      });
+      return row;
     });
 
     $loading.hide();
     $table.show();
+
+    /* ── Build DataTable columns config ── */
+    const dtColumns = [
+      { data: 0, render: { _: 'display', sort: 'sort' } },
+      { data: 1, render: { _: 'display', filter: 'filter', sort: 'filter' } },
+      { data: 2, render: { _: 'display', filter: 'filter', sort: 'filter' } },
+      { data: 3, render: { _: 'display', filter: 'filter', sort: 'filter' } },
+    ];
+    metricLabels.forEach((_, i) => {
+      const idx = 4 + i;
+      dtColumns.push({ data: idx, render: { _: 'display', filter: 'filter', sort: 'filter' } });
+    });
 
     tableApi = $table.DataTable({
       responsive: true,
@@ -699,12 +726,7 @@
           return data;
         }
       }],
-      columns: [
-        { data: 0, render: { _: 'display', filter: 'filter', sort: 'sort' } },
-        { data: 1, render: { _: 'display', filter: 'filter', sort: 'filter' } },
-        { data: 2, render: { _: 'display', filter: 'filter', sort: 'filter' } },
-        { data: 3, render: { _: 'display', filter: 'filter', sort: 'filter' } },
-      ],
+      columns: dtColumns,
     });
 
     function updateCount() {
@@ -714,14 +736,14 @@
     tableApi.on('draw', updateCount);
     updateCount();
 
-    /* ── Source filter (col 3 = fonte) ── */
+    /* ── Source filter (col 2 = fonte) ── */
     $.fn.dataTable.ext.search.push(function (_settings, _display, _idx, rowData) {
       const selected = [];
       $('.source-chip input[type="checkbox"]').each(function () {
         if (this.checked) selected.push(this.value);
       });
       if (!selected.length) return true;
-      const fonte = rowData[3] && rowData[3].filter ? rowData[3].filter : '';
+      const fonte = rowData[2] && rowData[2].filter ? rowData[2].filter : '';
       return selected.includes(fonte);
     });
 

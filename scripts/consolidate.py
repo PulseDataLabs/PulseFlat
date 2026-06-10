@@ -20,6 +20,7 @@ import argparse
 import re
 from pathlib import Path
 from typing import Optional
+from collections import OrderedDict
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
@@ -373,7 +374,7 @@ def _extract_multi_value(
             if not raw_val:
                 continue
             out = _build_base(idef)
-            out["indicador"] = f"{label_base} — {col_label}"
+            out["indicador"] = label_base
             out["valor"] = _fmt_pct(raw_val) if col_fmt == "pct" else _fmt_val(raw_val)
             out["unidade"] = col_label
             out["data_referencia"] = _ref_date(idef, latest)
@@ -521,6 +522,75 @@ def generate(dry_run: bool = False) -> None:
     )
 
 
+# ── Pivoteamento (multivalor → colunas) ───────────────────────────────
+
+def generate_pivoted() -> None:
+    """Lê consolidated.json e gera consolidated_pivoted.json/js.
+    Cada grupo (dataset_label, fonte, data_referencia, indicador) vira uma
+    única linha. Se o grupo tiver 2+ registros com unidades diferentes,
+    cada unidade vira uma coluna; caso contrário usa 'Valor'.
+    """
+    src = DATA_DIR / "consolidated.json"
+    if not src.exists():
+        return
+
+    raw = json.loads(src.read_text(encoding="utf-8"))
+    if not raw:
+        return
+
+    # First pass: group raw records
+    from collections import defaultdict
+    buckets: dict[tuple, list[dict]] = defaultdict(list)
+    for r in raw:
+        key = (r.get("dataset_label", ""), r.get("fonte", ""),
+               r.get("data_referencia", ""), r.get("indicador", ""))
+        buckets[key].append(r)
+
+    pivoted: list[OrderedDict] = []
+    all_metrics: set[str] = set()
+
+    for key, recs in buckets.items():
+        row = OrderedDict()
+        for k in ("data_referencia", "indicador", "fonte", "dataset_label", "categoria"):
+            row[k] = recs[0].get(k, "")
+
+        # Determine metric columns for this group
+        units = list(OrderedDict.fromkeys(r.get("unidade", "") or "" for r in recs))
+        non_empty = [u for u in units if u]
+
+        if len(non_empty) >= 2:
+            # Multi-metric group: use unit labels as columns
+            for r in recs:
+                metric = r.get("unidade", "") or ""
+                row[metric] = r.get("valor", "")
+                all_metrics.add(metric)
+        else:
+            # Single-metric group: use "Valor"
+            row["Valor"] = recs[0].get("valor", "")
+            all_metrics.add("Valor")
+
+        pivoted.append(row)
+
+    pivoted.sort(key=lambda x: (x.get("data_referencia", ""), x.get("indicador", "")))
+
+    section("Escrevendo pivô", "package")
+
+    json_path = DATA_DIR / "consolidated_pivoted.json"
+    js_path = DATA_DIR / "consolidated_pivoted.js"
+
+    json_path.write_text(
+        json.dumps(pivoted, indent=2, ensure_ascii=False) + "\n",
+        encoding="utf-8",
+    )
+    print_done(f"consolidated_pivoted.json — {len(pivoted)} registros")
+
+    js_path.write_text(
+        f"window.PULSEFLAT_PIVOTED = {json.dumps(pivoted, indent=2, ensure_ascii=False)};\n",
+        encoding="utf-8",
+    )
+    print_done(f"consolidated_pivoted.js — {len(pivoted)} registros")
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         description="📊 Gera dados consolidados (consolidated.json/csv/js) a partir dos CSVs",
@@ -538,3 +608,5 @@ exemplos:
         log.info("Modo dry-run: arquivos não serão salvos.")
     apply_common_args(args)
     generate(dry_run=args.dry_run)
+    if not args.dry_run:
+        generate_pivoted()
