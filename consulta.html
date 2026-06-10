@@ -538,11 +538,11 @@
         <table id="consolidated-table" class="display responsive" style="width:100%; display:none;">
           <thead>
             <tr>
+              <th>Data Ref.</th>
               <th>Indicador</th>
               <th>Valor</th>
               <th>Fonte</th>
               <th>Dataset</th>
-              <th>Data Ref.</th>
             </tr>
           </thead>
           <tbody></tbody>
@@ -655,6 +655,12 @@
     });
 
     /* ── Build table data ── */
+    function fmtDate(d) {
+      if (!d) return '—';
+      const m = d.match(/^(\d{4})-(\d{2})-(\d{2})/);
+      return m ? `${m[3]}/${m[2]}/${m[1]}` : d;
+    }
+
     const tableData = allData.map(r => {
       const indicador = r.indicador || '—';
       const valor     = r.valor || '—';
@@ -663,11 +669,11 @@
       const dataRef   = r.data_referencia || '';
 
       return [
+        { display: `<span class="date-cell">${fmtDate(dataRef)}</span>`, filter: fmtDate(dataRef), sort: dataRef || '' },
         { display: `<span class="indicador-cell">${indicador}</span>`, filter: indicador },
         { display: `<span class="valor-cell">${valor}</span>`,         filter: valor },
         { display: `<span class="fonte-cell">${fonte}</span>`,        filter: fonte },
         { display: `<span class="dataset-cell">${dataset}</span>`,    filter: dataset },
-        { display: `<span class="date-cell">${dataRef || '—'}</span>`, filter: dataRef, sort: dataRef },
       ];
     });
 
@@ -678,7 +684,7 @@
       responsive: true,
       pageLength: 50,
       lengthMenu: [[25, 50, 100, 250, -1], [25, 50, 100, 250, 'Todos']],
-      order: [[0, 'asc']],
+      order: [[0, 'desc']],
       data: tableData,
       language: {
         url: 'https://cdn.datatables.net/plug-ins/2.2.2/i18n/pt-BR.json'
@@ -700,11 +706,11 @@
         }
       }],
       columns: [
-        { data: 0, render: { _: 'display', filter: 'filter', sort: 'filter' } },
+        { data: 0, render: { _: 'display', filter: 'filter', sort: 'sort' } },
         { data: 1, render: { _: 'display', filter: 'filter', sort: 'filter' } },
         { data: 2, render: { _: 'display', filter: 'filter', sort: 'filter' } },
         { data: 3, render: { _: 'display', filter: 'filter', sort: 'filter' } },
-        { data: 4, render: { _: 'display', filter: 'filter', sort: 'sort' } },
+        { data: 4, render: { _: 'display', filter: 'filter', sort: 'filter' } },
       ],
     });
 
@@ -715,14 +721,14 @@
     tableApi.on('draw', updateCount);
     updateCount();
 
-    /* ── Source filter (col 2 = fonte) ── */
+    /* ── Source filter (col 3 = fonte) ── */
     $.fn.dataTable.ext.search.push(function (_settings, _display, _idx, rowData) {
       const selected = [];
       $('.source-chip input[type="checkbox"]').each(function () {
         if (this.checked) selected.push(this.value);
       });
       if (!selected.length) return true;
-      const fonte = rowData[2] && rowData[2].filter ? rowData[2].filter : '';
+      const fonte = rowData[3] && rowData[3].filter ? rowData[3].filter : '';
       return selected.includes(fonte);
     });
 
