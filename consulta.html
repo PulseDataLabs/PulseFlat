@@ -380,16 +380,9 @@
       font-family: var(--font-mono); font-size: 0.85rem; font-weight: 500;
       color: var(--gold);
     }
-    .unidade-cell {
-      font-family: var(--font-mono); font-size: 0.72rem; color: var(--text3);
-    }
     .date-cell {
       font-family: var(--font-mono); font-size: 0.72rem; color: var(--text3);
       white-space: nowrap;
-    }
-    .metrica-cell {
-      font-family: var(--font-mono); font-size: 0.68rem; color: var(--text3);
-      text-transform: lowercase;
     }
 
     .loading-state { text-align: center; padding: 5rem 1rem; }
@@ -476,7 +469,7 @@
         <div class="page-title-group">
           <div class="page-eyebrow">Indicadores financeiros</div>
           <h1>Consulta Consolidada</h1>
-          <p>Últimos valores de indicadores ANBIMA, B3, BCB, BACEN, CVM e mais</p>
+          <p>Últimos valores de indicadores ANBIMA, B3, BCB e Yahoo Finance</p>
         </div>
         <div class="stats-row" id="stats-row" aria-label="Estatísticas">
           <div class="stat-card registros">
@@ -499,10 +492,10 @@
             <div class="stat-value" id="stat-b3">—</div>
             <div class="stat-label">B3</div>
           </div>
-          <div class="stat-card bcb">
+              <div class="stat-card bcb">
             <div class="stat-dot"></div>
             <div class="stat-value" id="stat-bcb">—</div>
-            <div class="stat-label">BCB / BACEN</div>
+            <div class="stat-label">BCB</div>
           </div>
         </div>
       </div>
@@ -547,12 +540,9 @@
             <tr>
               <th>Indicador</th>
               <th>Valor</th>
-              <th>Unidade</th>
               <th>Fonte</th>
               <th>Dataset</th>
               <th>Data Ref.</th>
-              <th>Categoria</th>
-              <th>Métrica</th>
             </tr>
           </thead>
           <tbody></tbody>
@@ -626,30 +616,18 @@
     document.getElementById('stat-total').textContent      = allData.length.toLocaleString('pt-BR');
     document.getElementById('stat-indicadores').textContent = indicadores.length.toLocaleString('pt-BR');
 
-    // Top 3 sources for stats
-    const topSources = Object.entries(fonteCounts)
-      .sort((a, b) => b[1] - a[1])
-      .slice(0, 3);
-    const statsMap = { 'ANBIMA': 'stat-anbima', 'B3': 'stat-b3' };
-    topSources.forEach(([src, cnt]) => {
-      const elId = statsMap[src];
-      if (elId) document.getElementById(elId).textContent = cnt.toLocaleString('pt-BR');
+    // Source stat cards
+    const statsMap = { 'ANBIMA': 'stat-anbima', 'B3': 'stat-b3', 'BCB': 'stat-bcb' };
+    Object.entries(statsMap).forEach(([src, elId]) => {
+      document.getElementById(elId).textContent = (fonteCounts[src] || 0).toLocaleString('pt-BR');
     });
-    const statBcb = document.getElementById('stat-bcb');
-    const bcbCount = (fonteCounts['BCB'] || 0) + (fonteCounts['BACEN'] || 0);
-    statBcb.textContent = bcbCount.toLocaleString('pt-BR');
 
     /* ── Source filter chips ── */
     const SOURCE_COLORS = {
       'ANBIMA': { color: '#f0b429' },
       'B3':     { color: '#00d4ff' },
       'BCB':    { color: '#00e5a0' },
-      'BACEN':  { color: '#5b9bd5' },
-      'CVM':    { color: '#b388ff' },
-      'Debêntures': { color: '#ff8a65' },
       'Yahoo Finance': {color: '#78909c' },
-      'Investing.com': {color: '#4db6ac' },
-      'ONU':   { color: '#81c784' },
     };
 
     sources.forEach(src => {
@@ -680,22 +658,16 @@
     const tableData = allData.map(r => {
       const indicador = r.indicador || '—';
       const valor     = r.valor || '—';
-      const unidade   = r.unidade || '';
       const fonte     = r.fonte || '';
       const dataset   = r.dataset || '';
       const dataRef   = r.data_referencia || '';
-      const categoria = r.categoria || '';
-      const metrica   = r.metrica || '';
 
       return [
         { display: `<span class="indicador-cell">${indicador}</span>`, filter: indicador },
         { display: `<span class="valor-cell">${valor}</span>`,         filter: valor },
-        { display: `<span class="unidade-cell">${unidade || '—'}</span>`, filter: unidade },
         { display: `<span class="fonte-cell">${fonte}</span>`,        filter: fonte },
         { display: `<span class="dataset-cell">${dataset}</span>`,    filter: dataset },
         { display: `<span class="date-cell">${dataRef || '—'}</span>`, filter: dataRef, sort: dataRef },
-        { display: `<span style="font-size:0.72rem;color:var(--text3)">${categoria || '—'}</span>`, filter: categoria },
-        { display: `<span class="metrica-cell">${metrica || '—'}</span>`, filter: metrica },
       ];
     });
 
@@ -732,10 +704,7 @@
         { data: 1, render: { _: 'display', filter: 'filter', sort: 'filter' } },
         { data: 2, render: { _: 'display', filter: 'filter', sort: 'filter' } },
         { data: 3, render: { _: 'display', filter: 'filter', sort: 'filter' } },
-        { data: 4, render: { _: 'display', filter: 'filter', sort: 'filter' } },
-        { data: 5, render: { _: 'display', filter: 'filter', sort: 'sort' } },
-        { data: 6, render: { _: 'display', filter: 'filter', sort: 'filter' } },
-        { data: 7, render: { _: 'display', filter: 'filter', sort: 'filter' } },
+        { data: 4, render: { _: 'display', filter: 'filter', sort: 'sort' } },
       ],
     });
 
@@ -746,14 +715,14 @@
     tableApi.on('draw', updateCount);
     updateCount();
 
-    /* ── Source filter (col 3 = fonte) ── */
+    /* ── Source filter (col 2 = fonte) ── */
     $.fn.dataTable.ext.search.push(function (_settings, _display, _idx, rowData) {
       const selected = [];
       $('.source-chip input[type="checkbox"]').each(function () {
         if (this.checked) selected.push(this.value);
       });
       if (!selected.length) return true;
-      const fonte = rowData[3] && rowData[3].filter ? rowData[3].filter : '';
+      const fonte = rowData[2] && rowData[2].filter ? rowData[2].filter : '';
       return selected.includes(fonte);
     });
 
