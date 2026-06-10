@@ -33,7 +33,7 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "b3_bdi_di_over.csv": {
     "min": "2026-06-01",
-    "max": "2026-06-09"
+    "max": "2026-06-10"
   },
   "b3_carteira_teorica_agfs_iagro.csv": {
     "min": "2026-06-03",
@@ -120,8 +120,8 @@ window.PULSEFLAT_LAST_UPDATES = {
     "max": "2026-06-10"
   },
   "ibge_sidra.csv": {
-    "min": "2026-06-09",
-    "max": "2026-06-09"
+    "min": "2026-06-10",
+    "max": "2026-06-10"
   },
   "onu_pacto_global.csv": {
     "min": "2026-06-10",
@@ -136,12 +136,12 @@ window.PULSEFLAT_LAST_UPDATES = {
     "max": "2026-06-10"
   },
   "cvm_fundos_informe_diario.csv": {
-    "min": "2026-06-09",
-    "max": "2026-06-09"
+    "min": "2026-06-10",
+    "max": "2026-06-10"
   },
   "registro_fundo_classe.csv": {
-    "min": "2026-06-09",
-    "max": "2026-06-09"
+    "min": "2026-06-10",
+    "max": "2026-06-10"
   },
   "investing_etf.csv": {
     "min": "2026-06-10",
