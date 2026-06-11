@@ -2,13 +2,13 @@ window.PULSEFLAT_MARKET_LATEST = [
   {
     "label": "CDI",
     "value": "14,40%",
-    "reference_date": "2026-06-09",
+    "reference_date": "2026-06-10",
     "type": "neutral"
   },
   {
     "label": "SELIC",
     "value": "14,40%",
-    "reference_date": "2026-06-09",
+    "reference_date": "2026-06-10",
     "type": "neutral"
   },
   {
@@ -39,15 +39,15 @@ window.PULSEFLAT_MARKET_LATEST = [
   },
   {
     "label": "IBOVESPA",
-    "value": "170.331",
-    "reference_date": "2026-06-03",
+    "value": "168.619",
+    "reference_date": "2026-06-10",
     "type": "down",
-    "change": "-2,22%"
+    "change": "-0,70%"
   },
   {
     "label": "IMA-GERAL",
-    "value": "10.032,81",
-    "reference_date": "2026-06-09",
+    "value": "10.046,40",
+    "reference_date": "2026-06-10",
     "type": "neutral"
   }
 ];

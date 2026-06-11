@@ -136,12 +136,12 @@
     "max": "2026-06-11"
   },
   "cvm_fundos_informe_diario.csv": {
-    "min": "2026-06-10",
-    "max": "2026-06-10"
+    "min": "2026-06-11",
+    "max": "2026-06-11"
   },
   "registro_fundo_classe.csv": {
-    "min": "2026-06-10",
-    "max": "2026-06-10"
+    "min": "2026-06-11",
+    "max": "2026-06-11"
   },
   "investing_etf.csv": {
     "min": "2026-06-11",
