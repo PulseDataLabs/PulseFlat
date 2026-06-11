@@ -32,10 +32,10 @@ CABECALHO = [
     "tp_fundo_classe",
     "cnpj_fundo_classe",
     "id_subclasse",
-    "dt_comptc",
-    "vl_total",
-    "vl_quota",
-    "vl_patrim_liq",
+    "data_referencia",
+    "valor_total",
+    "valor_cota",
+    "patrimonio_liquido",
     "captc_dia",
     "resg_dia",
     "nr_cotst",
@@ -109,10 +109,10 @@ def capturar() -> list[dict]:
         "TP_FUNDO_CLASSE": "tp_fundo_classe",
         "CNPJ_FUNDO_CLASSE": "cnpj_fundo_classe",
         "ID_SUBCLASSE": "id_subclasse",
-        "DT_COMPTC": "dt_comptc",
-        "VL_TOTAL": "vl_total",
-        "VL_QUOTA": "vl_quota",
-        "VL_PATRIM_LIQ": "vl_patrim_liq",
+        "DT_COMPTC": "data_referencia",
+        "VL_TOTAL": "valor_total",
+        "VL_QUOTA": "valor_cota",
+        "VL_PATRIM_LIQ": "patrimonio_liquido",
         "CAPTC_DIA": "captc_dia",
         "RESG_DIA": "resg_dia",
         "NR_COTST": "nr_cotst",
@@ -138,7 +138,7 @@ class CvmFundosInformeDiarioScraper(BaseScraper):
     enabled = True
     phase = 1
     accumulate = False
-    chaves_dedup = ['data_captura', 'cnpj_fundo_classe', 'dt_comptc']
+    chaves_dedup = ['data_captura', 'cnpj_fundo_classe', 'data_referencia']
     
     # Catálogo de Metadados
     title = 'CVM — Informe Diário de Fundos'

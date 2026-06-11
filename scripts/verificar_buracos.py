@@ -41,7 +41,7 @@ CONFIG: dict[str, dict] = {
         "group_by": ["indice"],
     },
     "anbima_idka.csv": {
-        "date_col": "data_captura",
+        "date_col": "data_referencia",
         "group_by": ["no_indexador", "no_indice"],
     },
     "anbima_titulos_publicos.csv": {
@@ -61,7 +61,7 @@ CONFIG: dict[str, dict] = {
         "group_by": ["indice"],
     },
     "b3_bdi_di_over.csv": {
-        "date_col": "rpt_dt",
+        "date_col": "data_referencia",
         "group_by": [],
     },
     "b3_bmf_taxas_juros.csv": {
@@ -69,8 +69,8 @@ CONFIG: dict[str, dict] = {
         "group_by": ["curva", "prazo_dias"],
     },
     "yahoo_finance_series.csv": {
-        "date_col": "dt_ref",
-        "group_by": ["ticker"],
+        "date_col": "data_referencia",
+        "group_by": ["codigo_ativo"],
     },
 }
 

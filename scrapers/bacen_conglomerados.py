@@ -81,7 +81,7 @@ class BacenConglomeradosScraper(BaseScraper):
 
         df = pd.read_excel(BytesIO(xlsx_bytes), engine="openpyxl")
         df.columns = [str(c).strip() for c in df.columns]
-        df.insert(0, "dt_referencia", ref.replace(day=1))
+        df.insert(0, "data_referencia", ref.replace(day=1))
         return df
 
 

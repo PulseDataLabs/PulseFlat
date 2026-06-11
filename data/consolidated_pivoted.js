@@ -1,5 +1,15 @@
 window.PULSEFLAT_PIVOTED = [
   {
+    "data_referencia": "2025-12-26",
+    "indicador": "IMA-GERAL",
+    "fonte": "ANBIMA",
+    "dataset_label": "ANBIMA IMA-B",
+    "categoria": "IMA-B",
+    "Número-índice": "9.573",
+    "Variação diária": "0,15%",
+    "Duration (d.u.)": "520,00"
+  },
+  {
     "data_referencia": "2026-04-01",
     "indicador": "IGP-M 12m",
     "fonte": "BCB",
@@ -275,6 +285,16 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "ANBIMA Indicadores",
     "categoria": "FDS",
     "Valor": "0,0888"
+  },
+  {
+    "data_referencia": "2026-06-09",
+    "indicador": "IMA - Geral",
+    "fonte": "ANBIMA",
+    "dataset_label": "ANBIMA IMA-B",
+    "categoria": "IMA-B",
+    "Número-índice": "10.033",
+    "Variação diária": "0,04%",
+    "Duration (d.u.)": "487,00"
   },
   {
     "data_referencia": "2026-06-09",

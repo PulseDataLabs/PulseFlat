@@ -466,19 +466,44 @@
     "source": "b3",
     "fields": [
       {
-        "name": "00titulos_negociaveis_2026_06_10",
-        "type": "str",
-        "example": "01A1APADVANCE AUTO PARTS INC                                      ADVANCE AUTO"
-      },
-      {
         "name": "data_captura",
         "type": "date",
         "example": "2026-06-10"
       },
       {
-        "name": "none",
+        "name": "codigo_ativo",
         "type": "str",
-        "example": ""
+        "example": "A1AP34"
+      },
+      {
+        "name": "nome_emissor",
+        "type": "str",
+        "example": "ADVANCE AUTO PARTS INC"
+      },
+      {
+        "name": "nome_curto",
+        "type": "str",
+        "example": "ADVANCE AUTO"
+      },
+      {
+        "name": "codigo_isin",
+        "type": "str",
+        "example": "BRA1APBDR001"
+      },
+      {
+        "name": "tipo_ativo",
+        "type": "str",
+        "example": "LOTE PADRAO"
+      },
+      {
+        "name": "tipo_mercado",
+        "type": "str",
+        "example": "VISTA"
+      },
+      {
+        "name": "tipo_titulo",
+        "type": "str",
+        "example": "DRN"
       }
     ]
   },

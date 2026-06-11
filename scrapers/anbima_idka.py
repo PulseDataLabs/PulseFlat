@@ -20,7 +20,7 @@ from utils.parsers import date_ref
 
 
 COLUMNS = [
-    "dt_referencia",
+    "data_referencia",
     "no_indexador",
     "no_indice",
     "nu_indice",
@@ -97,7 +97,7 @@ class AnbimaIdkaScraper(BaseScraper):
             return pd.DataFrame(columns=COLUMNS)
 
         df = pd.DataFrame()
-        df["dt_referencia"] = dt_referencia
+        df["data_referencia"] = dt_referencia
         df["no_indexador"] = df_raw.get("Indexador", pd.Series(dtype=str))
         df["no_indice"] = df_raw.get("Índices", pd.Series(dtype=str))
         df["nu_indice"] = df_raw.get("Nº Índice", pd.Series(dtype=str))

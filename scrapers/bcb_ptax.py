@@ -38,7 +38,7 @@ METADATA = {
 CABECALHO = [
     "data_captura",
     
-    "data_hora_cotacao",
+    "data_referencia",
     "cotacao_compra",
     "cotacao_venda",
 ]
@@ -96,7 +96,7 @@ def capturar() -> list[dict]:
     for item in dados:
         registros.append({
             "data_captura":      data_captura,
-            "data_hora_cotacao": limpar(item.get("dataHoraCotacao")),
+            "data_referencia":   limpar(item.get("dataHoraCotacao"))[:10],
             "cotacao_compra":    limpar(item.get("cotacaoCompra")),
             "cotacao_venda":     limpar(item.get("cotacaoVenda")),
         })
@@ -110,7 +110,7 @@ class BcbPtaxScraper(BaseScraper):
     enabled = True
     phase = 1
     accumulate = False
-    chaves_dedup = ['data_captura', 'data_hora_cotacao']
+    chaves_dedup = ['data_captura', 'data_referencia']
     
     # Catálogo de Metadados
     title = 'BCB PTAX'

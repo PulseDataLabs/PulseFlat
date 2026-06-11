@@ -37,9 +37,9 @@ CABECALHO = [
     "security_identification_code",
     "description",
     "group_description",
-    "value",
-    "rate",
-    "last_update",
+    "valor",
+    "taxa",
+    "data_referencia",
 ]
 
 HEADERS = {
@@ -91,9 +91,9 @@ def capturar() -> list[dict]:
             "security_identification_code": limpar(item.get("securityIdentificationCode", "")),
             "description":                 limpar(item.get("description", "")),
             "group_description":           limpar(item.get("groupDescription", "")),
-            "value":                       limpar(str(item.get("value", ""))),
-            "rate":                        limpar(str(item.get("rate", ""))),
-            "last_update":                 limpar(item.get("lastUpdate", "")),
+            "valor":                       limpar(str(item.get("value", ""))),
+            "taxa":                        limpar(str(item.get("rate", ""))),
+            "data_referencia":             limpar(item.get("lastUpdate", "")),
         })
 
     log.info(f"{len(registros)} indicadores B3 capturados.")

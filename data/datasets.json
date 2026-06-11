@@ -177,19 +177,84 @@
     "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/anbima_indice_imab.csv"
   },
   {
-    "title": "B3 — Títulos Negociáveis",
-    "file": "b3_titulos_negociaveis.csv",
-    "description": "Lista consolidada de títulos públicos federais e privados autorizados e negociados no ambiente de balcão e bolsa da B3.",
+    "title": "B3 Boletim Diário",
+    "file": "b3_boletim_diario.csv",
+    "description": "Downloads dos arquivos consolidados do boletim diário de derivativos e posições em aberto da B3.",
+    "icon": "📂",
+    "iconClass": "icon-b3",
+    "badge": "Diário",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "boletim",
+      "derivativos",
+      "posição em aberto",
+      "B3"
+    ],
+    "source": "B3",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_boletim_diario.csv"
+  },
+  {
+    "title": "B3 Classificação Setorial",
+    "file": "b3_classificacao_setorial.csv",
+    "description": "Classificação setorial completa das empresas listadas na B3 (setor econômico, subsetor e segmento de atuação).",
+    "icon": "🗂️",
+    "iconClass": "icon-b3",
+    "badge": "Diário",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "setor",
+      "subsetor",
+      "segmento"
+    ],
+    "source": "B3",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_classificacao_setorial.csv"
+  },
+  {
+    "title": "B3 Futuros — Ajustes de Fechamento",
+    "file": "b3_futuros_ajustes.csv",
+    "description": "Preços de ajuste de fechamento diários para contratos futuros de juros (DI), dólar, índice Ibovespa e commodities.",
+    "icon": "📉",
+    "iconClass": "icon-b3",
+    "badge": "Diário",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "futuros",
+      "ajustes",
+      "commodities",
+      "b3",
+      "bm&f"
+    ],
+    "source": "B3",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_futuros_ajustes.csv"
+  },
+  {
+    "title": "B3 Series Historicas",
+    "file": "b3_series_historicas.csv",
+    "description": "Sem descrição fornecida.",
     "icon": "📊",
     "iconClass": "icon-b3",
     "badge": "Diário",
     "badgeClass": "badge-daily",
     "tags": [
-      "títulos",
-      "b3",
-      "negociáveis",
-      "balcão",
-      "cadastro"
+      "b3"
+    ],
+    "source": "B3",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_series_historicas.csv"
+  },
+  {
+    "title": "B3 Títulos Negociáveis",
+    "file": "b3_titulos_negociaveis.csv",
+    "description": "Cadastro de todos os títulos e instrumentos negociáveis no mercado da B3, incluindo BDRs, ações e outros ativos.",
+    "icon": "📋",
+    "iconClass": "icon-b3",
+    "badge": "Snapshot",
+    "badgeClass": "badge-snapshot",
+    "tags": [
+      "cadastro",
+      "instrumentos",
+      "bdr",
+      "ações",
+      "b3"
     ],
     "source": "B3",
     "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_titulos_negociaveis.csv"
@@ -395,6 +460,108 @@
     "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_indicadores_financeiros.csv"
   },
   {
+    "title": "B3 — Capital Social de Empresas",
+    "file": "b3_capital_social_empresas.csv",
+    "description": "Capital social de empresas listadas na B3: CNPJ, valor do capital e data de referência.",
+    "icon": "🏢",
+    "iconClass": "icon-b3",
+    "badge": "Diário",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "cnpj",
+      "empresa",
+      "capital social"
+    ],
+    "source": "B3 API",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_capital_social_empresas.csv"
+  },
+  {
+    "title": "B3 — Detalhes de Companhias",
+    "file": "b3_companhias_detalhes.csv",
+    "description": "Detalhes cadastrais completos das companhias listadas na B3 via API JSON: segmento de listagem, CNPJ, setor, código CVM e dados de registro.",
+    "icon": "🏢",
+    "iconClass": "icon-b3",
+    "badge": "Diário",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "companhias",
+      "cadastro",
+      "cnpj",
+      "setor"
+    ],
+    "source": "B3 API",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_companhias_detalhes.csv"
+  },
+  {
+    "title": "B3 — Dividendos em Dinheiro",
+    "file": "b3_dividendos_dinheiro.csv",
+    "description": "Histórico completo de dividendos em dinheiro pagos por companhias listadas na B3: valor por ação, data de pagamento, data ex e tipo de provento.",
+    "icon": "💰",
+    "iconClass": "icon-b3",
+    "badge": "Diário",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "dividendos",
+      "proventos",
+      "dinheiro",
+      "b3"
+    ],
+    "source": "B3 API",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_dividendos_dinheiro.csv"
+  },
+  {
+    "title": "B3 — Informações de Companhias",
+    "file": "b3_companhias_info.csv",
+    "description": "Informações complementares e proventos (dividendos em dinheiro, bonificações em ações, subscrições) de todas as companhias listadas na B3.",
+    "icon": "📋",
+    "iconClass": "icon-b3",
+    "badge": "Diário",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "proventos",
+      "dividendos",
+      "subscrições",
+      "b3"
+    ],
+    "source": "B3 API",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_companhias_info.csv"
+  },
+  {
+    "title": "B3 — Taxa de Câmbio de Referência",
+    "file": "b3_taxa_cambio_referencia.csv",
+    "description": "Taxas de câmbio de referência divulgadas pela B3: compra e venda por moeda.",
+    "icon": "💱",
+    "iconClass": "icon-b3",
+    "badge": "Diário",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "câmbio",
+      "taxa compra",
+      "taxa venda",
+      "moeda"
+    ],
+    "source": "B3 API",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_taxa_cambio_referencia.csv"
+  },
+  {
+    "title": "B3 — Índices de Preços Históricos",
+    "file": "b3_indices_precos_historicos.csv",
+    "description": "Composição histórica e pesos de índices B3 (IBOV, IBRA, IFIX, IDIV, SMLL) com dados dos últimos 2 anos.",
+    "icon": "📈",
+    "iconClass": "icon-b3",
+    "badge": "Diário",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "ibov",
+      "ibra",
+      "ifix",
+      "idiv",
+      "smll"
+    ],
+    "source": "B3 API",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_indices_precos_historicos.csv"
+  },
+  {
     "title": "B3 Carteiras Teóricas",
     "file": "b3_carteiras_teoricas.csv",
     "description": "Composição diária das carteiras teóricas dos 22 principais índices da B3. Permite acompanhar a evolução do peso de cada ativo ao longo do tempo e detectar entradas e saídas nas carteiras.",
@@ -479,6 +646,75 @@
     "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_bdi_di_over.csv"
   },
   {
+    "title": "B3 — COTAHIST Anual",
+    "file": "b3_cotahist_anual.csv",
+    "description": "Cotações históricas anuais de todos os ativos da B3 no formato COTAHIST de largura fixa — mesmo conteúdo do diário, consolidado por ano para backfill histórico.",
+    "icon": "📅",
+    "iconClass": "icon-b3",
+    "badge": "Diário",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "cotações anual",
+      "histórico",
+      "fwf",
+      "b3"
+    ],
+    "source": "B3 · COTAHIST",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_cotahist_anual.csv"
+  },
+  {
+    "title": "B3 — COTAHIST Diário",
+    "file": "b3_cotahist_diario.csv",
+    "description": "Cotações históricas diárias de todos os ativos da B3 (ações, BDRs, ETFs, FIIs) no formato COTAHIST de largura fixa, incluindo abertura, máxima, mínima, média, fechamento, volume e quantidade de negócios.",
+    "icon": "📊",
+    "iconClass": "icon-b3",
+    "badge": "Diário",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "cotações",
+      "ações",
+      "abertura/fechamento",
+      "volume",
+      "fwf"
+    ],
+    "source": "B3 · COTAHIST",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_cotahist_diario.csv"
+  },
+  {
+    "title": "B3 — Indicadores Econômicos",
+    "file": "b3_indicadores_economicos_fwf.csv",
+    "description": "Indicadores macroeconômicos diários divulgados pela B3 em formato de largura fixa (FWF): taxas de juros, índices de inflação e parâmetros de mercado.",
+    "icon": "📊",
+    "iconClass": "icon-b3",
+    "badge": "Diário",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "indicadores",
+      "macroeconômicos",
+      "fwf",
+      "b3"
+    ],
+    "source": "B3 · FWF",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_indicadores_economicos_fwf.csv"
+  },
+  {
+    "title": "B3 — Negócios de Balcão (OTC)",
+    "file": "b3_negocios_balcao.csv",
+    "description": "Negócios realizados em mercado de balcão da B3, incluindo operações com instrumentos de renda fixa, derivativos e títulos fora do ambiente de bolsa.",
+    "icon": "🤝",
+    "iconClass": "icon-b3",
+    "badge": "Diário",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "otc",
+      "balcão",
+      "negócios",
+      "b3"
+    ],
+    "source": "B3 · OTC",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_negocios_balcao.csv"
+  },
+  {
     "title": "BCB PTAX",
     "file": "bcb_ptax.csv",
     "description": "Cotações históricas diárias oficiais de compra e venda do dólar comercial (USD/BRL) publicadas pelo Banco Central do Brasil.",
@@ -550,6 +786,23 @@
   },
   {
     "title": "BCB — Negociação TPF Extra-grupo",
+    "file": "bacen_negociacao_tpf.csv",
+    "description": "Operações de compra e venda de Títulos Públicos Federais extra-grupo realizadas no mercado aberto (BCB/DEMAB).",
+    "icon": "📋",
+    "iconClass": "icon-bcb",
+    "badge": "Diário",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "título público",
+      "compra/venda",
+      "quantidade",
+      "preço"
+    ],
+    "source": "BCB · DEMAB",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/bacen_negociacao_tpf.csv"
+  },
+  {
+    "title": "BCB — Negociação TPF Extra-grupo",
     "file": "bacen_negociacao_tpf_extragrupo.csv",
     "description": "Operações de compra e venda de Títulos Públicos Federais extra-grupo realizadas no mercado aberto (BCB/DEMAB).",
     "icon": "📋",
@@ -618,6 +871,22 @@
     ],
     "source": "CVM",
     "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/cvm_fundos_informe_diario.csv"
+  },
+  {
+    "title": "CVM — Cadastro de Companhias Abertas",
+    "file": "cvm_cadastro_companhias_abertas.csv",
+    "description": "Cadastro completo de companhias abertas registradas na CVM: CNPJ, razão social, nome de pregão, situação cadastral e código CVM.",
+    "icon": "🏛️",
+    "iconClass": "icon-cvm",
+    "badge": "Diário",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "cnpj",
+      "companhia aberta",
+      "cadastro cvm"
+    ],
+    "source": "CVM · Dados Abertos",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/cvm_cadastro_companhias_abertas.csv"
   },
   {
     "title": "IBGE SIDRA — Metadados",

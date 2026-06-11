@@ -1,4 +1,4 @@
-data_captura,dt_ref,ticker,label,vr_fechamento
+data_captura,data_referencia,codigo_ativo,label,preco_fechamento
 2026-06-03,2026-05-04,^BVSP,IBOVESPA,185600.0
 2026-06-03,2026-05-05,^BVSP,IBOVESPA,186754.0
 2026-06-03,2026-05-06,^BVSP,IBOVESPA,187691.0

@@ -77,11 +77,16 @@ resources:
     file_name: 'debentures_emissoes_caracteristicas.csv'
     type_response: csv
     acumular: false
+    column_mapping:
+      codigo_do_ativo: codigo_ativo
   - name: Debêntures - Preços de Negociação
     url: 'https://www.debentures.com.br/exploreosnd/consultaadados/mercadosecundario/precosdenegociacao_e.asp?op_exc=Nada&emissor=&isin=&ativo=&dt_ini=20250101&dt_fim=YYYYMMDD'
     file_name: 'debentures_mercado_secundario_precos_negociacao.csv'
     type_response: csv
     acumular: false
+    column_mapping:
+      data: data_referencia
+      codigo_do_ativo: codigo_ativo
   ##############################################################################
   # Bases CVM
   ##############################################################################
@@ -107,11 +112,7 @@ resources:
     file_name: b3_classificacao_setorial.zip
     type_response: zip
     acumular: false
-  - name: B3 - Títulos Negociáveis
-    url: https://bvmf.bmfbovespa.com.br/suplemento/ExecutaAcaoDownload.asp?arquivo=Titulos_Negociaveis.zip&server=L
-    file_name: b3_titulos_negociaveis.zip
-    type_response: zip
-    acumular: false
+
   - name: B3 - ETFs listados
     url: https://sistemaswebb3-listados.b3.com.br/fundsProxy/fundsCall/GetListFundDownload/eyJ0eXBlRnVuZCI6MjAsInBhZ2VOdW1iZXIiOjEsInBhZ2VTaXplIjo2MH0=
     file_name: b3_etfs_listados.csv.base64

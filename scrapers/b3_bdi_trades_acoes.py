@@ -29,16 +29,16 @@ ARQUIVO = Path("data/b3_bdi_trades_acoes.csv")
 CABECALHO = [
     "data_captura",
     
-    "rpt_dt",
-    "tckr_symb",
+    "data_referencia",
+    "codigo_ativo",
     "isin",
     "sgmt_nm",
     "mkt",
-    "open_pric",
-    "min_pric",
-    "max_pric",
-    "trad_avrg_pric",
-    "last_pric",
+    "preco_abertura",
+    "preco_minimo",
+    "preco_maximo",
+    "preco_medio",
+    "preco_ultimo",
     "osc",
     "trad_qty",
     "fin_instrm_qty",
@@ -102,16 +102,16 @@ def capturar() -> list[dict]:
         for item in rows:
             todos.append({
                 "data_captura":  data_captura,
-                "rpt_dt":        limpar(str(item.get("rpt_dt", ""))),
-                "tckr_symb":     limpar(item.get("tckr_symb", "")),
+                "data_referencia":  limpar(str(item.get("rpt_dt", ""))),
+                "codigo_ativo":     limpar(item.get("tckr_symb", "")),
                 "isin":          limpar(item.get("isin", "")),
                 "sgmt_nm":       limpar(item.get("sgmt_nm", "")),
                 "mkt":           limpar(item.get("mkt", "")),
-                "open_pric":     limpar(str(item.get("open_pric", ""))),
-                "min_pric":      limpar(str(item.get("min_pric", ""))),
-                "max_pric":      limpar(str(item.get("max_pric", ""))),
-                "trad_avrg_pric": limpar(str(item.get("trad_avrg_pric", ""))),
-                "last_pric":     limpar(str(item.get("last_pric", ""))),
+                "preco_abertura":     limpar(str(item.get("open_pric", ""))),
+                "preco_minimo":      limpar(str(item.get("min_pric", ""))),
+                "preco_maximo":      limpar(str(item.get("max_pric", ""))),
+                "preco_medio": limpar(str(item.get("trad_avrg_pric", ""))),
+                "preco_ultimo":     limpar(str(item.get("last_pric", ""))),
                 "osc":           limpar(str(item.get("osc", ""))),
                 "trad_qty":      limpar(str(item.get("trad_qty", ""))),
                 "fin_instrm_qty": limpar(str(item.get("fin_instrm_qty", ""))),
@@ -134,7 +134,7 @@ class B3BdiTradesAcoesScraper(BaseScraper):
     enabled = True
     phase = 1
     accumulate = True
-    chaves_dedup = ['data_captura', 'tckr_symb', 'rpt_dt']
+    chaves_dedup = ['data_captura', 'codigo_ativo', 'data_referencia']
     
     # Catálogo de Metadados
     title = 'B3 BDI — Negócios de Ações'

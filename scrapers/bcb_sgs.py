@@ -36,7 +36,7 @@ CABECALHO = [
     
     "codigo_serie",
     "nome_serie",
-    "data",
+    "data_referencia",
     "valor",
 ]
 
@@ -85,7 +85,7 @@ def capturar() -> list[dict]:
                         "data_captura": data_captura,
                         "codigo_serie": str(codigo),
                         "nome_serie": nome,
-                        "data": limpar(item.get("data")),
+                        "data_referencia": limpar(item.get("data")),
                         "valor": limpar(item.get("valor")),
                     })
                 break
@@ -111,7 +111,7 @@ class BcbSgsScraper(BaseScraper):
     enabled = True
     phase = 1
     accumulate = False
-    chaves_dedup = ['data_captura', 'codigo_serie', 'data']
+    chaves_dedup = ['data_captura', 'codigo_serie', 'data_referencia']
     
     # Catálogo de Metadados
     title = 'BCB SGS — Séries Temporais'

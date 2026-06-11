@@ -27,12 +27,12 @@ ARQUIVO = Path("data/b3_bdi_di_over.csv")
 CABECALHO = [
     "data_captura",
     
-    "rpt_dt",
+    "data_referencia",
     "number_of_operations",
     "financial_volume",
     "average",
     "daily_factor",
-    "selic_rate",
+    "taxa_selic",
 ]
 
 PAGE_SIZE = 1000
@@ -92,12 +92,12 @@ def capturar() -> list[dict]:
             n_ops = item.get("tckr_symb") or item.get("number_of_operations", "")
             todos.append({
                 "data_captura":       data_captura,
-                "rpt_dt":             limpar(str(item.get("rpt_dt", ""))),
+                "data_referencia":     limpar(str(item.get("rpt_dt", ""))),
                 "number_of_operations": limpar(str(n_ops)),
                 "financial_volume":   limpar(str(item.get("financial_volume", ""))),
                 "average":            limpar(str(item.get("average", ""))),
                 "daily_factor":       limpar(str(item.get("daily_factor", ""))),
-                "selic_rate":         limpar(str(item.get("selic_rate", ""))),
+                "taxa_selic":         limpar(str(item.get("selic_rate", ""))),
             })
 
         pagina += 1
@@ -116,7 +116,7 @@ class B3BdiDiOverScraper(BaseScraper):
     enabled = True
     phase = 1
     accumulate = True
-    chaves_dedup = ['data_captura', 'rpt_dt']
+    chaves_dedup = ['data_captura', 'data_referencia']
     
     # Catálogo de Metadados
     title = 'B3 BDI — DI Over'

@@ -73,7 +73,7 @@ class AnbimaMatrizProbabilidadeResgateScraper(BaseScraper):
 
         from io import StringIO
         df = pd.read_csv(StringIO(resp.text), sep=",", encoding="utf-8")
-        df.insert(0, "dt_referencia", data_ref)
+        df.insert(0, "data_referencia", data_ref)
         return df
 
 

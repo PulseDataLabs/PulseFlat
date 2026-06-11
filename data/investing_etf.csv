@@ -1,4 +1,4 @@
-data_captura,nome,ticker,link,vr_ultimo,vr_variacao_pct,qt_volume,hr_atualizacao
+data_captura,nome,codigo_ativo,link,vr_ultimo,vr_variacao_pct,qt_volume,hr_atualizacao
 2026-06-10,Trend ETF LBMA Ouro,GOLD11,https://br.investing.com/etfs/gold11,22.880,-1.68%,"9,18M",09/06
 2026-06-10,iShares BM&FBOVESPA Small Cap ETF,SMAL11,https://br.investing.com/etfs/ishares-bm-fbovespa-small-cap,108.00,+0.70%,"4,12M",09/06
 2026-06-10,iShares Ibovespa ETF,BOVA11,https://br.investing.com/etfs/ishares-ibovespa,166.42,+0.56%,"2,79M",09/06

@@ -68,13 +68,13 @@ def _fetch_ticker(session: requests.Session, ticker: str, label: str, dt_ini: in
     closes = result[0].get("indicators", {}).get("quote", [{}])[0].get("close", [])
 
     df = pd.DataFrame({"timestamp": timestamps, "close": closes})
-    df["dt_ref"] = pd.to_datetime(df["timestamp"], unit="s").dt.normalize().dt.date
-    df["ticker"] = ticker
+    df["data_referencia"] = pd.to_datetime(df["timestamp"], unit="s").dt.normalize().dt.date
+    df["codigo_ativo"] = ticker
     df["label"] = label
-    df["vr_fechamento"] = pd.to_numeric(df["close"], errors="coerce")
-    df["vr_fechamento"] = df["vr_fechamento"].ffill()
+    df["preco_fechamento"] = pd.to_numeric(df["close"], errors="coerce")
+    df["preco_fechamento"] = df["preco_fechamento"].ffill()
 
-    return df[["dt_ref", "ticker", "label", "vr_fechamento"]]
+    return df[["data_referencia", "codigo_ativo", "label", "preco_fechamento"]]
 
 
 class YahooFinanceSeriesScraper(BaseScraper):

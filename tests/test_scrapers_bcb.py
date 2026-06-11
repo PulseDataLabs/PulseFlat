@@ -40,7 +40,7 @@ def test_bcb_ptax_sucesso(requests_mock):
     reg = registros[0]
     assert reg["cotacao_compra"] == "5.253"
     assert reg["cotacao_venda"] == "5.254"
-    assert reg["data_hora_cotacao"] == "2026-06-01 13:15:00.000"
+    assert reg["data_referencia"] == "2026-06-01"
     assert "data_captura" in reg
 
 
@@ -80,7 +80,7 @@ def test_bcb_ptax_scraper_fetch(requests_mock):
 
     assert isinstance(df, pd.DataFrame)
     assert not df.empty
-    assert list(df.columns) == ["data_captura", "data_hora_cotacao", "cotacao_compra", "cotacao_venda"]
+    assert list(df.columns) == ["data_captura", "data_referencia", "cotacao_compra", "cotacao_venda"]
     assert df.loc[0, "cotacao_compra"] == "5.253"
 
 
@@ -105,7 +105,7 @@ def test_bcb_sgs_sucesso(requests_mock, monkeypatch):
     assert len(registros) == total_esperado
 
     for reg in registros:
-        assert reg["data"] in ("01/06/2026", "02/06/2026")
+        assert reg["data_referencia"] in ("01/06/2026", "02/06/2026")
         assert reg["valor"] in ("10.5", "10.75", "10.50")
         assert "codigo_serie" in reg
         assert "nome_serie" in reg

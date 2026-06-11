@@ -132,7 +132,7 @@ def _read_sheet(content: bytes, sheet_name: str, data_referencia: datetime.date)
     df = pd.DataFrame(data_rows, columns=col_names)
     df = df.loc[:, ~df.columns.str.startswith("col_")]
     
-    df.insert(0, "dt_referencia", data_referencia)
+    df.insert(0, "data_referencia", data_referencia)
     df.insert(1, "tipo_ativo", sheet_name.strip())
     
     return df

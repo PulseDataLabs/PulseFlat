@@ -225,6 +225,18 @@ class GenericScraper(BaseScraper):
         if is_portfolio:
             return pd.DataFrame(rows)
 
+        # Aplicar mapeamento de colunas se definido no resources.yaml
+        column_mapping = self.res_config.get("column_mapping")
+        if column_mapping and rows:
+            mapped_rows = []
+            for r in rows:
+                new_r = {}
+                for k, v in r.items():
+                    new_key = column_mapping.get(k, k)
+                    new_r[new_key] = v
+                mapped_rows.append(new_r)
+            rows = mapped_rows
+
         dataset_id = self.resource_name.lower().replace(" ", "_").replace("-", "_")
         enriched, _ = enriquecer(dataset_id, rows)
         return pd.DataFrame(enriched)

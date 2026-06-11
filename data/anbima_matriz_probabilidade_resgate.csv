@@ -1,4 +1,4 @@
-data_captura,dt_referencia,data,periodo,classe,segmento_investidor,tipo_metodologia,metrica,prazo,valor
+data_captura,data_referencia,data_referencia,periodo,classe,segmento_investidor,tipo_metodologia,metrica,prazo,valor
 2026-06-03,2026-04-30,2026-04-30,04/2026,Ações,PRIVATE,Resgate Dados Consolidados,EWMA_97,2,0.0016
 2026-06-03,2026-04-30,2026-04-30,04/2026,Multimercados,OUTROS,Captação Líquida Dados Consolidados,media_simples,21,0.0291
 2026-06-03,2026-04-30,2026-04-30,04/2026,Multimercados,PJ,Captação Líquida Dados Consolidados,media_simples,4,0.0111
