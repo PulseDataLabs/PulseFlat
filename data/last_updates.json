@@ -146,5 +146,21 @@
   "investing_etf.csv": {
     "min": "2026-06-10",
     "max": "2026-06-10"
+  },
+  "bacen_conglomerados.csv": {
+    "min": "2026-06-03",
+    "max": "2026-06-05"
+  },
+  "bacen_parcelas_capital_basileia.csv": {
+    "min": "2026-06-03",
+    "max": "2026-06-05"
+  },
+  "consolidated.csv": {
+    "min": "2026-04-01",
+    "max": "2026-06-10"
+  },
+  "yahoo_finance_series.csv": {
+    "min": "2026-06-03",
+    "max": "2026-06-05"
   }
 }

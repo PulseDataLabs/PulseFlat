@@ -1271,7 +1271,7 @@
       },
       {
         "name": "banco_mandatario",
-        "type": "date",
+        "type": "str",
         "example": "BANCO BRADESCO S/A"
       },
       {
@@ -2918,6 +2918,204 @@
         "name": "selic_rate",
         "type": "str",
         "example": "14.4"
+      }
+    ]
+  },
+  {
+    "title": "Bacen Conglomerados",
+    "files": "bacen_conglomerados.csv",
+    "source": "bcb",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-06-03"
+      },
+      {
+        "name": "dt_referencia",
+        "type": "date",
+        "example": "2026-04-01"
+      },
+      {
+        "name": "departamento",
+        "type": "str",
+        "example": "99PAY IP - PRUDENCIAL"
+      },
+      {
+        "name": "secao_1",
+        "type": "str",
+        "example": "Privado Nacional"
+      },
+      {
+        "name": "secao_2",
+        "type": "int",
+        "example": "24313102"
+      },
+      {
+        "name": "secao_3",
+        "type": "str",
+        "example": "99PAY INSTITUICAO DE PAGAMENTO S.A."
+      },
+      {
+        "name": "tipo_documento",
+        "type": "str",
+        "example": "LIDER"
+      },
+      {
+        "name": "data_documento",
+        "type": "date",
+        "example": "2024-07-10 00:00:00"
+      },
+      {
+        "name": "detalhe",
+        "type": "str",
+        "example": "SP"
+      }
+    ]
+  },
+  {
+    "title": "Bacen Parcelas Capital Basileia",
+    "files": "bacen_parcelas_capital_basileia.csv",
+    "source": "bcb",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-06-03"
+      },
+      {
+        "name": "TipoInstituicao",
+        "type": "int",
+        "example": "1"
+      },
+      {
+        "name": "CodInst",
+        "type": "str",
+        "example": "00068987"
+      },
+      {
+        "name": "AnoMes",
+        "type": "int",
+        "example": "202512"
+      },
+      {
+        "name": "NomeRelatorio",
+        "type": "str",
+        "example": "Informações de Capital"
+      },
+      {
+        "name": "NumeroRelatorio",
+        "type": "int",
+        "example": "5"
+      },
+      {
+        "name": "Grupo",
+        "type": "str",
+        "example": "Ativos Ponderados pelo Risco (RWA)"
+      },
+      {
+        "name": "Conta",
+        "type": "int",
+        "example": "79658"
+      },
+      {
+        "name": "NomeColuna",
+        "type": "str",
+        "example": "Exposição Total (k)"
+      },
+      {
+        "name": "DescricaoColuna",
+        "type": "str",
+        "example": "Exposição Total, sem ponderação de risco"
+      },
+      {
+        "name": "Saldo",
+        "type": "str",
+        "example": "0.120138333017862"
+      },
+      {
+        "name": "tipo_instituicao_label",
+        "type": "str",
+        "example": "conglomerados_prudenciais"
+      }
+    ]
+  },
+  {
+    "title": "Investing Etf",
+    "files": "investing_etf.csv",
+    "source": "investing",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-06-10"
+      },
+      {
+        "name": "nome",
+        "type": "str",
+        "example": "Trend ETF LBMA Ouro"
+      },
+      {
+        "name": "ticker",
+        "type": "str",
+        "example": "GOLD11"
+      },
+      {
+        "name": "link",
+        "type": "str",
+        "example": "https://br.investing.com/etfs/gold11"
+      },
+      {
+        "name": "vr_ultimo",
+        "type": "float",
+        "example": "22.880"
+      },
+      {
+        "name": "vr_variacao_pct",
+        "type": "str",
+        "example": "-1.68%"
+      },
+      {
+        "name": "qt_volume",
+        "type": "str",
+        "example": "9,18M"
+      },
+      {
+        "name": "hr_atualizacao",
+        "type": "str",
+        "example": "09/06"
+      }
+    ]
+  },
+  {
+    "title": "Yahoo Finance Series",
+    "files": "yahoo_finance_series.csv",
+    "source": "yahoo",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-06-03"
+      },
+      {
+        "name": "dt_ref",
+        "type": "date",
+        "example": "2026-05-04"
+      },
+      {
+        "name": "ticker",
+        "type": "str",
+        "example": "^BVSP"
+      },
+      {
+        "name": "label",
+        "type": "str",
+        "example": "IBOVESPA"
+      },
+      {
+        "name": "vr_fechamento",
+        "type": "float",
+        "example": "185600.0"
       }
     ]
   }
