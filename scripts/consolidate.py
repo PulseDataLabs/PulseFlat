@@ -216,13 +216,13 @@ INDICATOR_DEFS = [
     {
         "dataset": "anbima_indice_imab.csv",
         "source": "ANBIMA",
-        "indicator_col": "ndice",
+        "indicator_col": "indice",
         "value_cols": [
-            ("n_mero_ndice", "Número-índice", "number"),
-            ("varia_o_di_ria", "Variação diária", "pct"),
-            ("duration_d_u", "Duration (d.u.)", "number"),
+            ("numero_indice", "Número-índice", "number"),
+            ("variacao_diaria", "Variação diária", "pct"),
+            ("duration_du", "Duration (d.u.)", "number"),
         ],
-        "date_col": "data_de_refer_ncia",
+        "date_col": "data_de_referencia",
         "category": "IMA-B",
     },
     # ── Yahoo Finance ──────────────────────────────────────────────

@@ -1332,7 +1332,7 @@
         "example": "AURA ALMAS MINERACAO S.A."
       },
       {
-        "name": "c_digo_do_ativo",
+        "name": "codigo_do_ativo",
         "type": "str",
         "example": "AALM12"
       },
@@ -1347,22 +1347,22 @@
         "example": "1200"
       },
       {
-        "name": "n_mero_de_neg_cios",
+        "name": "numero_de_negocios",
         "type": "str",
         "example": "2"
       },
       {
-        "name": "pu_m_nimo",
+        "name": "pu_minimo",
         "type": "str",
         "example": "1047.598855"
       },
       {
-        "name": "pu_m_dio",
+        "name": "pu_medio",
         "type": "str",
         "example": "1047.632188"
       },
       {
-        "name": "pu_m_ximo",
+        "name": "pu_maximo",
         "type": "str",
         "example": "1047.665521"
       },
@@ -2600,22 +2600,22 @@
         "example": "2026-06-10"
       },
       {
-        "name": "data_de_refer_ncia",
+        "name": "data_de_referencia",
         "type": "date",
         "example": "2001-12-04 00:00:00"
       },
       {
-        "name": "duration_d_u",
+        "name": "duration_du",
         "type": "str",
         "example": ""
       },
       {
-        "name": "n_mero_ndice",
+        "name": "numero_indice",
         "type": "str",
         "example": "532.621995"
       },
       {
-        "name": "ndice",
+        "name": "indice",
         "type": "str",
         "example": "IMA-GERAL"
       },
@@ -2625,27 +2625,27 @@
         "example": ""
       },
       {
-        "name": "varia_o_12_meses",
+        "name": "variacao_12_meses",
         "type": "str",
         "example": ""
       },
       {
-        "name": "varia_o_24_meses",
+        "name": "variacao_24_meses",
         "type": "str",
         "example": ""
       },
       {
-        "name": "varia_o_di_ria",
+        "name": "variacao_diaria",
         "type": "str",
         "example": "0.0708"
       },
       {
-        "name": "varia_o_no_ano",
+        "name": "variacao_no_ano",
         "type": "str",
         "example": ""
       },
       {
-        "name": "varia_o_no_m_s",
+        "name": "variacao_no_mes",
         "type": "str",
         "example": ""
       }
