@@ -125,7 +125,7 @@ class BacenParcelasCapitalBasileiaScraper(BaseScraper):
                     session, periodo, tipo["codigo"],
                 )
                 if df.empty:
-                    print_warn(f"sem dados: {tipo['label']} {periodo}", elapsed=time.time() - t0)
+                    print_warn(f"sem dados: {tipo['label']} {periodo}")
                     continue
 
                 df["tipo_instituicao_label"] = tipo["label"]

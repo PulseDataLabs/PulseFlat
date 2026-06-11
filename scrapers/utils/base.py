@@ -123,5 +123,5 @@ class BaseScraper:
 
         except Exception as e:
             elapsed = time.time() - t0
-            self.logger.error(f"Erro ao executar scraper {self.name}: {e}", exc_info=True)
+            self.logger.error(f"Erro ao executar scraper {self.name}: {e}")
             raise e

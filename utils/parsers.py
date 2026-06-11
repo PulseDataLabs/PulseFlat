@@ -99,6 +99,8 @@ def decode_bytes(content: bytes) -> str:
 
 def normalize_key(k: str) -> str:
     key = limpar(k).lower().replace(" ", "_")
+    key = unicodedata.normalize("NFKD", key)
+    key = key.encode("ascii", "ignore").decode("ascii")
     key = re.sub(r"[^a-z0-9_]+", "_", key)
     key = re.sub(r"_+", "_", key).strip("_")
     return key or "campo"

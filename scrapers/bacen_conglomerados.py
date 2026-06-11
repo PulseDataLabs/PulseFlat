@@ -10,6 +10,7 @@ e retorna o conteúdo normalizado.
 """
 import os
 import sys
+import time
 import datetime
 import zipfile
 from io import BytesIO

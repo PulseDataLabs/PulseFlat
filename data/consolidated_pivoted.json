@@ -1,15 +1,5 @@
 [
   {
-    "data_referencia": "2025-12-26",
-    "indicador": "IMA-GERAL",
-    "fonte": "ANBIMA",
-    "dataset_label": "ANBIMA IMA-B",
-    "categoria": "IMA-B",
-    "Número-índice": "9.573",
-    "Variação diária": "0,15%",
-    "Duration (d.u.)": "520,00"
-  },
-  {
     "data_referencia": "2026-04-01",
     "indicador": "IGP-M 12m",
     "fonte": "BCB",
@@ -80,22 +70,6 @@
     "dataset_label": "ANBIMA Indicadores",
     "categoria": "Índice de Preços",
     "Valor": "0,4000"
-  },
-  {
-    "data_referencia": "2026-06-02",
-    "indicador": "DOLAR SPOT BMF PARA 1 DIA",
-    "fonte": "B3",
-    "dataset_label": "B3 Taxa Câmbio",
-    "categoria": "Taxas de Câmbio",
-    "Valor": "5,01"
-  },
-  {
-    "data_referencia": "2026-06-02",
-    "indicador": "DÓLAR BMF SPOT - 2 DIAS",
-    "fonte": "B3",
-    "dataset_label": "B3 Taxa Câmbio",
-    "categoria": "Taxas de Câmbio",
-    "Valor": "5,01"
   },
   {
     "data_referencia": "2026-06-03",
@@ -301,16 +275,6 @@
     "dataset_label": "ANBIMA Indicadores",
     "categoria": "FDS",
     "Valor": "0,0888"
-  },
-  {
-    "data_referencia": "2026-06-09",
-    "indicador": "IMA - Geral",
-    "fonte": "ANBIMA",
-    "dataset_label": "ANBIMA IMA-B",
-    "categoria": "IMA-B",
-    "Número-índice": "10.033",
-    "Variação diária": "0,04%",
-    "Duration (d.u.)": "487,00"
   },
   {
     "data_referencia": "2026-06-09",

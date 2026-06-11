@@ -10,6 +10,7 @@ em TICKERS abaixo. Adicione ou remova conforme a necessidade do projeto.
 """
 import os
 import sys
+import time
 import datetime
 
 import pandas as pd

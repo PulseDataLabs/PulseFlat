@@ -27,8 +27,8 @@ def test_decode_bytes():
 def test_normalize_key():
     """Deve normalizar strings para formato snake_case limpo, removendo acentos e caracteres especiais."""
     assert parsers.normalize_key("  Nome da Companhia  ") == "nome_da_companhia"
-    assert parsers.normalize_key("Código CVM / Cadastro") == "c_digo_cvm_cadastro"
-    assert parsers.normalize_key("Data de Referência (2026)") == "data_de_refer_ncia_2026"
+    assert parsers.normalize_key("Código CVM / Cadastro") == "codigo_cvm_cadastro"
+    assert parsers.normalize_key("Data de Referência (2026)") == "data_de_referencia_2026"
     assert parsers.normalize_key("Taxa % a.a.") == "taxa_a_a"
     assert parsers.normalize_key("___teste__multiplo__") == "teste_multiplo"
     assert parsers.normalize_key("") == "campo"
@@ -39,7 +39,7 @@ def test_csv_rows():
     csv_semicolon = "Código;Nome;Valor\n123;Empresa A;10.50\n456;Empresa B;20.30"
     rows = parsers.csv_rows(csv_semicolon)
     assert len(rows) == 2
-    assert rows[0]["c_digo"] == "123"
+    assert rows[0]["codigo"] == "123"
     assert rows[0]["nome"] == "Empresa A"
     assert rows[0]["valor"] == "10.50"
 
