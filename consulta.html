@@ -493,6 +493,83 @@
       .source-filters { gap: 0.3rem; }
       .source-chip { padding: 0.3rem 0.55rem; font-size: 0.68rem; }
     }
+
+    /* ── Dashboard PTAX Card ── */
+    .dashboard-section {
+      max-width: 1400px;
+      margin: 1.5rem auto 0;
+      padding: 0 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+      gap: 1.5rem;
+    }
+    .dashboard-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      position: relative;
+    }
+    .dashboard-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: var(--border);
+      border-top-left-radius: var(--radius);
+      border-bottom-left-radius: var(--radius);
+    }
+    .dashboard-card.ptax::before {
+      background: var(--gold);
+    }
+    .dashboard-card.inflation::before {
+      background: var(--accent);
+    }
+    .dashboard-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .chart-period-selector {
+      display: flex;
+      gap: 0.25rem;
+      background: var(--bg3);
+      padding: 2px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border);
+    }
+    .period-btn {
+      background: transparent;
+      border: none;
+      color: var(--text2);
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      padding: 0.3rem 0.65rem;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .period-btn:hover {
+      color: var(--text);
+      background: rgba(255,255,255,0.03);
+    }
+    .period-btn.active {
+      background: var(--surface2);
+      font-weight: 600;
+    }
+    .dashboard-card.ptax .period-btn.active {
+      color: var(--gold);
+    }
+    .dashboard-card.inflation .period-btn.active {
+      color: var(--accent);
+    }
   </style>
 </head>
 <body>
@@ -552,6 +629,48 @@
         </div>
       </div>
     </header>
+
+    <section class="dashboard-section" id="dashboards-container">
+      <!-- Card Dólar PTAX -->
+      <div class="dashboard-card ptax">
+        <div class="dashboard-card-header">
+          <div>
+            <div class="page-eyebrow" style="margin-bottom: 0.2rem; font-size: 0.65rem;">Câmbio de Referência BCB</div>
+            <h2 style="font-family: var(--font-head); font-weight: 700; font-size: 1.40rem; display: flex; align-items: center; gap: 0.5rem;">
+              Dólar PTAX <span style="font-family: var(--font-mono); font-size: 1.15rem; color: var(--gold);" id="latest-ptax-val">R$ —,——</span>
+            </h2>
+            <div style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text3); margin-top: 0.2rem;" id="latest-ptax-date">Última cotação: —</div>
+          </div>
+          <div class="chart-period-selector" id="ptax-period-selector">
+            <button class="period-btn active" data-days="30">30D</button>
+            <button class="period-btn" data-days="90">90D</button>
+            <button class="period-btn" data-days="365">1Ano</button>
+            <button class="period-btn" data-days="all">Tudo</button>
+          </div>
+        </div>
+        <div id="ptax-dashboard-chart" style="height: 250px; width: 100%;"></div>
+      </div>
+
+      <!-- Card Inflação -->
+      <div class="dashboard-card inflation">
+        <div class="dashboard-card-header">
+          <div>
+            <div class="page-eyebrow" style="margin-bottom: 0.2rem; font-size: 0.65rem;">Índices de Inflação BCB</div>
+            <h2 style="font-family: var(--font-head); font-weight: 700; font-size: 1.40rem; display: flex; align-items: center; gap: 0.5rem;">
+              Inflação Acumulada 12M
+            </h2>
+            <div style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text3); margin-top: 0.2rem;" id="latest-inflation-values">IPCA: —,——% | IGP-M: —,——%</div>
+          </div>
+          <div class="chart-period-selector" id="inflation-period-selector">
+            <button class="period-btn" data-days="180">6M</button>
+            <button class="period-btn" data-days="365">1Ano</button>
+            <button class="period-btn active" data-days="730">2Anos</button>
+            <button class="period-btn" data-days="all">Tudo</button>
+          </div>
+        </div>
+        <div id="inflation-dashboard-chart" style="height: 250px; width: 100%;"></div>
+      </div>
+    </section>
 
     <section class="filter-section" aria-label="Filtros">
       <div class="filter-bar">
@@ -668,6 +787,27 @@
       if (!d) return '—';
       const m = d.match(/^(\d{4})-(\d{2})-(\d{2})/);
       return m ? `${m[3]}/${m[2]}/${m[1]}` : d;
+    }
+
+    function getConsolidatedValueHtml(r) {
+      const ignoreKeys = ['data_referencia', 'indicador', 'fonte', 'dataset_label', 'categoria', 'dataset', 'metrica', 'unidade', 'tipo', 'captura_em'];
+      const metrics = Object.keys(r).filter(k => !ignoreKeys.includes(k));
+      if (metrics.length === 0) {
+        return '<span class="metric-val-solo">—</span>';
+      }
+      if (metrics.length === 1) {
+        const key = metrics[0];
+        const val = r[key];
+        if (key === 'Valor') {
+          return `<span class="metric-val-solo">${val}</span>`;
+        } else {
+          return `<span class="metric-val-solo">${key}: ${val}</span>`;
+        }
+      }
+      const chips = metrics.map(key => {
+        return `<span class="metric-chip">${key}: ${r[key]}</span>`;
+      }).join('');
+      return `<div class="metrics-row-cell">${chips}</div>`;
     }
 
     /* ── Stats ── */
@@ -800,6 +940,10 @@
     }
 
     $search.on('input', applyFilters);
+
+    // Inicializar os dashboards
+    initPtaxDashboard();
+    initInflationDashboard();
 
     /* ── Expandable Rows for Charts ── */
     $('#consolidated-table tbody').on('click', 'tr.clickable-row', function (e) {
@@ -1003,6 +1147,7 @@
               tools: { selection: false, zoom: true, zoomin: false, zoomout: false, pan: false, reset: true }
             }
           },
+          dataLabels: { enabled: false },
           colors: ['#00d4ff', '#00e5a0', '#f0b429', '#ff4d6d'],
           stroke: { curve: 'smooth', width: 2 },
           grid: { borderColor: '#1e2d3d', strokeDashArray: 3 },
@@ -1034,6 +1179,286 @@
         if (loadingEl) {
           loadingEl.innerHTML = `<span style="color: var(--red); font-size: 0.75rem;">⚠️ Erro ao carregar histórico: ${err.message}</span>`;
         }
+      }
+    }
+
+    async function initPtaxDashboard() {
+      try {
+        const response = await fetch('./data/bcb_ptax.csv');
+        if (!response.ok) throw new Error(`Erro HTTP ${response.status}`);
+        const text = await response.text();
+        const lines = text.split('\n').map(l => l.trim()).filter(l => l !== '');
+        if (lines.length < 2) return;
+        
+        const parseLine = (line) => {
+          const vals = [];
+          let insideQuote = false;
+          let current = '';
+          for (let i = 0; i < line.length; i++) {
+            const char = line[i];
+            if (char === '"') {
+              insideQuote = !insideQuote;
+            } else if (char === ',' && !insideQuote) {
+              vals.push(current.trim());
+              current = '';
+            } else {
+              current += char;
+            }
+          }
+          vals.push(current.trim());
+          return vals.map(v => v.replace(/^"|"$/g, ''));
+        };
+        
+        const headers = parseLine(lines[0]);
+        const rows = lines.slice(1).map(parseLine);
+        
+        const dataObjects = rows.map(row => {
+          return headers.reduce((obj, h, idx) => {
+            obj[h] = row[idx] !== undefined ? row[idx] : '';
+            return obj;
+          }, {});
+        }).filter(r => r.data_referencia && r.cotacao_venda);
+        
+        dataObjects.sort((a, b) => a.data_referencia.localeCompare(b.data_referencia));
+        
+        if (dataObjects.length === 0) return;
+        
+        const latest = dataObjects[dataObjects.length - 1];
+        const latestVal = parseFloat(latest.cotacao_venda);
+        const latestDateFmt = fmtDate(latest.data_referencia);
+        
+        document.getElementById('latest-ptax-val').textContent = `R$ ${latestVal.toLocaleString('pt-BR', { minimumFractionDigits: 4, maximumFractionDigits: 4 })}`;
+        document.getElementById('latest-ptax-date').textContent = `Última cotação: ${latestDateFmt} (Ref: PTAX Venda)`;
+        
+        let chart = null;
+        
+        function drawChart(days) {
+          let filtered = dataObjects;
+          if (days !== 'all') {
+            const cutDate = new Date();
+            cutDate.setDate(cutDate.getDate() - parseInt(days));
+            const cutStr = cutDate.toISOString().split('T')[0];
+            filtered = dataObjects.filter(r => r.data_referencia >= cutStr);
+          }
+          
+          const seriesCompra = filtered.map(r => ({
+            x: r.data_referencia,
+            y: parseFloat(r.cotacao_compra)
+          })).filter(pt => !isNaN(pt.y));
+          
+          const seriesVenda = filtered.map(r => ({
+            x: r.data_referencia,
+            y: parseFloat(r.cotacao_venda)
+          })).filter(pt => !isNaN(pt.y));
+          
+          const chartData = [
+            { name: 'Compra', data: seriesCompra },
+            { name: 'Venda', data: seriesVenda }
+          ];
+          
+          const options = {
+            series: chartData,
+            chart: {
+              type: 'area',
+              height: 250,
+              background: 'transparent',
+              foreColor: '#8fa3b8',
+              toolbar: { show: false }
+            },
+            dataLabels: { enabled: false },
+            colors: ['#00e5a0', '#f0b429'],
+            fill: {
+              type: 'gradient',
+              gradient: {
+                shadeIntensity: 1,
+                opacityFrom: 0.15,
+                opacityTo: 0.01,
+                stops: [0, 90, 100]
+              }
+            },
+            stroke: { curve: 'smooth', width: 2 },
+            grid: { borderColor: '#1e2d3d', strokeDashArray: 3 },
+            xaxis: {
+              type: 'datetime',
+              labels: {
+                datetimeFormatter: { year: 'yyyy', month: 'MMM yy', day: 'dd/MM' }
+              }
+            },
+            yaxis: {
+              labels: {
+                formatter: function (value) {
+                  return value !== null ? value.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 4 }) : '';
+                }
+              }
+            },
+            tooltip: {
+              theme: 'dark',
+              x: { format: 'dd/MM/yyyy' }
+            },
+            legend: { show: true, position: 'top', horizontalAlign: 'right' }
+          };
+          
+          const container = document.getElementById('ptax-dashboard-chart');
+          container.innerHTML = '';
+          chart = new ApexCharts(container, options);
+          chart.render();
+        }
+        
+        drawChart(30);
+        
+        $('#ptax-period-selector .period-btn').on('click', function() {
+          $('#ptax-period-selector .period-btn').removeClass('active');
+          $(this).addClass('active');
+          const days = $(this).attr('data-days');
+          drawChart(days);
+        });
+        
+      } catch (err) {
+        console.error('Erro ao inicializar dashboard do dólar:', err);
+      }
+    }
+
+    async function initInflationDashboard() {
+      try {
+        const response = await fetch('./data/bcb_sgs.csv');
+        if (!response.ok) throw new Error(`Erro HTTP ${response.status}`);
+        const text = await response.text();
+        const lines = text.split('\n').map(l => l.trim()).filter(l => l !== '');
+        if (lines.length < 2) return;
+        
+        const parseLine = (line) => {
+          const vals = [];
+          let insideQuote = false;
+          let current = '';
+          for (let i = 0; i < line.length; i++) {
+            const char = line[i];
+            if (char === '"') {
+              insideQuote = !insideQuote;
+            } else if (char === ',' && !insideQuote) {
+              vals.push(current.trim());
+              current = '';
+            } else {
+              current += char;
+            }
+          }
+          vals.push(current.trim());
+          return vals.map(v => v.replace(/^"|"$/g, ''));
+        };
+        
+        const headers = parseLine(lines[0]);
+        const rows = lines.slice(1).map(parseLine);
+        
+        const ipcaData = [];
+        const igpmData = [];
+        
+        const idxCodigo = headers.indexOf('codigo_serie');
+        const idxDataRef = headers.indexOf('data_referencia');
+        const idxValor = headers.indexOf('valor');
+        
+        rows.forEach(row => {
+          const codigo = row[idxCodigo];
+          const dataRef = row[idxDataRef];
+          const valor = parseFloat(row[idxValor]);
+          if (!dataRef || isNaN(valor)) return;
+          
+          if (codigo === '433') {
+            ipcaData.push({ x: dataRef, y: valor });
+          } else if (codigo === '190') {
+            igpmData.push({ x: dataRef, y: valor });
+          }
+        });
+        
+        ipcaData.sort((a, b) => a.x.localeCompare(b.x));
+        igpmData.sort((a, b) => a.x.localeCompare(b.x));
+        
+        if (ipcaData.length === 0 && igpmData.length === 0) return;
+        
+        const latestIPCA = ipcaData.length ? ipcaData[ipcaData.length - 1] : null;
+        const latestIGPM = igpmData.length ? igpmData[igpmData.length - 1] : null;
+        
+        const ipcaValStr = latestIPCA ? `${latestIPCA.y.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}%` : '—';
+        const igpmValStr = latestIGPM ? `${latestIGPM.y.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}%` : '—';
+        
+        document.getElementById('latest-inflation-values').textContent = `IPCA: ${ipcaValStr} | IGP-M: ${igpmValStr}`;
+        
+        let chart = null;
+        
+        function drawChart(days) {
+          let filteredIPCA = ipcaData;
+          let filteredIGPM = igpmData;
+          
+          if (days !== 'all') {
+            const cutDate = new Date();
+            cutDate.setDate(cutDate.getDate() - parseInt(days));
+            const cutStr = cutDate.toISOString().split('T')[0];
+            filteredIPCA = ipcaData.filter(r => r.x >= cutStr);
+            filteredIGPM = igpmData.filter(r => r.x >= cutStr);
+          }
+          
+          const chartData = [
+            { name: 'IPCA (12M)', data: filteredIPCA },
+            { name: 'IGP-M (12M)', data: filteredIGPM }
+          ];
+          
+          const options = {
+            series: chartData,
+            chart: {
+              type: 'area',
+              height: 250,
+              background: 'transparent',
+              foreColor: '#8fa3b8',
+              toolbar: { show: false }
+            },
+            colors: ['#00d4ff', '#ff4d6d'],
+            fill: {
+              type: 'gradient',
+              gradient: {
+                shadeIntensity: 1,
+                opacityFrom: 0.15,
+                opacityTo: 0.01,
+                stops: [0, 90, 100]
+              }
+            },
+            dataLabels: { enabled: false },
+            stroke: { curve: 'smooth', width: 2 },
+            grid: { borderColor: '#1e2d3d', strokeDashArray: 3 },
+            xaxis: {
+              type: 'datetime',
+              labels: {
+                datetimeFormatter: { year: 'yyyy', month: 'MMM yy', day: 'dd/MM' }
+              }
+            },
+            yaxis: {
+              labels: {
+                formatter: function (value) {
+                  return value !== null ? value.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + '%' : '';
+                }
+              }
+            },
+            tooltip: {
+              theme: 'dark',
+              x: { format: 'MM/yyyy' }
+            },
+            legend: { show: true, position: 'top', horizontalAlign: 'right' }
+          };
+          
+          const container = document.getElementById('inflation-dashboard-chart');
+          container.innerHTML = '';
+          chart = new ApexCharts(container, options);
+          chart.render();
+        }
+        
+        drawChart(730);
+        
+        $('#inflation-period-selector .period-btn').on('click', function() {
+          $('#inflation-period-selector .period-btn').removeClass('active');
+          $(this).addClass('active');
+          const days = $(this).attr('data-days');
+          drawChart(days);
+        });
+        
+      } catch (err) {
+        console.error('Erro ao inicializar dashboard de inflação:', err);
       }
     }
   })();

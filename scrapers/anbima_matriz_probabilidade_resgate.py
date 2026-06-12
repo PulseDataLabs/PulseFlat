@@ -47,6 +47,7 @@ class AnbimaMatrizProbabilidadeResgateScraper(BaseScraper):
     group = "anbima"
     enabled = True
     phase = 1
+    chaves_dedup = ["data_referencia", "classe", "segmento_investidor", "tipo_metodologia", "metrica", "prazo"]
 
     def fetch(self) -> pd.DataFrame:
         data_ref = _ultimo_dia_mes_anterior()
