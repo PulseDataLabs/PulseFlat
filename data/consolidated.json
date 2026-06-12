@@ -8,8 +8,8 @@
     "indicador": "DI-B3",
     "valor": "14,40",
     "unidade": "% a.a.",
-    "data_referencia": "2026-06-10",
-    "captura_em": "2026-06-10",
+    "data_referencia": "2026-06-11",
+    "captura_em": "2026-06-11",
     "metrica": "valor"
   },
   {
@@ -19,10 +19,10 @@
     "categoria": "Câmbio",
     "tipo": "indicador",
     "indicador": "Dólar Comercial Compra",
-    "valor": "5,18",
+    "valor": "5,15",
     "unidade": "R$",
-    "data_referencia": "2026-06-10",
-    "captura_em": "2026-06-10",
+    "data_referencia": "2026-06-11",
+    "captura_em": "2026-06-11",
     "metrica": "valor"
   },
   {
@@ -32,10 +32,10 @@
     "categoria": "Câmbio",
     "tipo": "indicador",
     "indicador": "Dólar Comercial Venda",
-    "valor": "5,18",
+    "valor": "5,15",
     "unidade": "R$",
-    "data_referencia": "2026-06-10",
-    "captura_em": "2026-06-10",
+    "data_referencia": "2026-06-11",
+    "captura_em": "2026-06-11",
     "metrica": "valor"
   },
   {
@@ -47,6 +47,19 @@
     "indicador": "Estimativa SELIC",
     "valor": "14,40",
     "unidade": "% a.a.",
+    "data_referencia": "2026-06-12",
+    "captura_em": "2026-06-12",
+    "metrica": "valor"
+  },
+  {
+    "dataset": "anbima_indicadores.csv",
+    "dataset_label": "ANBIMA Indicadores",
+    "fonte": "ANBIMA",
+    "categoria": "Câmbio",
+    "tipo": "indicador",
+    "indicador": "Euro Compra",
+    "valor": "5,93",
+    "unidade": "R$",
     "data_referencia": "2026-06-11",
     "captura_em": "2026-06-11",
     "metrica": "valor"
@@ -57,24 +70,11 @@
     "fonte": "ANBIMA",
     "categoria": "Câmbio",
     "tipo": "indicador",
-    "indicador": "Euro Compra",
-    "valor": "5,98",
-    "unidade": "R$",
-    "data_referencia": "2026-06-10",
-    "captura_em": "2026-06-10",
-    "metrica": "valor"
-  },
-  {
-    "dataset": "anbima_indicadores.csv",
-    "dataset_label": "ANBIMA Indicadores",
-    "fonte": "ANBIMA",
-    "categoria": "Câmbio",
-    "tipo": "indicador",
     "indicador": "Euro Venda",
-    "valor": "5,98",
+    "valor": "5,93",
     "unidade": "R$",
-    "data_referencia": "2026-06-10",
-    "captura_em": "2026-06-10",
+    "data_referencia": "2026-06-11",
+    "captura_em": "2026-06-11",
     "metrica": "valor"
   },
   {
@@ -84,10 +84,10 @@
     "categoria": "FDS",
     "tipo": "indicador",
     "indicador": "FDS (registro 1)",
-    "valor": "0,0888",
+    "valor": "0,0889",
     "unidade": "R$ cota",
-    "data_referencia": "2026-06-10",
-    "captura_em": "2026-06-10",
+    "data_referencia": "2026-06-11",
+    "captura_em": "2026-06-11",
     "metrica": "valor"
   },
   {
@@ -99,8 +99,8 @@
     "indicador": "FDS (registro 2)",
     "valor": "0,0888",
     "unidade": "R$ cota",
-    "data_referencia": "2026-06-09",
-    "captura_em": "2026-06-10",
+    "data_referencia": "2026-06-10",
+    "captura_em": "2026-06-11",
     "metrica": "valor"
   },
   {
@@ -149,10 +149,10 @@
     "categoria": "Índice de Preços",
     "tipo": "indicador",
     "indicador": "IPCA Número Índice",
-    "valor": "7.596",
+    "valor": "7.640",
     "unidade": "índice",
-    "data_referencia": "2026-04-01",
-    "captura_em": "2026-06-01",
+    "data_referencia": "2026-05-01",
+    "captura_em": "2026-06-12",
     "metrica": "valor"
   },
   {
@@ -175,10 +175,10 @@
     "categoria": "Índice de Preços",
     "tipo": "indicador",
     "indicador": "IPCA Var % mês",
-    "valor": "0,6700",
+    "valor": "0,5800",
     "unidade": "%",
-    "data_referencia": "2026-04-01",
-    "captura_em": "2026-06-01",
+    "data_referencia": "2026-05-01",
+    "captura_em": "2026-06-12",
     "metrica": "valor"
   },
   {
@@ -190,8 +190,8 @@
     "indicador": "TBF",
     "valor": "1,09",
     "unidade": "% mês",
-    "data_referencia": "2026-06-09",
-    "captura_em": "2026-06-10",
+    "data_referencia": "2026-06-10",
+    "captura_em": "2026-06-11",
     "metrica": "valor"
   },
   {
@@ -201,10 +201,10 @@
     "categoria": "Taxa de Referência",
     "tipo": "indicador",
     "indicador": "TR",
-    "valor": "0,1726",
+    "valor": "0,1725",
     "unidade": "% mês",
-    "data_referencia": "2026-06-09",
-    "captura_em": "2026-06-10",
+    "data_referencia": "2026-06-10",
+    "captura_em": "2026-06-11",
     "metrica": "valor"
   },
   {
@@ -216,8 +216,8 @@
     "indicador": "Taxa SELIC (BC)",
     "valor": "14,40",
     "unidade": "% a.a.",
-    "data_referencia": "2026-06-10",
-    "captura_em": "2026-06-10",
+    "data_referencia": "2026-06-11",
+    "captura_em": "2026-06-11",
     "metrica": "valor"
   },
   {
@@ -227,9 +227,9 @@
     "categoria": "IMA-B",
     "tipo": "indicador",
     "indicador": "IMA - Geral",
-    "valor": "10.046",
+    "valor": "10.099",
     "unidade": "Número-índice",
-    "data_referencia": "2026-06-10",
+    "data_referencia": "2026-06-11",
     "captura_em": "2026-06-11",
     "metrica": "numero_indice"
   },
@@ -240,9 +240,9 @@
     "categoria": "IMA-B",
     "tipo": "indicador",
     "indicador": "IMA - Geral",
-    "valor": "0,14%",
+    "valor": "0,53%",
     "unidade": "Variação diária",
-    "data_referencia": "2026-06-10",
+    "data_referencia": "2026-06-11",
     "captura_em": "2026-06-11",
     "metrica": "variacao_diaria"
   },
@@ -279,10 +279,10 @@
     "categoria": "Títulos Públicos",
     "tipo": "indicador",
     "indicador": "100000 (LTN)",
-    "valor": "14,42%",
+    "valor": "14,37%",
     "unidade": "Taxa indicativa",
-    "data_referencia": "2026-06-10",
-    "captura_em": "2026-06-11",
+    "data_referencia": "2026-06-11",
+    "captura_em": "2026-06-12",
     "metrica": "tx_indicativa"
   },
   {
@@ -292,10 +292,10 @@
     "categoria": "Títulos Públicos",
     "tipo": "indicador",
     "indicador": "100000 (LTN)",
-    "valor": "992,01",
+    "valor": "992,57",
     "unidade": "PU",
-    "data_referencia": "2026-06-10",
-    "captura_em": "2026-06-11",
+    "data_referencia": "2026-06-11",
+    "captura_em": "2026-06-12",
     "metrica": "pu"
   },
   {
@@ -307,8 +307,8 @@
     "indicador": "210100 (LFT)",
     "valor": "0,00%",
     "unidade": "Taxa indicativa",
-    "data_referencia": "2026-06-10",
-    "captura_em": "2026-06-11",
+    "data_referencia": "2026-06-11",
+    "captura_em": "2026-06-12",
     "metrica": "tx_indicativa"
   },
   {
@@ -318,10 +318,10 @@
     "categoria": "Títulos Públicos",
     "tipo": "indicador",
     "indicador": "210100 (LFT)",
-    "valor": "19.181",
+    "valor": "19.192",
     "unidade": "PU",
-    "data_referencia": "2026-06-10",
-    "captura_em": "2026-06-11",
+    "data_referencia": "2026-06-11",
+    "captura_em": "2026-06-12",
     "metrica": "pu"
   },
   {
@@ -331,10 +331,10 @@
     "categoria": "Títulos Públicos",
     "tipo": "indicador",
     "indicador": "760199 (NTN-B)",
-    "valor": "11,24%",
+    "valor": "10,65%",
     "unidade": "Taxa indicativa",
-    "data_referencia": "2026-06-10",
-    "captura_em": "2026-06-11",
+    "data_referencia": "2026-06-11",
+    "captura_em": "2026-06-12",
     "metrica": "tx_indicativa"
   },
   {
@@ -344,10 +344,10 @@
     "categoria": "Títulos Públicos",
     "tipo": "indicador",
     "indicador": "760199 (NTN-B)",
-    "valor": "4.767",
+    "valor": "4.774",
     "unidade": "PU",
-    "data_referencia": "2026-06-10",
-    "captura_em": "2026-06-11",
+    "data_referencia": "2026-06-11",
+    "captura_em": "2026-06-12",
     "metrica": "pu"
   },
   {
@@ -357,10 +357,10 @@
     "categoria": "Títulos Públicos",
     "tipo": "indicador",
     "indicador": "770100 (NTN-C)",
-    "valor": "8,11%",
+    "valor": "8,08%",
     "unidade": "Taxa indicativa",
-    "data_referencia": "2026-06-10",
-    "captura_em": "2026-06-11",
+    "data_referencia": "2026-06-11",
+    "captura_em": "2026-06-12",
     "metrica": "tx_indicativa"
   },
   {
@@ -370,10 +370,10 @@
     "categoria": "Títulos Públicos",
     "tipo": "indicador",
     "indicador": "770100 (NTN-C)",
-    "valor": "7.992",
+    "valor": "8.005",
     "unidade": "PU",
-    "data_referencia": "2026-06-10",
-    "captura_em": "2026-06-11",
+    "data_referencia": "2026-06-11",
+    "captura_em": "2026-06-12",
     "metrica": "pu"
   },
   {
@@ -383,10 +383,10 @@
     "categoria": "Títulos Públicos",
     "tipo": "indicador",
     "indicador": "950199 (NTN-F)",
-    "valor": "14,36%",
+    "valor": "14,21%",
     "unidade": "Taxa indicativa",
-    "data_referencia": "2026-06-10",
-    "captura_em": "2026-06-11",
+    "data_referencia": "2026-06-11",
+    "captura_em": "2026-06-12",
     "metrica": "tx_indicativa"
   },
   {
@@ -396,10 +396,10 @@
     "categoria": "Títulos Públicos",
     "tipo": "indicador",
     "indicador": "950199 (NTN-F)",
-    "valor": "1.021",
+    "valor": "1.022",
     "unidade": "PU",
-    "data_referencia": "2026-06-10",
-    "captura_em": "2026-06-11",
+    "data_referencia": "2026-06-11",
+    "captura_em": "2026-06-12",
     "metrica": "pu"
   },
   {
@@ -437,8 +437,8 @@
     "indicador": "DI1",
     "valor": "13,65%",
     "unidade": "",
-    "data_referencia": "2026-06-10",
-    "captura_em": "2026-06-11",
+    "data_referencia": "2026-06-11",
+    "captura_em": "2026-06-12",
     "metrica": "taxa"
   },
   {
@@ -450,8 +450,8 @@
     "indicador": "PTAX USD — Compra",
     "valor": "4,02",
     "unidade": "",
-    "data_referencia": "2026-06-11",
-    "captura_em": "2026-06-11",
+    "data_referencia": "2026-06-12",
+    "captura_em": "2026-06-12",
     "metrica": "cotacao_compra"
   },
   {
@@ -463,8 +463,8 @@
     "indicador": "PTAX USD — Venda",
     "valor": "4,02",
     "unidade": "",
-    "data_referencia": "2026-06-11",
-    "captura_em": "2026-06-11",
+    "data_referencia": "2026-06-12",
+    "captura_em": "2026-06-12",
     "metrica": "cotacao_venda"
   },
   {
@@ -476,8 +476,8 @@
     "indicador": "IGP-M",
     "valor": "4,02%",
     "unidade": "",
-    "data_referencia": "2026-06-11",
-    "captura_em": "2026-06-11",
+    "data_referencia": "2026-06-12",
+    "captura_em": "2026-06-12",
     "metrica": "valor"
   },
   {
@@ -489,8 +489,8 @@
     "indicador": "IGP-M (índice)",
     "valor": "0,48%",
     "unidade": "",
-    "data_referencia": "2026-06-11",
-    "captura_em": "2026-06-11",
+    "data_referencia": "2026-06-12",
+    "captura_em": "2026-06-12",
     "metrica": "valor"
   },
   {
@@ -502,8 +502,8 @@
     "indicador": "IGP-M 12m",
     "valor": "0,09%",
     "unidade": "",
-    "data_referencia": "2026-06-11",
-    "captura_em": "2026-06-11",
+    "data_referencia": "2026-06-12",
+    "captura_em": "2026-06-12",
     "metrica": "valor"
   },
   {
@@ -515,8 +515,8 @@
     "indicador": "IPCA 12m",
     "valor": "0,21%",
     "unidade": "",
-    "data_referencia": "2026-06-11",
-    "captura_em": "2026-06-11",
+    "data_referencia": "2026-06-12",
+    "captura_em": "2026-06-12",
     "metrica": "valor"
   },
   {
@@ -528,8 +528,8 @@
     "indicador": "SELIC (% a.d.)",
     "valor": "0,02%",
     "unidade": "",
-    "data_referencia": "2026-06-11",
-    "captura_em": "2026-06-11",
+    "data_referencia": "2026-06-12",
+    "captura_em": "2026-06-12",
     "metrica": "valor"
   }
 ]

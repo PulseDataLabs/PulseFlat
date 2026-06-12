@@ -254,7 +254,8 @@
       "cadastro"
     ],
     "source": "B3",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_isin_ativos.csv"
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_isin_ativos.csv",
+    "accumulate": false
   },
   {
     "title": "B3 ISIN Emissores",
@@ -270,7 +271,8 @@
       "cadastro"
     ],
     "source": "B3",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_isin_emissores.csv"
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_isin_emissores.csv",
+    "accumulate": false
   },
   {
     "title": "B3 Series Historicas",
