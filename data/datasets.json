@@ -241,6 +241,38 @@
     "accumulate": true
   },
   {
+    "title": "B3 ISIN Ativos",
+    "file": "b3_isin_ativos.csv",
+    "description": "Banco de dados completo de ativos com código ISIN cadastrados na B3.",
+    "icon": "🏷️",
+    "iconClass": "icon-b3",
+    "badge": "Semanal",
+    "badgeClass": "badge-weekly",
+    "tags": [
+      "isin",
+      "ativos",
+      "cadastro"
+    ],
+    "source": "B3",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_isin_ativos.csv"
+  },
+  {
+    "title": "B3 ISIN Emissores",
+    "file": "b3_isin_emissores.csv",
+    "description": "Banco de dados completo de emissores de códigos ISIN da B3.",
+    "icon": "🏢",
+    "iconClass": "icon-b3",
+    "badge": "Semanal",
+    "badgeClass": "badge-weekly",
+    "tags": [
+      "isin",
+      "emissores",
+      "cadastro"
+    ],
+    "source": "B3",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_isin_emissores.csv"
+  },
+  {
     "title": "B3 Series Historicas",
     "file": "b3_series_historicas.csv",
     "description": "Sem descrição fornecida.",

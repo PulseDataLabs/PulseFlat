@@ -226,3 +226,6 @@ data/cvm_fundos_informe_diario.csv
 data/extrato_fi.csv
 data/registro_fundo_classe.csv
 data/b3_titulos_negociaveis.csv
+data/b3_isin_ativos.csv
+data/b3_isin_emissores.csv
+data/isinp.zip

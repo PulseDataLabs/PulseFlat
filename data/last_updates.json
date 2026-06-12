@@ -162,5 +162,13 @@
   "yahoo_finance_series.csv": {
     "min": "2026-06-03",
     "max": "2026-06-12"
+  },
+  "b3_isin_emissores.csv": {
+    "min": "2026-06-12",
+    "max": "2026-06-12"
+  },
+  "b3_isin_ativos.csv": {
+    "min": "2026-06-12",
+    "max": "2026-06-12"
   }
 }

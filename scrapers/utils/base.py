@@ -56,62 +56,64 @@ class BaseScraper:
 
             df_cleaned = df.fillna("")
 
-            import re
+            def clean_series_vectorized(s: pd.Series) -> pd.Series:
+                s_str = s.astype(str).str.strip()
+                result = s_str.copy()
+                
+                # DD/MM/YYYY
+                mask_date1 = s_str.str.match(r'^\d{2}/\d{2}/\d{4}$')
+                if mask_date1.any():
+                    result.loc[mask_date1] = s_str.loc[mask_date1].str.replace(
+                        r'^(\d{2})/(\d{2})/(\d{4})$', r'\3-\2-\1', regex=True
+                    )
+                    
+                # DD/MM/YY
+                mask_date2 = s_str.str.match(r'^\d{2}/\d{2}/\d{2}$')
+                if mask_date2.any():
+                    result.loc[mask_date2] = s_str.loc[mask_date2].str.replace(
+                        r'^(\d{2})/(\d{2})/(\d{2})$', r'20\3-\2-\1', regex=True
+                    )
+                    
+                # YYYYMMDD
+                mask_date3 = s_str.str.match(r'^\d{8}$')
+                if mask_date3.any():
+                    result.loc[mask_date3] = s_str.loc[mask_date3].str.replace(
+                        r'^(\d{4})(\d{2})(\d{2})$', r'\1-\2-\3', regex=True
+                    )
+                    
+                # Números brasileiros
+                mask_num = s_str.str.contains(r',') & (s_str.str.count(r',') == 1)
+                if mask_num.any():
+                    s_num = s_str.loc[mask_num]
+                    clean_num = s_num.str.replace(r'[\.\%\-\+\s]', '', regex=True).str.replace(',', '', regex=False)
+                    is_digit_mask = clean_num.str.isdigit()
+                    if is_digit_mask.any():
+                        valid_nums = s_num.loc[is_digit_mask]
+                        converted = valid_nums.str.replace('.', '', regex=False).str.replace(',', '.', regex=False)
+                        result.loc[valid_nums.index] = converted
 
-            def clean_value(val):
-                if val is None or pd.isna(val):
-                    return ""
-                val_str = str(val).strip()
-                if not val_str:
-                    return ""
-
-                match = re.match(r'^(\d{2})/(\d{2})/(\d{4})$', val_str)
-                if match:
-                    d, m, y = match.groups()
-                    return f"{y}-{m}-{d}"
-                match_short = re.match(r'^(\d{2})/(\d{2})/(\d{2})$', val_str)
-                if match_short:
-                    d, m, y = match_short.groups()
-                    return f"20{y}-{m}-{d}"
-
-                match_yyyymmdd = re.match(r'^(\d{4})(\d{2})(\d{2})$', val_str)
-                if match_yyyymmdd:
-                    y, m, d = match_yyyymmdd.groups()
-                    return f"{y}-{m}-{d}"
-
-                if ',' in val_str and val_str.count(',') == 1:
-                    clean_num = val_str.replace('.', '').replace(',', '').replace('%', '').replace('-', '').replace('+', '').strip()
-                    if clean_num.isdigit():
-                        parts = val_str.split(',')
-                        left = parts[0].replace('.', '')
-                        right = parts[1]
-                        return f"{left}.{right}"
-
-                return val_str
+                result = result.fillna("").replace({"nan": "", "None": ""})
+                return result
 
             for col in df_cleaned.columns:
                 if pd.api.types.is_datetime64_any_dtype(df_cleaned[col]):
                     df_cleaned[col] = df_cleaned[col].dt.strftime("%Y-%m-%d")
+                elif pd.api.types.is_numeric_dtype(df_cleaned[col]):
+                    continue
                 else:
-                    df_cleaned[col] = df_cleaned[col].apply(clean_value)
+                    df_cleaned[col] = clean_series_vectorized(df_cleaned[col])
 
-            registros = df_cleaned.to_dict(orient="records")
             cabecalho = list(df_cleaned.columns)
 
             data_captura, _ = agora_brt()
-            for r in registros:
-                if "data_captura" not in r:
-                    if "dt_captura" in r:
-                        r["data_captura"] = r["dt_captura"]
-                    else:
-                        r["data_captura"] = data_captura
-
+            if "data_captura" not in df_cleaned.columns:
+                df_cleaned.insert(0, "data_captura", data_captura)
             if "data_captura" not in cabecalho:
                 cabecalho.insert(0, "data_captura")
 
             salvar_csv(
                 arquivo=self.output_file,
-                registros=registros,
+                registros=df_cleaned,  # Passa o DataFrame diretamente
                 cabecalho=cabecalho,
                 chaves_dedup=self.chaves_dedup,
                 acumular=self.accumulate,
@@ -119,7 +121,7 @@ class BaseScraper:
 
             elapsed = time.time() - t0
             if not is_pipeline:
-                print_done(f"{len(registros)} registros salvos em {self.output_file.name}", elapsed=elapsed)
+                print_done(f"{len(df_cleaned)} registros salvos em {self.output_file.name}", elapsed=elapsed)
 
         except Exception as e:
             elapsed = time.time() - t0
