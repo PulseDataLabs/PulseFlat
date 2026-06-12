@@ -20,7 +20,7 @@ window.PULSEFLAT_LAST_UPDATES = {
     "max": "2026-06-12"
   },
   "anbima_matriz_probabilidade_resgate.csv": {
-    "min": "2026-06-03",
+    "min": "2026-06-12",
     "max": "2026-06-12"
   },
   "anbima_ranking_global.csv": {
