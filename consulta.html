@@ -357,7 +357,7 @@
       border-color: var(--accent2) !important;
     }
 
-    .fonte-cell {
+     .fonte-cell {
       font-family: var(--font-mono); font-size: 0.72rem; color: var(--text2);
       font-weight: 500;
     }
@@ -375,6 +375,66 @@
     }
     .dataset-cell {
       font-family: var(--font-mono); font-size: 0.68rem; color: var(--text3);
+    }
+
+    /* ── Metrics Consolidation ── */
+    .metrics-row-cell {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .metric-chip {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: var(--gold);
+    }
+    .metric-val-solo {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--gold);
+    }
+    
+    /* ── Collapsible row chart ── */
+    tr.clickable-row {
+      cursor: pointer;
+    }
+    tr.clickable-row:hover td {
+      background: rgba(0, 212, 255, 0.04) !important;
+    }
+    
+    .chart-wrapper-row {
+      background: var(--bg2) !important;
+      padding: 1.5rem !important;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .chart-container-inner {
+      width: 100%;
+      height: 250px;
+    }
+    .chart-loading {
+      text-align: center;
+      padding: 2rem;
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--text3);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .preview-section-title {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent);
     }
 
     .loading-state { text-align: center; padding: 5rem 1rem; }
@@ -534,6 +594,7 @@
               <th>Indicador</th>
               <th>Fonte</th>
               <th>Dataset</th>
+              <th>Valor / Métrica</th>
             </tr>
           </thead>
           <tbody></tbody>
@@ -561,6 +622,7 @@
   <script src="https://cdn.datatables.net/buttons/3.2.2/js/dataTables.buttons.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
   <script src="https://cdn.datatables.net/buttons/3.2.2/js/buttons.html5.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
   <script>
   (async function () {
     const $table   = $('#consolidated-table');
@@ -600,23 +662,6 @@
       $error.show();
       return;
     }
-
-    /* ── Discover metric columns (union across all rows) ── */
-    const metricKeySet = new Set();
-    allData.forEach(r => {
-      Object.keys(r).forEach(k => {
-        if (!FIXED_KEYS.includes(k)) metricKeySet.add(k);
-      });
-    });
-    const metricKeys = [...metricKeySet];
-    // Sort so "Valor" comes first, then alphabetical
-    metricKeys.sort((a, b) => (a === 'Valor' ? -1 : b === 'Valor' ? 1 : a.localeCompare(b)));
-    const metricLabels = metricKeys.map(k => ({ key: k, label: k }));
-
-    /* ── Build table header dynamically ── */
-    metricLabels.forEach(m => {
-      $thead.append(`<th>${m.label}</th>`);
-    });
 
     /* ── Format helpers ── */
     function fmtDate(d) {
@@ -673,17 +718,15 @@
 
     /* ── Build table data ── */
     const tableData = allData.map(r => {
-      const row = [
+      const valHtml = getConsolidatedValueHtml(r);
+      const valText = valHtml.replace(/<[^>]*>/g, '').trim();
+      return [
         { display: `<span class="date-cell">${fmtDate(r.data_referencia)}</span>`, sort: r.data_referencia || '' },
         { display: `<span class="indicador-cell">${r.indicador || '—'}</span>`, filter: r.indicador || '' },
         { display: `<span class="fonte-cell">${r.fonte || ''}</span>`, filter: r.fonte || '' },
         { display: `<span class="dataset-cell">${r.dataset_label || ''}</span>`, filter: r.dataset_label || '' },
+        { display: valHtml, filter: valText },
       ];
-      metricLabels.forEach(m => {
-        const val = r[m.key] || '—';
-        row.push({ display: `<span class="metric-cell">${val}</span>`, filter: val });
-      });
-      return row;
     });
 
     $loading.hide();
@@ -695,11 +738,8 @@
       { data: 1, render: { _: 'display', filter: 'filter', sort: 'filter' } },
       { data: 2, render: { _: 'display', filter: 'filter', sort: 'filter' } },
       { data: 3, render: { _: 'display', filter: 'filter', sort: 'filter' } },
+      { data: 4, render: { _: 'display', filter: 'filter', sort: 'filter' } },
     ];
-    metricLabels.forEach((_, i) => {
-      const idx = 4 + i;
-      dtColumns.push({ data: idx, render: { _: 'display', filter: 'filter', sort: 'filter' } });
-    });
 
     tableApi = $table.DataTable({
       responsive: true,
@@ -727,6 +767,13 @@
         }
       }],
       columns: dtColumns,
+      createdRow: function(row, data, dataIndex) {
+        const r = allData[dataIndex];
+        $(row).attr('data-dataset', r.dataset);
+        $(row).attr('data-indicador', r.indicador);
+        $(row).attr('data-metrica', r.metrica);
+        $(row).addClass('clickable-row');
+      }
     });
 
     function updateCount() {
@@ -754,6 +801,241 @@
 
     $search.on('input', applyFilters);
 
+    /* ── Expandable Rows for Charts ── */
+    $('#consolidated-table tbody').on('click', 'tr.clickable-row', function (e) {
+      if (e.target.closest('a') || e.target.closest('button')) return;
+
+      var tr = $(this);
+      var row = tableApi.row(tr);
+
+      if (row.child.isShown()) {
+        row.child.hide();
+        tr.removeClass('shown');
+      } else {
+        var dataset = tr.attr('data-dataset');
+        var indicador = tr.attr('data-indicador');
+        var metrica = tr.attr('data-metrica');
+        
+        var childId = 'chart-' + Math.random().toString(36).substr(2, 9);
+        row.child(`<div class="chart-wrapper-row">
+          <div id="loading-${childId}" class="chart-loading">
+            <div class="spinner" role="status" aria-label="Carregando" style="width:24px;height:24px;border-width:2px;margin-bottom:0.5rem;"></div>
+            Carregando histórico do CSV...
+          </div>
+          <div id="${childId}" class="chart-container-inner" style="display:none;"></div>
+        </div>`).show();
+        tr.addClass('shown');
+        
+        renderChartForIndicator(childId, dataset, indicador, metrica);
+      }
+    });
+
+    async function renderChartForIndicator(chartId, datasetFile, indicadorName, metricaName) {
+      const loadingEl = document.getElementById('loading-' + chartId);
+      const chartEl = document.getElementById(chartId);
+      
+      try {
+        const response = await fetch(`./data/${datasetFile}`);
+        if (!response.ok) throw new Error(`Erro HTTP ${response.status}`);
+        const text = await response.text();
+        
+        const lines = text.split('\n').map(l => l.trim()).filter(l => l !== '');
+        if (lines.length === 0) throw new Error('O arquivo CSV está vazio.');
+        
+        const parseLine = (line) => {
+          const vals = [];
+          let insideQuote = false;
+          let current = '';
+          for (let i = 0; i < line.length; i++) {
+            const char = line[i];
+            if (char === '"') {
+              insideQuote = !insideQuote;
+            } else if (char === ',' && !insideQuote) {
+              vals.push(current.trim());
+              current = '';
+            } else {
+              current += char;
+            }
+          }
+          vals.push(current.trim());
+          return vals.map(v => v.replace(/^"|"$/g, ''));
+        };
+        
+        const headers = parseLine(lines[0]);
+        const rows = lines.slice(1).map(parseLine);
+        
+        const dataObjects = rows.map(row => {
+          return headers.reduce((obj, h, idx) => {
+            obj[h] = row[idx] !== undefined ? row[idx] : '';
+            return obj;
+          }, {});
+        });
+        
+        let filtered = [];
+        let dateCol = 'data_referencia';
+        let valCols = [];
+        
+        if (datasetFile === 'bcb_sgs.csv') {
+          dateCol = 'data';
+          valCols = ['valor'];
+          const SGS_MAP = {
+            "SELIC (% a.d.)": "11",
+            "IGP-M": "1",
+            "IGP-M (índice)": "189",
+            "IGP-M 12m": "190",
+            "IPCA 12m": "433"
+          };
+          const code = SGS_MAP[indicadorName];
+          filtered = dataObjects.filter(r => r.codigo_serie === code);
+          
+        } else if (datasetFile === 'yahoo_finance_series.csv') {
+          dateCol = 'dt_ref';
+          valCols = ['vr_fechamento'];
+          filtered = dataObjects.filter(r => r.ticker === indicadorName);
+          
+        } else if (datasetFile === 'anbima_indicadores.csv') {
+          dateCol = 'data_referencia';
+          valCols = ['valor'];
+          filtered = dataObjects.filter(r => r.indicador === indicadorName);
+          
+        } else if (datasetFile === 'bcb_ptax.csv') {
+          dateCol = 'data_referencia';
+          valCols = ['cotacao_compra', 'cotacao_venda'];
+          filtered = dataObjects;
+          
+        } else if (datasetFile === 'b3_bdi_di_over.csv') {
+          dateCol = 'rpt_dt';
+          valCols = ['average', 'financial_volume'];
+          filtered = dataObjects;
+          
+        } else if (datasetFile === 'b3_bmf_taxas_juros.csv') {
+          dateCol = 'data_referencia';
+          valCols = ['taxa'];
+          filtered = dataObjects.filter(r => r.curva === indicadorName);
+          const terms = [...new Set(filtered.map(r => parseInt(r.prazo_dias) || 0))];
+          if (terms.length > 1) {
+            const targetTerm = terms.includes(360) ? 360 : terms[0];
+            filtered = filtered.filter(r => parseInt(r.prazo_dias) === targetTerm);
+          }
+          
+        } else if (datasetFile === 'b3_indicadores_financeiros.csv') {
+          dateCol = 'data_referencia';
+          valCols = ['valor', 'taxa'];
+          filtered = dataObjects.filter(r => r.description === indicadorName);
+          
+        } else if (datasetFile === 'b3_taxa_cambio_referencia.csv') {
+          dateCol = 'lastupdate';
+          valCols = ['valor'];
+          filtered = dataObjects.filter(r => r.description === indicadorName);
+          
+        } else if (datasetFile === 'anbima_titulos_publicos.csv') {
+          dateCol = 'data_referencia';
+          valCols = ['tx_indicativa', 'pu'];
+          const code = indicadorName.split(' ')[0];
+          filtered = dataObjects.filter(r => r.codigo_selic === code);
+          
+        } else if (datasetFile === 'anbima_indice_imab.csv') {
+          dateCol = 'data_de_referencia';
+          valCols = ['numero_indice', 'variacao_diaria'];
+          filtered = dataObjects.filter(r => r.indice.toUpperCase() === indicadorName.toUpperCase());
+        } else {
+          dateCol = headers.find(h => h.includes('data') || h.includes('dt') || h === 'rpt_dt') || headers[0];
+          valCols = [metricaName || headers.find(h => h.includes('valor') || h.includes('taxa') || h === 'pu') || headers[1]];
+          filtered = dataObjects;
+        }
+        
+        if (filtered.length === 0) throw new Error('Nenhum registro encontrado para este indicador.');
+        
+        const parseBrFloat = (val) => {
+          if (!val) return null;
+          let s = val.replace('%', '').replace(/\./g, '').replace(',', '.').trim();
+          let f = parseFloat(s);
+          return isNaN(f) ? null : f;
+        };
+        
+        const cleanDate = (dStr) => {
+          if (!dStr) return '';
+          return dStr.split(' ')[0].split('T')[0];
+        };
+        
+        filtered.sort((a, b) => cleanDate(a[dateCol]).localeCompare(cleanDate(b[dateCol])));
+        
+        const series = valCols.map(col => {
+          const dataPoints = filtered.map(r => {
+            const xVal = cleanDate(r[dateCol]);
+            const yVal = parseBrFloat(r[col]);
+            return { x: xVal, y: yVal };
+          }).filter(pt => pt.y !== null && pt.x !== '');
+          
+          let seriesName = col;
+          if (col === 'valor') seriesName = 'Valor';
+          else if (col === 'cotacao_compra') seriesName = 'Compra';
+          else if (col === 'cotacao_venda') seriesName = 'Venda';
+          else if (col === 'tx_indicativa') seriesName = 'Taxa Indicativa (%)';
+          else if (col === 'pu') seriesName = 'Preço Unitário (PU)';
+          else if (col === 'average') seriesName = 'Média (%)';
+          else if (col === 'financial_volume') seriesName = 'Volume Financ.';
+          else if (col === 'numero_indice') seriesName = 'Número Índice';
+          else if (col === 'variacao_diaria') seriesName = 'Variação Diária (%)';
+          
+          return {
+            name: seriesName,
+            data: dataPoints
+          };
+        }).filter(s => s.data.length > 0);
+        
+        if (series.length === 0 || series[0].data.length === 0) {
+          throw new Error('Sem pontos de dados válidos para plotagem.');
+        }
+        
+        if (loadingEl) loadingEl.style.display = 'none';
+        if (chartEl) chartEl.style.display = 'block';
+        
+        const options = {
+          series: series,
+          chart: {
+            type: 'line',
+            height: 250,
+            background: 'transparent',
+            foreColor: '#8fa3b8',
+            toolbar: {
+              show: true,
+              tools: { selection: false, zoom: true, zoomin: false, zoomout: false, pan: false, reset: true }
+            }
+          },
+          colors: ['#00d4ff', '#00e5a0', '#f0b429', '#ff4d6d'],
+          stroke: { curve: 'smooth', width: 2 },
+          grid: { borderColor: '#1e2d3d', strokeDashArray: 3 },
+          xaxis: {
+            type: 'datetime',
+            labels: {
+              datetimeFormatter: { year: 'yyyy', month: 'MMM yy', day: 'dd/MM' }
+            }
+          },
+          yaxis: {
+            labels: {
+              formatter: function (value) {
+                return value !== null ? value.toLocaleString('pt-BR', { maximumFractionDigits: 4 }) : '';
+              }
+            }
+          },
+          tooltip: {
+            theme: 'dark',
+            x: { format: 'dd/MM/yyyy' }
+          },
+          legend: { show: series.length > 1, position: 'top', horizontalAlign: 'right' }
+        };
+        
+        const chart = new ApexCharts(chartEl, options);
+        chart.render();
+        
+      } catch (err) {
+        console.error('Erro ao gerar gráfico:', err);
+        if (loadingEl) {
+          loadingEl.innerHTML = `<span style="color: var(--red); font-size: 0.75rem;">⚠️ Erro ao carregar histórico: ${err.message}</span>`;
+        }
+      }
+    }
   })();
   </script>
 </body>

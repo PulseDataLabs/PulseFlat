@@ -86,6 +86,7 @@ def generate(dry_run: bool = False) -> None:
         badge_class = ""
         tags = []
         source = ""
+        accumulate = None
         filename = f"{module_name}.csv"
 
         try:
@@ -103,6 +104,7 @@ def generate(dry_run: bool = False) -> None:
                 badge_class = getattr(inst, "badge_class", "")
                 tags = getattr(inst, "tags", [])
                 source = getattr(inst, "source", "")
+                accumulate = getattr(inst, "accumulate", True)
                 if hasattr(inst, "output_file") and inst.output_file:
                     filename = inst.output_file.name
                 else:
@@ -118,6 +120,7 @@ def generate(dry_run: bool = False) -> None:
                 badge_class = meta.get("badge_class", "")
                 tags = meta.get("tags", [])
                 source = meta.get("source", "")
+                accumulate = meta.get("accumulate", True)
                 if "file" in meta:
                     filename = meta["file"]
 
@@ -136,6 +139,7 @@ def generate(dry_run: bool = False) -> None:
         tags = tags or fallback.get("tags") or [group]
         source = source or fallback.get("source") or group.upper()
         icon_class = icon_class or fallback.get("iconClass") or get_source_class(source)
+        accumulate = accumulate if accumulate is not None else fallback.get("accumulate", True)
 
         url = fallback.get("url") or f"https://raw.githubusercontent.com/royopa/PulseFlat/main/data/{filename}"
 
@@ -150,6 +154,7 @@ def generate(dry_run: bool = False) -> None:
             "tags": tags,
             "source": source,
             "url": url,
+            "accumulate": accumulate,
         }
 
         new_catalog.append(dataset_entry)

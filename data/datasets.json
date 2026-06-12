@@ -14,7 +14,8 @@
       "tx_indicativa"
     ],
     "source": "ANBIMA",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/anbima_debentures.csv"
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/anbima_debentures.csv",
+    "accumulate": true
   },
   {
     "title": "ANBIMA IDkA",
@@ -32,7 +33,8 @@
       "anbima"
     ],
     "source": "ANBIMA",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/anbima_idka.csv"
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/anbima_idka.csv",
+    "accumulate": true
   },
   {
     "title": "ANBIMA IMA / IDA",
@@ -50,7 +52,8 @@
       "duration"
     ],
     "source": "ANBIMA",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/anbima_ima_completo.csv"
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/anbima_ima_completo.csv",
+    "accumulate": true
   },
   {
     "title": "ANBIMA Indicadores",
@@ -72,7 +75,8 @@
       "fds"
     ],
     "source": "ANBIMA",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/anbima_indicadores.csv"
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/anbima_indicadores.csv",
+    "accumulate": true
   },
   {
     "title": "ANBIMA Resolução 550",
@@ -88,7 +92,8 @@
       "custódia"
     ],
     "source": "ANBIMA",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/anbima_550.csv"
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/anbima_550.csv",
+    "accumulate": true
   },
   {
     "title": "ANBIMA Títulos Públicos",
@@ -106,7 +111,8 @@
       "tx_indicativa"
     ],
     "source": "ANBIMA",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/anbima_titulos_publicos.csv"
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/anbima_titulos_publicos.csv",
+    "accumulate": true
   },
   {
     "title": "ANBIMA — Probabilidade de Resgate",
@@ -123,7 +129,8 @@
       "segmentos"
     ],
     "source": "ANBIMA",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/anbima_matriz_probabilidade_resgate.csv"
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/anbima_matriz_probabilidade_resgate.csv",
+    "accumulate": true
   },
   {
     "title": "ANBIMA Projeções",
@@ -141,7 +148,8 @@
       "num_instituições"
     ],
     "source": "ANBIMA API",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/anbima_projecoes.csv"
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/anbima_projecoes.csv",
+    "accumulate": true
   },
   {
     "title": "ANBIMA — Ranking Global",
@@ -158,7 +166,8 @@
       "patrimônio"
     ],
     "source": "ANBIMA Strapi API",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/anbima_ranking_global.csv"
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/anbima_ranking_global.csv",
+    "accumulate": true
   },
   {
     "title": "ANBIMA — Índice IMA-B",
@@ -174,7 +183,8 @@
       "rentabilidade"
     ],
     "source": "ANBIMA · S3",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/anbima_indice_imab.csv"
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/anbima_indice_imab.csv",
+    "accumulate": true
   },
   {
     "title": "B3 Boletim Diário",
@@ -191,7 +201,8 @@
       "B3"
     ],
     "source": "B3",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_boletim_diario.csv"
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_boletim_diario.csv",
+    "accumulate": true
   },
   {
     "title": "B3 Classificação Setorial",
@@ -207,7 +218,8 @@
       "segmento"
     ],
     "source": "B3",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_classificacao_setorial.csv"
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_classificacao_setorial.csv",
+    "accumulate": false
   },
   {
     "title": "B3 Futuros — Ajustes de Fechamento",
@@ -225,7 +237,8 @@
       "bm&f"
     ],
     "source": "B3",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_futuros_ajustes.csv"
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_futuros_ajustes.csv",
+    "accumulate": true
   },
   {
     "title": "B3 Series Historicas",
@@ -239,7 +252,8 @@
       "b3"
     ],
     "source": "B3",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_series_historicas.csv"
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_series_historicas.csv",
+    "accumulate": true
   },
   {
     "title": "B3 Títulos Negociáveis",
@@ -257,7 +271,8 @@
       "b3"
     ],
     "source": "B3",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_titulos_negociaveis.csv"
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_titulos_negociaveis.csv",
+    "accumulate": false
   },
   {
     "title": "B3 Carteira - AGFS (IAGRO)",
@@ -275,7 +290,8 @@
       "participacao_pct"
     ],
     "source": "B3 API",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_carteira_teorica_agfs_iagro.csv"
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_carteira_teorica_agfs_iagro.csv",
+    "accumulate": true
   },
   {
     "title": "B3 Carteira - BDRX",
@@ -293,7 +309,8 @@
       "participacao_pct"
     ],
     "source": "B3 API",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_carteira_teorica_bdrx.csv"
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_carteira_teorica_bdrx.csv",
+    "accumulate": true
   },
   {
     "title": "B3 Carteira - IBOV",
@@ -311,7 +328,8 @@
       "participacao_pct"
     ],
     "source": "B3 API",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_carteira_teorica_ibov.csv"
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_carteira_teorica_ibov.csv",
+    "accumulate": true
   },
   {
     "title": "B3 Carteira - IBSD",
@@ -329,7 +347,8 @@
       "participacao_pct"
     ],
     "source": "B3 API",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_carteira_teorica_ibsd.csv"
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_carteira_teorica_ibsd.csv",
+    "accumulate": true
   },
   {
     "title": "B3 Carteira - IBXL",
@@ -347,7 +366,8 @@
       "participacao_pct"
     ],
     "source": "B3 API",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_carteira_teorica_ibxl.csv"
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_carteira_teorica_ibxl.csv",
+    "accumulate": true
   },
   {
     "title": "B3 Carteira - IFNC",
@@ -365,7 +385,8 @@
       "participacao_pct"
     ],
     "source": "B3 API",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_carteira_teorica_ifnc.csv"
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_carteira_teorica_ifnc.csv",
+    "accumulate": true
   },
   {
     "title": "B3 Carteira - ISEE",
@@ -383,7 +404,8 @@
       "participacao_pct"
     ],
     "source": "B3 API",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_carteira_teorica_isee.csv"
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_carteira_teorica_isee.csv",
+    "accumulate": true
   },
   {
     "title": "B3 Carteira - SMLL",
@@ -401,7 +423,8 @@
       "participacao_pct"
     ],
     "source": "B3 API",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_carteira_teorica_smll.csv"
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_carteira_teorica_smll.csv",
+    "accumulate": true
   },
   {
     "title": "B3 ETFs Listados",
@@ -420,7 +443,8 @@
       "renda fixa"
     ],
     "source": "B3 API",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_etfs.csv"
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_etfs.csv",
+    "accumulate": false
   },
   {
     "title": "B3 FIIs Listados",
@@ -439,7 +463,8 @@
       "patrimônio"
     ],
     "source": "B3 API",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_fiis.csv"
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_fiis.csv",
+    "accumulate": false
   },
   {
     "title": "B3 Indicadores Financeiros",
@@ -457,7 +482,8 @@
       "câmbio"
     ],
     "source": "B3 API",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_indicadores_financeiros.csv"
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_indicadores_financeiros.csv",
+    "accumulate": true
   },
   {
     "title": "B3 — Capital Social de Empresas",
@@ -473,7 +499,8 @@
       "capital social"
     ],
     "source": "B3 API",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_capital_social_empresas.csv"
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_capital_social_empresas.csv",
+    "accumulate": true
   },
   {
     "title": "B3 — Detalhes de Companhias",
@@ -490,7 +517,8 @@
       "setor"
     ],
     "source": "B3 API",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_companhias_detalhes.csv"
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_companhias_detalhes.csv",
+    "accumulate": true
   },
   {
     "title": "B3 — Dividendos em Dinheiro",
@@ -507,7 +535,8 @@
       "b3"
     ],
     "source": "B3 API",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_dividendos_dinheiro.csv"
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_dividendos_dinheiro.csv",
+    "accumulate": true
   },
   {
     "title": "B3 — Informações de Companhias",
@@ -524,7 +553,8 @@
       "b3"
     ],
     "source": "B3 API",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_companhias_info.csv"
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_companhias_info.csv",
+    "accumulate": true
   },
   {
     "title": "B3 — Taxa de Câmbio de Referência",
@@ -541,7 +571,8 @@
       "moeda"
     ],
     "source": "B3 API",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_taxa_cambio_referencia.csv"
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_taxa_cambio_referencia.csv",
+    "accumulate": true
   },
   {
     "title": "B3 — Índices de Preços Históricos",
@@ -559,7 +590,8 @@
       "smll"
     ],
     "source": "B3 API",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_indices_precos_historicos.csv"
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_indices_precos_historicos.csv",
+    "accumulate": true
   },
   {
     "title": "B3 Carteiras Teóricas",
@@ -590,7 +622,8 @@
       "+ 5 índices"
     ],
     "source": "B3 API · ~1.000 linhas/dia",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_carteiras_teoricas.csv"
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_carteiras_teoricas.csv",
+    "accumulate": true
   },
   {
     "title": "B3 BDI — Negócios de Ações",
@@ -608,7 +641,8 @@
       "negócios"
     ],
     "source": "B3 BDI",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_bdi_trades_acoes.csv"
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_bdi_trades_acoes.csv",
+    "accumulate": true
   },
   {
     "title": "B3 BDI — Taxas de Swap",
@@ -626,7 +660,8 @@
       "curva"
     ],
     "source": "B3 BDI",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_bmf_taxas_juros.csv"
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_bmf_taxas_juros.csv",
+    "accumulate": true
   },
   {
     "title": "B3 BDI — DI Over",
@@ -643,7 +678,8 @@
       "selic"
     ],
     "source": "B3 · BDI",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_bdi_di_over.csv"
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_bdi_di_over.csv",
+    "accumulate": true
   },
   {
     "title": "B3 — COTAHIST Anual",
@@ -660,7 +696,8 @@
       "b3"
     ],
     "source": "B3 · COTAHIST",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_cotahist_anual.csv"
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_cotahist_anual.csv",
+    "accumulate": true
   },
   {
     "title": "B3 — COTAHIST Diário",
@@ -678,7 +715,8 @@
       "fwf"
     ],
     "source": "B3 · COTAHIST",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_cotahist_diario.csv"
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_cotahist_diario.csv",
+    "accumulate": true
   },
   {
     "title": "B3 — Indicadores Econômicos",
@@ -695,7 +733,8 @@
       "b3"
     ],
     "source": "B3 · FWF",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_indicadores_economicos_fwf.csv"
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_indicadores_economicos_fwf.csv",
+    "accumulate": true
   },
   {
     "title": "B3 — Negócios de Balcão (OTC)",
@@ -712,7 +751,8 @@
       "b3"
     ],
     "source": "B3 · OTC",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_negocios_balcao.csv"
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_negocios_balcao.csv",
+    "accumulate": true
   },
   {
     "title": "BCB PTAX",
@@ -731,7 +771,8 @@
       "bcb"
     ],
     "source": "BCB",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/bcb_ptax.csv"
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/bcb_ptax.csv",
+    "accumulate": false
   },
   {
     "title": "BACEN — Balancetes de Bancos",
@@ -748,7 +789,8 @@
       "referência"
     ],
     "source": "BCB API",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/bacen_balancetes_bancos.csv"
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/bacen_balancetes_bancos.csv",
+    "accumulate": false
   },
   {
     "title": "BACEN — Conglomerados",
@@ -765,7 +807,8 @@
       "cadastro"
     ],
     "source": "BCB API",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/bacen_conglomerados.csv"
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/bacen_conglomerados.csv",
+    "accumulate": true
   },
   {
     "title": "BACEN — Capital Basileia",
@@ -782,7 +825,8 @@
       "risco"
     ],
     "source": "BCB API (Olinda)",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/bacen_parcelas_capital_basileia.csv"
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/bacen_parcelas_capital_basileia.csv",
+    "accumulate": true
   },
   {
     "title": "BCB — Negociação TPF Extra-grupo",
@@ -799,7 +843,8 @@
       "preço"
     ],
     "source": "BCB · DEMAB",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/bacen_negociacao_tpf.csv"
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/bacen_negociacao_tpf.csv",
+    "accumulate": true
   },
   {
     "title": "BCB — Negociação TPF Extra-grupo",
@@ -834,7 +879,8 @@
       "dólar"
     ],
     "source": "BCB · SGS",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/bcb_sgs.csv"
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/bcb_sgs.csv",
+    "accumulate": false
   },
   {
     "title": "CVM — Classes e Subclasses de Cotas",
@@ -852,7 +898,8 @@
       "cotas"
     ],
     "source": "CVM",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/registro_fundo_classe.csv"
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/registro_fundo_classe.csv",
+    "accumulate": false
   },
   {
     "title": "CVM — Informe Diário de Fundos",
@@ -870,7 +917,8 @@
       "resgate"
     ],
     "source": "CVM",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/cvm_fundos_informe_diario.csv"
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/cvm_fundos_informe_diario.csv",
+    "accumulate": false
   },
   {
     "title": "CVM — Cadastro de Companhias Abertas",
@@ -886,7 +934,8 @@
       "cadastro cvm"
     ],
     "source": "CVM · Dados Abertos",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/cvm_cadastro_companhias_abertas.csv"
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/cvm_cadastro_companhias_abertas.csv",
+    "accumulate": false
   },
   {
     "title": "IBGE SIDRA — Metadados",
@@ -902,7 +951,8 @@
       "inpc"
     ],
     "source": "IBGE · SIDRA",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/ibge_sidra.csv"
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/ibge_sidra.csv",
+    "accumulate": false
   },
   {
     "title": "Investing.com — Cotações ETFs",
@@ -919,7 +969,8 @@
       "volume"
     ],
     "source": "Investing.com",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/investing_etf.csv"
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/investing_etf.csv",
+    "accumulate": false
   },
   {
     "title": "Debêntures - Características de Emissões",
@@ -936,7 +987,8 @@
       "vencimento"
     ],
     "source": "SND/Debêntures",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/debentures_emissoes_caracteristicas.csv"
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/debentures_emissoes_caracteristicas.csv",
+    "accumulate": false
   },
   {
     "title": "Debêntures - Preços de Negociação",
@@ -953,7 +1005,8 @@
       "nº negócios"
     ],
     "source": "SND/Debêntures",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/debentures_mercado_secundario_precos_negociacao.csv"
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/debentures_mercado_secundario_precos_negociacao.csv",
+    "accumulate": false
   },
   {
     "title": "ONU — Pacto Global Participantes",
@@ -970,7 +1023,8 @@
       "participantes"
     ],
     "source": "UN Global Compact",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/onu_pacto_global.csv"
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/onu_pacto_global.csv",
+    "accumulate": false
   },
   {
     "title": "Yahoo Finance — Séries Globais",
@@ -987,6 +1041,7 @@
       "treasury"
     ],
     "source": "Yahoo Finance API",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/yahoo_finance_series.csv"
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/yahoo_finance_series.csv",
+    "accumulate": true
   }
 ]

@@ -1411,6 +1411,145 @@
     .skeleton-line:nth-child(2) { width: 30%; }
     .skeleton-line:nth-child(4) { width: 70%; }
     .skeleton-line:last-child { width: 50%; margin-top: 20px; margin-bottom: 0; }
+
+    /* ── Preview Modal ─────────────────────────────────── */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(4, 6, 8, 0.85);
+      backdrop-filter: blur(12px);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+    .modal-backdrop.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .modal-window {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      width: 90%;
+      max-width: 800px;
+      max-height: 85vh;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 10px 40px rgba(0, 212, 255, 0.15);
+      transform: translateY(20px);
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      overflow: hidden;
+    }
+    .modal-backdrop.open .modal-window {
+      transform: translateY(0);
+    }
+    .modal-header {
+      padding: 1.25rem 1.5rem;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .modal-title {
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--text);
+    }
+    .modal-close {
+      background: none;
+      border: none;
+      color: var(--text3);
+      font-size: 1.8rem;
+      cursor: pointer;
+      transition: color 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.25rem;
+      line-height: 1;
+    }
+    .modal-close:hover { color: var(--red); }
+    
+    .modal-body {
+      padding: 1.5rem;
+      overflow-y: auto;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    
+    .preview-section-title {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+    
+    .preview-table-container {
+      overflow-x: auto;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg2);
+    }
+    .preview-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.8rem;
+    }
+    .preview-table th {
+      background: var(--bg3);
+      color: var(--text2);
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 0.6rem 0.75rem;
+      border-bottom: 1px solid var(--border);
+      text-align: left;
+      white-space: nowrap;
+    }
+    .preview-table td {
+      padding: 0.5rem 0.75rem;
+      border-bottom: 1px solid rgba(30, 45, 61, 0.4);
+      color: var(--text);
+      white-space: nowrap;
+    }
+    .preview-table tr:last-child td {
+      border-bottom: none;
+    }
+    
+    .preview-schema-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 0.5rem;
+    }
+    .preview-schema-item {
+      background: rgba(255,255,255,0.02);
+      border: 1px solid var(--border);
+      padding: 0.5rem 0.75rem;
+      border-radius: 6px;
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+    }
+    .preview-schema-name {
+      font-weight: 600;
+      font-size: 0.8rem;
+      color: var(--text);
+    }
+    .preview-schema-type {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      color: var(--accent);
+    }
   </style>
 </head>
 <body>
@@ -1835,6 +1974,19 @@
   </div>
 </footer>
 
+<!-- PREVIEW MODAL -->
+<div id="preview-modal" class="modal-backdrop" aria-hidden="true">
+  <div class="modal-window" role="dialog" aria-modal="true" aria-labelledby="preview-modal-title">
+    <div class="modal-header">
+      <h3 id="preview-modal-title" class="modal-title">Prévia do Dataset</h3>
+      <button class="modal-close" id="preview-modal-close" aria-label="Fechar modal">&times;</button>
+    </div>
+    <div class="modal-body" id="preview-modal-body">
+      <!-- Carregado via JS -->
+    </div>
+  </div>
+</div>
+
 <script src="./data/last_updates.js"></script>
 <script src="./data/pipeline_status.js"></script>
 <script src="./data/market_latest.js"></script>
@@ -1896,17 +2048,43 @@
         cardClass = 'b3-card';
       }
 
+      // Determine source mapping
+      let sourceMapped = 'other';
+      if (lowerFile.startsWith('anbima_')) {
+        sourceMapped = 'anbima';
+      } else if (lowerFile.startsWith('b3_')) {
+        sourceMapped = 'b3';
+      } else if (lowerFile.startsWith('bcb_') || lowerFile.startsWith('bacen_')) {
+        sourceMapped = 'bcb';
+      } else if (lowerFile.startsWith('cvm_') || lowerFile.startsWith('registro_')) {
+        sourceMapped = 'cvm';
+      } else if (lowerFile.startsWith('ibge_')) {
+        sourceMapped = 'ibge';
+      } else if (lowerFile.startsWith('debentures_')) {
+        sourceMapped = 'debentures';
+      } else if (lowerFile.startsWith('yahoo_') || lowerFile.startsWith('investing_') || lowerFile.startsWith('onu_')) {
+        sourceMapped = 'misc';
+      }
+
       const tagsHtml = (dataset.tags || []).map(t => `<span class="field-tag">${t}</span>`).join('');
       const badgeClass = dataset.badgeClass || 'badge-daily';
       const badgeText = dataset.badge || 'Diário';
       const iconClass = dataset.iconClass || '';
       const iconText = dataset.icon || '📊';
 
+      // Accumulation badge
+      const isAccumulate = dataset.accumulate !== false;
+      const accBadgeText = isAccumulate ? 'Acumulado' : 'Snapshot';
+      const accBadgeClass = isAccumulate ? 'badge-cumulative' : 'badge-snapshot';
+
       html += `
-        <div class="dataset-card ${cardClass}">
+        <div class="dataset-card ${cardClass}" data-source-mapped="${sourceMapped}">
           <div class="card-top">
             <div class="card-icon ${iconClass}">${iconText}</div>
-            <span class="card-badge ${badgeClass}">${badgeText}</span>
+            <div class="card-badges">
+              <span class="card-badge ${badgeClass}">${badgeText}</span>
+              <span class="card-badge ${accBadgeClass}">${accBadgeText}</span>
+            </div>
           </div>
           <div class="card-title">${dataset.title}</div>
           <div class="card-file">${dataset.file}</div>
@@ -1916,10 +2094,23 @@
           </div>
           <div class="card-footer">
             <span class="card-source">Fonte: ${dataset.source || 'Desconhecida'}</span>
-            <a href="${dataset.url}" class="download-btn" target="_blank">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
-              CSV
-            </a>
+            <div style="display: flex; gap: 0.4rem; align-items: center;">
+              <button class="copy-btn preview-btn" data-file="${dataset.file}" data-title="${dataset.title}" title="Visualizar prévia e colunas">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 12px; height: 12px;"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                Prévia
+              </button>
+              <button class="copy-btn copy-btn-pandas" data-url="${dataset.url}" title="Copiar código de importação do Pandas">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 12px; height: 12px;">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"></path>
+                </svg>
+                Pandas
+              </button>
+              <a href="${dataset.url}" class="download-btn" target="_blank">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 12px; height: 12px;"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+                CSV
+              </a>
+            </div>
           </div>
         </div>
       `;
@@ -2033,76 +2224,20 @@
     });
   }
 
+  // Helper for search debouncing
+  function debounce(func, wait) {
+    let timeout;
+    return function(...args) {
+      const context = this;
+      clearTimeout(timeout);
+      timeout = setTimeout(() => func.apply(context, args), wait);
+    };
+  }
+
   // Initialize dataset filtering by source
   function initDatasetFilters() {
     const cards = document.querySelectorAll('.dataset-card');
     
-    // Map each card to its data source based on file name prefix and add accumulation badges
-    const nonAccumulating = new Set([
-      'bcb_ptax.csv',
-      'bcb_sgs.csv',
-      'ibge_sidra.csv',
-      'cvm_cadastro_companhias_abertas.csv',
-      'registro_fundo_classe.csv',
-      'cvm_fundos_informe_diario.csv',
-      'debentures_emissoes_caracteristicas.csv',
-      'b3_classificacao_setorial.csv',
-      'b3_titulos_negociaveis.csv',
-      'b3_etfs_listados.csv',
-      'b3_fiis_listados.csv',
-      'bacen_balancetes_bancos.csv',
-      'onu_pacto_global.csv',
-      'investing_etf.csv'
-    ]);
-
-    cards.forEach(card => {
-      const fileElement = card.querySelector('.card-file');
-      if (!fileElement) return;
-
-      const fileName = fileElement.textContent.trim().toLowerCase();
-      let source = 'other';
-
-      if (fileName.startsWith('anbima_')) {
-        source = 'anbima';
-      } else if (fileName.startsWith('b3_')) {
-        source = 'b3';
-      } else if (fileName.startsWith('bcb_') || fileName.startsWith('bacen_')) {
-        source = 'bcb';
-      } else if (fileName.startsWith('cvm_') || fileName.startsWith('registro_')) {
-        source = 'cvm';
-      } else if (fileName.startsWith('ibge_')) {
-        source = 'ibge';
-      } else if (fileName.startsWith('debentures_')) {
-        source = 'debentures';
-      } else if (fileName.startsWith('yahoo_') || fileName.startsWith('investing_') || fileName.startsWith('onu_')) {
-        source = 'misc';
-      }
-
-      card.setAttribute('data-source-mapped', source);
-
-      // Add cumulative or snapshot badge
-      const cardTop = card.querySelector('.card-top');
-      if (cardTop) {
-        const badgesContainer = document.createElement('div');
-        badgesContainer.className = 'card-badges';
-
-        const existingBadges = cardTop.querySelectorAll('.card-badge');
-        existingBadges.forEach(badge => badgesContainer.appendChild(badge));
-
-        const accBadge = document.createElement('span');
-        accBadge.className = 'card-badge';
-        if (nonAccumulating.has(fileName)) {
-          accBadge.textContent = 'Snapshot';
-          accBadge.classList.add('badge-snapshot');
-        } else {
-          accBadge.textContent = 'Acumulado';
-          accBadge.classList.add('badge-cumulative');
-        }
-        badgesContainer.appendChild(accBadge);
-        cardTop.appendChild(badgesContainer);
-      }
-    });
-
     // Empty state helpers
     function showEmptyState() {
       let el = document.getElementById('dataset-empty-state');
@@ -2191,13 +2326,13 @@
       });
     });
 
-    // Handle dataset search input
+    // Handle dataset search input with debounce
     const datasetSearchInput = document.getElementById('dataset-search');
     if (datasetSearchInput) {
-      datasetSearchInput.addEventListener('input', (e) => {
+      datasetSearchInput.addEventListener('input', debounce((e) => {
         activeSearchQuery = e.target.value.toLowerCase().trim();
         applyDatasetFilters();
-      });
+      }, 200));
     }
   }
 
@@ -2264,6 +2399,8 @@
     }
   }
 
+  let allSchemas = []; // Global schema registry
+
   // Load and render schemas dynamically
   async function loadSchemas() {
     const container = document.getElementById('schema-grid');
@@ -2272,9 +2409,9 @@
     try {
       const response = await fetch('./data/schemas.json');
       if (!response.ok) throw new Error('Falha ao carregar schemas.json');
-      const schemas = await response.json();
+      allSchemas = await response.json(); // Save to global variable
 
-      container.innerHTML = schemas.map(schema => {
+      container.innerHTML = allSchemas.map(schema => {
         const fieldsHtml = schema.fields.map(field => {
           let exVal = field.example || '';
           if (exVal === 'nan' || exVal === 'None') exVal = '';
@@ -2306,10 +2443,10 @@
       // Wire schema search event listener and initial filter
       const schemaSearchInput = document.getElementById('schema-search');
       if (schemaSearchInput) {
-        schemaSearchInput.addEventListener('input', (e) => {
+        schemaSearchInput.addEventListener('input', debounce((e) => {
           activeSchemaSearchQuery = e.target.value.toLowerCase().trim();
           applySchemaFilters();
-        });
+        }, 200));
       }
       applySchemaFilters();
 
@@ -2322,59 +2459,163 @@
     }
   }
 
-  // Pandas import snippet copy-to-clipboard buttons initialization
+  // Pandas import snippet copy-to-clipboard buttons initialization using event delegation
   function initPandasCopyButtons() {
-    document.querySelectorAll('.dataset-card').forEach(card => {
-      const downloadBtn = card.querySelector('.download-btn');
-      if (!downloadBtn) return;
+    document.addEventListener('click', (e) => {
+      const btn = e.target.closest('.copy-btn-pandas');
+      if (!btn) return;
       
-      const csvUrl = downloadBtn.getAttribute('href');
-      if (!csvUrl) return;
-
-      const copyBtn = document.createElement('button');
-      copyBtn.className = 'copy-btn';
-      copyBtn.title = 'Copiar código de importação do Pandas';
-      copyBtn.innerHTML = `
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 12px; height: 12px;">
-          <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-          <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"></path>
-        </svg>
-        Pandas
-      `;
+      e.preventDefault();
+      const csvUrl = btn.getAttribute('data-url');
+      const code = `import pandas as pd\ndf = pd.read_csv("${csvUrl}")`;
       
-      copyBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        const code = `import pandas as pd\ndf = pd.read_csv("${csvUrl}")`;
+      navigator.clipboard.writeText(code).then(() => {
+        const originalText = btn.innerHTML;
+        btn.innerHTML = `
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 12px; height: 12px; color: #00e5a0;">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+          Copiado!
+        `;
+        btn.style.borderColor = '#00e5a0';
+        btn.style.color = '#00e5a0';
         
-        navigator.clipboard.writeText(code).then(() => {
-          const originalText = copyBtn.innerHTML;
-          copyBtn.innerHTML = `
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 12px; height: 12px; color: #00e5a0;">
-              <polyline points="20 6 9 17 4 12"></polyline>
-            </svg>
-            Copiado!
-          `;
-          copyBtn.style.borderColor = '#00e5a0';
-          copyBtn.style.color = '#00e5a0';
-          
-          setTimeout(() => {
-            copyBtn.innerHTML = originalText;
-            copyBtn.style.borderColor = '';
-            copyBtn.style.color = '';
-          }, 2000);
-        }).catch(err => {
-          console.error('Erro ao copiar:', err);
-        });
+        setTimeout(() => {
+          btn.innerHTML = originalText;
+          btn.style.borderColor = '';
+          btn.style.color = '';
+        }, 2000);
+      }).catch(err => {
+        console.error('Erro ao copiar:', err);
       });
+    });
+  }
+
+  // Preview Modal functions
+  function initPreviewModal() {
+    const modal = document.getElementById('preview-modal');
+    const closeBtn = document.getElementById('preview-modal-close');
+    
+    if (!modal || !closeBtn) return;
+    
+    const closeModal = () => {
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden', 'true');
+    };
+    
+    closeBtn.addEventListener('click', closeModal);
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('open')) closeModal();
+    });
+    
+    document.addEventListener('click', async (e) => {
+      const btn = e.target.closest('.preview-btn');
+      if (!btn) return;
       
-      // Wrap copy and download buttons in a container for correct layout alignment
-      const wrapper = document.createElement('div');
-      wrapper.style.display = 'flex';
-      wrapper.style.gap = '0.5rem';
+      const fileName = btn.getAttribute('data-file');
+      const title = btn.getAttribute('data-title');
       
-      downloadBtn.parentNode.insertBefore(wrapper, downloadBtn);
-      wrapper.appendChild(copyBtn);
-      wrapper.appendChild(downloadBtn);
+      const modalTitle = document.getElementById('preview-modal-title');
+      const modalBody = document.getElementById('preview-modal-body');
+      
+      if (modalTitle && modalBody) {
+        modalTitle.textContent = `Prévia: ${title}`;
+        modalBody.innerHTML = `
+          <div class="loading-state" style="padding: 3rem;">
+            <div class="spinner" role="status" aria-label="Carregando"></div>
+            <p class="loading-text" style="color: var(--text3);">Buscando prévia do arquivo...</p>
+          </div>
+        `;
+        modal.classList.add('open');
+        modal.setAttribute('aria-hidden', 'false');
+        
+        // Find schema fields for the given file name
+        const schema = allSchemas.find(s => s.files === fileName);
+        
+        let schemaHtml = '';
+        if (schema && schema.fields) {
+          const fieldsItems = schema.fields.map(f => `
+            <div class="preview-schema-item">
+              <span class="preview-schema-name">${f.name}</span>
+              <span class="preview-schema-type">${f.type}</span>
+            </div>
+          `).join('');
+          schemaHtml = `
+            <div>
+              <div class="preview-section-title">Estrutura de Colunas (Schema)</div>
+              <div class="preview-schema-list">
+                ${fieldsItems}
+              </div>
+            </div>
+          `;
+        }
+        
+        let previewHtml = '';
+        try {
+          const resp = await fetch(`./data/${fileName}`);
+          if (!resp.ok) throw new Error(`Status ${resp.status}`);
+          const text = await resp.text();
+          
+          const lines = text.split('\n').map(l => l.trim()).filter(l => l !== '');
+          if (lines.length > 0) {
+            const headers = lines[0].split(',').map(h => h.trim().replace(/^"|"$/g, ''));
+            const rows = lines.slice(1, 6).map(line => {
+              const values = [];
+              let insideQuote = false;
+              let current = '';
+              for (let i = 0; i < line.length; i++) {
+                const char = line[i];
+                if (char === '"') {
+                  insideQuote = !insideQuote;
+                } else if (char === ',' && !insideQuote) {
+                  values.push(current.trim());
+                  current = '';
+                } else {
+                  current += char;
+                }
+              }
+              values.push(current.trim());
+              return values.map(v => v.replace(/^"|"$/g, ''));
+            });
+            
+            let tableHeader = headers.map(h => `<th>${h}</th>`).join('');
+            let tableRows = rows.map(r => {
+              let cells = headers.map((h, i) => `<td>${r[i] !== undefined ? r[i] : ''}</td>`).join('');
+              return `<tr>${cells}</tr>`;
+            }).join('');
+            
+            previewHtml = `
+              <div>
+                <div class="preview-section-title">Prévia dos Dados (Últimos Registros)</div>
+                <div class="preview-table-container">
+                  <table class="preview-table">
+                    <thead><tr>${tableHeader}</tr></thead>
+                    <tbody>${tableRows}</tbody>
+                  </table>
+                </div>
+              </div>
+            `;
+          }
+        } catch (err) {
+          console.warn('Erro ao carregar prévia do CSV:', err);
+          previewHtml = `
+            <div>
+              <div class="preview-section-title">Prévia dos Dados</div>
+              <div class="error-state" style="padding: 1.5rem; background: rgba(255, 77, 109, 0.02); border: 1px solid rgba(255, 77, 109, 0.1); border-radius: 6px;">
+                <p class="error-desc" style="font-size: 0.8rem; color: var(--text3); text-align: center;">Não foi possível carregar a prévia do CSV local (arquivo muito grande ou formato de log).</p>
+              </div>
+            </div>
+          `;
+        }
+        
+        modalBody.innerHTML = `
+          ${schemaHtml}
+          ${previewHtml}
+        `;
+      }
     });
   }
 
@@ -2523,6 +2764,7 @@
     await loadSchemas();
     initDatasetFilters();
     initPandasCopyButtons();
+    initPreviewModal();
     await loadPipelineStatus();
     await loadMarketLatest();
   });
