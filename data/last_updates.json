@@ -162,5 +162,9 @@
   "ibge_sidra.csv": {
     "min": "2026-06-15",
     "max": "2026-06-15"
+  },
+  "b3_classificacao_setorial.csv": {
+    "min": "2026-06-15",
+    "max": "2026-06-15"
   }
 }

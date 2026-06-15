@@ -3399,7 +3399,7 @@
       {
         "name": "name",
         "type": "str",
-        "example": "GOLDEN RIVER COMERCIO E SERVICOS LTDA"
+        "example": "VERMARI VIAGENS, TURISMO E EVENTOS LTDA."
       },
       {
         "name": "type",
@@ -3409,7 +3409,7 @@
       {
         "name": "sector",
         "type": "str",
-        "example": "Renewable Energy Equipment"
+        "example": "Travel and Tourism"
       },
       {
         "name": "country",
@@ -3419,12 +3419,12 @@
       {
         "name": "joined_on",
         "type": "str",
-        "example": "2026-06-11"
+        "example": "2026-06-15"
       },
       {
         "name": "link",
         "type": "str",
-        "example": "https://unglobalcompact.org/what-is-gc/participants/212824-GOLDEN-RIVER-COMERCIO-E-SERVICOS-LTDA"
+        "example": "https://unglobalcompact.org/what-is-gc/participants/212834-VERMARI-VIAGENS-TURISMO-E-EVENTOS-LTDA-"
       }
     ]
   },
@@ -3507,6 +3507,152 @@
         "name": "ntl_fin_vol",
         "type": "str",
         "example": ""
+      }
+    ]
+  },
+  {
+    "title": "Anbima Idka",
+    "files": "anbima_idka.csv",
+    "source": "anbima",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-06-03"
+      },
+      {
+        "name": "no_indexador",
+        "type": "str",
+        "example": "PREFIXADO"
+      },
+      {
+        "name": "no_indice",
+        "type": "str",
+        "example": "IDkA Pré 3M"
+      },
+      {
+        "name": "nu_indice",
+        "type": "str",
+        "example": "7558.191845"
+      },
+      {
+        "name": "ret_dia_perc",
+        "type": "float",
+        "example": "0.0593"
+      },
+      {
+        "name": "ret_mes_perc",
+        "type": "float",
+        "example": "0.1067"
+      },
+      {
+        "name": "ret_ano_perc",
+        "type": "float",
+        "example": "5.6793"
+      },
+      {
+        "name": "ret_12_meses_perc",
+        "type": "float",
+        "example": "14.7332"
+      },
+      {
+        "name": "vol_aa_perc",
+        "type": "float",
+        "example": "0.0569"
+      },
+      {
+        "name": "taxa_juros_aa_perc_compra_d1",
+        "type": "float",
+        "example": "14.1261"
+      },
+      {
+        "name": "taxa_juros_aa_perc_venda_d0",
+        "type": "float",
+        "example": "14.0943"
+      },
+      {
+        "name": "data_referencia",
+        "type": "date",
+        "example": ""
+      }
+    ]
+  },
+  {
+    "title": "Anbima 550",
+    "files": "anbima_550.csv",
+    "source": "anbima",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-06-01"
+      },
+      {
+        "name": "titulo",
+        "type": "str",
+        "example": "210100"
+      },
+      {
+        "name": "vencimento",
+        "type": "str",
+        "example": "2026-09-01"
+      },
+      {
+        "name": "preco_unitario",
+        "type": "float",
+        "example": "19105.49719407"
+      },
+      {
+        "name": "preco_retorno",
+        "type": "float",
+        "example": "0.00000000"
+      },
+      {
+        "name": "posicao_custodia",
+        "type": "str",
+        "example": "9627474"
+      }
+    ]
+  },
+  {
+    "title": "B3 Classificacao Setorial",
+    "files": "b3_classificacao_setorial.csv",
+    "source": "b3",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-06-15"
+      },
+      {
+        "name": "setor_economico",
+        "type": "str",
+        "example": "Petróleo, Gás e Biocombustíveis"
+      },
+      {
+        "name": "subsetor",
+        "type": "str",
+        "example": "Petróleo, Gás e Biocombustíveis"
+      },
+      {
+        "name": "segmento",
+        "type": "str",
+        "example": "Exploração, Refino e Distribuição"
+      },
+      {
+        "name": "nome_empresa",
+        "type": "str",
+        "example": "3R PETROLEUM"
+      },
+      {
+        "name": "codigo",
+        "type": "str",
+        "example": "RRRP"
+      },
+      {
+        "name": "segmento_listagem",
+        "type": "str",
+        "example": "NM"
       }
     ]
   }
