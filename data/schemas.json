@@ -37,108 +37,6 @@
     ]
   },
   {
-    "title": "Anbima Ima Completo",
-    "files": "anbima_ima_completo.csv",
-    "source": "anbima",
-    "fields": [
-      {
-        "name": "data_captura",
-        "type": "date",
-        "example": "2026-06-01"
-      },
-      {
-        "name": "data_referencia",
-        "type": "date",
-        "example": "2026-05-29"
-      },
-      {
-        "name": "indice",
-        "type": "str",
-        "example": "IRF-M 1"
-      },
-      {
-        "name": "numero_indice",
-        "type": "int",
-        "example": "20138.20756000"
-      },
-      {
-        "name": "variacao_diaria",
-        "type": "str",
-        "example": "0.0432"
-      },
-      {
-        "name": "variacao_mensal",
-        "type": "str",
-        "example": "1.0735"
-      },
-      {
-        "name": "variacao_anual",
-        "type": "str",
-        "example": "5.4314"
-      },
-      {
-        "name": "variacao_ultimos_12_meses",
-        "type": "str",
-        "example": "14.4269"
-      },
-      {
-        "name": "variacao_ultimos_24_meses",
-        "type": "str",
-        "example": "27.5287"
-      },
-      {
-        "name": "duration_du",
-        "type": "str",
-        "example": "96"
-      },
-      {
-        "name": "peso_geral",
-        "type": "str",
-        "example": "6.16"
-      },
-      {
-        "name": "carteira_a_mercado_rs_mil",
-        "type": "str",
-        "example": "500982803"
-      },
-      {
-        "name": "numero_operacoes",
-        "type": "int",
-        "example": "83"
-      },
-      {
-        "name": "quant_negociada_1000_titulos",
-        "type": "str",
-        "example": "5576.90"
-      },
-      {
-        "name": "valor_negociado_rs_mil",
-        "type": "str",
-        "example": "5427718.74"
-      },
-      {
-        "name": "pmr",
-        "type": "str",
-        "example": "141.779685975957"
-      },
-      {
-        "name": "convexidade",
-        "type": "str",
-        "example": "0.47475062168119"
-      },
-      {
-        "name": "yield_",
-        "type": "str",
-        "example": "14.1095522117692"
-      },
-      {
-        "name": "redemption_yield",
-        "type": "str",
-        "example": ""
-      }
-    ]
-  },
-  {
     "title": "Anbima Indicadores",
     "files": "anbima_indicadores.csv",
     "source": "anbima",
@@ -424,7 +322,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-06-13"
+        "example": "2026-06-15"
       },
       {
         "name": "data_referencia",
@@ -1081,6 +979,48 @@
     ]
   },
   {
+    "title": "B3 Bdi Di Over",
+    "files": "b3_bdi_di_over.csv",
+    "source": "b3",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-06-01"
+      },
+      {
+        "name": "data_referencia",
+        "type": "date",
+        "example": "2026-05-29T00:00:00"
+      },
+      {
+        "name": "number_of_operations",
+        "type": "str",
+        "example": "3"
+      },
+      {
+        "name": "financial_volume",
+        "type": "str",
+        "example": "2646973"
+      },
+      {
+        "name": "average",
+        "type": "str",
+        "example": "14.4"
+      },
+      {
+        "name": "daily_factor",
+        "type": "str",
+        "example": "1.000534"
+      },
+      {
+        "name": "taxa_selic",
+        "type": "float",
+        "example": "14.4"
+      }
+    ]
+  },
+  {
     "title": "Anbima Indice Imab",
     "files": "anbima_indice_imab.csv",
     "source": "anbima",
@@ -1267,63 +1207,6 @@
     ]
   },
   {
-    "title": "B3 Carteira Teorica Ibov",
-    "files": "b3_carteira_teorica_ibov.csv",
-    "source": "b3",
-    "fields": [
-      {
-        "name": "data_captura",
-        "type": "date",
-        "example": "2026-06-03"
-      },
-      {
-        "name": "indice",
-        "type": "str",
-        "example": "IBOV"
-      },
-      {
-        "name": "indice_nome",
-        "type": "str",
-        "example": "Ibovespa"
-      },
-      {
-        "name": "codigo_ativo",
-        "type": "str",
-        "example": "ALOS3"
-      },
-      {
-        "name": "nome_ativo",
-        "type": "str",
-        "example": "ALLOS"
-      },
-      {
-        "name": "tipo_ativo",
-        "type": "str",
-        "example": "ON      NM"
-      },
-      {
-        "name": "quantidade_teorica",
-        "type": "int",
-        "example": "478558715"
-      },
-      {
-        "name": "participacao_pct",
-        "type": "str",
-        "example": "0.547"
-      },
-      {
-        "name": "reducao_capital",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "segmento",
-        "type": "str",
-        "example": ""
-      }
-    ]
-  },
-  {
     "title": "B3 Carteira Teorica Ibsd",
     "files": "b3_carteira_teorica_ibsd.csv",
     "source": "b3",
@@ -1367,6 +1250,63 @@
         "name": "participacao_pct",
         "type": "str",
         "example": "6.731"
+      },
+      {
+        "name": "reducao_capital",
+        "type": "str",
+        "example": ""
+      },
+      {
+        "name": "segmento",
+        "type": "str",
+        "example": ""
+      }
+    ]
+  },
+  {
+    "title": "B3 Carteira Teorica Ibov",
+    "files": "b3_carteira_teorica_ibov.csv",
+    "source": "b3",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-06-03"
+      },
+      {
+        "name": "indice",
+        "type": "str",
+        "example": "IBOV"
+      },
+      {
+        "name": "indice_nome",
+        "type": "str",
+        "example": "Ibovespa"
+      },
+      {
+        "name": "codigo_ativo",
+        "type": "str",
+        "example": "ALOS3"
+      },
+      {
+        "name": "nome_ativo",
+        "type": "str",
+        "example": "ALLOS"
+      },
+      {
+        "name": "tipo_ativo",
+        "type": "str",
+        "example": "ON      NM"
+      },
+      {
+        "name": "quantidade_teorica",
+        "type": "int",
+        "example": "478558715"
+      },
+      {
+        "name": "participacao_pct",
+        "type": "str",
+        "example": "0.547"
       },
       {
         "name": "reducao_capital",
@@ -1658,7 +1598,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-06-13"
+        "example": "2026-06-15"
       },
       {
         "name": "categoria_etf",
@@ -1782,7 +1722,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-06-13"
+        "example": "2026-06-15"
       },
       {
         "name": "codigo_fundo",
@@ -1854,7 +1794,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-06-13"
+        "example": "2026-06-15"
       },
       {
         "name": "codigo_emissor",
@@ -1943,7 +1883,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-06-13"
+        "example": "2026-06-15"
       },
       {
         "name": "codigo_ativo",
@@ -1983,277 +1923,6 @@
     ]
   },
   {
-    "title": "Bacen Balancetes Bancos",
-    "files": "bacen_balancetes_bancos.csv",
-    "source": "bcb",
-    "fields": [
-      {
-        "name": "data_captura",
-        "type": "date",
-        "example": "2026-06-13"
-      },
-      {
-        "name": "data_base",
-        "type": "date",
-        "example": "202603"
-      },
-      {
-        "name": "documento",
-        "type": "str",
-        "example": "4010"
-      },
-      {
-        "name": "cnpj",
-        "type": "str",
-        "example": "0000-00-00"
-      },
-      {
-        "name": "agencia",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "nome_instituicao",
-        "type": "str",
-        "example": "BCO DO BRASIL S.A."
-      },
-      {
-        "name": "cod_congl",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "nome_congl",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "taxonomia",
-        "type": "str",
-        "example": "BANCO DO BRASIL - BANCO MULTIPLO"
-      },
-      {
-        "name": "conta",
-        "type": "str",
-        "example": "1000000009"
-      },
-      {
-        "name": "nome_conta",
-        "type": "str",
-        "example": "Ativo Realizável"
-      },
-      {
-        "name": "saldo",
-        "type": "float",
-        "example": "2409477025240.00"
-      }
-    ]
-  },
-  {
-    "title": "Bacen Conglomerados",
-    "files": "bacen_conglomerados.csv",
-    "source": "bcb",
-    "fields": [
-      {
-        "name": "data_captura",
-        "type": "date",
-        "example": "2026-06-03"
-      },
-      {
-        "name": "data_referencia",
-        "type": "date",
-        "example": "2026-04-01"
-      },
-      {
-        "name": "departamento",
-        "type": "str",
-        "example": "DEPARTAMENTO DE MONITORAMENTO DO SISTEMA FINANCEIRO - DESIG"
-      },
-      {
-        "name": "secao_1",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "secao_2",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "secao_3",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "tipo_documento",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "data_documento",
-        "type": "date",
-        "example": ""
-      },
-      {
-        "name": "detalhe",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "BANCO CENTRAL DO BRASIL - BACEN",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "Unnamed: 1",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "Unnamed: 2",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "Unnamed: 3",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "Unnamed: 4",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "Unnamed: 5",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "Unnamed: 6",
-        "type": "str",
-        "example": ""
-      }
-    ]
-  },
-  {
-    "title": "Bacen Negociacao Tpf Extragrupo",
-    "files": "bacen_negociacao_tpf_extragrupo.csv",
-    "source": "bcb",
-    "fields": [
-      {
-        "name": "data_captura",
-        "type": "date",
-        "example": "2026-06-03"
-      },
-      {
-        "name": "codigo",
-        "type": "str",
-        "example": "210100"
-      },
-      {
-        "name": "codigo_isin",
-        "type": "str",
-        "example": "BRSTNCLF1RF7"
-      },
-      {
-        "name": "data_referencia",
-        "type": "date",
-        "example": "2026-06-01"
-      },
-      {
-        "name": "emissao",
-        "type": "str",
-        "example": "2020-03-13"
-      },
-      {
-        "name": "num_de_oper",
-        "type": "str",
-        "example": "18"
-      },
-      {
-        "name": "num_oper_com_corretagem",
-        "type": "str",
-        "example": "0"
-      },
-      {
-        "name": "pu_lastro",
-        "type": "str",
-        "example": "19115.81460836"
-      },
-      {
-        "name": "pu_max",
-        "type": "str",
-        "example": "19124.70925500"
-      },
-      {
-        "name": "pu_med",
-        "type": "str",
-        "example": "19119.69775900"
-      },
-      {
-        "name": "pu_min",
-        "type": "str",
-        "example": "19117.52011900"
-      },
-      {
-        "name": "quant_neg_com_corretagem",
-        "type": "str",
-        "example": "0"
-      },
-      {
-        "name": "quant_negociada",
-        "type": "str",
-        "example": "14169"
-      },
-      {
-        "name": "codigo_ativo",
-        "type": "str",
-        "example": "LFT"
-      },
-      {
-        "name": "taxa_max",
-        "type": "float",
-        "example": "0.0515"
-      },
-      {
-        "name": "taxa_med",
-        "type": "float",
-        "example": "0.0073"
-      },
-      {
-        "name": "taxa_min",
-        "type": "float",
-        "example": "-0.0941"
-      },
-      {
-        "name": "valor_par",
-        "type": "str",
-        "example": "19120.04396500"
-      },
-      {
-        "name": "vencimento",
-        "type": "str",
-        "example": "2026-09-01"
-      },
-      {
-        "name": "data_mov",
-        "type": "date",
-        "example": ""
-      },
-      {
-        "name": "sigla",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "valor_negociado",
-        "type": "str",
-        "example": ""
-      }
-    ]
-  },
-  {
     "title": "B3 Isin Ativos",
     "files": "b3_isin_ativos.csv",
     "source": "b3",
@@ -2261,12 +1930,12 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-06-13"
+        "example": "2026-06-15"
       },
       {
         "name": "data_geracao",
         "type": "date",
-        "example": "2026-06-12"
+        "example": "2026-06-15"
       },
       {
         "name": "acao",
@@ -2491,6 +2160,277 @@
     ]
   },
   {
+    "title": "Bacen Conglomerados",
+    "files": "bacen_conglomerados.csv",
+    "source": "bcb",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-06-03"
+      },
+      {
+        "name": "data_referencia",
+        "type": "date",
+        "example": "2026-04-01"
+      },
+      {
+        "name": "departamento",
+        "type": "str",
+        "example": "DEPARTAMENTO DE MONITORAMENTO DO SISTEMA FINANCEIRO - DESIG"
+      },
+      {
+        "name": "secao_1",
+        "type": "str",
+        "example": ""
+      },
+      {
+        "name": "secao_2",
+        "type": "str",
+        "example": ""
+      },
+      {
+        "name": "secao_3",
+        "type": "str",
+        "example": ""
+      },
+      {
+        "name": "tipo_documento",
+        "type": "str",
+        "example": ""
+      },
+      {
+        "name": "data_documento",
+        "type": "date",
+        "example": ""
+      },
+      {
+        "name": "detalhe",
+        "type": "str",
+        "example": ""
+      },
+      {
+        "name": "BANCO CENTRAL DO BRASIL - BACEN",
+        "type": "str",
+        "example": ""
+      },
+      {
+        "name": "Unnamed: 1",
+        "type": "str",
+        "example": ""
+      },
+      {
+        "name": "Unnamed: 2",
+        "type": "str",
+        "example": ""
+      },
+      {
+        "name": "Unnamed: 3",
+        "type": "str",
+        "example": ""
+      },
+      {
+        "name": "Unnamed: 4",
+        "type": "str",
+        "example": ""
+      },
+      {
+        "name": "Unnamed: 5",
+        "type": "str",
+        "example": ""
+      },
+      {
+        "name": "Unnamed: 6",
+        "type": "str",
+        "example": ""
+      }
+    ]
+  },
+  {
+    "title": "Bacen Negociacao Tpf Extragrupo",
+    "files": "bacen_negociacao_tpf_extragrupo.csv",
+    "source": "bcb",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-06-03"
+      },
+      {
+        "name": "codigo",
+        "type": "str",
+        "example": "210100"
+      },
+      {
+        "name": "codigo_isin",
+        "type": "str",
+        "example": "BRSTNCLF1RF7"
+      },
+      {
+        "name": "data_referencia",
+        "type": "date",
+        "example": "2026-06-01"
+      },
+      {
+        "name": "emissao",
+        "type": "str",
+        "example": "2020-03-13"
+      },
+      {
+        "name": "num_de_oper",
+        "type": "str",
+        "example": "18"
+      },
+      {
+        "name": "num_oper_com_corretagem",
+        "type": "str",
+        "example": "0"
+      },
+      {
+        "name": "pu_lastro",
+        "type": "str",
+        "example": "19115.81460836"
+      },
+      {
+        "name": "pu_max",
+        "type": "str",
+        "example": "19124.70925500"
+      },
+      {
+        "name": "pu_med",
+        "type": "str",
+        "example": "19119.69775900"
+      },
+      {
+        "name": "pu_min",
+        "type": "str",
+        "example": "19117.52011900"
+      },
+      {
+        "name": "quant_neg_com_corretagem",
+        "type": "str",
+        "example": "0"
+      },
+      {
+        "name": "quant_negociada",
+        "type": "str",
+        "example": "14169"
+      },
+      {
+        "name": "codigo_ativo",
+        "type": "str",
+        "example": "LFT"
+      },
+      {
+        "name": "taxa_max",
+        "type": "float",
+        "example": "0.0515"
+      },
+      {
+        "name": "taxa_med",
+        "type": "float",
+        "example": "0.0073"
+      },
+      {
+        "name": "taxa_min",
+        "type": "float",
+        "example": "-0.0941"
+      },
+      {
+        "name": "valor_par",
+        "type": "str",
+        "example": "19120.04396500"
+      },
+      {
+        "name": "vencimento",
+        "type": "str",
+        "example": "2026-09-01"
+      },
+      {
+        "name": "data_mov",
+        "type": "date",
+        "example": ""
+      },
+      {
+        "name": "sigla",
+        "type": "str",
+        "example": ""
+      },
+      {
+        "name": "valor_negociado",
+        "type": "str",
+        "example": ""
+      }
+    ]
+  },
+  {
+    "title": "Bacen Balancetes Bancos",
+    "files": "bacen_balancetes_bancos.csv",
+    "source": "bcb",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-06-15"
+      },
+      {
+        "name": "data_base",
+        "type": "date",
+        "example": "202603"
+      },
+      {
+        "name": "documento",
+        "type": "str",
+        "example": "4010"
+      },
+      {
+        "name": "cnpj",
+        "type": "str",
+        "example": "0000-00-00"
+      },
+      {
+        "name": "agencia",
+        "type": "str",
+        "example": ""
+      },
+      {
+        "name": "nome_instituicao",
+        "type": "str",
+        "example": "BCO DO BRASIL S.A."
+      },
+      {
+        "name": "cod_congl",
+        "type": "str",
+        "example": ""
+      },
+      {
+        "name": "nome_congl",
+        "type": "str",
+        "example": ""
+      },
+      {
+        "name": "taxonomia",
+        "type": "str",
+        "example": "BANCO DO BRASIL - BANCO MULTIPLO"
+      },
+      {
+        "name": "conta",
+        "type": "str",
+        "example": "1000000009"
+      },
+      {
+        "name": "nome_conta",
+        "type": "str",
+        "example": "Ativo Realizável"
+      },
+      {
+        "name": "saldo",
+        "type": "float",
+        "example": "2409477025240.00"
+      }
+    ]
+  },
+  {
     "title": "Bcb Ptax",
     "files": "bcb_ptax.csv",
     "source": "bcb",
@@ -2498,7 +2438,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-06-13"
+        "example": "2026-06-15"
       },
       {
         "name": "data_referencia",
@@ -2592,7 +2532,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-06-13"
+        "example": "2026-06-15"
       },
       {
         "name": "codigo_serie",
@@ -2613,150 +2553,6 @@
         "name": "valor",
         "type": "str",
         "example": "0.017089"
-      }
-    ]
-  },
-  {
-    "title": "B3 Bdi Trades Acoes",
-    "files": "b3_bdi_trades_acoes.csv",
-    "source": "b3",
-    "fields": [
-      {
-        "name": "data_captura",
-        "type": "date",
-        "example": "2026-06-03"
-      },
-      {
-        "name": "data_referencia",
-        "type": "date",
-        "example": "2026-06-02T00:00:00"
-      },
-      {
-        "name": "codigo_ativo",
-        "type": "str",
-        "example": "BOVAS173W2"
-      },
-      {
-        "name": "isin",
-        "type": "str",
-        "example": "BRBOVA9S16I6"
-      },
-      {
-        "name": "sgmt_nm",
-        "type": "str",
-        "example": "EQUITY PUT"
-      },
-      {
-        "name": "mkt",
-        "type": "str",
-        "example": "EQUITY-DERIVATE"
-      },
-      {
-        "name": "preco_abertura",
-        "type": "float",
-        "example": ""
-      },
-      {
-        "name": "preco_minimo",
-        "type": "float",
-        "example": ""
-      },
-      {
-        "name": "preco_maximo",
-        "type": "float",
-        "example": ""
-      },
-      {
-        "name": "preco_medio",
-        "type": "float",
-        "example": ""
-      },
-      {
-        "name": "preco_ultimo",
-        "type": "float",
-        "example": ""
-      },
-      {
-        "name": "osc",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "trad_qty",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "fin_instrm_qty",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "ntl_fin_vol",
-        "type": "str",
-        "example": ""
-      }
-    ]
-  },
-  {
-    "title": "Debentures Mercado Secundario Precos Negociacao",
-    "files": "debentures_mercado_secundario_precos_negociacao.csv",
-    "source": "debentures",
-    "fields": [
-      {
-        "name": "data_referencia",
-        "type": "date",
-        "example": "11/6/2026"
-      },
-      {
-        "name": "emissor",
-        "type": "str",
-        "example": "AGUAS DE BOMBINHAS SANEAMENTO SPE S.A."
-      },
-      {
-        "name": "codigo_ativo",
-        "type": "str",
-        "example": "ABSP12"
-      },
-      {
-        "name": "isin",
-        "type": "str",
-        "example": "BRABSPDBS013"
-      },
-      {
-        "name": "quantidade",
-        "type": "int",
-        "example": "290"
-      },
-      {
-        "name": "numero_de_negocios",
-        "type": "int",
-        "example": "2"
-      },
-      {
-        "name": "pu_minimo",
-        "type": "str",
-        "example": "1025.100315"
-      },
-      {
-        "name": "pu_medio",
-        "type": "str",
-        "example": "1025.131069"
-      },
-      {
-        "name": "pu_maximo",
-        "type": "str",
-        "example": "1025.161823"
-      },
-      {
-        "name": "pu_da_curva",
-        "type": "str",
-        "example": "100.15"
-      },
-      {
-        "name": "data_captura",
-        "type": "date",
-        "example": "2026-06-13"
       }
     ]
   },
@@ -2963,7 +2759,7 @@
       {
         "name": "data_ult_vna",
         "type": "date",
-        "example": "2026-06-12"
+        "example": "2026-06-15"
       },
       {
         "name": "indice",
@@ -3188,7 +2984,151 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-06-13"
+        "example": "2026-06-15"
+      }
+    ]
+  },
+  {
+    "title": "Debentures Mercado Secundario Precos Negociacao",
+    "files": "debentures_mercado_secundario_precos_negociacao.csv",
+    "source": "debentures",
+    "fields": [
+      {
+        "name": "data_referencia",
+        "type": "date",
+        "example": "12/6/2026"
+      },
+      {
+        "name": "emissor",
+        "type": "str",
+        "example": "AURA ALMAS MINERACAO S.A."
+      },
+      {
+        "name": "codigo_ativo",
+        "type": "str",
+        "example": "AALM12"
+      },
+      {
+        "name": "isin",
+        "type": "str",
+        "example": "BRAALMDBS017"
+      },
+      {
+        "name": "quantidade",
+        "type": "int",
+        "example": "9532"
+      },
+      {
+        "name": "numero_de_negocios",
+        "type": "int",
+        "example": "2"
+      },
+      {
+        "name": "pu_minimo",
+        "type": "str",
+        "example": "1049.226817"
+      },
+      {
+        "name": "pu_medio",
+        "type": "str",
+        "example": "1049.226817"
+      },
+      {
+        "name": "pu_maximo",
+        "type": "str",
+        "example": "1049.226817"
+      },
+      {
+        "name": "pu_da_curva",
+        "type": "str",
+        "example": "102.00"
+      },
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-06-15"
+      }
+    ]
+  },
+  {
+    "title": "B3 Bdi Trades Acoes",
+    "files": "b3_bdi_trades_acoes.csv",
+    "source": "b3",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-06-03"
+      },
+      {
+        "name": "data_referencia",
+        "type": "date",
+        "example": "2026-06-02T00:00:00"
+      },
+      {
+        "name": "codigo_ativo",
+        "type": "str",
+        "example": "BOVAS173W2"
+      },
+      {
+        "name": "isin",
+        "type": "str",
+        "example": "BRBOVA9S16I6"
+      },
+      {
+        "name": "sgmt_nm",
+        "type": "str",
+        "example": "EQUITY PUT"
+      },
+      {
+        "name": "mkt",
+        "type": "str",
+        "example": "EQUITY-DERIVATE"
+      },
+      {
+        "name": "preco_abertura",
+        "type": "float",
+        "example": ""
+      },
+      {
+        "name": "preco_minimo",
+        "type": "float",
+        "example": ""
+      },
+      {
+        "name": "preco_maximo",
+        "type": "float",
+        "example": ""
+      },
+      {
+        "name": "preco_medio",
+        "type": "float",
+        "example": ""
+      },
+      {
+        "name": "preco_ultimo",
+        "type": "float",
+        "example": ""
+      },
+      {
+        "name": "osc",
+        "type": "str",
+        "example": ""
+      },
+      {
+        "name": "trad_qty",
+        "type": "str",
+        "example": ""
+      },
+      {
+        "name": "fin_instrm_qty",
+        "type": "str",
+        "example": ""
+      },
+      {
+        "name": "ntl_fin_vol",
+        "type": "str",
+        "example": ""
       }
     ]
   },
@@ -3232,7 +3172,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-06-13"
+        "example": "2026-06-15"
       },
       {
         "name": "name",
