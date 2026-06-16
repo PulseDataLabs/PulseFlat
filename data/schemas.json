@@ -1873,7 +1873,7 @@
       {
         "name": "data_referencia",
         "type": "date",
-        "example": "2025-07-01"
+        "example": "2025-06-01"
       },
       {
         "name": "tipo_ativo",
@@ -1893,7 +1893,7 @@
       {
         "name": "limite_quantidade",
         "type": "int",
-        "example": "12106000"
+        "example": "12453000.0"
       }
     ]
   },
@@ -3974,6 +3974,73 @@
         "name": "valor_indicador",
         "type": "str",
         "example": "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0018\u0003\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000"
+      }
+    ]
+  },
+  {
+    "title": "Anbima Idka",
+    "files": "anbima_idka.csv",
+    "source": "anbima",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-06-03"
+      },
+      {
+        "name": "no_indexador",
+        "type": "str",
+        "example": "PREFIXADO"
+      },
+      {
+        "name": "no_indice",
+        "type": "str",
+        "example": "IDkA Pré 3M"
+      },
+      {
+        "name": "nu_indice",
+        "type": "str",
+        "example": "7558.191845"
+      },
+      {
+        "name": "ret_dia_perc",
+        "type": "float",
+        "example": "0.0593"
+      },
+      {
+        "name": "ret_mes_perc",
+        "type": "float",
+        "example": "0.1067"
+      },
+      {
+        "name": "ret_ano_perc",
+        "type": "float",
+        "example": "5.6793"
+      },
+      {
+        "name": "ret_12_meses_perc",
+        "type": "float",
+        "example": "14.7332"
+      },
+      {
+        "name": "vol_aa_perc",
+        "type": "float",
+        "example": "0.0569"
+      },
+      {
+        "name": "taxa_juros_aa_perc_compra_d1",
+        "type": "float",
+        "example": "14.1261"
+      },
+      {
+        "name": "taxa_juros_aa_perc_venda_d0",
+        "type": "float",
+        "example": "14.0943"
+      },
+      {
+        "name": "data_referencia",
+        "type": "date",
+        "example": ""
       }
     ]
   }
