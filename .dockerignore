@@ -1,0 +1,12 @@
+venv/
+__pycache__/
+*.pyc
+.env
+.git
+.github/
+.gitignore
+README.md
+tests/
+chrome-profile/
+assets/
+logo.png

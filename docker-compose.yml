@@ -1,0 +1,12 @@
+services:
+  pulseflat:
+    build: .
+    container_name: pulseflat
+    ports:
+      - "8044:80"
+    volumes:
+      - ./data:/app/data
+      - ./.env:/app/.env:ro
+    environment:
+      - TZ=America/Sao_Paulo
+    restart: unless-stopped
