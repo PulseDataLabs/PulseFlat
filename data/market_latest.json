@@ -25,24 +25,24 @@
   },
   {
     "label": "PTAX USD Venda",
-    "value": "5,0430",
-    "reference_date": "2026-06-15",
-    "type": "down",
-    "change": "-0,78%"
+    "value": "5,0780",
+    "reference_date": "2026-06-16",
+    "type": "up",
+    "change": "+0,69%"
   },
   {
     "label": "PTAX USD Compra",
-    "value": "5,0424",
-    "reference_date": "2026-06-15",
-    "type": "down",
-    "change": "-0,78%"
+    "value": "5,0774",
+    "reference_date": "2026-06-16",
+    "type": "up",
+    "change": "+0,69%"
   },
   {
     "label": "IBOVESPA",
-    "value": "171.133",
+    "value": "170.415",
     "reference_date": "2026-06-15",
-    "type": "neutral",
-    "change": "+0,00%"
+    "type": "down",
+    "change": "-0,42%"
   },
   {
     "label": "IMA-GERAL",
