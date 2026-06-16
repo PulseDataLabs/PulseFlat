@@ -174,5 +174,13 @@
   "investing_etf.csv": {
     "min": "2026-06-16",
     "max": "2026-06-16"
+  },
+  "b3_limites_garantias.csv": {
+    "min": "2025-01-01",
+    "max": "2026-06-16"
+  },
+  "b3_indicadores_economicos_fwf.csv": {
+    "min": "2026-06-16",
+    "max": "2026-06-16"
   }
 }

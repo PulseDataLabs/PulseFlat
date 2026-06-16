@@ -61,7 +61,7 @@ def capturar() -> tuple[list[dict], list[str]]:
 class B3IndicadoresEconomicosFwfScraper(BaseScraper):
     name = "b3_indicadores_economicos_fwf"
     group = "b3"
-    enabled = False
+    enabled = True
     phase = 1
     accumulate = True
     chaves_dedup = ['data_captura', 'conjunto', 'registro_hash']

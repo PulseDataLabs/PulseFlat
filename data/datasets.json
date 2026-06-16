@@ -275,6 +275,28 @@
     "accumulate": false
   },
   {
+    "title": "B3 Limites de Garantias",
+    "file": "b3_limites_garantias.csv",
+    "description": "Limites de aceitacao de acoes, BDRs, units, ETFs, ADRs, FIIs e debentures em garantia na B3.",
+    "icon": "🔒",
+    "iconClass": "icon-b3",
+    "badge": "Mensal",
+    "badgeClass": "badge-monthly",
+    "tags": [
+      "limites",
+      "garantias",
+      "acoes",
+      "bdr",
+      "etf",
+      "fii",
+      "debentures",
+      "b3"
+    ],
+    "source": "B3",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_limites_garantias.csv",
+    "accumulate": true
+  },
+  {
     "title": "B3 Series Historicas",
     "file": "b3_series_historicas.csv",
     "description": "Sem descrição fornecida.",
