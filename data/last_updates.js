@@ -170,5 +170,9 @@ window.PULSEFLAT_LAST_UPDATES = {
   "cvm_cadastro_companhias_abertas.csv": {
     "min": "2026-06-16",
     "max": "2026-06-16"
+  },
+  "investing_etf.csv": {
+    "min": "2026-06-16",
+    "max": "2026-06-16"
   }
 };

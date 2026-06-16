@@ -19,8 +19,8 @@ window.PULSEFLAT_MARKET_LATEST = [
   },
   {
     "label": "IGP-M 12m",
-    "value": "2,41%",
-    "reference_date": "2026-04-01",
+    "value": "0,87%",
+    "reference_date": "2026-05-01",
     "type": "neutral"
   },
   {
