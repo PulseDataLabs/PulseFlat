@@ -16,6 +16,9 @@ echo "[entrypoint] Configurando cron jobs..."
 echo "[entrypoint] Iniciando cron daemon..."
 cron
 
+echo "[entrypoint] Executando coleta inicial..."
+python run_all.py >> /var/log/cron.log 2>&1 || echo "[entrypoint] Coleta inicial concluída (com avisos)"
+
 echo "[entrypoint] Container pronto. Schedule: ${CRON_RUN_ALL:-0 10,13,16,19,22 * * 1-5} UTC"
 echo "---"
 
