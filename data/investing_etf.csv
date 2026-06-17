@@ -170,12 +170,12 @@ data_captura,nome,ticker,link,vr_ultimo,vr_variacao_pct,qt_volume,hr_atualizacao
 2026-06-17,B-Index Connect China AMC Chinext Fundo de Índice,TECX11,https://br.investing.com/etfs/tecx11,193.36,+0.71%,"0,69K",16/06
 2026-06-17,iShares Core S&P Mid-Cap BDR,BIJH39,https://br.investing.com/etfs/bijh39,19.36,+0.52%,"0,69K",16/06
 2026-06-17,Investo MVIS US Business Development Companies Ind,BIZD11,https://br.investing.com/etfs/bizd11,74.87,+0.81%,"0,68K",16/06
-2026-06-17,It Now Ntn-B 2050,TD5011,https://br.investing.com/etfs/td5011,50.63,-0.43%,655.00,16/06
+2026-06-17,It Now Ntn-B 2050,TD5011,https://br.investing.com/etfs/td5011,50.63,-0.43%,"0,66K",16/06
 2026-06-17,Buena Vista Hashdex Gold & Bitcoin- Resp Limitada,GBTC11,https://br.investing.com/etfs/gbtc11,26.41,-0.71%,"0,65K",16/06
-2026-06-17,iShares Core S&P Small-Cap BDR,BIJR39,https://br.investing.com/etfs/bijr39,91.11,+0.53%,614.00,16/06
+2026-06-17,iShares Core S&P Small-Cap BDR,BIJR39,https://br.investing.com/etfs/bijr39,91.11,+0.53%,"0,61K",16/06
 2026-06-17,ETF First Trust Nasdaq 100 Technology,BQTC39,https://br.investing.com/etfs/bqtc39,105.80,+1.78%,"0,60K",11/06
 2026-06-17,Global X Blockchain BDR,BKCH39,https://br.investing.com/etfs/bkch39,36.61,-1.56%,"0,58K",16/06
-2026-06-17,Global X MLP & Energy Infrastructure BDR,BLPX39,https://br.investing.com/etfs/blpx39,46.01,-2.42%,568.00,16/06
+2026-06-17,Global X MLP & Energy Infrastructure BDR,BLPX39,https://br.investing.com/etfs/blpx39,46.01,-2.42%,"0,57K",16/06
 2026-06-17,ETF BB Iagro-FFS,AGRI11,https://br.investing.com/etfs/agri11,38.03,-0.65%,"0,55K",16/06
 2026-06-17,ETF BB Índice Futuro de Milho B3,CORN11,https://br.investing.com/etfs/corn11,7.00,-0.28%,"0,55K",16/06
 2026-06-17,iShares Core US REIT BDR,BUSR39,https://br.investing.com/etfs/busr39,55.98,-5.07%,"0,46K",16/06
@@ -187,7 +187,7 @@ data_captura,nome,ticker,link,vr_ultimo,vr_variacao_pct,qt_volume,hr_atualizacao
 2026-06-17,iShares Core MSCI Total International Stock BDR,BIXU39,https://br.investing.com/etfs/bixu39,81.77,-4.92%,"0,36K",16/06
 2026-06-17,iShares MSCI EAFE Min Vol Factor BDR,BFAV39,https://br.investing.com/etfs/bfav39,56.23,+2.18%,"0,35K",16/06
 2026-06-17,It Now MSCI USA IMI Millenials Select 50 ETF,MILL11,https://br.investing.com/etfs/mill11,87.02,-2.29%,"0,34K",16/06
-2026-06-17,Phronesis Teva IPCA Dynamic Yield Selection,PHIP11,https://br.investing.com/etfs/phip11,116.99,-0.58%,337.00,16/06
+2026-06-17,Phronesis Teva IPCA Dynamic Yield Selection,PHIP11,https://br.investing.com/etfs/phip11,116.99,-0.58%,"0,34K",16/06
 2026-06-17,abrdn Physical Silver Shares BDR,SIVR39,https://br.investing.com/etfs/sivr39,112.31,0.00%,"0,33K",16/06
 2026-06-17,Global X Robotics and Artificial Intelligence BDR,BOTZ39,https://br.investing.com/etfs/botz39,48.40,-0.23%,"0,32K",16/06
 2026-06-17,iShares MSCI Brazil BDR,BEWZ39,https://br.investing.com/etfs/bewz39,58.43,-4.31%,"0,32K",12/06
@@ -209,12 +209,12 @@ data_captura,nome,ticker,link,vr_ultimo,vr_variacao_pct,qt_volume,hr_atualizacao
 2026-06-17,Global X Genomics And Biotechnology BDR,BGNO39,https://br.investing.com/etfs/bgno39,41.44,-1.75%,"0,18K",12/06
 2026-06-17,Global X Social Media BDR,BSOC39,https://br.investing.com/etfs/bsoc39,29.15,0.00%,"0,17K",12/06
 2026-06-17,ETF First Trust Nasdaq Cybersecurity BDR,BCIR39,https://br.investing.com/etfs/bcir39,87.13,+0.51%,"0,17K",15/06
-2026-06-17,Global X NASDAQ 100 Covered Call BDR,BQYL39,https://br.investing.com/etfs/bqyl39,30.93,+0.32%,168.00,16/06
+2026-06-17,Global X NASDAQ 100 Covered Call BDR,BQYL39,https://br.investing.com/etfs/bqyl39,30.93,+0.32%,"0,17K",16/06
 2026-06-17,JPMorgan Equity Premium Income BDR,JEPI39,https://br.investing.com/etfs/jepi39,48.09,+1.16%,"0,16K",16/06
 2026-06-17,FI DE ÍNDICE - CI B-INDEX MORNINGSTAR SETORES DEFE,BDEF11,https://br.investing.com/etfs/bdef11,156.81,-0.86%,"0,14K",16/06
 2026-06-17,Global X SuperDividend BDR,BSDV39,https://br.investing.com/etfs/bsdv39,62.81,+0.38%,"0,13K",16/06
 2026-06-17,iShares Core Dividend Growth BDR,BGWH39,https://br.investing.com/etfs/bgwh39,77.07,-0.61%,"0,13K",16/06
-2026-06-17,BTG Pactual IMA-B 5+,PACL11,https://br.investing.com/etfs/pacl11,108.63,-0.56%,129.00,16/06
+2026-06-17,BTG Pactual IMA-B 5+,PACL11,https://br.investing.com/etfs/pacl11,108.63,-0.56%,"0,13K",16/06
 2026-06-17,iShares MSCI World BDR,BURT39,https://br.investing.com/etfs/burt39,69.15,+1.56%,"0,13K",16/06
 2026-06-17,TREND LBMA OURO FUNDO DE INVESTIMENTO DE ÍNDICE -,GOLD11T,https://br.investing.com/etfs/gold11t-b3,23.73,+6.08%,"0,12K",15/06
 2026-06-17,B-INDEX MORNINGSTAR SETORES CICLICOS BRASIL FDI,BCIC11,https://br.investing.com/etfs/bcic11,129.85,-0.89%,"0,12K",16/06
@@ -231,14 +231,14 @@ data_captura,nome,ticker,link,vr_ultimo,vr_variacao_pct,qt_volume,hr_atualizacao
 2026-06-17,Investo Brazil Small Cap Value ETF,SCVB11,https://br.investing.com/etfs/scvb11,83.91,-1.17%,"0,08K",16/06
 2026-06-17,iShares Russell 1000 Growth BDR,BIWF39,https://br.investing.com/etfs/biwf39,25.10,+2.62%,"0,07K",15/06
 2026-06-17,GALAPAGOS BITCOIN CME CF FUNDO DE ÍNDICE,GBIT11,https://br.investing.com/etfs/gbit11,64.71,+2.93%,"0,07K",16/06
-2026-06-17,BTG Pactual IRF-M P2,LTNB11,https://br.investing.com/etfs/ltnb11,110.72,-0.08%,66.00,16/06
+2026-06-17,BTG Pactual IRF-M P2,LTNB11,https://br.investing.com/etfs/ltnb11,110.72,-0.08%,"0,07K",16/06
 2026-06-17,iShares ESG MSCI USA Leaders BDR,BSUS39,https://br.investing.com/etfs/bsus39,83.48,0.00%,"0,07K",09/06
 2026-06-17,It Now ETF Connect E Fund MSCI China A50,SILK11,https://br.investing.com/etfs/silk11,64.58,-0.94%,"0,06K",16/06
 2026-06-17,iShares S&P 500 Growth BDR,BIVW39,https://br.investing.com/etfs/bivw39,87.48,-0.10%,"0,06K",16/06
 2026-06-17,iShares Latin America 40 BDR,BILF39,https://br.investing.com/etfs/bilf39,58.02,+1.36%,"0,06K",16/06
 2026-06-17,Global X Cybersecurity BDR,BBUG39,https://br.investing.com/etfs/bbug39,57.00,-2.15%,"0,05K",16/06
 2026-06-17,iShares Ethereum Trust ETF,ETHA39,https://br.investing.com/etfs/etha39,22.96,-1.03%,"0,05K",16/06
-2026-06-17,NU CDI TESOURO SELIC B3 CLASSE DE ÍNDICE - RESPONS,NCDI11,https://br.investing.com/etfs/ncdi11=sa,109.40,+0.07%,51.00,16/06
+2026-06-17,NU CDI TESOURO SELIC B3 CLASSE DE ÍNDICE - RESPONS,NCDI11,https://br.investing.com/etfs/ncdi11=sa,109.40,+0.07%,"0,05K",16/06
 2026-06-17,iShares MSCI China BDR,BCHI39,https://br.investing.com/etfs/bchi39,34.41,-0.03%,"0,04K",16/06
 2026-06-17,BB S&P Dividendos ETF,BBSD11,https://br.investing.com/etfs/bb-sp-dividendos,132.00,+0.13%,"0,04K",16/06
 2026-06-17,Global X Lithium & Battery Tech BDR,BLBT39,https://br.investing.com/etfs/blbt39,53.40,+0.53%,"0,04K",16/06
@@ -251,7 +251,7 @@ data_captura,nome,ticker,link,vr_ultimo,vr_variacao_pct,qt_volume,hr_atualizacao
 2026-06-17,Global X SuperDividend US BDR,BDVD39,https://br.investing.com/etfs/bdvd39,48.26,-0.25%,"0,02K",16/06
 2026-06-17,iShares MSCI Taiwan BDR,BEWT39,https://br.investing.com/etfs/bewt39,89.17,-0.90%,"0,02K",16/06
 2026-06-17,ETF Safra Mulheres na Liderança,ELAS11,https://br.investing.com/etfs/elas11,174.70,-0.28%,"0,02K",16/06
-2026-06-17,iShares U.S. Medical Devices BDR,BIHI39,https://br.investing.com/etfs/bihi39,6.99,-2.64%,17.00,16/06
+2026-06-17,iShares U.S. Medical Devices BDR,BIHI39,https://br.investing.com/etfs/bihi39,6.99,-2.64%,"0,02K",16/06
 2026-06-17,Global X US Infrastructure Development BDR,BPVE39,https://br.investing.com/etfs/bpve39,50.04,+1.05%,"0,02K",16/06
 2026-06-17,iShares MSCI Mexico BDR,BEWW39,https://br.investing.com/etfs/beww39,99.50,+1.63%,"0,02K",16/06
 2026-06-17,iShares Exponential Technologies BDR,BXTC39,https://br.investing.com/etfs/bxtc39,68.95,-0.30%,"0,02K",16/06
@@ -265,7 +265,7 @@ data_captura,nome,ticker,link,vr_ultimo,vr_variacao_pct,qt_volume,hr_atualizacao
 2026-06-17,abrdn Physical Gold Shares BDR,ABGD39,https://br.investing.com/etfs/abgd39,105.02,+0.52%,"0,01K",16/06
 2026-06-17,iShares Global Financials BDR,BIXG39,https://br.investing.com/etfs/bixg39,79.24,0.00%,"0,01K",12/06
 2026-06-17,BTG PACTUAL TEVA ETHEREUM FUNDO DE ÍNDICE,EETH11,https://br.investing.com/etfs/eeth11,37.65,-1.21%,"0,01K",16/06
-2026-06-17,It Now Ntn-B 2060,TD6011,https://br.investing.com/etfs/td6011,51.04,-0.39%,5.00,16/06
+2026-06-17,It Now Ntn-B 2060,TD6011,https://br.investing.com/etfs/td6011,51.04,-0.39%,"0,01K",16/06
 2026-06-17,Global X Cloud Computing BDR,BCLO39,https://br.investing.com/etfs/bclo39,38.08,-0.63%,"0,01K",15/06
 2026-06-17,Safra Ibovespa ETF,BOVS11,https://br.investing.com/etfs/saet11,130.77,-0.48%,"0,01K",16/06
 2026-06-17,BB ÍNDICE BOVESPA B3 BR+ FUNDO DE ÍNDICE RESPONSAB,BRAZ11,https://br.investing.com/etfs/braz11-b3,11.57,+1.05%,"0,01K",16/06
