@@ -174,5 +174,9 @@ window.PULSEFLAT_LAST_UPDATES = {
   "b3_carteira_teorica_ifnc.csv": {
     "min": "2026-06-03",
     "max": "2026-06-17"
+  },
+  "investing_etf.csv": {
+    "min": "2026-06-17",
+    "max": "2026-06-17"
   }
 };

@@ -3996,5 +3996,52 @@
         "example": ""
       }
     ]
+  },
+  {
+    "title": "Investing Etf",
+    "files": "investing_etf.csv",
+    "source": "misc",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-06-17"
+      },
+      {
+        "name": "nome",
+        "type": "str",
+        "example": "iShares Ibovespa ETF"
+      },
+      {
+        "name": "ticker",
+        "type": "str",
+        "example": "BOVA11"
+      },
+      {
+        "name": "link",
+        "type": "str",
+        "example": "https://br.investing.com/etfs/ishares-ibovespa"
+      },
+      {
+        "name": "vr_ultimo",
+        "type": "float",
+        "example": "165.14"
+      },
+      {
+        "name": "vr_variacao_pct",
+        "type": "float",
+        "example": "-0.73%"
+      },
+      {
+        "name": "qt_volume",
+        "type": "int",
+        "example": "3,59M"
+      },
+      {
+        "name": "hr_atualizacao",
+        "type": "str",
+        "example": "17:54:59"
+      }
+    ]
   }
 ]
