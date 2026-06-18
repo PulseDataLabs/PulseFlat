@@ -70,5 +70,117 @@ window.PULSEFLAT_LAST_UPDATES = {
   "b3_bdi_trades_acoes.csv": {
     "min": "2026-06-03",
     "max": "2026-06-18"
+  },
+  "anbima_ima_completo.csv": {
+    "min": "2026-06-01",
+    "max": "2026-06-18"
+  },
+  "anbima_idka.csv": {
+    "min": "2026-06-03",
+    "max": "2026-06-18"
+  },
+  "anbima_550.csv": {
+    "min": "2026-06-01",
+    "max": "2026-06-18"
+  },
+  "anbima_indicadores.csv": {
+    "min": "2026-06-01",
+    "max": "2026-06-18"
+  },
+  "anbima_projecoes.csv": {
+    "min": "2026-06-01",
+    "max": "2026-06-18"
+  },
+  "anbima_debentures.csv": {
+    "min": "2026-06-05",
+    "max": "2026-06-18"
+  },
+  "anbima_titulos_publicos.csv": {
+    "min": "2026-06-01",
+    "max": "2026-06-18"
+  },
+  "anbima_matriz_probabilidade_resgate.csv": {
+    "min": "2026-06-18",
+    "max": "2026-06-18"
+  },
+  "anbima_ranking_global.csv": {
+    "min": "2026-06-03",
+    "max": "2026-06-18"
+  },
+  "b3_bdi_di_over.csv": {
+    "min": "2026-06-01",
+    "max": "2026-06-18"
+  },
+  "b3_carteira_teorica_agfs_iagro.csv": {
+    "min": "2026-06-03",
+    "max": "2026-06-18"
+  },
+  "b3_carteira_teorica_bdrx.csv": {
+    "min": "2026-06-03",
+    "max": "2026-06-18"
+  },
+  "anbima_indice_imab.csv": {
+    "min": "2026-06-01",
+    "max": "2026-06-18"
+  },
+  "b3_carteira_teorica_ibov.csv": {
+    "min": "2026-06-03",
+    "max": "2026-06-18"
+  },
+  "b3_carteira_teorica_ibsd.csv": {
+    "min": "2026-06-03",
+    "max": "2026-06-18"
+  },
+  "b3_carteira_teorica_ibxl.csv": {
+    "min": "2026-06-03",
+    "max": "2026-06-18"
+  },
+  "b3_carteira_teorica_ifnc.csv": {
+    "min": "2026-06-03",
+    "max": "2026-06-18"
+  },
+  "b3_carteira_teorica_isee.csv": {
+    "min": "2026-06-03",
+    "max": "2026-06-18"
+  },
+  "b3_carteira_teorica_smll.csv": {
+    "min": "2026-06-03",
+    "max": "2026-06-18"
+  },
+  "b3_classificacao_setorial.csv": {
+    "min": "2026-06-18",
+    "max": "2026-06-18"
+  },
+  "b3_bmf_taxas_juros.csv": {
+    "min": "2026-06-04",
+    "max": "2026-06-18"
+  },
+  "b3_etfs.csv": {
+    "min": "2026-06-18",
+    "max": "2026-06-18"
+  },
+  "b3_fiis.csv": {
+    "min": "2026-06-18",
+    "max": "2026-06-18"
+  },
+  "b3_indicadores_financeiros.csv": {
+    "min": "2026-06-01",
+    "max": "2026-06-18"
+  },
+  "b3_carteiras_teoricas.csv": {
+    "min": "2026-06-01",
+    "max": "2026-06-18"
+  },
+  "b3_indicadores_economicos_fwf.csv": {
+    "min": "2026-06-16",
+    "max": "2026-06-18"
+  },
+  "b3_isin_emissores.csv": {
+    "min": "2026-06-18",
+    "max": "2026-06-18"
+  },
+  "investing_etf.csv": {
+    "min": "2026-06-18",
+    "max": "2026-06-18"
   }
 };

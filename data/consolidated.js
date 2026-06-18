@@ -45,10 +45,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Taxa de Juros",
     "tipo": "indicador",
     "indicador": "Estimativa SELIC",
-    "valor": "14,40",
+    "valor": "14,15",
     "unidade": "% a.a.",
-    "data_referencia": "2026-06-17",
-    "captura_em": "2026-06-17",
+    "data_referencia": "2026-06-18",
+    "captura_em": "2026-06-18",
     "metrica": "valor"
   },
   {
