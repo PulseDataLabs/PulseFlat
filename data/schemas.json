@@ -2848,7 +2848,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-06-03"
+        "example": "2026-06-05"
       },
       {
         "name": "TipoInstituicao",
@@ -2858,7 +2858,7 @@
       {
         "name": "CodInst",
         "type": "str",
-        "example": "00068987"
+        "example": "31804966"
       },
       {
         "name": "AnoMes",
@@ -2883,22 +2883,22 @@
       {
         "name": "Conta",
         "type": "str",
-        "example": "79658"
+        "example": "79662"
       },
       {
         "name": "NomeColuna",
         "type": "str",
-        "example": "Exposição Total \n(k)"
+        "example": "Índice de Imobilização \n(p)"
       },
       {
         "name": "DescricaoColuna",
         "type": "str",
-        "example": "Exposição Total, sem ponderação de risco, conforme definido na Circular n° 3.748 de 27 de fevereiro de 2015"
+        "example": "Relação entre Ativo Permanente e Patrimônio de Referência"
       },
       {
         "name": "Saldo",
         "type": "float",
-        "example": ""
+        "example": "0.0488819981004252"
       },
       {
         "name": "tipo_instituicao_label",
@@ -3973,6 +3973,73 @@
       {
         "name": "ntl_fin_vol",
         "type": "str",
+        "example": ""
+      }
+    ]
+  },
+  {
+    "title": "Anbima Idka",
+    "files": "anbima_idka.csv",
+    "source": "anbima",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-06-03"
+      },
+      {
+        "name": "no_indexador",
+        "type": "str",
+        "example": "PREFIXADO"
+      },
+      {
+        "name": "no_indice",
+        "type": "str",
+        "example": "IDkA Pré 3M"
+      },
+      {
+        "name": "nu_indice",
+        "type": "str",
+        "example": "7558.191845"
+      },
+      {
+        "name": "ret_dia_perc",
+        "type": "float",
+        "example": "0.0593"
+      },
+      {
+        "name": "ret_mes_perc",
+        "type": "float",
+        "example": "0.1067"
+      },
+      {
+        "name": "ret_ano_perc",
+        "type": "float",
+        "example": "5.6793"
+      },
+      {
+        "name": "ret_12_meses_perc",
+        "type": "float",
+        "example": "14.7332"
+      },
+      {
+        "name": "vol_aa_perc",
+        "type": "float",
+        "example": "0.0569"
+      },
+      {
+        "name": "taxa_juros_aa_perc_compra_d1",
+        "type": "float",
+        "example": "14.1261"
+      },
+      {
+        "name": "taxa_juros_aa_perc_venda_d0",
+        "type": "float",
+        "example": "14.0943"
+      },
+      {
+        "name": "data_referencia",
+        "type": "date",
         "example": ""
       }
     ]
