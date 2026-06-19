@@ -106,5 +106,73 @@ window.PULSEFLAT_LAST_UPDATES = {
   "onu_pacto_global.csv": {
     "min": "2026-06-19",
     "max": "2026-06-19"
+  },
+  "anbima_idka.csv": {
+    "min": "2026-06-03",
+    "max": "2026-06-19"
+  },
+  "anbima_550.csv": {
+    "min": "2026-06-01",
+    "max": "2026-06-19"
+  },
+  "anbima_indicadores.csv": {
+    "min": "2026-06-01",
+    "max": "2026-06-19"
+  },
+  "anbima_debentures.csv": {
+    "min": "2026-06-05",
+    "max": "2026-06-19"
+  },
+  "anbima_projecoes.csv": {
+    "min": "2026-06-01",
+    "max": "2026-06-19"
+  },
+  "anbima_titulos_publicos.csv": {
+    "min": "2026-06-01",
+    "max": "2026-06-19"
+  },
+  "anbima_matriz_probabilidade_resgate.csv": {
+    "min": "2026-06-19",
+    "max": "2026-06-19"
+  },
+  "anbima_ranking_global.csv": {
+    "min": "2026-06-03",
+    "max": "2026-06-19"
+  },
+  "b3_bdi_di_over.csv": {
+    "min": "2026-06-01",
+    "max": "2026-06-19"
+  },
+  "b3_carteira_teorica_agfs_iagro.csv": {
+    "min": "2026-06-03",
+    "max": "2026-06-19"
+  },
+  "b3_carteira_teorica_bdrx.csv": {
+    "min": "2026-06-03",
+    "max": "2026-06-19"
+  },
+  "anbima_indice_imab.csv": {
+    "min": "2026-06-01",
+    "max": "2026-06-19"
+  },
+  "b3_carteira_teorica_ibsd.csv": {
+    "min": "2026-06-03",
+    "max": "2026-06-19"
+  },
+  "cvm_cadastro_companhias_abertas.csv": {
+    "min": "2026-06-19",
+    "max": "2026-06-19"
+  },
+  "cvm_fundos_informe_diario.csv": {
+    "min": "2026-06-19",
+    "max": "2026-06-19"
+  },
+  "registro_fundo_classe.csv": {
+    "min": "2026-06-19",
+    "max": "2026-06-19"
+  },
+  "ibge_sidra.csv": {
+    "min": "2026-06-19",
+    "max": "2026-06-19"
   }
 };
