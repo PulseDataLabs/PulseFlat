@@ -1,9 +1,13 @@
 {
+  "b3_carteira_teorica_ibov.csv": {
+    "min": "2026-06-03",
+    "max": "2026-06-19"
+  },
   "b3_carteira_teorica_ifnc.csv": {
     "min": "2026-06-03",
     "max": "2026-06-19"
   },
-  "b3_carteira_teorica_smll.csv": {
+  "b3_carteira_teorica_ibxl.csv": {
     "min": "2026-06-03",
     "max": "2026-06-19"
   },
@@ -11,11 +15,23 @@
     "min": "2026-06-03",
     "max": "2026-06-19"
   },
+  "b3_carteira_teorica_smll.csv": {
+    "min": "2026-06-03",
+    "max": "2026-06-19"
+  },
+  "b3_classificacao_setorial.csv": {
+    "min": "2026-06-19",
+    "max": "2026-06-19"
+  },
   "b3_bmf_taxas_juros.csv": {
     "min": "2026-06-04",
     "max": "2026-06-19"
   },
-  "b3_classificacao_setorial.csv": {
+  "b3_etfs.csv": {
+    "min": "2026-06-19",
+    "max": "2026-06-19"
+  },
+  "b3_fiis.csv": {
     "min": "2026-06-19",
     "max": "2026-06-19"
   },
@@ -27,12 +43,20 @@
     "min": "2026-06-01",
     "max": "2026-06-19"
   },
+  "b3_indicadores_economicos_fwf.csv": {
+    "min": "2026-06-16",
+    "max": "2026-06-19"
+  },
   "b3_limites_garantias.csv": {
     "min": "2025-01-01",
     "max": "2026-06-19"
   },
-  "b3_indicadores_economicos_fwf.csv": {
-    "min": "2026-06-16",
+  "b3_isin_emissores.csv": {
+    "min": "2026-06-19",
+    "max": "2026-06-19"
+  },
+  "b3_isin_ativos.csv": {
+    "min": "2026-06-19",
     "max": "2026-06-19"
   },
   "b3_titulos_negociaveis.csv": {
@@ -47,11 +71,11 @@
     "min": "2026-06-03",
     "max": "2026-06-19"
   },
-  "bcb_ptax.csv": {
+  "bacen_balancetes_bancos.csv": {
     "min": "2026-06-19",
     "max": "2026-06-19"
   },
-  "bacen_balancetes_bancos.csv": {
+  "bcb_ptax.csv": {
     "min": "2026-06-19",
     "max": "2026-06-19"
   },
@@ -73,10 +97,6 @@
   },
   "b3_bdi_trades_acoes.csv": {
     "min": "2026-06-03",
-    "max": "2026-06-19"
-  },
-  "investing_etf.csv": {
-    "min": "2026-06-19",
     "max": "2026-06-19"
   },
   "yahoo_finance_series.csv": {
