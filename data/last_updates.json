@@ -1,6 +1,30 @@
 {
+  "anbima_projecoes.csv": {
+    "min": "2026-06-01",
+    "max": "2026-06-22"
+  },
+  "anbima_debentures.csv": {
+    "min": "2026-06-05",
+    "max": "2026-06-22"
+  },
+  "anbima_titulos_publicos.csv": {
+    "min": "2026-06-01",
+    "max": "2026-06-22"
+  },
+  "anbima_matriz_probabilidade_resgate.csv": {
+    "min": "2026-06-19",
+    "max": "2026-06-22"
+  },
   "anbima_ranking_global.csv": {
     "min": "2026-06-03",
+    "max": "2026-06-22"
+  },
+  "b3_bdi_di_over.csv": {
+    "min": "2026-06-01",
+    "max": "2026-06-22"
+  },
+  "anbima_indice_imab.csv": {
+    "min": "2026-06-01",
     "max": "2026-06-22"
   },
   "b3_carteira_teorica_agfs_iagro.csv": {
@@ -11,19 +35,15 @@
     "min": "2026-06-03",
     "max": "2026-06-22"
   },
-  "anbima_indice_imab.csv": {
-    "min": "2026-06-01",
-    "max": "2026-06-22"
-  },
-  "b3_carteira_teorica_ibov.csv": {
-    "min": "2026-06-03",
-    "max": "2026-06-22"
-  },
   "b3_carteira_teorica_ibsd.csv": {
     "min": "2026-06-03",
     "max": "2026-06-22"
   },
   "b3_carteira_teorica_ibxl.csv": {
+    "min": "2026-06-03",
+    "max": "2026-06-22"
+  },
+  "b3_carteira_teorica_ibov.csv": {
     "min": "2026-06-03",
     "max": "2026-06-22"
   },
@@ -39,12 +59,12 @@
     "min": "2026-06-03",
     "max": "2026-06-22"
   },
-  "b3_classificacao_setorial.csv": {
-    "min": "2026-06-22",
-    "max": "2026-06-22"
-  },
   "b3_bmf_taxas_juros.csv": {
     "min": "2026-06-04",
+    "max": "2026-06-22"
+  },
+  "b3_classificacao_setorial.csv": {
+    "min": "2026-06-22",
     "max": "2026-06-22"
   },
   "b3_etfs.csv": {
@@ -79,15 +99,15 @@
     "min": "2026-06-22",
     "max": "2026-06-22"
   },
-  "bacen_conglomerados.csv": {
-    "min": "2026-06-03",
-    "max": "2026-06-22"
-  },
   "b3_titulos_negociaveis.csv": {
     "min": "2026-06-22",
     "max": "2026-06-22"
   },
   "bacen_negociacao_tpf_extragrupo.csv": {
+    "min": "2026-06-03",
+    "max": "2026-06-22"
+  },
+  "bacen_conglomerados.csv": {
     "min": "2026-06-03",
     "max": "2026-06-22"
   },
@@ -119,19 +139,11 @@
     "min": "2026-06-22",
     "max": "2026-06-22"
   },
-  "debentures_mercado_secundario_precos_negociacao.csv": {
-    "min": "2026-06-22",
-    "max": "2026-06-22"
-  },
-  "investing_etf.csv": {
-    "min": "2026-06-22",
-    "max": "2026-06-22"
-  },
-  "b3_bdi_trades_acoes.csv": {
-    "min": "2026-06-03",
-    "max": "2026-06-22"
-  },
   "registro_fundo_classe.csv": {
+    "min": "2026-06-22",
+    "max": "2026-06-22"
+  },
+  "ibge_sidra.csv": {
     "min": "2026-06-22",
     "max": "2026-06-22"
   },
@@ -139,48 +151,16 @@
     "min": "2026-06-03",
     "max": "2026-06-22"
   },
-  "ibge_sidra.csv": {
+  "debentures_mercado_secundario_precos_negociacao.csv": {
     "min": "2026-06-22",
+    "max": "2026-06-22"
+  },
+  "b3_bdi_trades_acoes.csv": {
+    "min": "2026-06-03",
     "max": "2026-06-22"
   },
   "onu_pacto_global.csv": {
     "min": "2026-06-22",
-    "max": "2026-06-22"
-  },
-  "anbima_idka.csv": {
-    "min": "2026-06-03",
-    "max": "2026-06-22"
-  },
-  "anbima_indicadores.csv": {
-    "min": "2026-06-01",
-    "max": "2026-06-22"
-  },
-  "anbima_ima_completo.csv": {
-    "min": "2026-06-01",
-    "max": "2026-06-22"
-  },
-  "anbima_550.csv": {
-    "min": "2026-06-01",
-    "max": "2026-06-22"
-  },
-  "anbima_projecoes.csv": {
-    "min": "2026-06-01",
-    "max": "2026-06-22"
-  },
-  "anbima_debentures.csv": {
-    "min": "2026-06-05",
-    "max": "2026-06-22"
-  },
-  "anbima_titulos_publicos.csv": {
-    "min": "2026-06-01",
-    "max": "2026-06-22"
-  },
-  "anbima_matriz_probabilidade_resgate.csv": {
-    "min": "2026-06-19",
-    "max": "2026-06-22"
-  },
-  "b3_bdi_di_over.csv": {
-    "min": "2026-06-01",
     "max": "2026-06-22"
   }
 }
