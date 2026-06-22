@@ -305,3 +305,20 @@ data_captura,data_referencia,data_referencia_pagina,indicador,categoria,valor,un
 2026-06-20,2026-06-18,2026-06-19 16:17:00,TBF,Taxa de Referência,1.0692,% mês
 2026-06-20,2026-06-19,2026-06-19 16:17:00,FDS (registro 1),FDS,0.089112,R$ cota
 2026-06-20,2026-06-18,2026-06-19 16:17:00,FDS (registro 2),FDS,0.089072,R$ cota
+2026-06-22,2026-06-22,2026-06-22 09:36:00,Estimativa SELIC,Taxa de Juros,14.15,% a.a.
+2026-06-22,2026-06-19,2026-06-22 09:36:00,Taxa SELIC (BC),Taxa de Juros,14.15,% a.a.
+2026-06-22,2026-06-19,2026-06-22 09:36:00,DI-B3,Taxa de Juros,14.15,% a.a.
+2026-06-22,2026-05-01,2026-06-22 09:36:00,IGP-M Número Índice,Índice de Preços,1229.904,índice
+2026-06-22,2026-05-01,2026-06-22 09:36:00,IGP-M Var % mês,Índice de Preços,0.84,%
+2026-06-22,2026-06-01,2026-06-22 09:36:00,IGP-M Projeção,Índice de Preços,-0.40,%
+2026-06-22,2026-05-01,2026-06-22 09:36:00,IPCA Número Índice,Índice de Preços,7640.15,índice
+2026-06-22,2026-05-01,2026-06-22 09:36:00,IPCA Var % mês,Índice de Preços,0.58,%
+2026-06-22,2026-06-01,2026-06-22 09:36:00,IPCA Projeção,Índice de Preços,0.34,%
+2026-06-22,2026-06-19,2026-06-22 09:36:00,Dólar Comercial Compra,Câmbio,5.1436,R$
+2026-06-22,2026-06-19,2026-06-22 09:36:00,Dólar Comercial Venda,Câmbio,5.1442,R$
+2026-06-22,2026-06-19,2026-06-22 09:36:00,Euro Compra,Câmbio,5.8966,R$
+2026-06-22,2026-06-19,2026-06-22 09:36:00,Euro Venda,Câmbio,5.8978,R$
+2026-06-22,2026-06-18,2026-06-22 09:36:00,TR,Taxa de Referência,0.1717,% mês
+2026-06-22,2026-06-18,2026-06-22 09:36:00,TBF,Taxa de Referência,1.0692,% mês
+2026-06-22,2026-06-19,2026-06-22 09:36:00,FDS (registro 1),FDS,0.089112,R$ cota
+2026-06-22,2026-06-18,2026-06-22 09:36:00,FDS (registro 2),FDS,0.089072,R$ cota
