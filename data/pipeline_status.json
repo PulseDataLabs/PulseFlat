@@ -1,11 +1,11 @@
 {
   "timestamp": "2026-06-22T14:19:14.490717",
   "elapsed_seconds": 167.5950517654419,
-  "status": "error",
+  "status": "warning",
   "summary": {
-    "total": 47,
+    "total": 46,
     "success": 46,
-    "failed": 1,
+    "failed": 0,
     "drifts": 4
   },
   "scrapers": {
@@ -253,12 +253,6 @@
       "status": "success",
       "elapsed_seconds": 0.7359898090362549,
       "error": null,
-      "timestamp": "2026-06-22T14:19:14.490966"
-    },
-    "investing_etf": {
-      "status": "error",
-      "elapsed_seconds": 0.7591030597686768,
-      "error": "Traceback (most recent call last):\n  File \"/home/runner/work/PulseFlat/PulseFlat/run_all.py\", line 213, in run_scraper\n    getattr(mod, class_name)().run()\n    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\n  File \"/home/runner/work/PulseFlat/PulseFlat/scrapers/utils/base.py\", line 129, in run\n    raise e\n  File \"/home/runner/work/PulseFlat/PulseFlat/scrapers/utils/base.py\", line 48, in run\n    df = self.fetch()\n  File \"/home/runner/work/PulseFlat/PulseFlat/scrapers/investing_etf.py\", line 94, in fetch\n    resp.raise_for_status()\n    ~~~~~~~~~~~~~~~~~~~~~^^\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/curl_cffi/requests/models.py\", line 193, in raise_for_status\n    raise HTTPError(f\"HTTP Error {self.status_code}: {self.reason}\", 0, self)\ncurl_cffi.requests.exceptions.HTTPError: HTTP Error 403: \n",
       "timestamp": "2026-06-22T14:19:14.490966"
     },
     "b3_carteiras_teoricas": {

@@ -352,7 +352,7 @@ def salvar_csv(
                     return 'ibge'
                 elif filename.startswith('debentures_'):
                     return 'debentures'
-                elif filename.startswith('yahoo_') or filename.startswith('investing_') or filename.startswith('onu_'):
+                elif filename.startswith('yahoo_') or filename.startswith('onu_'):
                     return 'misc'
                 return 'other'
 

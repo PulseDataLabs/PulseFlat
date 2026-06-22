@@ -954,21 +954,6 @@
     "accumulate": false
   },
   {
-    "title": "Investing Etf",
-    "file": "investing_etf.csv",
-    "description": "Sem descrição fornecida.",
-    "icon": "📊",
-    "iconClass": "icon-misc",
-    "badge": "Diário",
-    "badgeClass": "badge-daily",
-    "tags": [
-      "misc"
-    ],
-    "source": "MISC",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/investing_etf.csv",
-    "accumulate": false
-  },
-  {
     "title": "Onu Pacto Global",
     "file": "onu_pacto_global.csv",
     "description": "Sem descrição fornecida.",
