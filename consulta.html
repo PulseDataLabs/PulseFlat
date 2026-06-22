@@ -43,6 +43,28 @@
       --radius:    8px;
       --radius-sm: 5px;
     }
+    :root[data-theme="light"] {
+      --bg:        #f5f7fa;
+      --bg2:       #ffffff;
+      --bg3:       #eef2f6;
+      --surface:   #ffffff;
+      --surface2:  #e4ebf3;
+      --border:    #cbd5e1;
+      --border2:   #94a3b8;
+      --accent:    #0284c7;
+      --accent2:   #0369a1;
+      --accent-dim: rgba(2,132,199,0.08);
+      --gold:      #d97706;
+      --gold2:     #b45309;
+      --gold-dim:  rgba(217,119,6,0.1);
+      --green:     #059669;
+      --green-dim: rgba(5,150,105,0.1);
+      --red:       #e11d48;
+      --red-dim:   rgba(225,29,72,0.1);
+      --text:      #0f172a;
+      --text2:     #475569;
+      --text3:     #64748b;
+    }
     html { scroll-behavior: smooth; }
     body {
       font-family: var(--font-body);
@@ -584,6 +606,11 @@
       <li><a href="index.html">Início</a></li>
       <li><a href="consulta.html" class="active" aria-current="page">Consulta</a></li>
       <li>
+        <button id="theme-toggle" style="background: transparent; border: none; font-size: 1.1rem; cursor: pointer; color: var(--text2); display: flex; align-items: center; justify-content: center; padding: 0.4rem; border-radius: var(--radius-sm); transition: color 0.2s;" aria-label="Alternar tema" title="Alternar tema">
+          🌓
+        </button>
+      </li>
+      <li>
         <a href="https://github.com/PulseDataLabs/PulseFlat" class="nav-cta" target="_blank" rel="noopener">
           GitHub ↗
         </a>
@@ -742,7 +769,44 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
   <script src="https://cdn.datatables.net/buttons/3.2.2/js/buttons.html5.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
   <script>
+  let activeTheme = localStorage.getItem('theme') || 'dark';
+  document.documentElement.setAttribute('data-theme', activeTheme);
+  window.activeRowCharts = new Map();
+
+  function applyTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+    const toggleBtn = document.getElementById('theme-toggle');
+    if (toggleBtn) {
+      toggleBtn.textContent = theme === 'light' ? '☀️' : '🌙';
+    }
+    const isDark = theme === 'dark';
+    const foreColor = isDark ? '#8fa3b8' : '#475569';
+    const gridColor = isDark ? '#1e2d3d' : '#cbd5e1';
+    const chartThemeOpts = {
+      chart: { foreColor: foreColor },
+      grid: { borderColor: gridColor },
+      tooltip: { theme: theme }
+    };
+    if (window.ptaxChartInstance) window.ptaxChartInstance.updateOptions(chartThemeOpts);
+    if (window.inflationChartInstance) window.inflationChartInstance.updateOptions(chartThemeOpts);
+    if (window.activeRowCharts) {
+      for (const chart of window.activeRowCharts.values()) {
+        chart.updateOptions(chartThemeOpts);
+      }
+    }
+  }
+
+  $(document).ready(function() {
+    applyTheme(activeTheme);
+    $('#theme-toggle').on('click', function() {
+      const nextTheme = localStorage.getItem('theme') === 'light' ? 'dark' : 'light';
+      applyTheme(nextTheme);
+    });
+  });
+
   (async function () {
     const $table   = $('#consolidated-table');
     const $thead   = $('#table-header-row');
@@ -892,7 +956,7 @@
       },
       buttons: [
         { extend: 'excelHtml5', text: '↓ Excel', title: 'pulseflat_consulta',
-          exportOptions: { columns: ':all', orthogonal: 'filter' } }
+          exportOptions: { columns: ':all', orthogonal: 'filter', modifier: { search: 'applied' } } }
       ],
       dom: '<"dt-layout-row"<"dt-layout-cell"B><"dt-layout-cell"l>>' +
            '<"dt-layout-row"tr>' +
@@ -913,6 +977,7 @@
         $(row).attr('data-indicador', r.indicador);
         $(row).attr('data-metrica', r.metrica);
         $(row).addClass('clickable-row');
+        $(row).attr('aria-expanded', 'false');
       }
     });
 
@@ -953,8 +1018,13 @@
       var row = tableApi.row(tr);
 
       if (row.child.isShown()) {
+        const childId = tr.next().find('.chart-container-inner').attr('id');
+        if (childId && window.activeRowCharts && window.activeRowCharts.has(childId)) {
+          window.activeRowCharts.delete(childId);
+        }
         row.child.hide();
         tr.removeClass('shown');
+        tr.attr('aria-expanded', 'false');
       } else {
         var dataset = tr.attr('data-dataset');
         var indicador = tr.attr('data-indicador');
@@ -969,6 +1039,7 @@
           <div id="${childId}" class="chart-container-inner" style="display:none;"></div>
         </div>`).show();
         tr.addClass('shown');
+        tr.attr('aria-expanded', 'true');
         
         renderChartForIndicator(childId, dataset, indicador, metrica);
       }
@@ -983,37 +1054,10 @@
         if (!response.ok) throw new Error(`Erro HTTP ${response.status}`);
         const text = await response.text();
         
-        const lines = text.split('\n').map(l => l.trim()).filter(l => l !== '');
-        if (lines.length === 0) throw new Error('O arquivo CSV está vazio.');
-        
-        const parseLine = (line) => {
-          const vals = [];
-          let insideQuote = false;
-          let current = '';
-          for (let i = 0; i < line.length; i++) {
-            const char = line[i];
-            if (char === '"') {
-              insideQuote = !insideQuote;
-            } else if (char === ',' && !insideQuote) {
-              vals.push(current.trim());
-              current = '';
-            } else {
-              current += char;
-            }
-          }
-          vals.push(current.trim());
-          return vals.map(v => v.replace(/^"|"$/g, ''));
-        };
-        
-        const headers = parseLine(lines[0]);
-        const rows = lines.slice(1).map(parseLine);
-        
-        const dataObjects = rows.map(row => {
-          return headers.reduce((obj, h, idx) => {
-            obj[h] = row[idx] !== undefined ? row[idx] : '';
-            return obj;
-          }, {});
-        });
+        const parsed = Papa.parse(text, { header: true, skipEmptyLines: true });
+        const dataObjects = parsed.data;
+        const headers = parsed.meta.fields || [];
+        if (dataObjects.length === 0) throw new Error('O arquivo CSV está vazio.');
         
         let filtered = [];
         let dateCol = 'data_referencia';
@@ -1135,13 +1179,17 @@
         if (loadingEl) loadingEl.style.display = 'none';
         if (chartEl) chartEl.style.display = 'block';
         
+        const isDark = (localStorage.getItem('theme') || 'dark') === 'dark';
+        const foreColor = isDark ? '#8fa3b8' : '#475569';
+        const gridColor = isDark ? '#1e2d3d' : '#cbd5e1';
+
         const options = {
           series: series,
           chart: {
             type: 'line',
             height: 250,
             background: 'transparent',
-            foreColor: '#8fa3b8',
+            foreColor: foreColor,
             toolbar: {
               show: true,
               tools: { selection: false, zoom: true, zoomin: false, zoomout: false, pan: false, reset: true }
@@ -1150,7 +1198,7 @@
           dataLabels: { enabled: false },
           colors: ['#00d4ff', '#00e5a0', '#f0b429', '#ff4d6d'],
           stroke: { curve: 'smooth', width: 2 },
-          grid: { borderColor: '#1e2d3d', strokeDashArray: 3 },
+          grid: { borderColor: gridColor, strokeDashArray: 3 },
           xaxis: {
             type: 'datetime',
             labels: {
@@ -1165,7 +1213,7 @@
             }
           },
           tooltip: {
-            theme: 'dark',
+            theme: localStorage.getItem('theme') || 'dark',
             x: { format: 'dd/MM/yyyy' }
           },
           legend: { show: series.length > 1, position: 'top', horizontalAlign: 'right' }
@@ -1173,6 +1221,7 @@
         
         const chart = new ApexCharts(chartEl, options);
         chart.render();
+        window.activeRowCharts.set(chartId, chart);
         
       } catch (err) {
         console.error('Erro ao gerar gráfico:', err);
@@ -1187,37 +1236,8 @@
         const response = await fetch('./data/bcb_ptax.csv');
         if (!response.ok) throw new Error(`Erro HTTP ${response.status}`);
         const text = await response.text();
-        const lines = text.split('\n').map(l => l.trim()).filter(l => l !== '');
-        if (lines.length < 2) return;
-        
-        const parseLine = (line) => {
-          const vals = [];
-          let insideQuote = false;
-          let current = '';
-          for (let i = 0; i < line.length; i++) {
-            const char = line[i];
-            if (char === '"') {
-              insideQuote = !insideQuote;
-            } else if (char === ',' && !insideQuote) {
-              vals.push(current.trim());
-              current = '';
-            } else {
-              current += char;
-            }
-          }
-          vals.push(current.trim());
-          return vals.map(v => v.replace(/^"|"$/g, ''));
-        };
-        
-        const headers = parseLine(lines[0]);
-        const rows = lines.slice(1).map(parseLine);
-        
-        const dataObjects = rows.map(row => {
-          return headers.reduce((obj, h, idx) => {
-            obj[h] = row[idx] !== undefined ? row[idx] : '';
-            return obj;
-          }, {});
-        }).filter(r => r.data_referencia && r.cotacao_venda);
+        const parsed = Papa.parse(text, { header: true, skipEmptyLines: true });
+        const dataObjects = parsed.data.filter(r => r.data_referencia && r.cotacao_venda);
         
         dataObjects.sort((a, b) => a.data_referencia.localeCompare(b.data_referencia));
         
@@ -1256,13 +1276,17 @@
             { name: 'Venda', data: seriesVenda }
           ];
           
+          const isDark = (localStorage.getItem('theme') || 'dark') === 'dark';
+          const foreColor = isDark ? '#8fa3b8' : '#475569';
+          const gridColor = isDark ? '#1e2d3d' : '#cbd5e1';
+
           const options = {
             series: chartData,
             chart: {
               type: 'area',
               height: 250,
               background: 'transparent',
-              foreColor: '#8fa3b8',
+              foreColor: foreColor,
               toolbar: { show: false }
             },
             dataLabels: { enabled: false },
@@ -1277,7 +1301,7 @@
               }
             },
             stroke: { curve: 'smooth', width: 2 },
-            grid: { borderColor: '#1e2d3d', strokeDashArray: 3 },
+            grid: { borderColor: gridColor, strokeDashArray: 3 },
             xaxis: {
               type: 'datetime',
               labels: {
@@ -1292,7 +1316,7 @@
               }
             },
             tooltip: {
-              theme: 'dark',
+              theme: localStorage.getItem('theme') || 'dark',
               x: { format: 'dd/MM/yyyy' }
             },
             legend: { show: true, position: 'top', horizontalAlign: 'right' }
@@ -1302,6 +1326,7 @@
           container.innerHTML = '';
           chart = new ApexCharts(container, options);
           chart.render();
+          window.ptaxChartInstance = chart;
         }
         
         drawChart(30);
@@ -1323,42 +1348,15 @@
         const response = await fetch('./data/bcb_sgs.csv');
         if (!response.ok) throw new Error(`Erro HTTP ${response.status}`);
         const text = await response.text();
-        const lines = text.split('\n').map(l => l.trim()).filter(l => l !== '');
-        if (lines.length < 2) return;
-        
-        const parseLine = (line) => {
-          const vals = [];
-          let insideQuote = false;
-          let current = '';
-          for (let i = 0; i < line.length; i++) {
-            const char = line[i];
-            if (char === '"') {
-              insideQuote = !insideQuote;
-            } else if (char === ',' && !insideQuote) {
-              vals.push(current.trim());
-              current = '';
-            } else {
-              current += char;
-            }
-          }
-          vals.push(current.trim());
-          return vals.map(v => v.replace(/^"|"$/g, ''));
-        };
-        
-        const headers = parseLine(lines[0]);
-        const rows = lines.slice(1).map(parseLine);
+        const parsed = Papa.parse(text, { header: true, skipEmptyLines: true });
         
         const ipcaData = [];
         const igpmData = [];
         
-        const idxCodigo = headers.indexOf('codigo_serie');
-        const idxDataRef = headers.indexOf('data_referencia');
-        const idxValor = headers.indexOf('valor');
-        
-        rows.forEach(row => {
-          const codigo = row[idxCodigo];
-          const dataRef = row[idxDataRef];
-          const valor = parseFloat(row[idxValor]);
+        parsed.data.forEach(row => {
+          const codigo = row.codigo_serie;
+          const dataRef = row.data_referencia;
+          const valor = parseFloat(row.valor);
           if (!dataRef || isNaN(valor)) return;
           
           if (codigo === '433') {
@@ -1400,13 +1398,17 @@
             { name: 'IGP-M (12M)', data: filteredIGPM }
           ];
           
+          const isDark = (localStorage.getItem('theme') || 'dark') === 'dark';
+          const foreColor = isDark ? '#8fa3b8' : '#475569';
+          const gridColor = isDark ? '#1e2d3d' : '#cbd5e1';
+
           const options = {
             series: chartData,
             chart: {
               type: 'area',
               height: 250,
               background: 'transparent',
-              foreColor: '#8fa3b8',
+              foreColor: foreColor,
               toolbar: { show: false }
             },
             colors: ['#00d4ff', '#ff4d6d'],
@@ -1421,7 +1423,7 @@
             },
             dataLabels: { enabled: false },
             stroke: { curve: 'smooth', width: 2 },
-            grid: { borderColor: '#1e2d3d', strokeDashArray: 3 },
+            grid: { borderColor: gridColor, strokeDashArray: 3 },
             xaxis: {
               type: 'datetime',
               labels: {
@@ -1436,7 +1438,7 @@
               }
             },
             tooltip: {
-              theme: 'dark',
+              theme: localStorage.getItem('theme') || 'dark',
               x: { format: 'MM/yyyy' }
             },
             legend: { show: true, position: 'top', horizontalAlign: 'right' }
@@ -1446,6 +1448,7 @@
           container.innerHTML = '';
           chart = new ApexCharts(container, options);
           chart.render();
+          window.inflationChartInstance = chart;
         }
         
         drawChart(730);

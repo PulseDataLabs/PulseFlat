@@ -34,6 +34,25 @@ class BaseScraper:
         root_dir = Path(__file__).resolve().parents[2]
         self.output_file = root_dir / "data" / f"{self.name}.csv"
 
+    def get_session(self, impersonate: str | None = None):
+        """Retorna uma sessão HTTP configurada. Se impersonate for fornecido e curl_cffi disponível, usa curl_cffi."""
+        if impersonate:
+            try:
+                from curl_cffi import requests as curl_requests
+                session = curl_requests.Session()
+                session.headers.update({
+                    "Accept-Language": "pt-BR,pt;q=0.9",
+                })
+                # No curl_cffi, podemos passar impersonate na criação/chamada
+                session.impersonate = impersonate
+                return session
+            except ImportError:
+                self.logger.warning("curl_cffi não instalada — caindo de volta para requests padrão.")
+        
+        import requests
+        session = requests.Session()
+        return session
+
     def fetch(self) -> pd.DataFrame:
         raise NotImplementedError("Cada scraper deve implementar o método fetch.")
 
