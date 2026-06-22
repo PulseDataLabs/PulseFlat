@@ -146,5 +146,41 @@ window.PULSEFLAT_LAST_UPDATES = {
   "onu_pacto_global.csv": {
     "min": "2026-06-22",
     "max": "2026-06-22"
+  },
+  "anbima_idka.csv": {
+    "min": "2026-06-03",
+    "max": "2026-06-22"
+  },
+  "anbima_indicadores.csv": {
+    "min": "2026-06-01",
+    "max": "2026-06-22"
+  },
+  "anbima_ima_completo.csv": {
+    "min": "2026-06-01",
+    "max": "2026-06-22"
+  },
+  "anbima_550.csv": {
+    "min": "2026-06-01",
+    "max": "2026-06-22"
+  },
+  "anbima_projecoes.csv": {
+    "min": "2026-06-01",
+    "max": "2026-06-22"
+  },
+  "anbima_debentures.csv": {
+    "min": "2026-06-05",
+    "max": "2026-06-22"
+  },
+  "anbima_titulos_publicos.csv": {
+    "min": "2026-06-01",
+    "max": "2026-06-22"
+  },
+  "anbima_matriz_probabilidade_resgate.csv": {
+    "min": "2026-06-19",
+    "max": "2026-06-22"
+  },
+  "b3_bdi_di_over.csv": {
+    "min": "2026-06-01",
+    "max": "2026-06-22"
   }
 };

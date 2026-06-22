@@ -3446,22 +3446,22 @@
       {
         "name": "emissor",
         "type": "str",
-        "example": "AGUAS DE BOMBINHAS SANEAMENTO SPE S.A."
+        "example": "AURA ALMAS MINERACAO S.A."
       },
       {
         "name": "codigo_ativo",
         "type": "str",
-        "example": "ABSP12"
+        "example": "AALM12"
       },
       {
         "name": "isin",
         "type": "str",
-        "example": "BRABSPDBS013"
+        "example": "BRAALMDBS017"
       },
       {
         "name": "quantidade",
         "type": "int",
-        "example": "318"
+        "example": "19010"
       },
       {
         "name": "numero_de_negocios",
@@ -3471,22 +3471,22 @@
       {
         "name": "pu_minimo",
         "type": "str",
-        "example": "1028.765584"
+        "example": "1052.247898"
       },
       {
         "name": "pu_medio",
         "type": "str",
-        "example": "1028.796448"
+        "example": "1052.247898"
       },
       {
         "name": "pu_maximo",
         "type": "str",
-        "example": "1028.827312"
+        "example": "1052.247898"
       },
       {
         "name": "pu_da_curva",
         "type": "str",
-        "example": "100.15"
+        "example": "101.99"
       },
       {
         "name": "data_captura",
@@ -3948,17 +3948,17 @@
       {
         "name": "name",
         "type": "str",
-        "example": "MEDQUIMICA INDUSTRIA FARMACEUTICA LTDA"
+        "example": "Kruzer Commerce Platform Ltda"
       },
       {
         "name": "type",
         "type": "str",
-        "example": "Company"
+        "example": "Small or Medium-sized Enterprise"
       },
       {
         "name": "sector",
         "type": "str",
-        "example": "Pharmaceuticals"
+        "example": "Software"
       },
       {
         "name": "country",
@@ -3968,12 +3968,181 @@
       {
         "name": "joined_on",
         "type": "str",
-        "example": "2026-06-17"
+        "example": "2026-06-22"
       },
       {
         "name": "link",
         "type": "str",
-        "example": "https://unglobalcompact.org/what-is-gc/participants/213169-MEDQUIMICA-INDUSTRIA-FARMACEUTICA-LTDA"
+        "example": "https://unglobalcompact.org/what-is-gc/participants/213549-Kruzer-Commerce-Platform-Ltda"
+      }
+    ]
+  },
+  {
+    "title": "Anbima Idka",
+    "files": "anbima_idka.csv",
+    "source": "anbima",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-06-03"
+      },
+      {
+        "name": "no_indexador",
+        "type": "str",
+        "example": "PREFIXADO"
+      },
+      {
+        "name": "no_indice",
+        "type": "str",
+        "example": "IDkA Pré 3M"
+      },
+      {
+        "name": "nu_indice",
+        "type": "str",
+        "example": "7558.191845"
+      },
+      {
+        "name": "ret_dia_perc",
+        "type": "float",
+        "example": "0.0593"
+      },
+      {
+        "name": "ret_mes_perc",
+        "type": "float",
+        "example": "0.1067"
+      },
+      {
+        "name": "ret_ano_perc",
+        "type": "float",
+        "example": "5.6793"
+      },
+      {
+        "name": "ret_12_meses_perc",
+        "type": "float",
+        "example": "14.7332"
+      },
+      {
+        "name": "vol_aa_perc",
+        "type": "float",
+        "example": "0.0569"
+      },
+      {
+        "name": "taxa_juros_aa_perc_compra_d1",
+        "type": "float",
+        "example": "14.1261"
+      },
+      {
+        "name": "taxa_juros_aa_perc_venda_d0",
+        "type": "float",
+        "example": "14.0943"
+      },
+      {
+        "name": "data_referencia",
+        "type": "date",
+        "example": ""
+      }
+    ]
+  },
+  {
+    "title": "Anbima Ima Completo",
+    "files": "anbima_ima_completo.csv",
+    "source": "anbima",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-06-01"
+      },
+      {
+        "name": "data_referencia",
+        "type": "date",
+        "example": "2026-05-29"
+      },
+      {
+        "name": "indice",
+        "type": "str",
+        "example": "IRF-M 1"
+      },
+      {
+        "name": "numero_indice",
+        "type": "int",
+        "example": "20138.20756000"
+      },
+      {
+        "name": "variacao_diaria",
+        "type": "str",
+        "example": "0.0432"
+      },
+      {
+        "name": "variacao_mensal",
+        "type": "str",
+        "example": "1.0735"
+      },
+      {
+        "name": "variacao_anual",
+        "type": "str",
+        "example": "5.4314"
+      },
+      {
+        "name": "variacao_ultimos_12_meses",
+        "type": "str",
+        "example": "14.4269"
+      },
+      {
+        "name": "variacao_ultimos_24_meses",
+        "type": "str",
+        "example": "27.5287"
+      },
+      {
+        "name": "duration_du",
+        "type": "str",
+        "example": "96"
+      },
+      {
+        "name": "peso_geral",
+        "type": "str",
+        "example": "6.16"
+      },
+      {
+        "name": "carteira_a_mercado_rs_mil",
+        "type": "str",
+        "example": "500982803"
+      },
+      {
+        "name": "numero_operacoes",
+        "type": "int",
+        "example": "83"
+      },
+      {
+        "name": "quant_negociada_1000_titulos",
+        "type": "str",
+        "example": "5576.90"
+      },
+      {
+        "name": "valor_negociado_rs_mil",
+        "type": "str",
+        "example": "5427718.74"
+      },
+      {
+        "name": "pmr",
+        "type": "str",
+        "example": "141.779685975957"
+      },
+      {
+        "name": "convexidade",
+        "type": "str",
+        "example": "0.47475062168119"
+      },
+      {
+        "name": "yield_",
+        "type": "str",
+        "example": "14.1095522117692"
+      },
+      {
+        "name": "redemption_yield",
+        "type": "str",
+        "example": ""
       }
     ]
   }
