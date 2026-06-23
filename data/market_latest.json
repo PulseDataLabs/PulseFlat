@@ -2,13 +2,13 @@
   {
     "label": "CDI",
     "value": "14,15%",
-    "reference_date": "2026-06-19",
+    "reference_date": "2026-06-22",
     "type": "neutral"
   },
   {
     "label": "SELIC",
     "value": "14,15%",
-    "reference_date": "2026-06-19",
+    "reference_date": "2026-06-22",
     "type": "neutral"
   },
   {
@@ -39,15 +39,15 @@
   },
   {
     "label": "IBOVESPA",
-    "value": "168.576",
-    "reference_date": "2026-06-19",
+    "value": "170.370",
+    "reference_date": "2026-06-22",
     "type": "up",
-    "change": "+0,07%"
+    "change": "+1,06%"
   },
   {
     "label": "IMA-GERAL",
-    "value": "10.081,62",
-    "reference_date": "2026-06-19",
+    "value": "10.099,79",
+    "reference_date": "2026-06-22",
     "type": "neutral"
   }
 ]

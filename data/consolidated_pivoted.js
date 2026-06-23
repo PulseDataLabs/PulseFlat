@@ -73,7 +73,7 @@ window.PULSEFLAT_PIVOTED = [
     "Valor": "0,3400"
   },
   {
-    "data_referencia": "2026-06-18",
+    "data_referencia": "2026-06-19",
     "indicador": "FDS (registro 2)",
     "fonte": "ANBIMA",
     "dataset_label": "ANBIMA Indicadores",
@@ -81,68 +81,68 @@ window.PULSEFLAT_PIVOTED = [
     "Valor": "0,0891"
   },
   {
-    "data_referencia": "2026-06-18",
+    "data_referencia": "2026-06-19",
     "indicador": "TBF",
     "fonte": "ANBIMA",
     "dataset_label": "ANBIMA Indicadores",
     "categoria": "Taxa de Referência",
-    "Valor": "1,07"
+    "Valor": "1,02"
   },
   {
-    "data_referencia": "2026-06-18",
+    "data_referencia": "2026-06-19",
     "indicador": "TR",
     "fonte": "ANBIMA",
     "dataset_label": "ANBIMA Indicadores",
     "categoria": "Taxa de Referência",
-    "Valor": "0,1717"
+    "Valor": "0,1699"
   },
   {
-    "data_referencia": "2026-06-19",
+    "data_referencia": "2026-06-22",
     "indicador": "100000 (LTN)",
     "fonte": "ANBIMA",
     "dataset_label": "ANBIMA Títulos Públicos",
     "categoria": "Títulos Públicos",
     "Taxa indicativa": "14,25%",
-    "PU": "995,78"
+    "PU": "996,31"
   },
   {
-    "data_referencia": "2026-06-19",
+    "data_referencia": "2026-06-22",
     "indicador": "210100 (LFT)",
     "fonte": "ANBIMA",
     "dataset_label": "ANBIMA Títulos Públicos",
     "categoria": "Títulos Públicos",
     "Taxa indicativa": "-0,02%",
-    "PU": "19.254"
+    "PU": "19.264"
   },
   {
-    "data_referencia": "2026-06-19",
+    "data_referencia": "2026-06-22",
     "indicador": "760199 (NTN-B)",
     "fonte": "ANBIMA",
     "dataset_label": "ANBIMA Títulos Públicos",
     "categoria": "Títulos Públicos",
-    "Taxa indicativa": "11,15%",
-    "PU": "4.792"
+    "Taxa indicativa": "11,10%",
+    "PU": "4.795"
   },
   {
-    "data_referencia": "2026-06-19",
+    "data_referencia": "2026-06-22",
     "indicador": "770100 (NTN-C)",
     "fonte": "ANBIMA",
     "dataset_label": "ANBIMA Títulos Públicos",
     "categoria": "Títulos Públicos",
-    "Taxa indicativa": "8,15%",
-    "PU": "7.971"
+    "Taxa indicativa": "8,09%",
+    "PU": "7.987"
   },
   {
-    "data_referencia": "2026-06-19",
+    "data_referencia": "2026-06-22",
     "indicador": "950199 (NTN-F)",
     "fonte": "ANBIMA",
     "dataset_label": "ANBIMA Títulos Públicos",
     "categoria": "Títulos Públicos",
-    "Taxa indicativa": "14,13%",
+    "Taxa indicativa": "14,09%",
     "PU": "1.026"
   },
   {
-    "data_referencia": "2026-06-19",
+    "data_referencia": "2026-06-22",
     "indicador": "DI-B3",
     "fonte": "ANBIMA",
     "dataset_label": "ANBIMA Indicadores",
@@ -150,7 +150,7 @@ window.PULSEFLAT_PIVOTED = [
     "Valor": "14,15"
   },
   {
-    "data_referencia": "2026-06-19",
+    "data_referencia": "2026-06-22",
     "indicador": "DI1",
     "fonte": "B3",
     "dataset_label": "B3 BMF Taxas",
@@ -158,7 +158,7 @@ window.PULSEFLAT_PIVOTED = [
     "Valor": "13,65%"
   },
   {
-    "data_referencia": "2026-06-19",
+    "data_referencia": "2026-06-22",
     "indicador": "Dólar Comercial Compra",
     "fonte": "ANBIMA",
     "dataset_label": "ANBIMA Indicadores",
@@ -166,53 +166,12 @@ window.PULSEFLAT_PIVOTED = [
     "Valor": "5,14"
   },
   {
-    "data_referencia": "2026-06-19",
+    "data_referencia": "2026-06-22",
     "indicador": "Dólar Comercial Venda",
     "fonte": "ANBIMA",
     "dataset_label": "ANBIMA Indicadores",
     "categoria": "Câmbio",
     "Valor": "5,14"
-  },
-  {
-    "data_referencia": "2026-06-19",
-    "indicador": "Euro Compra",
-    "fonte": "ANBIMA",
-    "dataset_label": "ANBIMA Indicadores",
-    "categoria": "Câmbio",
-    "Valor": "5,90"
-  },
-  {
-    "data_referencia": "2026-06-19",
-    "indicador": "Euro Venda",
-    "fonte": "ANBIMA",
-    "dataset_label": "ANBIMA Indicadores",
-    "categoria": "Câmbio",
-    "Valor": "5,90"
-  },
-  {
-    "data_referencia": "2026-06-19",
-    "indicador": "FDS (registro 1)",
-    "fonte": "ANBIMA",
-    "dataset_label": "ANBIMA Indicadores",
-    "categoria": "FDS",
-    "Valor": "0,0891"
-  },
-  {
-    "data_referencia": "2026-06-19",
-    "indicador": "IMA - Geral",
-    "fonte": "ANBIMA",
-    "dataset_label": "ANBIMA IMA-B",
-    "categoria": "IMA-B",
-    "Número-índice": "10.082",
-    "Variação diária": "-0,11%"
-  },
-  {
-    "data_referencia": "2026-06-19",
-    "indicador": "Taxa SELIC (BC)",
-    "fonte": "ANBIMA",
-    "dataset_label": "ANBIMA Indicadores",
-    "categoria": "Taxa de Juros",
-    "Valor": "14,15"
   },
   {
     "data_referencia": "2026-06-22",
@@ -224,6 +183,47 @@ window.PULSEFLAT_PIVOTED = [
   },
   {
     "data_referencia": "2026-06-22",
+    "indicador": "Euro Compra",
+    "fonte": "ANBIMA",
+    "dataset_label": "ANBIMA Indicadores",
+    "categoria": "Câmbio",
+    "Valor": "5,87"
+  },
+  {
+    "data_referencia": "2026-06-22",
+    "indicador": "Euro Venda",
+    "fonte": "ANBIMA",
+    "dataset_label": "ANBIMA Indicadores",
+    "categoria": "Câmbio",
+    "Valor": "5,88"
+  },
+  {
+    "data_referencia": "2026-06-22",
+    "indicador": "FDS (registro 1)",
+    "fonte": "ANBIMA",
+    "dataset_label": "ANBIMA Indicadores",
+    "categoria": "FDS",
+    "Valor": "0,0892"
+  },
+  {
+    "data_referencia": "2026-06-22",
+    "indicador": "IMA - Geral",
+    "fonte": "ANBIMA",
+    "dataset_label": "ANBIMA IMA-B",
+    "categoria": "IMA-B",
+    "Número-índice": "10.100",
+    "Variação diária": "0,18%"
+  },
+  {
+    "data_referencia": "2026-06-22",
+    "indicador": "Taxa SELIC (BC)",
+    "fonte": "ANBIMA",
+    "dataset_label": "ANBIMA Indicadores",
+    "categoria": "Taxa de Juros",
+    "Valor": "14,15"
+  },
+  {
+    "data_referencia": "2026-06-23",
     "indicador": "IGP-M",
     "fonte": "BCB",
     "dataset_label": "BCB SGS",
@@ -231,7 +231,7 @@ window.PULSEFLAT_PIVOTED = [
     "Valor": "4,02%"
   },
   {
-    "data_referencia": "2026-06-22",
+    "data_referencia": "2026-06-23",
     "indicador": "IGP-M (índice)",
     "fonte": "BCB",
     "dataset_label": "BCB SGS",
@@ -239,7 +239,7 @@ window.PULSEFLAT_PIVOTED = [
     "Valor": "0,48%"
   },
   {
-    "data_referencia": "2026-06-22",
+    "data_referencia": "2026-06-23",
     "indicador": "IGP-M 12m",
     "fonte": "BCB",
     "dataset_label": "BCB SGS",
@@ -247,7 +247,7 @@ window.PULSEFLAT_PIVOTED = [
     "Valor": "0,09%"
   },
   {
-    "data_referencia": "2026-06-22",
+    "data_referencia": "2026-06-23",
     "indicador": "IPCA 12m",
     "fonte": "BCB",
     "dataset_label": "BCB SGS",
@@ -255,7 +255,7 @@ window.PULSEFLAT_PIVOTED = [
     "Valor": "0,21%"
   },
   {
-    "data_referencia": "2026-06-22",
+    "data_referencia": "2026-06-23",
     "indicador": "PTAX USD — Compra",
     "fonte": "BCB",
     "dataset_label": "BCB PTAX",
@@ -263,7 +263,7 @@ window.PULSEFLAT_PIVOTED = [
     "Valor": "4,02"
   },
   {
-    "data_referencia": "2026-06-22",
+    "data_referencia": "2026-06-23",
     "indicador": "PTAX USD — Venda",
     "fonte": "BCB",
     "dataset_label": "BCB PTAX",
@@ -271,7 +271,7 @@ window.PULSEFLAT_PIVOTED = [
     "Valor": "4,02"
   },
   {
-    "data_referencia": "2026-06-22",
+    "data_referencia": "2026-06-23",
     "indicador": "SELIC (% a.d.)",
     "fonte": "BCB",
     "dataset_label": "BCB SGS",
