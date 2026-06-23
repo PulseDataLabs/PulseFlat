@@ -90,5 +90,89 @@ window.PULSEFLAT_LAST_UPDATES = {
   "onu_pacto_global.csv": {
     "min": "2026-06-23",
     "max": "2026-06-23"
+  },
+  "anbima_idka.csv": {
+    "min": "2026-06-03",
+    "max": "2026-06-23"
+  },
+  "anbima_550.csv": {
+    "min": "2026-06-01",
+    "max": "2026-06-23"
+  },
+  "anbima_indicadores.csv": {
+    "min": "2026-06-01",
+    "max": "2026-06-23"
+  },
+  "anbima_projecoes.csv": {
+    "min": "2026-06-01",
+    "max": "2026-06-23"
+  },
+  "anbima_matriz_probabilidade_resgate.csv": {
+    "min": "2026-06-19",
+    "max": "2026-06-23"
+  },
+  "anbima_debentures.csv": {
+    "min": "2026-06-05",
+    "max": "2026-06-23"
+  },
+  "anbima_ranking_global.csv": {
+    "min": "2026-06-03",
+    "max": "2026-06-23"
+  },
+  "anbima_titulos_publicos.csv": {
+    "min": "2026-06-01",
+    "max": "2026-06-23"
+  },
+  "b3_bdi_di_over.csv": {
+    "min": "2026-06-01",
+    "max": "2026-06-23"
+  },
+  "anbima_indice_imab.csv": {
+    "min": "2026-06-01",
+    "max": "2026-06-23"
+  },
+  "b3_carteira_teorica_agfs_iagro.csv": {
+    "min": "2026-06-03",
+    "max": "2026-06-23"
+  },
+  "b3_carteira_teorica_bdrx.csv": {
+    "min": "2026-06-03",
+    "max": "2026-06-23"
+  },
+  "b3_carteira_teorica_ibov.csv": {
+    "min": "2026-06-03",
+    "max": "2026-06-23"
+  },
+  "b3_carteira_teorica_ibxl.csv": {
+    "min": "2026-06-03",
+    "max": "2026-06-23"
+  },
+  "b3_carteira_teorica_ibsd.csv": {
+    "min": "2026-06-03",
+    "max": "2026-06-23"
+  },
+  "b3_carteira_teorica_ifnc.csv": {
+    "min": "2026-06-03",
+    "max": "2026-06-23"
+  },
+  "b3_carteira_teorica_isee.csv": {
+    "min": "2026-06-03",
+    "max": "2026-06-23"
+  },
+  "cvm_cadastro_companhias_abertas.csv": {
+    "min": "2026-06-23",
+    "max": "2026-06-23"
+  },
+  "cvm_fundos_informe_diario.csv": {
+    "min": "2026-06-23",
+    "max": "2026-06-23"
+  },
+  "registro_fundo_classe.csv": {
+    "min": "2026-06-23",
+    "max": "2026-06-23"
+  },
+  "ibge_sidra.csv": {
+    "min": "2026-06-23",
+    "max": "2026-06-23"
   }
 };
