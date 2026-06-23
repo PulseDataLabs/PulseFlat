@@ -47,8 +47,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "Estimativa SELIC",
     "valor": "14,15",
     "unidade": "% a.a.",
-    "data_referencia": "2026-06-22",
-    "captura_em": "2026-06-22",
+    "data_referencia": "2026-06-23",
+    "captura_em": "2026-06-23",
     "metrica": "valor"
   },
   {
