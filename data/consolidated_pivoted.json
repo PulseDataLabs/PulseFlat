@@ -175,14 +175,6 @@
   },
   {
     "data_referencia": "2026-06-23",
-    "indicador": "Estimativa SELIC",
-    "fonte": "ANBIMA",
-    "dataset_label": "ANBIMA Indicadores",
-    "categoria": "Taxa de Juros",
-    "Valor": "14,15"
-  },
-  {
-    "data_referencia": "2026-06-23",
     "indicador": "Euro Compra",
     "fonte": "ANBIMA",
     "dataset_label": "ANBIMA Indicadores",
@@ -217,6 +209,14 @@
   {
     "data_referencia": "2026-06-23",
     "indicador": "Taxa SELIC (BC)",
+    "fonte": "ANBIMA",
+    "dataset_label": "ANBIMA Indicadores",
+    "categoria": "Taxa de Juros",
+    "Valor": "14,15"
+  },
+  {
+    "data_referencia": "2026-06-24",
+    "indicador": "Estimativa SELIC",
     "fonte": "ANBIMA",
     "dataset_label": "ANBIMA Indicadores",
     "categoria": "Taxa de Juros",
