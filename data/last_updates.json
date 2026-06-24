@@ -174,5 +174,9 @@
   "ibge_sidra.csv": {
     "min": "2026-06-24",
     "max": "2026-06-24"
+  },
+  "anbima_ima_completo.csv": {
+    "min": "2026-06-01",
+    "max": "2026-06-24"
   }
 }
