@@ -2071,7 +2071,7 @@
       {
         "name": "data_geracao",
         "type": "date",
-        "example": "2026-06-24"
+        "example": "2026-06-25"
       },
       {
         "name": "acao",
@@ -2972,12 +2972,12 @@
       {
         "name": "valor_nominal_atual",
         "type": "str",
-        "example": "1000"
+        "example": "800"
       },
       {
         "name": "data_ult_vna",
         "type": "date",
-        "example": "2026-06-24"
+        "example": "2026-06-25"
       },
       {
         "name": "indice",
@@ -3214,52 +3214,52 @@
       {
         "name": "data_referencia",
         "type": "date",
-        "example": "23/6/2026"
+        "example": "24/6/2026"
       },
       {
         "name": "emissor",
         "type": "str",
-        "example": "ALCOESTE BIOENERGIA FERNANDOPOLIS S A"
+        "example": "AGUAS DE BOMBINHAS SANEAMENTO SPE S.A."
       },
       {
         "name": "codigo_ativo",
         "type": "str",
-        "example": "ABFR12"
+        "example": "ABSP12"
       },
       {
         "name": "isin",
         "type": "str",
-        "example": "BRABFRDBS016"
+        "example": "BRABSPDBS013"
       },
       {
         "name": "quantidade",
         "type": "int",
-        "example": "2"
+        "example": "2766"
       },
       {
         "name": "numero_de_negocios",
         "type": "int",
-        "example": "2"
+        "example": "4"
       },
       {
         "name": "pu_minimo",
         "type": "str",
-        "example": "616.080762"
+        "example": "1030.543017"
       },
       {
         "name": "pu_medio",
         "type": "str",
-        "example": "616.873847"
+        "example": "1030.563628"
       },
       {
         "name": "pu_maximo",
         "type": "str",
-        "example": "617.666931"
+        "example": "1030.584239"
       },
       {
         "name": "pu_da_curva",
         "type": "str",
-        "example": "98.30"
+        "example": "100.14"
       },
       {
         "name": "data_captura",
@@ -3768,7 +3768,7 @@
       {
         "name": "id_registro_classe",
         "type": "int",
-        "example": "34271"
+        "example": "34282"
       },
       {
         "name": "cnpj_classe",
