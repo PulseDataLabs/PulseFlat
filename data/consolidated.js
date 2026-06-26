@@ -8,8 +8,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "DI-B3",
     "valor": "14,15",
     "unidade": "% a.a.",
-    "data_referencia": "2026-06-24",
-    "captura_em": "2026-06-24",
+    "data_referencia": "2026-06-25",
+    "captura_em": "2026-06-25",
     "metrica": "valor"
   },
   {
@@ -19,10 +19,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Câmbio",
     "tipo": "indicador",
     "indicador": "Dólar Comercial Compra",
-    "valor": "5,21",
+    "valor": "5,19",
     "unidade": "R$",
-    "data_referencia": "2026-06-24",
-    "captura_em": "2026-06-24",
+    "data_referencia": "2026-06-25",
+    "captura_em": "2026-06-25",
     "metrica": "valor"
   },
   {
@@ -32,10 +32,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Câmbio",
     "tipo": "indicador",
     "indicador": "Dólar Comercial Venda",
-    "valor": "5,21",
+    "valor": "5,19",
     "unidade": "R$",
-    "data_referencia": "2026-06-24",
-    "captura_em": "2026-06-24",
+    "data_referencia": "2026-06-25",
+    "captura_em": "2026-06-25",
     "metrica": "valor"
   },
   {
@@ -60,8 +60,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "Euro Compra",
     "valor": "5,91",
     "unidade": "R$",
-    "data_referencia": "2026-06-24",
-    "captura_em": "2026-06-24",
+    "data_referencia": "2026-06-25",
+    "captura_em": "2026-06-25",
     "metrica": "valor"
   },
   {
@@ -73,8 +73,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "Euro Venda",
     "valor": "5,91",
     "unidade": "R$",
-    "data_referencia": "2026-06-24",
-    "captura_em": "2026-06-24",
+    "data_referencia": "2026-06-25",
+    "captura_em": "2026-06-25",
     "metrica": "valor"
   },
   {
@@ -84,10 +84,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "FDS",
     "tipo": "indicador",
     "indicador": "FDS (registro 1)",
-    "valor": "0,0892",
+    "valor": "0,0893",
     "unidade": "R$ cota",
-    "data_referencia": "2026-06-24",
-    "captura_em": "2026-06-24",
+    "data_referencia": "2026-06-25",
+    "captura_em": "2026-06-25",
     "metrica": "valor"
   },
   {
@@ -99,8 +99,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "FDS (registro 2)",
     "valor": "0,0892",
     "unidade": "R$ cota",
-    "data_referencia": "2026-06-23",
-    "captura_em": "2026-06-24",
+    "data_referencia": "2026-06-24",
+    "captura_em": "2026-06-25",
     "metrica": "valor"
   },
   {
@@ -188,10 +188,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Taxa de Referência",
     "tipo": "indicador",
     "indicador": "TBF",
-    "valor": "1,07",
+    "valor": "1,06",
     "unidade": "% mês",
-    "data_referencia": "2026-06-23",
-    "captura_em": "2026-06-24",
+    "data_referencia": "2026-06-24",
+    "captura_em": "2026-06-25",
     "metrica": "valor"
   },
   {
@@ -203,8 +203,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "TR",
     "valor": "0,1716",
     "unidade": "% mês",
-    "data_referencia": "2026-06-23",
-    "captura_em": "2026-06-24",
+    "data_referencia": "2026-06-24",
+    "captura_em": "2026-06-25",
     "metrica": "valor"
   },
   {
@@ -216,8 +216,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "Taxa SELIC (BC)",
     "valor": "14,15",
     "unidade": "% a.a.",
-    "data_referencia": "2026-06-24",
-    "captura_em": "2026-06-24",
+    "data_referencia": "2026-06-25",
+    "captura_em": "2026-06-25",
     "metrica": "valor"
   },
   {
@@ -227,10 +227,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "IMA-B",
     "tipo": "indicador",
     "indicador": "IMA - Geral",
-    "valor": "10.127",
+    "valor": "10.135",
     "unidade": "Número-índice",
-    "data_referencia": "2026-06-24",
-    "captura_em": "2026-06-24",
+    "data_referencia": "2026-06-25",
+    "captura_em": "2026-06-25",
     "metrica": "numero_indice"
   },
   {
@@ -240,10 +240,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "IMA-B",
     "tipo": "indicador",
     "indicador": "IMA - Geral",
-    "valor": "0,18%",
+    "valor": "0,08%",
     "unidade": "Variação diária",
-    "data_referencia": "2026-06-24",
-    "captura_em": "2026-06-24",
+    "data_referencia": "2026-06-25",
+    "captura_em": "2026-06-25",
     "metrica": "variacao_diaria"
   },
   {
@@ -279,10 +279,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Títulos Públicos",
     "tipo": "indicador",
     "indicador": "100000 (LTN)",
-    "valor": "14,26%",
+    "valor": "14,28%",
     "unidade": "Taxa indicativa",
-    "data_referencia": "2026-06-24",
-    "captura_em": "2026-06-25",
+    "data_referencia": "2026-06-25",
+    "captura_em": "2026-06-26",
     "metrica": "tx_indicativa"
   },
   {
@@ -292,10 +292,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Títulos Públicos",
     "tipo": "indicador",
     "indicador": "100000 (LTN)",
-    "valor": "997,36",
+    "valor": "997,88",
     "unidade": "PU",
-    "data_referencia": "2026-06-24",
-    "captura_em": "2026-06-25",
+    "data_referencia": "2026-06-25",
+    "captura_em": "2026-06-26",
     "metrica": "pu"
   },
   {
@@ -305,10 +305,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Títulos Públicos",
     "tipo": "indicador",
     "indicador": "210100 (LFT)",
-    "valor": "-0,10%",
+    "valor": "-0,09%",
     "unidade": "Taxa indicativa",
-    "data_referencia": "2026-06-24",
-    "captura_em": "2026-06-25",
+    "data_referencia": "2026-06-25",
+    "captura_em": "2026-06-26",
     "metrica": "tx_indicativa"
   },
   {
@@ -318,10 +318,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Títulos Públicos",
     "tipo": "indicador",
     "indicador": "210100 (LFT)",
-    "valor": "19.287",
+    "valor": "19.297",
     "unidade": "PU",
-    "data_referencia": "2026-06-24",
-    "captura_em": "2026-06-25",
+    "data_referencia": "2026-06-25",
+    "captura_em": "2026-06-26",
     "metrica": "pu"
   },
   {
@@ -331,10 +331,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Títulos Públicos",
     "tipo": "indicador",
     "indicador": "760199 (NTN-B)",
-    "valor": "11,20%",
+    "valor": "11,40%",
     "unidade": "Taxa indicativa",
-    "data_referencia": "2026-06-24",
-    "captura_em": "2026-06-25",
+    "data_referencia": "2026-06-25",
+    "captura_em": "2026-06-26",
     "metrica": "tx_indicativa"
   },
   {
@@ -344,10 +344,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Títulos Públicos",
     "tipo": "indicador",
     "indicador": "760199 (NTN-B)",
-    "valor": "4.800",
+    "valor": "4.801",
     "unidade": "PU",
-    "data_referencia": "2026-06-24",
-    "captura_em": "2026-06-25",
+    "data_referencia": "2026-06-25",
+    "captura_em": "2026-06-26",
     "metrica": "pu"
   },
   {
@@ -357,10 +357,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Títulos Públicos",
     "tipo": "indicador",
     "indicador": "770100 (NTN-C)",
-    "valor": "8,08%",
+    "valor": "8,09%",
     "unidade": "Taxa indicativa",
-    "data_referencia": "2026-06-24",
-    "captura_em": "2026-06-25",
+    "data_referencia": "2026-06-25",
+    "captura_em": "2026-06-26",
     "metrica": "tx_indicativa"
   },
   {
@@ -370,10 +370,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Títulos Públicos",
     "tipo": "indicador",
     "indicador": "770100 (NTN-C)",
-    "valor": "7.993",
+    "valor": "7.990",
     "unidade": "PU",
-    "data_referencia": "2026-06-24",
-    "captura_em": "2026-06-25",
+    "data_referencia": "2026-06-25",
+    "captura_em": "2026-06-26",
     "metrica": "pu"
   },
   {
@@ -383,10 +383,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Títulos Públicos",
     "tipo": "indicador",
     "indicador": "950199 (NTN-F)",
-    "valor": "14,00%",
+    "valor": "13,97%",
     "unidade": "Taxa indicativa",
-    "data_referencia": "2026-06-24",
-    "captura_em": "2026-06-25",
+    "data_referencia": "2026-06-25",
+    "captura_em": "2026-06-26",
     "metrica": "tx_indicativa"
   },
   {
@@ -396,10 +396,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Títulos Públicos",
     "tipo": "indicador",
     "indicador": "950199 (NTN-F)",
-    "valor": "1.028",
+    "valor": "1.029",
     "unidade": "PU",
-    "data_referencia": "2026-06-24",
-    "captura_em": "2026-06-25",
+    "data_referencia": "2026-06-25",
+    "captura_em": "2026-06-26",
     "metrica": "pu"
   },
   {
@@ -437,8 +437,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "DI1",
     "valor": "13,65%",
     "unidade": "",
-    "data_referencia": "2026-06-24",
-    "captura_em": "2026-06-25",
+    "data_referencia": "2026-06-25",
+    "captura_em": "2026-06-26",
     "metrica": "taxa"
   },
   {
@@ -450,8 +450,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "PTAX USD — Compra",
     "valor": "4,02",
     "unidade": "",
-    "data_referencia": "2026-06-25",
-    "captura_em": "2026-06-25",
+    "data_referencia": "2026-06-26",
+    "captura_em": "2026-06-26",
     "metrica": "cotacao_compra"
   },
   {
@@ -463,8 +463,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "PTAX USD — Venda",
     "valor": "4,02",
     "unidade": "",
-    "data_referencia": "2026-06-25",
-    "captura_em": "2026-06-25",
+    "data_referencia": "2026-06-26",
+    "captura_em": "2026-06-26",
     "metrica": "cotacao_venda"
   },
   {
@@ -476,8 +476,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "IGP-M",
     "valor": "4,02%",
     "unidade": "",
-    "data_referencia": "2026-06-25",
-    "captura_em": "2026-06-25",
+    "data_referencia": "2026-06-26",
+    "captura_em": "2026-06-26",
     "metrica": "valor"
   },
   {
@@ -489,8 +489,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "IGP-M (índice)",
     "valor": "0,48%",
     "unidade": "",
-    "data_referencia": "2026-06-25",
-    "captura_em": "2026-06-25",
+    "data_referencia": "2026-06-26",
+    "captura_em": "2026-06-26",
     "metrica": "valor"
   },
   {
@@ -502,8 +502,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "IGP-M 12m",
     "valor": "0,09%",
     "unidade": "",
-    "data_referencia": "2026-06-25",
-    "captura_em": "2026-06-25",
+    "data_referencia": "2026-06-26",
+    "captura_em": "2026-06-26",
     "metrica": "valor"
   },
   {
@@ -515,8 +515,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "IPCA 12m",
     "valor": "0,21%",
     "unidade": "",
-    "data_referencia": "2026-06-25",
-    "captura_em": "2026-06-25",
+    "data_referencia": "2026-06-26",
+    "captura_em": "2026-06-26",
     "metrica": "valor"
   },
   {
@@ -528,8 +528,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "SELIC (% a.d.)",
     "valor": "0,02%",
     "unidade": "",
-    "data_referencia": "2026-06-25",
-    "captura_em": "2026-06-25",
+    "data_referencia": "2026-06-26",
+    "captura_em": "2026-06-26",
     "metrica": "valor"
   }
 ];

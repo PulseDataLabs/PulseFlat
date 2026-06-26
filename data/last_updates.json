@@ -1,4 +1,12 @@
 {
+  "b3_carteira_teorica_ifnc.csv": {
+    "min": "2026-06-03",
+    "max": "2026-06-26"
+  },
+  "b3_carteira_teorica_isee.csv": {
+    "min": "2026-06-03",
+    "max": "2026-06-26"
+  },
   "b3_carteira_teorica_smll.csv": {
     "min": "2026-06-03",
     "max": "2026-06-26"
@@ -27,20 +35,20 @@
     "min": "2026-06-01",
     "max": "2026-06-26"
   },
-  "b3_indicadores_economicos_fwf.csv": {
-    "min": "2026-06-16",
+  "b3_isin_emissores.csv": {
+    "min": "2026-06-26",
     "max": "2026-06-26"
   },
   "b3_limites_garantias.csv": {
     "min": "2025-01-01",
     "max": "2026-06-26"
   },
-  "b3_isin_emissores.csv": {
-    "min": "2026-06-26",
+  "b3_bdi_trades_acoes.csv": {
+    "min": "2026-06-03",
     "max": "2026-06-26"
   },
-  "b3_isin_ativos.csv": {
-    "min": "2026-06-26",
+  "b3_indicadores_economicos_fwf.csv": {
+    "min": "2026-06-16",
     "max": "2026-06-26"
   },
   "bacen_conglomerados.csv": {
@@ -63,16 +71,20 @@
     "min": "2026-06-26",
     "max": "2026-06-26"
   },
+  "b3_isin_ativos.csv": {
+    "min": "2026-06-26",
+    "max": "2026-06-26"
+  },
+  "cvm_cadastro_companhias_abertas.csv": {
+    "min": "2026-06-26",
+    "max": "2026-06-26"
+  },
   "bacen_parcelas_capital_basileia.csv": {
     "min": "2026-06-05",
     "max": "2026-06-26"
   },
   "bcb_sgs.csv": {
     "min": "2026-06-26",
-    "max": "2026-06-26"
-  },
-  "b3_bdi_trades_acoes.csv": {
-    "min": "2026-06-03",
     "max": "2026-06-26"
   },
   "debentures_emissoes_caracteristicas.csv": {
@@ -83,100 +95,24 @@
     "min": "2026-06-26",
     "max": "2026-06-26"
   },
+  "cvm_fundos_informe_diario.csv": {
+    "min": "2026-06-26",
+    "max": "2026-06-26"
+  },
   "yahoo_finance_series.csv": {
     "min": "2026-06-03",
     "max": "2026-06-26"
   },
-  "onu_pacto_global.csv": {
+  "registro_fundo_classe.csv": {
     "min": "2026-06-26",
     "max": "2026-06-26"
   },
-  "anbima_idka.csv": {
-    "min": "2026-06-03",
-    "max": "2026-06-26"
-  },
-  "anbima_550.csv": {
-    "min": "2026-06-01",
-    "max": "2026-06-26"
-  },
-  "anbima_indicadores.csv": {
-    "min": "2026-06-01",
-    "max": "2026-06-26"
-  },
-  "anbima_projecoes.csv": {
-    "min": "2026-06-01",
-    "max": "2026-06-26"
-  },
-  "anbima_matriz_probabilidade_resgate.csv": {
-    "min": "2026-06-19",
-    "max": "2026-06-26"
-  },
-  "anbima_debentures.csv": {
-    "min": "2026-06-05",
-    "max": "2026-06-26"
-  },
-  "anbima_ranking_global.csv": {
-    "min": "2026-06-03",
-    "max": "2026-06-26"
-  },
-  "anbima_titulos_publicos.csv": {
-    "min": "2026-06-01",
-    "max": "2026-06-26"
-  },
-  "b3_bdi_di_over.csv": {
-    "min": "2026-06-01",
-    "max": "2026-06-25"
-  },
-  "anbima_indice_imab.csv": {
-    "min": "2026-06-01",
-    "max": "2026-06-26"
-  },
-  "b3_carteira_teorica_agfs_iagro.csv": {
-    "min": "2026-06-03",
-    "max": "2026-06-26"
-  },
-  "b3_carteira_teorica_bdrx.csv": {
-    "min": "2026-06-03",
-    "max": "2026-06-26"
-  },
-  "b3_carteira_teorica_ibov.csv": {
-    "min": "2026-06-03",
-    "max": "2026-06-26"
-  },
-  "b3_carteira_teorica_ibxl.csv": {
-    "min": "2026-06-03",
-    "max": "2026-06-26"
-  },
-  "b3_carteira_teorica_ibsd.csv": {
-    "min": "2026-06-03",
-    "max": "2026-06-26"
-  },
-  "b3_carteira_teorica_ifnc.csv": {
-    "min": "2026-06-03",
-    "max": "2026-06-26"
-  },
-  "b3_carteira_teorica_isee.csv": {
-    "min": "2026-06-03",
-    "max": "2026-06-26"
-  },
-  "cvm_cadastro_companhias_abertas.csv": {
-    "min": "2026-06-25",
-    "max": "2026-06-25"
-  },
-  "cvm_fundos_informe_diario.csv": {
-    "min": "2026-06-25",
-    "max": "2026-06-25"
-  },
-  "registro_fundo_classe.csv": {
-    "min": "2026-06-25",
-    "max": "2026-06-25"
-  },
   "ibge_sidra.csv": {
-    "min": "2026-06-25",
-    "max": "2026-06-25"
+    "min": "2026-06-26",
+    "max": "2026-06-26"
   },
-  "anbima_ima_completo.csv": {
-    "min": "2026-06-01",
+  "onu_pacto_global.csv": {
+    "min": "2026-06-26",
     "max": "2026-06-26"
   }
 }
