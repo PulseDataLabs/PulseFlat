@@ -1,13 +1,13 @@
 """
-scrapers/b3_etfs.py
--------------------
-Captura a lista completa de ETFs listados na B3 (Renda Variável + Renda Fixa).
+scrapers/b3_fundos_listados.py
+-------------------------------
+Captura a lista completa de fundos listados na B3 via API interna (GetListFunds).
+
+Cobre todos os tipos de fundo disponíveis no endpoint:
+  FII, FIAGRO, FIDC, FIP, ETF, ETF-RF, Fundo Setorial
 
 Endpoint: GET https://sistemaswebb3-listados.b3.com.br/fundsListedProxy/Search/
                 GetListFunds/<base64>
-
-fundsType: "ETF"    → ETFs de Renda Variável
-           "ETF-RF" → ETFs de Renda Fixa
 """
 
 import sys
@@ -15,27 +15,32 @@ import time
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from utils import get_logger, agora_brt, limpar, b64_encode_params, nova_session, salvar_csv
+from utils import get_logger, agora_brt, limpar, b64_encode_params, nova_session
 import pandas as pd
 from scrapers.utils.base import BaseScraper
 
-log = get_logger("b3_etfs")
+log = get_logger("b3_fundos_listados")
 
 BASE_URL  = "https://sistemaswebb3-listados.b3.com.br/fundsListedProxy/Search/GetListFunds/"
 PAGE_SIZE = 100
-ARQUIVO   = Path("data/b3_etfs_listados.csv")
+ARQUIVO   = Path("data/b3_fundos_listados.csv")
 
 CATEGORIAS = [
-    ("ETF",    "ETF Renda Variável"),
-    ("ETF-RF", "ETF Renda Fixa"),
+    ("FII",      "FII"),
+    ("FIAGRO",   "FIAGRO"),
+    ("FIDC",     "FIDC"),
+    ("FIP",      "FIP"),
+    ("ETF",      "ETF Renda Variável"),
+    ("ETF-RF",   "ETF Renda Fixa"),
+    ("SETORIAL", "Fundo Setorial"),
 ]
 
 CABECALHO = [
-    "data_captura", "categoria_etf",
-    "codigo_fundo", "nome_fundo", "cnpj",
-    "administrador", "gestor", "indice_referencia",
-    "segmento", "tipo", "prazo_duracao",
-    "data_encerramento", "cotistas", "patrimonio_liquido",
+    "data_captura",
+    "tipo_fundo",
+    "codigo_fundo",
+    "nome_fundo",
+    "id_b3",
 ]
 
 
@@ -67,27 +72,14 @@ def _pagina(session, funds_type: str, page: int) -> tuple[list, int, int | None]
         return [], 0, None
 
 
-def _mapear(item: dict, data_captura: str, label: str) -> dict:
-    codigo = limpar(item.get("fundTicker") or item.get("ticker") or item.get("code") or item.get("symbol"))
-    if not codigo:
-        acronym = limpar(item.get("acronym") or item.get("acronymName") or item.get("fundAcronym"))
-        if acronym:
-            codigo = acronym if any(c.isdigit() for c in acronym) else f"{acronym}11"
+def _mapear(item: dict, data_captura: str, tipo_label: str) -> dict:
+    codigo = limpar(item.get("acronym"))
     return {
-        "data_captura":       data_captura,
-        "categoria_etf":      label,
-        "codigo_fundo":       codigo,
-        "nome_fundo":         limpar(item.get("fundName")   or item.get("tradingName") or item.get("companyName")),
-        "cnpj":               limpar(item.get("cnpj")),
-        "administrador":      limpar(item.get("administrator") or item.get("administratorName")),
-        "gestor":             limpar(item.get("manager")   or item.get("managementCompany")),
-        "indice_referencia":  limpar(item.get("indexFund") or item.get("benchmark") or item.get("referenceIndex")),
-        "segmento":           limpar(item.get("fundSegment") or item.get("segment") or item.get("segmentName")),
-        "tipo":               limpar(item.get("fundType")  or item.get("type") or item.get("typeFund")),
-        "prazo_duracao":      limpar(item.get("term")),
-        "data_encerramento":  limpar(item.get("closingDate")),
-        "cotistas":           limpar(item.get("quotaHolders")),
-        "patrimonio_liquido": limpar(item.get("netEquity")),
+        "data_captura":  data_captura,
+        "tipo_fundo":    tipo_label,
+        "codigo_fundo":  codigo,
+        "nome_fundo":    limpar(item.get("fundName") or item.get("tradingName")),
+        "id_b3":         str(item.get("id", "")),
     }
 
 
@@ -100,7 +92,7 @@ def _capturar_categoria(session, funds_type: str, label: str,
         return []
 
     n_pag = total_pages or (total + PAGE_SIZE - 1) // PAGE_SIZE
-    log.info(f"[{label}] {total} ETFs | {n_pag} páginas")
+    log.info(f"[{label}] {total} fundos | {n_pag} páginas")
 
     todos = list(primeira)
     for p in range(2, n_pag + 1):
@@ -119,30 +111,29 @@ def capturar() -> list[dict]:
     for funds_type, label in CATEGORIAS:
         todos.extend(_capturar_categoria(session, funds_type, label, data_captura))
         time.sleep(0.5)
-    log.info(f"{len(todos)} ETFs capturados (RV + RF).")
+    log.info(f"{len(todos)} fundos capturados ao total.")
     return todos
 
-class B3EtfsScraper(BaseScraper):
-    name = "b3_etfs"
+
+class B3FundosListadosScraper(BaseScraper):
+    name = "b3_fundos_listados"
     group = "b3"
-    enabled = False  # substituído por b3_fundos_listados
+    enabled = True
     phase = 1
     accumulate = False
     chaves_dedup = None
-    
-    # Catálogo de Metadados
-    title = 'B3 ETFs Listados'
-    description = 'ETFs de Renda Variável e Renda Fixa listados na B3, com índice de referência, administrador, gestor e patrimônio líquido.'
-    icon = '📈'
+
+    title = 'B3 Fundos Listados'
+    description = 'Lista completa de fundos listados na B3: FII, FIAGRO, FIDC, FIP, ETFs (RV e RF) e Fundos Setoriais.'
+    icon = '🏢'
     icon_class = 'icon-b3'
     badge = 'Diário'
     badge_class = 'badge-daily'
-    tags = ['ticker', 'categoria_etf', 'índice_ref', 'gestor', 'renda variável', 'renda fixa']
+    tags = ['ticker', 'fundos', 'fii', 'fiagro', 'fidc', 'fip', 'etf', 'setorial']
     source = 'B3 API'
 
     def fetch(self) -> pd.DataFrame:
-        log.info("=== B3 ETFs Listados ===")
-        # Reordena para garantir o cabeçalho original
+        log.info("=== B3 Fundos Listados ===")
         df = pd.DataFrame(capturar())
         if not df.empty:
             colunas = [c for c in CABECALHO if c in df.columns]
@@ -151,4 +142,4 @@ class B3EtfsScraper(BaseScraper):
 
 
 if __name__ == "__main__":
-    B3EtfsScraper().run()
+    B3FundosListadosScraper().run()
