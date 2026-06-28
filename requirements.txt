@@ -10,3 +10,5 @@ pytest
 requests-mock
 pandas
 curl-cffi
+oracledb
+SQLAlchemy

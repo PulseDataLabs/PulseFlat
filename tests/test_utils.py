@@ -179,3 +179,37 @@ def test_salvar_csv_sem_acumular(tmp_path):
     assert linhas[0]["valor"] == "13.65"
     assert linhas[0]["data_captura"] == "2025-06-02"
 
+
+# ─────────────────────────────────────────────
+# Testes do utilitário de Banco de Dados Oracle
+# ─────────────────────────────────────────────
+
+def test_sanitize_column_name():
+    from utils.db import sanitize_column_name
+    assert sanitize_column_name("data_captura") == "DATA_CAPTURA"
+    assert sanitize_column_name("Preço Médio ($)") == "PRECO_MEDIO_"
+    assert sanitize_column_name("123_ticker") == "C_123_TICKER"
+    assert sanitize_column_name("DATE") == "DATE_VAL"
+    assert sanitize_column_name("Ação e Opção") == "ACAO_E_OPCAO"
+    assert sanitize_column_name("Muito_Longo_" * 20) == ("MUITO_LONGO_" * 20)[:128]
+
+
+def test_infer_oracle_type():
+    import pandas as pd
+    from utils.db import infer_oracle_type
+    
+    s_int = pd.Series([1, 2, 3], name="id")
+    s_float = pd.Series([1.5, 2.5], name="valor")
+    s_bool = pd.Series([True, False], name="flag")
+    s_str = pd.Series(["a", "b"], name="nome")
+    s_date = pd.Series(["2025-06-01", "2025-06-02"], name="dt_captura")
+    s_anomes = pd.Series(["202406", "202412"], name="AnoMes")
+    
+    assert infer_oracle_type(s_int) == "NUMBER(19)"
+    assert infer_oracle_type(s_float) == "NUMBER"
+    assert infer_oracle_type(s_bool) == "NUMBER(1)"
+    assert infer_oracle_type(s_str) == "VARCHAR2(4000)"
+    assert infer_oracle_type(s_date) == "DATE"
+    assert infer_oracle_type(s_anomes) == "VARCHAR2(4000)"
+
+

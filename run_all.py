@@ -540,8 +540,14 @@ exemplos:
         help="Executa verificação de buracos (dias úteis faltantes) após a coleta")
     parser.add_argument("--fail-on-holes", action="store_true",
         help="Falha se a verificação de buracos encontrar datas faltantes (exit code 1)")
+    parser.add_argument("--skip-db", action="store_true",
+        help="Ignora a persistência dos dados no banco de dados Oracle")
 
     args = parser.parse_args()
+
+    if args.skip_db:
+        import os
+        os.environ["SKIP_ORACLE_DB"] = "1"
 
     if args.generate_catalog:
         _banner()

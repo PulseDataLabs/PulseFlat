@@ -224,7 +224,7 @@ Os dados são atualizados automaticamente até 7 vezes por dia útil (06h–23h,
 
 ## 💻 Guia do Desenvolvedor
 
-### Instalação Local
+### Instalação Local e Gerenciamento de Dependências
 
 1.  **Clone o repositório:**
     ```bash
@@ -233,7 +233,32 @@ Os dados são atualizados automaticamente até 7 vezes por dia útil (06h–23h,
     ```
 
 2.  **Instale as dependências:**
+
+    #### Opção A (Recomendada — Usando `uv`):
+    O `uv` é um gerenciador de pacotes extremamente rápido escrito em Rust.
     ```bash
+    # Instale o uv (se já não tiver instalado)
+    curl -LsSf https://astral.sh/uv/install.sh | sh
+    
+    # Crie o ambiente virtual com uv
+    uv venv
+    
+    # Ative o ambiente
+    source .venv/bin/activate
+    
+    # Instale as dependências de forma ultra-rápida
+    uv pip install -r requirements.txt
+    ```
+
+    #### Opção B (Tradicional — Usando `venv` + `pip`):
+    ```bash
+    # Crie o ambiente virtual tradicional
+    python3 -m venv .venv
+    
+    # Ative o ambiente
+    source .venv/bin/activate
+    
+    # Instale as dependências tradicionalmente
     pip install -r requirements.txt
     ```
 
@@ -241,7 +266,27 @@ Os dados são atualizados automaticamente até 7 vezes por dia útil (06h–23h,
     ```bash
     cp .env.example .env
     ```
-    *(Edite o `.env` com suas chaves caso precise utilizar APIs oficiais da ANBIMA ou B3).*
+    *(Edite o `.env` com suas chaves de APIs e credenciais de banco de dados).*
+
+### Persistência no Banco de Dados (Oracle Cloud Autonomous Database)
+
+O projeto possui persistência automatizada opcional dos dados coletados em um banco **Oracle Cloud Autonomous Database** usando `oracledb` (Thin Mode) + `SQLAlchemy`.
+
+Para habilitar a persistência, configure as seguintes variáveis de ambiente no arquivo `.env`:
+*   `ORACLE_DB_USER`: Usuário do banco de dados
+*   `ORACLE_DB_PASSWORD`: Senha do banco (tratada via `urllib.parse.quote_plus` para evitar falhas na URL de conexão)
+*   `ORACLE_DB_DSN`: String DSN do banco (ou service name correspondente)
+*   `ORACLE_DB_WALLET_DIR` (opcional): Diretório local contendo a carteira mTLS (ex: `cwallet.sso`, `tnsnames.ora`). Se configurado e não estiver vazio, usará conexão segura **Mutual TLS (mTLS)**. Caso contrário, reverterá automaticamente para **One-Way TLS**.
+*   `ORACLE_DB_WALLET_PASSWORD` (opcional): Senha associada à Wallet.
+
+#### Desativação Local / Bypass (Dry-Run):
+Para executar o pipeline sem tentar persistir dados no banco (por exemplo, em ambiente local ou de CI/CD sem banco):
+- Defina a variável de ambiente `SKIP_ORACLE_DB=1` no arquivo `.env` ou no shell.
+- Ou adicione a flag `--skip-db` na execução do pipeline:
+  ```bash
+  python run_all.py --skip-db
+  ```
+
 
 ### Criando um Novo Scraper
 

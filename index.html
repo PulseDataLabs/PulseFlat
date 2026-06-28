@@ -1934,10 +1934,12 @@
 <span class="kw">git</span> clone https://github.com/PulseDataLabs/PulseFlat.git
 <span class="kw">cd</span> PulseFlat
 
-<span class="cm"># 2. Instale as dependências</span>
-<span class="kw">pip</span> install <span class="op">-r</span> requirements.txt
+<span class="cm"># 2. Instale as dependências (Recomendado via uv)</span>
+<span class="kw">uv</span> venv
+<span class="kw">source</span> .venv/bin/activate
+<span class="kw">uv</span> pip install <span class="op">-r</span> requirements.txt
 
-<span class="cm"># 3. Configure credenciais ANBIMA (opcional)</span>
+<span class="cm"># 3. Configure credenciais e banco de dados (opcional)</span>
 <span class="kw">cp</span> .env.example .env
 <span class="cm"># Edite .env com seu client_id e client_secret</span>
 

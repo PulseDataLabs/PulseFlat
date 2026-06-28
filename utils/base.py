@@ -252,6 +252,32 @@ def salvar_csv(
 
     df_final.to_csv(arquivo, index=False, columns=cabecalho, encoding="utf-8")
 
+    # --- Persistência no Banco de Dados Oracle ---
+    try:
+        from utils.db import upload_dataframe
+        table_name = arquivo.stem.upper()
+        
+        # Identificar se há colunas de período
+        candidates = [
+            "AnoMes", "ANOMES", 
+            "data_base", "DATA_BASE", 
+            "data_referencia", "DATA_REFERENCIA", 
+            "data_captura", "DATA_CAPTURA", 
+            "data", "DATA",
+            "dt_captura", "DT_CAPTURA"
+        ]
+        has_period_col = any(c in df_novos.columns for c in candidates)
+        
+        if has_period_col:
+            log.info(f"Iniciando carga incremental para '{table_name}' usando novos registros...")
+            upload_dataframe(df_novos[[c for c in cabecalho if c in df_novos.columns]], table_name)
+        else:
+            log.info(f"Iniciando carga total para '{table_name}' usando registros acumulados...")
+            upload_dataframe(df_final, table_name)
+    except Exception as db_err:
+        log.warning(f"Não foi possível persistir os dados no banco Oracle para {arquivo.name}: {db_err}")
+
+
     try:
         last_updates_path = arquivo.parent / "last_updates.json"
         last_updates = {}
