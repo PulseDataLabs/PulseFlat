@@ -174,7 +174,7 @@ INDICATOR_DEFS = [
     },
     {
         "label": "IBOVESPA",
-        "csv": "yahoo_finance_series.csv",
+        "csv": "yahoo_indices_globais.csv",
         "filter_col": "codigo_ativo",
         "filter_val": "^BVSP",
         "value_col": "preco_fechamento",

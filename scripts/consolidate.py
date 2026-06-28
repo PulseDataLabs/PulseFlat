@@ -94,9 +94,140 @@ DATASET_LABEL = {
     "b3_indicadores_financeiros.csv": "B3 Indicadores Financeiros",
     "b3_taxa_cambio_referencia.csv": "B3 Taxa Câmbio",
     "bcb_ptax.csv": "BCB PTAX",
-    "yahoo_finance_series.csv": "Yahoo Finance",
     "anbima_indice_imab.csv": "ANBIMA IMA-B",
     "anbima_titulos_publicos.csv": "ANBIMA Títulos Públicos",
+    "yahoo_acoes_brasileiras.csv": "Yahoo Ações Brasileiras",
+    "yahoo_acoes_internacionais.csv": "Yahoo Ações Internacionais",
+    "yahoo_cambio_moedas.csv": "Yahoo Câmbio e Moedas",
+    "yahoo_criptoativos.csv": "Yahoo Criptoativos",
+    "yahoo_commodities.csv": "Yahoo Commodities",
+    "yahoo_indices_globais.csv": "Yahoo Índices Globais",
+    "yahoo_renda_fixa.csv": "Yahoo Renda Fixa",
+    "yahoo_etfs.csv": "Yahoo ETFs",
+    "yahoo_fiis_fiagros.csv": "Yahoo FIIs e Fiagros",
+    "ipea_macroeconomia.csv": "IPEA Macroeconomia",
+    "ipea_mercados_diarios.csv": "IPEA Mercados Diários",
+    "ipea_taxas_juros.csv": "IPEA Taxas de Juros",
+    "ipea_precos_inflacao.csv": "IPEA Preços e Inflação",
+    "ipea_fbcf.csv": "IPEA FBCF",
+    "ipea_comercio_exterior.csv": "IPEA Comércio Exterior",
+    "ipea_producao_mineral.csv": "IPEA Produção Mineral",
+    "ipea_calendario.csv": "IPEA Calendário",
+}
+
+
+YAHOO_SECTIONS = {
+    "Ações Brasileiras (B3)": [
+        "VALE3.SA", "PETR4.SA", "PETR3.SA", "ITUB4.SA", "BBDC4.SA", "BBAS3.SA", "B3SA3.SA",
+        "ELET3.SA", "WEGE3.SA", "ABEV3.SA", "RENT3.SA", "GGBR4.SA", "CSNA3.SA", "USIM5.SA",
+        "JBSS3.SA", "MGLU3.SA", "LREN3.SA", "EQTL3.SA", "SBSP3.SA", "SUZB3.SA", "VIVT3.SA",
+        "TIMS3.SA", "SANB11.SA", "BPAC11.SA", "CIEL3.SA", "EGIE3.SA", "CPFE3.SA", "CMIG4.SA",
+        "CCRO3.SA", "RADL3.SA", "HYPE3.SA", "CRFB3.SA", "ASAI3.SA", "NTCO3.SA", "BRFS3.SA",
+        "COGN3.SA", "CYRE3.SA", "MRVE3.SA", "EZTC3.SA", "TEND3.SA", "ALOS3.SA", "MULT3.SA",
+        "IGTI11.SA", "BEEF3.SA", "MRFG3.SA", "CPLE6.SA", "ENGI11.SA", "TAEE11.SA", "TRPL4.SA",
+        "PRIO3.SA", "RRRP3.SA", "RECV3.SA", "UGPA3.SA", "VBBR3.SA", "CSAN3.SA", "BRKM5.SA",
+        "EMBR3.SA", "GOLL4.SA", "AZUL4.SA", "RUMO3.SA", "JHSF3.SA", "YDUQ3.SA", "CVCB3.SA",
+        "SLCE3.SA", "SMTO3.SA", "FLRY3.SA", "HAPV3.SA", "QUAL3.SA", "ODPV3.SA", "BBDC3.SA",
+        "ITSA4.SA", "BRAP4.SA", "CMIN3.SA", "KLBN11.SA", "PCAR3.SA", "IRBR3.SA", "ENEV3.SA",
+        "LOGN3.SA", "MDIA3.SA"
+    ],
+    "Ações Internacionais": [
+        "AAPL", "MSFT", "GOOGL", "AMZN", "NVDA", "META", "TSLA", "NFLX", "JPM", "V",
+        "WMT", "DIS", "MA", "UNH", "HD", "BAC", "XOM", "CVX", "KO", "PEP",
+        "COST", "PG", "JNJ", "MRK", "ABBV", "LLY", "PFE", "AMD", "INTC", "QCOM",
+        "ADBE", "CRM", "ORCL", "NKE", "MCD", "SBUX", "NVO", "ASML", "TSM", "BABA"
+    ],
+    "Câmbio / Moedas": [
+        "BRL=X", "EURBRL=X", "GBPBRL=X", "CHFBRL=X", "JPYBRL=X", "CNYBRL=X", "ARSBRL=X",
+        "CLPBRL=X", "MXNBRL=X", "UYUBRL=X", "COPBRL=X", "PENBRL=X", "EURUSD=X",
+        "GBPUSD=X", "USDJPY=X", "AUDUSD=X", "USDCAD=X", "USDCHF=X", "USDCNY=X",
+        "USDRUB=X", "USDTRY=X", "USDINR=X", "USDMXN=X", "DX-Y.NYB"
+    ],
+    "Criptoativos": [
+        "BTC-USD", "ETH-USD", "SOL-USD", "BNB-USD", "XRP-USD", "ADA-USD", "DOGE-USD",
+        "DOT-USD", "AVAX-USD", "LINK-USD", "SHIB-USD", "TRX-USD", "LTC-USD", "UNI-USD",
+        "XLM-USD", "ATOM-USD", "ETC-USD", "FIL-USD", "HBAR-USD", "NEAR-USD", "ICP-USD",
+        "APT-USD", "OP-USD", "GRT-USD", "IMX-USD"
+    ],
+    "Commodities Globais": [
+        "TIO=F", "ZS=F", "KC=F", "CL=F", "BZ=F", "GC=F", "SI=F", "HG=F", "NG=F",
+        "ZC=F", "ZW=F", "SB=F", "CT=F", "CC=F", "LH=F", "FC=F", "PL=F", "PA=F",
+        "ZO=F", "ZR=F"
+    ],
+    "Índices de Ações Globais": [
+        "^BVSP", "^GSPC", "^IXIC", "^DJI", "^VIX", "^STOXX50E", "000001.SS", "^N225",
+        "^FTSE", "^GDAXI", "^FCHI", "^HSI", "^MERV", "^IPSA", "^MXX", "^RUT",
+        "^NYA", "^AXJO", "^BSESN", "^KS11", "^TWII", "^JKSE", "^STI", "^KLSE",
+        "^TA35"
+    ],
+    "Renda Fixa & Treasuries": [
+        "^IRX", "^FVX", "^TNX", "^TYX"
+    ],
+    "ETFs & Setoriais": [
+        "EWZ", "SMLL.SA", "BOVA11.SA", "SMAL11.SA", "IVVB11.SA", "HASH11.SA",
+        "BND", "HYG", "LQD", "SPY", "QQQ", "DIA", "IWM", "EEM", "VGK", "VWO",
+        "XLE", "XLF", "XLK"
+    ],
+    "FIIs e Fiagros": [
+        "IFIX.SA", "MXRF11.SA", "HGLG11.SA", "XPML11.SA", "KNIP11.SA", "BTLG11.SA",
+        "KNCR11.SA", "VISC11.SA", "HGRU11.SA", "BRCO11.SA", "PVBI11.SA", "ALZR11.SA",
+        "VGIA11.SA", "KNCA11.SA", "RURA11.SA", "CPTR11.SA", "FGAA11.SA"
+    ]
+}
+
+
+IPEADATA_SECTIONS = {
+    "ipea_macroeconomia.csv": [
+        {"code": "BM12_PIBAC12", "label": "PIB (acumulado 12m)", "category": "Macroeconomia"},
+        {"code": "PNADC12_TDESOC12", "label": "Taxa de desocupação (PNAD Contínua)", "category": "Macroeconomia", "fmt": "pct"},
+        {"code": "GAC12_SALMINRE12", "label": "Salário Mínimo Real", "category": "Macroeconomia"},
+        {"code": "MTE12_SALMIN12", "label": "Salário Mínimo Vigente", "category": "Macroeconomia"},
+        {"code": "SGS12_7836", "label": "Saldo Total da Poupança (SBPE/Rural)", "category": "Macroeconomia"}
+    ],
+    "ipea_mercados_diarios.csv": [
+        {"code": "EIA366_PBRENT366", "label": "Petróleo Brent", "category": "Mercados Globais"},
+        {"code": "EIA366_PWTI366", "label": "Petróleo WTI", "category": "Mercados Globais"},
+        {"code": "GM366_DOW366", "label": "Índice Dow Jones", "category": "Mercados Globais"},
+        {"code": "SGS366_NASDAQ366", "label": "Índice NASDAQ", "category": "Mercados Globais"}
+    ],
+    "ipea_taxas_juros.csv": [
+        {"code": "ANBIMA12_TJPOUP12", "label": "Poupança Rentabilidade Antiga (dep. até 2012)", "category": "Taxas de Juros", "fmt": "pct"},
+        {"code": "BM12_RNDPO12", "label": "Poupança Rentabilidade Nova (dep. pós 2012)", "category": "Taxas de Juros", "fmt": "pct"},
+        {"code": "ANBIMA12_TJTLN112", "label": "Estrutura Termo LTN - 1 mês", "category": "Taxas de Juros", "fmt": "pct"},
+        {"code": "ANBIMA12_TJTLN312", "label": "Estrutura Termo LTN - 3 meses", "category": "Taxas de Juros", "fmt": "pct"},
+        {"code": "ANBIMA12_TJTLN612", "label": "Estrutura Termo LTN - 6 meses", "category": "Taxas de Juros", "fmt": "pct"},
+        {"code": "ANBIMA12_TJTLN1212", "label": "Estrutura Termo LTN - 12 meses", "category": "Taxas de Juros", "fmt": "pct"},
+        {"code": "BM12_TJCDI12", "label": "CDI Acumulado no Mês", "category": "Taxas de Juros", "fmt": "pct"},
+        {"code": "BM12_TJLP12", "label": "Taxa de Juros de Longo Prazo (TJLP)", "category": "Taxas de Juros", "fmt": "pct"},
+        {"code": "BM12_TJOVER12", "label": "Selic Acumulada no Mês", "category": "Taxas de Juros", "fmt": "pct"},
+        {"code": "BM12_TJTBF12", "label": "Taxa Básica Financeira (TBF)", "category": "Taxas de Juros", "fmt": "pct"},
+        {"code": "BM12_TJTR12", "label": "Taxa Referencial (TR)", "category": "Taxas de Juros", "fmt": "pct"}
+    ],
+    "ipea_precos_inflacao.csv": [
+        {"code": "IGP12_IGPDI12", "label": "IGP-DI - Geral - Índice", "category": "Macroeconomia"},
+        {"code": "IGP12_INCC12", "label": "INCC-DI - Geral - Índice", "category": "Macroeconomia"},
+        {"code": "PRECOS12_INPC12", "label": "INPC - Geral - Índice", "category": "Macroeconomia"},
+        {"code": "PRECOS12_INPCBR12", "label": "INPC - Geral - Taxa de Variação", "category": "Macroeconomia", "fmt": "pct"}
+    ],
+    "ipea_fbcf.csv": [
+        {"code": "GAC12_INDFBCF12", "label": "Indicador IPEA de FBCF - Índice Real", "category": "Macroeconomia"},
+        {"code": "GAC12_INDFBCFDESSAZ12", "label": "Indicador IPEA de FBCF - Dessazonalizado", "category": "Macroeconomia"},
+        {"code": "GAC12_INDFBCFCC12", "label": "Indicador IPEA de FBCF - Construção Civil", "category": "Macroeconomia"},
+        {"code": "GAC12_INDFBCFCCDESSAZ12", "label": "Indicador IPEA de FBCF - Construção Dessazonalizado", "category": "Macroeconomia"}
+    ],
+    "ipea_comercio_exterior.csv": [
+        {"code": "FUNCEX12_XPT12", "label": "Exportações - Preços - Índice", "category": "Macroeconomia"},
+        {"code": "FUNCEX12_MDPT12", "label": "Importações - Preços - Índice", "category": "Macroeconomia"}
+    ],
+    "ipea_producao_mineral.csv": [
+        {"code": "IBSIE12_QSCFG12", "label": "Mineral - Ferro-Gusa - Produção", "category": "Produção"},
+        {"code": "IBSIE12_QSCAB12", "label": "Mineral - Aço Bruto - Produção", "category": "Produção"},
+        {"code": "IBSIE12_QSCL12", "label": "Mineral - Laminados - Produção", "category": "Produção"}
+    ],
+    "ipea_calendario.csv": [
+        {"code": "SGS12_NDIASUTEISFUT12", "label": "Número de Dias Úteis Futuros", "category": "Calendário"},
+        {"code": "SGS12_NDIASUTEISPAS12", "label": "Número de Dias Úteis Passados", "category": "Calendário"}
+    ]
 }
 
 
@@ -228,16 +359,43 @@ INDICATOR_DEFS = [
     # ── Yahoo Finance ──────────────────────────────────────────────
     *[
         {
-            "dataset": "yahoo_finance_series.csv",
+            "dataset": filename + ".csv",
             "source": "Yahoo Finance",
             "label": ticker,
-            "value_col": "vr_fechamento",
-            "date_col": "dt_ref",
-            "filter_col": "ticker",
+            "value_col": "preco_fechamento",
+            "date_col": "data_referencia",
+            "filter_col": "codigo_ativo",
             "filter_val": ticker,
-            "category": "Mercados Globais",
+            "category": category,
         }
-        for ticker in ["^BVSP", "BRL=X", "GLD", "^TNX"]
+        for category, filename in [
+            ("Ações Brasileiras (B3)", "yahoo_acoes_brasileiras"),
+            ("Ações Internacionais", "yahoo_acoes_internacionais"),
+            ("Câmbio / Moedas", "yahoo_cambio_moedas"),
+            ("Criptoativos", "yahoo_criptoativos"),
+            ("Commodities Globais", "yahoo_commodities"),
+            ("Índices de Ações Globais", "yahoo_indices_globais"),
+            ("Renda Fixa & Treasuries", "yahoo_renda_fixa"),
+            ("ETFs & Setoriais", "yahoo_etfs"),
+            ("FIIs e Fiagros", "yahoo_fiis_fiagros"),
+        ]
+        for ticker in YAHOO_SECTIONS[category]
+    ],
+    # ── IPEADATA ───────────────────────────────────────────────────
+    *[
+        {
+            "dataset": filename,
+            "source": "IPEA",
+            "label": item["label"],
+            "value_col": "valor",
+            "date_col": "data_referencia",
+            "filter_col": "codigo_ativo",
+            "filter_val": item["code"],
+            "category": item["category"],
+            **({"fmt": item["fmt"]} if "fmt" in item else {})
+        }
+        for filename, items in IPEADATA_SECTIONS.items()
+        for item in items
     ],
 ]
 
@@ -304,7 +462,10 @@ def _extract_filtered_value(
     ]
     if not filtered:
         return None
-    return _extract_single_value(filtered, idef)
+    res = _extract_single_value(filtered, idef)
+    if res and "filter_val" in idef:
+        res["metrica"] = idef["filter_val"]
+    return res
 
 
 def _extract_grouped_value(

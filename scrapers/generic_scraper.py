@@ -115,7 +115,13 @@ class GenericScraper(BaseScraper):
         file_name = self.res_config.get("file_name")
         type_response = self.res_config.get("type_response")
 
-        dt = date_ref(None)
+        if self.target_date:
+            from datetime import datetime
+            # Combina a data alvo com o horário atual para evitar perda de fuso
+            dt = datetime.combine(self.target_date, datetime.now().time())
+        else:
+            dt = date_ref(None)
+
         url = replace_date_vars(url_template, dt)
 
         session = nova_session()
@@ -238,7 +244,8 @@ class GenericScraper(BaseScraper):
             rows = mapped_rows
 
         dataset_id = self.resource_name.lower().replace(" ", "_").replace("-", "_")
-        enriched, _ = enriquecer(dataset_id, rows)
+        override_str = self.target_date.strftime("%Y-%m-%d") if self.target_date else None
+        enriched, _ = enriquecer(dataset_id, rows, data_captura_override=override_str)
         return pd.DataFrame(enriched)
 
 

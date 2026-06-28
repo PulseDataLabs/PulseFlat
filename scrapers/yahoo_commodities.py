@@ -15,8 +15,9 @@ import requests
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from scrapers.utils.base import BaseScraper
 
-TICKERS = [('TIO=F', 'MINERIO_FERRO'), ('ZS=F', 'SOJA'), ('KC=F', 'CAFE'), ('CL=F', 'PETROLEO_WTI'), ('BZ=F', 'PETROLEO_BRENT'), ('GC=F', 'OURO_FUTUROS'), ('SI=F', 'PRATA_FUTUROS'), ('HG=F', 'COBRE_FUTUROS'), ('NG=F', 'GAS_NATURAL'), ('ZC=F', 'MILHO_FUTUROS'), ('ZW=F', 'TRIGO_FUTUROS'), ('SB=F', 'ACUCAR_FUTUROS'), ('CT=F', 'ALGODAO_FUTUROS'), ('CC=F', 'CACAU_FUTUROS'), ('LH=F', 'SUINO_LEAN'), ('FC=F', 'GADO_FEEDER'), ('PL=F', 'PLATINA_FUTUROS'), ('PA=F', 'PALADIO_FUTUROS'), ('ZO=F', 'AVEIA_FUTUROS'), ('ZR=F', 'ARROZ_FUTUROS'), ('GLD', 'OURO_ETF'), ('SLV', 'PRATA_ETF'), ('PPLT', 'PLATINA_ETF'), ('PALL', 'PALADIO_ETF'), ('GLTR', 'METAIS_PRECIOSOS_BASKET'), ('GDX', 'GOLD_MINERS_ETF'), ('GDXJ', 'JUNIOR_GOLD_MINERS_ETF'), ('NEM', 'NEWMONT'), ('GOLD', 'BARRICK_GOLD')]
+TICKERS = [('TIO=F', 'MINERIO_FERRO'), ('ZS=F', 'SOJA'), ('KC=F', 'CAFE'), ('CL=F', 'PETROLEO_WTI'), ('BZ=F', 'PETROLEO_BRENT'), ('GC=F', 'OURO_FUTUROS'), ('SI=F', 'PRATA_FUTUROS'), ('HG=F', 'COBRE_FUTUROS'), ('NG=F', 'GAS_NATURAL'), ('ZC=F', 'MILHO_FUTUROS'), ('ZW=F', 'TRIGO_FUTUROS'), ('SB=F', 'ACUCAR_FUTUROS'), ('CT=F', 'ALGODAO_FUTUROS'), ('CC=F', 'CACAU_FUTUROS'), ('LH=F', 'SUINO_LEAN'), ('FC=F', 'GADO_FEEDER'), ('PL=F', 'PLATINA_FUTUROS'), ('PA=F', 'PALADIO_FUTUROS'), ('ZO=F', 'AVEIA_FUTUROS'), ('ZR=F', 'ARROZ_FUTUROS')]
 DYNAMIC_CSV = ""
+DYNAMIC_FILTERS = None
 YAHOO_HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
     "Accept": "application/json, text/plain, */*",
@@ -88,6 +89,8 @@ class YahooCommoditiesScraper(BaseScraper):
             if csv_path.exists():
                 try:
                     df_b3 = pd.read_csv(csv_path)
+                    if DYNAMIC_FILTERS and "tipo_fundo" in df_b3.columns:
+                        df_b3 = df_b3[df_b3["tipo_fundo"].isin(DYNAMIC_FILTERS)]
                     col = "codigo_fundo" if "codigo_fundo" in df_b3.columns else "codigo_ativo"
                     if col in df_b3.columns:
                         codes = df_b3[col].dropna().unique()

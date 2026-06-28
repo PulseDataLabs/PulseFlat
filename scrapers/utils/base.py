@@ -33,6 +33,9 @@ class BaseScraper:
         self.logger = ColorLogger(self.name)
         root_dir = Path(__file__).resolve().parents[2]
         self.output_file = root_dir / "data" / f"{self.name}.csv"
+        self.target_date = None
+        self.start_date = None
+        self.end_date = None
 
     def get_session(self, impersonate: str | None = None):
         """Retorna uma sessão HTTP configurada. Se impersonate for fornecido e curl_cffi disponível, usa curl_cffi."""
@@ -62,6 +65,27 @@ class BaseScraper:
         if not is_pipeline:
             banner(self.title or self.name.replace("_", " ").title())
 
+        # Se não foram fornecidos programaticamente, tenta ler dos argumentos de CLI
+        if self.target_date is None and self.start_date is None and self.end_date is None:
+            import argparse
+            parser = argparse.ArgumentParser(add_help=False)
+            parser.add_argument("--date")
+            parser.add_argument("--start-date")
+            parser.add_argument("--end-date")
+            try:
+                args, _ = parser.parse_known_args()
+                if args.date:
+                    from datetime import date
+                    self.target_date = date.fromisoformat(args.date)
+                if args.start_date:
+                    from datetime import date
+                    self.start_date = date.fromisoformat(args.start_date)
+                if args.end_date:
+                    from datetime import date
+                    self.end_date = date.fromisoformat(args.end_date)
+            except Exception:
+                pass
+
         t0 = time.time()
         try:
             df = self.fetch()
@@ -69,9 +93,18 @@ class BaseScraper:
                 self.logger.warning("Nenhum dado retornado para salvar.")
                 return
 
-            if "data_captura" not in df.columns and "dt_captura" not in df.columns:
-                data_captura, _ = agora_brt()
-                df.insert(0, "data_captura", data_captura)
+            if self.target_date:
+                target_str = self.target_date.strftime("%Y-%m-%d")
+                if "data_captura" in df.columns:
+                    df["data_captura"] = target_str
+                elif "dt_captura" in df.columns:
+                    df["dt_captura"] = target_str
+                else:
+                    df.insert(0, "data_captura", target_str)
+            else:
+                if "data_captura" not in df.columns and "dt_captura" not in df.columns:
+                    data_captura, _ = agora_brt()
+                    df.insert(0, "data_captura", data_captura)
 
             df_cleaned = df.fillna("")
 

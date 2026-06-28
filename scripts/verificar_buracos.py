@@ -68,7 +68,43 @@ CONFIG: dict[str, dict] = {
         "date_col": "data_captura",
         "group_by": ["curva", "prazo_dias"],
     },
-    "yahoo_finance_series.csv": {
+    "yahoo_acoes_brasileiras.csv": {
+        "date_col": "data_referencia",
+        "group_by": ["codigo_ativo"],
+    },
+    "yahoo_acoes_internacionais.csv": {
+        "date_col": "data_referencia",
+        "group_by": ["codigo_ativo"],
+    },
+    "yahoo_cambio_moedas.csv": {
+        "date_col": "data_referencia",
+        "group_by": ["codigo_ativo"],
+    },
+    "yahoo_criptoativos.csv": {
+        "date_col": "data_referencia",
+        "group_by": ["codigo_ativo"],
+    },
+    "yahoo_commodities.csv": {
+        "date_col": "data_referencia",
+        "group_by": ["codigo_ativo"],
+    },
+    "yahoo_indices_globais.csv": {
+        "date_col": "data_referencia",
+        "group_by": ["codigo_ativo"],
+    },
+    "yahoo_renda_fixa.csv": {
+        "date_col": "data_referencia",
+        "group_by": ["codigo_ativo"],
+    },
+    "yahoo_etfs.csv": {
+        "date_col": "data_referencia",
+        "group_by": ["codigo_ativo"],
+    },
+    "yahoo_fiis_fiagros.csv": {
+        "date_col": "data_referencia",
+        "group_by": ["codigo_ativo"],
+    },
+    "ipea_mercados_diarios.csv": {
         "date_col": "data_referencia",
         "group_by": ["codigo_ativo"],
     },

@@ -337,8 +337,8 @@ def read_existing_header(arquivo) -> list[str]:
     return [c.strip() for c in first.split(",") if c.strip()] if first else []
 
 
-def enriquecer(dataset_id: str, rows: list[dict]) -> tuple[list[dict], list[str]]:
-    data_captura, _ = agora_brt()
+def enriquecer(dataset_id: str, rows: list[dict], data_captura_override: str | None = None) -> tuple[list[dict], list[str]]:
+    data_captura = data_captura_override or agora_brt()[0]
     enriched = []
     campos = set()
     for row in rows:

@@ -68,8 +68,8 @@ def _data_referencia() -> date:
     return _CAL.offset(date.today(), -1)
 
 
-def capturar() -> list[dict]:
-    data_ref = _data_referencia()
+def capturar(target_date: date | None = None) -> list[dict]:
+    data_ref = target_date or _data_referencia()
     str_data = data_ref.strftime("%Y-%m-%d")
     log.info(f"Buscando DI Over B3 (ref: {str_data})...")
 
@@ -131,7 +131,7 @@ class B3BdiDiOverScraper(BaseScraper):
     def fetch(self) -> pd.DataFrame:
         log.info("=== B3 BDI — DI Over ===")
         # Reordena para garantir o cabeçalho original
-        df = pd.DataFrame(capturar())
+        df = pd.DataFrame(capturar(self.target_date))
         if not df.empty:
             colunas = [c for c in CABECALHO if c in df.columns]
             return df[colunas]

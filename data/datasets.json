@@ -623,6 +623,31 @@
     "accumulate": true
   },
   {
+    "title": "B3 Fundos Listados",
+    "file": "b3_fundos_listados.csv",
+    "description": "Lista completa de fundos listados na B3: FII, FIAGRO, FIDC, FIP, ETFs (RV e RF) e Fundos Setoriais. Inclui dados cadastrais e patrimônio líquido via CVM.",
+    "icon": "🏢",
+    "iconClass": "icon-b3",
+    "badge": "Diário",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "ticker",
+      "fundos",
+      "fii",
+      "fiagro",
+      "fidc",
+      "fip",
+      "etf",
+      "setorial",
+      "cnpj",
+      "administrador",
+      "pl"
+    ],
+    "source": "B3 API + CVM",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_fundos_listados.csv",
+    "accumulate": false
+  },
+  {
     "title": "B3 Carteiras Teóricas",
     "file": "b3_carteiras_teoricas.csv",
     "description": "Composição diária das carteiras teóricas dos 22 principais índices da B3. Permite acompanhar a evolução do peso de cada ativo ao longo do tempo e detectar entradas e saídas nas carteiras.",
@@ -954,6 +979,770 @@
     "accumulate": false
   },
   {
+    "title": "Dias Úteis Futuros",
+    "file": "ipea_dias_uteis_futuros.csv",
+    "description": "Número de dias úteis futuros estimados mensalmente.",
+    "icon": "📆",
+    "iconClass": "icon-ipea_dias_uteis_futuros",
+    "badge": "Mensal",
+    "badgeClass": "badge-monthly",
+    "tags": [
+      "dias_uteis",
+      "calendario",
+      "ipea"
+    ],
+    "source": "IPEADATA",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/ipea_dias_uteis_futuros.csv",
+    "accumulate": true
+  },
+  {
+    "title": "Dias Úteis Passados",
+    "file": "ipea_dias_uteis_passados.csv",
+    "description": "Número de dias úteis passados no mês correspondente.",
+    "icon": "📅",
+    "iconClass": "icon-ipea_dias_uteis_passados",
+    "badge": "Mensal",
+    "badgeClass": "badge-monthly",
+    "tags": [
+      "dias_uteis",
+      "calendario",
+      "ipea"
+    ],
+    "source": "IPEADATA",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/ipea_dias_uteis_passados.csv",
+    "accumulate": true
+  },
+  {
+    "title": "Exportações Preços Índice",
+    "file": "ipea_exportacoes_precos.csv",
+    "description": "Índice de preços das exportações gerais (média 2018 = 100).",
+    "icon": "🚢",
+    "iconClass": "icon-ipea_exportacoes_precos",
+    "badge": "Mensal",
+    "badgeClass": "badge-monthly",
+    "tags": [
+      "exportacao",
+      "precos",
+      "comercio_exterior",
+      "ipea"
+    ],
+    "source": "IPEADATA",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/ipea_exportacoes_precos.csv",
+    "accumulate": true
+  },
+  {
+    "title": "Ibovespa Mensal",
+    "file": "ipea_ibovespa_mensal.csv",
+    "description": "Índice de ações Ibovespa - fechamento acumulado no mês (% a.m.).",
+    "icon": "📈",
+    "iconClass": "icon-ipea_ibovespa_mensal",
+    "badge": "Mensal",
+    "badgeClass": "badge-monthly",
+    "tags": [
+      "ibovespa",
+      "acoes",
+      "bolsa",
+      "ipea"
+    ],
+    "source": "IPEADATA",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/ipea_ibovespa_mensal.csv",
+    "accumulate": true
+  },
+  {
+    "title": "IGP-DI Índice Geral",
+    "file": "ipea_igp_di_indice.csv",
+    "description": "Índice Geral de Preços - Disponibilidade Interna (IGP-DI) - índice (ago 1994 = 100).",
+    "icon": "📊",
+    "iconClass": "icon-ipea_igp_di_indice",
+    "badge": "Mensal",
+    "badgeClass": "badge-monthly",
+    "tags": [
+      "igp_di",
+      "inflacao",
+      "precos",
+      "ipea"
+    ],
+    "source": "IPEADATA",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/ipea_igp_di_indice.csv",
+    "accumulate": true
+  },
+  {
+    "title": "Importações Preços Índice",
+    "file": "ipea_importacoes_precos.csv",
+    "description": "Índice de preços das importações gerais (média 2018 = 100).",
+    "icon": "🚢",
+    "iconClass": "icon-ipea_importacoes_precos",
+    "badge": "Mensal",
+    "badgeClass": "badge-monthly",
+    "tags": [
+      "importacao",
+      "precos",
+      "comercio_exterior",
+      "ipea"
+    ],
+    "source": "IPEADATA",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/ipea_importacoes_precos.csv",
+    "accumulate": true
+  },
+  {
+    "title": "INCC-DI Índice Geral",
+    "file": "ipea_incc_di_indice.csv",
+    "description": "Índice Nacional de Custo da Construção - Disponibilidade Interna (INCC-DI) - índice (ago 1994 = 100).",
+    "icon": "🏗",
+    "iconClass": "icon-ipea_incc_di_indice",
+    "badge": "Mensal",
+    "badgeClass": "badge-monthly",
+    "tags": [
+      "incc_di",
+      "construcao",
+      "precos",
+      "ipea"
+    ],
+    "source": "IPEADATA",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/ipea_incc_di_indice.csv",
+    "accumulate": true
+  },
+  {
+    "title": "Indicador FBCF Construção Civil",
+    "file": "ipea_fbcf_construcao_indice.csv",
+    "description": "Indicador IPEA de FBCF - construção civil - índice real (média 1995 = 100).",
+    "icon": "🏗",
+    "iconClass": "icon-ipea_fbcf_construcao_indice",
+    "badge": "Mensal",
+    "badgeClass": "badge-monthly",
+    "tags": [
+      "fbcf",
+      "construcao",
+      "investimento",
+      "ipea"
+    ],
+    "source": "IPEADATA",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/ipea_fbcf_construcao_indice.csv",
+    "accumulate": true
+  },
+  {
+    "title": "Indicador FBCF Construção Dessazonalizado",
+    "file": "ipea_fbcf_construcao_dessaz_indice.csv",
+    "description": "Indicador IPEA de FBCF - construção civil - índice real dessazonalizado (média 1995 = 100).",
+    "icon": "🏗",
+    "iconClass": "icon-ipea_fbcf_construcao_dessaz_indice",
+    "badge": "Mensal",
+    "badgeClass": "badge-monthly",
+    "tags": [
+      "fbcf",
+      "construcao",
+      "investimento",
+      "ipea"
+    ],
+    "source": "IPEADATA",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/ipea_fbcf_construcao_dessaz_indice.csv",
+    "accumulate": true
+  },
+  {
+    "title": "Indicador FBCF Dessazonalizado",
+    "file": "ipea_fbcf_dessaz_indice.csv",
+    "description": "Indicador IPEA de FBCF - índice real dessazonalizado (média 1995 = 100).",
+    "icon": "🏗",
+    "iconClass": "icon-ipea_fbcf_dessaz_indice",
+    "badge": "Mensal",
+    "badgeClass": "badge-monthly",
+    "tags": [
+      "fbcf",
+      "investimento",
+      "macroeconomia",
+      "ipea"
+    ],
+    "source": "IPEADATA",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/ipea_fbcf_dessaz_indice.csv",
+    "accumulate": true
+  },
+  {
+    "title": "Indicador FBCF Índice Real",
+    "file": "ipea_fbcf_indice.csv",
+    "description": "Indicador IPEA de Formação Bruta de Capital Fixo (FBCF) - índice real (média 1995 = 100).",
+    "icon": "🏗",
+    "iconClass": "icon-ipea_fbcf_indice",
+    "badge": "Mensal",
+    "badgeClass": "badge-monthly",
+    "tags": [
+      "fbcf",
+      "investimento",
+      "macroeconomia",
+      "ipea"
+    ],
+    "source": "IPEADATA",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/ipea_fbcf_indice.csv",
+    "accumulate": true
+  },
+  {
+    "title": "INPC Taxa de Variação",
+    "file": "ipea_inpc_variacao.csv",
+    "description": "Índice Nacional de Preços ao Consumidor (INPC) - geral - taxa de variação (% a.m.).",
+    "icon": "📈",
+    "iconClass": "icon-ipea_inpc_variacao",
+    "badge": "Mensal",
+    "badgeClass": "badge-monthly",
+    "tags": [
+      "inpc",
+      "inflacao",
+      "precos",
+      "ipea"
+    ],
+    "source": "IPEADATA",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/ipea_inpc_variacao.csv",
+    "accumulate": true
+  },
+  {
+    "title": "INPC Índice Geral",
+    "file": "ipea_inpc_indice.csv",
+    "description": "Índice Nacional de Preços ao Consumidor (INPC) - geral - índice (dez 1993 = 100).",
+    "icon": "📊",
+    "iconClass": "icon-ipea_inpc_indice",
+    "badge": "Mensal",
+    "badgeClass": "badge-monthly",
+    "tags": [
+      "inpc",
+      "inflacao",
+      "precos",
+      "ipea"
+    ],
+    "source": "IPEADATA",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/ipea_inpc_indice.csv",
+    "accumulate": true
+  },
+  {
+    "title": "IPEA Dow Jones",
+    "file": "ipea_dow_jones.csv",
+    "description": "Índice de ações Dow Jones (fechamento diário), obtido via Ipeadata.",
+    "icon": "🇺🇸",
+    "iconClass": "icon-ipea-dow",
+    "badge": "Diário",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "dow_jones",
+      "mercados",
+      "ações",
+      "ipea"
+    ],
+    "source": "IPEADATA",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/ipea_dow_jones.csv",
+    "accumulate": true
+  },
+  {
+    "title": "IPEA Nasdaq",
+    "file": "ipea_nasdaq.csv",
+    "description": "Índice de ações NASDAQ (fechamento diário), obtido via Ipeadata.",
+    "icon": "🇺🇸",
+    "iconClass": "icon-ipea-nasdaq",
+    "badge": "Diário",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "nasdaq",
+      "mercados",
+      "ações",
+      "ipea"
+    ],
+    "source": "IPEADATA",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/ipea_nasdaq.csv",
+    "accumulate": true
+  },
+  {
+    "title": "IPEA Petróleo Brent",
+    "file": "ipea_petroleo_brent.csv",
+    "description": "Preço médio diário do petróleo bruto Brent (FOB, em US$ por barril), obtido via Ipeadata.",
+    "icon": "🛢",
+    "iconClass": "icon-ipea-brent",
+    "badge": "Diário",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "petroleo",
+      "brent",
+      "commodities",
+      "ipea"
+    ],
+    "source": "IPEADATA",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/ipea_petroleo_brent.csv",
+    "accumulate": true
+  },
+  {
+    "title": "IPEA Petróleo WTI",
+    "file": "ipea_petroleo_wti.csv",
+    "description": "Preço médio diário do petróleo bruto West Texas Intermediate (FOB, em US$ por barril), obtido via Ipeadata.",
+    "icon": "🛢",
+    "iconClass": "icon-ipea-wti",
+    "badge": "Diário",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "petroleo",
+      "wti",
+      "commodities",
+      "ipea"
+    ],
+    "source": "IPEADATA",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/ipea_petroleo_wti.csv",
+    "accumulate": true
+  },
+  {
+    "title": "IPEA PIB Acumulado 12m",
+    "file": "ipea_pib_acum_12m.csv",
+    "description": "Série histórica do Produto Interno Bruto (PIB) acumulado em 12 meses (R$ milhões), obtido via Ipeadata.",
+    "icon": "💰",
+    "iconClass": "icon-ipea-pib",
+    "badge": "Mensal",
+    "badgeClass": "badge-monthly",
+    "tags": [
+      "pib",
+      "macroeconomia",
+      "ipea"
+    ],
+    "source": "IPEADATA",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/ipea_pib_acum_12m.csv",
+    "accumulate": true
+  },
+  {
+    "title": "IPEA Taxa de Desocupação",
+    "file": "ipea_taxa_desocupacao.csv",
+    "description": "Série histórica da Taxa de Desocupação da PNAD Contínua (%), obtida via Ipeadata.",
+    "icon": "👥",
+    "iconClass": "icon-ipea-desocupacao",
+    "badge": "Mensal",
+    "badgeClass": "badge-monthly",
+    "tags": [
+      "desemprego",
+      "macroeconomia",
+      "ipea"
+    ],
+    "source": "IPEADATA",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/ipea_taxa_desocupacao.csv",
+    "accumulate": true
+  },
+  {
+    "title": "Poupança Rentabilidade Antiga",
+    "file": "ipea_juros_poupanca_antiga.csv",
+    "description": "Rentabilidade mensal da poupança para depósitos até 03/05/2012 (% a.m.).",
+    "icon": "💵",
+    "iconClass": "icon-ipea_juros_poupanca_antiga",
+    "badge": "Mensal",
+    "badgeClass": "badge-monthly",
+    "tags": [
+      "juros",
+      "poupanca",
+      "investimentos",
+      "ipea"
+    ],
+    "source": "IPEADATA",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/ipea_juros_poupanca_antiga.csv",
+    "accumulate": true
+  },
+  {
+    "title": "Poupança Rentabilidade Nova",
+    "file": "ipea_juros_poupanca_nova.csv",
+    "description": "Rentabilidade mensal da poupança para depósitos a partir de 04/05/2012 (% a.m.).",
+    "icon": "💵",
+    "iconClass": "icon-ipea_juros_poupanca_nova",
+    "badge": "Mensal",
+    "badgeClass": "badge-monthly",
+    "tags": [
+      "juros",
+      "poupanca",
+      "investimentos",
+      "ipea"
+    ],
+    "source": "IPEADATA",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/ipea_juros_poupanca_nova.csv",
+    "accumulate": true
+  },
+  {
+    "title": "Produção de Aço Bruto",
+    "file": "ipea_mineral_aco_bruto.csv",
+    "description": "Produção mensal de aço bruto pela indústria de transformação mineral (em toneladas).",
+    "icon": "🧱",
+    "iconClass": "icon-ipea_mineral_aco_bruto",
+    "badge": "Mensal",
+    "badgeClass": "badge-monthly",
+    "tags": [
+      "mineracao",
+      "aco_bruto",
+      "producao",
+      "ipea"
+    ],
+    "source": "IPEADATA",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/ipea_mineral_aco_bruto.csv",
+    "accumulate": true
+  },
+  {
+    "title": "Produção de Ferro-Gusa",
+    "file": "ipea_mineral_ferro_gusa.csv",
+    "description": "Produção mensal de ferro-gusa pela indústria de transformação mineral (em toneladas).",
+    "icon": "🧱",
+    "iconClass": "icon-ipea_mineral_ferro_gusa",
+    "badge": "Mensal",
+    "badgeClass": "badge-monthly",
+    "tags": [
+      "mineracao",
+      "ferro_gusa",
+      "producao",
+      "ipea"
+    ],
+    "source": "IPEADATA",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/ipea_mineral_ferro_gusa.csv",
+    "accumulate": true
+  },
+  {
+    "title": "Produção de Laminados",
+    "file": "ipea_mineral_laminados.csv",
+    "description": "Produção mensal de laminados pela indústria de transformação mineral (em toneladas).",
+    "icon": "🧱",
+    "iconClass": "icon-ipea_mineral_laminados",
+    "badge": "Mensal",
+    "badgeClass": "badge-monthly",
+    "tags": [
+      "mineracao",
+      "laminados",
+      "producao",
+      "ipea"
+    ],
+    "source": "IPEADATA",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/ipea_mineral_laminados.csv",
+    "accumulate": true
+  },
+  {
+    "title": "Saldo Total da Poupança",
+    "file": "ipea_poupanca_saldo.csv",
+    "description": "Saldo total de depósitos em poupança SBPE e rural (R$ milhões).",
+    "icon": "🏦",
+    "iconClass": "icon-ipea_poupanca_saldo",
+    "badge": "Mensal",
+    "badgeClass": "badge-monthly",
+    "tags": [
+      "poupanca",
+      "saldo",
+      "bancos",
+      "ipea"
+    ],
+    "source": "IPEADATA",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/ipea_poupanca_saldo.csv",
+    "accumulate": true
+  },
+  {
+    "title": "Salário Mínimo Real",
+    "file": "ipea_salario_minimo_real.csv",
+    "description": "Salário mínimo real mensal (em R$ do último mês).",
+    "icon": "💰",
+    "iconClass": "icon-ipea_salario_minimo_real",
+    "badge": "Mensal",
+    "badgeClass": "badge-monthly",
+    "tags": [
+      "salario_minimo",
+      "renda",
+      "trabalho",
+      "ipea"
+    ],
+    "source": "IPEADATA",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/ipea_salario_minimo_real.csv",
+    "accumulate": true
+  },
+  {
+    "title": "Salário Mínimo Vigente",
+    "file": "ipea_salario_minimo_vigente.csv",
+    "description": "Salário mínimo mensal vigente nominal (em R$).",
+    "icon": "💰",
+    "iconClass": "icon-ipea_salario_minimo_vigente",
+    "badge": "Mensal",
+    "badgeClass": "badge-monthly",
+    "tags": [
+      "salario_minimo",
+      "renda",
+      "trabalho",
+      "ipea"
+    ],
+    "source": "IPEADATA",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/ipea_salario_minimo_vigente.csv",
+    "accumulate": true
+  },
+  {
+    "title": "Taxa CDI Mensal",
+    "file": "ipea_juros_cdi_mensal.csv",
+    "description": "Taxa de juros - CDI / Over - acumulada no mês (% a.m.).",
+    "icon": "📊",
+    "iconClass": "icon-ipea_juros_cdi_mensal",
+    "badge": "Mensal",
+    "badgeClass": "badge-monthly",
+    "tags": [
+      "juros",
+      "cdi",
+      "macroeconomia",
+      "ipea"
+    ],
+    "source": "IPEADATA",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/ipea_juros_cdi_mensal.csv",
+    "accumulate": true
+  },
+  {
+    "title": "Taxa LTN 12m",
+    "file": "ipea_juros_ltn_12m.csv",
+    "description": "Taxa de juros prefixada - estrutura a termo - LTN - vencimento 12 meses (% a.m.).",
+    "icon": "🏛",
+    "iconClass": "icon-ipea_juros_ltn_12m",
+    "badge": "Mensal",
+    "badgeClass": "badge-monthly",
+    "tags": [
+      "juros",
+      "ltn",
+      "renda_fixa",
+      "ipea"
+    ],
+    "source": "IPEADATA",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/ipea_juros_ltn_12m.csv",
+    "accumulate": true
+  },
+  {
+    "title": "Taxa LTN 1m",
+    "file": "ipea_juros_ltn_1m.csv",
+    "description": "Taxa de juros prefixada - estrutura a termo - LTN - vencimento 1 mês (% a.m.).",
+    "icon": "🏛",
+    "iconClass": "icon-ipea_juros_ltn_1m",
+    "badge": "Mensal",
+    "badgeClass": "badge-monthly",
+    "tags": [
+      "juros",
+      "ltn",
+      "renda_fixa",
+      "ipea"
+    ],
+    "source": "IPEADATA",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/ipea_juros_ltn_1m.csv",
+    "accumulate": true
+  },
+  {
+    "title": "Taxa LTN 3m",
+    "file": "ipea_juros_ltn_3m.csv",
+    "description": "Taxa de juros prefixada - estrutura a termo - LTN - vencimento 3 meses (% a.m.).",
+    "icon": "🏛",
+    "iconClass": "icon-ipea_juros_ltn_3m",
+    "badge": "Mensal",
+    "badgeClass": "badge-monthly",
+    "tags": [
+      "juros",
+      "ltn",
+      "renda_fixa",
+      "ipea"
+    ],
+    "source": "IPEADATA",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/ipea_juros_ltn_3m.csv",
+    "accumulate": true
+  },
+  {
+    "title": "Taxa LTN 6m",
+    "file": "ipea_juros_ltn_6m.csv",
+    "description": "Taxa de juros prefixada - estrutura a termo - LTN - vencimento 6 meses (% a.m.).",
+    "icon": "🏛",
+    "iconClass": "icon-ipea_juros_ltn_6m",
+    "badge": "Mensal",
+    "badgeClass": "badge-monthly",
+    "tags": [
+      "juros",
+      "ltn",
+      "renda_fixa",
+      "ipea"
+    ],
+    "source": "IPEADATA",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/ipea_juros_ltn_6m.csv",
+    "accumulate": true
+  },
+  {
+    "title": "Taxa Selic Mensal",
+    "file": "ipea_juros_selic_mensal.csv",
+    "description": "Taxa de juros - Over / Selic - acumulada no mês (% a.m.).",
+    "icon": "💰",
+    "iconClass": "icon-ipea_juros_selic_mensal",
+    "badge": "Mensal",
+    "badgeClass": "badge-monthly",
+    "tags": [
+      "juros",
+      "selic",
+      "macroeconomia",
+      "ipea"
+    ],
+    "source": "IPEADATA",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/ipea_juros_selic_mensal.csv",
+    "accumulate": true
+  },
+  {
+    "title": "Taxa TBF",
+    "file": "ipea_juros_tbf.csv",
+    "description": "Taxa Básica Financeira (TBF) - primeiro dia do mês (% a.m.).",
+    "icon": "📈",
+    "iconClass": "icon-ipea_juros_tbf",
+    "badge": "Mensal",
+    "badgeClass": "badge-monthly",
+    "tags": [
+      "juros",
+      "tbf",
+      "financas",
+      "ipea"
+    ],
+    "source": "IPEADATA",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/ipea_juros_tbf.csv",
+    "accumulate": true
+  },
+  {
+    "title": "Taxa TJLP",
+    "file": "ipea_juros_tjlp.csv",
+    "description": "Taxa de Juros de Longo Prazo (TJLP) ativa (% a.m.).",
+    "icon": "🏭",
+    "iconClass": "icon-ipea_juros_tjlp",
+    "badge": "Mensal",
+    "badgeClass": "badge-monthly",
+    "tags": [
+      "juros",
+      "tjlp",
+      "bndes",
+      "ipea"
+    ],
+    "source": "IPEADATA",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/ipea_juros_tjlp.csv",
+    "accumulate": true
+  },
+  {
+    "title": "Taxa TR",
+    "file": "ipea_juros_tr.csv",
+    "description": "Taxa Referencial (TR) - primeiro dia do mês (% a.m.).",
+    "icon": "🏠",
+    "iconClass": "icon-ipea_juros_tr",
+    "badge": "Mensal",
+    "badgeClass": "badge-monthly",
+    "tags": [
+      "juros",
+      "tr",
+      "habitacao",
+      "ipea"
+    ],
+    "source": "IPEADATA",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/ipea_juros_tr.csv",
+    "accumulate": true
+  },
+  {
+    "title": "Ipea Calendario",
+    "file": "ipea_calendario.csv",
+    "description": "Sem descrição fornecida.",
+    "icon": "📊",
+    "iconClass": "icon-misc",
+    "badge": "Diário",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "misc"
+    ],
+    "source": "MISC",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/ipea_calendario.csv",
+    "accumulate": true
+  },
+  {
+    "title": "Ipea Comercio Exterior",
+    "file": "ipea_comercio_exterior.csv",
+    "description": "Sem descrição fornecida.",
+    "icon": "📊",
+    "iconClass": "icon-misc",
+    "badge": "Diário",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "misc"
+    ],
+    "source": "MISC",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/ipea_comercio_exterior.csv",
+    "accumulate": true
+  },
+  {
+    "title": "Ipea Fbcf",
+    "file": "ipea_fbcf.csv",
+    "description": "Sem descrição fornecida.",
+    "icon": "📊",
+    "iconClass": "icon-misc",
+    "badge": "Diário",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "misc"
+    ],
+    "source": "MISC",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/ipea_fbcf.csv",
+    "accumulate": true
+  },
+  {
+    "title": "Ipea Macroeconomia",
+    "file": "ipea_macroeconomia.csv",
+    "description": "Sem descrição fornecida.",
+    "icon": "📊",
+    "iconClass": "icon-misc",
+    "badge": "Diário",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "misc"
+    ],
+    "source": "MISC",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/ipea_macroeconomia.csv",
+    "accumulate": true
+  },
+  {
+    "title": "Ipea Mercados Diarios",
+    "file": "ipea_mercados_diarios.csv",
+    "description": "Sem descrição fornecida.",
+    "icon": "📊",
+    "iconClass": "icon-misc",
+    "badge": "Diário",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "misc"
+    ],
+    "source": "MISC",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/ipea_mercados_diarios.csv",
+    "accumulate": true
+  },
+  {
+    "title": "Ipea Precos Inflacao",
+    "file": "ipea_precos_inflacao.csv",
+    "description": "Sem descrição fornecida.",
+    "icon": "📊",
+    "iconClass": "icon-misc",
+    "badge": "Diário",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "misc"
+    ],
+    "source": "MISC",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/ipea_precos_inflacao.csv",
+    "accumulate": true
+  },
+  {
+    "title": "Ipea Producao Mineral",
+    "file": "ipea_producao_mineral.csv",
+    "description": "Sem descrição fornecida.",
+    "icon": "📊",
+    "iconClass": "icon-misc",
+    "badge": "Diário",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "misc"
+    ],
+    "source": "MISC",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/ipea_producao_mineral.csv",
+    "accumulate": true
+  },
+  {
+    "title": "Ipea Taxas Juros",
+    "file": "ipea_taxas_juros.csv",
+    "description": "Sem descrição fornecida.",
+    "icon": "📊",
+    "iconClass": "icon-misc",
+    "badge": "Diário",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "misc"
+    ],
+    "source": "MISC",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/ipea_taxas_juros.csv",
+    "accumulate": true
+  },
+  {
     "title": "Onu Pacto Global",
     "file": "onu_pacto_global.csv",
     "description": "Sem descrição fornecida.",
@@ -969,6 +1758,111 @@
     "accumulate": false
   },
   {
+    "title": "Yahoo Acoes Brasileiras",
+    "file": "yahoo_acoes_brasileiras.csv",
+    "description": "Sem descrição fornecida.",
+    "icon": "📊",
+    "iconClass": "icon-misc",
+    "badge": "Diário",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "misc"
+    ],
+    "source": "MISC",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/yahoo_acoes_brasileiras.csv",
+    "accumulate": true
+  },
+  {
+    "title": "Yahoo Acoes Internacionais",
+    "file": "yahoo_acoes_internacionais.csv",
+    "description": "Sem descrição fornecida.",
+    "icon": "📊",
+    "iconClass": "icon-misc",
+    "badge": "Diário",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "misc"
+    ],
+    "source": "MISC",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/yahoo_acoes_internacionais.csv",
+    "accumulate": true
+  },
+  {
+    "title": "Yahoo Cambio Moedas",
+    "file": "yahoo_cambio_moedas.csv",
+    "description": "Sem descrição fornecida.",
+    "icon": "📊",
+    "iconClass": "icon-misc",
+    "badge": "Diário",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "misc"
+    ],
+    "source": "MISC",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/yahoo_cambio_moedas.csv",
+    "accumulate": true
+  },
+  {
+    "title": "Yahoo Commodities",
+    "file": "yahoo_commodities.csv",
+    "description": "Sem descrição fornecida.",
+    "icon": "📊",
+    "iconClass": "icon-misc",
+    "badge": "Diário",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "misc"
+    ],
+    "source": "MISC",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/yahoo_commodities.csv",
+    "accumulate": true
+  },
+  {
+    "title": "Yahoo Criptoativos",
+    "file": "yahoo_criptoativos.csv",
+    "description": "Sem descrição fornecida.",
+    "icon": "📊",
+    "iconClass": "icon-misc",
+    "badge": "Diário",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "misc"
+    ],
+    "source": "MISC",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/yahoo_criptoativos.csv",
+    "accumulate": true
+  },
+  {
+    "title": "Yahoo Etfs",
+    "file": "yahoo_etfs.csv",
+    "description": "Sem descrição fornecida.",
+    "icon": "📊",
+    "iconClass": "icon-misc",
+    "badge": "Diário",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "misc"
+    ],
+    "source": "MISC",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/yahoo_etfs.csv",
+    "accumulate": true
+  },
+  {
+    "title": "Yahoo Fiis Fiagros",
+    "file": "yahoo_fiis_fiagros.csv",
+    "description": "Sem descrição fornecida.",
+    "icon": "📊",
+    "iconClass": "icon-misc",
+    "badge": "Diário",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "misc"
+    ],
+    "source": "MISC",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/yahoo_fiis_fiagros.csv",
+    "accumulate": true
+  },
+  {
     "title": "Yahoo Finance Series",
     "file": "yahoo_finance_series.csv",
     "description": "Sem descrição fornecida.",
@@ -981,6 +1875,36 @@
     ],
     "source": "MISC",
     "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/yahoo_finance_series.csv",
+    "accumulate": true
+  },
+  {
+    "title": "Yahoo Indices Globais",
+    "file": "yahoo_indices_globais.csv",
+    "description": "Sem descrição fornecida.",
+    "icon": "📊",
+    "iconClass": "icon-misc",
+    "badge": "Diário",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "misc"
+    ],
+    "source": "MISC",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/yahoo_indices_globais.csv",
+    "accumulate": true
+  },
+  {
+    "title": "Yahoo Renda Fixa",
+    "file": "yahoo_renda_fixa.csv",
+    "description": "Sem descrição fornecida.",
+    "icon": "📊",
+    "iconClass": "icon-misc",
+    "badge": "Diário",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "misc"
+    ],
+    "source": "MISC",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/yahoo_renda_fixa.csv",
     "accumulate": true
   }
 ]

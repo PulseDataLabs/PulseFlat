@@ -1077,9 +1077,9 @@
           filtered = dataObjects.filter(r => r.codigo_serie === code);
           
         } else if (datasetFile === 'yahoo_finance_series.csv') {
-          dateCol = 'dt_ref';
-          valCols = ['vr_fechamento'];
-          filtered = dataObjects.filter(r => r.ticker === indicadorName);
+          dateCol = 'data_referencia';
+          valCols = ['preco_fechamento'];
+          filtered = dataObjects.filter(r => r.codigo_ativo === indicadorName);
           
         } else if (datasetFile === 'anbima_indicadores.csv') {
           dateCol = 'data_referencia';
