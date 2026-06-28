@@ -316,7 +316,7 @@ Os scrapers estão classificados nos seguintes grupos de dados principais:
 | **CVM** | [Portal Brasileiro de Dados Abertos](https://dados.cvm.gov.br) | Cadastro geral de companhias abertas, informes diários e dados de cotas/classes de fundos. | Diária |
 | **B3**     | [B3 Market Data](https://www.b3.com.br) | FIIs/ETFs listados, composição das carteiras teóricas de índices (IBOV, SMLL, ISEE, BDRX, IFNC), taxas DI Over, posição acionária / free float / capital social de companhias listadas (`b3_companhias_financeiro`), limites de aceitação de garantias (`b3_limites_garantias`). | Diária / Snapshot / Mensal |
 | **IBGE** | [IBGE SIDRA API](https://sidra.ibge.gov.br) | Índices oficiais de inflação do Brasil (IPCA, IPCA-15, INPC). | Mensal |
-| **Misc** | [Yahoo Finance](https://finance.yahoo.com) / [ONU](https://unglobalcompact.org) | Cotações históricas de índices globais e lista de empresas brasileiras participantes do Pacto Global da ONU. | Diária |
+| **Misc** | [Yahoo Finance](https://finance.yahoo.com) / [Wikipedia](https://www.wikipedia.org) / [ONU](https://unglobalcompact.org) | Cotações históricas/diárias de ações brasileiras e internacionais, ETFs (B3 e Irlandeses UCITS), moedas, criptoativos, commodities e índices globais de forma 100% parametrizável e dinâmica (composição via Wikipedia e B3); e dados do Pacto Global da ONU. | Diária |
 
 ---
 

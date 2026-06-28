@@ -15,9 +15,9 @@ import requests
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from scrapers.utils.base import BaseScraper
 
-TICKERS = [('VALE3.SA', 'VALE3'), ('PETR4.SA', 'PETR4'), ('PETR3.SA', 'PETR3'), ('ITUB4.SA', 'ITUB4'), ('BBDC4.SA', 'BBDC4'), ('BBAS3.SA', 'BBAS3'), ('B3SA3.SA', 'B3SA3'), ('ELET3.SA', 'ELET3'), ('WEGE3.SA', 'WEGE3'), ('ABEV3.SA', 'ABEV3'), ('RENT3.SA', 'RENT3'), ('GGBR4.SA', 'GGBR4'), ('CSNA3.SA', 'CSNA3'), ('USIM5.SA', 'USIM5'), ('JBSS3.SA', 'JBSS3'), ('MGLU3.SA', 'MGLU3'), ('LREN3.SA', 'LREN3'), ('EQTL3.SA', 'EQTL3'), ('SBSP3.SA', 'SBSP3'), ('SUZB3.SA', 'SUZB3'), ('VIVT3.SA', 'VIVT3'), ('TIMS3.SA', 'TIMS3'), ('SANB11.SA', 'SANB11'), ('BPAC11.SA', 'BPAC11'), ('CIEL3.SA', 'CIEL3'), ('EGIE3.SA', 'EGIE3'), ('CPFE3.SA', 'CPFE3'), ('CMIG4.SA', 'CMIG4'), ('CCRO3.SA', 'CCRO3'), ('RADL3.SA', 'RADL3'), ('HYPE3.SA', 'HYPE3'), ('CRFB3.SA', 'CRFB3'), ('ASAI3.SA', 'ASAI3'), ('NTCO3.SA', 'NTCO3'), ('BRFS3.SA', 'BRFS3'), ('COGN3.SA', 'COGN3'), ('CYRE3.SA', 'CYRE3'), ('MRVE3.SA', 'MRVE3'), ('EZTC3.SA', 'EZTC3'), ('TEND3.SA', 'TEND3'), ('ALOS3.SA', 'ALOS3'), ('MULT3.SA', 'MULT3'), ('IGTI11.SA', 'IGTI11'), ('BEEF3.SA', 'BEEF3'), ('MRFG3.SA', 'MRFG3'), ('CPLE6.SA', 'CPLE6'), ('ENGI11.SA', 'ENGI11'), ('TAEE11.SA', 'TAEE11'), ('TRPL4.SA', 'TRPL4'), ('PRIO3.SA', 'PRIO3'), ('RRRP3.SA', 'RRRP3'), ('RECV3.SA', 'RECV3'), ('UGPA3.SA', 'UGPA3'), ('VBBR3.SA', 'VBBR3'), ('CSAN3.SA', 'CSAN3'), ('BRKM5.SA', 'BRKM5'), ('EMBR3.SA', 'EMBR3'), ('GOLL4.SA', 'GOLL4'), ('AZUL4.SA', 'AZUL4'), ('RUMO3.SA', 'RUMO3'), ('JHSF3.SA', 'JHSF3'), ('YDUQ3.SA', 'YDUQ3'), ('CVCB3.SA', 'CVCB3'), ('SLCE3.SA', 'SLCE3'), ('SMTO3.SA', 'SMTO3'), ('FLRY3.SA', 'FLRY3'), ('HAPV3.SA', 'HAPV3'), ('QUAL3.SA', 'QUAL3'), ('ODPV3.SA', 'ODPV3'), ('BBDC3.SA', 'BBDC3'), ('ITSA4.SA', 'ITSA4'), ('BRAP4.SA', 'BRAP4'), ('CMIN3.SA', 'CMIN3'), ('KLBN11.SA', 'KLBN11'), ('PCAR3.SA', 'PCAR3'), ('IRBR3.SA', 'IRBR3'), ('ENEV3.SA', 'ENEV3'), ('LOGN3.SA', 'LOGN3'), ('MDIA3.SA', 'MDIA3')]
 DYNAMIC_CSV = "b3_carteiras_teoricas.csv"
 DYNAMIC_FILTERS = None
+DYNAMIC_SUFFIX = ".SA"
 YAHOO_HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
     "Accept": "application/json, text/plain, */*",
@@ -82,9 +82,19 @@ class YahooAcoesBrasileirasScraper(BaseScraper):
         dt_ini = int(datetime.datetime.combine(dt_ini_date, datetime.time()).timestamp())
 
         # Resolve tickers list
-        tickers_list = list(TICKERS)
+        tickers_list = []
+        root_dir = Path(__file__).resolve().parents[1]
+        custom_csv = root_dir / "data" / "custom_tickers.csv"
+        if custom_csv.exists():
+            try:
+                df_custom = pd.read_csv(custom_csv)
+                df_filtered = df_custom[df_custom["category"] == "yahoo_acoes_brasileiras"]
+                for _, row in df_filtered.iterrows():
+                    tickers_list.append((str(row["ticker"]).strip(), str(row["label"]).strip()))
+            except Exception as e:
+                self.logger.warning(f"Erro ao carregar custom_tickers.csv: {e}")
+
         if DYNAMIC_CSV:
-            root_dir = Path(__file__).resolve().parents[1]
             csv_path = root_dir / "data" / DYNAMIC_CSV
             if csv_path.exists():
                 try:
@@ -97,7 +107,8 @@ class YahooAcoesBrasileirasScraper(BaseScraper):
                         for code in codes:
                             code_str = str(code).strip()
                             if code_str:
-                                tickers_list.append((f"{code_str}.SA", code_str))
+                                ticker_yahoo = f"{code_str}{DYNAMIC_SUFFIX}" if DYNAMIC_SUFFIX else code_str
+                                tickers_list.append((ticker_yahoo, code_str))
                 except Exception as e:
                     self.logger.warning(f"Erro ao carregar B3 tickers dinâmicos: {e}")
 

@@ -21,123 +21,47 @@ YAHOO_SECTIONS = {
         "title": "Ações Brasileiras",
         "class_name": "YahooAcoesBrasileirasScraper",
         "dynamic_csv": "b3_carteiras_teoricas.csv",
-        "tickers": [
-            ("VALE3.SA", "VALE3"), ("PETR4.SA", "PETR4"), ("PETR3.SA", "PETR3"), ("ITUB4.SA", "ITUB4"),
-            ("BBDC4.SA", "BBDC4"), ("BBAS3.SA", "BBAS3"), ("B3SA3.SA", "B3SA3"), ("ELET3.SA", "ELET3"),
-            ("WEGE3.SA", "WEGE3"), ("ABEV3.SA", "ABEV3"), ("RENT3.SA", "RENT3"), ("GGBR4.SA", "GGBR4"),
-            ("CSNA3.SA", "CSNA3"), ("USIM5.SA", "USIM5"), ("JBSS3.SA", "JBSS3"), ("MGLU3.SA", "MGLU3"),
-            ("LREN3.SA", "LREN3"), ("EQTL3.SA", "EQTL3"), ("SBSP3.SA", "SBSP3"), ("SUZB3.SA", "SUZB3"),
-            ("VIVT3.SA", "VIVT3"), ("TIMS3.SA", "TIMS3"), ("SANB11.SA", "SANB11"), ("BPAC11.SA", "BPAC11"),
-            ("CIEL3.SA", "CIEL3"), ("EGIE3.SA", "EGIE3"), ("CPFE3.SA", "CPFE3"), ("CMIG4.SA", "CMIG4"),
-            ("CCRO3.SA", "CCRO3"), ("RADL3.SA", "RADL3"), ("HYPE3.SA", "HYPE3"), ("CRFB3.SA", "CRFB3"),
-            ("ASAI3.SA", "ASAI3"), ("NTCO3.SA", "NTCO3"), ("BRFS3.SA", "BRFS3"), ("COGN3.SA", "COGN3"),
-            ("CYRE3.SA", "CYRE3"), ("MRVE3.SA", "MRVE3"), ("EZTC3.SA", "EZTC3"), ("TEND3.SA", "TEND3"),
-            ("ALOS3.SA", "ALOS3"), ("MULT3.SA", "MULT3"), ("IGTI11.SA", "IGTI11"), ("BEEF3.SA", "BEEF3"),
-            ("MRFG3.SA", "MRFG3"), ("CPLE6.SA", "CPLE6"), ("ENGI11.SA", "ENGI11"), ("TAEE11.SA", "TAEE11"),
-            ("TRPL4.SA", "TRPL4"), ("PRIO3.SA", "PRIO3"), ("RRRP3.SA", "RRRP3"), ("RECV3.SA", "RECV3"),
-            ("UGPA3.SA", "UGPA3"), ("VBBR3.SA", "VBBR3"), ("CSAN3.SA", "CSAN3"), ("BRKM5.SA", "BRKM5"),
-            ("EMBR3.SA", "EMBR3"), ("GOLL4.SA", "GOLL4"), ("AZUL4.SA", "AZUL4"), ("RUMO3.SA", "RUMO3"),
-            ("JHSF3.SA", "JHSF3"), ("YDUQ3.SA", "YDUQ3"), ("CVCB3.SA", "CVCB3"), ("SLCE3.SA", "SLCE3"),
-            ("SMTO3.SA", "SMTO3"), ("FLRY3.SA", "FLRY3"), ("HAPV3.SA", "HAPV3"), ("QUAL3.SA", "QUAL3"),
-            ("ODPV3.SA", "ODPV3"), ("BBDC3.SA", "BBDC3"), ("ITSA4.SA", "ITSA4"), ("BRAP4.SA", "BRAP4"),
-            ("CMIN3.SA", "CMIN3"), ("KLBN11.SA", "KLBN11"), ("PCAR3.SA", "PCAR3"), ("IRBR3.SA", "IRBR3"),
-            ("ENEV3.SA", "ENEV3"), ("LOGN3.SA", "LOGN3"), ("MDIA3.SA", "MDIA3")
-        ]
+        "dynamic_suffix": ".SA",
     },
     "yahoo_acoes_internacionais": {
         "title": "Ações Internacionais",
         "class_name": "YahooAcoesInternacionaisScraper",
-        "tickers": [
-            ("AAPL", "APPLE"), ("MSFT", "MICROSOFT"), ("GOOGL", "GOOGLE"), ("AMZN", "AMAZON"),
-            ("NVDA", "NVIDIA"), ("META", "META"), ("TSLA", "TESLA"), ("NFLX", "NETFLIX"),
-            ("JPM", "JPMORGAN"), ("V", "VISA"), ("WMT", "WALMART"), ("DIS", "DISNEY"),
-            ("MA", "MASTERCARD"), ("UNH", "UNITEDHEALTH"), ("HD", "HOMEDEPOT"), ("BAC", "BANK_OF_AMERICA"),
-            ("XOM", "EXXONMOBIL"), ("CVX", "CHEVRON"), ("KO", "COCA_COLA"), ("PEP", "PEPSICO"),
-            ("COST", "COSTCO"), ("PG", "PROCTER_GAMBLE"), ("JNJ", "JOHNSON_JOHNSON"), ("MRK", "MERCK"),
-            ("ABBV", "ABBVIE"), ("LLY", "ELI_LILLY"), ("PFE", "PFIZER"), ("AMD", "AMD"),
-            ("INTC", "INTEL"), ("QCOM", "QUALCOMM"), ("ADBE", "ADOBE"), ("CRM", "SALESFORCE"),
-            ("ORCL", "ORACLE"), ("NKE", "NIKE"), ("MCD", "MCDONALDS"), ("SBUX", "STARBUCKS"),
-            ("NVO", "NOVO_NORDISK"), ("ASML", "ASML"), ("TSM", "TSMC"), ("BABA", "ALIBABA")
-        ]
+        "dynamic_csv": "wikipedia_global_indices.csv",
+        "dynamic_suffix": "",
     },
     "yahoo_cambio_moedas": {
         "title": "Câmbio e Moedas",
         "class_name": "YahooCambioMoedasScraper",
-        "tickers": [
-            ("BRL=X", "USD_BRL"), ("EURBRL=X", "EUR_BRL"), ("GBPBRL=X", "GBP_BRL"), ("CHFBRL=X", "CHF_BRL"),
-            ("JPYBRL=X", "JPY_BRL"), ("CNYBRL=X", "CNY_BRL"), ("ARSBRL=X", "ARS_BRL"), ("CLPBRL=X", "CLP_BRL"),
-            ("MXNBRL=X", "MXN_BRL"), ("UYUBRL=X", "UYU_BRL"), ("COPBRL=X", "COP_BRL"), ("PENBRL=X", "PEN_BRL"),
-            ("EURUSD=X", "EUR_USD"), ("GBPUSD=X", "GBP_USD"), ("USDJPY=X", "USD_JPY"), ("AUDUSD=X", "AUD_USD"),
-            ("USDCAD=X", "USD_CAD"), ("USDCHF=X", "USD_CHF"), ("USDCNY=X", "USD_CNY"), ("USDRUB=X", "USD_RUB"),
-            ("USDTRY=X", "USD_TRY"), ("USDINR=X", "USD_INR"), ("USDMXN=X", "USD_MXN"), ("DX-Y.NYB", "US_DOLLAR_INDEX")
-        ]
     },
     "yahoo_criptoativos": {
         "title": "Criptoativos",
         "class_name": "YahooCriptoativosScraper",
-        "tickers": [
-            ("BTC-USD", "BITCOIN"), ("ETH-USD", "ETHEREUM"), ("SOL-USD", "SOLANA"), ("BNB-USD", "BNB"),
-            ("XRP-USD", "RIPPLE"), ("ADA-USD", "CARDANO"), ("DOGE-USD", "DOGECOIN"), ("DOT-USD", "POLKADOT"),
-            ("AVAX-USD", "AVALANCHE"), ("LINK-USD", "CHAINLINK"), ("SHIB-USD", "SHIBA_INU"), ("TRX-USD", "TRON"),
-            ("LTC-USD", "LITECOIN"), ("UNI-USD", "UNISWAP"), ("XLM-USD", "STELLAR"), ("ATOM-USD", "COSMOS"),
-            ("ETC-USD", "ETHEREUM_CLASSIC"), ("FIL-USD", "FILECOIN"), ("HBAR-USD", "HEDERA"), ("NEAR-USD", "NEAR_PROTOCOL"),
-            ("ICP-USD", "INTERNET_COMPUTER"), ("APT-USD", "APTOS"), ("OP-USD", "OPTIMISM"), ("GRT-USD", "THE_GRAPH"),
-            ("IMX-USD", "IMMUTABLE")
-        ]
     },
     "yahoo_commodities": {
         "title": "Commodities Globais",
         "class_name": "YahooCommoditiesScraper",
-        "tickers": [
-            ("TIO=F", "MINERIO_FERRO"), ("ZS=F", "SOJA"), ("KC=F", "CAFE"), ("CL=F", "PETROLEO_WTI"),
-            ("BZ=F", "PETROLEO_BRENT"), ("GC=F", "OURO_FUTUROS"), ("SI=F", "PRATA_FUTUROS"), ("HG=F", "COBRE_FUTUROS"),
-            ("NG=F", "GAS_NATURAL"), ("ZC=F", "MILHO_FUTUROS"), ("ZW=F", "TRIGO_FUTUROS"), ("SB=F", "ACUCAR_FUTUROS"),
-            ("CT=F", "ALGODAO_FUTUROS"), ("CC=F", "CACAU_FUTUROS"), ("LH=F", "SUINO_LEAN"), ("FC=F", "GADO_FEEDER"),
-            ("PL=F", "PLATINA_FUTUROS"), ("PA=F", "PALADIO_FUTUROS"), ("ZO=F", "AVEIA_FUTUROS"), ("ZR=F", "ARROZ_FUTUROS")
-        ]
     },
     "yahoo_indices_globais": {
         "title": "Índices de Ações Globais",
         "class_name": "YahooIndicesGlobaisScraper",
-        "tickers": [
-            ("^BVSP", "IBOVESPA"), ("^GSPC", "S_P_500"), ("^IXIC", "NASDAQ"), ("^DJI", "DOW_JONES"),
-            ("^VIX", "VIX"), ("^STOXX50E", "EURO_STOXX_50"), ("000001.SS", "SHANGHAI_COMP"), ("^N225", "NIKKEI_225"),
-            ("^FTSE", "FTSE_100"), ("^GDAXI", "DAX"), ("^FCHI", "CAC_40"), ("^HSI", "HANG_SENG"),
-            ("^MERV", "MERVAL"), ("^IPSA", "IPSA"), ("^MXX", "IPC_MEXICO"), ("^RUT", "RUSSELL_2000"),
-            ("^NYA", "NYSE_COMPOSITE"), ("^AXJO", "ASX_200"), ("^BSESN", "SENSEX"), ("^KS11", "KOSPI"),
-            ("^TWII", "TAIWAN_WEIGHTED"), ("^JKSE", "JAKARTA_COMP"), ("^STI", "STRAITS_TIMES"), ("^KLSE", "KLCI"),
-            ("^TA35", "TA_35")
-        ]
     },
     "yahoo_renda_fixa": {
-        "title": "Renda Fixa Global",
+        "title": "Renda Fixa & Treasuries",
         "class_name": "YahooRendaFixaScraper",
-        "tickers": [
-            ("^IRX", "TREASURY_3M"), ("^FVX", "TREASURY_5Y"), ("^TNX", "TREASURY_10Y"), ("^TYX", "TREASURY_30Y")
-        ]
     },
     "yahoo_etfs": {
         "title": "ETFs Globais e Setoriais",
         "class_name": "YahooEtfsScraper",
         "dynamic_csv": "b3_fundos_listados.csv",
         "dynamic_filters": ["ETF Renda Variável", "ETF Renda Fixa"],
-        "tickers": [
-            ("EWZ", "EWZ_IBOV_USD"), ("SMLL.SA", "SMALL_CAPS_B3"),
-            ("BND", "VANGUARD_BOND_ETF"), ("HYG", "HIGH_YIELD_BOND_ETF"), ("LQD", "INVEST_GRADE_BOND_ETF"),
-            ("SPY", "SPY_S_P_500_ETF"), ("QQQ", "QQQ_NASDAQ_ETF"), ("DIA", "DIA_DOW_JONES_ETF"),
-            ("IWM", "IWM_RUSSELL_2000_ETF"), ("EEM", "EEM_EMERGING_MKT_ETF"), ("VGK", "VGK_EUROPE_ETF"),
-            ("VWO", "VWO_EMERGING_VANGUARD"), ("XLE", "XLE_ENERGY_SPDR"), ("XLF", "XLF_FINANCIAL_SPDR"),
-            ("XLK", "XLK_TECH_SPDR")
-        ]
+        "dynamic_suffix": ".SA",
     },
     "yahoo_fiis_fiagros": {
         "title": "FIIs e Fiagros B3",
         "class_name": "YahooFiisFiagrosScraper",
         "dynamic_csv": "b3_fundos_listados.csv",
         "dynamic_filters": ["FII", "FIAGRO"],
-        "tickers": [
-            ("IFIX.SA", "IFIX")
-        ]
+        "dynamic_suffix": ".SA",
     }
 }
 
@@ -244,9 +168,9 @@ import requests
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from scrapers.utils.base import BaseScraper
 
-TICKERS = {tickers}
 DYNAMIC_CSV = "{dynamic_csv}"
 DYNAMIC_FILTERS = {dynamic_filters}
+DYNAMIC_SUFFIX = "{dynamic_suffix}"
 YAHOO_HEADERS = {{
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
     "Accept": "application/json, text/plain, */*",
@@ -311,9 +235,19 @@ class {class_name}(BaseScraper):
         dt_ini = int(datetime.datetime.combine(dt_ini_date, datetime.time()).timestamp())
 
         # Resolve tickers list
-        tickers_list = list(TICKERS)
+        tickers_list = []
+        root_dir = Path(__file__).resolve().parents[1]
+        custom_csv = root_dir / "data" / "custom_tickers.csv"
+        if custom_csv.exists():
+            try:
+                df_custom = pd.read_csv(custom_csv)
+                df_filtered = df_custom[df_custom["category"] == "{name}"]
+                for _, row in df_filtered.iterrows():
+                    tickers_list.append((str(row["ticker"]).strip(), str(row["label"]).strip()))
+            except Exception as e:
+                self.logger.warning(f"Erro ao carregar custom_tickers.csv: {{e}}")
+
         if DYNAMIC_CSV:
-            root_dir = Path(__file__).resolve().parents[1]
             csv_path = root_dir / "data" / DYNAMIC_CSV
             if csv_path.exists():
                 try:
@@ -326,7 +260,8 @@ class {class_name}(BaseScraper):
                         for code in codes:
                             code_str = str(code).strip()
                             if code_str:
-                                tickers_list.append((f"{{code_str}}.SA", code_str))
+                                ticker_yahoo = f"{{code_str}}{{DYNAMIC_SUFFIX}}" if DYNAMIC_SUFFIX else code_str
+                                tickers_list.append((ticker_yahoo, code_str))
                 except Exception as e:
                     self.logger.warning(f"Erro ao carregar B3 tickers dinâmicos: {{e}}")
 
@@ -479,9 +414,9 @@ def generate():
             title=item["title"],
             name=name,
             class_name=item["class_name"],
-            tickers=str(item["tickers"]),
             dynamic_csv=item.get("dynamic_csv", ""),
             dynamic_filters=str(item.get("dynamic_filters", None)),
+            dynamic_suffix=item.get("dynamic_suffix", ""),
         )
         file_path.write_text(content, encoding="utf-8")
         file_path.chmod(file_path.stat().st_mode | stat.S_IEXEC)

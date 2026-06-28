@@ -15,9 +15,9 @@ import requests
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from scrapers.utils.base import BaseScraper
 
-TICKERS = [('BRL=X', 'USD_BRL'), ('EURBRL=X', 'EUR_BRL'), ('GBPBRL=X', 'GBP_BRL'), ('CHFBRL=X', 'CHF_BRL'), ('JPYBRL=X', 'JPY_BRL'), ('CNYBRL=X', 'CNY_BRL'), ('ARSBRL=X', 'ARS_BRL'), ('CLPBRL=X', 'CLP_BRL'), ('MXNBRL=X', 'MXN_BRL'), ('UYUBRL=X', 'UYU_BRL'), ('COPBRL=X', 'COP_BRL'), ('PENBRL=X', 'PEN_BRL'), ('EURUSD=X', 'EUR_USD'), ('GBPUSD=X', 'GBP_USD'), ('USDJPY=X', 'USD_JPY'), ('AUDUSD=X', 'AUD_USD'), ('USDCAD=X', 'USD_CAD'), ('USDCHF=X', 'USD_CHF'), ('USDCNY=X', 'USD_CNY'), ('USDRUB=X', 'USD_RUB'), ('USDTRY=X', 'USD_TRY'), ('USDINR=X', 'USD_INR'), ('USDMXN=X', 'USD_MXN'), ('DX-Y.NYB', 'US_DOLLAR_INDEX')]
 DYNAMIC_CSV = ""
 DYNAMIC_FILTERS = None
+DYNAMIC_SUFFIX = ""
 YAHOO_HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
     "Accept": "application/json, text/plain, */*",
@@ -82,9 +82,19 @@ class YahooCambioMoedasScraper(BaseScraper):
         dt_ini = int(datetime.datetime.combine(dt_ini_date, datetime.time()).timestamp())
 
         # Resolve tickers list
-        tickers_list = list(TICKERS)
+        tickers_list = []
+        root_dir = Path(__file__).resolve().parents[1]
+        custom_csv = root_dir / "data" / "custom_tickers.csv"
+        if custom_csv.exists():
+            try:
+                df_custom = pd.read_csv(custom_csv)
+                df_filtered = df_custom[df_custom["category"] == "yahoo_cambio_moedas"]
+                for _, row in df_filtered.iterrows():
+                    tickers_list.append((str(row["ticker"]).strip(), str(row["label"]).strip()))
+            except Exception as e:
+                self.logger.warning(f"Erro ao carregar custom_tickers.csv: {e}")
+
         if DYNAMIC_CSV:
-            root_dir = Path(__file__).resolve().parents[1]
             csv_path = root_dir / "data" / DYNAMIC_CSV
             if csv_path.exists():
                 try:
@@ -97,7 +107,8 @@ class YahooCambioMoedasScraper(BaseScraper):
                         for code in codes:
                             code_str = str(code).strip()
                             if code_str:
-                                tickers_list.append((f"{code_str}.SA", code_str))
+                                ticker_yahoo = f"{code_str}{DYNAMIC_SUFFIX}" if DYNAMIC_SUFFIX else code_str
+                                tickers_list.append((ticker_yahoo, code_str))
                 except Exception as e:
                     self.logger.warning(f"Erro ao carregar B3 tickers dinâmicos: {e}")
 

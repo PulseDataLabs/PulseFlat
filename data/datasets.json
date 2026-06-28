@@ -1906,5 +1906,28 @@
     "source": "MISC",
     "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/yahoo_renda_fixa.csv",
     "accumulate": true
+  },
+  {
+    "title": "Wikipedia Índices Globais",
+    "file": "wikipedia_global_indices.csv",
+    "description": "Composição histórica/atual dos índices de ações mais representativos do mundo (S&P 500, NASDAQ-100, Dow Jones, FTSE 100, DAX 40, CAC 40 e Euro Stoxx 50) raspados da Wikipedia.",
+    "icon": "🌐",
+    "iconClass": "icon-global",
+    "badge": "Diário",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "indices",
+      "global",
+      "wikipedia",
+      "sp500",
+      "nasdaq",
+      "dowjones",
+      "ftse",
+      "dax",
+      "cac"
+    ],
+    "source": "Wikipedia",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/wikipedia_global_indices.csv",
+    "accumulate": false
   }
 ]

@@ -398,5 +398,9 @@ window.PULSEFLAT_LAST_UPDATES = {
   "ipea_calendario.csv": {
     "min": "2026-06-28",
     "max": "2026-06-28"
+  },
+  "wikipedia_global_indices.csv": {
+    "min": "2026-06-28",
+    "max": "2026-06-28"
   }
 };

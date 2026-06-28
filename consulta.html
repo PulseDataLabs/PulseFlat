@@ -1076,9 +1076,9 @@
           const code = SGS_MAP[indicadorName];
           filtered = dataObjects.filter(r => r.codigo_serie === code);
           
-        } else if (datasetFile === 'yahoo_finance_series.csv') {
+        } else if (datasetFile.startsWith('yahoo_') || datasetFile.startsWith('ipea_')) {
           dateCol = 'data_referencia';
-          valCols = ['preco_fechamento'];
+          valCols = [headers.includes('preco_fechamento') ? 'preco_fechamento' : 'valor'];
           filtered = dataObjects.filter(r => r.codigo_ativo === indicadorName);
           
         } else if (datasetFile === 'anbima_indicadores.csv') {

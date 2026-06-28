@@ -15,9 +15,9 @@ import requests
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from scrapers.utils.base import BaseScraper
 
-TICKERS = [('TIO=F', 'MINERIO_FERRO'), ('ZS=F', 'SOJA'), ('KC=F', 'CAFE'), ('CL=F', 'PETROLEO_WTI'), ('BZ=F', 'PETROLEO_BRENT'), ('GC=F', 'OURO_FUTUROS'), ('SI=F', 'PRATA_FUTUROS'), ('HG=F', 'COBRE_FUTUROS'), ('NG=F', 'GAS_NATURAL'), ('ZC=F', 'MILHO_FUTUROS'), ('ZW=F', 'TRIGO_FUTUROS'), ('SB=F', 'ACUCAR_FUTUROS'), ('CT=F', 'ALGODAO_FUTUROS'), ('CC=F', 'CACAU_FUTUROS'), ('LH=F', 'SUINO_LEAN'), ('FC=F', 'GADO_FEEDER'), ('PL=F', 'PLATINA_FUTUROS'), ('PA=F', 'PALADIO_FUTUROS'), ('ZO=F', 'AVEIA_FUTUROS'), ('ZR=F', 'ARROZ_FUTUROS')]
 DYNAMIC_CSV = ""
 DYNAMIC_FILTERS = None
+DYNAMIC_SUFFIX = ""
 YAHOO_HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
     "Accept": "application/json, text/plain, */*",
@@ -82,9 +82,19 @@ class YahooCommoditiesScraper(BaseScraper):
         dt_ini = int(datetime.datetime.combine(dt_ini_date, datetime.time()).timestamp())
 
         # Resolve tickers list
-        tickers_list = list(TICKERS)
+        tickers_list = []
+        root_dir = Path(__file__).resolve().parents[1]
+        custom_csv = root_dir / "data" / "custom_tickers.csv"
+        if custom_csv.exists():
+            try:
+                df_custom = pd.read_csv(custom_csv)
+                df_filtered = df_custom[df_custom["category"] == "yahoo_commodities"]
+                for _, row in df_filtered.iterrows():
+                    tickers_list.append((str(row["ticker"]).strip(), str(row["label"]).strip()))
+            except Exception as e:
+                self.logger.warning(f"Erro ao carregar custom_tickers.csv: {e}")
+
         if DYNAMIC_CSV:
-            root_dir = Path(__file__).resolve().parents[1]
             csv_path = root_dir / "data" / DYNAMIC_CSV
             if csv_path.exists():
                 try:
@@ -97,7 +107,8 @@ class YahooCommoditiesScraper(BaseScraper):
                         for code in codes:
                             code_str = str(code).strip()
                             if code_str:
-                                tickers_list.append((f"{code_str}.SA", code_str))
+                                ticker_yahoo = f"{code_str}{DYNAMIC_SUFFIX}" if DYNAMIC_SUFFIX else code_str
+                                tickers_list.append((ticker_yahoo, code_str))
                 except Exception as e:
                     self.logger.warning(f"Erro ao carregar B3 tickers dinâmicos: {e}")
 
