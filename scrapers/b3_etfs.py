@@ -125,7 +125,7 @@ def capturar() -> list[dict]:
 class B3EtfsScraper(BaseScraper):
     name = "b3_etfs"
     group = "b3"
-    enabled = False  # substituído por b3_fundos_listados
+    enabled = True
     phase = 1
     accumulate = False
     chaves_dedup = None

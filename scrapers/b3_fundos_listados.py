@@ -46,6 +46,7 @@ CABECALHO = [
     "codigo_fundo",
     "nome_fundo",
     "cnpj",
+    "cnpj_classe",
     "administrador",
     "gestor",
     "classificacao",
@@ -54,8 +55,20 @@ CABECALHO = [
     "patrimonio_liquido",
     "data_patrimonio_liquido",
     "data_encerramento",
+    "data_inicio",
     "publico_alvo",
     "forma_condominio",
+    "codigo_cvm",
+    "custodiante",
+    "auditor",
+    "isin_codigo_cfi",
+    "isin_situacao",
+    "isin_data_expiracao",
+    "isin_data_emissao",
+    "isin_exchange",
+    "isin_moeda",
+    "isin_codigo_categoria",
+    "isin_codigo_especie",
     "id_b3",
 ]
 
@@ -100,6 +113,7 @@ def _mapear(item: dict, data_captura: str, tipo_label: str) -> dict:
         "codigo_fundo":  codigo,
         "nome_fundo":    limpar(item.get("fundName") or item.get("tradingName")),
         "cnpj":          "",
+        "cnpj_classe":   "",
         "administrador": "",
         "gestor":        "",
         "classificacao": "",
@@ -108,8 +122,20 @@ def _mapear(item: dict, data_captura: str, tipo_label: str) -> dict:
         "patrimonio_liquido": "",
         "data_patrimonio_liquido": "",
         "data_encerramento": "",
+        "data_inicio":   "",
         "publico_alvo":  "",
         "forma_condominio": "",
+        "codigo_cvm":    "",
+        "custodiante":   "",
+        "auditor":       "",
+        "isin_codigo_cfi": "",
+        "isin_situacao": "",
+        "isin_data_expiracao": "",
+        "isin_data_emissao": "",
+        "isin_exchange": "",
+        "isin_moeda":    "",
+        "isin_codigo_categoria": "",
+        "isin_codigo_especie": "",
         "id_b3":         str(item.get("id", "")),
     }
 
@@ -135,6 +161,7 @@ def _enriquecer(registros: list[dict]) -> list[dict]:
         log.warning(f"Erro ao ler CSVs de enriquecimento: {e}")
         return registros
 
+    # ── Fase 0: cadeia ticker → ISIN → emissor → CNPJ → CVM ──────────────
     ticker_to_isin = titulos.set_index("codigo_ativo")["codigo_isin"].dropna().to_dict()
     isin_to_emissor = isin_ativos.set_index("codigo_isin")["codigo_emissor"].dropna().to_dict()
     emissor_to_cnpj = isin_emissores.set_index("codigo_emissor")["cnpj_emissor"].dropna().to_dict()
@@ -145,10 +172,10 @@ def _enriquecer(registros: list[dict]) -> list[dict]:
     enriquecidos = 0
     for rec in registros:
         ticker = rec.get("codigo_fundo", "")
-        isin = ticker_to_isin.get(ticker)
-        if not isin:
+        cod_isin = ticker_to_isin.get(ticker)
+        if not cod_isin:
             continue
-        emissor = isin_to_emissor.get(isin)
+        emissor = isin_to_emissor.get(cod_isin)
         if not emissor:
             continue
         cnpj = emissor_to_cnpj.get(emissor)
@@ -173,7 +200,56 @@ def _enriquecer(registros: list[dict]) -> list[dict]:
         rec["forma_condominio"] = str(row.get("forma_condominio", ""))
         enriquecidos += 1
 
-    log.info(f"Registros enriquecidos via CVM: {enriquecidos}/{len(registros)}")
+    # ── Fase 1: dados complementares do ISIN (para todo fundo com ISIN) ─
+    isin_idx = isin_ativos.drop_duplicates(subset="codigo_isin").set_index("codigo_isin")
+
+    campos_isin = [
+        ("codigo_cfi",     "isin_codigo_cfi"),
+        ("situacao_isin",  "isin_situacao"),
+        ("data_expiracao", "isin_data_expiracao"),
+        ("data_emissao",   "isin_data_emissao"),
+        ("exchange",       "isin_exchange"),
+        ("moeda",          "isin_moeda"),
+        ("codigo_categoria", "isin_codigo_categoria"),
+        ("codigo_especie",   "isin_codigo_especie"),
+    ]
+
+    for rec in registros:
+        cod_isin = ticker_to_isin.get(rec.get("codigo_fundo", ""))
+        if not cod_isin or cod_isin not in isin_idx.index:
+            continue
+        row = isin_idx.loc[cod_isin]
+        for src_col, dst_col in campos_isin:
+            rec[dst_col] = str(row.get(src_col, ""))
+
+    # ── Fase 2: match por nome na CVM (ETF Renda Fixa) ─────────────────
+    cvm_nome = cvm.drop_duplicates(subset="denominacao_social").set_index("denominacao_social")
+
+    enriquecidos_nome = 0
+    for rec in registros:
+        if rec.get("cnpj"):
+            continue
+        if rec.get("tipo_fundo") != "ETF Renda Fixa":
+            continue
+        nome = str(rec.get("nome_fundo", "")).strip()
+        if not nome or nome not in cvm_nome.index:
+            continue
+
+        row = cvm_nome.loc[nome]
+        rec["situacao"] = str(row.get("situacao", ""))
+        rec["patrimonio_liquido"] = str(row.get("patrimonio_liquido", ""))
+        rec["data_patrimonio_liquido"] = str(row.get("data_patrimonio_liquido", ""))
+        rec["forma_condominio"] = str(row.get("forma_condominio", ""))
+        rec["codigo_cvm"] = str(row.get("codigo_cvm", ""))
+        rec["custodiante"] = str(row.get("custodiante", ""))
+        rec["auditor"] = str(row.get("auditor", ""))
+        rec["cnpj_classe"] = str(row.get("cnpj_classe", ""))
+        rec["data_inicio"] = str(row.get("data_inicio", ""))
+        enriquecidos_nome += 1
+
+    log.info(f"Enriquecimento: {enriquecidos} via cadeia CVM + "
+             f"{enriquecidos_nome} via nome CVM + "
+             f"{len(registros) - enriquecidos - enriquecidos_nome} básicos")
     return registros
 
 
