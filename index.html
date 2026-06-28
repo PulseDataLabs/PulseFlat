@@ -14,6 +14,7 @@
   <link rel="preload" href="./data/pipeline_status.json" as="fetch" crossorigin />
   <link rel="preload" href="./data/last_updates.json" as="fetch" crossorigin />
   <link rel="preload" href="./data/market_latest.json" as="fetch" crossorigin />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
 
   <style>
     /* ── Reset & Tokens ─────────────────────────────────── */
@@ -34,7 +35,7 @@
       --red:       #ff4d6d;
       --text:      #e8eef4;
       --text2:     #8fa3b8;
-      --text3:     #6a8096;
+      --text3:     #8096ad;
       --font-head: 'Syne', sans-serif;
       --font-mono: 'JetBrains Mono', monospace;
       --font-body: 'Inter', sans-serif;
@@ -219,6 +220,9 @@
       overflow: hidden;
       width: 100%;
       margin-bottom: 1.5rem;
+      min-height: 42px;
+      display: flex;
+      align-items: center;
     }
 
     .market-ticker-track {
@@ -1595,8 +1599,10 @@
     <img src="logo.png" alt="PulseFlat Logo" style="width: 120px; height: 120px; border-radius: 16px; box-shadow: 0 0 30px rgba(0, 212, 255, 0.25); border: 1px solid rgba(0, 212, 255, 0.15);">
   </div>
 
-  <div id="market-ticker" class="market-ticker" style="display: none;">
-    <div class="market-ticker-track" id="market-ticker-track"></div>
+  <div id="market-ticker" class="market-ticker">
+    <div class="market-ticker-track" id="market-ticker-track">
+      <div class="ticker-item" style="padding-left: 2rem;"><span class="ticker-label">Carregando cotações...</span></div>
+    </div>
   </div>
 
   <div class="ticker-bar">
@@ -1991,6 +1997,15 @@
 <script src="./data/pipeline_status.js"></script>
 <script src="./data/market_latest.js"></script>
 <script>
+  function escapeHtml(text) {
+    if (typeof text !== 'string') return text;
+    return text
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#039;');
+  }
   let activeSourceFilter = 'all';
   let activeSearchQuery = '';
   let activeSchemaSearchQuery = '';
@@ -2495,12 +2510,16 @@
   function initPreviewModal() {
     const modal = document.getElementById('preview-modal');
     const closeBtn = document.getElementById('preview-modal-close');
+    let lastFocusedElement = null;
     
     if (!modal || !closeBtn) return;
     
     const closeModal = () => {
       modal.classList.remove('open');
       modal.setAttribute('aria-hidden', 'true');
+      if (lastFocusedElement) {
+        lastFocusedElement.focus();
+      }
     };
     
     closeBtn.addEventListener('click', closeModal);
@@ -2511,9 +2530,32 @@
       if (e.key === 'Escape' && modal.classList.contains('open')) closeModal();
     });
     
+    // Focus Trap
+    modal.addEventListener('keydown', (e) => {
+      if (e.key === 'Tab') {
+        const focusableElements = modal.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+        if (focusableElements.length === 0) return;
+        const firstElement = focusableElements[0];
+        const lastElement = focusableElements[focusableElements.length - 1];
+        if (e.shiftKey) { // Shift + Tab
+          if (document.activeElement === firstElement) {
+            lastElement.focus();
+            e.preventDefault();
+          }
+        } else { // Tab
+          if (document.activeElement === lastElement) {
+            firstElement.focus();
+            e.preventDefault();
+          }
+        }
+      }
+    });
+    
     document.addEventListener('click', async (e) => {
       const btn = e.target.closest('.preview-btn');
       if (!btn) return;
+      
+      lastFocusedElement = document.activeElement;
       
       const fileName = btn.getAttribute('data-file');
       const title = btn.getAttribute('data-title');
@@ -2532,6 +2574,9 @@
         modal.classList.add('open');
         modal.setAttribute('aria-hidden', 'false');
         
+        // Focus close button for accessibility
+        setTimeout(() => closeBtn.focus(), 50);
+        
         // Find schema fields for the given file name
         const schema = allSchemas.find(s => s.files === fileName);
         
@@ -2539,8 +2584,8 @@
         if (schema && schema.fields) {
           const fieldsItems = schema.fields.map(f => `
             <div class="preview-schema-item">
-              <span class="preview-schema-name">${f.name}</span>
-              <span class="preview-schema-type">${f.type}</span>
+              <span class="preview-schema-name">${escapeHtml(f.name)}</span>
+              <span class="preview-schema-type">${escapeHtml(f.type)}</span>
             </div>
           `).join('');
           schemaHtml = `
@@ -2557,39 +2602,43 @@
         try {
           const resp = await fetch(`./data/${fileName}`);
           if (!resp.ok) throw new Error(`Status ${resp.status}`);
-          const text = await resp.text();
           
-          const lines = text.split('\n').map(l => l.trim()).filter(l => l !== '');
-          if (lines.length > 0) {
-            const headers = lines[0].split(',').map(h => h.trim().replace(/^"|"$/g, ''));
-            const rows = lines.slice(1, 6).map(line => {
-              const values = [];
-              let insideQuote = false;
-              let current = '';
-              for (let i = 0; i < line.length; i++) {
-                const char = line[i];
-                if (char === '"') {
-                  insideQuote = !insideQuote;
-                } else if (char === ',' && !insideQuote) {
-                  values.push(current.trim());
-                  current = '';
-                } else {
-                  current += char;
-                }
+          // Stream parsing of only the first chunk of the CSV file
+          const reader = resp.body.getReader();
+          const decoder = new TextDecoder('utf-8');
+          let textBuffer = '';
+          let readDone = false;
+          
+          while (!readDone) {
+            const { value, done } = await reader.read();
+            if (done) {
+              readDone = true;
+            } else {
+              textBuffer += decoder.decode(value, { stream: true });
+              const lineCount = (textBuffer.match(/\n/g) || []).length;
+              if (lineCount >= 10) {
+                await reader.cancel();
+                readDone = true;
               }
-              values.push(current.trim());
-              return values.map(v => v.replace(/^"|"$/g, ''));
-            });
+            }
+          }
+          
+          const parsed = Papa.parse(textBuffer, { skipEmptyLines: true });
+          const rows = parsed.data;
+          
+          if (rows.length > 0) {
+            const headers = rows[0];
+            const displayRows = rows.slice(1, 6);
             
-            let tableHeader = headers.map(h => `<th>${h}</th>`).join('');
-            let tableRows = rows.map(r => {
-              let cells = headers.map((h, i) => `<td>${r[i] !== undefined ? r[i] : ''}</td>`).join('');
+            let tableHeader = headers.map(h => `<th>${escapeHtml(h)}</th>`).join('');
+            let tableRows = displayRows.map(r => {
+              let cells = headers.map((h, i) => `<td>${escapeHtml(r[i] !== undefined ? r[i] : '')}</td>`).join('');
               return `<tr>${cells}</tr>`;
             }).join('');
             
             previewHtml = `
               <div>
-                <div class="preview-section-title">Prévia dos Dados (Últimos Registros)</div>
+                <div class="preview-section-title">Prévia dos Dados (Primeiras Linhas)</div>
                 <div class="preview-table-container">
                   <table class="preview-table">
                     <thead><tr>${tableHeader}</tr></thead>

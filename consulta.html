@@ -36,7 +36,7 @@
       --red-dim:   rgba(255,77,109,0.1);
       --text:      #e8eef4;
       --text2:     #8fa3b8;
-      --text3:     #566878;
+      --text3:     #8096ad;
       --font-head: 'Syne', sans-serif;
       --font-mono: 'JetBrains Mono', monospace;
       --font-body: 'Inter', sans-serif;
@@ -63,7 +63,7 @@
       --red-dim:   rgba(225,29,72,0.1);
       --text:      #0f172a;
       --text2:     #475569;
-      --text3:     #64748b;
+      --text3:     #526071;
     }
     html { scroll-behavior: smooth; }
     body {
@@ -774,6 +774,7 @@
   let activeTheme = localStorage.getItem('theme') || 'dark';
   document.documentElement.setAttribute('data-theme', activeTheme);
   window.activeRowCharts = new Map();
+  window.csvCache = new Map();
 
   function applyTheme(theme) {
     document.documentElement.setAttribute('data-theme', theme);
@@ -806,6 +807,73 @@
       applyTheme(nextTheme);
     });
   });
+
+  const DATASET_CONFIGS = {
+    'bcb_sgs.csv': {
+      date: 'data',
+      values: ['valor'],
+      filterKey: 'codigo_serie',
+      filterVal: (indicador) => {
+        const SGS_MAP = {
+          "SELIC (% a.d.)": "11",
+          "IGP-M": "1",
+          "IGP-M (índice)": "189",
+          "IGP-M 12m": "190",
+          "IPCA 12m": "433"
+        };
+        return SGS_MAP[indicador];
+      }
+    },
+    'anbima_indicadores.csv': {
+      date: 'data_referencia',
+      values: ['valor'],
+      filterKey: 'indicador'
+    },
+    'bcb_ptax.csv': {
+      date: 'data_referencia',
+      values: ['cotacao_compra', 'cotacao_venda']
+    },
+    'b3_bdi_di_over.csv': {
+      date: 'rpt_dt',
+      values: ['average', 'financial_volume']
+    },
+    'b3_bmf_taxas_juros.csv': {
+      date: 'data_referencia',
+      values: ['taxa'],
+      filterKey: 'curva',
+      transform: (data) => {
+        const terms = [...new Set(data.map(r => parseInt(r.prazo_dias) || 0))];
+        if (terms.length > 1) {
+          const targetTerm = terms.includes(360) ? 360 : terms[0];
+          return data.filter(r => parseInt(r.prazo_dias) === targetTerm);
+        }
+        return data;
+      }
+    },
+    'b3_indicadores_financeiros.csv': {
+      date: 'data_referencia',
+      values: ['valor', 'taxa'],
+      filterKey: 'description'
+    },
+    'b3_taxa_cambio_referencia.csv': {
+      date: 'lastupdate',
+      values: ['valor'],
+      filterKey: 'description'
+    },
+    'anbima_titulos_publicos.csv': {
+      date: 'data_referencia',
+      values: ['tx_indicativa', 'pu'],
+      filterKey: 'codigo_selic',
+      filterVal: (indicador) => indicador.split(' ')[0]
+    },
+    'anbima_indice_imab.csv': {
+      date: 'data_de_referencia',
+      values: ['numero_indice', 'variacao_diaria'],
+      filterKey: 'indice',
+      filterVal: (indicador) => indicador.toUpperCase(),
+      filterCompare: (rowVal, filterVal) => (rowVal || '').toUpperCase() === filterVal
+    }
+  };
 
   (async function () {
     const $table   = $('#consolidated-table');
@@ -1020,6 +1088,14 @@
       if (row.child.isShown()) {
         const childId = tr.next().find('.chart-container-inner').attr('id');
         if (childId && window.activeRowCharts && window.activeRowCharts.has(childId)) {
+          const chartInstance = window.activeRowCharts.get(childId);
+          if (chartInstance && typeof chartInstance.destroy === 'function') {
+            try {
+              chartInstance.destroy();
+            } catch (err) {
+              console.warn('Erro ao destruir gráfico do ApexCharts:', err);
+            }
+          }
           window.activeRowCharts.delete(childId);
         }
         row.child.hide();
@@ -1050,82 +1126,59 @@
       const chartEl = document.getElementById(chartId);
       
       try {
-        const response = await fetch(`./data/${datasetFile}`);
-        if (!response.ok) throw new Error(`Erro HTTP ${response.status}`);
-        const text = await response.text();
+        let parsedData = null;
+        let headers = [];
         
-        const parsed = Papa.parse(text, { header: true, skipEmptyLines: true });
-        const dataObjects = parsed.data;
-        const headers = parsed.meta.fields || [];
+        if (window.csvCache && window.csvCache.has(datasetFile)) {
+          const cached = window.csvCache.get(datasetFile);
+          parsedData = cached.data;
+          headers = cached.headers;
+        } else {
+          const response = await fetch(`./data/${datasetFile}`);
+          if (!response.ok) throw new Error(`Erro HTTP ${response.status}`);
+          const text = await response.text();
+          
+          const parsed = Papa.parse(text, { header: true, skipEmptyLines: true });
+          parsedData = parsed.data;
+          headers = parsed.meta.fields || [];
+          
+          if (window.csvCache) {
+            window.csvCache.set(datasetFile, { data: parsedData, headers: headers });
+          }
+        }
+        
+        const dataObjects = parsedData;
         if (dataObjects.length === 0) throw new Error('O arquivo CSV está vazio.');
         
         let filtered = [];
         let dateCol = 'data_referencia';
         let valCols = [];
         
-        if (datasetFile === 'bcb_sgs.csv') {
-          dateCol = 'data';
-          valCols = ['valor'];
-          const SGS_MAP = {
-            "SELIC (% a.d.)": "11",
-            "IGP-M": "1",
-            "IGP-M (índice)": "189",
-            "IGP-M 12m": "190",
-            "IPCA 12m": "433"
-          };
-          const code = SGS_MAP[indicadorName];
-          filtered = dataObjects.filter(r => r.codigo_serie === code);
+        const config = DATASET_CONFIGS[datasetFile];
+        if (config) {
+          dateCol = config.date;
+          valCols = config.values;
           
+          if (config.filterKey) {
+            const fKey = config.filterKey;
+            const targetVal = typeof config.filterVal === 'function' ? config.filterVal(indicadorName) : indicadorName;
+            
+            if (typeof config.filterCompare === 'function') {
+              filtered = dataObjects.filter(r => config.filterCompare(r[fKey], targetVal));
+            } else {
+              filtered = dataObjects.filter(r => r[fKey] === targetVal);
+            }
+          } else {
+            filtered = dataObjects;
+          }
+          
+          if (typeof config.transform === 'function') {
+            filtered = config.transform(filtered);
+          }
         } else if (datasetFile.startsWith('yahoo_') || datasetFile.startsWith('ipea_')) {
           dateCol = 'data_referencia';
           valCols = [headers.includes('preco_fechamento') ? 'preco_fechamento' : 'valor'];
           filtered = dataObjects.filter(r => r.codigo_ativo === indicadorName);
-          
-        } else if (datasetFile === 'anbima_indicadores.csv') {
-          dateCol = 'data_referencia';
-          valCols = ['valor'];
-          filtered = dataObjects.filter(r => r.indicador === indicadorName);
-          
-        } else if (datasetFile === 'bcb_ptax.csv') {
-          dateCol = 'data_referencia';
-          valCols = ['cotacao_compra', 'cotacao_venda'];
-          filtered = dataObjects;
-          
-        } else if (datasetFile === 'b3_bdi_di_over.csv') {
-          dateCol = 'rpt_dt';
-          valCols = ['average', 'financial_volume'];
-          filtered = dataObjects;
-          
-        } else if (datasetFile === 'b3_bmf_taxas_juros.csv') {
-          dateCol = 'data_referencia';
-          valCols = ['taxa'];
-          filtered = dataObjects.filter(r => r.curva === indicadorName);
-          const terms = [...new Set(filtered.map(r => parseInt(r.prazo_dias) || 0))];
-          if (terms.length > 1) {
-            const targetTerm = terms.includes(360) ? 360 : terms[0];
-            filtered = filtered.filter(r => parseInt(r.prazo_dias) === targetTerm);
-          }
-          
-        } else if (datasetFile === 'b3_indicadores_financeiros.csv') {
-          dateCol = 'data_referencia';
-          valCols = ['valor', 'taxa'];
-          filtered = dataObjects.filter(r => r.description === indicadorName);
-          
-        } else if (datasetFile === 'b3_taxa_cambio_referencia.csv') {
-          dateCol = 'lastupdate';
-          valCols = ['valor'];
-          filtered = dataObjects.filter(r => r.description === indicadorName);
-          
-        } else if (datasetFile === 'anbima_titulos_publicos.csv') {
-          dateCol = 'data_referencia';
-          valCols = ['tx_indicativa', 'pu'];
-          const code = indicadorName.split(' ')[0];
-          filtered = dataObjects.filter(r => r.codigo_selic === code);
-          
-        } else if (datasetFile === 'anbima_indice_imab.csv') {
-          dateCol = 'data_de_referencia';
-          valCols = ['numero_indice', 'variacao_diaria'];
-          filtered = dataObjects.filter(r => r.indice.toUpperCase() === indicadorName.toUpperCase());
         } else {
           dateCol = headers.find(h => h.includes('data') || h.includes('dt') || h === 'rpt_dt') || headers[0];
           valCols = [metricaName || headers.find(h => h.includes('valor') || h.includes('taxa') || h === 'pu') || headers[1]];
