@@ -1,15 +1,21 @@
 """
 scrapers/b3_fundos_listados.py
 -------------------------------
-Captura a lista completa de fundos listados na B3 via API interna (GetListFunds).
+Captura a lista completa de fundos listados na B3 via API interna (GetListFunds)
+e enriquece com dados cadastrais via cadeia ISIN → CNPJ → CVM.
 
 Cobre todos os tipos de fundo disponíveis no endpoint:
   FII, FIAGRO, FIDC, FIP, ETF, ETF-RF, Fundo Setorial
 
 Endpoint: GET https://sistemaswebb3-listados.b3.com.br/fundsListedProxy/Search/
                 GetListFunds/<base64>
+
+Enriquecimento:
+  ticker → b3_titulos_negociaveis → ISIN → b3_isin_ativos → emissor
+  → b3_isin_emissores → CNPJ → registro_fundo_classe → dados completos
 """
 
+import re
 import sys
 import time
 from pathlib import Path
@@ -23,7 +29,6 @@ log = get_logger("b3_fundos_listados")
 
 BASE_URL  = "https://sistemaswebb3-listados.b3.com.br/fundsListedProxy/Search/GetListFunds/"
 PAGE_SIZE = 100
-ARQUIVO   = Path("data/b3_fundos_listados.csv")
 
 CATEGORIAS = [
     ("FII",      "FII"),
@@ -40,6 +45,17 @@ CABECALHO = [
     "tipo_fundo",
     "codigo_fundo",
     "nome_fundo",
+    "cnpj",
+    "administrador",
+    "gestor",
+    "classificacao",
+    "classificacao_anbima",
+    "situacao",
+    "patrimonio_liquido",
+    "data_patrimonio_liquido",
+    "data_encerramento",
+    "publico_alvo",
+    "forma_condominio",
     "id_b3",
 ]
 
@@ -73,14 +89,92 @@ def _pagina(session, funds_type: str, page: int) -> tuple[list, int, int | None]
 
 
 def _mapear(item: dict, data_captura: str, tipo_label: str) -> dict:
-    codigo = limpar(item.get("acronym"))
+    codigo = limpar(item.get("fundTicker") or item.get("ticker") or item.get("code") or item.get("symbol"))
+    if not codigo:
+        acronym = limpar(item.get("acronym") or item.get("fundAcronym"))
+        if acronym:
+            codigo = acronym if any(c.isdigit() for c in acronym) else f"{acronym}11"
     return {
         "data_captura":  data_captura,
         "tipo_fundo":    tipo_label,
         "codigo_fundo":  codigo,
         "nome_fundo":    limpar(item.get("fundName") or item.get("tradingName")),
+        "cnpj":          "",
+        "administrador": "",
+        "gestor":        "",
+        "classificacao": "",
+        "classificacao_anbima": "",
+        "situacao":      "",
+        "patrimonio_liquido": "",
+        "data_patrimonio_liquido": "",
+        "data_encerramento": "",
+        "publico_alvo":  "",
+        "forma_condominio": "",
         "id_b3":         str(item.get("id", "")),
     }
+
+
+def _enriquecer(registros: list[dict]) -> list[dict]:
+    root_dir = Path(__file__).resolve().parents[1]
+
+    titulos_path = root_dir / "data" / "b3_titulos_negociaveis.csv"
+    isin_path = root_dir / "data" / "b3_isin_ativos.csv"
+    emissores_path = root_dir / "data" / "b3_isin_emissores.csv"
+    cvm_path = root_dir / "data" / "registro_fundo_classe.csv"
+
+    if not all(p.exists() for p in [titulos_path, isin_path, emissores_path, cvm_path]):
+        log.warning("Arquivos de enriquecimento ausentes — retornando dados básicos.")
+        return registros
+
+    try:
+        titulos = pd.read_csv(titulos_path, dtype=str, keep_default_na=False)
+        isin_ativos = pd.read_csv(isin_path, dtype=str, keep_default_na=False)
+        isin_emissores = pd.read_csv(emissores_path, dtype=str, keep_default_na=False)
+        cvm = pd.read_csv(cvm_path, dtype=str, keep_default_na=False)
+    except Exception as e:
+        log.warning(f"Erro ao ler CSVs de enriquecimento: {e}")
+        return registros
+
+    ticker_to_isin = titulos.set_index("codigo_ativo")["codigo_isin"].dropna().to_dict()
+    isin_to_emissor = isin_ativos.set_index("codigo_isin")["codigo_emissor"].dropna().to_dict()
+    emissor_to_cnpj = isin_emissores.set_index("codigo_emissor")["cnpj_emissor"].dropna().to_dict()
+
+    cvm["cnpj_clean"] = cvm["cnpj_fundo"].str.replace(r"\D", "", regex=True)
+    cvm_dedup = cvm.drop_duplicates(subset="cnpj_clean").set_index("cnpj_clean")
+
+    enriquecidos = 0
+    for rec in registros:
+        ticker = rec.get("codigo_fundo", "")
+        isin = ticker_to_isin.get(ticker)
+        if not isin:
+            continue
+        emissor = isin_to_emissor.get(isin)
+        if not emissor:
+            continue
+        cnpj = emissor_to_cnpj.get(emissor)
+        if not cnpj:
+            continue
+
+        cnpj_clean = re.sub(r"\D", "", cnpj)
+        if cnpj_clean not in cvm_dedup.index:
+            continue
+
+        row = cvm_dedup.loc[cnpj_clean]
+        rec["cnpj"] = cnpj
+        rec["administrador"] = str(row.get("administrador", ""))
+        rec["gestor"] = str(row.get("gestor", ""))
+        rec["classificacao"] = str(row.get("classificacao", ""))
+        rec["classificacao_anbima"] = str(row.get("classificacao_anbima", ""))
+        rec["situacao"] = str(row.get("situacao", ""))
+        rec["patrimonio_liquido"] = str(row.get("patrimonio_liquido", ""))
+        rec["data_patrimonio_liquido"] = str(row.get("data_patrimonio_liquido", ""))
+        rec["data_encerramento"] = str(row.get("data_cancelamento", ""))
+        rec["publico_alvo"] = str(row.get("publico_alvo", ""))
+        rec["forma_condominio"] = str(row.get("forma_condominio", ""))
+        enriquecidos += 1
+
+    log.info(f"Registros enriquecidos via CVM: {enriquecidos}/{len(registros)}")
+    return registros
 
 
 def _capturar_categoria(session, funds_type: str, label: str,
@@ -112,7 +206,9 @@ def capturar() -> list[dict]:
         todos.extend(_capturar_categoria(session, funds_type, label, data_captura))
         time.sleep(0.5)
     log.info(f"{len(todos)} fundos capturados ao total.")
-    return todos
+
+    registros = _enriquecer(todos)
+    return registros
 
 
 class B3FundosListadosScraper(BaseScraper):
@@ -124,13 +220,13 @@ class B3FundosListadosScraper(BaseScraper):
     chaves_dedup = None
 
     title = 'B3 Fundos Listados'
-    description = 'Lista completa de fundos listados na B3: FII, FIAGRO, FIDC, FIP, ETFs (RV e RF) e Fundos Setoriais.'
+    description = 'Lista completa de fundos listados na B3: FII, FIAGRO, FIDC, FIP, ETFs (RV e RF) e Fundos Setoriais. Inclui dados cadastrais e patrimônio líquido via CVM.'
     icon = '🏢'
     icon_class = 'icon-b3'
     badge = 'Diário'
     badge_class = 'badge-daily'
-    tags = ['ticker', 'fundos', 'fii', 'fiagro', 'fidc', 'fip', 'etf', 'setorial']
-    source = 'B3 API'
+    tags = ['ticker', 'fundos', 'fii', 'fiagro', 'fidc', 'fip', 'etf', 'setorial', 'cnpj', 'administrador', 'pl']
+    source = 'B3 API + CVM'
 
     def fetch(self) -> pd.DataFrame:
         log.info("=== B3 Fundos Listados ===")
