@@ -46,8 +46,25 @@ jobs:
 
     # Executa o script que vai atualizar ou criar os CSVs dentro de ./data
     - name: Executar script de processamento
+      env:
+        ORACLE_DB_DSN: ${{ secrets.ORACLE_DB_DSN || vars.ORACLE_DB_DSN }}
+        ORACLE_DB_USER: ${{ secrets.ORACLE_DB_USER || vars.ORACLE_DB_USER }}
+        ORACLE_DB_PASSWORD: ${{ secrets.ORACLE_DB_PASSWORD || vars.ORACLE_DB_PASSWORD }}
+        ORACLE_DB_WALLET_PASSWORD: ${{ secrets.ORACLE_DB_WALLET_PASSWORD || vars.ORACLE_DB_WALLET_PASSWORD }}
+        ORACLE_DB_WALLET_BASE64: ${{ secrets.ORACLE_DB_WALLET_BASE64 || vars.ORACLE_DB_WALLET_BASE64 }}
       # O "|| true" força o terminal a entender que a execução terminou com sucesso mesmo se o Python falhar
-      run: python run_all.py || true
+      run: |
+        if [ -n "$ORACLE_DB_WALLET_BASE64" ]; then
+          echo "Processando carteira mTLS..."
+          mkdir -p /tmp/oracle_wallet
+          echo "$ORACLE_DB_WALLET_BASE64" | base64 -d > /tmp/oracle_wallet.zip
+          unzip -o /tmp/oracle_wallet.zip -d /tmp/oracle_wallet
+          export ORACLE_DB_WALLET_DIR=/tmp/oracle_wallet
+          echo "Wallet extraída com sucesso para $ORACLE_DB_WALLET_DIR"
+        else
+          echo "Aviso: ORACLE_DB_WALLET_BASE64 não está configurada."
+        fi
+        python run_all.py || true
 
     # Verifica integridade das séries temporais (não falha o pipeline por padrão)
     - name: Verificar integridade das séries temporais
