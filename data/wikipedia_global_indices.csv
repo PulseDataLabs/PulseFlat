@@ -604,6 +604,7 @@ data_captura,codigo_ativo,nome_ativo,indice_origem
 2026-06-29,WDAY,"Workday, Inc.",NASDAQ-100
 2026-06-29,XEL,Xcel Energy,NASDAQ-100
 2026-06-29,MMM,NYSE,Dow Jones
+2026-06-29,GOOGL,NASDAQ,Dow Jones
 2026-06-29,AXP,NYSE,Dow Jones
 2026-06-29,AMGN,NASDAQ,Dow Jones
 2026-06-29,AMZN,NASDAQ,Dow Jones
@@ -630,7 +631,6 @@ data_captura,codigo_ativo,nome_ativo,indice_origem
 2026-06-29,SHW,NYSE,Dow Jones
 2026-06-29,TRV,NYSE,Dow Jones
 2026-06-29,UNH,NYSE,Dow Jones
-2026-06-29,VZ,NYSE,Dow Jones
 2026-06-29,V,NYSE,Dow Jones
 2026-06-29,WMT,NASDAQ,Dow Jones
 2026-06-29,III.L,3i,FTSE 100
