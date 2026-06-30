@@ -213,3 +213,125 @@ def test_infer_oracle_type():
     assert infer_oracle_type(s_anomes) == "VARCHAR2(4000)"
 
 
+def test_upload_dataframe_optimization(monkeypatch):
+    monkeypatch.setenv("ORACLE_DB_USER", "test_user")
+    monkeypatch.setenv("ORACLE_DB_PASSWORD", "test_pass")
+    monkeypatch.setenv("ORACLE_DB_DSN", "test_dsn")
+    
+    from unittest.mock import MagicMock, patch
+    import pandas as pd
+    from utils.db import upload_dataframe
+    
+    mock_conn = MagicMock()
+    mock_cursor = MagicMock()
+    mock_conn.cursor.return_value = mock_cursor
+    
+    def mock_fetchone():
+        args = mock_cursor.execute.call_args
+        if args:
+            sql = args[0][0]
+            if "user_tables" in sql:
+                return (1,)
+            if "user_tab_columns" in sql:
+                return ("DATE",)
+        return None
+        
+    mock_cursor.fetchone.side_effect = mock_fetchone
+    mock_cursor.fetchall.return_value = [("2026-06-28", "ABC")]
+    
+    df = pd.DataFrame([
+        {"data_referencia": "2026-06-28", "codigo_ativo": "ABC", "valor": 10.0},  # duplicate
+        {"data_referencia": "2026-06-29", "codigo_ativo": "DEF", "valor": 20.0},  # new
+    ])
+    
+    with patch("utils.db.get_connection", return_value=mock_conn):
+        with patch("utils.db.oracledb", new=MagicMock()):
+            with patch("utils.db.create_engine", new=MagicMock()):
+                success = upload_dataframe(df, "TEST_TABLE", chaves_dedup=["data_referencia", "codigo_ativo"])
+                
+    assert success is True
+    assert mock_cursor.executemany.called
+    insert_args = mock_cursor.executemany.call_args[0]
+    batch = insert_args[1]
+    assert len(batch) == 1
+    assert "DEF" in batch[0]
+    assert "ABC" not in batch[0]
+
+
+def test_upload_dataframe_type_normalization(monkeypatch):
+    monkeypatch.setenv("ORACLE_DB_USER", "test_user")
+    monkeypatch.setenv("ORACLE_DB_PASSWORD", "test_pass")
+    monkeypatch.setenv("ORACLE_DB_DSN", "test_dsn")
+    
+    from unittest.mock import MagicMock, patch
+    import pandas as pd
+    from datetime import date
+    from utils.db import upload_dataframe
+    
+    mock_conn = MagicMock()
+    mock_cursor = MagicMock()
+    mock_conn.cursor.return_value = mock_cursor
+    
+    def mock_fetchone():
+        args = mock_cursor.execute.call_args
+        if args:
+            sql = args[0][0]
+            if "user_tables" in sql:
+                return (1,)
+            if "user_tab_columns" in sql:
+                return ("DATE",)
+        return None
+        
+    mock_cursor.fetchone.side_effect = mock_fetchone
+    mock_cursor.fetchall.return_value = [(date(2026, 6, 28), "  ABC  ")]
+    
+    df = pd.DataFrame([
+        {"data_referencia": pd.Timestamp("2026-06-28"), "codigo_ativo": "ABC", "valor": 10.0},  # duplicate
+        {"data_referencia": "2026-06-29", "codigo_ativo": "DEF", "valor": 20.0},  # new
+    ])
+    
+    with patch("utils.db.get_connection", return_value=mock_conn):
+        with patch("utils.db.oracledb", new=MagicMock()):
+            with patch("utils.db.create_engine", new=MagicMock()):
+                success = upload_dataframe(df, "TEST_TABLE", chaves_dedup=["data_referencia", "codigo_ativo"])
+                
+    assert success is True
+    assert mock_cursor.executemany.called
+    batch = mock_cursor.executemany.call_args[0][1]
+    assert len(batch) == 1
+    assert "DEF" in batch[0]
+
+
+def test_upload_dataframe_new_table(monkeypatch):
+    monkeypatch.setenv("ORACLE_DB_USER", "test_user")
+    monkeypatch.setenv("ORACLE_DB_PASSWORD", "test_pass")
+    monkeypatch.setenv("ORACLE_DB_DSN", "test_dsn")
+    
+    from unittest.mock import MagicMock, patch
+    import pandas as pd
+    from utils.db import upload_dataframe
+    
+    mock_conn = MagicMock()
+    mock_cursor = MagicMock()
+    mock_conn.cursor.return_value = mock_cursor
+    
+    mock_cursor.fetchone.return_value = (0,)
+    
+    df = pd.DataFrame([
+        {"data_referencia": "2026-06-29", "codigo_ativo": "ABC", "valor": 10.0},
+    ])
+    
+    with patch("utils.db.get_connection", return_value=mock_conn):
+        with patch("utils.db.oracledb", new=MagicMock()):
+            with patch("utils.db.create_engine", new=MagicMock()):
+                success = upload_dataframe(df, "TEST_TABLE", chaves_dedup=["data_referencia", "codigo_ativo"])
+                
+    assert success is True
+    create_executed = any("CREATE TABLE" in args[0][0] for args in mock_cursor.execute.call_args_list)
+    assert create_executed is True
+    assert mock_cursor.executemany.called
+    batch = mock_cursor.executemany.call_args[0][1]
+    assert len(batch) == 1
+
+
+

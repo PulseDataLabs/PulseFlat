@@ -139,9 +139,10 @@ def infer_oracle_type(series: pd.Series) -> str:
     else:
         return "VARCHAR2(4000)"
 
-def create_table_from_df(cursor, table_name: str, df: pd.DataFrame, clean_cols: dict[str, str]):
+def create_table_from_df(cursor, table_name: str, df: pd.DataFrame, clean_cols: dict[str, str]) -> bool:
     """
     Cria a tabela no Oracle caso ela não exista, inferindo os tipos do DataFrame.
+    Retorna True se a tabela já existia, False caso tenha sido criada agora.
     """
     # Checar se a tabela existe
     cursor.execute(
@@ -152,7 +153,7 @@ def create_table_from_df(cursor, table_name: str, df: pd.DataFrame, clean_cols: 
     
     if exists:
         log.info(f"Tabela '{table_name}' já existe no banco.")
-        return
+        return True
 
     # Construir SQL de criação
     columns_sql = []
@@ -163,11 +164,56 @@ def create_table_from_df(cursor, table_name: str, df: pd.DataFrame, clean_cols: 
     create_sql = f"CREATE TABLE {table_name.upper()} (\n  " + ",\n  ".join(columns_sql) + "\n)"
     log.info(f"Criando tabela '{table_name}' com SQL:\n{create_sql}")
     cursor.execute(create_sql)
+    return False
 
-def upload_dataframe(df: pd.DataFrame, table_name: str, batch_size: int = 5000) -> bool:
+def standardize_val(val):
+    """
+    Padroniza um valor para comparação de chaves sem depender de tipo exato.
+    """
+    if val is None or pd.isna(val):
+        return None
+    
+    # Se for uma data, datetime ou Timestamp
+    if isinstance(val, (datetime, pd.Timestamp)):
+        return val.strftime("%Y-%m-%d")
+    if hasattr(val, "strftime"):
+        return val.strftime("%Y-%m-%d")
+        
+    # Se for string representando data, padronizar
+    if isinstance(val, str):
+        val_strip = val.strip()
+        if len(val_strip) == 10 and val_strip[4] == '-' and val_strip[7] == '-':
+            return val_strip
+        if len(val_strip) == 10 and val_strip[2] == '/' and val_strip[5] == '/':
+            try:
+                return datetime.strptime(val_strip, "%d/%m/%Y").strftime("%Y-%m-%d")
+            except ValueError:
+                pass
+        return val_strip
+        
+    # Se for numérico
+    if isinstance(val, (int, float, np.integer, np.floating)):
+        return float(val)
+        
+    try:
+        import decimal
+        if isinstance(val, decimal.Decimal):
+            return float(val)
+    except ImportError:
+        pass
+        
+    return str(val).strip()
+
+def standardize_tuple(tup):
+    """
+    Padroniza uma tupla de valores de chaves.
+    """
+    return tuple(standardize_val(v) for v in tup)
+
+def upload_dataframe(df: pd.DataFrame, table_name: str, batch_size: int = 5000, chaves_dedup: list[str] | None = None) -> bool:
     """
     Carrega um DataFrame para o banco de dados Oracle de forma otimizada.
-    Realiza uma carga incremental inteligente deletando os períodos existentes no DataFrame antes de inserir.
+    Realiza uma carga incremental inteligente inserindo apenas os novos registros.
     """
     if os.getenv("SKIP_ORACLE_DB"):
         log.info("Carga no banco Oracle desativada via SKIP_ORACLE_DB.")
@@ -199,10 +245,14 @@ def upload_dataframe(df: pd.DataFrame, table_name: str, batch_size: int = 5000) 
         cursor = conn.cursor()
         
         # 1. Garantir que a tabela existe
-        create_table_from_df(cursor, table_name, df, clean_cols)
+        exists = create_table_from_df(cursor, table_name, df, clean_cols)
         
-        # 2. Identificar se podemos fazer deleção incremental
-        # Vamos deletar registros existentes para os mesmos trimestres/datas presentes neste DataFrame
+        # 2. Identificar as chaves para identificação de duplicatas
+        keys_to_check = []
+        if chaves_dedup:
+            keys_to_check = [k for k in chaves_dedup if k in df.columns]
+            
+        # Identificar coluna de período para filtrar a busca se necessário
         period_col = None
         candidates = [
             "AnoMes", "ANOMES", 
@@ -213,53 +263,90 @@ def upload_dataframe(df: pd.DataFrame, table_name: str, batch_size: int = 5000) 
             "dt_captura", "DT_CAPTURA"
         ]
         for col_cand in candidates:
-            # Achar correspondente limpo no DataFrame
             found = [c for c in df.columns if clean_cols[c] == col_cand.upper()]
             if found:
-                period_col = (found[0], clean_cols[found[0]])
+                period_col = found[0]
                 break
+
+        if not keys_to_check:
+            if period_col:
+                keys_to_check = [period_col]
+            else:
+                keys_to_check = list(df.columns)
                 
-        if period_col:
-            orig_col, clean_col = period_col
-            unique_periods = df[orig_col].dropna().unique()
-            if len(unique_periods) > 0:
-                log.info(f"Executando deleção incremental na tabela {table_name} para a coluna {clean_col}...")
-                
-                # Se for do tipo DATE no banco, precisamos formatar a consulta de deleção
-                db_col_type = "VARCHAR"
-                try:
-                    cursor.execute(
-                        "SELECT data_type FROM user_tab_columns WHERE table_name = :1 AND column_name = :2",
-                        [table_name, clean_col]
-                    )
-                    db_col_type = cursor.fetchone()[0]
-                except Exception:
-                    pass
-                
-                for p in unique_periods:
-                    if "DATE" in db_col_type:
-                        # Converter p para date object se for string
-                        if isinstance(p, str):
-                            try:
-                                p_date = datetime.strptime(p.strip(), "%Y-%m-%d").date()
-                                cursor.execute(f"DELETE FROM {table_name} WHERE {clean_col} = :1", [p_date])
-                            except ValueError:
-                                # Fallback se a string não for YYYY-MM-DD
-                                cursor.execute(f"DELETE FROM {table_name} WHERE TO_CHAR({clean_col}, 'YYYY-MM-DD') = :1", [str(p)])
-                        else:
-                            cursor.execute(f"DELETE FROM {table_name} WHERE {clean_col} = :1", [p])
-                    else:
-                        cursor.execute(f"DELETE FROM {table_name} WHERE {clean_col} = :1", [str(p)])
-                        
-                conn.commit()
-                log.info(f"Deletados registros antigos para os períodos: {list(unique_periods)}")
-        else:
-            # Sem coluna de período, fazemos TRUNCATE na tabela se ela for pequena/tabela de cadastro
-            log.info(f"Nenhuma coluna de período identificada em '{table_name}'. Limpando tabela (TRUNCATE) para carga total...")
-            cursor.execute(f"TRUNCATE TABLE {table_name}")
-            conn.commit()
+        # 3. Buscar chaves existentes se a tabela já existia
+        existing_set = set()
+        if exists and keys_to_check:
+            cols_to_select = [clean_cols[k] for k in keys_to_check]
+            cols_str = ", ".join(cols_to_select)
             
-        # 3. Montar a query de inserção em lotes
+            if period_col and period_col in keys_to_check:
+                clean_period_col = clean_cols[period_col]
+                unique_periods = df[period_col].dropna().unique()
+                if len(unique_periods) > 0:
+                    # Obter tipo da coluna de período no banco
+                    db_col_type = "VARCHAR"
+                    try:
+                        cursor.execute(
+                            "SELECT data_type FROM user_tab_columns WHERE table_name = :1 AND column_name = :2",
+                            [table_name, clean_period_col]
+                        )
+                        res = cursor.fetchone()
+                        if res:
+                            db_col_type = res[0]
+                    except Exception:
+                        pass
+                        
+                    formatted_periods = []
+                    for p in unique_periods:
+                        if "DATE" in db_col_type:
+                            if isinstance(p, str):
+                                try:
+                                    formatted_periods.append(datetime.strptime(p.strip(), "%Y-%m-%d").date())
+                                except ValueError:
+                                    formatted_periods.append(p)
+                            else:
+                                formatted_periods.append(p)
+                        else:
+                            formatted_periods.append(str(p))
+                            
+                    # Buscar chaves em lotes de 1000 períodos
+                    for chunk_idx in range(0, len(formatted_periods), 1000):
+                        chunk_periods = formatted_periods[chunk_idx : chunk_idx + 1000]
+                        placeholders = ", ".join([f":{j+1}" for j in range(len(chunk_periods))])
+                        select_sql = f"SELECT {cols_str} FROM {table_name} WHERE {clean_period_col} IN ({placeholders})"
+                        log.info(f"Buscando chaves existentes no banco para deduplicação (restringido por período): {select_sql}")
+                        cursor.execute(select_sql, chunk_periods)
+                        for row in cursor.fetchall():
+                            existing_set.add(standardize_tuple(row))
+            else:
+                # Sem coluna de período ou período não faz parte das chaves, busca tudo da tabela
+                select_sql = f"SELECT {cols_str} FROM {table_name}"
+                log.info(f"Buscando chaves existentes no banco para deduplicação (tabela completa): {select_sql}")
+                cursor.execute(select_sql)
+                for row in cursor.fetchall():
+                    existing_set.add(standardize_tuple(row))
+
+        # 4. Filtrar o DataFrame localmente para manter apenas novas linhas
+        if existing_set:
+            new_rows_mask = []
+            for row in df.itertuples(index=False):
+                key_vals = [getattr(row, k) for k in keys_to_check]
+                std_key = standardize_tuple(key_vals)
+                new_rows_mask.append(std_key not in existing_set)
+                
+            df_filtered = df[new_rows_mask]
+            log.info(f"Filtrados {len(df) - len(df_filtered)} registros duplicados. Restam {len(df_filtered)} registros novos para inserção.")
+            df = df_filtered
+        else:
+            log.info(f"Nenhum registro existente ou tabela nova. Inserindo todos os {len(df)} registros.")
+
+        # Se não há mais linhas a inserir, retornar sucesso
+        if df.empty:
+            log.info(f"Todos os registros já existem no banco Oracle para {table_name}. Carga concluída sem inserções.")
+            return True
+
+        # 5. Montar a query de inserção em lotes
         cols_str = ", ".join(clean_cols.values())
         binds_str = ", ".join([f":{i+1}" for i in range(len(clean_cols))])
         insert_sql = f"INSERT INTO {table_name} ({cols_str}) VALUES ({binds_str})"
@@ -276,7 +363,7 @@ def upload_dataframe(df: pd.DataFrame, table_name: str, batch_size: int = 5000) 
             # Fallback para inferência baseada no DataFrame original
             date_cols = {clean_cols[col] for col in df.columns if infer_oracle_type(df[col]) == "DATE"}
         
-        # 4. Executar a inserção em blocos com limpeza sob demanda para economizar RAM
+        # 6. Executar a inserção em blocos com limpeza sob demanda para economizar RAM
         total_rows = len(df)
         inserted = 0
         log.info(f"Iniciando inserção de {total_rows} linhas em lotes de {batch_size}...")

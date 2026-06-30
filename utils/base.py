@@ -270,10 +270,10 @@ def salvar_csv(
         
         if has_period_col:
             log.info(f"Iniciando carga incremental para '{table_name}' usando novos registros...")
-            upload_dataframe(df_novos[[c for c in cabecalho if c in df_novos.columns]], table_name)
+            upload_dataframe(df_novos[[c for c in cabecalho if c in df_novos.columns]], table_name, chaves_dedup=chaves_dedup)
         else:
             log.info(f"Iniciando carga total para '{table_name}' usando registros acumulados...")
-            upload_dataframe(df_final, table_name)
+            upload_dataframe(df_final, table_name, chaves_dedup=chaves_dedup)
     except Exception as db_err:
         log.warning(f"Não foi possível persistir os dados no banco Oracle para {arquivo.name}: {db_err}")
 
