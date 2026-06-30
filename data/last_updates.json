@@ -150,5 +150,101 @@
   "yahoo_acoes_internacionais.csv": {
     "min": "2026-06-28",
     "max": "2026-06-30"
+  },
+  "anbima_ima_completo.csv": {
+    "min": "2026-06-01",
+    "max": "2026-06-30"
+  },
+  "anbima_550.csv": {
+    "min": "2026-06-01",
+    "max": "2026-06-30"
+  },
+  "anbima_idka.csv": {
+    "min": "2026-06-03",
+    "max": "2026-06-30"
+  },
+  "anbima_indicadores.csv": {
+    "min": "2026-06-01",
+    "max": "2026-06-30"
+  },
+  "anbima_debentures.csv": {
+    "min": "2026-06-05",
+    "max": "2026-06-30"
+  },
+  "anbima_projecoes.csv": {
+    "min": "2026-06-01",
+    "max": "2026-06-30"
+  },
+  "anbima_matriz_probabilidade_resgate.csv": {
+    "min": "2026-06-19",
+    "max": "2026-06-30"
+  },
+  "anbima_titulos_publicos.csv": {
+    "min": "2026-06-01",
+    "max": "2026-06-30"
+  },
+  "anbima_ranking_global.csv": {
+    "min": "2026-06-03",
+    "max": "2026-06-30"
+  },
+  "anbima_indice_imab.csv": {
+    "min": "2026-06-01",
+    "max": "2026-06-30"
+  },
+  "b3_bdi_di_over.csv": {
+    "min": "2026-06-01",
+    "max": "2026-06-30"
+  },
+  "b3_carteira_teorica_bdrx.csv": {
+    "min": "2026-06-03",
+    "max": "2026-06-30"
+  },
+  "cvm_cadastro_companhias_abertas.csv": {
+    "min": "2026-06-30",
+    "max": "2026-06-30"
+  },
+  "registro_fundo_classe.csv": {
+    "min": "2026-06-30",
+    "max": "2026-06-30"
+  },
+  "ipea_calendario.csv": {
+    "min": "2026-06-30",
+    "max": "2026-06-30"
+  },
+  "ibge_sidra.csv": {
+    "min": "2026-06-30",
+    "max": "2026-06-30"
+  },
+  "ipea_comercio_exterior.csv": {
+    "min": "2026-06-30",
+    "max": "2026-06-30"
+  },
+  "ipea_fbcf.csv": {
+    "min": "2026-06-30",
+    "max": "2026-06-30"
+  },
+  "ipea_macroeconomia.csv": {
+    "min": "2026-06-30",
+    "max": "2026-06-30"
+  },
+  "ipea_precos_inflacao.csv": {
+    "min": "2026-06-30",
+    "max": "2026-06-30"
+  },
+  "ipea_producao_mineral.csv": {
+    "min": "2026-06-30",
+    "max": "2026-06-30"
+  },
+  "ipea_taxas_juros.csv": {
+    "min": "2026-06-30",
+    "max": "2026-06-30"
+  },
+  "ipea_mercados_diarios.csv": {
+    "min": "2026-06-30",
+    "max": "2026-06-30"
+  },
+  "cvm_fundos_informe_diario.csv": {
+    "min": "2026-06-30",
+    "max": "2026-06-30"
   }
 }
