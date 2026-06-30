@@ -1818,7 +1818,7 @@
       {
         "name": "data_ult_vna",
         "type": "date",
-        "example": "2026-06-29"
+        "example": "2026-06-30"
       },
       {
         "name": "indice",
@@ -2055,27 +2055,27 @@
       {
         "name": "data_referencia",
         "type": "date",
-        "example": "26/6/2026"
+        "example": "29/6/2026"
       },
       {
         "name": "emissor",
         "type": "str",
-        "example": "BRK AMBIENTAL - MAUA S.A."
+        "example": "ALCOESTE BIOENERGIA FERNANDOPOLIS S A"
       },
       {
         "name": "codigo_ativo",
         "type": "str",
-        "example": "ABRK11"
+        "example": "ABFR12"
       },
       {
         "name": "isin",
         "type": "str",
-        "example": "BRABRKDBS008"
+        "example": "BRABFRDBS016"
       },
       {
         "name": "quantidade",
         "type": "int",
-        "example": "818"
+        "example": "44"
       },
       {
         "name": "numero_de_negocios",
@@ -2085,22 +2085,22 @@
       {
         "name": "pu_minimo",
         "type": "str",
-        "example": "956.887216"
+        "example": "610.671313"
       },
       {
         "name": "pu_medio",
         "type": "str",
-        "example": "956.906354"
+        "example": "610.797908"
       },
       {
         "name": "pu_maximo",
         "type": "str",
-        "example": "956.925492"
+        "example": "610.924502"
       },
       {
         "name": "pu_da_curva",
         "type": "str",
-        "example": "ND"
+        "example": "97.11"
       },
       {
         "name": "data_captura",
