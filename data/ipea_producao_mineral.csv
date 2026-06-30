@@ -555,6 +555,7 @@ data_captura,data_referencia,codigo_ativo,label,valor
 2026-06-30,2026-02-01,IBSIE12_QSCFG12,Produção de Ferro-Gusa,1958.564
 2026-06-30,2026-03-01,IBSIE12_QSCFG12,Produção de Ferro-Gusa,2237.107
 2026-06-30,2026-04-01,IBSIE12_QSCFG12,Produção de Ferro-Gusa,2077.401
+2026-06-30,2026-05-01,IBSIE12_QSCFG12,Produção de Ferro-Gusa,2233.49
 2026-06-30,1980-01-01,IBSIE12_QSCAB12,Produção de Aço Bruto,1220.1
 2026-06-30,1980-02-01,IBSIE12_QSCAB12,Produção de Aço Bruto,1172.3
 2026-06-30,1980-03-01,IBSIE12_QSCAB12,Produção de Aço Bruto,1271.1
@@ -1111,6 +1112,7 @@ data_captura,data_referencia,codigo_ativo,label,valor
 2026-06-30,2026-02-01,IBSIE12_QSCAB12,Produção de Aço Bruto,2492.708
 2026-06-30,2026-03-01,IBSIE12_QSCAB12,Produção de Aço Bruto,2778.275
 2026-06-30,2026-04-01,IBSIE12_QSCAB12,Produção de Aço Bruto,2672.845
+2026-06-30,2026-05-01,IBSIE12_QSCAB12,Produção de Aço Bruto,2769.319
 2026-06-30,1980-01-01,IBSIE12_QSCL12,Produção de Laminados,961.805
 2026-06-30,1980-02-01,IBSIE12_QSCL12,Produção de Laminados,898.178
 2026-06-30,1980-03-01,IBSIE12_QSCL12,Produção de Laminados,1026.957
@@ -1667,3 +1669,4 @@ data_captura,data_referencia,codigo_ativo,label,valor
 2026-06-30,2026-02-01,IBSIE12_QSCL12,Produção de Laminados,1836.559
 2026-06-30,2026-03-01,IBSIE12_QSCL12,Produção de Laminados,1894.639
 2026-06-30,2026-04-01,IBSIE12_QSCL12,Produção de Laminados,1868.998
+2026-06-30,2026-05-01,IBSIE12_QSCL12,Produção de Laminados,2030.292

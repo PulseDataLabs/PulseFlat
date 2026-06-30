@@ -2420,7 +2420,7 @@
       {
         "name": "name",
         "type": "str",
-        "example": "WATER BRAIN GESTAO EMPRESARIAL LTDA"
+        "example": "ASSOCIACAO ADMINISTRADORA DA FAIXA DE 3,5 GHZ - EAF"
       },
       {
         "name": "type",
@@ -2430,7 +2430,7 @@
       {
         "name": "sector",
         "type": "str",
-        "example": "Software"
+        "example": "Telecommunications Services"
       },
       {
         "name": "country",
@@ -2440,12 +2440,12 @@
       {
         "name": "joined_on",
         "type": "str",
-        "example": "2026-06-25"
+        "example": "2026-06-30"
       },
       {
         "name": "link",
         "type": "str",
-        "example": "https://unglobalcompact.org/what-is-gc/participants/213981-WATER-BRAIN-GESTAO-EMPRESARIAL-LTDA"
+        "example": "https://unglobalcompact.org/what-is-gc/participants/213259-ASSOCIACAO-ADMINISTRADORA-DA-FAIXA-DE-3-5-GHZ-EAF"
       }
     ]
   },
