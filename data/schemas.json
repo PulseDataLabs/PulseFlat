@@ -1818,7 +1818,7 @@
       {
         "name": "data_ult_vna",
         "type": "date",
-        "example": "2026-06-30"
+        "example": "2026-07-01"
       },
       {
         "name": "indice",
@@ -2055,52 +2055,52 @@
       {
         "name": "data_referencia",
         "type": "date",
-        "example": "29/6/2026"
+        "example": "30/6/2026"
       },
       {
         "name": "emissor",
         "type": "str",
-        "example": "ALCOESTE BIOENERGIA FERNANDOPOLIS S A"
+        "example": "AGUAS DE BOMBINHAS SANEAMENTO SPE S.A."
       },
       {
         "name": "codigo_ativo",
         "type": "str",
-        "example": "ABFR12"
+        "example": "ABSP12"
       },
       {
         "name": "isin",
         "type": "str",
-        "example": "BRABFRDBS016"
+        "example": "BRABSPDBS013"
       },
       {
         "name": "quantidade",
         "type": "int",
-        "example": "44"
+        "example": "2334"
       },
       {
         "name": "numero_de_negocios",
         "type": "int",
-        "example": "2"
+        "example": "6"
       },
       {
         "name": "pu_minimo",
         "type": "str",
-        "example": "610.671313"
+        "example": "1032.999812"
       },
       {
         "name": "pu_medio",
         "type": "str",
-        "example": "610.797908"
+        "example": "1033.020472"
       },
       {
         "name": "pu_maximo",
         "type": "str",
-        "example": "610.924502"
+        "example": "1033.041132"
       },
       {
         "name": "pu_da_curva",
         "type": "str",
-        "example": "97.11"
+        "example": "100.13"
       },
       {
         "name": "data_captura",
