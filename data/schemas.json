@@ -1029,7 +1029,7 @@
       {
         "name": "data_geracao",
         "type": "date",
-        "example": "2026-06-30"
+        "example": "2026-07-01"
       },
       {
         "name": "acao",
