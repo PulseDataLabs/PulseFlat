@@ -200,52 +200,52 @@ window.PULSEFLAT_LAST_UPDATES = {
     "max": "2026-07-01"
   },
   "cvm_cadastro_companhias_abertas.csv": {
-    "min": "2026-06-30",
-    "max": "2026-06-30"
+    "min": "2026-07-01",
+    "max": "2026-07-01"
   },
   "registro_fundo_classe.csv": {
-    "min": "2026-06-30",
-    "max": "2026-06-30"
+    "min": "2026-07-01",
+    "max": "2026-07-01"
   },
   "ipea_calendario.csv": {
-    "min": "2026-06-30",
-    "max": "2026-06-30"
+    "min": "2026-07-01",
+    "max": "2026-07-01"
   },
   "ibge_sidra.csv": {
-    "min": "2026-06-30",
-    "max": "2026-06-30"
+    "min": "2026-07-01",
+    "max": "2026-07-01"
   },
   "ipea_comercio_exterior.csv": {
-    "min": "2026-06-30",
-    "max": "2026-06-30"
+    "min": "2026-07-01",
+    "max": "2026-07-01"
   },
   "ipea_fbcf.csv": {
-    "min": "2026-06-30",
-    "max": "2026-06-30"
+    "min": "2026-07-01",
+    "max": "2026-07-01"
   },
   "ipea_macroeconomia.csv": {
-    "min": "2026-06-30",
-    "max": "2026-06-30"
+    "min": "2026-07-01",
+    "max": "2026-07-01"
   },
   "ipea_precos_inflacao.csv": {
-    "min": "2026-06-30",
-    "max": "2026-06-30"
+    "min": "2026-07-01",
+    "max": "2026-07-01"
   },
   "ipea_producao_mineral.csv": {
-    "min": "2026-06-30",
-    "max": "2026-06-30"
+    "min": "2026-07-01",
+    "max": "2026-07-01"
   },
   "ipea_taxas_juros.csv": {
-    "min": "2026-06-30",
-    "max": "2026-06-30"
+    "min": "2026-07-01",
+    "max": "2026-07-01"
   },
   "ipea_mercados_diarios.csv": {
-    "min": "2026-06-30",
-    "max": "2026-06-30"
+    "min": "2026-07-01",
+    "max": "2026-07-01"
   },
   "cvm_fundos_informe_diario.csv": {
-    "min": "2026-06-30",
-    "max": "2026-06-30"
+    "min": "2026-07-01",
+    "max": "2026-07-01"
   },
   "b3_indicadores_economicos_fwf.csv": {
     "min": "2026-06-16",
