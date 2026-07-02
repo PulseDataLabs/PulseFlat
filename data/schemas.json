@@ -1612,7 +1612,7 @@
       {
         "name": "data_ult_vna",
         "type": "date",
-        "example": "2026-07-01"
+        "example": "2026-07-02"
       },
       {
         "name": "indice",
@@ -1849,52 +1849,52 @@
       {
         "name": "data_referencia",
         "type": "date",
-        "example": "30/6/2026"
+        "example": "1/7/2026"
       },
       {
         "name": "emissor",
         "type": "str",
-        "example": "AGUAS DE BOMBINHAS SANEAMENTO SPE S.A."
+        "example": "ATLAS LUIZ CARLOS COMERCIALIZADORA DE ENERGIA S.A."
       },
       {
         "name": "codigo_ativo",
         "type": "str",
-        "example": "ABSP12"
+        "example": "ACRC21"
       },
       {
         "name": "isin",
         "type": "str",
-        "example": "BRABSPDBS013"
+        "example": "BRACRCDBS011"
       },
       {
         "name": "quantidade",
         "type": "int",
-        "example": "2334"
+        "example": "4892"
       },
       {
         "name": "numero_de_negocios",
         "type": "int",
-        "example": "6"
+        "example": "2"
       },
       {
         "name": "pu_minimo",
         "type": "str",
-        "example": "1032.999812"
+        "example": "1144.603576"
       },
       {
         "name": "pu_medio",
         "type": "str",
-        "example": "1033.020472"
+        "example": "1144.626469"
       },
       {
         "name": "pu_maximo",
         "type": "str",
-        "example": "1033.041132"
+        "example": "1144.649362"
       },
       {
         "name": "pu_da_curva",
         "type": "str",
-        "example": "100.13"
+        "example": "90.55"
       },
       {
         "name": "data_captura",
