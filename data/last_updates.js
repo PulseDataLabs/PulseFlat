@@ -9,7 +9,7 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "b3_carteira_teorica_ibsd.csv": {
     "min": "2026-06-03",
-    "max": "2026-07-01"
+    "max": "2026-07-02"
   },
   "b3_bmf_taxas_juros.csv": {
     "min": "2026-06-04",
@@ -157,7 +157,7 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "anbima_550.csv": {
     "min": "2026-06-01",
-    "max": "2026-07-01"
+    "max": "2026-07-02"
   },
   "anbima_idka.csv": {
     "min": "2026-06-03",
@@ -193,7 +193,7 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "b3_bdi_di_over.csv": {
     "min": "2026-06-01",
-    "max": "2026-07-01"
+    "max": "2026-07-02"
   },
   "b3_carteira_teorica_bdrx.csv": {
     "min": "2026-06-03",
