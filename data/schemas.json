@@ -873,7 +873,7 @@
       {
         "name": "data_geracao",
         "type": "date",
-        "example": "2026-07-02"
+        "example": "2026-07-03"
       },
       {
         "name": "acao",
@@ -1281,7 +1281,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-07-02"
+        "example": "2026-07-03"
       },
       {
         "name": "auditor",
@@ -1565,7 +1565,7 @@
       {
         "name": "id_registro_classe",
         "type": "int",
-        "example": "34284"
+        "example": "34282"
       },
       {
         "name": "cnpj_classe",
@@ -1710,7 +1710,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-07-02"
+        "example": "2026-07-03"
       },
       {
         "name": "cnpj_fundo",
@@ -2343,7 +2343,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-07-02"
+        "example": "2026-07-03"
       },
       {
         "name": "data_referencia",
@@ -2375,7 +2375,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-07-02"
+        "example": "2026-07-03"
       },
       {
         "name": "data_referencia",
@@ -2407,7 +2407,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-07-02"
+        "example": "2026-07-03"
       },
       {
         "name": "serie_id",
@@ -2444,7 +2444,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-07-02"
+        "example": "2026-07-03"
       },
       {
         "name": "data_referencia",
@@ -2476,7 +2476,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-07-02"
+        "example": "2026-07-03"
       },
       {
         "name": "data_referencia",
@@ -2508,7 +2508,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-07-02"
+        "example": "2026-07-03"
       },
       {
         "name": "data_referencia",
@@ -2540,7 +2540,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-07-02"
+        "example": "2026-07-03"
       },
       {
         "name": "data_referencia",
@@ -2572,7 +2572,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-07-02"
+        "example": "2026-07-03"
       },
       {
         "name": "data_referencia",
@@ -2673,7 +2673,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-07-02"
+        "example": "2026-07-03"
       },
       {
         "name": "data_referencia",
@@ -3060,7 +3060,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-07-02"
+        "example": "2026-07-03"
       },
       {
         "name": "tp_fundo_classe",
