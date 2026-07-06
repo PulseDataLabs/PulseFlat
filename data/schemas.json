@@ -3273,7 +3273,7 @@
       {
         "name": "name",
         "type": "str",
-        "example": "skyline tecnologia"
+        "example": "POTENZA SOLUCOES PREDIAIS E FACILITIES LTDA"
       },
       {
         "name": "type",
@@ -3283,7 +3283,7 @@
       {
         "name": "sector",
         "type": "str",
-        "example": "Software"
+        "example": "Engineering and Contracting Services"
       },
       {
         "name": "country",
@@ -3293,12 +3293,12 @@
       {
         "name": "joined_on",
         "type": "str",
-        "example": "2026-07-02"
+        "example": "2026-07-06"
       },
       {
         "name": "link",
         "type": "str",
-        "example": "https://unglobalcompact.org/what-is-gc/participants/212748-skyline-tecnologia"
+        "example": "https://unglobalcompact.org/what-is-gc/participants/214493-POTENZA-SOLUCOES-PREDIAIS-E-FACILITIES-LTDA"
       }
     ]
   },
