@@ -1427,7 +1427,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-07-06"
+        "example": "2026-07-07"
       },
       {
         "name": "setor_economico",
@@ -1551,7 +1551,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-07-06"
+        "example": "2026-07-07"
       },
       {
         "name": "categoria_etf",
@@ -1628,7 +1628,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-07-06"
+        "example": "2026-07-07"
       },
       {
         "name": "codigo_fundo",
@@ -1789,7 +1789,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-07-06"
+        "example": "2026-07-07"
       },
       {
         "name": "tipo_fundo",
@@ -2092,7 +2092,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-07-06"
+        "example": "2026-07-07"
       },
       {
         "name": "data_base",
@@ -2545,7 +2545,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-07-06"
+        "example": "2026-07-07"
       },
       {
         "name": "data_referencia",
@@ -2572,7 +2572,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-07-06"
+        "example": "2026-07-07"
       },
       {
         "name": "codigo_serie",
@@ -2604,7 +2604,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-07-06"
+        "example": "2026-07-07"
       },
       {
         "name": "codigo_ativo",
@@ -3071,7 +3071,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-07-06"
+        "example": "2026-07-07"
       }
     ]
   },
@@ -3133,7 +3133,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-07-06"
+        "example": "2026-07-07"
       }
     ]
   },
@@ -3145,7 +3145,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-07-06"
+        "example": "2026-07-07"
       },
       {
         "name": "codigo_ativo",
@@ -3268,7 +3268,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-07-06"
+        "example": "2026-07-07"
       },
       {
         "name": "name",
@@ -3765,7 +3765,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-07-06"
+        "example": "2026-07-07"
       },
       {
         "name": "auditor",
@@ -4162,7 +4162,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-07-06"
+        "example": "2026-07-07"
       },
       {
         "name": "cnpj_fundo",
@@ -4254,7 +4254,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-07-06"
+        "example": "2026-07-07"
       },
       {
         "name": "serie_id",
@@ -4291,7 +4291,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-07-06"
+        "example": "2026-07-07"
       },
       {
         "name": "data_referencia",
@@ -4323,7 +4323,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-07-06"
+        "example": "2026-07-07"
       },
       {
         "name": "data_referencia",
@@ -4355,7 +4355,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-07-06"
+        "example": "2026-07-07"
       },
       {
         "name": "data_referencia",
@@ -4387,7 +4387,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-07-06"
+        "example": "2026-07-07"
       },
       {
         "name": "data_referencia",
@@ -4419,7 +4419,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-07-06"
+        "example": "2026-07-07"
       },
       {
         "name": "data_referencia",
@@ -4451,7 +4451,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-07-06"
+        "example": "2026-07-07"
       },
       {
         "name": "data_referencia",
@@ -4483,7 +4483,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-07-06"
+        "example": "2026-07-07"
       },
       {
         "name": "data_referencia",
@@ -4515,7 +4515,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-07-06"
+        "example": "2026-07-07"
       },
       {
         "name": "data_referencia",
@@ -4547,7 +4547,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-07-06"
+        "example": "2026-07-07"
       },
       {
         "name": "tp_fundo_classe",
