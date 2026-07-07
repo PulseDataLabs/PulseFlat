@@ -2159,12 +2159,12 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-07-06"
+        "example": "2026-07-07"
       },
       {
         "name": "data_geracao",
         "type": "date",
-        "example": "2026-07-06"
+        "example": "2026-07-07"
       },
       {
         "name": "acao",
@@ -2513,7 +2513,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-07-06"
+        "example": "2026-07-07"
       },
       {
         "name": "codigo_emissor",
@@ -2846,7 +2846,7 @@
       {
         "name": "data_ult_vna",
         "type": "date",
-        "example": "2026-07-06"
+        "example": "2026-07-07"
       },
       {
         "name": "indice",
@@ -3083,52 +3083,52 @@
       {
         "name": "data_referencia",
         "type": "date",
-        "example": "3/7/2026"
+        "example": "6/7/2026"
       },
       {
         "name": "emissor",
         "type": "str",
-        "example": "AGUAS DE CAMBORIU SANEAMENTO SPE S.A."
+        "example": "AURA ALMAS MINERACAO S.A."
       },
       {
         "name": "codigo_ativo",
         "type": "str",
-        "example": "ACMB13"
+        "example": "AALM12"
       },
       {
         "name": "isin",
         "type": "str",
-        "example": "BRACMBDBS022"
+        "example": "BRAALMDBS017"
       },
       {
         "name": "quantidade",
         "type": "int",
-        "example": "38"
+        "example": "18950"
       },
       {
         "name": "numero_de_negocios",
         "type": "int",
-        "example": "2"
+        "example": "6"
       },
       {
         "name": "pu_minimo",
         "type": "str",
-        "example": "1034.663857"
+        "example": "1057.507950"
       },
       {
         "name": "pu_medio",
         "type": "str",
-        "example": "1034.715593"
+        "example": "1057.507950"
       },
       {
         "name": "pu_maximo",
         "type": "str",
-        "example": "1034.767328"
+        "example": "1057.507950"
       },
       {
         "name": "pu_da_curva",
         "type": "str",
-        "example": "100.12"
+        "example": "101.84"
       },
       {
         "name": "data_captura",
@@ -4017,7 +4017,7 @@
       {
         "name": "id_registro_classe",
         "type": "int",
-        "example": "34295"
+        "example": "34297"
       },
       {
         "name": "cnpj_classe",
