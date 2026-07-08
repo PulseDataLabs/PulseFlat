@@ -4449,5 +4449,345 @@
         "example": "conglomerados_prudenciais"
       }
     ]
+  },
+  {
+    "title": "Anbima Ima Completo",
+    "files": "anbima_ima_completo.csv",
+    "source": "anbima",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-06-01"
+      },
+      {
+        "name": "data_referencia",
+        "type": "date",
+        "example": "2026-05-29"
+      },
+      {
+        "name": "indice",
+        "type": "str",
+        "example": "IRF-M 1"
+      },
+      {
+        "name": "numero_indice",
+        "type": "int",
+        "example": "20138.20756000"
+      },
+      {
+        "name": "variacao_diaria",
+        "type": "str",
+        "example": "0.0432"
+      },
+      {
+        "name": "variacao_mensal",
+        "type": "str",
+        "example": "1.0735"
+      },
+      {
+        "name": "variacao_anual",
+        "type": "str",
+        "example": "5.4314"
+      },
+      {
+        "name": "variacao_ultimos_12_meses",
+        "type": "str",
+        "example": "14.4269"
+      },
+      {
+        "name": "variacao_ultimos_24_meses",
+        "type": "str",
+        "example": "27.5287"
+      },
+      {
+        "name": "duration_du",
+        "type": "str",
+        "example": "96"
+      },
+      {
+        "name": "peso_geral",
+        "type": "str",
+        "example": "6.16"
+      },
+      {
+        "name": "carteira_a_mercado_rs_mil",
+        "type": "str",
+        "example": "500982803"
+      },
+      {
+        "name": "numero_operacoes",
+        "type": "int",
+        "example": "83"
+      },
+      {
+        "name": "quant_negociada_1000_titulos",
+        "type": "str",
+        "example": "5576.90"
+      },
+      {
+        "name": "valor_negociado_rs_mil",
+        "type": "str",
+        "example": "5427718.74"
+      },
+      {
+        "name": "pmr",
+        "type": "str",
+        "example": "141.779685975957"
+      },
+      {
+        "name": "convexidade",
+        "type": "str",
+        "example": "0.47475062168119"
+      },
+      {
+        "name": "yield_",
+        "type": "str",
+        "example": "14.1095522117692"
+      },
+      {
+        "name": "redemption_yield",
+        "type": "str",
+        "example": ""
+      }
+    ]
+  },
+  {
+    "title": "Anbima 550",
+    "files": "anbima_550.csv",
+    "source": "anbima",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-06-01"
+      },
+      {
+        "name": "titulo",
+        "type": "str",
+        "example": "210100"
+      },
+      {
+        "name": "vencimento",
+        "type": "str",
+        "example": "2026-09-01"
+      },
+      {
+        "name": "preco_unitario",
+        "type": "float",
+        "example": "19105.49719407"
+      },
+      {
+        "name": "preco_retorno",
+        "type": "float",
+        "example": "0.00000000"
+      },
+      {
+        "name": "posicao_custodia",
+        "type": "str",
+        "example": "9627474"
+      }
+    ]
+  },
+  {
+    "title": "Anbima Indicadores",
+    "files": "anbima_indicadores.csv",
+    "source": "anbima",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-06-01"
+      },
+      {
+        "name": "data_referencia",
+        "type": "date",
+        "example": "2026-06-01"
+      },
+      {
+        "name": "data_referencia_pagina",
+        "type": "date",
+        "example": "2026-06-01 16:09:00"
+      },
+      {
+        "name": "indicador",
+        "type": "str",
+        "example": "Estimativa SELIC"
+      },
+      {
+        "name": "categoria",
+        "type": "str",
+        "example": "Taxa de Juros"
+      },
+      {
+        "name": "valor",
+        "type": "str",
+        "example": "14.40"
+      },
+      {
+        "name": "unidade",
+        "type": "str",
+        "example": "% a.a."
+      }
+    ]
+  },
+  {
+    "title": "Anbima Idka",
+    "files": "anbima_idka.csv",
+    "source": "anbima",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-06-03"
+      },
+      {
+        "name": "no_indexador",
+        "type": "str",
+        "example": "PREFIXADO"
+      },
+      {
+        "name": "no_indice",
+        "type": "str",
+        "example": "IDkA Pré 3M"
+      },
+      {
+        "name": "nu_indice",
+        "type": "str",
+        "example": "7558.191845"
+      },
+      {
+        "name": "ret_dia_perc",
+        "type": "float",
+        "example": "0.0593"
+      },
+      {
+        "name": "ret_mes_perc",
+        "type": "float",
+        "example": "0.1067"
+      },
+      {
+        "name": "ret_ano_perc",
+        "type": "float",
+        "example": "5.6793"
+      },
+      {
+        "name": "ret_12_meses_perc",
+        "type": "float",
+        "example": "14.7332"
+      },
+      {
+        "name": "vol_aa_perc",
+        "type": "float",
+        "example": "0.0569"
+      },
+      {
+        "name": "taxa_juros_aa_perc_compra_d1",
+        "type": "float",
+        "example": "14.1261"
+      },
+      {
+        "name": "taxa_juros_aa_perc_venda_d0",
+        "type": "float",
+        "example": "14.0943"
+      },
+      {
+        "name": "data_referencia",
+        "type": "date",
+        "example": ""
+      }
+    ]
+  },
+  {
+    "title": "Anbima Debentures",
+    "files": "anbima_debentures.csv",
+    "source": "anbima",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-06-05"
+      },
+      {
+        "name": "data_referencia",
+        "type": "date",
+        "example": "2026-06-03"
+      },
+      {
+        "name": "codigo",
+        "type": "str",
+        "example": "AALM12"
+      },
+      {
+        "name": "nome_emissor",
+        "type": "str",
+        "example": "AURA ALMAS MINERACAO S.A. (*)"
+      },
+      {
+        "name": "dt_repactuacao_vencimento",
+        "type": "date",
+        "example": "2030-10-02"
+      },
+      {
+        "name": "indice_correcao",
+        "type": "str",
+        "example": "DI + 1.6%"
+      },
+      {
+        "name": "tx_compra",
+        "type": "str",
+        "example": "0.8503"
+      },
+      {
+        "name": "tx_venda",
+        "type": "str",
+        "example": "0.5404"
+      },
+      {
+        "name": "tx_indicativa",
+        "type": "str",
+        "example": "0.6834"
+      },
+      {
+        "name": "desvio_padrao",
+        "type": "str",
+        "example": "0.0541"
+      },
+      {
+        "name": "intervalo_indicativo_min",
+        "type": "str",
+        "example": "0.6293"
+      },
+      {
+        "name": "intervalo_indicativo_max",
+        "type": "str",
+        "example": "0.7376"
+      },
+      {
+        "name": "pu",
+        "type": "str",
+        "example": "1046.357089"
+      },
+      {
+        "name": "ratio_pu_par_vne",
+        "type": "str",
+        "example": "102.0904"
+      },
+      {
+        "name": "duration",
+        "type": "str",
+        "example": "576.72"
+      },
+      {
+        "name": "pct_reune",
+        "type": "str",
+        "example": ""
+      },
+      {
+        "name": "ref_ntnb",
+        "type": "str",
+        "example": ""
+      }
+    ]
   }
 ]
