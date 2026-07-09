@@ -3380,7 +3380,7 @@
       {
         "name": "data_ult_vna",
         "type": "date",
-        "example": "2026-07-08"
+        "example": "2026-07-09"
       },
       {
         "name": "indice",
@@ -3617,52 +3617,52 @@
       {
         "name": "data_referencia",
         "type": "date",
-        "example": "7/7/2026"
+        "example": "8/7/2026"
       },
       {
         "name": "emissor",
         "type": "str",
-        "example": "AURA ALMAS MINERACAO S.A."
+        "example": "AGUAS DE BOMBINHAS SANEAMENTO SPE S.A."
       },
       {
         "name": "codigo_ativo",
         "type": "str",
-        "example": "AALM12"
+        "example": "ABSP12"
       },
       {
         "name": "isin",
         "type": "str",
-        "example": "BRAALMDBS017"
+        "example": "BRABSPDBS013"
       },
       {
         "name": "quantidade",
         "type": "int",
-        "example": "200"
+        "example": "432"
       },
       {
         "name": "numero_de_negocios",
         "type": "int",
-        "example": "1"
+        "example": "2"
       },
       {
         "name": "pu_minimo",
         "type": "str",
-        "example": "1059.959304"
+        "example": "1036.628091"
       },
       {
         "name": "pu_medio",
         "type": "str",
-        "example": "1059.959304"
+        "example": "1036.648824"
       },
       {
         "name": "pu_maximo",
         "type": "str",
-        "example": "1059.959304"
+        "example": "1036.669557"
       },
       {
         "name": "pu_da_curva",
         "type": "str",
-        "example": "102.02"
+        "example": "100.12"
       },
       {
         "name": "data_captura",
