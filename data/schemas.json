@@ -2005,7 +2005,7 @@
       {
         "name": "data_geracao",
         "type": "date",
-        "example": "2026-07-08"
+        "example": "2026-07-09"
       },
       {
         "name": "acao",
@@ -2948,7 +2948,7 @@
       {
         "name": "id_registro_classe",
         "type": "int",
-        "example": "34312"
+        "example": "34319"
       },
       {
         "name": "cnpj_classe",
