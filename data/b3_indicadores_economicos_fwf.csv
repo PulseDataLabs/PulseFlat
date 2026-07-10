@@ -2716,37 +2716,37 @@ data_captura,conjunto,arquivo_origem,registro_hash,cod_indicador,compl_transacao
 2026-07-08,b3_indicadores_economicos_fwf,ID260707.ex_,e25af3b5e391e1b6cc1d4a0b,"Î®ãqýTñq,3Õ­m8¿l »Uú©p",g×,¿ºµÇ~;,uk,Ä±;SÝÚ,~,"\Pë¨¢n-Ä±wukÎ},è jQ·âZE«[»âì×É",ñ,äqQ·öõ¼N.¨RQ·âØ^´ºµ+Î
 2026-07-08,b3_indicadores_economicos_fwf,ID260707.ex_,858bdb3f6e42b178d1191075,ë¤Ê¸^ª§9:ÃU´ní±¸^ª§9ª,vR·,\'Uü¡õb,f,8§ý,,",ªÑÝ¸^ªÅÃTØÅì¥Ê¸Nª¡q$E¢rÐºµÇ",ö`,P´ní±¸^ªÅCo@¹ýÍ~tâz©B
 2026-07-08,b3_indicadores_economicos_fwf,ID260707.ex_,c867f355a2c1785a7edf26f9,±o!Nyf¸q7:[ên»Jéû×éù,;3Ü,zúàòntÿ,}û,,,,2,ôÇÆ-ëM&ÂUªÌ|ÜÿPK(
-2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,8c29431947ac56a5d04cf3c6,   @                   ,  , ÿÿ     ,  ,MZ¡  ,  ,                                    ,  ,                       
-2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,128c2e4de0e154dc729f601c,     @             ,  Ð,       ,  ,   ,  ,                         ÄO d ,  ,         P    Uz    
-2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,d62a4f49938d744fc2a99224, tV V V °V ÊV äV," ""W",W ÜW ,bV,"V ""V",bW, W W W ¶W     úT     T lT, , üV ÊW tW 4W FW VW 
+2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,8c29431947ac56a5d04cf3c6,,,,,MZ¡,,,,
+2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,128c2e4de0e154dc729f601c,,,,,,,,,
+2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,d62a4f49938d744fc2a99224,,,W,bV,V,bW,,,
 2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,c3604b1462f2842274543dd1,,,,,,,,,
 2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,7bf72949531512448c491e6b,,,,,,,,,
 2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,dbfff5c9a496d73059858d51,,,,,,,,,
-2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,e9b27d29168e450b4f73ae3a,ê62Ð±úEPI·Xuý·îé¨:¨P-,H%^,¿;9[]Z5,sw,i:^Kþe,},Ðx§¨ÚZÙÖ*ê¤ROìBq¼³%ÂÝ=ÊúA9_ù1,-!,3´mZn ~GºT>Nð-]
-2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,5c80c818a7b6de347e1aaf8e,EE50 P     (8PX 70, ,  ,E,í@   ,xx,x          ( n u l l )   ,  ,0WP        `h````  ppx
-2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,efea7b8ec9dace1a45cea703,ram name unknown>  ÿÿÿÿ~$,m:, ... <pr,og,Progra,ÿE,",A I,A GetLastActivePopup  GetActive",  ,A $A     ÿÿÿÿÖ+A Ú+A ÿÿÿ
-2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,3e2dd0a5a5838931ce310927,      ºT ¨T ÈT ÜT    ,   ,        ,  ,U TA,8R, LR jR R R  R ¬R ¸R ÆR ÖR,  , ¤Q ÞQ îQ  R R *R 
-2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,d62a4f49938d744fc2a99224, tV V V °V ÊV äV," ""W",W ÜW ,bV,"V ""V",bW, W W W ¶W     úT     T lT, , üV ÊW tW 4W FW VW 
-2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,25cd90aca2bcb3034887b833,\ DeviceIoControl uGetVe,leA,ributesA,  ,GetFi,te,sA  ÊLocalFileTimeToFileTime _ DosD,tt,rsionExA hSetFileAttribu
-2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,2c4be163c45901cc0766b29b,"EL32.dll  ¬wsprintfA , C",cal,nfoA  KE,RN,GetLo,rB,uffA  USER32.dll  zRegQueryValueA  ,eI,harToOemBuffA  ÏOemToCha
-2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,95a56ca6e3e709b691aacdfa,SetConsoleMode  ë GetCons,ons,eInputA ,P,ReadC,  ,                                    ,ol,oleMode                  
-2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,20e04b6a51f0e13a0a7b46cb,"m e     P K W A R E ,   I", m ,a n y N ,a ,  C o,s ,c r i p t i o n     P K U N Z I P C ,p ," n c   l ""  F i l e D e "
-2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,d93712777def0e253cd65b8c,i l e n a m e   P K U n z, i ,i n a l ,F ,  O r,o ,d u c t N a m e     P K S F X ®   C ,g , i p . e x e   H   P r 
-2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,e56c4ba92e78a68eeb18dafd,"r s i o n   4 ,   0 ,   0", o ,u c t V ,e ,  P r,i ,l e I n f o     $    T r a n s l a ,d ," ,   0     D    V a r F "
-2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,33b6cef2f2dca13a6093f556,"      ` ""-  í|	\SG·øa ",  ," D3""8", ,  Xô ,oÂ,¦µ¸Ûºa]kµân­¶îUëB­mmë[UÜÒV­ö³vQ[ÿ, c,";u½*(Ê¸¡h""AV¬ääÞx"
+2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,e9b27d29168e450b4f73ae3a,ê62Ð±úEPI·Xuý·îé¨:¨P-,H%^,¿;9[]Z5,sw,i:^Kþe,},Ðx§¨ÚZÙÖ*ê¤ROìBq¼³%ÂÝ=ÊúA9_ù1,-!,3´mZn
+2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,5c80c818a7b6de347e1aaf8e,EE50,,,E,í@,xx,x,,0WP
+2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,efea7b8ec9dace1a45cea703,ram name unknown>,m:,,og,Progra,ÿE,",A",,A
+2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,3e2dd0a5a5838931ce310927,,,,,U,8R,,,
+2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,d62a4f49938d744fc2a99224,,,W,bV,V,bW,,,
+2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,25cd90aca2bcb3034887b833,\,leA,ributesA,,GetFi,te,sA,tt,rsionExA
+2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,2c4be163c45901cc0766b29b,EL32.dll,cal,nfoA,RN,GetLo,rB,uffA,eI,harToOemBuffA
+2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,95a56ca6e3e709b691aacdfa,SetConsoleMode,ons,eInputA,P,ReadC,,,ol,oleMode
+2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,20e04b6a51f0e13a0a7b46cb,m,,a,a,,s,c,p,
+2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,d93712777def0e253cd65b8c,i,,i,F,,o,d,g,
+2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,e56c4ba92e78a68eeb18dafd,r,,u,e,,i,l,d,
+2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,33b6cef2f2dca13a6093f556,,,,,,oÂ,¦µ¸Ûºa]kµân­¶îUëB­mmë[UÜÒV­ö³vQ[ÿ,,";u½*(Ê¸¡h""AV¬ääÞx"
 2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,b62301d35abd0c6e042d7ed0,Ü3¸	u&É#²òTÖO©FNc2,[ñE,ÐÁJEeÓñ,bo,AËZú4_,,ÉHè%«økJ=:Qs%£ÎÁã`xh$¥fõQ,ê¾,Ò|ÓçÍè¹dõûGÿQõën»çÊPÆ
 2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,6d5dbfb6316c85a1013f80ac,þÕ§>Së½àÈO_ë)nÛw´ùñá,çm«,¥Yü¥§Ì,Þ,xzï­,Ñ,`ò¡|°û)AUÝ»×sÊò98&0ÏÉ9L¥Óâ1,z5,Ü	·äU}Ø¾ÿÑ;[V6ôvïÚçÝ¯z´
 2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,a4be4ee47f335936bc812163,~ZdR1ÝÖÑH(¬QgPÕù,ÂÓã,ª^ýéti,N],"á,*f",-£,Ò	Ë&£ÎW1y´&´¡Å}{® RUHk(^W¾°î5\,L4,(1VÖXë¼@i½%«4L¥rÚ<
 2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,9ca75520c857cebfe6d6a269,áÌq*$ØjÃl(çXNCÄ±6Å,·Ì,Gl3c	¶Z,B?,á*,bG,Z¨¡Ê¨²Ús±*£ÒÔã£cÕdù/ÌOÆÄ°&,dÌ,?¿>­OY 5°A¥ë­ßDt±±@q
 2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,e57de01f3d260cd8f5c12c92,ÿ çüóZHsükmò<-êO«£¡^,DÞ,^= û@¢ßÈ,ü,¹þ,5_,¿q{×9³VÓ#7wê°ýÕw<Þ^|à>m6ãß,þr,ÓÒéÂ¬óqßvÈ¼=øÆScnnÌ¬_ÚT
-2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,8eff3c3b272dba05d1726c13,òö·iÆÏ=ýÀî^å±×ÿn®Ôd½,ØôÓ, .l}$11,yÚ,ú¹uyg,£®,ì¾¼4©ézJáÍ=n5§¬Ûo{ß·üÎ©§Û¶n],«ò,ÞÑt¢#Àæö¹·óí×=ZþÉÏ
+2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,8eff3c3b272dba05d1726c13,òö·iÆÏ=ýÀî^å±×ÿn®Ôd½,ØôÓ,,yÚ,ú¹uyg,£®,ì¾¼4©ézJáÍ=n5§¬Ûo{ß·üÎ©§Û¶n],«ò,ÞÑt¢#Àæö¹·óí×=ZþÉÏ
 2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,f8d629ef66d178953d96de1f,Ìè:f(Ú$¼ÇT$áì%6jDWÿ,"1""",1_8gßô`,Ç,-dæãc,æM,"Fe¤%TÇrÄÊDQÏ%""×²^ÂuFÕ$ÛWQ^¯Ñ",Ñ,E1_eÄÇr(.ByP¼ ÇT:ò^Û
-2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,dbf4e8a49a4f4c41198ec536,/§Ô()Q-R£ÎV3ÑÄp0,É%s,ï|²³/,,",û",Âþ,ZiE]h­¶­ëëVsu3k2âT¸ZÂ<AaÛK,=Â,ÿ&=ehj%\hµºîø+ÍE&& 
+2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,dbf4e8a49a4f4c41198ec536,/§Ô()Q-R£ÎV3ÑÄp0,É%s,ï|²³/,,",û",Âþ,ZiE]h­¶­ëëVsu3k2âT¸ZÂ<AaÛK,=Â,ÿ&=ehj%\hµºîø+ÍE&&
 2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,117f3466980f8a1bfa109048,<#©Ux[7 Ü¢L ðí|£y,N ,Ý×5tü,¡,=g}õö,Ö,X*¹9-®ºðZ¼ÁÅêQóãm`p©pOÄCÃÉù&1,&U,",:U¹1gÒé(·e]vz ¹£Ñ]"
 2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,e5ed6345aaf364ede88cf40a,¬Ýs¹¤ÃísæO/	HÚív`Â¶,y¿,ô\§¾½fæ,Ýð,u{û#z,Ô×,ÎV·ù×õ+ú¡»ÎþòÅ´3S-Õ5¯ÜX )}óôÎô©Y,5,.A{~ßþP¹Æû£ö¨­cãÇíýùªìà
-2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,4e94693f2da805dad8c0b850,+Ño¬±ÈÓüÀ.X0()Vªè,E¿,¥ ³ýÞÕ,J0,ýæCÅP0,ß,"ØÁë}Á,CµIA0:LrÕ+¸Âë MÜ°)]",BX,Ã¥àáøàG^/x: ¼ÖºâðÄ>
-2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,feb3755a77febd10df3eef1d,  Kº  ¼|TÅÕ?|7ÙÝlMvÑ ,ÿD, 0    ,  ,æÿ@q,î³,"O«÷±$.½ËÚªØjk)µô©mi«EcB,¥Jyü","3""","QÈ?ùc@²lAØM¬7,ÙeE­"
-2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,c6de0f8cea643f81e4b90644,õXY6Ö®qÀ?ÙqàëÁJÊÂÎ´6¥@,É>Ã,ÓþWawê,Ý,¿T ó<,¢Ø,_øMñesgû¬î!S8¥)»	hTÛË1j´i,Hi,mBwùò§ú:ð]â èG­	v
+2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,4e94693f2da805dad8c0b850,+Ño¬±ÈÓüÀ.X0()Vªè,E¿,¥,J0,ýæCÅP0,ß,"ØÁë}Á,CµIA0:LrÕ+¸Âë",BX,Ã¥àáøàG^/x:
+2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,feb3755a77febd10df3eef1d,,ÿD,,,æÿ@q,î³,"O«÷±$.½ËÚªØjk)µô©mi«EcB,¥Jyü","3""","QÈ?ùc@²lAØM¬7,ÙeE­"
+2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,c6de0f8cea643f81e4b90644,õXY6Ö®qÀ?ÙqàëÁJÊÂÎ´6¥@,É>Ã,ÓþWawê,Ý,¿T,¢Ø,_øMñesgû¬î!S8¥)»	hTÛË1j´i,Hi,mBwùò§ú:ð]â èG­	v
 2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,54d1c03fa728efbc188b581c,Oò_¶ËÝçê<:©.Pîµ@Re,ïs¯,"µf¡UF_Ì""",fV,'\^§xµ,Aè,"ù\ÉMPrXuVÏ#,=ÁI=»FNZ±¤kN¡'³lq³",÷á,fþF©¡~ím/ÑBbì¶ÕåÜÄ´±6
 2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,40fb1b2288f30cbcaa711a8a,ÆÐ´m'º¬J[;µÞùRA¼AõV+ÞåE,yÆ,"""i´%",_Ì,wm#çî],Ïñ,Èá¯ôn+6z(¿)¶*µ6n¬¥^páò8¥&êÑ«xm,`Y,Ð6òq÷IÙòn%òîvþ0®ô¤»
 2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,e84d07cda0d70f18d4b37741,DL8­3áÄ0NL¸~ÁÍ1Árç,½©Á,0!]þý/,2a,ç­îâó,8=,ÌåñÏ3^±)RÔ>wÐpz	4ÿöÓpæL,É,0aéH&6ALØýØ¿aÂO3áô%L
@@ -2755,28 +2755,28 @@ data_captura,conjunto,arquivo_origem,registro_hash,cod_indicador,compl_transacao
 2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,dff49672b5926b014c71561b,ºpB=ªèîÏß1Ëïs_Æ\üCîÑØ,ïÅ,|?&£µ,Ú,U°ÆÃ§,,ù´YGóå/3*¥iaáTY ó=Å!iÚ¥ÀkÕ%\,·%,1qQïi Jv3Õ	ïÉÊÂI¥b
 2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,1bf090bd576a7c588a9e3a0d,#EÛUõ±ßPÔ ­)kÏÄ=gÑÔ,Hº/,¯Ð$gÜ3,¾,{7Ý,Ã÷,ïOòNk]kÍâ±gÂý@;=µÊhr­Éþ¸ó¡,ÂÖ,öùqôû.ß>Ù½^ÒµBb<6µº}
 2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,671f1101d896118cd038db6c,"""edODIs¦èÍ½¤£¥qÚèÕh¯""",zgq,£(JMè,HÌ,E'Hö,¯t,¯SGÂköFuxË­=éiÑ+4mìüV/we¨',:2,«8;*H%Þ]ý¢ì°%²éc\I©p
-2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,4212c40131c3dff97403d2d9,ãª.ÖùÕÕf÷5ÒZm£YÛPÄîº?,WØ,MäâÂ~õN,H¿,vUâmQ,O¨,|sÝ£¤+´ë K³ÒtÔqb	Ñ¥ßõ$ýq¶.#Úø,[O,"¥{ªµëP]k2ZÛ`cué7³á""§ ©Ix"
+2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,4212c40131c3dff97403d2d9,ãª.ÖùÕÕf÷5ÒZm£YÛPÄîº?,WØ,MäâÂ~õN,H¿,vUâmQ,O¨,|sÝ£¤+´ë,[O,"¥{ªµëP]k2ZÛ`cué7³á""§ ©Ix"
 2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,7b72d423d99bfe7ec97057c4,"½Uê×Â,'ÇÞnÛAw¢éJ;9%ÿ",ËÔë,Ñ\90=xà,[@,V`G1,°\,w Ní´õæªC*x4ñXùê+ì£°ÃÍÐAv,Ð³,bmôBÏóK» HAa-Ã}ºBÅ[Ä 
-2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,0705f28103d4b60cd9f4d3de,$.OîCí`ÜôaP@ Q÷.7,h[,Ø-´Òó¯Ó,2,ÌÂèç,>Ó,ë9¡×óÿ0??ýð6yËjÑCD/è·Ë#NÜ5,+ù,Þ²¯@ß_è×ºÐ	÷M)ÆQÚo
-2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,97c57f58336df8e2bcced26b,V¢7U¼7Íj~µXyH¿jIQîÃ,ÇI5,¼ûv¥ª½,Ùl,f>¿|,~N,Åö3ñ/òfÈ.!XD»â| bÏÏçã²s.ÖIùp,SÌ,"q,ºFÁ³5Ð=O´c¤Ò£"
+2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,0705f28103d4b60cd9f4d3de,$.OîCí`ÜôaP@,h[,Ø-´Òó¯Ó,2,ÌÂèç,>Ó,ë9¡×óÿ0??ýð6yËjÑCD/è·Ë#NÜ5,+ù,Þ²¯@ß_è×ºÐ	÷M)ÆQÚo
+2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,97c57f58336df8e2bcced26b,V¢7U¼7Íj~µXyH¿jIQîÃ,ÇI5,¼ûv¥ª½,Ùl,f>¿|,~N,Åö3ñ/òfÈ.!XD»â|,SÌ,"q,ºFÁ³5Ð=O´c¤Ò£"
 2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,61ebe82b334aeb7dd85be1d3,vlIH×vTgvø2:)z.~yÊ«SþØý,ÁxÃ,õÝ8@òÏ,"7""",Ldtí¸,Ù,ÌrÐ§m;&üèpÇXþ ÷3ÃyÞL¯`,ã+,-óå	¿Sþ'§ñ_bvyìÖWÚQ
 2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,4cac7da6ef0c6df0a82902c3,ôñ$uõ<n)'^Ó]Ýr1$µäÅöØ,ÀSq,"7,!»w@",QÅ,Zâ5ð,,G5G¨Xå#f­fPz»¡ôäÌ¥z¹k^ÁÍ·k%­ê+,2¦,áý·Äç·I<*ñ[`{]zòÂYÚM
 2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,14bb491b3c4e62d670783ac0,Þç1-ôã@ÑÁð$YÞ_Ä¬¨,"ý,Ð",¥çé%ú¬,,·á¹ü`6,Fü,ÿ'?n¿SðàV¹jV£zwQ£ê+jtÿqcúGÇr÷ì,,¹yð¹j_[)ôàÿeüÿÿøÏ%c
 2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,a324779fe9ca5b585fffdf5d,k:VF½VÛ2l${Ôm|óÿý,"|""î",ù;Ñêc«oâ,Ç¿,wÛÈn,x<,">?gy!®æõSì{ÿ×ÂjÑV]-eá,..e5",¡,P¥<ûûk2å|brö¿ì¿@àí
-2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,4b7a01e708f4d60c3ac874ad,Ö%­ÿ¼ýklñZ	ÒÇþþ4}éÑQ?\,Ñû,ÙødC=W,"ñ,",!þÂ­,áñ,"o	""®þmþÙS@K¤ bßröuZñæÒ5#+ 4þí$¶",=,eÿX¿áìá1ë*ÖB=zé|òO
+2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,4b7a01e708f4d60c3ac874ad,Ö%­ÿ¼ýklñZ	ÒÇþþ4}éÑQ?\,Ñû,ÙødC=W,"ñ,",!þÂ­,áñ,"o	""®þmþÙS@K¤",=,eÿX¿áìá1ë*ÖB=zé|òO
 2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,a7746c53460a2043c7e449c5,ÍP3A\rD½¶pPóevSêµ#öX,s©æ,£AîÀÁÙ,Ç&,@<,°ÿ,»4NäBå×&ôuLN&5ð«ä[F7mpE6:ög,óó,²ú=6·×é¸?Î§§¬KÅäÁ|¼+o
 2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,2208ff1c014252b132c767ef,ë.ÇâjxFØâPñãÌ¾ªJ0Ð/Ê,jÒ,3 _?`Öî,Un,ôkÇ³ñ,¹,"ÇØ=4)?td)Í²-`Kð°þÐÆü3ê,;WN",Ø,"ÇI×¶Á¤²Ùq#@ùºË;[""#"
 2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,7a88fc5434a2297c0cdf1d3c,¬&?ÂÞäÆ\þc -Ô5sæ*îZþD«Ú,a&,w>ÿØ,ÜÙ,P&¡¢úô,Ö,"ËÄ¡öm?È±À¹ë¢ÊÅÂv,¨²¥	Þ~ÁÒ",gû,SXÊÎ>³´âÒ-¸t±ÙliÍÂ§f
-2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,6f69c1155278b3ad92bfca0c,Tæ;ºÊP1Á\AÙb?Ü9Üø6,Z,¬U`7¨s,Úâ,V/¢¶± ,Fû, 	âr¥oÃ±Å4ÃÙ¼XVÁÞ~>RhPÁn#,ö,m|²J· [Ê\-í.C.?¬§n%
-2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,b9d0c133ff6a62eaaec41070,ò7K¦J8@·á þ/.YruÞ¿ú,KÆ,gLö46B~,L,¾f/qÑë,ð;, ¶hìs¬³çC ´pz{q*I%%Oc_³!Ã8e,f-,CÜ «âZ<gel7æ¼R`Ò®ò§±£
+2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,6f69c1155278b3ad92bfca0c,Tæ;ºÊP1Á\AÙb?Ü9Üø6,Z,¬U`7¨s,Úâ,V/¢¶±,Fû, 	âr¥oÃ±Å4ÃÙ¼XVÁÞ~>RhPÁn#,ö,m|²J·
+2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,b9d0c133ff6a62eaaec41070,ò7K¦J8@·á,KÆ,gLö46B~,L,¾f/qÑë,ð;,,f-,CÜ «âZ<gel7æ¼R`Ò®ò§±£
 2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,1dd5bd7331d6ed0a14051545,0C{;IÜÐÃú4`Ý¬s),?t,Úáè])áA4,DH,¹¢=Ò,A×,¹òMKzÓæßÐêàà×r½ý®k§6ÉäF~%:,AÑ,",eO1÷6åPÇÿø»ÔYM­ð ë"
-2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,2c9b0e72f71ed0cc631e12e8,eû¼J:?äÄÅÚÐ»5Þ%iFå%ª¼,éK(,e¡lµeÿ`A,Jp,ùý@, .,ïçßqAê}¢AivüÀd­ÉâÛÚSíVÛO,ÜH,èÓçPô#i]§£sÓÈ@ö±¾&´û
-2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,8bfe8a7fd977e7b83ca41d67,®HLcpó ¶ut;ÀÃîOKÝ[+TM,ÐæS,^~[øGÏ,+÷,ÒödÏK,çÂ,âòÿ1x(Iº§h£7 \¡*ÚSx!«àµAè¬,ìä,"ªzØ1ÌzÛ""óÊ@j_¡®gµ´Ó¨"
-2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,5ffb41698ab86859b0176b3d,"Õhteé>z¿DÆ-áW¢è¼""Fw",È¹,¦wA6à ,Ý,æê9M,6G,ZV/]X=+Äq~>Ù$Nmw©4S·ã²3<ËÒt»z,¡ô,"r)ú{òóÜ""6ê+qø-áËõR~ÔX"
-2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,edac825097978d9a6441f15e,æúNýL_]O& ³ï_-þZ5oìh,Ý:,BxAÓå¹,¾,@04;À·,ÉÇ,© ÿ ÜI[ZqÙ¬Ôvð;Åÿá¦âW=Â¿4§,ýa,5ÖM¤É*Ð1U{õG;ímèù@3J{
+2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,2c9b0e72f71ed0cc631e12e8,eû¼J:?äÄÅÚÐ»5Þ%iFå%ª¼,éK(,e¡lµeÿ`A,Jp,ùý@,,ïçßqAê}¢AivüÀd­ÉâÛÚSíVÛO,ÜH,èÓçPô#i]§£sÓÈ@ö±¾&´û
+2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,8bfe8a7fd977e7b83ca41d67,®HLcpó,ÐæS,^~[øGÏ,+÷,ÒödÏK,çÂ,âòÿ1x(Iº§h£7 \¡*ÚSx!«àµAè¬,ìä,"ªzØ1ÌzÛ""óÊ@j_¡®gµ´Ó¨"
+2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,5ffb41698ab86859b0176b3d,"Õhteé>z¿DÆ-áW¢è¼""Fw",È¹,¦wA6à,Ý,æê9M,6G,ZV/]X=+Äq~>Ù$Nmw©4S·ã²3<ËÒt»z,¡ô,"r)ú{òóÜ""6ê+qø-áËõR~ÔX"
+2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,edac825097978d9a6441f15e,æúNýL_]O&,Ý:,BxAÓå¹,¾,@04;À·,ÉÇ,©,ýa,5ÖM¤É*Ð1U{õG;ímèù@3J{
 2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,cd2a0aa49153d8bad2fb13ab,tdG2iqSJ2TwÒ1_ú:Ü¤aE±,Î¬Ð,üÛÔs..Á,·,"ÍÄþ""",Ò_,%[Ê]Ì]¡ö»Ä|¹!9ÑªLÝ´CL¶é7*Ì¤,Ýø,£Ú¼ÁÏªMuËâqÊ\VbÙ±Ù¢l
 2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,09acbd598c9eeb0b50385cd2,3Ô»CøÓím ÉÄ$Tá(¢ÓÛ´ò2ó,áº,r¸ÖkÙy,º,ª§ÐcÙ,Û,X­5~Êkµjaf?¦/7Ã`Fjrña.Ó·;Â/]M,Á,ßÞD^d_î-ä·Qt3éÚ?¼
-2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,17dfeffd15b8ac3335e79f67,;WjÛÖå^£ñó{I*º õ¼Þ/O,ëxd,øÌ$:í,,ô!r7`,Î,ÜeÀMÿ.¤þsç°<æ_^¸Y­7é÷B¼>¢?/Ø5,,éðSÜ æJ`ºùD3öTwHAÏ
+2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,17dfeffd15b8ac3335e79f67,;WjÛÖå^£ñó{I*º,ëxd,øÌ$:í,,ô!r7`,Î,ÜeÀMÿ.¤þsç°<æ_^¸Y­7é÷B¼>¢?/Ø5,,éðSÜ æJ`ºùD3öTwHAÏ
 2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,efc44264d31ccf0bbb10eff7,ñÿÁéøû&ó;ÙÁãgfv6¶»×(~',sÜ,âUå=¶¯@Ô,½,pF>Òò±,Þ0,Ó~lfgôNhÕð~æÑJvPÙb+|]P¿Ó`Â4¶8QïÞéç,Y&,¨Ì;Ù'{ù­Ç?Uàî0Ûbs\Z_âØb
 2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,1eab7bf9f294d4fc3a6b40a7,/¾T®q;úÛ+Ì¶§/ßÂÅ®¹Ë¼¡,Öêí,ûñÍ@,èc,§*øI¯,ÏÉ,\ùQD~Àd¹ÞhUnN-ßöN$=·J·Ñ8JpøB,}¾,"¼Q«""iiûëªògÙûbeÛ­? "
 2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,68fec32f198fac7be8d8e6f7,"ÚeÞ:þ}ÍP¹~D3ß,æ2øj!",cà,¾ÅÉªK,&, àÇd¨,d?,à¶ßì¡s­wÚNþÄÏ{ø9[Em´Øf,úó,"b¨ þ­a""UEP=8ÇY;ÛGýÃþ"
@@ -2784,71 +2784,204 @@ data_captura,conjunto,arquivo_origem,registro_hash,cod_indicador,compl_transacao
 2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,c03f29b04b6033f8824ef817,ÃÎÀñ¦©Óã¿I°¿¬¦?îw,Yöc,FÈFºtì,;,"M,Õî¦",Î,Æ×>Ò²$ÐùøGú/Ø95í»oÓÀüIÌp]J@Y,D,"¤$Nò' -u­""÷ÂËiñØ`Fµz"
 2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,9d7ebcf2f0e7a062abd638ea,9¶_ÃOA±³V)>U½$ºÍ]§,ðÅ,÷añéÔ;,/ë,!R·½Ð,æç,+[jf¬Q{üÃigÐ°Q|WZÌ­½6{!_Ý,;±,6ÀW¤RïÄïÅÑÉYÀ+F?ø]E!]
 2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,2f285f40542a3707d14695d8,}/Ì~£Ñj[$ÎÊvnëi)ÿ7Pai,K£V,sòêÕ-ú#,Þ¤,ÓI§x?,½#,}0¨é¸¸Ol6ÁÄâ¨¾Ëqu£É1`yô! |7!cþ,¦ý,"""\@w¯K¼+GÍ¡0Þ+¿:tweènP"
-2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,0a3cf6a206238ae921309630,$8þfÁC\¦ÆÛ»÷¢äj,Àu,1Ú4¸,4E,p½ ×¸,ÿÜ,äûïG0ßþ@eï*oª>.ú(Äúxþ0Õoß÷'àO,®,à8@lLºm0¶¹tP¥þ0ýÇ^9
-2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,6167c5e2a7287c24a1665a53,jú£ãË[IkÛ'UªYK¤)`ÆIù0,2_,b_ÅÓÃÈ,",Í",7Ì;N,$È,7]:ÍÐCcg»z¥Ï7ñ¨	3Ê)[UúzSÔVÉ¼o,M,­?×û _ÜÚ'ÝÜ¿rWÊª[
-2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,89634abff78005220d6c0a63,÷¯Ï'ÝUç­N>¯Ïó}óYW0hp,©,Î©ÁÝ{ï,g?,+bL,ë,"gtC4Ø6uÑ´""éËJQ¬ »Û+Wq··[ö0ï",û},<øèº¾1Nöæ<.wÐ'qsñº~
-2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,7394b5a544fbc11cdd2a8dbb,ÙÉ#ß¬ LTøItCÕa`¼ª|¾PË,",Ð}",d.ZÑ÷},%,µ3dl|¡,w,¸þ-Íû¸wý3]èÌ|oc8¡(|ÕÅçC ªúÒç¯W,ññ,)d=|¬TïAÏÎ R_ÄV+Ï ³Í
-2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,db7dbd75f4051815ba8cdcce,éQåo\ò7¢Àäj>aã·ä([Ñ,, ­Í!{oÏÛ,¸z,­§´Ú,£,?±-³6`Öå¬Áv½0ìñ^Ø	©î>¡7mt.¡,ÈÛ,}Dwÿ¶7äCÏa¤!áÓü	ß
+2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,0a3cf6a206238ae921309630,$8þfÁC\¦ÆÛ»÷¢äj,Àu,1Ú4¸,4E,p½,ÿÜ,äûïG0ßþ@eï*oª>.ú(Äúxþ0Õoß÷'àO,®,à8@lLºm0¶¹tP¥þ0ýÇ^9
+2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,6167c5e2a7287c24a1665a53,jú£ãË[IkÛ'UªYK¤)`ÆIù0,2_,b_ÅÓÃÈ,",Í",7Ì;N,$È,7]:ÍÐCcg»z¥Ï7ñ¨	3Ê)[UúzSÔVÉ¼o,M,­?×û
+2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,89634abff78005220d6c0a63,÷¯Ï'ÝUç­N>¯Ïó}óYW0hp,©,Î©ÁÝ{ï,g?,+bL,ë,"gtC4Ø6uÑ´""éËJQ¬",û},<øèº¾1Nöæ<.wÐ'qsñº~
+2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,7394b5a544fbc11cdd2a8dbb,ÙÉ#ß¬ LTøItCÕa`¼ª|¾PË,",Ð}",d.ZÑ÷},%,µ3dl|¡,w,¸þ-Íû¸wý3]èÌ|oc8¡(|ÕÅçC ªúÒç¯W,ññ,)d=|¬TïAÏÎ
+2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,db7dbd75f4051815ba8cdcce,éQåo\ò7¢Àäj>aã·ä([Ñ,,,¸z,­§´Ú,£,?±-³6`Öå¬Áv½0ìñ^Ø	©î>¡7mt.¡,ÈÛ,}Dwÿ¶7äCÏa¤!áÓü	ß
 2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,28d2b54775c631beefa4bd1a,ÿ·èVÚ¾Zðßÿñÿ(þÇÿ/ñÿÌ,ð_p,¡vü_¥,²4,ø~\',ó,ê'Éä9|Äº¼ÆøpUOrS» yô×7^N68°ý	ÐM,ò?,Éÿ.ú /ÃøìÇ¿ÿÑÿMôAk%
 2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,91c53d1ec54e600d62a167a8,"LJn·ãyÊ}""º©g*¾uw	WVæ",÷}O,j1ÛÉ»,Û§,Ó0-±',,Ë%m1ËFÞ4 [|\3A¹è¹´×ék±<úFD£Ïà,Îw,]²öÑÍ©%'¶¥¤*IàªW=%ûe
-2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,15bef2bf500d7e23fcbd9c09,&)?ÿæíùJÂOrÝÝl6µßõÄá¶;,h=,"È¢þ,ÊÏ",?å,' ­§ÿ,sG,ß@Îú8NAÍJàÙ}¤f£KÝÓ5ô3Äû5u²ØÏv,Ú,)ç¶Àê<úVN{ð~ê]ºÛORG;^S
+2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,15bef2bf500d7e23fcbd9c09,&)?ÿæíùJÂOrÝÝl6µßõÄá¶;,h=,"È¢þ,ÊÏ",?å,',sG,ß@Îú8NAÍJàÙ}¤f£KÝÓ5ô3Äû5u²ØÏv,Ú,)ç¶Àê<úVN{ð~ê]ºÛORG;^S
 2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,a0906311b6f4acf2105aeecb,e+Ú2¿ÑÞKZó¤ØÍ.Åº1¯¨,\I,r¢Ú¡*ÒL,Ð,µøÍÁb,],"Ä8rõ©Â »ÔL³õµÉÇ,nÈc%^m+ó",I,"HhkG/zn""ßâîfñXFNÙdæ0U"
 2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,64bf7569f6e332e4f2d255ca,"M¼«¦r5~Lå|Á|""G}]eF",/4/,Q¥Óºmuà7,×V,¤DÞ;,ðÔ,~8!P*ºl)¢Ö2EPÙ¥KÑÑPï@³Lab.Û,[¹,ÞÕòTåXº\§Î*5æ*±ËmúÉB¼
 2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,935b583444761d383b521f8b,»håSéyÆ|È]3À|x¨z÷É_§,²¨X,¢ÀOxlú,´ñ,µãzË<,¿C,ÙÌßR~U3ö®ÛQízÞÁÙæÃÔw­ù÷gQ¬ÂI,Îf,å;½D#åjC`Úm2jî6T['U;Æ
 2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,657b480384e6f80c306ce5b2,%æÈçØ~ÎÕ¯kò9éÿ&=`óÂÐ,lZË,ÉÜ q§{+,çÔ,£=üý,ä,",ë1ÍxÈFÐlGÞ]ah°î¼ e¢ÿù}OlLX­-",#,mlNiæÒ vy°ØäK²c©9§­Bº
 2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,813bc7bf680f5b834300a35b,(me9srÔó°ÉÕh´ò:4!u!P,N£,TòR~ÕÇ,|y,"§³""á)_",6,zóhtC1©GmpQGôuô^dÄ­»<G­Ny ¼k,,UvõF0¯K0[zÐÛaZîè*Ñ×|¤
-2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,c79c03cf2a21cb0fa031de54,mîéï_Î©YåTÌù²æý0,[Nu,¶ä¦|¹,G,.¶q\´Â,­F,Ó1ä|ÒçÀWsÔÓ`CÇòL¯cøÔ¹´ÕÁW7ä»ÊJ,ÅM,í®÷â¢ÞûR½Ò§ë ß²ã
+2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,c79c03cf2a21cb0fa031de54,mîéï_Î©YåTÌù²æý0,[Nu,¶ä¦|¹,G,.¶q\´Â,­F,Ó1ä|ÒçÀWsÔÓ`CÇòL¯cøÔ¹´ÕÁW7ä»ÊJ,ÅM,í®÷â¢ÞûR½Ò§ë
 2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,c6181bb73822fc39c2caa202,"¤éÑ³¤ÀÖ ýËìø,©R¥4Ûo¥",Xôt,"Ý!M/Û,¹Ë",Àv,~ô	ÐE,äW,ôiÀêÙR~µ»í_©«Á²ª­Ë6¾cr Àx9~¢£ÇøÅ,¤,"ü,»[ÿB5åÇ»÷v+u;6K·+z¡"
-2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,a85a872a94de89c773d4327f,®°K© XÂYXRi*Ùì¯Âhï5LO,»5J,®Áó><),²³,5yôE`,"o,","§g´|¬²yr~î¶<þæ´""kÂ]ÚEñç©Û<y",¸À,#0xZÁë¨§Äbª¬åì¡Éé
-2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,a5d5b20f07b0cce6f850c3f4,_NÅÝJÐt÷3YKQhk7Qá=UF,¶(9,AÏIÍÝ,BÅ,VÙÇE,I·,åZ is?ãü]ûà	'\Ýú>e}¤où*,©z,"·ø^b}Ð·<Wp""§ë-/ª^ r9"
+2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,a85a872a94de89c773d4327f,®°K©,»5J,®Áó><),²³,5yôE`,"o,","§g´|¬²yr~î¶<þæ´""kÂ]ÚEñç©Û<y",¸À,#0xZÁë¨§Äbª¬åì¡Éé
+2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,a5d5b20f07b0cce6f850c3f4,_NÅÝJÐt÷3YKQhk7Qá=UF,¶(9,AÏIÍÝ,BÅ,VÙÇE,I·,åZ is?ãü]ûà	'\Ýú>e}¤où*,©z,"·ø^b}Ð·<Wp""§ë-/ª^"
 2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,d7e3e45d3d9c5d71c2dd2a61,êÇç¨o*½Bë²}¾M¥yòyþõ,ù,>ù¡wpW,G,"6""J",H×,Õé?{7êgçÔÖÖ÷\¢³ÇÈÙL{Ô	ª$ë4,°I,IaVN]ìDm­¯¶6¬­Eº.Ýk
-2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,6098df1ad692b5e964b08bfa,È9;3úf*i½¯³n 55¦Ï,pÊÎ,Y @49,Ñ,À<A]&m,,Û}ä®Ìj0ù¾'#4ìw¥HßiN¡	÷-.piÿ½,h,"Hg'Ä¥)@""ó`	Õkgµ]vÞèÛý"
-2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,4c01c730a73c1df403054570,4FÙÉ×öÅÇ7Ê¦u^»Û5Î*,èM&,qÖëã,È,Ñü¢iüÁ,",ï",ÛGË 2!Èe6ï¡­} ¼Ø»Öí*Kðìo~­Î,ë,$¶[	vºl'À£{ú*U$mVºn
-2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,3eea9654a1cb67e475e94d09,?ÒM]u>`{Ò6þù9yÚð#¡,m0,eü§÷t<ê¤,´,hkQzä&,f,"*;6OQlËN&×,0!©½Ü¦§3l)Ùü¹¾ÆÎ",Ò, ^4VZ¥¢$*6OS·nËI¦Õ´·³
+2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,6098df1ad692b5e964b08bfa,È9;3úf*i½¯³n 55¦Ï,pÊÎ,Y,Ñ,À<A]&m,,Û}ä®Ìj0ù¾'#4ìw¥HßiN¡	÷-.piÿ½,h,"Hg'Ä¥)@""ó`	Õkgµ]vÞèÛý"
+2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,4c01c730a73c1df403054570,4FÙÉ×öÅÇ7Ê¦u^»Û5Î*,èM&,qÖëã,È,Ñü¢iüÁ,",ï",ÛGË,ë,$¶[	vºl'À£{ú*U$mVºn
+2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,3eea9654a1cb67e475e94d09,?ÒM]u>`{Ò6þù9yÚð#¡,m0,eü§÷t<ê¤,´,hkQzä&,f,"*;6OQlËN&×,0!©½Ü¦§3l)Ùü¹¾ÆÎ",Ò,
 2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,8950d92d755134e881fa6561,OùY¡w¶Öÿ[nýÂz8º.&t¬	$,ýü?,Æa5ÚL,kî,IÒA,)d,ä@rÐ±i­ÛÑÓ¿¸ö32.-¤9ÏVQÁ7ó'JZ,0ü,"°´#¶~yø·b,;#ïî0²Ø±+}d"
-2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,8a373653d481c4d58aea2f49,   Á@  H$Á   H(,$P,LL$HT,,L$T, ,  H0PP   Á   H8   P ,H,"Á@  HÁ H,Á   H4Á"
-2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,312923f671e6ef2ebfd67c5a,  Ã_^[Ãfþ	|8î  G@,G`W,·öÿÿÄ,Ã,3ÀW ,ûB, W#ÐQ2  èlöÿÿÄ_Ã^[ÃSUVW|$,Pè,æÿÿ  3ÒÎæÁéIÆÓæ
-2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,710539f701391c07a10bd8b1,"][Ãæÿÿ  ÞÑëKûw,3Òæ",ÿÄ,þ}¿Æ,_^,Qè öÿ,õÿ,ÿÄÅ_^][Ão@Wjåÿ   è¢õÿÿO@3À,f,ûB ÆËêW@WÓæ#êSîè½
-2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,3694acdfe4e945af435eedd6,ø;Ø|»Ft$L$ð+Èt$,F,ÇèC+,ÂÑ,T$(),,                                    ,,L$u[]_¸   ^Ã
-2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,79464ad9235d58e21cb83fa7,                         ,   ,        ,  ,  ,  ,                                    ,  ,                         
-2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,7c739c3f58e18e50199ed127,                         ,78,(828î8  ,  ,0Q6ù66,  ,                                    ,8,                         
+2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,8a373653d481c4d58aea2f49,,$P,LL$HT,,L$T,,,H,Á@
+2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,312923f671e6ef2ebfd67c5a,,G`W,·öÿÿÄ,Ã,3ÀW ,ûB,,Pè,æÿÿ
+2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,710539f701391c07a10bd8b1,][Ãæÿÿ,ÿÄ,þ}¿Æ,_^,Qè,õÿ,ÿÄÅ_^][Ão@Wjåÿ,f,ûB
+2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,3694acdfe4e945af435eedd6,ø;Ø|»Ft$L$ð+Èt$,F,ÇèC+,ÂÑ,T$(),,,,L$u[]_¸
+2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,79464ad9235d58e21cb83fa7,,,,,,,,,
+2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,7c739c3f58e18e50199ed127,,78,(828î8,,0Q6ù66,,,8,
 2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,a9da1c0e170a5424afd761be,u¢)¿Ëd¹0ÜZk;ªîäÖþÄ©îã,µá,Uu[XÕ,ía,×ÉP:¹,Z,:¹µ?qïß&3On-Ç±Ì<¹µ?q\ÜÎn8U|\fãNSåÃ,Þ¿,6d¦[q½³3NoSÕß¨.N×Ñ
 2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,23bdb19777cbece8740dacd4,ûÎ}­Muc8I«$ÄòÉ­ý3C»,aZ,I«¼å,[,«NReâÌ,I,»ïQ½ëhÆ/ÜZkèñOnídØ?T¸];I,b8,[û7pèV9¹µ?qf¥8ç[Ëq°:
-2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,4a05140d6a94e5c6a2593b1b,uk'Î{ ¥¶¢®Ñc#ªÎÅ5ÔÀyU·và,8µ,ÌXÔ­e¸ö,,­NSåß,n-,Ã±Ì\Õ­8ïZFVuknE³F«ºµ_o¾ez$!¬ê,,ÌPj½<¬êÖ2\B¹ª[;qÞfæª
+2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,4a05140d6a94e5c6a2593b1b,uk'Î{,8µ,ÌXÔ­e¸ö,,­NSåß,n-,Ã±Ì\Õ­8ïZFVuknE³F«ºµ_o¾ez$!¬ê,,ÌPj½<¬êÖ2\B¹ª[;qÞfæª
 2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,ef304b2341434c0001971cfb,"©[;p~!ÅbU·âXuQªìDm""ßæ«º",B*,1ÔÒU·â,P,«ºµÇ,\,*Ç~Ì8UÚªS·âÐ@P·öë½¹l1é÷ËÿÙbU·,;,µo(Uvbh×ªn-ÄÁê¢TÙAA
-2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,f77ee3e36fbca04a63eb3f0e,Uuk'Î1t`AU·áèµReót4',U·v,cã®ª[Ëp,ìÚ,ª³q¬µx,+,ªníÄ¹M3:êÊ[Õ­e8vWU·vàÜkÇÌÁE©pìL,âÜ,VÕ­e¸º6UukÎnqLr\* WQ
+2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,f77ee3e36fbca04a63eb3f0e,Uuk'Î1t`AU·áèµReót4',U·v,cã®ª[Ëp,ìÚ,ª³q¬µx,+,ªníÄ¹M3:êÊ[Õ­e8vWU·vàÜkÇÌÁE©pìL,âÜ,VÕ­e¸º6UukÎnqLr\*
 2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,782114fbab3cfaa378d7d9d9,{>¾øBYØ)n-Å%t«[{Å!V,°¡,ªn-ÃuÔ±,[,GÇ]*¶,,s@eA«$UÜZË;ÚWÅ­½âÌPa'wTqk);qk',åÂ,´²\Å­¥86Ä­8ûÐjZÝ9U(VwN
 2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,b9c867f226d6e117f0c4ec75,¤«âÖNÑ´:qk)U'níÄù,ne·,ÊÄÙQÙ$,¸µ,;Wqk),©â,"o""ÕÅ©p¬º8UÞèô*n-ÅÁ;3N7:ý¡[Kq¨çp",¤,Ù)n-Å±;SÜÚ+ÎÞDÌ¦¾Å­Å8öcÆ
 2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,f3ed7bdc83181b94e7430bc0,]ÝÚ³¾Í»ºµ«SÅnhÉ2³«,8·9,!ÖÕ­E¸¶£,_,kÅÓÕ­,w¿,?ú Âëuukn]È÷]W·vâÜv¶öÚÕ­e¸uA·ºµ,[B,"[Ëp,3»ºµç6´dk@]ÝZÛ2»v*"
-2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,39e9a3e75483e89dda51b2f0,rkÿ´@)U´ß|ÜZcýUöÈ­ýA,È­ý, áÌÜZ,×.,piE­çö,Éi,"ÜÚH AÕEn-Â±ê""·öñUÐ¾×=rkÝ[û4ø",Ó~,Ô/zÜZC=÷È­ýbRí[ph
+2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,39e9a3e75483e89dda51b2f0,rkÿ´@)U´ß|ÜZcýUöÈ­ýA,È­ý,,×.,piE­çö,Éi,"ÜÚH AÕEn-Â±ê""·öñUÐ¾×=rkÝ[û4ø",Ó~,Ô/zÜZC=÷È­ýbRí[ph
 2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,7345b00c9b2d51a6c09db1a4,¬ßÑêâTñq°º8Uìõ;Z]*>V§,¬ß,·áXu[,û,áà©©ò,©,qìëUÝÚßo@[øÄ~Lukß'©2pv[xTa¸µÉÝÕ,Áê,/ÀêâTy#_eW·ö·ÇøÏG¸Ö°'
 2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,62b23ee89e1a3b64ad990702,YÝZCmá³ºµg®D«T8X¤Ê,·â,Ð¬níÄ!V,Ùù,&X{V,­e,¸¬¬níÀÙ+ÁSÝZÛÐ­¢níÄ¹+ÁÌT·âXfª,ÐÎ,ÀÙ+µ2SÝZkl HªL}ÚÕ
 2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,78ea671e7ec3d9a3aa191834,¸pu*G«ÓTy\{FN{V·á¶c,|p,4UV§©ò,>,­Ð	NSå,O,¨hó~Q·áhuqªØ§?°qWÔ­e86îºµçþ°¢PÔ,áê,¦ÊøàÚ+ªîXX«sq	9~EÝÚ³
-2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,a0da98615d1cdf890e24291a,>à)n-ÅÁêâT±@êÑ±[Kq°:,,qk!V'ní,ç,q´º8Uì,],PÂUÜZË¨æ*níÄÙ¬NÜZÕ[;q¶PÐÓ*,V,IüéÑ ãEà$U.£nØ«¸µW»
+2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,a0da98615d1cdf890e24291a,>à)n-ÅÁêâT±@êÑ±[Kq°:,,qk!V'ní,ç,q´º8Uì,],PÂUÜZË¨æ*níÄÙ¬NÜZÕ[;q¶PÐÓ*,V,IüéÑ
 2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,09774f6c3d77a22423e7a848,V´A`·â2·Vqkïòówÿ´Ö,\	,¸µ3SÜÚ,+Î,=^Å­½â,,D­âÖN}¬3­NSáhu*Î>ÖyE*ï*n-Ä4Á¸[,f¦,ýâÖBÜ¬âÖ^qf­Mã¬âÖBÜ
 2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,515eb8cdfdf2264e8f6e9230,çNÂq'n-Å±[EÜÚ+Î>]Ùk­¸µ,ìéS,Ä­¥8t.É*,ní,`·vâ,8[,)\Ø¸µÇªT¹EGiÀk'n-Å±k'níÄÙJáZ­®â,xí,®âÖÞÝ¢£4Ø=«¸µÇÔÄ­
 2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,7559eae39f1b4d880782f14b,A«SÅÇ%v«hª|v§þËêÖB\,w¢,uk!V§,=Ñ,»UÔ­8,@k,EÀ«ºµîLukÎn+qxm'©ÂpOp*ç¶hh,;,e8MÏîTÀ_§©Âpá$U>¿ð
 2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,215d7a8e1f4d9b1b9767b5a5,JkÆþ.n-Â-pûÃ.ní3··Õ1d,ãÐñ,¸µ÷ÞÝZ,E,1úcÆ©â,Ø0,·vâì-cG'YT8´h·öób8ICçNîâÖ,²»,·á¸a·öá·GÐâ¸dÔk·â
-2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,8ff94a67785a4fa31eae1c68,¥níÄ¹2pÜ©[ËppÜ©[;qî¢ÌNf,íÀÙ,;:wrW·á,I,á66©n,},"""WáH:ÙQ""Y$»í<ÿL 0ÝåC3{Mµr+«Vá'",2,ÜÕ­e¸M¨[ûÅ>(diåÿÐvnËyÛh
+2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,8ff94a67785a4fa31eae1c68,¥níÄ¹2pÜ©[ËppÜ©[;qî¢ÌNf,íÀÙ,;:wrW·á,I,á66©n,},"""WáH:ÙQ""Y$»í<ÿL",2,ÜÕ­e¸M¨[ûÅ>(diåÿÐvnËyÛh
 2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,7aab49cb028d87e27c94d695,Å/£³)[ËpiCëQÜÚ/_¯Èiä,ÍÌ,-ÃÁÌâÖ,8s,nÝ:UÌ,i,"RV""Eqk)},Gqk'ÈF?¦¸µÇ^qkO}Dâ$U",(n,gFqk?'©2pþiT¡8ÔïÄ­=qö
 2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,a126983dc853b9f2b3a2f2c4,2[KqèÜk·öÄ¹Ë<IQÜZcÏ,qk),qk'ÎþXÎ,hw,"|,ç^",$U,>»uªØË\Ù¢¸µ>'Å­ýòxCúÆ¾Ä­¥8¶,u,NReàìåÜÚ(n-Æ±SReâÜeÚï
 2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,f428b74fd21caddc6e0de25f,©òÅ/+ëÆv¸Ô­e¸Ì2SÝÚ3¥»ª,u*,²¼u*G,[§,[§©p´,ÝÚ,"3µ´º£r.IÝZ+¨ÂdR·öéá6Å""ñ.©[Ëpl#;©",_ü,ò¦¨n-ÃÑWe*®q£pí¢u6½I
 2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,78ae6947f543e8d420f75a3b,"öÄÙGWà¹Nc­TùãÖ,¶Úg",T¹F,`¿·ãP¿,·,¸µ,%,¸µ¿}ûìþ!öËNRáÆ<à$U:Îû1{ë(NRá,e%,"RX/[pýQ0¤JÇ­~eë""ÅIª\"
 2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,76eb167297ff7176565e624c,Ú8{C]RâÐá¼kªÜÜÜÞºÿz9,Û8ô,T8öfî*,ç,}n*g,·÷,ï½_ÞÓ^Ñðºkª \¿9à4Un?pSf×TA8¸)³kªÜ,Í,w_MÚ÷°H&íâÖ¸ïW/NëºÐp*
 2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,6c799c5a1428cba8649af223,çXe«µ%Jª0\AîJT83Äp¿,ÕÎ,(©qèÈX,*,'©2qf,?,ÝÞ-þý¯¸^Ý#ÕPº3±½ËP¬«¼^ÝùWG¥=¢n-Ä,,T¡8ÔïÒ:UÜ«ýàÖ©âãÐ>BI*
-2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,525a1f85b1c1352965a9720d,Ô­í8âWª9\¤n-ÄEt1Vºµg,O,·HÝZC,,Ã±~'uk,.±,~'uk'Î1èIÝZ­[¥?ñÃýn* GûÝ:UìKl,b¥,"XbkbR·âz,[¥?ñ+pZ+uk!"
-2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,84f8d3626369a1ff2ef56392,iºµgWBÀÏn* ÈðZ¥níü1ÝI,gN,n:Üeª@\,Bö,h¡£JÝÚ,ÅH,>¸ªÔ­ýýîùþð:4Ï¬R·âv6Wºµ'Î]è ­Ta,Ú·,;íwR·â`¿ºµ'Î´o]âY¥n-Ä
-2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,40d3625814df062938c25f80,¼?»uª¸8üìÖ©b@½uìÙ­SÅÆ,s Â,¸µYD[,{â,}3Å­8,ÄÙ,öÈ¾ÍÅ­¥8Ø:Is'íÝ)³[q	á$UÎ´Ç¾,o¦,tvr·öá÷?ÿöÈöÅ­¥8¶ô-ní
+2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,525a1f85b1c1352965a9720d,Ô­í8âWª9\¤n-ÄEt1Vºµg,O,·HÝZC,,Ã±~'uk,.±,~'uk'Î1èIÝZ­[¥?ñÃýn*,b¥,"XbkbR·âz,[¥?ñ+pZ+uk!"
+2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,84f8d3626369a1ff2ef56392,iºµgWBÀÏn*,gN,n:Üeª@\,Bö,h¡£JÝÚ,ÅH,>¸ªÔ­ýýîùþð:4Ï¬R·âv6Wºµ'Î]è ­Ta,Ú·,;íwR·â`¿ºµ'Î´o]âY¥n-Ä
+2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,40d3625814df062938c25f80,¼?»uª¸8üìÖ©b@½uìÙ­SÅÆ,s,¸µYD[,{â,}3Å­8,ÄÙ,öÈ¾ÍÅ­¥8Ø:Is'íÝ)³[q	á$UÎ´Ç¾,o¦,tvr·öá÷?ÿöÈöÅ­¥8¶ô-ní
 2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,7ba6438d4bbf3e8356099fe4,T8wÒ['©Âp´u*çNÚk`o¦¸,Îø,Ð'©Âpý,2,¸µ',¹,T¸uëT±q9MÜÚg~ÐÌ·âè³[§ûIR*×ÙÄ,,µYD[{âÌI{mlâ'n-ÄÁ~'níÄ
 2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,4532435fa3c821c68dcc90c2,õLÜ:I­T8ÿ<9Ä­¥¸>,ö´,ÜZc­·v,âÜ,sÄ­=q,}3,×©âãà¹N{ÒÞÈºJ¹¾hk`ò0:ÝEëîÿ¸ó#:%,µN,¸Ä­=qö'	º^ö·âû6·vâìI;
-2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,f46ba4d5f1d3b7f058495cb9,â`ë4U:Îú} 'n-ÅâÛ9[{,­¥8,·vâl¶,NR,$*Å,,[·Nwò@3SÜZ£)ní3'5;r·áÊwDq,6­,âÌÉClµVÜZcTâÖN­6Ñg·N
+2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,f46ba4d5f1d3b7f058495cb9,â`ë4U:Îú},­¥8,·vâl¶,NR,$*Å,,[·Nwò@3SÜZ£)ní3'5;r·áÊwDq,6­,âÌÉClµVÜZcTâÖN­6Ñg·N
 2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,7b68f1fabd307ff6d405528b,Ðé¤níÀÙV£²ð9©[ËpÌÆIêÖN,íÝ,.èÉIÝZ,;,WP­¤n,n-,ÃÑ7s*þÄö;uk¶NÝÚs¯uÞÙäAÝZ;Ð7BR·,/»,{iõNõ&ukî@'eºµg_ëÌ¬¤
 2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,f4c045c66cedd3d9efb5acdc,c­ÓTé8;Ä2[`T·âÐ©níÄ¹!û,AÝ,"sC,ïèëUÝ",Z,À©[Kqè,ä,XÝhuk!­<¨[;pnUêÖ2Ü.ÆJêÖN«ÇlÈ,Ú,ºµÇZ·N;Ä2Û%Q·âØ)©òrÿ
 2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,916f939187b872545b8ac48f,X_8qk)UÜÊâÖ87Ä2*¼Å,îI,fjª0\býN,Så,hqk_®,qn,"Á~'n-Å±~'nísC,£«£²¸µÑ\EÜÚ+Rgø",eø,­¥8tB-[;qv±ëe³¸µÇÖÄÄ­=
 2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,92fa3726fe1736780e345eb7,¥8ÖïÄ­=qî%ºlb·â`ë$Uîþ,D©,kO{«&ü1,Å­,ÞßÄ­¥¸,,"3´[KpéU,6qkÎú$éZýà·àÒklâÖ¾Þ",6q,XÿûîØvT	a·â*©°[Û½-S
 2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,2f1d7f6e766e82dc236861f3,­x;­û8Ü¯níÙ:{4Gß+&¸¸hÝ,>û,hÝâöEëÀ,hÞ,·-ZFó,­R,åq«TñGóÐëÜ*U>·Jÿ©íÜë¶(ú+úTáF,¸¶,"â©Áh3¥Eª|$n*`4ï¶,Á"
 2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,c655f9e7e602deb1bae71d5f,;KI'©Âp¥²)©2pÎnGtÞ­*,ùÚ,£¿¤Ê,óv,³ÛQ\3,ÿ,.¨ò¶MSá2j?Ô6MóºFfæ¦©p	©MmÓTÙqN×,VI,;;U¼Ýâ²²yg§:·MSåÛ
-2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,68dfb0094e12fcb3a207a998,Xª4I«DmMReÇy@)-hYÛ$U,¥UI,c£k*çm,&,ç} %vt,â,Ö¶f§jÁµ&©òç&*&.öJÒ$U&âÊøëÑß·,,½p5Is>è¼k*ïL;U¼ 
+2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,68dfb0094e12fcb3a207a998,Xª4I«DmMReÇy@)-hYÛ$U,¥UI,c£k*çm,&,ç},â,Ö¶f§jÁµ&©òç&*&.öJÒ$U&âÊøëÑß·,,½p5Is>è¼k*ïL;U¼ 
 2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,c808448800e255441c631308,"Û©âÇ®%fI_ÜU,Öýä¿ÎCY",T,SÅ»h%C,U1,sÑN'B,­å,¯G÷ñÇ÷{rÝ*å*×K2Ü9UÎ}hcïæå*W,³,RáXY³¤JÇYÇÄ+*Ç*ì
-2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,a3945ec7241b8863ccffe7a5,zg[;pÞ¾vªLÃÙ©â} ÑÌ·,`£,qÞ½3Å­,e8,DMâÖR\,çÓ,'9P$n-Å±íSqk4ÏEËZqk)íÖ[{àüÝl,TÙ,áhf[{à þáÄ­e¸ÚÐá$ní
-2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,2556a78c6ccfe395ec185739,s©µ/SWðn^®ÝÚÊp[kýÁÕÓèþ,åÚ­,qëõè~>~\,^},Wdtw,¯O,ÏO¹q£Û×nm¥¸½}÷PK(     è,­Ó,üþË}«äX{dk§Ñ1Üº-èb^»µÛÏ
+2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,a3945ec7241b8863ccffe7a5,zg[;pÞ¾vªLÃÙ©â},`£,qÞ½3Å­,e8,DMâÖR\,çÓ,'9P$n-Å±íSqk4ÏEËZqk)íÖ[{àüÝl,TÙ,áhf[{à þáÄ­e¸ÚÐá$ní
+2026-07-09,b3_indicadores_economicos_fwf,ID260708.ex_,2556a78c6ccfe395ec185739,s©µ/SWðn^®ÝÚÊp[kýÁÕÓèþ,åÚ­,qëõè~>~\,^},Wdtw,¯O,ÏO¹q£Û×nm¥¸½}÷PK(,­Ó,üþË}«äX{dk§Ñ1Üº-èb^»µÛÏ
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,cd69aef9296fb44b153b4e07,   @                   ,  , ÿÿ     ,  ,MZ¡  ,  ,                                    ,  ,                       
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,6316694781e7876f7885b8ab,     @             ,  Ð,       ,  ,   ,  ,                         ÄO d ,  ,         P    Uz    
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,c77e4c3de395731049332bd9, tV V V °V ÊV äV," ""W",W ÜW ,bV,"V ""V",bW, W W W ¶W     úT     T lT, , üV ÊW tW 4W FW VW 
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,f4544613382215b546f440d9,,,,,,,,,
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,ff07e937e4fe187989328bab,,,,,,,,,
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,899bd8cbc82e25b278b8d5d0,,,,,,,,,
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,ab727414c3fdb01cc717aa7c,ê62Ð±úEPI·Xuý·îé¨:¨P-,H%^,¿;9[]Z5,sw,i:^Kþe,},Ðx§¨ÚZÙÖ*ê¤ROìBq¼³%ÂÝ=ÊúA9_ù1,-!,3´mZn ~GºT>Nð-]
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,1a8a2ebeb384ea473efb86fb,EE50 P     (8PX 70, ,  ,E,í@   ,xx,x          ( n u l l )   ,  ,0WP        `h````  ppx
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,de316ecfe9a61ddab477d926,ram name unknown>  ÿÿÿÿ~$,m:, ... <pr,og,Progra,ÿE,",A I,A GetLastActivePopup  GetActive",  ,A $A     ÿÿÿÿÖ+A Ú+A ÿÿÿ
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,3f93bc6cd71a94fac0e87d56,      ºT ¨T ÈT ÜT    ,   ,        ,  ,U TA,8R, LR jR R R  R ¬R ¸R ÆR ÖR,  , ¤Q ÞQ îQ  R R *R 
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,c77e4c3de395731049332bd9, tV V V °V ÊV äV," ""W",W ÜW ,bV,"V ""V",bW, W W W ¶W     úT     T lT, , üV ÊW tW 4W FW VW 
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,8e2589a2661556308941de92,\ DeviceIoControl uGetVe,leA,ributesA,  ,GetFi,te,sA  ÊLocalFileTimeToFileTime _ DosD,tt,rsionExA hSetFileAttribu
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,d9ab6fb7861ba10e433f763f,"EL32.dll  ¬wsprintfA , C",cal,nfoA  KE,RN,GetLo,rB,uffA  USER32.dll  zRegQueryValueA  ,eI,harToOemBuffA  ÏOemToCha
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,dea195fc9a6878cd87a0ca72,SetConsoleMode  ë GetCons,ons,eInputA ,P,ReadC,  ,                                    ,ol,oleMode                  
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,9f56128ee0153c8e3151f508,"m e     P K W A R E ,   I", m ,a n y N ,a ,  C o,s ,c r i p t i o n     P K U N Z I P C ,p ," n c   l ""  F i l e D e "
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,fec58d832e2048a112ee9285,i l e n a m e   P K U n z, i ,i n a l ,F ,  O r,o ,d u c t N a m e     P K S F X ®   C ,g , i p . e x e   H   P r 
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,bf73d4f412c93ae8556b35e4,"r s i o n   4 ,   0 ,   0", o ,u c t V ,e ,  P r,i ,l e I n f o     $    T r a n s l a ,d ," ,   0     D    V a r F "
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,6b07c9beeb9c54a0281630fa,"      ` ""-  í|	\SG·øa ",  ," D3""8", ,  Xô ,oÂ,¦µ¸Ûºa]kµân­¶îUëB­mmë[UÜÒV­ö³vQ[ÿ, c,";u½*(Ê¸¡h""AV¬ääÞx"
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,dca1caaa78f16c4af1dd245c,Ü3¸	u&É#²òTÖO©FNc2,[ñE,ÐÁJEeÓñ,bo,AËZú4_,,ÉHè%«økJ=:Qs%£ÎÁã`xh$¥fõQ,ê¾,Ò|ÓçÍè¹dõûGÿQõën»çÊPÆ
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,037db7f9ef7301af7cc01e7b,þÕ§>Së½àÈO_ë)nÛw´ùñá,çm«,¥Yü¥§Ì,Þ,xzï­,Ñ,`ò¡|°û)AUÝ»×sÊò98&0ÏÉ9L¥Óâ1,z5,Ü	·äU}Ø¾ÿÑ;[V6ôvïÚçÝ¯z´
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,3182d659e8c7f1c12d6e36b1,~ZdR1ÝÖÑH(¬QgPÕù,ÂÓã,ª^ýéti,N],"á,*f",-£,Ò	Ë&£ÎW1y´&´¡Å}{® RUHk(^W¾°î5\,L4,(1VÖXë¼@i½%«4L¥rÚ<
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,f12bb331cf01e9843cd50864,áÌq*$ØjÃl(çXNCÄ±6Å,·Ì,Gl3c	¶Z,B?,á*,bG,Z¨¡Ê¨²Ús±*£ÒÔã£cÕdù/ÌOÆÄ°&,dÌ,?¿>­OY 5°A¥ë­ßDt±±@q
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,617d646323c3c40735bef555,ÿ çüóZHsükmò<-êO«£¡^,DÞ,^= û@¢ßÈ,ü,¹þ,5_,¿q{×9³VÓ#7wê°ýÕw<Þ^|à>m6ãß,þr,ÓÒéÂ¬óqßvÈ¼=øÆScnnÌ¬_ÚT
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,996c1cc3e7d9f0141bbd1e17,òö·iÆÏ=ýÀî^å±×ÿn®Ôd½,ØôÓ, .l}$11,yÚ,ú¹uyg,£®,ì¾¼4©ézJáÍ=n5§¬Ûo{ß·üÎ©§Û¶n],«ò,ÞÑt¢#Àæö¹·óí×=ZþÉÏ
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,2f50b0e8138c3191cad2965f,Ìè:f(Ú$¼ÇT$áì%6jDWÿ,"1""",1_8gßô`,Ç,-dæãc,æM,"Fe¤%TÇrÄÊDQÏ%""×²^ÂuFÕ$ÛWQ^¯Ñ",Ñ,E1_eÄÇr(.ByP¼ ÇT:ò^Û
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,1be08aa8b57a3cfd0016e861,/§Ô()Q-R£ÎV3ÑÄp0,É%s,ï|²³/,,",û",Âþ,ZiE]h­¶­ëëVsu3k2âT¸ZÂ<AaÛK,=Â,ÿ&=ehj%\hµºîø+ÍE&& 
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,34e45773462cb0b21b35aaca,<#©Ux[7 Ü¢L ðí|£y,N ,Ý×5tü,¡,=g}õö,Ö,X*¹9-®ºðZ¼ÁÅêQóãm`p©pOÄCÃÉù&1,&U,",:U¹1gÒé(·e]vz ¹£Ñ]"
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,d707c70af6f5b4c12412c449,¬Ýs¹¤ÃísæO/	HÚív`Â¶,y¿,ô\§¾½fæ,Ýð,u{û#z,Ô×,ÎV·ù×õ+ú¡»ÎþòÅ´3S-Õ5¯ÜX )}óôÎô©Y,5,.A{~ßþP¹Æû£ö¨­cãÇíýùªìà
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,d74149aca4ea948aad94a5e4,+Ño¬±ÈÓüÀ.X0()Vªè,E¿,¥ ³ýÞÕ,J0,ýæCÅP0,ß,"ØÁë}Á,CµIA0:LrÕ+¸Âë MÜ°)]",BX,Ã¥àáøàG^/x: ¼ÖºâðÄ>
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,7f9524eaebd7cb7640077f78,  Kº  ¼|TÅÕ?|7ÙÝlMvÑ ,ÿD, 0    ,  ,æÿ@q,î³,"O«÷±$.½ËÚªØjk)µô©mi«EcB,¥Jyü","3""","QÈ?ùc@²lAØM¬7,ÙeE­"
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,0ca9da65807b5d969d377c24,õXY6Ö®qÀ?ÙqàëÁJÊÂÎ´6¥@,É>Ã,ÓþWawê,Ý,¿T ó<,¢Ø,_øMñesgû¬î!S8¥)»	hTÛË1j´i,Hi,mBwùò§ú:ð]â èG­	v
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,196cfa1a764fa34847d80e77,Oò_¶ËÝçê<:©.Pîµ@Re,ïs¯,"µf¡UF_Ì""",fV,'\^§xµ,Aè,"ù\ÉMPrXuVÏ#,=ÁI=»FNZ±¤kN¡'³lq³",÷á,fþF©¡~ím/ÑBbì¶ÕåÜÄ´±6
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,cb49fabfdbd7bc52fe80b342,ÆÐ´m'º¬J[;µÞùRA¼AõV+ÞåE,yÆ,"""i´%",_Ì,wm#çî],Ïñ,Èá¯ôn+6z(¿)¶*µ6n¬¥^páò8¥&êÑ«xm,`Y,Ð6òq÷IÙòn%òîvþ0®ô¤»
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,4ed6096aa79ca9ef102b4cfb,DL8­3áÄ0NL¸~ÁÍ1Árç,½©Á,0!]þý/,2a,ç­îâó,8=,ÌåñÏ3^±)RÔ>wÐpz	4ÿöÓpæL,É,0aéH&6ALØýØ¿aÂO3áô%L
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,efe3ea95fb1ae6bccea91d82,`(=Å'î4qGÃ£Ô­eÏÚ»T,ã-,Y4 Öoëó,,ËÍ¹Ø,ä,â|w·þfUÂ-'GI×¹vrÃÏBeË];}éÏµ³2ü],Õ½,"/gNÒ¦<@¦¥f)^_¢zcû""ºä"
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,cc53bbc9d3cd52508c25f549,ãi;O¹QÂ-¥s+OùÚÝ¹§òtO,	½,­p5©t~§,;x,·óÇÓ,D,ç¢m4¦¢­|h.¥+ÓjÃEBûx£3ÓÇ¾ÿ®ò;2Ë¯,º,"à)5²íaFS°0¢Ô²,íÒX´Î"
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,71cf26aa66e64756b3831d05,ºpB=ªèîÏß1Ëïs_Æ\üCîÑØ,ïÅ,|?&£µ,Ú,U°ÆÃ§,,ù´YGóå/3*¥iaáTY ó=Å!iÚ¥ÀkÕ%\,·%,1qQïi Jv3Õ	ïÉÊÂI¥b
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,dd4a37adb685bb69e48063de,#EÛUõ±ßPÔ ­)kÏÄ=gÑÔ,Hº/,¯Ð$gÜ3,¾,{7Ý,Ã÷,ïOòNk]kÍâ±gÂý@;=µÊhr­Éþ¸ó¡,ÂÖ,öùqôû.ß>Ù½^ÒµBb<6µº}
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,de2498534bfb63fe9f4ff990,"""edODIs¦èÍ½¤£¥qÚèÕh¯""",zgq,£(JMè,HÌ,E'Hö,¯t,¯SGÂköFuxË­=éiÑ+4mìüV/we¨',:2,«8;*H%Þ]ý¢ì°%²éc\I©p
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,9fdef19deb4aad5df531c73c,ãª.ÖùÕÕf÷5ÒZm£YÛPÄîº?,WØ,MäâÂ~õN,H¿,vUâmQ,O¨,|sÝ£¤+´ë K³ÒtÔqb	Ñ¥ßõ$ýq¶.#Úø,[O,"¥{ªµëP]k2ZÛ`cué7³á""§ ©Ix"
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,05fa865ccfe5b861683fdfd7,"½Uê×Â,'ÇÞnÛAw¢éJ;9%ÿ",ËÔë,Ñ\90=xà,[@,V`G1,°\,w Ní´õæªC*x4ñXùê+ì£°ÃÍÐAv,Ð³,bmôBÏóK» HAa-Ã}ºBÅ[Ä 
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,ec71b0857ea39d64a54bebc1,$.OîCí`ÜôaP@ Q÷.7,h[,Ø-´Òó¯Ó,2,ÌÂèç,>Ó,ë9¡×óÿ0??ýð6yËjÑCD/è·Ë#NÜ5,+ù,Þ²¯@ß_è×ºÐ	÷M)ÆQÚo
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,8663c309f7c97a2d4fd06166,V¢7U¼7Íj~µXyH¿jIQîÃ,ÇI5,¼ûv¥ª½,Ùl,f>¿|,~N,Åö3ñ/òfÈ.!XD»â| bÏÏçã²s.ÖIùp,SÌ,"q,ºFÁ³5Ð=O´c¤Ò£"
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,c3b94d193b3152edada91315,vlIH×vTgvø2:)z.~yÊ«SþØý,ÁxÃ,õÝ8@òÏ,"7""",Ldtí¸,Ù,ÌrÐ§m;&üèpÇXþ ÷3ÃyÞL¯`,ã+,-óå	¿Sþ'§ñ_bvyìÖWÚQ
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,64c872f2c780d13af291437a,ôñ$uõ<n)'^Ó]Ýr1$µäÅöØ,ÀSq,"7,!»w@",QÅ,Zâ5ð,,G5G¨Xå#f­fPz»¡ôäÌ¥z¹k^ÁÍ·k%­ê+,2¦,áý·Äç·I<*ñ[`{]zòÂYÚM
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,bbfcdd9774b7de06ba3a13e6,Þç1-ôã@ÑÁð$YÞ_Ä¬¨,"ý,Ð",¥çé%ú¬,,·á¹ü`6,Fü,ÿ'?n¿SðàV¹jV£zwQ£ê+jtÿqcúGÇr÷ì,,¹yð¹j_[)ôàÿeüÿÿøÏ%c
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,c23ab3b62a76365ee198e515,k:VF½VÛ2l${Ôm|óÿý,"|""î",ù;Ñêc«oâ,Ç¿,wÛÈn,x<,">?gy!®æõSì{ÿ×ÂjÑV]-eá,..e5",¡,P¥<ûûk2å|brö¿ì¿@àí
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,556f799093f2c419198213b0,Ö%­ÿ¼ýklñZ	ÒÇþþ4}éÑQ?\,Ñû,ÙødC=W,"ñ,",!þÂ­,áñ,"o	""®þmþÙS@K¤ bßröuZñæÒ5#+ 4þí$¶",=,eÿX¿áìá1ë*ÖB=zé|òO
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,373e57f853f5d88ff1063197,ÍP3A\rD½¶pPóevSêµ#öX,s©æ,£AîÀÁÙ,Ç&,@<,°ÿ,»4NäBå×&ôuLN&5ð«ä[F7mpE6:ög,óó,²ú=6·×é¸?Î§§¬KÅäÁ|¼+o
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,782490c97239a65a152b9827,ë.ÇâjxFØâPñãÌ¾ªJ0Ð/Ê,jÒ,3 _?`Öî,Un,ôkÇ³ñ,¹,"ÇØ=4)?td)Í²-`Kð°þÐÆü3ê,;WN",Ø,"ÇI×¶Á¤²Ùq#@ùºË;[""#"
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,5a5081e87ae6dc0b39856f71,¬&?ÂÞäÆ\þc -Ô5sæ*îZþD«Ú,a&,w>ÿØ,ÜÙ,P&¡¢úô,Ö,"ËÄ¡öm?È±À¹ë¢ÊÅÂv,¨²¥	Þ~ÁÒ",gû,SXÊÎ>³´âÒ-¸t±ÙliÍÂ§f
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,4a79083d36eb0bab58f3c4aa,Tæ;ºÊP1Á\AÙb?Ü9Üø6,Z,¬U`7¨s,Úâ,V/¢¶± ,Fû, 	âr¥oÃ±Å4ÃÙ¼XVÁÞ~>RhPÁn#,ö,m|²J· [Ê\-í.C.?¬§n%
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,5f7175eed51bb502243b11cb,ò7K¦J8@·á þ/.YruÞ¿ú,KÆ,gLö46B~,L,¾f/qÑë,ð;, ¶hìs¬³çC ´pz{q*I%%Oc_³!Ã8e,f-,CÜ «âZ<gel7æ¼R`Ò®ò§±£
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,71e37bbf1956094db46993b8,0C{;IÜÐÃú4`Ý¬s),?t,Úáè])áA4,DH,¹¢=Ò,A×,¹òMKzÓæßÐêàà×r½ý®k§6ÉäF~%:,AÑ,",eO1÷6åPÇÿø»ÔYM­ð ë"
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,fd5716d088e870bd2eab61f1,eû¼J:?äÄÅÚÐ»5Þ%iFå%ª¼,éK(,e¡lµeÿ`A,Jp,ùý@, .,ïçßqAê}¢AivüÀd­ÉâÛÚSíVÛO,ÜH,èÓçPô#i]§£sÓÈ@ö±¾&´û
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,15a75f19fdf6c349b6786a0d,®HLcpó ¶ut;ÀÃîOKÝ[+TM,ÐæS,^~[øGÏ,+÷,ÒödÏK,çÂ,âòÿ1x(Iº§h£7 \¡*ÚSx!«àµAè¬,ìä,"ªzØ1ÌzÛ""óÊ@j_¡®gµ´Ó¨"
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,16c3b290d43b51e2fcfbd508,"Õhteé>z¿DÆ-áW¢è¼""Fw",È¹,¦wA6à ,Ý,æê9M,6G,ZV/]X=+Äq~>Ù$Nmw©4S·ã²3<ËÒt»z,¡ô,"r)ú{òóÜ""6ê+qø-áËõR~ÔX"
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,1d0c909293d7e0c790770908,æúNýL_]O& ³ï_-þZ5oìh,Ý:,BxAÓå¹,¾,@04;À·,ÉÇ,© ÿ ÜI[ZqÙ¬Ôvð;Åÿá¦âW=Â¿4§,ýa,5ÖM¤É*Ð1U{õG;ímèù@3J{
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,6573c88decaa9ff065f9e4ba,tdG2iqSJ2TwÒ1_ú:Ü¤aE±,Î¬Ð,üÛÔs..Á,·,"ÍÄþ""",Ò_,%[Ê]Ì]¡ö»Ä|¹!9ÑªLÝ´CL¶é7*Ì¤,Ýø,£Ú¼ÁÏªMuËâqÊ\VbÙ±Ù¢l
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,1b1afd59cdcb445d592c7f9a,3Ô»CøÓím ÉÄ$Tá(¢ÓÛ´ò2ó,áº,r¸ÖkÙy,º,ª§ÐcÙ,Û,X­5~Êkµjaf?¦/7Ã`Fjrña.Ó·;Â/]M,Á,ßÞD^d_î-ä·Qt3éÚ?¼
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,dd8e096d1866d188f8eb9f59,;WjÛÖå^£ñó{I*º õ¼Þ/O,ëxd,øÌ$:í,,ô!r7`,Î,ÜeÀMÿ.¤þsç°<æ_^¸Y­7é÷B¼>¢?/Ø5,,éðSÜ æJ`ºùD3öTwHAÏ
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,660d93cc74e38b95675a15b9,ñÿÁéøû&ó;ÙÁãgfv6¶»×(~',sÜ,âUå=¶¯@Ô,½,pF>Òò±,Þ0,Ó~lfgôNhÕð~æÑJvPÙb+|]P¿Ó`Â4¶8QïÞéç,Y&,¨Ì;Ù'{ù­Ç?Uàî0Ûbs\Z_âØb
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,1f8f74c45355e2a806a3ee81,/¾T®q;úÛ+Ì¶§/ßÂÅ®¹Ë¼¡,Öêí,ûñÍ@,èc,§*øI¯,ÏÉ,\ùQD~Àd¹ÞhUnN-ßöN$=·J·Ñ8JpøB,}¾,"¼Q«""iiûëªògÙûbeÛ­? "
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,035086ef8077674b38796b3e,"ÚeÞ:þ}ÍP¹~D3ß,æ2øj!",cà,¾ÅÉªK,&, àÇd¨,d?,à¶ßì¡s­wÚNþÄÏ{ø9[Em´Øf,úó,"b¨ þ­a""UEP=8ÇY;ÛGýÃþ"
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,a67d23ad3f5b3510e916f2e7,5»akÚúÎ¿`ÙvþæìÖV,¥Y,6ï~Ýdï,¨y,ÕÁ@5A,&¨,Ü¦ß«?<;öúÏ{P¥E4×íÁ ¨a=$¶H3×Æ*\,eÆ,<³)|Ñ´iæ1£ã@H*Ã±²	±*
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,5c5a99bc01aa686b8598ec33,ÃÎÀñ¦©Óã¿I°¿¬¦?îw,Yöc,FÈFºtì,;,"M,Õî¦",Î,Æ×>Ò²$ÐùøGú/Ø95í»oÓÀüIÌp]J@Y,D,"¤$Nò' -u­""÷ÂËiñØ`Fµz"
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,7d032d10b433f3c7b647c18b,9¶_ÃOA±³V)>U½$ºÍ]§,ðÅ,÷añéÔ;,/ë,!R·½Ð,æç,+[jf¬Q{üÃigÐ°Q|WZÌ­½6{!_Ý,;±,6ÀW¤RïÄïÅÑÉYÀ+F?ø]E!]
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,fa88abea7752b282bfbdb673,}/Ì~£Ñj[$ÎÊvnëi)ÿ7Pai,K£V,sòêÕ-ú#,Þ¤,ÓI§x?,½#,}0¨é¸¸Ol6ÁÄâ¨¾Ëqu£É1`yô! |7!cþ,¦ý,"""\@w¯K¼+GÍ¡0Þ+¿:tweènP"
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,b58267b9a5c48e849e1331cc,$8þfÁC\¦ÆÛ»÷¢äj,Àu,1Ú4¸,4E,p½ ×¸,ÿÜ,äûïG0ßþ@eï*oª>.ú(Äúxþ0Õoß÷'àO,®,à8@lLºm0¶¹tP¥þ0ýÇ^9
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,72b6e4d1466fbd3434c02bd9,jú£ãË[IkÛ'UªYK¤)`ÆIù0,2_,b_ÅÓÃÈ,",Í",7Ì;N,$È,7]:ÍÐCcg»z¥Ï7ñ¨	3Ê)[UúzSÔVÉ¼o,M,­?×û _ÜÚ'ÝÜ¿rWÊª[
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,eea4cb91e0cd458ae2fce2fc,÷¯Ï'ÝUç­N>¯Ïó}óYW0hp,©,Î©ÁÝ{ï,g?,+bL,ë,"gtC4Ø6uÑ´""éËJQ¬ »Û+Wq··[ö0ï",û},<øèº¾1Nöæ<.wÐ'qsñº~
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,c7f71242638758cacf3746d2,ÙÉ#ß¬ LTøItCÕa`¼ª|¾PË,",Ð}",d.ZÑ÷},%,µ3dl|¡,w,¸þ-Íû¸wý3]èÌ|oc8¡(|ÕÅçC ªúÒç¯W,ññ,)d=|¬TïAÏÎ R_ÄV+Ï ³Í
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,d9a10ed0af91c390933ba778,éQåo\ò7¢Àäj>aã·ä([Ñ,, ­Í!{oÏÛ,¸z,­§´Ú,£,?±-³6`Öå¬Áv½0ìñ^Ø	©î>¡7mt.¡,ÈÛ,}Dwÿ¶7äCÏa¤!áÓü	ß
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,501af0d3c2a006d15b33d5bc,ÿ·èVÚ¾Zðßÿñÿ(þÇÿ/ñÿÌ,ð_p,¡vü_¥,²4,ø~\',ó,ê'Éä9|Äº¼ÆøpUOrS» yô×7^N68°ý	ÐM,ò?,Éÿ.ú /ÃøìÇ¿ÿÑÿMôAk%
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,2a6703f735b6e35e5b08310b,"LJn·ãyÊ}""º©g*¾uw	WVæ",÷}O,j1ÛÉ»,Û§,Ó0-±',,Ë%m1ËFÞ4 [|\3A¹è¹´×ék±<úFD£Ïà,Îw,]²öÑÍ©%'¶¥¤*IàªW=%ûe
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,22ac741761f87470f515228b,&)?ÿæíùJÂOrÝÝl6µßõÄá¶;,h=,"È¢þ,ÊÏ",?å,' ­§ÿ,sG,ß@Îú8NAÍJàÙ}¤f£KÝÓ5ô3Äû5u²ØÏv,Ú,)ç¶Àê<úVN{ð~ê]ºÛORG;^S
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,326f0fe7d35a45a68d373dfe,e+Ú2¿ÑÞKZó¤ØÍ.Åº1¯¨,\I,r¢Ú¡*ÒL,Ð,µøÍÁb,],"Ä8rõ©Â »ÔL³õµÉÇ,nÈc%^m+ó",I,"HhkG/zn""ßâîfñXFNÙdæ0U"
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,8f33fcb77a08d6377ad0d6cf,"M¼«¦r5~Lå|Á|""G}]eF",/4/,Q¥Óºmuà7,×V,¤DÞ;,ðÔ,~8!P*ºl)¢Ö2EPÙ¥KÑÑPï@³Lab.Û,[¹,ÞÕòTåXº\§Î*5æ*±ËmúÉB¼
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,fe98d36e8ead46bf98e1208b,»håSéyÆ|È]3À|x¨z÷É_§,²¨X,¢ÀOxlú,´ñ,µãzË<,¿C,ÙÌßR~U3ö®ÛQízÞÁÙæÃÔw­ù÷gQ¬ÂI,Îf,å;½D#åjC`Úm2jî6T['U;Æ
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,ca7bae5b96154283c6c07e72,%æÈçØ~ÎÕ¯kò9éÿ&=`óÂÐ,lZË,ÉÜ q§{+,çÔ,£=üý,ä,",ë1ÍxÈFÐlGÞ]ah°î¼ e¢ÿù}OlLX­-",#,mlNiæÒ vy°ØäK²c©9§­Bº
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,bdc0c4efcde3cd52563dd069,(me9srÔó°ÉÕh´ò:4!u!P,N£,TòR~ÕÇ,|y,"§³""á)_",6,zóhtC1©GmpQGôuô^dÄ­»<G­Ny ¼k,,UvõF0¯K0[zÐÛaZîè*Ñ×|¤
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,5376cbe9acc74522d51a8df3,mîéï_Î©YåTÌù²æý0,[Nu,¶ä¦|¹,G,.¶q\´Â,­F,Ó1ä|ÒçÀWsÔÓ`CÇòL¯cøÔ¹´ÕÁW7ä»ÊJ,ÅM,í®÷â¢ÞûR½Ò§ë ß²ã
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,446cc5876708a9238b5f82e0,"¤éÑ³¤ÀÖ ýËìø,©R¥4Ûo¥",Xôt,"Ý!M/Û,¹Ë",Àv,~ô	ÐE,äW,ôiÀêÙR~µ»í_©«Á²ª­Ë6¾cr Àx9~¢£ÇøÅ,¤,"ü,»[ÿB5åÇ»÷v+u;6K·+z¡"
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,49430ee819adbb611e42950f,®°K© XÂYXRi*Ùì¯Âhï5LO,»5J,®Áó><),²³,5yôE`,"o,","§g´|¬²yr~î¶<þæ´""kÂ]ÚEñç©Û<y",¸À,#0xZÁë¨§Äbª¬åì¡Éé
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,5e0ca87c4da0c239d5c3b3bf,_NÅÝJÐt÷3YKQhk7Qá=UF,¶(9,AÏIÍÝ,BÅ,VÙÇE,I·,åZ is?ãü]ûà	'\Ýú>e}¤où*,©z,"·ø^b}Ð·<Wp""§ë-/ª^ r9"
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,5a4c042b61cc917a329f34c8,êÇç¨o*½Bë²}¾M¥yòyþõ,ù,>ù¡wpW,G,"6""J",H×,Õé?{7êgçÔÖÖ÷\¢³ÇÈÙL{Ô	ª$ë4,°I,IaVN]ìDm­¯¶6¬­Eº.Ýk
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,1b1c09e50fd04490860dd307,È9;3úf*i½¯³n 55¦Ï,pÊÎ,Y @49,Ñ,À<A]&m,,Û}ä®Ìj0ù¾'#4ìw¥HßiN¡	÷-.piÿ½,h,"Hg'Ä¥)@""ó`	Õkgµ]vÞèÛý"
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,1b5a8e3c99969bb4820a3868,4FÙÉ×öÅÇ7Ê¦u^»Û5Î*,èM&,qÖëã,È,Ñü¢iüÁ,",ï",ÛGË 2!Èe6ï¡­} ¼Ø»Öí*Kðìo~­Î,ë,$¶[	vºl'À£{ú*U$mVºn
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,cfd76b0015dc1a49caf3ae4b,?ÒM]u>`{Ò6þù9yÚð#¡,m0,eü§÷t<ê¤,´,hkQzä&,f,"*;6OQlËN&×,0!©½Ü¦§3l)Ùü¹¾ÆÎ",Ò, ^4VZ¥¢$*6OS·nËI¦Õ´·³
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,4ea550bec06009c3ad9e8ff9,OùY¡w¶Öÿ[nýÂz8º.&t¬	$,ýü?,Æa5ÚL,kî,IÒA,)d,ä@rÐ±i­ÛÑÓ¿¸ö32.-¤9ÏVQÁ7ó'JZ,0ü,"°´#¶~yø·b,;#ïî0²Ø±+}d"
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,1fb35e445dc5028cb618370d,   Á@  H$Á   H(,$P,LL$HT,,L$T, ,  H0PP   Á   H8   P ,H,"Á@  HÁ H,Á   H4Á"
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,84abb87619d165b70b4ebfd2,  Ã_^[Ãfþ	|8î  G@,G`W,·öÿÿÄ,Ã,3ÀW ,ûB, W#ÐQ2  èlöÿÿÄ_Ã^[ÃSUVW|$,Pè,æÿÿ  3ÒÎæÁéIÆÓæ
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,97269fed1fc1809d31dba35e,"][Ãæÿÿ  ÞÑëKûw,3Òæ",ÿÄ,þ}¿Æ,_^,Qè öÿ,õÿ,ÿÄÅ_^][Ão@Wjåÿ   è¢õÿÿO@3À,f,ûB ÆËêW@WÓæ#êSîè½
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,84dc030842c285ced73b262d,ø;Ø|»Ft$L$ð+Èt$,F,ÇèC+,ÂÑ,T$(),,                                    ,,L$u[]_¸   ^Ã
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,1c81607e041a03bb65ccc6cd,                         ,   ,        ,  ,  ,  ,                                    ,  ,                         
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,827bae96c8e6cf063b546456,                         ,78,(828î8  ,  ,0Q6ù66,  ,                                    ,8,                         
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,a3873836496f3b5affc80134, ^ 	   Indic.txt´ËrÝ:¶,  ,é\Ïh1), ,PK ,ûý,QÀ¶£Ä¹w³óÞÈ#×&1À´ÿ'íÿòë´, ç,eûQÿPêU8 HhêåceJ¶R
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,b3b626d57b6ed45381a8c8ba,èÇ|*wú_ËÝÛT¹½»½ËÛ×4¸,mªÜ,x¸ÿËsË,[Í,Ä-ÓÜî,>¿,óïWeÿAóB~Ìü6U.KRÝ}»1®÷Ðï2¥ºâ,^ý,4mÛÒÊ4¿ÜÛT¸æSu÷6Un?¾
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,f39c692d82800f1e04114e6c,æ¬n-Ã±v7«[;p^êffuk®¡,n-Â,eyV·và¼,f,Pª	eæ¬,,U§n-Ä!§}V·vàl+ ù*³ºµREÝÚóéau*,­l,iYÝÚ¯W_®SÕ­¥82ðÕ­í8
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,7a0aca8626bb0cc3b522733a,ÛÐ«¢n-Å¡êÔ­í8?Ä`uQª\¥J,åYÝ,#cYÝÚ®,,8{>,«[,;pvÁW%Jcí.N`R¡V·âP÷ªní×[sÙ¢/Ó·,Z,!nÕ­¥8Ô«[Ûq@mbÕE©p¨
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,3cf1597836e9ed1a9d85d76f,íÀ¹ZÒê$U®eÖî$U:Î¾ V§n-,`cN,Î¬n-Ã5¶\,¨n,­NRåÛ_,¤,5suk!nc?f*þa¤ðÙÅ©bãrüfukÎ=¶»8Ul,f6,ÃÁêÔ­í8ÿ0R6S·á¶U'©2pîa
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,2f470678ed9eb94449c95372,3sAËôUÝZC6NU·¶ãìo¦ºµÇ,¶°,k!©¼UÝÚ,s,ASeÇÙ!,U·,â`uQªøK½iEâVU·á6Öß©[Ûqþ&b6xP·âVb,}u,FbêÖ´:McíNÝÚsClA:h
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,0bf01ccb5e2045f24f435f1b,v§n-ÃÁg§níÀyrCV¯êÖ2Üº¢,­e¸,zÕ­í83¢O,Õ±,8UÇÖïÔ,¸,µª[Ëp+ÒÒVukÎëpfª[Ëp´ÝÅ©bv@)oè²UÝZ,Ê,V·¶ã>{ßLuk¾êÖvÙ¥Ü
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,962ba018307411f7585895ca,!ÃIÝZCvR·¶ãìí~´:MÕi,TA¸,ÁCR·vàÌ,k,.5Ó,á4,UneÕÅ©bo÷£ÕÅ©âã*ÃÅ©bo÷£of*6¾qªØÛ,º,ªì8{»|3Õ­e8øfª[;pîv¿Jî<
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,ef2b4a96bd237a686a1b5530,V'©q°:I³/WªlQFÝZCEV·,8I,çøeuk;Î¾,\,±¥ûÍO,¥n,-Ä¡²ºµç^®3SÝZc©níÀ¹+±²ºµÇ,C,vàÜË*²²ºµä¬nmÇÙ+U6I
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,b955413777622727f6b2e824,Z«è¬¢nmÇÙÇÑg§ Z*ê,8úf,;pîñÔ	,EÝ,õ]Ô­E,uk,nAguk_ÀñÔykìÇT8´¼¨[;p®ìº!§½¨[,ª[,Ö{<5ÌLuk¾êÖ{<uBo
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,55dca41333246b4342c2fa24,s¯uÑ!Q³¸µ· §}·öæê\9,s¯,)n-ÄÁÌ,·ö,»lb·ö,Óú,.CpâÖ\?ºá$Uv\ôð£êúy'©pýþT¹zù,u,ï÷BÏï2'©Bq+ÂIªp¯ÉÁÚw3L
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,0bcfa5673addef1712252dc5,K'©²ãÌ2ÅIª \¢?¦¤ÊË,öùÆ,Hã(* f,I,8t$HU·,©¢,"níÀ¹û'VÕ­¥84S·¶ãìýÂ""ZÝZcÃZukÎ",è,Ø/èªn-Ämh©nmÇÙû´:IC
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,939de636c61efcde0108ac35,ýUÜZ[a3?¦ÊÀ¹¢2­NÜZÕ[,n-Ä,Ez·ö3e,×Â,"©döI""",Û,¸µ·4Ñ!níÀ¹¢2~vqª¸¸}Üpqª¸¢2~vqªØ8,U´,;p®¨:Ùu·áJBÇS¯âÖq¦¨L
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,917bd248c0c5d0b885ca76ac,ös·?ÊC¸8UüÝhwá&níí?íåÂ,ÎÞþ,SÅßmRe,·,]7qk,k,n¦8IÇÞÇò>ÓûXÞÄ­¸Smp¢c·öö³;W·©,@«,u[àDÇ&n-ÃÁIªMÜÚ~?7q
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,7c4af596c138a3e3b6ce71bf,C;C¸µw×ÿðClcÞ7qk!® ÕÉ,q¬Ý,{ÆùâØ,§,q¬Ý[K,fk,¸µ7££Å¸µçØVÐÍMÜZÛÇ©'©2pfÑv',[,&níÀ¹!¶%´S¦[KqðÍT83Ä¶
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,2d88c09adbe118549bc609fe,KpqGëAÜZ;ªæ¤Ê×÷rDÜ],à`f,k!ef·ö,Ä,}vëTq,ì#,Òh*[qìUT8ÿ4Ã[qhD·öÄÙG¤aë$U(,q,¸µ:¸µç8IcÏNReâ
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,9bb9de4bd68e9e4adbdf8e17,NÚ;:Ä­¥8âÖNªõ;qk),êe+,ÖRÜREÜÚ,ç,¸µç,¶¸,µ×Ø©©òÍ/+JFµÆõí­C¸ÈFsuk'Î·pë4U,â,>;Is'í°ß[Kq¬ß[{âìkÙF
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,32fd16deb7aceb79c628f11e,#¸ËT8»¶î2U(\s£¸µ'Î¯9,7¯à,­³Oqkn,º,±À]¦Êï,qk,O¿]ÞLqkö;qkO_s}½[qhåAÜÚßoÞ÷,¢ÿ,º¹¸µÇZw*çFgI¢¸µÇF
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,c3abf7c29a458f0cab3710da,;qu+8Ta2[Kql-níï·¨¬DÊ,¸Å:,¥ß[Kq¬ß,[,ª'Å­,·,öÄÙGWX¿·öq*·¨¬DBc·ãÐ)ní³®°~,Î,h¼·âÐ)§(níÄùGWX[Kq¨ e
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,98133aa1acc1bdb1d9f7ddbb,÷Ù=\ùnmÇ¸Îºù?ÝÚÿÛ:ùwÿ,DÚ¯,÷O·öÀ½ßÜ,,å6JÏíØ,Ï,áöeëì³-0\]¶ÎÇÁÐÖ­³!®¯[ç/£~Ö©â/,2,tk;Æ5´°ÿéÖþ¿ÖÙË§l®òO·¶c\
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,75fe015dff51b84f387eb513,eàÜ}ÓTa8ÖïöuªØû	É?y_§,Ê³,hë4U=»,]S,áã¦,ö,^Ç´à4U.1¦Êw°÷3[ñÛ5U® K<sÕTùö^s,÷,+èa×Tùö^3\Øß5UYßy×Tù
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,199ff4cd6f5a44d449f83805,®@²%ôª[Kq;k¤Êó¿Àfhkhù´,s,T8ÖïÄ­,=q,Ä± ní,8,Ûi§ÏNRâØÇ²¸µ'ÎÌÙfh·â6´ZÄ­8[2o,,"[Kqý*gKæÇ%ÁIª \k,3Å­"
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,793ab0691879cdb27860a7ff,ð³·â`f[{â¼(ÔÀÖ3Å­¥¸,s Â,ÜZ£o¦¸µ,'Î,|3Å­8,7î,"ÕB8M_þ9éø-AÁ""n-Åu·öÀÙw[{$NSá",ÏN,µNSå×oÏ¿/¸°ÏnËãâ×p* 
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,61d17833138a25b3fce3c6e8,wìâÖ>þûýLü: ¾[KqHþÙÅ,âè³,_8}g¸uª,Ø¸,ÓY¿·,î¸,à$UÎø%¶°/n-Å¡³$»¸µ'ÎøÑ7SRâX¿·,[§,­8{âG['©Bq¬u*g/³ÍPqk!
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,8c1909174fbbd18d397b8647,pTYV&¸·H+;2ö«¸µ÷è·,[,"?hÝ""U nÜ",&H,¸ÆWqk,q%,±vqkî¾Ãûcùà$UnKh&&níÄ¹Kõ¨=Gp*,ë,}[Ëp£ 4Á­ReUwáZë{v«Tñ
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,e1e7f1747561184e82ce4610,"}ûq>Ù«""©qèÌrS·vàüetGv",;ñk,dS·âÙ,Ô­,ëwêÖN,Î,±Pª¨[ËpðëUÝÚó?Q¿S·â`¿[§ÿ±*!4uk,¨Â,S·ösq*çXA+5uk!nC?uk
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,d04f103487eb945285a0e5cd,;Åiª¼P÷3¦+·î2UÃË,z3,oÏ#ÝÕ­,¸Ò,ú6ïêÖþ,¥8,$!tqk'Î.éO[w*ÇZ'níÄÙ¢òöÍ»¸µVk»¸,0,¿AIÿÀBLÜZCýNÜÚçÊ®ÝÝÅ­
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,3843f2b8dc755a789b38b3f2,¬D·vâl	áe	NSáàLLÜÚg;,Úç,$ª!ª[K,q¨,q! 7SÜ,O»,¸µ'Î¯ÀZ§©Âp¬ß[{âl	!£¸µ:¸µÏ·/?,R,¨|Y·âP9.níÄÙ|vâÖB\Cµ
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,3140d52f3419f2d5b799271a,Kq¨p·vâ4¡¯âPª[KqÈ5JâÖ,Råö,ÐW^Và+,[,ÀôN,­¥,8öìÄ­8Mèk8ö$n-Å±qkÿ¼{yò?I*ý1%U®,ãn,"Ü""¡¯>;T8¶m!níÄiB_}v(3Å"
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,a3f70799abc3ddb329e8d257,ísö7tÑ·âÐUeT8{) #,"ö""",([Kqèö,",n",}p[;q,Ä­,=qîÂ>Å­SàH¿+âÖ¾Ý?_CõU¸µ×Ñ2N·v,»~,"µ©[ËpðÇ,âÖ8waõ»""n-Å¡~W"
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,aaf46474c99dd18b1bd99123,sKÓ~'©qìÙ[{âÜÒâðÇ·â,×Û,)©q¨ö.,ní,{v*ç,àì,K<;ûà·âØ£¸µ'Î½Ä³³U#qk.mèµ]ÜÚ³/,Ù,"Ø«""níûíû«b±³.qknw§©r"
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,109ecdb43a9c3a211b92fc81,h·và¬á5õZéÔHÜZ£Uª¸µïO,5Jý,É&âÖ\M,ðd,'©òí9,-Å,òõZÕ­8w bUè«ºµn;ªêÖ= ÑÖIª@\A©,¨f,¿¨¢U£*n-Åµp*g@ì²ø*n
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,02007ed3702b86e35829a73a,£Ñ\ÝZCë*mÓTYN¸«¯ÒÔ­E, ö;,!>»uªØK,=,Õ­8w),ÔÔ,­}ZN®¶}ß5ukîX¨G8MåÄèê«ÒYë4U®×¶,uk,¸ÂnflêÖ>-'FWp5 {'ºµ×w´
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,d12a6b0f173bbc2efae806de,e¸6Cºµ¯w?ýëmTa¸PQë,U^~,ôÅÄåBß,Ô­,Âñà$,£,­T8wò;ªìÚÔ­E¸²!ë»©[;qîVoD+MÝZCÅ,ýö,Ô­8w»¶NÝZ£­T8÷ú!Ü:I
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,81a420e6aba817484b4071df,6ukÎøÕÀ2SÝZH iêÖN9ñ£,8s,¾Í	n*,*»,#ÍÕ­,µ¯,?¿û¿pÜç@pTa8ôcª[{àì_ØÑMÄMÝZ­[¤Ê,â7,ýNÝZcýNÝÚ3'~5²µhuk!e¦º
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,b2a0eff7fb0c33d1d7c13d8c,M²µsq­í8óêÜ©¸N¬2'Vyø,)ê,ZÿÞÂÅÐG,ÿA,0ÇP,a,àÄ*sqb/aJÍ'V³¬²ºq1¬ìQ±¬2'ÙÚ,ò1,bïµq1C<dk'ãÄ*_ìßßÁõÎp
+2026-07-10,b3_indicadores_economicos_fwf,ID260709.ex_,b1e3925e7ab117e4631cfc7e,ÚÆpKX»&®Z÷õÇo÷£ãº-+ÁÝf,ûõÅ,ºµÖb!ïæ,·Ù,·Ý¶î×ã,ÍÖ,6Û×¸ÿPK(     çé\Ïh1)  ^,w1,kÅ-½¾5ÁÝX¥þúòôíéo7®GîPG¸
