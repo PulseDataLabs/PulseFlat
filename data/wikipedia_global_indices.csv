@@ -1,764 +1,764 @@
 data_captura,codigo_ativo,nome_ativo,indice_origem
-2026-07-10,MMM,3M,S&P 500
-2026-07-10,AOS,A. O. Smith,S&P 500
-2026-07-10,ABT,Abbott Laboratories,S&P 500
-2026-07-10,ABBV,AbbVie,S&P 500
-2026-07-10,ACN,Accenture,S&P 500
-2026-07-10,ADBE,Adobe Inc.,S&P 500
-2026-07-10,AMD,Advanced Micro Devices,S&P 500
-2026-07-10,AES,AES Corporation,S&P 500
-2026-07-10,AFL,Aflac,S&P 500
-2026-07-10,A,Agilent Technologies,S&P 500
-2026-07-10,APD,Air Products,S&P 500
-2026-07-10,ABNB,Airbnb,S&P 500
-2026-07-10,AKAM,Akamai Technologies,S&P 500
-2026-07-10,ALB,Albemarle Corporation,S&P 500
-2026-07-10,ARE,Alexandria Real Estate Equities,S&P 500
-2026-07-10,ALGN,Align Technology,S&P 500
-2026-07-10,ALLE,Allegion,S&P 500
-2026-07-10,LNT,Alliant Energy,S&P 500
-2026-07-10,ALL,Allstate,S&P 500
-2026-07-10,GOOGL,Alphabet Inc. (Class A),S&P 500
-2026-07-10,GOOG,Alphabet Inc. (Class C),S&P 500
-2026-07-10,MO,Altria,S&P 500
-2026-07-10,AMZN,Amazon,S&P 500
-2026-07-10,AMCR,Amcor,S&P 500
-2026-07-10,AEE,Ameren,S&P 500
-2026-07-10,AEP,American Electric Power,S&P 500
-2026-07-10,AXP,American Express,S&P 500
-2026-07-10,AIG,American International Group,S&P 500
-2026-07-10,AMT,American Tower,S&P 500
-2026-07-10,AWK,American Water Works,S&P 500
-2026-07-10,AMP,Ameriprise Financial,S&P 500
-2026-07-10,AME,Ametek,S&P 500
-2026-07-10,AMGN,Amgen,S&P 500
-2026-07-10,APH,Amphenol,S&P 500
-2026-07-10,ADI,Analog Devices,S&P 500
-2026-07-10,AON,Aon plc,S&P 500
-2026-07-10,APA,APA Corporation,S&P 500
-2026-07-10,APO,Apollo Global Management,S&P 500
-2026-07-10,AAPL,Apple Inc.,S&P 500
-2026-07-10,AMAT,Applied Materials,S&P 500
-2026-07-10,APP,AppLovin,S&P 500
-2026-07-10,APTV,Aptiv,S&P 500
-2026-07-10,ACGL,Arch Capital Group,S&P 500
-2026-07-10,ADM,Archer Daniels Midland,S&P 500
-2026-07-10,ARES,Ares Management,S&P 500
-2026-07-10,ANET,Arista Networks,S&P 500
-2026-07-10,AJG,Arthur J. Gallagher & Co.,S&P 500
-2026-07-10,AIZ,Assurant,S&P 500
-2026-07-10,T,AT&T,S&P 500
-2026-07-10,ATO,Atmos Energy,S&P 500
-2026-07-10,ADSK,Autodesk,S&P 500
-2026-07-10,ADP,Automatic Data Processing,S&P 500
-2026-07-10,AZO,AutoZone,S&P 500
-2026-07-10,AVB,AvalonBay Communities,S&P 500
-2026-07-10,AVY,Avery Dennison,S&P 500
-2026-07-10,AXON,Axon Enterprise,S&P 500
-2026-07-10,BKR,Baker Hughes,S&P 500
-2026-07-10,BALL,Ball Corporation,S&P 500
-2026-07-10,BAC,Bank of America,S&P 500
-2026-07-10,BAX,Baxter International,S&P 500
-2026-07-10,BDX,Becton Dickinson,S&P 500
-2026-07-10,BRK-B,Berkshire Hathaway,S&P 500
-2026-07-10,BBY,Best Buy,S&P 500
-2026-07-10,TECH,Bio-Techne,S&P 500
-2026-07-10,BIIB,Biogen,S&P 500
-2026-07-10,BLK,BlackRock,S&P 500
-2026-07-10,BX,Blackstone Inc.,S&P 500
-2026-07-10,XYZ,"Block, Inc.",S&P 500
-2026-07-10,BNY,BNY Mellon,S&P 500
-2026-07-10,BA,Boeing,S&P 500
-2026-07-10,BKNG,Booking Holdings,S&P 500
-2026-07-10,BSX,Boston Scientific,S&P 500
-2026-07-10,BMY,Bristol Myers Squibb,S&P 500
-2026-07-10,AVGO,Broadcom,S&P 500
-2026-07-10,BR,Broadridge Financial Solutions,S&P 500
-2026-07-10,BRO,Brown & Brown,S&P 500
-2026-07-10,BF-B,Brown–Forman,S&P 500
-2026-07-10,BLDR,Builders FirstSource,S&P 500
-2026-07-10,BG,Bunge Global,S&P 500
-2026-07-10,BXP,"BXP, Inc.",S&P 500
-2026-07-10,CHRW,C.H. Robinson,S&P 500
-2026-07-10,CDNS,Cadence Design Systems,S&P 500
-2026-07-10,CPT,Camden Property Trust,S&P 500
-2026-07-10,COF,Capital One,S&P 500
-2026-07-10,CAH,Cardinal Health,S&P 500
-2026-07-10,CCL,Carnival Corporation,S&P 500
-2026-07-10,CARR,Carrier Global,S&P 500
-2026-07-10,CVNA,Carvana,S&P 500
-2026-07-10,CASY,Casey's,S&P 500
-2026-07-10,CAT,Caterpillar Inc.,S&P 500
-2026-07-10,CBOE,Cboe Global Markets,S&P 500
-2026-07-10,CBRE,CBRE Group,S&P 500
-2026-07-10,CDW,CDW Corporation,S&P 500
-2026-07-10,COR,Cencora,S&P 500
-2026-07-10,CNC,Centene Corporation,S&P 500
-2026-07-10,CNP,CenterPoint Energy,S&P 500
-2026-07-10,CF,CF Industries,S&P 500
-2026-07-10,CRL,Charles River Laboratories,S&P 500
-2026-07-10,SCHW,Charles Schwab Corporation,S&P 500
-2026-07-10,CHTR,Charter Communications,S&P 500
-2026-07-10,CVX,Chevron Corporation,S&P 500
-2026-07-10,CMG,Chipotle Mexican Grill,S&P 500
-2026-07-10,CB,Chubb Limited,S&P 500
-2026-07-10,CHD,Church & Dwight,S&P 500
-2026-07-10,CIEN,Ciena,S&P 500
-2026-07-10,CI,Cigna,S&P 500
-2026-07-10,CINF,Cincinnati Financial,S&P 500
-2026-07-10,CTAS,Cintas,S&P 500
-2026-07-10,CSCO,Cisco,S&P 500
-2026-07-10,C,Citigroup,S&P 500
-2026-07-10,CFG,Citizens Financial Group,S&P 500
-2026-07-10,CLX,Clorox,S&P 500
-2026-07-10,CME,CME Group,S&P 500
-2026-07-10,CMS,CMS Energy,S&P 500
-2026-07-10,KO,Coca-Cola Company (The),S&P 500
-2026-07-10,CTSH,Cognizant,S&P 500
-2026-07-10,COHR,Coherent Corp.,S&P 500
-2026-07-10,COIN,Coinbase,S&P 500
-2026-07-10,CL,Colgate-Palmolive,S&P 500
-2026-07-10,CMCSA,Comcast,S&P 500
-2026-07-10,FIX,Comfort Systems USA,S&P 500
-2026-07-10,COP,ConocoPhillips,S&P 500
-2026-07-10,ED,Consolidated Edison,S&P 500
-2026-07-10,STZ,Constellation Brands,S&P 500
-2026-07-10,CEG,Constellation Energy,S&P 500
-2026-07-10,COO,Cooper Companies (The),S&P 500
-2026-07-10,CPRT,Copart,S&P 500
-2026-07-10,GLW,Corning Inc.,S&P 500
-2026-07-10,CPAY,Corpay,S&P 500
-2026-07-10,CTVA,Corteva,S&P 500
-2026-07-10,CSGP,CoStar Group,S&P 500
-2026-07-10,COST,Costco,S&P 500
-2026-07-10,CRH,CRH plc,S&P 500
-2026-07-10,CRWD,CrowdStrike,S&P 500
-2026-07-10,CCI,Crown Castle,S&P 500
-2026-07-10,CSX,CSX Corporation,S&P 500
-2026-07-10,CMI,Cummins,S&P 500
-2026-07-10,CVS,CVS Health,S&P 500
-2026-07-10,DHR,Danaher Corporation,S&P 500
-2026-07-10,DRI,Darden Restaurants,S&P 500
-2026-07-10,DDOG,Datadog,S&P 500
-2026-07-10,DVA,DaVita,S&P 500
-2026-07-10,DECK,Deckers Brands,S&P 500
-2026-07-10,DE,Deere & Company,S&P 500
-2026-07-10,DELL,Dell Technologies,S&P 500
-2026-07-10,DAL,Delta Air Lines,S&P 500
-2026-07-10,DVN,Devon Energy,S&P 500
-2026-07-10,DXCM,Dexcom,S&P 500
-2026-07-10,FANG,Diamondback Energy,S&P 500
-2026-07-10,DLR,Digital Realty,S&P 500
-2026-07-10,DG,Dollar General,S&P 500
-2026-07-10,DLTR,Dollar Tree,S&P 500
-2026-07-10,D,Dominion Energy,S&P 500
-2026-07-10,DPZ,Domino's,S&P 500
-2026-07-10,DASH,DoorDash,S&P 500
-2026-07-10,DOV,Dover Corporation,S&P 500
-2026-07-10,DOW,Dow Inc.,S&P 500
-2026-07-10,DHI,D. R. Horton,S&P 500
-2026-07-10,DTE,DTE Energy,S&P 500
-2026-07-10,DUK,Duke Energy,S&P 500
-2026-07-10,DD,DuPont,S&P 500
-2026-07-10,ETN,Eaton Corporation,S&P 500
-2026-07-10,EBAY,eBay Inc.,S&P 500
-2026-07-10,ECHO,EchoStar,S&P 500
-2026-07-10,ECL,Ecolab,S&P 500
-2026-07-10,EIX,Edison International,S&P 500
-2026-07-10,EW,Edwards Lifesciences,S&P 500
-2026-07-10,EA,Electronic Arts,S&P 500
-2026-07-10,ELV,Elevance Health,S&P 500
-2026-07-10,EME,Emcor,S&P 500
-2026-07-10,EMR,Emerson Electric,S&P 500
-2026-07-10,ETR,Entergy,S&P 500
-2026-07-10,EOG,EOG Resources,S&P 500
-2026-07-10,EQT,EQT Corporation,S&P 500
-2026-07-10,EFX,Equifax,S&P 500
-2026-07-10,EQIX,Equinix,S&P 500
-2026-07-10,EQR,Equity Residential,S&P 500
-2026-07-10,ERIE,Erie Indemnity,S&P 500
-2026-07-10,ESS,Essex Property Trust,S&P 500
-2026-07-10,EL,Estée Lauder Companies (The),S&P 500
-2026-07-10,EG,Everest Group,S&P 500
-2026-07-10,EVRG,Evergy,S&P 500
-2026-07-10,ES,Eversource Energy,S&P 500
-2026-07-10,EXC,Exelon,S&P 500
-2026-07-10,EXE,Expand Energy,S&P 500
-2026-07-10,EXPE,Expedia Group,S&P 500
-2026-07-10,EXPD,Expeditors International,S&P 500
-2026-07-10,EXR,Extra Space Storage,S&P 500
-2026-07-10,XOM,ExxonMobil,S&P 500
-2026-07-10,FFIV,"F5, Inc.",S&P 500
-2026-07-10,FDS,FactSet,S&P 500
-2026-07-10,FICO,Fair Isaac,S&P 500
-2026-07-10,FAST,Fastenal,S&P 500
-2026-07-10,FRT,Federal Realty Investment Trust,S&P 500
-2026-07-10,FDX,FedEx,S&P 500
-2026-07-10,FDXF,FedEx Freight,S&P 500
-2026-07-10,FIS,Fidelity National Information Services,S&P 500
-2026-07-10,FITB,Fifth Third Bancorp,S&P 500
-2026-07-10,FSLR,First Solar,S&P 500
-2026-07-10,FE,FirstEnergy,S&P 500
-2026-07-10,FISV,Fiserv,S&P 500
-2026-07-10,FLEX,Flex Ltd.,S&P 500
-2026-07-10,F,Ford Motor Company,S&P 500
-2026-07-10,FTNT,Fortinet,S&P 500
-2026-07-10,FTV,Fortive,S&P 500
-2026-07-10,FOXA,Fox Corporation (Class A),S&P 500
-2026-07-10,FOX,Fox Corporation (Class B),S&P 500
-2026-07-10,BEN,Franklin Resources,S&P 500
-2026-07-10,FCX,Freeport-McMoRan,S&P 500
-2026-07-10,GRMN,Garmin,S&P 500
-2026-07-10,IT,Gartner,S&P 500
-2026-07-10,GE,GE Aerospace,S&P 500
-2026-07-10,GEHC,GE HealthCare,S&P 500
-2026-07-10,GEV,GE Vernova,S&P 500
-2026-07-10,GEN,Gen Digital,S&P 500
-2026-07-10,GNRC,Generac,S&P 500
-2026-07-10,GD,General Dynamics,S&P 500
-2026-07-10,GIS,General Mills,S&P 500
-2026-07-10,GM,General Motors,S&P 500
-2026-07-10,GPC,Genuine Parts Company,S&P 500
-2026-07-10,GILD,Gilead Sciences,S&P 500
-2026-07-10,GPN,Global Payments,S&P 500
-2026-07-10,GL,Globe Life,S&P 500
-2026-07-10,GDDY,GoDaddy,S&P 500
-2026-07-10,GS,Goldman Sachs,S&P 500
-2026-07-10,HAL,Halliburton,S&P 500
-2026-07-10,HIG,Hartford (The),S&P 500
-2026-07-10,HAS,Hasbro,S&P 500
-2026-07-10,HCA,HCA Healthcare,S&P 500
-2026-07-10,DOC,Healthpeak Properties,S&P 500
-2026-07-10,HSIC,Henry Schein,S&P 500
-2026-07-10,HSY,Hershey Company (The),S&P 500
-2026-07-10,HPE,Hewlett Packard Enterprise,S&P 500
-2026-07-10,HLT,Hilton Worldwide,S&P 500
-2026-07-10,HD,Home Depot (The),S&P 500
-2026-07-10,HONA,Honeywell Aerospace,S&P 500
-2026-07-10,HON,Honeywell Technologies,S&P 500
-2026-07-10,HRL,Hormel Foods,S&P 500
-2026-07-10,HST,Host Hotels & Resorts,S&P 500
-2026-07-10,HWM,Howmet Aerospace,S&P 500
-2026-07-10,HPQ,HP Inc.,S&P 500
-2026-07-10,HUBB,Hubbell Incorporated,S&P 500
-2026-07-10,HUM,Humana,S&P 500
-2026-07-10,HBAN,Huntington Bancshares,S&P 500
-2026-07-10,HII,Huntington Ingalls Industries,S&P 500
-2026-07-10,IBM,IBM,S&P 500
-2026-07-10,IEX,IDEX Corporation,S&P 500
-2026-07-10,IDXX,Idexx Laboratories,S&P 500
-2026-07-10,ITW,Illinois Tool Works,S&P 500
-2026-07-10,INCY,Incyte,S&P 500
-2026-07-10,IR,Ingersoll Rand,S&P 500
-2026-07-10,PODD,Insulet Corporation,S&P 500
-2026-07-10,INTC,Intel,S&P 500
-2026-07-10,IBKR,Interactive Brokers,S&P 500
-2026-07-10,ICE,Intercontinental Exchange,S&P 500
-2026-07-10,IFF,International Flavors & Fragrances,S&P 500
-2026-07-10,IP,International Paper,S&P 500
-2026-07-10,INTU,Intuit,S&P 500
-2026-07-10,ISRG,Intuitive Surgical,S&P 500
-2026-07-10,IVZ,Invesco,S&P 500
-2026-07-10,INVH,Invitation Homes,S&P 500
-2026-07-10,IQV,IQVIA,S&P 500
-2026-07-10,IRM,Iron Mountain,S&P 500
-2026-07-10,JBHT,J.B. Hunt,S&P 500
-2026-07-10,JBL,Jabil,S&P 500
-2026-07-10,JKHY,Jack Henry & Associates,S&P 500
-2026-07-10,J,Jacobs Solutions,S&P 500
-2026-07-10,JNJ,Johnson & Johnson,S&P 500
-2026-07-10,JCI,Johnson Controls,S&P 500
-2026-07-10,JPM,JPMorgan Chase,S&P 500
-2026-07-10,KVUE,Kenvue,S&P 500
-2026-07-10,KDP,Keurig Dr Pepper,S&P 500
-2026-07-10,KEY,KeyCorp,S&P 500
-2026-07-10,KEYS,Keysight Technologies,S&P 500
-2026-07-10,KMB,Kimberly-Clark,S&P 500
-2026-07-10,KIM,Kimco Realty,S&P 500
-2026-07-10,KMI,Kinder Morgan,S&P 500
-2026-07-10,KKR,KKR & Co.,S&P 500
-2026-07-10,KLAC,KLA Corporation,S&P 500
-2026-07-10,KHC,Kraft Heinz,S&P 500
-2026-07-10,KR,Kroger,S&P 500
-2026-07-10,LHX,L3Harris,S&P 500
-2026-07-10,LH,Labcorp,S&P 500
-2026-07-10,LRCX,Lam Research,S&P 500
-2026-07-10,LVS,Las Vegas Sands,S&P 500
-2026-07-10,LDOS,Leidos,S&P 500
-2026-07-10,LEN,Lennar,S&P 500
-2026-07-10,LII,Lennox International,S&P 500
-2026-07-10,LLY,Lilly (Eli),S&P 500
-2026-07-10,LIN,Linde plc,S&P 500
-2026-07-10,LYV,Live Nation Entertainment,S&P 500
-2026-07-10,LMT,Lockheed Martin,S&P 500
-2026-07-10,L,Loews Corporation,S&P 500
-2026-07-10,LOW,Lowe's,S&P 500
-2026-07-10,LULU,Lululemon Athletica,S&P 500
-2026-07-10,LITE,Lumentum,S&P 500
-2026-07-10,LYB,LyondellBasell,S&P 500
-2026-07-10,MTB,M&T Bank,S&P 500
-2026-07-10,MPC,Marathon Petroleum,S&P 500
-2026-07-10,MAR,Marriott International,S&P 500
-2026-07-10,MRSH,Marsh McLennan,S&P 500
-2026-07-10,MLM,Martin Marietta Materials,S&P 500
-2026-07-10,MRVL,Marvell Technology,S&P 500
-2026-07-10,MAS,Masco,S&P 500
-2026-07-10,MA,Mastercard,S&P 500
-2026-07-10,MKC,McCormick & Company,S&P 500
-2026-07-10,MCD,McDonald's,S&P 500
-2026-07-10,MCK,McKesson Corporation,S&P 500
-2026-07-10,MDT,Medtronic,S&P 500
-2026-07-10,MRK,Merck & Co.,S&P 500
-2026-07-10,META,Meta Platforms,S&P 500
-2026-07-10,MET,MetLife,S&P 500
-2026-07-10,MTD,Mettler Toledo,S&P 500
-2026-07-10,MGM,MGM Resorts,S&P 500
-2026-07-10,MCHP,Microchip Technology,S&P 500
-2026-07-10,MU,Micron Technology,S&P 500
-2026-07-10,MSFT,Microsoft,S&P 500
-2026-07-10,MAA,Mid-America Apartment Communities,S&P 500
-2026-07-10,MRNA,Moderna,S&P 500
-2026-07-10,TAP,Molson Coors Beverage Company,S&P 500
-2026-07-10,MDLZ,Mondelez International,S&P 500
-2026-07-10,MPWR,Monolithic Power Systems,S&P 500
-2026-07-10,MNST,Monster Beverage,S&P 500
-2026-07-10,MCO,Moody's Corporation,S&P 500
-2026-07-10,MS,Morgan Stanley,S&P 500
-2026-07-10,MOS,Mosaic Company (The),S&P 500
-2026-07-10,MSI,Motorola Solutions,S&P 500
-2026-07-10,MSCI,MSCI Inc.,S&P 500
-2026-07-10,NDAQ,"Nasdaq, Inc.",S&P 500
-2026-07-10,NTAP,NetApp,S&P 500
-2026-07-10,NFLX,Netflix,S&P 500
-2026-07-10,NEM,Newmont,S&P 500
-2026-07-10,NWSA,News Corp (Class A),S&P 500
-2026-07-10,NWS,News Corp (Class B),S&P 500
-2026-07-10,NEE,NextEra Energy,S&P 500
-2026-07-10,NKE,"Nike, Inc.",S&P 500
-2026-07-10,NI,NiSource,S&P 500
-2026-07-10,NDSN,Nordson Corporation,S&P 500
-2026-07-10,NSC,Norfolk Southern,S&P 500
-2026-07-10,NTRS,Northern Trust,S&P 500
-2026-07-10,NOC,Northrop Grumman,S&P 500
-2026-07-10,NCLH,Norwegian Cruise Line Holdings,S&P 500
-2026-07-10,NRG,NRG Energy,S&P 500
-2026-07-10,NUE,Nucor,S&P 500
-2026-07-10,NVDA,Nvidia,S&P 500
-2026-07-10,NVR,"NVR, Inc.",S&P 500
-2026-07-10,NXPI,NXP Semiconductors,S&P 500
-2026-07-10,ORLY,O’Reilly Automotive,S&P 500
-2026-07-10,OXY,Occidental Petroleum,S&P 500
-2026-07-10,ODFL,Old Dominion,S&P 500
-2026-07-10,OMC,Omnicom Group,S&P 500
-2026-07-10,ON,ON Semiconductor,S&P 500
-2026-07-10,OKE,Oneok,S&P 500
-2026-07-10,ORCL,Oracle Corporation,S&P 500
-2026-07-10,OTIS,Otis Worldwide,S&P 500
-2026-07-10,PCAR,Paccar,S&P 500
-2026-07-10,PKG,Packaging Corporation of America,S&P 500
-2026-07-10,PLTR,Palantir Technologies,S&P 500
-2026-07-10,PANW,Palo Alto Networks,S&P 500
-2026-07-10,PSKY,Paramount Skydance Corporation,S&P 500
-2026-07-10,PH,Parker Hannifin,S&P 500
-2026-07-10,PAYX,Paychex,S&P 500
-2026-07-10,PYPL,PayPal,S&P 500
-2026-07-10,PNR,Pentair,S&P 500
-2026-07-10,PEP,PepsiCo,S&P 500
-2026-07-10,PFE,Pfizer,S&P 500
-2026-07-10,PCG,PG&E Corporation,S&P 500
-2026-07-10,PM,Philip Morris International,S&P 500
-2026-07-10,PSX,Phillips 66,S&P 500
-2026-07-10,PNW,Pinnacle West Capital,S&P 500
-2026-07-10,PNC,PNC Financial Services,S&P 500
-2026-07-10,PPG,PPG Industries,S&P 500
-2026-07-10,PPL,PPL Corporation,S&P 500
-2026-07-10,PFG,Principal Financial Group,S&P 500
-2026-07-10,PG,Procter & Gamble,S&P 500
-2026-07-10,PGR,Progressive Corporation,S&P 500
-2026-07-10,PLD,Prologis,S&P 500
-2026-07-10,PRU,Prudential Financial,S&P 500
-2026-07-10,PEG,Public Service Enterprise Group,S&P 500
-2026-07-10,PTC,PTC Inc.,S&P 500
-2026-07-10,PSA,Public Storage,S&P 500
-2026-07-10,PHM,PulteGroup,S&P 500
-2026-07-10,PWR,Quanta Services,S&P 500
-2026-07-10,QCOM,Qualcomm,S&P 500
-2026-07-10,DGX,Quest Diagnostics,S&P 500
-2026-07-10,Q,Qnity Electronics,S&P 500
-2026-07-10,RL,Ralph Lauren Corporation,S&P 500
-2026-07-10,RJF,Raymond James Financial,S&P 500
-2026-07-10,RTX,RTX Corporation,S&P 500
-2026-07-10,O,Realty Income,S&P 500
-2026-07-10,REG,Regency Centers,S&P 500
-2026-07-10,REGN,Regeneron Pharmaceuticals,S&P 500
-2026-07-10,RF,Regions Financial Corporation,S&P 500
-2026-07-10,RSG,Republic Services,S&P 500
-2026-07-10,RMD,ResMed,S&P 500
-2026-07-10,RVTY,Revvity,S&P 500
-2026-07-10,HOOD,Robinhood Markets,S&P 500
-2026-07-10,ROK,Rockwell Automation,S&P 500
-2026-07-10,ROL,"Rollins, Inc.",S&P 500
-2026-07-10,ROP,Roper Technologies,S&P 500
-2026-07-10,ROST,Ross Stores,S&P 500
-2026-07-10,RCL,Royal Caribbean Group,S&P 500
-2026-07-10,SPGI,S&P Global,S&P 500
-2026-07-10,CRM,Salesforce,S&P 500
-2026-07-10,SNDK,Sandisk,S&P 500
-2026-07-10,SBAC,SBA Communications,S&P 500
-2026-07-10,SLB,Schlumberger,S&P 500
-2026-07-10,STX,Seagate Technology,S&P 500
-2026-07-10,SRE,Sempra,S&P 500
-2026-07-10,NOW,ServiceNow,S&P 500
-2026-07-10,SHW,Sherwin-Williams,S&P 500
-2026-07-10,SPG,Simon Property Group,S&P 500
-2026-07-10,SWKS,Skyworks Solutions,S&P 500
-2026-07-10,SJM,J.M. Smucker Company (The),S&P 500
-2026-07-10,SW,Smurfit Westrock,S&P 500
-2026-07-10,SNA,Snap-on,S&P 500
-2026-07-10,SOLV,Solventum,S&P 500
-2026-07-10,SO,Southern Company,S&P 500
-2026-07-10,LUV,Southwest Airlines,S&P 500
-2026-07-10,SWK,Stanley Black & Decker,S&P 500
-2026-07-10,SBUX,Starbucks,S&P 500
-2026-07-10,STT,State Street Corporation,S&P 500
-2026-07-10,STLD,Steel Dynamics,S&P 500
-2026-07-10,STE,Steris,S&P 500
-2026-07-10,SYK,Stryker Corporation,S&P 500
-2026-07-10,SMCI,Supermicro,S&P 500
-2026-07-10,SYF,Synchrony Financial,S&P 500
-2026-07-10,SNPS,Synopsys,S&P 500
-2026-07-10,SYY,Sysco,S&P 500
-2026-07-10,TMUS,T-Mobile US,S&P 500
-2026-07-10,TROW,T. Rowe Price,S&P 500
-2026-07-10,TTWO,Take-Two Interactive,S&P 500
-2026-07-10,TPR,"Tapestry, Inc.",S&P 500
-2026-07-10,TRGP,Targa Resources,S&P 500
-2026-07-10,TGT,Target Corporation,S&P 500
-2026-07-10,TEL,TE Connectivity,S&P 500
-2026-07-10,TDY,Teledyne Technologies,S&P 500
-2026-07-10,TER,Teradyne,S&P 500
-2026-07-10,TSLA,"Tesla, Inc.",S&P 500
-2026-07-10,TXN,Texas Instruments,S&P 500
-2026-07-10,TPL,Texas Pacific Land Corporation,S&P 500
-2026-07-10,TXT,Textron,S&P 500
-2026-07-10,TMO,Thermo Fisher Scientific,S&P 500
-2026-07-10,TJX,TJX Companies,S&P 500
-2026-07-10,TKO,TKO Group Holdings,S&P 500
-2026-07-10,TTD,Trade Desk (The),S&P 500
-2026-07-10,TSCO,Tractor Supply,S&P 500
-2026-07-10,TT,Trane Technologies,S&P 500
-2026-07-10,TDG,TransDigm Group,S&P 500
-2026-07-10,TRV,Travelers Companies (The),S&P 500
-2026-07-10,TRMB,Trimble Inc.,S&P 500
-2026-07-10,TFC,Truist Financial,S&P 500
-2026-07-10,TYL,Tyler Technologies,S&P 500
-2026-07-10,TSN,Tyson Foods,S&P 500
-2026-07-10,USB,U.S. Bancorp,S&P 500
-2026-07-10,UBER,Uber,S&P 500
-2026-07-10,UDR,"UDR, Inc.",S&P 500
-2026-07-10,ULTA,Ulta Beauty,S&P 500
-2026-07-10,UNP,Union Pacific Corporation,S&P 500
-2026-07-10,UAL,United Airlines Holdings,S&P 500
-2026-07-10,UPS,United Parcel Service,S&P 500
-2026-07-10,URI,United Rentals,S&P 500
-2026-07-10,UNH,UnitedHealth Group,S&P 500
-2026-07-10,UHS,Universal Health Services,S&P 500
-2026-07-10,VLO,Valero Energy,S&P 500
-2026-07-10,VEEV,Veeva Systems,S&P 500
-2026-07-10,VTR,Ventas,S&P 500
-2026-07-10,VLTO,Veralto,S&P 500
-2026-07-10,VRSN,Verisign,S&P 500
-2026-07-10,VRSK,Verisk Analytics,S&P 500
-2026-07-10,VZ,Verizon,S&P 500
-2026-07-10,VRTX,Vertex Pharmaceuticals,S&P 500
-2026-07-10,VRT,Vertiv,S&P 500
-2026-07-10,VTRS,Viatris,S&P 500
-2026-07-10,VICI,Vici Properties,S&P 500
-2026-07-10,V,Visa Inc.,S&P 500
-2026-07-10,VST,Vistra Corp.,S&P 500
-2026-07-10,VMC,Vulcan Materials Company,S&P 500
-2026-07-10,WRB,W. R. Berkley Corporation,S&P 500
-2026-07-10,GWW,W. W. Grainger,S&P 500
-2026-07-10,WAB,Wabtec,S&P 500
-2026-07-10,WMT,Walmart,S&P 500
-2026-07-10,DIS,Walt Disney Company (The),S&P 500
-2026-07-10,WBD,Warner Bros. Discovery,S&P 500
-2026-07-10,WM,Waste Management,S&P 500
-2026-07-10,WAT,Waters Corporation,S&P 500
-2026-07-10,WEC,WEC Energy Group,S&P 500
-2026-07-10,WFC,Wells Fargo,S&P 500
-2026-07-10,WELL,Welltower,S&P 500
-2026-07-10,WST,West Pharmaceutical Services,S&P 500
-2026-07-10,WDC,Western Digital,S&P 500
-2026-07-10,WY,Weyerhaeuser,S&P 500
-2026-07-10,WSM,"Williams-Sonoma, Inc.",S&P 500
-2026-07-10,WMB,Williams Companies,S&P 500
-2026-07-10,WTW,Willis Towers Watson,S&P 500
-2026-07-10,WDAY,"Workday, Inc.",S&P 500
-2026-07-10,WYNN,Wynn Resorts,S&P 500
-2026-07-10,XEL,Xcel Energy,S&P 500
-2026-07-10,XYL,Xylem Inc.,S&P 500
-2026-07-10,YUM,Yum! Brands,S&P 500
-2026-07-10,ZBRA,Zebra Technologies,S&P 500
-2026-07-10,ZBH,Zimmer Biomet,S&P 500
-2026-07-10,ZTS,Zoetis,S&P 500
-2026-07-10,MMM,NYSE,Dow Jones
-2026-07-10,GOOGL,NASDAQ,Dow Jones
-2026-07-10,AXP,NYSE,Dow Jones
-2026-07-10,AMGN,NASDAQ,Dow Jones
-2026-07-10,AMZN,NASDAQ,Dow Jones
-2026-07-10,AAPL,NASDAQ,Dow Jones
-2026-07-10,BA,NYSE,Dow Jones
-2026-07-10,CAT,NYSE,Dow Jones
-2026-07-10,CVX,NYSE,Dow Jones
-2026-07-10,CSCO,NASDAQ,Dow Jones
-2026-07-10,KO,NYSE,Dow Jones
-2026-07-10,DIS,NYSE,Dow Jones
-2026-07-10,GS,NYSE,Dow Jones
-2026-07-10,HD,NYSE,Dow Jones
-2026-07-10,HON,NASDAQ,Dow Jones
-2026-07-10,IBM,NYSE,Dow Jones
-2026-07-10,JNJ,NYSE,Dow Jones
-2026-07-10,JPM,NYSE,Dow Jones
-2026-07-10,MCD,NYSE,Dow Jones
-2026-07-10,MRK,NYSE,Dow Jones
-2026-07-10,MSFT,NASDAQ,Dow Jones
-2026-07-10,NKE,NYSE,Dow Jones
-2026-07-10,NVDA,NASDAQ,Dow Jones
-2026-07-10,PG,NYSE,Dow Jones
-2026-07-10,CRM,NYSE,Dow Jones
-2026-07-10,SHW,NYSE,Dow Jones
-2026-07-10,TRV,NYSE,Dow Jones
-2026-07-10,UNH,NYSE,Dow Jones
-2026-07-10,V,NYSE,Dow Jones
-2026-07-10,WMT,NASDAQ,Dow Jones
-2026-07-10,III.L,3i,FTSE 100
-2026-07-10,ABDN.L,Aberdeen Group,FTSE 100
-2026-07-10,ADM.L,Admiral Group,FTSE 100
-2026-07-10,AAF.L,Airtel Africa,FTSE 100
-2026-07-10,ALW.L,Alliance Witan,FTSE 100
-2026-07-10,AAL.L,Anglo American plc,FTSE 100
-2026-07-10,ANTO.L,Antofagasta plc,FTSE 100
-2026-07-10,ABF.L,Associated British Foods,FTSE 100
-2026-07-10,AZN.L,AstraZeneca,FTSE 100
-2026-07-10,AUTO.L,Autotrader Group,FTSE 100
-2026-07-10,AV.L,Aviva,FTSE 100
-2026-07-10,BAB.L,Babcock International,FTSE 100
-2026-07-10,BA.L,BAE Systems,FTSE 100
-2026-07-10,BARC.L,Barclays,FTSE 100
-2026-07-10,BTRW.L,Barratt Redrow,FTSE 100
-2026-07-10,BEZ.L,Beazley,FTSE 100
-2026-07-10,BP.L,BP,FTSE 100
-2026-07-10,BATS.L,British American Tobacco,FTSE 100
-2026-07-10,BLND.L,British Land,FTSE 100
-2026-07-10,BT.A.L,BT Group,FTSE 100
-2026-07-10,BNZL.L,Bunzl,FTSE 100
-2026-07-10,BRBY.L,Burberry Group,FTSE 100
-2026-07-10,CNA.L,Centrica,FTSE 100
-2026-07-10,CCEP.L,Coca-Cola Europacific Partners,FTSE 100
-2026-07-10,CCH.L,Coca-Cola HBC,FTSE 100
-2026-07-10,CPG.L,Compass Group,FTSE 100
-2026-07-10,CCC.L,Computacenter,FTSE 100
-2026-07-10,CTEC.L,Convatec,FTSE 100
-2026-07-10,CRDA.L,Croda International,FTSE 100
-2026-07-10,DCC.L,DCC plc,FTSE 100
-2026-07-10,DGE.L,Diageo,FTSE 100
-2026-07-10,DPLM.L,Diploma,FTSE 100
-2026-07-10,EDV.L,Endeavour Mining,FTSE 100
-2026-07-10,ENT.L,Entain,FTSE 100
-2026-07-10,EXPN.L,Experian,FTSE 100
-2026-07-10,FCIT.L,F & C Investment Trust,FTSE 100
-2026-07-10,FRES.L,Fresnillo plc,FTSE 100
-2026-07-10,GAW.L,Games Workshop,FTSE 100
-2026-07-10,GLEN.L,Glencore,FTSE 100
-2026-07-10,GSK.L,GSK plc,FTSE 100
-2026-07-10,HLN.L,Haleon,FTSE 100
-2026-07-10,HLMA.L,Halma plc,FTSE 100
-2026-07-10,HSX.L,Hiscox,FTSE 100
-2026-07-10,HWDN.L,Howdens Joinery,FTSE 100
-2026-07-10,HSBA.L,HSBC,FTSE 100
-2026-07-10,ICG.L,ICG,FTSE 100
-2026-07-10,IGG.L,IG Group,FTSE 100
-2026-07-10,IHG.L,IHG Hotels & Resorts,FTSE 100
-2026-07-10,IMI.L,IMI,FTSE 100
-2026-07-10,IMB.L,Imperial Brands,FTSE 100
-2026-07-10,INF.L,Informa,FTSE 100
-2026-07-10,IAG.L,International Airlines Group,FTSE 100
-2026-07-10,ITRK.L,Intertek,FTSE 100
-2026-07-10,INVP.L,Investec,FTSE 100
-2026-07-10,JD.L,JD Sports,FTSE 100
-2026-07-10,BGEO.L,Lion Finance Group,FTSE 100
-2026-07-10,KGF.L,Kingfisher plc,FTSE 100
-2026-07-10,LAND.L,Land Securities,FTSE 100
-2026-07-10,LGEN.L,Legal & General,FTSE 100
-2026-07-10,LLOY.L,Lloyds Banking Group,FTSE 100
-2026-07-10,LMP.L,LondonMetric Property,FTSE 100
-2026-07-10,LSEG.L,London Stock Exchange Group,FTSE 100
-2026-07-10,MNG.L,M&G,FTSE 100
-2026-07-10,MKS.L,Marks & Spencer,FTSE 100
-2026-07-10,MRO.L,Melrose Industries,FTSE 100
-2026-07-10,MTLN.L,Metlen Energy & Metals,FTSE 100
-2026-07-10,NG.L,National Grid plc,FTSE 100
-2026-07-10,NWG.L,NatWest Group,FTSE 100
-2026-07-10,NXT.L,Next plc,FTSE 100
-2026-07-10,PSON.L,Pearson plc,FTSE 100
-2026-07-10,PSH.L,Pershing Square Holdings,FTSE 100
-2026-07-10,PSN.L,Persimmon,FTSE 100
-2026-07-10,PCT.L,Polar Capital Technology Trust,FTSE 100
-2026-07-10,PRU.L,Prudential plc,FTSE 100
-2026-07-10,RKT.L,Reckitt,FTSE 100
-2026-07-10,REL.L,RELX,FTSE 100
-2026-07-10,RTO.L,Rentokil Initial,FTSE 100
-2026-07-10,RIO.L,Rio Tinto,FTSE 100
-2026-07-10,RR.L,Rolls-Royce Holdings,FTSE 100
-2026-07-10,SGE.L,Sage Group,FTSE 100
-2026-07-10,SBRY.L,Sainsbury's,FTSE 100
-2026-07-10,SDR.L,Schroders,FTSE 100
-2026-07-10,SMT.L,Scottish Mortgage Investment Trust,FTSE 100
-2026-07-10,SGRO.L,Segro,FTSE 100
-2026-07-10,SVT.L,Severn Trent,FTSE 100
-2026-07-10,SHEL.L,Shell plc,FTSE 100
-2026-07-10,SMIN.L,Smiths Group,FTSE 100
-2026-07-10,SN.L,Smith & Nephew,FTSE 100
-2026-07-10,SPX.L,Spirax Group,FTSE 100
-2026-07-10,SSE.L,SSE plc,FTSE 100
-2026-07-10,STAN.L,Standard Chartered,FTSE 100
-2026-07-10,SDLF.L,Standard Life,FTSE 100
-2026-07-10,STJ.L,St. James's Place,FTSE 100
-2026-07-10,TSCO.L,Tesco,FTSE 100
-2026-07-10,BBOX.L,Tritax Big Box REIT,FTSE 100
-2026-07-10,ULVR.L,Unilever,FTSE 100
-2026-07-10,UU.L,United Utilities,FTSE 100
-2026-07-10,VOD.L,Vodafone Group,FTSE 100
-2026-07-10,WEIR.L,Weir Group,FTSE 100
-2026-07-10,WTB.L,Whitbread,FTSE 100
-2026-07-10,ADS.DE,Adidas,DAX 40
-2026-07-10,AIR.PA,Airbus,DAX 40
-2026-07-10,ALV.DE,Allianz,DAX 40
-2026-07-10,BAS.DE,BASF,DAX 40
-2026-07-10,BAYN.DE,Bayer,DAX 40
-2026-07-10,BEI.DE,Beiersdorf,DAX 40
-2026-07-10,BMW.DE,BMW,DAX 40
-2026-07-10,BNR.DE,Brenntag,DAX 40
-2026-07-10,CBK.DE,Commerzbank,DAX 40
-2026-07-10,CON.DE,Continental,DAX 40
-2026-07-10,DTG.DE,Daimler Truck,DAX 40
-2026-07-10,DBK.DE,Deutsche Bank,DAX 40
-2026-07-10,DB1.DE,Deutsche Börse,DAX 40
-2026-07-10,DHL.DE,Deutsche Post,DAX 40
-2026-07-10,DTE.DE,Deutsche Telekom,DAX 40
-2026-07-10,EOAN.DE,E.ON,DAX 40
-2026-07-10,FRE.DE,Fresenius,DAX 40
-2026-07-10,FME.DE,Fresenius Medical Care,DAX 40
-2026-07-10,G1A.DE,GEA Group,DAX 40
-2026-07-10,HNR1.DE,Hannover Re,DAX 40
-2026-07-10,HEI.DE,Heidelberg Materials,DAX 40
-2026-07-10,HEN3.DE,Henkel,DAX 40
-2026-07-10,IFX.DE,Infineon Technologies,DAX 40
-2026-07-10,MBG.DE,Mercedes-Benz Group,DAX 40
-2026-07-10,MRK.DE,Merck,DAX 40
-2026-07-10,MTX.DE,MTU Aero Engines,DAX 40
-2026-07-10,MUV2.DE,Munich Re,DAX 40
-2026-07-10,PAH3.DE,Porsche SE,DAX 40
-2026-07-10,QIA.DE,Qiagen,DAX 40
-2026-07-10,RHM.DE,Rheinmetall,DAX 40
-2026-07-10,RWE.DE,RWE,DAX 40
-2026-07-10,SAP.DE,SAP,DAX 40
-2026-07-10,G24.DE,Scout24,DAX 40
-2026-07-10,SIE.DE,Siemens,DAX 40
-2026-07-10,ENR.DE,Siemens Energy,DAX 40
-2026-07-10,SHL.DE,Siemens Healthineers,DAX 40
-2026-07-10,SY1.DE,Symrise,DAX 40
-2026-07-10,VOW3.DE,Volkswagen Group,DAX 40
-2026-07-10,VNA.DE,Vonovia,DAX 40
-2026-07-10,ZAL.DE,Zalando,DAX 40
-2026-07-10,AC.PA,Accor,CAC 40
-2026-07-10,AI.PA,Air Liquide,CAC 40
-2026-07-10,AIR.PA,Airbus,CAC 40
-2026-07-10,MT.AS,ArcelorMittal,CAC 40
-2026-07-10,CS.PA,Axa,CAC 40
-2026-07-10,BNP.PA,BNP Paribas,CAC 40
-2026-07-10,EN.PA,Bouygues,CAC 40
-2026-07-10,BVI.PA,Bureau Veritas,CAC 40
-2026-07-10,CAP.PA,Capgemini,CAC 40
-2026-07-10,CA.PA,Carrefour,CAC 40
-2026-07-10,ACA.PA,Crédit Agricole,CAC 40
-2026-07-10,BN.PA,Danone,CAC 40
-2026-07-10,DSY.PA,Dassault Systèmes,CAC 40
-2026-07-10,EDEN.PA,Edenred,CAC 40
-2026-07-10,ENGI.PA,Engie,CAC 40
-2026-07-10,EL.PA,EssilorLuxottica,CAC 40
-2026-07-10,ERF.PA,Eurofins Scientific,CAC 40
-2026-07-10,RMS.PA,Hermès,CAC 40
-2026-07-10,KER.PA,Kering,CAC 40
-2026-07-10,OR.PA,L'Oréal,CAC 40
-2026-07-10,LR.PA,Legrand,CAC 40
-2026-07-10,MC.PA,LVMH,CAC 40
-2026-07-10,ML.PA,Michelin,CAC 40
-2026-07-10,ORA.PA,Orange,CAC 40
-2026-07-10,RI.PA,Pernod Ricard,CAC 40
-2026-07-10,PUB.PA,Publicis,CAC 40
-2026-07-10,RNO.PA,Renault,CAC 40
-2026-07-10,SAF.PA,Safran,CAC 40
-2026-07-10,SGO.PA,Saint-Gobain,CAC 40
-2026-07-10,SAN.PA,Sanofi,CAC 40
-2026-07-10,SU.PA,Schneider Electric,CAC 40
-2026-07-10,GLE.PA,Société Générale,CAC 40
-2026-07-10,STLAP.PA,Stellantis,CAC 40
-2026-07-10,STMPA.PA,STMicroelectronics,CAC 40
-2026-07-10,TEP.PA,Teleperformance,CAC 40
-2026-07-10,HO.PA,Thales,CAC 40
-2026-07-10,TTE.PA,TotalEnergies,CAC 40
-2026-07-10,URW.PA,Unibail-Rodamco-Westfield,CAC 40
-2026-07-10,VIE.PA,Veolia,CAC 40
-2026-07-10,DG.PA,Vinci,CAC 40
-2026-07-10,ADS.DE,Adidas,Euro Stoxx 50
-2026-07-10,ADYEN.AS,Adyen,Euro Stoxx 50
-2026-07-10,AD.AS,Ahold Delhaize,Euro Stoxx 50
-2026-07-10,AI.PA,Air Liquide,Euro Stoxx 50
-2026-07-10,AIR.PA,Airbus,Euro Stoxx 50
-2026-07-10,ALV.DE,Allianz,Euro Stoxx 50
-2026-07-10,ABI.BR,Anheuser-Busch InBev,Euro Stoxx 50
-2026-07-10,ARGX.BR,Argenx,Euro Stoxx 50
-2026-07-10,ASML.AS,ASML Holding,Euro Stoxx 50
-2026-07-10,CS.PA,Axa,Euro Stoxx 50
-2026-07-10,BAS.DE,BASF,Euro Stoxx 50
-2026-07-10,BAYN.DE,Bayer,Euro Stoxx 50
-2026-07-10,BBVA.MC,BBVA,Euro Stoxx 50
-2026-07-10,SAN.MC,Banco Santander,Euro Stoxx 50
-2026-07-10,BMW.DE,BMW,Euro Stoxx 50
-2026-07-10,BNP.PA,BNP Paribas,Euro Stoxx 50
-2026-07-10,BN.PA,Danone,Euro Stoxx 50
-2026-07-10,DBK.DE,Deutsche Bank,Euro Stoxx 50
-2026-07-10,DB1.DE,Deutsche Börse,Euro Stoxx 50
-2026-07-10,DHL.DE,Deutsche Post,Euro Stoxx 50
-2026-07-10,DTE.DE,Deutsche Telekom,Euro Stoxx 50
-2026-07-10,ENEL.MI,Enel,Euro Stoxx 50
-2026-07-10,ENI.MI,Eni,Euro Stoxx 50
-2026-07-10,EL.PA,EssilorLuxottica,Euro Stoxx 50
-2026-07-10,RACE.MI,Ferrari,Euro Stoxx 50
-2026-07-10,RMS.PA,Hermès,Euro Stoxx 50
-2026-07-10,IBE.MC,Iberdrola,Euro Stoxx 50
-2026-07-10,ITX.MC,Inditex,Euro Stoxx 50
-2026-07-10,IFX.DE,Infineon Technologies,Euro Stoxx 50
-2026-07-10,INGA.AS,ING Group,Euro Stoxx 50
-2026-07-10,ISP.MI,Intesa Sanpaolo,Euro Stoxx 50
-2026-07-10,OR.PA,L'Oréal,Euro Stoxx 50
-2026-07-10,MC.PA,LVMH Moët Hennessy Louis Vuitton,Euro Stoxx 50
-2026-07-10,MBG.DE,Mercedes-Benz Group,Euro Stoxx 50
-2026-07-10,MUV2.DE,Munich Re,Euro Stoxx 50
-2026-07-10,NDA-FI.HE,Nordea,Euro Stoxx 50
-2026-07-10,PRX.AS,Prosus,Euro Stoxx 50
-2026-07-10,RHM.DE,Rheinmetall,Euro Stoxx 50
-2026-07-10,SAF.PA,Safran,Euro Stoxx 50
-2026-07-10,SGO.PA,Saint-Gobain,Euro Stoxx 50
-2026-07-10,SAN.PA,Sanofi,Euro Stoxx 50
-2026-07-10,SAP.DE,SAP,Euro Stoxx 50
-2026-07-10,SU.PA,Schneider Electric,Euro Stoxx 50
-2026-07-10,SIE.DE,Siemens,Euro Stoxx 50
-2026-07-10,ENR.DE,Siemens Energy,Euro Stoxx 50
-2026-07-10,TTE.PA,TotalEnergies,Euro Stoxx 50
-2026-07-10,DG.PA,Vinci SA,Euro Stoxx 50
-2026-07-10,UCG.MI,UniCredit,Euro Stoxx 50
-2026-07-10,VOW.DE,Volkswagen Group,Euro Stoxx 50
-2026-07-10,WKL.AS,Wolters Kluwer,Euro Stoxx 50
+2026-07-13,MMM,3M,S&P 500
+2026-07-13,AOS,A. O. Smith,S&P 500
+2026-07-13,ABT,Abbott Laboratories,S&P 500
+2026-07-13,ABBV,AbbVie,S&P 500
+2026-07-13,ACN,Accenture,S&P 500
+2026-07-13,ADBE,Adobe Inc.,S&P 500
+2026-07-13,AMD,Advanced Micro Devices,S&P 500
+2026-07-13,AES,AES Corporation,S&P 500
+2026-07-13,AFL,Aflac,S&P 500
+2026-07-13,A,Agilent Technologies,S&P 500
+2026-07-13,APD,Air Products,S&P 500
+2026-07-13,ABNB,Airbnb,S&P 500
+2026-07-13,AKAM,Akamai Technologies,S&P 500
+2026-07-13,ALB,Albemarle Corporation,S&P 500
+2026-07-13,ARE,Alexandria Real Estate Equities,S&P 500
+2026-07-13,ALGN,Align Technology,S&P 500
+2026-07-13,ALLE,Allegion,S&P 500
+2026-07-13,LNT,Alliant Energy,S&P 500
+2026-07-13,ALL,Allstate,S&P 500
+2026-07-13,GOOGL,Alphabet Inc. (Class A),S&P 500
+2026-07-13,GOOG,Alphabet Inc. (Class C),S&P 500
+2026-07-13,MO,Altria,S&P 500
+2026-07-13,AMZN,Amazon,S&P 500
+2026-07-13,AMCR,Amcor,S&P 500
+2026-07-13,AEE,Ameren,S&P 500
+2026-07-13,AEP,American Electric Power,S&P 500
+2026-07-13,AXP,American Express,S&P 500
+2026-07-13,AIG,American International Group,S&P 500
+2026-07-13,AMT,American Tower,S&P 500
+2026-07-13,AWK,American Water Works,S&P 500
+2026-07-13,AMP,Ameriprise Financial,S&P 500
+2026-07-13,AME,Ametek,S&P 500
+2026-07-13,AMGN,Amgen,S&P 500
+2026-07-13,APH,Amphenol,S&P 500
+2026-07-13,ADI,Analog Devices,S&P 500
+2026-07-13,AON,Aon plc,S&P 500
+2026-07-13,APA,APA Corporation,S&P 500
+2026-07-13,APO,Apollo Global Management,S&P 500
+2026-07-13,AAPL,Apple Inc.,S&P 500
+2026-07-13,AMAT,Applied Materials,S&P 500
+2026-07-13,APP,AppLovin,S&P 500
+2026-07-13,APTV,Aptiv,S&P 500
+2026-07-13,ACGL,Arch Capital Group,S&P 500
+2026-07-13,ADM,Archer Daniels Midland,S&P 500
+2026-07-13,ARES,Ares Management,S&P 500
+2026-07-13,ANET,Arista Networks,S&P 500
+2026-07-13,AJG,Arthur J. Gallagher & Co.,S&P 500
+2026-07-13,AIZ,Assurant,S&P 500
+2026-07-13,T,AT&T,S&P 500
+2026-07-13,ATO,Atmos Energy,S&P 500
+2026-07-13,ADSK,Autodesk,S&P 500
+2026-07-13,ADP,Automatic Data Processing,S&P 500
+2026-07-13,AZO,AutoZone,S&P 500
+2026-07-13,AVB,AvalonBay Communities,S&P 500
+2026-07-13,AVY,Avery Dennison,S&P 500
+2026-07-13,AXON,Axon Enterprise,S&P 500
+2026-07-13,BKR,Baker Hughes,S&P 500
+2026-07-13,BALL,Ball Corporation,S&P 500
+2026-07-13,BAC,Bank of America,S&P 500
+2026-07-13,BAX,Baxter International,S&P 500
+2026-07-13,BDX,Becton Dickinson,S&P 500
+2026-07-13,BRK-B,Berkshire Hathaway,S&P 500
+2026-07-13,BBY,Best Buy,S&P 500
+2026-07-13,TECH,Bio-Techne,S&P 500
+2026-07-13,BIIB,Biogen,S&P 500
+2026-07-13,BLK,BlackRock,S&P 500
+2026-07-13,BX,Blackstone Inc.,S&P 500
+2026-07-13,XYZ,"Block, Inc.",S&P 500
+2026-07-13,BNY,BNY Mellon,S&P 500
+2026-07-13,BA,Boeing,S&P 500
+2026-07-13,BKNG,Booking Holdings,S&P 500
+2026-07-13,BSX,Boston Scientific,S&P 500
+2026-07-13,BMY,Bristol Myers Squibb,S&P 500
+2026-07-13,AVGO,Broadcom,S&P 500
+2026-07-13,BR,Broadridge Financial Solutions,S&P 500
+2026-07-13,BRO,Brown & Brown,S&P 500
+2026-07-13,BF-B,Brown–Forman,S&P 500
+2026-07-13,BLDR,Builders FirstSource,S&P 500
+2026-07-13,BG,Bunge Global,S&P 500
+2026-07-13,BXP,"BXP, Inc.",S&P 500
+2026-07-13,CHRW,C.H. Robinson,S&P 500
+2026-07-13,CDNS,Cadence Design Systems,S&P 500
+2026-07-13,CPT,Camden Property Trust,S&P 500
+2026-07-13,COF,Capital One,S&P 500
+2026-07-13,CAH,Cardinal Health,S&P 500
+2026-07-13,CCL,Carnival Corporation,S&P 500
+2026-07-13,CARR,Carrier Global,S&P 500
+2026-07-13,CVNA,Carvana,S&P 500
+2026-07-13,CASY,Casey's,S&P 500
+2026-07-13,CAT,Caterpillar Inc.,S&P 500
+2026-07-13,CBOE,Cboe Global Markets,S&P 500
+2026-07-13,CBRE,CBRE Group,S&P 500
+2026-07-13,CDW,CDW Corporation,S&P 500
+2026-07-13,COR,Cencora,S&P 500
+2026-07-13,CNC,Centene Corporation,S&P 500
+2026-07-13,CNP,CenterPoint Energy,S&P 500
+2026-07-13,CF,CF Industries,S&P 500
+2026-07-13,CRL,Charles River Laboratories,S&P 500
+2026-07-13,SCHW,Charles Schwab Corporation,S&P 500
+2026-07-13,CHTR,Charter Communications,S&P 500
+2026-07-13,CVX,Chevron Corporation,S&P 500
+2026-07-13,CMG,Chipotle Mexican Grill,S&P 500
+2026-07-13,CB,Chubb Limited,S&P 500
+2026-07-13,CHD,Church & Dwight,S&P 500
+2026-07-13,CIEN,Ciena,S&P 500
+2026-07-13,CI,Cigna,S&P 500
+2026-07-13,CINF,Cincinnati Financial,S&P 500
+2026-07-13,CTAS,Cintas,S&P 500
+2026-07-13,CSCO,Cisco,S&P 500
+2026-07-13,C,Citigroup,S&P 500
+2026-07-13,CFG,Citizens Financial Group,S&P 500
+2026-07-13,CLX,Clorox,S&P 500
+2026-07-13,CME,CME Group,S&P 500
+2026-07-13,CMS,CMS Energy,S&P 500
+2026-07-13,KO,Coca-Cola Company (The),S&P 500
+2026-07-13,CTSH,Cognizant,S&P 500
+2026-07-13,COHR,Coherent Corp.,S&P 500
+2026-07-13,COIN,Coinbase,S&P 500
+2026-07-13,CL,Colgate-Palmolive,S&P 500
+2026-07-13,CMCSA,Comcast,S&P 500
+2026-07-13,FIX,Comfort Systems USA,S&P 500
+2026-07-13,COP,ConocoPhillips,S&P 500
+2026-07-13,ED,Consolidated Edison,S&P 500
+2026-07-13,STZ,Constellation Brands,S&P 500
+2026-07-13,CEG,Constellation Energy,S&P 500
+2026-07-13,COO,Cooper Companies (The),S&P 500
+2026-07-13,CPRT,Copart,S&P 500
+2026-07-13,GLW,Corning Inc.,S&P 500
+2026-07-13,CPAY,Corpay,S&P 500
+2026-07-13,CTVA,Corteva,S&P 500
+2026-07-13,CSGP,CoStar Group,S&P 500
+2026-07-13,COST,Costco,S&P 500
+2026-07-13,CRH,CRH plc,S&P 500
+2026-07-13,CRWD,CrowdStrike,S&P 500
+2026-07-13,CCI,Crown Castle,S&P 500
+2026-07-13,CSX,CSX Corporation,S&P 500
+2026-07-13,CMI,Cummins,S&P 500
+2026-07-13,CVS,CVS Health,S&P 500
+2026-07-13,DHR,Danaher Corporation,S&P 500
+2026-07-13,DRI,Darden Restaurants,S&P 500
+2026-07-13,DDOG,Datadog,S&P 500
+2026-07-13,DVA,DaVita,S&P 500
+2026-07-13,DECK,Deckers Brands,S&P 500
+2026-07-13,DE,Deere & Company,S&P 500
+2026-07-13,DELL,Dell Technologies,S&P 500
+2026-07-13,DAL,Delta Air Lines,S&P 500
+2026-07-13,DVN,Devon Energy,S&P 500
+2026-07-13,DXCM,Dexcom,S&P 500
+2026-07-13,FANG,Diamondback Energy,S&P 500
+2026-07-13,DLR,Digital Realty,S&P 500
+2026-07-13,DG,Dollar General,S&P 500
+2026-07-13,DLTR,Dollar Tree,S&P 500
+2026-07-13,D,Dominion Energy,S&P 500
+2026-07-13,DPZ,Domino's,S&P 500
+2026-07-13,DASH,DoorDash,S&P 500
+2026-07-13,DOV,Dover Corporation,S&P 500
+2026-07-13,DOW,Dow Inc.,S&P 500
+2026-07-13,DHI,D. R. Horton,S&P 500
+2026-07-13,DTE,DTE Energy,S&P 500
+2026-07-13,DUK,Duke Energy,S&P 500
+2026-07-13,DD,DuPont,S&P 500
+2026-07-13,ETN,Eaton Corporation,S&P 500
+2026-07-13,EBAY,eBay Inc.,S&P 500
+2026-07-13,ECHO,EchoStar,S&P 500
+2026-07-13,ECL,Ecolab,S&P 500
+2026-07-13,EIX,Edison International,S&P 500
+2026-07-13,EW,Edwards Lifesciences,S&P 500
+2026-07-13,EA,Electronic Arts,S&P 500
+2026-07-13,ELV,Elevance Health,S&P 500
+2026-07-13,EME,Emcor,S&P 500
+2026-07-13,EMR,Emerson Electric,S&P 500
+2026-07-13,ETR,Entergy,S&P 500
+2026-07-13,EOG,EOG Resources,S&P 500
+2026-07-13,EQT,EQT Corporation,S&P 500
+2026-07-13,EFX,Equifax,S&P 500
+2026-07-13,EQIX,Equinix,S&P 500
+2026-07-13,EQR,Equity Residential,S&P 500
+2026-07-13,ERIE,Erie Indemnity,S&P 500
+2026-07-13,ESS,Essex Property Trust,S&P 500
+2026-07-13,EL,Estée Lauder Companies (The),S&P 500
+2026-07-13,EG,Everest Group,S&P 500
+2026-07-13,EVRG,Evergy,S&P 500
+2026-07-13,ES,Eversource Energy,S&P 500
+2026-07-13,EXC,Exelon,S&P 500
+2026-07-13,EXE,Expand Energy,S&P 500
+2026-07-13,EXPE,Expedia Group,S&P 500
+2026-07-13,EXPD,Expeditors International,S&P 500
+2026-07-13,EXR,Extra Space Storage,S&P 500
+2026-07-13,XOM,ExxonMobil,S&P 500
+2026-07-13,FFIV,"F5, Inc.",S&P 500
+2026-07-13,FDS,FactSet,S&P 500
+2026-07-13,FICO,Fair Isaac,S&P 500
+2026-07-13,FAST,Fastenal,S&P 500
+2026-07-13,FRT,Federal Realty Investment Trust,S&P 500
+2026-07-13,FDX,FedEx,S&P 500
+2026-07-13,FDXF,FedEx Freight,S&P 500
+2026-07-13,FIS,Fidelity National Information Services,S&P 500
+2026-07-13,FITB,Fifth Third Bancorp,S&P 500
+2026-07-13,FSLR,First Solar,S&P 500
+2026-07-13,FE,FirstEnergy,S&P 500
+2026-07-13,FISV,Fiserv,S&P 500
+2026-07-13,FLEX,Flex Ltd.,S&P 500
+2026-07-13,F,Ford Motor Company,S&P 500
+2026-07-13,FTNT,Fortinet,S&P 500
+2026-07-13,FTV,Fortive,S&P 500
+2026-07-13,FOXA,Fox Corporation (Class A),S&P 500
+2026-07-13,FOX,Fox Corporation (Class B),S&P 500
+2026-07-13,BEN,Franklin Resources,S&P 500
+2026-07-13,FCX,Freeport-McMoRan,S&P 500
+2026-07-13,GRMN,Garmin,S&P 500
+2026-07-13,IT,Gartner,S&P 500
+2026-07-13,GE,GE Aerospace,S&P 500
+2026-07-13,GEHC,GE HealthCare,S&P 500
+2026-07-13,GEV,GE Vernova,S&P 500
+2026-07-13,GEN,Gen Digital,S&P 500
+2026-07-13,GNRC,Generac,S&P 500
+2026-07-13,GD,General Dynamics,S&P 500
+2026-07-13,GIS,General Mills,S&P 500
+2026-07-13,GM,General Motors,S&P 500
+2026-07-13,GPC,Genuine Parts Company,S&P 500
+2026-07-13,GILD,Gilead Sciences,S&P 500
+2026-07-13,GPN,Global Payments,S&P 500
+2026-07-13,GL,Globe Life,S&P 500
+2026-07-13,GDDY,GoDaddy,S&P 500
+2026-07-13,GS,Goldman Sachs,S&P 500
+2026-07-13,HAL,Halliburton,S&P 500
+2026-07-13,HIG,Hartford (The),S&P 500
+2026-07-13,HAS,Hasbro,S&P 500
+2026-07-13,HCA,HCA Healthcare,S&P 500
+2026-07-13,DOC,Healthpeak Properties,S&P 500
+2026-07-13,HSIC,Henry Schein,S&P 500
+2026-07-13,HSY,Hershey Company (The),S&P 500
+2026-07-13,HPE,Hewlett Packard Enterprise,S&P 500
+2026-07-13,HLT,Hilton Worldwide,S&P 500
+2026-07-13,HD,Home Depot (The),S&P 500
+2026-07-13,HONA,Honeywell Aerospace,S&P 500
+2026-07-13,HON,Honeywell Technologies,S&P 500
+2026-07-13,HRL,Hormel Foods,S&P 500
+2026-07-13,HST,Host Hotels & Resorts,S&P 500
+2026-07-13,HWM,Howmet Aerospace,S&P 500
+2026-07-13,HPQ,HP Inc.,S&P 500
+2026-07-13,HUBB,Hubbell Incorporated,S&P 500
+2026-07-13,HUM,Humana,S&P 500
+2026-07-13,HBAN,Huntington Bancshares,S&P 500
+2026-07-13,HII,Huntington Ingalls Industries,S&P 500
+2026-07-13,IBM,IBM,S&P 500
+2026-07-13,IEX,IDEX Corporation,S&P 500
+2026-07-13,IDXX,Idexx Laboratories,S&P 500
+2026-07-13,ITW,Illinois Tool Works,S&P 500
+2026-07-13,INCY,Incyte,S&P 500
+2026-07-13,IR,Ingersoll Rand,S&P 500
+2026-07-13,PODD,Insulet Corporation,S&P 500
+2026-07-13,INTC,Intel,S&P 500
+2026-07-13,IBKR,Interactive Brokers,S&P 500
+2026-07-13,ICE,Intercontinental Exchange,S&P 500
+2026-07-13,IFF,International Flavors & Fragrances,S&P 500
+2026-07-13,IP,International Paper,S&P 500
+2026-07-13,INTU,Intuit,S&P 500
+2026-07-13,ISRG,Intuitive Surgical,S&P 500
+2026-07-13,IVZ,Invesco,S&P 500
+2026-07-13,INVH,Invitation Homes,S&P 500
+2026-07-13,IQV,IQVIA,S&P 500
+2026-07-13,IRM,Iron Mountain,S&P 500
+2026-07-13,JBHT,J.B. Hunt,S&P 500
+2026-07-13,JBL,Jabil,S&P 500
+2026-07-13,JKHY,Jack Henry & Associates,S&P 500
+2026-07-13,J,Jacobs Solutions,S&P 500
+2026-07-13,JNJ,Johnson & Johnson,S&P 500
+2026-07-13,JCI,Johnson Controls,S&P 500
+2026-07-13,JPM,JPMorgan Chase,S&P 500
+2026-07-13,KVUE,Kenvue,S&P 500
+2026-07-13,KDP,Keurig Dr Pepper,S&P 500
+2026-07-13,KEY,KeyCorp,S&P 500
+2026-07-13,KEYS,Keysight Technologies,S&P 500
+2026-07-13,KMB,Kimberly-Clark,S&P 500
+2026-07-13,KIM,Kimco Realty,S&P 500
+2026-07-13,KMI,Kinder Morgan,S&P 500
+2026-07-13,KKR,KKR & Co.,S&P 500
+2026-07-13,KLAC,KLA Corporation,S&P 500
+2026-07-13,KHC,Kraft Heinz,S&P 500
+2026-07-13,KR,Kroger,S&P 500
+2026-07-13,LHX,L3Harris,S&P 500
+2026-07-13,LH,Labcorp,S&P 500
+2026-07-13,LRCX,Lam Research,S&P 500
+2026-07-13,LVS,Las Vegas Sands,S&P 500
+2026-07-13,LDOS,Leidos,S&P 500
+2026-07-13,LEN,Lennar,S&P 500
+2026-07-13,LII,Lennox International,S&P 500
+2026-07-13,LLY,Lilly (Eli),S&P 500
+2026-07-13,LIN,Linde plc,S&P 500
+2026-07-13,LYV,Live Nation Entertainment,S&P 500
+2026-07-13,LMT,Lockheed Martin,S&P 500
+2026-07-13,L,Loews Corporation,S&P 500
+2026-07-13,LOW,Lowe's,S&P 500
+2026-07-13,LULU,Lululemon Athletica,S&P 500
+2026-07-13,LITE,Lumentum,S&P 500
+2026-07-13,LYB,LyondellBasell,S&P 500
+2026-07-13,MTB,M&T Bank,S&P 500
+2026-07-13,MPC,Marathon Petroleum,S&P 500
+2026-07-13,MAR,Marriott International,S&P 500
+2026-07-13,MRSH,Marsh McLennan,S&P 500
+2026-07-13,MLM,Martin Marietta Materials,S&P 500
+2026-07-13,MRVL,Marvell Technology,S&P 500
+2026-07-13,MAS,Masco,S&P 500
+2026-07-13,MA,Mastercard,S&P 500
+2026-07-13,MKC,McCormick & Company,S&P 500
+2026-07-13,MCD,McDonald's,S&P 500
+2026-07-13,MCK,McKesson Corporation,S&P 500
+2026-07-13,MDT,Medtronic,S&P 500
+2026-07-13,MRK,Merck & Co.,S&P 500
+2026-07-13,META,Meta Platforms,S&P 500
+2026-07-13,MET,MetLife,S&P 500
+2026-07-13,MTD,Mettler Toledo,S&P 500
+2026-07-13,MGM,MGM Resorts,S&P 500
+2026-07-13,MCHP,Microchip Technology,S&P 500
+2026-07-13,MU,Micron Technology,S&P 500
+2026-07-13,MSFT,Microsoft,S&P 500
+2026-07-13,MAA,Mid-America Apartment Communities,S&P 500
+2026-07-13,MRNA,Moderna,S&P 500
+2026-07-13,TAP,Molson Coors Beverage Company,S&P 500
+2026-07-13,MDLZ,Mondelez International,S&P 500
+2026-07-13,MPWR,Monolithic Power Systems,S&P 500
+2026-07-13,MNST,Monster Beverage,S&P 500
+2026-07-13,MCO,Moody's Corporation,S&P 500
+2026-07-13,MS,Morgan Stanley,S&P 500
+2026-07-13,MOS,Mosaic Company (The),S&P 500
+2026-07-13,MSI,Motorola Solutions,S&P 500
+2026-07-13,MSCI,MSCI Inc.,S&P 500
+2026-07-13,NDAQ,"Nasdaq, Inc.",S&P 500
+2026-07-13,NTAP,NetApp,S&P 500
+2026-07-13,NFLX,Netflix,S&P 500
+2026-07-13,NEM,Newmont,S&P 500
+2026-07-13,NWSA,News Corp (Class A),S&P 500
+2026-07-13,NWS,News Corp (Class B),S&P 500
+2026-07-13,NEE,NextEra Energy,S&P 500
+2026-07-13,NKE,"Nike, Inc.",S&P 500
+2026-07-13,NI,NiSource,S&P 500
+2026-07-13,NDSN,Nordson Corporation,S&P 500
+2026-07-13,NSC,Norfolk Southern,S&P 500
+2026-07-13,NTRS,Northern Trust,S&P 500
+2026-07-13,NOC,Northrop Grumman,S&P 500
+2026-07-13,NCLH,Norwegian Cruise Line Holdings,S&P 500
+2026-07-13,NRG,NRG Energy,S&P 500
+2026-07-13,NUE,Nucor,S&P 500
+2026-07-13,NVDA,Nvidia,S&P 500
+2026-07-13,NVR,"NVR, Inc.",S&P 500
+2026-07-13,NXPI,NXP Semiconductors,S&P 500
+2026-07-13,ORLY,O’Reilly Automotive,S&P 500
+2026-07-13,OXY,Occidental Petroleum,S&P 500
+2026-07-13,ODFL,Old Dominion,S&P 500
+2026-07-13,OMC,Omnicom Group,S&P 500
+2026-07-13,ON,ON Semiconductor,S&P 500
+2026-07-13,OKE,Oneok,S&P 500
+2026-07-13,ORCL,Oracle Corporation,S&P 500
+2026-07-13,OTIS,Otis Worldwide,S&P 500
+2026-07-13,PCAR,Paccar,S&P 500
+2026-07-13,PKG,Packaging Corporation of America,S&P 500
+2026-07-13,PLTR,Palantir Technologies,S&P 500
+2026-07-13,PANW,Palo Alto Networks,S&P 500
+2026-07-13,PSKY,Paramount Skydance Corporation,S&P 500
+2026-07-13,PH,Parker Hannifin,S&P 500
+2026-07-13,PAYX,Paychex,S&P 500
+2026-07-13,PYPL,PayPal,S&P 500
+2026-07-13,PNR,Pentair,S&P 500
+2026-07-13,PEP,PepsiCo,S&P 500
+2026-07-13,PFE,Pfizer,S&P 500
+2026-07-13,PCG,PG&E Corporation,S&P 500
+2026-07-13,PM,Philip Morris International,S&P 500
+2026-07-13,PSX,Phillips 66,S&P 500
+2026-07-13,PNW,Pinnacle West Capital,S&P 500
+2026-07-13,PNC,PNC Financial Services,S&P 500
+2026-07-13,PPG,PPG Industries,S&P 500
+2026-07-13,PPL,PPL Corporation,S&P 500
+2026-07-13,PFG,Principal Financial Group,S&P 500
+2026-07-13,PG,Procter & Gamble,S&P 500
+2026-07-13,PGR,Progressive Corporation,S&P 500
+2026-07-13,PLD,Prologis,S&P 500
+2026-07-13,PRU,Prudential Financial,S&P 500
+2026-07-13,PEG,Public Service Enterprise Group,S&P 500
+2026-07-13,PTC,PTC Inc.,S&P 500
+2026-07-13,PSA,Public Storage,S&P 500
+2026-07-13,PHM,PulteGroup,S&P 500
+2026-07-13,PWR,Quanta Services,S&P 500
+2026-07-13,QCOM,Qualcomm,S&P 500
+2026-07-13,DGX,Quest Diagnostics,S&P 500
+2026-07-13,Q,Qnity Electronics,S&P 500
+2026-07-13,RL,Ralph Lauren Corporation,S&P 500
+2026-07-13,RJF,Raymond James Financial,S&P 500
+2026-07-13,RTX,RTX Corporation,S&P 500
+2026-07-13,O,Realty Income,S&P 500
+2026-07-13,REG,Regency Centers,S&P 500
+2026-07-13,REGN,Regeneron Pharmaceuticals,S&P 500
+2026-07-13,RF,Regions Financial Corporation,S&P 500
+2026-07-13,RSG,Republic Services,S&P 500
+2026-07-13,RMD,ResMed,S&P 500
+2026-07-13,RVTY,Revvity,S&P 500
+2026-07-13,HOOD,Robinhood Markets,S&P 500
+2026-07-13,ROK,Rockwell Automation,S&P 500
+2026-07-13,ROL,"Rollins, Inc.",S&P 500
+2026-07-13,ROP,Roper Technologies,S&P 500
+2026-07-13,ROST,Ross Stores,S&P 500
+2026-07-13,RCL,Royal Caribbean Group,S&P 500
+2026-07-13,SPGI,S&P Global,S&P 500
+2026-07-13,CRM,Salesforce,S&P 500
+2026-07-13,SNDK,Sandisk,S&P 500
+2026-07-13,SBAC,SBA Communications,S&P 500
+2026-07-13,SLB,Schlumberger,S&P 500
+2026-07-13,STX,Seagate Technology,S&P 500
+2026-07-13,SRE,Sempra,S&P 500
+2026-07-13,NOW,ServiceNow,S&P 500
+2026-07-13,SHW,Sherwin-Williams,S&P 500
+2026-07-13,SPG,Simon Property Group,S&P 500
+2026-07-13,SWKS,Skyworks Solutions,S&P 500
+2026-07-13,SJM,J.M. Smucker Company (The),S&P 500
+2026-07-13,SW,Smurfit Westrock,S&P 500
+2026-07-13,SNA,Snap-on,S&P 500
+2026-07-13,SOLV,Solventum,S&P 500
+2026-07-13,SO,Southern Company,S&P 500
+2026-07-13,LUV,Southwest Airlines,S&P 500
+2026-07-13,SWK,Stanley Black & Decker,S&P 500
+2026-07-13,SBUX,Starbucks,S&P 500
+2026-07-13,STT,State Street Corporation,S&P 500
+2026-07-13,STLD,Steel Dynamics,S&P 500
+2026-07-13,STE,Steris,S&P 500
+2026-07-13,SYK,Stryker Corporation,S&P 500
+2026-07-13,SMCI,Supermicro,S&P 500
+2026-07-13,SYF,Synchrony Financial,S&P 500
+2026-07-13,SNPS,Synopsys,S&P 500
+2026-07-13,SYY,Sysco,S&P 500
+2026-07-13,TMUS,T-Mobile US,S&P 500
+2026-07-13,TROW,T. Rowe Price,S&P 500
+2026-07-13,TTWO,Take-Two Interactive,S&P 500
+2026-07-13,TPR,"Tapestry, Inc.",S&P 500
+2026-07-13,TRGP,Targa Resources,S&P 500
+2026-07-13,TGT,Target Corporation,S&P 500
+2026-07-13,TEL,TE Connectivity,S&P 500
+2026-07-13,TDY,Teledyne Technologies,S&P 500
+2026-07-13,TER,Teradyne,S&P 500
+2026-07-13,TSLA,"Tesla, Inc.",S&P 500
+2026-07-13,TXN,Texas Instruments,S&P 500
+2026-07-13,TPL,Texas Pacific Land Corporation,S&P 500
+2026-07-13,TXT,Textron,S&P 500
+2026-07-13,TMO,Thermo Fisher Scientific,S&P 500
+2026-07-13,TJX,TJX Companies,S&P 500
+2026-07-13,TKO,TKO Group Holdings,S&P 500
+2026-07-13,TTD,Trade Desk (The),S&P 500
+2026-07-13,TSCO,Tractor Supply,S&P 500
+2026-07-13,TT,Trane Technologies,S&P 500
+2026-07-13,TDG,TransDigm Group,S&P 500
+2026-07-13,TRV,Travelers Companies (The),S&P 500
+2026-07-13,TRMB,Trimble Inc.,S&P 500
+2026-07-13,TFC,Truist Financial,S&P 500
+2026-07-13,TYL,Tyler Technologies,S&P 500
+2026-07-13,TSN,Tyson Foods,S&P 500
+2026-07-13,USB,U.S. Bancorp,S&P 500
+2026-07-13,UBER,Uber,S&P 500
+2026-07-13,UDR,"UDR, Inc.",S&P 500
+2026-07-13,ULTA,Ulta Beauty,S&P 500
+2026-07-13,UNP,Union Pacific Corporation,S&P 500
+2026-07-13,UAL,United Airlines Holdings,S&P 500
+2026-07-13,UPS,United Parcel Service,S&P 500
+2026-07-13,URI,United Rentals,S&P 500
+2026-07-13,UNH,UnitedHealth Group,S&P 500
+2026-07-13,UHS,Universal Health Services,S&P 500
+2026-07-13,VLO,Valero Energy,S&P 500
+2026-07-13,VEEV,Veeva Systems,S&P 500
+2026-07-13,VTR,Ventas,S&P 500
+2026-07-13,VLTO,Veralto,S&P 500
+2026-07-13,VRSN,Verisign,S&P 500
+2026-07-13,VRSK,Verisk Analytics,S&P 500
+2026-07-13,VZ,Verizon,S&P 500
+2026-07-13,VRTX,Vertex Pharmaceuticals,S&P 500
+2026-07-13,VRT,Vertiv,S&P 500
+2026-07-13,VTRS,Viatris,S&P 500
+2026-07-13,VICI,Vici Properties,S&P 500
+2026-07-13,V,Visa Inc.,S&P 500
+2026-07-13,VST,Vistra Corp.,S&P 500
+2026-07-13,VMC,Vulcan Materials Company,S&P 500
+2026-07-13,WRB,W. R. Berkley Corporation,S&P 500
+2026-07-13,GWW,W. W. Grainger,S&P 500
+2026-07-13,WAB,Wabtec,S&P 500
+2026-07-13,WMT,Walmart,S&P 500
+2026-07-13,DIS,Walt Disney Company (The),S&P 500
+2026-07-13,WBD,Warner Bros. Discovery,S&P 500
+2026-07-13,WM,Waste Management,S&P 500
+2026-07-13,WAT,Waters Corporation,S&P 500
+2026-07-13,WEC,WEC Energy Group,S&P 500
+2026-07-13,WFC,Wells Fargo,S&P 500
+2026-07-13,WELL,Welltower,S&P 500
+2026-07-13,WST,West Pharmaceutical Services,S&P 500
+2026-07-13,WDC,Western Digital,S&P 500
+2026-07-13,WY,Weyerhaeuser,S&P 500
+2026-07-13,WSM,"Williams-Sonoma, Inc.",S&P 500
+2026-07-13,WMB,Williams Companies,S&P 500
+2026-07-13,WTW,Willis Towers Watson,S&P 500
+2026-07-13,WDAY,"Workday, Inc.",S&P 500
+2026-07-13,WYNN,Wynn Resorts,S&P 500
+2026-07-13,XEL,Xcel Energy,S&P 500
+2026-07-13,XYL,Xylem Inc.,S&P 500
+2026-07-13,YUM,Yum! Brands,S&P 500
+2026-07-13,ZBRA,Zebra Technologies,S&P 500
+2026-07-13,ZBH,Zimmer Biomet,S&P 500
+2026-07-13,ZTS,Zoetis,S&P 500
+2026-07-13,MMM,NYSE,Dow Jones
+2026-07-13,GOOGL,NASDAQ,Dow Jones
+2026-07-13,AXP,NYSE,Dow Jones
+2026-07-13,AMGN,NASDAQ,Dow Jones
+2026-07-13,AMZN,NASDAQ,Dow Jones
+2026-07-13,AAPL,NASDAQ,Dow Jones
+2026-07-13,BA,NYSE,Dow Jones
+2026-07-13,CAT,NYSE,Dow Jones
+2026-07-13,CVX,NYSE,Dow Jones
+2026-07-13,CSCO,NASDAQ,Dow Jones
+2026-07-13,KO,NYSE,Dow Jones
+2026-07-13,DIS,NYSE,Dow Jones
+2026-07-13,GS,NYSE,Dow Jones
+2026-07-13,HD,NYSE,Dow Jones
+2026-07-13,HON,NASDAQ,Dow Jones
+2026-07-13,IBM,NYSE,Dow Jones
+2026-07-13,JNJ,NYSE,Dow Jones
+2026-07-13,JPM,NYSE,Dow Jones
+2026-07-13,MCD,NYSE,Dow Jones
+2026-07-13,MRK,NYSE,Dow Jones
+2026-07-13,MSFT,NASDAQ,Dow Jones
+2026-07-13,NKE,NYSE,Dow Jones
+2026-07-13,NVDA,NASDAQ,Dow Jones
+2026-07-13,PG,NYSE,Dow Jones
+2026-07-13,CRM,NYSE,Dow Jones
+2026-07-13,SHW,NYSE,Dow Jones
+2026-07-13,TRV,NYSE,Dow Jones
+2026-07-13,UNH,NYSE,Dow Jones
+2026-07-13,V,NYSE,Dow Jones
+2026-07-13,WMT,NASDAQ,Dow Jones
+2026-07-13,III.L,3i,FTSE 100
+2026-07-13,ABDN.L,Aberdeen Group,FTSE 100
+2026-07-13,ADM.L,Admiral Group,FTSE 100
+2026-07-13,AAF.L,Airtel Africa,FTSE 100
+2026-07-13,ALW.L,Alliance Witan,FTSE 100
+2026-07-13,AAL.L,Anglo American plc,FTSE 100
+2026-07-13,ANTO.L,Antofagasta plc,FTSE 100
+2026-07-13,ABF.L,Associated British Foods,FTSE 100
+2026-07-13,AZN.L,AstraZeneca,FTSE 100
+2026-07-13,AUTO.L,Autotrader Group,FTSE 100
+2026-07-13,AV.L,Aviva,FTSE 100
+2026-07-13,BAB.L,Babcock International,FTSE 100
+2026-07-13,BA.L,BAE Systems,FTSE 100
+2026-07-13,BARC.L,Barclays,FTSE 100
+2026-07-13,BTRW.L,Barratt Redrow,FTSE 100
+2026-07-13,BEZ.L,Beazley,FTSE 100
+2026-07-13,BP.L,BP,FTSE 100
+2026-07-13,BATS.L,British American Tobacco,FTSE 100
+2026-07-13,BLND.L,British Land,FTSE 100
+2026-07-13,BT.A.L,BT Group,FTSE 100
+2026-07-13,BNZL.L,Bunzl,FTSE 100
+2026-07-13,BRBY.L,Burberry Group,FTSE 100
+2026-07-13,CNA.L,Centrica,FTSE 100
+2026-07-13,CCEP.L,Coca-Cola Europacific Partners,FTSE 100
+2026-07-13,CCH.L,Coca-Cola HBC,FTSE 100
+2026-07-13,CPG.L,Compass Group,FTSE 100
+2026-07-13,CCC.L,Computacenter,FTSE 100
+2026-07-13,CTEC.L,Convatec,FTSE 100
+2026-07-13,CRDA.L,Croda International,FTSE 100
+2026-07-13,DCC.L,DCC plc,FTSE 100
+2026-07-13,DGE.L,Diageo,FTSE 100
+2026-07-13,DPLM.L,Diploma,FTSE 100
+2026-07-13,EDV.L,Endeavour Mining,FTSE 100
+2026-07-13,ENT.L,Entain,FTSE 100
+2026-07-13,EXPN.L,Experian,FTSE 100
+2026-07-13,FCIT.L,F & C Investment Trust,FTSE 100
+2026-07-13,FRES.L,Fresnillo plc,FTSE 100
+2026-07-13,GAW.L,Games Workshop,FTSE 100
+2026-07-13,GLEN.L,Glencore,FTSE 100
+2026-07-13,GSK.L,GSK plc,FTSE 100
+2026-07-13,HLN.L,Haleon,FTSE 100
+2026-07-13,HLMA.L,Halma plc,FTSE 100
+2026-07-13,HSX.L,Hiscox,FTSE 100
+2026-07-13,HWDN.L,Howdens Joinery,FTSE 100
+2026-07-13,HSBA.L,HSBC,FTSE 100
+2026-07-13,ICG.L,ICG,FTSE 100
+2026-07-13,IGG.L,IG Group,FTSE 100
+2026-07-13,IHG.L,IHG Hotels & Resorts,FTSE 100
+2026-07-13,IMI.L,IMI,FTSE 100
+2026-07-13,IMB.L,Imperial Brands,FTSE 100
+2026-07-13,INF.L,Informa,FTSE 100
+2026-07-13,IAG.L,International Airlines Group,FTSE 100
+2026-07-13,ITRK.L,Intertek,FTSE 100
+2026-07-13,INVP.L,Investec,FTSE 100
+2026-07-13,JD.L,JD Sports,FTSE 100
+2026-07-13,BGEO.L,Lion Finance Group,FTSE 100
+2026-07-13,KGF.L,Kingfisher plc,FTSE 100
+2026-07-13,LAND.L,Land Securities,FTSE 100
+2026-07-13,LGEN.L,Legal & General,FTSE 100
+2026-07-13,LLOY.L,Lloyds Banking Group,FTSE 100
+2026-07-13,LMP.L,LondonMetric Property,FTSE 100
+2026-07-13,LSEG.L,London Stock Exchange Group,FTSE 100
+2026-07-13,MNG.L,M&G,FTSE 100
+2026-07-13,MKS.L,Marks & Spencer,FTSE 100
+2026-07-13,MRO.L,Melrose Industries,FTSE 100
+2026-07-13,MTLN.L,Metlen Energy & Metals,FTSE 100
+2026-07-13,NG.L,National Grid plc,FTSE 100
+2026-07-13,NWG.L,NatWest Group,FTSE 100
+2026-07-13,NXT.L,Next plc,FTSE 100
+2026-07-13,PSON.L,Pearson plc,FTSE 100
+2026-07-13,PSH.L,Pershing Square Holdings,FTSE 100
+2026-07-13,PSN.L,Persimmon,FTSE 100
+2026-07-13,PCT.L,Polar Capital Technology Trust,FTSE 100
+2026-07-13,PRU.L,Prudential plc,FTSE 100
+2026-07-13,RKT.L,Reckitt,FTSE 100
+2026-07-13,REL.L,RELX,FTSE 100
+2026-07-13,RTO.L,Rentokil Initial,FTSE 100
+2026-07-13,RIO.L,Rio Tinto,FTSE 100
+2026-07-13,RR.L,Rolls-Royce Holdings,FTSE 100
+2026-07-13,SGE.L,Sage Group,FTSE 100
+2026-07-13,SBRY.L,Sainsbury's,FTSE 100
+2026-07-13,SDR.L,Schroders,FTSE 100
+2026-07-13,SMT.L,Scottish Mortgage Investment Trust,FTSE 100
+2026-07-13,SGRO.L,Segro,FTSE 100
+2026-07-13,SVT.L,Severn Trent,FTSE 100
+2026-07-13,SHEL.L,Shell plc,FTSE 100
+2026-07-13,SMIN.L,Smiths Group,FTSE 100
+2026-07-13,SN.L,Smith & Nephew,FTSE 100
+2026-07-13,SPX.L,Spirax Group,FTSE 100
+2026-07-13,SSE.L,SSE plc,FTSE 100
+2026-07-13,STAN.L,Standard Chartered,FTSE 100
+2026-07-13,SDLF.L,Standard Life,FTSE 100
+2026-07-13,STJ.L,St. James's Place,FTSE 100
+2026-07-13,TSCO.L,Tesco,FTSE 100
+2026-07-13,BBOX.L,Tritax Big Box REIT,FTSE 100
+2026-07-13,ULVR.L,Unilever,FTSE 100
+2026-07-13,UU.L,United Utilities,FTSE 100
+2026-07-13,VOD.L,Vodafone Group,FTSE 100
+2026-07-13,WEIR.L,Weir Group,FTSE 100
+2026-07-13,WTB.L,Whitbread,FTSE 100
+2026-07-13,ADS.DE,Adidas,DAX 40
+2026-07-13,AIR.PA,Airbus,DAX 40
+2026-07-13,ALV.DE,Allianz,DAX 40
+2026-07-13,BAS.DE,BASF,DAX 40
+2026-07-13,BAYN.DE,Bayer,DAX 40
+2026-07-13,BEI.DE,Beiersdorf,DAX 40
+2026-07-13,BMW.DE,BMW,DAX 40
+2026-07-13,BNR.DE,Brenntag,DAX 40
+2026-07-13,CBK.DE,Commerzbank,DAX 40
+2026-07-13,CON.DE,Continental,DAX 40
+2026-07-13,DTG.DE,Daimler Truck,DAX 40
+2026-07-13,DBK.DE,Deutsche Bank,DAX 40
+2026-07-13,DB1.DE,Deutsche Börse,DAX 40
+2026-07-13,DHL.DE,Deutsche Post,DAX 40
+2026-07-13,DTE.DE,Deutsche Telekom,DAX 40
+2026-07-13,EOAN.DE,E.ON,DAX 40
+2026-07-13,FRE.DE,Fresenius,DAX 40
+2026-07-13,FME.DE,Fresenius Medical Care,DAX 40
+2026-07-13,G1A.DE,GEA Group,DAX 40
+2026-07-13,HNR1.DE,Hannover Re,DAX 40
+2026-07-13,HEI.DE,Heidelberg Materials,DAX 40
+2026-07-13,HEN3.DE,Henkel,DAX 40
+2026-07-13,IFX.DE,Infineon Technologies,DAX 40
+2026-07-13,MBG.DE,Mercedes-Benz Group,DAX 40
+2026-07-13,MRK.DE,Merck,DAX 40
+2026-07-13,MTX.DE,MTU Aero Engines,DAX 40
+2026-07-13,MUV2.DE,Munich Re,DAX 40
+2026-07-13,PAH3.DE,Porsche SE,DAX 40
+2026-07-13,QIA.DE,Qiagen,DAX 40
+2026-07-13,RHM.DE,Rheinmetall,DAX 40
+2026-07-13,RWE.DE,RWE,DAX 40
+2026-07-13,SAP.DE,SAP,DAX 40
+2026-07-13,G24.DE,Scout24,DAX 40
+2026-07-13,SIE.DE,Siemens,DAX 40
+2026-07-13,ENR.DE,Siemens Energy,DAX 40
+2026-07-13,SHL.DE,Siemens Healthineers,DAX 40
+2026-07-13,SY1.DE,Symrise,DAX 40
+2026-07-13,VOW3.DE,Volkswagen Group,DAX 40
+2026-07-13,VNA.DE,Vonovia,DAX 40
+2026-07-13,ZAL.DE,Zalando,DAX 40
+2026-07-13,AC.PA,Accor,CAC 40
+2026-07-13,AI.PA,Air Liquide,CAC 40
+2026-07-13,AIR.PA,Airbus,CAC 40
+2026-07-13,MT.AS,ArcelorMittal,CAC 40
+2026-07-13,CS.PA,Axa,CAC 40
+2026-07-13,BNP.PA,BNP Paribas,CAC 40
+2026-07-13,EN.PA,Bouygues,CAC 40
+2026-07-13,BVI.PA,Bureau Veritas,CAC 40
+2026-07-13,CAP.PA,Capgemini,CAC 40
+2026-07-13,CA.PA,Carrefour,CAC 40
+2026-07-13,ACA.PA,Crédit Agricole,CAC 40
+2026-07-13,BN.PA,Danone,CAC 40
+2026-07-13,DSY.PA,Dassault Systèmes,CAC 40
+2026-07-13,EDEN.PA,Edenred,CAC 40
+2026-07-13,ENGI.PA,Engie,CAC 40
+2026-07-13,EL.PA,EssilorLuxottica,CAC 40
+2026-07-13,ERF.PA,Eurofins Scientific,CAC 40
+2026-07-13,RMS.PA,Hermès,CAC 40
+2026-07-13,KER.PA,Kering,CAC 40
+2026-07-13,OR.PA,L'Oréal,CAC 40
+2026-07-13,LR.PA,Legrand,CAC 40
+2026-07-13,MC.PA,LVMH,CAC 40
+2026-07-13,ML.PA,Michelin,CAC 40
+2026-07-13,ORA.PA,Orange,CAC 40
+2026-07-13,RI.PA,Pernod Ricard,CAC 40
+2026-07-13,PUB.PA,Publicis,CAC 40
+2026-07-13,RNO.PA,Renault,CAC 40
+2026-07-13,SAF.PA,Safran,CAC 40
+2026-07-13,SGO.PA,Saint-Gobain,CAC 40
+2026-07-13,SAN.PA,Sanofi,CAC 40
+2026-07-13,SU.PA,Schneider Electric,CAC 40
+2026-07-13,GLE.PA,Société Générale,CAC 40
+2026-07-13,STLAP.PA,Stellantis,CAC 40
+2026-07-13,STMPA.PA,STMicroelectronics,CAC 40
+2026-07-13,TEP.PA,Teleperformance,CAC 40
+2026-07-13,HO.PA,Thales,CAC 40
+2026-07-13,TTE.PA,TotalEnergies,CAC 40
+2026-07-13,URW.PA,Unibail-Rodamco-Westfield,CAC 40
+2026-07-13,VIE.PA,Veolia,CAC 40
+2026-07-13,DG.PA,Vinci,CAC 40
+2026-07-13,ADS.DE,Adidas,Euro Stoxx 50
+2026-07-13,ADYEN.AS,Adyen,Euro Stoxx 50
+2026-07-13,AD.AS,Ahold Delhaize,Euro Stoxx 50
+2026-07-13,AI.PA,Air Liquide,Euro Stoxx 50
+2026-07-13,AIR.PA,Airbus,Euro Stoxx 50
+2026-07-13,ALV.DE,Allianz,Euro Stoxx 50
+2026-07-13,ABI.BR,Anheuser-Busch InBev,Euro Stoxx 50
+2026-07-13,ARGX.BR,Argenx,Euro Stoxx 50
+2026-07-13,ASML.AS,ASML Holding,Euro Stoxx 50
+2026-07-13,CS.PA,Axa,Euro Stoxx 50
+2026-07-13,BAS.DE,BASF,Euro Stoxx 50
+2026-07-13,BAYN.DE,Bayer,Euro Stoxx 50
+2026-07-13,BBVA.MC,BBVA,Euro Stoxx 50
+2026-07-13,SAN.MC,Banco Santander,Euro Stoxx 50
+2026-07-13,BMW.DE,BMW,Euro Stoxx 50
+2026-07-13,BNP.PA,BNP Paribas,Euro Stoxx 50
+2026-07-13,BN.PA,Danone,Euro Stoxx 50
+2026-07-13,DBK.DE,Deutsche Bank,Euro Stoxx 50
+2026-07-13,DB1.DE,Deutsche Börse,Euro Stoxx 50
+2026-07-13,DHL.DE,Deutsche Post,Euro Stoxx 50
+2026-07-13,DTE.DE,Deutsche Telekom,Euro Stoxx 50
+2026-07-13,ENEL.MI,Enel,Euro Stoxx 50
+2026-07-13,ENI.MI,Eni,Euro Stoxx 50
+2026-07-13,EL.PA,EssilorLuxottica,Euro Stoxx 50
+2026-07-13,RACE.MI,Ferrari,Euro Stoxx 50
+2026-07-13,RMS.PA,Hermès,Euro Stoxx 50
+2026-07-13,IBE.MC,Iberdrola,Euro Stoxx 50
+2026-07-13,ITX.MC,Inditex,Euro Stoxx 50
+2026-07-13,IFX.DE,Infineon Technologies,Euro Stoxx 50
+2026-07-13,INGA.AS,ING Group,Euro Stoxx 50
+2026-07-13,ISP.MI,Intesa Sanpaolo,Euro Stoxx 50
+2026-07-13,OR.PA,L'Oréal,Euro Stoxx 50
+2026-07-13,MC.PA,LVMH Moët Hennessy Louis Vuitton,Euro Stoxx 50
+2026-07-13,MBG.DE,Mercedes-Benz Group,Euro Stoxx 50
+2026-07-13,MUV2.DE,Munich Re,Euro Stoxx 50
+2026-07-13,NDA-FI.HE,Nordea,Euro Stoxx 50
+2026-07-13,PRX.AS,Prosus,Euro Stoxx 50
+2026-07-13,RHM.DE,Rheinmetall,Euro Stoxx 50
+2026-07-13,SAF.PA,Safran,Euro Stoxx 50
+2026-07-13,SGO.PA,Saint-Gobain,Euro Stoxx 50
+2026-07-13,SAN.PA,Sanofi,Euro Stoxx 50
+2026-07-13,SAP.DE,SAP,Euro Stoxx 50
+2026-07-13,SU.PA,Schneider Electric,Euro Stoxx 50
+2026-07-13,SIE.DE,Siemens,Euro Stoxx 50
+2026-07-13,ENR.DE,Siemens Energy,Euro Stoxx 50
+2026-07-13,TTE.PA,TotalEnergies,Euro Stoxx 50
+2026-07-13,DG.PA,Vinci SA,Euro Stoxx 50
+2026-07-13,UCG.MI,UniCredit,Euro Stoxx 50
+2026-07-13,VOW.DE,Volkswagen Group,Euro Stoxx 50
+2026-07-13,WKL.AS,Wolters Kluwer,Euro Stoxx 50

@@ -2,13 +2,13 @@ window.PULSEFLAT_MARKET_LATEST = [
   {
     "label": "CDI",
     "value": "14,15%",
-    "reference_date": "2026-07-09",
+    "reference_date": "2026-07-10",
     "type": "neutral"
   },
   {
     "label": "SELIC",
     "value": "14,15%",
-    "reference_date": "2026-07-09",
+    "reference_date": "2026-07-10",
     "type": "neutral"
   },
   {
@@ -25,29 +25,29 @@ window.PULSEFLAT_MARKET_LATEST = [
   },
   {
     "label": "PTAX USD Venda",
-    "value": "5,1329",
-    "reference_date": "2026-07-09",
+    "value": "5,1088",
+    "reference_date": "2026-07-10",
     "type": "down",
-    "change": "-0,43%"
+    "change": "-0,47%"
   },
   {
     "label": "PTAX USD Compra",
-    "value": "5,1323",
-    "reference_date": "2026-07-09",
+    "value": "5,1082",
+    "reference_date": "2026-07-10",
     "type": "down",
-    "change": "-0,43%"
+    "change": "-0,47%"
   },
   {
     "label": "IBOVESPA",
-    "value": "172.742",
-    "reference_date": "2026-07-09",
+    "value": "177.866",
+    "reference_date": "2026-07-10",
     "type": "up",
-    "change": "+1,22%"
+    "change": "+2,97%"
   },
   {
     "label": "IMA-GERAL",
-    "value": "10.194,07",
-    "reference_date": "2026-07-09",
+    "value": "10.211,87",
+    "reference_date": "2026-07-10",
     "type": "neutral"
   }
 ];
