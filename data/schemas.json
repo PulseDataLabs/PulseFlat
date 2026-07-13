@@ -4012,17 +4012,17 @@
       {
         "name": "name",
         "type": "str",
-        "example": "POTENZA SOLUCOES PREDIAIS E FACILITIES LTDA"
+        "example": "RINA BRASIL SERVICOS TECNICOS LTDA"
       },
       {
         "name": "type",
         "type": "str",
-        "example": "Small or Medium-sized Enterprise"
+        "example": "Company"
       },
       {
         "name": "sector",
         "type": "str",
-        "example": "Engineering and Contracting Services"
+        "example": "Professional Business Support Services"
       },
       {
         "name": "country",
@@ -4032,12 +4032,12 @@
       {
         "name": "joined_on",
         "type": "str",
-        "example": "2026-07-06"
+        "example": "2026-07-13"
       },
       {
         "name": "link",
         "type": "str",
-        "example": "https://unglobalcompact.org/what-is-gc/participants/214493-POTENZA-SOLUCOES-PREDIAIS-E-FACILITIES-LTDA"
+        "example": "https://unglobalcompact.org/what-is-gc/participants/215017-RINA-BRASIL-SERVICOS-TECNICOS-LTDA"
       }
     ]
   },

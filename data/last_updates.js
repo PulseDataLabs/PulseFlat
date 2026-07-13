@@ -9,7 +9,7 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "b3_carteira_teorica_ibxl.csv": {
     "min": "2026-06-03",
-    "max": "2026-07-10"
+    "max": "2026-07-13"
   },
   "b3_carteira_teorica_ibsd.csv": {
     "min": "2026-06-03",
