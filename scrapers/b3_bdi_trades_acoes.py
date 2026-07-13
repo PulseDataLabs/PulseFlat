@@ -134,6 +134,7 @@ class B3BdiTradesAcoesScraper(BaseScraper):
     enabled = True
     phase = 1
     accumulate = True
+    compress = True
     chaves_dedup = ['data_captura', 'codigo_ativo', 'data_referencia']
     
     # Catálogo de Metadados

@@ -2094,6 +2094,9 @@
       const accBadgeText = isAccumulate ? 'Acumulado' : 'Snapshot';
       const accBadgeClass = isAccumulate ? 'badge-cumulative' : 'badge-snapshot';
 
+      const isGzipped = dataset.file.endsWith('.gz');
+      const downloadText = isGzipped ? 'CSV.GZ' : 'CSV';
+
       html += `
         <div class="dataset-card ${cardClass}" data-source-mapped="${sourceMapped}">
           <div class="card-top">
@@ -2125,7 +2128,7 @@
               </button>
               <a href="${dataset.url}" class="download-btn" target="_blank">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 12px; height: 12px;"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
-                CSV
+                ${downloadText}
               </a>
             </div>
           </div>
@@ -2605,8 +2608,14 @@
           const resp = await fetch(`./data/${fileName}`);
           if (!resp.ok) throw new Error(`Status ${resp.status}`);
           
+          let bodyStream = resp.body;
+          if (fileName.endsWith('.gz') && bodyStream) {
+            const decompressionStream = new DecompressionStream('gzip');
+            bodyStream = bodyStream.pipeThrough(decompressionStream);
+          }
+          
           // Stream parsing of only the first chunk of the CSV file
-          const reader = resp.body.getReader();
+          const reader = bodyStream.getReader();
           const decoder = new TextDecoder('utf-8');
           let textBuffer = '';
           let readDone = false;

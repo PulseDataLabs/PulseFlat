@@ -5,6 +5,7 @@ Funções e classes utilitárias compartilhadas por todos os scrapers.
 """
 
 import csv
+import gzip
 import json
 import logging
 import sys
@@ -145,10 +146,16 @@ def read_existing_header(arquivo: Path) -> list[str]:
     if not arquivo.exists() or arquivo.stat().st_size == 0:
         return []
     try:
-        with arquivo.open("r", encoding="utf-8", newline="") as f:
-            reader = csv.reader(f)
-            header = next(reader, [])
-            return [col.strip() for col in header if col.strip()]
+        if arquivo.suffix == ".gz":
+            with gzip.open(arquivo, "rt", encoding="utf-8", newline="") as f:
+                reader = csv.reader(f)
+                header = next(reader, [])
+                return [col.strip() for col in header if col.strip()]
+        else:
+            with arquivo.open("r", encoding="utf-8", newline="") as f:
+                reader = csv.reader(f)
+                header = next(reader, [])
+                return [col.strip() for col in header if col.strip()]
     except Exception:
         return []
 

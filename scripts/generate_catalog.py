@@ -141,7 +141,11 @@ def generate(dry_run: bool = False) -> None:
         icon_class = icon_class or fallback.get("iconClass") or get_source_class(source)
         accumulate = accumulate if accumulate is not None else fallback.get("accumulate", True)
 
-        url = fallback.get("url") or f"https://raw.githubusercontent.com/royopa/PulseFlat/main/data/{filename}"
+        url = fallback.get("url")
+        if url and url.endswith(".csv") and filename.endswith(".csv.gz"):
+            url = url[:-4] + ".csv.gz"
+        elif not url:
+            url = f"https://raw.githubusercontent.com/royopa/PulseFlat/main/data/{filename}"
 
         dataset_entry = {
             "title": title,

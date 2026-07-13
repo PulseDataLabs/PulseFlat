@@ -109,6 +109,7 @@ class BacenParcelasCapitalBasileiaScraper(BaseScraper):
     group = "bcb"
     enabled = True
     phase = 1
+    compress = True
     chaves_dedup = ["AnoMes", "TipoInstituicao", "CodInst", "Conta", "Grupo"]
 
     def fetch(self) -> pd.DataFrame:

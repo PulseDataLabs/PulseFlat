@@ -26,13 +26,15 @@ class BaseScraper:
     group: str = ""
     enabled: bool = True
     phase: int = 1
+    compress: bool = False
 
     def __init__(self):
         if not self.name:
             self.name = self.__class__.__name__.lower().replace("scraper", "")
         self.logger = ColorLogger(self.name)
         root_dir = Path(__file__).resolve().parents[2]
-        self.output_file = root_dir / "data" / f"{self.name}.csv"
+        ext = ".csv.gz" if getattr(self, "compress", False) else ".csv"
+        self.output_file = root_dir / "data" / f"{self.name}{ext}"
         self.target_date = None
         self.start_date = None
         self.end_date = None

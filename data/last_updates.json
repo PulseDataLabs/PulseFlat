@@ -51,7 +51,7 @@
     "min": "2026-06-01",
     "max": "2026-07-13"
   },
-  "b3_bdi_trades_acoes.csv": {
+  "b3_bdi_trades_acoes.csv.gz": {
     "min": "2026-06-03",
     "max": "2026-07-13"
   },
@@ -195,7 +195,7 @@
     "min": "2026-07-13",
     "max": "2026-07-13"
   },
-  "bacen_parcelas_capital_basileia.csv": {
+  "bacen_parcelas_capital_basileia.csv.gz": {
     "min": "2026-06-05",
     "max": "2026-07-13"
   },

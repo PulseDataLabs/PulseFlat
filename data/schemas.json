@@ -1878,7 +1878,7 @@
   },
   {
     "title": "B3 Bdi Trades Acoes",
-    "files": "b3_bdi_trades_acoes.csv",
+    "files": "b3_bdi_trades_acoes.csv.gz",
     "source": "b3",
     "fields": [
       {
@@ -4452,7 +4452,7 @@
   },
   {
     "title": "Bacen Parcelas Capital Basileia",
-    "files": "bacen_parcelas_capital_basileia.csv",
+    "files": "bacen_parcelas_capital_basileia.csv.gz",
     "source": "bcb",
     "fields": [
       {
