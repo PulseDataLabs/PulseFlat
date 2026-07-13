@@ -20,7 +20,7 @@ from scrapers.utils.base import BaseScraper
 log = get_logger("bacen_negociacao_tpf")
 
 URL_TPLT = "https://www4.bcb.gov.br/pom/demab/negociacoes/download/NegEYYYYMM.ZIP"
-OUTPUT_FILE = Path("data/bacen_negociacao_tpf_extragrupo.csv")
+OUTPUT_FILE = Path("data/bacen_negociacao_tpf_extragrupo.csv.gz")
 DATASET_ID = "bacen_negociacao_tpf_extragrupo"
 
 ARQUIVOS_CONFIG = [
@@ -69,7 +69,12 @@ class BacenNegociacaoTpfScraper(BaseScraper):
     enabled = True
     phase = 1
     accumulate = True
+    compress = True
     chaves_dedup = ['data_captura', 'conjunto', 'registro_hash']
+
+    def __init__(self):
+        super().__init__()
+        self.output_file = self.output_file.parent / "bacen_negociacao_tpf_extragrupo.csv.gz"
     
     # Catálogo de Metadados
     title = 'BCB — Negociação TPF Extra-grupo'

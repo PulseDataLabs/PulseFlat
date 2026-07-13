@@ -99,6 +99,7 @@ class GenericScraper(BaseScraper):
 
         self.name = base_name.replace(".csv", "")
         self.accumulate = self.res_config.get("acumular", True)
+        self.compress = self.res_config.get("compress", False)
 
         is_portfolio = self.resource_name.startswith("B3 - Carteira Teórica")
         if is_portfolio:

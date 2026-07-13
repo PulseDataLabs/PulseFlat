@@ -20,6 +20,7 @@ class B3TitulosNegociaveisScraper(BaseScraper):
     enabled = True
     phase = 1
     accumulate = False
+    compress = True
     chaves_dedup = ["data_captura", "codigo_ativo", "codigo_isin"]
 
     title = "B3 Títulos Negociáveis"

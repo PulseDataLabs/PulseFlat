@@ -876,7 +876,7 @@
   },
   {
     "title": "Anbima Indice Imab",
-    "files": "anbima_indice_imab.csv",
+    "files": "anbima_indice_imab.csv.gz",
     "source": "anbima",
     "fields": [
       {
@@ -2178,7 +2178,7 @@
   },
   {
     "title": "B3 Isin Ativos",
-    "files": "b3_isin_ativos.csv",
+    "files": "b3_isin_ativos.csv.gz",
     "source": "b3",
     "fields": [
       {
@@ -2502,7 +2502,7 @@
   },
   {
     "title": "Bacen Negociacao Tpf Extragrupo",
-    "files": "bacen_negociacao_tpf_extragrupo.csv",
+    "files": "bacen_negociacao_tpf_extragrupo.csv.gz",
     "source": "bcb",
     "fields": [
       {
@@ -2957,7 +2957,7 @@
   },
   {
     "title": "B3 Titulos Negociaveis",
-    "files": "b3_titulos_negociaveis.csv",
+    "files": "b3_titulos_negociaveis.csv.gz",
     "source": "b3",
     "fields": [
       {
@@ -3436,7 +3436,7 @@
   },
   {
     "title": "Registro Fundo Classe",
-    "files": "registro_fundo_classe.csv",
+    "files": "registro_fundo_classe.csv.gz",
     "source": "cvm",
     "fields": [
       {
@@ -4390,7 +4390,7 @@
   },
   {
     "title": "Cvm Fundos Informe Diario",
-    "files": "cvm_fundos_informe_diario.csv",
+    "files": "cvm_fundos_informe_diario.csv.gz",
     "source": "cvm",
     "fields": [
       {

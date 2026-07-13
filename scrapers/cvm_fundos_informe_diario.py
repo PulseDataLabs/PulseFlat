@@ -138,6 +138,7 @@ class CvmFundosInformeDiarioScraper(BaseScraper):
     enabled = True
     phase = 1
     accumulate = False
+    compress = True
     chaves_dedup = ['data_captura', 'cnpj_fundo_classe', 'data_referencia']
     
     # Catálogo de Metadados

@@ -195,7 +195,7 @@
   },
   {
     "title": "ANBIMA — Índice IMA-B",
-    "file": "anbima_indice_imab.csv",
+    "file": "anbima_indice_imab.csv.gz",
     "description": "Histórico completo do IMA-B (Índice de Mercado ANBIMA), incluindo subíndices como IMA-B5, IMA-B5+, IMA-C e IMA-S.",
     "icon": "📈",
     "iconClass": "icon-anbima",
@@ -207,7 +207,7 @@
       "rentabilidade"
     ],
     "source": "ANBIMA · S3",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/anbima_indice_imab.csv",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/anbima_indice_imab.csv.gz",
     "accumulate": true
   },
   {
@@ -367,7 +367,7 @@
   },
   {
     "title": "B3 ISIN Ativos",
-    "file": "b3_isin_ativos.csv",
+    "file": "b3_isin_ativos.csv.gz",
     "description": "Banco de dados completo de ativos com código ISIN cadastrados na B3.",
     "icon": "🏷️",
     "iconClass": "icon-b3",
@@ -379,7 +379,7 @@
       "cadastro"
     ],
     "source": "B3",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_isin_ativos.csv",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_isin_ativos.csv.gz",
     "accumulate": false
   },
   {
@@ -438,7 +438,7 @@
   },
   {
     "title": "B3 Títulos Negociáveis",
-    "file": "b3_titulos_negociaveis.csv",
+    "file": "b3_titulos_negociaveis.csv.gz",
     "description": "Cadastro de todos os títulos e instrumentos negociáveis no mercado da B3, incluindo BDRs, ações e outros ativos.",
     "icon": "📋",
     "iconClass": "icon-b3",
@@ -452,7 +452,7 @@
       "b3"
     ],
     "source": "B3",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_titulos_negociaveis.csv",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_titulos_negociaveis.csv.gz",
     "accumulate": false
   },
   {
@@ -875,7 +875,7 @@
   },
   {
     "title": "BCB — Negociação TPF Extra-grupo",
-    "file": "bacen_negociacao_tpf.csv",
+    "file": "bacen_negociacao_tpf_extragrupo.csv.gz",
     "description": "Operações de compra e venda de Títulos Públicos Federais extra-grupo realizadas no mercado aberto (BCB/DEMAB).",
     "icon": "📋",
     "iconClass": "icon-bcb",
@@ -888,7 +888,7 @@
       "preço"
     ],
     "source": "BCB · DEMAB",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/bacen_negociacao_tpf.csv",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/bacen_negociacao_tpf.csv.gz",
     "accumulate": true
   },
   {
@@ -912,7 +912,7 @@
   },
   {
     "title": "Cvm Fundos Classe",
-    "file": "registro_fundo_classe.csv",
+    "file": "registro_fundo_classe.csv.gz",
     "description": "Sem descrição fornecida.",
     "icon": "📊",
     "iconClass": "icon-cvm",
@@ -922,12 +922,12 @@
       "cvm"
     ],
     "source": "CVM",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/registro_fundo_classe.csv",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/registro_fundo_classe.csv.gz",
     "accumulate": false
   },
   {
     "title": "CVM — Informe Diário de Fundos",
-    "file": "cvm_fundos_informe_diario.csv",
+    "file": "cvm_fundos_informe_diario.csv.gz",
     "description": "Desempenho diário de fundos de investimento: valor da cota, PL, captações, resgates e cotistas.",
     "icon": "📋",
     "iconClass": "icon-cvm",
@@ -941,7 +941,7 @@
       "resgate"
     ],
     "source": "CVM",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/cvm_fundos_informe_diario.csv",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/cvm_fundos_informe_diario.csv.gz",
     "accumulate": false
   },
   {

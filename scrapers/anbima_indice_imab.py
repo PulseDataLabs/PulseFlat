@@ -19,7 +19,7 @@ from scrapers.utils.base import BaseScraper
 log = get_logger("anbima_indice_imab")
 
 URL = "https://s3-data-prd-use1-precos.s3.us-east-1.amazonaws.com/arquivos/indices-historico/IMAGERAL-HISTORICO.xls"
-ARQUIVO = Path("data/anbima_indice_imab.csv")
+ARQUIVO = Path("data/anbima_indice_imab.csv.gz")
 
 
 def capturar() -> tuple[list[dict], list[str]]:
@@ -42,6 +42,7 @@ class AnbimaIndiceImabScraper(BaseScraper):
     enabled = True
     phase = 1
     accumulate = True
+    compress = True
     chaves_dedup = ['data_captura', 'conjunto', 'registro_hash']
     
     # Catálogo de Metadados

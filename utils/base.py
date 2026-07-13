@@ -250,7 +250,12 @@ def salvar_csv(
                 substituidas = len(df_antigo) - mask_keep.sum()
                 df_antigo_filtrado = df_antigo[mask_keep]
 
-            df_final = pd.concat([df_antigo_filtrado, df_novos[cabecalho]], ignore_index=True)
+            if df_antigo_filtrado.empty:
+                df_final = df_novos[cabecalho]
+            elif df_novos.empty:
+                df_final = df_antigo_filtrado[cabecalho]
+            else:
+                df_final = pd.concat([df_antigo_filtrado, df_novos[cabecalho]], ignore_index=True)
         except Exception as e:
             log.warning(f"Erro ao ler arquivo existente para acumular, reescrevendo: {e}")
             df_final = df_novos[cabecalho]

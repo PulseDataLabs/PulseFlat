@@ -104,6 +104,7 @@ resources:
     file_name: 'registro_fundo_classe.zip'
     type_response: zip
     acumular: false
+    compress: true
   ##############################################################################
   # Bases B3
   ##############################################################################
