@@ -1690,17 +1690,17 @@
       {
         "name": "tipo_fundo",
         "type": "str",
-        "example": "FII"
+        "example": "FIAGRO"
       },
       {
         "name": "codigo_fundo",
         "type": "str",
-        "example": "ADSH11"
+        "example": "AAGR11"
       },
       {
         "name": "nome_fundo",
         "type": "str",
-        "example": "AD SHOPPING FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA"
+        "example": "ASSET BANK AGRONEGÓCIOS FIAGRO - DIREITOS CREDITÓRIOS - RESPONSABILIDADE LIMITADA"
       },
       {
         "name": "cnpj",
@@ -1825,7 +1825,7 @@
       {
         "name": "id_b3",
         "type": "str",
-        "example": "23336"
+        "example": "10972"
       }
     ]
   },
@@ -3205,7 +3205,7 @@
       {
         "name": "data_ult_vna",
         "type": "date",
-        "example": "2026-07-13"
+        "example": "2026-07-14"
       },
       {
         "name": "indice",
