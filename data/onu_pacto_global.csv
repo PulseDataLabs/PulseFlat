@@ -120,7 +120,7 @@ data_captura,name,type,sector,country,joined_on,link
 2026-07-14,Itaminas Comércio de Minérios S/A,Company,General Mining,Brazil,2025-12-08,https://unglobalcompact.org/what-is-gc/participants/151124-Itaminas-Com-rcio-de-Min-rios-S-A
 2026-07-14,PLANO & PLANO DESENVOLVIMENTO IMOBILIARIO S/A,Company,Home Construction,Brazil,2025-12-08,https://unglobalcompact.org/what-is-gc/participants/202817-PLANO-PLANO-DESENVOLVIMENTO-IMOBILIARIO-S-A
 2026-07-14,TRANSPORTADORA BRASILEIRA GASODUTO BOLIVIA-BRASIL S/A,Company,Oil Equipment and Services,Brazil,2025-12-04,https://unglobalcompact.org/what-is-gc/participants/202579-TRANSPORTADORA-BRASILEIRA-GASODUTO-BOLIVIA-BRASIL-S-A
-2026-07-14,HVG EMPREENDIMENTOS LTDA,Small or Medium-sized Enterprise,,Brazil,2025-12-03,https://unglobalcompact.org/what-is-gc/participants/202381-HVG-EMPREENDIMENTOS-LTDA
+2026-07-14,HVG EMPREENDIMENTOS LTDA,Small or Medium-sized Enterprise,Construction,Brazil,2025-12-03,https://unglobalcompact.org/what-is-gc/participants/202381-HVG-EMPREENDIMENTOS-LTDA
 2026-07-14,PERPETUO CONSULTORIA ESPECIALIZADA LTDA,Company,Consumer Lending,Brazil,2025-12-02,https://unglobalcompact.org/what-is-gc/participants/202360-PERPETUO-CONSULTORIA-ESPECIALIZADA-LTDA
 2026-07-14,SOCIÉTÉ VIE ET SANTÉ,Small or Medium-sized Enterprise,,Brazil,2025-12-01,https://unglobalcompact.org/what-is-gc/participants/201904-SOCI-T-VIE-ET-SANT-
 2026-07-14,FIBER CITRUS INDUSTRIA E COMERCIO S.A.,Small or Medium-sized Enterprise,Food Products,Brazil,2025-12-01,https://unglobalcompact.org/what-is-gc/participants/202235-FIBER-CITRUS-INDUSTRIA-E-COMERCIO-S-A-
@@ -278,7 +278,6 @@ data_captura,name,type,sector,country,joined_on,link
 2026-07-14,Hero MGA Serviços S.A.,Small or Medium-sized Enterprise,Life Insurance,Brazil,2025-05-29,https://unglobalcompact.org/what-is-gc/participants/188026-Hero-MGA-Servi-os-S-A-
 2026-07-14,XS5 Administradora de Consórcio SA,Small or Medium-sized Enterprise,,Brazil,2025-05-29,https://unglobalcompact.org/what-is-gc/participants/188033-XS5-Administradora-de-Cons-rcio-SA
 2026-07-14,BT Logística Integrada Ltda.,Small or Medium-sized Enterprise,Transportation Services,Brazil,2025-05-29,https://unglobalcompact.org/what-is-gc/participants/188035-BT-Log-stica-Integrada-Ltda-
-2026-07-14,Produzindo Certo S/A,Small or Medium-sized Enterprise,Food Products,Brazil,2025-05-29,https://unglobalcompact.org/what-is-gc/participants/188154-Produzindo-Certo-S-A
 2026-07-14,Canal Companhia de Securitização,Small or Medium-sized Enterprise,Consumer Lending,Brazil,2025-05-29,https://unglobalcompact.org/what-is-gc/participants/188194-Canal-Companhia-de-Securitiza-o
 2026-07-14,VTC Operadora Logística Ltda.,Company,Industrial Suppliers,Brazil,2025-05-27,https://unglobalcompact.org/what-is-gc/participants/149521-VTC-Operadora-Log-stica-Ltda-
 2026-07-14,"SAVIN, PAIVA ADVOGADOS",Small or Medium-sized Enterprise,,Brazil,2025-05-23,https://unglobalcompact.org/what-is-gc/participants/185713-SAVIN-PAIVA-ADVOGADOS
@@ -636,9 +635,8 @@ data_captura,name,type,sector,country,joined_on,link
 2026-07-14,GOETZE LOBATO ENGENHARIA S.A.,Company,,Brazil,2024-05-20,https://unglobalcompact.org/what-is-gc/participants/164327-GOETZE-LOBATO-ENGENHARIA-S-A-
 2026-07-14,Resinas Bom Sucesso Industria e Comércio Ltda,Small or Medium-sized Enterprise,Specialty Chemicals,Brazil,2024-05-16,https://unglobalcompact.org/what-is-gc/participants/164319-Resinas-Bom-Sucesso-Industria-e-Com-rcio-Ltda
 2026-07-14,GO TRATCH HUB AMBIENTAL AÇU S/A,Small or Medium-sized Enterprise,Water,Brazil,2024-05-15,https://unglobalcompact.org/what-is-gc/participants/164131-GO-TRATCH-HUB-AMBIENTAL-A-U-S-A
-2026-07-14,Martha Indústria e Comércio de Embalagens Plásticas Ltda,Small or Medium-sized Enterprise,Containers and Packaging,Brazil,2024-05-15,https://unglobalcompact.org/what-is-gc/participants/164373-Martha-Ind-stria-e-Com-rcio-de-Embalagens-Pl-sticas-Ltda
+2026-07-14,Martha Indústria e Comércio de Embalagens Plásticas Ltda,Small or Medium-sized Enterprise,Plastics,Brazil,2024-05-15,https://unglobalcompact.org/what-is-gc/participants/164373-Martha-Ind-stria-e-Com-rcio-de-Embalagens-Pl-sticas-Ltda
 2026-07-14,FEDERAÇÃO PAULISTA DE FUTEBOL,Civil Society Organization & Other,,Brazil,2024-05-14,https://unglobalcompact.org/what-is-gc/participants/163494-FEDERA-O-PAULISTA-DE-FUTEBOL
-2026-07-14,Elbert Editora Gráfica Ltda,Small or Medium-sized Enterprise,Forms and Bulk Printing Services,Brazil,2024-05-14,https://unglobalcompact.org/what-is-gc/participants/164214-Elbert-Editora-Gr-fica-Ltda
 2026-07-14,Grupo Ibrame,Company,Diversified Industrials,Brazil,2024-05-14,https://unglobalcompact.org/what-is-gc/participants/164237-Grupo-Ibrame
 2026-07-14,Bomix Indústria de Embalagens LTDA,Company,Containers and Packaging,Brazil,2024-05-14,https://unglobalcompact.org/what-is-gc/participants/164253-Bomix-Ind-stria-de-Embalagens-LTDA
 2026-07-14,EcommIT Consultoria e Tecnologia,Small or Medium-sized Enterprise,Computer Services,Brazil,2024-05-14,https://unglobalcompact.org/what-is-gc/participants/164277-EcommIT-Consultoria-e-Tecnologia
@@ -650,7 +648,6 @@ data_captura,name,type,sector,country,joined_on,link
 2026-07-14,Petruz Fruity,Company,Soft Drinks,Brazil,2024-05-07,https://unglobalcompact.org/what-is-gc/participants/164133-Petruz-Fruity
 2026-07-14,Toder Verpackung Embalagens,Small or Medium-sized Enterprise,Containers and Packaging,Brazil,2024-05-07,https://unglobalcompact.org/what-is-gc/participants/164155-Toder-Verpackung-Embalagens
 2026-07-14,TASTEMAKERS,Small or Medium-sized Enterprise,Media Agencies,Brazil,2024-05-07,https://unglobalcompact.org/what-is-gc/participants/164163-TASTEMAKERS
-2026-07-14,Empresa Construtora Brasil SA,Company,Construction,Brazil,2024-04-30,https://unglobalcompact.org/what-is-gc/participants/163672-Empresa-Construtora-Brasil-SA
 2026-07-14,IN PRESS OFICINA ASSESSORIA DE COMUNICAÇÃO LTDA.,Small or Medium-sized Enterprise,Media Agencies,Brazil,2024-04-30,https://unglobalcompact.org/what-is-gc/participants/163711-IN-PRESS-OFICINA-ASSESSORIA-DE-COMUNICA-O-LTDA-
 2026-07-14,Wheaton Brasil Vidros Ltda,Company,Glass,Brazil,2024-04-29,https://unglobalcompact.org/what-is-gc/participants/163981-Wheaton-Brasil-Vidros-Ltda
 2026-07-14,FORTUNE INVESTMENT S/A,Small or Medium-sized Enterprise,Consumer Lending,Brazil,2024-04-26,https://unglobalcompact.org/what-is-gc/participants/156345-FORTUNE-INVESTMENT-S-A
@@ -1386,7 +1383,6 @@ data_captura,name,type,sector,country,joined_on,link
 2026-07-14,Optimal Energy,Small or Medium-sized Enterprise,Software,Brazil,2021-07-27,https://unglobalcompact.org/what-is-gc/participants/147126-Optimal-Energy
 2026-07-14,Equatorial Energia,Company,Conventional Electricity,Brazil,2021-07-26,https://unglobalcompact.org/what-is-gc/participants/146178-Equatorial-Energia
 2026-07-14,FRAS-LE S.A.,Company,Auto Parts,Brazil,2021-07-26,https://unglobalcompact.org/what-is-gc/participants/146197-FRAS-LE-S-A-
-2026-07-14,Nova Piramidal,Small or Medium-sized Enterprise,Plastics,Brazil,2021-07-26,https://unglobalcompact.org/what-is-gc/participants/146586-Nova-Piramidal
 2026-07-14,Instituto Selo Social,Civil Society Organization & Other,,Brazil,2021-07-21,https://unglobalcompact.org/what-is-gc/participants/141445-Instituto-Selo-Social
 2026-07-14,TPA SAUDE,Small or Medium-sized Enterprise,Health Care Management Services,Brazil,2021-07-21,https://unglobalcompact.org/what-is-gc/participants/146275-TPA-SAUDE
 2026-07-14,Tecsys do Brasil Industrial LTDA,Small or Medium-sized Enterprise,Computer Services,Brazil,2021-07-21,https://unglobalcompact.org/what-is-gc/participants/146297-Tecsys-do-Brasil-Industrial-LTDA
@@ -1930,7 +1926,6 @@ data_captura,name,type,sector,country,joined_on,link
 2026-07-14,Telefonica Brasil,Company,Telecommunications Services,Brazil,2010-06-01,https://unglobalcompact.org/what-is-gc/participants/11774-Telefonica-Brasil
 2026-07-14,Associacao Educacional Cultural e Assistencial MIESPERANZA,Civil Society Organization & Other,,Brazil,2010-05-13,https://unglobalcompact.org/what-is-gc/participants/11643-Associacao-Educacional-Cultural-e-Assistencial-MIESPERANZA
 2026-07-14,Fundacao Fritz Muller,Civil Society Organization & Other,,Brazil,2010-03-24,https://unglobalcompact.org/what-is-gc/participants/11399-Fundacao-Fritz-Muller
-2026-07-14,ACOVISA INDUSTRIA E COMERCIO DE ACOS ESPECIAIS LTDA,Company,Iron and Steel,Brazil,2010-03-05,https://unglobalcompact.org/what-is-gc/participants/11263-ACOVISA-INDUSTRIA-E-COMERCIO-DE-ACOS-ESPECIAIS-LTDA
 2026-07-14,Associacao Goiana de Administracao - AGAD,Labour Organization,,Brazil,2009-11-19,https://unglobalcompact.org/what-is-gc/participants/918-Associacao-Goiana-de-Administracao-AGAD
 2026-07-14,Wilson Sons,Company,Marine Transportation,Brazil,2009-11-16,https://unglobalcompact.org/what-is-gc/participants/10120-Wilson-Sons
 2026-07-14,Fiagril Ltda.,Company,Industrial Suppliers,Brazil,2009-09-23,https://unglobalcompact.org/what-is-gc/participants/3723-Fiagril-Ltda-
