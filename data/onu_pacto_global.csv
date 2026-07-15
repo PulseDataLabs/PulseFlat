@@ -263,7 +263,7 @@ data_captura,name,type,sector,country,joined_on,link
 2026-07-15,Go Editoração Ltda,Small or Medium-sized Enterprise,Media Agencies,Brazil,2025-06-17,https://unglobalcompact.org/what-is-gc/participants/190057-Go-Editora-o-Ltda
 2026-07-15,Hyti Informática Ltda,Company,Computer Services,Brazil,2025-06-17,https://unglobalcompact.org/what-is-gc/participants/190130-Hyti-Inform-tica-Ltda
 2026-07-15,GERSON & GREY MOBILITY LTDA,Small or Medium-sized Enterprise,Storage Facilities,Brazil,2025-06-12,https://unglobalcompact.org/what-is-gc/participants/189165-GERSON-GREY-MOBILITY-LTDA
-2026-07-15,Minerbo Fuchs Engenharia S A,Small or Medium-sized Enterprise,Machinery: Industrial,Brazil,2025-06-12,https://unglobalcompact.org/what-is-gc/participants/189268-Minerbo-Fuchs-Engenharia-S-A
+2026-07-15,Minerbo Fuchs Engenharia S A,Small or Medium-sized Enterprise,Machinery: Construction and Handling,Brazil,2025-06-12,https://unglobalcompact.org/what-is-gc/participants/189268-Minerbo-Fuchs-Engenharia-S-A
 2026-07-15,KEEGGO TECHNOLOGY BRASIL S/A,Company,Computer Services,Brazil,2025-06-12,https://unglobalcompact.org/what-is-gc/participants/189437-KEEGGO-TECHNOLOGY-BRASIL-S-A
 2026-07-15,INCOPOSTES INDUSTRIA E COMERCIO DE POSTES LTDA,Company,Construction,Brazil,2025-06-09,https://unglobalcompact.org/what-is-gc/participants/185552-INCOPOSTES-INDUSTRIA-E-COMERCIO-DE-POSTES-LTDA
 2026-07-15,OMNI S/A CREDITO FINANCIAMENTO E INVESTIMENTO,Company,Consumer Lending,Brazil,2025-06-09,https://unglobalcompact.org/what-is-gc/participants/188607-OMNI-S-A-CREDITO-FINANCIAMENTO-E-INVESTIMENTO
@@ -286,7 +286,7 @@ data_captura,name,type,sector,country,joined_on,link
 2026-07-15,BUSINESS INTEGRATION PARTNERSHIP PARTICIPACOES DO BRASIL LTDA.,Small or Medium-sized Enterprise,Computer Services,Brazil,2025-05-23,https://unglobalcompact.org/what-is-gc/participants/186031-BUSINESS-INTEGRATION-PARTNERSHIP-PARTICIPACOES-DO-BRASIL-LTDA-
 2026-07-15,BUSINESS INTEGRATION PARTNERS DO BRASIL CONSULTORIA LTDA,Small or Medium-sized Enterprise,Professional Business Support Services,Brazil,2025-05-23,https://unglobalcompact.org/what-is-gc/participants/186033-BUSINESS-INTEGRATION-PARTNERS-DO-BRASIL-CONSULTORIA-LTDA
 2026-07-15,Redmaxx Inovação,Small or Medium-sized Enterprise,Computer Services,Brazil,2025-05-23,https://unglobalcompact.org/what-is-gc/participants/186047-Redmaxx-Inova-o
-2026-07-15,GC CALDEIRARIA E SERVIÇOS LTDA,Small or Medium-sized Enterprise,Diversified Industrials,Brazil,2025-05-23,https://unglobalcompact.org/what-is-gc/participants/186048-GC-CALDEIRARIA-E-SERVI-OS-LTDA
+2026-07-15,GC CALDEIRARIA E SERVIÇOS LTDA,Small or Medium-sized Enterprise,Machinery: Industrial,Brazil,2025-05-23,https://unglobalcompact.org/what-is-gc/participants/186048-GC-CALDEIRARIA-E-SERVI-OS-LTDA
 2026-07-15,MPA AUTOMAÇÃO E INTEGRAÇÃO,Small or Medium-sized Enterprise,Diversified Industrials,Brazil,2025-05-23,https://unglobalcompact.org/what-is-gc/participants/187629-MPA-AUTOMA-O-E-INTEGRA-O
 2026-07-15,"Dinaco Importacao, Comercio Ltda",Small or Medium-sized Enterprise,Specialty Chemicals,Brazil,2025-05-23,https://unglobalcompact.org/what-is-gc/participants/187634-Dinaco-Importacao-Comercio-Ltda
 2026-07-15,Serviço Social do Comércio do Distrito Federal - SESC/DF,Company,Consumer Services: Misc.,Brazil,2025-05-19,https://unglobalcompact.org/what-is-gc/participants/164299-Servi-o-Social-do-Com-rcio-do-Distrito-Federal-SESC-DF
@@ -435,7 +435,7 @@ data_captura,name,type,sector,country,joined_on,link
 2026-07-15,Katrium Industrias Quimicas S/A,Company,Specialty Chemicals,Brazil,2024-11-27,https://unglobalcompact.org/what-is-gc/participants/168682-Katrium-Industrias-Quimicas-S-A
 2026-07-15,Ipê Soluções Sustentáveis,Small or Medium-sized Enterprise,Professional Business Support Services,Brazil,2024-11-26,https://unglobalcompact.org/what-is-gc/participants/168569-Ip-Solu-es-Sustent-veis
 2026-07-15,FRIMESA COOPERATIVA CENTRAL,Company,Food Products,Brazil,2024-11-26,https://unglobalcompact.org/what-is-gc/participants/168643-FRIMESA-COOPERATIVA-CENTRAL
-2026-07-15,INSTITUTO BOURBON DE RESPONSABILIDADE SOCIOAMBIENTAL,Small or Medium-sized Enterprise,Consumer Services: Misc.,Brazil,2024-11-20,https://unglobalcompact.org/what-is-gc/participants/168561-INSTITUTO-BOURBON-DE-RESPONSABILIDADE-SOCIOAMBIENTAL
+2026-07-15,INSTITUTO BOURBON DE RESPONSABILIDADE SOCIOAMBIENTAL,Small or Medium-sized Enterprise,Education Services,Brazil,2024-11-20,https://unglobalcompact.org/what-is-gc/participants/168561-INSTITUTO-BOURBON-DE-RESPONSABILIDADE-SOCIOAMBIENTAL
 2026-07-15,Associação Brasileira dos Terminais Portuários - ABTP,Small or Medium-sized Enterprise,Marine Transportation,Brazil,2024-11-14,https://unglobalcompact.org/what-is-gc/participants/167799-Associa-o-Brasileira-dos-Terminais-Portu-rios-ABTP
 2026-07-15,ACADEMIA PME EDUCACAO E CONSULTORIA EM NEGOCIOS LTDA,Small or Medium-sized Enterprise,Education Services,Brazil,2024-11-14,https://unglobalcompact.org/what-is-gc/participants/168455-ACADEMIA-PME-EDUCACAO-E-CONSULTORIA-EM-NEGOCIOS-LTDA
 2026-07-15,MARINELLO SOCIEDADE DE ADVOGADOS,Small or Medium-sized Enterprise,Professional Business Support Services,Brazil,2024-11-14,https://unglobalcompact.org/what-is-gc/participants/168457-MARINELLO-SOCIEDADE-DE-ADVOGADOS
@@ -630,7 +630,6 @@ data_captura,name,type,sector,country,joined_on,link
 2026-07-15,Educare Produções ME,Small or Medium-sized Enterprise,Education Services,Brazil,2024-05-29,https://unglobalcompact.org/what-is-gc/participants/164616-Educare-Produ-es-ME
 2026-07-15,PHD-Tecnologia da Informação e Comunicação LTDA,Small or Medium-sized Enterprise,Computer Services,Brazil,2024-05-28,https://unglobalcompact.org/what-is-gc/participants/162342-PHD-Tecnologia-da-Informa-o-e-Comunica-o-LTDA
 2026-07-15,Casa dos Ventos S.A.,Company,Alternative Electricity,Brazil,2024-05-28,https://unglobalcompact.org/what-is-gc/participants/163753-Casa-dos-Ventos-S-A-
-2026-07-15,ImpulsoBeta,Small or Medium-sized Enterprise,Professional Business Support Services,Brazil,2024-05-28,https://unglobalcompact.org/what-is-gc/participants/164341-ImpulsoBeta
 2026-07-15,Unida Distribuidora de Títulos e Valores Mobiliários Ltda.,Small or Medium-sized Enterprise,Diversified Financial Services,Brazil,2024-05-23,https://unglobalcompact.org/what-is-gc/participants/157791-Unida-Distribuidora-de-T-tulos-e-Valores-Mobili-rios-Ltda-
 2026-07-15,GOETZE LOBATO ENGENHARIA S.A.,Company,,Brazil,2024-05-20,https://unglobalcompact.org/what-is-gc/participants/164327-GOETZE-LOBATO-ENGENHARIA-S-A-
 2026-07-15,Resinas Bom Sucesso Industria e Comércio Ltda,Small or Medium-sized Enterprise,Specialty Chemicals,Brazil,2024-05-16,https://unglobalcompact.org/what-is-gc/participants/164319-Resinas-Bom-Sucesso-Industria-e-Com-rcio-Ltda

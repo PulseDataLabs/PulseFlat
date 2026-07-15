@@ -8,7 +8,7 @@
   {
     "label": "SELIC",
     "value": "14,15%",
-    "reference_date": "2026-07-14",
+    "reference_date": "2026-07-15",
     "type": "neutral"
   },
   {
@@ -25,24 +25,24 @@
   },
   {
     "label": "PTAX USD Venda",
-    "value": "5,0742",
-    "reference_date": "2026-07-14",
+    "value": "5,0727",
+    "reference_date": "2026-07-15",
     "type": "down",
-    "change": "-0,86%"
+    "change": "-0,03%"
   },
   {
     "label": "PTAX USD Compra",
-    "value": "5,0736",
-    "reference_date": "2026-07-14",
+    "value": "5,0721",
+    "reference_date": "2026-07-15",
     "type": "down",
-    "change": "-0,86%"
+    "change": "-0,03%"
   },
   {
     "label": "IBOVESPA",
-    "value": "175.739",
+    "value": "176.641",
     "reference_date": "2026-07-14",
-    "type": "neutral",
-    "change": "+0,00%"
+    "type": "up",
+    "change": "+0,51%"
   },
   {
     "label": "IMA-GERAL",

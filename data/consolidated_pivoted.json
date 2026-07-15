@@ -325,7 +325,7 @@
     "fonte": "IPEA",
     "dataset_label": "IPEA Taxas de Juros",
     "categoria": "Taxas de Juros",
-    "Valor": "0,47%"
+    "Valor": "0,53%"
   },
   {
     "data_referencia": "2026-07-01",
@@ -400,44 +400,20 @@
     "Valor": "14,62"
   },
   {
-    "data_referencia": "2026-07-06",
+    "data_referencia": "2026-07-13",
     "indicador": "Petróleo Brent",
     "fonte": "IPEA",
     "dataset_label": "IPEA Mercados Diários",
     "categoria": "Mercados Globais",
-    "Valor": "69,56"
+    "Valor": "81,62"
   },
   {
-    "data_referencia": "2026-07-06",
+    "data_referencia": "2026-07-13",
     "indicador": "Petróleo WTI",
     "fonte": "IPEA",
     "dataset_label": "IPEA Mercados Diários",
     "categoria": "Mercados Globais",
-    "Valor": "69,60"
-  },
-  {
-    "data_referencia": "2026-07-13",
-    "indicador": "FDS (registro 2)",
-    "fonte": "ANBIMA",
-    "dataset_label": "ANBIMA Indicadores",
-    "categoria": "FDS",
-    "Valor": "0,0898"
-  },
-  {
-    "data_referencia": "2026-07-13",
-    "indicador": "Índice Dow Jones",
-    "fonte": "IPEA",
-    "dataset_label": "IPEA Mercados Diários",
-    "categoria": "Mercados Globais",
-    "Valor": "52.499"
-  },
-  {
-    "data_referencia": "2026-07-13",
-    "indicador": "Índice NASDAQ",
-    "fonte": "IPEA",
-    "dataset_label": "IPEA Mercados Diários",
-    "categoria": "Mercados Globais",
-    "Valor": "25.873"
+    "Valor": "79,20"
   },
   {
     "data_referencia": "2026-07-14",
@@ -490,7 +466,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Internacionais",
     "categoria": "Ações Internacionais",
-    "Valor": "317,31"
+    "Valor": "314,86"
   },
   {
     "data_referencia": "2026-07-14",
@@ -514,7 +490,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Internacionais",
     "categoria": "Ações Internacionais",
-    "Valor": "230,61"
+    "Valor": "220,78"
   },
   {
     "data_referencia": "2026-07-14",
@@ -538,7 +514,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Internacionais",
     "categoria": "Ações Internacionais",
-    "Valor": "534,39"
+    "Valor": "548,13"
   },
   {
     "data_referencia": "2026-07-14",
@@ -546,7 +522,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Internacionais",
     "categoria": "Ações Internacionais",
-    "Valor": "247,31"
+    "Valor": "247,49"
   },
   {
     "data_referencia": "2026-07-14",
@@ -562,7 +538,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Internacionais",
     "categoria": "Ações Internacionais",
-    "Valor": "1.726"
+    "Valor": "1.776"
   },
   {
     "data_referencia": "2026-07-14",
@@ -586,7 +562,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Internacionais",
     "categoria": "Ações Internacionais",
-    "Valor": "59,50"
+    "Valor": "60,62"
   },
   {
     "data_referencia": "2026-07-14",
@@ -626,7 +602,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo ETFs",
     "categoria": "ETFs & Setoriais",
-    "Valor": "72,50"
+    "Valor": "72,70"
   },
   {
     "data_referencia": "2026-07-14",
@@ -730,7 +706,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Internacionais",
     "categoria": "Ações Internacionais",
-    "Valor": "926,43"
+    "Valor": "921,75"
   },
   {
     "data_referencia": "2026-07-14",
@@ -754,7 +730,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Internacionais",
     "categoria": "Ações Internacionais",
-    "Valor": "171,22"
+    "Valor": "167,56"
   },
   {
     "data_referencia": "2026-07-14",
@@ -794,7 +770,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Internacionais",
     "categoria": "Ações Internacionais",
-    "Valor": "182,20"
+    "Valor": "181,76"
   },
   {
     "data_referencia": "2026-07-14",
@@ -803,14 +779,6 @@
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "Valor": "22,96"
-  },
-  {
-    "data_referencia": "2026-07-14",
-    "indicador": "DI-B3",
-    "fonte": "ANBIMA",
-    "dataset_label": "ANBIMA Indicadores",
-    "categoria": "Taxa de Juros",
-    "Valor": "14,15"
   },
   {
     "data_referencia": "2026-07-14",
@@ -826,7 +794,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo ETFs",
     "categoria": "ETFs & Setoriais",
-    "Valor": "524,47"
+    "Valor": "524,69"
   },
   {
     "data_referencia": "2026-07-14",
@@ -834,23 +802,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Internacionais",
     "categoria": "Ações Internacionais",
-    "Valor": "96,00"
-  },
-  {
-    "data_referencia": "2026-07-14",
-    "indicador": "Dólar Comercial Compra",
-    "fonte": "ANBIMA",
-    "dataset_label": "ANBIMA Indicadores",
-    "categoria": "Câmbio",
-    "Valor": "5,07"
-  },
-  {
-    "data_referencia": "2026-07-14",
-    "indicador": "Dólar Comercial Venda",
-    "fonte": "ANBIMA",
-    "dataset_label": "ANBIMA Indicadores",
-    "categoria": "Câmbio",
-    "Valor": "5,07"
+    "Valor": "95,87"
   },
   {
     "data_referencia": "2026-07-14",
@@ -858,7 +810,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo ETFs",
     "categoria": "ETFs & Setoriais",
-    "Valor": "64,50"
+    "Valor": "65,67"
   },
   {
     "data_referencia": "2026-07-14",
@@ -898,7 +850,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo ETFs",
     "categoria": "ETFs & Setoriais",
-    "Valor": "35,39"
+    "Valor": "36,03"
   },
   {
     "data_referencia": "2026-07-14",
@@ -910,23 +862,7 @@
   },
   {
     "data_referencia": "2026-07-14",
-    "indicador": "Euro Compra",
-    "fonte": "ANBIMA",
-    "dataset_label": "ANBIMA Indicadores",
-    "categoria": "Câmbio",
-    "Valor": "5,80"
-  },
-  {
-    "data_referencia": "2026-07-14",
-    "indicador": "Euro Venda",
-    "fonte": "ANBIMA",
-    "dataset_label": "ANBIMA Indicadores",
-    "categoria": "Câmbio",
-    "Valor": "5,80"
-  },
-  {
-    "data_referencia": "2026-07-14",
-    "indicador": "FDS (registro 1)",
+    "indicador": "FDS (registro 2)",
     "fonte": "ANBIMA",
     "dataset_label": "ANBIMA Indicadores",
     "categoria": "FDS",
@@ -970,7 +906,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Internacionais",
     "categoria": "Ações Internacionais",
-    "Valor": "352,51"
+    "Valor": "359,51"
   },
   {
     "data_referencia": "2026-07-14",
@@ -986,7 +922,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Internacionais",
     "categoria": "Ações Internacionais",
-    "Valor": "337,11"
+    "Valor": "337,74"
   },
   {
     "data_referencia": "2026-07-14",
@@ -1018,7 +954,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo ETFs",
     "categoria": "ETFs & Setoriais",
-    "Valor": "79,52"
+    "Valor": "79,68"
   },
   {
     "data_referencia": "2026-07-14",
@@ -1050,7 +986,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Internacionais",
     "categoria": "Ações Internacionais",
-    "Valor": "103,12"
+    "Valor": "107,76"
   },
   {
     "data_referencia": "2026-07-14",
@@ -1090,7 +1026,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo ETFs",
     "categoria": "ETFs & Setoriais",
-    "Valor": "293,48"
+    "Valor": "294,51"
   },
   {
     "data_referencia": "2026-07-14",
@@ -1106,7 +1042,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Internacionais",
     "categoria": "Ações Internacionais",
-    "Valor": "257,77"
+    "Valor": "253,85"
   },
   {
     "data_referencia": "2026-07-14",
@@ -1114,7 +1050,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Internacionais",
     "categoria": "Ações Internacionais",
-    "Valor": "334,53"
+    "Valor": "342,89"
   },
   {
     "data_referencia": "2026-07-14",
@@ -1162,7 +1098,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Internacionais",
     "categoria": "Ações Internacionais",
-    "Valor": "84,25"
+    "Valor": "83,08"
   },
   {
     "data_referencia": "2026-07-14",
@@ -1170,7 +1106,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Internacionais",
     "categoria": "Ações Internacionais",
-    "Valor": "1.182"
+    "Valor": "1.153"
   },
   {
     "data_referencia": "2026-07-14",
@@ -1186,7 +1122,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo ETFs",
     "categoria": "ETFs & Setoriais",
-    "Valor": "106,96"
+    "Valor": "107,21"
   },
   {
     "data_referencia": "2026-07-14",
@@ -1202,7 +1138,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Internacionais",
     "categoria": "Ações Internacionais",
-    "Valor": "537,70"
+    "Valor": "538,02"
   },
   {
     "data_referencia": "2026-07-14",
@@ -1210,7 +1146,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Internacionais",
     "categoria": "Ações Internacionais",
-    "Valor": "272,61"
+    "Valor": "268,94"
   },
   {
     "data_referencia": "2026-07-14",
@@ -1242,7 +1178,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Internacionais",
     "categoria": "Ações Internacionais",
-    "Valor": "124,03"
+    "Valor": "120,78"
   },
   {
     "data_referencia": "2026-07-14",
@@ -1258,7 +1194,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Internacionais",
     "categoria": "Ações Internacionais",
-    "Valor": "390,99"
+    "Valor": "384,93"
   },
   {
     "data_referencia": "2026-07-14",
@@ -1282,7 +1218,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Internacionais",
     "categoria": "Ações Internacionais",
-    "Valor": "73,83"
+    "Valor": "73,53"
   },
   {
     "data_referencia": "2026-07-14",
@@ -1298,7 +1234,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Internacionais",
     "categoria": "Ações Internacionais",
-    "Valor": "43,76"
+    "Valor": "42,86"
   },
   {
     "data_referencia": "2026-07-14",
@@ -1306,7 +1242,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Internacionais",
     "categoria": "Ações Internacionais",
-    "Valor": "203,53"
+    "Valor": "211,80"
   },
   {
     "data_referencia": "2026-07-14",
@@ -1314,7 +1250,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Internacionais",
     "categoria": "Ações Internacionais",
-    "Valor": "49,28"
+    "Valor": "49,07"
   },
   {
     "data_referencia": "2026-07-14",
@@ -1322,7 +1258,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Internacionais",
     "categoria": "Ações Internacionais",
-    "Valor": "131,54"
+    "Valor": "127,94"
   },
   {
     "data_referencia": "2026-07-14",
@@ -1346,7 +1282,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Internacionais",
     "categoria": "Ações Internacionais",
-    "Valor": "138,49"
+    "Valor": "135,45"
   },
   {
     "data_referencia": "2026-07-14",
@@ -1370,7 +1306,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Internacionais",
     "categoria": "Ações Internacionais",
-    "Valor": "24,48"
+    "Valor": "24,25"
   },
   {
     "data_referencia": "2026-07-14",
@@ -1378,7 +1314,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Internacionais",
     "categoria": "Ações Internacionais",
-    "Valor": "148,37"
+    "Valor": "146,08"
   },
   {
     "data_referencia": "2026-07-14",
@@ -1410,7 +1346,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Internacionais",
     "categoria": "Ações Internacionais",
-    "Valor": "183,98"
+    "Valor": "178,10"
   },
   {
     "data_referencia": "2026-07-14",
@@ -1418,7 +1354,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo ETFs",
     "categoria": "ETFs & Setoriais",
-    "Valor": "711,74"
+    "Valor": "719,69"
   },
   {
     "data_referencia": "2026-07-14",
@@ -1490,7 +1426,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Internacionais",
     "categoria": "Ações Internacionais",
-    "Valor": "107,34"
+    "Valor": "106,17"
   },
   {
     "data_referencia": "2026-07-14",
@@ -1538,7 +1474,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo ETFs",
     "categoria": "ETFs & Setoriais",
-    "Valor": "749,17"
+    "Valor": "751,83"
   },
   {
     "data_referencia": "2026-07-14",
@@ -1558,14 +1494,6 @@
   },
   {
     "data_referencia": "2026-07-14",
-    "indicador": "TBF",
-    "fonte": "ANBIMA",
-    "dataset_label": "ANBIMA Indicadores",
-    "categoria": "Taxa de Referência",
-    "Valor": "1,01"
-  },
-  {
-    "data_referencia": "2026-07-14",
     "indicador": "TEND3.SA",
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
@@ -1582,19 +1510,11 @@
   },
   {
     "data_referencia": "2026-07-14",
-    "indicador": "TR",
-    "fonte": "ANBIMA",
-    "dataset_label": "ANBIMA Indicadores",
-    "categoria": "Taxa de Referência",
-    "Valor": "0,1695"
-  },
-  {
-    "data_referencia": "2026-07-14",
     "indicador": "TSLA",
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Internacionais",
     "categoria": "Ações Internacionais",
-    "Valor": "394,76"
+    "Valor": "396,18"
   },
   {
     "data_referencia": "2026-07-14",
@@ -1602,15 +1522,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Internacionais",
     "categoria": "Ações Internacionais",
-    "Valor": "421,58"
-  },
-  {
-    "data_referencia": "2026-07-14",
-    "indicador": "Taxa SELIC (BC)",
-    "fonte": "ANBIMA",
-    "dataset_label": "ANBIMA Indicadores",
-    "categoria": "Taxa de Juros",
-    "Valor": "14,15"
+    "Valor": "420,39"
   },
   {
     "data_referencia": "2026-07-14",
@@ -1626,7 +1538,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Internacionais",
     "categoria": "Ações Internacionais",
-    "Valor": "429,09"
+    "Valor": "425,19"
   },
   {
     "data_referencia": "2026-07-14",
@@ -1642,7 +1554,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Internacionais",
     "categoria": "Ações Internacionais",
-    "Valor": "357,75"
+    "Valor": "356,02"
   },
   {
     "data_referencia": "2026-07-14",
@@ -1674,7 +1586,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo ETFs",
     "categoria": "ETFs & Setoriais",
-    "Valor": "87,86"
+    "Valor": "88,30"
   },
   {
     "data_referencia": "2026-07-14",
@@ -1698,7 +1610,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo ETFs",
     "categoria": "ETFs & Setoriais",
-    "Valor": "58,79"
+    "Valor": "59,08"
   },
   {
     "data_referencia": "2026-07-14",
@@ -1714,7 +1626,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Internacionais",
     "categoria": "Ações Internacionais",
-    "Valor": "114,78"
+    "Valor": "113,70"
   },
   {
     "data_referencia": "2026-07-14",
@@ -1722,7 +1634,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo ETFs",
     "categoria": "ETFs & Setoriais",
-    "Valor": "56,74"
+    "Valor": "56,95"
   },
   {
     "data_referencia": "2026-07-14",
@@ -1730,7 +1642,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo ETFs",
     "categoria": "ETFs & Setoriais",
-    "Valor": "56,07"
+    "Valor": "56,18"
   },
   {
     "data_referencia": "2026-07-14",
@@ -1738,7 +1650,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo ETFs",
     "categoria": "ETFs & Setoriais",
-    "Valor": "181,28"
+    "Valor": "183,62"
   },
   {
     "data_referencia": "2026-07-14",
@@ -1746,7 +1658,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Internacionais",
     "categoria": "Ações Internacionais",
-    "Valor": "144,51"
+    "Valor": "145,09"
   },
   {
     "data_referencia": "2026-07-14",
@@ -1810,7 +1722,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Índices Globais",
     "categoria": "Índices de Ações Globais",
-    "Valor": "175.739"
+    "Valor": "176.641"
   },
   {
     "data_referencia": "2026-07-14",
@@ -1818,7 +1730,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Índices Globais",
     "categoria": "Índices de Ações Globais",
-    "Valor": "52.499"
+    "Valor": "52.508"
   },
   {
     "data_referencia": "2026-07-14",
@@ -1826,7 +1738,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Índices Globais",
     "categoria": "Índices de Ações Globais",
-    "Valor": "8.365"
+    "Valor": "8.367"
   },
   {
     "data_referencia": "2026-07-14",
@@ -1834,7 +1746,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Índices Globais",
     "categoria": "Índices de Ações Globais",
-    "Valor": "10.498"
+    "Valor": "10.529"
   },
   {
     "data_referencia": "2026-07-14",
@@ -1842,7 +1754,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Renda Fixa",
     "categoria": "Renda Fixa & Treasuries",
-    "Valor": "4,36"
+    "Valor": "4,32"
   },
   {
     "data_referencia": "2026-07-14",
@@ -1850,7 +1762,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Índices Globais",
     "categoria": "Índices de Ações Globais",
-    "Valor": "25.114"
+    "Valor": "25.147"
   },
   {
     "data_referencia": "2026-07-14",
@@ -1858,7 +1770,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Índices Globais",
     "categoria": "Índices de Ações Globais",
-    "Valor": "7.515"
+    "Valor": "7.544"
   },
   {
     "data_referencia": "2026-07-14",
@@ -1866,7 +1778,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Renda Fixa",
     "categoria": "Renda Fixa & Treasuries",
-    "Valor": "3,73"
+    "Valor": "3,70"
   },
   {
     "data_referencia": "2026-07-14",
@@ -1874,7 +1786,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Índices Globais",
     "categoria": "Índices de Ações Globais",
-    "Valor": "25.873"
+    "Valor": "26.107"
   },
   {
     "data_referencia": "2026-07-14",
@@ -1882,7 +1794,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Índices Globais",
     "categoria": "Índices de Ações Globais",
-    "Valor": "3.235.295"
+    "Valor": "3.229.324"
   },
   {
     "data_referencia": "2026-07-14",
@@ -1890,7 +1802,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Índices Globais",
     "categoria": "Índices de Ações Globais",
-    "Valor": "65.973"
+    "Valor": "66.514"
   },
   {
     "data_referencia": "2026-07-14",
@@ -1898,7 +1810,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Renda Fixa",
     "categoria": "Renda Fixa & Treasuries",
-    "Valor": "4,61"
+    "Valor": "4,59"
   },
   {
     "data_referencia": "2026-07-14",
@@ -1906,7 +1818,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Renda Fixa",
     "categoria": "Renda Fixa & Treasuries",
-    "Valor": "5,10"
+    "Valor": "5,09"
   },
   {
     "data_referencia": "2026-07-14",
@@ -1914,7 +1826,23 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Índices Globais",
     "categoria": "Índices de Ações Globais",
-    "Valor": "17,16"
+    "Valor": "16,50"
+  },
+  {
+    "data_referencia": "2026-07-14",
+    "indicador": "Índice Dow Jones",
+    "fonte": "IPEA",
+    "dataset_label": "IPEA Mercados Diários",
+    "categoria": "Mercados Globais",
+    "Valor": "52.508"
+  },
+  {
+    "data_referencia": "2026-07-14",
+    "indicador": "Índice NASDAQ",
+    "fonte": "IPEA",
+    "dataset_label": "IPEA Mercados Diários",
+    "categoria": "Mercados Globais",
+    "Valor": "26.107"
   },
   {
     "data_referencia": "2026-07-15",
@@ -1922,7 +1850,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "0,1656"
+    "Valor": "0,1646"
   },
   {
     "data_referencia": "2026-07-15",
@@ -1930,7 +1858,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "0,003210"
+    "Valor": "0,003190"
   },
   {
     "data_referencia": "2026-07-15",
@@ -1938,7 +1866,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "0,6996"
+    "Valor": "0,7007"
   },
   {
     "data_referencia": "2026-07-15",
@@ -1946,7 +1874,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "6,67"
+    "Valor": "6,68"
   },
   {
     "data_referencia": "2026-07-15",
@@ -1954,7 +1882,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "580,12"
+    "Valor": "580,71"
   },
   {
     "data_referencia": "2026-07-15",
@@ -1970,7 +1898,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "65.075"
+    "Valor": "64.793"
   },
   {
     "data_referencia": "2026-07-15",
@@ -1978,7 +1906,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "6,28"
+    "Valor": "6,30"
   },
   {
     "data_referencia": "2026-07-15",
@@ -1986,7 +1914,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "0,005438"
+    "Valor": "0,005432"
   },
   {
     "data_referencia": "2026-07-15",
@@ -1994,7 +1922,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "0,7492"
+    "Valor": "0,7494"
   },
   {
     "data_referencia": "2026-07-15",
@@ -2002,7 +1930,15 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "0,001563"
+    "Valor": "0,001572"
+  },
+  {
+    "data_referencia": "2026-07-15",
+    "indicador": "DI-B3",
+    "fonte": "ANBIMA",
+    "dataset_label": "ANBIMA Indicadores",
+    "categoria": "Taxa de Juros",
+    "Valor": "14,15"
   },
   {
     "data_referencia": "2026-07-15",
@@ -2010,7 +1946,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "0,0745"
+    "Valor": "0,0740"
   },
   {
     "data_referencia": "2026-07-15",
@@ -2018,7 +1954,23 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "0,8550"
+    "Valor": "0,8450"
+  },
+  {
+    "data_referencia": "2026-07-15",
+    "indicador": "Dólar Comercial Compra",
+    "fonte": "ANBIMA",
+    "dataset_label": "ANBIMA Indicadores",
+    "categoria": "Câmbio",
+    "Valor": "5,07"
+  },
+  {
+    "data_referencia": "2026-07-15",
+    "indicador": "Dólar Comercial Venda",
+    "fonte": "ANBIMA",
+    "dataset_label": "ANBIMA Indicadores",
+    "categoria": "Câmbio",
+    "Valor": "5,07"
   },
   {
     "data_referencia": "2026-07-15",
@@ -2026,7 +1978,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "1.920"
+    "Valor": "1.921"
   },
   {
     "data_referencia": "2026-07-15",
@@ -2034,7 +1986,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "5,80"
+    "Valor": "5,82"
   },
   {
     "data_referencia": "2026-07-15",
@@ -2042,7 +1994,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "1,14"
+    "Valor": "1,15"
   },
   {
     "data_referencia": "2026-07-15",
@@ -2054,11 +2006,35 @@
   },
   {
     "data_referencia": "2026-07-15",
+    "indicador": "Euro Compra",
+    "fonte": "ANBIMA",
+    "dataset_label": "ANBIMA Indicadores",
+    "categoria": "Câmbio",
+    "Valor": "5,80"
+  },
+  {
+    "data_referencia": "2026-07-15",
+    "indicador": "Euro Venda",
+    "fonte": "ANBIMA",
+    "dataset_label": "ANBIMA Indicadores",
+    "categoria": "Câmbio",
+    "Valor": "5,80"
+  },
+  {
+    "data_referencia": "2026-07-15",
+    "indicador": "FDS (registro 1)",
+    "fonte": "ANBIMA",
+    "dataset_label": "ANBIMA Indicadores",
+    "categoria": "FDS",
+    "Valor": "0,0898"
+  },
+  {
+    "data_referencia": "2026-07-15",
     "indicador": "GBPBRL=X",
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "6,82"
+    "Valor": "6,87"
   },
   {
     "data_referencia": "2026-07-15",
@@ -2066,7 +2042,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "1,34"
+    "Valor": "1,35"
   },
   {
     "data_referencia": "2026-07-15",
@@ -2074,7 +2050,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "2,21"
+    "Valor": "2,17"
   },
   {
     "data_referencia": "2026-07-15",
@@ -2122,7 +2098,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "8,49"
+    "Valor": "8,54"
   },
   {
     "data_referencia": "2026-07-15",
@@ -2130,7 +2106,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "45,38"
+    "Valor": "44,98"
   },
   {
     "data_referencia": "2026-07-15",
@@ -2138,7 +2114,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "0,2914"
+    "Valor": "0,2918"
   },
   {
     "data_referencia": "2026-07-15",
@@ -2146,7 +2122,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "2,07"
+    "Valor": "2,06"
   },
   {
     "data_referencia": "2026-07-15",
@@ -2154,7 +2130,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "0,1030"
+    "Valor": "0,1020"
   },
   {
     "data_referencia": "2026-07-15",
@@ -2194,7 +2170,23 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "77,79"
+    "Valor": "77,37"
+  },
+  {
+    "data_referencia": "2026-07-15",
+    "indicador": "TBF",
+    "fonte": "ANBIMA",
+    "dataset_label": "ANBIMA Indicadores",
+    "categoria": "Taxa de Referência",
+    "Valor": "1,10"
+  },
+  {
+    "data_referencia": "2026-07-15",
+    "indicador": "TR",
+    "fonte": "ANBIMA",
+    "dataset_label": "ANBIMA Indicadores",
+    "categoria": "Taxa de Referência",
+    "Valor": "0,1730"
   },
   {
     "data_referencia": "2026-07-15",
@@ -2202,7 +2194,15 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "0,3271"
+    "Valor": "0,3244"
+  },
+  {
+    "data_referencia": "2026-07-15",
+    "indicador": "Taxa SELIC (BC)",
+    "fonte": "ANBIMA",
+    "dataset_label": "ANBIMA Indicadores",
+    "categoria": "Taxa de Juros",
+    "Valor": "14,15"
   },
   {
     "data_referencia": "2026-07-15",
@@ -2210,7 +2210,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "1,41"
+    "Valor": "1,40"
   },
   {
     "data_referencia": "2026-07-15",
@@ -2218,7 +2218,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "0,8082"
+    "Valor": "0,8049"
   },
   {
     "data_referencia": "2026-07-15",
@@ -2242,7 +2242,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "162,22"
+    "Valor": "162,10"
   },
   {
     "data_referencia": "2026-07-15",
@@ -2250,7 +2250,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "17,42"
+    "Valor": "17,36"
   },
   {
     "data_referencia": "2026-07-15",
@@ -2258,7 +2258,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "0,1875"
+    "Valor": "0,1895"
   },
   {
     "data_referencia": "2026-07-15",
@@ -2282,7 +2282,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Índices Globais",
     "categoria": "Índices de Ações Globais",
-    "Valor": "24.681"
+    "Valor": "24.341"
   },
   {
     "data_referencia": "2026-07-15",
@@ -2298,7 +2298,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Índices Globais",
     "categoria": "Índices de Ações Globais",
-    "Valor": "6.042"
+    "Valor": "6.040"
   },
   {
     "data_referencia": "2026-07-15",
@@ -2306,7 +2306,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Índices Globais",
     "categoria": "Índices de Ações Globais",
-    "Valor": "1.714"
+    "Valor": "1.720"
   },
   {
     "data_referencia": "2026-07-15",
@@ -2314,7 +2314,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Índices Globais",
     "categoria": "Índices de Ações Globais",
-    "Valor": "7.284"
+    "Valor": "6.857"
   },
   {
     "data_referencia": "2026-07-15",
@@ -2322,7 +2322,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Índices Globais",
     "categoria": "Índices de Ações Globais",
-    "Valor": "68.752"
+    "Valor": "67.744"
   },
   {
     "data_referencia": "2026-07-15",
@@ -2330,7 +2330,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Índices Globais",
     "categoria": "Índices de Ações Globais",
-    "Valor": "5.560"
+    "Valor": "5.496"
   },
   {
     "data_referencia": "2026-07-15",
@@ -2338,7 +2338,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Índices Globais",
     "categoria": "Índices de Ações Globais",
-    "Valor": "45.632"
+    "Valor": "44.738"
   },
   {
     "data_referencia": "2026-12-01",
