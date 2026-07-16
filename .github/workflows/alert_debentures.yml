@@ -1,0 +1,78 @@
+name: Monitorar e Alertar Debêntures
+
+on:
+  schedule:
+    # 8h00 às 20h00 Horário de Brasília (BRT = UTC-3) de segunda a sexta-feira.
+    # Em UTC, isso equivale a 11h00 às 23h00.
+    # Roda a cada 10 minutos.
+    - cron: '*/10 11-23 * * 1-5'
+  
+  # Permite execução manual pelo painel do GitHub
+  workflow_dispatch:
+
+jobs:
+  check-and-alert:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+    - name: Checkout do código
+      uses: actions/checkout@v6
+
+    - name: Configurar Fuso Horário Local
+      run: sudo timedatectl set-timezone America/Sao_Paulo
+
+    - name: Configurar Python
+      uses: actions/setup-python@v6
+      with:
+        python-version: '3.13'
+
+    - name: Instalar dependências
+      run: |
+        python -m pip install --upgrade pip
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+    - name: Executar verificação e ingestão
+      env:
+        ORACLE_DB_DSN: ${{ secrets.ORACLE_DB_DSN || vars.ORACLE_DB_DSN }}
+        ORACLE_DB_USER: ${{ secrets.ORACLE_DB_USER || vars.ORACLE_DB_USER }}
+        ORACLE_DB_PASSWORD: ${{ secrets.ORACLE_DB_PASSWORD || vars.ORACLE_DB_PASSWORD }}
+        ORACLE_DB_WALLET_PASSWORD: ${{ secrets.ORACLE_DB_WALLET_PASSWORD || vars.ORACLE_DB_WALLET_PASSWORD }}
+        ORACLE_DB_WALLET_BASE64: ${{ secrets.ORACLE_DB_WALLET_BASE64 || vars.ORACLE_DB_WALLET_BASE64 }}
+        TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+        TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        SMTP_SERVER: ${{ secrets.SMTP_SERVER }}
+        SMTP_PORT: ${{ secrets.SMTP_PORT }}
+        SMTP_USER: ${{ secrets.SMTP_USER }}
+        SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+        SMTP_FROM: ${{ secrets.SMTP_FROM }}
+        SMTP_TO: ${{ secrets.SMTP_TO }}
+        SMTP_SUBJECT: ${{ secrets.SMTP_SUBJECT }}
+        POWER_AUTOMATE_WEBHOOK_URL: ${{ secrets.POWER_AUTOMATE_WEBHOOK_URL }}
+      run: |
+        if [ -n "$ORACLE_DB_WALLET_BASE64" ]; then
+          echo "Processando carteira mTLS..."
+          mkdir -p /tmp/oracle_wallet
+          echo "$ORACLE_DB_WALLET_BASE64" | base64 -d > /tmp/oracle_wallet.zip
+          unzip -o /tmp/oracle_wallet.zip -d /tmp/oracle_wallet
+          export ORACLE_DB_WALLET_DIR=/tmp/oracle_wallet
+          echo "Wallet extraída com sucesso para $ORACLE_DB_WALLET_DIR"
+        else
+          echo "Aviso: ORACLE_DB_WALLET_BASE64 não está configurada."
+        fi
+        python scripts/alerta_debentures.py
+
+    # Identifica mudanças na pasta data/ e faz o push se houver novos dados coletados
+    - name: Commitar e enviar novas alterações de dados
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        
+        git add data/
+        
+        # O "|| echo" evita que o workflow falhe caso o script rode mas não mude nada nos arquivos
+        git commit -m "Bot: Alerta de Debêntures Enviado [skip ci]" || echo "Nenhuma alteração nos dados."
+        
+        git push origin main
