@@ -206,3 +206,60 @@ def test_main_success(mock_pa, mock_email, mock_tg, tmp_path, monkeypatch, reque
     with temp_state.open("r", encoding="utf-8") as f:
         state = json.load(f)
     assert state.get("ultima_notificacao") == "2026-07-16"
+
+
+def test_verificar_dados_real_queries():
+    """Teste de integração real que realiza consultas diretas ao portal debentures.com.br
+    para validar o comportamento com dados históricos (passados) e dados futuros (vazio).
+    """
+    import requests
+    session = requests.Session()
+    session.headers.update({
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+    })
+    
+    f_url = "https://www.debentures.com.br/exploreosnd/consultaadados/mercadosecundario/precosdenegociacao_f.asp"
+    r_url = "https://www.debentures.com.br/exploreosnd/consultaadados/mercadosecundario/precosdenegociacao_r.asp"
+    
+    try:
+        session.get(f_url, timeout=30)
+    except Exception as e:
+        pytest.skip(f"Portal debentures.com.br indisponível no momento: {e}")
+        
+    # 1. Consulta com dados (data passada conhecida: 01/06/2026 a 02/06/2026)
+    post_data_past = {
+        "op_exc": "False",
+        "emissor": "",
+        "ativo": "",
+        "ISIN": "",
+        "dt_ini": "01/06/2026",
+        "dt_fim": "02/06/2026",
+        "Submit32.x": "38",
+        "Submit32.y": "16"
+    }
+    try:
+        resp_past = session.post(r_url, data=post_data_past, headers={"Referer": f_url}, timeout=30)
+        assert resp_past.status_code == 200
+        assert ad.verificar_dados(resp_past.text) is True
+    except Exception as e:
+        pytest.fail(f"Falha na consulta real com dados históricos: {e}")
+
+    # 2. Consulta sem dados (domingo passado conhecido: 12/07/2026)
+    post_data_sunday = {
+        "op_exc": "False",
+        "emissor": "",
+        "ativo": "",
+        "ISIN": "",
+        "dt_ini": "12/07/2026",
+        "dt_fim": "12/07/2026",
+        "Submit32.x": "38",
+        "Submit32.y": "16"
+    }
+    try:
+        resp_sunday = session.post(r_url, data=post_data_sunday, headers={"Referer": f_url}, timeout=30)
+        assert resp_sunday.status_code == 200
+        assert ad.verificar_dados(resp_sunday.text) is False
+    except Exception as e:
+        pytest.fail(f"Falha na consulta real com domingo sem dados: {e}")
+
+
