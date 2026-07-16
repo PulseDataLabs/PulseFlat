@@ -29,6 +29,8 @@ from utils.base import FUSO
 
 log = get_logger("alerta_debentures")
 
+STATE_FILE_PATH = Path(__file__).resolve().parents[1] / "data" / "debentures_alert_state.json"
+
 
 def send_telegram(token: str, chat_id: str, text: str):
     """Envia mensagem para o Telegram."""
@@ -109,6 +111,47 @@ def send_power_automate(url: str, title: str, message: str):
         log.error(f"Erro ao enviar webhook para o Power Automate: {e}")
 
 
+def verificar_dados(html: str) -> bool:
+    """
+    Avalia se existem dados disponíveis na página HTML do portal de debêntures.
+    Retorna True se houver dados de negociação válidos, False caso contrário.
+    """
+    # 1. Verifica textos explícitos de ausência de dados
+    texto_sem_dados = re.compile(
+        r"nenhum\s+registro|"
+        r"nenhuma\s+informa|"
+        r"n[aã]o\s+foram\s+encontrados|"
+        r"n[aã]o\s+existe\s+resposta",
+        re.IGNORECASE
+    )
+    if texto_sem_dados.search(html):
+        return False
+
+    # 2. Verifica estrutura da tabela com BeautifulSoup
+    try:
+        from bs4 import BeautifulSoup
+        soup = BeautifulSoup(html, "html.parser")
+        rows = soup.find_all("tr")
+        
+        date_pattern = re.compile(r"^\d{2}/\d{2}/\d{4}$")
+        isin_pattern = re.compile(r"^[A-Z]{2}[A-Z0-9]{10}$", re.IGNORECASE)
+        
+        for row in rows:
+            cells = row.find_all(["td", "th"])
+            # Remove células vazias/espaçadoras
+            non_empty_texts = [text for c in cells if (text := c.get_text(strip=True))]
+            if len(non_empty_texts) >= 4:
+                # O primeiro campo deve ser uma data (Data) e o quarto deve ser o ISIN
+                if date_pattern.match(non_empty_texts[0]) and isin_pattern.match(non_empty_texts[3]):
+                    return True
+    except Exception as e:
+        log.warning(f"Erro ao analisar HTML com BeautifulSoup: {e}. Usando fallback.")
+
+    # 3. Fallback heurístico simples caso falhe o parsing
+    linhas_tabela = len(re.findall(r"<tr[^>]*>", html, re.IGNORECASE))
+    return linhas_tabela > 3
+
+
 def main():
     hoje = datetime.now(FUSO).date()
     hoje_iso = hoje.strftime("%Y-%m-%d")
@@ -119,7 +162,7 @@ def main():
     log.info(f"Hoje: {hoje.strftime('%d/%m/%Y')} (ISO: {hoje_iso}) | Data Ref Esperada: {ref_date_str}")
 
     # 2. Carrega o estado de notificações e verifica se já notificado hoje
-    state_path = Path(__file__).resolve().parents[1] / "data" / "debentures_alert_state.json"
+    state_path = STATE_FILE_PATH
     state = {"ultima_notificacao": ""}
     
     if state_path.exists():
@@ -177,12 +220,8 @@ def main():
 
     html = resp.text
     
-    # 4. Avalia se existem dados disponíveis usando a heurística do n8n
-    texto_sem_dados = re.compile(r"nenhum\s+registro|nenhuma\s+informa|n[aã]o\s+foram\s+encontrados", re.IGNORECASE)
-    tem_texto_vazio = bool(texto_sem_dados.search(html))
-    linhas_tabela = len(re.findall(r"<tr[^>]*>", html, re.IGNORECASE))
-    
-    tem_dados = not tem_texto_vazio and linhas_tabela > 3
+    # 4. Avalia se existem dados disponíveis usando a heurística aprimorada
+    tem_dados = verificar_dados(html)
     
     if not tem_dados:
         log.info("Dados ainda indisponíveis na ANBIMA. Encerrando e aguardando próxima checagem.")
