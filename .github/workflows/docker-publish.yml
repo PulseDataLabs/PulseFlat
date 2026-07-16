@@ -32,8 +32,9 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Downcase image name
+        id: prep
         run: |
-          echo "IMAGE_NAME=ghcr.io/${{ github.repository }}" | tr '[:upper:]' '[:lower:]' >> $GITHUB_ENV
+          echo "image=ghcr.io/${{ github.repository }}" | tr '[:upper:]' '[:lower:]' >> $GITHUB_OUTPUT
 
       - name: Build and push
         uses: docker/build-push-action@v6
@@ -41,5 +42,5 @@ jobs:
           context: .
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: ${{ env.IMAGE_NAME }}:latest
+          tags: ${{ steps.prep.outputs.image }}:latest
 
