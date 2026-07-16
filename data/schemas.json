@@ -449,7 +449,7 @@
       {
         "name": "data_ult_vna",
         "type": "date",
-        "example": "2026-07-15"
+        "example": "2026-07-16"
       },
       {
         "name": "indice",
@@ -686,7 +686,7 @@
       {
         "name": "data_referencia",
         "type": "date",
-        "example": "14/7/2026"
+        "example": "15/7/2026"
       },
       {
         "name": "emissor",
@@ -706,32 +706,32 @@
       {
         "name": "quantidade",
         "type": "int",
-        "example": "4524"
+        "example": "200"
       },
       {
         "name": "numero_de_negocios",
         "type": "int",
-        "example": "5"
+        "example": "1"
       },
       {
         "name": "pu_minimo",
         "type": "str",
-        "example": "1062.535286"
+        "example": "1063.505355"
       },
       {
         "name": "pu_medio",
         "type": "str",
-        "example": "1062.535286"
+        "example": "1063.505355"
       },
       {
         "name": "pu_maximo",
         "type": "str",
-        "example": "1062.535286"
+        "example": "1063.505355"
       },
       {
         "name": "pu_da_curva",
         "type": "str",
-        "example": "101.97"
+        "example": "102.00"
       },
       {
         "name": "data_captura",
