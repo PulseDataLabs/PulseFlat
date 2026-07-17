@@ -231,17 +231,17 @@
       {
         "name": "name",
         "type": "str",
-        "example": "RINA BRASIL SERVICOS TECNICOS LTDA"
+        "example": "Associacao Brasileira das Agencias de Comunicacao - ABRACOM"
       },
       {
         "name": "type",
         "type": "str",
-        "example": "Company"
+        "example": "Business Association"
       },
       {
         "name": "sector",
         "type": "str",
-        "example": "Professional Business Support Services"
+        "example": ""
       },
       {
         "name": "country",
@@ -251,12 +251,12 @@
       {
         "name": "joined_on",
         "type": "str",
-        "example": "2026-07-13"
+        "example": "2026-07-17"
       },
       {
         "name": "link",
         "type": "str",
-        "example": "https://unglobalcompact.org/what-is-gc/participants/215017-RINA-BRASIL-SERVICOS-TECNICOS-LTDA"
+        "example": "https://unglobalcompact.org/what-is-gc/participants/213979-Associacao-Brasileira-das-Agencias-de-Comunicacao-ABRACOM"
       }
     ]
   },
