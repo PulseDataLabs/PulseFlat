@@ -112,8 +112,8 @@ window.PULSEFLAT_LAST_UPDATES = {
     "max": "2026-07-17"
   },
   "ibge_sidra.csv": {
-    "min": "2026-07-16",
-    "max": "2026-07-16"
+    "min": "2026-07-17",
+    "max": "2026-07-17"
   },
   "ipea_calendario.csv": {
     "min": "2026-07-17",
@@ -197,7 +197,7 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "bacen_parcelas_capital_basileia.csv.gz": {
     "min": "2026-06-05",
-    "max": "2026-07-16"
+    "max": "2026-07-17"
   },
   "anbima_idka.csv": {
     "min": "2026-06-03",
