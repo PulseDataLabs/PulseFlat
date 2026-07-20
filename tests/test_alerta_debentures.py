@@ -205,7 +205,7 @@ def test_main_success(mock_pa, mock_email, mock_tg, tmp_path, monkeypatch, reque
     assert temp_state.exists()
     with temp_state.open("r", encoding="utf-8") as f:
         state = json.load(f)
-    assert state.get("ultima_notificacao") == "2026-07-16"
+    assert state.get("ultima_notificacao") == "2026-07-16 09:30:00"
 
 
 def test_verificar_dados_real_queries():

@@ -2,10 +2,10 @@ name: Monitorar e Alertar Debêntures
 
 on:
   schedule:
-    # 8h00 às 20h00 Horário de Brasília (BRT = UTC-3) de segunda a sexta-feira.
-    # Em UTC, isso equivale a 11h00 às 23h00.
-    # Roda a cada 10 minutos.
-    - cron: '*/10 11-23 * * 1-5'
+    # 5h00 às 20h00 Horário de Brasília (BRT = UTC-3) de segunda a sexta-feira.
+    # Em UTC, isso equivale a 8h00 às 23h00.
+    # Roda a cada 15 minutos.
+    - cron: '*/15 8-23 * * 1-5'
   
   # Permite execução manual pelo painel do GitHub
   workflow_dispatch:

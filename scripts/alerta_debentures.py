@@ -172,7 +172,7 @@ def main():
         except Exception as e:
             log.warning(f"Erro ao ler arquivo de estado: {e}. Criando novo estado.")
 
-    if state.get("ultima_notificacao") == hoje_iso:
+    if state.get("ultima_notificacao", "").startswith(hoje_iso):
         log.info(f"Notificação diária para {hoje_iso} já foi enviada hoje. Encerrando.")
         sys.exit(0)
 
@@ -293,7 +293,7 @@ def main():
 
     # 6. Grava a data de hoje no JSON de estado para evitar duplicidade de notificações
     log.info("Atualizando arquivo de estado...")
-    state["ultima_notificacao"] = hoje_iso
+    state["ultima_notificacao"] = datetime.now(FUSO).strftime("%Y-%m-%d %H:%M:%S")
     try:
         state_path.parent.mkdir(parents=True, exist_ok=True)
         with state_path.open("w", encoding="utf-8") as f:
