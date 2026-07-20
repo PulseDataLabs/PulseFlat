@@ -3468,7 +3468,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-07-17"
+        "example": "2026-07-20"
       },
       {
         "name": "auditor",
@@ -4236,7 +4236,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-07-17"
+        "example": "2026-07-20"
       },
       {
         "name": "tp_fundo_classe",
@@ -4303,7 +4303,7 @@
       {
         "name": "id_registro_classe",
         "type": "int",
-        "example": "34368"
+        "example": "34375"
       },
       {
         "name": "cnpj_classe",
@@ -4448,7 +4448,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-07-17"
+        "example": "2026-07-20"
       },
       {
         "name": "cnpj_fundo",

@@ -2,13 +2,13 @@
   {
     "label": "CDI",
     "value": "14,15%",
-    "reference_date": "2026-07-16",
+    "reference_date": "2026-07-17",
     "type": "neutral"
   },
   {
     "label": "SELIC",
     "value": "14,15%",
-    "reference_date": "2026-07-16",
+    "reference_date": "2026-07-17",
     "type": "neutral"
   },
   {
@@ -25,29 +25,29 @@
   },
   {
     "label": "PTAX USD Venda",
-    "value": "5,0975",
-    "reference_date": "2026-07-16",
+    "value": "5,1176",
+    "reference_date": "2026-07-17",
     "type": "up",
-    "change": "+0,49%"
+    "change": "+0,39%"
   },
   {
     "label": "PTAX USD Compra",
-    "value": "5,0969",
-    "reference_date": "2026-07-16",
+    "value": "5,1170",
+    "reference_date": "2026-07-17",
     "type": "up",
-    "change": "+0,49%"
+    "change": "+0,39%"
   },
   {
     "label": "IBOVESPA",
-    "value": "173.825",
-    "reference_date": "2026-07-16",
+    "value": "173.714",
+    "reference_date": "2026-07-17",
     "type": "down",
-    "change": "-1,24%"
+    "change": "-0,06%"
   },
   {
     "label": "IMA-GERAL",
-    "value": "10.228,88",
-    "reference_date": "2026-07-16",
+    "value": "10.218,09",
+    "reference_date": "2026-07-17",
     "type": "neutral"
   }
 ]

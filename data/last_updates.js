@@ -88,8 +88,8 @@ window.PULSEFLAT_LAST_UPDATES = {
     "max": "2026-07-20"
   },
   "cvm_cadastro_companhias_abertas.csv": {
-    "min": "2026-07-17",
-    "max": "2026-07-17"
+    "min": "2026-07-20",
+    "max": "2026-07-20"
   },
   "b3_titulos_negociaveis.csv.gz": {
     "min": "2026-07-20",
@@ -108,8 +108,8 @@ window.PULSEFLAT_LAST_UPDATES = {
     "max": "2026-07-20"
   },
   "registro_fundo_classe.csv.gz": {
-    "min": "2026-07-17",
-    "max": "2026-07-17"
+    "min": "2026-07-20",
+    "max": "2026-07-20"
   },
   "ibge_sidra.csv": {
     "min": "2026-07-20",
@@ -192,8 +192,8 @@ window.PULSEFLAT_LAST_UPDATES = {
     "max": "2026-07-20"
   },
   "cvm_fundos_informe_diario.csv.gz": {
-    "min": "2026-07-17",
-    "max": "2026-07-17"
+    "min": "2026-07-20",
+    "max": "2026-07-20"
   },
   "bacen_parcelas_capital_basileia.csv.gz": {
     "min": "2026-06-05",
