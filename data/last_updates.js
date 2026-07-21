@@ -178,5 +178,69 @@ window.PULSEFLAT_LAST_UPDATES = {
   "yahoo_acoes_internacionais.csv": {
     "min": "2026-06-28",
     "max": "2026-07-21"
+  },
+  "anbima_idka.csv": {
+    "min": "2026-06-03",
+    "max": "2026-07-21"
+  },
+  "anbima_ima_completo.csv": {
+    "min": "2026-06-01",
+    "max": "2026-07-21"
+  },
+  "anbima_debentures.csv": {
+    "min": "2026-06-05",
+    "max": "2026-07-21"
+  },
+  "anbima_550.csv": {
+    "min": "2026-06-01",
+    "max": "2026-07-21"
+  },
+  "anbima_indicadores.csv": {
+    "min": "2026-06-01",
+    "max": "2026-07-21"
+  },
+  "anbima_projecoes.csv": {
+    "min": "2026-06-01",
+    "max": "2026-07-21"
+  },
+  "anbima_ranking_global.csv": {
+    "min": "2026-06-03",
+    "max": "2026-07-21"
+  },
+  "anbima_titulos_publicos.csv": {
+    "min": "2026-06-01",
+    "max": "2026-07-21"
+  },
+  "anbima_matriz_probabilidade_resgate.csv": {
+    "min": "2026-06-19",
+    "max": "2026-07-21"
+  },
+  "b3_bdi_di_over.csv": {
+    "min": "2026-06-01",
+    "max": "2026-07-21"
+  },
+  "b3_carteira_teorica_agfs_iagro.csv": {
+    "min": "2026-06-03",
+    "max": "2026-07-21"
+  },
+  "b3_carteira_teorica_bdrx.csv": {
+    "min": "2026-06-03",
+    "max": "2026-07-21"
+  },
+  "b3_carteira_teorica_ibov.csv": {
+    "min": "2026-06-03",
+    "max": "2026-07-21"
+  },
+  "b3_carteira_teorica_ibsd.csv": {
+    "min": "2026-06-03",
+    "max": "2026-07-21"
+  },
+  "b3_bmf_taxas_juros.csv": {
+    "min": "2026-06-04",
+    "max": "2026-07-21"
+  },
+  "bacen_parcelas_capital_basileia.csv.gz": {
+    "min": "2026-06-05",
+    "max": "2026-07-21"
   }
 };

@@ -325,7 +325,7 @@
     "fonte": "IPEA",
     "dataset_label": "IPEA Taxas de Juros",
     "categoria": "Taxas de Juros",
-    "Valor": "13,81%"
+    "Valor": "13,80%"
   },
   {
     "data_referencia": "2026-07-01",
@@ -417,51 +417,11 @@
   },
   {
     "data_referencia": "2026-07-17",
-    "indicador": "CVCB3.SA",
-    "fonte": "Yahoo Finance",
-    "dataset_label": "Yahoo Ações Brasileiras",
-    "categoria": "Ações Brasileiras (B3)",
-    "Valor": "1,22"
-  },
-  {
-    "data_referencia": "2026-07-17",
     "indicador": "FDS (registro 2)",
     "fonte": "ANBIMA",
     "dataset_label": "ANBIMA Indicadores",
     "categoria": "FDS",
     "Valor": "0,0899"
-  },
-  {
-    "data_referencia": "2026-07-17",
-    "indicador": "RECV3.SA",
-    "fonte": "Yahoo Finance",
-    "dataset_label": "Yahoo Ações Brasileiras",
-    "categoria": "Ações Brasileiras (B3)",
-    "Valor": "10,29"
-  },
-  {
-    "data_referencia": "2026-07-17",
-    "indicador": "UGPA3.SA",
-    "fonte": "Yahoo Finance",
-    "dataset_label": "Yahoo Ações Brasileiras",
-    "categoria": "Ações Brasileiras (B3)",
-    "Valor": "32,07"
-  },
-  {
-    "data_referencia": "2026-07-17",
-    "indicador": "VBBR3.SA",
-    "fonte": "Yahoo Finance",
-    "dataset_label": "Yahoo Ações Brasileiras",
-    "categoria": "Ações Brasileiras (B3)",
-    "Valor": "34,92"
-  },
-  {
-    "data_referencia": "2026-07-17",
-    "indicador": "YDUQ3.SA",
-    "fonte": "Yahoo Finance",
-    "dataset_label": "Yahoo Ações Brasileiras",
-    "categoria": "Ações Brasileiras (B3)",
-    "Valor": "8,61"
   },
   {
     "data_referencia": "2026-07-17",
@@ -814,6 +774,14 @@
   },
   {
     "data_referencia": "2026-07-20",
+    "indicador": "CVCB3.SA",
+    "fonte": "Yahoo Finance",
+    "dataset_label": "Yahoo Ações Brasileiras",
+    "categoria": "Ações Brasileiras (B3)",
+    "Valor": "1,08"
+  },
+  {
+    "data_referencia": "2026-07-20",
     "indicador": "CVX",
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Internacionais",
@@ -931,14 +899,6 @@
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "Valor": "11,80"
-  },
-  {
-    "data_referencia": "2026-07-20",
-    "indicador": "Estimativa SELIC",
-    "fonte": "ANBIMA",
-    "dataset_label": "ANBIMA Indicadores",
-    "categoria": "Taxa de Juros",
-    "Valor": "14,15"
   },
   {
     "data_referencia": "2026-07-20",
@@ -1470,6 +1430,14 @@
   },
   {
     "data_referencia": "2026-07-20",
+    "indicador": "RECV3.SA",
+    "fonte": "Yahoo Finance",
+    "dataset_label": "Yahoo Ações Brasileiras",
+    "categoria": "Ações Brasileiras (B3)",
+    "Valor": "10,16"
+  },
+  {
+    "data_referencia": "2026-07-20",
     "indicador": "RENT3.SA",
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
@@ -1638,6 +1606,14 @@
   },
   {
     "data_referencia": "2026-07-20",
+    "indicador": "UGPA3.SA",
+    "fonte": "Yahoo Finance",
+    "dataset_label": "Yahoo Ações Brasileiras",
+    "categoria": "Ações Brasileiras (B3)",
+    "Valor": "31,70"
+  },
+  {
+    "data_referencia": "2026-07-20",
     "indicador": "UNH",
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Internacionais",
@@ -1667,6 +1643,14 @@
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "Valor": "71,93"
+  },
+  {
+    "data_referencia": "2026-07-20",
+    "indicador": "VBBR3.SA",
+    "fonte": "Yahoo Finance",
+    "dataset_label": "Yahoo Ações Brasileiras",
+    "categoria": "Ações Brasileiras (B3)",
+    "Valor": "34,11"
   },
   {
     "data_referencia": "2026-07-20",
@@ -1763,6 +1747,14 @@
     "dataset_label": "Yahoo FIIs e Fiagros",
     "categoria": "FIIs e Fiagros",
     "Valor": "105,35"
+  },
+  {
+    "data_referencia": "2026-07-20",
+    "indicador": "YDUQ3.SA",
+    "fonte": "Yahoo Finance",
+    "dataset_label": "Yahoo Ações Brasileiras",
+    "categoria": "Ações Brasileiras (B3)",
+    "Valor": "8,17"
   },
   {
     "data_referencia": "2026-07-20",
@@ -1938,7 +1930,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "0,1745"
+    "Valor": "0,1751"
   },
   {
     "data_referencia": "2026-07-21",
@@ -1954,7 +1946,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "0,7020"
+    "Valor": "0,7006"
   },
   {
     "data_referencia": "2026-07-21",
@@ -1970,7 +1962,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "576,94"
+    "Valor": "576,19"
   },
   {
     "data_referencia": "2026-07-21",
@@ -1978,7 +1970,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "5,09"
+    "Valor": "5,08"
   },
   {
     "data_referencia": "2026-07-21",
@@ -1986,7 +1978,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "66.116"
+    "Valor": "66.304"
   },
   {
     "data_referencia": "2026-07-21",
@@ -1994,7 +1986,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "6,28"
+    "Valor": "6,26"
   },
   {
     "data_referencia": "2026-07-21",
@@ -2002,7 +1994,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "0,005399"
+    "Valor": "0,005400"
   },
   {
     "data_referencia": "2026-07-21",
@@ -2010,7 +2002,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "0,7522"
+    "Valor": "0,7507"
   },
   {
     "data_referencia": "2026-07-21",
@@ -2018,7 +2010,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "0,001561"
+    "Valor": "0,001565"
   },
   {
     "data_referencia": "2026-07-21",
@@ -2026,7 +2018,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "0,0734"
+    "Valor": "0,0732"
   },
   {
     "data_referencia": "2026-07-21",
@@ -2042,7 +2034,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "1.930"
+    "Valor": "1.928"
   },
   {
     "data_referencia": "2026-07-21",
@@ -2050,7 +2042,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "5,81"
+    "Valor": "5,80"
   },
   {
     "data_referencia": "2026-07-21",
@@ -2062,11 +2054,19 @@
   },
   {
     "data_referencia": "2026-07-21",
+    "indicador": "Estimativa SELIC",
+    "fonte": "ANBIMA",
+    "dataset_label": "ANBIMA Indicadores",
+    "categoria": "Taxa de Juros",
+    "Valor": "14,15"
+  },
+  {
+    "data_referencia": "2026-07-21",
     "indicador": "GBPBRL=X",
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "6,83"
+    "Valor": "6,79"
   },
   {
     "data_referencia": "2026-07-21",
@@ -2082,7 +2082,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "2,20"
+    "Valor": "2,23"
   },
   {
     "data_referencia": "2026-07-21",
@@ -2122,7 +2122,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "0,0312"
+    "Valor": "0,0311"
   },
   {
     "data_referencia": "2026-07-21",
@@ -2130,7 +2130,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "8,69"
+    "Valor": "8,67"
   },
   {
     "data_referencia": "2026-07-21",
@@ -2138,7 +2138,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "47,29"
+    "Valor": "47,63"
   },
   {
     "data_referencia": "2026-07-21",
@@ -2146,7 +2146,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "0,2926"
+    "Valor": "0,2916"
   },
   {
     "data_referencia": "2026-07-21",
@@ -2154,7 +2154,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "1,99"
+    "Valor": "1,98"
   },
   {
     "data_referencia": "2026-07-21",
@@ -2162,7 +2162,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "0,0970"
+    "Valor": "0,0960"
   },
   {
     "data_referencia": "2026-07-21",
@@ -2202,7 +2202,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "78,10"
+    "Valor": "78,19"
   },
   {
     "data_referencia": "2026-07-21",
@@ -2210,7 +2210,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "0,3270"
+    "Valor": "0,3286"
   },
   {
     "data_referencia": "2026-07-21",
@@ -2226,7 +2226,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "0,8105"
+    "Valor": "0,8119"
   },
   {
     "data_referencia": "2026-07-21",
@@ -2234,7 +2234,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "6,75"
+    "Valor": "6,76"
   },
   {
     "data_referencia": "2026-07-21",
@@ -2250,7 +2250,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "162,72"
+    "Valor": "162,83"
   },
   {
     "data_referencia": "2026-07-21",
@@ -2258,7 +2258,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "17,39"
+    "Valor": "17,41"
   },
   {
     "data_referencia": "2026-07-21",
@@ -2266,7 +2266,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "0,1917"
+    "Valor": "0,1926"
   },
   {
     "data_referencia": "2026-07-21",
@@ -2274,7 +2274,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "1,13"
+    "Valor": "1,14"
   },
   {
     "data_referencia": "2026-07-21",
