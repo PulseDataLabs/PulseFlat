@@ -8,8 +8,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "DI-B3",
     "valor": "14,15",
     "unidade": "% a.a.",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-17",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-20",
     "metrica": "valor"
   },
   {
@@ -19,10 +19,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Câmbio",
     "tipo": "indicador",
     "indicador": "Dólar Comercial Compra",
-    "valor": "5,12",
+    "valor": "5,09",
     "unidade": "R$",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-17",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-20",
     "metrica": "valor"
   },
   {
@@ -32,10 +32,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Câmbio",
     "tipo": "indicador",
     "indicador": "Dólar Comercial Venda",
-    "valor": "5,12",
+    "valor": "5,09",
     "unidade": "R$",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-17",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-20",
     "metrica": "valor"
   },
   {
@@ -58,10 +58,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Câmbio",
     "tipo": "indicador",
     "indicador": "Euro Compra",
-    "valor": "5,85",
+    "valor": "5,81",
     "unidade": "R$",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-17",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-20",
     "metrica": "valor"
   },
   {
@@ -71,10 +71,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Câmbio",
     "tipo": "indicador",
     "indicador": "Euro Venda",
-    "valor": "5,86",
+    "valor": "5,81",
     "unidade": "R$",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-17",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-20",
     "metrica": "valor"
   },
   {
@@ -84,10 +84,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "FDS",
     "tipo": "indicador",
     "indicador": "FDS (registro 1)",
-    "valor": "0,0899",
+    "valor": "0,0900",
     "unidade": "R$ cota",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-17",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-20",
     "metrica": "valor"
   },
   {
@@ -99,8 +99,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "FDS (registro 2)",
     "valor": "0,0899",
     "unidade": "R$ cota",
-    "data_referencia": "2026-07-16",
-    "captura_em": "2026-07-17",
+    "data_referencia": "2026-07-17",
+    "captura_em": "2026-07-20",
     "metrica": "valor"
   },
   {
@@ -188,10 +188,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Taxa de Referência",
     "tipo": "indicador",
     "indicador": "TBF",
-    "valor": "1,05",
+    "valor": "1,01",
     "unidade": "% mês",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-17",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-20",
     "metrica": "valor"
   },
   {
@@ -201,10 +201,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Taxa de Referência",
     "tipo": "indicador",
     "indicador": "TR",
-    "valor": "0,1712",
+    "valor": "0,1694",
     "unidade": "% mês",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-17",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-20",
     "metrica": "valor"
   },
   {
@@ -216,8 +216,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "Taxa SELIC (BC)",
     "valor": "14,15",
     "unidade": "% a.a.",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-17",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-20",
     "metrica": "valor"
   },
   {
@@ -227,10 +227,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Títulos Públicos",
     "tipo": "indicador",
     "indicador": "100000 (LTN)",
-    "valor": "13,82%",
+    "valor": "13,81%",
     "unidade": "Taxa indicativa",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "tx_indicativa"
   },
   {
@@ -240,10 +240,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Títulos Públicos",
     "tipo": "indicador",
     "indicador": "100000 (LTN)",
-    "valor": "973,15",
+    "valor": "973,67",
     "unidade": "PU",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "pu"
   },
   {
@@ -255,8 +255,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "210100 (LFT)",
     "valor": "0,00%",
     "unidade": "Taxa indicativa",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "tx_indicativa"
   },
   {
@@ -266,10 +266,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Títulos Públicos",
     "tipo": "indicador",
     "indicador": "210100 (LFT)",
-    "valor": "19.456",
+    "valor": "19.466",
     "unidade": "PU",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "pu"
   },
   {
@@ -281,8 +281,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "760199 (NTN-B)",
     "valor": "11,71%",
     "unidade": "Taxa indicativa",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "tx_indicativa"
   },
   {
@@ -292,10 +292,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Títulos Públicos",
     "tipo": "indicador",
     "indicador": "760199 (NTN-B)",
-    "valor": "4.836",
+    "valor": "4.838",
     "unidade": "PU",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "pu"
   },
   {
@@ -307,8 +307,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "770100 (NTN-C)",
     "valor": "7,98%",
     "unidade": "Taxa indicativa",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "tx_indicativa"
   },
   {
@@ -320,8 +320,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "770100 (NTN-C)",
     "valor": "7.626",
     "unidade": "PU",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "pu"
   },
   {
@@ -331,10 +331,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Títulos Públicos",
     "tipo": "indicador",
     "indicador": "950199 (NTN-F)",
-    "valor": "13,81%",
+    "valor": "13,78%",
     "unidade": "Taxa indicativa",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "tx_indicativa"
   },
   {
@@ -344,10 +344,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Títulos Públicos",
     "tipo": "indicador",
     "indicador": "950199 (NTN-F)",
-    "valor": "988,67",
+    "valor": "989,32",
     "unidade": "PU",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "pu"
   },
   {
@@ -385,8 +385,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "DI1",
     "valor": "13,65%",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "taxa"
   },
   {
@@ -398,8 +398,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "PTAX USD — Compra",
     "valor": "4,02",
     "unidade": "",
-    "data_referencia": "2026-07-20",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-21",
+    "captura_em": "2026-07-21",
     "metrica": "cotacao_compra"
   },
   {
@@ -411,8 +411,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "PTAX USD — Venda",
     "valor": "4,02",
     "unidade": "",
-    "data_referencia": "2026-07-20",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-21",
+    "captura_em": "2026-07-21",
     "metrica": "cotacao_venda"
   },
   {
@@ -424,8 +424,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "IGP-M",
     "valor": "4,02%",
     "unidade": "",
-    "data_referencia": "2026-07-20",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-21",
+    "captura_em": "2026-07-21",
     "metrica": "1"
   },
   {
@@ -437,8 +437,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "IGP-M (índice)",
     "valor": "0,48%",
     "unidade": "",
-    "data_referencia": "2026-07-20",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-21",
+    "captura_em": "2026-07-21",
     "metrica": "189"
   },
   {
@@ -450,8 +450,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "IGP-M 12m",
     "valor": "0,09%",
     "unidade": "",
-    "data_referencia": "2026-07-20",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-21",
+    "captura_em": "2026-07-21",
     "metrica": "190"
   },
   {
@@ -463,8 +463,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "IPCA 12m",
     "valor": "0,21%",
     "unidade": "",
-    "data_referencia": "2026-07-20",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-21",
+    "captura_em": "2026-07-21",
     "metrica": "433"
   },
   {
@@ -476,8 +476,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "SELIC (% a.d.)",
     "valor": "0,02%",
     "unidade": "",
-    "data_referencia": "2026-07-20",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-21",
+    "captura_em": "2026-07-21",
     "metrica": "11"
   },
   {
@@ -490,7 +490,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "21,00",
     "unidade": "",
     "data_referencia": "2030-12-01",
-    "captura_em": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "SGS12_NDIASUTEISFUT12"
   },
   {
@@ -503,7 +503,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "22,00",
     "unidade": "",
     "data_referencia": "2026-12-01",
-    "captura_em": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "SGS12_NDIASUTEISPAS12"
   },
   {
@@ -516,7 +516,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "125,40",
     "unidade": "",
     "data_referencia": "2026-04-01",
-    "captura_em": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "FUNCEX12_XPT12"
   },
   {
@@ -529,7 +529,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "110,60",
     "unidade": "",
     "data_referencia": "2026-04-01",
-    "captura_em": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "FUNCEX12_MDPT12"
   },
   {
@@ -542,7 +542,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "158,80",
     "unidade": "",
     "data_referencia": "2026-04-01",
-    "captura_em": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "GAC12_INDFBCFCC12"
   },
   {
@@ -555,7 +555,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "161,83",
     "unidade": "",
     "data_referencia": "2026-04-01",
-    "captura_em": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "GAC12_INDFBCFCCDESSAZ12"
   },
   {
@@ -568,7 +568,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "178,01",
     "unidade": "",
     "data_referencia": "2026-04-01",
-    "captura_em": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "GAC12_INDFBCFDESSAZ12"
   },
   {
@@ -581,7 +581,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "176,12",
     "unidade": "",
     "data_referencia": "2026-04-01",
-    "captura_em": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "GAC12_INDFBCF12"
   },
   {
@@ -594,7 +594,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "13.192.246",
     "unidade": "",
     "data_referencia": "2026-06-01",
-    "captura_em": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "BM12_PIBAC12"
   },
   {
@@ -607,7 +607,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "1.020.540",
     "unidade": "",
     "data_referencia": "2026-06-01",
-    "captura_em": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "SGS12_7836"
   },
   {
@@ -620,7 +620,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "1.621",
     "unidade": "",
     "data_referencia": "2026-06-01",
-    "captura_em": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "GAC12_SALMINRE12"
   },
   {
@@ -633,7 +633,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "1.621",
     "unidade": "",
     "data_referencia": "2026-12-01",
-    "captura_em": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "MTE12_SALMIN12"
   },
   {
@@ -646,7 +646,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "5,60%",
     "unidade": "",
     "data_referencia": "2026-05-01",
-    "captura_em": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "PNADC12_TDESOC12"
   },
   {
@@ -659,7 +659,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "81,62",
     "unidade": "",
     "data_referencia": "2026-07-13",
-    "captura_em": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "EIA366_PBRENT366"
   },
   {
@@ -672,7 +672,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "79,20",
     "unidade": "",
     "data_referencia": "2026-07-13",
-    "captura_em": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "EIA366_PWTI366"
   },
   {
@@ -682,10 +682,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Mercados Globais",
     "tipo": "indicador",
     "indicador": "Índice Dow Jones",
-    "valor": "52.146",
+    "valor": "51.839",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "GM366_DOW366"
   },
   {
@@ -695,10 +695,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Mercados Globais",
     "tipo": "indicador",
     "indicador": "Índice NASDAQ",
-    "valor": "25.520",
+    "valor": "25.508",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "SGS366_NASDAQ366"
   },
   {
@@ -711,7 +711,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "1.202",
     "unidade": "",
     "data_referencia": "2026-06-01",
-    "captura_em": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "IGP12_IGPDI12"
   },
   {
@@ -724,7 +724,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "1.281",
     "unidade": "",
     "data_referencia": "2026-06-01",
-    "captura_em": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "IGP12_INCC12"
   },
   {
@@ -737,7 +737,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "0,14%",
     "unidade": "",
     "data_referencia": "2026-06-01",
-    "captura_em": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "PRECOS12_INPCBR12"
   },
   {
@@ -750,7 +750,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "7.836",
     "unidade": "",
     "data_referencia": "2026-06-01",
-    "captura_em": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "PRECOS12_INPC12"
   },
   {
@@ -763,7 +763,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "2.769",
     "unidade": "",
     "data_referencia": "2026-05-01",
-    "captura_em": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "IBSIE12_QSCAB12"
   },
   {
@@ -776,7 +776,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "2.233",
     "unidade": "",
     "data_referencia": "2026-05-01",
-    "captura_em": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "IBSIE12_QSCFG12"
   },
   {
@@ -789,7 +789,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "2.030",
     "unidade": "",
     "data_referencia": "2026-05-01",
-    "captura_em": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "IBSIE12_QSCL12"
   },
   {
@@ -799,10 +799,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Taxas de Juros",
     "tipo": "indicador",
     "indicador": "CDI Acumulado no Mês",
-    "valor": "0,63%",
+    "valor": "0,69%",
     "unidade": "",
     "data_referencia": "2026-07-01",
-    "captura_em": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "BM12_TJCDI12"
   },
   {
@@ -815,7 +815,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "13,87%",
     "unidade": "",
     "data_referencia": "2026-07-01",
-    "captura_em": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "ANBIMA12_TJTLN112"
   },
   {
@@ -828,7 +828,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "13,87%",
     "unidade": "",
     "data_referencia": "2026-07-01",
-    "captura_em": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "ANBIMA12_TJTLN1212"
   },
   {
@@ -841,7 +841,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "13,83%",
     "unidade": "",
     "data_referencia": "2026-07-01",
-    "captura_em": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "ANBIMA12_TJTLN312"
   },
   {
@@ -854,7 +854,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "13,81%",
     "unidade": "",
     "data_referencia": "2026-07-01",
-    "captura_em": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "ANBIMA12_TJTLN612"
   },
   {
@@ -867,7 +867,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "0,67%",
     "unidade": "",
     "data_referencia": "2026-07-01",
-    "captura_em": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "ANBIMA12_TJPOUP12"
   },
   {
@@ -880,7 +880,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "0,67%",
     "unidade": "",
     "data_referencia": "2026-07-01",
-    "captura_em": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "BM12_RNDPO12"
   },
   {
@@ -890,10 +890,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Taxas de Juros",
     "tipo": "indicador",
     "indicador": "Selic Acumulada no Mês",
-    "valor": "0,69%",
+    "valor": "0,74%",
     "unidade": "",
     "data_referencia": "2026-07-01",
-    "captura_em": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "BM12_TJOVER12"
   },
   {
@@ -906,7 +906,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "1,10%",
     "unidade": "",
     "data_referencia": "2026-07-01",
-    "captura_em": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "BM12_TJTBF12"
   },
   {
@@ -919,7 +919,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "0,17%",
     "unidade": "",
     "data_referencia": "2026-07-01",
-    "captura_em": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "BM12_TJTR12"
   },
   {
@@ -932,7 +932,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "0,73%",
     "unidade": "",
     "data_referencia": "2026-07-01",
-    "captura_em": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "BM12_TJLP12"
   },
   {
@@ -942,10 +942,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Brasileiras (B3)",
     "tipo": "indicador",
     "indicador": "ABEV3.SA",
-    "valor": "15,63",
+    "valor": "15,79",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "ABEV3.SA"
   },
   {
@@ -955,10 +955,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Brasileiras (B3)",
     "tipo": "indicador",
     "indicador": "ALOS3.SA",
-    "valor": "27,32",
+    "valor": "27,30",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "ALOS3.SA"
   },
   {
@@ -968,10 +968,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Brasileiras (B3)",
     "tipo": "indicador",
     "indicador": "ASAI3.SA",
-    "valor": "8,50",
+    "valor": "8,14",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "ASAI3.SA"
   },
   {
@@ -981,10 +981,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Brasileiras (B3)",
     "tipo": "indicador",
     "indicador": "B3SA3.SA",
-    "valor": "15,20",
+    "valor": "15,26",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "B3SA3.SA"
   },
   {
@@ -994,10 +994,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Brasileiras (B3)",
     "tipo": "indicador",
     "indicador": "BBAS3.SA",
-    "valor": "20,49",
+    "valor": "20,17",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "BBAS3.SA"
   },
   {
@@ -1007,10 +1007,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Brasileiras (B3)",
     "tipo": "indicador",
     "indicador": "BBDC3.SA",
-    "valor": "15,94",
+    "valor": "16,05",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "BBDC3.SA"
   },
   {
@@ -1020,10 +1020,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Brasileiras (B3)",
     "tipo": "indicador",
     "indicador": "BBDC4.SA",
-    "valor": "18,29",
+    "valor": "18,41",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "BBDC4.SA"
   },
   {
@@ -1033,10 +1033,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Brasileiras (B3)",
     "tipo": "indicador",
     "indicador": "BEEF3.SA",
-    "valor": "3,60",
+    "valor": "3,58",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "BEEF3.SA"
   },
   {
@@ -1046,10 +1046,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Brasileiras (B3)",
     "tipo": "indicador",
     "indicador": "BPAC11.SA",
-    "valor": "56,18",
+    "valor": "55,84",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "BPAC11.SA"
   },
   {
@@ -1059,10 +1059,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Brasileiras (B3)",
     "tipo": "indicador",
     "indicador": "BRAP4.SA",
-    "valor": "21,19",
+    "valor": "20,81",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "BRAP4.SA"
   },
   {
@@ -1072,10 +1072,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Brasileiras (B3)",
     "tipo": "indicador",
     "indicador": "BRKM5.SA",
-    "valor": "6,19",
+    "valor": "5,94",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "BRKM5.SA"
   },
   {
@@ -1085,10 +1085,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Brasileiras (B3)",
     "tipo": "indicador",
     "indicador": "CMIG4.SA",
-    "valor": "11,12",
+    "valor": "11,02",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "CMIG4.SA"
   },
   {
@@ -1098,10 +1098,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Brasileiras (B3)",
     "tipo": "indicador",
     "indicador": "CMIN3.SA",
-    "valor": "5,33",
+    "valor": "5,39",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "CMIN3.SA"
   },
   {
@@ -1111,10 +1111,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Brasileiras (B3)",
     "tipo": "indicador",
     "indicador": "COGN3.SA",
-    "valor": "2,23",
+    "valor": "2,18",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "COGN3.SA"
   },
   {
@@ -1124,10 +1124,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Brasileiras (B3)",
     "tipo": "indicador",
     "indicador": "CPFE3.SA",
-    "valor": "46,87",
+    "valor": "46,32",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "CPFE3.SA"
   },
   {
@@ -1137,10 +1137,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Brasileiras (B3)",
     "tipo": "indicador",
     "indicador": "CSAN3.SA",
-    "valor": "3,84",
+    "valor": "3,82",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "CSAN3.SA"
   },
   {
@@ -1150,10 +1150,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Brasileiras (B3)",
     "tipo": "indicador",
     "indicador": "CSNA3.SA",
-    "valor": "5,05",
+    "valor": "5,07",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "CSNA3.SA"
   },
   {
@@ -1176,10 +1176,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Brasileiras (B3)",
     "tipo": "indicador",
     "indicador": "CYRE3.SA",
-    "valor": "21,63",
+    "valor": "21,13",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "CYRE3.SA"
   },
   {
@@ -1189,10 +1189,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Brasileiras (B3)",
     "tipo": "indicador",
     "indicador": "EGIE3.SA",
-    "valor": "29,97",
+    "valor": "30,27",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "EGIE3.SA"
   },
   {
@@ -1202,10 +1202,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Brasileiras (B3)",
     "tipo": "indicador",
     "indicador": "ENEV3.SA",
-    "valor": "25,68",
+    "valor": "25,65",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "ENEV3.SA"
   },
   {
@@ -1215,10 +1215,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Brasileiras (B3)",
     "tipo": "indicador",
     "indicador": "ENGI11.SA",
-    "valor": "49,25",
+    "valor": "49,49",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "ENGI11.SA"
   },
   {
@@ -1228,10 +1228,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Brasileiras (B3)",
     "tipo": "indicador",
     "indicador": "EQTL3.SA",
-    "valor": "39,50",
+    "valor": "39,29",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "EQTL3.SA"
   },
   {
@@ -1241,10 +1241,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Brasileiras (B3)",
     "tipo": "indicador",
     "indicador": "EZTC3.SA",
-    "valor": "12,01",
+    "valor": "11,80",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "EZTC3.SA"
   },
   {
@@ -1254,10 +1254,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Brasileiras (B3)",
     "tipo": "indicador",
     "indicador": "FLRY3.SA",
-    "valor": "16,59",
+    "valor": "16,56",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "FLRY3.SA"
   },
   {
@@ -1267,10 +1267,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Brasileiras (B3)",
     "tipo": "indicador",
     "indicador": "GGBR4.SA",
-    "valor": "24,04",
+    "valor": "23,62",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "GGBR4.SA"
   },
   {
@@ -1280,10 +1280,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Brasileiras (B3)",
     "tipo": "indicador",
     "indicador": "HAPV3.SA",
-    "valor": "11,38",
+    "valor": "11,55",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "HAPV3.SA"
   },
   {
@@ -1293,10 +1293,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Brasileiras (B3)",
     "tipo": "indicador",
     "indicador": "HYPE3.SA",
-    "valor": "21,19",
+    "valor": "21,42",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "HYPE3.SA"
   },
   {
@@ -1306,10 +1306,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Brasileiras (B3)",
     "tipo": "indicador",
     "indicador": "IGTI11.SA",
-    "valor": "25,22",
+    "valor": "24,85",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "IGTI11.SA"
   },
   {
@@ -1319,10 +1319,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Brasileiras (B3)",
     "tipo": "indicador",
     "indicador": "IRBR3.SA",
-    "valor": "57,00",
+    "valor": "56,80",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "IRBR3.SA"
   },
   {
@@ -1332,10 +1332,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Brasileiras (B3)",
     "tipo": "indicador",
     "indicador": "ITSA4.SA",
-    "valor": "13,61",
+    "valor": "13,63",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "ITSA4.SA"
   },
   {
@@ -1345,10 +1345,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Brasileiras (B3)",
     "tipo": "indicador",
     "indicador": "ITUB4.SA",
-    "valor": "41,96",
+    "valor": "42,30",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "ITUB4.SA"
   },
   {
@@ -1358,10 +1358,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Brasileiras (B3)",
     "tipo": "indicador",
     "indicador": "JHSF3.SA",
-    "valor": "10,93",
+    "valor": "10,75",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "JHSF3.SA"
   },
   {
@@ -1371,10 +1371,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Brasileiras (B3)",
     "tipo": "indicador",
     "indicador": "KLBN11.SA",
-    "valor": "17,58",
+    "valor": "17,48",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "KLBN11.SA"
   },
   {
@@ -1384,10 +1384,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Brasileiras (B3)",
     "tipo": "indicador",
     "indicador": "LOGN3.SA",
-    "valor": "27,95",
+    "valor": "27,91",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "LOGN3.SA"
   },
   {
@@ -1397,10 +1397,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Brasileiras (B3)",
     "tipo": "indicador",
     "indicador": "LREN3.SA",
-    "valor": "13,42",
+    "valor": "13,31",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "LREN3.SA"
   },
   {
@@ -1410,10 +1410,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Brasileiras (B3)",
     "tipo": "indicador",
     "indicador": "MDIA3.SA",
-    "valor": "17,85",
+    "valor": "17,55",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "MDIA3.SA"
   },
   {
@@ -1423,10 +1423,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Brasileiras (B3)",
     "tipo": "indicador",
     "indicador": "MGLU3.SA",
-    "valor": "4,92",
+    "valor": "4,86",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "MGLU3.SA"
   },
   {
@@ -1436,10 +1436,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Brasileiras (B3)",
     "tipo": "indicador",
     "indicador": "MRVE3.SA",
-    "valor": "4,68",
+    "valor": "4,59",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "MRVE3.SA"
   },
   {
@@ -1449,10 +1449,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Brasileiras (B3)",
     "tipo": "indicador",
     "indicador": "MULT3.SA",
-    "valor": "28,53",
+    "valor": "28,32",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "MULT3.SA"
   },
   {
@@ -1477,8 +1477,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "PCAR3.SA",
     "valor": "2,60",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "PCAR3.SA"
   },
   {
@@ -1488,10 +1488,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Brasileiras (B3)",
     "tipo": "indicador",
     "indicador": "PETR3.SA",
-    "valor": "45,81",
+    "valor": "46,12",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "PETR3.SA"
   },
   {
@@ -1501,10 +1501,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Brasileiras (B3)",
     "tipo": "indicador",
     "indicador": "PETR4.SA",
-    "valor": "40,90",
+    "valor": "41,15",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "PETR4.SA"
   },
   {
@@ -1514,10 +1514,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Brasileiras (B3)",
     "tipo": "indicador",
     "indicador": "PRIO3.SA",
-    "valor": "57,85",
+    "valor": "57,69",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "PRIO3.SA"
   },
   {
@@ -1527,10 +1527,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Brasileiras (B3)",
     "tipo": "indicador",
     "indicador": "QUAL3.SA",
-    "valor": "1,59",
+    "valor": "1,50",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "QUAL3.SA"
   },
   {
@@ -1540,10 +1540,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Brasileiras (B3)",
     "tipo": "indicador",
     "indicador": "RADL3.SA",
-    "valor": "18,55",
+    "valor": "18,69",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "RADL3.SA"
   },
   {
@@ -1566,10 +1566,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Brasileiras (B3)",
     "tipo": "indicador",
     "indicador": "RENT3.SA",
-    "valor": "38,23",
+    "valor": "37,49",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "RENT3.SA"
   },
   {
@@ -1579,10 +1579,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Brasileiras (B3)",
     "tipo": "indicador",
     "indicador": "SANB11.SA",
-    "valor": "26,65",
+    "valor": "27,01",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "SANB11.SA"
   },
   {
@@ -1592,10 +1592,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Brasileiras (B3)",
     "tipo": "indicador",
     "indicador": "SBSP3.SA",
-    "valor": "29,22",
+    "valor": "28,98",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "SBSP3.SA"
   },
   {
@@ -1605,10 +1605,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Brasileiras (B3)",
     "tipo": "indicador",
     "indicador": "SLCE3.SA",
-    "valor": "13,53",
+    "valor": "13,57",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "SLCE3.SA"
   },
   {
@@ -1618,10 +1618,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Brasileiras (B3)",
     "tipo": "indicador",
     "indicador": "SMTO3.SA",
-    "valor": "15,45",
+    "valor": "15,41",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "SMTO3.SA"
   },
   {
@@ -1631,10 +1631,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Brasileiras (B3)",
     "tipo": "indicador",
     "indicador": "SUZB3.SA",
-    "valor": "41,93",
+    "valor": "41,89",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "SUZB3.SA"
   },
   {
@@ -1644,10 +1644,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Brasileiras (B3)",
     "tipo": "indicador",
     "indicador": "TAEE11.SA",
-    "valor": "40,89",
+    "valor": "41,15",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "TAEE11.SA"
   },
   {
@@ -1657,10 +1657,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Brasileiras (B3)",
     "tipo": "indicador",
     "indicador": "TEND3.SA",
-    "valor": "31,67",
+    "valor": "30,62",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "TEND3.SA"
   },
   {
@@ -1672,8 +1672,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "TIMS3.SA",
     "valor": "22,60",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "TIMS3.SA"
   },
   {
@@ -1696,10 +1696,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Brasileiras (B3)",
     "tipo": "indicador",
     "indicador": "USIM5.SA",
-    "valor": "8,23",
+    "valor": "8,16",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "USIM5.SA"
   },
   {
@@ -1709,10 +1709,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Brasileiras (B3)",
     "tipo": "indicador",
     "indicador": "VALE3.SA",
-    "valor": "72,94",
+    "valor": "71,93",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "VALE3.SA"
   },
   {
@@ -1735,10 +1735,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Brasileiras (B3)",
     "tipo": "indicador",
     "indicador": "VIVT3.SA",
-    "valor": "35,52",
+    "valor": "35,67",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "VIVT3.SA"
   },
   {
@@ -1748,10 +1748,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Brasileiras (B3)",
     "tipo": "indicador",
     "indicador": "WEGE3.SA",
-    "valor": "43,63",
+    "valor": "43,13",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "WEGE3.SA"
   },
   {
@@ -1774,10 +1774,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "AAPL",
-    "valor": "333,74",
+    "valor": "326,59",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "AAPL"
   },
   {
@@ -1787,10 +1787,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "ABBV",
-    "valor": "254,49",
+    "valor": "253,38",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "ABBV"
   },
   {
@@ -1800,10 +1800,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "ADBE",
-    "valor": "237,25",
+    "valor": "234,74",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "ADBE"
   },
   {
@@ -1813,10 +1813,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "AMD",
-    "valor": "495,76",
+    "valor": "503,57",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "AMD"
   },
   {
@@ -1826,10 +1826,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "AMZN",
-    "valor": "247,23",
+    "valor": "249,99",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "AMZN"
   },
   {
@@ -1839,10 +1839,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "ASML",
-    "valor": "1.748",
+    "valor": "1.739",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "ASML"
   },
   {
@@ -1852,10 +1852,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "BABA",
-    "valor": "114,97",
+    "valor": "120,34",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "BABA"
   },
   {
@@ -1865,10 +1865,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "BAC",
-    "valor": "61,27",
+    "valor": "60,42",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "BAC"
   },
   {
@@ -1878,10 +1878,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "COST",
-    "valor": "940,87",
+    "valor": "935,80",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "COST"
   },
   {
@@ -1891,10 +1891,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "CRM",
-    "valor": "170,77",
+    "valor": "173,79",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "CRM"
   },
   {
@@ -1904,10 +1904,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "CVX",
-    "valor": "187,38",
+    "valor": "189,71",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "CVX"
   },
   {
@@ -1917,10 +1917,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "DIS",
-    "valor": "97,67",
+    "valor": "96,41",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "DIS"
   },
   {
@@ -1930,10 +1930,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "GOOGL",
-    "valor": "346,77",
+    "valor": "351,99",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "GOOGL"
   },
   {
@@ -1943,10 +1943,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "HD",
-    "valor": "338,87",
+    "valor": "333,04",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "HD"
   },
   {
@@ -1956,10 +1956,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "INTC",
-    "valor": "95,04",
+    "valor": "97,06",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "INTC"
   },
   {
@@ -1969,10 +1969,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "JNJ",
-    "valor": "253,04",
+    "valor": "248,82",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "JNJ"
   },
   {
@@ -1982,10 +1982,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "JPM",
-    "valor": "341,10",
+    "valor": "338,87",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "JPM"
   },
   {
@@ -1995,10 +1995,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "KO",
-    "valor": "81,56",
+    "valor": "82,12",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "KO"
   },
   {
@@ -2008,10 +2008,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "LLY",
-    "valor": "1.179",
+    "valor": "1.147",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "LLY"
   },
   {
@@ -2021,10 +2021,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "MA",
-    "valor": "543,60",
+    "valor": "547,44",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "MA"
   },
   {
@@ -2034,10 +2034,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "MCD",
-    "valor": "267,71",
+    "valor": "267,64",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "MCD"
   },
   {
@@ -2047,10 +2047,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "META",
-    "valor": "646,01",
+    "valor": "645,85",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "META"
   },
   {
@@ -2060,10 +2060,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "MRK",
-    "valor": "127,50",
+    "valor": "124,40",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "MRK"
   },
   {
@@ -2073,10 +2073,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "MSFT",
-    "valor": "393,82",
+    "valor": "402,29",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "MSFT"
   },
   {
@@ -2086,10 +2086,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "NFLX",
-    "valor": "68,95",
+    "valor": "67,60",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "NFLX"
   },
   {
@@ -2099,10 +2099,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "NKE",
-    "valor": "43,76",
+    "valor": "43,47",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "NKE"
   },
   {
@@ -2112,10 +2112,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "NVDA",
-    "valor": "202,81",
+    "valor": "203,28",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "NVDA"
   },
   {
@@ -2125,10 +2125,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "NVO",
-    "valor": "50,32",
+    "valor": "49,61",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "NVO"
   },
   {
@@ -2138,10 +2138,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "ORCL",
-    "valor": "126,41",
+    "valor": "121,38",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "ORCL"
   },
   {
@@ -2151,10 +2151,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "PEP",
-    "valor": "137,12",
+    "valor": "135,46",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "PEP"
   },
   {
@@ -2164,10 +2164,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "PFE",
-    "valor": "25,05",
+    "valor": "24,75",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "PFE"
   },
   {
@@ -2177,10 +2177,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "PG",
-    "valor": "149,98",
+    "valor": "149,13",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "PG"
   },
   {
@@ -2190,10 +2190,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "QCOM",
-    "valor": "171,78",
+    "valor": "170,32",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "QCOM"
   },
   {
@@ -2203,10 +2203,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "SBUX",
-    "valor": "105,49",
+    "valor": "104,81",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "SBUX"
   },
   {
@@ -2216,10 +2216,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "TSLA",
-    "valor": "380,84",
+    "valor": "369,57",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "TSLA"
   },
   {
@@ -2229,10 +2229,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "TSM",
-    "valor": "398,37",
+    "valor": "402,30",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "TSM"
   },
   {
@@ -2242,10 +2242,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "UNH",
-    "valor": "426,09",
+    "valor": "421,55",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "UNH"
   },
   {
@@ -2255,10 +2255,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "V",
-    "valor": "358,56",
+    "valor": "360,57",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "V"
   },
   {
@@ -2268,10 +2268,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "WMT",
-    "valor": "114,24",
+    "valor": "112,20",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "WMT"
   },
   {
@@ -2281,10 +2281,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "XOM",
-    "valor": "147,36",
+    "valor": "148,36",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "XOM"
   },
   {
@@ -2296,8 +2296,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "ARSBRL=X",
     "valor": "0,003190",
     "unidade": "",
-    "data_referencia": "2026-07-20",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-21",
+    "captura_em": "2026-07-21",
     "metrica": "ARSBRL=X"
   },
   {
@@ -2307,10 +2307,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Câmbio / Moedas",
     "tipo": "indicador",
     "indicador": "AUDUSD=X",
-    "valor": "0,7010",
+    "valor": "0,7020",
     "unidade": "",
-    "data_referencia": "2026-07-20",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-21",
+    "captura_em": "2026-07-21",
     "metrica": "AUDUSD=X"
   },
   {
@@ -2322,8 +2322,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "BRL=X",
     "valor": "5,09",
     "unidade": "",
-    "data_referencia": "2026-07-20",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-21",
+    "captura_em": "2026-07-21",
     "metrica": "BRL=X"
   },
   {
@@ -2335,8 +2335,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "CHFBRL=X",
     "valor": "6,28",
     "unidade": "",
-    "data_referencia": "2026-07-20",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-21",
+    "captura_em": "2026-07-21",
     "metrica": "CHFBRL=X"
   },
   {
@@ -2348,8 +2348,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "CLPBRL=X",
     "valor": "0,005399",
     "unidade": "",
-    "data_referencia": "2026-07-20",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-21",
+    "captura_em": "2026-07-21",
     "metrica": "CLPBRL=X"
   },
   {
@@ -2359,10 +2359,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Câmbio / Moedas",
     "tipo": "indicador",
     "indicador": "CNYBRL=X",
-    "valor": "0,7514",
+    "valor": "0,7522",
     "unidade": "",
-    "data_referencia": "2026-07-20",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-21",
+    "captura_em": "2026-07-21",
     "metrica": "CNYBRL=X"
   },
   {
@@ -2372,10 +2372,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Câmbio / Moedas",
     "tipo": "indicador",
     "indicador": "COPBRL=X",
-    "valor": "0,001565",
+    "valor": "0,001561",
     "unidade": "",
-    "data_referencia": "2026-07-20",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-21",
+    "captura_em": "2026-07-21",
     "metrica": "COPBRL=X"
   },
   {
@@ -2398,10 +2398,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Câmbio / Moedas",
     "tipo": "indicador",
     "indicador": "EURBRL=X",
-    "valor": "5,80",
+    "valor": "5,81",
     "unidade": "",
-    "data_referencia": "2026-07-20",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-21",
+    "captura_em": "2026-07-21",
     "metrica": "EURBRL=X"
   },
   {
@@ -2413,8 +2413,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "EURUSD=X",
     "valor": "1,14",
     "unidade": "",
-    "data_referencia": "2026-07-20",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-21",
+    "captura_em": "2026-07-21",
     "metrica": "EURUSD=X"
   },
   {
@@ -2424,10 +2424,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Câmbio / Moedas",
     "tipo": "indicador",
     "indicador": "GBPBRL=X",
-    "valor": "6,84",
+    "valor": "6,83",
     "unidade": "",
-    "data_referencia": "2026-07-20",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-21",
+    "captura_em": "2026-07-21",
     "metrica": "GBPBRL=X"
   },
   {
@@ -2439,8 +2439,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "GBPUSD=X",
     "valor": "1,34",
     "unidade": "",
-    "data_referencia": "2026-07-20",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-21",
+    "captura_em": "2026-07-21",
     "metrica": "GBPUSD=X"
   },
   {
@@ -2452,8 +2452,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "JPYBRL=X",
     "valor": "0,0312",
     "unidade": "",
-    "data_referencia": "2026-07-20",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-21",
+    "captura_em": "2026-07-21",
     "metrica": "JPYBRL=X"
   },
   {
@@ -2463,10 +2463,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Câmbio / Moedas",
     "tipo": "indicador",
     "indicador": "MXNBRL=X",
-    "valor": "0,2909",
+    "valor": "0,2926",
     "unidade": "",
-    "data_referencia": "2026-07-20",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-21",
+    "captura_em": "2026-07-21",
     "metrica": "MXNBRL=X"
   },
   {
@@ -2476,10 +2476,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Câmbio / Moedas",
     "tipo": "indicador",
     "indicador": "USDCAD=X",
-    "valor": "1,40",
+    "valor": "1,41",
     "unidade": "",
-    "data_referencia": "2026-07-20",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-21",
+    "captura_em": "2026-07-21",
     "metrica": "USDCAD=X"
   },
   {
@@ -2489,10 +2489,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Câmbio / Moedas",
     "tipo": "indicador",
     "indicador": "USDCHF=X",
-    "valor": "0,8103",
+    "valor": "0,8105",
     "unidade": "",
-    "data_referencia": "2026-07-20",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-21",
+    "captura_em": "2026-07-21",
     "metrica": "USDCHF=X"
   },
   {
@@ -2502,10 +2502,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Câmbio / Moedas",
     "tipo": "indicador",
     "indicador": "USDCNY=X",
-    "valor": "6,76",
+    "valor": "6,75",
     "unidade": "",
-    "data_referencia": "2026-07-20",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-21",
+    "captura_em": "2026-07-21",
     "metrica": "USDCNY=X"
   },
   {
@@ -2515,10 +2515,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Câmbio / Moedas",
     "tipo": "indicador",
     "indicador": "USDINR=X",
-    "valor": "96,43",
+    "valor": "96,24",
     "unidade": "",
-    "data_referencia": "2026-07-20",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-21",
+    "captura_em": "2026-07-21",
     "metrica": "USDINR=X"
   },
   {
@@ -2528,10 +2528,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Câmbio / Moedas",
     "tipo": "indicador",
     "indicador": "USDJPY=X",
-    "valor": "162,57",
+    "valor": "162,72",
     "unidade": "",
-    "data_referencia": "2026-07-20",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-21",
+    "captura_em": "2026-07-21",
     "metrica": "USDJPY=X"
   },
   {
@@ -2541,10 +2541,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Câmbio / Moedas",
     "tipo": "indicador",
     "indicador": "USDMXN=X",
-    "valor": "17,46",
+    "valor": "17,39",
     "unidade": "",
-    "data_referencia": "2026-07-20",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-21",
+    "captura_em": "2026-07-21",
     "metrica": "USDMXN=X"
   },
   {
@@ -2580,10 +2580,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Commodities Globais",
     "tipo": "indicador",
     "indicador": "BZ=F",
-    "valor": "88,10",
+    "valor": "89,22",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "BZ=F"
   },
   {
@@ -2593,10 +2593,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Commodities Globais",
     "tipo": "indicador",
     "indicador": "CC=F",
-    "valor": "5.533",
+    "valor": "5.520",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "CC=F"
   },
   {
@@ -2606,10 +2606,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Commodities Globais",
     "tipo": "indicador",
     "indicador": "CL=F",
-    "valor": "82,49",
+    "valor": "83,23",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "CL=F"
   },
   {
@@ -2619,10 +2619,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Commodities Globais",
     "tipo": "indicador",
     "indicador": "CT=F",
-    "valor": "77,07",
+    "valor": "77,37",
     "unidade": "",
-    "data_referencia": "2026-07-19",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "CT=F"
   },
   {
@@ -2632,10 +2632,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Commodities Globais",
     "tipo": "indicador",
     "indicador": "GC=F",
-    "valor": "4.013",
+    "valor": "4.010",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "GC=F"
   },
   {
@@ -2645,10 +2645,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Commodities Globais",
     "tipo": "indicador",
     "indicador": "HG=F",
-    "valor": "6,22",
+    "valor": "6,30",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "HG=F"
   },
   {
@@ -2658,10 +2658,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Commodities Globais",
     "tipo": "indicador",
     "indicador": "KC=F",
-    "valor": "328,45",
+    "valor": "334,40",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "KC=F"
   },
   {
@@ -2671,10 +2671,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Commodities Globais",
     "tipo": "indicador",
     "indicador": "NG=F",
-    "valor": "2,91",
+    "valor": "2,86",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "NG=F"
   },
   {
@@ -2684,10 +2684,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Commodities Globais",
     "tipo": "indicador",
     "indicador": "PA=F",
-    "valor": "1.244",
+    "valor": "1.261",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "PA=F"
   },
   {
@@ -2697,10 +2697,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Commodities Globais",
     "tipo": "indicador",
     "indicador": "PL=F",
-    "valor": "1.606",
+    "valor": "1.592",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "PL=F"
   },
   {
@@ -2710,10 +2710,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Commodities Globais",
     "tipo": "indicador",
     "indicador": "SB=F",
-    "valor": "14,83",
+    "valor": "14,82",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "SB=F"
   },
   {
@@ -2723,10 +2723,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Commodities Globais",
     "tipo": "indicador",
     "indicador": "SI=F",
-    "valor": "56,04",
+    "valor": "56,80",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "SI=F"
   },
   {
@@ -2749,10 +2749,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Commodities Globais",
     "tipo": "indicador",
     "indicador": "ZC=F",
-    "valor": "444,75",
+    "valor": "449,50",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "ZC=F"
   },
   {
@@ -2762,10 +2762,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Commodities Globais",
     "tipo": "indicador",
     "indicador": "ZO=F",
-    "valor": "342,25",
+    "valor": "342,00",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "ZO=F"
   },
   {
@@ -2775,10 +2775,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Commodities Globais",
     "tipo": "indicador",
     "indicador": "ZR=F",
-    "valor": "14,01",
+    "valor": "14,00",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "ZR=F"
   },
   {
@@ -2788,10 +2788,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Commodities Globais",
     "tipo": "indicador",
     "indicador": "ZS=F",
-    "valor": "1.204",
+    "valor": "1.226",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "ZS=F"
   },
   {
@@ -2801,10 +2801,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Commodities Globais",
     "tipo": "indicador",
     "indicador": "ZW=F",
-    "valor": "682,75",
+    "valor": "674,00",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "ZW=F"
   },
   {
@@ -2814,10 +2814,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Criptoativos",
     "tipo": "indicador",
     "indicador": "ADA-USD",
-    "valor": "0,1627",
+    "valor": "0,1745",
     "unidade": "",
-    "data_referencia": "2026-07-20",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-21",
+    "captura_em": "2026-07-21",
     "metrica": "ADA-USD"
   },
   {
@@ -2840,10 +2840,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Criptoativos",
     "tipo": "indicador",
     "indicador": "AVAX-USD",
-    "valor": "6,53",
+    "valor": "6,62",
     "unidade": "",
-    "data_referencia": "2026-07-20",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-21",
+    "captura_em": "2026-07-21",
     "metrica": "AVAX-USD"
   },
   {
@@ -2853,10 +2853,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Criptoativos",
     "tipo": "indicador",
     "indicador": "BNB-USD",
-    "valor": "567,47",
+    "valor": "576,94",
     "unidade": "",
-    "data_referencia": "2026-07-20",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-21",
+    "captura_em": "2026-07-21",
     "metrica": "BNB-USD"
   },
   {
@@ -2866,10 +2866,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Criptoativos",
     "tipo": "indicador",
     "indicador": "BTC-USD",
-    "valor": "64.417",
+    "valor": "66.116",
     "unidade": "",
-    "data_referencia": "2026-07-20",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-21",
+    "captura_em": "2026-07-21",
     "metrica": "BTC-USD"
   },
   {
@@ -2879,10 +2879,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Criptoativos",
     "tipo": "indicador",
     "indicador": "DOGE-USD",
-    "valor": "0,0724",
+    "valor": "0,0734",
     "unidade": "",
-    "data_referencia": "2026-07-20",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-21",
+    "captura_em": "2026-07-21",
     "metrica": "DOGE-USD"
   },
   {
@@ -2892,10 +2892,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Criptoativos",
     "tipo": "indicador",
     "indicador": "DOT-USD",
-    "valor": "0,8130",
+    "valor": "0,8580",
     "unidade": "",
-    "data_referencia": "2026-07-20",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-21",
+    "captura_em": "2026-07-21",
     "metrica": "DOT-USD"
   },
   {
@@ -2918,10 +2918,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Criptoativos",
     "tipo": "indicador",
     "indicador": "ETH-USD",
-    "valor": "1.867",
+    "valor": "1.930",
     "unidade": "",
-    "data_referencia": "2026-07-20",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-21",
+    "captura_em": "2026-07-21",
     "metrica": "ETH-USD"
   },
   {
@@ -2957,10 +2957,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Criptoativos",
     "tipo": "indicador",
     "indicador": "ICP-USD",
-    "valor": "2,15",
+    "valor": "2,20",
     "unidade": "",
-    "data_referencia": "2026-07-20",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-21",
+    "captura_em": "2026-07-21",
     "metrica": "ICP-USD"
   },
   {
@@ -2970,10 +2970,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Criptoativos",
     "tipo": "indicador",
     "indicador": "LINK-USD",
-    "valor": "8,36",
+    "valor": "8,69",
     "unidade": "",
-    "data_referencia": "2026-07-20",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-21",
+    "captura_em": "2026-07-21",
     "metrica": "LINK-USD"
   },
   {
@@ -2983,10 +2983,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Criptoativos",
     "tipo": "indicador",
     "indicador": "LTC-USD",
-    "valor": "46,85",
+    "valor": "47,29",
     "unidade": "",
-    "data_referencia": "2026-07-20",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-21",
+    "captura_em": "2026-07-21",
     "metrica": "LTC-USD"
   },
   {
@@ -2996,10 +2996,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Criptoativos",
     "tipo": "indicador",
     "indicador": "NEAR-USD",
-    "valor": "1,98",
+    "valor": "1,99",
     "unidade": "",
-    "data_referencia": "2026-07-20",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-21",
+    "captura_em": "2026-07-21",
     "metrica": "NEAR-USD"
   },
   {
@@ -3009,10 +3009,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Criptoativos",
     "tipo": "indicador",
     "indicador": "OP-USD",
-    "valor": "0,0930",
+    "valor": "0,0970",
     "unidade": "",
-    "data_referencia": "2026-07-20",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-21",
+    "captura_em": "2026-07-21",
     "metrica": "OP-USD"
   },
   {
@@ -3024,8 +3024,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "SHIB-USD",
     "valor": "0,000004",
     "unidade": "",
-    "data_referencia": "2026-07-20",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-21",
+    "captura_em": "2026-07-21",
     "metrica": "SHIB-USD"
   },
   {
@@ -3035,10 +3035,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Criptoativos",
     "tipo": "indicador",
     "indicador": "SOL-USD",
-    "valor": "76,23",
+    "valor": "78,10",
     "unidade": "",
-    "data_referencia": "2026-07-20",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-21",
+    "captura_em": "2026-07-21",
     "metrica": "SOL-USD"
   },
   {
@@ -3048,10 +3048,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Criptoativos",
     "tipo": "indicador",
     "indicador": "TRX-USD",
-    "valor": "0,3252",
+    "valor": "0,3270",
     "unidade": "",
-    "data_referencia": "2026-07-20",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-21",
+    "captura_em": "2026-07-21",
     "metrica": "TRX-USD"
   },
   {
@@ -3061,10 +3061,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Criptoativos",
     "tipo": "indicador",
     "indicador": "XLM-USD",
-    "valor": "0,1861",
+    "valor": "0,1917",
     "unidade": "",
-    "data_referencia": "2026-07-20",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-21",
+    "captura_em": "2026-07-21",
     "metrica": "XLM-USD"
   },
   {
@@ -3074,10 +3074,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Criptoativos",
     "tipo": "indicador",
     "indicador": "XRP-USD",
-    "valor": "1,09",
+    "valor": "1,13",
     "unidade": "",
-    "data_referencia": "2026-07-20",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-21",
+    "captura_em": "2026-07-21",
     "metrica": "XRP-USD"
   },
   {
@@ -3087,10 +3087,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "ETFs & Setoriais",
     "tipo": "indicador",
     "indicador": "BND",
-    "valor": "72,86",
+    "valor": "72,68",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "BND"
   },
   {
@@ -3100,10 +3100,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "ETFs & Setoriais",
     "tipo": "indicador",
     "indicador": "BOVA11.SA",
-    "valor": "170,63",
+    "valor": "170,30",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "BOVA11.SA"
   },
   {
@@ -3113,10 +3113,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "ETFs & Setoriais",
     "tipo": "indicador",
     "indicador": "DIA",
-    "valor": "520,81",
+    "valor": "517,94",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "DIA"
   },
   {
@@ -3126,10 +3126,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "ETFs & Setoriais",
     "tipo": "indicador",
     "indicador": "EEM",
-    "valor": "63,29",
+    "valor": "63,56",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "EEM"
   },
   {
@@ -3139,10 +3139,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "ETFs & Setoriais",
     "tipo": "indicador",
     "indicador": "EWZ",
-    "valor": "35,23",
+    "valor": "35,48",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "EWZ"
   },
   {
@@ -3152,10 +3152,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "ETFs & Setoriais",
     "tipo": "indicador",
     "indicador": "HYG",
-    "valor": "79,65",
+    "valor": "79,68",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "HYG"
   },
   {
@@ -3165,10 +3165,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "ETFs & Setoriais",
     "tipo": "indicador",
     "indicador": "IVVB11.SA",
-    "valor": "429,12",
+    "valor": "426,97",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "IVVB11.SA"
   },
   {
@@ -3178,10 +3178,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "ETFs & Setoriais",
     "tipo": "indicador",
     "indicador": "IWM",
-    "valor": "294,04",
+    "valor": "292,31",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "IWM"
   },
   {
@@ -3191,10 +3191,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "ETFs & Setoriais",
     "tipo": "indicador",
     "indicador": "LQD",
-    "valor": "107,56",
+    "valor": "107,15",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "LQD"
   },
   {
@@ -3204,10 +3204,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "ETFs & Setoriais",
     "tipo": "indicador",
     "indicador": "QQQ",
-    "valor": "695,33",
+    "valor": "696,06",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "QQQ"
   },
   {
@@ -3217,10 +3217,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "ETFs & Setoriais",
     "tipo": "indicador",
     "indicador": "SMAL11.SA",
-    "valor": "107,43",
+    "valor": "106,23",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "SMAL11.SA"
   },
   {
@@ -3230,10 +3230,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "ETFs & Setoriais",
     "tipo": "indicador",
     "indicador": "SMLL.SA",
-    "valor": "2.186",
+    "valor": "2.168",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "SMLL.SA"
   },
   {
@@ -3243,10 +3243,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "ETFs & Setoriais",
     "tipo": "indicador",
     "indicador": "SPY",
-    "valor": "743,29",
+    "valor": "742,09",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "SPY"
   },
   {
@@ -3256,10 +3256,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "ETFs & Setoriais",
     "tipo": "indicador",
     "indicador": "VGK",
-    "valor": "88,59",
+    "valor": "87,69",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "VGK"
   },
   {
@@ -3269,10 +3269,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "ETFs & Setoriais",
     "tipo": "indicador",
     "indicador": "VWO",
-    "valor": "57,84",
+    "valor": "57,93",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "VWO"
   },
   {
@@ -3282,10 +3282,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "ETFs & Setoriais",
     "tipo": "indicador",
     "indicador": "XLE",
-    "valor": "57,68",
+    "valor": "57,94",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "XLE"
   },
   {
@@ -3295,10 +3295,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "ETFs & Setoriais",
     "tipo": "indicador",
     "indicador": "XLF",
-    "valor": "56,26",
+    "valor": "56,04",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "XLF"
   },
   {
@@ -3308,10 +3308,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "ETFs & Setoriais",
     "tipo": "indicador",
     "indicador": "XLK",
-    "valor": "175,59",
+    "valor": "175,71",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "XLK"
   },
   {
@@ -3321,10 +3321,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "FIIs e Fiagros",
     "tipo": "indicador",
     "indicador": "ALZR11.SA",
-    "valor": "9,97",
+    "valor": "9,95",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "ALZR11.SA"
   },
   {
@@ -3334,10 +3334,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "FIIs e Fiagros",
     "tipo": "indicador",
     "indicador": "BRCO11.SA",
-    "valor": "114,24",
+    "valor": "113,49",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "BRCO11.SA"
   },
   {
@@ -3347,10 +3347,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "FIIs e Fiagros",
     "tipo": "indicador",
     "indicador": "BTLG11.SA",
-    "valor": "102,53",
+    "valor": "102,56",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "BTLG11.SA"
   },
   {
@@ -3360,10 +3360,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "FIIs e Fiagros",
     "tipo": "indicador",
     "indicador": "CPTR11.SA",
-    "valor": "7,96",
+    "valor": "7,92",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "CPTR11.SA"
   },
   {
@@ -3373,10 +3373,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "FIIs e Fiagros",
     "tipo": "indicador",
     "indicador": "FGAA11.SA",
-    "valor": "8,24",
+    "valor": "8,21",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "FGAA11.SA"
   },
   {
@@ -3386,10 +3386,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "FIIs e Fiagros",
     "tipo": "indicador",
     "indicador": "HGLG11.SA",
-    "valor": "148,92",
+    "valor": "148,50",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "HGLG11.SA"
   },
   {
@@ -3399,10 +3399,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "FIIs e Fiagros",
     "tipo": "indicador",
     "indicador": "HGRU11.SA",
-    "valor": "126,41",
+    "valor": "126,45",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "HGRU11.SA"
   },
   {
@@ -3412,10 +3412,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "FIIs e Fiagros",
     "tipo": "indicador",
     "indicador": "IFIX.SA",
-    "valor": "3.847",
+    "valor": "3.838",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "IFIX.SA"
   },
   {
@@ -3425,10 +3425,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "FIIs e Fiagros",
     "tipo": "indicador",
     "indicador": "KNCA11.SA",
-    "valor": "91,30",
+    "valor": "91,12",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "KNCA11.SA"
   },
   {
@@ -3438,10 +3438,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "FIIs e Fiagros",
     "tipo": "indicador",
     "indicador": "KNCR11.SA",
-    "valor": "108,50",
+    "valor": "108,08",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "KNCR11.SA"
   },
   {
@@ -3451,10 +3451,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "FIIs e Fiagros",
     "tipo": "indicador",
     "indicador": "KNIP11.SA",
-    "valor": "92,01",
+    "valor": "91,70",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "KNIP11.SA"
   },
   {
@@ -3466,8 +3466,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "MXRF11.SA",
     "valor": "9,73",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "MXRF11.SA"
   },
   {
@@ -3477,10 +3477,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "FIIs e Fiagros",
     "tipo": "indicador",
     "indicador": "PVBI11.SA",
-    "valor": "72,00",
+    "valor": "72,50",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "PVBI11.SA"
   },
   {
@@ -3490,10 +3490,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "FIIs e Fiagros",
     "tipo": "indicador",
     "indicador": "RURA11.SA",
-    "valor": "8,16",
+    "valor": "8,14",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "RURA11.SA"
   },
   {
@@ -3503,10 +3503,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "FIIs e Fiagros",
     "tipo": "indicador",
     "indicador": "VGIA11.SA",
-    "valor": "9,44",
+    "valor": "8,90",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "VGIA11.SA"
   },
   {
@@ -3516,10 +3516,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "FIIs e Fiagros",
     "tipo": "indicador",
     "indicador": "VISC11.SA",
-    "valor": "106,21",
+    "valor": "105,24",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "VISC11.SA"
   },
   {
@@ -3529,10 +3529,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "FIIs e Fiagros",
     "tipo": "indicador",
     "indicador": "XPML11.SA",
-    "valor": "106,87",
+    "valor": "105,35",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "XPML11.SA"
   },
   {
@@ -3555,10 +3555,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Índices de Ações Globais",
     "tipo": "indicador",
     "indicador": "^AXJO",
-    "valor": "8.797",
+    "valor": "8.793",
     "unidade": "",
-    "data_referencia": "2026-07-20",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-21",
+    "captura_em": "2026-07-21",
     "metrica": "^AXJO"
   },
   {
@@ -3581,10 +3581,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Índices de Ações Globais",
     "tipo": "indicador",
     "indicador": "^BVSP",
-    "valor": "173.714",
+    "valor": "173.371",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "^BVSP"
   },
   {
@@ -3594,10 +3594,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Índices de Ações Globais",
     "tipo": "indicador",
     "indicador": "^DJI",
-    "valor": "52.146",
+    "valor": "51.839",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "^DJI"
   },
   {
@@ -3607,10 +3607,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Índices de Ações Globais",
     "tipo": "indicador",
     "indicador": "^FCHI",
-    "valor": "8.339",
+    "valor": "8.340",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "^FCHI"
   },
   {
@@ -3620,10 +3620,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Índices de Ações Globais",
     "tipo": "indicador",
     "indicador": "^FTSE",
-    "valor": "10.600",
+    "valor": "10.525",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "^FTSE"
   },
   {
@@ -3633,10 +3633,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Índices de Ações Globais",
     "tipo": "indicador",
     "indicador": "^GDAXI",
-    "valor": "24.831",
+    "valor": "24.847",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "^GDAXI"
   },
   {
@@ -3646,10 +3646,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Índices de Ações Globais",
     "tipo": "indicador",
     "indicador": "^GSPC",
-    "valor": "7.458",
+    "valor": "7.443",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "^GSPC"
   },
   {
@@ -3659,10 +3659,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Índices de Ações Globais",
     "tipo": "indicador",
     "indicador": "^HSI",
-    "valor": "25.143",
+    "valor": "25.132",
     "unidade": "",
-    "data_referencia": "2026-07-20",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-21",
+    "captura_em": "2026-07-21",
     "metrica": "^HSI"
   },
   {
@@ -3675,7 +3675,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "10.888",
     "unidade": "",
     "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "^IPSA"
   },
   {
@@ -3685,10 +3685,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Índices de Ações Globais",
     "tipo": "indicador",
     "indicador": "^IXIC",
-    "valor": "25.520",
+    "valor": "25.508",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "^IXIC"
   },
   {
@@ -3698,10 +3698,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Índices de Ações Globais",
     "tipo": "indicador",
     "indicador": "^JKSE",
-    "valor": "6.232",
+    "valor": "6.340",
     "unidade": "",
-    "data_referencia": "2026-07-20",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-21",
+    "captura_em": "2026-07-21",
     "metrica": "^JKSE"
   },
   {
@@ -3711,10 +3711,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Índices de Ações Globais",
     "tipo": "indicador",
     "indicador": "^KLSE",
-    "valor": "1.722",
+    "valor": "1.720",
     "unidade": "",
-    "data_referencia": "2026-07-20",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-21",
+    "captura_em": "2026-07-21",
     "metrica": "^KLSE"
   },
   {
@@ -3724,10 +3724,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Índices de Ações Globais",
     "tipo": "indicador",
     "indicador": "^KS11",
-    "valor": "6.516",
+    "valor": "6.748",
     "unidade": "",
-    "data_referencia": "2026-07-20",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-21",
+    "captura_em": "2026-07-21",
     "metrica": "^KS11"
   },
   {
@@ -3737,10 +3737,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Índices de Ações Globais",
     "tipo": "indicador",
     "indicador": "^MERV",
-    "valor": "3.199.935",
+    "valor": "3.223.652",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "^MERV"
   },
   {
@@ -3750,10 +3750,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Índices de Ações Globais",
     "tipo": "indicador",
     "indicador": "^MXX",
-    "valor": "66.634",
+    "valor": "66.123",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "^MXX"
   },
   {
@@ -3763,10 +3763,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Índices de Ações Globais",
     "tipo": "indicador",
     "indicador": "^N225",
-    "valor": "64.141",
+    "valor": "66.232",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-21",
+    "captura_em": "2026-07-21",
     "metrica": "^N225"
   },
   {
@@ -3802,10 +3802,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Índices de Ações Globais",
     "tipo": "indicador",
     "indicador": "^STI",
-    "valor": "5.499",
+    "valor": "5.527",
     "unidade": "",
-    "data_referencia": "2026-07-20",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-21",
+    "captura_em": "2026-07-21",
     "metrica": "^STI"
   },
   {
@@ -3828,10 +3828,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Índices de Ações Globais",
     "tipo": "indicador",
     "indicador": "^TWII",
-    "valor": "42.450",
+    "valor": "44.233",
     "unidade": "",
-    "data_referencia": "2026-07-20",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-21",
+    "captura_em": "2026-07-21",
     "metrica": "^TWII"
   },
   {
@@ -3841,10 +3841,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Índices de Ações Globais",
     "tipo": "indicador",
     "indicador": "^VIX",
-    "valor": "18,77",
+    "valor": "18,65",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "^VIX"
   },
   {
@@ -3854,10 +3854,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Renda Fixa & Treasuries",
     "tipo": "indicador",
     "indicador": "^FVX",
-    "valor": "4,27",
+    "valor": "4,33",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "^FVX"
   },
   {
@@ -3867,10 +3867,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Renda Fixa & Treasuries",
     "tipo": "indicador",
     "indicador": "^IRX",
-    "valor": "3,71",
+    "valor": "3,70",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "^IRX"
   },
   {
@@ -3880,10 +3880,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Renda Fixa & Treasuries",
     "tipo": "indicador",
     "indicador": "^TNX",
-    "valor": "4,54",
+    "valor": "4,60",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "^TNX"
   },
   {
@@ -3893,10 +3893,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Renda Fixa & Treasuries",
     "tipo": "indicador",
     "indicador": "^TYX",
-    "valor": "5,06",
+    "valor": "5,12",
     "unidade": "",
-    "data_referencia": "2026-07-17",
-    "captura_em": "2026-07-20",
+    "data_referencia": "2026-07-20",
+    "captura_em": "2026-07-21",
     "metrica": "^TYX"
   }
 ];
