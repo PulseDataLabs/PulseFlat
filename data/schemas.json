@@ -1740,7 +1740,7 @@
       {
         "name": "data_ult_vna",
         "type": "date",
-        "example": "2026-07-21"
+        "example": "2026-07-22"
       },
       {
         "name": "indice",
@@ -1977,52 +1977,52 @@
       {
         "name": "data_referencia",
         "type": "date",
-        "example": "20/7/2026"
+        "example": "21/7/2026"
       },
       {
         "name": "emissor",
         "type": "str",
-        "example": "AURA ALMAS MINERACAO S.A."
+        "example": "ACQUAVIAS SP PARTICIPACOES S/A"
       },
       {
         "name": "codigo_ativo",
         "type": "str",
-        "example": "AALM12"
+        "example": "ACQU11"
       },
       {
         "name": "isin",
         "type": "str",
-        "example": "BRAALMDBS017"
+        "example": "BRACQUDBS007"
       },
       {
         "name": "quantidade",
         "type": "int",
-        "example": "438"
+        "example": "40000"
       },
       {
         "name": "numero_de_negocios",
         "type": "int",
-        "example": "2"
+        "example": "4"
       },
       {
         "name": "pu_minimo",
         "type": "str",
-        "example": "1064.837135"
+        "example": "605.792050"
       },
       {
         "name": "pu_medio",
         "type": "str",
-        "example": "1064.837135"
+        "example": "605.795800"
       },
       {
         "name": "pu_maximo",
         "type": "str",
-        "example": "1064.837135"
+        "example": "605.799550"
       },
       {
         "name": "pu_da_curva",
         "type": "str",
-        "example": "101.95"
+        "example": "59.88"
       },
       {
         "name": "data_captura",
