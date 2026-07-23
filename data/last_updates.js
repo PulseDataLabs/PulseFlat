@@ -168,7 +168,7 @@ window.PULSEFLAT_LAST_UPDATES = {
     "max": "2026-07-23"
   },
   "ipea_mercados_diarios.csv": {
-    "min": "2026-07-23",
+    "min": "2024-01-15",
     "max": "2026-07-23"
   },
   "yahoo_fiis_fiagros.csv": {
@@ -241,6 +241,10 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "bacen_parcelas_capital_basileia.csv.gz": {
     "min": "2026-06-05",
+    "max": "2026-07-23"
+  },
+  "anbima_indice_imab.csv.gz": {
+    "min": "2026-06-01",
     "max": "2026-07-23"
   }
 };

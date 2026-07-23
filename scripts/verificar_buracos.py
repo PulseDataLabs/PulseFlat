@@ -141,8 +141,13 @@ def load_entity_dates(
     date_col: str,
     group_by_cols: list[str],
 ) -> dict[tuple[str, ...], set[str]]:
+    import gzip
     entity_dates: dict[tuple[str, ...], set[str]] = {}
-    with csv_path.open(newline="", encoding="utf-8") as f:
+    is_gz = str(csv_path).endswith(".gz")
+    open_func = gzip.open if is_gz else open
+    open_mode = "rt" if is_gz else "r"
+    open_kwargs = {"encoding": "utf-8", "newline": ""} if is_gz else {"newline": "", "encoding": "utf-8"}
+    with open_func(csv_path, open_mode, **open_kwargs) as f:
         reader = csv.DictReader(f)
         if not reader.fieldnames:
             return entity_dates
@@ -176,15 +181,32 @@ def check_gaps(
     threshold: int = 3,
 ) -> dict[tuple[str, ...], list[str]]:
     gaps: dict[tuple[str, ...], list[str]] = {}
+    
+    # Limites suportados pelo Calendar em utils/parsers.py
+    start_cal = date(2024, 1, 1)
+    end_cal = date(2028, 12, 31)
+    
     for key, dates in entity_dates.items():
         if len(dates) < threshold:
             continue
         sorted_dates = sorted(dates)
         min_date = date.fromisoformat(sorted_dates[0])
         max_date = date.fromisoformat(sorted_dates[-1])
-        expected = _CAL.seq(min_date, max_date)
+        
+        # Ajusta datas para os limites suportados
+        effective_min = max(min_date, start_cal)
+        effective_max = min(max_date, end_cal)
+        
+        if effective_min > effective_max:
+            continue
+            
+        expected = _CAL.seq(effective_min, effective_max)
         expected_strs = {d.strftime("%Y-%m-%d") for d in expected}
-        missing = sorted(expected_strs - dates)
+        
+        # Filtra as datas reais para comparar apenas as que estão no período do calendário
+        actual_filtered = {d for d in dates if start_cal <= date.fromisoformat(d) <= end_cal}
+        
+        missing = sorted(expected_strs - actual_filtered)
         if missing:
             gaps[key] = missing
 
@@ -269,11 +291,14 @@ def main(
 
         csv_path = data_dir / csv_name
         if not csv_path.exists():
-            if not quiet:
-                print_warn(f"{csv_name}: arquivo não encontrado.")
-            total_skipped += 1
-            details.append(("skip", csv_name, "arquivo não encontrado"))
-            continue
+            if (data_dir / (csv_name + ".gz")).exists():
+                csv_path = data_dir / (csv_name + ".gz")
+            else:
+                if not quiet:
+                    print_warn(f"{csv_name}: arquivo não encontrado.")
+                total_skipped += 1
+                details.append(("skip", csv_name, "arquivo não encontrado"))
+                continue
 
         if dry_run:
             if not quiet:

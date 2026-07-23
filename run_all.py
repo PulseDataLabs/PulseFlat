@@ -217,7 +217,14 @@ def run_scraper(module_name: str) -> tuple[bool, float, Optional[str]]:
             msg = f"Módulo {module_name} não possui classe {class_name} nem função main()."
             return False, time.time() - t0, msg
         return True, time.time() - t0, None
-    except Exception:
+    except KeyboardInterrupt:
+        raise
+    except BaseException as e:
+        if isinstance(e, SystemExit):
+            if e.code == 0:
+                return True, time.time() - t0, None
+            else:
+                return False, time.time() - t0, f"SystemExit({e.code})"
         return False, time.time() - t0, traceback.format_exc()
 
 

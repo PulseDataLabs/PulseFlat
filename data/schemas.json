@@ -3775,301 +3775,6 @@
         "name": "clientes_total",
         "type": "str",
         "example": ""
-      },
-      {
-        "name": "Ordem",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "Administrador",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "nan",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "Total Global de Ativos (*) - (a) - k-l = m+n",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "Clubes de Investimento e Carteiras Administradas - (b) - Ativos (-) cotas de Fundos",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "nan - (c) - Cotas de Fundos Próprios",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "nan - (d) - Cotas de Fundos Terceiros",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "Fundos em Cotas - (e) - Ativos (-) cotas de Fundos",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "nan - (f) - Cotas de Fundos Próprios",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "nan - (g) - Cotas de Fundos Terceiros",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "Fundos de Investimento - (h) - Ativos (-) cotas de Fundos",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "nan - (i) - Cotas de Fundos Próprios",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "nan - (j) - Cotas de Fundos Terceiros",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "Sub Total - (k) - b+c+d+e+ f+g+h+i+j",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "Dupla Contagem - (l) - c+d+ f+g+i+j",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "Origem dos recursos (da coluna a) - (m) - Do Grupo",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "nan - (n) - Clientes",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "Total Global de Ativos (*) - nan",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "(a) - EFPC Emp.Públicas",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "(b) - EFPC Emp. Privadas",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "(c) - Seguradora",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "(d) - EAPC",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "(e) - Capitalização",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "(f) - Corporate",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "(g) - Middle Market",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "(h) - Private",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "(i) - Varejo Alta Renda",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "(j) - Varejo",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "(k) - Poder Público",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "(l) - RPPS",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "(m) - Fundos de Investimento",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "(n) - Estrangeiros",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "(o) - Por Conta e Ordem",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "(p) - Outros",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "Renda Fixa - (a) Operação Compromissada - Lastro em Tít. Públ. Federais",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "nan - Lastro em Tít. Est., Municipais e Privados",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "nan - (b) - Tít. Públ. Federais",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "nan - (c) - CDB/RDB",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "nan - (d) - Notas Promissórias",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "nan - (e) - Debêntures",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "nan - (f) - Direitos Creditórios",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "nan - (g) - DPGE",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "nan - (h) - CCB / CCCB",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "nan - (i) - Títulos Imobiliários",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "nan - (j) - Letras Financeiras",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "nan - (k) - Investimento no Exterior",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "nan - (l) - Outros",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "nan - (m) - Sub Total Renda Fixa",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "Renda Variável - (a) - Ações",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "nan - (b) - Opções",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "nan - (c) - Outros",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "nan - (d) - Sub Total Renda Variável",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "(a) - Clubes de Investimento",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "(b) - Carteiras Administradas",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "(c) - Fundos em Cotas",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "(d) - Fundos de Investimento",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "(e) - Sut Total (a+b+c+d)",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "(f) - Dupla Contagem",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "(g) - Total de Clientes (e-f)",
-        "type": "str",
-        "example": ""
       }
     ]
   },
@@ -4596,6 +4301,78 @@
       },
       {
         "name": "redemption_yield",
+        "type": "str",
+        "example": ""
+      }
+    ]
+  },
+  {
+    "title": "Anbima Indice Imab.Gz",
+    "files": "anbima_indice_imab.csv.gz",
+    "source": "anbima",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-06-01"
+      },
+      {
+        "name": "data_referencia",
+        "type": "date",
+        "example": "2001-12-04 00:00:00"
+      },
+      {
+        "name": "duration_du",
+        "type": "str",
+        "example": ""
+      },
+      {
+        "name": "numero_indice",
+        "type": "int",
+        "example": "532.621995"
+      },
+      {
+        "name": "indice",
+        "type": "str",
+        "example": "IMA-GERAL"
+      },
+      {
+        "name": "pmr",
+        "type": "str",
+        "example": ""
+      },
+      {
+        "name": "variacao_12_meses",
+        "type": "str",
+        "example": ""
+      },
+      {
+        "name": "variacao_24_meses",
+        "type": "str",
+        "example": ""
+      },
+      {
+        "name": "variacao_diaria",
+        "type": "str",
+        "example": "0.0708"
+      },
+      {
+        "name": "variacao_no_ano",
+        "type": "str",
+        "example": ""
+      },
+      {
+        "name": "variacao_no_mes",
+        "type": "str",
+        "example": ""
+      },
+      {
+        "name": "data_de_referencia",
+        "type": "date",
+        "example": ""
+      },
+      {
+        "name": "duration_d_u",
         "type": "str",
         "example": ""
       }

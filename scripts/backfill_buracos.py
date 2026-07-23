@@ -57,7 +57,10 @@ def main(
     for csv_name, config in sorted(targets.items()):
         csv_path = data_dir / csv_name
         if not csv_path.exists():
-            continue
+            if (data_dir / (csv_name + ".gz")).exists():
+                csv_path = data_dir / (csv_name + ".gz")
+            else:
+                continue
 
         date_col = config["date_col"]
         group_by_cols = config.get("group_by", [])
@@ -153,7 +156,10 @@ def main(
     for csv_name, config in sorted(targets.items()):
         csv_path = data_dir / csv_name
         if not csv_path.exists():
-            continue
+            if (data_dir / (csv_name + ".gz")).exists():
+                csv_path = data_dir / (csv_name + ".gz")
+            else:
+                continue
 
         date_col = config["date_col"]
         group_by_cols = config.get("group_by", [])

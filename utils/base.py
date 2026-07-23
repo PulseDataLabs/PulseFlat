@@ -267,7 +267,7 @@ def salvar_csv(
     # --- Persistência no Banco de Dados Oracle ---
     try:
         from utils.db import upload_dataframe
-        table_name = arquivo.stem.upper()
+        table_name = arquivo.name.split(".")[0].upper()
         
         # Identificar se há colunas de período
         candidates = [

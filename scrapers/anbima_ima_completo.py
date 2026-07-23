@@ -89,8 +89,7 @@ def capturar() -> list[dict]:
         except requests.RequestException as e:
             log.warning(f"Tentativa {tentativa}/3: {e}")
             if tentativa == 3:
-                log.error("Falha ao baixar IMA ANBIMA.")
-                sys.exit(1)
+                raise RuntimeError("Falha ao baixar IMA ANBIMA.") from e
             time.sleep(5)
 
     for enc in ("latin-1", "utf-8", "cp1252"):
@@ -125,8 +124,7 @@ def capturar() -> list[dict]:
         if len(p) > 1:
             file_date = p[1].strip()
             if file_date != d1_util_str:
-                log.error(f"Abortando: data do arquivo ({file_date}) não corresponde ao D-1 útil ({d1_util_str}).")
-                sys.exit(1)
+                raise ValueError(f"Abortando: data do arquivo ({file_date}) não corresponde ao D-1 útil ({d1_util_str}).")
 
     data_captura, _ = agora_brt()
     registros = []

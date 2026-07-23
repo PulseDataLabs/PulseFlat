@@ -330,10 +330,18 @@ def hash_row(row: dict) -> str:
 
 
 def read_existing_header(arquivo) -> list[str]:
+    import gzip
     if not arquivo.exists():
         return []
-    with arquivo.open(newline="", encoding="utf-8") as f:
-        first = f.readline().strip()
+    try:
+        if str(arquivo).endswith(".gz"):
+            with gzip.open(arquivo, "rt", encoding="utf-8", newline="") as f:
+                first = f.readline().strip()
+        else:
+            with arquivo.open(newline="", encoding="utf-8") as f:
+                first = f.readline().strip()
+    except Exception:
+        return []
     return [c.strip() for c in first.split(",") if c.strip()] if first else []
 
 

@@ -383,13 +383,32 @@ def upload_dataframe(df: pd.DataFrame, table_name: str, batch_size: int = 5000, 
                         clean_row.append(None)
                     elif col_clean in date_cols:
                         if isinstance(val, (pd.Timestamp, datetime)):
-                            clean_row.append(val.date() if hasattr(val, 'date') else val)
+                            if hasattr(val, 'to_pydatetime'):
+                                clean_row.append(val.to_pydatetime())
+                            else:
+                                clean_row.append(val)
                         elif hasattr(val, 'to_pydatetime'):
-                            clean_row.append(val.to_pydatetime().date())
-                        elif isinstance(val, str) and len(val.strip()) == 10 and val.strip()[4] == '-' and val.strip()[7] == '-':
-                            try:
-                                clean_row.append(datetime.strptime(val.strip(), "%Y-%m-%d").date())
-                            except ValueError:
+                            clean_row.append(val.to_pydatetime())
+                        elif isinstance(val, str):
+                            val_strip = val.strip()
+                            if len(val_strip) >= 19 and val_strip[4] == '-' and val_strip[7] == '-':
+                                parsed_dt = None
+                                for fmt in ("%Y-%m-%d %H:%M:%S", "%Y-%m-%dT%H:%M:%S", "%Y-%m-%d %H:%M:%S.%f"):
+                                    try:
+                                        parsed_dt = datetime.strptime(val_strip, fmt)
+                                        break
+                                    except ValueError:
+                                        continue
+                                if parsed_dt is not None:
+                                    clean_row.append(parsed_dt)
+                                else:
+                                    clean_row.append(val)
+                            elif len(val_strip) == 10 and val_strip[4] == '-' and val_strip[7] == '-':
+                                try:
+                                    clean_row.append(datetime.strptime(val_strip, "%Y-%m-%d").date())
+                                except ValueError:
+                                    clean_row.append(val)
+                            else:
                                 clean_row.append(val)
                         else:
                             clean_row.append(val)
