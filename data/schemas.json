@@ -2735,17 +2735,17 @@
       {
         "name": "name",
         "type": "str",
-        "example": "SERVICO NACIONAL DE APRENDIZAGEM COMERCIAL - SENAC"
+        "example": "Sense-Lab Consultoria e Treinamento Ltda"
       },
       {
         "name": "type",
         "type": "str",
-        "example": "Company"
+        "example": "Small or Medium-sized Enterprise"
       },
       {
         "name": "sector",
         "type": "str",
-        "example": "Education Services"
+        "example": "Professional Business Support Services"
       },
       {
         "name": "country",
@@ -2755,12 +2755,12 @@
       {
         "name": "joined_on",
         "type": "str",
-        "example": "2026-07-20"
+        "example": "2026-07-23"
       },
       {
         "name": "link",
         "type": "str",
-        "example": "https://unglobalcompact.org/what-is-gc/participants/216450-SERVICO-NACIONAL-DE-APRENDIZAGEM-COMERCIAL-SENAC"
+        "example": "https://unglobalcompact.org/what-is-gc/participants/215029-Sense-Lab-Consultoria-e-Treinamento-Ltda"
       }
     ]
   },
