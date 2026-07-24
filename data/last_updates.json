@@ -168,7 +168,7 @@
     "max": "2026-07-23"
   },
   "ipea_mercados_diarios.csv": {
-    "min": "2024-01-15",
+    "min": "2026-07-23",
     "max": "2026-07-23"
   },
   "yahoo_fiis_fiagros.csv": {
@@ -245,6 +245,10 @@
   },
   "anbima_indice_imab.csv.gz": {
     "min": "2026-06-01",
+    "max": "2026-07-23"
+  },
+  "bacen_negociacao_tpf_extragrupo.csv.gz": {
+    "min": "2026-06-03",
     "max": "2026-07-23"
   }
 }

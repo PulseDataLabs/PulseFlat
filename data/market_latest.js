@@ -8,7 +8,7 @@ window.PULSEFLAT_MARKET_LATEST = [
   {
     "label": "SELIC",
     "value": "14,15%",
-    "reference_date": "2026-07-22",
+    "reference_date": "2026-07-23",
     "type": "neutral"
   },
   {
@@ -25,17 +25,17 @@ window.PULSEFLAT_MARKET_LATEST = [
   },
   {
     "label": "PTAX USD Venda",
-    "value": "5,0638",
-    "reference_date": "2026-07-22",
-    "type": "down",
-    "change": "-0,28%"
+    "value": "5,0807",
+    "reference_date": "2026-07-23",
+    "type": "up",
+    "change": "+0,33%"
   },
   {
     "label": "PTAX USD Compra",
-    "value": "5,0632",
-    "reference_date": "2026-07-22",
-    "type": "down",
-    "change": "-0,28%"
+    "value": "5,0801",
+    "reference_date": "2026-07-23",
+    "type": "up",
+    "change": "+0,33%"
   },
   {
     "label": "IBOVESPA",

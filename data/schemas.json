@@ -4377,5 +4377,122 @@
         "example": ""
       }
     ]
+  },
+  {
+    "title": "Bacen Negociacao Tpf Extragrupo.Gz",
+    "files": "bacen_negociacao_tpf_extragrupo.csv.gz",
+    "source": "bcb",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-06-03"
+      },
+      {
+        "name": "codigo",
+        "type": "str",
+        "example": "210100"
+      },
+      {
+        "name": "codigo_isin",
+        "type": "str",
+        "example": "BRSTNCLF1RF7"
+      },
+      {
+        "name": "data_referencia",
+        "type": "date",
+        "example": "2026-06-01"
+      },
+      {
+        "name": "emissao",
+        "type": "str",
+        "example": "2020-03-13"
+      },
+      {
+        "name": "num_de_oper",
+        "type": "str",
+        "example": "18"
+      },
+      {
+        "name": "num_oper_com_corretagem",
+        "type": "str",
+        "example": "0"
+      },
+      {
+        "name": "pu_lastro",
+        "type": "str",
+        "example": "19115.81460836"
+      },
+      {
+        "name": "pu_max",
+        "type": "str",
+        "example": "19124.70925500"
+      },
+      {
+        "name": "pu_med",
+        "type": "str",
+        "example": "19119.69775900"
+      },
+      {
+        "name": "pu_min",
+        "type": "str",
+        "example": "19117.52011900"
+      },
+      {
+        "name": "quant_neg_com_corretagem",
+        "type": "str",
+        "example": "0"
+      },
+      {
+        "name": "quant_negociada",
+        "type": "str",
+        "example": "14169"
+      },
+      {
+        "name": "codigo_ativo",
+        "type": "str",
+        "example": "LFT"
+      },
+      {
+        "name": "taxa_max",
+        "type": "float",
+        "example": "0.0515"
+      },
+      {
+        "name": "taxa_med",
+        "type": "float",
+        "example": "0.0073"
+      },
+      {
+        "name": "taxa_min",
+        "type": "float",
+        "example": "-0.0941"
+      },
+      {
+        "name": "valor_par",
+        "type": "str",
+        "example": "19120.04396500"
+      },
+      {
+        "name": "vencimento",
+        "type": "str",
+        "example": "2026-09-01"
+      },
+      {
+        "name": "data_mov",
+        "type": "date",
+        "example": ""
+      },
+      {
+        "name": "sigla",
+        "type": "str",
+        "example": ""
+      },
+      {
+        "name": "valor_negociado",
+        "type": "str",
+        "example": ""
+      }
+    ]
   }
 ]
