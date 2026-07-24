@@ -178,7 +178,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-07-23"
+        "example": "2026-07-24"
       },
       {
         "name": "setor_economico",
@@ -220,7 +220,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-07-23"
+        "example": "2026-07-24"
       },
       {
         "name": "categoria_etf",
@@ -297,7 +297,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-07-23"
+        "example": "2026-07-24"
       },
       {
         "name": "codigo_fundo",
@@ -451,7 +451,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-07-23"
+        "example": "2026-07-24"
       },
       {
         "name": "tipo_fundo",
@@ -801,7 +801,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-07-23"
+        "example": "2026-07-24"
       },
       {
         "name": "codigo_ativo",
@@ -848,12 +848,12 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-07-23"
+        "example": "2026-07-24"
       },
       {
         "name": "data_geracao",
         "type": "date",
-        "example": "2026-07-23"
+        "example": "2026-07-24"
       },
       {
         "name": "acao",
@@ -1239,7 +1239,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-07-23"
+        "example": "2026-07-24"
       },
       {
         "name": "data_base",
@@ -1306,7 +1306,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-07-23"
+        "example": "2026-07-24"
       },
       {
         "name": "codigo_emissor",
@@ -1338,7 +1338,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-07-23"
+        "example": "2026-07-24"
       },
       {
         "name": "auditor",
@@ -1585,7 +1585,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-07-23"
+        "example": "2026-07-24"
       },
       {
         "name": "data_referencia",
@@ -1807,7 +1807,7 @@
       {
         "name": "data_ult_vna",
         "type": "date",
-        "example": "2026-07-23"
+        "example": "2026-07-24"
       },
       {
         "name": "indice",
@@ -2032,7 +2032,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-07-23"
+        "example": "2026-07-24"
       }
     ]
   },
@@ -2044,27 +2044,27 @@
       {
         "name": "data_referencia",
         "type": "date",
-        "example": "22/7/2026"
+        "example": "23/7/2026"
       },
       {
         "name": "emissor",
         "type": "str",
-        "example": "AGUAS DE BOMBINHAS SANEAMENTO SPE S.A."
+        "example": "AURA ALMAS MINERACAO S.A."
       },
       {
         "name": "codigo_ativo",
         "type": "str",
-        "example": "ABSP12"
+        "example": "AALM12"
       },
       {
         "name": "isin",
         "type": "str",
-        "example": "BRABSPDBS013"
+        "example": "BRAALMDBS017"
       },
       {
         "name": "quantidade",
         "type": "int",
-        "example": "18"
+        "example": "120"
       },
       {
         "name": "numero_de_negocios",
@@ -2074,27 +2074,27 @@
       {
         "name": "pu_minimo",
         "type": "str",
-        "example": "1043.003461"
+        "example": "1065.866883"
       },
       {
         "name": "pu_medio",
         "type": "str",
-        "example": "1043.055614"
+        "example": "1065.882872"
       },
       {
         "name": "pu_maximo",
         "type": "str",
-        "example": "1043.107766"
+        "example": "1065.898860"
       },
       {
         "name": "pu_da_curva",
         "type": "str",
-        "example": "100.14"
+        "example": "101.87"
       },
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-07-23"
+        "example": "2026-07-24"
       }
     ]
   },
@@ -2106,7 +2106,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-07-23"
+        "example": "2026-07-24"
       },
       {
         "name": "tp_fundo_classe",
@@ -2168,7 +2168,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-07-23"
+        "example": "2026-07-24"
       },
       {
         "name": "data_referencia",
@@ -2205,7 +2205,7 @@
       {
         "name": "id_registro_classe",
         "type": "int",
-        "example": "34394"
+        "example": "34403"
       },
       {
         "name": "cnpj_classe",
@@ -2350,7 +2350,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-07-23"
+        "example": "2026-07-24"
       },
       {
         "name": "cnpj_fundo",
@@ -2442,7 +2442,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-07-23"
+        "example": "2026-07-24"
       },
       {
         "name": "serie_id",
@@ -2479,7 +2479,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-07-23"
+        "example": "2026-07-24"
       },
       {
         "name": "data_referencia",
@@ -2511,7 +2511,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-07-23"
+        "example": "2026-07-24"
       },
       {
         "name": "data_referencia",
@@ -2543,7 +2543,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-07-23"
+        "example": "2026-07-24"
       },
       {
         "name": "data_referencia",
@@ -2575,7 +2575,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-07-23"
+        "example": "2026-07-24"
       },
       {
         "name": "data_referencia",
@@ -2607,7 +2607,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-07-23"
+        "example": "2026-07-24"
       },
       {
         "name": "data_referencia",
@@ -2639,7 +2639,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-07-23"
+        "example": "2026-07-24"
       },
       {
         "name": "data_referencia",
@@ -2671,7 +2671,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-07-23"
+        "example": "2026-07-24"
       },
       {
         "name": "codigo_ativo",
@@ -2698,7 +2698,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-07-23"
+        "example": "2026-07-24"
       },
       {
         "name": "codigo_serie",
@@ -2730,7 +2730,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-07-23"
+        "example": "2026-07-24"
       },
       {
         "name": "name",
@@ -2900,7 +2900,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-07-23"
+        "example": "2026-07-24"
       },
       {
         "name": "data_referencia",
