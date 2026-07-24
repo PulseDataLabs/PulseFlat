@@ -2735,17 +2735,17 @@
       {
         "name": "name",
         "type": "str",
-        "example": "Sense-Lab Consultoria e Treinamento Ltda"
+        "example": "PERBRAS EMPRESA BRASILEIRA DE PERFURACOES LTDA"
       },
       {
         "name": "type",
         "type": "str",
-        "example": "Small or Medium-sized Enterprise"
+        "example": "Company"
       },
       {
         "name": "sector",
         "type": "str",
-        "example": "Professional Business Support Services"
+        "example": "Oil Equipment and Services"
       },
       {
         "name": "country",
@@ -2755,12 +2755,12 @@
       {
         "name": "joined_on",
         "type": "str",
-        "example": "2026-07-23"
+        "example": "2026-07-24"
       },
       {
         "name": "link",
         "type": "str",
-        "example": "https://unglobalcompact.org/what-is-gc/participants/215029-Sense-Lab-Consultoria-e-Treinamento-Ltda"
+        "example": "https://unglobalcompact.org/what-is-gc/participants/216968-PERBRAS-EMPRESA-BRASILEIRA-DE-PERFURACOES-LTDA"
       }
     ]
   },
