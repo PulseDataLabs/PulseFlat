@@ -186,5 +186,69 @@
   "cvm_fundos_informe_diario.csv.gz": {
     "min": "2026-07-28",
     "max": "2026-07-28"
+  },
+  "anbima_ima_completo.csv": {
+    "min": "2026-06-01",
+    "max": "2026-07-28"
+  },
+  "anbima_idka.csv": {
+    "min": "2026-06-03",
+    "max": "2026-07-28"
+  },
+  "anbima_indicadores.csv": {
+    "min": "2026-06-01",
+    "max": "2026-07-28"
+  },
+  "anbima_550.csv": {
+    "min": "2026-06-01",
+    "max": "2026-07-28"
+  },
+  "anbima_projecoes.csv": {
+    "min": "2026-06-01",
+    "max": "2026-07-28"
+  },
+  "anbima_debentures.csv": {
+    "min": "2026-06-05",
+    "max": "2026-07-28"
+  },
+  "anbima_matriz_probabilidade_resgate.csv": {
+    "min": "2026-06-19",
+    "max": "2026-07-28"
+  },
+  "anbima_ranking_global.csv": {
+    "min": "2026-06-03",
+    "max": "2026-07-28"
+  },
+  "anbima_titulos_publicos.csv": {
+    "min": "2026-06-01",
+    "max": "2026-07-28"
+  },
+  "b3_bdi_di_over.csv": {
+    "min": "2026-06-01",
+    "max": "2026-07-28"
+  },
+  "b3_carteira_teorica_agfs_iagro.csv": {
+    "min": "2026-06-03",
+    "max": "2026-07-28"
+  },
+  "b3_carteira_teorica_bdrx.csv": {
+    "min": "2026-06-03",
+    "max": "2026-07-28"
+  },
+  "b3_bmf_taxas_juros.csv": {
+    "min": "2026-06-04",
+    "max": "2026-07-28"
+  },
+  "b3_carteira_teorica_ibov.csv": {
+    "min": "2026-06-03",
+    "max": "2026-07-28"
+  },
+  "b3_carteira_teorica_ibsd.csv": {
+    "min": "2026-06-03",
+    "max": "2026-07-28"
+  },
+  "b3_carteira_teorica_ibxl.csv": {
+    "min": "2026-06-03",
+    "max": "2026-07-28"
   }
 }

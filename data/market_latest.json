@@ -41,8 +41,8 @@
     "label": "IBOVESPA",
     "value": "175.335",
     "reference_date": "2026-07-27",
-    "type": "up",
-    "change": "+0,74%"
+    "type": "down",
+    "change": "-0,79%"
   },
   {
     "label": "IMA-GERAL",
