@@ -72,8 +72,8 @@ window.PULSEFLAT_LAST_UPDATES = {
     "max": "2026-07-29"
   },
   "bcb_ptax.csv": {
-    "min": "2026-07-28",
-    "max": "2026-07-28"
+    "min": "2026-07-29",
+    "max": "2026-07-29"
   },
   "cvm_cadastro_companhias_abertas.csv": {
     "min": "2026-07-29",

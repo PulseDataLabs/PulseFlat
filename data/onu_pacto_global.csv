@@ -250,7 +250,7 @@ data_captura,name,type,sector,country,joined_on,link
 2026-07-29,Ofício do 2º Registro de Imóveis de Montes Claros,Small or Medium-sized Enterprise,Real Estate Services,Brazil,2025-07-09,https://unglobalcompact.org/what-is-gc/participants/190232-Of-cio-do-2-Registro-de-Im-veis-de-Montes-Claros
 2026-07-29,MBV- MOVIMENTO BRASIL VERDE,Small or Medium-sized Enterprise,Biotechnology,Brazil,2025-07-09,https://unglobalcompact.org/what-is-gc/participants/191092-MBV-MOVIMENTO-BRASIL-VERDE
 2026-07-29,Peterson Consultoria e Logística Ltda,Small or Medium-sized Enterprise,Professional Business Support Services,Brazil,2025-07-09,https://unglobalcompact.org/what-is-gc/participants/191370-Peterson-Consultoria-e-Log-stica-Ltda
-2026-07-29,ECOSSIS SOLUCOES AMBIENTAIS S/S LTDA,Small or Medium-sized Enterprise,Waste and Disposal Services,Brazil,2025-07-07,https://unglobalcompact.org/what-is-gc/participants/191319-ECOSSIS-SOLUCOES-AMBIENTAIS-S-S-LTDA
+2026-07-29,ECOSSIS SOLUCOES AMBIENTAIS S/S LTDA,Small or Medium-sized Enterprise,Professional Business Support Services,Brazil,2025-07-07,https://unglobalcompact.org/what-is-gc/participants/191319-ECOSSIS-SOLUCOES-AMBIENTAIS-S-S-LTDA
 2026-07-29,Concessionária de Rodovia Nova 381,Small or Medium-sized Enterprise,Transportation Services,Brazil,2025-07-03,https://unglobalcompact.org/what-is-gc/participants/189854-Concession-ria-de-Rodovia-Nova-381
 2026-07-29,GSB Operaora de Turismo LTDA,Small or Medium-sized Enterprise,Travel and Tourism,Brazil,2025-07-03,https://unglobalcompact.org/what-is-gc/participants/191011-GSB-Operaora-de-Turismo-LTDA
 2026-07-29,Hyundai Transys Fabricação de Autopeças Brasil Ltda,Small or Medium-sized Enterprise,Auto Parts,Brazil,2025-07-03,https://unglobalcompact.org/what-is-gc/participants/191152-Hyundai-Transys-Fabrica-o-de-Autope-as-Brasil-Ltda
@@ -543,7 +543,7 @@ data_captura,name,type,sector,country,joined_on,link
 2026-07-29,TALIE IND COM EXP IMP CONFECCOES E ACESSORIOS LTDA,Company,Apparel Retailers,Brazil,2024-08-22,https://unglobalcompact.org/what-is-gc/participants/166490-TALIE-IND-COM-EXP-IMP-CONFECCOES-E-ACESSORIOS-LTDA
 2026-07-29,BRAZIL SENSATIONS,Small or Medium-sized Enterprise,Travel and Tourism,Brazil,2024-08-15,https://unglobalcompact.org/what-is-gc/participants/166371-BRAZIL-SENSATIONS
 2026-07-29,GRI - Gerenciamento de Resíduos Industriais S.A,Company,Waste and Disposal Services,Brazil,2024-08-15,https://unglobalcompact.org/what-is-gc/participants/166376-GRI-Gerenciamento-de-Res-duos-Industriais-S-A
-2026-07-29,Adami,Company,Paper,Brazil,2024-08-15,https://unglobalcompact.org/what-is-gc/participants/166399-Adami
+2026-07-29,Adami,Company,Diversified Industrials,Brazil,2024-08-15,https://unglobalcompact.org/what-is-gc/participants/166399-Adami
 2026-07-29,Brasil Telecom Call Center - TAHTO,Company,Professional Business Support Services,Brazil,2024-08-15,https://unglobalcompact.org/what-is-gc/participants/166402-Brasil-Telecom-Call-Center-TAHTO
 2026-07-29,ANTEA BRASIL GEOLOGIA E MEIO AMBIENTE LTDA,Small or Medium-sized Enterprise,Professional Business Support Services,Brazil,2024-08-15,https://unglobalcompact.org/what-is-gc/participants/166427-ANTEA-BRASIL-GEOLOGIA-E-MEIO-AMBIENTE-LTDA
 2026-07-29,Arcadis Logos S.A.,Company,Engineering and Contracting Services,Brazil,2024-08-15,https://unglobalcompact.org/what-is-gc/participants/166445-Arcadis-Logos-S-A-
@@ -1091,7 +1091,7 @@ data_captura,name,type,sector,country,joined_on,link
 2026-07-29,ARQOS,Small or Medium-sized Enterprise,Real Estate Services,Brazil,2022-11-01,https://unglobalcompact.org/what-is-gc/participants/153967-ARQOS
 2026-07-29,Banco Cooperativo Sicoob S.A.,Company,Banks,Brazil,2022-10-31,https://unglobalcompact.org/what-is-gc/participants/154310-Banco-Cooperativo-Sicoob-S-A-
 2026-07-29,NOVA PARTICIPACOES S.A.,Company,Engineering and Contracting Services,Brazil,2022-10-24,https://unglobalcompact.org/what-is-gc/participants/139231-NOVA-PARTICIPACOES-S-A-
-2026-07-29,Banco Bmg,Company,,Brazil,2022-10-17,https://unglobalcompact.org/what-is-gc/participants/152085-Banco-Bmg
+2026-07-29,Banco Bmg,Company,Banks,Brazil,2022-10-17,https://unglobalcompact.org/what-is-gc/participants/152085-Banco-Bmg
 2026-07-29,Centro Empresarial Mario Henrique Simonsen,Small or Medium-sized Enterprise,Real Estate Holding and Development,Brazil,2022-10-17,https://unglobalcompact.org/what-is-gc/participants/154028-Centro-Empresarial-Mario-Henrique-Simonsen
 2026-07-29,Pironti e Moura Advogados Associados,Small or Medium-sized Enterprise,Professional Business Support Services,Brazil,2022-10-17,https://unglobalcompact.org/what-is-gc/participants/154167-Pironti-e-Moura-Advogados-Associados
 2026-07-29,INDUSTRIA E COMERCIO DE ARTEFATOS PLASTICOS VELAPLAST LTDA,Small or Medium-sized Enterprise,Plastics,Brazil,2022-10-17,https://unglobalcompact.org/what-is-gc/participants/154277-INDUSTRIA-E-COMERCIO-DE-ARTEFATOS-PLASTICOS-VELAPLAST-LTDA
@@ -1444,6 +1444,7 @@ data_captura,name,type,sector,country,joined_on,link
 2026-07-29,Royal Trade Comercio e Exportacao Ltda,Small or Medium-sized Enterprise,Building Materials: Other,Brazil,2021-03-15,https://unglobalcompact.org/what-is-gc/participants/141614-Royal-Trade-Comercio-e-Exportacao-Ltda
 2026-07-29,Quest Inteligencia,Company,Professional Business Support Services,Brazil,2021-03-15,https://unglobalcompact.org/what-is-gc/participants/142704-Quest-Inteligencia
 2026-07-29,Teletrica,Small or Medium-sized Enterprise,Professional Business Support Services,Brazil,2021-03-12,https://unglobalcompact.org/what-is-gc/participants/144573-Teletrica
+2026-07-29,DMS AGENCIAMENTO DE CARGAS E LOGISTICA LTDA,Company,Transportation Services,Brazil,2021-03-12,https://unglobalcompact.org/what-is-gc/participants/144588-DMS-AGENCIAMENTO-DE-CARGAS-E-LOGISTICA-LTDA
 2026-07-29,WNF Industria e Comercio Ltda,Small or Medium-sized Enterprise,Personal Products,Brazil,2021-03-12,https://unglobalcompact.org/what-is-gc/participants/144592-WNF-Industria-e-Comercio-Ltda
 2026-07-29,Surreal Hotel Arts,Small or Medium-sized Enterprise,Media Agencies,Brazil,2021-03-08,https://unglobalcompact.org/what-is-gc/participants/141783-Surreal-Hotel-Arts
 2026-07-29,BMA Advogados,Company,Professional Business Support Services,Brazil,2021-03-08,https://unglobalcompact.org/what-is-gc/participants/144580-BMA-Advogados
