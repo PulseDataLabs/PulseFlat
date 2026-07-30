@@ -2825,17 +2825,17 @@
       {
         "name": "name",
         "type": "str",
-        "example": "FUSAO LIGAS COM. E IND. LTDA"
+        "example": "ARTEMYN RIO CAPIM CAULIM LTDA"
       },
       {
         "name": "type",
         "type": "str",
-        "example": "Small or Medium-sized Enterprise"
+        "example": "Company"
       },
       {
         "name": "sector",
         "type": "str",
-        "example": "Diversified Industrials"
+        "example": "General Mining"
       },
       {
         "name": "country",
@@ -2845,12 +2845,12 @@
       {
         "name": "joined_on",
         "type": "str",
-        "example": "2026-07-28"
+        "example": "2026-07-30"
       },
       {
         "name": "link",
         "type": "str",
-        "example": "https://unglobalcompact.org/what-is-gc/participants/217883-FUSAO-LIGAS-COM-E-IND-LTDA"
+        "example": "https://unglobalcompact.org/what-is-gc/participants/218432-ARTEMYN-RIO-CAPIM-CAULIM-LTDA"
       }
     ]
   },
