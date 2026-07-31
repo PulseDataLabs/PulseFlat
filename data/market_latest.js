@@ -39,10 +39,10 @@ window.PULSEFLAT_MARKET_LATEST = [
   },
   {
     "label": "IBOVESPA",
-    "value": "173.885",
-    "reference_date": "2026-07-29",
-    "type": "down",
-    "change": "-1,52%"
+    "value": "177.159",
+    "reference_date": "2026-07-30",
+    "type": "up",
+    "change": "+1,88%"
   },
   {
     "label": "IMA-GERAL",
