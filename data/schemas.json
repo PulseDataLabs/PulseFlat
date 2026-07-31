@@ -2845,7 +2845,7 @@
       {
         "name": "joined_on",
         "type": "str",
-        "example": "2026-07-30"
+        "example": "2026-07-31"
       },
       {
         "name": "link",
