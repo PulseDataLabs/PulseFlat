@@ -220,7 +220,7 @@ window.PULSEFLAT_LAST_UPDATES = {
     "max": "2026-07-31"
   },
   "anbima_titulos_publicos.csv": {
-    "min": "2026-06-01",
+    "min": "2025-08-01",
     "max": "2026-07-31"
   },
   "b3_bdi_di_over.csv": {
