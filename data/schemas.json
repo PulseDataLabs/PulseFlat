@@ -379,17 +379,17 @@
       {
         "name": "codigo_ativo",
         "type": "str",
-        "example": "VALE3.SA"
+        "example": "ODPV3.SA"
       },
       {
         "name": "label",
         "type": "str",
-        "example": "VALE3"
+        "example": "ODPV3"
       },
       {
         "name": "preco_fechamento",
         "type": "float",
-        "example": "82.81999969482422"
+        "example": "13.5600004196167"
       }
     ]
   },
@@ -507,17 +507,17 @@
       {
         "name": "codigo_ativo",
         "type": "str",
-        "example": "EWZ"
+        "example": "GPCA11.SA"
       },
       {
         "name": "label",
         "type": "str",
-        "example": "EWZ_IBOV_USD"
+        "example": "GPCA11"
       },
       {
         "name": "preco_fechamento",
         "type": "float",
-        "example": "36.11000061035156"
+        "example": "25.15999984741211"
       }
     ]
   },
@@ -3126,9 +3126,14 @@
     "source": "bcb",
     "fields": [
       {
-        "name": "data_captura",
+        "name": "data_mov",
         "type": "date",
-        "example": "2026-06-03"
+        "example": "2020-01-02"
+      },
+      {
+        "name": "sigla",
+        "type": "str",
+        "example": "LFT"
       },
       {
         "name": "codigo",
@@ -3138,102 +3143,87 @@
       {
         "name": "codigo_isin",
         "type": "str",
-        "example": "BRSTNCLF1RF7"
-      },
-      {
-        "name": "data_referencia",
-        "type": "date",
-        "example": "2026-06-01"
+        "example": "BRSTNCLF1R25"
       },
       {
         "name": "emissao",
         "type": "str",
-        "example": "2020-03-13"
-      },
-      {
-        "name": "num_de_oper",
-        "type": "str",
-        "example": "18"
-      },
-      {
-        "name": "num_oper_com_corretagem",
-        "type": "str",
-        "example": "0"
-      },
-      {
-        "name": "pu_lastro",
-        "type": "str",
-        "example": "19115.81460836"
-      },
-      {
-        "name": "pu_max",
-        "type": "str",
-        "example": "19124.70925500"
-      },
-      {
-        "name": "pu_med",
-        "type": "str",
-        "example": "19119.69775900"
-      },
-      {
-        "name": "pu_min",
-        "type": "str",
-        "example": "19117.52011900"
-      },
-      {
-        "name": "quant_neg_com_corretagem",
-        "type": "str",
-        "example": "0"
-      },
-      {
-        "name": "quant_negociada",
-        "type": "str",
-        "example": "14169"
-      },
-      {
-        "name": "codigo_ativo",
-        "type": "str",
-        "example": "LFT"
-      },
-      {
-        "name": "taxa_max",
-        "type": "float",
-        "example": "0.0515"
-      },
-      {
-        "name": "taxa_med",
-        "type": "float",
-        "example": "0.0073"
-      },
-      {
-        "name": "taxa_min",
-        "type": "float",
-        "example": "-0.0941"
-      },
-      {
-        "name": "valor_par",
-        "type": "str",
-        "example": "19120.04396500"
+        "example": "2014-01-17"
       },
       {
         "name": "vencimento",
         "type": "str",
-        "example": "2026-09-01"
+        "example": "2020-03-01"
       },
       {
-        "name": "data_mov",
-        "type": "date",
-        "example": ""
-      },
-      {
-        "name": "sigla",
+        "name": "num_de_oper",
         "type": "str",
-        "example": ""
+        "example": "7"
+      },
+      {
+        "name": "quant_negociada",
+        "type": "str",
+        "example": "534"
       },
       {
         "name": "valor_negociado",
         "type": "str",
         "example": ""
+      },
+      {
+        "name": "pu_min",
+        "type": "str",
+        "example": ""
+      },
+      {
+        "name": "pu_med",
+        "type": "str",
+        "example": ""
+      },
+      {
+        "name": "pu_max",
+        "type": "str",
+        "example": ""
+      },
+      {
+        "name": "pu_lastro",
+        "type": "str",
+        "example": "10470.80412868"
+      },
+      {
+        "name": "valor_par",
+        "type": "str",
+        "example": "10471.89090300"
+      },
+      {
+        "name": "taxa_min",
+        "type": "float",
+        "example": ""
+      },
+      {
+        "name": "taxa_med",
+        "type": "float",
+        "example": ""
+      },
+      {
+        "name": "taxa_max",
+        "type": "float",
+        "example": ""
+      },
+      {
+        "name": "num_oper_com_corretagem",
+        "type": "str",
+        "example": "7"
+      },
+      {
+        "name": "quant_neg_com_corretagem",
+        "type": "str",
+        "example": "534"
+      },
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2020-01-31"
       }
     ]
   },
@@ -4301,63 +4291,63 @@
   },
   {
     "title": "Debentures Mercado Secundario Precos Negociacao",
-    "files": "debentures_mercado_secundario_precos_negociacao.csv",
+    "files": "debentures_mercado_secundario_precos_negociacao.csv.gz",
     "source": "debentures",
     "fields": [
       {
         "name": "data_referencia",
         "type": "date",
-        "example": "30/7/2026"
+        "example": "2020-01-31"
       },
       {
         "name": "emissor",
         "type": "str",
-        "example": "AURA ALMAS MINERACAO S.A."
+        "example": "AGUAS GUARIROBA  S/A"
       },
       {
         "name": "codigo_ativo",
         "type": "str",
-        "example": "AALM12"
+        "example": "AGGU13"
       },
       {
         "name": "isin",
         "type": "str",
-        "example": "BRAALMDBS017"
+        "example": "BRGRRBDBS026"
       },
       {
         "name": "quantidade",
         "type": "int",
-        "example": "354"
+        "example": "200"
       },
       {
         "name": "numero_de_negocios",
         "type": "int",
-        "example": "4"
+        "example": "2"
       },
       {
         "name": "pu_minimo",
         "type": "str",
-        "example": "1069.438154"
+        "example": "10.276,858668"
       },
       {
         "name": "pu_medio",
         "type": "str",
-        "example": "1069.446175"
+        "example": "10.278,390536"
       },
       {
         "name": "pu_maximo",
         "type": "str",
-        "example": "1069.454196"
+        "example": "10.279,922403"
       },
       {
         "name": "pu_da_curva",
         "type": "str",
-        "example": "101.91"
+        "example": "100,41"
       },
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-07-31"
+        "example": "2026-08-01"
       }
     ]
   },

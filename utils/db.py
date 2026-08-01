@@ -182,11 +182,17 @@ def standardize_val(val):
     # Se for string representando data, padronizar
     if isinstance(val, str):
         val_strip = val.strip()
-        if len(val_strip) == 10 and val_strip[4] == '-' and val_strip[7] == '-':
-            return val_strip
-        if len(val_strip) == 10 and val_strip[2] == '/' and val_strip[5] == '/':
+        if "/" in val_strip:
             try:
-                return datetime.strptime(val_strip, "%d/%m/%Y").strftime("%Y-%m-%d")
+                return datetime.strptime(val_strip.split()[0], "%d/%m/%Y").strftime("%Y-%m-%d")
+            except ValueError:
+                try:
+                    return datetime.strptime(val_strip.split()[0], "%Y/%m/%d").strftime("%Y-%m-%d")
+                except ValueError:
+                    pass
+        elif "-" in val_strip:
+            try:
+                return datetime.strptime(val_strip.split()[0], "%Y-%m-%d").strftime("%Y-%m-%d")
             except ValueError:
                 pass
         return val_strip
@@ -301,9 +307,17 @@ def upload_dataframe(df: pd.DataFrame, table_name: str, batch_size: int = 5000, 
                     for p in unique_periods:
                         if "DATE" in db_col_type:
                             if isinstance(p, str):
-                                try:
-                                    formatted_periods.append(datetime.strptime(p.strip(), "%Y-%m-%d").date())
-                                except ValueError:
+                                p_strip = p.strip()
+                                parsed_p = None
+                                for fmt in ("%Y-%m-%d", "%d/%m/%Y", "%Y/%m/%d"):
+                                    try:
+                                        parsed_p = datetime.strptime(p_strip, fmt).date()
+                                        break
+                                    except ValueError:
+                                        continue
+                                if parsed_p is not None:
+                                    formatted_periods.append(parsed_p)
+                                else:
                                     formatted_periods.append(p)
                             else:
                                 formatted_periods.append(p)
@@ -391,23 +405,25 @@ def upload_dataframe(df: pd.DataFrame, table_name: str, batch_size: int = 5000, 
                             clean_row.append(val.to_pydatetime())
                         elif isinstance(val, str):
                             val_strip = val.strip()
-                            if len(val_strip) >= 19 and val_strip[4] == '-' and val_strip[7] == '-':
-                                parsed_dt = None
-                                for fmt in ("%Y-%m-%d %H:%M:%S", "%Y-%m-%dT%H:%M:%S", "%Y-%m-%d %H:%M:%S.%f"):
+                            parsed_dt = None
+                            if " " in val_strip or "T" in val_strip:
+                                for fmt in ("%Y-%m-%d %H:%M:%S", "%Y-%m-%dT%H:%M:%S", "%Y-%m-%d %H:%M:%S.%f", "%d/%m/%Y %H:%M:%S", "%d/%m/%Y %H:%M"):
                                     try:
                                         parsed_dt = datetime.strptime(val_strip, fmt)
                                         break
                                     except ValueError:
                                         continue
-                                if parsed_dt is not None:
-                                    clean_row.append(parsed_dt)
-                                else:
-                                    clean_row.append(val)
-                            elif len(val_strip) == 10 and val_strip[4] == '-' and val_strip[7] == '-':
-                                try:
-                                    clean_row.append(datetime.strptime(val_strip, "%Y-%m-%d").date())
-                                except ValueError:
-                                    clean_row.append(val)
+                            
+                            if parsed_dt is None:
+                                for fmt in ("%Y-%m-%d", "%d/%m/%Y", "%Y/%m/%d"):
+                                    try:
+                                        parsed_dt = datetime.strptime(val_strip, fmt).date()
+                                        break
+                                    except ValueError:
+                                        continue
+                                        
+                            if parsed_dt is not None:
+                                clean_row.append(parsed_dt)
                             else:
                                 clean_row.append(val)
                         else:

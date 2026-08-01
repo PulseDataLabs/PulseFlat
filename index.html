@@ -2805,7 +2805,12 @@
       const change = d.change
         ? `<span class="ticker-change ${d.type}">${d.change}</span>`
         : '';
-      const refDate = d.reference_date ? `Referência: ${d.reference_date}` : '';
+      let refDate = '';
+      if (d.reference_date) {
+        const parts = d.reference_date.split('-');
+        const formattedDate = parts.length === 3 ? `${parts[2]}/${parts[1]}/${parts[0]}` : d.reference_date;
+        refDate = `Referência: ${formattedDate}`;
+      }
       return `<div class="ticker-item" title="${refDate}">
         <span class="ticker-label">${arrow} ${d.label}</span>
         <span class="ticker-value">${d.value}</span>

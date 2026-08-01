@@ -64,8 +64,8 @@
     "max": "2026-07-31"
   },
   "bacen_negociacao_tpf_extragrupo.csv.gz": {
-    "min": "2026-06-03",
-    "max": "2026-07-31"
+    "min": "2020-01-31",
+    "max": "2026-08-01"
   },
   "bacen_balancetes_bancos.csv": {
     "min": "2026-07-31",
@@ -95,9 +95,9 @@
     "min": "2026-07-31",
     "max": "2026-07-31"
   },
-  "debentures_mercado_secundario_precos_negociacao.csv": {
-    "min": "2026-07-31",
-    "max": "2026-07-31"
+  "debentures_mercado_secundario_precos_negociacao.csv.gz": {
+    "min": "2026-08-01",
+    "max": "2026-08-01"
   },
   "ipea_calendario.csv": {
     "min": "2026-07-31",

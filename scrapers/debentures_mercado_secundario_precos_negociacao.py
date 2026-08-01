@@ -11,6 +11,10 @@ class DebenturesMercadoSecundarioPrecosNegociacaoScraper(GenericScraper):
     phase = 1
     resource_name = "Debêntures - Preços de Negociação"
 
+    def __init__(self):
+        super().__init__()
+        self.chaves_dedup = ["data_referencia", "codigo_ativo", "isin"]
+
 
 def main():
     DebenturesMercadoSecundarioPrecosNegociacaoScraper().run()

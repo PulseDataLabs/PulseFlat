@@ -81,9 +81,10 @@ resources:
       codigo_do_ativo: codigo_ativo
   - name: Debêntures - Preços de Negociação
     url: 'https://www.debentures.com.br/exploreosnd/consultaadados/mercadosecundario/precosdenegociacao_e.asp?op_exc=Nada&emissor=&isin=&ativo=&dt_ini=20250101&dt_fim=YYYYMMDD'
-    file_name: 'debentures_mercado_secundario_precos_negociacao.csv'
+    file_name: 'debentures_mercado_secundario_precos_negociacao.csv.gz'
     type_response: csv
-    acumular: false
+    acumular: true
+    compress: true
     column_mapping:
       data: data_referencia
       codigo_do_ativo: codigo_ativo

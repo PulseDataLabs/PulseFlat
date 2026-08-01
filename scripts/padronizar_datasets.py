@@ -27,7 +27,7 @@ RENAMES: dict[str, dict[str, str]] = {
         "varia_o_no_ano": "variacao_no_ano",
         "varia_o_no_m_s": "variacao_no_mes",
     },
-    "debentures_mercado_secundario_precos_negociacao.csv": {
+    "debentures_mercado_secundario_precos_negociacao.csv.gz": {
         "c_digo_do_ativo": "codigo_do_ativo",
         "n_mero_de_neg_cios": "numero_de_negocios",
         "pu_m_nimo": "pu_minimo",
@@ -39,7 +39,7 @@ RENAMES: dict[str, dict[str, str]] = {
 # ── Arquivos que precisam ter data_captura movida para pos 0 ──────────
 REORDER_DATA_CAPTURA = [
     "anbima_debentures.csv",        # pos 16 → 0
-    "debentures_mercado_secundario_precos_negociacao.csv",  # pos 10 → 0
+    "debentures_mercado_secundario_precos_negociacao.csv.gz",  # pos 10 → 0
     "debentures_emissoes_caracteristicas.csv",  # pos 84 → 0
 ]
 
@@ -48,13 +48,20 @@ DATE_FIXES: dict[str, dict[str, str]] = {
     "anbima_matriz_probabilidade_resgate.csv": {
         "data": "YYYY/MM/DD",  # formato atual
     },
-    "debentures_mercado_secundario_precos_negociacao.csv": {
-        "data": "D/M/YYYY",    # formato atual
+    "debentures_mercado_secundario_precos_negociacao.csv.gz": {
+        "data_referencia": "D/M/YYYY",    # formato atual
     },
 }
 
 
 def ler_csv(path: Path) -> tuple[list[str], list[dict]]:
+    import gzip
+    if path.suffix == ".gz":
+        with gzip.open(path, "rt", encoding="utf-8", newline="") as f:
+            reader = csv.DictReader(f)
+            header = list(reader.fieldnames or [])
+            rows = list(reader)
+        return header, rows
     with path.open("r", encoding="utf-8", newline="") as f:
         reader = csv.DictReader(f)
         header = reader.fieldnames[:]
@@ -63,11 +70,18 @@ def ler_csv(path: Path) -> tuple[list[str], list[dict]]:
 
 
 def escrever_csv(path: Path, header: list[str], rows: list[dict]):
-    tmp = path.with_suffix(".csv.tmp")
-    with tmp.open("w", encoding="utf-8", newline="") as f:
-        writer = csv.DictWriter(f, fieldnames=header)
-        writer.writeheader()
-        writer.writerows(rows)
+    import gzip
+    tmp = path.with_suffix(path.suffix + ".tmp")
+    if path.suffix == ".gz":
+        with gzip.open(tmp, "wt", encoding="utf-8", newline="") as f:
+            writer = csv.DictWriter(f, fieldnames=header)
+            writer.writeheader()
+            writer.writerows(rows)
+    else:
+        with tmp.open("w", encoding="utf-8", newline="") as f:
+            writer = csv.DictWriter(f, fieldnames=header)
+            writer.writeheader()
+            writer.writerows(rows)
     shutil.move(str(tmp), str(path))
 
 

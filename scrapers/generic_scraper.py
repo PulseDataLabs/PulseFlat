@@ -235,13 +235,33 @@ class GenericScraper(BaseScraper):
         # Aplicar mapeamento de colunas se definido no resources.yaml
         column_mapping = self.res_config.get("column_mapping")
         if column_mapping and rows:
+            from datetime import datetime
             mapped_rows = []
             for r in rows:
                 new_r = {}
+                is_valid = True
                 for k, v in r.items():
                     new_key = column_mapping.get(k, k)
-                    new_r[new_key] = v
-                mapped_rows.append(new_r)
+                    val = v
+                    if new_key == "data_referencia":
+                        if not val:
+                            is_valid = False
+                            break
+                        val_strip = val.strip()
+                        parsed_date = None
+                        for fmt in ("%d/%m/%Y", "%Y/%m/%d", "%Y-%m-%d"):
+                            try:
+                                parsed_date = datetime.strptime(val_strip, fmt).strftime("%Y-%m-%d")
+                                break
+                            except ValueError:
+                                continue
+                        if not parsed_date:
+                            is_valid = False
+                            break
+                        val = parsed_date
+                    new_r[new_key] = val
+                if is_valid:
+                    mapped_rows.append(new_r)
             rows = mapped_rows
 
         dataset_id = self.resource_name.lower().replace(" ", "_").replace("-", "_")

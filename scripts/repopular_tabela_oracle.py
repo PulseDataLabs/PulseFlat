@@ -1,0 +1,54 @@
+import sys
+import pandas as pd
+from pathlib import Path
+
+# Adiciona o diretório raiz ao sys.path
+ROOT_DIR = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT_DIR))
+
+from utils.base import get_logger
+from utils.db import get_connection, upload_dataframe
+
+log = get_logger("repopular_tabela_oracle")
+
+def main():
+    csv_file = ROOT_DIR / "data" / "debentures_mercado_secundario_precos_negociacao.csv.gz"
+    if not csv_file.exists():
+        log.error(f"Arquivo {csv_file} não encontrado.")
+        return
+
+    table_name = "DEBENTURES_MERCADO_SECUNDARIO_PRECOS_NEGOCIACAO"
+    
+    log.info("Lendo dados do CSV corrigido...")
+    df = pd.read_csv(csv_file, dtype=str, keep_default_na=False)
+    log.info(f"{len(df)} registros carregados.")
+
+    log.info("Conectando ao banco de dados Oracle...")
+    try:
+        conn = get_connection()
+        cursor = conn.cursor()
+        
+        # 1. Truncar a tabela existente
+        log.info(f"Truncando a tabela {table_name}...")
+        cursor.execute(f"TRUNCATE TABLE {table_name}")
+        conn.commit()
+        log.info("Tabela truncada com sucesso!")
+        
+        cursor.close()
+        conn.close()
+    except Exception as e:
+        log.error(f"Erro ao truncar a tabela no Oracle: {e}")
+        return
+
+    # 2. Fazer o upload completo do DataFrame atualizado
+    log.info("Iniciando upload de todo o DataFrame atualizado para o Oracle...")
+    chaves_dedup = ["data_referencia", "codigo_ativo", "isin"]
+    success = upload_dataframe(df, table_name, chaves_dedup=chaves_dedup)
+    
+    if success:
+        log.info("Repopulação da tabela concluída com sucesso!")
+    else:
+        log.error("Falha ao sincronizar dados com o banco Oracle.")
+
+if __name__ == "__main__":
+    main()

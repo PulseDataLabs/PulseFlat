@@ -161,6 +161,21 @@
   },
   {
     "title": "Debentures Mercado Secundario Precos Negociacao",
+    "file": "debentures_mercado_secundario_precos_negociacao.csv.gz",
+    "description": "Sem descrição fornecida.",
+    "icon": "📊",
+    "iconClass": "icon-anbima",
+    "badge": "Diário",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "anbima"
+    ],
+    "source": "ANBIMA",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/debentures_mercado_secundario_precos_negociacao.csv.gz",
+    "accumulate": true
+  },
+  {
+    "title": "Debentures Mercado Secundario Precos Negociacao",
     "file": "debentures_mercado_secundario_precos_negociacao.csv",
     "description": "Sem descrição fornecida.",
     "icon": "📊",
@@ -888,7 +903,7 @@
       "preço"
     ],
     "source": "BCB · DEMAB",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/bacen_negociacao_tpf.csv.gz",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/bacen_negociacao_tpf_extragrupo.csv.gz",
     "accumulate": true
   },
   {
