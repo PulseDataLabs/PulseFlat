@@ -120,44 +120,44 @@
     "max": "2026-07-31"
   },
   "ipea_precos_inflacao.csv": {
-    "min": "2026-07-31",
-    "max": "2026-07-31"
+    "min": "2026-08-01",
+    "max": "2026-08-01"
   },
   "ipea_producao_mineral.csv": {
-    "min": "2026-07-31",
-    "max": "2026-07-31"
+    "min": "2026-08-01",
+    "max": "2026-08-01"
   },
   "ipea_taxas_juros.csv": {
-    "min": "2026-07-31",
-    "max": "2026-07-31"
+    "min": "2026-08-01",
+    "max": "2026-08-01"
   },
   "onu_pacto_global.csv": {
-    "min": "2026-07-31",
-    "max": "2026-07-31"
+    "min": "2026-08-01",
+    "max": "2026-08-01"
   },
   "wikipedia_global_indices.csv": {
-    "min": "2026-07-31",
-    "max": "2026-07-31"
+    "min": "2026-08-01",
+    "max": "2026-08-01"
   },
   "ipea_mercados_diarios.csv": {
-    "min": "2026-07-31",
-    "max": "2026-07-31"
+    "min": "2026-08-01",
+    "max": "2026-08-01"
   },
   "yahoo_acoes_brasileiras.csv": {
     "min": "2026-06-28",
-    "max": "2026-07-31"
+    "max": "2026-08-01"
   },
   "yahoo_cambio_moedas.csv": {
     "min": "2026-06-28",
-    "max": "2026-07-31"
+    "max": "2026-08-01"
   },
   "yahoo_commodities.csv": {
     "min": "2026-06-27",
-    "max": "2026-07-31"
+    "max": "2026-08-01"
   },
   "yahoo_criptoativos.csv": {
     "min": "2026-06-28",
-    "max": "2026-07-31"
+    "max": "2026-08-01"
   },
   "bacen_parcelas_capital_basileia.csv.gz": {
     "min": "2026-06-05",
@@ -165,23 +165,23 @@
   },
   "yahoo_etfs.csv": {
     "min": "2026-06-27",
-    "max": "2026-07-31"
+    "max": "2026-08-01"
   },
   "yahoo_indices_globais.csv": {
     "min": "2026-06-28",
-    "max": "2026-07-31"
+    "max": "2026-08-01"
   },
   "yahoo_renda_fixa.csv": {
     "min": "2026-06-28",
-    "max": "2026-07-31"
+    "max": "2026-08-01"
   },
   "yahoo_acoes_internacionais.csv": {
     "min": "2026-06-28",
-    "max": "2026-07-31"
+    "max": "2026-08-01"
   },
   "yahoo_fiis_fiagros.csv": {
     "min": "2026-06-28",
-    "max": "2026-07-31"
+    "max": "2026-08-01"
   },
   "cvm_fundos_informe_diario.csv.gz": {
     "min": "2026-07-31",
