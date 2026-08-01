@@ -111,6 +111,29 @@ def run():
                                     is_valid = False
                                     break
                                 val = parsed_date
+                            elif new_key in ("pu_minimo", "pu_medio", "pu_maximo", "pu_da_curva"):
+                                if val and str(val).strip() not in ("-", ""):
+                                    val_str = str(val).strip()
+                                    if "," in val_str:
+                                        val_str = val_str.replace(".", "").replace(",", ".")
+                                    try:
+                                        f = float(val_str)
+                                        if f.is_integer():
+                                            val = str(int(f))
+                                        else:
+                                            val = f"{f:.8f}".rstrip('0').rstrip('.')
+                                    except ValueError:
+                                        pass
+                            elif new_key in ("quantidade", "numero_de_negocios"):
+                                if val and str(val).strip() not in ("-", ""):
+                                    val_str = str(val).strip()
+                                    if "," in val_str:
+                                        val_str = val_str.split(",")[0]
+                                    val_str = val_str.replace(".", "")
+                                    try:
+                                        val = str(int(val_str))
+                                    except ValueError:
+                                        pass
                             new_r[new_key] = val
                         if is_valid:
                             mapped_rows.append(new_r)

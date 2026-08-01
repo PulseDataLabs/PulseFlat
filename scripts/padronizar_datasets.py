@@ -8,11 +8,16 @@ Aplica padronização em todos os CSVs de data/:
   - Renomeia colunas Unnamed em bacen_conglomerados.csv
 """
 
-import csv, re, os, shutil
+import csv, re, os, shutil, sys
 from pathlib import Path
 from collections import OrderedDict
 
-DATA = Path("data")
+# Adiciona o diretório raiz ao sys.path
+ROOT_DIR = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT_DIR))
+from utils.parsers import hash_row
+
+DATA = ROOT_DIR / "data"
 
 # ── Mapa de renomeação de colunas corrompidas ──────────────────────────
 RENAMES: dict[str, dict[str, str]] = {
@@ -207,6 +212,55 @@ def processar():
         header, rows = mover_data_captura(header, rows)
         escrever_csv(path, header, rows)
         print(f"  [OK] {fname} — data_captura movida para pos 0")
+
+    # ── 5. Padronizar campos numéricos no mercado secundário de debêntures ──
+    path = DATA / "debentures_mercado_secundario_precos_negociacao.csv.gz"
+    if path.exists():
+        header, rows = ler_csv(path)
+        
+        def clean_float(val):
+            if not val or val.strip() in ("-", ""):
+                return ""
+            val_str = val.strip()
+            if "," in val_str:
+                val_str = val_str.replace(".", "").replace(",", ".")
+            try:
+                f = float(val_str)
+                if f.is_integer():
+                    return str(int(f))
+                return f"{f:.8f}".rstrip('0').rstrip('.')
+            except ValueError:
+                return val_str
+
+        def clean_int(val):
+            if not val or val.strip() in ("-", ""):
+                return ""
+            val_str = val.strip()
+            if "," in val_str:
+                val_str = val_str.split(",")[0]
+            val_str = val_str.replace(".", "")
+            try:
+                return str(int(val_str))
+            except ValueError:
+                return val_str
+
+        cleaned_rows = []
+        for row in rows:
+            new_row = dict(row)
+            for col in ["pu_minimo", "pu_medio", "pu_maximo", "pu_da_curva"]:
+                if col in new_row:
+                    new_row[col] = clean_float(new_row[col])
+            for col in ["quantidade", "numero_de_negocios"]:
+                if col in new_row:
+                    new_row[col] = clean_int(new_row[col])
+            
+            # Recalcula o hash do registro com os valores novos
+            hash_input = {k: v for k, v in new_row.items() if k not in ("data_captura", "registro_hash")}
+            new_row["registro_hash"] = hash_row(hash_input)
+            cleaned_rows.append(new_row)
+            
+        escrever_csv(path, header, cleaned_rows)
+        print("  [OK] debentures_mercado_secundario_precos_negociacao.csv.gz — campos numéricos padronizados")
 
     print("\n  Todos os CSVs padronizados com sucesso.")
 
