@@ -4382,5 +4382,147 @@
         "example": "0.017089"
       }
     ]
+  },
+  {
+    "title": "B3 Cotahist Diario.Gz",
+    "files": "b3_cotahist_diario.csv.gz",
+    "source": "b3",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-08-02"
+      },
+      {
+        "name": "allocation_lot_size",
+        "type": "str",
+        "example": "0000001"
+      },
+      {
+        "name": "average",
+        "type": "str",
+        "example": "0000000004908"
+      },
+      {
+        "name": "bdi_code",
+        "type": "str",
+        "example": "02"
+      },
+      {
+        "name": "best_ask",
+        "type": "str",
+        "example": "0000000004905"
+      },
+      {
+        "name": "best_bid",
+        "type": "str",
+        "example": "0000000004903"
+      },
+      {
+        "name": "close",
+        "type": "str",
+        "example": "0000000004904"
+      },
+      {
+        "name": "corporation_name",
+        "type": "str",
+        "example": "PETROBRAS"
+      },
+      {
+        "name": "days_to_settlement",
+        "type": "str",
+        "example": ""
+      },
+      {
+        "name": "distribution_id",
+        "type": "str",
+        "example": "214"
+      },
+      {
+        "name": "high",
+        "type": "str",
+        "example": "0000000004943"
+      },
+      {
+        "name": "instrument_market",
+        "type": "str",
+        "example": "010"
+      },
+      {
+        "name": "isin",
+        "type": "str",
+        "example": "BRPETRACNOR9"
+      },
+      {
+        "name": "low",
+        "type": "str",
+        "example": "0000000004856"
+      },
+      {
+        "name": "maturity_date",
+        "type": "date",
+        "example": "9999-12-31"
+      },
+      {
+        "name": "open",
+        "type": "str",
+        "example": "0000000004896"
+      },
+      {
+        "name": "refdate",
+        "type": "date",
+        "example": "2026-07-31"
+      },
+      {
+        "name": "regtype",
+        "type": "str",
+        "example": "01"
+      },
+      {
+        "name": "specification_code",
+        "type": "str",
+        "example": "ON      N2"
+      },
+      {
+        "name": "strike_price",
+        "type": "str",
+        "example": "0000000000000"
+      },
+      {
+        "name": "strike_price_adjustment_indicator",
+        "type": "str",
+        "example": "0"
+      },
+      {
+        "name": "strike_price_in_points",
+        "type": "str",
+        "example": "0000000000000"
+      },
+      {
+        "name": "symbol",
+        "type": "str",
+        "example": "PETR3"
+      },
+      {
+        "name": "trade_quantity",
+        "type": "str",
+        "example": "10105"
+      },
+      {
+        "name": "traded_contracts",
+        "type": "str",
+        "example": "000000000007065500"
+      },
+      {
+        "name": "trading_currency",
+        "type": "str",
+        "example": "R$"
+      },
+      {
+        "name": "volume",
+        "type": "str",
+        "example": "000000034680084900"
+      }
+    ]
   }
 ]

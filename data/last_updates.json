@@ -250,5 +250,9 @@
   "b3_carteira_teorica_ibxl.csv": {
     "min": "2026-06-03",
     "max": "2026-07-31"
+  },
+  "b3_cotahist_diario.csv.gz": {
+    "min": "2026-08-02",
+    "max": "2026-08-02"
   }
 }

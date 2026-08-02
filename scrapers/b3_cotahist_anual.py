@@ -32,6 +32,11 @@ COTAHIST_FIELDS = [
 
 ARQUIVO = Path("data/b3_cotahist_anual.csv.gz")
 
+# Mercados mantidos: 010 (à vista) e 020 (fracionário) — ações, BDRs, ETFs e
+# fundos listados. Demais mercados (opções, termos, direitos, leilões) são
+# descartados para manter o arquivo pequeno e versionável no GitHub.
+MERCADOS_KEEP = ("010", "020")
+
 
 def capturar(year: int) -> tuple[list[dict], list[str]]:
     session = nova_session()
@@ -48,6 +53,8 @@ def capturar(year: int) -> tuple[list[dict], list[str]]:
             text = decode_bytes(zf.read(info.filename))
             parsed = fwf_rows(text, COTAHIST_FIELDS, COTAHIST_WIDTHS, only_regtype_01=True)
             for r in parsed:
+                if r.get("instrument_market") not in MERCADOS_KEEP:
+                    continue
                 r["arquivo_origem"] = info.filename
                 rows.append(r)
 
