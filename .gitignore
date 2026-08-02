@@ -220,6 +220,7 @@ __marimo__/
 
 # Ignorar APENAS os arquivos locais gigantes que passam do limite do GitHub
 data/b3_cotahist_anual.csv
+data/b3_cotahist_anual.csv.gz
 data/debentures_mercado_pu_historico.csv
 data/cvm_fundos_cadastro.csv
 data/cvm_fundos_informe_diario.csv
