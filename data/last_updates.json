@@ -254,5 +254,9 @@
   "b3_cotahist_diario.csv.gz": {
     "min": "2026-08-02",
     "max": "2026-08-02"
+  },
+  "b3_bdi_etfrf.csv.gz": {
+    "min": "2026-08-02",
+    "max": "2026-08-02"
   }
 }

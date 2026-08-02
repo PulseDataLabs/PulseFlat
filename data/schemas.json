@@ -4524,5 +4524,82 @@
         "example": "000000034680084900"
       }
     ]
+  },
+  {
+    "title": "B3 Bdi Etfrf.Gz",
+    "files": "b3_bdi_etfrf.csv.gz",
+    "source": "b3",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-08-02"
+      },
+      {
+        "name": "data_referencia",
+        "type": "date",
+        "example": "2026-01-02"
+      },
+      {
+        "name": "codigo_ativo",
+        "type": "str",
+        "example": "AREA"
+      },
+      {
+        "name": "preco_abertura",
+        "type": "float",
+        "example": "102.96"
+      },
+      {
+        "name": "preco_minimo",
+        "type": "float",
+        "example": "102.96"
+      },
+      {
+        "name": "preco_maximo",
+        "type": "float",
+        "example": "103.52"
+      },
+      {
+        "name": "preco_medio",
+        "type": "float",
+        "example": "103.31"
+      },
+      {
+        "name": "preco_fechamento",
+        "type": "float",
+        "example": "103.23"
+      },
+      {
+        "name": "preco_referencia_d1",
+        "type": "float",
+        "example": "102.75"
+      },
+      {
+        "name": "oferta_compra",
+        "type": "str",
+        "example": "103.23"
+      },
+      {
+        "name": "oferta_venda",
+        "type": "str",
+        "example": "103.52"
+      },
+      {
+        "name": "quantidade",
+        "type": "int",
+        "example": "1858"
+      },
+      {
+        "name": "negocios",
+        "type": "str",
+        "example": "136"
+      },
+      {
+        "name": "volume",
+        "type": "str",
+        "example": "191958.12"
+      }
+    ]
   }
 ]
