@@ -182,12 +182,13 @@ def json_rows(payload) -> list[dict]:
 def fwf_rows(text: str, fields: list[str], widths: list[int], only_regtype_01: bool = False) -> list[dict]:
     lines = [ln for ln in text.splitlines() if ln.strip()]
     rows = []
+    norm_fields = [normalize_key(f) for f in fields]
     for ln in lines:
         if len(ln) < sum(widths):
             continue
         pos = 0
         row = {}
-        for name, width in zip(fields, widths):
+        for name, width in zip(norm_fields, widths):
             row[name] = ln[pos:pos + width].strip()
             pos += width
         if only_regtype_01 and row.get("regtype") != "01":
@@ -203,8 +204,9 @@ def fwf_rows(text: str, fields: list[str], widths: list[int], only_regtype_01: b
                     row["valor_indicador"] = f"{sinal}{dig[:-casas]}.{dig[-casas:]}"
                 else:
                     row["valor_indicador"] = valor
-        rows.append(normalize_keys(row))
+        rows.append({k: limpar(v) for k, v in row.items()})
     return rows
+
 
 
 def _strip_ns(tag: str) -> str:

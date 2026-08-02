@@ -30,7 +30,7 @@ COTAHIST_FIELDS = [
     "maturity_date", "allocation_lot_size", "strike_price_in_points", "isin", "distribution_id",
 ]
 
-ARQUIVO = Path("data/b3_cotahist_diario.csv")
+ARQUIVO = Path("data/b3_cotahist_diario.csv.gz")
 
 
 def capturar() -> tuple[list[dict], list[str]]:
@@ -63,9 +63,10 @@ def capturar() -> tuple[list[dict], list[str]]:
 class B3CotahistDiarioScraper(BaseScraper):
     name = "b3_cotahist_diario"
     group = "b3"
-    enabled = False
+    enabled = True
     phase = 1
     accumulate = True
+    compress = True
     chaves_dedup = ['data_captura', 'conjunto', 'registro_hash']
     
     # Catálogo de Metadados
