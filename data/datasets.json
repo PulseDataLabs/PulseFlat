@@ -695,6 +695,26 @@
     "accumulate": true
   },
   {
+    "title": "B3 BDI — ETF de Renda Fixa",
+    "file": "b3_bdi_etfrf.csv.gz",
+    "description": "Resumo diário dos negócios de ETF de Renda Fixa no mercado da B3 (Boletim Diário), com preços de abertura, mínimo, máximo, médio e fechamento, quantidade negociada, número de negócios e volume financeiro.",
+    "icon": "📊",
+    "iconClass": "icon-b3",
+    "badge": "Diário",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "ETF",
+      "renda fixa",
+      "bdi",
+      "volume",
+      "negócios",
+      "preço"
+    ],
+    "source": "B3 BDI",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_bdi_etfrf.csv.gz",
+    "accumulate": true
+  },
+  {
     "title": "B3 BDI — Negócios de Ações",
     "file": "b3_bdi_trades_acoes.csv.gz",
     "description": "Resumo de negócios diários consolidados de ações negociadas no mercado de bolsa da B3, com preços e volumes.",
@@ -752,6 +772,24 @@
   },
   {
     "title": "B3 — COTAHIST Anual",
+    "file": "b3_cotahist_anual.csv.gz",
+    "description": "Cotações históricas anuais de todos os ativos da B3 no formato COTAHIST de largura fixa — mesmo conteúdo do diário, consolidado por ano para backfill histórico.",
+    "icon": "📅",
+    "iconClass": "icon-b3",
+    "badge": "Diário",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "cotações anual",
+      "histórico",
+      "fwf",
+      "b3"
+    ],
+    "source": "B3 · COTAHIST",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_cotahist_anual.csv.gz",
+    "accumulate": true
+  },
+  {
+    "title": "B3 — COTAHIST Anual",
     "file": "b3_cotahist_anual.csv",
     "description": "Cotações históricas anuais de todos os ativos da B3 no formato COTAHIST de largura fixa — mesmo conteúdo do diário, consolidado por ano para backfill histórico.",
     "icon": "📅",
@@ -766,6 +804,25 @@
     ],
     "source": "B3 · COTAHIST",
     "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_cotahist_anual.csv",
+    "accumulate": true
+  },
+  {
+    "title": "B3 — COTAHIST Diário",
+    "file": "b3_cotahist_diario.csv.gz",
+    "description": "Cotações históricas diárias de todos os ativos da B3 (ações, BDRs, ETFs, FIIs) no formato COTAHIST de largura fixa, incluindo abertura, máxima, mínima, média, fechamento, volume e quantidade de negócios.",
+    "icon": "📊",
+    "iconClass": "icon-b3",
+    "badge": "Diário",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "cotações",
+      "ações",
+      "abertura/fechamento",
+      "volume",
+      "fwf"
+    ],
+    "source": "B3 · COTAHIST",
+    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_cotahist_diario.csv.gz",
     "accumulate": true
   },
   {
