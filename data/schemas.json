@@ -744,22 +744,22 @@
       {
         "name": "data_referencia",
         "type": "date",
-        "example": "2026-07-01"
+        "example": "2026-06-01"
       },
       {
         "name": "valor_total",
         "type": "str",
-        "example": "1140469.50"
+        "example": "1127873.60"
       },
       {
         "name": "valor_cota",
         "type": "str",
-        "example": "43.837987300000"
+        "example": "43.453590600000"
       },
       {
         "name": "patrimonio_liquido",
         "type": "float",
-        "example": "1198734.29"
+        "example": "1191031.59"
       },
       {
         "name": "captc_dia",
