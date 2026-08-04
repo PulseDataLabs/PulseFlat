@@ -2,7 +2,7 @@ window.PULSEFLAT_MARKET_LATEST = [
   {
     "label": "CDI",
     "value": "14,15%",
-    "reference_date": "2026-07-31",
+    "reference_date": "2026-08-03",
     "type": "neutral"
   },
   {
@@ -40,14 +40,14 @@ window.PULSEFLAT_MARKET_LATEST = [
   {
     "label": "IBOVESPA",
     "value": "177.999",
-    "reference_date": "2026-07-31",
-    "type": "up",
-    "change": "+0,47%"
+    "reference_date": "2026-08-03",
+    "type": "neutral",
+    "change": "+0,00%"
   },
   {
     "label": "IMA-GERAL",
-    "value": "10.262,57",
-    "reference_date": "2026-07-31",
+    "value": "10.281,60",
+    "reference_date": "2026-08-03",
     "type": "neutral"
   }
 ];
