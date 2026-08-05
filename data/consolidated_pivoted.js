@@ -429,7 +429,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "IPEA",
     "dataset_label": "IPEA Taxas de Juros",
     "categoria": "Taxas de Juros",
-    "Valor": "0,05%"
+    "Valor": "0,11%"
   },
   {
     "data_referencia": "2026-08-01",
@@ -446,30 +446,6 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
     "Valor": "0,000163"
-  },
-  {
-    "data_referencia": "2026-08-03",
-    "indicador": "FDS (registro 2)",
-    "fonte": "ANBIMA",
-    "dataset_label": "ANBIMA Indicadores",
-    "categoria": "FDS",
-    "Valor": "0,0904"
-  },
-  {
-    "data_referencia": "2026-08-03",
-    "indicador": "Índice Dow Jones",
-    "fonte": "IPEA",
-    "dataset_label": "IPEA Mercados Diários",
-    "categoria": "Mercados Globais",
-    "Valor": "53.178"
-  },
-  {
-    "data_referencia": "2026-08-03",
-    "indicador": "Índice NASDAQ",
-    "fonte": "IPEA",
-    "dataset_label": "IPEA Mercados Diários",
-    "categoria": "Mercados Globais",
-    "Valor": "25.914"
   },
   {
     "data_referencia": "2026-08-04",
@@ -666,7 +642,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo ETFs",
     "categoria": "ETFs & Setoriais",
-    "Valor": "174,90"
+    "Valor": "174,85"
   },
   {
     "data_referencia": "2026-08-04",
@@ -838,14 +814,6 @@ window.PULSEFLAT_PIVOTED = [
   },
   {
     "data_referencia": "2026-08-04",
-    "indicador": "DI-B3",
-    "fonte": "ANBIMA",
-    "dataset_label": "ANBIMA Indicadores",
-    "categoria": "Taxa de Juros",
-    "Valor": "14,15"
-  },
-  {
-    "data_referencia": "2026-08-04",
     "indicador": "DI1",
     "fonte": "B3",
     "dataset_label": "B3 BMF Taxas",
@@ -867,22 +835,6 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Ações Internacionais",
     "categoria": "Ações Internacionais",
     "Valor": "98,18"
-  },
-  {
-    "data_referencia": "2026-08-04",
-    "indicador": "Dólar Comercial Compra",
-    "fonte": "ANBIMA",
-    "dataset_label": "ANBIMA Indicadores",
-    "categoria": "Câmbio",
-    "Valor": "5,10"
-  },
-  {
-    "data_referencia": "2026-08-04",
-    "indicador": "Dólar Comercial Venda",
-    "fonte": "ANBIMA",
-    "dataset_label": "ANBIMA Indicadores",
-    "categoria": "Câmbio",
-    "Valor": "5,11"
   },
   {
     "data_referencia": "2026-08-04",
@@ -942,23 +894,7 @@ window.PULSEFLAT_PIVOTED = [
   },
   {
     "data_referencia": "2026-08-04",
-    "indicador": "Euro Compra",
-    "fonte": "ANBIMA",
-    "dataset_label": "ANBIMA Indicadores",
-    "categoria": "Câmbio",
-    "Valor": "5,88"
-  },
-  {
-    "data_referencia": "2026-08-04",
-    "indicador": "Euro Venda",
-    "fonte": "ANBIMA",
-    "dataset_label": "ANBIMA Indicadores",
-    "categoria": "Câmbio",
-    "Valor": "5,88"
-  },
-  {
-    "data_referencia": "2026-08-04",
-    "indicador": "FDS (registro 1)",
+    "indicador": "FDS (registro 2)",
     "fonte": "ANBIMA",
     "dataset_label": "ANBIMA Indicadores",
     "categoria": "FDS",
@@ -1114,7 +1050,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo ETFs",
     "categoria": "ETFs & Setoriais",
-    "Valor": "435,83"
+    "Valor": "447,55"
   },
   {
     "data_referencia": "2026-08-04",
@@ -1546,7 +1482,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo ETFs",
     "categoria": "ETFs & Setoriais",
-    "Valor": "108,38"
+    "Valor": "108,15"
   },
   {
     "data_referencia": "2026-08-04",
@@ -1590,14 +1526,6 @@ window.PULSEFLAT_PIVOTED = [
   },
   {
     "data_referencia": "2026-08-04",
-    "indicador": "TBF",
-    "fonte": "ANBIMA",
-    "dataset_label": "ANBIMA Indicadores",
-    "categoria": "Taxa de Referência",
-    "Valor": "1,00"
-  },
-  {
-    "data_referencia": "2026-08-04",
     "indicador": "TEND3.SA",
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
@@ -1614,14 +1542,6 @@ window.PULSEFLAT_PIVOTED = [
   },
   {
     "data_referencia": "2026-08-04",
-    "indicador": "TR",
-    "fonte": "ANBIMA",
-    "dataset_label": "ANBIMA Indicadores",
-    "categoria": "Taxa de Referência",
-    "Valor": "0,1693"
-  },
-  {
-    "data_referencia": "2026-08-04",
     "indicador": "TSLA",
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Internacionais",
@@ -1635,14 +1555,6 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Ações Internacionais",
     "categoria": "Ações Internacionais",
     "Valor": "417,17"
-  },
-  {
-    "data_referencia": "2026-08-04",
-    "indicador": "Taxa SELIC (BC)",
-    "fonte": "ANBIMA",
-    "dataset_label": "ANBIMA Indicadores",
-    "categoria": "Taxa de Juros",
-    "Valor": "14,15"
   },
   {
     "data_referencia": "2026-08-04",
@@ -1949,12 +1861,28 @@ window.PULSEFLAT_PIVOTED = [
     "Valor": "16,50"
   },
   {
+    "data_referencia": "2026-08-04",
+    "indicador": "Índice Dow Jones",
+    "fonte": "IPEA",
+    "dataset_label": "IPEA Mercados Diários",
+    "categoria": "Mercados Globais",
+    "Valor": "54.086"
+  },
+  {
+    "data_referencia": "2026-08-04",
+    "indicador": "Índice NASDAQ",
+    "fonte": "IPEA",
+    "dataset_label": "IPEA Mercados Diários",
+    "categoria": "Mercados Globais",
+    "Valor": "26.585"
+  },
+  {
     "data_referencia": "2026-08-05",
     "indicador": "ADA-USD",
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "0,1916"
+    "Valor": "0,1912"
   },
   {
     "data_referencia": "2026-08-05",
@@ -1970,7 +1898,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "0,7062"
+    "Valor": "0,7059"
   },
   {
     "data_referencia": "2026-08-05",
@@ -1978,7 +1906,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "6,64"
+    "Valor": "6,65"
   },
   {
     "data_referencia": "2026-08-05",
@@ -1986,7 +1914,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "603,10"
+    "Valor": "594,16"
   },
   {
     "data_referencia": "2026-08-05",
@@ -2002,7 +1930,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "64.656"
+    "Valor": "64.638"
   },
   {
     "data_referencia": "2026-08-05",
@@ -2010,7 +1938,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "6,34"
+    "Valor": "6,35"
   },
   {
     "data_referencia": "2026-08-05",
@@ -2018,7 +1946,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "0,005572"
+    "Valor": "0,005558"
   },
   {
     "data_referencia": "2026-08-05",
@@ -2026,7 +1954,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "0,7581"
+    "Valor": "0,7585"
   },
   {
     "data_referencia": "2026-08-05",
@@ -2034,7 +1962,15 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "0,001609"
+    "Valor": "0,001612"
+  },
+  {
+    "data_referencia": "2026-08-05",
+    "indicador": "DI-B3",
+    "fonte": "ANBIMA",
+    "dataset_label": "ANBIMA Indicadores",
+    "categoria": "Taxa de Juros",
+    "Valor": "14,15"
   },
   {
     "data_referencia": "2026-08-05",
@@ -2042,7 +1978,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "0,0700"
+    "Valor": "0,0701"
   },
   {
     "data_referencia": "2026-08-05",
@@ -2050,7 +1986,23 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "0,8486"
+    "Valor": "0,8398"
+  },
+  {
+    "data_referencia": "2026-08-05",
+    "indicador": "Dólar Comercial Compra",
+    "fonte": "ANBIMA",
+    "dataset_label": "ANBIMA Indicadores",
+    "categoria": "Câmbio",
+    "Valor": "5,11"
+  },
+  {
+    "data_referencia": "2026-08-05",
+    "indicador": "Dólar Comercial Venda",
+    "fonte": "ANBIMA",
+    "dataset_label": "ANBIMA Indicadores",
+    "categoria": "Câmbio",
+    "Valor": "5,12"
   },
   {
     "data_referencia": "2026-08-05",
@@ -2058,7 +2010,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "1.880"
+    "Valor": "1.910"
   },
   {
     "data_referencia": "2026-08-05",
@@ -2066,7 +2018,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "5,91"
+    "Valor": "5,92"
   },
   {
     "data_referencia": "2026-08-05",
@@ -2083,6 +2035,30 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "ANBIMA Indicadores",
     "categoria": "Taxa de Juros",
     "Valor": "14,15"
+  },
+  {
+    "data_referencia": "2026-08-05",
+    "indicador": "Euro Compra",
+    "fonte": "ANBIMA",
+    "dataset_label": "ANBIMA Indicadores",
+    "categoria": "Câmbio",
+    "Valor": "5,91"
+  },
+  {
+    "data_referencia": "2026-08-05",
+    "indicador": "Euro Venda",
+    "fonte": "ANBIMA",
+    "dataset_label": "ANBIMA Indicadores",
+    "categoria": "Câmbio",
+    "Valor": "5,91"
+  },
+  {
+    "data_referencia": "2026-08-05",
+    "indicador": "FDS (registro 1)",
+    "fonte": "ANBIMA",
+    "dataset_label": "ANBIMA Indicadores",
+    "categoria": "FDS",
+    "Valor": "0,0905"
   },
   {
     "data_referencia": "2026-08-05",
@@ -2106,7 +2082,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "2,10"
+    "Valor": "2,09"
   },
   {
     "data_referencia": "2026-08-05",
@@ -2154,7 +2130,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "8,19"
+    "Valor": "8,15"
   },
   {
     "data_referencia": "2026-08-05",
@@ -2162,7 +2138,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "45,19"
+    "Valor": "45,27"
   },
   {
     "data_referencia": "2026-08-05",
@@ -2170,7 +2146,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "0,2972"
+    "Valor": "0,2970"
   },
   {
     "data_referencia": "2026-08-05",
@@ -2178,7 +2154,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "1,69"
+    "Valor": "1,70"
   },
   {
     "data_referencia": "2026-08-05",
@@ -2226,7 +2202,23 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "74,12"
+    "Valor": "74,05"
+  },
+  {
+    "data_referencia": "2026-08-05",
+    "indicador": "TBF",
+    "fonte": "ANBIMA",
+    "dataset_label": "ANBIMA Indicadores",
+    "categoria": "Taxa de Referência",
+    "Valor": "1,10"
+  },
+  {
+    "data_referencia": "2026-08-05",
+    "indicador": "TR",
+    "fonte": "ANBIMA",
+    "dataset_label": "ANBIMA Indicadores",
+    "categoria": "Taxa de Referência",
+    "Valor": "0,1728"
   },
   {
     "data_referencia": "2026-08-05",
@@ -2234,7 +2226,15 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "0,3275"
+    "Valor": "0,3274"
+  },
+  {
+    "data_referencia": "2026-08-05",
+    "indicador": "Taxa SELIC (BC)",
+    "fonte": "ANBIMA",
+    "dataset_label": "ANBIMA Indicadores",
+    "categoria": "Taxa de Juros",
+    "Valor": "14,15"
   },
   {
     "data_referencia": "2026-08-05",
@@ -2250,7 +2250,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "0,8071"
+    "Valor": "0,8070"
   },
   {
     "data_referencia": "2026-08-05",
@@ -2258,7 +2258,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "6,75"
+    "Valor": "6,74"
   },
   {
     "data_referencia": "2026-08-05",
@@ -2274,7 +2274,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "157,52"
+    "Valor": "157,70"
   },
   {
     "data_referencia": "2026-08-05",
@@ -2282,7 +2282,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "17,21"
+    "Valor": "17,23"
   },
   {
     "data_referencia": "2026-08-05",
@@ -2290,7 +2290,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "0,1678"
+    "Valor": "0,1660"
   },
   {
     "data_referencia": "2026-08-05",
@@ -2298,7 +2298,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "1,07"
+    "Valor": "1,06"
   },
   {
     "data_referencia": "2026-08-05",
@@ -2314,7 +2314,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Índices Globais",
     "categoria": "Índices de Ações Globais",
-    "Valor": "25.916"
+    "Valor": "25.853"
   },
   {
     "data_referencia": "2026-08-05",
@@ -2322,7 +2322,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Índices Globais",
     "categoria": "Índices de Ações Globais",
-    "Valor": "6.351"
+    "Valor": "6.320"
   },
   {
     "data_referencia": "2026-08-05",
@@ -2330,7 +2330,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Índices Globais",
     "categoria": "Índices de Ações Globais",
-    "Valor": "1.748"
+    "Valor": "1.733"
   },
   {
     "data_referencia": "2026-08-05",
@@ -2354,7 +2354,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Índices Globais",
     "categoria": "Índices de Ações Globais",
-    "Valor": "5.581"
+    "Valor": "5.612"
   },
   {
     "data_referencia": "2026-08-05",
@@ -2362,7 +2362,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Índices Globais",
     "categoria": "Índices de Ações Globais",
-    "Valor": "44.612"
+    "Valor": "43.361"
   },
   {
     "data_referencia": "2026-12-01",
