@@ -1655,6 +1655,7 @@ data_captura,codigo_serie,nome_serie,data_referencia,valor
 2026-08-07,11,Taxa SELIC diária (% a.d.),2026-08-04,0.052531
 2026-08-07,11,Taxa SELIC diária (% a.d.),2026-08-05,0.052531
 2026-08-07,11,Taxa SELIC diária (% a.d.),2026-08-06,0.051660
+2026-08-07,11,Taxa SELIC diária (% a.d.),2026-08-07,0.051660
 2026-08-07,4390,SELIC acumulada no mês (% a.m.),2020-01-01,0.38
 2026-08-07,4390,SELIC acumulada no mês (% a.m.),2020-02-01,0.29
 2026-08-07,4390,SELIC acumulada no mês (% a.m.),2020-03-01,0.34
@@ -1734,7 +1735,7 @@ data_captura,codigo_serie,nome_serie,data_referencia,valor
 2026-08-07,4390,SELIC acumulada no mês (% a.m.),2026-05-01,1.07
 2026-08-07,4390,SELIC acumulada no mês (% a.m.),2026-06-01,1.12
 2026-08-07,4390,SELIC acumulada no mês (% a.m.),2026-07-01,1.22
-2026-08-07,4390,SELIC acumulada no mês (% a.m.),2026-08-01,0.21
+2026-08-07,4390,SELIC acumulada no mês (% a.m.),2026-08-01,0.26
 2026-08-07,432,CDI diário (% a.d.),2020-01-01,4.50
 2026-08-07,432,CDI diário (% a.d.),2020-01-02,4.50
 2026-08-07,432,CDI diário (% a.d.),2020-01-03,4.50
@@ -6197,3 +6198,4 @@ data_captura,codigo_serie,nome_serie,data_referencia,valor
 2026-08-07,1,Dólar americano - venda (R$/US$),2026-08-04,5.1053
 2026-08-07,1,Dólar americano - venda (R$/US$),2026-08-05,5.1154
 2026-08-07,1,Dólar americano - venda (R$/US$),2026-08-06,5.1017
+2026-08-07,1,Dólar americano - venda (R$/US$),2026-08-07,5.0908
