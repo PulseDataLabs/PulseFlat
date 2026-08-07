@@ -51,8 +51,8 @@ ipea_macroeconomia.csv,IPEA Macroeconomia,IPEA,Macroeconomia,indicador,Salário 
 ipea_macroeconomia.csv,IPEA Macroeconomia,IPEA,Macroeconomia,indicador,Taxa de desocupação (PNAD Contínua),"5,40%",,2026-06-01,2026-08-07,PNADC12_TDESOC12
 ipea_mercados_diarios.csv,IPEA Mercados Diários,IPEA,Mercados Globais,indicador,Petróleo Brent,"88,90",,2026-08-03,2026-08-07,EIA366_PBRENT366
 ipea_mercados_diarios.csv,IPEA Mercados Diários,IPEA,Mercados Globais,indicador,Petróleo WTI,"81,96",,2026-08-03,2026-08-07,EIA366_PWTI366
-ipea_mercados_diarios.csv,IPEA Mercados Diários,IPEA,Mercados Globais,indicador,Índice Dow Jones,54.349,,2026-08-05,2026-08-07,GM366_DOW366
-ipea_mercados_diarios.csv,IPEA Mercados Diários,IPEA,Mercados Globais,indicador,Índice NASDAQ,26.363,,2026-08-05,2026-08-07,SGS366_NASDAQ366
+ipea_mercados_diarios.csv,IPEA Mercados Diários,IPEA,Mercados Globais,indicador,Índice Dow Jones,53.885,,2026-08-06,2026-08-07,GM366_DOW366
+ipea_mercados_diarios.csv,IPEA Mercados Diários,IPEA,Mercados Globais,indicador,Índice NASDAQ,26.348,,2026-08-06,2026-08-07,SGS366_NASDAQ366
 ipea_precos_inflacao.csv,IPEA Preços e Inflação,IPEA,Macroeconomia,indicador,IGP-DI - Geral - Índice,1.202,,2026-06-01,2026-08-07,IGP12_IGPDI12
 ipea_precos_inflacao.csv,IPEA Preços e Inflação,IPEA,Macroeconomia,indicador,INCC-DI - Geral - Índice,1.281,,2026-06-01,2026-08-07,IGP12_INCC12
 ipea_precos_inflacao.csv,IPEA Preços e Inflação,IPEA,Macroeconomia,indicador,INPC - Geral - Taxa de Variação,"0,14%",,2026-06-01,2026-08-07,PRECOS12_INPCBR12
@@ -60,14 +60,14 @@ ipea_precos_inflacao.csv,IPEA Preços e Inflação,IPEA,Macroeconomia,indicador,
 ipea_producao_mineral.csv,IPEA Produção Mineral,IPEA,Produção,indicador,Mineral - Aço Bruto - Produção,2.837,,2026-06-01,2026-08-07,IBSIE12_QSCAB12
 ipea_producao_mineral.csv,IPEA Produção Mineral,IPEA,Produção,indicador,Mineral - Ferro-Gusa - Produção,2.218,,2026-06-01,2026-08-07,IBSIE12_QSCFG12
 ipea_producao_mineral.csv,IPEA Produção Mineral,IPEA,Produção,indicador,Mineral - Laminados - Produção,1.832,,2026-06-01,2026-08-07,IBSIE12_QSCL12
-ipea_taxas_juros.csv,IPEA Taxas de Juros,IPEA,Taxas de Juros,indicador,CDI Acumulado no Mês,"0,11%",,2026-08-01,2026-08-07,BM12_TJCDI12
+ipea_taxas_juros.csv,IPEA Taxas de Juros,IPEA,Taxas de Juros,indicador,CDI Acumulado no Mês,"0,21%",,2026-08-01,2026-08-07,BM12_TJCDI12
 ipea_taxas_juros.csv,IPEA Taxas de Juros,IPEA,Taxas de Juros,indicador,Estrutura Termo LTN - 1 mês,"13,85%",,2026-07-01,2026-08-07,ANBIMA12_TJTLN112
 ipea_taxas_juros.csv,IPEA Taxas de Juros,IPEA,Taxas de Juros,indicador,Estrutura Termo LTN - 12 meses,"13,87%",,2026-07-01,2026-08-07,ANBIMA12_TJTLN1212
 ipea_taxas_juros.csv,IPEA Taxas de Juros,IPEA,Taxas de Juros,indicador,Estrutura Termo LTN - 3 meses,"13,80%",,2026-07-01,2026-08-07,ANBIMA12_TJTLN312
 ipea_taxas_juros.csv,IPEA Taxas de Juros,IPEA,Taxas de Juros,indicador,Estrutura Termo LTN - 6 meses,"13,79%",,2026-07-01,2026-08-07,ANBIMA12_TJTLN612
 ipea_taxas_juros.csv,IPEA Taxas de Juros,IPEA,Taxas de Juros,indicador,Poupança Rentabilidade Antiga (dep. até 2012),"0,67%",,2026-08-01,2026-08-07,ANBIMA12_TJPOUP12
 ipea_taxas_juros.csv,IPEA Taxas de Juros,IPEA,Taxas de Juros,indicador,Poupança Rentabilidade Nova (dep. pós 2012),"0,67%",,2026-08-01,2026-08-07,BM12_RNDPO12
-ipea_taxas_juros.csv,IPEA Taxas de Juros,IPEA,Taxas de Juros,indicador,Selic Acumulada no Mês,"0,16%",,2026-08-01,2026-08-07,BM12_TJOVER12
+ipea_taxas_juros.csv,IPEA Taxas de Juros,IPEA,Taxas de Juros,indicador,Selic Acumulada no Mês,"0,21%",,2026-08-01,2026-08-07,BM12_TJOVER12
 ipea_taxas_juros.csv,IPEA Taxas de Juros,IPEA,Taxas de Juros,indicador,Taxa Básica Financeira (TBF),"1,00%",,2026-08-01,2026-08-07,BM12_TJTBF12
 ipea_taxas_juros.csv,IPEA Taxas de Juros,IPEA,Taxas de Juros,indicador,Taxa Referencial (TR),"0,17%",,2026-08-01,2026-08-07,BM12_TJTR12
 ipea_taxas_juros.csv,IPEA Taxas de Juros,IPEA,Taxas de Juros,indicador,Taxa de Juros de Longo Prazo (TJLP),"0,73%",,2026-08-01,2026-08-07,BM12_TJLP12
@@ -176,25 +176,25 @@ yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Açõe
 yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,WMT,"112,07",,2026-08-06,2026-08-07,WMT
 yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,XOM,"154,84",,2026-08-06,2026-08-07,XOM
 yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,ARSBRL=X,"0,003160",,2026-08-07,2026-08-07,ARSBRL=X
-yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,AUDUSD=X,"0,7044",,2026-08-07,2026-08-07,AUDUSD=X
-yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,BRL=X,"5,10",,2026-08-07,2026-08-07,BRL=X
-yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,CHFBRL=X,"6,29",,2026-08-07,2026-08-07,CHFBRL=X
-yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,CLPBRL=X,"0,005519",,2026-08-07,2026-08-07,CLPBRL=X
-yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,CNYBRL=X,"0,7559",,2026-08-07,2026-08-07,CNYBRL=X
-yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,COPBRL=X,"0,001616",,2026-08-07,2026-08-07,COPBRL=X
+yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,AUDUSD=X,"0,7070",,2026-08-07,2026-08-07,AUDUSD=X
+yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,BRL=X,"5,09",,2026-08-07,2026-08-07,BRL=X
+yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,CHFBRL=X,"6,30",,2026-08-07,2026-08-07,CHFBRL=X
+yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,CLPBRL=X,"0,005553",,2026-08-07,2026-08-07,CLPBRL=X
+yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,CNYBRL=X,"0,7536",,2026-08-07,2026-08-07,CNYBRL=X
+yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,COPBRL=X,"0,001608",,2026-08-07,2026-08-07,COPBRL=X
 yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,DX-Y.NYB,"101,36",,2026-06-26,2026-06-28,DX-Y.NYB
 yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,EURBRL=X,"5,88",,2026-08-07,2026-08-07,EURBRL=X
-yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,EURUSD=X,"1,15",,2026-08-07,2026-08-07,EURUSD=X
+yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,EURUSD=X,"1,16",,2026-08-07,2026-08-07,EURUSD=X
 yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,GBPBRL=X,"6,86",,2026-08-07,2026-08-07,GBPBRL=X
-yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,GBPUSD=X,"1,34",,2026-08-07,2026-08-07,GBPUSD=X
-yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,JPYBRL=X,"0,0321",,2026-08-07,2026-08-07,JPYBRL=X
+yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,GBPUSD=X,"1,35",,2026-08-07,2026-08-07,GBPUSD=X
+yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,JPYBRL=X,"0,0322",,2026-08-07,2026-08-07,JPYBRL=X
 yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,MXNBRL=X,"0,2970",,2026-08-07,2026-08-07,MXNBRL=X
-yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,USDCAD=X,"1,40",,2026-08-07,2026-08-07,USDCAD=X
-yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,USDCHF=X,"0,8102",,2026-08-07,2026-08-07,USDCHF=X
-yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,USDCNY=X,"6,75",,2026-08-07,2026-08-07,USDCNY=X
+yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,USDCAD=X,"1,39",,2026-08-07,2026-08-07,USDCAD=X
+yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,USDCHF=X,"0,8068",,2026-08-07,2026-08-07,USDCHF=X
+yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,USDCNY=X,"6,73",,2026-08-07,2026-08-07,USDCNY=X
 yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,USDINR=X,"95,20",,2026-08-07,2026-08-07,USDINR=X
-yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,USDJPY=X,"158,37",,2026-08-07,2026-08-07,USDJPY=X
-yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,USDMXN=X,"17,16",,2026-08-07,2026-08-07,USDMXN=X
+yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,USDJPY=X,"157,35",,2026-08-07,2026-08-07,USDJPY=X
+yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,USDMXN=X,"17,11",,2026-08-07,2026-08-07,USDMXN=X
 yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,USDRUB=X,"78,80",,2026-06-27,2026-06-28,USDRUB=X
 yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,USDTRY=X,"46,55",,2026-06-27,2026-06-28,USDTRY=X
 yahoo_commodities.csv,Yahoo Commodities,Yahoo Finance,Commodities Globais,indicador,BZ=F,"82,49",,2026-08-06,2026-08-07,BZ=F
@@ -215,29 +215,29 @@ yahoo_commodities.csv,Yahoo Commodities,Yahoo Finance,Commodities Globais,indica
 yahoo_commodities.csv,Yahoo Commodities,Yahoo Finance,Commodities Globais,indicador,ZR=F,"14,19",,2026-08-06,2026-08-07,ZR=F
 yahoo_commodities.csv,Yahoo Commodities,Yahoo Finance,Commodities Globais,indicador,ZS=F,1.157,,2026-08-06,2026-08-07,ZS=F
 yahoo_commodities.csv,Yahoo Commodities,Yahoo Finance,Commodities Globais,indicador,ZW=F,"631,25",,2026-08-06,2026-08-07,ZW=F
-yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,ADA-USD,"0,2019",,2026-08-07,2026-08-07,ADA-USD
+yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,ADA-USD,"0,2004",,2026-08-07,2026-08-07,ADA-USD
 yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,APT-USD,"0,000131",,2026-08-01,2026-08-01,APT-USD
 yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,ATOM-USD,"1,57",,2026-06-28,2026-06-28,ATOM-USD
-yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,AVAX-USD,"6,45",,2026-08-07,2026-08-07,AVAX-USD
-yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,BNB-USD,"589,75",,2026-08-07,2026-08-07,BNB-USD
-yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,BTC-USD,64.787,,2026-08-07,2026-08-07,BTC-USD
-yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,DOGE-USD,"0,0696",,2026-08-07,2026-08-07,DOGE-USD
-yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,DOT-USD,"0,8146",,2026-08-07,2026-08-07,DOT-USD
+yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,AVAX-USD,"6,49",,2026-08-07,2026-08-07,AVAX-USD
+yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,BNB-USD,"591,97",,2026-08-07,2026-08-07,BNB-USD
+yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,BTC-USD,65.216,,2026-08-07,2026-08-07,BTC-USD
+yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,DOGE-USD,"0,0700",,2026-08-07,2026-08-07,DOGE-USD
+yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,DOT-USD,"0,8170",,2026-08-07,2026-08-07,DOT-USD
 yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,ETC-USD,"7,03",,2026-06-28,2026-06-28,ETC-USD
-yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,ETH-USD,1.913,,2026-08-07,2026-08-07,ETH-USD
+yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,ETH-USD,1.930,,2026-08-07,2026-08-07,ETH-USD
 yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,FIL-USD,"0,7250",,2026-06-28,2026-06-28,FIL-USD
 yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,HBAR-USD,"0,0713",,2026-06-28,2026-06-28,HBAR-USD
-yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,ICP-USD,"2,07",,2026-08-07,2026-08-07,ICP-USD
+yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,ICP-USD,"2,08",,2026-08-07,2026-08-07,ICP-USD
 yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,IMX-USD,"0,004143",,2026-08-01,2026-08-01,IMX-USD
-yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,LINK-USD,"8,22",,2026-08-07,2026-08-07,LINK-USD
-yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,LTC-USD,"45,73",,2026-08-07,2026-08-07,LTC-USD
-yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,NEAR-USD,"1,65",,2026-08-07,2026-08-07,NEAR-USD
-yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,OP-USD,"0,0880",,2026-08-07,2026-08-07,OP-USD
+yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,LINK-USD,"8,27",,2026-08-07,2026-08-07,LINK-USD
+yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,LTC-USD,"45,75",,2026-08-07,2026-08-07,LTC-USD
+yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,NEAR-USD,"1,64",,2026-08-07,2026-08-07,NEAR-USD
+yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,OP-USD,"0,0890",,2026-08-07,2026-08-07,OP-USD
 yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,SHIB-USD,"0,000005",,2026-08-07,2026-08-07,SHIB-USD
-yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,SOL-USD,"73,63",,2026-08-07,2026-08-07,SOL-USD
-yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,TRX-USD,"0,3266",,2026-08-07,2026-08-07,TRX-USD
+yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,SOL-USD,"73,79",,2026-08-07,2026-08-07,SOL-USD
+yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,TRX-USD,"0,3275",,2026-08-07,2026-08-07,TRX-USD
 yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,UNI-USD,"0,000163",,2026-08-01,2026-08-01,UNI-USD
-yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,XLM-USD,"0,1618",,2026-08-07,2026-08-07,XLM-USD
+yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,XLM-USD,"0,1606",,2026-08-07,2026-08-07,XLM-USD
 yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,XRP-USD,"1,04",,2026-08-07,2026-08-07,XRP-USD
 yahoo_etfs.csv,Yahoo ETFs,Yahoo Finance,ETFs & Setoriais,indicador,BND,"72,25",,2026-08-06,2026-08-07,BND
 yahoo_etfs.csv,Yahoo ETFs,Yahoo Finance,ETFs & Setoriais,indicador,BOVA11.SA,"172,04",,2026-08-06,2026-08-07,BOVA11.SA

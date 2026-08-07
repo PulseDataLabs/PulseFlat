@@ -19,8 +19,8 @@ window.PULSEFLAT_MARKET_LATEST = [
   },
   {
     "label": "IGP-M 12m",
-    "value": "-0,79%",
-    "reference_date": "2026-06-01",
+    "value": "-0,86%",
+    "reference_date": "2026-07-01",
     "type": "neutral"
   },
   {
