@@ -273,17 +273,17 @@
       {
         "name": "name",
         "type": "str",
-        "example": "A2 SEGURANCA E VIGILANCIA LTDA"
+        "example": "RADAR LABS INOVACAO E TECNOLOGIA LTDA"
       },
       {
         "name": "type",
         "type": "str",
-        "example": "Company"
+        "example": "Small or Medium-sized Enterprise"
       },
       {
         "name": "sector",
         "type": "str",
-        "example": "Consumer Services: Misc."
+        "example": "Software"
       },
       {
         "name": "country",
@@ -298,7 +298,7 @@
       {
         "name": "link",
         "type": "str",
-        "example": "https://unglobalcompact.org/what-is-gc/participants/219927-A2-SEGURANCA-E-VIGILANCIA-LTDA"
+        "example": "https://unglobalcompact.org/what-is-gc/participants/219608-RADAR-LABS-INOVACAO-E-TECNOLOGIA-LTDA"
       }
     ]
   },
@@ -342,22 +342,22 @@
       {
         "name": "data_referencia",
         "type": "date",
-        "example": "1987-05-20"
+        "example": "2026-08-07"
       },
       {
         "name": "codigo_ativo",
         "type": "str",
-        "example": "EIA366_PBRENT366"
+        "example": "GM366_DOW366"
       },
       {
         "name": "label",
         "type": "str",
-        "example": "Petróleo Brent"
+        "example": "Índice Dow Jones"
       },
       {
         "name": "valor",
         "type": "str",
-        "example": "18.63"
+        "example": "54036.929688"
       }
     ]
   },
