@@ -273,17 +273,17 @@
       {
         "name": "name",
         "type": "str",
-        "example": "MIRANDA TURISMO E REPRESENTACOES LTDA"
+        "example": "A2 SEGURANCA E VIGILANCIA LTDA"
       },
       {
         "name": "type",
         "type": "str",
-        "example": "Small or Medium-sized Enterprise"
+        "example": "Company"
       },
       {
         "name": "sector",
         "type": "str",
-        "example": "Travel and Tourism"
+        "example": "Consumer Services: Misc."
       },
       {
         "name": "country",
@@ -293,12 +293,12 @@
       {
         "name": "joined_on",
         "type": "str",
-        "example": "2026-07-31"
+        "example": "2026-08-10"
       },
       {
         "name": "link",
         "type": "str",
-        "example": "https://unglobalcompact.org/what-is-gc/participants/218244-MIRANDA-TURISMO-E-REPRESENTACOES-LTDA"
+        "example": "https://unglobalcompact.org/what-is-gc/participants/219927-A2-SEGURANCA-E-VIGILANCIA-LTDA"
       }
     ]
   },
