@@ -100,36 +100,36 @@ window.PULSEFLAT_LAST_UPDATES = {
     "max": "2026-08-01"
   },
   "ipea_calendario.csv": {
-    "min": "2026-08-08",
-    "max": "2026-08-08"
+    "min": "2026-08-10",
+    "max": "2026-08-10"
   },
   "ibge_sidra.csv": {
     "min": "2026-08-10",
     "max": "2026-08-10"
   },
   "ipea_comercio_exterior.csv": {
-    "min": "2026-08-08",
-    "max": "2026-08-08"
+    "min": "2026-08-10",
+    "max": "2026-08-10"
   },
   "ipea_fbcf.csv": {
-    "min": "2026-08-08",
-    "max": "2026-08-08"
+    "min": "2026-08-10",
+    "max": "2026-08-10"
   },
   "ipea_macroeconomia.csv": {
-    "min": "2026-08-08",
-    "max": "2026-08-08"
+    "min": "2026-08-10",
+    "max": "2026-08-10"
   },
   "ipea_precos_inflacao.csv": {
-    "min": "2026-08-08",
-    "max": "2026-08-08"
+    "min": "2026-08-10",
+    "max": "2026-08-10"
   },
   "ipea_producao_mineral.csv": {
-    "min": "2026-08-08",
-    "max": "2026-08-08"
+    "min": "2026-08-10",
+    "max": "2026-08-10"
   },
   "ipea_taxas_juros.csv": {
-    "min": "2026-08-08",
-    "max": "2026-08-08"
+    "min": "2026-08-10",
+    "max": "2026-08-10"
   },
   "onu_pacto_global.csv": {
     "min": "2026-08-10",
@@ -140,8 +140,8 @@ window.PULSEFLAT_LAST_UPDATES = {
     "max": "2026-08-10"
   },
   "ipea_mercados_diarios.csv": {
-    "min": "2026-08-08",
-    "max": "2026-08-08"
+    "min": "2026-08-10",
+    "max": "2026-08-10"
   },
   "yahoo_acoes_brasileiras.csv": {
     "min": "2026-06-28",

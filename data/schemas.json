@@ -7,7 +7,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-08"
+        "example": "2026-08-10"
       },
       {
         "name": "data_referencia",
@@ -76,7 +76,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-08"
+        "example": "2026-08-10"
       },
       {
         "name": "data_referencia",
@@ -108,7 +108,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-08"
+        "example": "2026-08-10"
       },
       {
         "name": "data_referencia",
@@ -140,7 +140,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-08"
+        "example": "2026-08-10"
       },
       {
         "name": "data_referencia",
@@ -172,7 +172,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-08"
+        "example": "2026-08-10"
       },
       {
         "name": "data_referencia",
@@ -204,7 +204,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-08"
+        "example": "2026-08-10"
       },
       {
         "name": "data_referencia",
@@ -236,7 +236,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-08"
+        "example": "2026-08-10"
       },
       {
         "name": "data_referencia",
@@ -337,7 +337,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-08"
+        "example": "2026-08-10"
       },
       {
         "name": "data_referencia",
