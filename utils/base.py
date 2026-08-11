@@ -412,3 +412,56 @@ def salvar_csv(
         f"{len(df_novos)} novos registros salvos"
         + (f" | {substituidas} linha(s) antigas substituídas" if substituidas else "")
     )
+
+
+try:
+    import fcntl
+except ImportError:
+    fcntl = None
+from contextlib import contextmanager
+
+@contextmanager
+def acquire_lock(lock_name: str, blocking: bool = True):
+    """
+    Adquire um lock de arquivo exclusivo para evitar execuções concorrentes.
+    Usa fcntl (Linux/Unix) para liberação automática se o processo cair.
+    """
+    import time
+    from pathlib import Path
+    
+    lock_file = Path(__file__).resolve().parents[1] / "data" / f"{lock_name}.lock"
+    lock_file.parent.mkdir(parents=True, exist_ok=True)
+
+    if fcntl:
+        f = open(lock_file, "w")
+        try:
+            if blocking:
+                fcntl.flock(f, fcntl.LOCK_EX)
+            else:
+                try:
+                    fcntl.flock(f, fcntl.LOCK_EX | fcntl.LOCK_NB)
+                except BlockingIOError:
+                    f.close()
+                    raise RuntimeError(f"O processo '{lock_name}' já está em execução.")
+            yield
+        finally:
+            try:
+                fcntl.flock(f, fcntl.LOCK_UN)
+            except Exception:
+                pass
+            f.close()
+    else:
+        # Fallback para ambientes sem fcntl (ex: Windows)
+        if not blocking and lock_file.exists():
+            if time.time() - lock_file.stat().st_mtime < 3600:
+                raise RuntimeError(f"O processo '{lock_name}' já está em execução.")
+        
+        lock_file.touch()
+        try:
+            yield
+        finally:
+            try:
+                lock_file.unlink(missing_ok=True)
+            except Exception:
+                pass
+

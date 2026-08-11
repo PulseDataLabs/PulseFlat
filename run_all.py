@@ -564,12 +564,30 @@ exemplos:
         print(b_green("\n  ✔  datasets.json atualizado com sucesso.\n"))
         sys.exit(0)
 
-    main(
-        group=args.group,
-        scraper=args.scraper,
-        parallel=args.parallel,
-        max_workers=args.max_workers,
-        list_only=args.list,
-        check_holes=args.check_holes,
-        fail_on_holes=args.fail_on_holes,
-    )
+    if args.list:
+        main(
+            group=args.group,
+            scraper=args.scraper,
+            parallel=args.parallel,
+            max_workers=args.max_workers,
+            list_only=args.list,
+            check_holes=args.check_holes,
+            fail_on_holes=args.fail_on_holes,
+        )
+    else:
+        from utils.base import acquire_lock
+        try:
+            with acquire_lock("pulseflat", blocking=True):
+                main(
+                    group=args.group,
+                    scraper=args.scraper,
+                    parallel=args.parallel,
+                    max_workers=args.max_workers,
+                    list_only=args.list,
+                    check_holes=args.check_holes,
+                    fail_on_holes=args.fail_on_holes,
+                )
+        except Exception as e:
+            logger.error(red(f"  ✖  Erro ao executar o pipeline: {e}"))
+            sys.exit(1)
+

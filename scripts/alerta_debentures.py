@@ -306,4 +306,11 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    from utils.base import acquire_lock
+    try:
+        with acquire_lock("pulseflat", blocking=False):
+            main()
+    except RuntimeError as e:
+        log.warning(f"Abortando alerta de debêntures: {e}")
+        sys.exit(0)
+

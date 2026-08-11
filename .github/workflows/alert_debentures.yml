@@ -10,6 +10,10 @@ on:
   # Permite execução manual pelo painel do GitHub
   workflow_dispatch:
 
+concurrency:
+  group: pulseflat-workflow
+  cancel-in-progress: false
+
 jobs:
   check-and-alert:
     runs-on: ubuntu-latest
