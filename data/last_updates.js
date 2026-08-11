@@ -140,7 +140,7 @@ window.PULSEFLAT_LAST_UPDATES = {
     "max": "2026-08-11"
   },
   "ipea_mercados_diarios.csv": {
-    "min": "2026-08-10",
+    "min": "2026-08-11",
     "max": "2026-08-11"
   },
   "yahoo_acoes_brasileiras.csv": {

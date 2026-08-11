@@ -337,27 +337,27 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-10"
+        "example": "2026-08-11"
       },
       {
         "name": "data_referencia",
         "type": "date",
-        "example": "2026-08-07"
+        "example": "1987-05-20"
       },
       {
         "name": "codigo_ativo",
         "type": "str",
-        "example": "GM366_DOW366"
+        "example": "EIA366_PBRENT366"
       },
       {
         "name": "label",
         "type": "str",
-        "example": "Índice Dow Jones"
+        "example": "Petróleo Brent"
       },
       {
         "name": "valor",
         "type": "str",
-        "example": "54036.929688"
+        "example": "18.63"
       }
     ]
   },
