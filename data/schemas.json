@@ -3235,7 +3235,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-10"
+        "example": "2026-08-11"
       },
       {
         "name": "data_base",
@@ -3549,7 +3549,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-10"
+        "example": "2026-08-11"
       },
       {
         "name": "data_referencia",
@@ -4359,7 +4359,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-10"
+        "example": "2026-08-11"
       },
       {
         "name": "codigo_serie",

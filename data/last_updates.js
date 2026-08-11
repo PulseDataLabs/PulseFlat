@@ -61,19 +61,19 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "bacen_conglomerados.csv": {
     "min": "2026-06-03",
-    "max": "2026-08-10"
+    "max": "2026-08-11"
   },
   "bacen_negociacao_tpf_extragrupo.csv.gz": {
     "min": "2020-01-31",
-    "max": "2026-08-10"
+    "max": "2026-08-11"
   },
   "bacen_balancetes_bancos.csv": {
-    "min": "2026-08-10",
-    "max": "2026-08-10"
+    "min": "2026-08-11",
+    "max": "2026-08-11"
   },
   "bcb_ptax.csv": {
-    "min": "2026-08-10",
-    "max": "2026-08-10"
+    "min": "2026-08-11",
+    "max": "2026-08-11"
   },
   "cvm_cadastro_companhias_abertas.csv": {
     "min": "2026-08-11",
@@ -92,8 +92,8 @@ window.PULSEFLAT_LAST_UPDATES = {
     "max": "2026-08-11"
   },
   "bcb_sgs.csv": {
-    "min": "2026-08-10",
-    "max": "2026-08-10"
+    "min": "2026-08-11",
+    "max": "2026-08-11"
   },
   "debentures_mercado_secundario_precos_negociacao.csv.gz": {
     "min": "2026-08-01",
@@ -225,7 +225,7 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "b3_bdi_di_over.csv": {
     "min": "2026-06-01",
-    "max": "2026-08-10"
+    "max": "2026-08-11"
   },
   "b3_carteira_teorica_agfs_iagro.csv": {
     "min": "2026-06-03",
