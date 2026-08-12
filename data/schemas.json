@@ -273,17 +273,17 @@
       {
         "name": "name",
         "type": "str",
-        "example": "RADAR LABS INOVACAO E TECNOLOGIA LTDA"
+        "example": "Postal Saude - Caixa de Assistencia e Saude dos Empregados dos Correios"
       },
       {
         "name": "type",
         "type": "str",
-        "example": "Small or Medium-sized Enterprise"
+        "example": "Company"
       },
       {
         "name": "sector",
         "type": "str",
-        "example": "Software"
+        "example": "Health Care Services"
       },
       {
         "name": "country",
@@ -293,12 +293,12 @@
       {
         "name": "joined_on",
         "type": "str",
-        "example": "2026-08-10"
+        "example": "2026-08-11"
       },
       {
         "name": "link",
         "type": "str",
-        "example": "https://unglobalcompact.org/what-is-gc/participants/219608-RADAR-LABS-INOVACAO-E-TECNOLOGIA-LTDA"
+        "example": "https://unglobalcompact.org/what-is-gc/participants/219849-Postal-Saude-Caixa-de-Assistencia-e-Saude-dos-Empregados-dos-Correios"
       }
     ]
   },
@@ -4013,7 +4013,7 @@
       {
         "name": "data_ult_vna",
         "type": "date",
-        "example": "2026-08-10"
+        "example": "2026-08-11"
       },
       {
         "name": "indice",

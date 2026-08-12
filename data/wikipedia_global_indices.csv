@@ -326,7 +326,7 @@ data_captura,codigo_ativo,nome_ativo,indice_origem
 2026-08-11,MS,Morgan Stanley,S&P 500
 2026-08-11,MOS,Mosaic Company (The),S&P 500
 2026-08-11,MSI,Motorola Solutions,S&P 500
-2026-08-11,MSCI,MSCI Inc.,S&P 500
+2026-08-11,MSCI,MSCI,S&P 500
 2026-08-11,NDAQ,"Nasdaq, Inc.",S&P 500
 2026-08-11,NTAP,NetApp,S&P 500
 2026-08-11,NFLX,Netflix,S&P 500
@@ -346,7 +346,7 @@ data_captura,codigo_ativo,nome_ativo,indice_origem
 2026-08-11,NVDA,Nvidia,S&P 500
 2026-08-11,NVR,"NVR, Inc.",S&P 500
 2026-08-11,NXPI,NXP Semiconductors,S&P 500
-2026-08-11,ORLY,O’Reilly Automotive,S&P 500
+2026-08-11,ORLY,O'Reilly Automotive,S&P 500
 2026-08-11,OXY,Occidental Petroleum,S&P 500
 2026-08-11,ODFL,Old Dominion,S&P 500
 2026-08-11,OMC,Omnicom Group,S&P 500
@@ -393,7 +393,7 @@ data_captura,codigo_ativo,nome_ativo,indice_origem
 2026-08-11,REGN,Regeneron Pharmaceuticals,S&P 500
 2026-08-11,RF,Regions Financial Corporation,S&P 500
 2026-08-11,RSG,Republic Services,S&P 500
-2026-08-11,RMD,ResMed,S&P 500
+2026-08-11,RMD,ResMed|,S&P 500
 2026-08-11,RVTY,Revvity,S&P 500
 2026-08-11,HOOD,Robinhood Markets,S&P 500
 2026-08-11,ROK,Rockwell Automation,S&P 500
