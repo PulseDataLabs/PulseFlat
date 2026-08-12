@@ -76,7 +76,10 @@ jobs:
         
         git add data/
         
-        # O "|| echo" evita que o workflow falhe caso o script rode mas não mude nada nos arquivos
-        git commit -m "Bot: Alerta de Debêntures Enviado [skip ci]" || echo "Nenhuma alteração nos dados."
-        
-        git push origin main
+        if ! git diff --cached --quiet; then
+          git commit -m "Bot: Alerta de Debêntures Enviado [skip ci]"
+          git pull --rebase origin main
+          git push origin main
+        else
+          echo "Nenhuma alteração nos dados."
+        fi
