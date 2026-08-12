@@ -1,85 +1,85 @@
 window.PULSEFLAT_PIPELINE_STATUS = {
-  "timestamp": "2026-08-12T09:40:21.889822",
-  "elapsed_seconds": 3441.698339700699,
-  "status": "warning",
+  "timestamp": "2026-08-12T10:41:15.002326",
+  "elapsed_seconds": 2395.8240847587585,
+  "status": "error",
   "summary": {
     "total": 66,
-    "success": 68,
-    "failed": 0,
+    "success": 56,
+    "failed": 12,
     "drifts": 4
   },
   "scrapers": {
     "onu_pacto_global": {
       "status": "success",
-      "elapsed_seconds": 64.45553779602051,
+      "elapsed_seconds": 56.771995544433594,
       "error": null,
-      "timestamp": "2026-08-12T09:40:21.890056"
+      "timestamp": "2026-08-12T10:41:15.002535"
     },
     "anbima_indicadores": {
       "status": "success",
-      "elapsed_seconds": 2.6800363063812256,
+      "elapsed_seconds": 1.9100124835968018,
       "error": null,
-      "timestamp": "2026-08-12T09:40:21.890056"
+      "timestamp": "2026-08-12T10:41:15.002535"
     },
     "anbima_projecoes": {
       "status": "success",
-      "elapsed_seconds": 1.5490779876708984,
+      "elapsed_seconds": 1.0650866031646729,
       "error": null,
-      "timestamp": "2026-08-12T09:40:21.890056"
+      "timestamp": "2026-08-12T10:41:15.002535"
     },
     "anbima_titulos_publicos": {
       "status": "success",
-      "elapsed_seconds": 13.755258798599243,
+      "elapsed_seconds": 9.566296100616455,
       "error": null,
-      "timestamp": "2026-08-12T09:40:21.890056"
+      "timestamp": "2026-08-12T10:41:15.002535"
     },
     "anbima_debentures": {
       "status": "success",
-      "elapsed_seconds": 7.348931550979614,
+      "elapsed_seconds": 5.672466993331909,
       "error": null,
-      "timestamp": "2026-08-12T09:40:21.890056"
+      "timestamp": "2026-08-12T10:41:15.002535"
     },
     "anbima_ima_completo": {
       "status": "success",
-      "elapsed_seconds": 6.852193117141724,
+      "elapsed_seconds": 5.570621728897095,
       "error": null,
-      "timestamp": "2026-08-12T09:40:21.890056"
+      "timestamp": "2026-08-12T10:41:15.002535"
     },
     "anbima_550": {
       "status": "success",
-      "elapsed_seconds": 6.207427263259888,
+      "elapsed_seconds": 3.7849202156066895,
       "error": null,
-      "timestamp": "2026-08-12T09:40:21.890056"
+      "timestamp": "2026-08-12T10:41:15.002535"
     },
     "anbima_idka": {
       "status": "success",
-      "elapsed_seconds": 8.76459813117981,
+      "elapsed_seconds": 5.534892797470093,
       "error": null,
-      "timestamp": "2026-08-12T09:40:21.890056"
+      "timestamp": "2026-08-12T10:41:15.002535"
     },
     "anbima_ranking_global": {
       "status": "success",
-      "elapsed_seconds": 5.623018980026245,
+      "elapsed_seconds": 3.3590457439422607,
       "error": null,
-      "timestamp": "2026-08-12T09:40:21.890056"
+      "timestamp": "2026-08-12T10:41:15.002535"
     },
     "anbima_matriz_probabilidade_resgate": {
       "status": "success",
-      "elapsed_seconds": 8.753975868225098,
+      "elapsed_seconds": 6.288573503494263,
       "error": null,
-      "timestamp": "2026-08-12T09:40:21.890056"
+      "timestamp": "2026-08-12T10:41:15.002535"
     },
     "anbima_indice_imab": {
       "status": "success",
-      "elapsed_seconds": 276.0475447177887,
+      "elapsed_seconds": 208.55483388900757,
       "error": null,
-      "timestamp": "2026-08-12T09:40:21.890056"
+      "timestamp": "2026-08-12T10:41:15.002535"
     },
     "debentures_emissoes_caracteristicas": {
       "status": "success",
-      "elapsed_seconds": 158.72340488433838,
+      "elapsed_seconds": 11.96389651298523,
       "error": null,
-      "timestamp": "2026-08-12T09:40:21.890056"
+      "timestamp": "2026-08-12T10:41:15.002535"
     },
     "debentures_mercado_secundario_precos_negociacao": {
       "status": "success",
@@ -89,15 +89,15 @@ window.PULSEFLAT_PIPELINE_STATUS = {
     },
     "b3_fiis": {
       "status": "success",
-      "elapsed_seconds": 5.0410120487213135,
+      "elapsed_seconds": 4.048649311065674,
       "error": null,
-      "timestamp": "2026-08-12T09:40:21.890056"
+      "timestamp": "2026-08-12T10:41:15.002535"
     },
     "b3_etfs": {
       "status": "success",
-      "elapsed_seconds": 3.5171947479248047,
+      "elapsed_seconds": 2.921347141265869,
       "error": null,
-      "timestamp": "2026-08-12T09:40:21.890056"
+      "timestamp": "2026-08-12T10:41:15.002535"
     },
     "b3_carteiras": {
       "status": "unknown",
@@ -113,141 +113,141 @@ window.PULSEFLAT_PIPELINE_STATUS = {
     },
     "b3_indicadores_financeiros": {
       "status": "success",
-      "elapsed_seconds": 1.663336992263794,
+      "elapsed_seconds": 1.0530891418457031,
       "error": null,
-      "timestamp": "2026-08-12T09:40:21.890056"
+      "timestamp": "2026-08-12T10:41:15.002535"
     },
     "b3_bdi_di_over": {
       "status": "success",
-      "elapsed_seconds": 3.4314091205596924,
+      "elapsed_seconds": 2.9141080379486084,
       "error": null,
-      "timestamp": "2026-08-12T09:40:21.890056"
+      "timestamp": "2026-08-12T10:41:15.002535"
     },
     "b3_bdi_trades_acoes": {
       "status": "success",
-      "elapsed_seconds": 713.1634011268616,
+      "elapsed_seconds": 348.59788966178894,
       "error": null,
-      "timestamp": "2026-08-12T09:40:21.890056"
+      "timestamp": "2026-08-12T10:41:15.002535"
     },
     "b3_bmf_taxas_juros": {
       "status": "success",
-      "elapsed_seconds": 5.989309072494507,
+      "elapsed_seconds": 5.802986145019531,
       "error": null,
-      "timestamp": "2026-08-12T09:40:21.890056"
+      "timestamp": "2026-08-12T10:41:15.002535"
     },
     "b3_series_historicas": {
       "status": "success",
-      "elapsed_seconds": 7.098346948623657,
+      "elapsed_seconds": 6.867249488830566,
       "error": null,
-      "timestamp": "2026-08-12T09:40:21.890056"
+      "timestamp": "2026-08-12T10:41:15.002535"
     },
     "b3_carteira_teorica_ibov": {
       "status": "success",
-      "elapsed_seconds": 2.799546003341675,
+      "elapsed_seconds": 1.9595589637756348,
       "error": null,
-      "timestamp": "2026-08-12T09:40:21.890056"
+      "timestamp": "2026-08-12T10:41:15.002535"
     },
     "b3_carteira_teorica_smll": {
       "status": "success",
-      "elapsed_seconds": 2.4780261516571045,
+      "elapsed_seconds": 2.3857269287109375,
       "error": null,
-      "timestamp": "2026-08-12T09:40:21.890056"
+      "timestamp": "2026-08-12T10:41:15.002535"
     },
     "b3_carteira_teorica_bdrx": {
       "status": "success",
-      "elapsed_seconds": 2.888582706451416,
+      "elapsed_seconds": 2.4086239337921143,
       "error": null,
-      "timestamp": "2026-08-12T09:40:21.890056"
+      "timestamp": "2026-08-12T10:41:15.002535"
     },
     "b3_carteira_teorica_isee": {
       "status": "success",
-      "elapsed_seconds": 2.2177534103393555,
+      "elapsed_seconds": 1.9340951442718506,
       "error": null,
-      "timestamp": "2026-08-12T09:40:21.890056"
+      "timestamp": "2026-08-12T10:41:15.002535"
     },
     "b3_carteira_teorica_ibxl": {
       "status": "success",
-      "elapsed_seconds": 2.148149013519287,
+      "elapsed_seconds": 1.9798061847686768,
       "error": null,
-      "timestamp": "2026-08-12T09:40:21.890056"
+      "timestamp": "2026-08-12T10:41:15.002535"
     },
     "b3_carteira_teorica_ifnc": {
       "status": "success",
-      "elapsed_seconds": 1.9103257656097412,
+      "elapsed_seconds": 1.7327888011932373,
       "error": null,
-      "timestamp": "2026-08-12T09:40:21.890056"
+      "timestamp": "2026-08-12T10:41:15.002535"
     },
     "b3_carteira_teorica_agfs_iagro": {
       "status": "success",
-      "elapsed_seconds": 2.3791463375091553,
+      "elapsed_seconds": 2.0501348972320557,
       "error": null,
-      "timestamp": "2026-08-12T09:40:21.890056"
+      "timestamp": "2026-08-12T10:41:15.002535"
     },
     "b3_carteira_teorica_ibsd": {
       "status": "success",
-      "elapsed_seconds": 2.037048101425171,
+      "elapsed_seconds": 1.9862284660339355,
       "error": null,
-      "timestamp": "2026-08-12T09:40:21.890056"
+      "timestamp": "2026-08-12T10:41:15.002535"
     },
     "b3_titulos_negociaveis": {
       "status": "success",
-      "elapsed_seconds": 273.6688177585602,
+      "elapsed_seconds": 189.1133234500885,
       "error": null,
-      "timestamp": "2026-08-12T09:40:21.890056"
+      "timestamp": "2026-08-12T10:41:15.002535"
     },
     "bcb_ptax": {
       "status": "success",
-      "elapsed_seconds": 102.88559937477112,
+      "elapsed_seconds": 72.6206955909729,
       "error": null,
-      "timestamp": "2026-08-12T09:40:21.890056"
+      "timestamp": "2026-08-12T10:41:15.002535"
     },
     "bcb_sgs": {
       "status": "success",
-      "elapsed_seconds": 429.71029257774353,
+      "elapsed_seconds": 306.5485882759094,
       "error": null,
-      "timestamp": "2026-08-12T09:40:21.890056"
+      "timestamp": "2026-08-12T10:41:15.002535"
     },
     "bacen_balancetes_bancos": {
       "status": "success",
-      "elapsed_seconds": 98.27134561538696,
+      "elapsed_seconds": 66.59002804756165,
       "error": null,
-      "timestamp": "2026-08-12T09:40:21.890056"
+      "timestamp": "2026-08-12T10:41:15.002535"
     },
     "bacen_conglomerados": {
       "status": "success",
-      "elapsed_seconds": 4.157109498977661,
+      "elapsed_seconds": 3.085012435913086,
       "error": null,
-      "timestamp": "2026-08-12T09:40:21.890056"
+      "timestamp": "2026-08-12T10:41:15.002535"
     },
     "bacen_parcelas_capital_basileia": {
       "status": "success",
-      "elapsed_seconds": 3103.626875400543,
+      "elapsed_seconds": 2125.569193124771,
       "error": null,
-      "timestamp": "2026-08-12T09:40:21.890056"
+      "timestamp": "2026-08-12T10:41:15.002535"
     },
     "bacen_negociacao_tpf": {
       "status": "success",
-      "elapsed_seconds": 15.785387754440308,
+      "elapsed_seconds": 13.286879777908325,
       "error": null,
-      "timestamp": "2026-08-12T09:40:21.890056"
+      "timestamp": "2026-08-12T10:41:15.002535"
     },
     "ibge_sidra": {
-      "status": "success",
-      "elapsed_seconds": 25.43458390235901,
-      "error": null,
-      "timestamp": "2026-08-12T09:40:21.890056"
+      "status": "error",
+      "elapsed_seconds": 109.31219673156738,
+      "error": "SystemExit(1)",
+      "timestamp": "2026-08-12T10:41:15.002535"
     },
     "cvm_fundos_informe_diario": {
-      "status": "success",
-      "elapsed_seconds": 1024.8484194278717,
-      "error": null,
-      "timestamp": "2026-08-12T09:40:21.890056"
+      "status": "error",
+      "elapsed_seconds": 146.13847184181213,
+      "error": "SystemExit(1)",
+      "timestamp": "2026-08-12T10:41:15.002535"
     },
     "cvm_fundos_classe": {
-      "status": "success",
-      "elapsed_seconds": 37.66389441490173,
-      "error": null,
-      "timestamp": "2026-08-12T09:40:21.890056"
+      "status": "error",
+      "elapsed_seconds": 73.12373232841492,
+      "error": "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/connection.py\", line 204, in _new_conn\n    sock = connection.create_connection(\n        (self._dns_host, self.port),\n    ...<2 lines>...\n        socket_options=self.socket_options,\n    )\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/util/connection.py\", line 85, in create_connection\n    raise err\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/util/connection.py\", line 73, in create_connection\n    sock.connect(sa)\n    ~~~~~~~~~~~~^^^^\nOSError: [Errno 101] Network is unreachable\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/connectionpool.py\", line 788, in urlopen\n    response = self._make_request(\n        conn,\n    ...<10 lines>...\n        **response_kw,\n    )\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/connectionpool.py\", line 488, in _make_request\n    raise new_e\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/connectionpool.py\", line 464, in _make_request\n    self._validate_conn(conn)\n    ~~~~~~~~~~~~~~~~~~~^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/connectionpool.py\", line 1106, in _validate_conn\n    conn.connect()\n    ~~~~~~~~~~~~^^\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/connection.py\", line 759, in connect\n    self.sock = sock = self._new_conn()\n                       ~~~~~~~~~~~~~~^^\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/connection.py\", line 219, in _new_conn\n    raise NewConnectionError(\n        self, f\"Failed to establish a new connection: {e}\"\n    ) from e\nurllib3.exceptions.NewConnectionError: HTTPSConnection(host='dados.cvm.gov.br', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/requests/adapters.py\", line 696, in send\n    resp = conn.urlopen(\n        method=request.method,\n    ...<9 lines>...\n        chunked=chunked,\n    )\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/connectionpool.py\", line 842, in urlopen\n    retries = retries.increment(\n        method, url, error=new_e, _pool=self, _stacktrace=sys.exc_info()[2]\n    )\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/util/retry.py\", line 543, in increment\n    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nurllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='dados.cvm.gov.br', port=443): Max retries exceeded with url: /dados/FI/CAD/DADOS/registro_fundo_classe.zip (Caused by NewConnectionError(\"HTTPSConnection(host='dados.cvm.gov.br', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable\"))\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/PulseFlat/PulseFlat/run_all.py\", line 213, in run_scraper\n    getattr(mod, class_name)().run()\n    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\n  File \"/home/runner/work/PulseFlat/PulseFlat/scrapers/utils/base.py\", line 183, in run\n    raise e\n  File \"/home/runner/work/PulseFlat/PulseFlat/scrapers/utils/base.py\", line 93, in run\n    df = self.fetch()\n  File \"/home/runner/work/PulseFlat/PulseFlat/scrapers/generic_scraper.py\", line 140, in fetch\n    raise e\n  File \"/home/runner/work/PulseFlat/PulseFlat/scrapers/generic_scraper.py\", line 133, in fetch\n    resp = session.get(url, timeout=120)\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/requests/sessions.py\", line 671, in get\n    return self.request(\"GET\", url, params=params, **kwargs)\n           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/PulseFlat/PulseFlat/utils/base.py\", line 85, in _patched_request\n    raise e\n  File \"/home/runner/work/PulseFlat/PulseFlat/utils/base.py\", line 76, in _patched_request\n    resp = _orig_request(self, method, url, *args, **kwargs)\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/requests/sessions.py\", line 651, in request\n    resp = self.send(prep, **send_kwargs)\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/requests/sessions.py\", line 784, in send\n    r = adapter.send(request, **kwargs)\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/requests/adapters.py\", line 729, in send\n    raise ConnectionError(e, request=request)\nrequests.exceptions.ConnectionError: HTTPSConnectionPool(host='dados.cvm.gov.br', port=443): Max retries exceeded with url: /dados/FI/CAD/DADOS/registro_fundo_classe.zip (Caused by NewConnectionError(\"HTTPSConnection(host='dados.cvm.gov.br', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable\"))\n",
+      "timestamp": "2026-08-12T10:41:15.002535"
     },
     "yahoo_finance_series": {
       "status": "success",
@@ -257,177 +257,177 @@ window.PULSEFLAT_PIPELINE_STATUS = {
     },
     "b3_carteiras_teoricas": {
       "status": "success",
-      "elapsed_seconds": 20.530172109603882,
+      "elapsed_seconds": 18.682806491851807,
       "error": null,
-      "timestamp": "2026-08-12T09:40:21.890056"
+      "timestamp": "2026-08-12T10:41:15.002535"
     },
     "b3_isin_emissores": {
       "status": "success",
-      "elapsed_seconds": 123.89925026893616,
+      "elapsed_seconds": 83.87153553962708,
       "error": null,
-      "timestamp": "2026-08-12T09:40:21.890056"
+      "timestamp": "2026-08-12T10:41:15.002535"
     },
     "b3_isin_ativos": {
       "status": "success",
-      "elapsed_seconds": 71.1775255203247,
+      "elapsed_seconds": 68.65465068817139,
       "error": null,
-      "timestamp": "2026-08-12T09:40:21.890056"
+      "timestamp": "2026-08-12T10:41:15.002535"
     },
     "b3_classificacao_setorial": {
       "status": "success",
-      "elapsed_seconds": 2.977409601211548,
+      "elapsed_seconds": 1.7210290431976318,
       "error": null,
-      "timestamp": "2026-08-12T09:40:21.890056"
+      "timestamp": "2026-08-12T10:41:15.002535"
     },
     "cvm_cadastro_companhias_abertas": {
-      "status": "success",
-      "elapsed_seconds": 4.577195644378662,
-      "error": null,
-      "timestamp": "2026-08-12T09:40:21.890056"
+      "status": "error",
+      "elapsed_seconds": 21.133355379104614,
+      "error": "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/connection.py\", line 204, in _new_conn\n    sock = connection.create_connection(\n        (self._dns_host, self.port),\n    ...<2 lines>...\n        socket_options=self.socket_options,\n    )\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/util/connection.py\", line 85, in create_connection\n    raise err\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/util/connection.py\", line 73, in create_connection\n    sock.connect(sa)\n    ~~~~~~~~~~~~^^^^\nOSError: [Errno 101] Network is unreachable\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/connectionpool.py\", line 788, in urlopen\n    response = self._make_request(\n        conn,\n    ...<10 lines>...\n        **response_kw,\n    )\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/connectionpool.py\", line 488, in _make_request\n    raise new_e\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/connectionpool.py\", line 464, in _make_request\n    self._validate_conn(conn)\n    ~~~~~~~~~~~~~~~~~~~^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/connectionpool.py\", line 1106, in _validate_conn\n    conn.connect()\n    ~~~~~~~~~~~~^^\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/connection.py\", line 759, in connect\n    self.sock = sock = self._new_conn()\n                       ~~~~~~~~~~~~~~^^\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/connection.py\", line 219, in _new_conn\n    raise NewConnectionError(\n        self, f\"Failed to establish a new connection: {e}\"\n    ) from e\nurllib3.exceptions.NewConnectionError: HTTPSConnection(host='dados.cvm.gov.br', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/requests/adapters.py\", line 696, in send\n    resp = conn.urlopen(\n        method=request.method,\n    ...<9 lines>...\n        chunked=chunked,\n    )\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/connectionpool.py\", line 842, in urlopen\n    retries = retries.increment(\n        method, url, error=new_e, _pool=self, _stacktrace=sys.exc_info()[2]\n    )\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/util/retry.py\", line 543, in increment\n    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nurllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='dados.cvm.gov.br', port=443): Max retries exceeded with url: /dados/CIA_ABERTA/CAD/DADOS/cad_cia_aberta.csv (Caused by NewConnectionError(\"HTTPSConnection(host='dados.cvm.gov.br', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable\"))\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/PulseFlat/PulseFlat/run_all.py\", line 213, in run_scraper\n    getattr(mod, class_name)().run()\n    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\n  File \"/home/runner/work/PulseFlat/PulseFlat/scrapers/utils/base.py\", line 183, in run\n    raise e\n  File \"/home/runner/work/PulseFlat/PulseFlat/scrapers/utils/base.py\", line 93, in run\n    df = self.fetch()\n  File \"/home/runner/work/PulseFlat/PulseFlat/scrapers/cvm_cadastro_companhias_abertas.py\", line 58, in fetch\n    rows, header = capturar()\n                   ~~~~~~~~^^\n  File \"/home/runner/work/PulseFlat/PulseFlat/scrapers/cvm_cadastro_companhias_abertas.py\", line 27, in capturar\n    resp = session.get(URL, timeout=180)\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/requests/sessions.py\", line 671, in get\n    return self.request(\"GET\", url, params=params, **kwargs)\n           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/PulseFlat/PulseFlat/utils/base.py\", line 85, in _patched_request\n    raise e\n  File \"/home/runner/work/PulseFlat/PulseFlat/utils/base.py\", line 76, in _patched_request\n    resp = _orig_request(self, method, url, *args, **kwargs)\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/requests/sessions.py\", line 651, in request\n    resp = self.send(prep, **send_kwargs)\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/requests/sessions.py\", line 784, in send\n    r = adapter.send(request, **kwargs)\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/requests/adapters.py\", line 729, in send\n    raise ConnectionError(e, request=request)\nrequests.exceptions.ConnectionError: HTTPSConnectionPool(host='dados.cvm.gov.br', port=443): Max retries exceeded with url: /dados/CIA_ABERTA/CAD/DADOS/cad_cia_aberta.csv (Caused by NewConnectionError(\"HTTPSConnection(host='dados.cvm.gov.br', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable\"))\n",
+      "timestamp": "2026-08-12T10:41:15.002535"
     },
     "b3_limites_garantias": {
       "status": "success",
-      "elapsed_seconds": 6.979113817214966,
+      "elapsed_seconds": 4.787236928939819,
       "error": null,
-      "timestamp": "2026-08-12T09:40:21.890056"
+      "timestamp": "2026-08-12T10:41:15.002535"
     },
     "b3_indicadores_economicos_fwf": {
       "status": "success",
-      "elapsed_seconds": 23.6497220993042,
+      "elapsed_seconds": 21.758336544036865,
       "error": null,
-      "timestamp": "2026-08-12T09:40:21.890056"
+      "timestamp": "2026-08-12T10:41:15.002535"
     },
     "b3_fundos_listados": {
       "status": "success",
-      "elapsed_seconds": 11.418443441390991,
+      "elapsed_seconds": 9.331591367721558,
       "error": null,
-      "timestamp": "2026-08-12T09:40:21.890056"
+      "timestamp": "2026-08-12T10:41:15.002535"
     },
     "ipea_calendario": {
-      "status": "success",
-      "elapsed_seconds": 14.720242023468018,
-      "error": null,
-      "timestamp": "2026-08-12T09:40:21.890056"
+      "status": "error",
+      "elapsed_seconds": 20.337748527526855,
+      "error": "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/connection.py\", line 204, in _new_conn\n    sock = connection.create_connection(\n        (self._dns_host, self.port),\n    ...<2 lines>...\n        socket_options=self.socket_options,\n    )\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/util/connection.py\", line 85, in create_connection\n    raise err\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/util/connection.py\", line 73, in create_connection\n    sock.connect(sa)\n    ~~~~~~~~~~~~^^^^\nTimeoutError: timed out\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/connectionpool.py\", line 788, in urlopen\n    response = self._make_request(\n        conn,\n    ...<10 lines>...\n        **response_kw,\n    )\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/connectionpool.py\", line 493, in _make_request\n    conn.request(\n    ~~~~~~~~~~~~^\n        method,\n        ^^^^^^^\n    ...<6 lines>...\n        enforce_content_length=enforce_content_length,\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/connection.py\", line 500, in request\n    self.endheaders()\n    ~~~~~~~~~~~~~~~^^\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/http/client.py\", line 1362, in endheaders\n    self._send_output(message_body, encode_chunked=encode_chunked)\n    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/http/client.py\", line 1122, in _send_output\n    self.send(msg)\n    ~~~~~~~~~^^^^^\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/http/client.py\", line 1066, in send\n    self.connect()\n    ~~~~~~~~~~~~^^\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/connection.py\", line 331, in connect\n    self.sock = self._new_conn()\n                ~~~~~~~~~~~~~~^^\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/connection.py\", line 213, in _new_conn\n    raise ConnectTimeoutError(\n    ...<2 lines>...\n    ) from e\nurllib3.exceptions.ConnectTimeoutError: (<HTTPConnection(host='www.ipeadata.gov.br', port=80) at 0x7f431c8b4830>, 'Connection to www.ipeadata.gov.br timed out. (connect timeout=10)')\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/requests/adapters.py\", line 696, in send\n    resp = conn.urlopen(\n        method=request.method,\n    ...<9 lines>...\n        chunked=chunked,\n    )\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/connectionpool.py\", line 842, in urlopen\n    retries = retries.increment(\n        method, url, error=new_e, _pool=self, _stacktrace=sys.exc_info()[2]\n    )\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/util/retry.py\", line 543, in increment\n    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nurllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='www.ipeadata.gov.br', port=80): Max retries exceeded with url: /api/odata4/ValoresSerie(SERCODIGO='SGS12_NDIASUTEISFUT12') (Caused by ConnectTimeoutError(<HTTPConnection(host='www.ipeadata.gov.br', port=80) at 0x7f431c8b4830>, 'Connection to www.ipeadata.gov.br timed out. (connect timeout=10)'))\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/PulseFlat/PulseFlat/run_all.py\", line 213, in run_scraper\n    getattr(mod, class_name)().run()\n    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\n  File \"/home/runner/work/PulseFlat/PulseFlat/scrapers/utils/base.py\", line 183, in run\n    raise e\n  File \"/home/runner/work/PulseFlat/PulseFlat/scrapers/utils/base.py\", line 93, in run\n    df = self.fetch()\n  File \"/home/runner/work/PulseFlat/PulseFlat/scrapers/ipea_calendario.py\", line 34, in fetch\n    resp = session.get(url, timeout=60)\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/requests/sessions.py\", line 671, in get\n    return self.request(\"GET\", url, params=params, **kwargs)\n           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/PulseFlat/PulseFlat/utils/base.py\", line 82, in _patched_request\n    raise e\n  File \"/home/runner/work/PulseFlat/PulseFlat/utils/base.py\", line 76, in _patched_request\n    resp = _orig_request(self, method, url, *args, **kwargs)\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/requests/sessions.py\", line 651, in request\n    resp = self.send(prep, **send_kwargs)\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/requests/sessions.py\", line 784, in send\n    r = adapter.send(request, **kwargs)\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/requests/adapters.py\", line 717, in send\n    raise ConnectTimeout(e, request=request)\nrequests.exceptions.ConnectTimeout: HTTPConnectionPool(host='www.ipeadata.gov.br', port=80): Max retries exceeded with url: /api/odata4/ValoresSerie(SERCODIGO='SGS12_NDIASUTEISFUT12') (Caused by ConnectTimeoutError(<HTTPConnection(host='www.ipeadata.gov.br', port=80) at 0x7f431c8b4830>, 'Connection to www.ipeadata.gov.br timed out. (connect timeout=10)'))\n",
+      "timestamp": "2026-08-12T10:41:15.002535"
     },
     "ipea_comercio_exterior": {
-      "status": "success",
-      "elapsed_seconds": 5.331235408782959,
-      "error": null,
-      "timestamp": "2026-08-12T09:40:21.890056"
+      "status": "error",
+      "elapsed_seconds": 20.32959818840027,
+      "error": "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/connection.py\", line 204, in _new_conn\n    sock = connection.create_connection(\n        (self._dns_host, self.port),\n    ...<2 lines>...\n        socket_options=self.socket_options,\n    )\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/util/connection.py\", line 85, in create_connection\n    raise err\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/util/connection.py\", line 73, in create_connection\n    sock.connect(sa)\n    ~~~~~~~~~~~~^^^^\nTimeoutError: timed out\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/connectionpool.py\", line 788, in urlopen\n    response = self._make_request(\n        conn,\n    ...<10 lines>...\n        **response_kw,\n    )\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/connectionpool.py\", line 493, in _make_request\n    conn.request(\n    ~~~~~~~~~~~~^\n        method,\n        ^^^^^^^\n    ...<6 lines>...\n        enforce_content_length=enforce_content_length,\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/connection.py\", line 500, in request\n    self.endheaders()\n    ~~~~~~~~~~~~~~~^^\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/http/client.py\", line 1362, in endheaders\n    self._send_output(message_body, encode_chunked=encode_chunked)\n    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/http/client.py\", line 1122, in _send_output\n    self.send(msg)\n    ~~~~~~~~~^^^^^\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/http/client.py\", line 1066, in send\n    self.connect()\n    ~~~~~~~~~~~~^^\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/connection.py\", line 331, in connect\n    self.sock = self._new_conn()\n                ~~~~~~~~~~~~~~^^\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/connection.py\", line 213, in _new_conn\n    raise ConnectTimeoutError(\n    ...<2 lines>...\n    ) from e\nurllib3.exceptions.ConnectTimeoutError: (<HTTPConnection(host='www.ipeadata.gov.br', port=80) at 0x7f431f10d950>, 'Connection to www.ipeadata.gov.br timed out. (connect timeout=10)')\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/requests/adapters.py\", line 696, in send\n    resp = conn.urlopen(\n        method=request.method,\n    ...<9 lines>...\n        chunked=chunked,\n    )\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/connectionpool.py\", line 842, in urlopen\n    retries = retries.increment(\n        method, url, error=new_e, _pool=self, _stacktrace=sys.exc_info()[2]\n    )\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/util/retry.py\", line 543, in increment\n    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nurllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='www.ipeadata.gov.br', port=80): Max retries exceeded with url: /api/odata4/ValoresSerie(SERCODIGO='FUNCEX12_XPT12') (Caused by ConnectTimeoutError(<HTTPConnection(host='www.ipeadata.gov.br', port=80) at 0x7f431f10d950>, 'Connection to www.ipeadata.gov.br timed out. (connect timeout=10)'))\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/PulseFlat/PulseFlat/run_all.py\", line 213, in run_scraper\n    getattr(mod, class_name)().run()\n    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\n  File \"/home/runner/work/PulseFlat/PulseFlat/scrapers/utils/base.py\", line 183, in run\n    raise e\n  File \"/home/runner/work/PulseFlat/PulseFlat/scrapers/utils/base.py\", line 93, in run\n    df = self.fetch()\n  File \"/home/runner/work/PulseFlat/PulseFlat/scrapers/ipea_comercio_exterior.py\", line 34, in fetch\n    resp = session.get(url, timeout=60)\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/requests/sessions.py\", line 671, in get\n    return self.request(\"GET\", url, params=params, **kwargs)\n           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/PulseFlat/PulseFlat/utils/base.py\", line 82, in _patched_request\n    raise e\n  File \"/home/runner/work/PulseFlat/PulseFlat/utils/base.py\", line 76, in _patched_request\n    resp = _orig_request(self, method, url, *args, **kwargs)\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/requests/sessions.py\", line 651, in request\n    resp = self.send(prep, **send_kwargs)\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/requests/sessions.py\", line 784, in send\n    r = adapter.send(request, **kwargs)\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/requests/adapters.py\", line 717, in send\n    raise ConnectTimeout(e, request=request)\nrequests.exceptions.ConnectTimeout: HTTPConnectionPool(host='www.ipeadata.gov.br', port=80): Max retries exceeded with url: /api/odata4/ValoresSerie(SERCODIGO='FUNCEX12_XPT12') (Caused by ConnectTimeoutError(<HTTPConnection(host='www.ipeadata.gov.br', port=80) at 0x7f431f10d950>, 'Connection to www.ipeadata.gov.br timed out. (connect timeout=10)'))\n",
+      "timestamp": "2026-08-12T10:41:15.002535"
     },
     "ipea_fbcf": {
-      "status": "success",
-      "elapsed_seconds": 6.312185049057007,
-      "error": null,
-      "timestamp": "2026-08-12T09:40:21.890056"
+      "status": "error",
+      "elapsed_seconds": 20.132670879364014,
+      "error": "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/connection.py\", line 204, in _new_conn\n    sock = connection.create_connection(\n        (self._dns_host, self.port),\n    ...<2 lines>...\n        socket_options=self.socket_options,\n    )\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/util/connection.py\", line 85, in create_connection\n    raise err\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/util/connection.py\", line 73, in create_connection\n    sock.connect(sa)\n    ~~~~~~~~~~~~^^^^\nTimeoutError: timed out\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/connectionpool.py\", line 788, in urlopen\n    response = self._make_request(\n        conn,\n    ...<10 lines>...\n        **response_kw,\n    )\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/connectionpool.py\", line 493, in _make_request\n    conn.request(\n    ~~~~~~~~~~~~^\n        method,\n        ^^^^^^^\n    ...<6 lines>...\n        enforce_content_length=enforce_content_length,\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/connection.py\", line 500, in request\n    self.endheaders()\n    ~~~~~~~~~~~~~~~^^\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/http/client.py\", line 1362, in endheaders\n    self._send_output(message_body, encode_chunked=encode_chunked)\n    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/http/client.py\", line 1122, in _send_output\n    self.send(msg)\n    ~~~~~~~~~^^^^^\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/http/client.py\", line 1066, in send\n    self.connect()\n    ~~~~~~~~~~~~^^\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/connection.py\", line 331, in connect\n    self.sock = self._new_conn()\n                ~~~~~~~~~~~~~~^^\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/connection.py\", line 213, in _new_conn\n    raise ConnectTimeoutError(\n    ...<2 lines>...\n    ) from e\nurllib3.exceptions.ConnectTimeoutError: (<HTTPConnection(host='www.ipeadata.gov.br', port=80) at 0x7f431f10e710>, 'Connection to www.ipeadata.gov.br timed out. (connect timeout=10)')\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/requests/adapters.py\", line 696, in send\n    resp = conn.urlopen(\n        method=request.method,\n    ...<9 lines>...\n        chunked=chunked,\n    )\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/connectionpool.py\", line 842, in urlopen\n    retries = retries.increment(\n        method, url, error=new_e, _pool=self, _stacktrace=sys.exc_info()[2]\n    )\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/util/retry.py\", line 543, in increment\n    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nurllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='www.ipeadata.gov.br', port=80): Max retries exceeded with url: /api/odata4/ValoresSerie(SERCODIGO='GAC12_INDFBCF12') (Caused by ConnectTimeoutError(<HTTPConnection(host='www.ipeadata.gov.br', port=80) at 0x7f431f10e710>, 'Connection to www.ipeadata.gov.br timed out. (connect timeout=10)'))\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/PulseFlat/PulseFlat/run_all.py\", line 213, in run_scraper\n    getattr(mod, class_name)().run()\n    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\n  File \"/home/runner/work/PulseFlat/PulseFlat/scrapers/utils/base.py\", line 183, in run\n    raise e\n  File \"/home/runner/work/PulseFlat/PulseFlat/scrapers/utils/base.py\", line 93, in run\n    df = self.fetch()\n  File \"/home/runner/work/PulseFlat/PulseFlat/scrapers/ipea_fbcf.py\", line 34, in fetch\n    resp = session.get(url, timeout=60)\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/requests/sessions.py\", line 671, in get\n    return self.request(\"GET\", url, params=params, **kwargs)\n           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/PulseFlat/PulseFlat/utils/base.py\", line 82, in _patched_request\n    raise e\n  File \"/home/runner/work/PulseFlat/PulseFlat/utils/base.py\", line 76, in _patched_request\n    resp = _orig_request(self, method, url, *args, **kwargs)\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/requests/sessions.py\", line 651, in request\n    resp = self.send(prep, **send_kwargs)\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/requests/sessions.py\", line 784, in send\n    r = adapter.send(request, **kwargs)\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/requests/adapters.py\", line 717, in send\n    raise ConnectTimeout(e, request=request)\nrequests.exceptions.ConnectTimeout: HTTPConnectionPool(host='www.ipeadata.gov.br', port=80): Max retries exceeded with url: /api/odata4/ValoresSerie(SERCODIGO='GAC12_INDFBCF12') (Caused by ConnectTimeoutError(<HTTPConnection(host='www.ipeadata.gov.br', port=80) at 0x7f431f10e710>, 'Connection to www.ipeadata.gov.br timed out. (connect timeout=10)'))\n",
+      "timestamp": "2026-08-12T10:41:15.002535"
     },
     "ipea_macroeconomia": {
-      "status": "success",
-      "elapsed_seconds": 29.19033670425415,
-      "error": null,
-      "timestamp": "2026-08-12T09:40:21.890056"
+      "status": "error",
+      "elapsed_seconds": 20.335134744644165,
+      "error": "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/connection.py\", line 204, in _new_conn\n    sock = connection.create_connection(\n        (self._dns_host, self.port),\n    ...<2 lines>...\n        socket_options=self.socket_options,\n    )\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/util/connection.py\", line 85, in create_connection\n    raise err\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/util/connection.py\", line 73, in create_connection\n    sock.connect(sa)\n    ~~~~~~~~~~~~^^^^\nTimeoutError: timed out\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/connectionpool.py\", line 788, in urlopen\n    response = self._make_request(\n        conn,\n    ...<10 lines>...\n        **response_kw,\n    )\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/connectionpool.py\", line 493, in _make_request\n    conn.request(\n    ~~~~~~~~~~~~^\n        method,\n        ^^^^^^^\n    ...<6 lines>...\n        enforce_content_length=enforce_content_length,\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/connection.py\", line 500, in request\n    self.endheaders()\n    ~~~~~~~~~~~~~~~^^\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/http/client.py\", line 1362, in endheaders\n    self._send_output(message_body, encode_chunked=encode_chunked)\n    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/http/client.py\", line 1122, in _send_output\n    self.send(msg)\n    ~~~~~~~~~^^^^^\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/http/client.py\", line 1066, in send\n    self.connect()\n    ~~~~~~~~~~~~^^\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/connection.py\", line 331, in connect\n    self.sock = self._new_conn()\n                ~~~~~~~~~~~~~~^^\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/connection.py\", line 213, in _new_conn\n    raise ConnectTimeoutError(\n    ...<2 lines>...\n    ) from e\nurllib3.exceptions.ConnectTimeoutError: (<HTTPConnection(host='www.ipeadata.gov.br', port=80) at 0x7f431f177360>, 'Connection to www.ipeadata.gov.br timed out. (connect timeout=10)')\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/requests/adapters.py\", line 696, in send\n    resp = conn.urlopen(\n        method=request.method,\n    ...<9 lines>...\n        chunked=chunked,\n    )\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/connectionpool.py\", line 842, in urlopen\n    retries = retries.increment(\n        method, url, error=new_e, _pool=self, _stacktrace=sys.exc_info()[2]\n    )\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/util/retry.py\", line 543, in increment\n    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nurllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='www.ipeadata.gov.br', port=80): Max retries exceeded with url: /api/odata4/ValoresSerie(SERCODIGO='BM12_PIBAC12') (Caused by ConnectTimeoutError(<HTTPConnection(host='www.ipeadata.gov.br', port=80) at 0x7f431f177360>, 'Connection to www.ipeadata.gov.br timed out. (connect timeout=10)'))\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/PulseFlat/PulseFlat/run_all.py\", line 213, in run_scraper\n    getattr(mod, class_name)().run()\n    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\n  File \"/home/runner/work/PulseFlat/PulseFlat/scrapers/utils/base.py\", line 183, in run\n    raise e\n  File \"/home/runner/work/PulseFlat/PulseFlat/scrapers/utils/base.py\", line 93, in run\n    df = self.fetch()\n  File \"/home/runner/work/PulseFlat/PulseFlat/scrapers/ipea_macroeconomia.py\", line 34, in fetch\n    resp = session.get(url, timeout=60)\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/requests/sessions.py\", line 671, in get\n    return self.request(\"GET\", url, params=params, **kwargs)\n           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/PulseFlat/PulseFlat/utils/base.py\", line 82, in _patched_request\n    raise e\n  File \"/home/runner/work/PulseFlat/PulseFlat/utils/base.py\", line 76, in _patched_request\n    resp = _orig_request(self, method, url, *args, **kwargs)\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/requests/sessions.py\", line 651, in request\n    resp = self.send(prep, **send_kwargs)\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/requests/sessions.py\", line 784, in send\n    r = adapter.send(request, **kwargs)\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/requests/adapters.py\", line 717, in send\n    raise ConnectTimeout(e, request=request)\nrequests.exceptions.ConnectTimeout: HTTPConnectionPool(host='www.ipeadata.gov.br', port=80): Max retries exceeded with url: /api/odata4/ValoresSerie(SERCODIGO='BM12_PIBAC12') (Caused by ConnectTimeoutError(<HTTPConnection(host='www.ipeadata.gov.br', port=80) at 0x7f431f177360>, 'Connection to www.ipeadata.gov.br timed out. (connect timeout=10)'))\n",
+      "timestamp": "2026-08-12T10:41:15.002535"
     },
     "ipea_mercados_diarios": {
-      "status": "success",
-      "elapsed_seconds": 156.40113472938538,
-      "error": null,
-      "timestamp": "2026-08-12T09:40:21.890056"
+      "status": "error",
+      "elapsed_seconds": 20.33864426612854,
+      "error": "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/connection.py\", line 204, in _new_conn\n    sock = connection.create_connection(\n        (self._dns_host, self.port),\n    ...<2 lines>...\n        socket_options=self.socket_options,\n    )\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/util/connection.py\", line 85, in create_connection\n    raise err\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/util/connection.py\", line 73, in create_connection\n    sock.connect(sa)\n    ~~~~~~~~~~~~^^^^\nTimeoutError: timed out\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/connectionpool.py\", line 788, in urlopen\n    response = self._make_request(\n        conn,\n    ...<10 lines>...\n        **response_kw,\n    )\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/connectionpool.py\", line 493, in _make_request\n    conn.request(\n    ~~~~~~~~~~~~^\n        method,\n        ^^^^^^^\n    ...<6 lines>...\n        enforce_content_length=enforce_content_length,\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/connection.py\", line 500, in request\n    self.endheaders()\n    ~~~~~~~~~~~~~~~^^\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/http/client.py\", line 1362, in endheaders\n    self._send_output(message_body, encode_chunked=encode_chunked)\n    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/http/client.py\", line 1122, in _send_output\n    self.send(msg)\n    ~~~~~~~~~^^^^^\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/http/client.py\", line 1066, in send\n    self.connect()\n    ~~~~~~~~~~~~^^\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/connection.py\", line 331, in connect\n    self.sock = self._new_conn()\n                ~~~~~~~~~~~~~~^^\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/connection.py\", line 213, in _new_conn\n    raise ConnectTimeoutError(\n    ...<2 lines>...\n    ) from e\nurllib3.exceptions.ConnectTimeoutError: (<HTTPConnection(host='www.ipeadata.gov.br', port=80) at 0x7f431f177490>, 'Connection to www.ipeadata.gov.br timed out. (connect timeout=10)')\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/requests/adapters.py\", line 696, in send\n    resp = conn.urlopen(\n        method=request.method,\n    ...<9 lines>...\n        chunked=chunked,\n    )\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/connectionpool.py\", line 842, in urlopen\n    retries = retries.increment(\n        method, url, error=new_e, _pool=self, _stacktrace=sys.exc_info()[2]\n    )\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/util/retry.py\", line 543, in increment\n    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nurllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='www.ipeadata.gov.br', port=80): Max retries exceeded with url: /api/odata4/ValoresSerie(SERCODIGO='EIA366_PBRENT366') (Caused by ConnectTimeoutError(<HTTPConnection(host='www.ipeadata.gov.br', port=80) at 0x7f431f177490>, 'Connection to www.ipeadata.gov.br timed out. (connect timeout=10)'))\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/PulseFlat/PulseFlat/run_all.py\", line 213, in run_scraper\n    getattr(mod, class_name)().run()\n    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\n  File \"/home/runner/work/PulseFlat/PulseFlat/scrapers/utils/base.py\", line 183, in run\n    raise e\n  File \"/home/runner/work/PulseFlat/PulseFlat/scrapers/utils/base.py\", line 93, in run\n    df = self.fetch()\n  File \"/home/runner/work/PulseFlat/PulseFlat/scrapers/ipea_mercados_diarios.py\", line 34, in fetch\n    resp = session.get(url, timeout=60)\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/requests/sessions.py\", line 671, in get\n    return self.request(\"GET\", url, params=params, **kwargs)\n           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/PulseFlat/PulseFlat/utils/base.py\", line 82, in _patched_request\n    raise e\n  File \"/home/runner/work/PulseFlat/PulseFlat/utils/base.py\", line 76, in _patched_request\n    resp = _orig_request(self, method, url, *args, **kwargs)\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/requests/sessions.py\", line 651, in request\n    resp = self.send(prep, **send_kwargs)\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/requests/sessions.py\", line 784, in send\n    r = adapter.send(request, **kwargs)\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/requests/adapters.py\", line 717, in send\n    raise ConnectTimeout(e, request=request)\nrequests.exceptions.ConnectTimeout: HTTPConnectionPool(host='www.ipeadata.gov.br', port=80): Max retries exceeded with url: /api/odata4/ValoresSerie(SERCODIGO='EIA366_PBRENT366') (Caused by ConnectTimeoutError(<HTTPConnection(host='www.ipeadata.gov.br', port=80) at 0x7f431f177490>, 'Connection to www.ipeadata.gov.br timed out. (connect timeout=10)'))\n",
+      "timestamp": "2026-08-12T10:41:15.002535"
     },
     "ipea_precos_inflacao": {
-      "status": "success",
-      "elapsed_seconds": 10.826571464538574,
-      "error": null,
-      "timestamp": "2026-08-12T09:40:21.890056"
+      "status": "error",
+      "elapsed_seconds": 20.387179136276245,
+      "error": "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/connection.py\", line 204, in _new_conn\n    sock = connection.create_connection(\n        (self._dns_host, self.port),\n    ...<2 lines>...\n        socket_options=self.socket_options,\n    )\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/util/connection.py\", line 85, in create_connection\n    raise err\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/util/connection.py\", line 73, in create_connection\n    sock.connect(sa)\n    ~~~~~~~~~~~~^^^^\nTimeoutError: timed out\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/connectionpool.py\", line 788, in urlopen\n    response = self._make_request(\n        conn,\n    ...<10 lines>...\n        **response_kw,\n    )\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/connectionpool.py\", line 493, in _make_request\n    conn.request(\n    ~~~~~~~~~~~~^\n        method,\n        ^^^^^^^\n    ...<6 lines>...\n        enforce_content_length=enforce_content_length,\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/connection.py\", line 500, in request\n    self.endheaders()\n    ~~~~~~~~~~~~~~~^^\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/http/client.py\", line 1362, in endheaders\n    self._send_output(message_body, encode_chunked=encode_chunked)\n    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/http/client.py\", line 1122, in _send_output\n    self.send(msg)\n    ~~~~~~~~~^^^^^\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/http/client.py\", line 1066, in send\n    self.connect()\n    ~~~~~~~~~~~~^^\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/connection.py\", line 331, in connect\n    self.sock = self._new_conn()\n                ~~~~~~~~~~~~~~^^\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/connection.py\", line 213, in _new_conn\n    raise ConnectTimeoutError(\n    ...<2 lines>...\n    ) from e\nurllib3.exceptions.ConnectTimeoutError: (<HTTPConnection(host='www.ipeadata.gov.br', port=80) at 0x7f4311671490>, 'Connection to www.ipeadata.gov.br timed out. (connect timeout=10)')\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/requests/adapters.py\", line 696, in send\n    resp = conn.urlopen(\n        method=request.method,\n    ...<9 lines>...\n        chunked=chunked,\n    )\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/connectionpool.py\", line 842, in urlopen\n    retries = retries.increment(\n        method, url, error=new_e, _pool=self, _stacktrace=sys.exc_info()[2]\n    )\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/util/retry.py\", line 543, in increment\n    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nurllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='www.ipeadata.gov.br', port=80): Max retries exceeded with url: /api/odata4/ValoresSerie(SERCODIGO='IGP12_IGPDI12') (Caused by ConnectTimeoutError(<HTTPConnection(host='www.ipeadata.gov.br', port=80) at 0x7f4311671490>, 'Connection to www.ipeadata.gov.br timed out. (connect timeout=10)'))\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/PulseFlat/PulseFlat/run_all.py\", line 213, in run_scraper\n    getattr(mod, class_name)().run()\n    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\n  File \"/home/runner/work/PulseFlat/PulseFlat/scrapers/utils/base.py\", line 183, in run\n    raise e\n  File \"/home/runner/work/PulseFlat/PulseFlat/scrapers/utils/base.py\", line 93, in run\n    df = self.fetch()\n  File \"/home/runner/work/PulseFlat/PulseFlat/scrapers/ipea_precos_inflacao.py\", line 34, in fetch\n    resp = session.get(url, timeout=60)\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/requests/sessions.py\", line 671, in get\n    return self.request(\"GET\", url, params=params, **kwargs)\n           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/PulseFlat/PulseFlat/utils/base.py\", line 82, in _patched_request\n    raise e\n  File \"/home/runner/work/PulseFlat/PulseFlat/utils/base.py\", line 76, in _patched_request\n    resp = _orig_request(self, method, url, *args, **kwargs)\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/requests/sessions.py\", line 651, in request\n    resp = self.send(prep, **send_kwargs)\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/requests/sessions.py\", line 784, in send\n    r = adapter.send(request, **kwargs)\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/requests/adapters.py\", line 717, in send\n    raise ConnectTimeout(e, request=request)\nrequests.exceptions.ConnectTimeout: HTTPConnectionPool(host='www.ipeadata.gov.br', port=80): Max retries exceeded with url: /api/odata4/ValoresSerie(SERCODIGO='IGP12_IGPDI12') (Caused by ConnectTimeoutError(<HTTPConnection(host='www.ipeadata.gov.br', port=80) at 0x7f4311671490>, 'Connection to www.ipeadata.gov.br timed out. (connect timeout=10)'))\n",
+      "timestamp": "2026-08-12T10:41:15.002535"
     },
     "ipea_producao_mineral": {
-      "status": "success",
-      "elapsed_seconds": 18.635356664657593,
-      "error": null,
-      "timestamp": "2026-08-12T09:40:21.890056"
+      "status": "error",
+      "elapsed_seconds": 20.323490619659424,
+      "error": "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/connection.py\", line 204, in _new_conn\n    sock = connection.create_connection(\n        (self._dns_host, self.port),\n    ...<2 lines>...\n        socket_options=self.socket_options,\n    )\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/util/connection.py\", line 85, in create_connection\n    raise err\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/util/connection.py\", line 73, in create_connection\n    sock.connect(sa)\n    ~~~~~~~~~~~~^^^^\nTimeoutError: timed out\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/connectionpool.py\", line 788, in urlopen\n    response = self._make_request(\n        conn,\n    ...<10 lines>...\n        **response_kw,\n    )\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/connectionpool.py\", line 493, in _make_request\n    conn.request(\n    ~~~~~~~~~~~~^\n        method,\n        ^^^^^^^\n    ...<6 lines>...\n        enforce_content_length=enforce_content_length,\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/connection.py\", line 500, in request\n    self.endheaders()\n    ~~~~~~~~~~~~~~~^^\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/http/client.py\", line 1362, in endheaders\n    self._send_output(message_body, encode_chunked=encode_chunked)\n    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/http/client.py\", line 1122, in _send_output\n    self.send(msg)\n    ~~~~~~~~~^^^^^\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/http/client.py\", line 1066, in send\n    self.connect()\n    ~~~~~~~~~~~~^^\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/connection.py\", line 331, in connect\n    self.sock = self._new_conn()\n                ~~~~~~~~~~~~~~^^\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/connection.py\", line 213, in _new_conn\n    raise ConnectTimeoutError(\n    ...<2 lines>...\n    ) from e\nurllib3.exceptions.ConnectTimeoutError: (<HTTPConnection(host='www.ipeadata.gov.br', port=80) at 0x7f43118c9ae0>, 'Connection to www.ipeadata.gov.br timed out. (connect timeout=10)')\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/requests/adapters.py\", line 696, in send\n    resp = conn.urlopen(\n        method=request.method,\n    ...<9 lines>...\n        chunked=chunked,\n    )\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/connectionpool.py\", line 842, in urlopen\n    retries = retries.increment(\n        method, url, error=new_e, _pool=self, _stacktrace=sys.exc_info()[2]\n    )\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/util/retry.py\", line 543, in increment\n    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nurllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='www.ipeadata.gov.br', port=80): Max retries exceeded with url: /api/odata4/ValoresSerie(SERCODIGO='IBSIE12_QSCFG12') (Caused by ConnectTimeoutError(<HTTPConnection(host='www.ipeadata.gov.br', port=80) at 0x7f43118c9ae0>, 'Connection to www.ipeadata.gov.br timed out. (connect timeout=10)'))\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/PulseFlat/PulseFlat/run_all.py\", line 213, in run_scraper\n    getattr(mod, class_name)().run()\n    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\n  File \"/home/runner/work/PulseFlat/PulseFlat/scrapers/utils/base.py\", line 183, in run\n    raise e\n  File \"/home/runner/work/PulseFlat/PulseFlat/scrapers/utils/base.py\", line 93, in run\n    df = self.fetch()\n  File \"/home/runner/work/PulseFlat/PulseFlat/scrapers/ipea_producao_mineral.py\", line 34, in fetch\n    resp = session.get(url, timeout=60)\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/requests/sessions.py\", line 671, in get\n    return self.request(\"GET\", url, params=params, **kwargs)\n           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/PulseFlat/PulseFlat/utils/base.py\", line 82, in _patched_request\n    raise e\n  File \"/home/runner/work/PulseFlat/PulseFlat/utils/base.py\", line 76, in _patched_request\n    resp = _orig_request(self, method, url, *args, **kwargs)\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/requests/sessions.py\", line 651, in request\n    resp = self.send(prep, **send_kwargs)\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/requests/sessions.py\", line 784, in send\n    r = adapter.send(request, **kwargs)\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/requests/adapters.py\", line 717, in send\n    raise ConnectTimeout(e, request=request)\nrequests.exceptions.ConnectTimeout: HTTPConnectionPool(host='www.ipeadata.gov.br', port=80): Max retries exceeded with url: /api/odata4/ValoresSerie(SERCODIGO='IBSIE12_QSCFG12') (Caused by ConnectTimeoutError(<HTTPConnection(host='www.ipeadata.gov.br', port=80) at 0x7f43118c9ae0>, 'Connection to www.ipeadata.gov.br timed out. (connect timeout=10)'))\n",
+      "timestamp": "2026-08-12T10:41:15.002535"
     },
     "ipea_taxas_juros": {
-      "status": "success",
-      "elapsed_seconds": 26.0553617477417,
-      "error": null,
-      "timestamp": "2026-08-12T09:40:21.890056"
+      "status": "error",
+      "elapsed_seconds": 20.33374047279358,
+      "error": "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/connection.py\", line 204, in _new_conn\n    sock = connection.create_connection(\n        (self._dns_host, self.port),\n    ...<2 lines>...\n        socket_options=self.socket_options,\n    )\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/util/connection.py\", line 85, in create_connection\n    raise err\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/util/connection.py\", line 73, in create_connection\n    sock.connect(sa)\n    ~~~~~~~~~~~~^^^^\nTimeoutError: timed out\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/connectionpool.py\", line 788, in urlopen\n    response = self._make_request(\n        conn,\n    ...<10 lines>...\n        **response_kw,\n    )\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/connectionpool.py\", line 493, in _make_request\n    conn.request(\n    ~~~~~~~~~~~~^\n        method,\n        ^^^^^^^\n    ...<6 lines>...\n        enforce_content_length=enforce_content_length,\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/connection.py\", line 500, in request\n    self.endheaders()\n    ~~~~~~~~~~~~~~~^^\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/http/client.py\", line 1362, in endheaders\n    self._send_output(message_body, encode_chunked=encode_chunked)\n    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/http/client.py\", line 1122, in _send_output\n    self.send(msg)\n    ~~~~~~~~~^^^^^\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/http/client.py\", line 1066, in send\n    self.connect()\n    ~~~~~~~~~~~~^^\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/connection.py\", line 331, in connect\n    self.sock = self._new_conn()\n                ~~~~~~~~~~~~~~^^\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/connection.py\", line 213, in _new_conn\n    raise ConnectTimeoutError(\n    ...<2 lines>...\n    ) from e\nurllib3.exceptions.ConnectTimeoutError: (<HTTPConnection(host='www.ipeadata.gov.br', port=80) at 0x7f43118c9040>, 'Connection to www.ipeadata.gov.br timed out. (connect timeout=10)')\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/requests/adapters.py\", line 696, in send\n    resp = conn.urlopen(\n        method=request.method,\n    ...<9 lines>...\n        chunked=chunked,\n    )\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/connectionpool.py\", line 842, in urlopen\n    retries = retries.increment(\n        method, url, error=new_e, _pool=self, _stacktrace=sys.exc_info()[2]\n    )\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/urllib3/util/retry.py\", line 543, in increment\n    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nurllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='www.ipeadata.gov.br', port=80): Max retries exceeded with url: /api/odata4/ValoresSerie(SERCODIGO='ANBIMA12_TJPOUP12') (Caused by ConnectTimeoutError(<HTTPConnection(host='www.ipeadata.gov.br', port=80) at 0x7f43118c9040>, 'Connection to www.ipeadata.gov.br timed out. (connect timeout=10)'))\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/PulseFlat/PulseFlat/run_all.py\", line 213, in run_scraper\n    getattr(mod, class_name)().run()\n    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\n  File \"/home/runner/work/PulseFlat/PulseFlat/scrapers/utils/base.py\", line 183, in run\n    raise e\n  File \"/home/runner/work/PulseFlat/PulseFlat/scrapers/utils/base.py\", line 93, in run\n    df = self.fetch()\n  File \"/home/runner/work/PulseFlat/PulseFlat/scrapers/ipea_taxas_juros.py\", line 34, in fetch\n    resp = session.get(url, timeout=60)\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/requests/sessions.py\", line 671, in get\n    return self.request(\"GET\", url, params=params, **kwargs)\n           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/PulseFlat/PulseFlat/utils/base.py\", line 82, in _patched_request\n    raise e\n  File \"/home/runner/work/PulseFlat/PulseFlat/utils/base.py\", line 76, in _patched_request\n    resp = _orig_request(self, method, url, *args, **kwargs)\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/requests/sessions.py\", line 651, in request\n    resp = self.send(prep, **send_kwargs)\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/requests/sessions.py\", line 784, in send\n    r = adapter.send(request, **kwargs)\n  File \"/opt/hostedtoolcache/Python/3.13.14/x64/lib/python3.13/site-packages/requests/adapters.py\", line 717, in send\n    raise ConnectTimeout(e, request=request)\nrequests.exceptions.ConnectTimeout: HTTPConnectionPool(host='www.ipeadata.gov.br', port=80): Max retries exceeded with url: /api/odata4/ValoresSerie(SERCODIGO='ANBIMA12_TJPOUP12') (Caused by ConnectTimeoutError(<HTTPConnection(host='www.ipeadata.gov.br', port=80) at 0x7f43118c9040>, 'Connection to www.ipeadata.gov.br timed out. (connect timeout=10)'))\n",
+      "timestamp": "2026-08-12T10:41:15.002535"
     },
     "yahoo_acoes_brasileiras": {
       "status": "success",
-      "elapsed_seconds": 36.09453010559082,
+      "elapsed_seconds": 35.075644731521606,
       "error": null,
-      "timestamp": "2026-08-12T09:40:21.890056"
+      "timestamp": "2026-08-12T10:41:15.002535"
     },
     "yahoo_acoes_internacionais": {
       "status": "success",
-      "elapsed_seconds": 88.74431920051575,
+      "elapsed_seconds": 85.1891405582428,
       "error": null,
-      "timestamp": "2026-08-12T09:40:21.890056"
+      "timestamp": "2026-08-12T10:41:15.002535"
     },
     "yahoo_cambio_moedas": {
       "status": "success",
-      "elapsed_seconds": 3.0585408210754395,
+      "elapsed_seconds": 2.6454660892486572,
       "error": null,
-      "timestamp": "2026-08-12T09:40:21.890056"
+      "timestamp": "2026-08-12T10:41:15.002535"
     },
     "yahoo_commodities": {
       "status": "success",
-      "elapsed_seconds": 2.7660417556762695,
+      "elapsed_seconds": 2.2071382999420166,
       "error": null,
-      "timestamp": "2026-08-12T09:40:21.890056"
+      "timestamp": "2026-08-12T10:41:15.002535"
     },
     "yahoo_criptoativos": {
       "status": "success",
-      "elapsed_seconds": 3.8824870586395264,
+      "elapsed_seconds": 3.2468318939208984,
       "error": null,
-      "timestamp": "2026-08-12T09:40:21.890056"
+      "timestamp": "2026-08-12T10:41:15.002535"
     },
     "yahoo_etfs": {
       "status": "success",
-      "elapsed_seconds": 19.212292909622192,
+      "elapsed_seconds": 17.98492956161499,
       "error": null,
-      "timestamp": "2026-08-12T09:40:21.890056"
+      "timestamp": "2026-08-12T10:41:15.002535"
     },
     "yahoo_fiis_fiagros": {
       "status": "success",
-      "elapsed_seconds": 48.740668535232544,
+      "elapsed_seconds": 45.906144857406616,
       "error": null,
-      "timestamp": "2026-08-12T09:40:21.890056"
+      "timestamp": "2026-08-12T10:41:15.002535"
     },
     "yahoo_indices_globais": {
       "status": "success",
-      "elapsed_seconds": 3.7638356685638428,
+      "elapsed_seconds": 2.5197744369506836,
       "error": null,
-      "timestamp": "2026-08-12T09:40:21.890056"
+      "timestamp": "2026-08-12T10:41:15.002535"
     },
     "yahoo_renda_fixa": {
       "status": "success",
-      "elapsed_seconds": 17.746300220489502,
+      "elapsed_seconds": 1.1152045726776123,
       "error": null,
-      "timestamp": "2026-08-12T09:40:21.890056"
+      "timestamp": "2026-08-12T10:41:15.002535"
     },
     "wikipedia_global_indices": {
       "status": "success",
-      "elapsed_seconds": 5.3159894943237305,
+      "elapsed_seconds": 2.957160711288452,
       "error": null,
-      "timestamp": "2026-08-12T09:40:21.890056"
+      "timestamp": "2026-08-12T10:41:15.002535"
     },
     "b3_bdi_etfrf": {
       "status": "success",
-      "elapsed_seconds": 34.045918464660645,
+      "elapsed_seconds": 34.08938431739807,
       "error": null,
-      "timestamp": "2026-08-12T09:40:21.890056"
+      "timestamp": "2026-08-12T10:41:15.002535"
     },
     "b3_cotahist_diario": {
       "status": "success",
-      "elapsed_seconds": 8.30959415435791,
+      "elapsed_seconds": 5.011765241622925,
       "error": null,
-      "timestamp": "2026-08-12T09:40:21.890056"
+      "timestamp": "2026-08-12T10:41:15.002535"
     },
     "b3_cotahist_anual": {
       "status": "success",
-      "elapsed_seconds": 171.17659425735474,
+      "elapsed_seconds": 146.08473372459412,
       "error": null,
-      "timestamp": "2026-08-12T09:40:21.890056"
+      "timestamp": "2026-08-12T10:41:15.002535"
     }
   },
   "drifts": {
@@ -437,7 +437,7 @@ window.PULSEFLAT_PIPELINE_STATUS = {
         "data_referencia",
         "duration_du"
       ],
-      "timestamp": "2026-08-12T08:43:09.575217"
+      "timestamp": "2026-08-12T10:01:26.856396"
     },
     "b3_bdi_etfrf.csv.gz": {
       "added": [],
@@ -446,14 +446,14 @@ window.PULSEFLAT_PIPELINE_STATUS = {
         "oferta_compra",
         "oferta_venda"
       ],
-      "timestamp": "2026-08-12T08:43:49.108126"
+      "timestamp": "2026-08-12T10:02:04.246066"
     },
     "b3_indicadores_financeiros.csv": {
       "added": [],
       "removed": [
         "last_update"
       ],
-      "timestamp": "2026-08-12T08:45:01.991574"
+      "timestamp": "2026-08-12T10:02:59.686560"
     },
     "bacen_conglomerados.csv": {
       "added": [],
@@ -466,7 +466,7 @@ window.PULSEFLAT_PIPELINE_STATUS = {
         "data_documento",
         "detalhe"
       ],
-      "timestamp": "2026-08-12T08:48:19.828032"
+      "timestamp": "2026-08-12T10:05:34.255543"
     }
   }
 };
