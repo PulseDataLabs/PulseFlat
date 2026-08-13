@@ -4457,17 +4457,17 @@
       {
         "name": "name",
         "type": "str",
-        "example": "Postal Saude - Caixa de Assistencia e Saude dos Empregados dos Correios"
+        "example": "EXEC Consultoria em Recursos Humanos Ltda"
       },
       {
         "name": "type",
         "type": "str",
-        "example": "Company"
+        "example": "Small or Medium-sized Enterprise"
       },
       {
         "name": "sector",
         "type": "str",
-        "example": "Health Care Services"
+        "example": "Professional Business Support Services"
       },
       {
         "name": "country",
@@ -4477,12 +4477,12 @@
       {
         "name": "joined_on",
         "type": "str",
-        "example": "2026-08-11"
+        "example": "2026-08-13"
       },
       {
         "name": "link",
         "type": "str",
-        "example": "https://unglobalcompact.org/what-is-gc/participants/219849-Postal-Saude-Caixa-de-Assistencia-e-Saude-dos-Empregados-dos-Correios"
+        "example": "https://unglobalcompact.org/what-is-gc/participants/219499-EXEC-Consultoria-em-Recursos-Humanos-Ltda"
       }
     ]
   },
