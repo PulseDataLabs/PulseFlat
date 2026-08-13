@@ -2293,7 +2293,7 @@
       {
         "name": "data_geracao",
         "type": "date",
-        "example": "2026-08-12"
+        "example": "2026-08-13"
       },
       {
         "name": "acao",
@@ -4515,6 +4515,73 @@
         "name": "preco_fechamento",
         "type": "float",
         "example": "2.0133860111236572"
+      }
+    ]
+  },
+  {
+    "title": "Bacen Parcelas Capital Basileia.Gz",
+    "files": "bacen_parcelas_capital_basileia.csv.gz",
+    "source": "bcb",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-06-05"
+      },
+      {
+        "name": "TipoInstituicao",
+        "type": "str",
+        "example": "1"
+      },
+      {
+        "name": "CodInst",
+        "type": "str",
+        "example": "31804966"
+      },
+      {
+        "name": "AnoMes",
+        "type": "str",
+        "example": "202512"
+      },
+      {
+        "name": "NomeRelatorio",
+        "type": "str",
+        "example": "Informações de Capital"
+      },
+      {
+        "name": "NumeroRelatorio",
+        "type": "int",
+        "example": "5"
+      },
+      {
+        "name": "Grupo",
+        "type": "str",
+        "example": ""
+      },
+      {
+        "name": "Conta",
+        "type": "str",
+        "example": "79662"
+      },
+      {
+        "name": "NomeColuna",
+        "type": "str",
+        "example": "Índice de Imobilização \n(p)"
+      },
+      {
+        "name": "DescricaoColuna",
+        "type": "str",
+        "example": "Relação entre Ativo Permanente e Patrimônio de Referência"
+      },
+      {
+        "name": "Saldo",
+        "type": "float",
+        "example": "0.0488819981004252"
+      },
+      {
+        "name": "tipo_instituicao_label",
+        "type": "str",
+        "example": "conglomerados_prudenciais"
       }
     ]
   }
