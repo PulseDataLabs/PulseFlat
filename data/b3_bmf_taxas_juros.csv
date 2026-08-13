@@ -113,3 +113,5 @@ data_captura,tabela_origem,data_referencia,curva,prazo_dias,taxa,base
 2026-08-11,DerivativesMarketSwapRates,2026-08-10,DI1,360,13.12,252
 2026-08-12,DerivativesMarketSwapRates,2026-08-11,DI1,30,13.65,252
 2026-08-12,DerivativesMarketSwapRates,2026-08-11,DI1,360,13.12,252
+2026-08-13,DerivativesMarketSwapRates,2026-08-12,DI1,30,13.65,252
+2026-08-13,DerivativesMarketSwapRates,2026-08-12,DI1,360,13.12,252

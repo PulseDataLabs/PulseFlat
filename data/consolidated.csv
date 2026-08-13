@@ -16,289 +16,289 @@ anbima_indicadores.csv,ANBIMA Indicadores,ANBIMA,Índice de Preços,indicador,IP
 anbima_indicadores.csv,ANBIMA Indicadores,ANBIMA,Taxa de Referência,indicador,TBF,"1,04",% mês,2026-08-11,2026-08-12,valor
 anbima_indicadores.csv,ANBIMA Indicadores,ANBIMA,Taxa de Referência,indicador,TR,"0,1708",% mês,2026-08-11,2026-08-12,valor
 anbima_indicadores.csv,ANBIMA Indicadores,ANBIMA,Taxa de Juros,indicador,Taxa SELIC (BC),"13,90",% a.a.,2026-08-12,2026-08-12,valor
-anbima_titulos_publicos.csv,ANBIMA Títulos Públicos,ANBIMA,Títulos Públicos,indicador,100000 (LTN),"13,65%",Taxa indicativa,2026-08-11,2026-08-12,tx_indicativa
-anbima_titulos_publicos.csv,ANBIMA Títulos Públicos,ANBIMA,Títulos Públicos,indicador,100000 (LTN),"981,88",PU,2026-08-11,2026-08-12,pu
-anbima_titulos_publicos.csv,ANBIMA Títulos Públicos,ANBIMA,Títulos Públicos,indicador,210100 (LFT),"0,01%",Taxa indicativa,2026-08-11,2026-08-12,tx_indicativa
-anbima_titulos_publicos.csv,ANBIMA Títulos Públicos,ANBIMA,Títulos Públicos,indicador,210100 (LFT),19.630,PU,2026-08-11,2026-08-12,pu
-anbima_titulos_publicos.csv,ANBIMA Títulos Públicos,ANBIMA,Títulos Públicos,indicador,760199 (NTN-B),"12,99%",Taxa indicativa,2026-08-11,2026-08-12,tx_indicativa
-anbima_titulos_publicos.csv,ANBIMA Títulos Públicos,ANBIMA,Títulos Públicos,indicador,760199 (NTN-B),4.873,PU,2026-08-11,2026-08-12,pu
-anbima_titulos_publicos.csv,ANBIMA Títulos Públicos,ANBIMA,Títulos Públicos,indicador,770100 (NTN-C),"7,97%",Taxa indicativa,2026-08-11,2026-08-12,tx_indicativa
-anbima_titulos_publicos.csv,ANBIMA Títulos Públicos,ANBIMA,Títulos Públicos,indicador,770100 (NTN-C),7.615,PU,2026-08-11,2026-08-12,pu
-anbima_titulos_publicos.csv,ANBIMA Títulos Públicos,ANBIMA,Títulos Públicos,indicador,950199 (NTN-F),"13,62%",Taxa indicativa,2026-08-11,2026-08-12,tx_indicativa
-anbima_titulos_publicos.csv,ANBIMA Títulos Públicos,ANBIMA,Títulos Públicos,indicador,950199 (NTN-F),"998,02",PU,2026-08-11,2026-08-12,pu
+anbima_titulos_publicos.csv,ANBIMA Títulos Públicos,ANBIMA,Títulos Públicos,indicador,100000 (LTN),"13,66%",Taxa indicativa,2026-08-12,2026-08-13,tx_indicativa
+anbima_titulos_publicos.csv,ANBIMA Títulos Públicos,ANBIMA,Títulos Públicos,indicador,100000 (LTN),"982,37",PU,2026-08-12,2026-08-13,pu
+anbima_titulos_publicos.csv,ANBIMA Títulos Públicos,ANBIMA,Títulos Públicos,indicador,210100 (LFT),"0,01%",Taxa indicativa,2026-08-12,2026-08-13,tx_indicativa
+anbima_titulos_publicos.csv,ANBIMA Títulos Públicos,ANBIMA,Títulos Públicos,indicador,210100 (LFT),19.640,PU,2026-08-12,2026-08-13,pu
+anbima_titulos_publicos.csv,ANBIMA Títulos Públicos,ANBIMA,Títulos Públicos,indicador,760199 (NTN-B),"13,03%",Taxa indicativa,2026-08-12,2026-08-13,tx_indicativa
+anbima_titulos_publicos.csv,ANBIMA Títulos Públicos,ANBIMA,Títulos Públicos,indicador,760199 (NTN-B),4.875,PU,2026-08-12,2026-08-13,pu
+anbima_titulos_publicos.csv,ANBIMA Títulos Públicos,ANBIMA,Títulos Públicos,indicador,770100 (NTN-C),"7,96%",Taxa indicativa,2026-08-12,2026-08-13,tx_indicativa
+anbima_titulos_publicos.csv,ANBIMA Títulos Públicos,ANBIMA,Títulos Públicos,indicador,770100 (NTN-C),7.621,PU,2026-08-12,2026-08-13,pu
+anbima_titulos_publicos.csv,ANBIMA Títulos Públicos,ANBIMA,Títulos Públicos,indicador,950199 (NTN-F),"13,54%",Taxa indicativa,2026-08-12,2026-08-13,tx_indicativa
+anbima_titulos_publicos.csv,ANBIMA Títulos Públicos,ANBIMA,Títulos Públicos,indicador,950199 (NTN-F),"998,79",PU,2026-08-12,2026-08-13,pu
 b3_bdi_di_over.csv,B3 DI Over,B3,,indicador,DI Over (SELIC equivalente),"14,40%",,2026-06-01,2026-06-01,average
 b3_bdi_di_over.csv,B3 DI Over,B3,,indicador,DI Over — Volume financeiro,2.646.973,,2026-06-01,2026-06-01,financial_volume
-b3_bmf_taxas_juros.csv,B3 BMF Taxas,B3,Taxas de Juros,indicador,DI1,"13,65%",,2026-08-11,2026-08-12,taxa
-bcb_ptax.csv,BCB PTAX,BCB,Taxas de Câmbio,indicador,PTAX USD — Compra,"4,02",,2026-08-12,2026-08-12,cotacao_compra
-bcb_ptax.csv,BCB PTAX,BCB,Taxas de Câmbio,indicador,PTAX USD — Venda,"4,02",,2026-08-12,2026-08-12,cotacao_venda
-bcb_sgs.csv,BCB SGS,BCB,Séries SGS,indicador,IGP-M,"4,02%",,2026-08-12,2026-08-12,1
-bcb_sgs.csv,BCB SGS,BCB,Séries SGS,indicador,IGP-M (índice),"0,48%",,2026-08-12,2026-08-12,189
-bcb_sgs.csv,BCB SGS,BCB,Séries SGS,indicador,IGP-M 12m,"0,09%",,2026-08-12,2026-08-12,190
-bcb_sgs.csv,BCB SGS,BCB,Séries SGS,indicador,IPCA 12m,"0,21%",,2026-08-12,2026-08-12,433
-bcb_sgs.csv,BCB SGS,BCB,Séries SGS,indicador,SELIC (% a.d.),"0,02%",,2026-08-12,2026-08-12,11
-ipea_calendario.csv,IPEA Calendário,IPEA,Calendário,indicador,Número de Dias Úteis Futuros,"21,00",,2030-12-01,2026-08-12,SGS12_NDIASUTEISFUT12
-ipea_calendario.csv,IPEA Calendário,IPEA,Calendário,indicador,Número de Dias Úteis Passados,"22,00",,2026-12-01,2026-08-12,SGS12_NDIASUTEISPAS12
-ipea_comercio_exterior.csv,IPEA Comércio Exterior,IPEA,Macroeconomia,indicador,Exportações - Preços - Índice,"129,58",,2026-05-01,2026-08-12,FUNCEX12_XPT12
-ipea_comercio_exterior.csv,IPEA Comércio Exterior,IPEA,Macroeconomia,indicador,Importações - Preços - Índice,"115,13",,2026-05-01,2026-08-12,FUNCEX12_MDPT12
-ipea_fbcf.csv,IPEA FBCF,IPEA,Macroeconomia,indicador,Indicador IPEA de FBCF - Construção Civil,"158,80",,2026-04-01,2026-08-12,GAC12_INDFBCFCC12
-ipea_fbcf.csv,IPEA FBCF,IPEA,Macroeconomia,indicador,Indicador IPEA de FBCF - Construção Dessazonalizado,"161,83",,2026-04-01,2026-08-12,GAC12_INDFBCFCCDESSAZ12
-ipea_fbcf.csv,IPEA FBCF,IPEA,Macroeconomia,indicador,Indicador IPEA de FBCF - Dessazonalizado,"178,01",,2026-04-01,2026-08-12,GAC12_INDFBCFDESSAZ12
-ipea_fbcf.csv,IPEA FBCF,IPEA,Macroeconomia,indicador,Indicador IPEA de FBCF - Índice Real,"176,12",,2026-04-01,2026-08-12,GAC12_INDFBCF12
-ipea_macroeconomia.csv,IPEA Macroeconomia,IPEA,Macroeconomia,indicador,PIB (acumulado 12m),13.192.246,,2026-06-01,2026-08-12,BM12_PIBAC12
-ipea_macroeconomia.csv,IPEA Macroeconomia,IPEA,Macroeconomia,indicador,Saldo Total da Poupança (SBPE/Rural),1.022.832,,2026-07-01,2026-08-12,SGS12_7836
-ipea_macroeconomia.csv,IPEA Macroeconomia,IPEA,Macroeconomia,indicador,Salário Mínimo Real,1.621,,2026-07-01,2026-08-12,GAC12_SALMINRE12
-ipea_macroeconomia.csv,IPEA Macroeconomia,IPEA,Macroeconomia,indicador,Salário Mínimo Vigente,1.621,,2026-12-01,2026-08-12,MTE12_SALMIN12
-ipea_macroeconomia.csv,IPEA Macroeconomia,IPEA,Macroeconomia,indicador,Taxa de desocupação (PNAD Contínua),"5,40%",,2026-06-01,2026-08-12,PNADC12_TDESOC12
-ipea_mercados_diarios.csv,IPEA Mercados Diários,IPEA,Mercados Globais,indicador,Petróleo Brent,"93,26",,2026-08-11,2026-08-12,EIA366_PBRENT366
-ipea_mercados_diarios.csv,IPEA Mercados Diários,IPEA,Mercados Globais,indicador,Petróleo WTI,"84,77",,2026-08-11,2026-08-12,EIA366_PWTI366
-ipea_mercados_diarios.csv,IPEA Mercados Diários,IPEA,Mercados Globais,indicador,Índice Dow Jones,53.792,,2026-08-11,2026-08-12,GM366_DOW366
-ipea_mercados_diarios.csv,IPEA Mercados Diários,IPEA,Mercados Globais,indicador,Índice NASDAQ,26.445,,2026-08-11,2026-08-12,SGS366_NASDAQ366
-ipea_precos_inflacao.csv,IPEA Preços e Inflação,IPEA,Macroeconomia,indicador,IGP-DI - Geral - Índice,1.192,,2026-07-01,2026-08-12,IGP12_IGPDI12
-ipea_precos_inflacao.csv,IPEA Preços e Inflação,IPEA,Macroeconomia,indicador,INCC-DI - Geral - Índice,1.288,,2026-07-01,2026-08-12,IGP12_INCC12
-ipea_precos_inflacao.csv,IPEA Preços e Inflação,IPEA,Macroeconomia,indicador,INPC - Geral - Taxa de Variação,"-0,01%",,2026-07-01,2026-08-12,PRECOS12_INPCBR12
-ipea_precos_inflacao.csv,IPEA Preços e Inflação,IPEA,Macroeconomia,indicador,INPC - Geral - Índice,7.835,,2026-07-01,2026-08-12,PRECOS12_INPC12
-ipea_producao_mineral.csv,IPEA Produção Mineral,IPEA,Produção,indicador,Mineral - Aço Bruto - Produção,2.837,,2026-06-01,2026-08-12,IBSIE12_QSCAB12
-ipea_producao_mineral.csv,IPEA Produção Mineral,IPEA,Produção,indicador,Mineral - Ferro-Gusa - Produção,2.218,,2026-06-01,2026-08-12,IBSIE12_QSCFG12
-ipea_producao_mineral.csv,IPEA Produção Mineral,IPEA,Produção,indicador,Mineral - Laminados - Produção,1.832,,2026-06-01,2026-08-12,IBSIE12_QSCL12
-ipea_taxas_juros.csv,IPEA Taxas de Juros,IPEA,Taxas de Juros,indicador,CDI Acumulado no Mês,"0,36%",,2026-08-01,2026-08-12,BM12_TJCDI12
-ipea_taxas_juros.csv,IPEA Taxas de Juros,IPEA,Taxas de Juros,indicador,Estrutura Termo LTN - 1 mês,"13,85%",,2026-07-01,2026-08-12,ANBIMA12_TJTLN112
-ipea_taxas_juros.csv,IPEA Taxas de Juros,IPEA,Taxas de Juros,indicador,Estrutura Termo LTN - 12 meses,"13,87%",,2026-07-01,2026-08-12,ANBIMA12_TJTLN1212
-ipea_taxas_juros.csv,IPEA Taxas de Juros,IPEA,Taxas de Juros,indicador,Estrutura Termo LTN - 3 meses,"13,80%",,2026-07-01,2026-08-12,ANBIMA12_TJTLN312
-ipea_taxas_juros.csv,IPEA Taxas de Juros,IPEA,Taxas de Juros,indicador,Estrutura Termo LTN - 6 meses,"13,79%",,2026-07-01,2026-08-12,ANBIMA12_TJTLN612
-ipea_taxas_juros.csv,IPEA Taxas de Juros,IPEA,Taxas de Juros,indicador,Poupança Rentabilidade Antiga (dep. até 2012),"0,67%",,2026-08-01,2026-08-12,ANBIMA12_TJPOUP12
-ipea_taxas_juros.csv,IPEA Taxas de Juros,IPEA,Taxas de Juros,indicador,Poupança Rentabilidade Nova (dep. pós 2012),"0,67%",,2026-08-01,2026-08-12,BM12_RNDPO12
-ipea_taxas_juros.csv,IPEA Taxas de Juros,IPEA,Taxas de Juros,indicador,Selic Acumulada no Mês,"0,36%",,2026-08-01,2026-08-12,BM12_TJOVER12
-ipea_taxas_juros.csv,IPEA Taxas de Juros,IPEA,Taxas de Juros,indicador,Taxa Básica Financeira (TBF),"1,00%",,2026-08-01,2026-08-12,BM12_TJTBF12
-ipea_taxas_juros.csv,IPEA Taxas de Juros,IPEA,Taxas de Juros,indicador,Taxa Referencial (TR),"0,17%",,2026-08-01,2026-08-12,BM12_TJTR12
-ipea_taxas_juros.csv,IPEA Taxas de Juros,IPEA,Taxas de Juros,indicador,Taxa de Juros de Longo Prazo (TJLP),"0,73%",,2026-08-01,2026-08-12,BM12_TJLP12
-yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,ABEV3.SA,"15,01",,2026-08-11,2026-08-12,ABEV3.SA
-yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,ALOS3.SA,"26,05",,2026-08-11,2026-08-12,ALOS3.SA
-yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,ASAI3.SA,"8,08",,2026-08-11,2026-08-12,ASAI3.SA
-yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,B3SA3.SA,"14,29",,2026-08-11,2026-08-12,B3SA3.SA
-yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,BBAS3.SA,"19,28",,2026-08-11,2026-08-12,BBAS3.SA
-yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,BBDC3.SA,"14,72",,2026-08-11,2026-08-12,BBDC3.SA
-yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,BBDC4.SA,"16,79",,2026-08-11,2026-08-12,BBDC4.SA
-yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,BEEF3.SA,"3,27",,2026-08-11,2026-08-12,BEEF3.SA
-yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,BPAC11.SA,"50,13",,2026-08-11,2026-08-12,BPAC11.SA
-yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,BRAP4.SA,"21,05",,2026-08-11,2026-08-12,BRAP4.SA
-yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,BRKM5.SA,"5,64",,2026-08-11,2026-08-12,BRKM5.SA
-yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,CMIG4.SA,"10,40",,2026-08-11,2026-08-12,CMIG4.SA
-yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,CMIN3.SA,"5,57",,2026-08-11,2026-08-12,CMIN3.SA
-yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,COGN3.SA,"2,03",,2026-08-11,2026-08-12,COGN3.SA
-yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,CPFE3.SA,"43,65",,2026-08-11,2026-08-12,CPFE3.SA
-yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,CSAN3.SA,"3,28",,2026-08-11,2026-08-12,CSAN3.SA
-yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,CSNA3.SA,"4,28",,2026-08-11,2026-08-12,CSNA3.SA
-yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,CVCB3.SA,"1,37",,2026-08-11,2026-08-12,CVCB3.SA
-yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,CYRE3.SA,"20,54",,2026-08-11,2026-08-12,CYRE3.SA
-yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,EGIE3.SA,"29,09",,2026-08-11,2026-08-12,EGIE3.SA
-yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,ENEV3.SA,"24,55",,2026-08-11,2026-08-12,ENEV3.SA
-yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,ENGI11.SA,"45,64",,2026-08-11,2026-08-12,ENGI11.SA
-yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,EQTL3.SA,"35,81",,2026-08-11,2026-08-12,EQTL3.SA
-yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,EZTC3.SA,"10,31",,2026-08-11,2026-08-12,EZTC3.SA
-yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,FLRY3.SA,"18,59",,2026-08-11,2026-08-12,FLRY3.SA
-yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,GGBR4.SA,"24,16",,2026-08-11,2026-08-12,GGBR4.SA
-yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,HAPV3.SA,"9,79",,2026-08-11,2026-08-12,HAPV3.SA
-yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,HYPE3.SA,"21,16",,2026-08-11,2026-08-12,HYPE3.SA
-yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,IGTI11.SA,"23,60",,2026-08-11,2026-08-12,IGTI11.SA
-yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,IRBR3.SA,"49,05",,2026-08-11,2026-08-12,IRBR3.SA
-yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,ITSA4.SA,"12,63",,2026-08-11,2026-08-12,ITSA4.SA
-yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,ITUB4.SA,"39,00",,2026-08-11,2026-08-12,ITUB4.SA
-yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,JHSF3.SA,"10,28",,2026-08-11,2026-08-12,JHSF3.SA
-yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,KLBN11.SA,"17,55",,2026-08-11,2026-08-12,KLBN11.SA
-yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,LOGN3.SA,"27,65",,2026-08-11,2026-08-12,LOGN3.SA
-yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,LREN3.SA,"12,03",,2026-08-11,2026-08-12,LREN3.SA
-yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,MDIA3.SA,"17,00",,2026-08-11,2026-08-12,MDIA3.SA
-yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,MGLU3.SA,"4,26",,2026-08-11,2026-08-12,MGLU3.SA
-yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,MRVE3.SA,"4,28",,2026-08-11,2026-08-12,MRVE3.SA
-yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,MULT3.SA,"27,13",,2026-08-11,2026-08-12,MULT3.SA
+b3_bmf_taxas_juros.csv,B3 BMF Taxas,B3,Taxas de Juros,indicador,DI1,"13,65%",,2026-08-12,2026-08-13,taxa
+bcb_ptax.csv,BCB PTAX,BCB,Taxas de Câmbio,indicador,PTAX USD — Compra,"4,02",,2026-08-13,2026-08-13,cotacao_compra
+bcb_ptax.csv,BCB PTAX,BCB,Taxas de Câmbio,indicador,PTAX USD — Venda,"4,02",,2026-08-13,2026-08-13,cotacao_venda
+bcb_sgs.csv,BCB SGS,BCB,Séries SGS,indicador,IGP-M,"4,02%",,2026-08-13,2026-08-13,1
+bcb_sgs.csv,BCB SGS,BCB,Séries SGS,indicador,IGP-M (índice),"0,48%",,2026-08-13,2026-08-13,189
+bcb_sgs.csv,BCB SGS,BCB,Séries SGS,indicador,IGP-M 12m,"0,09%",,2026-08-13,2026-08-13,190
+bcb_sgs.csv,BCB SGS,BCB,Séries SGS,indicador,IPCA 12m,"0,21%",,2026-08-13,2026-08-13,433
+bcb_sgs.csv,BCB SGS,BCB,Séries SGS,indicador,SELIC (% a.d.),"0,02%",,2026-08-13,2026-08-13,11
+ipea_calendario.csv,IPEA Calendário,IPEA,Calendário,indicador,Número de Dias Úteis Futuros,"21,00",,2030-12-01,2026-08-13,SGS12_NDIASUTEISFUT12
+ipea_calendario.csv,IPEA Calendário,IPEA,Calendário,indicador,Número de Dias Úteis Passados,"22,00",,2026-12-01,2026-08-13,SGS12_NDIASUTEISPAS12
+ipea_comercio_exterior.csv,IPEA Comércio Exterior,IPEA,Macroeconomia,indicador,Exportações - Preços - Índice,"129,58",,2026-05-01,2026-08-13,FUNCEX12_XPT12
+ipea_comercio_exterior.csv,IPEA Comércio Exterior,IPEA,Macroeconomia,indicador,Importações - Preços - Índice,"115,13",,2026-05-01,2026-08-13,FUNCEX12_MDPT12
+ipea_fbcf.csv,IPEA FBCF,IPEA,Macroeconomia,indicador,Indicador IPEA de FBCF - Construção Civil,"158,80",,2026-04-01,2026-08-13,GAC12_INDFBCFCC12
+ipea_fbcf.csv,IPEA FBCF,IPEA,Macroeconomia,indicador,Indicador IPEA de FBCF - Construção Dessazonalizado,"161,83",,2026-04-01,2026-08-13,GAC12_INDFBCFCCDESSAZ12
+ipea_fbcf.csv,IPEA FBCF,IPEA,Macroeconomia,indicador,Indicador IPEA de FBCF - Dessazonalizado,"178,01",,2026-04-01,2026-08-13,GAC12_INDFBCFDESSAZ12
+ipea_fbcf.csv,IPEA FBCF,IPEA,Macroeconomia,indicador,Indicador IPEA de FBCF - Índice Real,"176,12",,2026-04-01,2026-08-13,GAC12_INDFBCF12
+ipea_macroeconomia.csv,IPEA Macroeconomia,IPEA,Macroeconomia,indicador,PIB (acumulado 12m),13.192.246,,2026-06-01,2026-08-13,BM12_PIBAC12
+ipea_macroeconomia.csv,IPEA Macroeconomia,IPEA,Macroeconomia,indicador,Saldo Total da Poupança (SBPE/Rural),1.022.832,,2026-07-01,2026-08-13,SGS12_7836
+ipea_macroeconomia.csv,IPEA Macroeconomia,IPEA,Macroeconomia,indicador,Salário Mínimo Real,1.621,,2026-07-01,2026-08-13,GAC12_SALMINRE12
+ipea_macroeconomia.csv,IPEA Macroeconomia,IPEA,Macroeconomia,indicador,Salário Mínimo Vigente,1.621,,2026-12-01,2026-08-13,MTE12_SALMIN12
+ipea_macroeconomia.csv,IPEA Macroeconomia,IPEA,Macroeconomia,indicador,Taxa de desocupação (PNAD Contínua),"5,40%",,2026-06-01,2026-08-13,PNADC12_TDESOC12
+ipea_mercados_diarios.csv,IPEA Mercados Diários,IPEA,Mercados Globais,indicador,Petróleo Brent,"93,26",,2026-08-11,2026-08-13,EIA366_PBRENT366
+ipea_mercados_diarios.csv,IPEA Mercados Diários,IPEA,Mercados Globais,indicador,Petróleo WTI,"84,77",,2026-08-11,2026-08-13,EIA366_PWTI366
+ipea_mercados_diarios.csv,IPEA Mercados Diários,IPEA,Mercados Globais,indicador,Índice Dow Jones,53.792,,2026-08-11,2026-08-13,GM366_DOW366
+ipea_mercados_diarios.csv,IPEA Mercados Diários,IPEA,Mercados Globais,indicador,Índice NASDAQ,26.445,,2026-08-11,2026-08-13,SGS366_NASDAQ366
+ipea_precos_inflacao.csv,IPEA Preços e Inflação,IPEA,Macroeconomia,indicador,IGP-DI - Geral - Índice,1.192,,2026-07-01,2026-08-13,IGP12_IGPDI12
+ipea_precos_inflacao.csv,IPEA Preços e Inflação,IPEA,Macroeconomia,indicador,INCC-DI - Geral - Índice,1.288,,2026-07-01,2026-08-13,IGP12_INCC12
+ipea_precos_inflacao.csv,IPEA Preços e Inflação,IPEA,Macroeconomia,indicador,INPC - Geral - Taxa de Variação,"-0,01%",,2026-07-01,2026-08-13,PRECOS12_INPCBR12
+ipea_precos_inflacao.csv,IPEA Preços e Inflação,IPEA,Macroeconomia,indicador,INPC - Geral - Índice,7.835,,2026-07-01,2026-08-13,PRECOS12_INPC12
+ipea_producao_mineral.csv,IPEA Produção Mineral,IPEA,Produção,indicador,Mineral - Aço Bruto - Produção,2.837,,2026-06-01,2026-08-13,IBSIE12_QSCAB12
+ipea_producao_mineral.csv,IPEA Produção Mineral,IPEA,Produção,indicador,Mineral - Ferro-Gusa - Produção,2.218,,2026-06-01,2026-08-13,IBSIE12_QSCFG12
+ipea_producao_mineral.csv,IPEA Produção Mineral,IPEA,Produção,indicador,Mineral - Laminados - Produção,1.832,,2026-06-01,2026-08-13,IBSIE12_QSCL12
+ipea_taxas_juros.csv,IPEA Taxas de Juros,IPEA,Taxas de Juros,indicador,CDI Acumulado no Mês,"0,36%",,2026-08-01,2026-08-13,BM12_TJCDI12
+ipea_taxas_juros.csv,IPEA Taxas de Juros,IPEA,Taxas de Juros,indicador,Estrutura Termo LTN - 1 mês,"13,85%",,2026-07-01,2026-08-13,ANBIMA12_TJTLN112
+ipea_taxas_juros.csv,IPEA Taxas de Juros,IPEA,Taxas de Juros,indicador,Estrutura Termo LTN - 12 meses,"13,87%",,2026-07-01,2026-08-13,ANBIMA12_TJTLN1212
+ipea_taxas_juros.csv,IPEA Taxas de Juros,IPEA,Taxas de Juros,indicador,Estrutura Termo LTN - 3 meses,"13,80%",,2026-07-01,2026-08-13,ANBIMA12_TJTLN312
+ipea_taxas_juros.csv,IPEA Taxas de Juros,IPEA,Taxas de Juros,indicador,Estrutura Termo LTN - 6 meses,"13,79%",,2026-07-01,2026-08-13,ANBIMA12_TJTLN612
+ipea_taxas_juros.csv,IPEA Taxas de Juros,IPEA,Taxas de Juros,indicador,Poupança Rentabilidade Antiga (dep. até 2012),"0,67%",,2026-08-01,2026-08-13,ANBIMA12_TJPOUP12
+ipea_taxas_juros.csv,IPEA Taxas de Juros,IPEA,Taxas de Juros,indicador,Poupança Rentabilidade Nova (dep. pós 2012),"0,67%",,2026-08-01,2026-08-13,BM12_RNDPO12
+ipea_taxas_juros.csv,IPEA Taxas de Juros,IPEA,Taxas de Juros,indicador,Selic Acumulada no Mês,"0,36%",,2026-08-01,2026-08-13,BM12_TJOVER12
+ipea_taxas_juros.csv,IPEA Taxas de Juros,IPEA,Taxas de Juros,indicador,Taxa Básica Financeira (TBF),"1,00%",,2026-08-01,2026-08-13,BM12_TJTBF12
+ipea_taxas_juros.csv,IPEA Taxas de Juros,IPEA,Taxas de Juros,indicador,Taxa Referencial (TR),"0,17%",,2026-08-01,2026-08-13,BM12_TJTR12
+ipea_taxas_juros.csv,IPEA Taxas de Juros,IPEA,Taxas de Juros,indicador,Taxa de Juros de Longo Prazo (TJLP),"0,73%",,2026-08-01,2026-08-13,BM12_TJLP12
+yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,ABEV3.SA,"14,85",,2026-08-12,2026-08-13,ABEV3.SA
+yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,ALOS3.SA,"26,22",,2026-08-12,2026-08-13,ALOS3.SA
+yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,ASAI3.SA,"8,00",,2026-08-12,2026-08-13,ASAI3.SA
+yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,B3SA3.SA,"14,24",,2026-08-12,2026-08-13,B3SA3.SA
+yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,BBAS3.SA,"19,00",,2026-08-12,2026-08-13,BBAS3.SA
+yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,BBDC3.SA,"14,70",,2026-08-12,2026-08-13,BBDC3.SA
+yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,BBDC4.SA,"16,74",,2026-08-12,2026-08-13,BBDC4.SA
+yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,BEEF3.SA,"3,29",,2026-08-12,2026-08-13,BEEF3.SA
+yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,BPAC11.SA,"49,60",,2026-08-12,2026-08-13,BPAC11.SA
+yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,BRAP4.SA,"21,10",,2026-08-12,2026-08-13,BRAP4.SA
+yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,BRKM5.SA,"5,20",,2026-08-12,2026-08-13,BRKM5.SA
+yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,CMIG4.SA,"10,33",,2026-08-12,2026-08-13,CMIG4.SA
+yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,CMIN3.SA,"5,79",,2026-08-12,2026-08-13,CMIN3.SA
+yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,COGN3.SA,"2,03",,2026-08-12,2026-08-13,COGN3.SA
+yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,CPFE3.SA,"43,11",,2026-08-12,2026-08-13,CPFE3.SA
+yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,CSAN3.SA,"3,21",,2026-08-12,2026-08-13,CSAN3.SA
+yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,CSNA3.SA,"4,32",,2026-08-12,2026-08-13,CSNA3.SA
+yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,CVCB3.SA,"1,35",,2026-08-12,2026-08-13,CVCB3.SA
+yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,CYRE3.SA,"20,50",,2026-08-12,2026-08-13,CYRE3.SA
+yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,EGIE3.SA,"28,43",,2026-08-12,2026-08-13,EGIE3.SA
+yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,ENEV3.SA,"24,11",,2026-08-12,2026-08-13,ENEV3.SA
+yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,ENGI11.SA,"44,49",,2026-08-12,2026-08-13,ENGI11.SA
+yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,EQTL3.SA,"35,50",,2026-08-12,2026-08-13,EQTL3.SA
+yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,EZTC3.SA,"10,30",,2026-08-12,2026-08-13,EZTC3.SA
+yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,FLRY3.SA,"18,25",,2026-08-12,2026-08-13,FLRY3.SA
+yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,GGBR4.SA,"24,88",,2026-08-12,2026-08-13,GGBR4.SA
+yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,HAPV3.SA,"9,58",,2026-08-12,2026-08-13,HAPV3.SA
+yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,HYPE3.SA,"21,57",,2026-08-12,2026-08-13,HYPE3.SA
+yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,IGTI11.SA,"24,18",,2026-08-12,2026-08-13,IGTI11.SA
+yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,IRBR3.SA,"49,13",,2026-08-12,2026-08-13,IRBR3.SA
+yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,ITSA4.SA,"12,45",,2026-08-12,2026-08-13,ITSA4.SA
+yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,ITUB4.SA,"38,43",,2026-08-12,2026-08-13,ITUB4.SA
+yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,JHSF3.SA,"10,28",,2026-08-12,2026-08-13,JHSF3.SA
+yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,KLBN11.SA,"17,62",,2026-08-12,2026-08-13,KLBN11.SA
+yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,LOGN3.SA,"27,85",,2026-08-12,2026-08-13,LOGN3.SA
+yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,LREN3.SA,"11,74",,2026-08-12,2026-08-13,LREN3.SA
+yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,MDIA3.SA,"16,82",,2026-08-12,2026-08-13,MDIA3.SA
+yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,MGLU3.SA,"4,24",,2026-08-12,2026-08-13,MGLU3.SA
+yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,MRVE3.SA,"4,20",,2026-08-12,2026-08-13,MRVE3.SA
+yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,MULT3.SA,"27,26",,2026-08-12,2026-08-13,MULT3.SA
 yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,ODPV3.SA,"14,62",,2026-07-06,2026-07-07,ODPV3.SA
-yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,PCAR3.SA,"2,76",,2026-08-11,2026-08-12,PCAR3.SA
-yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,PETR3.SA,"46,53",,2026-08-11,2026-08-12,PETR3.SA
-yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,PETR4.SA,"41,66",,2026-08-11,2026-08-12,PETR4.SA
-yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,PRIO3.SA,"59,25",,2026-08-11,2026-08-12,PRIO3.SA
-yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,QUAL3.SA,"1,49",,2026-08-11,2026-08-12,QUAL3.SA
-yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,RADL3.SA,"18,28",,2026-08-11,2026-08-12,RADL3.SA
-yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,RECV3.SA,"10,40",,2026-08-11,2026-08-12,RECV3.SA
-yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,RENT3.SA,"34,71",,2026-08-11,2026-08-12,RENT3.SA
-yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,SANB11.SA,"29,52",,2026-08-11,2026-08-12,SANB11.SA
-yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,SBSP3.SA,"25,99",,2026-08-11,2026-08-12,SBSP3.SA
-yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,SLCE3.SA,"13,30",,2026-08-11,2026-08-12,SLCE3.SA
-yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,SMTO3.SA,"15,01",,2026-08-11,2026-08-12,SMTO3.SA
-yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,SUZB3.SA,"40,38",,2026-08-11,2026-08-12,SUZB3.SA
-yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,TAEE11.SA,"38,30",,2026-08-11,2026-08-12,TAEE11.SA
-yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,TEND3.SA,"32,40",,2026-08-11,2026-08-12,TEND3.SA
-yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,TIMS3.SA,"18,73",,2026-08-11,2026-08-12,TIMS3.SA
-yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,UGPA3.SA,"30,99",,2026-08-11,2026-08-12,UGPA3.SA
-yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,USIM5.SA,"6,62",,2026-08-11,2026-08-12,USIM5.SA
-yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,VALE3.SA,"74,40",,2026-08-11,2026-08-12,VALE3.SA
-yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,VBBR3.SA,"33,23",,2026-08-11,2026-08-12,VBBR3.SA
-yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,VIVT3.SA,"30,14",,2026-08-11,2026-08-12,VIVT3.SA
-yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,WEGE3.SA,"47,36",,2026-08-11,2026-08-12,WEGE3.SA
-yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,YDUQ3.SA,"7,52",,2026-08-11,2026-08-12,YDUQ3.SA
-yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,AAPL,"304,91",,2026-08-11,2026-08-12,AAPL
-yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,ABBV,"250,09",,2026-08-11,2026-08-12,ABBV
-yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,ADBE,"263,71",,2026-08-11,2026-08-12,ADBE
-yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,AMD,"474,32",,2026-08-11,2026-08-12,AMD
-yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,AMZN,"272,27",,2026-08-11,2026-08-12,AMZN
-yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,ASML,1.799,,2026-08-11,2026-08-12,ASML
-yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,BABA,"127,85",,2026-08-11,2026-08-12,BABA
-yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,BAC,"64,00",,2026-08-11,2026-08-12,BAC
-yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,COST,"944,32",,2026-08-11,2026-08-12,COST
-yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,CRM,"197,47",,2026-08-11,2026-08-12,CRM
-yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,CVX,"196,66",,2026-08-11,2026-08-12,CVX
-yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,DIS,"103,53",,2026-08-11,2026-08-12,DIS
-yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,GOOGL,"343,80",,2026-08-11,2026-08-12,GOOGL
-yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,HD,"354,48",,2026-08-11,2026-08-12,HD
-yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,INTC,"97,71",,2026-08-11,2026-08-12,INTC
-yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,JNJ,"259,80",,2026-08-11,2026-08-12,JNJ
-yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,JPM,"362,04",,2026-08-11,2026-08-12,JPM
-yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,KO,"86,48",,2026-08-11,2026-08-12,KO
-yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,LLY,1.215,,2026-08-11,2026-08-12,LLY
-yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,MA,"561,44",,2026-08-11,2026-08-12,MA
-yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,MCD,"274,15",,2026-08-11,2026-08-12,MCD
-yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,META,"599,12",,2026-08-11,2026-08-12,META
-yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,MRK,"130,42",,2026-08-11,2026-08-12,MRK
-yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,MSFT,"503,81",,2026-08-11,2026-08-12,MSFT
-yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,NFLX,"74,79",,2026-08-11,2026-08-12,NFLX
-yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,NKE,"41,32",,2026-08-11,2026-08-12,NKE
-yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,NVDA,"217,50",,2026-08-11,2026-08-12,NVDA
-yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,NVO,"47,17",,2026-08-11,2026-08-12,NVO
-yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,ORCL,"145,48",,2026-08-11,2026-08-12,ORCL
-yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,PEP,"138,41",,2026-08-11,2026-08-12,PEP
-yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,PFE,"26,62",,2026-08-11,2026-08-12,PFE
-yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,PG,"145,21",,2026-08-11,2026-08-12,PG
-yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,QCOM,"162,68",,2026-08-11,2026-08-12,QCOM
-yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,SBUX,"106,66",,2026-08-11,2026-08-12,SBUX
-yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,TSLA,"332,81",,2026-08-11,2026-08-12,TSLA
-yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,TSM,"422,06",,2026-08-11,2026-08-12,TSM
-yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,UNH,"402,19",,2026-08-11,2026-08-12,UNH
-yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,V,"362,82",,2026-08-11,2026-08-12,V
-yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,WMT,"113,26",,2026-08-11,2026-08-12,WMT
-yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,XOM,"159,80",,2026-08-11,2026-08-12,XOM
-yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,ARSBRL=X,"0,003220",,2026-08-12,2026-08-12,ARSBRL=X
-yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,AUDUSD=X,"0,7063",,2026-08-12,2026-08-12,AUDUSD=X
-yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,BRL=X,"5,19",,2026-08-12,2026-08-12,BRL=X
-yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,CHFBRL=X,"6,38",,2026-08-12,2026-08-12,CHFBRL=X
-yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,CLPBRL=X,"0,005624",,2026-08-12,2026-08-12,CLPBRL=X
-yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,CNYBRL=X,"0,7688",,2026-08-12,2026-08-12,CNYBRL=X
-yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,COPBRL=X,"0,001652",,2026-08-12,2026-08-12,COPBRL=X
+yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,PCAR3.SA,"2,76",,2026-08-12,2026-08-13,PCAR3.SA
+yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,PETR3.SA,"46,32",,2026-08-12,2026-08-13,PETR3.SA
+yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,PETR4.SA,"41,45",,2026-08-12,2026-08-13,PETR4.SA
+yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,PRIO3.SA,"59,14",,2026-08-12,2026-08-13,PRIO3.SA
+yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,QUAL3.SA,"1,50",,2026-08-12,2026-08-13,QUAL3.SA
+yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,RADL3.SA,"18,00",,2026-08-12,2026-08-13,RADL3.SA
+yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,RECV3.SA,"10,62",,2026-08-12,2026-08-13,RECV3.SA
+yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,RENT3.SA,"34,10",,2026-08-12,2026-08-13,RENT3.SA
+yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,SANB11.SA,"29,62",,2026-08-12,2026-08-13,SANB11.SA
+yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,SBSP3.SA,"26,12",,2026-08-12,2026-08-13,SBSP3.SA
+yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,SLCE3.SA,"13,23",,2026-08-12,2026-08-13,SLCE3.SA
+yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,SMTO3.SA,"14,78",,2026-08-12,2026-08-13,SMTO3.SA
+yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,SUZB3.SA,"41,45",,2026-08-12,2026-08-13,SUZB3.SA
+yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,TAEE11.SA,"37,70",,2026-08-12,2026-08-13,TAEE11.SA
+yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,TEND3.SA,"33,43",,2026-08-12,2026-08-13,TEND3.SA
+yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,TIMS3.SA,"18,75",,2026-08-12,2026-08-13,TIMS3.SA
+yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,UGPA3.SA,"30,49",,2026-08-12,2026-08-13,UGPA3.SA
+yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,USIM5.SA,"6,54",,2026-08-12,2026-08-13,USIM5.SA
+yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,VALE3.SA,"73,18",,2026-08-12,2026-08-13,VALE3.SA
+yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,VBBR3.SA,"33,04",,2026-08-12,2026-08-13,VBBR3.SA
+yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,VIVT3.SA,"29,93",,2026-08-12,2026-08-13,VIVT3.SA
+yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,WEGE3.SA,"47,64",,2026-08-12,2026-08-13,WEGE3.SA
+yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,YDUQ3.SA,"7,44",,2026-08-12,2026-08-13,YDUQ3.SA
+yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,AAPL,"302,25",,2026-08-12,2026-08-13,AAPL
+yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,ABBV,"248,76",,2026-08-12,2026-08-13,ABBV
+yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,ADBE,"258,75",,2026-08-12,2026-08-13,ADBE
+yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,AMD,"482,93",,2026-08-12,2026-08-13,AMD
+yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,AMZN,"267,28",,2026-08-12,2026-08-13,AMZN
+yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,ASML,1.810,,2026-08-12,2026-08-13,ASML
+yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,BABA,"125,22",,2026-08-12,2026-08-13,BABA
+yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,BAC,"64,81",,2026-08-12,2026-08-13,BAC
+yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,COST,"949,58",,2026-08-12,2026-08-13,COST
+yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,CRM,"193,32",,2026-08-12,2026-08-13,CRM
+yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,CVX,"196,60",,2026-08-12,2026-08-13,CVX
+yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,DIS,"103,22",,2026-08-12,2026-08-13,DIS
+yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,GOOGL,"343,54",,2026-08-12,2026-08-13,GOOGL
+yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,HD,"343,43",,2026-08-12,2026-08-13,HD
+yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,INTC,"100,95",,2026-08-12,2026-08-13,INTC
+yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,JNJ,"260,86",,2026-08-12,2026-08-13,JNJ
+yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,JPM,"365,18",,2026-08-12,2026-08-13,JPM
+yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,KO,"86,71",,2026-08-12,2026-08-13,KO
+yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,LLY,1.220,,2026-08-12,2026-08-13,LLY
+yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,MA,"559,73",,2026-08-12,2026-08-13,MA
+yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,MCD,"275,70",,2026-08-12,2026-08-13,MCD
+yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,META,"578,85",,2026-08-12,2026-08-13,META
+yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,MRK,"132,92",,2026-08-12,2026-08-13,MRK
+yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,MSFT,"492,43",,2026-08-12,2026-08-13,MSFT
+yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,NFLX,"74,21",,2026-08-12,2026-08-13,NFLX
+yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,NKE,"40,51",,2026-08-12,2026-08-13,NKE
+yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,NVDA,"224,09",,2026-08-12,2026-08-13,NVDA
+yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,NVO,"46,39",,2026-08-12,2026-08-13,NVO
+yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,ORCL,"153,28",,2026-08-12,2026-08-13,ORCL
+yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,PEP,"138,70",,2026-08-12,2026-08-13,PEP
+yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,PFE,"26,31",,2026-08-12,2026-08-13,PFE
+yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,PG,"144,08",,2026-08-12,2026-08-13,PG
+yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,QCOM,"163,07",,2026-08-12,2026-08-13,QCOM
+yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,SBUX,"108,49",,2026-08-12,2026-08-13,SBUX
+yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,TSLA,"327,51",,2026-08-12,2026-08-13,TSLA
+yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,TSM,"429,15",,2026-08-12,2026-08-13,TSM
+yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,UNH,"405,59",,2026-08-12,2026-08-13,UNH
+yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,V,"359,42",,2026-08-12,2026-08-13,V
+yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,WMT,"116,01",,2026-08-12,2026-08-13,WMT
+yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,XOM,"159,75",,2026-08-12,2026-08-13,XOM
+yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,ARSBRL=X,"0,003230",,2026-08-13,2026-08-13,ARSBRL=X
+yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,AUDUSD=X,"0,7060",,2026-08-13,2026-08-13,AUDUSD=X
+yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,BRL=X,"5,16",,2026-08-13,2026-08-13,BRL=X
+yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,CHFBRL=X,"6,36",,2026-08-13,2026-08-13,CHFBRL=X
+yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,CLPBRL=X,"0,005624",,2026-08-12,2026-08-13,CLPBRL=X
+yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,CNYBRL=X,"0,7654",,2026-08-13,2026-08-13,CNYBRL=X
+yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,COPBRL=X,"0,001642",,2026-08-13,2026-08-13,COPBRL=X
 yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,DX-Y.NYB,"101,36",,2026-06-26,2026-06-28,DX-Y.NYB
-yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,EURBRL=X,"5,98",,2026-08-12,2026-08-12,EURBRL=X
-yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,EURUSD=X,"1,15",,2026-08-12,2026-08-12,EURUSD=X
-yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,GBPBRL=X,"7,00",,2026-08-12,2026-08-12,GBPBRL=X
-yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,GBPUSD=X,"1,35",,2026-08-12,2026-08-12,GBPUSD=X
-yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,JPYBRL=X,"0,0324",,2026-08-12,2026-08-12,JPYBRL=X
-yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,MXNBRL=X,"0,3041",,2026-08-12,2026-08-12,MXNBRL=X
-yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,USDCAD=X,"1,39",,2026-08-12,2026-08-12,USDCAD=X
-yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,USDCHF=X,"0,8133",,2026-08-12,2026-08-12,USDCHF=X
-yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,USDCNY=X,"6,74",,2026-08-12,2026-08-12,USDCNY=X
-yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,USDINR=X,"95,32",,2026-08-12,2026-08-12,USDINR=X
-yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,USDJPY=X,"159,39",,2026-08-12,2026-08-12,USDJPY=X
-yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,USDMXN=X,"17,04",,2026-08-12,2026-08-12,USDMXN=X
+yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,EURBRL=X,"5,95",,2026-08-13,2026-08-13,EURBRL=X
+yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,EURUSD=X,"1,15",,2026-08-13,2026-08-13,EURUSD=X
+yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,GBPBRL=X,"6,96",,2026-08-13,2026-08-13,GBPBRL=X
+yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,GBPUSD=X,"1,35",,2026-08-13,2026-08-13,GBPUSD=X
+yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,JPYBRL=X,"0,0323",,2026-08-13,2026-08-13,JPYBRL=X
+yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,MXNBRL=X,"0,3021",,2026-08-13,2026-08-13,MXNBRL=X
+yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,USDCAD=X,"1,39",,2026-08-13,2026-08-13,USDCAD=X
+yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,USDCHF=X,"0,8123",,2026-08-13,2026-08-13,USDCHF=X
+yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,USDCNY=X,"6,73",,2026-08-13,2026-08-13,USDCNY=X
+yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,USDINR=X,"95,43",,2026-08-13,2026-08-13,USDINR=X
+yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,USDJPY=X,"159,34",,2026-08-13,2026-08-13,USDJPY=X
+yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,USDMXN=X,"17,05",,2026-08-13,2026-08-13,USDMXN=X
 yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,USDRUB=X,"78,80",,2026-06-27,2026-06-28,USDRUB=X
 yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,USDTRY=X,"46,55",,2026-06-27,2026-06-28,USDTRY=X
-yahoo_commodities.csv,Yahoo Commodities,Yahoo Finance,Commodities Globais,indicador,BZ=F,"88,91",,2026-08-11,2026-08-12,BZ=F
-yahoo_commodities.csv,Yahoo Commodities,Yahoo Finance,Commodities Globais,indicador,CC=F,5.543,,2026-08-11,2026-08-12,CC=F
-yahoo_commodities.csv,Yahoo Commodities,Yahoo Finance,Commodities Globais,indicador,CL=F,"83,20",,2026-08-11,2026-08-12,CL=F
-yahoo_commodities.csv,Yahoo Commodities,Yahoo Finance,Commodities Globais,indicador,CT=F,"83,09",,2026-08-11,2026-08-12,CT=F
-yahoo_commodities.csv,Yahoo Commodities,Yahoo Finance,Commodities Globais,indicador,GC=F,4.383,,2026-08-11,2026-08-12,GC=F
-yahoo_commodities.csv,Yahoo Commodities,Yahoo Finance,Commodities Globais,indicador,HG=F,"6,61",,2026-08-11,2026-08-12,HG=F
-yahoo_commodities.csv,Yahoo Commodities,Yahoo Finance,Commodities Globais,indicador,KC=F,"335,75",,2026-08-11,2026-08-12,KC=F
-yahoo_commodities.csv,Yahoo Commodities,Yahoo Finance,Commodities Globais,indicador,NG=F,"2,77",,2026-08-11,2026-08-12,NG=F
-yahoo_commodities.csv,Yahoo Commodities,Yahoo Finance,Commodities Globais,indicador,PA=F,1.366,,2026-08-11,2026-08-12,PA=F
-yahoo_commodities.csv,Yahoo Commodities,Yahoo Finance,Commodities Globais,indicador,PL=F,1.746,,2026-08-11,2026-08-12,PL=F
-yahoo_commodities.csv,Yahoo Commodities,Yahoo Finance,Commodities Globais,indicador,SB=F,"16,73",,2026-08-11,2026-08-12,SB=F
-yahoo_commodities.csv,Yahoo Commodities,Yahoo Finance,Commodities Globais,indicador,SI=F,"64,77",,2026-08-11,2026-08-12,SI=F
+yahoo_commodities.csv,Yahoo Commodities,Yahoo Finance,Commodities Globais,indicador,BZ=F,"88,98",,2026-08-12,2026-08-13,BZ=F
+yahoo_commodities.csv,Yahoo Commodities,Yahoo Finance,Commodities Globais,indicador,CC=F,5.619,,2026-08-12,2026-08-13,CC=F
+yahoo_commodities.csv,Yahoo Commodities,Yahoo Finance,Commodities Globais,indicador,CL=F,"83,27",,2026-08-12,2026-08-13,CL=F
+yahoo_commodities.csv,Yahoo Commodities,Yahoo Finance,Commodities Globais,indicador,CT=F,"83,21",,2026-08-12,2026-08-13,CT=F
+yahoo_commodities.csv,Yahoo Commodities,Yahoo Finance,Commodities Globais,indicador,GC=F,4.409,,2026-08-12,2026-08-13,GC=F
+yahoo_commodities.csv,Yahoo Commodities,Yahoo Finance,Commodities Globais,indicador,HG=F,"6,60",,2026-08-12,2026-08-13,HG=F
+yahoo_commodities.csv,Yahoo Commodities,Yahoo Finance,Commodities Globais,indicador,KC=F,"340,10",,2026-08-12,2026-08-13,KC=F
+yahoo_commodities.csv,Yahoo Commodities,Yahoo Finance,Commodities Globais,indicador,NG=F,"2,80",,2026-08-12,2026-08-13,NG=F
+yahoo_commodities.csv,Yahoo Commodities,Yahoo Finance,Commodities Globais,indicador,PA=F,1.370,,2026-08-12,2026-08-13,PA=F
+yahoo_commodities.csv,Yahoo Commodities,Yahoo Finance,Commodities Globais,indicador,PL=F,1.761,,2026-08-12,2026-08-13,PL=F
+yahoo_commodities.csv,Yahoo Commodities,Yahoo Finance,Commodities Globais,indicador,SB=F,"16,42",,2026-08-12,2026-08-13,SB=F
+yahoo_commodities.csv,Yahoo Commodities,Yahoo Finance,Commodities Globais,indicador,SI=F,"65,56",,2026-08-12,2026-08-13,SI=F
 yahoo_commodities.csv,Yahoo Commodities,Yahoo Finance,Commodities Globais,indicador,TIO=F,"100,33",,2026-06-26,2026-06-28,TIO=F
-yahoo_commodities.csv,Yahoo Commodities,Yahoo Finance,Commodities Globais,indicador,ZC=F,"436,75",,2026-08-11,2026-08-12,ZC=F
-yahoo_commodities.csv,Yahoo Commodities,Yahoo Finance,Commodities Globais,indicador,ZO=F,"322,75",,2026-08-11,2026-08-12,ZO=F
-yahoo_commodities.csv,Yahoo Commodities,Yahoo Finance,Commodities Globais,indicador,ZR=F,"13,92",,2026-08-11,2026-08-12,ZR=F
-yahoo_commodities.csv,Yahoo Commodities,Yahoo Finance,Commodities Globais,indicador,ZS=F,1.148,,2026-08-11,2026-08-12,ZS=F
-yahoo_commodities.csv,Yahoo Commodities,Yahoo Finance,Commodities Globais,indicador,ZW=F,"630,25",,2026-08-11,2026-08-12,ZW=F
-yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,ADA-USD,"0,1869",,2026-08-12,2026-08-12,ADA-USD
+yahoo_commodities.csv,Yahoo Commodities,Yahoo Finance,Commodities Globais,indicador,ZC=F,"457,00",,2026-08-12,2026-08-13,ZC=F
+yahoo_commodities.csv,Yahoo Commodities,Yahoo Finance,Commodities Globais,indicador,ZO=F,"323,25",,2026-08-12,2026-08-13,ZO=F
+yahoo_commodities.csv,Yahoo Commodities,Yahoo Finance,Commodities Globais,indicador,ZR=F,"13,91",,2026-08-12,2026-08-13,ZR=F
+yahoo_commodities.csv,Yahoo Commodities,Yahoo Finance,Commodities Globais,indicador,ZS=F,1.165,,2026-08-12,2026-08-13,ZS=F
+yahoo_commodities.csv,Yahoo Commodities,Yahoo Finance,Commodities Globais,indicador,ZW=F,"652,75",,2026-08-12,2026-08-13,ZW=F
+yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,ADA-USD,"0,1852",,2026-08-13,2026-08-13,ADA-USD
 yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,APT-USD,"0,000131",,2026-08-01,2026-08-01,APT-USD
 yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,ATOM-USD,"1,57",,2026-06-28,2026-06-28,ATOM-USD
-yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,AVAX-USD,"6,32",,2026-08-12,2026-08-12,AVAX-USD
-yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,BNB-USD,"616,50",,2026-08-12,2026-08-12,BNB-USD
-yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,BTC-USD,63.552,,2026-08-12,2026-08-12,BTC-USD
-yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,DOGE-USD,"0,0718",,2026-08-12,2026-08-12,DOGE-USD
-yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,DOT-USD,"0,7896",,2026-08-12,2026-08-12,DOT-USD
+yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,AVAX-USD,"6,48",,2026-08-13,2026-08-13,AVAX-USD
+yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,BNB-USD,"610,56",,2026-08-13,2026-08-13,BNB-USD
+yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,BTC-USD,63.575,,2026-08-13,2026-08-13,BTC-USD
+yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,DOGE-USD,"0,0702",,2026-08-13,2026-08-13,DOGE-USD
+yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,DOT-USD,"0,7718",,2026-08-13,2026-08-13,DOT-USD
 yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,ETC-USD,"7,03",,2026-06-28,2026-06-28,ETC-USD
-yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,ETH-USD,1.881,,2026-08-12,2026-08-12,ETH-USD
+yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,ETH-USD,1.882,,2026-08-13,2026-08-13,ETH-USD
 yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,FIL-USD,"0,7250",,2026-06-28,2026-06-28,FIL-USD
 yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,HBAR-USD,"0,0713",,2026-06-28,2026-06-28,HBAR-USD
-yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,ICP-USD,"2,24",,2026-08-12,2026-08-12,ICP-USD
+yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,ICP-USD,"2,18",,2026-08-13,2026-08-13,ICP-USD
 yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,IMX-USD,"0,004143",,2026-08-01,2026-08-01,IMX-USD
-yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,LINK-USD,"8,77",,2026-08-12,2026-08-12,LINK-USD
-yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,LTC-USD,"45,47",,2026-08-12,2026-08-12,LTC-USD
-yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,NEAR-USD,"1,62",,2026-08-12,2026-08-12,NEAR-USD
-yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,OP-USD,"0,0911",,2026-08-12,2026-08-12,OP-USD
-yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,SHIB-USD,"0,000004",,2026-08-12,2026-08-12,SHIB-USD
-yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,SOL-USD,"76,20",,2026-08-12,2026-08-12,SOL-USD
-yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,TRX-USD,"0,3348",,2026-08-12,2026-08-12,TRX-USD
+yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,LINK-USD,"8,70",,2026-08-13,2026-08-13,LINK-USD
+yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,LTC-USD,"44,87",,2026-08-13,2026-08-13,LTC-USD
+yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,NEAR-USD,"1,66",,2026-08-13,2026-08-13,NEAR-USD
+yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,OP-USD,"0,0866",,2026-08-13,2026-08-13,OP-USD
+yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,SHIB-USD,"0,000005",,2026-08-13,2026-08-13,SHIB-USD
+yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,SOL-USD,"75,83",,2026-08-13,2026-08-13,SOL-USD
+yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,TRX-USD,"0,3335",,2026-08-13,2026-08-13,TRX-USD
 yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,UNI-USD,"0,000163",,2026-08-01,2026-08-01,UNI-USD
-yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,XLM-USD,"0,1619",,2026-08-12,2026-08-12,XLM-USD
-yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,XRP-USD,"1,02",,2026-08-12,2026-08-12,XRP-USD
-yahoo_etfs.csv,Yahoo ETFs,Yahoo Finance,ETFs & Setoriais,indicador,BND,"72,21",,2026-08-11,2026-08-12,BND
-yahoo_etfs.csv,Yahoo ETFs,Yahoo Finance,ETFs & Setoriais,indicador,BOVA11.SA,"165,05",,2026-08-11,2026-08-12,BOVA11.SA
-yahoo_etfs.csv,Yahoo ETFs,Yahoo Finance,ETFs & Setoriais,indicador,DIA,"537,28",,2026-08-11,2026-08-12,DIA
-yahoo_etfs.csv,Yahoo ETFs,Yahoo Finance,ETFs & Setoriais,indicador,EEM,"65,43",,2026-08-11,2026-08-12,EEM
-yahoo_etfs.csv,Yahoo ETFs,Yahoo Finance,ETFs & Setoriais,indicador,EWZ,"33,98",,2026-08-11,2026-08-12,EWZ
-yahoo_etfs.csv,Yahoo ETFs,Yahoo Finance,ETFs & Setoriais,indicador,HYG,"79,51",,2026-08-11,2026-08-12,HYG
-yahoo_etfs.csv,Yahoo ETFs,Yahoo Finance,ETFs & Setoriais,indicador,IVVB11.SA,"450,35",,2026-08-11,2026-08-12,IVVB11.SA
-yahoo_etfs.csv,Yahoo ETFs,Yahoo Finance,ETFs & Setoriais,indicador,IWM,"300,99",,2026-08-11,2026-08-12,IWM
-yahoo_etfs.csv,Yahoo ETFs,Yahoo Finance,ETFs & Setoriais,indicador,LQD,"105,99",,2026-08-11,2026-08-12,LQD
-yahoo_etfs.csv,Yahoo ETFs,Yahoo Finance,ETFs & Setoriais,indicador,QQQ,"718,45",,2026-08-11,2026-08-12,QQQ
-yahoo_etfs.csv,Yahoo ETFs,Yahoo Finance,ETFs & Setoriais,indicador,SMAL11.SA,"101,20",,2026-08-11,2026-08-12,SMAL11.SA
-yahoo_etfs.csv,Yahoo ETFs,Yahoo Finance,ETFs & Setoriais,indicador,SMLL.SA,2.051,,2026-08-11,2026-08-12,SMLL.SA
-yahoo_etfs.csv,Yahoo ETFs,Yahoo Finance,ETFs & Setoriais,indicador,SPY,"770,56",,2026-08-11,2026-08-12,SPY
-yahoo_etfs.csv,Yahoo ETFs,Yahoo Finance,ETFs & Setoriais,indicador,VGK,"92,30",,2026-08-11,2026-08-12,VGK
-yahoo_etfs.csv,Yahoo ETFs,Yahoo Finance,ETFs & Setoriais,indicador,VWO,"60,12",,2026-08-11,2026-08-12,VWO
-yahoo_etfs.csv,Yahoo ETFs,Yahoo Finance,ETFs & Setoriais,indicador,XLE,"60,93",,2026-08-11,2026-08-12,XLE
-yahoo_etfs.csv,Yahoo ETFs,Yahoo Finance,ETFs & Setoriais,indicador,XLF,"57,80",,2026-08-11,2026-08-12,XLF
-yahoo_etfs.csv,Yahoo ETFs,Yahoo Finance,ETFs & Setoriais,indicador,XLK,"186,09",,2026-08-11,2026-08-12,XLK
-yahoo_fiis_fiagros.csv,Yahoo FIIs e Fiagros,Yahoo Finance,FIIs e Fiagros,indicador,ALZR11.SA,"9,87",,2026-08-11,2026-08-12,ALZR11.SA
-yahoo_fiis_fiagros.csv,Yahoo FIIs e Fiagros,Yahoo Finance,FIIs e Fiagros,indicador,BRCO11.SA,"111,90",,2026-08-11,2026-08-12,BRCO11.SA
-yahoo_fiis_fiagros.csv,Yahoo FIIs e Fiagros,Yahoo Finance,FIIs e Fiagros,indicador,BTLG11.SA,"100,38",,2026-08-11,2026-08-12,BTLG11.SA
-yahoo_fiis_fiagros.csv,Yahoo FIIs e Fiagros,Yahoo Finance,FIIs e Fiagros,indicador,CPTR11.SA,"8,10",,2026-08-11,2026-08-12,CPTR11.SA
-yahoo_fiis_fiagros.csv,Yahoo FIIs e Fiagros,Yahoo Finance,FIIs e Fiagros,indicador,FGAA11.SA,"7,86",,2026-08-11,2026-08-12,FGAA11.SA
-yahoo_fiis_fiagros.csv,Yahoo FIIs e Fiagros,Yahoo Finance,FIIs e Fiagros,indicador,HGLG11.SA,"145,55",,2026-08-11,2026-08-12,HGLG11.SA
-yahoo_fiis_fiagros.csv,Yahoo FIIs e Fiagros,Yahoo Finance,FIIs e Fiagros,indicador,HGRU11.SA,"116,80",,2026-08-11,2026-08-12,HGRU11.SA
-yahoo_fiis_fiagros.csv,Yahoo FIIs e Fiagros,Yahoo Finance,FIIs e Fiagros,indicador,IFIX.SA,3.722,,2026-08-11,2026-08-12,IFIX.SA
-yahoo_fiis_fiagros.csv,Yahoo FIIs e Fiagros,Yahoo Finance,FIIs e Fiagros,indicador,KNCA11.SA,"88,35",,2026-08-11,2026-08-12,KNCA11.SA
-yahoo_fiis_fiagros.csv,Yahoo FIIs e Fiagros,Yahoo Finance,FIIs e Fiagros,indicador,KNCR11.SA,"105,60",,2026-08-11,2026-08-12,KNCR11.SA
-yahoo_fiis_fiagros.csv,Yahoo FIIs e Fiagros,Yahoo Finance,FIIs e Fiagros,indicador,KNIP11.SA,"89,40",,2026-08-11,2026-08-12,KNIP11.SA
-yahoo_fiis_fiagros.csv,Yahoo FIIs e Fiagros,Yahoo Finance,FIIs e Fiagros,indicador,MXRF11.SA,"9,35",,2026-08-11,2026-08-12,MXRF11.SA
-yahoo_fiis_fiagros.csv,Yahoo FIIs e Fiagros,Yahoo Finance,FIIs e Fiagros,indicador,PVBI11.SA,"65,34",,2026-08-11,2026-08-12,PVBI11.SA
-yahoo_fiis_fiagros.csv,Yahoo FIIs e Fiagros,Yahoo Finance,FIIs e Fiagros,indicador,RURA11.SA,"8,04",,2026-08-11,2026-08-12,RURA11.SA
-yahoo_fiis_fiagros.csv,Yahoo FIIs e Fiagros,Yahoo Finance,FIIs e Fiagros,indicador,VGIA11.SA,"8,31",,2026-08-11,2026-08-12,VGIA11.SA
-yahoo_fiis_fiagros.csv,Yahoo FIIs e Fiagros,Yahoo Finance,FIIs e Fiagros,indicador,VISC11.SA,"103,24",,2026-08-11,2026-08-12,VISC11.SA
-yahoo_fiis_fiagros.csv,Yahoo FIIs e Fiagros,Yahoo Finance,FIIs e Fiagros,indicador,XPML11.SA,"103,61",,2026-08-11,2026-08-12,XPML11.SA
+yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,XLM-USD,"0,1608",,2026-08-13,2026-08-13,XLM-USD
+yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,XRP-USD,"1,01",,2026-08-13,2026-08-13,XRP-USD
+yahoo_etfs.csv,Yahoo ETFs,Yahoo Finance,ETFs & Setoriais,indicador,BND,"72,28",,2026-08-12,2026-08-13,BND
+yahoo_etfs.csv,Yahoo ETFs,Yahoo Finance,ETFs & Setoriais,indicador,BOVA11.SA,"165,05",,2026-08-12,2026-08-13,BOVA11.SA
+yahoo_etfs.csv,Yahoo ETFs,Yahoo Finance,ETFs & Setoriais,indicador,DIA,"537,15",,2026-08-12,2026-08-13,DIA
+yahoo_etfs.csv,Yahoo ETFs,Yahoo Finance,ETFs & Setoriais,indicador,EEM,"66,46",,2026-08-12,2026-08-13,EEM
+yahoo_etfs.csv,Yahoo ETFs,Yahoo Finance,ETFs & Setoriais,indicador,EWZ,"33,86",,2026-08-12,2026-08-13,EWZ
+yahoo_etfs.csv,Yahoo ETFs,Yahoo Finance,ETFs & Setoriais,indicador,HYG,"79,61",,2026-08-12,2026-08-13,HYG
+yahoo_etfs.csv,Yahoo ETFs,Yahoo Finance,ETFs & Setoriais,indicador,IVVB11.SA,"450,35",,2026-08-12,2026-08-13,IVVB11.SA
+yahoo_etfs.csv,Yahoo ETFs,Yahoo Finance,ETFs & Setoriais,indicador,IWM,"302,71",,2026-08-12,2026-08-13,IWM
+yahoo_etfs.csv,Yahoo ETFs,Yahoo Finance,ETFs & Setoriais,indicador,LQD,"106,12",,2026-08-12,2026-08-13,LQD
+yahoo_etfs.csv,Yahoo ETFs,Yahoo Finance,ETFs & Setoriais,indicador,QQQ,"723,70",,2026-08-12,2026-08-13,QQQ
+yahoo_etfs.csv,Yahoo ETFs,Yahoo Finance,ETFs & Setoriais,indicador,SMAL11.SA,"101,20",,2026-08-12,2026-08-13,SMAL11.SA
+yahoo_etfs.csv,Yahoo ETFs,Yahoo Finance,ETFs & Setoriais,indicador,SMLL.SA,2.046,,2026-08-12,2026-08-13,SMLL.SA
+yahoo_etfs.csv,Yahoo ETFs,Yahoo Finance,ETFs & Setoriais,indicador,SPY,"772,49",,2026-08-12,2026-08-13,SPY
+yahoo_etfs.csv,Yahoo ETFs,Yahoo Finance,ETFs & Setoriais,indicador,VGK,"92,25",,2026-08-12,2026-08-13,VGK
+yahoo_etfs.csv,Yahoo ETFs,Yahoo Finance,ETFs & Setoriais,indicador,VWO,"60,41",,2026-08-12,2026-08-13,VWO
+yahoo_etfs.csv,Yahoo ETFs,Yahoo Finance,ETFs & Setoriais,indicador,XLE,"61,03",,2026-08-12,2026-08-13,XLE
+yahoo_etfs.csv,Yahoo ETFs,Yahoo Finance,ETFs & Setoriais,indicador,XLF,"57,92",,2026-08-12,2026-08-13,XLF
+yahoo_etfs.csv,Yahoo ETFs,Yahoo Finance,ETFs & Setoriais,indicador,XLK,"188,86",,2026-08-12,2026-08-13,XLK
+yahoo_fiis_fiagros.csv,Yahoo FIIs e Fiagros,Yahoo Finance,FIIs e Fiagros,indicador,ALZR11.SA,"9,86",,2026-08-12,2026-08-13,ALZR11.SA
+yahoo_fiis_fiagros.csv,Yahoo FIIs e Fiagros,Yahoo Finance,FIIs e Fiagros,indicador,BRCO11.SA,"111,86",,2026-08-12,2026-08-13,BRCO11.SA
+yahoo_fiis_fiagros.csv,Yahoo FIIs e Fiagros,Yahoo Finance,FIIs e Fiagros,indicador,BTLG11.SA,"100,05",,2026-08-12,2026-08-13,BTLG11.SA
+yahoo_fiis_fiagros.csv,Yahoo FIIs e Fiagros,Yahoo Finance,FIIs e Fiagros,indicador,CPTR11.SA,"7,84",,2026-08-12,2026-08-13,CPTR11.SA
+yahoo_fiis_fiagros.csv,Yahoo FIIs e Fiagros,Yahoo Finance,FIIs e Fiagros,indicador,FGAA11.SA,"7,83",,2026-08-12,2026-08-13,FGAA11.SA
+yahoo_fiis_fiagros.csv,Yahoo FIIs e Fiagros,Yahoo Finance,FIIs e Fiagros,indicador,HGLG11.SA,"145,98",,2026-08-12,2026-08-13,HGLG11.SA
+yahoo_fiis_fiagros.csv,Yahoo FIIs e Fiagros,Yahoo Finance,FIIs e Fiagros,indicador,HGRU11.SA,"116,20",,2026-08-12,2026-08-13,HGRU11.SA
+yahoo_fiis_fiagros.csv,Yahoo FIIs e Fiagros,Yahoo Finance,FIIs e Fiagros,indicador,IFIX.SA,3.715,,2026-08-12,2026-08-13,IFIX.SA
+yahoo_fiis_fiagros.csv,Yahoo FIIs e Fiagros,Yahoo Finance,FIIs e Fiagros,indicador,KNCA11.SA,"87,75",,2026-08-12,2026-08-13,KNCA11.SA
+yahoo_fiis_fiagros.csv,Yahoo FIIs e Fiagros,Yahoo Finance,FIIs e Fiagros,indicador,KNCR11.SA,"105,71",,2026-08-12,2026-08-13,KNCR11.SA
+yahoo_fiis_fiagros.csv,Yahoo FIIs e Fiagros,Yahoo Finance,FIIs e Fiagros,indicador,KNIP11.SA,"88,99",,2026-08-12,2026-08-13,KNIP11.SA
+yahoo_fiis_fiagros.csv,Yahoo FIIs e Fiagros,Yahoo Finance,FIIs e Fiagros,indicador,MXRF11.SA,"9,33",,2026-08-12,2026-08-13,MXRF11.SA
+yahoo_fiis_fiagros.csv,Yahoo FIIs e Fiagros,Yahoo Finance,FIIs e Fiagros,indicador,PVBI11.SA,"66,31",,2026-08-12,2026-08-13,PVBI11.SA
+yahoo_fiis_fiagros.csv,Yahoo FIIs e Fiagros,Yahoo Finance,FIIs e Fiagros,indicador,RURA11.SA,"8,05",,2026-08-12,2026-08-13,RURA11.SA
+yahoo_fiis_fiagros.csv,Yahoo FIIs e Fiagros,Yahoo Finance,FIIs e Fiagros,indicador,VGIA11.SA,"8,30",,2026-08-12,2026-08-13,VGIA11.SA
+yahoo_fiis_fiagros.csv,Yahoo FIIs e Fiagros,Yahoo Finance,FIIs e Fiagros,indicador,VISC11.SA,"103,03",,2026-08-12,2026-08-13,VISC11.SA
+yahoo_fiis_fiagros.csv,Yahoo FIIs e Fiagros,Yahoo Finance,FIIs e Fiagros,indicador,XPML11.SA,"103,11",,2026-08-12,2026-08-13,XPML11.SA
 yahoo_indices_globais.csv,Yahoo Índices Globais,Yahoo Finance,Índices de Ações Globais,indicador,000001.SS,4.027,,2026-06-26,2026-06-28,000001.SS
-yahoo_indices_globais.csv,Yahoo Índices Globais,Yahoo Finance,Índices de Ações Globais,indicador,^AXJO,9.209,,2026-08-12,2026-08-12,^AXJO
+yahoo_indices_globais.csv,Yahoo Índices Globais,Yahoo Finance,Índices de Ações Globais,indicador,^AXJO,9.188,,2026-08-13,2026-08-13,^AXJO
 yahoo_indices_globais.csv,Yahoo Índices Globais,Yahoo Finance,Índices de Ações Globais,indicador,^BSESN,77.100,,2026-06-26,2026-06-28,^BSESN
-yahoo_indices_globais.csv,Yahoo Índices Globais,Yahoo Finance,Índices de Ações Globais,indicador,^BVSP,167.875,,2026-08-11,2026-08-12,^BVSP
-yahoo_indices_globais.csv,Yahoo Índices Globais,Yahoo Finance,Índices de Ações Globais,indicador,^DJI,53.792,,2026-08-11,2026-08-12,^DJI
-yahoo_indices_globais.csv,Yahoo Índices Globais,Yahoo Finance,Índices de Ações Globais,indicador,^FCHI,8.715,,2026-08-11,2026-08-12,^FCHI
-yahoo_indices_globais.csv,Yahoo Índices Globais,Yahoo Finance,Índices de Ações Globais,indicador,^FTSE,10.844,,2026-08-11,2026-08-12,^FTSE
-yahoo_indices_globais.csv,Yahoo Índices Globais,Yahoo Finance,Índices de Ações Globais,indicador,^GDAXI,26.391,,2026-08-11,2026-08-12,^GDAXI
-yahoo_indices_globais.csv,Yahoo Índices Globais,Yahoo Finance,Índices de Ações Globais,indicador,^GSPC,7.728,,2026-08-11,2026-08-12,^GSPC
-yahoo_indices_globais.csv,Yahoo Índices Globais,Yahoo Finance,Índices de Ações Globais,indicador,^HSI,25.440,,2026-08-12,2026-08-12,^HSI
-yahoo_indices_globais.csv,Yahoo Índices Globais,Yahoo Finance,Índices de Ações Globais,indicador,^IPSA,10.888,,2026-07-17,2026-08-12,^IPSA
-yahoo_indices_globais.csv,Yahoo Índices Globais,Yahoo Finance,Índices de Ações Globais,indicador,^IXIC,26.445,,2026-08-11,2026-08-12,^IXIC
-yahoo_indices_globais.csv,Yahoo Índices Globais,Yahoo Finance,Índices de Ações Globais,indicador,^JKSE,6.374,,2026-08-12,2026-08-12,^JKSE
-yahoo_indices_globais.csv,Yahoo Índices Globais,Yahoo Finance,Índices de Ações Globais,indicador,^KLSE,1.742,,2026-08-12,2026-08-12,^KLSE
-yahoo_indices_globais.csv,Yahoo Índices Globais,Yahoo Finance,Índices de Ações Globais,indicador,^KS11,6.579,,2026-08-12,2026-08-12,^KS11
-yahoo_indices_globais.csv,Yahoo Índices Globais,Yahoo Finance,Índices de Ações Globais,indicador,^MERV,3.022.485,,2026-08-11,2026-08-12,^MERV
-yahoo_indices_globais.csv,Yahoo Índices Globais,Yahoo Finance,Índices de Ações Globais,indicador,^MXX,65.565,,2026-08-11,2026-08-12,^MXX
-yahoo_indices_globais.csv,Yahoo Índices Globais,Yahoo Finance,Índices de Ações Globais,indicador,^N225,67.524,,2026-08-12,2026-08-12,^N225
+yahoo_indices_globais.csv,Yahoo Índices Globais,Yahoo Finance,Índices de Ações Globais,indicador,^BVSP,167.491,,2026-08-12,2026-08-13,^BVSP
+yahoo_indices_globais.csv,Yahoo Índices Globais,Yahoo Finance,Índices de Ações Globais,indicador,^DJI,53.770,,2026-08-12,2026-08-13,^DJI
+yahoo_indices_globais.csv,Yahoo Índices Globais,Yahoo Finance,Índices de Ações Globais,indicador,^FCHI,8.675,,2026-08-12,2026-08-13,^FCHI
+yahoo_indices_globais.csv,Yahoo Índices Globais,Yahoo Finance,Índices de Ações Globais,indicador,^FTSE,10.833,,2026-08-12,2026-08-13,^FTSE
+yahoo_indices_globais.csv,Yahoo Índices Globais,Yahoo Finance,Índices de Ações Globais,indicador,^GDAXI,26.331,,2026-08-12,2026-08-13,^GDAXI
+yahoo_indices_globais.csv,Yahoo Índices Globais,Yahoo Finance,Índices de Ações Globais,indicador,^GSPC,7.748,,2026-08-12,2026-08-13,^GSPC
+yahoo_indices_globais.csv,Yahoo Índices Globais,Yahoo Finance,Índices de Ações Globais,indicador,^HSI,25.397,,2026-08-13,2026-08-13,^HSI
+yahoo_indices_globais.csv,Yahoo Índices Globais,Yahoo Finance,Índices de Ações Globais,indicador,^IPSA,10.888,,2026-07-17,2026-08-13,^IPSA
+yahoo_indices_globais.csv,Yahoo Índices Globais,Yahoo Finance,Índices de Ações Globais,indicador,^IXIC,26.588,,2026-08-12,2026-08-13,^IXIC
+yahoo_indices_globais.csv,Yahoo Índices Globais,Yahoo Finance,Índices de Ações Globais,indicador,^JKSE,6.302,,2026-08-13,2026-08-13,^JKSE
+yahoo_indices_globais.csv,Yahoo Índices Globais,Yahoo Finance,Índices de Ações Globais,indicador,^KLSE,1.735,,2026-08-13,2026-08-13,^KLSE
+yahoo_indices_globais.csv,Yahoo Índices Globais,Yahoo Finance,Índices de Ações Globais,indicador,^KS11,6.813,,2026-08-13,2026-08-13,^KS11
+yahoo_indices_globais.csv,Yahoo Índices Globais,Yahoo Finance,Índices de Ações Globais,indicador,^MERV,2.999.524,,2026-08-12,2026-08-13,^MERV
+yahoo_indices_globais.csv,Yahoo Índices Globais,Yahoo Finance,Índices de Ações Globais,indicador,^MXX,65.756,,2026-08-12,2026-08-13,^MXX
+yahoo_indices_globais.csv,Yahoo Índices Globais,Yahoo Finance,Índices de Ações Globais,indicador,^N225,68.309,,2026-08-13,2026-08-13,^N225
 yahoo_indices_globais.csv,Yahoo Índices Globais,Yahoo Finance,Índices de Ações Globais,indicador,^NYA,23.689,,2026-06-26,2026-06-28,^NYA
 yahoo_indices_globais.csv,Yahoo Índices Globais,Yahoo Finance,Índices de Ações Globais,indicador,^RUT,3.010,,2026-06-26,2026-06-28,^RUT
-yahoo_indices_globais.csv,Yahoo Índices Globais,Yahoo Finance,Índices de Ações Globais,indicador,^STI,5.721,,2026-08-12,2026-08-12,^STI
+yahoo_indices_globais.csv,Yahoo Índices Globais,Yahoo Finance,Índices de Ações Globais,indicador,^STI,5.720,,2026-08-13,2026-08-13,^STI
 yahoo_indices_globais.csv,Yahoo Índices Globais,Yahoo Finance,Índices de Ações Globais,indicador,^STOXX50E,6.222,,2026-06-26,2026-06-28,^STOXX50E
-yahoo_indices_globais.csv,Yahoo Índices Globais,Yahoo Finance,Índices de Ações Globais,indicador,^TWII,45.518,,2026-08-12,2026-08-12,^TWII
-yahoo_indices_globais.csv,Yahoo Índices Globais,Yahoo Finance,Índices de Ações Globais,indicador,^VIX,"15,28",,2026-08-11,2026-08-12,^VIX
-yahoo_renda_fixa.csv,Yahoo Renda Fixa,Yahoo Finance,Renda Fixa & Treasuries,indicador,^FVX,"4,39",,2026-08-11,2026-08-12,^FVX
-yahoo_renda_fixa.csv,Yahoo Renda Fixa,Yahoo Finance,Renda Fixa & Treasuries,indicador,^IRX,"3,73",,2026-08-11,2026-08-12,^IRX
-yahoo_renda_fixa.csv,Yahoo Renda Fixa,Yahoo Finance,Renda Fixa & Treasuries,indicador,^TNX,"4,68",,2026-08-11,2026-08-12,^TNX
-yahoo_renda_fixa.csv,Yahoo Renda Fixa,Yahoo Finance,Renda Fixa & Treasuries,indicador,^TYX,"5,24",,2026-08-11,2026-08-12,^TYX
+yahoo_indices_globais.csv,Yahoo Índices Globais,Yahoo Finance,Índices de Ações Globais,indicador,^TWII,46.021,,2026-08-13,2026-08-13,^TWII
+yahoo_indices_globais.csv,Yahoo Índices Globais,Yahoo Finance,Índices de Ações Globais,indicador,^VIX,"14,55",,2026-08-12,2026-08-13,^VIX
+yahoo_renda_fixa.csv,Yahoo Renda Fixa,Yahoo Finance,Renda Fixa & Treasuries,indicador,^FVX,"4,38",,2026-08-12,2026-08-13,^FVX
+yahoo_renda_fixa.csv,Yahoo Renda Fixa,Yahoo Finance,Renda Fixa & Treasuries,indicador,^IRX,"3,71",,2026-08-12,2026-08-13,^IRX
+yahoo_renda_fixa.csv,Yahoo Renda Fixa,Yahoo Finance,Renda Fixa & Treasuries,indicador,^TNX,"4,68",,2026-08-12,2026-08-13,^TNX
+yahoo_renda_fixa.csv,Yahoo Renda Fixa,Yahoo Finance,Renda Fixa & Treasuries,indicador,^TYX,"5,25",,2026-08-12,2026-08-13,^TYX
