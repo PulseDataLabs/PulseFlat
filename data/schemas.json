@@ -167,7 +167,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-13"
+        "example": "2026-08-14"
       },
       {
         "name": "tp_fundo_classe",
@@ -1699,7 +1699,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-13"
+        "example": "2026-08-14"
       },
       {
         "name": "setor_economico",
@@ -1940,7 +1940,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-13"
+        "example": "2026-08-14"
       },
       {
         "name": "categoria_etf",
@@ -2017,7 +2017,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-13"
+        "example": "2026-08-14"
       },
       {
         "name": "codigo_fundo",
@@ -2089,7 +2089,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-13"
+        "example": "2026-08-14"
       },
       {
         "name": "tipo_fundo",
@@ -2288,7 +2288,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-13"
+        "example": "2026-08-14"
       },
       {
         "name": "data_geracao",
@@ -2525,7 +2525,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-13"
+        "example": "2026-08-14"
       },
       {
         "name": "codigo_emissor",
@@ -2594,7 +2594,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-13"
+        "example": "2026-08-14"
       },
       {
         "name": "codigo_ativo",
@@ -2907,7 +2907,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-13"
+        "example": "2026-08-14"
       },
       {
         "name": "data_base",
@@ -2974,7 +2974,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-13"
+        "example": "2026-08-14"
       },
       {
         "name": "auditor",
@@ -3221,7 +3221,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-13"
+        "example": "2026-08-14"
       },
       {
         "name": "data_referencia",
@@ -3253,7 +3253,7 @@
       {
         "name": "id_registro_classe",
         "type": "int",
-        "example": "34435"
+        "example": "34445"
       },
       {
         "name": "cnpj_classe",
@@ -3398,7 +3398,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-13"
+        "example": "2026-08-14"
       },
       {
         "name": "cnpj_fundo",
@@ -3910,7 +3910,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-13"
+        "example": "2026-08-14"
       }
     ]
   },
@@ -3922,7 +3922,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-13"
+        "example": "2026-08-14"
       },
       {
         "name": "serie_id",
@@ -3959,7 +3959,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-13"
+        "example": "2026-08-14"
       },
       {
         "name": "data_referencia",
@@ -3991,7 +3991,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-13"
+        "example": "2026-08-14"
       },
       {
         "name": "data_referencia",
@@ -4023,7 +4023,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-13"
+        "example": "2026-08-14"
       },
       {
         "name": "data_referencia",
@@ -4055,7 +4055,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-13"
+        "example": "2026-08-14"
       },
       {
         "name": "data_referencia",
@@ -4169,7 +4169,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-13"
+        "example": "2026-08-14"
       },
       {
         "name": "data_referencia",
@@ -4201,7 +4201,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-13"
+        "example": "2026-08-14"
       },
       {
         "name": "data_referencia",
@@ -4233,7 +4233,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-13"
+        "example": "2026-08-14"
       },
       {
         "name": "data_referencia",
@@ -4265,7 +4265,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-13"
+        "example": "2026-08-14"
       },
       {
         "name": "data_referencia",
@@ -4297,7 +4297,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-13"
+        "example": "2026-08-14"
       },
       {
         "name": "codigo_ativo",
@@ -4356,7 +4356,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-13"
+        "example": "2026-08-14"
       },
       {
         "name": "codigo_serie",
@@ -4452,7 +4452,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-13"
+        "example": "2026-08-14"
       },
       {
         "name": "name",
@@ -4582,6 +4582,63 @@
         "name": "tipo_instituicao_label",
         "type": "str",
         "example": "conglomerados_prudenciais"
+      }
+    ]
+  },
+  {
+    "title": "B3 Indicadores Economicos Fwf",
+    "files": "b3_indicadores_economicos_fwf.csv",
+    "source": "b3",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-06-16"
+      },
+      {
+        "name": "cod_indicador",
+        "type": "str",
+        "example": ""
+      },
+      {
+        "name": "compl_transacao",
+        "type": "str",
+        "example": ""
+      },
+      {
+        "name": "data_geracao_arquivo",
+        "type": "date",
+        "example": ""
+      },
+      {
+        "name": "grupo_indicador",
+        "type": "str",
+        "example": ""
+      },
+      {
+        "name": "id_transacao",
+        "type": "str",
+        "example": "MZ¡"
+      },
+      {
+        "name": "num_casas_decimais",
+        "type": "str",
+        "example": ""
+      },
+      {
+        "name": "reserva",
+        "type": "str",
+        "example": ""
+      },
+      {
+        "name": "tipo_registro",
+        "type": "str",
+        "example": ""
+      },
+      {
+        "name": "valor_indicador",
+        "type": "str",
+        "example": ""
       }
     ]
   }
