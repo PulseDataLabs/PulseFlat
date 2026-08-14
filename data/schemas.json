@@ -4457,7 +4457,7 @@
       {
         "name": "name",
         "type": "str",
-        "example": "EXEC Consultoria em Recursos Humanos Ltda"
+        "example": "ALIANCA AGRICOLA DO CERRADO S.A. - EM RECUPERACAO JUDICIAL"
       },
       {
         "name": "type",
@@ -4467,7 +4467,7 @@
       {
         "name": "sector",
         "type": "str",
-        "example": "Professional Business Support Services"
+        "example": "Fruit and Grain Processing"
       },
       {
         "name": "country",
@@ -4477,12 +4477,12 @@
       {
         "name": "joined_on",
         "type": "str",
-        "example": "2026-08-13"
+        "example": "2026-08-14"
       },
       {
         "name": "link",
         "type": "str",
-        "example": "https://unglobalcompact.org/what-is-gc/participants/219499-EXEC-Consultoria-em-Recursos-Humanos-Ltda"
+        "example": "https://unglobalcompact.org/what-is-gc/participants/219487-ALIANCA-AGRICOLA-DO-CERRADO-S-A-EM-RECUPERACAO-JUDICIAL"
       }
     ]
   },
