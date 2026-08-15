@@ -3922,7 +3922,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-14"
+        "example": "2026-08-15"
       },
       {
         "name": "serie_id",
@@ -3959,7 +3959,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-14"
+        "example": "2026-08-15"
       },
       {
         "name": "data_referencia",
@@ -3991,7 +3991,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-14"
+        "example": "2026-08-15"
       },
       {
         "name": "data_referencia",
@@ -4023,7 +4023,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-14"
+        "example": "2026-08-15"
       },
       {
         "name": "data_referencia",
@@ -4055,7 +4055,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-14"
+        "example": "2026-08-15"
       },
       {
         "name": "data_referencia",
@@ -4169,7 +4169,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-14"
+        "example": "2026-08-15"
       },
       {
         "name": "data_referencia",
@@ -4201,7 +4201,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-14"
+        "example": "2026-08-15"
       },
       {
         "name": "data_referencia",
@@ -4233,7 +4233,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-14"
+        "example": "2026-08-15"
       },
       {
         "name": "data_referencia",
@@ -4265,7 +4265,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-14"
+        "example": "2026-08-15"
       },
       {
         "name": "data_referencia",
@@ -4297,7 +4297,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-14"
+        "example": "2026-08-15"
       },
       {
         "name": "codigo_ativo",
@@ -4452,7 +4452,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-14"
+        "example": "2026-08-15"
       },
       {
         "name": "name",

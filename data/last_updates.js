@@ -100,64 +100,64 @@ window.PULSEFLAT_LAST_UPDATES = {
     "max": "2026-08-01"
   },
   "ipea_calendario.csv": {
-    "min": "2026-08-14",
-    "max": "2026-08-14"
+    "min": "2026-08-15",
+    "max": "2026-08-15"
   },
   "ibge_sidra.csv": {
-    "min": "2026-08-14",
-    "max": "2026-08-14"
+    "min": "2026-08-15",
+    "max": "2026-08-15"
   },
   "ipea_comercio_exterior.csv": {
-    "min": "2026-08-14",
-    "max": "2026-08-14"
+    "min": "2026-08-15",
+    "max": "2026-08-15"
   },
   "ipea_fbcf.csv": {
-    "min": "2026-08-14",
-    "max": "2026-08-14"
+    "min": "2026-08-15",
+    "max": "2026-08-15"
   },
   "ipea_macroeconomia.csv": {
-    "min": "2026-08-14",
-    "max": "2026-08-14"
+    "min": "2026-08-15",
+    "max": "2026-08-15"
   },
   "ipea_precos_inflacao.csv": {
-    "min": "2026-08-14",
-    "max": "2026-08-14"
+    "min": "2026-08-15",
+    "max": "2026-08-15"
   },
   "ipea_producao_mineral.csv": {
-    "min": "2026-08-14",
-    "max": "2026-08-14"
+    "min": "2026-08-15",
+    "max": "2026-08-15"
   },
   "ipea_taxas_juros.csv": {
-    "min": "2026-08-14",
-    "max": "2026-08-14"
+    "min": "2026-08-15",
+    "max": "2026-08-15"
   },
   "onu_pacto_global.csv": {
-    "min": "2026-08-14",
-    "max": "2026-08-14"
+    "min": "2026-08-15",
+    "max": "2026-08-15"
   },
   "wikipedia_global_indices.csv": {
-    "min": "2026-08-14",
-    "max": "2026-08-14"
+    "min": "2026-08-15",
+    "max": "2026-08-15"
   },
   "ipea_mercados_diarios.csv": {
-    "min": "2026-08-14",
-    "max": "2026-08-14"
+    "min": "2026-08-15",
+    "max": "2026-08-15"
   },
   "yahoo_acoes_brasileiras.csv": {
     "min": "2026-06-28",
-    "max": "2026-08-14"
+    "max": "2026-08-15"
   },
   "yahoo_cambio_moedas.csv": {
     "min": "2026-06-28",
-    "max": "2026-08-14"
+    "max": "2026-08-15"
   },
   "yahoo_commodities.csv": {
     "min": "2026-06-27",
-    "max": "2026-08-14"
+    "max": "2026-08-15"
   },
   "yahoo_criptoativos.csv": {
     "min": "2026-06-28",
-    "max": "2026-08-14"
+    "max": "2026-08-15"
   },
   "bacen_parcelas_capital_basileia.csv.gz": {
     "min": "2026-06-05",
@@ -165,23 +165,23 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "yahoo_etfs.csv": {
     "min": "2026-06-27",
-    "max": "2026-08-14"
+    "max": "2026-08-15"
   },
   "yahoo_indices_globais.csv": {
     "min": "2026-06-28",
-    "max": "2026-08-14"
+    "max": "2026-08-15"
   },
   "yahoo_renda_fixa.csv": {
     "min": "2026-06-28",
-    "max": "2026-08-14"
+    "max": "2026-08-15"
   },
   "yahoo_acoes_internacionais.csv": {
     "min": "2026-06-28",
-    "max": "2026-08-14"
+    "max": "2026-08-15"
   },
   "yahoo_fiis_fiagros.csv": {
     "min": "2026-06-28",
-    "max": "2026-08-14"
+    "max": "2026-08-15"
   },
   "cvm_fundos_informe_diario.csv.gz": {
     "min": "2026-08-14",
