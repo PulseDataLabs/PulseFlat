@@ -2,7 +2,7 @@ window.PULSEFLAT_MARKET_LATEST = [
   {
     "label": "CDI",
     "value": "13,90%",
-    "reference_date": "2026-08-13",
+    "reference_date": "2026-08-14",
     "type": "neutral"
   },
   {
@@ -46,8 +46,8 @@ window.PULSEFLAT_MARKET_LATEST = [
   },
   {
     "label": "IMA-GERAL",
-    "value": "10.312,03",
-    "reference_date": "2026-08-13",
+    "value": "10.310,30",
+    "reference_date": "2026-08-14",
     "type": "neutral"
   }
 ];
