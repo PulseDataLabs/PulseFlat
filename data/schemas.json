@@ -1699,7 +1699,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-17"
+        "example": "2026-08-18"
       },
       {
         "name": "setor_economico",
@@ -1940,7 +1940,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-17"
+        "example": "2026-08-18"
       },
       {
         "name": "categoria_etf",
@@ -2017,7 +2017,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-17"
+        "example": "2026-08-18"
       },
       {
         "name": "codigo_fundo",
@@ -2089,7 +2089,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-17"
+        "example": "2026-08-18"
       },
       {
         "name": "tipo_fundo",
@@ -2288,7 +2288,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-17"
+        "example": "2026-08-18"
       },
       {
         "name": "data_geracao",
@@ -2525,7 +2525,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-17"
+        "example": "2026-08-18"
       },
       {
         "name": "codigo_emissor",
@@ -3253,7 +3253,7 @@
       {
         "name": "id_registro_classe",
         "type": "int",
-        "example": "34450"
+        "example": "34455"
       },
       {
         "name": "cnpj_classe",
@@ -3358,12 +3358,12 @@
       {
         "name": "patrimonio_liquido",
         "type": "float",
-        "example": "258394578.50"
+        "example": "258037314.58"
       },
       {
         "name": "data_patrimonio_liquido",
         "type": "date",
-        "example": "2026-06-30"
+        "example": "2026-07-31"
       },
       {
         "name": "cnpj_auditor",

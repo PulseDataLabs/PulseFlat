@@ -173,7 +173,6 @@ data_captura,codigo_ativo,nome_ativo,indice_origem
 2026-08-18,EQT,EQT Corporation,S&P 500
 2026-08-18,EFX,Equifax,S&P 500
 2026-08-18,EQIX,Equinix,S&P 500
-2026-08-18,EQR,Equity Residential,S&P 500
 2026-08-18,ERIE,Erie Indemnity,S&P 500
 2026-08-18,ESS,Essex Property Trust,S&P 500
 2026-08-18,EL,Estée Lauder Companies (The),S&P 500
@@ -386,6 +385,7 @@ data_captura,codigo_ativo,nome_ativo,indice_origem
 2026-08-18,Q,Qnity Electronics,S&P 500
 2026-08-18,RL,Ralph Lauren Corporation,S&P 500
 2026-08-18,RJF,Raymond James Financial,S&P 500
+2026-08-18,RDDT,Reddit,S&P 500
 2026-08-18,RTX,RTX Corporation,S&P 500
 2026-08-18,O,Realty Income,S&P 500
 2026-08-18,REG,Regency Centers,S&P 500
@@ -475,6 +475,7 @@ data_captura,codigo_ativo,nome_ativo,indice_origem
 2026-08-18,VICI,Vici Properties,S&P 500
 2026-08-18,V,Visa Inc.,S&P 500
 2026-08-18,VST,Vistra Corp.,S&P 500
+2026-08-18,VMRK,Vivmark Residential,S&P 500
 2026-08-18,VMC,Vulcan Materials Company,S&P 500
 2026-08-18,WRB,W. R. Berkley Corporation,S&P 500
 2026-08-18,GWW,W. W. Grainger,S&P 500
