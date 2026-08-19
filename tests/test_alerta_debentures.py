@@ -99,8 +99,18 @@ MOCK_HTML_FORM_ONLY = """
 class MockDatetime:
     @classmethod
     def now(cls, tz=None):
-        # Congela em 16/07/2026 às 09:30:00
+        # Congela em 16/07/2026 às 09:30:00 (depois das 08h00)
         dt = real_datetime(2026, 7, 16, 9, 30, 0)
+        if tz:
+            return tz.localize(dt) if hasattr(tz, "localize") else dt.replace(tzinfo=tz)
+        return dt
+
+
+class MockDatetimeEarly:
+    @classmethod
+    def now(cls, tz=None):
+        # Congela em 16/07/2026 às 07:30:00 (antes das 08h00)
+        dt = real_datetime(2026, 7, 16, 7, 30, 0)
         if tz:
             return tz.localize(dt) if hasattr(tz, "localize") else dt.replace(tzinfo=tz)
         return dt
@@ -149,15 +159,18 @@ def test_main_already_notified(tmp_path, monkeypatch):
 @patch("scripts.alerta_debentures.send_telegram")
 @patch("scripts.alerta_debentures.send_email")
 @patch("scripts.alerta_debentures.send_power_automate")
-def test_main_not_available(
+def test_main_not_available_before_8am(
     mock_pa, mock_email, mock_tg, tmp_path, monkeypatch, requests_mock
 ):
-    """Se dados estiverem indisponíveis no site, encerra sem notificar e sem atualizar o arquivo de estado."""
+    """Antes das 08h00, se dados estiverem indisponíveis, encerra silenciosamente sem enviar e-mail e sem salvar estado."""
     temp_state = tmp_path / "debentures_alert_state.json"
     monkeypatch.setattr(ad, "STATE_FILE_PATH", temp_state)
-    monkeypatch.setattr(ad, "datetime", MockDatetime)
+    monkeypatch.setattr(ad, "datetime", MockDatetimeEarly)
 
-    # Moca as requisições HTTP para retornar o HTML sem dados
+    monkeypatch.setenv("SMTP_SERVER", "smtp.fake.com")
+    monkeypatch.setenv("SMTP_USER", "user@fake.com")
+    monkeypatch.setenv("SMTP_PASSWORD", "password123")
+
     requests_mock.get(
         "https://www.debentures.com.br/exploreosnd/consultaadados/mercadosecundario/precosdenegociacao_f.asp",
         status_code=200,
@@ -173,12 +186,53 @@ def test_main_not_available(
 
     assert exc_info.value.code == 0
 
-    # Garante que nenhuma notificação foi disparada
+    # Garante que nenhuma notificação foi disparada antes das 08h00
     mock_tg.assert_not_called()
     mock_email.assert_not_called()
     mock_pa.assert_not_called()
+    assert not temp_state.exists()
 
-    # Garante que o arquivo de estado não foi gravado ou está vazio
+
+@patch("scripts.alerta_debentures.send_telegram")
+@patch("scripts.alerta_debentures.send_email")
+@patch("scripts.alerta_debentures.send_power_automate")
+def test_main_not_available_after_8am(
+    mock_pa, mock_email, mock_tg, tmp_path, monkeypatch, requests_mock
+):
+    """A partir das 08h00, se dados estiverem indisponíveis, envia e-mail de aviso de indisponibilidade e não salva estado de sucesso."""
+    temp_state = tmp_path / "debentures_alert_state.json"
+    monkeypatch.setattr(ad, "STATE_FILE_PATH", temp_state)
+    monkeypatch.setattr(ad, "datetime", MockDatetime)
+
+    monkeypatch.setenv("SMTP_SERVER", "smtp.fake.com")
+    monkeypatch.setenv("SMTP_USER", "user@fake.com")
+    monkeypatch.setenv("SMTP_PASSWORD", "password123")
+
+    requests_mock.get(
+        "https://www.debentures.com.br/exploreosnd/consultaadados/mercadosecundario/precosdenegociacao_f.asp",
+        status_code=200,
+    )
+    requests_mock.post(
+        "https://www.debentures.com.br/exploreosnd/consultaadados/mercadosecundario/precosdenegociacao_r.asp",
+        text=MOCK_HTML_EMPTY,
+        status_code=200,
+    )
+
+    with pytest.raises(SystemExit) as exc_info:
+        ad.main()
+
+    assert exc_info.value.code == 0
+
+    # Envia e-mail de indisponibilidade, mas não Telegram nem Power Automate
+    mock_tg.assert_not_called()
+    mock_pa.assert_not_called()
+    mock_email.assert_called_once()
+    args, kwargs = mock_email.call_args
+    # args: server, port, user, password, from_email, to_email, subject, html_content
+    subject = args[6]
+    assert "Ainda Não Disponível" in subject
+
+    # Garante que o arquivo de estado NÃO foi gravado como sucesso
     assert not temp_state.exists()
 
 
