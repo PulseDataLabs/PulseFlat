@@ -14,16 +14,17 @@ Campos: DATA_REFERENCIA, INDICE, NUMERO_INDICE, VARIACAO_DIARIA,
 
 import sys
 import time
-from datetime import datetime, date
+from datetime import datetime
 from pathlib import Path
 
 import requests
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from utils import get_logger, agora_brt, limpar, nova_session, salvar_csv
-from utils.parsers import _CAL
 import pandas as pd
+
 from scrapers.utils.base import BaseScraper
+from utils import agora_brt, get_logger, limpar, nova_session
+from utils.parsers import _CAL
 
 log = get_logger("anbima_ima_completo")
 
@@ -53,12 +54,24 @@ CABECALHO = [
 ]
 
 COLUNAS_ARQUIVO = [
-    "data_referencia", "indice", "numero_indice", "variacao_diaria",
-    "variacao_mensal", "variacao_anual", "variacao_ultimos_12_meses",
-    "variacao_ultimos_24_meses", "duration_du", "peso_geral",
-    "carteira_a_mercado_rs_mil", "numero_operacoes",
-    "quant_negociada_1000_titulos", "valor_negociado_rs_mil",
-    "pmr", "convexidade", "yield_", "redemption_yield",
+    "data_referencia",
+    "indice",
+    "numero_indice",
+    "variacao_diaria",
+    "variacao_mensal",
+    "variacao_anual",
+    "variacao_ultimos_12_meses",
+    "variacao_ultimos_24_meses",
+    "duration_du",
+    "peso_geral",
+    "carteira_a_mercado_rs_mil",
+    "numero_operacoes",
+    "quant_negociada_1000_titulos",
+    "valor_negociado_rs_mil",
+    "pmr",
+    "convexidade",
+    "yield_",
+    "redemption_yield",
 ]
 
 
@@ -117,14 +130,16 @@ def capturar() -> list[dict]:
     # Validar que a data de referência no arquivo corresponde ao D-1 útil esperado
     d1_util_str = obter_d1_util()
     log.info(f"D-1 útil esperado: {d1_util_str}")
-    
+
     primeira_linha_valida = next((l for l in dados_linhas if "@" in l), None)
     if primeira_linha_valida:
         p = primeira_linha_valida.split("@")
         if len(p) > 1:
             file_date = p[1].strip()
             if file_date != d1_util_str:
-                raise ValueError(f"Abortando: data do arquivo ({file_date}) não corresponde ao D-1 útil ({d1_util_str}).")
+                raise ValueError(
+                    f"Abortando: data do arquivo ({file_date}) não corresponde ao D-1 útil ({d1_util_str})."
+                )
 
     data_captura, _ = agora_brt()
     registros = []
@@ -135,7 +150,7 @@ def capturar() -> list[dict]:
         partes = linha.split("@")
         if len(partes) < len(COLUNAS_ARQUIVO) + 1:
             partes += [""] * (len(COLUNAS_ARQUIVO) + 1 - len(partes))
-            
+
         registro = {"data_captura": data_captura}
         # Zipa pulando o primeiro elemento (partes[0]), que é o tipo de registro
         for col, val in zip(COLUNAS_ARQUIVO, partes[1:]):
@@ -152,23 +167,24 @@ def capturar() -> list[dict]:
     log.info(f"{len(registros)} índices IMA capturados.")
     return registros
 
+
 class AnbimaImaCompletoScraper(BaseScraper):
     name = "anbima_ima_completo"
     group = "anbima"
     enabled = True
     phase = 1
     accumulate = True
-    chaves_dedup = ['data_captura', 'data_referencia', 'indice']
-    
+    chaves_dedup = ["data_captura", "data_referencia", "indice"]
+
     # Catálogo de Metadados
-    title = 'ANBIMA IMA / IDA'
-    description = 'Índices de mercado ANBIMA (IMA, IRF-M, IDA, IDKA): variações diárias, mensais e anuais, duration e peso geral.'
-    icon = '📊'
-    icon_class = 'icon-anbima'
-    badge = 'Diário'
-    badge_class = 'badge-daily'
-    tags = ['ima-geral', 'irf-m', 'ida', 'idka', 'duration']
-    source = 'ANBIMA'
+    title = "ANBIMA IMA / IDA"
+    description = "Índices de mercado ANBIMA (IMA, IRF-M, IDA, IDKA): variações diárias, mensais e anuais, duration e peso geral."
+    icon = "📊"
+    icon_class = "icon-anbima"
+    badge = "Diário"
+    badge_class = "badge-daily"
+    tags = ["ima-geral", "irf-m", "ida", "idka", "duration"]
+    source = "ANBIMA"
 
     def fetch(self) -> pd.DataFrame:
         log.info("=== ANBIMA IMA Completo ===")

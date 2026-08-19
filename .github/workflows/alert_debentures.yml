@@ -78,8 +78,30 @@ jobs:
         
         if ! git diff --cached --quiet; then
           git commit -m "Bot: Alerta de Debêntures Enviado [skip ci]"
-          git pull --rebase origin main
-          git push origin main
+          
+          # Push com retry resiliente contra alterações remotas concorrentes
+          pushed=false
+          for i in 1 2 3 4 5; do
+            if git push origin main; then
+              echo "Push realizado com sucesso!"
+              pushed=true
+              break
+            fi
+            echo "Push falhou (possível alteração remota). Sincronizando com rebase..."
+            if ! git pull --rebase -X theirs origin main; then
+              git rebase --abort || true
+              git fetch origin main
+              git reset --soft origin/main
+              git add data/
+              git commit -m "Bot: Alerta de Debêntures Enviado [skip ci]" || true
+            fi
+            sleep 3
+          done
+          
+          if [ "$pushed" = false ]; then
+            echo "Falha ao enviar alterações após 5 tentativas."
+            exit 1
+          fi
         else
           echo "Nenhuma alteração nos dados."
         fi

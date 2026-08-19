@@ -9,22 +9,32 @@ para preenchê-los.
 """
 
 import argparse
+import importlib
 import sys
 import time
-import importlib
-from datetime import date, datetime
+from datetime import date
 from pathlib import Path
 
 # Adiciona o diretório raiz ao path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-from scripts.verificar_buracos import CONFIG, load_entity_dates, check_gaps
 from scripts.utils.ux import (
-    banner, section, print_start, print_done, print_fail, print_warn, print_info,
-    print_summary, add_common_args, apply_common_args, ColorLogger,
+    ColorLogger,
+    add_common_args,
+    apply_common_args,
+    banner,
+    print_done,
+    print_fail,
+    print_info,
+    print_start,
+    print_summary,
+    print_warn,
+    section,
 )
+from scripts.verificar_buracos import CONFIG, check_gaps, load_entity_dates
 
 log = ColorLogger("backfill_buracos")
+
 
 def main(
     csv_filter: list[str] | None = None,
@@ -35,7 +45,10 @@ def main(
 ) -> None:
     t0 = time.time()
     if not quiet:
-        banner("Backfill Automático de Buracos", "Preenche lacunas de datas nas séries temporais")
+        banner(
+            "Backfill Automático de Buracos",
+            "Preenche lacunas de datas nas séries temporais",
+        )
 
     root_dir = Path(__file__).resolve().parents[1]
     data_dir = root_dir / "data"
@@ -82,11 +95,16 @@ def main(
     if not quiet:
         print_info(f"Buracos detectados em {len(gaps_by_csv)} arquivo(s).")
         for csv_name, dates in sorted(gaps_by_csv.items()):
-            print_info(f"  {csv_name}: {len(dates)} data(s) faltante(s) ({dates[0]} até {dates[-1]})")
+            print_info(
+                f"  {csv_name}: {len(dates)} data(s) faltante(s) ({dates[0]} até {dates[-1]})"
+            )
 
     if dry_run:
         if not quiet:
-            print_info("\nModo dry-run: nenhuma execução de scraper será iniciada.", icon="gear")
+            print_info(
+                "\nModo dry-run: nenhuma execução de scraper será iniciada.",
+                icon="gear",
+            )
         return
 
     if not quiet:
@@ -98,15 +116,22 @@ def main(
     for csv_name, missing_dates in sorted(gaps_by_csv.items()):
         scraper_name = csv_name.replace(".csv", "")
         if not quiet:
-            print_start(f"Processando backfill para {csv_name} usando scraper '{scraper_name}'", icon="refresh")
+            print_start(
+                f"Processando backfill para {csv_name} usando scraper '{scraper_name}'",
+                icon="refresh",
+            )
 
         try:
             # Importa o scraper dinamicamente
             mod = importlib.import_module(f"scrapers.{scraper_name}")
-            class_name = "".join(w.capitalize() for w in scraper_name.split("_")) + "Scraper"
+            class_name = (
+                "".join(w.capitalize() for w in scraper_name.split("_")) + "Scraper"
+            )
             if not hasattr(mod, class_name):
                 if not quiet:
-                    print_fail(f"Scraper classe '{class_name}' não encontrada no módulo scrapers.{scraper_name}")
+                    print_fail(
+                        f"Scraper classe '{class_name}' não encontrada no módulo scrapers.{scraper_name}"
+                    )
                 continue
 
             scraper_class = getattr(mod, class_name)
@@ -119,8 +144,10 @@ def main(
                 max_d = date.fromisoformat(max_date_str)
 
                 if not quiet:
-                    print_info(f"Executando Yahoo Finance Scraper no intervalo {min_date_str} a {max_date_str}")
-                
+                    print_info(
+                        f"Executando Yahoo Finance Scraper no intervalo {min_date_str} a {max_date_str}"
+                    )
+
                 # Executa o scraper
                 scraper = scraper_class()
                 scraper.start_date = min_d
@@ -133,7 +160,7 @@ def main(
                     target_d = date.fromisoformat(d_str)
                     if not quiet:
                         print_info(f"  -> Baixando dados para data: {d_str}")
-                    
+
                     scraper = scraper_class()
                     scraper.target_date = target_d
                     scraper.run()
@@ -151,7 +178,7 @@ def main(
     # Validação pós-backfill
     if not quiet:
         section("Reavaliando bases pós-backfill", "search")
-    
+
     total_remaining = 0
     for csv_name, config in sorted(targets.items()):
         csv_path = data_dir / csv_name
@@ -172,7 +199,9 @@ def main(
             all_missing = sorted(list({d for dates in gaps.values() for d in dates}))
             total_remaining += len(all_missing)
             if not quiet:
-                print_warn(f"{csv_name}: ainda possui {len(all_missing)} buraco(s) (prováveis feriados/indisponibilidade na origem).")
+                print_warn(
+                    f"{csv_name}: ainda possui {len(all_missing)} buraco(s) (prováveis feriados/indisponibilidade na origem)."
+                )
         else:
             if not quiet:
                 print_done(f"{csv_name}: 0 buracos!")
@@ -189,8 +218,9 @@ def main(
             details=[
                 ("gear", "Scrapers executados", str(total_scrapers_run)),
                 ("search", "Buracos restantes", str(total_remaining)),
-            ]
+            ],
         )
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
@@ -198,11 +228,16 @@ if __name__ == "__main__":
     )
     add_common_args(parser)
     parser.add_argument(
-        "--csv", nargs="+", metavar="CSV",
+        "--csv",
+        nargs="+",
+        metavar="CSV",
         help="Executar backfill apenas em CSVs específicos",
     )
     parser.add_argument(
-        "--threshold", type=int, default=3, metavar="N",
+        "--threshold",
+        type=int,
+        default=3,
+        metavar="N",
         help="Ignorar entidades com menos de N datas (padrão: 3)",
     )
 

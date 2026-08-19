@@ -6,16 +6,15 @@ Utilizado para alimentar dinamicamente os scrapers do Yahoo Finance de ações i
 """
 
 import sys
-import os
 from pathlib import Path
-import datetime
+
+import pandas as pd
 import requests
 from bs4 import BeautifulSoup
-import pandas as pd
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from scrapers.utils.base import BaseScraper
-from utils import get_logger, agora_brt
+from utils import agora_brt, get_logger
 
 log = get_logger("wikipedia_global_indices")
 
@@ -43,7 +42,9 @@ def scrape_sp500(session: requests.Session) -> list[dict]:
         if len(tds) >= 2:
             ticker = clean_us_ticker(tds[0].text.strip())
             name = tds[1].text.strip()
-            res.append({"codigo_ativo": ticker, "nome_ativo": name, "indice_origem": "S&P 500"})
+            res.append(
+                {"codigo_ativo": ticker, "nome_ativo": name, "indice_origem": "S&P 500"}
+            )
     return res
 
 
@@ -63,7 +64,13 @@ def scrape_nasdaq100(session: requests.Session) -> list[dict]:
         if len(tds) >= 2:
             ticker = clean_us_ticker(tds[0].text.strip())
             name = tds[1].text.strip()
-            res.append({"codigo_ativo": ticker, "nome_ativo": name, "indice_origem": "NASDAQ-100"})
+            res.append(
+                {
+                    "codigo_ativo": ticker,
+                    "nome_ativo": name,
+                    "indice_origem": "NASDAQ-100",
+                }
+            )
     return res
 
 
@@ -83,7 +90,13 @@ def scrape_dowjones(session: requests.Session) -> list[dict]:
         if len(tds) >= 2:
             name = tds[0].text.strip()
             ticker = clean_us_ticker(tds[1].text.strip())
-            res.append({"codigo_ativo": ticker, "nome_ativo": name, "indice_origem": "Dow Jones"})
+            res.append(
+                {
+                    "codigo_ativo": ticker,
+                    "nome_ativo": name,
+                    "indice_origem": "Dow Jones",
+                }
+            )
     return res
 
 
@@ -106,7 +119,13 @@ def scrape_ftse100(session: requests.Session) -> list[dict]:
             # Adiciona sufixo .L do Yahoo para Londres
             if ticker and not ticker.endswith(".L"):
                 ticker = f"{ticker}.L"
-            res.append({"codigo_ativo": ticker, "nome_ativo": name, "indice_origem": "FTSE 100"})
+            res.append(
+                {
+                    "codigo_ativo": ticker,
+                    "nome_ativo": name,
+                    "indice_origem": "FTSE 100",
+                }
+            )
     return res
 
 
@@ -126,7 +145,9 @@ def scrape_dax40(session: requests.Session) -> list[dict]:
         if len(tds) >= 3:
             ticker = tds[0].text.strip()
             name = tds[2].text.strip()
-            res.append({"codigo_ativo": ticker, "nome_ativo": name, "indice_origem": "DAX 40"})
+            res.append(
+                {"codigo_ativo": ticker, "nome_ativo": name, "indice_origem": "DAX 40"}
+            )
     return res
 
 
@@ -146,7 +167,9 @@ def scrape_cac40(session: requests.Session) -> list[dict]:
         if len(tds) >= 4:
             name = tds[0].text.strip()
             ticker = tds[3].text.strip()
-            res.append({"codigo_ativo": ticker, "nome_ativo": name, "indice_origem": "CAC 40"})
+            res.append(
+                {"codigo_ativo": ticker, "nome_ativo": name, "indice_origem": "CAC 40"}
+            )
     return res
 
 
@@ -166,7 +189,13 @@ def scrape_eurostoxx50(session: requests.Session) -> list[dict]:
         if len(tds) >= 3:
             ticker = tds[0].text.strip()
             name = tds[2].text.strip()
-            res.append({"codigo_ativo": ticker, "nome_ativo": name, "indice_origem": "Euro Stoxx 50"})
+            res.append(
+                {
+                    "codigo_ativo": ticker,
+                    "nome_ativo": name,
+                    "indice_origem": "Euro Stoxx 50",
+                }
+            )
     return res
 
 
@@ -184,13 +213,27 @@ class WikipediaGlobalIndicesScraper(BaseScraper):
     icon_class = "icon-global"
     badge = "Diário"
     badge_class = "badge-daily"
-    tags = ["indices", "global", "wikipedia", "sp500", "nasdaq", "dowjones", "ftse", "dax", "cac"]
+    tags = [
+        "indices",
+        "global",
+        "wikipedia",
+        "sp500",
+        "nasdaq",
+        "dowjones",
+        "ftse",
+        "dax",
+        "cac",
+    ]
     source = "Wikipedia"
 
     def fetch(self) -> pd.DataFrame:
         data_captura, _ = agora_brt()
         session = requests.Session()
-        session.headers.update({"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"})
+        session.headers.update(
+            {
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+            }
+        )
 
         todos_ativos = []
 

@@ -7,8 +7,9 @@ Testes unitários específicos para os scrapers do Banco Central do Brasil (BCB 
 import re
 import sys
 from pathlib import Path
-import pytest
+
 import pandas as pd
+import pytest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
@@ -23,7 +24,7 @@ def test_bcb_ptax_sucesso(requests_mock):
             {
                 "cotacaoCompra": 5.2530,
                 "cotacaoVenda": 5.2540,
-                "dataHoraCotacao": "2026-06-01 13:15:00.000"
+                "dataHoraCotacao": "2026-06-01 13:15:00.000",
             }
         ]
     }
@@ -31,7 +32,7 @@ def test_bcb_ptax_sucesso(requests_mock):
     requests_mock.get(
         re.compile(r"https://olinda\.bcb\.gov\.br/.*"),
         json=mock_response,
-        status_code=200
+        status_code=200,
     )
 
     registros = bcb_ptax.capturar()
@@ -46,10 +47,7 @@ def test_bcb_ptax_sucesso(requests_mock):
 
 def test_bcb_ptax_erro_conexao(requests_mock):
     """Deve falhar e terminar com código de saída 1 se a API PTAX Olinda falhar em todas as tentativas."""
-    requests_mock.get(
-        re.compile(r"https://olinda\.bcb\.gov\.br/.*"),
-        status_code=500
-    )
+    requests_mock.get(re.compile(r"https://olinda\.bcb\.gov\.br/.*"), status_code=500)
 
     with pytest.raises(SystemExit) as exc_info:
         bcb_ptax.capturar()
@@ -64,7 +62,7 @@ def test_bcb_ptax_scraper_fetch(requests_mock):
             {
                 "cotacaoCompra": 5.2530,
                 "cotacaoVenda": 5.2540,
-                "dataHoraCotacao": "2026-06-01 13:15:00.000"
+                "dataHoraCotacao": "2026-06-01 13:15:00.000",
             }
         ]
     }
@@ -72,7 +70,7 @@ def test_bcb_ptax_scraper_fetch(requests_mock):
     requests_mock.get(
         re.compile(r"https://olinda\.bcb\.gov\.br/.*"),
         json=mock_response,
-        status_code=200
+        status_code=200,
     )
 
     scraper = bcb_ptax.BcbPtaxScraper()
@@ -80,7 +78,12 @@ def test_bcb_ptax_scraper_fetch(requests_mock):
 
     assert isinstance(df, pd.DataFrame)
     assert not df.empty
-    assert list(df.columns) == ["data_captura", "data_referencia", "cotacao_compra", "cotacao_venda"]
+    assert list(df.columns) == [
+        "data_captura",
+        "data_referencia",
+        "cotacao_compra",
+        "cotacao_venda",
+    ]
     assert df.loc[0, "cotacao_compra"] == "5.253"
 
 
@@ -90,13 +93,11 @@ def test_bcb_sgs_sucesso(requests_mock, monkeypatch):
 
     mock_dados = [
         {"data": "01/06/2026", "valor": "10.50"},
-        {"data": "02/06/2026", "valor": "10.75"}
+        {"data": "02/06/2026", "valor": "10.75"},
     ]
 
     requests_mock.get(
-        re.compile(r"https://api\.bcb\.gov\.br/.*"),
-        json=mock_dados,
-        status_code=200
+        re.compile(r"https://api\.bcb\.gov\.br/.*"), json=mock_dados, status_code=200
     )
 
     registros = bcb_sgs.capturar()
@@ -125,10 +126,7 @@ def test_bcb_sgs_erro_parcial(requests_mock, monkeypatch):
         context.status_code = 200
         return mock_dados
 
-    requests_mock.get(
-        re.compile(r"https://api\.bcb\.gov\.br/.*"),
-        json=callback
-    )
+    requests_mock.get(re.compile(r"https://api\.bcb\.gov\.br/.*"), json=callback)
 
     registros = bcb_sgs.capturar()
 
@@ -144,9 +142,7 @@ def test_bcb_sgs_scraper_fetch(requests_mock, monkeypatch):
     mock_dados = [{"data": "01/06/2026", "valor": "5.25"}]
 
     requests_mock.get(
-        re.compile(r"https://api\.bcb\.gov\.br/.*"),
-        json=mock_dados,
-        status_code=200
+        re.compile(r"https://api\.bcb\.gov\.br/.*"), json=mock_dados, status_code=200
     )
 
     scraper = bcb_sgs.BcbSgsScraper()

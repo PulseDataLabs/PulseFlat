@@ -1,3 +1,5 @@
+from io import StringIO
+
 #!/usr/bin/env python
 # coding: utf-8
 """
@@ -8,17 +10,16 @@ Saída:   data/anbima_matriz_probabilidade_resgate.csv
 Os arquivos são mensais, nomeados report_fliq_YYYYMM.csv.
 O scraper baixa o arquivo do mês anterior (última disponibilidade confirmada).
 """
+import calendar
+import datetime
 import os
 import sys
-import datetime
-import calendar
 
 import pandas as pd
 import requests
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from scrapers.utils.base import BaseScraper
-
 
 BASE_URL = "https://databricks-reports.anbima.com.br/fliq"
 
@@ -47,7 +48,14 @@ class AnbimaMatrizProbabilidadeResgateScraper(BaseScraper):
     group = "anbima"
     enabled = True
     phase = 1
-    chaves_dedup = ["data_referencia", "classe", "segmento_investidor", "tipo_metodologia", "metrica", "prazo"]
+    chaves_dedup = [
+        "data_referencia",
+        "classe",
+        "segmento_investidor",
+        "tipo_metodologia",
+        "metrica",
+        "prazo",
+    ]
 
     def fetch(self) -> pd.DataFrame:
         data_ref = _ultimo_dia_mes_anterior()
@@ -67,12 +75,12 @@ class AnbimaMatrizProbabilidadeResgateScraper(BaseScraper):
             file_name = f"report_fliq_{data_ref.strftime('%Y%m')}.csv"
             url = f"{BASE_URL}/{file_name}"
             from scripts.utils.ux import print_warn
+
             print_warn("arquivo não encontrado, tentando mês anterior")
             resp = requests.get(url, headers=HEADERS, timeout=120)
 
         resp.raise_for_status()
 
-        from io import StringIO
         df = pd.read_csv(StringIO(resp.text), sep=",", encoding="utf-8")
         df.insert(0, "data_referencia", data_ref)
         return df

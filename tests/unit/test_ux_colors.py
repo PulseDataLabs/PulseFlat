@@ -6,11 +6,6 @@ tests/unit/test_ux_colors.py
 Testes de detecção de ambiente e cores (USE_COLOR, USE_UNICODE).
 """
 
-import os
-import sys
-from unittest.mock import patch
-
-import pytest
 import scripts.utils.ux as ux
 
 
@@ -80,9 +75,24 @@ class TestPaletteFunctions:
 
     def test_all_return_plain_when_disabled(self):
         ux.configure(use_color=False, use_unicode=False)
-        for fn in [ux.red, ux.green, ux.yellow, ux.blue, ux.magenta, ux.cyan, ux.white,
-                   ux.bold, ux.dim,
-                   ux.b_red, ux.b_green, ux.b_yellow, ux.b_blue, ux.b_magenta, ux.b_cyan, ux.b_white]:
+        for fn in [
+            ux.red,
+            ux.green,
+            ux.yellow,
+            ux.blue,
+            ux.magenta,
+            ux.cyan,
+            ux.white,
+            ux.bold,
+            ux.dim,
+            ux.b_red,
+            ux.b_green,
+            ux.b_yellow,
+            ux.b_blue,
+            ux.b_magenta,
+            ux.b_cyan,
+            ux.b_white,
+        ]:
             assert fn("test") == "test"
 
 

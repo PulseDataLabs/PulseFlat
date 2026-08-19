@@ -6,7 +6,7 @@ Testes unitários específicos para os scrapers da ANBIMA.
 
 import sys
 from pathlib import Path
-import pytest
+
 import pandas as pd
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
@@ -18,7 +18,7 @@ import scrapers.anbima_indicadores as ai
 def test_anbima_ima_completo_sucesso(requests_mock, monkeypatch):
     """Deve capturar, validar D-1 e parsear com sucesso o arquivo IMA Completo da ANBIMA."""
     monkeypatch.setattr(aic, "obter_d1_util", lambda: "02/06/2026")
-    
+
     mock_txt = (
         "0@ANBIMA - Associação Brasileira das Entidades dos Mercados Financeiros e de Capitais\n"
         "1@TOTAIS\n"
@@ -26,11 +26,11 @@ def test_anbima_ima_completo_sucesso(requests_mock, monkeypatch):
         "1@02/06/2026@IRF-M 1@20154,43293200@0,0569@0,0806@5,5163\n"
         "1@02/06/2026@IRF-M 1+@24436,46503800@0,0386@0,0518@3,9291\n"
     )
-    
+
     requests_mock.get(aic.URL, text=mock_txt, status_code=200)
-    
+
     registros = aic.capturar()
-    
+
     assert len(registros) == 2
     reg1 = registros[0]
     assert reg1["data_referencia"] == "2026-06-02"
@@ -41,18 +41,18 @@ def test_anbima_ima_completo_sucesso(requests_mock, monkeypatch):
 def test_anbima_ima_completo_scraper_fetch(requests_mock, monkeypatch):
     """Deve testar o método fetch da classe AnbimaImaCompletoScraper."""
     monkeypatch.setattr(aic, "obter_d1_util", lambda: "02/06/2026")
-    
+
     mock_txt = (
         "0@ANBIMA\n1@TOTAIS\n"
         "1@Data de Referência@INDICE@Número Índice@Variação Diária(%)@Variação Mensal(%)@Variação Anual(%)\n"
         "1@02/06/2026@IRF-M 1@20154,43293200@0,0569@0,0806@5,5163\n"
     )
-    
+
     requests_mock.get(aic.URL, text=mock_txt, status_code=200)
-    
+
     scraper = aic.AnbimaImaCompletoScraper()
     df = scraper.fetch()
-    
+
     assert isinstance(df, pd.DataFrame)
     assert not df.empty
     assert "data_referencia" in df.columns
@@ -81,9 +81,9 @@ def test_anbima_indicadores_sucesso(requests_mock):
     requests_mock.get(ai.URL, content=mock_html.encode("iso-8859-1"), status_code=200)
 
     registros = ai.capturar()
-    
+
     assert len(registros) == 11
-    
+
     selic = next(r for r in registros if r["indicador"] == "Estimativa SELIC")
     assert selic["valor"] == "14.40"
     assert selic["data_referencia"] == "2026-06-03"
@@ -100,10 +100,10 @@ def test_anbima_indicadores_scraper_fetch(requests_mock):
     </html>
     """
     requests_mock.get(ai.URL, content=mock_html.encode("iso-8859-1"), status_code=200)
-    
+
     scraper = ai.AnbimaIndicadoresScraper()
     df = scraper.fetch()
-    
+
     assert isinstance(df, pd.DataFrame)
     assert not df.empty
     assert "indicador" in df.columns

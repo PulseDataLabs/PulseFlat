@@ -1,3 +1,5 @@
+from scripts.utils.ux import print_done, print_fail, print_warn
+
 #!/usr/bin/env python
 # coding: utf-8
 """
@@ -9,7 +11,6 @@ Cria a lista de todos os participantes do Brasil no Pacto Global da ONU.
 """
 import os
 import sys
-import datetime
 import time
 
 import pandas as pd
@@ -18,7 +19,6 @@ from bs4 import BeautifulSoup
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from scrapers.utils.base import BaseScraper
-
 
 BASE_URL = "https://unglobalcompact.org"
 HEADERS = {
@@ -35,20 +35,30 @@ def parse_un_date(date_str: str) -> str:
     """Converte datas no formato 'DD-MMM-YYYY' para 'YYYY-MM-DD'."""
     if not date_str:
         return ""
-    
+
     parts = date_str.strip().split("-")
     if len(parts) != 3:
         return date_str
-        
+
     day, month_abbr, year = parts
     months = {
-        "jan": "01", "feb": "02", "mar": "03", "apr": "04", "may": "05", "jun": "06",
-        "jul": "07", "aug": "08", "sep": "09", "oct": "10", "nov": "11", "dec": "12"
+        "jan": "01",
+        "feb": "02",
+        "mar": "03",
+        "apr": "04",
+        "may": "05",
+        "jun": "06",
+        "jul": "07",
+        "aug": "08",
+        "sep": "09",
+        "oct": "10",
+        "nov": "11",
+        "dec": "12",
     }
     m = months.get(month_abbr.lower()[:3])
     if m:
         return f"{year}-{m}-{day.zfill(2)}"
-        
+
     return date_str
 
 
@@ -60,7 +70,6 @@ class OnuPactoGlobalScraper(BaseScraper):
     accumulate = False  # Sobrescreve diariamente para manter a lista ativa atualizada
 
     def fetch(self) -> pd.DataFrame:
-        from scripts.utils.ux import print_start, print_done, print_warn, print_fail
 
         session = requests.Session()
         page = 1
@@ -80,7 +89,10 @@ class OnuPactoGlobalScraper(BaseScraper):
                 break
 
             if resp.status_code != 200:
-                print_fail(f"página {page}: status {resp.status_code}", elapsed=time.time() - t0)
+                print_fail(
+                    f"página {page}: status {resp.status_code}",
+                    elapsed=time.time() - t0,
+                )
                 break
 
             soup = BeautifulSoup(resp.text, "html.parser")
@@ -123,17 +135,22 @@ class OnuPactoGlobalScraper(BaseScraper):
                 td_joined = tr.find("td", class_="joined-on")
                 joined_val = td_joined.get_text(strip=True) if td_joined else ""
 
-                data_rows.append({
-                    "name": name,
-                    "type": type_val,
-                    "sector": sector_val,
-                    "country": country_val,
-                    "joined_on": parse_un_date(joined_val),
-                    "link": profile_link,
-                })
+                data_rows.append(
+                    {
+                        "name": name,
+                        "type": type_val,
+                        "sector": sector_val,
+                        "country": country_val,
+                        "joined_on": parse_un_date(joined_val),
+                        "link": profile_link,
+                    }
+                )
 
             elapsed = time.time() - t0
-            print_done(f"página {page}: {len(rows)} participantes  (total: {len(data_rows)})", elapsed=elapsed)
+            print_done(
+                f"página {page}: {len(rows)} participantes  (total: {len(data_rows)})",
+                elapsed=elapsed,
+            )
 
             next_el = soup.find(class_="next_page")
             if next_el and next_el.name == "a" and next_el.get("href"):

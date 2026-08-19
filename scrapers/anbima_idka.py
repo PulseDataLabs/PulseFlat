@@ -1,3 +1,5 @@
+from io import StringIO
+
 #!/usr/bin/env python
 # coding: utf-8
 """
@@ -7,8 +9,6 @@ Saída:   data/anbima_idka.csv
 """
 import os
 import sys
-import csv
-import shutil
 from datetime import date
 
 import pandas as pd
@@ -17,7 +17,6 @@ import requests
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from scrapers.utils.base import BaseScraper
 from utils.parsers import date_ref
-
 
 COLUMNS = [
     "data_referencia",
@@ -83,7 +82,6 @@ class AnbimaIdkaScraper(BaseScraper):
             dt_referencia = dt.date()
 
         # Lê CSV pulando as 2 primeiras linhas e as 3 últimas (rodapé)
-        from io import StringIO
         content = "\n".join(lines[2:-3])
         df_raw = pd.read_csv(
             StringIO(content),
@@ -104,7 +102,9 @@ class AnbimaIdkaScraper(BaseScraper):
         df["ret_dia_perc"] = df_raw.get("Retorno (% Dia)", pd.Series(dtype=str))
         df["ret_mes_perc"] = df_raw.get("Retorno (% Mês)", pd.Series(dtype=str))
         df["ret_ano_perc"] = df_raw.get("Retorno (% Ano)", pd.Series(dtype=str))
-        df["ret_12_meses_perc"] = df_raw.get("Retorno (% 12 Meses)", pd.Series(dtype=str))
+        df["ret_12_meses_perc"] = df_raw.get(
+            "Retorno (% 12 Meses)", pd.Series(dtype=str)
+        )
         df["vol_aa_perc"] = df_raw.get("Volatilidade (% a.a.) *", pd.Series(dtype=str))
         df["taxa_juros_aa_perc_compra_d1"] = df_raw.get(
             "Taxa de Juros (% a.a.) [Compra (D-1)]", pd.Series(dtype=str)

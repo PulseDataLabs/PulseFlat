@@ -15,35 +15,57 @@ import time
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from utils import get_logger, agora_brt, limpar, b64_encode_params, nova_session, salvar_csv
 import pandas as pd
+
 from scrapers.utils.base import BaseScraper
+from utils import (
+    agora_brt,
+    b64_encode_params,
+    get_logger,
+    limpar,
+    nova_session,
+)
 
 log = get_logger("b3_etfs")
 
-BASE_URL  = "https://sistemaswebb3-listados.b3.com.br/fundsListedProxy/Search/GetListFunds/"
+BASE_URL = (
+    "https://sistemaswebb3-listados.b3.com.br/fundsListedProxy/Search/GetListFunds/"
+)
 PAGE_SIZE = 100
-ARQUIVO   = Path("data/b3_etfs_listados.csv")
+ARQUIVO = Path("data/b3_etfs_listados.csv")
 
 CATEGORIAS = [
-    ("ETF",    "ETF Renda Variável"),
+    ("ETF", "ETF Renda Variável"),
     ("ETF-RF", "ETF Renda Fixa"),
 ]
 
 CABECALHO = [
-    "data_captura", "categoria_etf",
-    "codigo_fundo", "nome_fundo", "cnpj",
-    "administrador", "gestor", "indice_referencia",
-    "segmento", "tipo", "prazo_duracao",
-    "data_encerramento", "cotistas", "patrimonio_liquido",
+    "data_captura",
+    "categoria_etf",
+    "codigo_fundo",
+    "nome_fundo",
+    "cnpj",
+    "administrador",
+    "gestor",
+    "indice_referencia",
+    "segmento",
+    "tipo",
+    "prazo_duracao",
+    "data_encerramento",
+    "cotistas",
+    "patrimonio_liquido",
 ]
 
 
 def _url(funds_type: str, page: int) -> str:
-    return BASE_URL + b64_encode_params({
-        "language": "pt-br", "pageNumber": page,
-        "pageSize": PAGE_SIZE, "typeFund": funds_type,
-    })
+    return BASE_URL + b64_encode_params(
+        {
+            "language": "pt-br",
+            "pageNumber": page,
+            "pageSize": PAGE_SIZE,
+            "typeFund": funds_type,
+        }
+    )
 
 
 def _pagina(session, funds_type: str, page: int) -> tuple[list, int, int | None]:
@@ -68,31 +90,49 @@ def _pagina(session, funds_type: str, page: int) -> tuple[list, int, int | None]
 
 
 def _mapear(item: dict, data_captura: str, label: str) -> dict:
-    codigo = limpar(item.get("fundTicker") or item.get("ticker") or item.get("code") or item.get("symbol"))
+    codigo = limpar(
+        item.get("fundTicker")
+        or item.get("ticker")
+        or item.get("code")
+        or item.get("symbol")
+    )
     if not codigo:
-        acronym = limpar(item.get("acronym") or item.get("acronymName") or item.get("fundAcronym"))
+        acronym = limpar(
+            item.get("acronym") or item.get("acronymName") or item.get("fundAcronym")
+        )
         if acronym:
             codigo = acronym if any(c.isdigit() for c in acronym) else f"{acronym}11"
     return {
-        "data_captura":       data_captura,
-        "categoria_etf":      label,
-        "codigo_fundo":       codigo,
-        "nome_fundo":         limpar(item.get("fundName")   or item.get("tradingName") or item.get("companyName")),
-        "cnpj":               limpar(item.get("cnpj")),
-        "administrador":      limpar(item.get("administrator") or item.get("administratorName")),
-        "gestor":             limpar(item.get("manager")   or item.get("managementCompany")),
-        "indice_referencia":  limpar(item.get("indexFund") or item.get("benchmark") or item.get("referenceIndex")),
-        "segmento":           limpar(item.get("fundSegment") or item.get("segment") or item.get("segmentName")),
-        "tipo":               limpar(item.get("fundType")  or item.get("type") or item.get("typeFund")),
-        "prazo_duracao":      limpar(item.get("term")),
-        "data_encerramento":  limpar(item.get("closingDate")),
-        "cotistas":           limpar(item.get("quotaHolders")),
+        "data_captura": data_captura,
+        "categoria_etf": label,
+        "codigo_fundo": codigo,
+        "nome_fundo": limpar(
+            item.get("fundName") or item.get("tradingName") or item.get("companyName")
+        ),
+        "cnpj": limpar(item.get("cnpj")),
+        "administrador": limpar(
+            item.get("administrator") or item.get("administratorName")
+        ),
+        "gestor": limpar(item.get("manager") or item.get("managementCompany")),
+        "indice_referencia": limpar(
+            item.get("indexFund") or item.get("benchmark") or item.get("referenceIndex")
+        ),
+        "segmento": limpar(
+            item.get("fundSegment") or item.get("segment") or item.get("segmentName")
+        ),
+        "tipo": limpar(
+            item.get("fundType") or item.get("type") or item.get("typeFund")
+        ),
+        "prazo_duracao": limpar(item.get("term")),
+        "data_encerramento": limpar(item.get("closingDate")),
+        "cotistas": limpar(item.get("quotaHolders")),
         "patrimonio_liquido": limpar(item.get("netEquity")),
     }
 
 
-def _capturar_categoria(session, funds_type: str, label: str,
-                         data_captura: str) -> list[dict]:
+def _capturar_categoria(
+    session, funds_type: str, label: str, data_captura: str
+) -> list[dict]:
     log.info(f"[{label}] Buscando página 1...")
     primeira, total, total_pages = _pagina(session, funds_type, 1)
     if not primeira:
@@ -122,6 +162,7 @@ def capturar() -> list[dict]:
     log.info(f"{len(todos)} ETFs capturados (RV + RF).")
     return todos
 
+
 class B3EtfsScraper(BaseScraper):
     name = "b3_etfs"
     group = "b3"
@@ -129,16 +170,23 @@ class B3EtfsScraper(BaseScraper):
     phase = 1
     accumulate = False
     chaves_dedup = None
-    
+
     # Catálogo de Metadados
-    title = 'B3 ETFs Listados'
-    description = 'ETFs de Renda Variável e Renda Fixa listados na B3, com índice de referência, administrador, gestor e patrimônio líquido.'
-    icon = '📈'
-    icon_class = 'icon-b3'
-    badge = 'Diário'
-    badge_class = 'badge-daily'
-    tags = ['ticker', 'categoria_etf', 'índice_ref', 'gestor', 'renda variável', 'renda fixa']
-    source = 'B3 API'
+    title = "B3 ETFs Listados"
+    description = "ETFs de Renda Variável e Renda Fixa listados na B3, com índice de referência, administrador, gestor e patrimônio líquido."
+    icon = "📈"
+    icon_class = "icon-b3"
+    badge = "Diário"
+    badge_class = "badge-daily"
+    tags = [
+        "ticker",
+        "categoria_etf",
+        "índice_ref",
+        "gestor",
+        "renda variável",
+        "renda fixa",
+    ]
+    source = "B3 API"
 
     def fetch(self) -> pd.DataFrame:
         log.info("=== B3 ETFs Listados ===")

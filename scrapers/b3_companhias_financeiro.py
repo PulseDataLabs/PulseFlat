@@ -11,31 +11,30 @@ Fonte:
     https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/
 """
 
+import random
 import sys
 import time
-import random
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
+import pandas as pd
+
+from scrapers.utils.base import BaseScraper
 from utils import (
-    get_logger,
     agora_brt,
-    limpar,
     b64_encode_params,
+    get_logger,
+    limpar,
     nova_session,
 )
-
-import pandas as pd
-from scrapers.utils.base import BaseScraper
 
 log = get_logger(__name__)
 
 BASE_URL = (
-    "https://sistemaswebb3-listados.b3.com.br"
-    "/listedCompaniesProxy/CompanyCall"
+    "https://sistemaswebb3-listados.b3.com.br" "/listedCompaniesProxy/CompanyCall"
 )
 
 PAGE_SIZE = 9999
@@ -85,7 +84,7 @@ def _extrair_financeiro(dados: dict, empresa: dict, agora: str) -> list[dict]:
     """Extrai as 3 seções do JSON GetListedFinancial e retorna registros planos."""
     registros = []
 
-    cvm  = empresa.get("codeCVM", "")
+    cvm = empresa.get("codeCVM", "")
     code = empresa.get("issuingCompany", "")
     nome = empresa.get("tradingName", "")
     cnpj = empresa.get("cnpj", "")
@@ -95,63 +94,69 @@ def _extrair_financeiro(dados: dict, empresa: dict, agora: str) -> list[dict]:
     if pos and isinstance(pos, dict):
         dt_ref = limpar(pos.get("informationReceived", ""))
         for r in pos.get("results", []):
-            registros.append({
-                "data_captura":    agora,
-                "secao":           "posicao_acionaria",
-                "codigo_cvm":      cvm,
-                "codigo_negociacao": code,
-                "nome_empresa":    nome,
-                "cnpj":            cnpj,
-                "data_referencia": dt_ref,
-                "descricao":       limpar(r.get("describle", "")),
-                "pct_on":          limpar(r.get("on", "")),
-                "pct_pn":          limpar(r.get("pn", "")),
-                "pct_total":       limpar(r.get("total", "")),
-                "quantidade":      "",
-                "percentual":      "",
-            })
+            registros.append(
+                {
+                    "data_captura": agora,
+                    "secao": "posicao_acionaria",
+                    "codigo_cvm": cvm,
+                    "codigo_negociacao": code,
+                    "nome_empresa": nome,
+                    "cnpj": cnpj,
+                    "data_referencia": dt_ref,
+                    "descricao": limpar(r.get("describle", "")),
+                    "pct_on": limpar(r.get("on", "")),
+                    "pct_pn": limpar(r.get("pn", "")),
+                    "pct_total": limpar(r.get("total", "")),
+                    "quantidade": "",
+                    "percentual": "",
+                }
+            )
 
     # 2) Free float (ações em circulação)
     ff = dados.get("freeFloatResult")
     if ff and isinstance(ff, dict):
         dt_ref = limpar(ff.get("title", ""))
         for r in ff.get("results", []):
-            registros.append({
-                "data_captura":    agora,
-                "secao":           "free_float",
-                "codigo_cvm":      cvm,
-                "codigo_negociacao": code,
-                "nome_empresa":    nome,
-                "cnpj":            cnpj,
-                "data_referencia": dt_ref,
-                "descricao":       limpar(r.get("describle", "")),
-                "pct_on":          "",
-                "pct_pn":          "",
-                "pct_total":       "",
-                "quantidade":      limpar(r.get("value", "")),
-                "percentual":      limpar(r.get("value2", "")),
-            })
+            registros.append(
+                {
+                    "data_captura": agora,
+                    "secao": "free_float",
+                    "codigo_cvm": cvm,
+                    "codigo_negociacao": code,
+                    "nome_empresa": nome,
+                    "cnpj": cnpj,
+                    "data_referencia": dt_ref,
+                    "descricao": limpar(r.get("describle", "")),
+                    "pct_on": "",
+                    "pct_pn": "",
+                    "pct_total": "",
+                    "quantidade": limpar(r.get("value", "")),
+                    "percentual": limpar(r.get("value2", "")),
+                }
+            )
 
     # 3) Composição do capital social
     cs = dados.get("capitalStockComposition")
     if cs and isinstance(cs, dict):
         dt_ref = limpar(cs.get("title", ""))
         for r in cs.get("results", []):
-            registros.append({
-                "data_captura":    agora,
-                "secao":           "capital_social",
-                "codigo_cvm":      cvm,
-                "codigo_negociacao": code,
-                "nome_empresa":    nome,
-                "cnpj":            cnpj,
-                "data_referencia": dt_ref,
-                "descricao":       limpar(r.get("describle", "")),
-                "pct_on":          "",
-                "pct_pn":          "",
-                "pct_total":       "",
-                "quantidade":      limpar(r.get("value", "")),
-                "percentual":      "",
-            })
+            registros.append(
+                {
+                    "data_captura": agora,
+                    "secao": "capital_social",
+                    "codigo_cvm": cvm,
+                    "codigo_negociacao": code,
+                    "nome_empresa": nome,
+                    "cnpj": cnpj,
+                    "data_referencia": dt_ref,
+                    "descricao": limpar(r.get("describle", "")),
+                    "pct_on": "",
+                    "pct_pn": "",
+                    "pct_total": "",
+                    "quantidade": limpar(r.get("value", "")),
+                    "percentual": "",
+                }
+            )
 
     return registros
 
@@ -172,13 +177,13 @@ def capturar() -> list[dict]:
         Lista de registros planos prontos para DataFrame.
     """
     session = nova_session()
-    agora   = agora_brt()
-    todos   = []
+    agora = agora_brt()
+    todos = []
 
     empresas = _listar_empresas(session)
 
     for i, emp in enumerate(empresas, 1):
-        cvm  = emp.get("codeCVM", "")
+        cvm = emp.get("codeCVM", "")
         nome = emp.get("tradingName", "")
 
         if not cvm:
@@ -187,7 +192,7 @@ def capturar() -> list[dict]:
         log.info(f"[{i}/{len(empresas)}] {nome} (CVM: {cvm})")
 
         params = {"codeCVM": str(cvm), "language": "pt-br"}
-        url    = _url("GetListedFinancial", params)
+        url = _url("GetListedFinancial", params)
 
         try:
             resp = session.get(url)
@@ -214,33 +219,33 @@ def capturar() -> list[dict]:
 
 class Scraper(BaseScraper):
     # ── Orquestração ──────────────────────────────────────────────────────────
-    name        = "b3_companhias_financeiro"
-    group       = "b3"
-    enabled     = True
-    phase       = 1
+    name = "b3_companhias_financeiro"
+    group = "b3"
+    enabled = True
+    phase = 1
 
     # ── Persistência ──────────────────────────────────────────────────────────
-    accumulate  = False                          # snapshot: substitui o arquivo a cada run
+    accumulate = False  # snapshot: substitui o arquivo a cada run
     output_file = ROOT / "data" / "b3_companhias_financeiro.csv"
     chaves_dedup = ["secao", "codigo_cvm", "descricao", "data_referencia"]
 
     # ── Catálogo / Dashboard ──────────────────────────────────────────────────
-    title        = "B3 – Financeiro de Cias Listadas"
-    description  = (
+    title = "B3 – Financeiro de Cias Listadas"
+    description = (
         "Posição acionária, free float e composição do capital social "
         "de todas as companhias listadas na B3."
     )
-    icon         = "🏛️"
-    icon_class   = "icon-b3"
-    badge        = "Snapshot"
-    badge_class  = "badge-snapshot"
-    tags         = ["b3", "posicao-acionaria", "free-float", "capital-social"]
-    source       = "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/"
+    icon = "🏛️"
+    icon_class = "icon-b3"
+    badge = "Snapshot"
+    badge_class = "badge-snapshot"
+    tags = ["b3", "posicao-acionaria", "free-float", "capital-social"]
+    source = "https://sistemaswebb3-listados.b3.com.br/listedCompaniesPage/"
 
     def fetch(self) -> pd.DataFrame:
         """Captura os dados e devolve um DataFrame — salvamento é responsabilidade do BaseScraper."""
         rows = capturar()
-        df   = pd.DataFrame(rows)
+        df = pd.DataFrame(rows)
         if df.empty:
             return df
         return df.reindex(columns=CABECALHO)

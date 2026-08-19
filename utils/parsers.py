@@ -6,56 +6,107 @@ de formatos heterogêneos (CSV, JSON, ZIP).
 """
 
 import csv
+import gzip
 import hashlib
 import io
 import json
 import re
 import unicodedata
+import warnings
 import zipfile
 from datetime import date, datetime, timedelta
 from xml.etree import ElementTree as ET
 
+import openpyxl
+import xlrd
 from bizdays import Calendar
 
-import openpyxl
-import warnings
+from .base import FUSO, agora_brt, limpar
 
 # Silencia avisos irritantes de formatação/estilos ausentes do openpyxl
 warnings.filterwarnings("ignore", category=UserWarning, module="openpyxl")
-
-import xlrd
-
-from .base import FUSO, agora_brt, get_logger, limpar
 
 FIXOS = ["data_captura", "conjunto", "arquivo_origem", "registro_hash"]
 
 _CAL = Calendar(
     holidays=[
         # 2024
-        "2024-01-01", "2024-02-12", "2024-02-13", "2024-02-14",
-        "2024-03-29", "2024-04-21", "2024-05-01", "2024-05-30",
-        "2024-09-07", "2024-10-12", "2024-11-02", "2024-11-15",
-        "2024-11-20", "2024-12-25",
+        "2024-01-01",
+        "2024-02-12",
+        "2024-02-13",
+        "2024-02-14",
+        "2024-03-29",
+        "2024-04-21",
+        "2024-05-01",
+        "2024-05-30",
+        "2024-09-07",
+        "2024-10-12",
+        "2024-11-02",
+        "2024-11-15",
+        "2024-11-20",
+        "2024-12-25",
         # 2025
-        "2025-01-01", "2025-03-03", "2025-03-04", "2025-03-05",
-        "2025-04-18", "2025-04-21", "2025-05-01", "2025-06-19",
-        "2025-09-07", "2025-10-12", "2025-11-02", "2025-11-15",
-        "2025-11-20", "2025-12-25",
+        "2025-01-01",
+        "2025-03-03",
+        "2025-03-04",
+        "2025-03-05",
+        "2025-04-18",
+        "2025-04-21",
+        "2025-05-01",
+        "2025-06-19",
+        "2025-09-07",
+        "2025-10-12",
+        "2025-11-02",
+        "2025-11-15",
+        "2025-11-20",
+        "2025-12-25",
         # 2026
-        "2026-01-01", "2026-02-16", "2026-02-17", "2026-02-18",
-        "2026-04-03", "2026-04-21", "2026-05-01", "2026-06-04",
-        "2026-09-07", "2026-10-12", "2026-11-02", "2026-11-15",
-        "2026-11-20", "2026-12-24", "2026-12-25", "2026-12-31",
+        "2026-01-01",
+        "2026-02-16",
+        "2026-02-17",
+        "2026-02-18",
+        "2026-04-03",
+        "2026-04-21",
+        "2026-05-01",
+        "2026-06-04",
+        "2026-09-07",
+        "2026-10-12",
+        "2026-11-02",
+        "2026-11-15",
+        "2026-11-20",
+        "2026-12-24",
+        "2026-12-25",
+        "2026-12-31",
         # 2027
-        "2027-01-01", "2027-02-08", "2027-02-09", "2027-02-10",
-        "2027-03-26", "2027-04-21", "2027-05-01", "2027-05-27",
-        "2027-09-07", "2027-10-12", "2027-11-02", "2027-11-15",
-        "2027-11-20", "2027-12-25",
+        "2027-01-01",
+        "2027-02-08",
+        "2027-02-09",
+        "2027-02-10",
+        "2027-03-26",
+        "2027-04-21",
+        "2027-05-01",
+        "2027-05-27",
+        "2027-09-07",
+        "2027-10-12",
+        "2027-11-02",
+        "2027-11-15",
+        "2027-11-20",
+        "2027-12-25",
         # 2028
-        "2028-01-01", "2028-02-28", "2028-02-29", "2028-03-01",
-        "2028-04-14", "2028-04-21", "2028-05-01", "2028-06-15",
-        "2028-09-07", "2028-10-12", "2028-11-02", "2028-11-15",
-        "2028-11-20", "2028-12-25",
+        "2028-01-01",
+        "2028-02-28",
+        "2028-02-29",
+        "2028-03-01",
+        "2028-04-14",
+        "2028-04-21",
+        "2028-05-01",
+        "2028-06-15",
+        "2028-09-07",
+        "2028-10-12",
+        "2028-11-02",
+        "2028-11-15",
+        "2028-11-20",
+        "2028-12-25",
     ],
     weekdays=["Saturday", "Sunday"],
 )
@@ -119,7 +170,6 @@ def sanitize_xls_header(key: str) -> str:
     return key
 
 
-
 def csv_rows(text: str, delimiter: str | None = None) -> list[dict]:
     text = text.replace("\x00", "").strip()
     if not text:
@@ -142,7 +192,11 @@ def csv_rows(text: str, delimiter: str | None = None) -> list[dict]:
 
     try:
         reader = csv.DictReader(io.StringIO("\n".join(lines)), delimiter=delimiter)
-        rows = [normalize_keys(r) for r in reader if any((v or "").strip() for v in r.values())]
+        rows = [
+            normalize_keys(r)
+            for r in reader
+            if any((v or "").strip() for v in r.values())
+        ]
         if rows:
             return rows
     except Exception:
@@ -179,7 +233,9 @@ def json_rows(payload) -> list[dict]:
     return rows
 
 
-def fwf_rows(text: str, fields: list[str], widths: list[int], only_regtype_01: bool = False) -> list[dict]:
+def fwf_rows(
+    text: str, fields: list[str], widths: list[int], only_regtype_01: bool = False
+) -> list[dict]:
     lines = [ln for ln in text.splitlines() if ln.strip()]
     rows = []
     norm_fields = [normalize_key(f) for f in fields]
@@ -189,7 +245,7 @@ def fwf_rows(text: str, fields: list[str], widths: list[int], only_regtype_01: b
         pos = 0
         row = {}
         for name, width in zip(norm_fields, widths):
-            row[name] = ln[pos:pos + width].strip()
+            row[name] = ln[pos : pos + width].strip()
             pos += width
         if only_regtype_01 and row.get("regtype") != "01":
             continue
@@ -206,7 +262,6 @@ def fwf_rows(text: str, fields: list[str], widths: list[int], only_regtype_01: b
                     row["valor_indicador"] = valor
         rows.append({k: limpar(v) for k, v in row.items()})
     return rows
-
 
 
 def _strip_ns(tag: str) -> str:
@@ -242,7 +297,10 @@ def _xls_rows_xlrd(content: bytes) -> list[dict]:
             target = name
             break
     sheet = book.sheet_by_name(target) if target else book.sheet_by_index(0)
-    headers = [sanitize_xls_header(normalize_key(str(sheet.cell_value(0, c)))) for c in range(sheet.ncols)]
+    headers = [
+        sanitize_xls_header(normalize_key(str(sheet.cell_value(0, c))))
+        for c in range(sheet.ncols)
+    ]
     rows = []
     for r in range(1, sheet.nrows):
         item = {}
@@ -274,7 +332,10 @@ def _xls_rows_openpyxl(content: bytes) -> list[dict]:
             target = name
             break
     ws = wb[target] if target else wb.active
-    headers = [sanitize_xls_header(normalize_key(str(c.value or ""))) for c in next(ws.iter_rows(min_row=1, max_row=1))]
+    headers = [
+        sanitize_xls_header(normalize_key(str(c.value or "")))
+        for c in next(ws.iter_rows(min_row=1, max_row=1))
+    ]
     rows = []
     for row in ws.iter_rows(min_row=2, values_only=True):
         item = {}
@@ -322,7 +383,9 @@ def rows_from_zip(content: bytes, zip_password: bytes | None = None) -> list[dic
                     row["arquivo_origem"] = name
                     rows.append(row)
             else:
-                rows.append({"arquivo_origem": name, "tamanho_bytes": str(info.file_size)})
+                rows.append(
+                    {"arquivo_origem": name, "tamanho_bytes": str(info.file_size)}
+                )
     return rows
 
 
@@ -332,7 +395,6 @@ def hash_row(row: dict) -> str:
 
 
 def read_existing_header(arquivo) -> list[str]:
-    import gzip
     if not arquivo.exists():
         return []
     try:
@@ -347,7 +409,9 @@ def read_existing_header(arquivo) -> list[str]:
     return [c.strip() for c in first.split(",") if c.strip()] if first else []
 
 
-def enriquecer(dataset_id: str, rows: list[dict], data_captura_override: str | None = None) -> tuple[list[dict], list[str]]:
+def enriquecer(
+    dataset_id: str, rows: list[dict], data_captura_override: str | None = None
+) -> tuple[list[dict], list[str]]:
     data_captura = data_captura_override or agora_brt()[0]
     enriched = []
     campos = set()
@@ -356,7 +420,9 @@ def enriquecer(dataset_id: str, rows: list[dict], data_captura_override: str | N
         item["data_captura"] = data_captura
         item["conjunto"] = dataset_id
         item.setdefault("arquivo_origem", "")
-        item["registro_hash"] = hash_row({k: v for k, v in item.items() if k != "data_captura"})
+        item["registro_hash"] = hash_row(
+            {k: v for k, v in item.items() if k != "data_captura"}
+        )
         campos.update(item.keys())
         enriched.append(item)
 

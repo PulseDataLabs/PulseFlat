@@ -12,10 +12,18 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from utils.base import get_logger, nova_session, salvar_csv
-from utils.parsers import date_ref, replace_date_vars, decode_bytes, csv_rows, enriquecer, read_existing_header
 import pandas as pd
+
 from scrapers.utils.base import BaseScraper
+from utils.base import get_logger, nova_session
+from utils.parsers import (
+    csv_rows,
+    date_ref,
+    decode_bytes,
+    enriquecer,
+    read_existing_header,
+    replace_date_vars,
+)
 
 log = get_logger("b3_negocios_balcao")
 
@@ -52,23 +60,24 @@ def capturar() -> tuple[list[dict], list[str]]:
             header.append(col)
     return enriched, header
 
+
 class B3NegociosBalcaoScraper(BaseScraper):
     name = "b3_negocios_balcao"
     group = "b3"
     enabled = False
     phase = 1
     accumulate = True
-    chaves_dedup = ['data_captura', 'conjunto', 'registro_hash']
-    
+    chaves_dedup = ["data_captura", "conjunto", "registro_hash"]
+
     # Catálogo de Metadados
-    title = 'B3 — Negócios de Balcão (OTC)'
-    description = 'Negócios realizados em mercado de balcão da B3, incluindo operações com instrumentos de renda fixa, derivativos e títulos fora do ambiente de bolsa.'
-    icon = '🤝'
-    icon_class = 'icon-b3'
-    badge = 'Diário'
-    badge_class = 'badge-daily'
-    tags = ['otc', 'balcão', 'negócios', 'b3']
-    source = 'B3 · OTC'
+    title = "B3 — Negócios de Balcão (OTC)"
+    description = "Negócios realizados em mercado de balcão da B3, incluindo operações com instrumentos de renda fixa, derivativos e títulos fora do ambiente de bolsa."
+    icon = "🤝"
+    icon_class = "icon-b3"
+    badge = "Diário"
+    badge_class = "badge-daily"
+    tags = ["otc", "balcão", "negócios", "b3"]
+    source = "B3 · OTC"
 
     def fetch(self) -> pd.DataFrame:
         log.info("=== B3 — Negócios de Balcão (OTC) ===")

@@ -1,3 +1,5 @@
+from scripts.utils.ux import print_done, print_warn
+
 """
 scrapers/generic_scraper.py
 ----------------------------
@@ -8,22 +10,22 @@ import base64
 import sys
 import time
 from pathlib import Path
-import yaml
+
 import pandas as pd
+import yaml
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from scrapers.utils.base import BaseScraper
-from utils.base import get_logger, nova_session, salvar_csv, agora_brt
+from utils.base import agora_brt, get_logger, nova_session
 from utils.parsers import (
-    decode_bytes,
     csv_rows,
-    json_rows,
-    xls_rows,
-    rows_from_zip,
-    enriquecer,
-    read_existing_header,
     date_ref,
+    decode_bytes,
+    enriquecer,
+    json_rows,
     replace_date_vars,
+    rows_from_zip,
+    xls_rows,
 )
 
 log = get_logger("generic_scraper")
@@ -52,7 +54,7 @@ def clean_csv_text(text: str) -> str:
     lines = [ln.strip() for ln in text.splitlines() if ln.strip()]
     if not lines:
         return ""
-    
+
     idx = 0
     for i, line in enumerate(lines[:10]):
         num_delimiters = sum(line.count(d) for d in (";", ",", "\t", "|"))
@@ -61,7 +63,7 @@ def clean_csv_text(text: str) -> str:
             break
     else:
         idx = 0
-    
+
     if idx > 0:
         return "\n".join(lines[idx:])
     return "\n".join(lines)
@@ -82,9 +84,13 @@ class GenericScraper(BaseScraper):
             config = yaml.safe_load(f)
 
         resources = config.get("resources", [])
-        self.res_config = next((r for r in resources if r.get("name") == self.resource_name), None)
+        self.res_config = next(
+            (r for r in resources if r.get("name") == self.resource_name), None
+        )
         if not self.res_config:
-            raise ValueError(f"Recurso '{self.resource_name}' não encontrado no resources.yaml")
+            raise ValueError(
+                f"Recurso '{self.resource_name}' não encontrado no resources.yaml"
+            )
 
         file_name = self.res_config.get("file_name")
         base_name = Path(file_name).name
@@ -110,7 +116,6 @@ class GenericScraper(BaseScraper):
         super().__init__()
 
     def fetch(self) -> pd.DataFrame:
-        from scripts.utils.ux import print_done, print_warn
 
         url_template = self.res_config.get("url")
         file_name = self.res_config.get("file_name")
@@ -118,6 +123,7 @@ class GenericScraper(BaseScraper):
 
         if self.target_date:
             from datetime import datetime
+
             # Combina a data alvo com o horário atual para evitar perda de fuso
             dt = datetime.combine(self.target_date, datetime.now().time())
         else:
@@ -160,7 +166,7 @@ class GenericScraper(BaseScraper):
             except Exception as e:
                 raise RuntimeError(f"Falha ao decodificar conteúdo base64: {e}")
             decoded_text = decode_bytes(decoded_bytes)
-            
+
             base_name = Path(file_name).name
             key = base_name.replace("b3_carteira_teorica_", "").split(".")[0]
             MAP_INDICES = {
@@ -181,23 +187,31 @@ class GenericScraper(BaseScraper):
                 parts = [p.strip() for p in ln.split(";")]
                 if len(parts) < 5:
                     continue
-                if parts[0].lower() in ("código", "cdigo", "codigo") or "carteira" in parts[0].lower() or "dia" in parts[0].lower():
+                if (
+                    parts[0].lower() in ("código", "cdigo", "codigo")
+                    or "carteira" in parts[0].lower()
+                    or "dia" in parts[0].lower()
+                ):
                     continue
                 if "total" in parts[0].lower() or "redutor" in parts[0].lower():
                     continue
 
-                rows.append({
-                    "data_captura":       data_captura,
-                    "indice":             index_code,
-                    "indice_nome":        index_name,
-                    "codigo_ativo":       parts[0],
-                    "nome_ativo":         parts[1],
-                    "tipo_ativo":         parts[2],
-                    "quantidade_teorica": _limpar_int(parts[3]),
-                    "participacao_pct":   _limpar_float(parts[4]),
-                    "reducao_capital":    _limpar_float(parts[5]) if len(parts) > 5 else "",
-                    "segmento":           parts[6] if len(parts) > 6 else "",
-                })
+                rows.append(
+                    {
+                        "data_captura": data_captura,
+                        "indice": index_code,
+                        "indice_nome": index_name,
+                        "codigo_ativo": parts[0],
+                        "nome_ativo": parts[1],
+                        "tipo_ativo": parts[2],
+                        "quantidade_teorica": _limpar_int(parts[3]),
+                        "participacao_pct": _limpar_float(parts[4]),
+                        "reducao_capital": (
+                            _limpar_float(parts[5]) if len(parts) > 5 else ""
+                        ),
+                        "segmento": parts[6] if len(parts) > 6 else "",
+                    }
+                )
         else:
             if type_response == "json":
                 rows = json_rows(resp.json())
@@ -217,7 +231,11 @@ class GenericScraper(BaseScraper):
                 decoded_text = clean_csv_text(decoded_text)
                 rows = csv_rows(decoded_text)
             elif type_response == "txt":
-                rows = [{"linha": ln} for ln in decode_bytes(content).splitlines() if ln.strip()]
+                rows = [
+                    {"linha": ln}
+                    for ln in decode_bytes(content).splitlines()
+                    if ln.strip()
+                ]
             elif type_response == "xls":
                 rows = xls_rows(content)
             elif type_response == "zip":
@@ -236,6 +254,7 @@ class GenericScraper(BaseScraper):
         column_mapping = self.res_config.get("column_mapping")
         if column_mapping and rows:
             from datetime import datetime
+
             mapped_rows = []
             for r in rows:
                 new_r = {}
@@ -251,7 +270,9 @@ class GenericScraper(BaseScraper):
                         parsed_date = None
                         for fmt in ("%d/%m/%Y", "%Y/%m/%d", "%Y-%m-%d"):
                             try:
-                                parsed_date = datetime.strptime(val_strip, fmt).strftime("%Y-%m-%d")
+                                parsed_date = datetime.strptime(
+                                    val_strip, fmt
+                                ).strftime("%Y-%m-%d")
                                 break
                             except ValueError:
                                 continue
@@ -265,7 +286,9 @@ class GenericScraper(BaseScraper):
             rows = mapped_rows
 
         dataset_id = self.resource_name.lower().replace(" ", "_").replace("-", "_")
-        override_str = self.target_date.strftime("%Y-%m-%d") if self.target_date else None
+        override_str = (
+            self.target_date.strftime("%Y-%m-%d") if self.target_date else None
+        )
         enriched, _ = enriquecer(dataset_id, rows, data_captura_override=override_str)
         return pd.DataFrame(enriched)
 

@@ -124,7 +124,9 @@ class TestRunAllFlags:
 
     def test_list_shows_scrapers(self):
         result = run_script(RUN_ALL, "--list")
-        assert "Scrapers disponíveis" in result.stdout or "dispon" in result.stdout.lower()
+        assert (
+            "Scrapers disponíveis" in result.stdout or "dispon" in result.stdout.lower()
+        )
 
     def test_generate_catalog_exits_cleanly(self):
         result = run_script(RUN_ALL, "--generate-catalog")
@@ -154,7 +156,10 @@ class TestErrorHandling:
     def test_help_has_examples(self):
         for name, path in SCRIPTS:
             result = run_script(path, "--help")
-            assert "exemplos" in result.stdout.lower() or "example" in result.stdout.lower()
+            assert (
+                "exemplos" in result.stdout.lower()
+                or "example" in result.stdout.lower()
+            )
 
 
 class TestVerificarBuracosFlags:
@@ -170,26 +175,37 @@ class TestVerificarBuracosFlags:
 
     def test_csv_filter(self):
         result = run_script(
-            self.VERIFICAR_PATH, "--csv", "anbima_ima_completo.csv", "--no-color",
+            self.VERIFICAR_PATH,
+            "--csv",
+            "anbima_ima_completo.csv",
+            "--no-color",
         )
         assert result.returncode == 0
         assert "anbima_ima_completo.csv" in result.stdout
 
     def test_threshold_flag(self):
-        result = run_script(self.VERIFICAR_PATH, "--threshold", "5", "--no-color", "--dry-run")
+        result = run_script(
+            self.VERIFICAR_PATH, "--threshold", "5", "--no-color", "--dry-run"
+        )
         assert result.returncode == 0
 
     def test_fail_on_holes_does_not_crash(self):
         result = run_script(
-            self.VERIFICAR_PATH, "--csv", "anbima_ima_completo.csv",
-            "--fail-on-holes", "--no-color",
+            self.VERIFICAR_PATH,
+            "--csv",
+            "anbima_ima_completo.csv",
+            "--fail-on-holes",
+            "--no-color",
         )
         # Should exit cleanly (0 or 1 depending on holes found)
         assert result.returncode in (0, 1)
 
     def test_verbose_shows_entity_details(self):
         result = run_script(
-            self.VERIFICAR_PATH, "--csv", "anbima_ima_completo.csv",
-            "--verbose", "--no-color",
+            self.VERIFICAR_PATH,
+            "--csv",
+            "anbima_ima_completo.csv",
+            "--verbose",
+            "--no-color",
         )
         assert result.returncode == 0

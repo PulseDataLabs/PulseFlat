@@ -6,12 +6,11 @@ tests/unit/test_ux.py
 Testes unitários do módulo ux.py: status prints, ColorLogger, CLI args, summary.
 """
 
-import logging
 import argparse
 import io
+import logging
 from contextlib import redirect_stdout
 
-import pytest
 import scripts.utils.ux as ux
 
 
@@ -24,6 +23,7 @@ def capture_print(func, *args, **kwargs) -> str:
 
 
 # ── Status Prints ─────────────────────────────────────────────────────
+
 
 class TestStatusPrints:
     """Testes das funções print_start/done/fail/warn/skip/info."""
@@ -84,12 +84,15 @@ class TestStatusPrints:
 
 # ── Print Summary ─────────────────────────────────────────────────────
 
+
 class TestPrintSummary:
     """Testes da função print_summary."""
 
     def test_summary_no_errors(self):
         ux.configure(use_color=False, use_unicode=True)
-        out = capture_print(ux.print_summary, "Teste", total=10, success=10, failed=0, elapsed=5.0)
+        out = capture_print(
+            ux.print_summary, "Teste", total=10, success=10, failed=0, elapsed=5.0
+        )
         assert "Teste" in out
         assert "10" in out
         assert "0 erros" in out
@@ -97,19 +100,36 @@ class TestPrintSummary:
 
     def test_summary_with_errors(self):
         ux.configure(use_color=False, use_unicode=True)
-        out = capture_print(ux.print_summary, "Teste", total=10, success=7, failed=3, elapsed=5.0)
+        out = capture_print(
+            ux.print_summary, "Teste", total=10, success=7, failed=3, elapsed=5.0
+        )
         assert "3 erro(s)" in out
 
     def test_summary_with_skipped(self):
         ux.configure(use_color=False, use_unicode=True)
-        out = capture_print(ux.print_summary, "Teste", total=10, success=7, failed=2, skipped=1, elapsed=5.0)
+        out = capture_print(
+            ux.print_summary,
+            "Teste",
+            total=10,
+            success=7,
+            failed=2,
+            skipped=1,
+            elapsed=5.0,
+        )
         assert "1" in out
         assert "pulado" in out
 
     def test_summary_with_details(self):
         ux.configure(use_color=False, use_unicode=True)
-        out = capture_print(ux.print_summary, "Teste", total=5, success=5, failed=0, elapsed=3.0,
-                            details=[("file", "Arquivos", "10"), ("clock", "Tempo", "3s")])
+        out = capture_print(
+            ux.print_summary,
+            "Teste",
+            total=5,
+            success=5,
+            failed=0,
+            elapsed=3.0,
+            details=[("file", "Arquivos", "10"), ("clock", "Tempo", "3s")],
+        )
         assert "Arquivos" in out
         assert "10" in out
         assert "Tempo" in out
@@ -117,11 +137,14 @@ class TestPrintSummary:
 
     def test_summary_empty(self):
         ux.configure(use_color=False, use_unicode=True)
-        out = capture_print(ux.print_summary, "Teste", total=0, success=0, failed=0, elapsed=0.0)
+        out = capture_print(
+            ux.print_summary, "Teste", total=0, success=0, failed=0, elapsed=0.0
+        )
         assert "Teste" in out
 
 
 # ── ColorLogger ───────────────────────────────────────────────────────
+
 
 class TestColorLogger:
     """Testes do ColorLogger."""
@@ -198,6 +221,7 @@ class TestColorLogger:
 
 # ── CLI Common Args ───────────────────────────────────────────────────
 
+
 class TestCLIArgs:
     """Testes de add_common_args e apply_common_args."""
 
@@ -272,6 +296,7 @@ class TestCLIArgs:
 
 # ── Banner and Section ────────────────────────────────────────────────
 
+
 class TestBannerSection:
     """Testes de banner() e section()."""
 
@@ -308,6 +333,7 @@ class TestBannerSection:
 
 
 # ── Module __all__ ────────────────────────────────────────────────────
+
 
 class TestModuleAll:
     """Testa que __all__ está completo e exporta tudo."""

@@ -7,8 +7,8 @@ normalização de datas brasileiras e conversão de formatos decimais nacionais.
 
 import sys
 from pathlib import Path
+
 import pandas as pd
-import pytest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
@@ -17,6 +17,7 @@ from scrapers.utils.base import BaseScraper
 
 def test_base_scraper_data_sanitization(tmp_path):
     """Deve normalizar datas no padrão brasileiro e converter números com vírgula para ponto."""
+
     class DummyScraper(BaseScraper):
         name = "dummy_test_scraper"
         accumulate = False
@@ -48,6 +49,7 @@ def test_base_scraper_data_sanitization(tmp_path):
 
     # Lê os dados do arquivo gerado para verificar a normalização
     import csv
+
     with scraper.output_file.open(encoding="utf-8") as f:
         reader = csv.DictReader(f)
         registros = list(reader)
@@ -75,6 +77,7 @@ def test_base_scraper_data_sanitization(tmp_path):
 
 def test_base_scraper_datetime_conversion(tmp_path):
     """Deve converter colunas do tipo datetime64 do Pandas para string no formato YYYY-MM-DD."""
+
     class DatetimeDummyScraper(BaseScraper):
         name = "datetime_dummy_scraper"
         accumulate = False
@@ -90,6 +93,7 @@ def test_base_scraper_datetime_conversion(tmp_path):
     scraper.run()
 
     import csv
+
     with scraper.output_file.open(encoding="utf-8") as f:
         reader = csv.DictReader(f)
         registros = list(reader)
@@ -99,6 +103,7 @@ def test_base_scraper_datetime_conversion(tmp_path):
 
 def test_base_scraper_run_empty_dataframe(tmp_path, caplog):
     """Deve registrar um alerta e não salvar arquivos caso o DataFrame retornado seja vazio."""
+
     class EmptyDummyScraper(BaseScraper):
         name = "empty_dummy_scraper"
         accumulate = False

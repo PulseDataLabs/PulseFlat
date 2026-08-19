@@ -8,8 +8,8 @@ import io
 import sys
 import zipfile
 from pathlib import Path
+
 import openpyxl
-import pytest
 import pandas as pd
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
@@ -24,32 +24,38 @@ def test_b3_classificacao_setorial_sucesso(requests_mock):
     wb = openpyxl.Workbook()
     ws = wb.active
     ws.title = "Plan3"
-    
+
     # Adiciona linhas no formato esperado
     for _ in range(6):
         ws.append([None, None, None, None, None, None, None])
-    ws.append(['SETOR ECONÔMICO', 'SUBSETOR', 'SEGMENTO', 'LISTAGEM', None, None, None])
-    ws.append([None, None, None, 'CÓDIGO', 'SEGMENTO', None, None])
-    ws.append(['Petróleo, Gás e Biocombustíveis', 'Petróleo, Gás e Biocombustíveis', 'Exploração, Refino e Distribuição', None, None, None, None])
-    ws.append([None, None, 'PETROBRAS', 'PETR', 'N2', None, None])
-    
+    ws.append(["SETOR ECONÔMICO", "SUBSETOR", "SEGMENTO", "LISTAGEM", None, None, None])
+    ws.append([None, None, None, "CÓDIGO", "SEGMENTO", None, None])
+    ws.append(
+        [
+            "Petróleo, Gás e Biocombustíveis",
+            "Petróleo, Gás e Biocombustíveis",
+            "Exploração, Refino e Distribuição",
+            None,
+            None,
+            None,
+            None,
+        ]
+    )
+    ws.append([None, None, "PETROBRAS", "PETR", "N2", None, None])
+
     excel_io = io.BytesIO()
     wb.save(excel_io)
     excel_bytes = excel_io.getvalue()
-    
+
     # Crie um arquivo ZIP mock em memória contendo o Excel
     zip_io = io.BytesIO()
-    with zipfile.ZipFile(zip_io, 'w') as zf:
-        zf.writestr('Setorial B3.xlsx', excel_bytes)
+    with zipfile.ZipFile(zip_io, "w") as zf:
+        zf.writestr("Setorial B3.xlsx", excel_bytes)
     zip_bytes = zip_io.getvalue()
-    
+
     # Mock do download
-    requests_mock.get(
-        bcs.URL,
-        content=zip_bytes,
-        status_code=200
-    )
-    
+    requests_mock.get(bcs.URL, content=zip_bytes, status_code=200)
+
     empresas = bcs.capturar()
     assert len(empresas) == 1
     emp = empresas[0]
@@ -65,32 +71,36 @@ def test_b3_classificacao_setorial_scraper_fetch(requests_mock):
     ws.title = "Plan3"
     for _ in range(6):
         ws.append([None, None, None, None, None, None, None])
-    ws.append(['SETOR ECONÔMICO', 'SUBSETOR', 'SEGMENTO', 'LISTAGEM', None, None, None])
-    ws.append([None, None, None, 'CÓDIGO', 'SEGMENTO', None, None])
-    ws.append(['Petróleo', 'Petróleo', 'Exploração', None, None, None, None])
-    ws.append([None, None, 'PETROBRAS', 'PETR', 'N2', None, None])
-    
+    ws.append(["SETOR ECONÔMICO", "SUBSETOR", "SEGMENTO", "LISTAGEM", None, None, None])
+    ws.append([None, None, None, "CÓDIGO", "SEGMENTO", None, None])
+    ws.append(["Petróleo", "Petróleo", "Exploração", None, None, None, None])
+    ws.append([None, None, "PETROBRAS", "PETR", "N2", None, None])
+
     excel_io = io.BytesIO()
     wb.save(excel_io)
     excel_bytes = excel_io.getvalue()
-    
+
     zip_io = io.BytesIO()
-    with zipfile.ZipFile(zip_io, 'w') as zf:
-        zf.writestr('Setorial B3.xlsx', excel_bytes)
+    with zipfile.ZipFile(zip_io, "w") as zf:
+        zf.writestr("Setorial B3.xlsx", excel_bytes)
     zip_bytes = zip_io.getvalue()
-    
-    requests_mock.get(
-        bcs.URL,
-        content=zip_bytes,
-        status_code=200
-    )
-    
+
+    requests_mock.get(bcs.URL, content=zip_bytes, status_code=200)
+
     scraper = bcs.B3ClassificacaoSetorialScraper()
     df = scraper.fetch()
-    
+
     assert isinstance(df, pd.DataFrame)
     assert not df.empty
-    assert list(df.columns) == ["data_captura", "setor_economico", "subsetor", "segmento", "nome_empresa", "codigo", "segmento_listagem"]
+    assert list(df.columns) == [
+        "data_captura",
+        "setor_economico",
+        "subsetor",
+        "segmento",
+        "nome_empresa",
+        "codigo",
+        "segmento_listagem",
+    ]
 
 
 def test_b3_limites_garantias_capturar(requests_mock):
@@ -116,7 +126,10 @@ def test_b3_limites_garantias_capturar(requests_mock):
 
     zip_io = io.BytesIO()
     with zipfile.ZipFile(zip_io, "w") as zf:
-        zf.writestr("Limites de Ações, BDRs, Units, ETFs, ADRs, FIIs e Debêntures_Junho_2026.xlsx", excel_bytes)
+        zf.writestr(
+            "Limites de Ações, BDRs, Units, ETFs, ADRs, FIIs e Debêntures_Junho_2026.xlsx",
+            excel_bytes,
+        )
     zip_bytes = zip_io.getvalue()
 
     pagina_html = """
@@ -159,7 +172,10 @@ def test_b3_limites_garantias_sheet_legacy(requests_mock):
 
     zip_io = io.BytesIO()
     with zipfile.ZipFile(zip_io, "w") as zf:
-        zf.writestr("Limites de Ações, BDRs, Units, ETFs, ADRs e Debêntures_Junho_2025.xlsx", excel_bytes)
+        zf.writestr(
+            "Limites de Ações, BDRs, Units, ETFs, ADRs e Debêntures_Junho_2025.xlsx",
+            excel_bytes,
+        )
     zip_bytes = zip_io.getvalue()
 
     pagina_html = """

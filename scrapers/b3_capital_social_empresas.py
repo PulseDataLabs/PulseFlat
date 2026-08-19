@@ -7,17 +7,18 @@ Fonte: https://sistemaswebb3-listados.b3.com.br/shareCapitalProxy/
        ShareCapitalCall/GetList/<base64>
 """
 
+import json
 import sys
 import time
 from base64 import b64encode
 from pathlib import Path
-import json
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from utils.base import get_logger, nova_session, salvar_csv
-from utils.parsers import json_rows, enriquecer, read_existing_header
 import pandas as pd
+
 from scrapers.utils.base import BaseScraper
+from utils.base import get_logger, nova_session
+from utils.parsers import enriquecer, json_rows, read_existing_header
 
 log = get_logger("b3_capital_social_empresas")
 
@@ -68,23 +69,24 @@ def capturar() -> tuple[list[dict], list[str]]:
             header.append(col)
     return enriched, header
 
+
 class B3CapitalSocialEmpresasScraper(BaseScraper):
     name = "b3_capital_social_empresas"
     group = "b3"
     enabled = False
     phase = 1
     accumulate = True
-    chaves_dedup = ['data_captura', 'conjunto', 'registro_hash']
-    
+    chaves_dedup = ["data_captura", "conjunto", "registro_hash"]
+
     # Catálogo de Metadados
-    title = 'B3 — Capital Social de Empresas'
-    description = 'Capital social de empresas listadas na B3: CNPJ, valor do capital e data de referência.'
-    icon = '🏢'
-    icon_class = 'icon-b3'
-    badge = 'Diário'
-    badge_class = 'badge-daily'
-    tags = ['cnpj', 'empresa', 'capital social']
-    source = 'B3 API'
+    title = "B3 — Capital Social de Empresas"
+    description = "Capital social de empresas listadas na B3: CNPJ, valor do capital e data de referência."
+    icon = "🏢"
+    icon_class = "icon-b3"
+    badge = "Diário"
+    badge_class = "badge-daily"
+    tags = ["cnpj", "empresa", "capital social"]
+    source = "B3 API"
 
     def fetch(self) -> pd.DataFrame:
         log.info("=== B3 — Capital Social de Empresas Listadas ===")

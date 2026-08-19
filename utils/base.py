@@ -11,18 +11,23 @@ import logging
 import sys
 import time
 from base64 import b64encode
+from contextlib import contextmanager
 from datetime import datetime
 from pathlib import Path
 from typing import Union
 from zoneinfo import ZoneInfo
 
+import pandas as pd
 import requests
 import urllib3
 import urllib3.response
 from urllib3.exceptions import InvalidChunkLength
 
+from scripts.utils.ux import ColorLogger
+
 # Desabilita avisos de SSL inseguro globais
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+
 
 # Monkeypatch do urllib3 para tratar conexão fechada prematuramente pelo proxy local (InvalidChunkLength) como EOF normal
 def _patched_update_chunk_length(self):
@@ -46,10 +51,12 @@ def _patched_update_chunk_length(self):
             self.close()
             raise InvalidChunkLength(self, line)
 
+
 urllib3.response.HTTPResponse._update_chunk_length = _patched_update_chunk_length
 
 # Patch global do requests para impor limite e padrão de timeout (evita travamentos longos) e desabilitar verificação de SSL
 _orig_request = requests.Session.request
+
 
 def _patched_request(self, method, url, *args, **kwargs):
     # Desabilita SSL verify para evitar problemas com proxy auto-assinado no sandbox
@@ -85,6 +92,7 @@ def _patched_request(self, method, url, *args, **kwargs):
                 raise e
             time.sleep(1.0)
 
+
 requests.Session.request = _patched_request
 
 DRIFTS = []
@@ -97,16 +105,15 @@ HEADERS_HTTP = {
         "AppleWebKit/537.36 (KHTML, like Gecko) "
         "Chrome/124.0 Safari/537.36"
     ),
-    "Accept":  "application/json, text/plain, */*",
+    "Accept": "application/json, text/plain, */*",
     "Referer": "https://www.b3.com.br/",
-    "Origin":  "https://www.b3.com.br",
+    "Origin": "https://www.b3.com.br",
 }
 
 
 def get_logger(name: str) -> logging.Logger:
     """Retorna um logger. Usa ColorLogger de scripts.utils.ux se disponível."""
     try:
-        from scripts.utils.ux import ColorLogger
         return ColorLogger(name)
     except Exception:
         logging.basicConfig(
@@ -161,7 +168,6 @@ def read_existing_header(arquivo: Path) -> list[str]:
 
 
 def _salvar_csv_logger():
-    from scripts.utils.ux import ColorLogger
     return ColorLogger("utils.salvar_csv")
 
 
@@ -172,7 +178,6 @@ def salvar_csv(
     chaves_dedup: list[str] | None = None,
     acumular: bool = True,
 ) -> None:
-    import pandas as pd
     log = _salvar_csv_logger()
 
     is_empty = registros.empty if isinstance(registros, pd.DataFrame) else not registros
@@ -186,28 +191,38 @@ def salvar_csv(
         if schemas_path.exists():
             with schemas_path.open("r", encoding="utf-8") as sf:
                 schemas = json.load(sf)
-            
-            filtered_cols = [c for c in cabecalho if c not in ("conjunto", "arquivo_origem", "registro_hash", "dt_captura")]
-            
+
+            filtered_cols = [
+                c
+                for c in cabecalho
+                if c
+                not in ("conjunto", "arquivo_origem", "registro_hash", "dt_captura")
+            ]
+
             import re
+
             for s in schemas:
-                files_declared = [f.strip() for f in re.split(r'·| e ', s.get("files", ""))]
+                files_declared = [
+                    f.strip() for f in re.split(r"·| e ", s.get("files", ""))
+                ]
                 if arquivo.name in files_declared:
                     existing_cols = [f["name"] for f in s.get("fields", [])]
                     added = [c for c in filtered_cols if c not in existing_cols]
                     removed = []
                     if len(files_declared) == 1:
                         removed = [c for c in existing_cols if c not in filtered_cols]
-                    
+
                     if added or removed:
                         drift_info = {
                             "file": arquivo.name,
                             "added": added,
                             "removed": removed,
-                            "timestamp": datetime.now().isoformat()
+                            "timestamp": datetime.now().isoformat(),
                         }
                         DRIFTS.append(drift_info)
-                        log.warning(f"SCHEMA DRIFT detectado em {arquivo.name}: Adicionadas: {added} | Removidas: {removed}")
+                        log.warning(
+                            f"SCHEMA DRIFT detectado em {arquivo.name}: Adicionadas: {added} | Removidas: {removed}"
+                        )
                     break
     except Exception as e:
         log.warning(f"Erro ao detectar schema drift para {arquivo.name}: {e}")
@@ -231,7 +246,7 @@ def salvar_csv(
 
         try:
             df_antigo = pd.read_csv(arquivo, dtype=str, keep_default_na=False)
-            
+
             for c in cabecalho:
                 if c not in df_novos.columns:
                     df_novos[c] = ""
@@ -239,8 +254,8 @@ def salvar_csv(
                     df_antigo[c] = ""
 
             if chaves_dedup:
-                keys_new = df_novos[chaves_dedup].astype(str).agg('-'.join, axis=1)
-                keys_old = df_antigo[chaves_dedup].astype(str).agg('-'.join, axis=1)
+                keys_new = df_novos[chaves_dedup].astype(str).agg("-".join, axis=1)
+                keys_old = df_antigo[chaves_dedup].astype(str).agg("-".join, axis=1)
                 mask_keep = ~keys_old.isin(keys_new)
                 substituidas = len(df_antigo) - mask_keep.sum()
                 df_antigo_filtrado = df_antigo[mask_keep]
@@ -255,9 +270,13 @@ def salvar_csv(
             elif df_novos.empty:
                 df_final = df_antigo_filtrado[cabecalho]
             else:
-                df_final = pd.concat([df_antigo_filtrado, df_novos[cabecalho]], ignore_index=True)
+                df_final = pd.concat(
+                    [df_antigo_filtrado, df_novos[cabecalho]], ignore_index=True
+                )
         except Exception as e:
-            log.warning(f"Erro ao ler arquivo existente para acumular, reescrevendo: {e}")
+            log.warning(
+                f"Erro ao ler arquivo existente para acumular, reescrevendo: {e}"
+            )
             df_final = df_novos[cabecalho]
     else:
         df_final = df_novos[cabecalho]
@@ -267,28 +286,44 @@ def salvar_csv(
     # --- Persistência no Banco de Dados Oracle ---
     try:
         from utils.db import upload_dataframe
+
         table_name = arquivo.name.split(".")[0].upper()
-        
+
         # Identificar se há colunas de período
         candidates = [
-            "AnoMes", "ANOMES", 
-            "data_base", "DATA_BASE", 
-            "data_referencia", "DATA_REFERENCIA", 
-            "data_captura", "DATA_CAPTURA", 
-            "data", "DATA",
-            "dt_captura", "DT_CAPTURA"
+            "AnoMes",
+            "ANOMES",
+            "data_base",
+            "DATA_BASE",
+            "data_referencia",
+            "DATA_REFERENCIA",
+            "data_captura",
+            "DATA_CAPTURA",
+            "data",
+            "DATA",
+            "dt_captura",
+            "DT_CAPTURA",
         ]
         has_period_col = any(c in df_novos.columns for c in candidates)
-        
+
         if has_period_col:
-            log.info(f"Iniciando carga incremental para '{table_name}' usando novos registros...")
-            upload_dataframe(df_novos[[c for c in cabecalho if c in df_novos.columns]], table_name, chaves_dedup=chaves_dedup)
+            log.info(
+                f"Iniciando carga incremental para '{table_name}' usando novos registros..."
+            )
+            upload_dataframe(
+                df_novos[[c for c in cabecalho if c in df_novos.columns]],
+                table_name,
+                chaves_dedup=chaves_dedup,
+            )
         else:
-            log.info(f"Iniciando carga total para '{table_name}' usando registros acumulados...")
+            log.info(
+                f"Iniciando carga total para '{table_name}' usando registros acumulados..."
+            )
             upload_dataframe(df_final, table_name, chaves_dedup=chaves_dedup)
     except Exception as db_err:
-        log.warning(f"Não foi possível persistir os dados no banco Oracle para {arquivo.name}: {db_err}")
-
+        log.warning(
+            f"Não foi possível persistir os dados no banco Oracle para {arquivo.name}: {db_err}"
+        )
 
     try:
         last_updates_path = arquivo.parent / "last_updates.json"
@@ -299,33 +334,33 @@ def salvar_csv(
                     last_updates = json.load(lf)
             except Exception:
                 pass
-        
+
         if not df_final.empty:
             date_col = None
             for candidate in ["data_captura", "data_referencia", "data", "rpt_dt"]:
                 if candidate in cabecalho:
                     date_col = candidate
                     break
-            
+
             if date_col and date_col in df_final.columns:
                 datas = df_final[date_col].dropna().unique()
                 datas = [str(d) for d in datas if str(d).strip()]
                 if datas:
-                    last_updates[arquivo.name] = {
-                        "min": min(datas),
-                        "max": max(datas)
-                    }
+                    last_updates[arquivo.name] = {"min": min(datas), "max": max(datas)}
                     with last_updates_path.open("w", encoding="utf-8") as lf:
                         json.dump(last_updates, lf, indent=2, ensure_ascii=False)
-                    
+
                     last_updates_js_path = arquivo.parent / "last_updates.js"
                     with last_updates_js_path.open("w", encoding="utf-8") as lf:
-                        lf.write(f"window.PULSEFLAT_LAST_UPDATES = {json.dumps(last_updates, indent=2, ensure_ascii=False)};\n")
+                        lf.write(
+                            f"window.PULSEFLAT_LAST_UPDATES = {json.dumps(last_updates, indent=2, ensure_ascii=False)};\n"
+                        )
     except Exception as e:
         log.warning(f"Não foi possível atualizar last_updates.json/js: {e}")
 
     try:
         import re
+
         schemas_path = arquivo.parent / "schemas.json"
         schemas = []
         if schemas_path.exists():
@@ -337,15 +372,56 @@ def salvar_csv(
 
         def get_type_badge(col_name):
             col_name = col_name.lower()
-            if col_name.startswith("dt_") or col_name.endswith("_dt") or "data" in col_name or "date" in col_name:
+            if (
+                col_name.startswith("dt_")
+                or col_name.endswith("_dt")
+                or "data" in col_name
+                or "date" in col_name
+            ):
                 return "date"
-            if col_name.startswith("vr_") or col_name.startswith("vl_") or col_name.endswith("_val") or "preco" in col_name or "taxa" in col_name or "saldo" in col_name or "patrimonio" in col_name or col_name in ("ret_dia_perc", "ret_mes_perc", "ret_ano_perc", "ret_12_meses_perc", "vol_aa_perc", "taxa_juros_aa_perc_compra_d1", "taxa_juros_aa_perc_venda_d0"):
+            if (
+                col_name.startswith("vr_")
+                or col_name.startswith("vl_")
+                or col_name.endswith("_val")
+                or "preco" in col_name
+                or "taxa" in col_name
+                or "saldo" in col_name
+                or "patrimonio" in col_name
+                or col_name
+                in (
+                    "ret_dia_perc",
+                    "ret_mes_perc",
+                    "ret_ano_perc",
+                    "ret_12_meses_perc",
+                    "vol_aa_perc",
+                    "taxa_juros_aa_perc_compra_d1",
+                    "taxa_juros_aa_perc_venda_d0",
+                )
+            ):
                 return "float"
-            if col_name.startswith("qt_") or col_name.startswith("nr_") or "quantidade" in col_name or "numero" in col_name or col_name in ("id_registro_fundo", "id_registro_classe", "prazo", "prazo_dias", "Ordem", "page_number"):
+            if (
+                col_name.startswith("qt_")
+                or col_name.startswith("nr_")
+                or "quantidade" in col_name
+                or "numero" in col_name
+                or col_name
+                in (
+                    "id_registro_fundo",
+                    "id_registro_classe",
+                    "prazo",
+                    "prazo_dias",
+                    "Ordem",
+                    "page_number",
+                )
+            ):
                 return "int"
             return "str"
 
-        filtered_cols = [c for c in cabecalho if c not in ("conjunto", "arquivo_origem", "registro_hash", "dt_captura")]
+        filtered_cols = [
+            c
+            for c in cabecalho
+            if c not in ("conjunto", "arquivo_origem", "registro_hash", "dt_captura")
+        ]
         first_reg = df_final.iloc[0].to_dict() if not df_final.empty else {}
         fields = []
         for c in filtered_cols:
@@ -353,15 +429,11 @@ def salvar_csv(
             ex_val = str(first_reg.get(c, ""))
             if ex_val == "nan" or ex_val == "None":
                 ex_val = ""
-            fields.append({
-                "name": c,
-                "type": t_badge,
-                "example": ex_val
-            })
+            fields.append({"name": c, "type": t_badge, "example": ex_val})
 
         found = False
         for s in schemas:
-            files_declared = [f.strip() for f in re.split(r'·| e ', s.get("files", ""))]
+            files_declared = [f.strip() for f in re.split(r"·| e ", s.get("files", ""))]
             if arquivo.name in files_declared:
                 if len(files_declared) > 1:
                     new_names = {f["name"] for f in fields}
@@ -376,31 +448,34 @@ def salvar_csv(
                 break
 
         if not found:
+
             def get_source_from_filename(filename: str) -> str:
                 filename = filename.lower()
-                if filename.startswith('anbima_'):
-                    return 'anbima'
-                elif filename.startswith('b3_'):
-                    return 'b3'
-                elif filename.startswith('bcb_') or filename.startswith('bacen_'):
-                    return 'bcb'
-                elif filename.startswith('cvm_') or filename.startswith('registro_'):
-                    return 'cvm'
-                elif filename.startswith('ibge_'):
-                    return 'ibge'
-                elif filename.startswith('debentures_'):
-                    return 'debentures'
-                elif filename.startswith('yahoo_') or filename.startswith('onu_'):
-                    return 'misc'
-                return 'other'
+                if filename.startswith("anbima_"):
+                    return "anbima"
+                elif filename.startswith("b3_"):
+                    return "b3"
+                elif filename.startswith("bcb_") or filename.startswith("bacen_"):
+                    return "bcb"
+                elif filename.startswith("cvm_") or filename.startswith("registro_"):
+                    return "cvm"
+                elif filename.startswith("ibge_"):
+                    return "ibge"
+                elif filename.startswith("debentures_"):
+                    return "debentures"
+                elif filename.startswith("yahoo_") or filename.startswith("onu_"):
+                    return "misc"
+                return "other"
 
             guessed_title = arquivo.name.replace(".csv", "").replace("_", " ").title()
-            schemas.append({
-                "title": guessed_title,
-                "files": arquivo.name,
-                "source": get_source_from_filename(arquivo.name),
-                "fields": fields
-            })
+            schemas.append(
+                {
+                    "title": guessed_title,
+                    "files": arquivo.name,
+                    "source": get_source_from_filename(arquivo.name),
+                    "fields": fields,
+                }
+            )
 
         with schemas_path.open("w", encoding="utf-8") as sf:
             json.dump(schemas, sf, indent=2, ensure_ascii=False)
@@ -418,7 +493,7 @@ try:
     import fcntl
 except ImportError:
     fcntl = None
-from contextlib import contextmanager
+
 
 @contextmanager
 def acquire_lock(lock_name: str, blocking: bool = True):
@@ -426,9 +501,7 @@ def acquire_lock(lock_name: str, blocking: bool = True):
     Adquire um lock de arquivo exclusivo para evitar execuções concorrentes.
     Usa fcntl (Linux/Unix) para liberação automática se o processo cair.
     """
-    import time
-    from pathlib import Path
-    
+
     lock_file = Path(__file__).resolve().parents[1] / "data" / f"{lock_name}.lock"
     lock_file.parent.mkdir(parents=True, exist_ok=True)
 
@@ -455,7 +528,7 @@ def acquire_lock(lock_name: str, blocking: bool = True):
         if not blocking and lock_file.exists():
             if time.time() - lock_file.stat().st_mtime < 3600:
                 raise RuntimeError(f"O processo '{lock_name}' já está em execução.")
-        
+
         lock_file.touch()
         try:
             yield
@@ -464,4 +537,3 @@ def acquire_lock(lock_name: str, blocking: bool = True):
                 lock_file.unlink(missing_ok=True)
             except Exception:
                 pass
-

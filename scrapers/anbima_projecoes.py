@@ -59,44 +59,58 @@ from bs4 import BeautifulSoup
 # Carrega .env se existir (sem obrigar dependência em produção)
 try:
     from dotenv import load_dotenv
+
     load_dotenv()
 except ImportError:
     pass
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from utils import get_logger, agora_brt, limpar, nova_session, salvar_csv
 import pandas as pd
+
 from scrapers.utils.base import BaseScraper
+from utils import agora_brt, get_logger, limpar, nova_session
 
 log = get_logger("anbima_projecoes")
 
 # ─────────────────────────────────────────────
 # Endpoints
 # ─────────────────────────────────────────────
-URL_INDICADORES     = "https://www.anbima.com.br/informacoes/indicadores/"
-ANBIMA_OAUTH_URL    = "https://api.anbima.com.br/oauth/access-token"
-ANBIMA_PROJECOES_URL = "https://api.anbima.com.br/feed/precos-indices/v1/titulos-publicos/projecoes"
+URL_INDICADORES = "https://www.anbima.com.br/informacoes/indicadores/"
+ANBIMA_OAUTH_URL = "https://api.anbima.com.br/oauth/access-token"
+ANBIMA_PROJECOES_URL = (
+    "https://api.anbima.com.br/feed/precos-indices/v1/titulos-publicos/projecoes"
+)
 
 ARQUIVO = Path("data/anbima_projecoes.csv")
 
 CABECALHO = [
     "data_captura",
     "data_referencia",
-    "estrategia_coleta",      # "api_oficial" | "scraping_indicadores"
-    "indice",                 # IPCA | IGP-M
-    "mes_referencia",         # ex: "mai/26"
-    "tipo_projecao",          # corrente | seguinte | posterior | fechado
-    "valor_pct",              # ex: 0.64 (separador decimal: ponto)
-    "data_divulgacao",        # data em que a projeção foi divulgada
-    "num_instituicoes",       # nº de instituições (disponível via API)
+    "estrategia_coleta",  # "api_oficial" | "scraping_indicadores"
+    "indice",  # IPCA | IGP-M
+    "mes_referencia",  # ex: "mai/26"
+    "tipo_projecao",  # corrente | seguinte | posterior | fechado
+    "valor_pct",  # ex: 0.64 (separador decimal: ponto)
+    "data_divulgacao",  # data em que a projeção foi divulgada
+    "num_instituicoes",  # nº de instituições (disponível via API)
     "observacao",
 ]
 
 MESES_MAP = {
-    "jan": "01", "fev": "02", "mar": "03", "abr": "04",
-    "mai": "05", "jun": "06", "jul": "07", "ago": "08",
-    "set": "09", "out": "10", "nov": "11", "dez": "12",
+    "jan": "01",
+    "fev": "02",
+    "mar": "03",
+    "abr": "04",
+    "mai": "05",
+    "jun": "06",
+    "jul": "07",
+    "ago": "08",
+    "set": "09",
+    "out": "10",
+    "nov": "11",
+    "dez": "12",
 }
+
 
 def _converter_mes_ano(texto_mes_ano: str) -> str:
     if not texto_mes_ano:
@@ -117,6 +131,7 @@ def _converter_mes_ano(texto_mes_ano: str) -> str:
 # ESTRATÉGIA A — API Oficial OAuth 2.0
 # ════════════════════════════════════════════════════════
 
+
 def _obter_token(session, client_id: str, client_secret: str) -> str | None:
     """Troca client_id + client_secret por access_token OAuth 2.0."""
     credencial = b64encode(f"{client_id}:{client_secret}".encode()).decode()
@@ -124,7 +139,7 @@ def _obter_token(session, client_id: str, client_secret: str) -> str | None:
         resp = session.post(
             ANBIMA_OAUTH_URL,
             headers={
-                "Content-Type":  "application/json",
+                "Content-Type": "application/json",
                 "Authorization": f"Basic {credencial}",
             },
             json={"grant_type": "client_credentials"},
@@ -141,18 +156,30 @@ def _obter_token(session, client_id: str, client_secret: str) -> str | None:
 
 
 def _mapear_api(item: dict, data_captura: str) -> dict:
-    mes_ref = limpar(item.get("referenceMonth") or item.get("mesReferencia") or item.get("mes_referencia", ""))
+    mes_ref = limpar(
+        item.get("referenceMonth")
+        or item.get("mesReferencia")
+        or item.get("mes_referencia", "")
+    )
     return {
-        "data_captura":      data_captura,
-        "data_referencia":   _converter_mes_ano(mes_ref),
+        "data_captura": data_captura,
+        "data_referencia": _converter_mes_ano(mes_ref),
         "estrategia_coleta": "api_oficial",
-        "indice":            limpar(item.get("indice") or item.get("index", "")).upper(),
-        "mes_referencia":    mes_ref,
-        "tipo_projecao":     limpar(item.get("projectionType") or item.get("tipoProjecao", "")),
-        "valor_pct":         limpar(item.get("projection")     or item.get("projecao") or item.get("value", "")).replace(",", "."),
-        "data_divulgacao":   limpar(item.get("releaseDate")    or item.get("dataReferencia", "")),
-        "num_instituicoes":  limpar(item.get("numberOfInstitutions") or item.get("numInstituicoes", "")),
-        "observacao":        "",
+        "indice": limpar(item.get("indice") or item.get("index", "")).upper(),
+        "mes_referencia": mes_ref,
+        "tipo_projecao": limpar(
+            item.get("projectionType") or item.get("tipoProjecao", "")
+        ),
+        "valor_pct": limpar(
+            item.get("projection") or item.get("projecao") or item.get("value", "")
+        ).replace(",", "."),
+        "data_divulgacao": limpar(
+            item.get("releaseDate") or item.get("dataReferencia", "")
+        ),
+        "num_instituicoes": limpar(
+            item.get("numberOfInstitutions") or item.get("numInstituicoes", "")
+        ),
+        "observacao": "",
     }
 
 
@@ -192,6 +219,7 @@ def capturar_via_api(session, client_id: str, client_secret: str) -> list[dict]:
 # ESTRATÉGIA B — Scraping da página de indicadores
 # ════════════════════════════════════════════════════════
 
+
 def capturar_via_scraping(session) -> list[dict]:
     """
     Extrai projeções vigentes da página de indicadores da ANBIMA.
@@ -220,48 +248,72 @@ def capturar_via_scraping(session) -> list[dict]:
     registros = []
 
     def add(indice, mes_ref, tipo, valor, data_div="", obs=""):
-        registros.append({
-            "data_captura":      data_captura,
-            "data_referencia":   _converter_mes_ano(mes_ref),
-            "estrategia_coleta": "scraping_indicadores",
-            "indice":            indice,
-            "mes_referencia":    mes_ref,
-            "tipo_projecao":     tipo,
-            "valor_pct":         valor.replace(",", ".").replace("%", "").strip(),
-            "data_divulgacao":   data_div,
-            "num_instituicoes":  "",
-            "observacao":        obs,
-        })
+        registros.append(
+            {
+                "data_captura": data_captura,
+                "data_referencia": _converter_mes_ano(mes_ref),
+                "estrategia_coleta": "scraping_indicadores",
+                "indice": indice,
+                "mes_referencia": mes_ref,
+                "tipo_projecao": tipo,
+                "valor_pct": valor.replace(",", ".").replace("%", "").strip(),
+                "data_divulgacao": data_div,
+                "num_instituicoes": "",
+                "observacao": obs,
+            }
+        )
 
     # IGP-M — variação fechada
-    m = re.search(r"IGP-M.*?Var\s*%\s*no\s*m[eê]s.*?(\w{3}/\d{2,4}).*?(-?\d+[,\.]\d+)",
-                  texto, re.DOTALL | re.IGNORECASE)
+    m = re.search(
+        r"IGP-M.*?Var\s*%\s*no\s*m[eê]s.*?(\w{3}/\d{2,4}).*?(-?\d+[,\.]\d+)",
+        texto,
+        re.DOTALL | re.IGNORECASE,
+    )
     if m:
         add("IGP-M", m.group(1), "fechado", m.group(2), obs="Var % mês fechado")
 
     # IGP-M — projeção genérica
-    for i, m in enumerate(re.findall(
-        r"IGP-M[^%\n]*?proje[cç][aã]o[^%\n]*?(\w{3}/\d{2,4})[^%\n]*?(-?\d+[,\.]\d+\s*%?)",
-        texto, re.IGNORECASE
-    )[:3]):
+    for i, m in enumerate(
+        re.findall(
+            r"IGP-M[^%\n]*?proje[cç][aã]o[^%\n]*?(\w{3}/\d{2,4})[^%\n]*?(-?\d+[,\.]\d+\s*%?)",
+            texto,
+            re.IGNORECASE,
+        )[:3]
+    ):
         tipos = ["corrente", "seguinte", "posterior"]
-        add("IGP-M", m[0], tipos[i], m[1].replace("%", "").strip(),
-            obs=f"Projeção ANBIMA {tipos[i]}")
+        add(
+            "IGP-M",
+            m[0],
+            tipos[i],
+            m[1].replace("%", "").strip(),
+            obs=f"Projeção ANBIMA {tipos[i]}",
+        )
 
     # IPCA — variação fechada
-    m = re.search(r"IPCA.*?Var\s*%\s*no\s*m[eê]s.*?(\w{3}/\d{2,4}).*?(-?\d+[,\.]\d+)",
-                  texto, re.DOTALL | re.IGNORECASE)
+    m = re.search(
+        r"IPCA.*?Var\s*%\s*no\s*m[eê]s.*?(\w{3}/\d{2,4}).*?(-?\d+[,\.]\d+)",
+        texto,
+        re.DOTALL | re.IGNORECASE,
+    )
     if m:
         add("IPCA", m.group(1), "fechado", m.group(2), obs="Var % mês fechado")
 
     # IPCA — projeção genérica
-    for i, m in enumerate(re.findall(
-        r"IPCA[^%\n]*?proje[cç][aã]o[^%\n]*?(\w{3}/\d{2,4})[^%\n]*?(-?\d+[,\.]\d+\s*%?)",
-        texto, re.IGNORECASE
-    )[:2]):
+    for i, m in enumerate(
+        re.findall(
+            r"IPCA[^%\n]*?proje[cç][aã]o[^%\n]*?(\w{3}/\d{2,4})[^%\n]*?(-?\d+[,\.]\d+\s*%?)",
+            texto,
+            re.IGNORECASE,
+        )[:2]
+    ):
         tipos = ["corrente", "seguinte"]
-        add("IPCA", m[0], tipos[i], m[1].replace("%", "").strip(),
-            obs=f"Projeção ANBIMA {tipos[i]}")
+        add(
+            "IPCA",
+            m[0],
+            tipos[i],
+            m[1].replace("%", "").strip(),
+            obs=f"Projeção ANBIMA {tipos[i]}",
+        )
 
     # Remove duplicatas por (indice, mes_referencia, tipo_projecao)
     vistos, unicos = set(), []
@@ -279,8 +331,9 @@ def capturar_via_scraping(session) -> list[dict]:
 # Orquestrador com fallback automático
 # ════════════════════════════════════════════════════════
 
+
 def capturar() -> list[dict]:
-    client_id     = os.getenv("ANBIMA_CLIENT_ID", "").strip()
+    client_id = os.getenv("ANBIMA_CLIENT_ID", "").strip()
     client_secret = os.getenv("ANBIMA_CLIENT_SECRET", "").strip()
     session = nova_session()
 
@@ -294,23 +347,30 @@ def capturar() -> list[dict]:
     log.info("Usando scraping da página de indicadores.")
     return capturar_via_scraping(session)
 
+
 class AnbimaProjecoesScraper(BaseScraper):
     name = "anbima_projecoes"
     group = "anbima"
     enabled = True
     phase = 1
     accumulate = True
-    chaves_dedup = ['data_captura', 'indice', 'mes_referencia', 'tipo_projecao']
-    
+    chaves_dedup = ["data_captura", "indice", "mes_referencia", "tipo_projecao"]
+
     # Catálogo de Metadados
-    title = 'ANBIMA Projeções'
-    description = 'Projeções de IPCA e IGP-M coletadas junto às instituições do Comitê Macroeconômico da ANBIMA para o mês corrente e seguinte.'
-    icon = '🔮'
-    icon_class = 'icon-anbima'
-    badge = 'Sob divulgação'
-    badge_class = 'badge-dynamic'
-    tags = ['ipca corrente', 'ipca seguinte', 'igp-m corrente', 'igp-m seguinte', 'num_instituições']
-    source = 'ANBIMA API'
+    title = "ANBIMA Projeções"
+    description = "Projeções de IPCA e IGP-M coletadas junto às instituições do Comitê Macroeconômico da ANBIMA para o mês corrente e seguinte."
+    icon = "🔮"
+    icon_class = "icon-anbima"
+    badge = "Sob divulgação"
+    badge_class = "badge-dynamic"
+    tags = [
+        "ipca corrente",
+        "ipca seguinte",
+        "igp-m corrente",
+        "igp-m seguinte",
+        "num_instituições",
+    ]
+    source = "ANBIMA API"
 
     def fetch(self) -> pd.DataFrame:
         log.info("=== ANBIMA Projeções IPCA e IGP-M ===")

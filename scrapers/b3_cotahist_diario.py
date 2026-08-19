@@ -13,21 +13,78 @@ import zipfile
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from utils.base import get_logger, nova_session, salvar_csv
-from utils.parsers import date_ref, replace_date_vars, decode_bytes, fwf_rows, enriquecer, read_existing_header
 import pandas as pd
+
 from scrapers.utils.base import BaseScraper
+from utils.base import get_logger, nova_session
+from utils.parsers import (
+    date_ref,
+    decode_bytes,
+    enriquecer,
+    fwf_rows,
+    read_existing_header,
+    replace_date_vars,
+)
 
 log = get_logger("b3_cotahist_diario")
 
 URL = "https://bvmf.bmfbovespa.com.br/InstDados/SerHist/COTAHIST_D%d%m%Y.ZIP"
 
-COTAHIST_WIDTHS = [2, 8, 2, 12, 3, 12, 10, 3, 4, 13, 13, 13, 13, 13, 13, 13, 5, 18, 18, 13, 1, 8, 7, 13, 12, 3]
+COTAHIST_WIDTHS = [
+    2,
+    8,
+    2,
+    12,
+    3,
+    12,
+    10,
+    3,
+    4,
+    13,
+    13,
+    13,
+    13,
+    13,
+    13,
+    13,
+    5,
+    18,
+    18,
+    13,
+    1,
+    8,
+    7,
+    13,
+    12,
+    3,
+]
 COTAHIST_FIELDS = [
-    "regtype", "refdate", "bdi_code", "symbol", "instrument_market", "corporation_name", "specification_code",
-    "days_to_settlement", "trading_currency", "open", "high", "low", "average", "close", "best_bid", "best_ask",
-    "trade_quantity", "traded_contracts", "volume", "strike_price", "strike_price_adjustment_indicator",
-    "maturity_date", "allocation_lot_size", "strike_price_in_points", "isin", "distribution_id",
+    "regtype",
+    "refdate",
+    "bdi_code",
+    "symbol",
+    "instrument_market",
+    "corporation_name",
+    "specification_code",
+    "days_to_settlement",
+    "trading_currency",
+    "open",
+    "high",
+    "low",
+    "average",
+    "close",
+    "best_bid",
+    "best_ask",
+    "trade_quantity",
+    "traded_contracts",
+    "volume",
+    "strike_price",
+    "strike_price_adjustment_indicator",
+    "maturity_date",
+    "allocation_lot_size",
+    "strike_price_in_points",
+    "isin",
+    "distribution_id",
 ]
 
 ARQUIVO = Path("data/b3_cotahist_diario.csv.gz")
@@ -50,7 +107,9 @@ def capturar() -> tuple[list[dict], list[str]]:
             if info.is_dir() or info.file_size == 0:
                 continue
             text = decode_bytes(zf.read(info.filename))
-            parsed = fwf_rows(text, COTAHIST_FIELDS, COTAHIST_WIDTHS, only_regtype_01=True)
+            parsed = fwf_rows(
+                text, COTAHIST_FIELDS, COTAHIST_WIDTHS, only_regtype_01=True
+            )
             for r in parsed:
                 if r.get("instrument_market") not in MERCADOS_KEEP:
                     continue
@@ -65,6 +124,7 @@ def capturar() -> tuple[list[dict], list[str]]:
             header.append(col)
     return enriched, header
 
+
 class B3CotahistDiarioScraper(BaseScraper):
     name = "b3_cotahist_diario"
     group = "b3"
@@ -72,17 +132,17 @@ class B3CotahistDiarioScraper(BaseScraper):
     phase = 1
     accumulate = True
     compress = True
-    chaves_dedup = ['data_captura', 'conjunto', 'registro_hash']
-    
+    chaves_dedup = ["data_captura", "conjunto", "registro_hash"]
+
     # Catálogo de Metadados
-    title = 'B3 — COTAHIST Diário'
-    description = 'Cotações históricas diárias de todos os ativos da B3 (ações, BDRs, ETFs, FIIs) no formato COTAHIST de largura fixa, incluindo abertura, máxima, mínima, média, fechamento, volume e quantidade de negócios.'
-    icon = '📊'
-    icon_class = 'icon-b3'
-    badge = 'Diário'
-    badge_class = 'badge-daily'
-    tags = ['cotações', 'ações', 'abertura/fechamento', 'volume', 'fwf']
-    source = 'B3 · COTAHIST'
+    title = "B3 — COTAHIST Diário"
+    description = "Cotações históricas diárias de todos os ativos da B3 (ações, BDRs, ETFs, FIIs) no formato COTAHIST de largura fixa, incluindo abertura, máxima, mínima, média, fechamento, volume e quantidade de negócios."
+    icon = "📊"
+    icon_class = "icon-b3"
+    badge = "Diário"
+    badge_class = "badge-daily"
+    tags = ["cotações", "ações", "abertura/fechamento", "volume", "fwf"]
+    source = "B3 · COTAHIST"
 
     def fetch(self) -> pd.DataFrame:
         log.info("=== B3 — COTAHIST Diário ===")

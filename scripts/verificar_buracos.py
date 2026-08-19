@@ -1,3 +1,5 @@
+import gzip
+
 #!/usr/bin/env python
 # coding: utf-8
 """
@@ -22,16 +24,25 @@ import argparse
 import csv
 import sys
 import time
-from datetime import date, timedelta
+from datetime import date
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-from utils.parsers import _CAL
 from scripts.utils.ux import (
-    banner, section, print_start, print_done, print_fail, print_warn, print_info,
-    print_summary, add_common_args, apply_common_args, ColorLogger,
+    ColorLogger,
+    add_common_args,
+    apply_common_args,
+    banner,
+    print_done,
+    print_fail,
+    print_info,
+    print_start,
+    print_summary,
+    print_warn,
+    section,
 )
+from utils.parsers import _CAL
 
 log = ColorLogger("verificar_buracos")
 
@@ -141,12 +152,15 @@ def load_entity_dates(
     date_col: str,
     group_by_cols: list[str],
 ) -> dict[tuple[str, ...], set[str]]:
-    import gzip
     entity_dates: dict[tuple[str, ...], set[str]] = {}
     is_gz = str(csv_path).endswith(".gz")
     open_func = gzip.open if is_gz else open
     open_mode = "rt" if is_gz else "r"
-    open_kwargs = {"encoding": "utf-8", "newline": ""} if is_gz else {"newline": "", "encoding": "utf-8"}
+    open_kwargs = (
+        {"encoding": "utf-8", "newline": ""}
+        if is_gz
+        else {"newline": "", "encoding": "utf-8"}
+    )
     with open_func(csv_path, open_mode, **open_kwargs) as f:
         reader = csv.DictReader(f)
         if not reader.fieldnames:
@@ -181,31 +195,33 @@ def check_gaps(
     threshold: int = 3,
 ) -> dict[tuple[str, ...], list[str]]:
     gaps: dict[tuple[str, ...], list[str]] = {}
-    
+
     # Limites suportados pelo Calendar em utils/parsers.py
     start_cal = date(2024, 1, 1)
     end_cal = date(2028, 12, 31)
-    
+
     for key, dates in entity_dates.items():
         if len(dates) < threshold:
             continue
         sorted_dates = sorted(dates)
         min_date = date.fromisoformat(sorted_dates[0])
         max_date = date.fromisoformat(sorted_dates[-1])
-        
+
         # Ajusta datas para os limites suportados
         effective_min = max(min_date, start_cal)
         effective_max = min(max_date, end_cal)
-        
+
         if effective_min > effective_max:
             continue
-            
+
         expected = _CAL.seq(effective_min, effective_max)
         expected_strs = {d.strftime("%Y-%m-%d") for d in expected}
-        
+
         # Filtra as datas reais para comparar apenas as que estão no período do calendário
-        actual_filtered = {d for d in dates if start_cal <= date.fromisoformat(d) <= end_cal}
-        
+        actual_filtered = {
+            d for d in dates if start_cal <= date.fromisoformat(d) <= end_cal
+        }
+
         missing = sorted(expected_strs - actual_filtered)
         if missing:
             gaps[key] = missing
@@ -254,7 +270,10 @@ def main(
 ) -> None:
     t0 = time.time()
     if not quiet:
-        banner("Verificar Buracos em Séries Temporais", "Valida continuidade de dias úteis nos CSVs")
+        banner(
+            "Verificar Buracos em Séries Temporais",
+            "Valida continuidade de dias úteis nos CSVs",
+        )
 
     if dry_run:
         if not quiet:
@@ -309,7 +328,10 @@ def main(
         _entity_label._csv_name = csv_name
 
         gaps_count, entity_count, gaps = run_csv(
-            csv_path, config, threshold=threshold, verbose=verbose,
+            csv_path,
+            config,
+            threshold=threshold,
+            verbose=verbose,
         )
 
         total_entities_checked += entity_count
@@ -322,7 +344,9 @@ def main(
 
         if gaps_count == 0:
             if not quiet:
-                print_done(f"OK — {entity_count} entidade{'s' if entity_count > 1 else ''}, 0 buracos")
+                print_done(
+                    f"OK — {entity_count} entidade{'s' if entity_count > 1 else ''}, 0 buracos"
+                )
             total_ok += 1
             details.append(("success", csv_name, "0 buracos"))
         else:
@@ -350,7 +374,13 @@ def main(
                     if verbose:
                         if not quiet:
                             print_info(detail_line, icon="warn")
-                    details.append(("fail", f"{csv_name} ({label})" if label else csv_name, f"{gap_count} buraco(s): {gap_dates}"))
+                    details.append(
+                        (
+                            "fail",
+                            f"{csv_name} ({label})" if label else csv_name,
+                            f"{gap_count} buraco(s): {gap_dates}",
+                        )
+                    )
             else:
                 details.append(("fail", csv_name, f"{total_gaps} data(s) faltante(s)"))
 
@@ -392,19 +422,26 @@ exemplos:
     )
     add_common_args(parser)
     parser.add_argument(
-        "--csv", nargs="+", metavar="CSV",
+        "--csv",
+        nargs="+",
+        metavar="CSV",
         help="Verificar apenas CSVs específicos (ex: anbima_ima_completo.csv)",
     )
     parser.add_argument(
-        "--threshold", type=int, default=3, metavar="N",
+        "--threshold",
+        type=int,
+        default=3,
+        metavar="N",
         help="Ignorar entidades com menos de N datas (padrão: 3)",
     )
     parser.add_argument(
-        "--fail-on-holes", action="store_true",
+        "--fail-on-holes",
+        action="store_true",
         help="Sair com exit code 1 se houver buracos",
     )
     parser.add_argument(
-        "--list", action="store_true",
+        "--list",
+        action="store_true",
         help="Listar CSVs habilitados para verificação e sair",
     )
 

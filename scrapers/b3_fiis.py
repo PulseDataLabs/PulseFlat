@@ -13,31 +13,52 @@ import time
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from utils import get_logger, agora_brt, limpar, b64_encode_params, nova_session, salvar_csv
 import pandas as pd
+
 from scrapers.utils.base import BaseScraper
+from utils import (
+    agora_brt,
+    b64_encode_params,
+    get_logger,
+    limpar,
+    nova_session,
+)
 
 log = get_logger("b3_fiis")
 
-BASE_URL  = "https://sistemaswebb3-listados.b3.com.br/fundsListedProxy/Search/GetListFunds/"
+BASE_URL = (
+    "https://sistemaswebb3-listados.b3.com.br/fundsListedProxy/Search/GetListFunds/"
+)
 TYPE_FUND = "FII"
-PAGE_SIZE  = 100
-ARQUIVO    = Path("data/b3_fiis_listados.csv")
+PAGE_SIZE = 100
+ARQUIVO = Path("data/b3_fiis_listados.csv")
 
 CABECALHO = [
-    "data_captura", 
-    "codigo_fundo", "nome_fundo", "cnpj",
-    "administrador", "segmento", "tipo",
-    "mandato", "prazo_duracao", "gestao",
-    "data_encerramento", "cotistas", "patrimonio_liquido",
+    "data_captura",
+    "codigo_fundo",
+    "nome_fundo",
+    "cnpj",
+    "administrador",
+    "segmento",
+    "tipo",
+    "mandato",
+    "prazo_duracao",
+    "gestao",
+    "data_encerramento",
+    "cotistas",
+    "patrimonio_liquido",
 ]
 
 
 def _url(page: int) -> str:
-    return BASE_URL + b64_encode_params({
-        "language": "pt-br", "pageNumber": page,
-        "pageSize": PAGE_SIZE, "typeFund": TYPE_FUND,
-    })
+    return BASE_URL + b64_encode_params(
+        {
+            "language": "pt-br",
+            "pageNumber": page,
+            "pageSize": PAGE_SIZE,
+            "typeFund": TYPE_FUND,
+        }
+    )
 
 
 def _pagina(session, page: int) -> tuple[list, int, int | None]:
@@ -62,24 +83,39 @@ def _pagina(session, page: int) -> tuple[list, int, int | None]:
 
 
 def _mapear(item: dict, data_captura: str) -> dict:
-    codigo = limpar(item.get("fundTicker") or item.get("ticker") or item.get("code") or item.get("symbol"))
+    codigo = limpar(
+        item.get("fundTicker")
+        or item.get("ticker")
+        or item.get("code")
+        or item.get("symbol")
+    )
     if not codigo:
-        acronym = limpar(item.get("acronym") or item.get("acronymName") or item.get("fundAcronym"))
+        acronym = limpar(
+            item.get("acronym") or item.get("acronymName") or item.get("fundAcronym")
+        )
         if acronym:
             codigo = acronym if any(c.isdigit() for c in acronym) else f"{acronym}11"
     return {
-        "data_captura":       data_captura,
-        "codigo_fundo":       codigo,
-        "nome_fundo":         limpar(item.get("fundName")   or item.get("tradingName") or item.get("companyName")),
-        "cnpj":               limpar(item.get("cnpj")),
-        "administrador":      limpar(item.get("administrator") or item.get("administratorName")),
-        "segmento":           limpar(item.get("fundSegment") or item.get("segment") or item.get("segmentName")),
-        "tipo":               limpar(item.get("fundType")    or item.get("type") or item.get("typeFund")),
-        "mandato":            limpar(item.get("mandate")),
-        "prazo_duracao":      limpar(item.get("term")),
-        "gestao":             limpar(item.get("managementType") or item.get("management")),
-        "data_encerramento":  limpar(item.get("closingDate")),
-        "cotistas":           limpar(item.get("quotaHolders")),
+        "data_captura": data_captura,
+        "codigo_fundo": codigo,
+        "nome_fundo": limpar(
+            item.get("fundName") or item.get("tradingName") or item.get("companyName")
+        ),
+        "cnpj": limpar(item.get("cnpj")),
+        "administrador": limpar(
+            item.get("administrator") or item.get("administratorName")
+        ),
+        "segmento": limpar(
+            item.get("fundSegment") or item.get("segment") or item.get("segmentName")
+        ),
+        "tipo": limpar(
+            item.get("fundType") or item.get("type") or item.get("typeFund")
+        ),
+        "mandato": limpar(item.get("mandate")),
+        "prazo_duracao": limpar(item.get("term")),
+        "gestao": limpar(item.get("managementType") or item.get("management")),
+        "data_encerramento": limpar(item.get("closingDate")),
+        "cotistas": limpar(item.get("quotaHolders")),
         "patrimonio_liquido": limpar(item.get("netEquity")),
     }
 
@@ -108,6 +144,7 @@ def capturar() -> list[dict]:
     log.info(f"{len(registros)} FIIs capturados.")
     return registros
 
+
 class B3FiisScraper(BaseScraper):
     name = "b3_fiis"
     group = "b3"
@@ -115,16 +152,16 @@ class B3FiisScraper(BaseScraper):
     phase = 1
     accumulate = False
     chaves_dedup = None
-    
+
     # Catálogo de Metadados
-    title = 'B3 FIIs Listados'
-    description = 'Lista completa de Fundos de Investimento Imobiliário listados na B3, com dados cadastrais, administrador, segmento e patrimônio líquido.'
-    icon = '🏢'
-    icon_class = 'icon-b3'
-    badge = 'Diário'
-    badge_class = 'badge-daily'
-    tags = ['ticker', 'cnpj', 'administrador', 'segmento', 'cotistas', 'patrimônio']
-    source = 'B3 API'
+    title = "B3 FIIs Listados"
+    description = "Lista completa de Fundos de Investimento Imobiliário listados na B3, com dados cadastrais, administrador, segmento e patrimônio líquido."
+    icon = "🏢"
+    icon_class = "icon-b3"
+    badge = "Diário"
+    badge_class = "badge-daily"
+    tags = ["ticker", "cnpj", "administrador", "segmento", "cotistas", "patrimônio"]
+    source = "B3 API"
 
     def fetch(self) -> pd.DataFrame:
         log.info("=== B3 FIIs Listados ===")

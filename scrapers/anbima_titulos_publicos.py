@@ -11,16 +11,16 @@ Fonte: https://www.anbima.com.br/informacoes/merc-sec/arqs/ms{YYMMDD}.txt
 import sys
 import time
 from datetime import date
-from io import StringIO
 from pathlib import Path
 
 import requests
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from utils import get_logger, agora_brt, limpar, nova_session, salvar_csv
-from utils.parsers import _CAL
 import pandas as pd
+
 from scrapers.utils.base import BaseScraper
+from utils import agora_brt, get_logger, limpar, nova_session
+from utils.parsers import _CAL
 
 log = get_logger("anbima_titulos_publicos")
 
@@ -28,7 +28,6 @@ ARQUIVO = Path("data/anbima_titulos_publicos.csv")
 
 CABECALHO = [
     "data_captura",
-    
     "titulo",
     "data_referencia",
     "codigo_selic",
@@ -103,10 +102,21 @@ def capturar(target_date: date | None = None) -> list[dict]:
     registros = []
 
     COLUNAS = [
-        "titulo", "data_referencia", "codigo_selic", "data_base_emissao",
-        "data_vencimento", "tx_compra", "tx_venda", "tx_indicativa", "pu",
-        "desvio_padrao", "interv_ind_inf_d0", "interv_ind_sup_d0",
-        "interv_ind_inf_dma1", "interv_ind_sup_dma1", "criterio",
+        "titulo",
+        "data_referencia",
+        "codigo_selic",
+        "data_base_emissao",
+        "data_vencimento",
+        "tx_compra",
+        "tx_venda",
+        "tx_indicativa",
+        "pu",
+        "desvio_padrao",
+        "interv_ind_inf_d0",
+        "interv_ind_sup_d0",
+        "interv_ind_inf_dma1",
+        "interv_ind_sup_dma1",
+        "criterio",
     ]
 
     for linha in dados_linhas:
@@ -125,23 +135,24 @@ def capturar(target_date: date | None = None) -> list[dict]:
     log.info(f"{len(registros)} títulos públicos capturados (ref: {data_ref}).")
     return registros
 
+
 class AnbimaTitulosPublicosScraper(BaseScraper):
     name = "anbima_titulos_publicos"
     group = "anbima"
     enabled = True
     phase = 1
     accumulate = True
-    chaves_dedup = ['data_captura', 'titulo', 'data_vencimento']
-    
+    chaves_dedup = ["data_captura", "titulo", "data_vencimento"]
+
     # Catálogo de Metadados
-    title = 'ANBIMA Títulos Públicos'
-    description = 'Preços e taxas indicativas de títulos públicos federais (LTN, NTN, LFT), incluindo PU, duration e desvio padrão.'
-    icon = '🏛️'
-    icon_class = 'icon-anbima'
-    badge = 'Diário'
-    badge_class = 'badge-daily'
-    tags = ['ltn', 'ntn', 'lft', 'pu', 'tx_indicativa']
-    source = 'ANBIMA'
+    title = "ANBIMA Títulos Públicos"
+    description = "Preços e taxas indicativas de títulos públicos federais (LTN, NTN, LFT), incluindo PU, duration e desvio padrão."
+    icon = "🏛️"
+    icon_class = "icon-anbima"
+    badge = "Diário"
+    badge_class = "badge-daily"
+    tags = ["ltn", "ntn", "lft", "pu", "tx_indicativa"]
+    source = "ANBIMA"
 
     def fetch(self) -> pd.DataFrame:
         log.info("=== ANBIMA — Títulos Públicos ===")

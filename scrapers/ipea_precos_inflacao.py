@@ -7,14 +7,42 @@ Saída:   data/ipea_precos_inflacao.csv
 
 import os
 import sys
-import datetime
+
 import pandas as pd
-import requests
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from scrapers.utils.base import BaseScraper
 
-SERIES = [{'code': 'IGP12_IGPDI12', 'title': 'IGP-DI Índice Geral', 'desc': 'Índice Geral de Preços - Disponibilidade Interna (IGP-DI) - índice (ago 1994 = 100)', 'icon': '📊', 'tags': ['igp_di', 'inflacao', 'ipea']}, {'code': 'IGP12_INCC12', 'title': 'INCC-DI Índice Geral', 'desc': 'Índice Nacional de Custo da Construção - Disponibilidade Interna (INCC-DI) - índice (ago 1994 = 100)', 'icon': '🏗', 'tags': ['incc_di', 'construcao', 'ipea']}, {'code': 'PRECOS12_INPC12', 'title': 'INPC Índice Geral', 'desc': 'Índice Nacional de Preços ao Consumidor (INPC) - geral - índice (dez 1993 = 100)', 'icon': '📊', 'tags': ['inpc', 'inflacao', 'ipea']}, {'code': 'PRECOS12_INPCBR12', 'title': 'INPC Taxa de Variação', 'desc': 'Índice Nacional de Preços ao Consumidor (INPC) - geral - taxa de variação (% a.m.)', 'icon': '📈', 'tags': ['inpc', 'inflacao', 'ipea']}]
+SERIES = [
+    {
+        "code": "IGP12_IGPDI12",
+        "title": "IGP-DI Índice Geral",
+        "desc": "Índice Geral de Preços - Disponibilidade Interna (IGP-DI) - índice (ago 1994 = 100)",
+        "icon": "📊",
+        "tags": ["igp_di", "inflacao", "ipea"],
+    },
+    {
+        "code": "IGP12_INCC12",
+        "title": "INCC-DI Índice Geral",
+        "desc": "Índice Nacional de Custo da Construção - Disponibilidade Interna (INCC-DI) - índice (ago 1994 = 100)",
+        "icon": "🏗",
+        "tags": ["incc_di", "construcao", "ipea"],
+    },
+    {
+        "code": "PRECOS12_INPC12",
+        "title": "INPC Índice Geral",
+        "desc": "Índice Nacional de Preços ao Consumidor (INPC) - geral - índice (dez 1993 = 100)",
+        "icon": "📊",
+        "tags": ["inpc", "inflacao", "ipea"],
+    },
+    {
+        "code": "PRECOS12_INPCBR12",
+        "title": "INPC Taxa de Variação",
+        "desc": "Índice Nacional de Preços ao Consumidor (INPC) - geral - taxa de variação (% a.m.)",
+        "icon": "📈",
+        "tags": ["inpc", "inflacao", "ipea"],
+    },
+]
 API_URL = "http://www.ipeadata.gov.br/api/odata4/ValoresSerie(SERCODIGO='{code}')"
 
 
@@ -51,13 +79,15 @@ class IpeaPrecosInflacaoScraper(BaseScraper):
                 if val is None:
                     continue
 
-                records.append({
-                    "data_referencia": date_ref,
-                    "codigo_ativo": item["code"],
-                    "label": item["title"],
-                    "valor": float(val),
-                })
-            
+                records.append(
+                    {
+                        "data_referencia": date_ref,
+                        "codigo_ativo": item["code"],
+                        "label": item["title"],
+                        "valor": float(val),
+                    }
+                )
+
             if records:
                 frames.append(pd.DataFrame(records))
 

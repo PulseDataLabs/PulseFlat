@@ -6,7 +6,6 @@ scripts/generate_ipea_scrapers.py
 Gera programaticamente os arquivos de scrapers para a segunda rodada de séries mensais do Ipeadata.
 """
 
-import os
 import stat
 from pathlib import Path
 
@@ -221,6 +220,7 @@ if __name__ == "__main__":
     {class_name}().run()
 """
 
+
 def generate():
     for item in SERIES:
         file_path = SCRAPERS_DIR / f"{item['name']}.py"
@@ -237,6 +237,7 @@ def generate():
         # chmod +x
         file_path.chmod(file_path.stat().st_mode | stat.S_IEXEC)
         print(f"Gerado: {file_path.name}")
+
 
 if __name__ == "__main__":
     generate()

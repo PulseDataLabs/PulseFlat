@@ -1,6 +1,8 @@
 import sys
 from pathlib import Path
 
+import pandas as pd
+
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from scrapers.generic_scraper import GenericScraper
 
@@ -18,7 +20,7 @@ class DebenturesMercadoSecundarioPrecosNegociacaoScraper(GenericScraper):
     def fetch(self) -> pd.DataFrame:
         df = super().fetch()
         if not df.empty:
-            import pandas as pd
+
             from utils.parsers import hash_row
 
             def clean_float(val):
@@ -31,7 +33,7 @@ class DebenturesMercadoSecundarioPrecosNegociacaoScraper(GenericScraper):
                     f = float(val_str)
                     if f.is_integer():
                         return str(int(f))
-                    return f"{f:.8f}".rstrip('0').rstrip('.')
+                    return f"{f:.8f}".rstrip("0").rstrip(".")
                 except ValueError:
                     return val_str
 
@@ -62,7 +64,11 @@ class DebenturesMercadoSecundarioPrecosNegociacaoScraper(GenericScraper):
             records = df.to_dict(orient="records")
             new_hashes = []
             for item in records:
-                hash_input = {k: v for k, v in item.items() if k not in ("data_captura", "registro_hash")}
+                hash_input = {
+                    k: v
+                    for k, v in item.items()
+                    if k not in ("data_captura", "registro_hash")
+                }
                 new_hashes.append(hash_row(hash_input))
             df["registro_hash"] = new_hashes
 
@@ -70,7 +76,6 @@ class DebenturesMercadoSecundarioPrecosNegociacaoScraper(GenericScraper):
 
 
 def main():
-    import pandas as pd
     DebenturesMercadoSecundarioPrecosNegociacaoScraper().run()
 
 

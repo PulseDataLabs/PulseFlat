@@ -1,3 +1,5 @@
+import re
+
 """
 scrapers/b3_indicadores_financeiros.py
 ----------------------------------------
@@ -17,9 +19,10 @@ from pathlib import Path
 import requests
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from utils import get_logger, agora_brt, limpar, salvar_csv
 import pandas as pd
+
 from scrapers.utils.base import BaseScraper
+from utils import agora_brt, get_logger, limpar
 
 log = get_logger("b3_indicadores_financeiros")
 
@@ -33,7 +36,6 @@ URL = (
 
 CABECALHO = [
     "data_captura",
-    
     "security_identification_code",
     "description",
     "group_description",
@@ -57,7 +59,6 @@ HEADERS = {
 
 def _camel_to_snake(name: str) -> str:
     """converte camelCase para snake_case simples."""
-    import re
     s1 = re.sub(r"(.)([A-Z][a-z]+)", r"\1_\2", name)
     return re.sub(r"([a-z0-9])([A-Z])", r"\1_\2", s1).lower()
 
@@ -86,18 +87,23 @@ def capturar() -> list[dict]:
     registros = []
 
     for item in dados:
-        registros.append({
-            "data_captura":                data_captura,
-            "security_identification_code": limpar(item.get("securityIdentificationCode", "")),
-            "description":                 limpar(item.get("description", "")),
-            "group_description":           limpar(item.get("groupDescription", "")),
-            "valor":                       limpar(str(item.get("value", ""))),
-            "taxa":                        limpar(str(item.get("rate", ""))),
-            "data_referencia":             limpar(item.get("lastUpdate", "")),
-        })
+        registros.append(
+            {
+                "data_captura": data_captura,
+                "security_identification_code": limpar(
+                    item.get("securityIdentificationCode", "")
+                ),
+                "description": limpar(item.get("description", "")),
+                "group_description": limpar(item.get("groupDescription", "")),
+                "valor": limpar(str(item.get("value", ""))),
+                "taxa": limpar(str(item.get("rate", ""))),
+                "data_referencia": limpar(item.get("lastUpdate", "")),
+            }
+        )
 
     log.info(f"{len(registros)} indicadores B3 capturados.")
     return registros
+
 
 class B3IndicadoresFinanceirosScraper(BaseScraper):
     name = "b3_indicadores_financeiros"
@@ -105,17 +111,17 @@ class B3IndicadoresFinanceirosScraper(BaseScraper):
     enabled = True
     phase = 1
     accumulate = True
-    chaves_dedup = ['data_captura', 'security_identification_code']
-    
+    chaves_dedup = ["data_captura", "security_identification_code"]
+
     # Catálogo de Metadados
-    title = 'B3 Indicadores Financeiros'
-    description = 'Indicadores financeiros da B3 via API de derivativos: SELIC, CDI, IPCA, IGP-M, câmbio e taxas de juros.'
-    icon = '📊'
-    icon_class = 'icon-b3'
-    badge = 'Diário'
-    badge_class = 'badge-daily'
-    tags = ['selic', 'cdi', 'ipca', 'igp-m', 'câmbio']
-    source = 'B3 API'
+    title = "B3 Indicadores Financeiros"
+    description = "Indicadores financeiros da B3 via API de derivativos: SELIC, CDI, IPCA, IGP-M, câmbio e taxas de juros."
+    icon = "📊"
+    icon_class = "icon-b3"
+    badge = "Diário"
+    badge_class = "badge-daily"
+    tags = ["selic", "cdi", "ipca", "igp-m", "câmbio"]
+    source = "B3 API"
 
     def fetch(self) -> pd.DataFrame:
         log.info("=== B3 — Indicadores Financeiros ===")

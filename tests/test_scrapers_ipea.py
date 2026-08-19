@@ -9,19 +9,19 @@ Testes unitários para os scrapers consolidados do Ipeadata.
 import sys
 from datetime import date
 from pathlib import Path
-import pytest
+
 import pandas as pd
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
+from scrapers.ipea_calendario import IpeaCalendarioScraper
+from scrapers.ipea_comercio_exterior import IpeaComercioExteriorScraper
+from scrapers.ipea_fbcf import IpeaFbcfScraper
 from scrapers.ipea_macroeconomia import IpeaMacroeconomiaScraper
 from scrapers.ipea_mercados_diarios import IpeaMercadosDiariosScraper
-from scrapers.ipea_taxas_juros import IpeaTaxasJurosScraper
 from scrapers.ipea_precos_inflacao import IpeaPrecosInflacaoScraper
-from scrapers.ipea_fbcf import IpeaFbcfScraper
-from scrapers.ipea_comercio_exterior import IpeaComercioExteriorScraper
 from scrapers.ipea_producao_mineral import IpeaProducaoMineralScraper
-from scrapers.ipea_calendario import IpeaCalendarioScraper
+from scrapers.ipea_taxas_juros import IpeaTaxasJurosScraper
 
 
 def test_ipea_macroeconomia_fetch(requests_mock):
@@ -35,23 +35,28 @@ def test_ipea_macroeconomia_fetch(requests_mock):
             }
         ]
     }
-    
+
     requests_mock.get(
         "http://www.ipeadata.gov.br/api/odata4/ValoresSerie(SERCODIGO='BM12_PIBAC12')",
         json=mock_json,
-        status_code=200
+        status_code=200,
     )
     # Mock para os outros códigos da mesma seção para não dar erro
-    for code in ["PNADC12_TDESOC12", "GAC12_SALMINRE12", "MTE12_SALMIN12", "SGS12_7836"]:
+    for code in [
+        "PNADC12_TDESOC12",
+        "GAC12_SALMINRE12",
+        "MTE12_SALMIN12",
+        "SGS12_7836",
+    ]:
         requests_mock.get(
             f"http://www.ipeadata.gov.br/api/odata4/ValoresSerie(SERCODIGO='{code}')",
             json={"value": []},
-            status_code=200
+            status_code=200,
         )
-    
+
     scraper = IpeaMacroeconomiaScraper()
     df = scraper.fetch()
-    
+
     assert isinstance(df, pd.DataFrame)
     assert len(df) == 1
     assert "data_referencia" in df.columns
@@ -78,36 +83,36 @@ def test_ipea_daily_scrapers_fetch_and_filtering(requests_mock):
                 "SERCODIGO": "EIA366_PBRENT366",
                 "VALDATA": "2026-06-03T00:00:00-03:00",
                 "VALVALOR": 77.0,
-            }
+            },
         ]
     }
-    
+
     requests_mock.get(
         "http://www.ipeadata.gov.br/api/odata4/ValoresSerie(SERCODIGO='EIA366_PBRENT366')",
         json=mock_json,
-        status_code=200
+        status_code=200,
     )
     # Mock para os outros códigos da mesma seção para não dar erro
     for code in ["EIA366_PWTI366", "GM366_DOW366", "SGS366_NASDAQ366"]:
         requests_mock.get(
             f"http://www.ipeadata.gov.br/api/odata4/ValoresSerie(SERCODIGO='{code}')",
             json={"value": []},
-            status_code=200
+            status_code=200,
         )
-    
+
     scraper = IpeaMercadosDiariosScraper()
-    
+
     # 1. Sem filtros
     df = scraper.fetch()
     assert len(df) == 3
-    
+
     # 2. Com target_date
     scraper.target_date = date(2026, 6, 2)
     df_target = scraper.fetch()
     assert len(df_target) == 1
     assert df_target.iloc[0]["data_referencia"] == "2026-06-02"
     assert df_target.iloc[0]["valor"] == 76.0
-    
+
     # 3. Com start/end date
     scraper.target_date = None
     scraper.start_date = date(2026, 6, 2)

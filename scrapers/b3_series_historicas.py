@@ -1,3 +1,5 @@
+from scripts.utils.ux import print_warn
+
 #!/usr/bin/env python
 # coding: utf-8
 """
@@ -9,9 +11,9 @@ A B3 disponibiliza endpoint de download direto via POST/GET com parâmetros
 de data. O scraper consulta o período dos últimos 7 dias úteis e retorna
 o CSV consolidado.
 """
+import datetime
 import os
 import sys
-import datetime
 import time
 from io import StringIO
 
@@ -20,7 +22,6 @@ import requests
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from scrapers.utils.base import BaseScraper
-
 
 # Endpoint de download direto da B3 para tabelas BDI / séries históricas
 REQUEST_URL = "https://drp.b3.com.br/api/download/requestname"
@@ -45,7 +46,6 @@ class B3SeriesHistoricasScraper(BaseScraper):
     phase = 1
 
     def fetch(self) -> pd.DataFrame:
-        from scripts.utils.ux import print_start, print_done, print_warn
 
         data_final = datetime.date.today()
         session = requests.Session()
@@ -68,7 +68,9 @@ class B3SeriesHistoricasScraper(BaseScraper):
                 retries_429 = 0
                 while True:
                     time.sleep(6)
-                    resp = session.get(REQUEST_URL, params=params, headers=HEADERS, timeout=120)
+                    resp = session.get(
+                        REQUEST_URL, params=params, headers=HEADERS, timeout=120
+                    )
                     if resp.status_code == 429 and retries_429 < 3:
                         retries_429 += 1
                         print_warn(f"limite 429 ({retries_429}/3), aguardando 11s")
@@ -77,7 +79,9 @@ class B3SeriesHistoricasScraper(BaseScraper):
                     break
 
                 if resp.status_code == 404:
-                    print_warn(f"dados não disponíveis para {dt_fim_str}, retrocedendo 1 dia")
+                    print_warn(
+                        f"dados não disponíveis para {dt_fim_str}, retrocedendo 1 dia"
+                    )
                     data_final -= datetime.timedelta(days=1)
                     time.sleep(1)
                     continue
@@ -95,7 +99,9 @@ class B3SeriesHistoricasScraper(BaseScraper):
                     print_warn("token de download não encontrado")
                     return pd.DataFrame()
                 time.sleep(6)  # Garante intervalo mínimo para o download
-                resp = session.get(DOWNLOAD_URL, params={"token": token}, headers=HEADERS, timeout=120)
+                resp = session.get(
+                    DOWNLOAD_URL, params={"token": token}, headers=HEADERS, timeout=120
+                )
                 resp.raise_for_status()
                 content_type = resp.headers.get("Content-Type", "")
 

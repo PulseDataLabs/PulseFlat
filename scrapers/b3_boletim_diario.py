@@ -12,9 +12,10 @@ import time
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from utils import get_logger, agora_brt, nova_session
 import pandas as pd
+
 from scrapers.utils.base import BaseScraper
+from utils import agora_brt, get_logger, nova_session
 
 log = get_logger("b3_boletim_diario")
 
@@ -54,7 +55,9 @@ def _arquivos_configurados() -> list[str]:
     return ARQUIVOS_PADRAO
 
 
-def _solicitar_token(session, file_name: str, date: str, recaptcha_token: str) -> tuple[str, dict]:
+def _solicitar_token(
+    session, file_name: str, date: str, recaptcha_token: str
+) -> tuple[str, dict]:
     resp = session.get(
         REQUEST_URL,
         params={
@@ -97,7 +100,9 @@ def capturar() -> tuple[int, int]:
     for file_name in arquivos:
         log.info(f"[{file_name}] Solicitando token ({data_ref})...")
         try:
-            token, file_info = _solicitar_token(session, file_name, data_ref, recaptcha_token)
+            token, file_info = _solicitar_token(
+                session, file_name, data_ref, recaptcha_token
+            )
             if not token:
                 log.error(f"[{file_name}] Token vazio na resposta.")
                 erro += 1
@@ -117,6 +122,7 @@ def capturar() -> tuple[int, int]:
 
     return ok, erro
 
+
 class B3BoletimDiarioScraper(BaseScraper):
     name = "b3_boletim_diario"
     group = "b3"
@@ -124,23 +130,23 @@ class B3BoletimDiarioScraper(BaseScraper):
     phase = 1
     accumulate = True
     chaves_dedup = None
-    
+
     # Catálogo de Metadados
-    title = 'B3 Boletim Diário'
-    description = 'Downloads dos arquivos consolidados do boletim diário de derivativos e posições em aberto da B3.'
-    icon = '📂'
-    icon_class = 'icon-b3'
-    badge = 'Diário'
-    badge_class = 'badge-daily'
-    tags = ['boletim', 'derivativos', 'posição em aberto', 'B3']
-    source = 'B3'
+    title = "B3 Boletim Diário"
+    description = "Downloads dos arquivos consolidados do boletim diário de derivativos e posições em aberto da B3."
+    icon = "📂"
+    icon_class = "icon-b3"
+    badge = "Diário"
+    badge_class = "badge-daily"
+    tags = ["boletim", "derivativos", "posição em aberto", "B3"]
+    source = "B3"
 
     def fetch(self) -> pd.DataFrame:
         log.info("=== B3 Boletim Diário (arquivos para download) ===")
         ok, erro = capturar()
         log.info(f"{ok} arquivo(s) baixado(s) | {erro} erro(s)")
         if erro or ok == 0:
-            raise RuntimeError('Execução do scraper falhou')
+            raise RuntimeError("Execução do scraper falhou")
 
 
 if __name__ == "__main__":

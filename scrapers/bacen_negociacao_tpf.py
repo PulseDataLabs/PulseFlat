@@ -12,10 +12,17 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from utils.base import get_logger, nova_session, salvar_csv
-from utils.parsers import date_ref, replace_date_vars, rows_from_zip, enriquecer, read_existing_header
 import pandas as pd
+
 from scrapers.utils.base import BaseScraper
+from utils.base import get_logger, nova_session, salvar_csv
+from utils.parsers import (
+    date_ref,
+    enriquecer,
+    read_existing_header,
+    replace_date_vars,
+    rows_from_zip,
+)
 
 log = get_logger("bacen_negociacao_tpf")
 
@@ -55,13 +62,19 @@ def capturar() -> list[dict]:
                 if col and col not in header:
                     header.append(col)
 
-            salvar_csv(OUTPUT_FILE, enriched, header, chaves_dedup=["data_captura", "conjunto", "registro_hash"])
+            salvar_csv(
+                OUTPUT_FILE,
+                enriched,
+                header,
+                chaves_dedup=["data_captura", "conjunto", "registro_hash"],
+            )
             log.info(f"[{DATASET_ID}][{tipo}] {len(enriched)} linha(s) salvas")
             registros.extend(enriched)
         except Exception as e:
             log.error(f"[{DATASET_ID}][{tipo}] Falha: {e}")
 
     return registros
+
 
 class BacenNegociacaoTpfScraper(BaseScraper):
     name = "bacen_negociacao_tpf"
@@ -70,21 +83,23 @@ class BacenNegociacaoTpfScraper(BaseScraper):
     phase = 1
     accumulate = True
     compress = True
-    chaves_dedup = ['data_captura', 'conjunto', 'registro_hash']
+    chaves_dedup = ["data_captura", "conjunto", "registro_hash"]
 
     def __init__(self):
         super().__init__()
-        self.output_file = self.output_file.parent / "bacen_negociacao_tpf_extragrupo.csv.gz"
-    
+        self.output_file = (
+            self.output_file.parent / "bacen_negociacao_tpf_extragrupo.csv.gz"
+        )
+
     # Catálogo de Metadados
-    title = 'BCB — Negociação TPF Extra-grupo'
-    description = 'Operações de compra e venda de Títulos Públicos Federais extra-grupo realizadas no mercado aberto (BCB/DEMAB).'
-    icon = '📋'
-    icon_class = 'icon-bcb'
-    badge = 'Diário'
-    badge_class = 'badge-daily'
-    tags = ['título público', 'compra/venda', 'quantidade', 'preço']
-    source = 'BCB · DEMAB'
+    title = "BCB — Negociação TPF Extra-grupo"
+    description = "Operações de compra e venda de Títulos Públicos Federais extra-grupo realizadas no mercado aberto (BCB/DEMAB)."
+    icon = "📋"
+    icon_class = "icon-bcb"
+    badge = "Diário"
+    badge_class = "badge-daily"
+    tags = ["título público", "compra/venda", "quantidade", "preço"]
+    source = "BCB · DEMAB"
 
     def fetch(self) -> pd.DataFrame:
         log.info("=== BCB — Negociacao TPF Extra-grupo ===")

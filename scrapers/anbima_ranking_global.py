@@ -1,3 +1,5 @@
+from scripts.utils.ux import print_done, print_warn
+
 #!/usr/bin/env python
 # coding: utf-8
 """
@@ -9,20 +11,18 @@ Nota: a página entrega um arquivo Excel (.xls/.xlsx). O scraper baixa via
 requests seguindo os redirects, lê a aba "Pag 4 - Por Ativos RF" e
 "Pag - 5 Por Ativos RV", e consolida ambas num único CSV.
 """
+import datetime
 import os
 import re
 import sys
 import time
-import datetime
 from io import BytesIO
 
 import pandas as pd
 import requests
-from bs4 import BeautifulSoup
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from scrapers.utils.base import BaseScraper
-
 
 STRAPI_HOST = "https://data-strapi.prd.anbima.com.br"
 STRAPI_API_URL = f"{STRAPI_HOST}/api/ranking-global-de-adm-de-fundo?populate[template][populate][publication_document][populate]=*"
@@ -57,7 +57,9 @@ def _get_download_url(session: requests.Session) -> str:
         url_path = files[0]["attributes"]["url"]
         return STRAPI_HOST + url_path
     except (KeyError, IndexError, TypeError, ValueError) as e:
-        raise RuntimeError(f"Erro ao extrair URL de download da API do Strapi: {e}") from e
+        raise RuntimeError(
+            f"Erro ao extrair URL de download da API do Strapi: {e}"
+        ) from e
 
 
 def _extract_date_from_filename(file_name: str) -> datetime.date:
@@ -74,27 +76,29 @@ def clean_header_name(name):
     return " ".join(str(name).replace("\n", " ").split()).strip()
 
 
-def _read_sheet(content: bytes, sheet_name: str, data_referencia: datetime.date) -> pd.DataFrame:
+def _read_sheet(
+    content: bytes, sheet_name: str, data_referencia: datetime.date
+) -> pd.DataFrame:
     """Lê uma aba específica do Excel usando uma estratégia robusta para cabeçalhos e linhas de dados."""
     engine = "xlrd" if content.startswith(b"\xd0\xcf\x11\xe0") else "openpyxl"
-    
+
     df_raw = pd.read_excel(
         BytesIO(content),
         sheet_name=sheet_name,
         header=None,
         engine=engine,
     )
-    
+
     all_rows = df_raw.values.tolist()
-    
+
     header_rows = []
     data_rows = []
     found_data = False
-    
+
     for idx, row in enumerate(all_rows):
         if not any(str(v).strip() for v in row if v is not None):
             continue
-            
+
         first_val = row[0]
         is_numeric = False
         try:
@@ -103,7 +107,7 @@ def _read_sheet(content: bytes, sheet_name: str, data_referencia: datetime.date)
                 is_numeric = True
         except (ValueError, TypeError):
             pass
-            
+
         if is_numeric:
             found_data = True
             data_rows.append(row)
@@ -111,7 +115,7 @@ def _read_sheet(content: bytes, sheet_name: str, data_referencia: datetime.date)
             if not found_data:
                 if idx >= 6:
                     header_rows.append(row)
-                    
+
     num_cols = len(all_rows[0]) if all_rows else 0
     col_names = []
     for col_idx in range(num_cols):
@@ -123,19 +127,19 @@ def _read_sheet(content: bytes, sheet_name: str, data_referencia: datetime.date)
                     parts.append(val)
         col_name = " - ".join(parts) if parts else f"col_{col_idx}"
         col_names.append(col_name)
-        
+
     if col_names:
         col_names[0] = "Ordem"
     if len(col_names) > 1:
         col_names[1] = "Administrador"
-        
+
     df = pd.DataFrame(data_rows, columns=col_names)
     df = df.loc[:, ~df.columns.str.startswith("col_")]
     df = df.loc[:, [c for c in df.columns if c and str(c).strip().lower() != "nan"]]
-    
+
     df.insert(0, "data_referencia", data_referencia)
     df.insert(1, "tipo_ativo", sheet_name.strip())
-    
+
     return df
 
 
@@ -146,7 +150,6 @@ class AnbimaRankingGlobalScraper(BaseScraper):
     phase = 1
 
     def fetch(self) -> pd.DataFrame:
-        from scripts.utils.ux import print_done, print_warn
 
         session = requests.Session()
 
@@ -162,7 +165,11 @@ class AnbimaRankingGlobalScraper(BaseScraper):
 
         engine = "xlrd" if content.startswith(b"\xd0\xcf\x11\xe0") else "openpyxl"
         xl = pd.ExcelFile(BytesIO(content), engine=engine)
-        sheets = [s for s in xl.sheet_names if "Pag" in s and "Índices" not in s and "Expediente" not in s]
+        sheets = [
+            s
+            for s in xl.sheet_names
+            if "Pag" in s and "Índices" not in s and "Expediente" not in s
+        ]
 
         dfs = []
         for sheet_name in sheets:
@@ -178,7 +185,7 @@ class AnbimaRankingGlobalScraper(BaseScraper):
             raise RuntimeError("Nenhuma aba pôde ser processada com sucesso.")
 
         df_concat = pd.concat(dfs, ignore_index=True)
-        
+
         mapping = {
             "Ordem": "ordem",
             "Administrador": "administrador",
@@ -239,7 +246,7 @@ class AnbimaRankingGlobalScraper(BaseScraper):
             "(f) - Dupla Contagem": "clientes_dupla_contagem",
             "(g) - Total de Clientes (e-f)": "clientes_total",
         }
-        
+
         return df_concat.rename(columns=mapping)
 
 

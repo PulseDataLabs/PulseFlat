@@ -7,14 +7,28 @@ Saída:   data/ipea_calendario.csv
 
 import os
 import sys
-import datetime
+
 import pandas as pd
-import requests
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from scrapers.utils.base import BaseScraper
 
-SERIES = [{'code': 'SGS12_NDIASUTEISFUT12', 'title': 'Dias Úteis Futuros', 'desc': 'Número de dias úteis futuros estimados mensalmente', 'icon': '📆', 'tags': ['dias_uteis', 'calendario', 'ipea']}, {'code': 'SGS12_NDIASUTEISPAS12', 'title': 'Dias Úteis Passados', 'desc': 'Número de dias úteis passados no mês correspondente', 'icon': '📅', 'tags': ['dias_uteis', 'calendario', 'ipea']}]
+SERIES = [
+    {
+        "code": "SGS12_NDIASUTEISFUT12",
+        "title": "Dias Úteis Futuros",
+        "desc": "Número de dias úteis futuros estimados mensalmente",
+        "icon": "📆",
+        "tags": ["dias_uteis", "calendario", "ipea"],
+    },
+    {
+        "code": "SGS12_NDIASUTEISPAS12",
+        "title": "Dias Úteis Passados",
+        "desc": "Número de dias úteis passados no mês correspondente",
+        "icon": "📅",
+        "tags": ["dias_uteis", "calendario", "ipea"],
+    },
+]
 API_URL = "http://www.ipeadata.gov.br/api/odata4/ValoresSerie(SERCODIGO='{code}')"
 
 
@@ -51,13 +65,15 @@ class IpeaCalendarioScraper(BaseScraper):
                 if val is None:
                     continue
 
-                records.append({
-                    "data_referencia": date_ref,
-                    "codigo_ativo": item["code"],
-                    "label": item["title"],
-                    "valor": float(val),
-                })
-            
+                records.append(
+                    {
+                        "data_referencia": date_ref,
+                        "codigo_ativo": item["code"],
+                        "label": item["title"],
+                        "valor": float(val),
+                    }
+                )
+
             if records:
                 frames.append(pd.DataFrame(records))
 

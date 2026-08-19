@@ -12,18 +12,27 @@ Uso:
     python scripts/populate_last_updates.py --quiet
 """
 
+import argparse
 import csv
 import json
 import sys
 import time
-import argparse
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from scripts.utils.ux import (
-    banner, section, print_start, print_done, print_fail, print_warn, print_info,
-    print_summary, add_common_args, apply_common_args, ColorLogger,
+    ColorLogger,
+    add_common_args,
+    apply_common_args,
+    banner,
+    print_done,
+    print_fail,
+    print_info,
+    print_start,
+    print_summary,
+    print_warn,
+    section,
 )
 
 log = ColorLogger("populate_last_updates")

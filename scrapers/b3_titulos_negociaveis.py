@@ -2,11 +2,12 @@ import io
 import sys
 import zipfile
 from pathlib import Path
+
 import pandas as pd
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from scrapers.utils.base import BaseScraper
-from utils.base import nova_session, get_logger
+from utils.base import get_logger, nova_session
 from utils.parsers import decode_bytes
 
 log = get_logger("b3_titulos_negociaveis")
@@ -48,7 +49,7 @@ class B3TitulosNegociaveisScraper(BaseScraper):
                 filename = info.filename
                 log.info(f"Processando arquivo {filename}...")
                 raw_text = decode_bytes(zf.read(filename))
-                
+
                 for line in raw_text.splitlines():
                     if not line:
                         continue
@@ -60,7 +61,7 @@ class B3TitulosNegociaveisScraper(BaseScraper):
                         current_company = {
                             "root": root,
                             "nome_emissor": name,
-                            "nome_curto": short_name
+                            "nome_curto": short_name,
                         }
                     elif line.startswith("02"):
                         # Registro de ativo negociável
@@ -71,16 +72,18 @@ class B3TitulosNegociaveisScraper(BaseScraper):
                         market_type = line[111:126].strip()
                         title_type = line[133:143].strip()
 
-                        records.append({
-                            "codigo_ativo": ticker,
-                            "nome_emissor": current_company.get("nome_emissor", ""),
-                            "nome_curto": current_company.get("nome_curto", ""),
-                            "codigo_isin": isin,
-                            "tipo_ativo": desc,
-                            "tipo_mercado": market_type,
-                            "tipo_titulo": title_type,
-                            "arquivo_origem": filename,
-                        })
+                        records.append(
+                            {
+                                "codigo_ativo": ticker,
+                                "nome_emissor": current_company.get("nome_emissor", ""),
+                                "nome_curto": current_company.get("nome_curto", ""),
+                                "codigo_isin": isin,
+                                "tipo_ativo": desc,
+                                "tipo_mercado": market_type,
+                                "tipo_titulo": title_type,
+                                "arquivo_origem": filename,
+                            }
+                        )
 
         log.info(f"Total de {len(records)} registros extraídos.")
         return pd.DataFrame(records)

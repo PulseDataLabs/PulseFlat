@@ -1,3 +1,5 @@
+import re
+
 """
 scrapers/b3_bdi_di_over.py
 ---------------------------
@@ -15,10 +17,11 @@ from pathlib import Path
 import requests
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from utils import get_logger, agora_brt, limpar, salvar_csv
-from utils.parsers import _CAL
 import pandas as pd
+
 from scrapers.utils.base import BaseScraper
+from utils import agora_brt, get_logger, limpar
+from utils.parsers import _CAL
 
 log = get_logger("b3_bdi_di_over")
 
@@ -26,7 +29,6 @@ ARQUIVO = Path("data/b3_bdi_di_over.csv")
 
 CABECALHO = [
     "data_captura",
-    
     "data_referencia",
     "number_of_operations",
     "financial_volume",
@@ -44,7 +46,6 @@ HEADERS = {
 
 
 def _to_snake(name: str) -> str:
-    import re
     s1 = re.sub(r"(.)([A-Z][a-z]+)", r"\1_\2", name)
     return re.sub(r"([a-z0-9])([A-Z])", r"\1_\2", s1).lower()
 
@@ -90,15 +91,17 @@ def capturar(target_date: date | None = None) -> list[dict]:
         for item in rows:
             # API retorna TCKR_SYMB no lugar de NUMBER_OF_OPERATIONS em alguns casos
             n_ops = item.get("tckr_symb") or item.get("number_of_operations", "")
-            todos.append({
-                "data_captura":       data_captura,
-                "data_referencia":     limpar(str(item.get("rpt_dt", ""))),
-                "number_of_operations": limpar(str(n_ops)),
-                "financial_volume":   limpar(str(item.get("financial_volume", ""))),
-                "average":            limpar(str(item.get("average", ""))),
-                "daily_factor":       limpar(str(item.get("daily_factor", ""))),
-                "taxa_selic":         limpar(str(item.get("selic_rate", ""))),
-            })
+            todos.append(
+                {
+                    "data_captura": data_captura,
+                    "data_referencia": limpar(str(item.get("rpt_dt", ""))),
+                    "number_of_operations": limpar(str(n_ops)),
+                    "financial_volume": limpar(str(item.get("financial_volume", ""))),
+                    "average": limpar(str(item.get("average", ""))),
+                    "daily_factor": limpar(str(item.get("daily_factor", ""))),
+                    "taxa_selic": limpar(str(item.get("selic_rate", ""))),
+                }
+            )
 
         pagina += 1
         time.sleep(1)
@@ -110,23 +113,24 @@ def capturar(target_date: date | None = None) -> list[dict]:
     log.info(f"{len(todos)} registros DI Over capturados.")
     return todos
 
+
 class B3BdiDiOverScraper(BaseScraper):
     name = "b3_bdi_di_over"
     group = "b3"
     enabled = True
     phase = 1
     accumulate = True
-    chaves_dedup = ['data_captura', 'data_referencia']
-    
+    chaves_dedup = ["data_captura", "data_referencia"]
+
     # Catálogo de Metadados
-    title = 'B3 BDI — DI Over'
-    description = 'Taxa DI Over overnight: número de operações, volume financeiro, taxa média, fator diário e SELIC.'
-    icon = '🏦'
-    icon_class = 'icon-b3'
-    badge = 'Diário'
-    badge_class = 'badge-daily'
-    tags = ['di over', 'taxa média', 'volume', 'selic']
-    source = 'B3 · BDI'
+    title = "B3 BDI — DI Over"
+    description = "Taxa DI Over overnight: número de operações, volume financeiro, taxa média, fator diário e SELIC."
+    icon = "🏦"
+    icon_class = "icon-b3"
+    badge = "Diário"
+    badge_class = "badge-daily"
+    tags = ["di over", "taxa média", "volume", "selic"]
+    source = "B3 · BDI"
 
     def fetch(self) -> pd.DataFrame:
         log.info("=== B3 BDI — DI Over ===")

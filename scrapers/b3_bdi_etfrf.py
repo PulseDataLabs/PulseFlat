@@ -28,10 +28,11 @@ from datetime import date
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+import pandas as pd
+
+from scrapers.utils.base import BaseScraper
 from utils import get_logger, nova_session
 from utils.parsers import _CAL
-import pandas as pd
-from scrapers.utils.base import BaseScraper
 
 log = get_logger("b3_bdi_etfrf")
 
@@ -120,32 +121,37 @@ def _parse_old_format(doc, valid: set[str]) -> list[dict]:
         while j < len(lines) and lines[j].strip() != "Volume":
             j += 1
         cur = None
-        for ln in lines[j + 1:]:
+        for ln in lines[j + 1 :]:
             toks = ln.split()
             if not toks:
                 continue
             first = toks[0]
             if first in valid:
-                cur = {"code": _base(first), "values": [t for t in toks[1:] if VALUE_RE.match(t)]}
+                cur = {
+                    "code": _base(first),
+                    "values": [t for t in toks[1:] if VALUE_RE.match(t)],
+                }
                 continue
             if cur is not None:
                 cur["values"].extend(t for t in toks if VALUE_RE.match(t))
                 if len(cur["values"]) >= 11:
                     v = cur["values"][:11]
-                    rows.append({
-                        "codigo_ativo": cur["code"],
-                        "preco_abertura": v[0],
-                        "preco_minimo": v[1],
-                        "preco_maximo": v[2],
-                        "preco_medio": v[3],
-                        "preco_fechamento": v[4],
-                        "preco_referencia_d1": v[5],
-                        "oferta_compra": v[6],
-                        "oferta_venda": v[7],
-                        "quantidade": v[8],
-                        "negocios": v[9],
-                        "volume": v[10],
-                    })
+                    rows.append(
+                        {
+                            "codigo_ativo": cur["code"],
+                            "preco_abertura": v[0],
+                            "preco_minimo": v[1],
+                            "preco_maximo": v[2],
+                            "preco_medio": v[3],
+                            "preco_fechamento": v[4],
+                            "preco_referencia_d1": v[5],
+                            "oferta_compra": v[6],
+                            "oferta_venda": v[7],
+                            "quantidade": v[8],
+                            "negocios": v[9],
+                            "volume": v[10],
+                        }
+                    )
                     cur = None
     return rows
 
@@ -179,17 +185,19 @@ def _parse_forward_format(doc, valid: set[str]) -> list[dict]:
                 cur["values"].extend(t for t in toks if VALUE_RE.match(t))
                 if len(cur["values"]) >= 17:
                     v = cur["values"][:17]
-                    rows.append({
-                        "codigo_ativo": cur["code"],
-                        "preco_abertura": v[0],
-                        "preco_minimo": v[1],
-                        "preco_maximo": v[2],
-                        "preco_medio": v[3],
-                        "preco_fechamento": v[4],
-                        "negocios": v[14],
-                        "quantidade": v[15],
-                        "volume": v[16],
-                    })
+                    rows.append(
+                        {
+                            "codigo_ativo": cur["code"],
+                            "preco_abertura": v[0],
+                            "preco_minimo": v[1],
+                            "preco_maximo": v[2],
+                            "preco_medio": v[3],
+                            "preco_fechamento": v[4],
+                            "negocios": v[14],
+                            "quantidade": v[15],
+                            "volume": v[16],
+                        }
+                    )
                     cur = None
     return rows
 
@@ -202,7 +210,11 @@ def _ler_etfrf_base() -> list[str]:
     df = pd.read_csv(csv_path, dtype=str)
     if "tipo_fundo" in df.columns and "codigo_fundo" in df.columns:
         df = df[df["tipo_fundo"].astype(str).str.strip() == "ETF Renda Fixa"]
-        codigos = {str(c).strip().upper() for c in df["codigo_fundo"].dropna() if str(c).strip()}
+        codigos = {
+            str(c).strip().upper()
+            for c in df["codigo_fundo"].dropna()
+            if str(c).strip()
+        }
         return sorted({_base(c) for c in codigos})
     return []
 
@@ -240,9 +252,19 @@ def _baixar_e_parsear(session, dt: date, valid: set[str], parser: str) -> list[d
             for r in rows:
                 r["data_referencia"] = data
                 r["arquivo_origem"] = f"{nome}_{ymd}.pdf"
-                for campo in ("preco_abertura", "preco_minimo", "preco_maximo", "preco_medio",
-                              "preco_fechamento", "preco_referencia_d1", "oferta_compra",
-                              "oferta_venda", "quantidade", "negocios", "volume"):
+                for campo in (
+                    "preco_abertura",
+                    "preco_minimo",
+                    "preco_maximo",
+                    "preco_medio",
+                    "preco_fechamento",
+                    "preco_referencia_d1",
+                    "oferta_compra",
+                    "oferta_venda",
+                    "quantidade",
+                    "negocios",
+                    "volume",
+                ):
                     if campo in r:
                         r[campo] = _normalizar_valor(r[campo])
             log.info(f"  {data}: {len(rows)} registros via {nome}")
@@ -251,8 +273,12 @@ def _baixar_e_parsear(session, dt: date, valid: set[str], parser: str) -> list[d
     return []
 
 
-def capturar(start_date: date | None, end_date: date | None, target_date: date | None,
-             parser: str = "any") -> list[dict]:
+def capturar(
+    start_date: date | None,
+    end_date: date | None,
+    target_date: date | None,
+    parser: str = "any",
+) -> list[dict]:
     if target_date:
         dias = [target_date]
     elif start_date and end_date:
@@ -264,7 +290,9 @@ def capturar(start_date: date | None, end_date: date | None, target_date: date |
 
     base = _ler_etfrf_base()
     if not base:
-        log.error("Lista de ETF Renda Fixa não encontrada (data/b3_fundos_listados.csv).")
+        log.error(
+            "Lista de ETF Renda Fixa não encontrada (data/b3_fundos_listados.csv)."
+        )
         return []
     valid = {c + "11" for c in base}
 
@@ -286,14 +314,14 @@ class B3BdiEtfrfScraper(BaseScraper):
     chaves_dedup = ["data_referencia", "codigo_ativo"]
 
     # Catálogo de Metadados
-    title = 'B3 BDI — ETF de Renda Fixa'
-    description = 'Resumo diário dos negócios de ETF de Renda Fixa no mercado da B3 (Boletim Diário), com preços de abertura, mínimo, máximo, médio e fechamento, quantidade negociada, número de negócios e volume financeiro.'
-    icon = '📊'
-    icon_class = 'icon-b3'
-    badge = 'Diário'
-    badge_class = 'badge-daily'
-    tags = ['ETF', 'renda fixa', 'bdi', 'volume', 'negócios', 'preço']
-    source = 'B3 BDI'
+    title = "B3 BDI — ETF de Renda Fixa"
+    description = "Resumo diário dos negócios de ETF de Renda Fixa no mercado da B3 (Boletim Diário), com preços de abertura, mínimo, máximo, médio e fechamento, quantidade negociada, número de negócios e volume financeiro."
+    icon = "📊"
+    icon_class = "icon-b3"
+    badge = "Diário"
+    badge_class = "badge-daily"
+    tags = ["ETF", "renda fixa", "bdi", "volume", "negócios", "preço"]
+    source = "B3 BDI"
 
     def fetch(self) -> pd.DataFrame:
         log.info("=== B3 BDI — ETF de Renda Fixa ===")

@@ -16,9 +16,10 @@ import openpyxl
 import requests
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from utils import get_logger, agora_brt, limpar, nova_session, salvar_csv
 import pandas as pd
+
 from scrapers.utils.base import BaseScraper
+from utils import agora_brt, get_logger, limpar, nova_session
 
 log = get_logger("b3_classificacao_setorial")
 
@@ -64,7 +65,7 @@ def capturar() -> list[dict]:
         if not xls_files:
             log.error("Nenhum arquivo .xlsx encontrado dentro do ZIP.")
             sys.exit(1)
-        
+
         arquivo_nome = xls_files[0]
         log.info(f"Extraindo e processando {arquivo_nome}...")
         xlsx_bytes = zf.read(arquivo_nome)
@@ -74,7 +75,7 @@ def capturar() -> list[dict]:
 
     data_captura, _ = agora_brt()
     companies = []
-    
+
     current_setor = ""
     current_subsetor = ""
     current_segmento = ""
@@ -110,19 +111,22 @@ def capturar() -> list[dict]:
 
         # Se houver um código de ticker válido, é uma empresa!
         if val_3:
-            companies.append({
-                "data_captura": data_captura,
-                "setor_economico": current_setor,
-                "subsetor": current_subsetor,
-                "segmento": current_segmento,
-                "nome_empresa": val_2,
-                "codigo": val_3,
-                "segmento_listagem": val_4,
-            })
+            companies.append(
+                {
+                    "data_captura": data_captura,
+                    "setor_economico": current_setor,
+                    "subsetor": current_subsetor,
+                    "segmento": current_segmento,
+                    "nome_empresa": val_2,
+                    "codigo": val_3,
+                    "segmento_listagem": val_4,
+                }
+            )
 
     wb.close()
     log.info(f"{len(companies)} empresas processadas da classificação setorial.")
     return companies
+
 
 class B3ClassificacaoSetorialScraper(BaseScraper):
     name = "b3_classificacao_setorial"
@@ -130,17 +134,17 @@ class B3ClassificacaoSetorialScraper(BaseScraper):
     enabled = True
     phase = 1
     accumulate = False
-    chaves_dedup = ['data_captura', 'codigo']
-    
+    chaves_dedup = ["data_captura", "codigo"]
+
     # Catálogo de Metadados
-    title = 'B3 Classificação Setorial'
-    description = 'Classificação setorial completa das empresas listadas na B3 (setor econômico, subsetor e segmento de atuação).'
-    icon = '🗂️'
-    icon_class = 'icon-b3'
-    badge = 'Diário'
-    badge_class = 'badge-daily'
-    tags = ['setor', 'subsetor', 'segmento']
-    source = 'B3'
+    title = "B3 Classificação Setorial"
+    description = "Classificação setorial completa das empresas listadas na B3 (setor econômico, subsetor e segmento de atuação)."
+    icon = "🗂️"
+    icon_class = "icon-b3"
+    badge = "Diário"
+    badge_class = "badge-daily"
+    tags = ["setor", "subsetor", "segmento"]
+    source = "B3"
 
     def fetch(self) -> pd.DataFrame:
         log.info("=== B3 — Classificação Setorial ===")

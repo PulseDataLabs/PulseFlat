@@ -6,9 +6,8 @@ definidas em utils/parsers.py (CSV, JSON, XML, FWF, normalização de chaves e d
 """
 
 import sys
-from pathlib import Path
 from datetime import datetime
-import pytest
+from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
@@ -28,7 +27,9 @@ def test_normalize_key():
     """Deve normalizar strings para formato snake_case limpo, removendo acentos e caracteres especiais."""
     assert parsers.normalize_key("  Nome da Companhia  ") == "nome_da_companhia"
     assert parsers.normalize_key("Código CVM / Cadastro") == "codigo_cvm_cadastro"
-    assert parsers.normalize_key("Data de Referência (2026)") == "data_de_referencia_2026"
+    assert (
+        parsers.normalize_key("Data de Referência (2026)") == "data_de_referencia_2026"
+    )
     assert parsers.normalize_key("Taxa % a.a.") == "taxa_a_a"
     assert parsers.normalize_key("___teste__multiplo__") == "teste_multiplo"
     assert parsers.normalize_key("") == "campo"
@@ -54,7 +55,7 @@ def test_json_rows():
     """Deve parsear payloads JSON (listas e dicts) convertendo sub-estruturas em strings e normalizando chaves."""
     payload_list = [
         {"id": 1, "dados": {"sub_id": 100, "status": "ativo"}},
-        {"id": 2, "dados": [1, 2, 3]}
+        {"id": 2, "dados": [1, 2, 3]},
     ]
     rows = parsers.json_rows(payload_list)
     assert len(rows) == 2

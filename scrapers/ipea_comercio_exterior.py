@@ -7,14 +7,28 @@ Saída:   data/ipea_comercio_exterior.csv
 
 import os
 import sys
-import datetime
+
 import pandas as pd
-import requests
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from scrapers.utils.base import BaseScraper
 
-SERIES = [{'code': 'FUNCEX12_XPT12', 'title': 'Exportações Preços Índice', 'desc': 'Índice de preços das exportações gerais (média 2018 = 100)', 'icon': '🚢', 'tags': ['exportacao', 'precos', 'ipea']}, {'code': 'FUNCEX12_MDPT12', 'title': 'Importações Preços Índice', 'desc': 'Índice de preços das importações gerais (média 2018 = 100)', 'icon': '🚢', 'tags': ['importacao', 'precos', 'ipea']}]
+SERIES = [
+    {
+        "code": "FUNCEX12_XPT12",
+        "title": "Exportações Preços Índice",
+        "desc": "Índice de preços das exportações gerais (média 2018 = 100)",
+        "icon": "🚢",
+        "tags": ["exportacao", "precos", "ipea"],
+    },
+    {
+        "code": "FUNCEX12_MDPT12",
+        "title": "Importações Preços Índice",
+        "desc": "Índice de preços das importações gerais (média 2018 = 100)",
+        "icon": "🚢",
+        "tags": ["importacao", "precos", "ipea"],
+    },
+]
 API_URL = "http://www.ipeadata.gov.br/api/odata4/ValoresSerie(SERCODIGO='{code}')"
 
 
@@ -51,13 +65,15 @@ class IpeaComercioExteriorScraper(BaseScraper):
                 if val is None:
                     continue
 
-                records.append({
-                    "data_referencia": date_ref,
-                    "codigo_ativo": item["code"],
-                    "label": item["title"],
-                    "valor": float(val),
-                })
-            
+                records.append(
+                    {
+                        "data_referencia": date_ref,
+                        "codigo_ativo": item["code"],
+                        "label": item["title"],
+                        "valor": float(val),
+                    }
+                )
+
             if records:
                 frames.append(pd.DataFrame(records))
 

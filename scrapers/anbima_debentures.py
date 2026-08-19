@@ -15,10 +15,11 @@ from pathlib import Path
 import requests
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from utils import get_logger, limpar, nova_session, salvar_csv
-from utils.parsers import _CAL
 import pandas as pd
+
 from scrapers.utils.base import BaseScraper
+from utils import get_logger, limpar, nova_session
+from utils.parsers import _CAL
 
 log = get_logger("anbima_debentures")
 
@@ -43,7 +44,9 @@ CABECALHO = [
     "ref_ntnb",
 ]
 
-URL_TPL = "https://www.anbima.com.br/informacoes/merc-sec-debentures/arqs/db{yymmdd}.txt"
+URL_TPL = (
+    "https://www.anbima.com.br/informacoes/merc-sec-debentures/arqs/db{yymmdd}.txt"
+)
 
 
 def _url_referencia(session) -> tuple[str, date]:
@@ -93,10 +96,21 @@ def capturar() -> list[dict]:
     registros = []
 
     COLUNAS = [
-        "codigo", "nome_emissor", "dt_repactuacao_vencimento", "indice_correcao",
-        "tx_compra", "tx_venda", "tx_indicativa", "desvio_padrao",
-        "intervalo_indicativo_min", "intervalo_indicativo_max", "pu",
-        "ratio_pu_par_vne", "duration", "pct_reune", "ref_ntnb",
+        "codigo",
+        "nome_emissor",
+        "dt_repactuacao_vencimento",
+        "indice_correcao",
+        "tx_compra",
+        "tx_venda",
+        "tx_indicativa",
+        "desvio_padrao",
+        "intervalo_indicativo_min",
+        "intervalo_indicativo_max",
+        "pu",
+        "ratio_pu_par_vne",
+        "duration",
+        "pct_reune",
+        "ref_ntnb",
     ]
 
     for linha in dados_linhas:
@@ -115,23 +129,24 @@ def capturar() -> list[dict]:
     log.info(f"{len(registros)} debêntures capturadas (ref: {data_ref}).")
     return registros
 
+
 class AnbimaDebenturesScraper(BaseScraper):
     name = "anbima_debentures"
     group = "anbima"
     enabled = True
     phase = 1
     accumulate = True
-    chaves_dedup = ['data_referencia', 'codigo']
-    
+    chaves_dedup = ["data_referencia", "codigo"]
+
     # Catálogo de Metadados
-    title = 'ANBIMA Debêntures'
-    description = 'Preços e taxas indicativas de debêntures, com PU, duration, índice de correção e intervalo indicativo.'
-    icon = '📜'
-    icon_class = 'icon-anbima'
-    badge = 'Diário'
-    badge_class = 'badge-daily'
-    tags = ['pu', 'duration', 'índice correção', 'tx_indicativa']
-    source = 'ANBIMA'
+    title = "ANBIMA Debêntures"
+    description = "Preços e taxas indicativas de debêntures, com PU, duration, índice de correção e intervalo indicativo."
+    icon = "📜"
+    icon_class = "icon-anbima"
+    badge = "Diário"
+    badge_class = "badge-daily"
+    tags = ["pu", "duration", "índice correção", "tx_indicativa"]
+    source = "ANBIMA"
 
     def fetch(self) -> pd.DataFrame:
         log.info("=== ANBIMA — Debêntures ===")

@@ -25,8 +25,8 @@ import importlib
 import json
 import logging
 import sys
-import traceback
 import time
+import traceback
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime
 from pathlib import Path
@@ -47,15 +47,25 @@ logging.getLogger("requests").setLevel(logging.WARNING)
 
 # ── UX compartilhada (cores, ícones, helpers visuais) ────────────────
 from scripts.utils.ux import (
-    USE_COLOR, IS_TTY,
-    bold, dim, green, yellow, red, cyan, blue, magenta, white,
-    b_green, b_yellow, b_red, b_cyan, b_white,
-    _line, _progress_bar,
-    GROUP_ICON, GROUP_COLOR,
+    GROUP_COLOR,
+    GROUP_ICON,
+    IS_TTY,
+    USE_COLOR,
+    _line,
+    _progress_bar,
+    b_green,
+    b_red,
+    bold,
+    cyan,
+    dim,
+    green,
+    red,
+    white,
+    yellow,
 )
 
-
 # ── Helpers visuais ───────────────────────────────────────────────────────────
+
 
 def _banner() -> None:
     """Imprime o cabeçalho do pipeline."""
@@ -63,8 +73,8 @@ def _banner() -> None:
     print()
     print(_line("═"))
     print(
-        bold(white("  ⚡ PulseFlat")) +
-        dim("  Pipeline Serverless de Dados Financeiros Brasileiros")
+        bold(white("  ⚡ PulseFlat"))
+        + dim("  Pipeline Serverless de Dados Financeiros Brasileiros")
     )
     print(dim(f"  {now}"))
     print(_line("═"))
@@ -79,36 +89,34 @@ def _section(title: str, icon: str = "▶") -> None:
 
 
 def _scraper_start(name: str, group: str, idx: int, total: int) -> None:
-    icon  = GROUP_ICON.get(group, "⬜")
+    icon = GROUP_ICON.get(group, "⬜")
     color = GROUP_COLOR.get(group, dim)
-    pct   = f"{idx}/{total}"
-    print(
-        f"  {dim(pct.rjust(7))}  {icon}  "
-        + color(f"{name:<40}")
-        + dim("iniciando…")
-    )
+    pct = f"{idx}/{total}"
+    print(f"  {dim(pct.rjust(7))}  {icon}  " + color(f"{name:<40}") + dim("iniciando…"))
 
 
 def _scraper_done(name: str, group: str, elapsed: float, idx: int, total: int) -> None:
-    icon  = GROUP_ICON.get(group, "⬜")
+    icon = GROUP_ICON.get(group, "⬜")
     color = GROUP_COLOR.get(group, dim)
-    pct   = f"{idx}/{total}"
-    t     = f"{elapsed:6.1f}s"
+    pct = f"{idx}/{total}"
+    t = f"{elapsed:6.1f}s"
     print(
         f"  {dim(pct.rjust(7))}  {icon}  "
         + color(f"{name:<40}")
-        + b_green("  ✔  ") + dim(t)
+        + b_green("  ✔  ")
+        + dim(t)
     )
 
 
 def _scraper_fail(name: str, group: str, elapsed: float, idx: int, total: int) -> None:
-    icon  = GROUP_ICON.get(group, "⬜")
-    pct   = f"{idx}/{total}"
-    t     = f"{elapsed:6.1f}s"
+    icon = GROUP_ICON.get(group, "⬜")
+    pct = f"{idx}/{total}"
+    t = f"{elapsed:6.1f}s"
     print(
         f"  {dim(pct.rjust(7))}  {icon}  "
         + b_red(f"{name:<40}")
-        + b_red("  ✖  ") + dim(t)
+        + b_red("  ✖  ")
+        + dim(t)
     )
 
 
@@ -118,7 +126,7 @@ def _summary_table(
     total_elapsed: float,
 ) -> None:
     """Imprime a tabela final de resultados."""
-    ok   = [(n, r) for n, r in results.items() if r[0]]
+    ok = [(n, r) for n, r in results.items() if r[0]]
     fail = [(n, r) for n, r in results.items() if not r[0]]
 
     print()
@@ -130,7 +138,8 @@ def _summary_table(
     total = len(results)
     print(
         f"  {bold('Total')}: {white(str(total))} scrapers  │  "
-        + b_green(f"✔ {len(ok)} ok") + "  │  "
+        + b_green(f"✔ {len(ok)} ok")
+        + "  │  "
         + (b_red(f"✖ {len(fail)} erro(s)") if fail else dim("0 erros"))
         + "  │  "
         + cyan(f"⏱  {total_elapsed:.1f}s")
@@ -141,11 +150,12 @@ def _summary_table(
         print(dim("  ── Sucesso " + "─" * 57))
         for name, (_, elapsed, _) in sorted(ok, key=lambda x: -x[1][1]):
             group = registry.get(name, {}).get("group", "misc")
-            icon  = GROUP_ICON.get(group, "⬜")
+            icon = GROUP_ICON.get(group, "⬜")
             color = GROUP_COLOR.get(group, dim)
             print(
                 f"    {icon}  {color(name):<50}"
-                + b_green("✔") + dim(f"  {elapsed:5.1f}s")
+                + b_green("✔")
+                + dim(f"  {elapsed:5.1f}s")
             )
 
     if fail:
@@ -153,10 +163,11 @@ def _summary_table(
         print(dim("  ── Erros " + "─" * 59))
         for name, (_, elapsed, err) in fail:
             group = registry.get(name, {}).get("group", "misc")
-            icon  = GROUP_ICON.get(group, "⬜")
+            icon = GROUP_ICON.get(group, "⬜")
             print(
                 f"    {icon}  {b_red(name):<50}"
-                + b_red("✖") + dim(f"  {elapsed:5.1f}s")
+                + b_red("✖")
+                + dim(f"  {elapsed:5.1f}s")
             )
             if err:
                 # Mostra apenas a última linha do traceback
@@ -171,6 +182,7 @@ def _summary_table(
 
 # ── Descoberta dinâmica ───────────────────────────────────────────────────────
 
+
 def discover_scrapers() -> dict[str, dict]:
     """
     Varre scrapers/ e retorna metadados de cada scraper descoberto.
@@ -184,30 +196,39 @@ def discover_scrapers() -> dict[str, dict]:
         if module_name in ("__init__", "generic_scraper"):
             continue
         try:
-            mod        = importlib.import_module(f"scrapers.{module_name}")
-            class_name = "".join(w.capitalize() for w in module_name.split("_")) + "Scraper"
+            mod = importlib.import_module(f"scrapers.{module_name}")
+            class_name = (
+                "".join(w.capitalize() for w in module_name.split("_")) + "Scraper"
+            )
             if hasattr(mod, class_name):
                 cls = getattr(mod, class_name)
                 scrapers[module_name] = {
-                    "group":      getattr(cls, "group",   "misc"),
-                    "enabled":    getattr(cls, "enabled", True),
-                    "phase":      getattr(cls, "phase",   1),
+                    "group": getattr(cls, "group", "misc"),
+                    "enabled": getattr(cls, "enabled", True),
+                    "phase": getattr(cls, "phase", 1),
                     "class_name": class_name,
-                    "title":      getattr(cls, "title", module_name.replace("_", " ").title()),
+                    "title": getattr(
+                        cls, "title", module_name.replace("_", " ").title()
+                    ),
                 }
         except Exception as e:
-            logger.warning(yellow(f"  ⚠  Não foi possível carregar metadados de {module_name}: {e}"))
+            logger.warning(
+                yellow(
+                    f"  ⚠  Não foi possível carregar metadados de {module_name}: {e}"
+                )
+            )
 
     return scrapers
 
 
 # ── Execução individual ───────────────────────────────────────────────────────
 
+
 def run_scraper(module_name: str) -> tuple[bool, float, Optional[str]]:
     """Executa um scraper. Retorna (success, elapsed_s, error_msg_or_None)."""
     t0 = time.time()
     try:
-        mod        = importlib.import_module(f"scrapers.{module_name}")
+        mod = importlib.import_module(f"scrapers.{module_name}")
         class_name = "".join(w.capitalize() for w in module_name.split("_")) + "Scraper"
         if hasattr(mod, class_name):
             getattr(mod, class_name)().run()
@@ -230,6 +251,7 @@ def run_scraper(module_name: str) -> tuple[bool, float, Optional[str]]:
 
 # ── Execução de subconjuntos (paralelo / sequencial) ──────────────────────────
 
+
 def run_subset(
     names: list[str],
     registry: dict[str, dict],
@@ -245,7 +267,9 @@ def run_subset(
     _section(f"Fase {phase_label} — {total} scraper{'s' if total > 1 else ''}", "⚙")
 
     if parallel:
-        print(f"  {dim('Modo')} {cyan('paralelo')}  {dim(f'max_workers={max_workers}')}\n")
+        print(
+            f"  {dim('Modo')} {cyan('paralelo')}  {dim(f'max_workers={max_workers}')}\n"
+        )
         done_count = 0
         with ThreadPoolExecutor(max_workers=max_workers) as ex:
             future_map = {ex.submit(run_scraper, n): n for n in names}
@@ -265,7 +289,10 @@ def run_subset(
 
                 results[name] = (success, elapsed, err)
                 # Barra de progresso inline
-                print(f"  {_progress_bar(done_count, total)}", end="\r" if done_count < total else "\n")
+                print(
+                    f"  {_progress_bar(done_count, total)}",
+                    end="\r" if done_count < total else "\n",
+                )
     else:
         print(f"  {dim('Modo')} {yellow('sequencial')}\n")
         for idx, name in enumerate(names, 1):
@@ -286,25 +313,26 @@ def run_subset(
 
 # ── Salvamento de status ──────────────────────────────────────────────────────
 
+
 def save_pipeline_status(
     results: dict[str, tuple[bool, float, Optional[str]]],
     total_elapsed: float,
 ) -> None:
     from utils.base import DRIFTS
 
-    root_dir        = Path(__file__).resolve().parent
-    status_path     = root_dir / "data" / "pipeline_status.json"
-    status_js_path  = root_dir / "data" / "pipeline_status.js"
+    root_dir = Path(__file__).resolve().parent
+    status_path = root_dir / "data" / "pipeline_status.json"
+    status_js_path = root_dir / "data" / "pipeline_status.js"
     scrapers_registry = discover_scrapers()
-    active_scrapers   = {k: v for k, v in scrapers_registry.items() if v["enabled"]}
+    active_scrapers = {k: v for k, v in scrapers_registry.items() if v["enabled"]}
 
     status_data: dict = {
-        "timestamp":       datetime.now().isoformat(),
+        "timestamp": datetime.now().isoformat(),
         "elapsed_seconds": total_elapsed,
-        "status":          "success",
-        "summary":         {"total": 0, "success": 0, "failed": 0, "drifts": 0},
-        "scrapers":        {},
-        "drifts":          {},
+        "status": "success",
+        "summary": {"total": 0, "success": 0, "failed": 0, "drifts": 0},
+        "scrapers": {},
+        "drifts": {},
     }
 
     # Carrega status anterior (para preservar scrapers não executados nesta rodada)
@@ -317,16 +345,18 @@ def save_pipeline_status(
             if isinstance(loaded.get("drifts"), dict):
                 status_data["drifts"] = loaded["drifts"]
         except Exception as e:
-            logger.warning(yellow(f"  ⚠  Não foi possível carregar status anterior: {e}"))
+            logger.warning(
+                yellow(f"  ⚠  Não foi possível carregar status anterior: {e}")
+            )
 
     # Atualiza com resultados desta execução
     now_iso = datetime.now().isoformat()
     for name, (success, elapsed, err) in results.items():
         status_data["scrapers"][name] = {
-            "status":          "success" if success else "error",
+            "status": "success" if success else "error",
             "elapsed_seconds": elapsed,
-            "error":           err,
-            "timestamp":       now_iso,
+            "error": err,
+            "timestamp": now_iso,
         }
 
     # Drifts: limpa os de scrapers que rodaram agora e adiciona os novos
@@ -336,8 +366,8 @@ def save_pipeline_status(
             del status_data["drifts"][filename]
     for d in DRIFTS:
         status_data["drifts"][d["file"]] = {
-            "added":     d["added"],
-            "removed":   d["removed"],
+            "added": d["added"],
+            "removed": d["removed"],
             "timestamp": d["timestamp"],
         }
 
@@ -345,23 +375,27 @@ def save_pipeline_status(
     for name in active_scrapers:
         if name not in status_data["scrapers"]:
             status_data["scrapers"][name] = {
-                "status": "unknown", "elapsed_seconds": 0.0,
-                "error": None, "timestamp": None,
+                "status": "unknown",
+                "elapsed_seconds": 0.0,
+                "error": None,
+                "timestamp": None,
             }
 
     # Recalcula resumo
-    ok_cnt = sum(1 for s in status_data["scrapers"].values() if s["status"] == "success")
-    fail_cnt = sum(1 for s in status_data["scrapers"].values() if s["status"] == "error")
+    ok_cnt = sum(
+        1 for s in status_data["scrapers"].values() if s["status"] == "success"
+    )
+    fail_cnt = sum(
+        1 for s in status_data["scrapers"].values() if s["status"] == "error"
+    )
     status_data["summary"] = {
-        "total":   len(active_scrapers),
+        "total": len(active_scrapers),
         "success": ok_cnt,
-        "failed":  fail_cnt,
-        "drifts":  len(status_data["drifts"]),
+        "failed": fail_cnt,
+        "drifts": len(status_data["drifts"]),
     }
     status_data["status"] = (
-        "error"   if fail_cnt > 0 else
-        "warning" if status_data["drifts"] else
-        "success"
+        "error" if fail_cnt > 0 else "warning" if status_data["drifts"] else "success"
     )
 
     try:
@@ -380,6 +414,7 @@ def save_pipeline_status(
 
 # ── Listagem de scrapers disponíveis ──────────────────────────────────────────
 
+
 def list_scrapers(registry: dict[str, dict]) -> None:
     _section("Scrapers disponíveis", "📋")
     by_group: dict[str, list] = {}
@@ -387,32 +422,35 @@ def list_scrapers(registry: dict[str, dict]) -> None:
         by_group.setdefault(info["group"], []).append((name, info))
 
     for group, items in sorted(by_group.items()):
-        icon  = GROUP_ICON.get(group, "⬜")
+        icon = GROUP_ICON.get(group, "⬜")
         color = GROUP_COLOR.get(group, dim)
         print(f"\n  {icon}  {bold(color(group.upper()))}")
         for name, info in items:
             enabled_marker = green("●") if info["enabled"] else dim("○")
-            phase_tag      = dim(f"[ph{info['phase']}]")
+            phase_tag = dim(f"[ph{info['phase']}]")
             print(
                 f"    {enabled_marker}  {color(name):<42} "
-                + phase_tag + "  " + dim(info.get("title", ""))
+                + phase_tag
+                + "  "
+                + dim(info.get("title", ""))
             )
     print()
 
 
 # ── Orquestrador principal ────────────────────────────────────────────────────
 
+
 def main(
-    group:         Optional[str] = None,
-    scraper:       Optional[str] = None,
-    parallel:      bool = True,
-    max_workers:   int  = 4,
-    list_only:     bool = False,
-    check_holes:   bool = False,
+    group: Optional[str] = None,
+    scraper: Optional[str] = None,
+    parallel: bool = True,
+    max_workers: int = 4,
+    list_only: bool = False,
+    check_holes: bool = False,
     fail_on_holes: bool = False,
 ) -> None:
     _banner()
-    t0       = time.time()
+    t0 = time.time()
     registry = discover_scrapers()
 
     if list_only:
@@ -427,7 +465,8 @@ def main(
         targets = {scraper: registry[scraper]}
     else:
         targets = {
-            n: info for n, info in registry.items()
+            n: info
+            for n, info in registry.items()
             if info["enabled"] and (group is None or info["group"] == group)
         }
 
@@ -475,6 +514,7 @@ def main(
     if not group and not scraper:
         try:
             from scripts.generate_catalog import generate
+
             generate()
             print(f"  {dim('📦 datasets.json regenerado')}")
         except Exception as e:
@@ -482,13 +522,16 @@ def main(
 
         try:
             from scripts.generate_market_latest import generate as gen_market
+
             gen_market()
             print(f"  {dim('📈 market_latest.json atualizado')}")
         except Exception as e:
             print(yellow(f"  ⚠  Não foi possível gerar market_latest: {e}"))
 
         try:
-            from scripts.consolidate import generate as gen_consolidated, generate_pivoted
+            from scripts.consolidate import generate as gen_consolidated
+            from scripts.consolidate import generate_pivoted
+
             gen_consolidated()
             generate_pivoted()
             print(f"  {dim('📊 consolidated.json/csv/js + pivoted atualizados')}")
@@ -498,6 +541,7 @@ def main(
         if check_holes:
             try:
                 from scripts.verificar_buracos import main as check_holes_fn
+
                 check_holes_fn(fail_on_holes=fail_on_holes, quiet=not IS_TTY)
                 print(f"  {dim('🔍 Verificação de buracos concluída')}")
             except SystemExit:
@@ -518,7 +562,7 @@ def main(
 
 if __name__ == "__main__":
     registry = discover_scrapers()
-    available_groups   = sorted({i["group"] for i in registry.values() if i["enabled"]})
+    available_groups = sorted({i["group"] for i in registry.values() if i["enabled"]})
     available_scrapers = sorted(registry.keys())
 
     parser = argparse.ArgumentParser(
@@ -536,30 +580,71 @@ exemplos:
         """,
     )
 
-    parser.add_argument("--group",    choices=available_groups,   metavar="GRUPO",   help="Filtra por grupo de scrapers")
-    parser.add_argument("--scraper",  choices=available_scrapers, metavar="SCRAPER", help="Executa um scraper específico")
-    parser.add_argument("--parallel",    action="store_true",  default=True,  help="Execução paralela (padrão)")
-    parser.add_argument("--sequential",  action="store_false", dest="parallel", help="Execução sequencial")
-    parser.add_argument("--max-workers", type=int, default=4,  metavar="N",   help="Threads para modo paralelo (padrão: 4)")
-    parser.add_argument("--list",        action="store_true",                 help="Lista todos os scrapers disponíveis e sai")
-    parser.add_argument("--generate-catalog", action="store_true",            help="Regenera datasets.json e sai")
-    parser.add_argument("--check-holes", action="store_true",
-        help="Executa verificação de buracos (dias úteis faltantes) após a coleta")
-    parser.add_argument("--fail-on-holes", action="store_true",
-        help="Falha se a verificação de buracos encontrar datas faltantes (exit code 1)")
-    parser.add_argument("--skip-db", action="store_true",
-        help="Ignora a persistência dos dados no banco de dados Oracle")
+    parser.add_argument(
+        "--group",
+        choices=available_groups,
+        metavar="GRUPO",
+        help="Filtra por grupo de scrapers",
+    )
+    parser.add_argument(
+        "--scraper",
+        choices=available_scrapers,
+        metavar="SCRAPER",
+        help="Executa um scraper específico",
+    )
+    parser.add_argument(
+        "--parallel",
+        action="store_true",
+        default=True,
+        help="Execução paralela (padrão)",
+    )
+    parser.add_argument(
+        "--sequential",
+        action="store_false",
+        dest="parallel",
+        help="Execução sequencial",
+    )
+    parser.add_argument(
+        "--max-workers",
+        type=int,
+        default=4,
+        metavar="N",
+        help="Threads para modo paralelo (padrão: 4)",
+    )
+    parser.add_argument(
+        "--list", action="store_true", help="Lista todos os scrapers disponíveis e sai"
+    )
+    parser.add_argument(
+        "--generate-catalog", action="store_true", help="Regenera datasets.json e sai"
+    )
+    parser.add_argument(
+        "--check-holes",
+        action="store_true",
+        help="Executa verificação de buracos (dias úteis faltantes) após a coleta",
+    )
+    parser.add_argument(
+        "--fail-on-holes",
+        action="store_true",
+        help="Falha se a verificação de buracos encontrar datas faltantes (exit code 1)",
+    )
+    parser.add_argument(
+        "--skip-db",
+        action="store_true",
+        help="Ignora a persistência dos dados no banco de dados Oracle",
+    )
 
     args = parser.parse_args()
 
     if args.skip_db:
         import os
+
         os.environ["SKIP_ORACLE_DB"] = "1"
 
     if args.generate_catalog:
         _banner()
         _section("Gerando catálogo de datasets", "📦")
         from scripts.generate_catalog import generate
+
         generate()
         print(b_green("\n  ✔  datasets.json atualizado com sucesso.\n"))
         sys.exit(0)
@@ -576,6 +661,7 @@ exemplos:
         )
     else:
         from utils.base import acquire_lock
+
         try:
             with acquire_lock("pulseflat", blocking=True):
                 main(
@@ -590,4 +676,3 @@ exemplos:
         except Exception as e:
             logger.error(red(f"  ✖  Erro ao executar o pipeline: {e}"))
             sys.exit(1)
-

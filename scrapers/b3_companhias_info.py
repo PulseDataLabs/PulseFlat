@@ -12,11 +12,12 @@ import time
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from utils.base import b64_encode_params, get_logger, nova_session, salvar_csv
-from utils.b3_helpers import get_company_seeds
-from utils.parsers import json_rows, enriquecer, read_existing_header
 import pandas as pd
+
 from scrapers.utils.base import BaseScraper
+from utils.b3_helpers import get_company_seeds
+from utils.base import b64_encode_params, get_logger, nova_session
+from utils.parsers import enriquecer, json_rows, read_existing_header
 
 log = get_logger("b3_companhias_info")
 
@@ -34,13 +35,19 @@ def capturar() -> tuple[list[dict], list[str]]:
         issuing = s["issuingCompany"]
         if not issuing:
             continue
-        url = BASE_URL + b64_encode_params({"issuingCompany": issuing, "language": "pt-br"})
+        url = BASE_URL + b64_encode_params(
+            {"issuingCompany": issuing, "language": "pt-br"}
+        )
         try:
             resp = session.get(url, timeout=60)
             resp.raise_for_status()
             data = resp.json()
             payload = data if isinstance(data, dict) else {}
-            base_row = payload.get("info") if isinstance(payload.get("info"), dict) else payload
+            base_row = (
+                payload.get("info")
+                if isinstance(payload.get("info"), dict)
+                else payload
+            )
             if isinstance(base_row, dict):
                 base_row["issuingcompany_consulta"] = issuing
                 todos.append(base_row)
@@ -62,23 +69,24 @@ def capturar() -> tuple[list[dict], list[str]]:
             header.append(col)
     return enriched, header
 
+
 class B3CompanhiasInfoScraper(BaseScraper):
     name = "b3_companhias_info"
     group = "b3"
     enabled = False
     phase = 1
     accumulate = True
-    chaves_dedup = ['data_captura', 'conjunto', 'registro_hash']
-    
+    chaves_dedup = ["data_captura", "conjunto", "registro_hash"]
+
     # Catálogo de Metadados
-    title = 'B3 — Informações de Companhias'
-    description = 'Informações complementares e proventos (dividendos em dinheiro, bonificações em ações, subscrições) de todas as companhias listadas na B3.'
-    icon = '📋'
-    icon_class = 'icon-b3'
-    badge = 'Diário'
-    badge_class = 'badge-daily'
-    tags = ['proventos', 'dividendos', 'subscrições', 'b3']
-    source = 'B3 API'
+    title = "B3 — Informações de Companhias"
+    description = "Informações complementares e proventos (dividendos em dinheiro, bonificações em ações, subscrições) de todas as companhias listadas na B3."
+    icon = "📋"
+    icon_class = "icon-b3"
+    badge = "Diário"
+    badge_class = "badge-daily"
+    tags = ["proventos", "dividendos", "subscrições", "b3"]
+    source = "B3 API"
 
     def fetch(self) -> pd.DataFrame:
         log.info("=== B3 — Informações de Companhias Listadas ===")

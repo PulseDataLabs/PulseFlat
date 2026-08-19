@@ -15,9 +15,10 @@ from pathlib import Path
 import requests
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from utils import get_logger, agora_brt, limpar, nova_session, salvar_csv
 import pandas as pd
+
 from scrapers.utils.base import BaseScraper
+from utils import agora_brt, get_logger, limpar, nova_session
 
 log = get_logger("bcb_ptax")
 
@@ -37,7 +38,6 @@ METADATA = {
 
 CABECALHO = [
     "data_captura",
-    
     "data_referencia",
     "cotacao_compra",
     "cotacao_venda",
@@ -94,15 +94,18 @@ def capturar() -> list[dict]:
     data_captura, _ = agora_brt()
     registros = []
     for item in dados:
-        registros.append({
-            "data_captura":      data_captura,
-            "data_referencia":   limpar(item.get("dataHoraCotacao"))[:10],
-            "cotacao_compra":    limpar(item.get("cotacaoCompra")),
-            "cotacao_venda":     limpar(item.get("cotacaoVenda")),
-        })
+        registros.append(
+            {
+                "data_captura": data_captura,
+                "data_referencia": limpar(item.get("dataHoraCotacao"))[:10],
+                "cotacao_compra": limpar(item.get("cotacaoCompra")),
+                "cotacao_venda": limpar(item.get("cotacaoVenda")),
+            }
+        )
 
     log.info(f"{len(registros)} cotações PTAX capturadas.")
     return registros
+
 
 class BcbPtaxScraper(BaseScraper):
     name = "bcb_ptax"
@@ -110,17 +113,17 @@ class BcbPtaxScraper(BaseScraper):
     enabled = True
     phase = 1
     accumulate = False
-    chaves_dedup = ['data_captura', 'data_referencia']
-    
+    chaves_dedup = ["data_captura", "data_referencia"]
+
     # Catálogo de Metadados
-    title = 'BCB PTAX'
-    description = 'Cotações históricas diárias oficiais de compra e venda do dólar comercial (USD/BRL) publicadas pelo Banco Central do Brasil.'
-    icon = '💵'
-    icon_class = 'icon-bcb'
-    badge = 'Diário'
-    badge_class = 'badge-daily'
-    tags = ['dólar', 'ptax', 'cotação', 'compra', 'venda', 'bcb']
-    source = 'BCB'
+    title = "BCB PTAX"
+    description = "Cotações históricas diárias oficiais de compra e venda do dólar comercial (USD/BRL) publicadas pelo Banco Central do Brasil."
+    icon = "💵"
+    icon_class = "icon-bcb"
+    badge = "Diário"
+    badge_class = "badge-daily"
+    tags = ["dólar", "ptax", "cotação", "compra", "venda", "bcb"]
+    source = "BCB"
 
     def fetch(self) -> pd.DataFrame:
         log.info("=== BCB PTAX (USD/BRL) ===")

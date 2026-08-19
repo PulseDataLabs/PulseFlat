@@ -13,10 +13,18 @@ import zipfile
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from utils.base import get_logger, nova_session, salvar_csv
-from utils.parsers import date_ref, replace_date_vars, decode_bytes, fwf_rows, enriquecer, read_existing_header
 import pandas as pd
+
 from scrapers.utils.base import BaseScraper
+from utils.base import get_logger, nova_session
+from utils.parsers import (
+    date_ref,
+    decode_bytes,
+    enriquecer,
+    fwf_rows,
+    read_existing_header,
+    replace_date_vars,
+)
 
 log = get_logger("b3_indicadores_economicos_fwf")
 
@@ -24,8 +32,15 @@ URL = "https://www.b3.com.br/pesquisapregao/download?filelist=ID%y%m%d.ex_"
 
 INDICADORES_WIDTHS = [6, 3, 2, 8, 2, 25, 25, 2, 36]
 INDICADORES_FIELDS = [
-    "id_transacao", "compl_transacao", "tipo_registro", "data_geracao_arquivo", "grupo_indicador",
-    "cod_indicador", "valor_indicador", "num_casas_decimais", "reserva",
+    "id_transacao",
+    "compl_transacao",
+    "tipo_registro",
+    "data_geracao_arquivo",
+    "grupo_indicador",
+    "cod_indicador",
+    "valor_indicador",
+    "num_casas_decimais",
+    "reserva",
 ]
 
 ARQUIVO = Path("data/b3_indicadores_economicos_fwf.csv")
@@ -58,23 +73,24 @@ def capturar() -> tuple[list[dict], list[str]]:
             header.append(col)
     return enriched, header
 
+
 class B3IndicadoresEconomicosFwfScraper(BaseScraper):
     name = "b3_indicadores_economicos_fwf"
     group = "b3"
     enabled = True
     phase = 1
     accumulate = True
-    chaves_dedup = ['data_captura', 'conjunto', 'registro_hash']
-    
+    chaves_dedup = ["data_captura", "conjunto", "registro_hash"]
+
     # Catálogo de Metadados
-    title = 'B3 — Indicadores Econômicos'
-    description = 'Indicadores macroeconômicos diários divulgados pela B3 em formato de largura fixa (FWF): taxas de juros, índices de inflação e parâmetros de mercado.'
-    icon = '📊'
-    icon_class = 'icon-b3'
-    badge = 'Diário'
-    badge_class = 'badge-daily'
-    tags = ['indicadores', 'macroeconômicos', 'fwf', 'b3']
-    source = 'B3 · FWF'
+    title = "B3 — Indicadores Econômicos"
+    description = "Indicadores macroeconômicos diários divulgados pela B3 em formato de largura fixa (FWF): taxas de juros, índices de inflação e parâmetros de mercado."
+    icon = "📊"
+    icon_class = "icon-b3"
+    badge = "Diário"
+    badge_class = "badge-daily"
+    tags = ["indicadores", "macroeconômicos", "fwf", "b3"]
+    source = "B3 · FWF"
 
     def fetch(self) -> pd.DataFrame:
         log.info("=== B3 — Indicadores Econômicos (FWF) ===")

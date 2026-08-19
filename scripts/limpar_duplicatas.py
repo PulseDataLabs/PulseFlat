@@ -13,51 +13,61 @@ Execute uma única vez para limpar o histórico acumulado:
 A partir daí, salvar_csv() garante que novas execuções nunca dupliquem.
 """
 
-import csv
-import time
 import argparse
+import csv
 import sys
+import time
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from scripts.utils.ux import (
-    banner, section, print_start, print_done, print_info, print_skip,
-    print_summary, add_common_args, apply_common_args, ColorLogger,
+    ColorLogger,
+    add_common_args,
+    apply_common_args,
+    banner,
+    print_done,
+    print_info,
+    print_skip,
+    print_start,
+    print_summary,
+    section,
 )
 
 log = ColorLogger("limpar_duplicatas")
 
 CONFIGS = [
     {
-        "arquivo":    Path("data/anbima_indicadores.csv"),
-        "chaves":     ["data_captura", "indicador"],
+        "arquivo": Path("data/anbima_indicadores.csv"),
+        "chaves": ["data_captura", "indicador"],
         "ordenar_por": ["data_captura", "hora_captura"],
     },
     {
-        "arquivo":    Path("data/anbima_projecoes.csv"),
-        "chaves":     ["data_captura", "indice", "mes_referencia", "tipo_projecao"],
+        "arquivo": Path("data/anbima_projecoes.csv"),
+        "chaves": ["data_captura", "indice", "mes_referencia", "tipo_projecao"],
         "ordenar_por": ["data_captura", "hora_captura"],
     },
     {
-        "arquivo":    Path("data/b3_fiis_listados.csv"),
-        "chaves":     ["data_captura", "codigo_fundo"],
+        "arquivo": Path("data/b3_fiis_listados.csv"),
+        "chaves": ["data_captura", "codigo_fundo"],
         "ordenar_por": ["data_captura", "hora_captura"],
     },
     {
-        "arquivo":    Path("data/b3_etfs_listados.csv"),
-        "chaves":     ["data_captura", "categoria_etf", "codigo_fundo"],
+        "arquivo": Path("data/b3_etfs_listados.csv"),
+        "chaves": ["data_captura", "categoria_etf", "codigo_fundo"],
         "ordenar_por": ["data_captura", "hora_captura"],
     },
     {
-        "arquivo":    Path("data/b3_carteiras_teoricas.csv"),
-        "chaves":     ["data_captura", "indice", "codigo_ativo"],
+        "arquivo": Path("data/b3_carteiras_teoricas.csv"),
+        "chaves": ["data_captura", "indice", "codigo_ativo"],
         "ordenar_por": ["data_captura", "hora_captura"],
     },
 ]
 
 
-def limpar(arquivo: Path, chaves: list[str], ordenar_por: list[str], dry_run: bool = False) -> tuple[int, int, int]:
+def limpar(
+    arquivo: Path, chaves: list[str], ordenar_por: list[str], dry_run: bool = False
+) -> tuple[int, int, int]:
     """Remove duplicatas de um CSV. Retorna (antes, depois, removidas)."""
     if not arquivo.exists():
         return 0, 0, -1  # -1 indica skip
@@ -110,7 +120,9 @@ def main(dry_run: bool = False) -> None:
         nome = arquivo.name
 
         print_start(f"[{idx}/{total_configs}] {nome}", icon="file")
-        antes, depois, removidas = limpar(arquivo, cfg["chaves"], cfg["ordenar_por"], dry_run=dry_run)
+        antes, depois, removidas = limpar(
+            arquivo, cfg["chaves"], cfg["ordenar_por"], dry_run=dry_run
+        )
 
         if removidas == -1:
             print_skip(f"{nome} — arquivo não encontrado")

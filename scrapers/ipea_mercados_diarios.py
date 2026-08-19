@@ -7,14 +7,42 @@ Saída:   data/ipea_mercados_diarios.csv
 
 import os
 import sys
-import datetime
+
 import pandas as pd
-import requests
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from scrapers.utils.base import BaseScraper
 
-SERIES = [{'code': 'EIA366_PBRENT366', 'title': 'Petróleo Brent', 'desc': 'Preço do petróleo bruto Brent (FOB, US$)', 'icon': '🛢', 'tags': ['petroleo', 'brent', 'commodities', 'ipea']}, {'code': 'EIA366_PWTI366', 'title': 'Petróleo WTI', 'desc': 'Preço do petróleo bruto WTI (FOB, US$)', 'icon': '🛢', 'tags': ['petroleo', 'wti', 'commodities', 'ipea']}, {'code': 'GM366_DOW366', 'title': 'Índice Dow Jones', 'desc': 'Índice de ações Dow Jones (fechamento)', 'icon': '📈', 'tags': ['dow_jones', 'acoes', 'ipea']}, {'code': 'SGS366_NASDAQ366', 'title': 'Índice NASDAQ', 'desc': 'Índice de ações NASDAQ (fechamento)', 'icon': '📈', 'tags': ['nasdaq', 'acoes', 'ipea']}]
+SERIES = [
+    {
+        "code": "EIA366_PBRENT366",
+        "title": "Petróleo Brent",
+        "desc": "Preço do petróleo bruto Brent (FOB, US$)",
+        "icon": "🛢",
+        "tags": ["petroleo", "brent", "commodities", "ipea"],
+    },
+    {
+        "code": "EIA366_PWTI366",
+        "title": "Petróleo WTI",
+        "desc": "Preço do petróleo bruto WTI (FOB, US$)",
+        "icon": "🛢",
+        "tags": ["petroleo", "wti", "commodities", "ipea"],
+    },
+    {
+        "code": "GM366_DOW366",
+        "title": "Índice Dow Jones",
+        "desc": "Índice de ações Dow Jones (fechamento)",
+        "icon": "📈",
+        "tags": ["dow_jones", "acoes", "ipea"],
+    },
+    {
+        "code": "SGS366_NASDAQ366",
+        "title": "Índice NASDAQ",
+        "desc": "Índice de ações NASDAQ (fechamento)",
+        "icon": "📈",
+        "tags": ["nasdaq", "acoes", "ipea"],
+    },
+]
 API_URL = "http://www.ipeadata.gov.br/api/odata4/ValoresSerie(SERCODIGO='{code}')"
 
 
@@ -51,13 +79,15 @@ class IpeaMercadosDiariosScraper(BaseScraper):
                 if val is None:
                     continue
 
-                records.append({
-                    "data_referencia": date_ref,
-                    "codigo_ativo": item["code"],
-                    "label": item["title"],
-                    "valor": float(val),
-                })
-            
+                records.append(
+                    {
+                        "data_referencia": date_ref,
+                        "codigo_ativo": item["code"],
+                        "label": item["title"],
+                        "valor": float(val),
+                    }
+                )
+
             if records:
                 frames.append(pd.DataFrame(records))
 

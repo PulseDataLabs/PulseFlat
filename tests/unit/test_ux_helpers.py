@@ -23,7 +23,8 @@ class TestLineHelper:
         result = ux._line("=", 20)
         # Remove ANSI codes to verify core content
         import re
-        plain = re.sub(r'\033\[[0-9;]*m', '', result)
+
+        plain = re.sub(r"\033\[[0-9;]*m", "", result)
         assert len(plain) == 20
         assert plain == "=" * 20
 
@@ -73,7 +74,7 @@ class TestProgressBar:
         ux.configure(use_color=True, use_unicode=False)
         result = ux._progress_bar(5, 10, width=10)
         assert "\033[36m" in result  # cyan
-        assert "\033[2m" in result   # dim
+        assert "\033[2m" in result  # dim
 
 
 class TestSpinner:
@@ -96,8 +97,23 @@ class TestIcons:
 
     def test_icon_keys_exist(self):
         ux.configure(use_color=True, use_unicode=False)
-        expected_keys = {"success", "fail", "warn", "info", "skip", "file", "package",
-                         "refresh", "clean", "chart", "clock", "folder", "search", "gear", "rocket"}
+        expected_keys = {
+            "success",
+            "fail",
+            "warn",
+            "info",
+            "skip",
+            "file",
+            "package",
+            "refresh",
+            "clean",
+            "chart",
+            "clock",
+            "folder",
+            "search",
+            "gear",
+            "rocket",
+        }
         assert set(ux.ICON.keys()) == expected_keys
 
     def test_group_icons_complete(self):

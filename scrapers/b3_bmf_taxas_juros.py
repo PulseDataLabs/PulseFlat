@@ -1,3 +1,5 @@
+import re
+
 """
 scrapers/b3_bmf_taxas_juros.py
 --------------------------------
@@ -17,9 +19,10 @@ from pathlib import Path
 import requests
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from utils import get_logger, agora_brt, limpar, salvar_csv
 import pandas as pd
+
 from scrapers.utils.base import BaseScraper
+from utils import agora_brt, get_logger, limpar
 
 log = get_logger("b3_bmf_taxas_juros")
 
@@ -39,7 +42,6 @@ TABELAS_CANDIDATAS = [
 
 CABECALHO = [
     "data_captura",
-    
     "tabela_origem",
     "data_referencia",
     "curva",
@@ -58,7 +60,6 @@ HEADERS = {
 
 
 def _to_snake(name: str) -> str:
-    import re
     s1 = re.sub(r"(.)([A-Z][a-z]+)", r"\1_\2", name)
     return re.sub(r"([a-z0-9])([A-Z])", r"\1_\2", s1).lower()
 
@@ -85,8 +86,7 @@ def _descobrir_tabela(str_data: str) -> str | None:
     """Tenta cada candidato e retorna o nome da primeira tabela com dados."""
     for nome in TABELAS_CANDIDATAS:
         url = (
-            f"https://arquivos.b3.com.br/bdi/table/{nome}/"
-            f"{str_data}/{str_data}/1/5"
+            f"https://arquivos.b3.com.br/bdi/table/{nome}/" f"{str_data}/{str_data}/1/5"
         )
         log.info(f"Testando tabela: {nome}")
         rows, cols = _buscar_pagina(url)
@@ -120,23 +120,23 @@ def capturar(target_date: date | None = None) -> list[dict]:
         data_captura, _ = agora_brt()
         return [
             {
-                "data_captura":    data_captura,
-                "tabela_origem":   "DerivativesMarketSwapRates",
+                "data_captura": data_captura,
+                "tabela_origem": "DerivativesMarketSwapRates",
                 "data_referencia": str_data,
-                "curva":           "DI1",
-                "prazo_dias":      "30",
-                "taxa":            "13.65",
-                "base":            "252",
+                "curva": "DI1",
+                "prazo_dias": "30",
+                "taxa": "13.65",
+                "base": "252",
             },
             {
-                "data_captura":    data_captura,
-                "tabela_origem":   "DerivativesMarketSwapRates",
+                "data_captura": data_captura,
+                "tabela_origem": "DerivativesMarketSwapRates",
                 "data_referencia": str_data,
-                "curva":           "DI1",
-                "prazo_dias":      "360",
-                "taxa":            "13.12",
-                "base":            "252",
-            }
+                "curva": "DI1",
+                "prazo_dias": "360",
+                "taxa": "13.12",
+                "base": "252",
+            },
         ]
 
     data_captura, _ = agora_brt()
@@ -154,40 +154,68 @@ def capturar(target_date: date | None = None) -> list[dict]:
             break
 
         for item in rows:
-            curva  = item.get("curve_name") or item.get("curve") or item.get("index_name") or item.get("description") or item.get("nm_indic") or ""
-            prazo  = item.get("business_days") or item.get("term_days") or item.get("days") or item.get("prazo") or ""
-            taxa   = item.get("rate") or item.get("yield_") or item.get("value") or item.get("taxa") or ""
-            base   = item.get("base") or item.get("day_count") or item.get("base_calc") or ""
+            curva = (
+                item.get("curve_name")
+                or item.get("curve")
+                or item.get("index_name")
+                or item.get("description")
+                or item.get("nm_indic")
+                or ""
+            )
+            prazo = (
+                item.get("business_days")
+                or item.get("term_days")
+                or item.get("days")
+                or item.get("prazo")
+                or ""
+            )
+            taxa = (
+                item.get("rate")
+                or item.get("yield_")
+                or item.get("value")
+                or item.get("taxa")
+                or ""
+            )
+            base = (
+                item.get("base") or item.get("day_count") or item.get("base_calc") or ""
+            )
 
-            todos.append({
-                "data_captura":    data_captura,
-                "tabela_origem":   tabela,
-                "data_referencia": limpar(str(item.get("rpt_dt", str_data))),
-                "curva":           limpar(str(curva)),
-                "prazo_dias":      limpar(str(prazo)),
-                "taxa":            limpar(str(taxa)),
-                "base":            limpar(str(base)),
-            })
+            todos.append(
+                {
+                    "data_captura": data_captura,
+                    "tabela_origem": tabela,
+                    "data_referencia": limpar(str(item.get("rpt_dt", str_data))),
+                    "curva": limpar(str(curva)),
+                    "prazo_dias": limpar(str(prazo)),
+                    "taxa": limpar(str(taxa)),
+                    "base": limpar(str(base)),
+                }
+            )
 
         pagina += 1
         time.sleep(1)
 
     if not todos:
-        log.warning("Tabela encontrada mas sem registros. Utilizando dados de fallback.")
+        log.warning(
+            "Tabela encontrada mas sem registros. Utilizando dados de fallback."
+        )
         return [
             {
-                "data_captura":    data_captura,
-                "tabela_origem":   tabela,
+                "data_captura": data_captura,
+                "tabela_origem": tabela,
                 "data_referencia": str_data,
-                "curva":           "DI1",
-                "prazo_dias":      "30",
-                "taxa":            "13.65",
-                "base":            "252",
+                "curva": "DI1",
+                "prazo_dias": "30",
+                "taxa": "13.65",
+                "base": "252",
             }
         ]
 
-    log.info(f"{len(todos)} taxas swap capturadas via tabela '{tabela}' (ref: {data_ref}).")
+    log.info(
+        f"{len(todos)} taxas swap capturadas via tabela '{tabela}' (ref: {data_ref})."
+    )
     return todos
+
 
 class B3BmfTaxasJurosScraper(BaseScraper):
     name = "b3_bmf_taxas_juros"
@@ -195,17 +223,17 @@ class B3BmfTaxasJurosScraper(BaseScraper):
     enabled = True
     phase = 1
     accumulate = True
-    chaves_dedup = ['data_captura', 'data_referencia', 'curva', 'prazo_dias']
-    
+    chaves_dedup = ["data_captura", "data_referencia", "curva", "prazo_dias"]
+
     # Catálogo de Metadados
-    title = 'B3 BDI — Taxas de Swap'
-    description = 'Taxas de mercado e de referência para swaps e taxas referenciais da BM&F por prazo em dias corridos e úteis.'
-    icon = '📊'
-    icon_class = 'icon-b3'
-    badge = 'Diário'
-    badge_class = 'badge-daily'
-    tags = ['taxas', 'swap', 'juros', 'bm&f', 'curva']
-    source = 'B3 BDI'
+    title = "B3 BDI — Taxas de Swap"
+    description = "Taxas de mercado e de referência para swaps e taxas referenciais da BM&F por prazo em dias corridos e úteis."
+    icon = "📊"
+    icon_class = "icon-b3"
+    badge = "Diário"
+    badge_class = "badge-daily"
+    tags = ["taxas", "swap", "juros", "bm&f", "curva"]
+    source = "B3 BDI"
 
     def fetch(self) -> pd.DataFrame:
         log.info("=== B3 BM&F — Taxas de Mercado para Swaps ===")

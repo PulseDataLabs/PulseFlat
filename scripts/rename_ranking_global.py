@@ -1,6 +1,6 @@
 import csv
 
-fpath = '/home/rodrigo/projects/PulseFlat/data/anbima_ranking_global.csv'
+fpath = "/home/rodrigo/projects/PulseFlat/data/anbima_ranking_global.csv"
 
 mapping = {
     "data_captura": "data_captura",
@@ -66,14 +66,14 @@ mapping = {
     "(g) - Total de Clientes (e-f)": "clientes_total",
 }
 
-with open(fpath, newline='') as f:
+with open(fpath, newline="") as f:
     reader = csv.DictReader(f)
     old_headers = reader.fieldnames
     rows = list(reader)
 
 new_headers = [mapping[h] for h in old_headers]
 
-with open(fpath, 'w', newline='') as f:
+with open(fpath, "w", newline="") as f:
     writer = csv.DictWriter(f, fieldnames=new_headers)
     writer.writeheader()
     for row in rows:

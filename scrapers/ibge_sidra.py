@@ -21,13 +21,18 @@ from pathlib import Path
 import requests
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from utils import get_logger, agora_brt, limpar, salvar_csv
 import pandas as pd
+
 from scrapers.utils.base import BaseScraper
 from scripts.utils.ux import (
-    banner, section, print_start, print_done, print_info, print_warn, print_fail,
-    print_summary, ColorLogger, ICON,
+    ColorLogger,
+    banner,
+    print_done,
+    print_fail,
+    print_start,
+    print_warn,
 )
+from utils import agora_brt, limpar
 
 log = ColorLogger("ibge_sidra")
 
@@ -77,14 +82,15 @@ def _buscar_periodos(serie_id: int, data_captura: str) -> list[dict]:
     url = URL_PERIODOS.format(serie_id)
     for tentativa in range(1, 4):
         try:
-            resp = requests.get(url, timeout=30,
-                                headers={"Accept": "application/json"})
+            resp = requests.get(url, timeout=30, headers={"Accept": "application/json"})
             resp.raise_for_status()
             dados = resp.json()
             break
         except requests.HTTPError as e:
             if e.response is not None and e.response.status_code >= 500:
-                print_warn(f"[tabela {serie_id}] Erro {e.response.status_code} do servidor — ignorando.")
+                print_warn(
+                    f"[tabela {serie_id}] Erro {e.response.status_code} do servidor — ignorando."
+                )
                 return []
             print_warn(f"[tabela {serie_id}] Tentativa {tentativa}/3: {e}")
             if tentativa == 3:
@@ -103,14 +109,16 @@ def _buscar_periodos(serie_id: int, data_captura: str) -> list[dict]:
     for item in dados:
         literals = item.get("literals", [])
         periodo = literals[1] if len(literals) > 1 else limpar(str(literals))
-        registros.append({
-            "data_captura":      data_captura,
-            "serie_id":          str(serie_id),
-            "nome_serie":        nome,
-            "fonte":             fonte,
-            "periodo_referencia": limpar(periodo),
-            "data_modificacao":  limpar(item.get("modificacao", "")),
-        })
+        registros.append(
+            {
+                "data_captura": data_captura,
+                "serie_id": str(serie_id),
+                "nome_serie": nome,
+                "fonte": fonte,
+                "periodo_referencia": limpar(periodo),
+                "data_modificacao": limpar(item.get("modificacao", "")),
+            }
+        )
     return registros
 
 
@@ -146,21 +154,23 @@ class IbgeSidraScraper(BaseScraper):
     enabled = True
     phase = 1
     accumulate = False
-    chaves_dedup = ['data_captura', 'serie_id', 'periodo_referencia']
+    chaves_dedup = ["data_captura", "serie_id", "periodo_referencia"]
 
     # Catálogo de Metadados
-    title = 'IBGE SIDRA — Metadados'
-    description = 'Metadados das tabelas do IBGE SIDRA: IPCA, IPCA-15 e INPC — períodos disponíveis e datas de modificação.'
-    icon = '📊'
-    icon_class = 'icon-ibge'
-    badge = 'Diário'
-    badge_class = 'badge-daily'
-    tags = ['ipca', 'ipca-15', 'inpc']
-    source = 'IBGE · SIDRA'
+    title = "IBGE SIDRA — Metadados"
+    description = "Metadados das tabelas do IBGE SIDRA: IPCA, IPCA-15 e INPC — períodos disponíveis e datas de modificação."
+    icon = "📊"
+    icon_class = "icon-ibge"
+    badge = "Diário"
+    badge_class = "badge-daily"
+    tags = ["ipca", "ipca-15", "inpc"]
+    source = "IBGE · SIDRA"
 
     def fetch(self) -> pd.DataFrame:
         # Mostra banner apenas quando executado standalone (não via run_all.py)
-        is_pipeline = any("run_all" in str(getattr(m, "__file__", "")) for m in sys.modules.values())
+        is_pipeline = any(
+            "run_all" in str(getattr(m, "__file__", "")) for m in sys.modules.values()
+        )
         if not is_pipeline:
             banner("IBGE SIDRA — Metadados", "Captura períodos e datas de modificação")
 

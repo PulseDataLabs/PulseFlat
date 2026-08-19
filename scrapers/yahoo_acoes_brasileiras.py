@@ -1,3 +1,5 @@
+from pathlib import Path
+
 # coding: utf-8
 """
 Scraper: Yahoo Finance – Ações Brasileiras
@@ -5,10 +7,10 @@ Fonte:   https://finance.yahoo.com
 Saída:   data/yahoo_acoes_brasileiras.csv
 """
 
+import datetime
 import os
 import sys
-import time
-import datetime
+
 import pandas as pd
 import requests
 
@@ -29,7 +31,9 @@ API_URL = "https://query2.finance.yahoo.com/v8/finance/chart/{ticker}"
 DAYS_BACK = 30
 
 
-def _fetch_ticker(session: requests.Session, ticker: str, label: str, dt_ini: int, dt_fim: int) -> pd.DataFrame:
+def _fetch_ticker(
+    session: requests.Session, ticker: str, label: str, dt_ini: int, dt_fim: int
+) -> pd.DataFrame:
     url = API_URL.format(ticker=ticker)
     params = {
         "period1": dt_ini,
@@ -50,7 +54,9 @@ def _fetch_ticker(session: requests.Session, ticker: str, label: str, dt_ini: in
     closes = result[0].get("indicators", {}).get("quote", [{}])[0].get("close", [])
 
     df = pd.DataFrame({"timestamp": timestamps, "close": closes})
-    df["data_referencia"] = pd.to_datetime(df["timestamp"], unit="s").dt.normalize().dt.date
+    df["data_referencia"] = (
+        pd.to_datetime(df["timestamp"], unit="s").dt.normalize().dt.date
+    )
     df["codigo_ativo"] = ticker
     df["label"] = label
     df["preco_fechamento"] = pd.to_numeric(df["close"], errors="coerce")
@@ -67,7 +73,6 @@ class YahooAcoesBrasileirasScraper(BaseScraper):
     chaves_dedup = ["data_referencia", "codigo_ativo"]
 
     def fetch(self) -> pd.DataFrame:
-        from pathlib import Path
 
         dt_ini_date = self.start_date
         dt_fim_date = self.end_date
@@ -78,8 +83,12 @@ class YahooAcoesBrasileirasScraper(BaseScraper):
         if dt_fim_date is None:
             dt_fim_date = datetime.date.today()
 
-        dt_fim = int(datetime.datetime.combine(dt_fim_date, datetime.time()).timestamp())
-        dt_ini = int(datetime.datetime.combine(dt_ini_date, datetime.time()).timestamp())
+        dt_fim = int(
+            datetime.datetime.combine(dt_fim_date, datetime.time()).timestamp()
+        )
+        dt_ini = int(
+            datetime.datetime.combine(dt_ini_date, datetime.time()).timestamp()
+        )
 
         # Resolve tickers list
         tickers_list = []
@@ -88,9 +97,13 @@ class YahooAcoesBrasileirasScraper(BaseScraper):
         if custom_csv.exists():
             try:
                 df_custom = pd.read_csv(custom_csv)
-                df_filtered = df_custom[df_custom["category"] == "yahoo_acoes_brasileiras"]
+                df_filtered = df_custom[
+                    df_custom["category"] == "yahoo_acoes_brasileiras"
+                ]
                 for _, row in df_filtered.iterrows():
-                    tickers_list.append((str(row["ticker"]).strip(), str(row["label"]).strip()))
+                    tickers_list.append(
+                        (str(row["ticker"]).strip(), str(row["label"]).strip())
+                    )
             except Exception as e:
                 self.logger.warning(f"Erro ao carregar custom_tickers.csv: {e}")
 
@@ -101,13 +114,21 @@ class YahooAcoesBrasileirasScraper(BaseScraper):
                     df_b3 = pd.read_csv(csv_path)
                     if DYNAMIC_FILTERS and "tipo_fundo" in df_b3.columns:
                         df_b3 = df_b3[df_b3["tipo_fundo"].isin(DYNAMIC_FILTERS)]
-                    col = "codigo_fundo" if "codigo_fundo" in df_b3.columns else "codigo_ativo"
+                    col = (
+                        "codigo_fundo"
+                        if "codigo_fundo" in df_b3.columns
+                        else "codigo_ativo"
+                    )
                     if col in df_b3.columns:
                         codes = df_b3[col].dropna().unique()
                         for code in codes:
                             code_str = str(code).strip()
                             if code_str:
-                                ticker_yahoo = f"{code_str}{DYNAMIC_SUFFIX}" if DYNAMIC_SUFFIX else code_str
+                                ticker_yahoo = (
+                                    f"{code_str}{DYNAMIC_SUFFIX}"
+                                    if DYNAMIC_SUFFIX
+                                    else code_str
+                                )
                                 tickers_list.append((ticker_yahoo, code_str))
                 except Exception as e:
                     self.logger.warning(f"Erro ao carregar B3 tickers dinâmicos: {e}")

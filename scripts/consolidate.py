@@ -1,3 +1,5 @@
+from collections import defaultdict
+
 #!/usr/bin/env python
 # coding: utf-8
 """
@@ -12,21 +14,28 @@ Saídas:
   data/consolidated.js    — fallback offline para a página web
 """
 
+import argparse
 import csv
 import json
 import sys
 import time
-import argparse
-import re
+from collections import OrderedDict
 from pathlib import Path
 from typing import Optional
-from collections import OrderedDict
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from scripts.utils.ux import (
-    banner, section, print_start, print_done, print_fail, print_warn, print_info,
-    print_summary, add_common_args, apply_common_args, ColorLogger, ICON,
+    ColorLogger,
+    add_common_args,
+    apply_common_args,
+    banner,
+    print_done,
+    print_info,
+    print_start,
+    print_summary,
+    print_warn,
+    section,
 )
 
 log = ColorLogger("consolidate")
@@ -36,6 +45,7 @@ DATA_DIR = ROOT / "data"
 
 
 # ── Helpers ────────────────────────────────────────────────────────────
+
 
 def _read_csv(path: str) -> list[dict]:
     if not Path(path).exists():
@@ -118,116 +128,479 @@ DATASET_LABEL = {
 
 YAHOO_SECTIONS = {
     "Ações Brasileiras (B3)": [
-        "VALE3.SA", "PETR4.SA", "PETR3.SA", "ITUB4.SA", "BBDC4.SA", "BBAS3.SA", "B3SA3.SA",
-        "ELET3.SA", "WEGE3.SA", "ABEV3.SA", "RENT3.SA", "GGBR4.SA", "CSNA3.SA", "USIM5.SA",
-        "JBSS3.SA", "MGLU3.SA", "LREN3.SA", "EQTL3.SA", "SBSP3.SA", "SUZB3.SA", "VIVT3.SA",
-        "TIMS3.SA", "SANB11.SA", "BPAC11.SA", "CIEL3.SA", "EGIE3.SA", "CPFE3.SA", "CMIG4.SA",
-        "CCRO3.SA", "RADL3.SA", "HYPE3.SA", "CRFB3.SA", "ASAI3.SA", "NTCO3.SA", "BRFS3.SA",
-        "COGN3.SA", "CYRE3.SA", "MRVE3.SA", "EZTC3.SA", "TEND3.SA", "ALOS3.SA", "MULT3.SA",
-        "IGTI11.SA", "BEEF3.SA", "MRFG3.SA", "CPLE6.SA", "ENGI11.SA", "TAEE11.SA", "TRPL4.SA",
-        "PRIO3.SA", "RRRP3.SA", "RECV3.SA", "UGPA3.SA", "VBBR3.SA", "CSAN3.SA", "BRKM5.SA",
-        "EMBR3.SA", "GOLL4.SA", "AZUL4.SA", "RUMO3.SA", "JHSF3.SA", "YDUQ3.SA", "CVCB3.SA",
-        "SLCE3.SA", "SMTO3.SA", "FLRY3.SA", "HAPV3.SA", "QUAL3.SA", "ODPV3.SA", "BBDC3.SA",
-        "ITSA4.SA", "BRAP4.SA", "CMIN3.SA", "KLBN11.SA", "PCAR3.SA", "IRBR3.SA", "ENEV3.SA",
-        "LOGN3.SA", "MDIA3.SA"
+        "VALE3.SA",
+        "PETR4.SA",
+        "PETR3.SA",
+        "ITUB4.SA",
+        "BBDC4.SA",
+        "BBAS3.SA",
+        "B3SA3.SA",
+        "ELET3.SA",
+        "WEGE3.SA",
+        "ABEV3.SA",
+        "RENT3.SA",
+        "GGBR4.SA",
+        "CSNA3.SA",
+        "USIM5.SA",
+        "JBSS3.SA",
+        "MGLU3.SA",
+        "LREN3.SA",
+        "EQTL3.SA",
+        "SBSP3.SA",
+        "SUZB3.SA",
+        "VIVT3.SA",
+        "TIMS3.SA",
+        "SANB11.SA",
+        "BPAC11.SA",
+        "CIEL3.SA",
+        "EGIE3.SA",
+        "CPFE3.SA",
+        "CMIG4.SA",
+        "CCRO3.SA",
+        "RADL3.SA",
+        "HYPE3.SA",
+        "CRFB3.SA",
+        "ASAI3.SA",
+        "NTCO3.SA",
+        "BRFS3.SA",
+        "COGN3.SA",
+        "CYRE3.SA",
+        "MRVE3.SA",
+        "EZTC3.SA",
+        "TEND3.SA",
+        "ALOS3.SA",
+        "MULT3.SA",
+        "IGTI11.SA",
+        "BEEF3.SA",
+        "MRFG3.SA",
+        "CPLE6.SA",
+        "ENGI11.SA",
+        "TAEE11.SA",
+        "TRPL4.SA",
+        "PRIO3.SA",
+        "RRRP3.SA",
+        "RECV3.SA",
+        "UGPA3.SA",
+        "VBBR3.SA",
+        "CSAN3.SA",
+        "BRKM5.SA",
+        "EMBR3.SA",
+        "GOLL4.SA",
+        "AZUL4.SA",
+        "RUMO3.SA",
+        "JHSF3.SA",
+        "YDUQ3.SA",
+        "CVCB3.SA",
+        "SLCE3.SA",
+        "SMTO3.SA",
+        "FLRY3.SA",
+        "HAPV3.SA",
+        "QUAL3.SA",
+        "ODPV3.SA",
+        "BBDC3.SA",
+        "ITSA4.SA",
+        "BRAP4.SA",
+        "CMIN3.SA",
+        "KLBN11.SA",
+        "PCAR3.SA",
+        "IRBR3.SA",
+        "ENEV3.SA",
+        "LOGN3.SA",
+        "MDIA3.SA",
     ],
     "Ações Internacionais": [
-        "AAPL", "MSFT", "GOOGL", "AMZN", "NVDA", "META", "TSLA", "NFLX", "JPM", "V",
-        "WMT", "DIS", "MA", "UNH", "HD", "BAC", "XOM", "CVX", "KO", "PEP",
-        "COST", "PG", "JNJ", "MRK", "ABBV", "LLY", "PFE", "AMD", "INTC", "QCOM",
-        "ADBE", "CRM", "ORCL", "NKE", "MCD", "SBUX", "NVO", "ASML", "TSM", "BABA"
+        "AAPL",
+        "MSFT",
+        "GOOGL",
+        "AMZN",
+        "NVDA",
+        "META",
+        "TSLA",
+        "NFLX",
+        "JPM",
+        "V",
+        "WMT",
+        "DIS",
+        "MA",
+        "UNH",
+        "HD",
+        "BAC",
+        "XOM",
+        "CVX",
+        "KO",
+        "PEP",
+        "COST",
+        "PG",
+        "JNJ",
+        "MRK",
+        "ABBV",
+        "LLY",
+        "PFE",
+        "AMD",
+        "INTC",
+        "QCOM",
+        "ADBE",
+        "CRM",
+        "ORCL",
+        "NKE",
+        "MCD",
+        "SBUX",
+        "NVO",
+        "ASML",
+        "TSM",
+        "BABA",
     ],
     "Câmbio / Moedas": [
-        "BRL=X", "EURBRL=X", "GBPBRL=X", "CHFBRL=X", "JPYBRL=X", "CNYBRL=X", "ARSBRL=X",
-        "CLPBRL=X", "MXNBRL=X", "UYUBRL=X", "COPBRL=X", "PENBRL=X", "EURUSD=X",
-        "GBPUSD=X", "USDJPY=X", "AUDUSD=X", "USDCAD=X", "USDCHF=X", "USDCNY=X",
-        "USDRUB=X", "USDTRY=X", "USDINR=X", "USDMXN=X", "DX-Y.NYB"
+        "BRL=X",
+        "EURBRL=X",
+        "GBPBRL=X",
+        "CHFBRL=X",
+        "JPYBRL=X",
+        "CNYBRL=X",
+        "ARSBRL=X",
+        "CLPBRL=X",
+        "MXNBRL=X",
+        "UYUBRL=X",
+        "COPBRL=X",
+        "PENBRL=X",
+        "EURUSD=X",
+        "GBPUSD=X",
+        "USDJPY=X",
+        "AUDUSD=X",
+        "USDCAD=X",
+        "USDCHF=X",
+        "USDCNY=X",
+        "USDRUB=X",
+        "USDTRY=X",
+        "USDINR=X",
+        "USDMXN=X",
+        "DX-Y.NYB",
     ],
     "Criptoativos": [
-        "BTC-USD", "ETH-USD", "SOL-USD", "BNB-USD", "XRP-USD", "ADA-USD", "DOGE-USD",
-        "DOT-USD", "AVAX-USD", "LINK-USD", "SHIB-USD", "TRX-USD", "LTC-USD", "UNI-USD",
-        "XLM-USD", "ATOM-USD", "ETC-USD", "FIL-USD", "HBAR-USD", "NEAR-USD", "ICP-USD",
-        "APT-USD", "OP-USD", "GRT-USD", "IMX-USD"
+        "BTC-USD",
+        "ETH-USD",
+        "SOL-USD",
+        "BNB-USD",
+        "XRP-USD",
+        "ADA-USD",
+        "DOGE-USD",
+        "DOT-USD",
+        "AVAX-USD",
+        "LINK-USD",
+        "SHIB-USD",
+        "TRX-USD",
+        "LTC-USD",
+        "UNI-USD",
+        "XLM-USD",
+        "ATOM-USD",
+        "ETC-USD",
+        "FIL-USD",
+        "HBAR-USD",
+        "NEAR-USD",
+        "ICP-USD",
+        "APT-USD",
+        "OP-USD",
+        "GRT-USD",
+        "IMX-USD",
     ],
     "Commodities Globais": [
-        "TIO=F", "ZS=F", "KC=F", "CL=F", "BZ=F", "GC=F", "SI=F", "HG=F", "NG=F",
-        "ZC=F", "ZW=F", "SB=F", "CT=F", "CC=F", "LH=F", "FC=F", "PL=F", "PA=F",
-        "ZO=F", "ZR=F"
+        "TIO=F",
+        "ZS=F",
+        "KC=F",
+        "CL=F",
+        "BZ=F",
+        "GC=F",
+        "SI=F",
+        "HG=F",
+        "NG=F",
+        "ZC=F",
+        "ZW=F",
+        "SB=F",
+        "CT=F",
+        "CC=F",
+        "LH=F",
+        "FC=F",
+        "PL=F",
+        "PA=F",
+        "ZO=F",
+        "ZR=F",
     ],
     "Índices de Ações Globais": [
-        "^BVSP", "^GSPC", "^IXIC", "^DJI", "^VIX", "^STOXX50E", "000001.SS", "^N225",
-        "^FTSE", "^GDAXI", "^FCHI", "^HSI", "^MERV", "^IPSA", "^MXX", "^RUT",
-        "^NYA", "^AXJO", "^BSESN", "^KS11", "^TWII", "^JKSE", "^STI", "^KLSE",
-        "^TA35"
+        "^BVSP",
+        "^GSPC",
+        "^IXIC",
+        "^DJI",
+        "^VIX",
+        "^STOXX50E",
+        "000001.SS",
+        "^N225",
+        "^FTSE",
+        "^GDAXI",
+        "^FCHI",
+        "^HSI",
+        "^MERV",
+        "^IPSA",
+        "^MXX",
+        "^RUT",
+        "^NYA",
+        "^AXJO",
+        "^BSESN",
+        "^KS11",
+        "^TWII",
+        "^JKSE",
+        "^STI",
+        "^KLSE",
+        "^TA35",
     ],
-    "Renda Fixa & Treasuries": [
-        "^IRX", "^FVX", "^TNX", "^TYX"
-    ],
+    "Renda Fixa & Treasuries": ["^IRX", "^FVX", "^TNX", "^TYX"],
     "ETFs & Setoriais": [
-        "EWZ", "SMLL.SA", "BOVA11.SA", "SMAL11.SA", "IVVB11.SA", "HASH11.SA",
-        "BND", "HYG", "LQD", "SPY", "QQQ", "DIA", "IWM", "EEM", "VGK", "VWO",
-        "XLE", "XLF", "XLK"
+        "EWZ",
+        "SMLL.SA",
+        "BOVA11.SA",
+        "SMAL11.SA",
+        "IVVB11.SA",
+        "HASH11.SA",
+        "BND",
+        "HYG",
+        "LQD",
+        "SPY",
+        "QQQ",
+        "DIA",
+        "IWM",
+        "EEM",
+        "VGK",
+        "VWO",
+        "XLE",
+        "XLF",
+        "XLK",
     ],
     "FIIs e Fiagros": [
-        "IFIX.SA", "MXRF11.SA", "HGLG11.SA", "XPML11.SA", "KNIP11.SA", "BTLG11.SA",
-        "KNCR11.SA", "VISC11.SA", "HGRU11.SA", "BRCO11.SA", "PVBI11.SA", "ALZR11.SA",
-        "VGIA11.SA", "KNCA11.SA", "RURA11.SA", "CPTR11.SA", "FGAA11.SA"
-    ]
+        "IFIX.SA",
+        "MXRF11.SA",
+        "HGLG11.SA",
+        "XPML11.SA",
+        "KNIP11.SA",
+        "BTLG11.SA",
+        "KNCR11.SA",
+        "VISC11.SA",
+        "HGRU11.SA",
+        "BRCO11.SA",
+        "PVBI11.SA",
+        "ALZR11.SA",
+        "VGIA11.SA",
+        "KNCA11.SA",
+        "RURA11.SA",
+        "CPTR11.SA",
+        "FGAA11.SA",
+    ],
 }
 
 
 IPEADATA_SECTIONS = {
     "ipea_macroeconomia.csv": [
-        {"code": "BM12_PIBAC12", "label": "PIB (acumulado 12m)", "category": "Macroeconomia"},
-        {"code": "PNADC12_TDESOC12", "label": "Taxa de desocupação (PNAD Contínua)", "category": "Macroeconomia", "fmt": "pct"},
-        {"code": "GAC12_SALMINRE12", "label": "Salário Mínimo Real", "category": "Macroeconomia"},
-        {"code": "MTE12_SALMIN12", "label": "Salário Mínimo Vigente", "category": "Macroeconomia"},
-        {"code": "SGS12_7836", "label": "Saldo Total da Poupança (SBPE/Rural)", "category": "Macroeconomia"}
+        {
+            "code": "BM12_PIBAC12",
+            "label": "PIB (acumulado 12m)",
+            "category": "Macroeconomia",
+        },
+        {
+            "code": "PNADC12_TDESOC12",
+            "label": "Taxa de desocupação (PNAD Contínua)",
+            "category": "Macroeconomia",
+            "fmt": "pct",
+        },
+        {
+            "code": "GAC12_SALMINRE12",
+            "label": "Salário Mínimo Real",
+            "category": "Macroeconomia",
+        },
+        {
+            "code": "MTE12_SALMIN12",
+            "label": "Salário Mínimo Vigente",
+            "category": "Macroeconomia",
+        },
+        {
+            "code": "SGS12_7836",
+            "label": "Saldo Total da Poupança (SBPE/Rural)",
+            "category": "Macroeconomia",
+        },
     ],
     "ipea_mercados_diarios.csv": [
-        {"code": "EIA366_PBRENT366", "label": "Petróleo Brent", "category": "Mercados Globais"},
-        {"code": "EIA366_PWTI366", "label": "Petróleo WTI", "category": "Mercados Globais"},
-        {"code": "GM366_DOW366", "label": "Índice Dow Jones", "category": "Mercados Globais"},
-        {"code": "SGS366_NASDAQ366", "label": "Índice NASDAQ", "category": "Mercados Globais"}
+        {
+            "code": "EIA366_PBRENT366",
+            "label": "Petróleo Brent",
+            "category": "Mercados Globais",
+        },
+        {
+            "code": "EIA366_PWTI366",
+            "label": "Petróleo WTI",
+            "category": "Mercados Globais",
+        },
+        {
+            "code": "GM366_DOW366",
+            "label": "Índice Dow Jones",
+            "category": "Mercados Globais",
+        },
+        {
+            "code": "SGS366_NASDAQ366",
+            "label": "Índice NASDAQ",
+            "category": "Mercados Globais",
+        },
     ],
     "ipea_taxas_juros.csv": [
-        {"code": "ANBIMA12_TJPOUP12", "label": "Poupança Rentabilidade Antiga (dep. até 2012)", "category": "Taxas de Juros", "fmt": "pct"},
-        {"code": "BM12_RNDPO12", "label": "Poupança Rentabilidade Nova (dep. pós 2012)", "category": "Taxas de Juros", "fmt": "pct"},
-        {"code": "ANBIMA12_TJTLN112", "label": "Estrutura Termo LTN - 1 mês", "category": "Taxas de Juros", "fmt": "pct"},
-        {"code": "ANBIMA12_TJTLN312", "label": "Estrutura Termo LTN - 3 meses", "category": "Taxas de Juros", "fmt": "pct"},
-        {"code": "ANBIMA12_TJTLN612", "label": "Estrutura Termo LTN - 6 meses", "category": "Taxas de Juros", "fmt": "pct"},
-        {"code": "ANBIMA12_TJTLN1212", "label": "Estrutura Termo LTN - 12 meses", "category": "Taxas de Juros", "fmt": "pct"},
-        {"code": "BM12_TJCDI12", "label": "CDI Acumulado no Mês", "category": "Taxas de Juros", "fmt": "pct"},
-        {"code": "BM12_TJLP12", "label": "Taxa de Juros de Longo Prazo (TJLP)", "category": "Taxas de Juros", "fmt": "pct"},
-        {"code": "BM12_TJOVER12", "label": "Selic Acumulada no Mês", "category": "Taxas de Juros", "fmt": "pct"},
-        {"code": "BM12_TJTBF12", "label": "Taxa Básica Financeira (TBF)", "category": "Taxas de Juros", "fmt": "pct"},
-        {"code": "BM12_TJTR12", "label": "Taxa Referencial (TR)", "category": "Taxas de Juros", "fmt": "pct"}
+        {
+            "code": "ANBIMA12_TJPOUP12",
+            "label": "Poupança Rentabilidade Antiga (dep. até 2012)",
+            "category": "Taxas de Juros",
+            "fmt": "pct",
+        },
+        {
+            "code": "BM12_RNDPO12",
+            "label": "Poupança Rentabilidade Nova (dep. pós 2012)",
+            "category": "Taxas de Juros",
+            "fmt": "pct",
+        },
+        {
+            "code": "ANBIMA12_TJTLN112",
+            "label": "Estrutura Termo LTN - 1 mês",
+            "category": "Taxas de Juros",
+            "fmt": "pct",
+        },
+        {
+            "code": "ANBIMA12_TJTLN312",
+            "label": "Estrutura Termo LTN - 3 meses",
+            "category": "Taxas de Juros",
+            "fmt": "pct",
+        },
+        {
+            "code": "ANBIMA12_TJTLN612",
+            "label": "Estrutura Termo LTN - 6 meses",
+            "category": "Taxas de Juros",
+            "fmt": "pct",
+        },
+        {
+            "code": "ANBIMA12_TJTLN1212",
+            "label": "Estrutura Termo LTN - 12 meses",
+            "category": "Taxas de Juros",
+            "fmt": "pct",
+        },
+        {
+            "code": "BM12_TJCDI12",
+            "label": "CDI Acumulado no Mês",
+            "category": "Taxas de Juros",
+            "fmt": "pct",
+        },
+        {
+            "code": "BM12_TJLP12",
+            "label": "Taxa de Juros de Longo Prazo (TJLP)",
+            "category": "Taxas de Juros",
+            "fmt": "pct",
+        },
+        {
+            "code": "BM12_TJOVER12",
+            "label": "Selic Acumulada no Mês",
+            "category": "Taxas de Juros",
+            "fmt": "pct",
+        },
+        {
+            "code": "BM12_TJTBF12",
+            "label": "Taxa Básica Financeira (TBF)",
+            "category": "Taxas de Juros",
+            "fmt": "pct",
+        },
+        {
+            "code": "BM12_TJTR12",
+            "label": "Taxa Referencial (TR)",
+            "category": "Taxas de Juros",
+            "fmt": "pct",
+        },
     ],
     "ipea_precos_inflacao.csv": [
-        {"code": "IGP12_IGPDI12", "label": "IGP-DI - Geral - Índice", "category": "Macroeconomia"},
-        {"code": "IGP12_INCC12", "label": "INCC-DI - Geral - Índice", "category": "Macroeconomia"},
-        {"code": "PRECOS12_INPC12", "label": "INPC - Geral - Índice", "category": "Macroeconomia"},
-        {"code": "PRECOS12_INPCBR12", "label": "INPC - Geral - Taxa de Variação", "category": "Macroeconomia", "fmt": "pct"}
+        {
+            "code": "IGP12_IGPDI12",
+            "label": "IGP-DI - Geral - Índice",
+            "category": "Macroeconomia",
+        },
+        {
+            "code": "IGP12_INCC12",
+            "label": "INCC-DI - Geral - Índice",
+            "category": "Macroeconomia",
+        },
+        {
+            "code": "PRECOS12_INPC12",
+            "label": "INPC - Geral - Índice",
+            "category": "Macroeconomia",
+        },
+        {
+            "code": "PRECOS12_INPCBR12",
+            "label": "INPC - Geral - Taxa de Variação",
+            "category": "Macroeconomia",
+            "fmt": "pct",
+        },
     ],
     "ipea_fbcf.csv": [
-        {"code": "GAC12_INDFBCF12", "label": "Indicador IPEA de FBCF - Índice Real", "category": "Macroeconomia"},
-        {"code": "GAC12_INDFBCFDESSAZ12", "label": "Indicador IPEA de FBCF - Dessazonalizado", "category": "Macroeconomia"},
-        {"code": "GAC12_INDFBCFCC12", "label": "Indicador IPEA de FBCF - Construção Civil", "category": "Macroeconomia"},
-        {"code": "GAC12_INDFBCFCCDESSAZ12", "label": "Indicador IPEA de FBCF - Construção Dessazonalizado", "category": "Macroeconomia"}
+        {
+            "code": "GAC12_INDFBCF12",
+            "label": "Indicador IPEA de FBCF - Índice Real",
+            "category": "Macroeconomia",
+        },
+        {
+            "code": "GAC12_INDFBCFDESSAZ12",
+            "label": "Indicador IPEA de FBCF - Dessazonalizado",
+            "category": "Macroeconomia",
+        },
+        {
+            "code": "GAC12_INDFBCFCC12",
+            "label": "Indicador IPEA de FBCF - Construção Civil",
+            "category": "Macroeconomia",
+        },
+        {
+            "code": "GAC12_INDFBCFCCDESSAZ12",
+            "label": "Indicador IPEA de FBCF - Construção Dessazonalizado",
+            "category": "Macroeconomia",
+        },
     ],
     "ipea_comercio_exterior.csv": [
-        {"code": "FUNCEX12_XPT12", "label": "Exportações - Preços - Índice", "category": "Macroeconomia"},
-        {"code": "FUNCEX12_MDPT12", "label": "Importações - Preços - Índice", "category": "Macroeconomia"}
+        {
+            "code": "FUNCEX12_XPT12",
+            "label": "Exportações - Preços - Índice",
+            "category": "Macroeconomia",
+        },
+        {
+            "code": "FUNCEX12_MDPT12",
+            "label": "Importações - Preços - Índice",
+            "category": "Macroeconomia",
+        },
     ],
     "ipea_producao_mineral.csv": [
-        {"code": "IBSIE12_QSCFG12", "label": "Mineral - Ferro-Gusa - Produção", "category": "Produção"},
-        {"code": "IBSIE12_QSCAB12", "label": "Mineral - Aço Bruto - Produção", "category": "Produção"},
-        {"code": "IBSIE12_QSCL12", "label": "Mineral - Laminados - Produção", "category": "Produção"}
+        {
+            "code": "IBSIE12_QSCFG12",
+            "label": "Mineral - Ferro-Gusa - Produção",
+            "category": "Produção",
+        },
+        {
+            "code": "IBSIE12_QSCAB12",
+            "label": "Mineral - Aço Bruto - Produção",
+            "category": "Produção",
+        },
+        {
+            "code": "IBSIE12_QSCL12",
+            "label": "Mineral - Laminados - Produção",
+            "category": "Produção",
+        },
     ],
     "ipea_calendario.csv": [
-        {"code": "SGS12_NDIASUTEISFUT12", "label": "Número de Dias Úteis Futuros", "category": "Calendário"},
-        {"code": "SGS12_NDIASUTEISPAS12", "label": "Número de Dias Úteis Passados", "category": "Calendário"}
-    ]
+        {
+            "code": "SGS12_NDIASUTEISFUT12",
+            "label": "Número de Dias Úteis Futuros",
+            "category": "Calendário",
+        },
+        {
+            "code": "SGS12_NDIASUTEISPAS12",
+            "label": "Número de Dias Úteis Passados",
+            "category": "Calendário",
+        },
+    ],
 }
 
 
@@ -313,11 +686,11 @@ INDICATOR_DEFS = [
             "category": "Séries SGS",
         }
         for codigo, nome in [
-            ("11",   "SELIC (% a.d.)"),
-            ("1",    "IGP-M"),
-            ("189",  "IGP-M (índice)"),
-            ("190",  "IGP-M 12m"),
-            ("433",  "IPCA 12m"),
+            ("11", "SELIC (% a.d.)"),
+            ("1", "IGP-M"),
+            ("189", "IGP-M (índice)"),
+            ("190", "IGP-M 12m"),
+            ("433", "IPCA 12m"),
         ]
     ],
     # ── ANBIMA Indicadores ─────────────────────────────────────────
@@ -392,7 +765,7 @@ INDICATOR_DEFS = [
             "filter_col": "codigo_ativo",
             "filter_val": item["code"],
             "category": item["category"],
-            **({"fmt": item["fmt"]} if "fmt" in item else {})
+            **({"fmt": item["fmt"]} if "fmt" in item else {}),
         }
         for filename, items in IPEADATA_SECTIONS.items()
         for item in items
@@ -402,10 +775,13 @@ INDICATOR_DEFS = [
 
 # ── Extratores ────────────────────────────────────────────────────────
 
+
 def _build_base(idef: dict) -> dict:
     return {
         "dataset": idef["dataset"],
-        "dataset_label": DATASET_LABEL.get(idef["dataset"], idef["dataset"].replace(".csv", "")),
+        "dataset_label": DATASET_LABEL.get(
+            idef["dataset"], idef["dataset"].replace(".csv", "")
+        ),
         "fonte": idef["source"],
         "categoria": idef.get("category", ""),
         "tipo": "indicador",
@@ -432,9 +808,7 @@ def _ref_date(idef: dict, row: dict) -> str:
     return _safe(row.get("data_captura", ""))[:10]
 
 
-def _extract_single_value(
-    rows: list[dict], idef: dict
-) -> Optional[dict]:
+def _extract_single_value(rows: list[dict], idef: dict) -> Optional[dict]:
     value_col = idef["value_col"]
     rows_sorted = _sorted_by(rows, idef["date_col"])
     if not rows_sorted:
@@ -453,12 +827,9 @@ def _extract_single_value(
     return out
 
 
-def _extract_filtered_value(
-    rows: list[dict], idef: dict
-) -> Optional[dict]:
+def _extract_filtered_value(rows: list[dict], idef: dict) -> Optional[dict]:
     filtered = [
-        r for r in rows
-        if _safe(r.get(idef["filter_col"], "")) == idef["filter_val"]
+        r for r in rows if _safe(r.get(idef["filter_col"], "")) == idef["filter_val"]
     ]
     if not filtered:
         return None
@@ -468,9 +839,7 @@ def _extract_filtered_value(
     return res
 
 
-def _extract_grouped_value(
-    rows: list[dict], idef: dict
-) -> list[dict]:
+def _extract_grouped_value(rows: list[dict], idef: dict) -> list[dict]:
     indicator_col = idef["indicator_col"]
     value_col = idef["value_col"]
     category_col = idef.get("category_col", "")
@@ -495,7 +864,11 @@ def _extract_grouped_value(
         out["indicador"] = indicator_name
         out["valor"] = _fmt(idef, raw_val)
         out["unidade"] = _safe(latest.get(unit_col, "")) if unit_col else ""
-        out["categoria"] = (_safe(latest.get(category_col, "")) or idef.get("category", "")) if category_col else idef.get("category", "")
+        out["categoria"] = (
+            (_safe(latest.get(category_col, "")) or idef.get("category", ""))
+            if category_col
+            else idef.get("category", "")
+        )
         out["data_referencia"] = _ref_date(idef, latest)
         out["captura_em"] = _safe(latest.get("data_captura", ""))[:10]
         out["metrica"] = value_col
@@ -503,9 +876,7 @@ def _extract_grouped_value(
     return results
 
 
-def _extract_multi_value(
-    rows: list[dict], idef: dict
-) -> list[dict]:
+def _extract_multi_value(rows: list[dict], idef: dict) -> list[dict]:
     indicator_col = idef.get("indicator_col", "")
     value_cols = idef["value_cols"]
     note_col = idef.get("note_col", "")
@@ -545,9 +916,7 @@ def _extract_multi_value(
     return results
 
 
-def _extract_dual_value(
-    rows: list[dict], idef: dict
-) -> list[dict]:
+def _extract_dual_value(rows: list[dict], idef: dict) -> list[dict]:
     indicator_col = idef.get("indicator_col", "")
     main_col = idef["value_col_main"]
     fallback_col = idef["value_col_fallback"]
@@ -584,9 +953,13 @@ def _extract_dual_value(
 
 # ── Gerador principal ─────────────────────────────────────────────────
 
+
 def generate(dry_run: bool = False) -> None:
     t0 = time.time()
-    banner("Consolidado", "Extrai último valor de cada indicador financeiro → consolidated.json/csv")
+    banner(
+        "Consolidado",
+        "Extrai último valor de cada indicador financeiro → consolidated.json/csv",
+    )
     section("Processando indicadores", "chart")
 
     all_results: list[dict] = []
@@ -657,8 +1030,17 @@ def generate(dry_run: bool = False) -> None:
         print_done(f"consolidated.js — {len(all_results)} registros")
 
         fieldnames = [
-            "dataset", "dataset_label", "fonte", "categoria", "tipo",
-            "indicador", "valor", "unidade", "data_referencia", "captura_em", "metrica",
+            "dataset",
+            "dataset_label",
+            "fonte",
+            "categoria",
+            "tipo",
+            "indicador",
+            "valor",
+            "unidade",
+            "data_referencia",
+            "captura_em",
+            "metrica",
         ]
         with csv_path.open("w", encoding="utf-8", newline="") as f:
             writer = csv.DictWriter(f, fieldnames=fieldnames)
@@ -685,6 +1067,7 @@ def generate(dry_run: bool = False) -> None:
 
 # ── Pivoteamento (multivalor → colunas) ───────────────────────────────
 
+
 def generate_pivoted() -> None:
     """Lê consolidated.json e gera consolidated_pivoted.json/js.
     Cada grupo (dataset_label, fonte, data_referencia, indicador) vira uma
@@ -700,11 +1083,14 @@ def generate_pivoted() -> None:
         return
 
     # First pass: group raw records
-    from collections import defaultdict
     buckets: dict[tuple, list[dict]] = defaultdict(list)
     for r in raw:
-        key = (r.get("dataset_label", ""), r.get("fonte", ""),
-               r.get("data_referencia", ""), r.get("indicador", ""))
+        key = (
+            r.get("dataset_label", ""),
+            r.get("fonte", ""),
+            r.get("data_referencia", ""),
+            r.get("indicador", ""),
+        )
         buckets[key].append(r)
 
     pivoted: list[OrderedDict] = []
@@ -712,7 +1098,13 @@ def generate_pivoted() -> None:
 
     for key, recs in buckets.items():
         row = OrderedDict()
-        for k in ("data_referencia", "indicador", "fonte", "dataset_label", "categoria"):
+        for k in (
+            "data_referencia",
+            "indicador",
+            "fonte",
+            "dataset_label",
+            "categoria",
+        ):
             row[k] = recs[0].get(k, "")
 
         # Determine metric columns for this group

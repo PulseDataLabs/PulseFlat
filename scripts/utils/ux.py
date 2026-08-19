@@ -8,10 +8,10 @@ Fornece cores ANSI, ícones, helpers visuais, logger colorido e CLI comum.
 """
 
 import argparse
+import logging
 import os
 import sys
-import logging
-from typing import Optional, Iterator
+from typing import Iterator, Optional
 
 # ── Detecção de Ambiente ──────────────────────────────────────────────
 _CI = os.environ.get("CI", "")
@@ -23,14 +23,18 @@ USE_COLOR = (IS_TTY or bool(_CI)) and not _NO_COLOR and _TERM != "dumb"
 
 # Detecta suporte a Unicode (emoji) no terminal
 try:
-    USE_UNICODE = IS_TTY and sys.stdout.encoding and "UTF" in sys.stdout.encoding.upper()
+    USE_UNICODE = (
+        IS_TTY and sys.stdout.encoding and "UTF" in (sys.stdout.encoding or "").upper()
+    )
 except Exception:
     USE_UNICODE = False
 
 
-def configure(*, use_color: Optional[bool] = None, use_unicode: Optional[bool] = None) -> None:
+def configure(
+    *, use_color: Optional[bool] = None, use_unicode: Optional[bool] = None
+) -> None:
     """Override runtime de USE_COLOR / USE_UNICODE (útil em testes)."""
-    global USE_COLOR, USE_UNICODE, ICON
+    global USE_COLOR, USE_UNICODE
     if use_color is not None:
         USE_COLOR = use_color
     if use_unicode is not None:
@@ -41,26 +45,27 @@ def configure(*, use_color: Optional[bool] = None, use_unicode: Optional[bool] =
 
 def _rebuild_icons() -> None:
     """Reconstrói ICON com base no USE_UNICODE atual."""
-    global ICON
     u = USE_UNICODE
     ICON.clear()
-    ICON.update({
-        "success": "✔" if u else "[OK]",
-        "fail":    "✖" if u else "[FAIL]",
-        "warn":    "⚠" if u else "[WARN]",
-        "info":    "ℹ" if u else "[INFO]",
-        "skip":    "⏭" if u else "[SKIP]",
-        "file":    "📄" if u else "[FILE]",
-        "package": "📦" if u else "[PKG]",
-        "refresh": "🔄" if u else "[REFRESH]",
-        "clean":   "🧹" if u else "[CLEAN]",
-        "chart":   "📊" if u else "[CHART]",
-        "clock":   "⏱" if u else "[TIME]",
-        "folder":  "📁" if u else "[DIR]",
-        "search":  "🔍" if u else "[SEARCH]",
-        "gear":    "⚙"  if u else "[GEAR]",
-        "rocket":  "🚀" if u else "[ROCKET]",
-    })
+    ICON.update(
+        {
+            "success": "✔" if u else "[OK]",
+            "fail": "✖" if u else "[FAIL]",
+            "warn": "⚠" if u else "[WARN]",
+            "info": "ℹ" if u else "[INFO]",
+            "skip": "⏭" if u else "[SKIP]",
+            "file": "📄" if u else "[FILE]",
+            "package": "📦" if u else "[PKG]",
+            "refresh": "🔄" if u else "[REFRESH]",
+            "clean": "🧹" if u else "[CLEAN]",
+            "chart": "📊" if u else "[CHART]",
+            "clock": "⏱" if u else "[TIME]",
+            "folder": "📁" if u else "[DIR]",
+            "search": "🔍" if u else "[SEARCH]",
+            "gear": "⚙" if u else "[GEAR]",
+            "rocket": "🚀" if u else "[ROCKET]",
+        }
+    )
 
 
 # ── Códigos ANSI Core ─────────────────────────────────────────────────
@@ -70,24 +75,69 @@ def _c(code: str, text: str) -> str:
 
 
 # Paleta básica
-def bold(t: str) -> str:    return _c("1", t)
-def dim(t: str) -> str:     return _c("2", t)
-def red(t: str) -> str:     return _c("31", t)
-def green(t: str) -> str:   return _c("32", t)
-def yellow(t: str) -> str:  return _c("33", t)
-def blue(t: str) -> str:    return _c("34", t)
-def magenta(t: str) -> str: return _c("35", t)
-def cyan(t: str) -> str:    return _c("36", t)
-def white(t: str) -> str:   return _c("97", t)
+def bold(t: str) -> str:
+    return _c("1", t)
+
+
+def dim(t: str) -> str:
+    return _c("2", t)
+
+
+def red(t: str) -> str:
+    return _c("31", t)
+
+
+def green(t: str) -> str:
+    return _c("32", t)
+
+
+def yellow(t: str) -> str:
+    return _c("33", t)
+
+
+def blue(t: str) -> str:
+    return _c("34", t)
+
+
+def magenta(t: str) -> str:
+    return _c("35", t)
+
+
+def cyan(t: str) -> str:
+    return _c("36", t)
+
+
+def white(t: str) -> str:
+    return _c("97", t)
+
 
 # Paleta brilhante (bold + cor)
-def b_red(t: str) -> str:     return _c("1;31", t)
-def b_green(t: str) -> str:   return _c("1;32", t)
-def b_yellow(t: str) -> str:  return _c("1;33", t)
-def b_blue(t: str) -> str:    return _c("1;34", t)
-def b_magenta(t: str) -> str: return _c("1;35", t)
-def b_cyan(t: str) -> str:    return _c("1;36", t)
-def b_white(t: str) -> str:   return _c("1;97", t)
+def b_red(t: str) -> str:
+    return _c("1;31", t)
+
+
+def b_green(t: str) -> str:
+    return _c("1;32", t)
+
+
+def b_yellow(t: str) -> str:
+    return _c("1;33", t)
+
+
+def b_blue(t: str) -> str:
+    return _c("1;34", t)
+
+
+def b_magenta(t: str) -> str:
+    return _c("1;35", t)
+
+
+def b_cyan(t: str) -> str:
+    return _c("1;36", t)
+
+
+def b_white(t: str) -> str:
+    return _c("1;97", t)
 
 
 # ── Ícones ────────────────────────────────────────────────────────────
@@ -95,23 +145,23 @@ ICON: dict[str, str] = {}
 _rebuild_icons()
 
 GROUP_ICON = {
-    "anbima":  "🟡",
-    "b3":      "🔵",
-    "bcb":     "🟢",
-    "cvm":     "🟣",
-    "ibge":    "🔴",
+    "anbima": "🟡",
+    "b3": "🔵",
+    "bcb": "🟢",
+    "cvm": "🟣",
+    "ibge": "🔴",
     "ratings": "⚪",
-    "misc":    "🟤",
+    "misc": "🟤",
 }
 
 GROUP_COLOR = {
-    "anbima":  yellow,
-    "b3":      cyan,
-    "bcb":     green,
-    "cvm":     magenta,
-    "ibge":    red,
+    "anbima": yellow,
+    "b3": cyan,
+    "bcb": green,
+    "cvm": magenta,
+    "ibge": red,
     "ratings": white,
-    "misc":    blue,
+    "misc": blue,
 }
 
 
@@ -145,7 +195,9 @@ def print_start(msg: str, icon: str = "refresh") -> None:
     print(f"  {ICON[icon]}  {msg}")
 
 
-def print_done(msg: str, elapsed: Optional[float] = None, icon: str = "success") -> None:
+def print_done(
+    msg: str, elapsed: Optional[float] = None, icon: str = "success"
+) -> None:
     """Indica operação concluída com sucesso."""
     time_str = f"  {dim(f'{elapsed:.1f}s')}" if elapsed is not None else ""
     print(f"  {green(ICON[icon])}  {msg}{time_str}")
@@ -257,24 +309,24 @@ class ColorLogger:
 def add_common_args(parser: argparse.ArgumentParser) -> None:
     """Adiciona argumentos comuns a todos os scripts."""
     parser.add_argument(
-        "--quiet", "-q",
+        "--quiet",
+        "-q",
         action="store_true",
-        help="Suprime output não-essencial (apenas erros e resumo final)"
+        help="Suprime output não-essencial (apenas erros e resumo final)",
     )
     parser.add_argument(
-        "--verbose", "-v",
+        "--verbose",
+        "-v",
         action="store_true",
-        help="Mostra output detalhado (debug/info)"
+        help="Mostra output detalhado (debug/info)",
     )
     parser.add_argument(
         "--no-color",
         action="store_true",
-        help="Desabilita cores ANSI (equivalente a NO_COLOR=1)"
+        help="Desabilita cores ANSI (equivalente a NO_COLOR=1)",
     )
     parser.add_argument(
-        "--dry-run",
-        action="store_true",
-        help="Simula execução sem gravar arquivos"
+        "--dry-run", action="store_true", help="Simula execução sem gravar arquivos"
     )
 
 
@@ -311,13 +363,42 @@ def section(title: str, icon: str = "gear") -> None:
 
 
 __all__ = [
-    "USE_COLOR", "USE_UNICODE", "IS_TTY",
-    "_c", "bold", "dim", "red", "green", "yellow", "blue", "magenta", "cyan", "white",
-    "b_red", "b_green", "b_yellow", "b_blue", "b_magenta", "b_cyan", "b_white",
-    "ICON", "GROUP_ICON", "GROUP_COLOR",
-    "_line", "_progress_bar", "_spinner",
-    "print_start", "print_done", "print_fail", "print_warn", "print_skip", "print_info",
-    "print_summary", "ColorLogger",
-    "add_common_args", "apply_common_args",
-    "banner", "section",
+    "USE_COLOR",
+    "USE_UNICODE",
+    "IS_TTY",
+    "_c",
+    "bold",
+    "dim",
+    "red",
+    "green",
+    "yellow",
+    "blue",
+    "magenta",
+    "cyan",
+    "white",
+    "b_red",
+    "b_green",
+    "b_yellow",
+    "b_blue",
+    "b_magenta",
+    "b_cyan",
+    "b_white",
+    "ICON",
+    "GROUP_ICON",
+    "GROUP_COLOR",
+    "_line",
+    "_progress_bar",
+    "_spinner",
+    "print_start",
+    "print_done",
+    "print_fail",
+    "print_warn",
+    "print_skip",
+    "print_info",
+    "print_summary",
+    "ColorLogger",
+    "add_common_args",
+    "apply_common_args",
+    "banner",
+    "section",
 ]

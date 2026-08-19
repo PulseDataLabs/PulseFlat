@@ -8,23 +8,22 @@ Testes unitários para scripts/verificar_buracos.py
 Rodar: python -m pytest tests/test_verificar_buracos.py -v
 """
 
-import csv
 import sys
 from datetime import date
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-from utils.parsers import _CAL
 from scripts.verificar_buracos import (
-    _parse_date,
-    load_entity_dates,
-    check_gaps,
     _entity_label,
+    _parse_date,
+    check_gaps,
+    load_entity_dates,
 )
-
+from utils.parsers import _CAL
 
 # ── _parse_date ──────────────────────────────────────────────────────
+
 
 class TestParseDate:
     def test_iso_format(self):
@@ -60,6 +59,7 @@ class TestParseDate:
 
 # ── load_entity_dates ────────────────────────────────────────────────
 
+
 class TestLoadEntityDates:
     def test_single_entity_no_group_by(self, tmp_path):
         csv_path = tmp_path / "test.csv"
@@ -91,9 +91,7 @@ class TestLoadEntityDates:
     def test_datetime_date_column(self, tmp_path):
         csv_path = tmp_path / "test.csv"
         csv_path.write_text(
-            "rpt_dt,volume\n"
-            "2026-06-01T00:00:00,100\n"
-            "2026-06-02T00:00:00,200\n"
+            "rpt_dt,volume\n" "2026-06-01T00:00:00,100\n" "2026-06-02T00:00:00,200\n"
         )
         result = load_entity_dates(csv_path, "rpt_dt", [])
         assert result[("*",)] == {"2026-06-01", "2026-06-02"}
@@ -112,10 +110,7 @@ class TestLoadEntityDates:
 
     def test_case_insensitive_column(self, tmp_path):
         csv_path = tmp_path / "test.csv"
-        csv_path.write_text(
-            "DATA_CAPTURA,valor\n"
-            "2026-06-01,10\n"
-        )
+        csv_path.write_text("DATA_CAPTURA,valor\n" "2026-06-01,10\n")
         result = load_entity_dates(csv_path, "data_captura", [])
         assert result[("*",)] == {"2026-06-01"}
 
@@ -145,16 +140,14 @@ class TestLoadEntityDates:
     def test_skip_empty_dates(self, tmp_path):
         csv_path = tmp_path / "test.csv"
         csv_path.write_text(
-            "data_captura,valor\n"
-            "2026-06-01,10\n"
-            ",20\n"
-            "2026-06-03,30\n"
+            "data_captura,valor\n" "2026-06-01,10\n" ",20\n" "2026-06-03,30\n"
         )
         result = load_entity_dates(csv_path, "data_captura", [])
         assert result[("*",)] == {"2026-06-01", "2026-06-03"}
 
 
 # ── check_gaps ───────────────────────────────────────────────────────
+
 
 class TestCheckGaps:
     def test_no_gaps(self):
@@ -236,6 +229,7 @@ class TestCheckGaps:
 
 
 # ── _entity_label ────────────────────────────────────────────────────
+
 
 class TestEntityLabel:
     def test_single_star_entity(self):

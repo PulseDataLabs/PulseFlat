@@ -7,14 +7,49 @@ Saída:   data/ipea_macroeconomia.csv
 
 import os
 import sys
-import datetime
+
 import pandas as pd
-import requests
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from scrapers.utils.base import BaseScraper
 
-SERIES = [{'code': 'BM12_PIBAC12', 'title': 'PIB Acumulado 12m', 'desc': 'PIB acumulado em 12 meses (R$)', 'icon': '📈', 'tags': ['pib', 'macroeconomia', 'ipea']}, {'code': 'PNADC12_TDESOC12', 'title': 'Taxa de Desocupação', 'desc': 'Taxa de desocupação da PNAD Contínua (%)', 'icon': '👥', 'tags': ['desemprego', 'trabalho', 'ipea']}, {'code': 'GAC12_SALMINRE12', 'title': 'Salário Mínimo Real', 'desc': 'Salário mínimo real mensal (em R$ do último mês)', 'icon': '💰', 'tags': ['salario_minimo', 'renda', 'ipea']}, {'code': 'MTE12_SALMIN12', 'title': 'Salário Mínimo Vigente', 'desc': 'Salário mínimo vigente nominal (R$)', 'icon': '💰', 'tags': ['salario_minimo', 'renda', 'ipea']}, {'code': 'SGS12_7836', 'title': 'Saldo da Poupança', 'desc': 'Saldo total de depósitos em poupança SBPE e rural (R$ milhões)', 'icon': '🏦', 'tags': ['poupanca', 'saldo', 'ipea']}]
+SERIES = [
+    {
+        "code": "BM12_PIBAC12",
+        "title": "PIB Acumulado 12m",
+        "desc": "PIB acumulado em 12 meses (R$)",
+        "icon": "📈",
+        "tags": ["pib", "macroeconomia", "ipea"],
+    },
+    {
+        "code": "PNADC12_TDESOC12",
+        "title": "Taxa de Desocupação",
+        "desc": "Taxa de desocupação da PNAD Contínua (%)",
+        "icon": "👥",
+        "tags": ["desemprego", "trabalho", "ipea"],
+    },
+    {
+        "code": "GAC12_SALMINRE12",
+        "title": "Salário Mínimo Real",
+        "desc": "Salário mínimo real mensal (em R$ do último mês)",
+        "icon": "💰",
+        "tags": ["salario_minimo", "renda", "ipea"],
+    },
+    {
+        "code": "MTE12_SALMIN12",
+        "title": "Salário Mínimo Vigente",
+        "desc": "Salário mínimo vigente nominal (R$)",
+        "icon": "💰",
+        "tags": ["salario_minimo", "renda", "ipea"],
+    },
+    {
+        "code": "SGS12_7836",
+        "title": "Saldo da Poupança",
+        "desc": "Saldo total de depósitos em poupança SBPE e rural (R$ milhões)",
+        "icon": "🏦",
+        "tags": ["poupanca", "saldo", "ipea"],
+    },
+]
 API_URL = "http://www.ipeadata.gov.br/api/odata4/ValoresSerie(SERCODIGO='{code}')"
 
 
@@ -51,13 +86,15 @@ class IpeaMacroeconomiaScraper(BaseScraper):
                 if val is None:
                     continue
 
-                records.append({
-                    "data_referencia": date_ref,
-                    "codigo_ativo": item["code"],
-                    "label": item["title"],
-                    "valor": float(val),
-                })
-            
+                records.append(
+                    {
+                        "data_referencia": date_ref,
+                        "codigo_ativo": item["code"],
+                        "label": item["title"],
+                        "valor": float(val),
+                    }
+                )
+
             if records:
                 frames.append(pd.DataFrame(records))
 

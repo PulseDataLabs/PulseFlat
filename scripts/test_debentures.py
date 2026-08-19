@@ -1,12 +1,14 @@
-import pandas as pd
-from pathlib import Path
 from datetime import datetime
+from pathlib import Path
+
+import pandas as pd
 
 ROOT_DIR = Path(__file__).resolve().parents[1]
 csv_file = ROOT_DIR / "data" / "debentures_mercado_secundario_precos_negociacao.csv.gz"
 df = pd.read_csv(csv_file, dtype=str, keep_default_na=False)
 
 print(f"Original row count: {len(df)}")
+
 
 def is_valid_date(val):
     val_strip = str(val).strip()
@@ -17,6 +19,7 @@ def is_valid_date(val):
         except ValueError:
             continue
     return False
+
 
 # Filter out rows with invalid data_referencia
 mask_valid = df["data_referencia"].apply(is_valid_date)

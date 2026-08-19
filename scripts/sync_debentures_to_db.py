@@ -1,6 +1,7 @@
 import sys
-import pandas as pd
 from pathlib import Path
+
+import pandas as pd
 
 # Adiciona o diretório raiz ao sys.path
 ROOT_DIR = Path(__file__).resolve().parents[1]
@@ -11,8 +12,11 @@ from utils.db import upload_dataframe
 
 log = get_logger("sync_debentures_to_db")
 
+
 def main():
-    csv_file = ROOT_DIR / "data" / "debentures_mercado_secundario_precos_negociacao.csv.gz"
+    csv_file = (
+        ROOT_DIR / "data" / "debentures_mercado_secundario_precos_negociacao.csv.gz"
+    )
     if not csv_file.exists():
         log.error(f"Arquivo {csv_file} não encontrado.")
         return
@@ -26,11 +30,12 @@ def main():
 
     log.info(f"Iniciando sincronização para a tabela {table_name} no Oracle...")
     success = upload_dataframe(df, table_name, chaves_dedup=chaves_dedup)
-    
+
     if success:
         log.info("Sincronização concluída com sucesso!")
     else:
         log.error("Falha ao sincronizar dados com o banco Oracle.")
+
 
 if __name__ == "__main__":
     main()

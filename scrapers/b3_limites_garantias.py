@@ -16,13 +16,13 @@ from pathlib import Path
 from urllib.parse import urljoin
 
 import openpyxl
-import requests
 from bs4 import BeautifulSoup
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from utils import get_logger, agora_brt, nova_session, salvar_csv
 import pandas as pd
+
 from scrapers.utils.base import BaseScraper
+from utils import agora_brt, get_logger, nova_session
 
 log = get_logger("b3_limites_garantias")
 
@@ -30,9 +30,18 @@ URL_PAGINA = "https://www.b3.com.br/pt_br/produtos-e-servicos/compensacao-e-liqu
 ARQUIVO = Path("data/b3_limites_garantias.csv")
 
 MESES_PT = {
-    "janeiro": 1, "fevereiro": 2, "março": 3, "abril": 4,
-    "maio": 5, "junho": 6, "julho": 7, "agosto": 8,
-    "setembro": 9, "outubro": 10, "novembro": 11, "dezembro": 12,
+    "janeiro": 1,
+    "fevereiro": 2,
+    "março": 3,
+    "abril": 4,
+    "maio": 5,
+    "junho": 6,
+    "julho": 7,
+    "agosto": 8,
+    "setembro": 9,
+    "outubro": 10,
+    "novembro": 11,
+    "dezembro": 12,
 }
 
 CABECALHO = [
@@ -60,7 +69,12 @@ def _extrair_data_referencia(nome_arquivo: str) -> str:
 
 
 def _tipo_ativo_slug(nome_aba: str) -> str:
-    simplified = nome_aba.replace(",", "").replace(" e ", "_").replace(" ", "_").replace("__", "_")
+    simplified = (
+        nome_aba.replace(",", "")
+        .replace(" e ", "_")
+        .replace(" ", "_")
+        .replace("__", "_")
+    )
     return simplified.strip("_")
 
 
@@ -73,25 +87,33 @@ def _parse_xlsx(content: bytes, data_captura: str) -> list[dict]:
         if not rows:
             continue
         header = rows[0] if rows else []
-        if not header or str(header[0]).strip().lower() not in ("código", "codigo", "isin"):
+        if not header or str(header[0]).strip().lower() not in (
+            "código",
+            "codigo",
+            "isin",
+        ):
             continue
         tipo_ativo = _tipo_ativo_slug(nome_aba)
         for row in rows[1:]:
             if not row or all(v is None for v in row):
                 continue
             codigo = str(row[0]).strip() if row[0] is not None else ""
-            isin_val = str(row[1]).strip() if len(row) > 1 and row[1] is not None else ""
+            isin_val = (
+                str(row[1]).strip() if len(row) > 1 and row[1] is not None else ""
+            )
             limite = row[2] if len(row) > 2 and row[2] is not None else ""
             if not codigo and not isin_val:
                 continue
-            registros.append({
-                "data_captura": data_captura,
-                "data_referencia": "",
-                "tipo_ativo": tipo_ativo,
-                "codigo": codigo,
-                "isin": isin_val,
-                "limite_quantidade": limite,
-            })
+            registros.append(
+                {
+                    "data_captura": data_captura,
+                    "data_referencia": "",
+                    "tipo_ativo": tipo_ativo,
+                    "codigo": codigo,
+                    "isin": isin_val,
+                    "limite_quantidade": limite,
+                }
+            )
     wb.close()
     return registros
 
@@ -124,7 +146,9 @@ def capturar() -> pd.DataFrame:
 
     registros = []
     with zipfile.ZipFile(io.BytesIO(resp_zip.content)) as zf:
-        xls_files = sorted(n for n in zf.namelist() if n.lower().endswith((".xlsx", ".xls")))
+        xls_files = sorted(
+            n for n in zf.namelist() if n.lower().endswith((".xlsx", ".xls"))
+        )
         if not xls_files:
             log.error("Nenhum arquivo .xlsx/.xls encontrado no ZIP.")
             sys.exit(1)

@@ -12,21 +12,28 @@ Uso:
     python scripts/generate_catalog.py --quiet
 """
 
+import argparse
 import importlib
 import json
 import sys
 import time
-import argparse
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from run_all import discover_scrapers
-from scrapers.utils.base import BaseScraper
-
 from scripts.utils.ux import (
-    banner, section, print_start, print_done, print_fail, print_warn, print_info,
-    print_summary, add_common_args, apply_common_args, ColorLogger, ICON,
+    ColorLogger,
+    add_common_args,
+    apply_common_args,
+    banner,
+    print_done,
+    print_fail,
+    print_info,
+    print_start,
+    print_summary,
+    print_warn,
+    section,
 )
 
 log = ColorLogger("generate_catalog")
@@ -63,7 +70,9 @@ def generate(dry_run: bool = False) -> None:
                 for item in data_list:
                     if "file" in item:
                         old_datasets[item["file"]] = item
-            print_info(f"Carregado catálogo atual com {len(old_datasets)} datasets (fallback).")
+            print_info(
+                f"Carregado catálogo atual com {len(old_datasets)} datasets (fallback)."
+            )
         except Exception as e:
             print_warn(f"Não foi possível ler datasets.json para fallback: {e}")
 
@@ -91,7 +100,10 @@ def generate(dry_run: bool = False) -> None:
 
         try:
             mod = importlib.import_module(f"scrapers.{module_name}")
-            class_name = "".join(word.capitalize() for word in module_name.split("_")) + "Scraper"
+            class_name = (
+                "".join(word.capitalize() for word in module_name.split("_"))
+                + "Scraper"
+            )
 
             if hasattr(mod, class_name):
                 cls = getattr(mod, class_name)
@@ -132,14 +144,18 @@ def generate(dry_run: bool = False) -> None:
             fallback = old_datasets.get(f"{module_name}.csv", {})
 
         title = title or fallback.get("title") or module_name.replace("_", " ").title()
-        description = description or fallback.get("description") or "Sem descrição fornecida."
+        description = (
+            description or fallback.get("description") or "Sem descrição fornecida."
+        )
         icon = icon or fallback.get("icon") or "📊"
         badge = badge or fallback.get("badge") or "Diário"
         badge_class = badge_class or fallback.get("badgeClass") or "badge-daily"
         tags = tags or fallback.get("tags") or [group]
         source = source or fallback.get("source") or group.upper()
         icon_class = icon_class or fallback.get("iconClass") or get_source_class(source)
-        accumulate = accumulate if accumulate is not None else fallback.get("accumulate", True)
+        accumulate = (
+            accumulate if accumulate is not None else fallback.get("accumulate", True)
+        )
 
         url = fallback.get("url")
         if url and url.endswith(".csv") and filename.endswith(".csv.gz"):
@@ -177,7 +193,9 @@ def generate(dry_run: bool = False) -> None:
             datasets_json_path.parent.mkdir(parents=True, exist_ok=True)
             with datasets_json_path.open("w", encoding="utf-8") as f:
                 json.dump(new_catalog, f, indent=2, ensure_ascii=False)
-            print_done(f"Catálogo salvo em {datasets_json_path} com {len(new_catalog)} datasets.")
+            print_done(
+                f"Catálogo salvo em {datasets_json_path} com {len(new_catalog)} datasets."
+            )
         except Exception as e:
             print_fail(f"Erro ao salvar datasets.json: {e}")
             sys.exit(1)

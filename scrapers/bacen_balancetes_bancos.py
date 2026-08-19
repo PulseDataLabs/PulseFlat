@@ -9,11 +9,12 @@ Busca o documento de balancetes mais recente do BCB, faz o download do arquivo Z
 extrai o CSV interno, trata os campos (limpeza de cabeçalhos e formatação de saldo)
 e salva o arquivo final tratado.
 """
+
+import csv
 import os
 import sys
 import time
 import zipfile
-import csv
 from io import BytesIO
 
 import pandas as pd
@@ -21,7 +22,6 @@ import requests
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from scrapers.utils.base import BaseScraper
-
 
 DOCS_API_URL = (
     "https://www.bcb.gov.br/api/servico/sitebcb/Documentos/byListGuid"
@@ -46,7 +46,9 @@ class BacenBalancetesBancosScraper(BaseScraper):
     group = "bcb"
     enabled = True
     phase = 1
-    accumulate = False  # Sobrescreve diariamente para manter apenas o balancete mais recente
+    accumulate = (
+        False  # Sobrescreve diariamente para manter apenas o balancete mais recente
+    )
 
     def fetch(self) -> pd.DataFrame:
         t0 = time.time()

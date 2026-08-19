@@ -1,3 +1,5 @@
+from scripts.utils.ux import print_done, print_warn
+
 #!/usr/bin/env python
 # coding: utf-8
 """
@@ -8,20 +10,19 @@ Saída:   data/bacen_conglomerados.csv
 Baixa o arquivo ZIP mensal (YYYYMMCONGLOMERADO.zip), extrai o XLSX
 e retorna o conteúdo normalizado.
 """
+import datetime
 import os
 import sys
 import time
-import datetime
 import zipfile
 from io import BytesIO
-from dateutil.relativedelta import relativedelta
 
 import pandas as pd
 import requests
+from dateutil.relativedelta import relativedelta
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from scrapers.utils.base import BaseScraper
-
 
 BASE_URL = (
     "https://www.bcb.gov.br/content/estabilidadefinanceira/"
@@ -53,7 +54,6 @@ class BacenConglomeradosScraper(BaseScraper):
     phase = 1
 
     def fetch(self) -> pd.DataFrame:
-        from scripts.utils.ux import print_done, print_warn
 
         session = requests.Session()
 
@@ -65,12 +65,18 @@ class BacenConglomeradosScraper(BaseScraper):
             t0 = time.time()
             c = _try_download(session, yyyymm)
             if c:
-                print_done(f"encontrado {yyyymm}CONGLOMERADO.zip", elapsed=time.time() - t0)
+                print_done(
+                    f"encontrado {yyyymm}CONGLOMERADO.zip", elapsed=time.time() - t0
+                )
                 content = c
                 break
-            print_warn(f"{yyyymm}CONGLOMERADO.zip não disponível", elapsed=time.time() - t0)
+            print_warn(
+                f"{yyyymm}CONGLOMERADO.zip não disponível", elapsed=time.time() - t0
+            )
         if not content:
-            raise RuntimeError("Nenhum arquivo de conglomerados disponível nos últimos 3 meses.")
+            raise RuntimeError(
+                "Nenhum arquivo de conglomerados disponível nos últimos 3 meses."
+            )
 
         # Extrai XLSX do ZIP em memória
         with zipfile.ZipFile(BytesIO(content)) as zf:

@@ -12,19 +12,27 @@ Uso:
     python scripts/generate_market_latest.py --quiet
 """
 
+import argparse
 import csv
 import json
 import sys
 import time
-import argparse
 from pathlib import Path
 from typing import Optional
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from scripts.utils.ux import (
-    banner, section, print_start, print_done, print_fail, print_warn, print_info,
-    print_summary, add_common_args, apply_common_args, ColorLogger, ICON,
+    ColorLogger,
+    add_common_args,
+    apply_common_args,
+    banner,
+    print_done,
+    print_info,
+    print_start,
+    print_summary,
+    print_warn,
+    section,
 )
 
 log = ColorLogger("generate_market_latest")
@@ -34,6 +42,7 @@ DATA_DIR = ROOT / "data"
 
 
 # ── Helpers de formatação BR ──────────────────────────────────────────────
+
 
 def _parse_br_float(val: str) -> Optional[float]:
     if not val or not val.strip():
@@ -62,7 +71,9 @@ def _format_change(change: Optional[float]) -> Optional[str]:
     if change is None:
         return None
     signal = "+" if change >= 0 else ""
-    return f"{signal}{change:,.2f}%".replace(",", "X").replace(".", ",").replace("X", ".")
+    return (
+        f"{signal}{change:,.2f}%".replace(",", "X").replace(".", ",").replace("X", ".")
+    )
 
 
 def _infer_type(change: Optional[float]) -> str:
@@ -77,6 +88,7 @@ def _infer_type(change: Optional[float]) -> str:
 
 # ── Leitores de CSV ───────────────────────────────────────────────────────
 
+
 def _read_csv(path: str) -> list[dict]:
     if not Path(path).exists():
         return []
@@ -88,7 +100,9 @@ def _sorted_by(rows: list[dict], col: str, reverse: bool = True) -> list[dict]:
     return sorted(rows, key=lambda r: r.get(col, ""), reverse=reverse)
 
 
-def _last_filtered(path: str, filter_col: str, filter_val: object, sort_col: str, n: int = 1) -> list[dict]:
+def _last_filtered(
+    path: str, filter_col: str, filter_val: object, sort_col: str, n: int = 1
+) -> list[dict]:
     rows = _read_csv(path)
     if filter_col:
         rows = [r for r in rows if r.get(filter_col) == filter_val]

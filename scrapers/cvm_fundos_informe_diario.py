@@ -1,3 +1,5 @@
+import csv
+
 """
 scrapers/cvm_fundos_informe_diario.py
 --------------------------------------
@@ -18,9 +20,10 @@ from pathlib import Path
 import requests
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from utils import get_logger, agora_brt, limpar, salvar_csv
 import pandas as pd
+
 from scrapers.utils.base import BaseScraper
+from utils import agora_brt, get_logger, limpar
 
 log = get_logger("cvm_fundos_informe_diario")
 
@@ -28,7 +31,6 @@ ARQUIVO = Path("data/cvm_fundos_informe_diario.csv")
 
 CABECALHO = [
     "data_captura",
-    
     "tp_fundo_classe",
     "cnpj_fundo_classe",
     "id_subclasse",
@@ -59,7 +61,7 @@ def _url_referencia() -> tuple[str, date]:
         except Exception:
             pass
         # Tenta mês anterior
-        ref = (ref.replace(day=1) - timedelta(days=1))
+        ref = ref.replace(day=1) - timedelta(days=1)
     return URL_TPL.format(yyyymm=ref.strftime("%Y%m")), ref
 
 
@@ -101,7 +103,6 @@ def capturar() -> list[dict]:
     else:
         texto = raw.decode("utf-8", errors="replace")
 
-    import csv
     reader = csv.DictReader(StringIO(texto), delimiter=";")
     data_captura, _ = agora_brt()
 
@@ -132,6 +133,7 @@ def capturar() -> list[dict]:
     log.info(f"{len(registros)} registros do informe diário CVM capturados.")
     return registros
 
+
 class CvmFundosInformeDiarioScraper(BaseScraper):
     name = "cvm_fundos_informe_diario"
     group = "cvm"
@@ -139,17 +141,17 @@ class CvmFundosInformeDiarioScraper(BaseScraper):
     phase = 1
     accumulate = False
     compress = True
-    chaves_dedup = ['data_captura', 'cnpj_fundo_classe', 'data_referencia']
-    
+    chaves_dedup = ["data_captura", "cnpj_fundo_classe", "data_referencia"]
+
     # Catálogo de Metadados
-    title = 'CVM — Informe Diário de Fundos'
-    description = 'Desempenho diário de fundos de investimento: valor da cota, PL, captações, resgates e cotistas.'
-    icon = '📋'
-    icon_class = 'icon-cvm'
-    badge = 'Diário'
-    badge_class = 'badge-daily'
-    tags = ['fundos', 'cota', 'patrimônio', 'captação', 'resgate']
-    source = 'CVM'
+    title = "CVM — Informe Diário de Fundos"
+    description = "Desempenho diário de fundos de investimento: valor da cota, PL, captações, resgates e cotistas."
+    icon = "📋"
+    icon_class = "icon-cvm"
+    badge = "Diário"
+    badge_class = "badge-daily"
+    tags = ["fundos", "cota", "patrimônio", "captação", "resgate"]
+    source = "CVM"
 
     def fetch(self) -> pd.DataFrame:
         log.info("=== CVM — Informe Diário de Fundos ===")

@@ -9,7 +9,6 @@ e remove os arquivos antigos de scrapers e dados individuais de forma limpa.
 
 import os
 import stat
-import glob
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -62,7 +61,7 @@ YAHOO_SECTIONS = {
         "dynamic_csv": "b3_fundos_listados.csv",
         "dynamic_filters": ["FII", "FIAGRO"],
         "dynamic_suffix": ".SA",
-    }
+    },
 }
 
 IPEADATA_SECTIONS = {
@@ -70,85 +69,295 @@ IPEADATA_SECTIONS = {
         "title": "Macroeconomia Geral",
         "class_name": "IpeaMacroeconomiaScraper",
         "series": [
-            {"code": "BM12_PIBAC12", "title": "PIB Acumulado 12m", "desc": "PIB acumulado em 12 meses (R$)", "icon": "📈", "tags": ["pib", "macroeconomia", "ipea"]},
-            {"code": "PNADC12_TDESOC12", "title": "Taxa de Desocupação", "desc": "Taxa de desocupação da PNAD Contínua (%)", "icon": "👥", "tags": ["desemprego", "trabalho", "ipea"]},
-            {"code": "GAC12_SALMINRE12", "title": "Salário Mínimo Real", "desc": "Salário mínimo real mensal (em R$ do último mês)", "icon": "💰", "tags": ["salario_minimo", "renda", "ipea"]},
-            {"code": "MTE12_SALMIN12", "title": "Salário Mínimo Vigente", "desc": "Salário mínimo vigente nominal (R$)", "icon": "💰", "tags": ["salario_minimo", "renda", "ipea"]},
-            {"code": "SGS12_7836", "title": "Saldo da Poupança", "desc": "Saldo total de depósitos em poupança SBPE e rural (R$ milhões)", "icon": "🏦", "tags": ["poupanca", "saldo", "ipea"]}
-        ]
+            {
+                "code": "BM12_PIBAC12",
+                "title": "PIB Acumulado 12m",
+                "desc": "PIB acumulado em 12 meses (R$)",
+                "icon": "📈",
+                "tags": ["pib", "macroeconomia", "ipea"],
+            },
+            {
+                "code": "PNADC12_TDESOC12",
+                "title": "Taxa de Desocupação",
+                "desc": "Taxa de desocupação da PNAD Contínua (%)",
+                "icon": "👥",
+                "tags": ["desemprego", "trabalho", "ipea"],
+            },
+            {
+                "code": "GAC12_SALMINRE12",
+                "title": "Salário Mínimo Real",
+                "desc": "Salário mínimo real mensal (em R$ do último mês)",
+                "icon": "💰",
+                "tags": ["salario_minimo", "renda", "ipea"],
+            },
+            {
+                "code": "MTE12_SALMIN12",
+                "title": "Salário Mínimo Vigente",
+                "desc": "Salário mínimo vigente nominal (R$)",
+                "icon": "💰",
+                "tags": ["salario_minimo", "renda", "ipea"],
+            },
+            {
+                "code": "SGS12_7836",
+                "title": "Saldo da Poupança",
+                "desc": "Saldo total de depósitos em poupança SBPE e rural (R$ milhões)",
+                "icon": "🏦",
+                "tags": ["poupanca", "saldo", "ipea"],
+            },
+        ],
     },
     "ipea_mercados_diarios": {
         "title": "Mercados Globais Diários",
         "class_name": "IpeaMercadosDiariosScraper",
         "series": [
-            {"code": "EIA366_PBRENT366", "title": "Petróleo Brent", "desc": "Preço do petróleo bruto Brent (FOB, US$)", "icon": "🛢", "tags": ["petroleo", "brent", "commodities", "ipea"]},
-            {"code": "EIA366_PWTI366", "title": "Petróleo WTI", "desc": "Preço do petróleo bruto WTI (FOB, US$)", "icon": "🛢", "tags": ["petroleo", "wti", "commodities", "ipea"]},
-            {"code": "GM366_DOW366", "title": "Índice Dow Jones", "desc": "Índice de ações Dow Jones (fechamento)", "icon": "📈", "tags": ["dow_jones", "acoes", "ipea"]},
-            {"code": "SGS366_NASDAQ366", "title": "Índice NASDAQ", "desc": "Índice de ações NASDAQ (fechamento)", "icon": "📈", "tags": ["nasdaq", "acoes", "ipea"]}
-        ]
+            {
+                "code": "EIA366_PBRENT366",
+                "title": "Petróleo Brent",
+                "desc": "Preço do petróleo bruto Brent (FOB, US$)",
+                "icon": "🛢",
+                "tags": ["petroleo", "brent", "commodities", "ipea"],
+            },
+            {
+                "code": "EIA366_PWTI366",
+                "title": "Petróleo WTI",
+                "desc": "Preço do petróleo bruto WTI (FOB, US$)",
+                "icon": "🛢",
+                "tags": ["petroleo", "wti", "commodities", "ipea"],
+            },
+            {
+                "code": "GM366_DOW366",
+                "title": "Índice Dow Jones",
+                "desc": "Índice de ações Dow Jones (fechamento)",
+                "icon": "📈",
+                "tags": ["dow_jones", "acoes", "ipea"],
+            },
+            {
+                "code": "SGS366_NASDAQ366",
+                "title": "Índice NASDAQ",
+                "desc": "Índice de ações NASDAQ (fechamento)",
+                "icon": "📈",
+                "tags": ["nasdaq", "acoes", "ipea"],
+            },
+        ],
     },
     "ipea_taxas_juros": {
         "title": "Taxas de Juros",
         "class_name": "IpeaTaxasJurosScraper",
         "series": [
-            {"code": "ANBIMA12_TJPOUP12", "title": "Poupança Rentabilidade Antiga", "desc": "Rentabilidade mensal da poupança para depósitos até 03/05/2012 (% a.m.)", "icon": "💵", "tags": ["juros", "poupanca", "ipea"]},
-            {"code": "BM12_RNDPO12", "title": "Poupança Rentabilidade Nova", "desc": "Rentabilidade mensal da poupança para depósitos a partir de 04/05/2012 (% a.m.)", "icon": "💵", "tags": ["juros", "poupanca", "ipea"]},
-            {"code": "ANBIMA12_TJTLN112", "title": "Taxa LTN 1m", "desc": "Taxa de juros prefixada - estrutura a termo - LTN - 1 mês (% a.m.)", "icon": "🏛", "tags": ["juros", "ltn", "ipea"]},
-            {"code": "ANBIMA12_TJTLN312", "title": "Taxa LTN 3m", "desc": "Taxa de juros prefixada - estrutura a termo - LTN - 3 meses (% a.m.)", "icon": "🏛", "tags": ["juros", "ltn", "ipea"]},
-            {"code": "ANBIMA12_TJTLN612", "title": "Taxa LTN 6m", "desc": "Taxa de juros prefixada - estrutura a termo - LTN - 6 meses (% a.m.)", "icon": "🏛", "tags": ["juros", "ltn", "ipea"]},
-            {"code": "ANBIMA12_TJTLN1212", "title": "Taxa LTN 12m", "desc": "Taxa de juros prefixada - estrutura a termo - LTN - 12 meses (% a.m.)", "icon": "🏛", "tags": ["juros", "ltn", "ipea"]},
-            {"code": "BM12_TJCDI12", "title": "Taxa CDI Mensal", "desc": "Taxa de juros - CDI / Over - acumulada no mês (% a.m.)", "icon": "📊", "tags": ["juros", "cdi", "ipea"]},
-            {"code": "BM12_TJLP12", "title": "Taxa TJLP", "desc": "Taxa de Juros de Longo Prazo (TJLP) (% a.m.)", "icon": "🏭", "tags": ["juros", "tjlp", "ipea"]},
-            {"code": "BM12_TJOVER12", "title": "Taxa Selic Mensal", "desc": "Taxa de juros - Over / Selic - acumulada no mês (% a.m.)", "icon": "💰", "tags": ["juros", "selic", "ipea"]},
-            {"code": "BM12_TJTBF12", "title": "Taxa TBF", "desc": "Taxa Básica Financeira (TBF) - 1º dia do mês (% a.m.)", "icon": "📈", "tags": ["juros", "tbf", "ipea"]},
-            {"code": "BM12_TJTR12", "title": "Taxa TR", "desc": "Taxa Referencial (TR) - 1º dia do mês (% a.m.)", "icon": "🏠", "tags": ["juros", "tr", "ipea"]}
-        ]
+            {
+                "code": "ANBIMA12_TJPOUP12",
+                "title": "Poupança Rentabilidade Antiga",
+                "desc": "Rentabilidade mensal da poupança para depósitos até 03/05/2012 (% a.m.)",
+                "icon": "💵",
+                "tags": ["juros", "poupanca", "ipea"],
+            },
+            {
+                "code": "BM12_RNDPO12",
+                "title": "Poupança Rentabilidade Nova",
+                "desc": "Rentabilidade mensal da poupança para depósitos a partir de 04/05/2012 (% a.m.)",
+                "icon": "💵",
+                "tags": ["juros", "poupanca", "ipea"],
+            },
+            {
+                "code": "ANBIMA12_TJTLN112",
+                "title": "Taxa LTN 1m",
+                "desc": "Taxa de juros prefixada - estrutura a termo - LTN - 1 mês (% a.m.)",
+                "icon": "🏛",
+                "tags": ["juros", "ltn", "ipea"],
+            },
+            {
+                "code": "ANBIMA12_TJTLN312",
+                "title": "Taxa LTN 3m",
+                "desc": "Taxa de juros prefixada - estrutura a termo - LTN - 3 meses (% a.m.)",
+                "icon": "🏛",
+                "tags": ["juros", "ltn", "ipea"],
+            },
+            {
+                "code": "ANBIMA12_TJTLN612",
+                "title": "Taxa LTN 6m",
+                "desc": "Taxa de juros prefixada - estrutura a termo - LTN - 6 meses (% a.m.)",
+                "icon": "🏛",
+                "tags": ["juros", "ltn", "ipea"],
+            },
+            {
+                "code": "ANBIMA12_TJTLN1212",
+                "title": "Taxa LTN 12m",
+                "desc": "Taxa de juros prefixada - estrutura a termo - LTN - 12 meses (% a.m.)",
+                "icon": "🏛",
+                "tags": ["juros", "ltn", "ipea"],
+            },
+            {
+                "code": "BM12_TJCDI12",
+                "title": "Taxa CDI Mensal",
+                "desc": "Taxa de juros - CDI / Over - acumulada no mês (% a.m.)",
+                "icon": "📊",
+                "tags": ["juros", "cdi", "ipea"],
+            },
+            {
+                "code": "BM12_TJLP12",
+                "title": "Taxa TJLP",
+                "desc": "Taxa de Juros de Longo Prazo (TJLP) (% a.m.)",
+                "icon": "🏭",
+                "tags": ["juros", "tjlp", "ipea"],
+            },
+            {
+                "code": "BM12_TJOVER12",
+                "title": "Taxa Selic Mensal",
+                "desc": "Taxa de juros - Over / Selic - acumulada no mês (% a.m.)",
+                "icon": "💰",
+                "tags": ["juros", "selic", "ipea"],
+            },
+            {
+                "code": "BM12_TJTBF12",
+                "title": "Taxa TBF",
+                "desc": "Taxa Básica Financeira (TBF) - 1º dia do mês (% a.m.)",
+                "icon": "📈",
+                "tags": ["juros", "tbf", "ipea"],
+            },
+            {
+                "code": "BM12_TJTR12",
+                "title": "Taxa TR",
+                "desc": "Taxa Referencial (TR) - 1º dia do mês (% a.m.)",
+                "icon": "🏠",
+                "tags": ["juros", "tr", "ipea"],
+            },
+        ],
     },
     "ipea_precos_inflacao": {
         "title": "Preços e Inflação",
         "class_name": "IpeaPrecosInflacaoScraper",
         "series": [
-            {"code": "IGP12_IGPDI12", "title": "IGP-DI Índice Geral", "desc": "Índice Geral de Preços - Disponibilidade Interna (IGP-DI) - índice (ago 1994 = 100)", "icon": "📊", "tags": ["igp_di", "inflacao", "ipea"]},
-            {"code": "IGP12_INCC12", "title": "INCC-DI Índice Geral", "desc": "Índice Nacional de Custo da Construção - Disponibilidade Interna (INCC-DI) - índice (ago 1994 = 100)", "icon": "🏗", "tags": ["incc_di", "construcao", "ipea"]},
-            {"code": "PRECOS12_INPC12", "title": "INPC Índice Geral", "desc": "Índice Nacional de Preços ao Consumidor (INPC) - geral - índice (dez 1993 = 100)", "icon": "📊", "tags": ["inpc", "inflacao", "ipea"]},
-            {"code": "PRECOS12_INPCBR12", "title": "INPC Taxa de Variação", "desc": "Índice Nacional de Preços ao Consumidor (INPC) - geral - taxa de variação (% a.m.)", "icon": "📈", "tags": ["inpc", "inflacao", "ipea"]}
-        ]
+            {
+                "code": "IGP12_IGPDI12",
+                "title": "IGP-DI Índice Geral",
+                "desc": "Índice Geral de Preços - Disponibilidade Interna (IGP-DI) - índice (ago 1994 = 100)",
+                "icon": "📊",
+                "tags": ["igp_di", "inflacao", "ipea"],
+            },
+            {
+                "code": "IGP12_INCC12",
+                "title": "INCC-DI Índice Geral",
+                "desc": "Índice Nacional de Custo da Construção - Disponibilidade Interna (INCC-DI) - índice (ago 1994 = 100)",
+                "icon": "🏗",
+                "tags": ["incc_di", "construcao", "ipea"],
+            },
+            {
+                "code": "PRECOS12_INPC12",
+                "title": "INPC Índice Geral",
+                "desc": "Índice Nacional de Preços ao Consumidor (INPC) - geral - índice (dez 1993 = 100)",
+                "icon": "📊",
+                "tags": ["inpc", "inflacao", "ipea"],
+            },
+            {
+                "code": "PRECOS12_INPCBR12",
+                "title": "INPC Taxa de Variação",
+                "desc": "Índice Nacional de Preços ao Consumidor (INPC) - geral - taxa de variação (% a.m.)",
+                "icon": "📈",
+                "tags": ["inpc", "inflacao", "ipea"],
+            },
+        ],
     },
     "ipea_fbcf": {
         "title": "Investimento FBCF",
         "class_name": "IpeaFbcfScraper",
         "series": [
-            {"code": "GAC12_INDFBCF12", "title": "Indicador FBCF Índice Real", "desc": "Indicador IPEA de FBCF - índice real (média 1995 = 100)", "icon": "🏗", "tags": ["fbcf", "investimento", "ipea"]},
-            {"code": "GAC12_INDFBCFDESSAZ12", "title": "Indicador FBCF Dessazonalizado", "desc": "Indicador IPEA de FBCF - índice real dessazonalizado (média 1995 = 100)", "icon": "🏗", "tags": ["fbcf", "investimento", "ipea"]},
-            {"code": "GAC12_INDFBCFCC12", "title": "Indicador FBCF Construção Civil", "desc": "Indicador IPEA de FBCF - construção civil - índice real (média 1995 = 100)", "icon": "🏗", "tags": ["fbcf", "construcao", "ipea"]},
-            {"code": "GAC12_INDFBCFCCDESSAZ12", "title": "Indicador FBCF Construção Dessazonalizado", "desc": "Indicador IPEA de FBCF - construção civil - índice real dessazonalizado (média 1995 = 100)", "icon": "🏗", "tags": ["fbcf", "construcao", "ipea"]}
-        ]
+            {
+                "code": "GAC12_INDFBCF12",
+                "title": "Indicador FBCF Índice Real",
+                "desc": "Indicador IPEA de FBCF - índice real (média 1995 = 100)",
+                "icon": "🏗",
+                "tags": ["fbcf", "investimento", "ipea"],
+            },
+            {
+                "code": "GAC12_INDFBCFDESSAZ12",
+                "title": "Indicador FBCF Dessazonalizado",
+                "desc": "Indicador IPEA de FBCF - índice real dessazonalizado (média 1995 = 100)",
+                "icon": "🏗",
+                "tags": ["fbcf", "investimento", "ipea"],
+            },
+            {
+                "code": "GAC12_INDFBCFCC12",
+                "title": "Indicador FBCF Construção Civil",
+                "desc": "Indicador IPEA de FBCF - construção civil - índice real (média 1995 = 100)",
+                "icon": "🏗",
+                "tags": ["fbcf", "construcao", "ipea"],
+            },
+            {
+                "code": "GAC12_INDFBCFCCDESSAZ12",
+                "title": "Indicador FBCF Construção Dessazonalizado",
+                "desc": "Indicador IPEA de FBCF - construção civil - índice real dessazonalizado (média 1995 = 100)",
+                "icon": "🏗",
+                "tags": ["fbcf", "construcao", "ipea"],
+            },
+        ],
     },
     "ipea_comercio_exterior": {
         "title": "Comércio Exterior",
         "class_name": "IpeaComercioExteriorScraper",
         "series": [
-            {"code": "FUNCEX12_XPT12", "title": "Exportações Preços Índice", "desc": "Índice de preços das exportações gerais (média 2018 = 100)", "icon": "🚢", "tags": ["exportacao", "precos", "ipea"]},
-            {"code": "FUNCEX12_MDPT12", "title": "Importações Preços Índice", "desc": "Índice de preços das importações gerais (média 2018 = 100)", "icon": "🚢", "tags": ["importacao", "precos", "ipea"]}
-        ]
+            {
+                "code": "FUNCEX12_XPT12",
+                "title": "Exportações Preços Índice",
+                "desc": "Índice de preços das exportações gerais (média 2018 = 100)",
+                "icon": "🚢",
+                "tags": ["exportacao", "precos", "ipea"],
+            },
+            {
+                "code": "FUNCEX12_MDPT12",
+                "title": "Importações Preços Índice",
+                "desc": "Índice de preços das importações gerais (média 2018 = 100)",
+                "icon": "🚢",
+                "tags": ["importacao", "precos", "ipea"],
+            },
+        ],
     },
     "ipea_producao_mineral": {
         "title": "Produção Transformação Mineral",
         "class_name": "IpeaProducaoMineralScraper",
         "series": [
-            {"code": "IBSIE12_QSCFG12", "title": "Produção de Ferro-Gusa", "desc": "Produção mensal de ferro-gusa (em toneladas)", "icon": "🧱", "tags": ["ferro_gusa", "producao", "ipea"]},
-            {"code": "IBSIE12_QSCAB12", "title": "Produção de Aço Bruto", "desc": "Produção mensal de aço bruto (em toneladas)", "icon": "🧱", "tags": ["aco_bruto", "producao", "ipea"]},
-            {"code": "IBSIE12_QSCL12", "title": "Produção de Laminados", "desc": "Produção mensal de laminados (em toneladas)", "icon": "🧱", "tags": ["laminados", "producao", "ipea"]}
-        ]
+            {
+                "code": "IBSIE12_QSCFG12",
+                "title": "Produção de Ferro-Gusa",
+                "desc": "Produção mensal de ferro-gusa (em toneladas)",
+                "icon": "🧱",
+                "tags": ["ferro_gusa", "producao", "ipea"],
+            },
+            {
+                "code": "IBSIE12_QSCAB12",
+                "title": "Produção de Aço Bruto",
+                "desc": "Produção mensal de aço bruto (em toneladas)",
+                "icon": "🧱",
+                "tags": ["aco_bruto", "producao", "ipea"],
+            },
+            {
+                "code": "IBSIE12_QSCL12",
+                "title": "Produção de Laminados",
+                "desc": "Produção mensal de laminados (em toneladas)",
+                "icon": "🧱",
+                "tags": ["laminados", "producao", "ipea"],
+            },
+        ],
     },
     "ipea_calendario": {
         "title": "Calendário e Dias Úteis",
         "class_name": "IpeaCalendarioScraper",
         "series": [
-            {"code": "SGS12_NDIASUTEISFUT12", "title": "Dias Úteis Futuros", "desc": "Número de dias úteis futuros estimados mensalmente", "icon": "📆", "tags": ["dias_uteis", "calendario", "ipea"]},
-            {"code": "SGS12_NDIASUTEISPAS12", "title": "Dias Úteis Passados", "desc": "Número de dias úteis passados no mês correspondente", "icon": "📅", "tags": ["dias_uteis", "calendario", "ipea"]}
-        ]
-    }
+            {
+                "code": "SGS12_NDIASUTEISFUT12",
+                "title": "Dias Úteis Futuros",
+                "desc": "Número de dias úteis futuros estimados mensalmente",
+                "icon": "📆",
+                "tags": ["dias_uteis", "calendario", "ipea"],
+            },
+            {
+                "code": "SGS12_NDIASUTEISPAS12",
+                "title": "Dias Úteis Passados",
+                "desc": "Número de dias úteis passados no mês correspondente",
+                "icon": "📅",
+                "tags": ["dias_uteis", "calendario", "ipea"],
+            },
+        ],
+    },
 }
 
 TEMPLATE_YAHOO = """# coding: utf-8
@@ -383,6 +592,7 @@ if __name__ == "__main__":
     {class_name}().run()
 """
 
+
 def clean_old():
     # Remove scrapers antigos do Yahoo
     old_files = [str(SCRAPERS_DIR / "yahoo_finance_series.py")]
@@ -403,6 +613,7 @@ def clean_old():
                 print(f"Removido CSV antigo: {Path(f).name}")
         except Exception:
             pass
+
 
 def generate():
     clean_old()
@@ -434,6 +645,7 @@ def generate():
         file_path.write_text(content, encoding="utf-8")
         file_path.chmod(file_path.stat().st_mode | stat.S_IEXEC)
         print(f"Gerado scraper Ipea: {file_path.name}")
+
 
 if __name__ == "__main__":
     generate()

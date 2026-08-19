@@ -11,11 +11,12 @@ import time
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from utils.base import b64_encode_params, get_logger, nova_session, salvar_csv
-from utils.b3_helpers import get_company_seeds
-from utils.parsers import json_rows, enriquecer, read_existing_header
 import pandas as pd
+
 from scrapers.utils.base import BaseScraper
+from utils.b3_helpers import get_company_seeds
+from utils.base import b64_encode_params, get_logger, nova_session
+from utils.parsers import enriquecer, json_rows, read_existing_header
 
 log = get_logger("b3_companhias_detalhes")
 
@@ -55,23 +56,24 @@ def capturar() -> tuple[list[dict], list[str]]:
             header.append(col)
     return enriched, header
 
+
 class B3CompanhiasDetalhesScraper(BaseScraper):
     name = "b3_companhias_detalhes"
     group = "b3"
     enabled = False
     phase = 1
     accumulate = True
-    chaves_dedup = ['data_captura', 'conjunto', 'registro_hash']
-    
+    chaves_dedup = ["data_captura", "conjunto", "registro_hash"]
+
     # Catálogo de Metadados
-    title = 'B3 — Detalhes de Companhias'
-    description = 'Detalhes cadastrais completos das companhias listadas na B3 via API JSON: segmento de listagem, CNPJ, setor, código CVM e dados de registro.'
-    icon = '🏢'
-    icon_class = 'icon-b3'
-    badge = 'Diário'
-    badge_class = 'badge-daily'
-    tags = ['companhias', 'cadastro', 'cnpj', 'setor']
-    source = 'B3 API'
+    title = "B3 — Detalhes de Companhias"
+    description = "Detalhes cadastrais completos das companhias listadas na B3 via API JSON: segmento de listagem, CNPJ, setor, código CVM e dados de registro."
+    icon = "🏢"
+    icon_class = "icon-b3"
+    badge = "Diário"
+    badge_class = "badge-daily"
+    tags = ["companhias", "cadastro", "cnpj", "setor"]
+    source = "B3 API"
 
     def fetch(self) -> pd.DataFrame:
         log.info("=== B3 — Detalhes de Companhias Listadas ===")

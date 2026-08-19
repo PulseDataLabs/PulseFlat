@@ -12,17 +12,24 @@ Uso:
     python scripts/migrate_portfolio_numbers.py --quiet
 """
 
+import argparse
 import csv
 import sys
 import time
-import argparse
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from scripts.utils.ux import (
-    banner, section, print_start, print_done, print_fail, print_info,
-    print_summary, add_common_args, apply_common_args, ColorLogger,
+    ColorLogger,
+    add_common_args,
+    apply_common_args,
+    banner,
+    print_done,
+    print_info,
+    print_start,
+    print_summary,
+    section,
 )
 
 log = ColorLogger("migrate_portfolio_numbers")
@@ -84,14 +91,20 @@ def process_file(file_path: Path, dry_run: bool = False) -> tuple[int, int]:
 
 def main(dry_run: bool = False) -> None:
     t0 = time.time()
-    banner("Migrar Números Portfolio",
-           "Limpa quantidade/participação em CSVs de carteiras B3")
+    banner(
+        "Migrar Números Portfolio",
+        "Limpa quantidade/participação em CSVs de carteiras B3",
+    )
     section("Processando arquivos", "clean")
 
     data_dir = Path(__file__).resolve().parents[1] / "data"
     compiled_file = data_dir / "b3_carteiras_teoricas.csv"
     individual_files = sorted(data_dir.glob("b3_carteira_teorica_*.csv"))
-    all_files = [compiled_file] + individual_files if compiled_file.exists() else individual_files
+    all_files = (
+        [compiled_file] + individual_files
+        if compiled_file.exists()
+        else individual_files
+    )
 
     if not all_files:
         log.warning("Nenhum arquivo de carteira teórica encontrado.")

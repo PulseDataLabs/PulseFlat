@@ -9,12 +9,12 @@ Usa um arquivo JSON de estado local para rastrear as notificações enviadas dia
 import json
 import os
 import re
-import sys
 import smtplib
-from datetime import date, datetime
-from pathlib import Path
-from email.mime.text import MIMEText
+import sys
+from datetime import datetime
 from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+from pathlib import Path
 
 import requests
 from dotenv import load_dotenv
@@ -23,24 +23,22 @@ load_dotenv()
 
 # Garante que o diretório raiz esteja no path para importar utils/scrapers
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from utils import get_logger, nova_session
-from utils.parsers import _CAL
+from utils import get_logger
 from utils.base import FUSO
+from utils.parsers import _CAL
 
 log = get_logger("alerta_debentures")
 
-STATE_FILE_PATH = Path(__file__).resolve().parents[1] / "data" / "debentures_alert_state.json"
+STATE_FILE_PATH = (
+    Path(__file__).resolve().parents[1] / "data" / "debentures_alert_state.json"
+)
 
 
 def send_telegram(token: str, chat_id: str, text: str):
     """Envia mensagem para o Telegram."""
     log.info("Disparando notificação via Telegram...")
     url = f"https://api.telegram.org/bot{token}/sendMessage"
-    payload = {
-        "chat_id": chat_id,
-        "text": text,
-        "parse_mode": "HTML"
-    }
+    payload = {"chat_id": chat_id, "text": text, "parse_mode": "HTML"}
     try:
         r = requests.post(url, json=payload, timeout=15)
         r.raise_for_status()
@@ -49,7 +47,16 @@ def send_telegram(token: str, chat_id: str, text: str):
         log.error(f"Erro ao notificar Telegram: {e}")
 
 
-def send_email(server: str, port: str, user: str, password: str, from_email: str, to_email: str, subject: str, html_content: str):
+def send_email(
+    server: str,
+    port: str,
+    user: str,
+    password: str,
+    from_email: str,
+    to_email: str,
+    subject: str,
+    html_content: str,
+):
     """Envia e-mail via SMTP com suporte a STARTTLS e SSL."""
     log.info("Disparando notificação via E-mail...")
     msg = MIMEMultipart("alternative")
@@ -90,18 +97,14 @@ def send_power_automate(url: str, title: str, message: str):
                             "type": "TextBlock",
                             "text": title,
                             "weight": "Bolder",
-                            "size": "Medium"
+                            "size": "Medium",
                         },
-                        {
-                            "type": "TextBlock",
-                            "text": message,
-                            "wrap": True
-                        }
+                        {"type": "TextBlock", "text": message, "wrap": True},
                     ],
-                    "schema": "http://adaptivecards.io/schemas/adaptive-card.json"
-                }
+                    "schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+                },
             }
-        ]
+        ],
     }
     try:
         r = requests.post(url, json=adaptive_card, timeout=15)
@@ -122,7 +125,7 @@ def verificar_dados(html: str) -> bool:
         r"nenhuma\s+informa|"
         r"n[aã]o\s+foram\s+encontrados|"
         r"n[aã]o\s+existe\s+resposta",
-        re.IGNORECASE
+        re.IGNORECASE,
     )
     if texto_sem_dados.search(html):
         return False
@@ -130,19 +133,22 @@ def verificar_dados(html: str) -> bool:
     # 2. Verifica estrutura da tabela com BeautifulSoup
     try:
         from bs4 import BeautifulSoup
+
         soup = BeautifulSoup(html, "html.parser")
         rows = soup.find_all("tr")
-        
+
         date_pattern = re.compile(r"^\d{2}/\d{2}/\d{4}$")
         isin_pattern = re.compile(r"^[A-Z]{2}[A-Z0-9]{10}$", re.IGNORECASE)
-        
+
         for row in rows:
             cells = row.find_all(["td", "th"])
             # Remove células vazias/espaçadoras
             non_empty_texts = [text for c in cells if (text := c.get_text(strip=True))]
             if len(non_empty_texts) >= 4:
                 # O primeiro campo deve ser uma data (Data) e o quarto deve ser o ISIN
-                if date_pattern.match(non_empty_texts[0]) and isin_pattern.match(non_empty_texts[3]):
+                if date_pattern.match(non_empty_texts[0]) and isin_pattern.match(
+                    non_empty_texts[3]
+                ):
                     return True
     except Exception as e:
         log.warning(f"Erro ao analisar HTML com BeautifulSoup: {e}. Usando fallback.")
@@ -155,16 +161,18 @@ def verificar_dados(html: str) -> bool:
 def main():
     hoje = datetime.now(FUSO).date()
     hoje_iso = hoje.strftime("%Y-%m-%d")
-    
+
     # 1. Determina a data de referência esperada (último dia útil)
     ref_date = _CAL.offset(hoje, -1)
     ref_date_str = ref_date.strftime("%d/%m/%Y")
-    log.info(f"Hoje: {hoje.strftime('%d/%m/%Y')} (ISO: {hoje_iso}) | Data Ref Esperada: {ref_date_str}")
+    log.info(
+        f"Hoje: {hoje.strftime('%d/%m/%Y')} (ISO: {hoje_iso}) | Data Ref Esperada: {ref_date_str}"
+    )
 
     # 2. Carrega o estado de notificações e verifica se já notificado hoje
     state_path = STATE_FILE_PATH
     state = {"ultima_notificacao": ""}
-    
+
     if state_path.exists():
         try:
             with state_path.open("r", encoding="utf-8") as f:
@@ -178,11 +186,13 @@ def main():
 
     # 3. Consulta o site debentures.com.br
     session = requests.Session()
-    session.headers.update({
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
-        "Accept-Language": "pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7",
-    })
+    session.headers.update(
+        {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+            "Accept-Language": "pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7",
+        }
+    )
 
     f_url = "https://www.debentures.com.br/exploreosnd/consultaadados/mercadosecundario/precosdenegociacao_f.asp"
     r_url = "https://www.debentures.com.br/exploreosnd/consultaadados/mercadosecundario/precosdenegociacao_r.asp"
@@ -202,13 +212,10 @@ def main():
         "dt_ini": ref_date_str,
         "dt_fim": hoje.strftime("%d/%m/%Y"),
         "Submit32.x": "38",
-        "Submit32.y": "16"
+        "Submit32.y": "16",
     }
-    
-    headers = {
-        "Content-Type": "application/x-www-form-urlencoded",
-        "Referer": f_url
-    }
+
+    headers = {"Content-Type": "application/x-www-form-urlencoded", "Referer": f_url}
 
     try:
         log.info(f"Consultando dados de {ref_date_str} a {post_data['dt_fim']}...")
@@ -219,12 +226,14 @@ def main():
         sys.exit(1)
 
     html = resp.text
-    
+
     # 4. Avalia se existem dados disponíveis usando a heurística aprimorada
     tem_dados = verificar_dados(html)
-    
+
     if not tem_dados:
-        log.info("Dados ainda indisponíveis na ANBIMA. Encerrando e aguardando próxima checagem.")
+        log.info(
+            "Dados ainda indisponíveis na ANBIMA. Encerrando e aguardando próxima checagem."
+        )
         sys.exit(0)
 
     log.info("=== DADOS DISPONÍVEIS DETECTADOS! ===")
@@ -241,7 +250,7 @@ def main():
         send_power_automate(
             url=power_automate_url,
             title="Debêntures.com.br - Preços de negociação",
-            message=f"Dados disponíveis para captura. Data de referência: {ref_date_str}"
+            message=f"Dados disponíveis para captura. Data de referência: {ref_date_str}",
         )
 
     smtp_server = os.getenv("SMTP_SERVER")
@@ -253,12 +262,14 @@ def main():
 
     if smtp_server and smtp_user and smtp_pass:
         email_subject = os.getenv("SMTP_SUBJECT", "Debêntures - Disponível")
-        email_subject = email_subject.replace("{data}", ref_date_str).replace("{dt_ini}", ref_date_str)
-        
+        email_subject = email_subject.replace("{data}", ref_date_str).replace(
+            "{dt_ini}", ref_date_str
+        )
+
         download_date_str = hoje.strftime("%Y%m%d")
         download_url = f"https://www.debentures.com.br/exploreosnd/consultaadados/mercadosecundario/precosdenegociacao_e.asp?op_exc=Nada&emissor=&isin=&ativo=&dt_ini=20250101&dt_fim={download_date_str}"
         page_url = "https://www.debentures.com.br/exploreosnd/consultaadados/mercadosecundario/precosdenegociacao_f.asp"
-        
+
         email_html = f"""
         <html>
         <body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333333; margin: 0; padding: 20px;">
@@ -287,9 +298,20 @@ def main():
         </body>
         </html>
         """
-        send_email(smtp_server, smtp_port, smtp_user, smtp_pass, smtp_from, smtp_to, email_subject, email_html)
+        send_email(
+            smtp_server,
+            smtp_port,
+            smtp_user,
+            smtp_pass,
+            smtp_from,
+            smtp_to,
+            email_subject,
+            email_html,
+        )
     else:
-        log.warning("Credenciais de SMTP incompletas. Notificação por E-mail não enviada.")
+        log.warning(
+            "Credenciais de SMTP incompletas. Notificação por E-mail não enviada."
+        )
 
     # 6. Grava a data de hoje no JSON de estado para evitar duplicidade de notificações
     log.info("Atualizando arquivo de estado...")
@@ -307,10 +329,10 @@ def main():
 
 if __name__ == "__main__":
     from utils.base import acquire_lock
+
     try:
         with acquire_lock("pulseflat", blocking=False):
             main()
     except RuntimeError as e:
         log.warning(f"Abortando alerta de debêntures: {e}")
         sys.exit(0)
-

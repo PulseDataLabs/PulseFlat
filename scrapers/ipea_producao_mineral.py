@@ -7,14 +7,35 @@ Saída:   data/ipea_producao_mineral.csv
 
 import os
 import sys
-import datetime
+
 import pandas as pd
-import requests
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from scrapers.utils.base import BaseScraper
 
-SERIES = [{'code': 'IBSIE12_QSCFG12', 'title': 'Produção de Ferro-Gusa', 'desc': 'Produção mensal de ferro-gusa (em toneladas)', 'icon': '🧱', 'tags': ['ferro_gusa', 'producao', 'ipea']}, {'code': 'IBSIE12_QSCAB12', 'title': 'Produção de Aço Bruto', 'desc': 'Produção mensal de aço bruto (em toneladas)', 'icon': '🧱', 'tags': ['aco_bruto', 'producao', 'ipea']}, {'code': 'IBSIE12_QSCL12', 'title': 'Produção de Laminados', 'desc': 'Produção mensal de laminados (em toneladas)', 'icon': '🧱', 'tags': ['laminados', 'producao', 'ipea']}]
+SERIES = [
+    {
+        "code": "IBSIE12_QSCFG12",
+        "title": "Produção de Ferro-Gusa",
+        "desc": "Produção mensal de ferro-gusa (em toneladas)",
+        "icon": "🧱",
+        "tags": ["ferro_gusa", "producao", "ipea"],
+    },
+    {
+        "code": "IBSIE12_QSCAB12",
+        "title": "Produção de Aço Bruto",
+        "desc": "Produção mensal de aço bruto (em toneladas)",
+        "icon": "🧱",
+        "tags": ["aco_bruto", "producao", "ipea"],
+    },
+    {
+        "code": "IBSIE12_QSCL12",
+        "title": "Produção de Laminados",
+        "desc": "Produção mensal de laminados (em toneladas)",
+        "icon": "🧱",
+        "tags": ["laminados", "producao", "ipea"],
+    },
+]
 API_URL = "http://www.ipeadata.gov.br/api/odata4/ValoresSerie(SERCODIGO='{code}')"
 
 
@@ -51,13 +72,15 @@ class IpeaProducaoMineralScraper(BaseScraper):
                 if val is None:
                     continue
 
-                records.append({
-                    "data_referencia": date_ref,
-                    "codigo_ativo": item["code"],
-                    "label": item["title"],
-                    "valor": float(val),
-                })
-            
+                records.append(
+                    {
+                        "data_referencia": date_ref,
+                        "codigo_ativo": item["code"],
+                        "label": item["title"],
+                        "valor": float(val),
+                    }
+                )
+
             if records:
                 frames.append(pd.DataFrame(records))
 

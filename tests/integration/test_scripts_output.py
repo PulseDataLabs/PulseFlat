@@ -27,11 +27,14 @@ SCRIPTS = [
 def run_script(path: Path, *args) -> subprocess.CompletedProcess:
     return subprocess.run(
         [sys.executable, str(path), *args],
-        capture_output=True, text=True, timeout=30,
+        capture_output=True,
+        text=True,
+        timeout=30,
     )
 
 
 # ── Banner ───────────────────────────────────────────────────────────
+
 
 class TestBannerOutput:
     """Verifica que todos os scripts mostram banner no início."""
@@ -49,6 +52,7 @@ class TestBannerOutput:
 
 # ── Seções ───────────────────────────────────────────────────────────
 
+
 class TestSectionOutput:
     """Verifica que os scripts mostram seções temáticas."""
 
@@ -57,15 +61,21 @@ class TestSectionOutput:
         result = run_script(path, "--dry-run", "--no-color")
         assert "──" in result.stdout
 
-    @pytest.mark.parametrize("name,path", [
-        (n, p) for n, p in SCRIPTS if n not in ("generate_catalog", "generate_market_latest")
-    ])
+    @pytest.mark.parametrize(
+        "name,path",
+        [
+            (n, p)
+            for n, p in SCRIPTS
+            if n not in ("generate_catalog", "generate_market_latest")
+        ],
+    )
     def test_section_has_processando(self, name, path):
         result = run_script(path, "--dry-run", "--no-color")
         assert "Processando" in result.stdout
 
 
 # ── Status Prints ────────────────────────────────────────────────────
+
 
 class TestStatusPrints:
     """Verifica prints de start/done/fail/warn/skip."""
@@ -84,6 +94,7 @@ class TestStatusPrints:
 
 
 # ── Summary ──────────────────────────────────────────────────────────
+
 
 class TestSummaryOutput:
     """Verifica que todos os scripts mostram resumo final."""
@@ -111,6 +122,7 @@ class TestSummaryOutput:
 
 # ── Exit Codes ───────────────────────────────────────────────────────
 
+
 class TestExitCodes:
     """Verifica exit codes corretos."""
 
@@ -132,6 +144,7 @@ class TestExitCodes:
 
 # ── Output mínimo (--quiet) ──────────────────────────────────────────
 
+
 class TestMinimalOutput:
     """Verifica que --quiet produz output mínimo mas ainda tem summary."""
 
@@ -143,6 +156,7 @@ class TestMinimalOutput:
 
 
 # ── Dry-run Mensagem ─────────────────────────────────────────────────
+
 
 class TestDryRunMessage:
     """Verifica mensagem de dry-run."""

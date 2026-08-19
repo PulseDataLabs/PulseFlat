@@ -1,3 +1,5 @@
+import gzip
+
 """
 scripts/padronizar_datasets.py
 -------------------------------
@@ -8,9 +10,11 @@ Aplica padronização em todos os CSVs de data/:
   - Renomeia colunas Unnamed em bacen_conglomerados.csv
 """
 
-import csv, re, os, shutil, sys
+import csv
+import re
+import shutil
+import sys
 from pathlib import Path
-from collections import OrderedDict
 
 # Adiciona o diretório raiz ao sys.path
 ROOT_DIR = Path(__file__).resolve().parents[1]
@@ -43,7 +47,7 @@ RENAMES: dict[str, dict[str, str]] = {
 
 # ── Arquivos que precisam ter data_captura movida para pos 0 ──────────
 REORDER_DATA_CAPTURA = [
-    "anbima_debentures.csv",        # pos 16 → 0
+    "anbima_debentures.csv",  # pos 16 → 0
     "debentures_mercado_secundario_precos_negociacao.csv.gz",  # pos 10 → 0
     "debentures_emissoes_caracteristicas.csv",  # pos 84 → 0
 ]
@@ -54,13 +58,12 @@ DATE_FIXES: dict[str, dict[str, str]] = {
         "data": "YYYY/MM/DD",  # formato atual
     },
     "debentures_mercado_secundario_precos_negociacao.csv.gz": {
-        "data_referencia": "D/M/YYYY",    # formato atual
+        "data_referencia": "D/M/YYYY",  # formato atual
     },
 }
 
 
 def ler_csv(path: Path) -> tuple[list[str], list[dict]]:
-    import gzip
     if path.suffix == ".gz":
         with gzip.open(path, "rt", encoding="utf-8", newline="") as f:
             reader = csv.DictReader(f)
@@ -75,7 +78,6 @@ def ler_csv(path: Path) -> tuple[list[str], list[dict]]:
 
 
 def escrever_csv(path: Path, header: list[str], rows: list[dict]):
-    import gzip
     tmp = path.with_suffix(path.suffix + ".tmp")
     if path.suffix == ".gz":
         with gzip.open(tmp, "wt", encoding="utf-8", newline="") as f:
@@ -104,7 +106,9 @@ def renomear_nas_linhas(rows: list[dict], renames: dict[str, str]) -> list[dict]
     return out
 
 
-def mover_data_captura(header: list[str], rows: list[dict]) -> tuple[list[str], list[dict]]:
+def mover_data_captura(
+    header: list[str], rows: list[dict]
+) -> tuple[list[str], list[dict]]:
     if "data_captura" not in header:
         return header, rows
     if header[0] == "data_captura":
@@ -143,11 +147,15 @@ def parse_date_dmy(val: str) -> str:
     return val
 
 
-def fixar_datas(header: list[str], rows: list[dict], fixes: dict[str, str]) -> list[dict]:
+def fixar_datas(
+    header: list[str], rows: list[dict], fixes: dict[str, str]
+) -> list[dict]:
     for col, fmt in fixes.items():
         if col not in header:
             continue
-        parser = {"YYYY/MM/DD": parse_date_ymd_slash, "D/M/YYYY": parse_date_dmy}.get(fmt)
+        parser = {"YYYY/MM/DD": parse_date_ymd_slash, "D/M/YYYY": parse_date_dmy}.get(
+            fmt
+        )
         if not parser:
             continue
         for row in rows:
@@ -155,7 +163,9 @@ def fixar_datas(header: list[str], rows: list[dict], fixes: dict[str, str]) -> l
     return rows
 
 
-def fix_bacen_conglomerados(header: list[str], rows: list[dict]) -> tuple[list[str], list[dict]]:
+def fix_bacen_conglomerados(
+    header: list[str], rows: list[dict]
+) -> tuple[list[str], list[dict]]:
     renames = {
         "BANCO CENTRAL DO BRASIL - BACEN": "departamento",
         "Unnamed: 1": "secao_1",
@@ -217,7 +227,7 @@ def processar():
     path = DATA / "debentures_mercado_secundario_precos_negociacao.csv.gz"
     if path.exists():
         header, rows = ler_csv(path)
-        
+
         def clean_float(val):
             if not val or val.strip() in ("-", ""):
                 return ""
@@ -228,7 +238,7 @@ def processar():
                 f = float(val_str)
                 if f.is_integer():
                     return str(int(f))
-                return f"{f:.8f}".rstrip('0').rstrip('.')
+                return f"{f:.8f}".rstrip("0").rstrip(".")
             except ValueError:
                 return val_str
 
@@ -253,14 +263,20 @@ def processar():
             for col in ["quantidade", "numero_de_negocios"]:
                 if col in new_row:
                     new_row[col] = clean_int(new_row[col])
-            
+
             # Recalcula o hash do registro com os valores novos
-            hash_input = {k: v for k, v in new_row.items() if k not in ("data_captura", "registro_hash")}
+            hash_input = {
+                k: v
+                for k, v in new_row.items()
+                if k not in ("data_captura", "registro_hash")
+            }
             new_row["registro_hash"] = hash_row(hash_input)
             cleaned_rows.append(new_row)
-            
+
         escrever_csv(path, header, cleaned_rows)
-        print("  [OK] debentures_mercado_secundario_precos_negociacao.csv.gz — campos numéricos padronizados")
+        print(
+            "  [OK] debentures_mercado_secundario_precos_negociacao.csv.gz — campos numéricos padronizados"
+        )
 
     print("\n  Todos os CSVs padronizados com sucesso.")
 

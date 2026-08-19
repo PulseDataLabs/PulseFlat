@@ -7,14 +7,42 @@ Saída:   data/ipea_fbcf.csv
 
 import os
 import sys
-import datetime
+
 import pandas as pd
-import requests
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from scrapers.utils.base import BaseScraper
 
-SERIES = [{'code': 'GAC12_INDFBCF12', 'title': 'Indicador FBCF Índice Real', 'desc': 'Indicador IPEA de FBCF - índice real (média 1995 = 100)', 'icon': '🏗', 'tags': ['fbcf', 'investimento', 'ipea']}, {'code': 'GAC12_INDFBCFDESSAZ12', 'title': 'Indicador FBCF Dessazonalizado', 'desc': 'Indicador IPEA de FBCF - índice real dessazonalizado (média 1995 = 100)', 'icon': '🏗', 'tags': ['fbcf', 'investimento', 'ipea']}, {'code': 'GAC12_INDFBCFCC12', 'title': 'Indicador FBCF Construção Civil', 'desc': 'Indicador IPEA de FBCF - construção civil - índice real (média 1995 = 100)', 'icon': '🏗', 'tags': ['fbcf', 'construcao', 'ipea']}, {'code': 'GAC12_INDFBCFCCDESSAZ12', 'title': 'Indicador FBCF Construção Dessazonalizado', 'desc': 'Indicador IPEA de FBCF - construção civil - índice real dessazonalizado (média 1995 = 100)', 'icon': '🏗', 'tags': ['fbcf', 'construcao', 'ipea']}]
+SERIES = [
+    {
+        "code": "GAC12_INDFBCF12",
+        "title": "Indicador FBCF Índice Real",
+        "desc": "Indicador IPEA de FBCF - índice real (média 1995 = 100)",
+        "icon": "🏗",
+        "tags": ["fbcf", "investimento", "ipea"],
+    },
+    {
+        "code": "GAC12_INDFBCFDESSAZ12",
+        "title": "Indicador FBCF Dessazonalizado",
+        "desc": "Indicador IPEA de FBCF - índice real dessazonalizado (média 1995 = 100)",
+        "icon": "🏗",
+        "tags": ["fbcf", "investimento", "ipea"],
+    },
+    {
+        "code": "GAC12_INDFBCFCC12",
+        "title": "Indicador FBCF Construção Civil",
+        "desc": "Indicador IPEA de FBCF - construção civil - índice real (média 1995 = 100)",
+        "icon": "🏗",
+        "tags": ["fbcf", "construcao", "ipea"],
+    },
+    {
+        "code": "GAC12_INDFBCFCCDESSAZ12",
+        "title": "Indicador FBCF Construção Dessazonalizado",
+        "desc": "Indicador IPEA de FBCF - construção civil - índice real dessazonalizado (média 1995 = 100)",
+        "icon": "🏗",
+        "tags": ["fbcf", "construcao", "ipea"],
+    },
+]
 API_URL = "http://www.ipeadata.gov.br/api/odata4/ValoresSerie(SERCODIGO='{code}')"
 
 
@@ -51,13 +79,15 @@ class IpeaFbcfScraper(BaseScraper):
                 if val is None:
                     continue
 
-                records.append({
-                    "data_referencia": date_ref,
-                    "codigo_ativo": item["code"],
-                    "label": item["title"],
-                    "valor": float(val),
-                })
-            
+                records.append(
+                    {
+                        "data_referencia": date_ref,
+                        "codigo_ativo": item["code"],
+                        "label": item["title"],
+                        "valor": float(val),
+                    }
+                )
+
             if records:
                 frames.append(pd.DataFrame(records))
 

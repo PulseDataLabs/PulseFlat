@@ -1,10 +1,12 @@
 import sys
 import time
 from pathlib import Path
-import pandas as pd
-from utils import salvar_csv, agora_brt
 
-from scripts.utils.ux import ColorLogger, banner, print_start, print_done, print_fail
+import pandas as pd
+import requests
+
+from scripts.utils.ux import ColorLogger, banner, print_done
+from utils import agora_brt, salvar_csv
 
 
 class BaseScraper:
@@ -44,17 +46,21 @@ class BaseScraper:
         if impersonate:
             try:
                 from curl_cffi import requests as curl_requests
+
                 session = curl_requests.Session()
-                session.headers.update({
-                    "Accept-Language": "pt-BR,pt;q=0.9",
-                })
+                session.headers.update(
+                    {
+                        "Accept-Language": "pt-BR,pt;q=0.9",
+                    }
+                )
                 # No curl_cffi, podemos passar impersonate na criação/chamada
                 session.impersonate = impersonate
                 return session
             except ImportError:
-                self.logger.warning("curl_cffi não instalada — caindo de volta para requests padrão.")
-        
-        import requests
+                self.logger.warning(
+                    "curl_cffi não instalada — caindo de volta para requests padrão."
+                )
+
         session = requests.Session()
         return session
 
@@ -62,14 +68,21 @@ class BaseScraper:
         raise NotImplementedError("Cada scraper deve implementar o método fetch.")
 
     def run(self) -> None:
-        is_pipeline = any("run_all" in str(getattr(m, "__file__", "")) for m in sys.modules.values())
+        is_pipeline = any(
+            "run_all" in str(getattr(m, "__file__", "")) for m in sys.modules.values()
+        )
 
         if not is_pipeline:
             banner(self.title or self.name.replace("_", " ").title())
 
         # Se não foram fornecidos programaticamente, tenta ler dos argumentos de CLI
-        if self.target_date is None and self.start_date is None and self.end_date is None:
+        if (
+            self.target_date is None
+            and self.start_date is None
+            and self.end_date is None
+        ):
             import argparse
+
             parser = argparse.ArgumentParser(add_help=False)
             parser.add_argument("--date")
             parser.add_argument("--start-date")
@@ -78,12 +91,15 @@ class BaseScraper:
                 args, _ = parser.parse_known_args()
                 if args.date:
                     from datetime import date
+
                     self.target_date = date.fromisoformat(args.date)
                 if args.start_date:
                     from datetime import date
+
                     self.start_date = date.fromisoformat(args.start_date)
                 if args.end_date:
                     from datetime import date
+
                     self.end_date = date.fromisoformat(args.end_date)
             except Exception:
                 pass
@@ -113,37 +129,41 @@ class BaseScraper:
             def clean_series_vectorized(s: pd.Series) -> pd.Series:
                 s_str = s.astype(str).str.strip()
                 result = s_str.copy()
-                
+
                 # DD/MM/YYYY
-                mask_date1 = s_str.str.match(r'^\d{2}/\d{2}/\d{4}$')
+                mask_date1 = s_str.str.match(r"^\d{2}/\d{2}/\d{4}$")
                 if mask_date1.any():
                     result.loc[mask_date1] = s_str.loc[mask_date1].str.replace(
-                        r'^(\d{2})/(\d{2})/(\d{4})$', r'\3-\2-\1', regex=True
+                        r"^(\d{2})/(\d{2})/(\d{4})$", r"\3-\2-\1", regex=True
                     )
-                    
+
                 # DD/MM/YY
-                mask_date2 = s_str.str.match(r'^\d{2}/\d{2}/\d{2}$')
+                mask_date2 = s_str.str.match(r"^\d{2}/\d{2}/\d{2}$")
                 if mask_date2.any():
                     result.loc[mask_date2] = s_str.loc[mask_date2].str.replace(
-                        r'^(\d{2})/(\d{2})/(\d{2})$', r'20\3-\2-\1', regex=True
+                        r"^(\d{2})/(\d{2})/(\d{2})$", r"20\3-\2-\1", regex=True
                     )
-                    
+
                 # YYYYMMDD
-                mask_date3 = s_str.str.match(r'^\d{8}$')
+                mask_date3 = s_str.str.match(r"^\d{8}$")
                 if mask_date3.any():
                     result.loc[mask_date3] = s_str.loc[mask_date3].str.replace(
-                        r'^(\d{4})(\d{2})(\d{2})$', r'\1-\2-\3', regex=True
+                        r"^(\d{4})(\d{2})(\d{2})$", r"\1-\2-\3", regex=True
                     )
-                    
+
                 # Números brasileiros
-                mask_num = s_str.str.contains(r',') & (s_str.str.count(r',') == 1)
+                mask_num = s_str.str.contains(r",") & (s_str.str.count(r",") == 1)
                 if mask_num.any():
                     s_num = s_str.loc[mask_num]
-                    clean_num = s_num.str.replace(r'[\.\%\-\+\s]', '', regex=True).str.replace(',', '', regex=False)
+                    clean_num = s_num.str.replace(
+                        r"[\.\%\-\+\s]", "", regex=True
+                    ).str.replace(",", "", regex=False)
                     is_digit_mask = clean_num.str.isdigit()
                     if is_digit_mask.any():
                         valid_nums = s_num.loc[is_digit_mask]
-                        converted = valid_nums.str.replace('.', '', regex=False).str.replace(',', '.', regex=False)
+                        converted = valid_nums.str.replace(
+                            ".", "", regex=False
+                        ).str.replace(",", ".", regex=False)
                         result.loc[valid_nums.index] = converted
 
                 result = result.fillna("").replace({"nan": "", "None": ""})
@@ -175,7 +195,10 @@ class BaseScraper:
 
             elapsed = time.time() - t0
             if not is_pipeline:
-                print_done(f"{len(df_cleaned)} registros salvos em {self.output_file.name}", elapsed=elapsed)
+                print_done(
+                    f"{len(df_cleaned)} registros salvos em {self.output_file.name}",
+                    elapsed=elapsed,
+                )
 
         except Exception as e:
             elapsed = time.time() - t0

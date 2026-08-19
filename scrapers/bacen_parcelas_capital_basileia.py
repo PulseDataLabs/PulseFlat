@@ -1,3 +1,5 @@
+from scripts.utils.ux import print_done, print_warn
+
 #!/usr/bin/env python
 # coding: utf-8
 """
@@ -12,9 +14,9 @@ Dois conjuntos são capturados:
   - Conglomerados Prudenciais (TipoInstituicao=1)
   - Instituições Individuais   (TipoInstituicao=3)
 """
+import datetime
 import os
 import sys
-import datetime
 import time
 from io import StringIO
 
@@ -23,7 +25,6 @@ import requests
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from scrapers.utils.base import BaseScraper
-
 
 # API OData do BCB (Olinda) – IFData
 ODATA_BASE = (
@@ -78,7 +79,9 @@ def _get_periodos_recentes(n_trimestres: int = 4) -> list[int]:
 
 
 def _download_relatorio_odata(
-    session: requests.Session, periodo: int, tipo_codigo: int,
+    session: requests.Session,
+    periodo: int,
+    tipo_codigo: int,
 ) -> pd.DataFrame:
     params = {
         "@AnoMes": str(periodo),
@@ -113,7 +116,6 @@ class BacenParcelasCapitalBasileiaScraper(BaseScraper):
     chaves_dedup = ["AnoMes", "TipoInstituicao", "CodInst", "Conta", "Grupo"]
 
     def fetch(self) -> pd.DataFrame:
-        from scripts.utils.ux import print_done, print_warn
 
         session = requests.Session()
 
@@ -124,7 +126,9 @@ class BacenParcelasCapitalBasileiaScraper(BaseScraper):
             for tipo in TIPOS_INST:
                 t0 = time.time()
                 df = _download_relatorio_odata(
-                    session, periodo, tipo["codigo"],
+                    session,
+                    periodo,
+                    tipo["codigo"],
                 )
                 if df.empty:
                     print_warn(f"sem dados: {tipo['label']} {periodo}")
