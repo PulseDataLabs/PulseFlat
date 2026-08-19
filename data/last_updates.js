@@ -1,43 +1,43 @@
 window.PULSEFLAT_LAST_UPDATES = {
   "b3_carteira_teorica_ifnc.csv": {
     "min": "2026-06-03",
-    "max": "2026-08-18"
+    "max": "2026-08-19"
   },
   "b3_carteira_teorica_isee.csv": {
     "min": "2026-06-03",
-    "max": "2026-08-18"
+    "max": "2026-08-19"
   },
   "b3_carteira_teorica_smll.csv": {
     "min": "2026-06-03",
-    "max": "2026-08-18"
+    "max": "2026-08-19"
   },
   "b3_classificacao_setorial.csv": {
-    "min": "2026-08-18",
-    "max": "2026-08-18"
+    "min": "2026-08-19",
+    "max": "2026-08-19"
   },
   "b3_etfs.csv": {
-    "min": "2026-08-18",
-    "max": "2026-08-18"
+    "min": "2026-08-19",
+    "max": "2026-08-19"
   },
   "b3_fiis.csv": {
-    "min": "2026-08-18",
-    "max": "2026-08-18"
+    "min": "2026-08-19",
+    "max": "2026-08-19"
   },
   "b3_bdi_trades_acoes.csv.gz": {
     "min": "2026-06-03",
-    "max": "2026-08-18"
+    "max": "2026-08-19"
   },
   "b3_carteiras_teoricas.csv": {
     "min": "2026-06-01",
-    "max": "2026-08-18"
+    "max": "2026-08-19"
   },
   "b3_indicadores_financeiros.csv": {
     "min": "2026-06-01",
     "max": "2026-08-19"
   },
   "b3_fundos_listados.csv": {
-    "min": "2026-08-18",
-    "max": "2026-08-18"
+    "min": "2026-08-19",
+    "max": "2026-08-19"
   },
   "b3_indicadores_economicos_fwf.csv": {
     "min": "2026-06-16",
@@ -53,7 +53,7 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "anbima_indice_imab.csv.gz": {
     "min": "2026-06-01",
-    "max": "2026-08-18"
+    "max": "2026-08-19"
   },
   "b3_isin_emissores.csv": {
     "min": "2026-08-19",
@@ -189,74 +189,74 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "anbima_ima_completo.csv": {
     "min": "2026-06-01",
-    "max": "2026-08-18"
+    "max": "2026-08-19"
   },
   "anbima_idka.csv": {
     "min": "2026-06-03",
-    "max": "2026-08-18"
+    "max": "2026-08-19"
   },
   "anbima_indicadores.csv": {
     "min": "2026-06-01",
-    "max": "2026-08-18"
+    "max": "2026-08-19"
   },
   "anbima_550.csv": {
     "min": "2026-06-01",
-    "max": "2026-08-18"
+    "max": "2026-08-19"
   },
   "anbima_projecoes.csv": {
     "min": "2026-06-01",
-    "max": "2026-08-18"
+    "max": "2026-08-19"
   },
   "anbima_debentures.csv": {
     "min": "2026-06-05",
-    "max": "2026-08-18"
+    "max": "2026-08-19"
   },
   "anbima_matriz_probabilidade_resgate.csv": {
     "min": "2026-06-19",
-    "max": "2026-08-18"
+    "max": "2026-08-19"
   },
   "anbima_ranking_global.csv": {
     "min": "2026-06-03",
-    "max": "2026-08-18"
+    "max": "2026-08-19"
   },
   "anbima_titulos_publicos.csv": {
     "min": "2025-08-01",
-    "max": "2026-08-18"
+    "max": "2026-08-19"
   },
   "b3_bdi_di_over.csv": {
     "min": "2026-06-01",
-    "max": "2026-08-18"
+    "max": "2026-08-19"
   },
   "b3_carteira_teorica_agfs_iagro.csv": {
     "min": "2026-06-03",
-    "max": "2026-08-18"
+    "max": "2026-08-19"
   },
   "b3_carteira_teorica_bdrx.csv": {
     "min": "2026-06-03",
-    "max": "2026-08-18"
+    "max": "2026-08-19"
   },
   "b3_bmf_taxas_juros.csv": {
     "min": "2026-06-04",
-    "max": "2026-08-18"
+    "max": "2026-08-19"
   },
   "b3_carteira_teorica_ibov.csv": {
     "min": "2026-06-03",
-    "max": "2026-08-18"
+    "max": "2026-08-19"
   },
   "b3_carteira_teorica_ibsd.csv": {
     "min": "2026-06-03",
-    "max": "2026-08-18"
+    "max": "2026-08-19"
   },
   "b3_carteira_teorica_ibxl.csv": {
     "min": "2026-06-03",
-    "max": "2026-08-18"
+    "max": "2026-08-19"
   },
   "b3_cotahist_diario.csv.gz": {
     "min": "2026-08-02",
-    "max": "2026-08-18"
+    "max": "2026-08-19"
   },
   "b3_bdi_etfrf.csv.gz": {
     "min": "2026-08-02",
-    "max": "2026-08-18"
+    "max": "2026-08-19"
   }
 };
