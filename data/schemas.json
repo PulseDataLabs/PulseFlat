@@ -3158,7 +3158,7 @@
       {
         "name": "data_ult_vna",
         "type": "date",
-        "example": "2026-08-18"
+        "example": "2026-08-19"
       },
       {
         "name": "indice",
@@ -3767,7 +3767,7 @@
       {
         "name": "name",
         "type": "str",
-        "example": "RANGEL DE MIRANDA ADVOGADOS"
+        "example": "VANKKA TECNOLOGIA EM SOLUÇÕES AMBIENTAIS LTDA"
       },
       {
         "name": "type",
@@ -3777,7 +3777,7 @@
       {
         "name": "sector",
         "type": "str",
-        "example": "Professional Business Support Services"
+        "example": ""
       },
       {
         "name": "country",
@@ -3787,12 +3787,12 @@
       {
         "name": "joined_on",
         "type": "str",
-        "example": "2026-08-18"
+        "example": "2026-08-19"
       },
       {
         "name": "link",
         "type": "str",
-        "example": "https://unglobalcompact.org/what-is-gc/participants/220849-RANGEL-DE-MIRANDA-ADVOGADOS"
+        "example": "https://unglobalcompact.org/what-is-gc/participants/163017-VANKKA-TECNOLOGIA-EM-SOLU-ES-AMBIENTAIS-LTDA"
       }
     ]
   },
