@@ -613,7 +613,7 @@ INDICATOR_DEFS = [
         "source": "B3",
         "label": "DI Over (SELIC equivalente)",
         "value_col": "average",
-        "date_col": "rpt_dt",
+        "date_col": "data_referencia",
         "fmt": "pct",
     },
     {
@@ -621,7 +621,7 @@ INDICATOR_DEFS = [
         "source": "B3",
         "label": "DI Over — Volume financeiro",
         "value_col": "financial_volume",
-        "date_col": "rpt_dt",
+        "date_col": "data_referencia",
         "fmt": "number",
     },
     # ── B3 BMF Taxas de Juros ──────────────────────────────────────
@@ -640,9 +640,9 @@ INDICATOR_DEFS = [
         "dataset": "b3_indicadores_financeiros.csv",
         "source": "B3",
         "indicator_col": "description",
-        "value_col_main": "value",
-        "value_col_fallback": "rate",
-        "date_col": "last_update",
+        "value_col_main": "valor",
+        "value_col_fallback": "taxa",
+        "date_col": "data_referencia",
         "category": "Indicadores B3",
     },
     # ── B3 Taxa de Câmbio ──────────────────────────────────────────
@@ -661,7 +661,7 @@ INDICATOR_DEFS = [
         "source": "BCB",
         "label": "PTAX USD — Compra",
         "value_col": "cotacao_compra",
-        "date_col": "data_hora_cotacao",
+        "date_col": "data_referencia",
         "category": "Taxas de Câmbio",
     },
     {
@@ -669,7 +669,7 @@ INDICATOR_DEFS = [
         "source": "BCB",
         "label": "PTAX USD — Venda",
         "value_col": "cotacao_venda",
-        "date_col": "data_hora_cotacao",
+        "date_col": "data_referencia",
         "category": "Taxas de Câmbio",
     },
     # ── BCB SGS ────────────────────────────────────────────────────
@@ -679,7 +679,7 @@ INDICATOR_DEFS = [
             "source": "BCB",
             "label": nome,
             "value_col": "valor",
-            "date_col": "data",
+            "date_col": "data_referencia",
             "filter_col": "codigo_serie",
             "filter_val": codigo,
             "fmt": "pct",

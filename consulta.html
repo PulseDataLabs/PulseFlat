@@ -200,8 +200,10 @@
       background: radial-gradient(circle at 50% -20%, rgba(2, 132, 199, 0.08) 0%, rgba(248, 250, 252, 0) 70%);
     }
     .hero-inner {
-      max-width: 1440px;
+      width: 100%;
+      max-width: 100%;
       margin: 0 auto;
+      box-sizing: border-box;
       display: flex;
       align-items: flex-end;
       justify-content: space-between;
@@ -284,14 +286,18 @@
 
     /* ── Dashboard Grid (3 Cards) ── */
     .dashboard-grid {
-      max-width: 1440px;
+      width: 100%;
+      max-width: 100%;
       margin: 1.75rem auto 0;
       padding: 0 2rem;
       display: flex;
       flex-direction: column;
       gap: 1.75rem;
+      box-sizing: border-box;
     }
     .market-card {
+      width: 100%;
+      box-sizing: border-box;
       background: var(--bg-card);
       border: 1px solid var(--border);
       border-radius: var(--radius);
@@ -389,8 +395,10 @@
 
     /* ── Category Tabs & Filter Section ── */
     .filter-wrapper {
-      max-width: 1440px;
+      width: 100%;
+      max-width: 100%;
       margin: 1.5rem auto 0;
+      box-sizing: border-box;
       padding: 0 2rem;
       display: flex;
       flex-direction: column;
@@ -570,8 +578,10 @@
 
     /* ── Table Section ── */
     .table-wrap {
-      max-width: 1440px;
+      width: 100%;
+      max-width: 100%;
       margin: 1rem auto 4rem;
+      box-sizing: border-box;
       padding: 0 2rem;
     }
     .table-container {
@@ -1637,6 +1647,7 @@
           series: series,
           chart: {
             type: 'line',
+            width: '100%',
             height: 320,
             background: 'transparent',
             foreColor: foreColor,
@@ -1712,6 +1723,7 @@
             ],
             chart: { 
               type: 'area', 
+              width: '100%',
               height: 280, 
               background: 'transparent', 
               foreColor: isDark ? '#94a3b8' : '#475569', 
@@ -1802,6 +1814,7 @@
             ],
             chart: { 
               type: 'area', 
+              width: '100%',
               height: 280, 
               background: 'transparent', 
               foreColor: isDark ? '#94a3b8' : '#475569', 
@@ -1904,6 +1917,7 @@
             ],
             chart: { 
               type: 'area', 
+              width: '100%',
               height: 280, 
               background: 'transparent', 
               foreColor: isDark ? '#94a3b8' : '#475569', 
