@@ -2072,7 +2072,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-19"
+        "example": "2026-08-20"
       },
       {
         "name": "codigo_emissor",
@@ -2298,7 +2298,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-19"
+        "example": "2026-08-20"
       },
       {
         "name": "data_base",
@@ -2447,7 +2447,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-19"
+        "example": "2026-08-20"
       },
       {
         "name": "auditor",
@@ -2694,7 +2694,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-19"
+        "example": "2026-08-20"
       },
       {
         "name": "data_referencia",
@@ -2871,7 +2871,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-19"
+        "example": "2026-08-20"
       },
       {
         "name": "cnpj_fundo",
@@ -3383,7 +3383,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-19"
+        "example": "2026-08-20"
       }
     ]
   },
@@ -3395,7 +3395,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-19"
+        "example": "2026-08-20"
       },
       {
         "name": "serie_id",
@@ -3432,7 +3432,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-19"
+        "example": "2026-08-20"
       },
       {
         "name": "codigo_ativo",
@@ -3479,7 +3479,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-19"
+        "example": "2026-08-20"
       },
       {
         "name": "data_referencia",
@@ -3511,7 +3511,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-19"
+        "example": "2026-08-20"
       },
       {
         "name": "data_referencia",
@@ -3543,7 +3543,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-19"
+        "example": "2026-08-20"
       },
       {
         "name": "data_referencia",
@@ -3575,7 +3575,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-19"
+        "example": "2026-08-20"
       },
       {
         "name": "data_referencia",
@@ -3607,7 +3607,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-19"
+        "example": "2026-08-20"
       },
       {
         "name": "data_referencia",
@@ -3639,7 +3639,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-19"
+        "example": "2026-08-20"
       },
       {
         "name": "data_referencia",
@@ -3671,7 +3671,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-19"
+        "example": "2026-08-20"
       },
       {
         "name": "data_referencia",
@@ -3703,7 +3703,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-19"
+        "example": "2026-08-20"
       },
       {
         "name": "data_referencia",
@@ -3735,7 +3735,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-19"
+        "example": "2026-08-20"
       },
       {
         "name": "codigo_ativo",
@@ -3762,7 +3762,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-19"
+        "example": "2026-08-20"
       },
       {
         "name": "name",
@@ -3932,7 +3932,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-19"
+        "example": "2026-08-20"
       },
       {
         "name": "codigo_serie",
@@ -4124,7 +4124,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-19"
+        "example": "2026-08-20"
       },
       {
         "name": "tp_fundo_classe",
