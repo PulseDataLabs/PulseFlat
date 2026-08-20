@@ -20,7 +20,7 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: pulseflat-workflow
+  group: pulseflat-daily
   cancel-in-progress: false
 
 jobs:

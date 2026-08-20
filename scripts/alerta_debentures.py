@@ -404,7 +404,7 @@ if __name__ == "__main__":
     from utils.base import acquire_lock
 
     try:
-        with acquire_lock("pulseflat", blocking=False):
+        with acquire_lock("pulseflat_debentures_alert", blocking=False):
             main()
     except RuntimeError as e:
         log.warning(f"Abortando alerta de debêntures: {e}")

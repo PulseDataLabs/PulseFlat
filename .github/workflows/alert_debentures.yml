@@ -11,7 +11,7 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: pulseflat-workflow
+  group: pulseflat-debentures-alert
   cancel-in-progress: false
 
 jobs:

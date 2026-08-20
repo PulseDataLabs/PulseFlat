@@ -663,7 +663,7 @@ exemplos:
         from utils.base import acquire_lock
 
         try:
-            with acquire_lock("pulseflat", blocking=True):
+            with acquire_lock("pulseflat_daily", blocking=True):
                 main(
                     group=args.group,
                     scraper=args.scraper,
