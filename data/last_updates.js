@@ -161,7 +161,7 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "bacen_parcelas_capital_basileia.csv.gz": {
     "min": "2026-06-05",
-    "max": "2026-08-19"
+    "max": "2026-08-20"
   },
   "yahoo_etfs.csv": {
     "min": "2026-06-27",
