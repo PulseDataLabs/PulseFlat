@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-# coding: utf-8
 """
 scripts/generate_all_scrapers.py
 ---------------------------------
@@ -564,7 +563,7 @@ class {class_name}(BaseScraper):
                     "label": item["title"],
                     "valor": float(val),
                 }})
-            
+
             if records:
                 frames.append(pd.DataFrame(records))
 

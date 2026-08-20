@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-# coding: utf-8
 """
 scripts/backfill_buracos.py
 --------------------------
@@ -110,7 +109,6 @@ def main(
     if not quiet:
         section("Iniciando execução dos scrapers em modo retroativo", "gear")
 
-    total_resolved = 0
     total_scrapers_run = 0
 
     for csv_name, missing_dates in sorted(gaps_by_csv.items()):

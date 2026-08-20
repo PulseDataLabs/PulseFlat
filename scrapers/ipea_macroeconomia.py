@@ -1,4 +1,3 @@
-# coding: utf-8
 """
 Scraper: IPEADATA – Macroeconomia Geral
 Fonte:   http://www.ipeadata.gov.br/api/odata4/

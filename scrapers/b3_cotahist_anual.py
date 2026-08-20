@@ -308,7 +308,7 @@ class B3CotahistAnualScraper(BaseScraper):
                     elapsed=total_elapsed,
                 )
         except Exception as e:
-            elapsed = time.time() - t0
+            time.time() - t0
             self.logger.error(f"Erro ao executar scraper {self.name}: {e}")
             raise e
 

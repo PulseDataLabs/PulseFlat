@@ -230,3 +230,9 @@ data/b3_isin_ativos.csv
 data/b3_isin_emissores.csv
 data/isinp.zip
 data/anbima_matriz_probabilidade_resgate.csv
+# OS / Caches / Parquet
+.DS_Store
+*.DS_Store
+data/parquet/
+*.parquet
+*.lock

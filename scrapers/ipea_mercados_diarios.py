@@ -1,4 +1,3 @@
-# coding: utf-8
 """
 Scraper: IPEADATA – Mercados Globais Diários
 Fonte:   http://www.ipeadata.gov.br/api/odata4/

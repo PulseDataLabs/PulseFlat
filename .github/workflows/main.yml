@@ -26,6 +26,7 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 60
 
     # Dá permissão para o token do GitHub Actions fazer alterações no repositório (Push)
     permissions:
@@ -33,15 +34,16 @@ jobs:
 
     steps:
     - name: Checkout do código
-      uses: actions/checkout@v6
+      uses: actions/checkout@v4
 
     - name: Configurar Fuso Horário Local
       run: sudo timedatectl set-timezone America/Sao_Paulo
 
     - name: Configurar Python
-      uses: actions/setup-python@v6
+      uses: actions/setup-python@v5
       with:
         python-version: '3.13'
+        cache: 'pip'
 
     - name: Instalar dependências
       run: |

@@ -92,7 +92,7 @@ def capturar() -> list[dict]:
                         }
                     )
                 break
-            except requests.RequestException as e:
+            except requests.RequestException:
                 if tentativa == 3:
                     print_warn(f"({i}/{n}) série {codigo}: falha — ignorando")
                     break

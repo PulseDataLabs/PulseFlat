@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-# coding: utf-8
 """
 tests/test_scrapers_ipea.py
 ---------------------------

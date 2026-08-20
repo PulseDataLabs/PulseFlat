@@ -1,4 +1,3 @@
-# coding: utf-8
 """
 Scraper: IPEADATA – Produção Transformação Mineral
 Fonte:   http://www.ipeadata.gov.br/api/odata4/

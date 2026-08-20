@@ -1,0 +1,57 @@
+[project]
+name = "pulseflat"
+version = "0.1.0"
+description = "Pipeline Serverless de Dados Financeiros Brasileiros"
+readme = "README.md"
+requires-python = ">=3.13"
+
+[tool.pytest.ini_options]
+minversion = "8.0"
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = "-ra --strict-markers"
+markers = [
+    "slow: marca testes que executam subprocessos ou operações demoradas",
+    "integration: marca testes de integração",
+    "unit: marca testes unitários",
+]
+filterwarnings = [
+    "ignore::urllib3.exceptions.InsecureRequestWarning",
+]
+
+[tool.ruff]
+target-version = "py313"
+line-length = 100
+
+[tool.ruff.lint]
+select = [
+    "E",      # pycodestyle errors
+    "W",      # pycodestyle warnings
+    "F",      # pyflakes
+    "I",      # isort
+    "B",      # flake8-bugbear
+    "UP",     # pyupgrade
+]
+ignore = [
+    "E402",   # module level import not at top of file (necessário devido a sys.path.insert)
+    "E501",   # line-too-long (handled by formatter)
+    "E741",   # ambiguous variable name
+    "B007",   # loop control variable not used
+    "B008",   # do not perform function calls in argument defaults
+    "B904",   # raise ... from err
+    "B905",   # zip without strict=
+    "UP009",  # UTF-8 encoding declaration
+]
+
+[tool.ruff.lint.isort]
+known-first-party = ["scrapers", "scripts", "utils"]
+
+[tool.coverage.run]
+source = ["scrapers", "scripts", "utils"]
+branch = true
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = true

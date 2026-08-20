@@ -125,7 +125,7 @@ def run():
         total_count = len(dates_to_fetch)
 
         for future in as_completed(futures):
-            date_val = futures[future]
+            futures[future]
             completed_count += 1
             res = future.result()
             if res:

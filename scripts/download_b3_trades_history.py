@@ -69,7 +69,7 @@ def run():
     start_date = date.fromisoformat(args.start_date)
     end_date = date.fromisoformat(args.end_date)
 
-    print(f"=== B3 BDI — Negócios de Ações — Importador de Histórico ===")
+    print("=== B3 BDI — Negócios de Ações — Importador de Histórico ===")
     print(f"Período: {start_date} até {end_date}")
 
     data_captura, _ = agora_brt()

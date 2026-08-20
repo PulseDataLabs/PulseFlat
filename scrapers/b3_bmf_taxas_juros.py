@@ -93,7 +93,7 @@ def _descobrir_tabela(str_data: str) -> str | None:
         if rows:
             log.info(f"  ✓ Tabela encontrada: {nome} | colunas: {cols}")
             return nome
-        log.info(f"  ✗ Sem dados")
+        log.info("  ✗ Sem dados")
         time.sleep(0.3)
     return None
 

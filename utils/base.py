@@ -131,7 +131,7 @@ def agora_brt() -> tuple[str, str]:
 
 
 def limpar(valor) -> str:
-    if valor is None:
+    if valor is None or pd.isna(valor):
         return ""
     return str(valor).strip()
 

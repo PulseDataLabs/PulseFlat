@@ -21,7 +21,6 @@ import sys
 import time
 from collections import OrderedDict
 from pathlib import Path
-from typing import Optional
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
@@ -58,7 +57,7 @@ def _sorted_by(rows: list[dict], col: str, reverse: bool = True) -> list[dict]:
     return sorted(rows, key=lambda r: r.get(col, ""), reverse=reverse)
 
 
-def _parse_br_float(val: str) -> Optional[float]:
+def _parse_br_float(val: str) -> float | None:
     if not val or not val.strip():
         return None
     try:
@@ -808,7 +807,7 @@ def _ref_date(idef: dict, row: dict) -> str:
     return _safe(row.get("data_captura", ""))[:10]
 
 
-def _extract_single_value(rows: list[dict], idef: dict) -> Optional[dict]:
+def _extract_single_value(rows: list[dict], idef: dict) -> dict | None:
     value_col = idef["value_col"]
     rows_sorted = _sorted_by(rows, idef["date_col"])
     if not rows_sorted:
@@ -827,7 +826,7 @@ def _extract_single_value(rows: list[dict], idef: dict) -> Optional[dict]:
     return out
 
 
-def _extract_filtered_value(rows: list[dict], idef: dict) -> Optional[dict]:
+def _extract_filtered_value(rows: list[dict], idef: dict) -> dict | None:
     filtered = [
         r for r in rows if _safe(r.get(idef["filter_col"], "")) == idef["filter_val"]
     ]

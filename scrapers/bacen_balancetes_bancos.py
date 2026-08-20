@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-# coding: utf-8
 """
 Scraper: BACEN – Balancetes de Bancos (COSIF)
 Fonte:   https://www.bcb.gov.br/api/servico/sitebcb/Documentos/byListGuid
@@ -51,7 +50,7 @@ class BacenBalancetesBancosScraper(BaseScraper):
     )
 
     def fetch(self) -> pd.DataFrame:
-        t0 = time.time()
+        time.time()
         resp = requests.get(DOCS_API_URL, headers=HEADERS, timeout=60)
         resp.raise_for_status()
 

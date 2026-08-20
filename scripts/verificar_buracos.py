@@ -245,7 +245,7 @@ def run_csv(
     gaps = check_gaps(entity_dates, threshold=threshold)
     gaps_count = len(gaps)
 
-    total_entity_gaps = sum(len(missing) for missing in gaps.values())
+    sum(len(missing) for missing in gaps.values())
 
     affected_entity_names = []
     if verbose:

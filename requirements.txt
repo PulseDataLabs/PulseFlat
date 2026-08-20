@@ -13,3 +13,4 @@ pymupdf
 curl-cffi
 oracledb
 SQLAlchemy
+pyarrow

@@ -1,4 +1,3 @@
-# coding: utf-8
 """
 Scraper: IPEADATA – Taxas de Juros
 Fonte:   http://www.ipeadata.gov.br/api/odata4/

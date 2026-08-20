@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-# coding: utf-8
 """
 PulseFlat – Script de monitoramento e alertas para debêntures do mercado secundário.
 Busca dados de preços de negociação e notifica via E-mail, Telegram e Power Automate.
@@ -269,20 +268,20 @@ def main():
                     <div style="max-width: 600px; margin: 0 auto; border: 1px solid #e0e0e0; border-radius: 8px; padding: 24px; background-color: #ffffff; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
                         <h2 style="color: #d83b01; margin-top: 0;">⏳ Debêntures — Arquivo Ainda Não Disponível</h2>
                         <p>A checagem automática foi realizada, porém os preços de negociação de debêntures da ANBIMA para a data de referência ainda não foram publicados no portal.</p>
-                        
+
                         <div style="background-color: #fff4ce; border-left: 4px solid #ffb900; padding: 12px 16px; border-radius: 4px; margin: 20px 0;">
                             <p style="margin: 0; font-size: 14px; color: #333333;"><b>Data de Referência (D-1):</b> {ref_date_str}</p>
                             <p style="margin: 4px 0 0 0; font-size: 13px; color: #666666;"><b>Horário da Checagem:</b> {hora_str} (Horário de Brasília)</p>
                         </div>
-                        
+
                         <p style="font-size: 14px; color: #555555;">O monitoramento continuará ativo a cada 15 minutos. Um novo e-mail de confirmação será enviado automaticamente assim que o arquivo for liberado.</p>
-                        
+
                         <div style="margin: 24px 0; text-align: left;">
                             <a href="{page_url}" style="background-color: #f3f2f1; color: #333333; text-decoration: none; padding: 10px 20px; border-radius: 4px; font-weight: 600; font-size: 13px; border: 1px solid #d1d1d1; display: inline-block;">
                                 Consultar Portal ANBIMA ↗
                             </a>
                         </div>
-                        
+
                         <hr style="border: none; border-top: 1px solid #eaeaea; margin: 24px 0;" />
                         <p style="font-size: 11px; color: #888888; margin: 0;">Este é um alerta automático enviado pelo pipeline de dados PulseFlat.</p>
                     </div>
@@ -349,13 +348,13 @@ def main():
             <div style="max-width: 600px; margin: 0 auto; border: 1px solid #e0e0e0; border-radius: 8px; padding: 24px; background-color: #ffffff; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
                 <h2 style="color: #0078d4; margin-top: 0;">⚡ Debêntures — Arquivo Disponível</h2>
                 <p>Os preços de negociação de debêntures no mercado secundário da ANBIMA já estão liberados para consulta e download.</p>
-                
+
                 <div style="background-color: #f3f2f1; padding: 12px 16px; border-radius: 4px; margin: 20px 0;">
                     <p style="margin: 0; font-size: 14px;"><b>Data de Referência:</b> {ref_date_str}</p>
                 </div>
-                
+
                 <p>Você pode baixar os dados consolidados (acumulados desde 01/01/2025) ou acessar a página de consulta:</p>
-                
+
                 <div style="margin: 24px 0; text-align: left;">
                     <a href="{download_url}" style="background-color: #0078d4; color: #ffffff; text-decoration: none; padding: 12px 24px; border-radius: 4px; font-weight: bold; font-size: 14px; display: inline-block; box-shadow: 0 2px 4px rgba(0, 120, 212, 0.2);">
                         Baixar Arquivo CSV
@@ -364,7 +363,7 @@ def main():
                         Acessar Portal ANBIMA ↗
                     </a>
                 </div>
-                
+
                 <hr style="border: none; border-top: 1px solid #eaeaea; margin: 24px 0;" />
                 <p style="font-size: 11px; color: #888888; margin: 0;">Este é um alerta automático enviado pelo pipeline de dados PulseFlat.</p>
             </div>

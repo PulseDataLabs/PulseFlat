@@ -1,4 +1,3 @@
-# coding: utf-8
 """
 Scraper: IPEADATA – Calendário e Dias Úteis
 Fonte:   http://www.ipeadata.gov.br/api/odata4/

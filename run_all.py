@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-# coding: utf-8
 """
 PulseFlat – Orquestrador de scrapers
 
@@ -30,7 +29,6 @@ import traceback
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime
 from pathlib import Path
-from typing import Optional
 
 # ── Logger minimalista ────────────────────────────────────────────────
 logging.basicConfig(
@@ -121,7 +119,7 @@ def _scraper_fail(name: str, group: str, elapsed: float, idx: int, total: int) -
 
 
 def _summary_table(
-    results: dict[str, tuple[bool, float, Optional[str]]],
+    results: dict[str, tuple[bool, float, str | None]],
     registry: dict[str, dict],
     total_elapsed: float,
 ) -> None:
@@ -224,7 +222,7 @@ def discover_scrapers() -> dict[str, dict]:
 # ── Execução individual ───────────────────────────────────────────────────────
 
 
-def run_scraper(module_name: str) -> tuple[bool, float, Optional[str]]:
+def run_scraper(module_name: str) -> tuple[bool, float, str | None]:
     """Executa um scraper. Retorna (success, elapsed_s, error_msg_or_None)."""
     t0 = time.time()
     try:
@@ -258,8 +256,8 @@ def run_subset(
     parallel: bool,
     max_workers: int,
     phase_label: str,
-) -> dict[str, tuple[bool, float, Optional[str]]]:
-    results: dict[str, tuple[bool, float, Optional[str]]] = {}
+) -> dict[str, tuple[bool, float, str | None]]:
+    results: dict[str, tuple[bool, float, str | None]] = {}
     if not names:
         return results
 
@@ -315,7 +313,7 @@ def run_subset(
 
 
 def save_pipeline_status(
-    results: dict[str, tuple[bool, float, Optional[str]]],
+    results: dict[str, tuple[bool, float, str | None]],
     total_elapsed: float,
 ) -> None:
     from utils.base import DRIFTS
@@ -441,8 +439,8 @@ def list_scrapers(registry: dict[str, dict]) -> None:
 
 
 def main(
-    group: Optional[str] = None,
-    scraper: Optional[str] = None,
+    group: str | None = None,
+    scraper: str | None = None,
     parallel: bool = True,
     max_workers: int = 4,
     list_only: bool = False,
@@ -497,7 +495,7 @@ def main(
     )
     print(f"  {group_summary}")
 
-    results: dict[str, tuple[bool, float, Optional[str]]] = {}
+    results: dict[str, tuple[bool, float, str | None]] = {}
 
     if phase1:
         results.update(run_subset(phase1, registry, parallel, max_workers, "1"))

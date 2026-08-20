@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-# coding: utf-8
 """
 scripts/generate_market_latest.py
 ----------------------------------
@@ -18,7 +17,6 @@ import json
 import sys
 import time
 from pathlib import Path
-from typing import Optional
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
@@ -44,7 +42,7 @@ DATA_DIR = ROOT / "data"
 # ── Helpers de formatação BR ──────────────────────────────────────────────
 
 
-def _parse_br_float(val: str) -> Optional[float]:
+def _parse_br_float(val: str) -> float | None:
     if not val or not val.strip():
         return None
     try:
@@ -61,13 +59,13 @@ def _format_number(val: float, decimals: int = 2) -> str:
     return f"{val:,.{decimals}f}".replace(",", "X").replace(".", ",").replace("X", ".")
 
 
-def _calc_change(old: float, new: float) -> Optional[float]:
+def _calc_change(old: float, new: float) -> float | None:
     if old == 0:
         return None
     return ((new / old) - 1) * 100
 
 
-def _format_change(change: Optional[float]) -> Optional[str]:
+def _format_change(change: float | None) -> str | None:
     if change is None:
         return None
     signal = "+" if change >= 0 else ""
@@ -76,7 +74,7 @@ def _format_change(change: Optional[float]) -> Optional[str]:
     )
 
 
-def _infer_type(change: Optional[float]) -> str:
+def _infer_type(change: float | None) -> str:
     if change is None:
         return "neutral"
     if change > 0.01:

@@ -269,7 +269,10 @@ def _strip_ns(tag: str) -> str:
 
 
 def xml_rows(content: bytes) -> list[dict]:
-    root = ET.fromstring(content)
+    try:
+        root = ET.fromstring(content)
+    except Exception:
+        return []
     rows = []
     for elem in root.iter():
         children = list(elem)

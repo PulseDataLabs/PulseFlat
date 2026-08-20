@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-# coding: utf-8
 """
 scripts/generate_ipea_scrapers.py
 ---------------------------------

@@ -199,7 +199,7 @@ def processar():
         header, rows = ler_csv(path)
         header, rows = fix_bacen_conglomerados(header, rows)
         escrever_csv(path, header, rows)
-        print(f"  [OK] bacen_conglomerados.csv — Unnamed renomeadas")
+        print("  [OK] bacen_conglomerados.csv — Unnamed renomeadas")
 
     # ── 3. Padronizar datas ───────────────────────────────────────────────
     for fname, fixes in DATE_FIXES.items():

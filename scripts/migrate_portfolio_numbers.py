@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-# coding: utf-8
 """
 scripts/migrate_portfolio_numbers.py
 -------------------------------------
@@ -65,7 +64,7 @@ def process_file(file_path: Path, dry_run: bool = False) -> tuple[int, int]:
     headers = []
     modificadas = 0
 
-    with open(file_path, "r", encoding="utf-8") as f:
+    with open(file_path, encoding="utf-8") as f:
         reader = csv.DictReader(f)
         headers = reader.fieldnames
         for row in reader:

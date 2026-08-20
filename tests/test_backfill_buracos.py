@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-# coding: utf-8
 """
 tests/test_backfill_buracos.py
 ------------------------------
@@ -57,7 +56,7 @@ class TestBackfillBuracos:
         mock_scraper_class = MagicMock(return_value=mock_scraper_instance)
 
         mock_module = MagicMock()
-        setattr(mock_module, "Anbima550Scraper", mock_scraper_class)
+        mock_module.Anbima550Scraper = mock_scraper_class
 
         def side_effect(name, *args, **kwargs):
             if name == "scrapers.anbima_550":
@@ -99,7 +98,7 @@ class TestBackfillBuracos:
         mock_scraper_class = MagicMock(return_value=mock_scraper_instance)
 
         mock_module = MagicMock()
-        setattr(mock_module, "YahooEtfsScraper", mock_scraper_class)
+        mock_module.YahooEtfsScraper = mock_scraper_class
 
         def side_effect(name, *args, **kwargs):
             if name == "scrapers.yahoo_etfs":

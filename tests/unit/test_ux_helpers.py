@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-# coding: utf-8
 """
 tests/unit/test_ux_helpers.py
 -----------------------------

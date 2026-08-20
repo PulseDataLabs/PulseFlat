@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-# coding: utf-8
 """
 scripts/utils/ux.py
 -------------------
@@ -11,7 +10,7 @@ import argparse
 import logging
 import os
 import sys
-from typing import Iterator, Optional
+from collections.abc import Iterator
 
 # ── Detecção de Ambiente ──────────────────────────────────────────────
 _CI = os.environ.get("CI", "")
@@ -31,7 +30,7 @@ except Exception:
 
 
 def configure(
-    *, use_color: Optional[bool] = None, use_unicode: Optional[bool] = None
+    *, use_color: bool | None = None, use_unicode: bool | None = None
 ) -> None:
     """Override runtime de USE_COLOR / USE_UNICODE (útil em testes)."""
     global USE_COLOR, USE_UNICODE
@@ -196,14 +195,14 @@ def print_start(msg: str, icon: str = "refresh") -> None:
 
 
 def print_done(
-    msg: str, elapsed: Optional[float] = None, icon: str = "success"
+    msg: str, elapsed: float | None = None, icon: str = "success"
 ) -> None:
     """Indica operação concluída com sucesso."""
     time_str = f"  {dim(f'{elapsed:.1f}s')}" if elapsed is not None else ""
     print(f"  {green(ICON[icon])}  {msg}{time_str}")
 
 
-def print_fail(msg: str, elapsed: Optional[float] = None, icon: str = "fail") -> None:
+def print_fail(msg: str, elapsed: float | None = None, icon: str = "fail") -> None:
     """Indica operação falhou."""
     time_str = f"  {dim(f'{elapsed:.1f}s')}" if elapsed is not None else ""
     print(f"  {red(ICON[icon])}  {msg}{time_str}")
