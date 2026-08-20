@@ -1731,7 +1731,7 @@
       {
         "name": "data_geracao",
         "type": "date",
-        "example": "2026-08-19"
+        "example": "2026-08-20"
       },
       {
         "name": "acao",
@@ -3158,7 +3158,7 @@
       {
         "name": "data_ult_vna",
         "type": "date",
-        "example": "2026-08-19"
+        "example": "2026-08-20"
       },
       {
         "name": "indice",
@@ -3563,7 +3563,7 @@
       {
         "name": "valor",
         "type": "str",
-        "example": "83.1444798503866"
+        "example": "83.144479850387"
       }
     ]
   },
