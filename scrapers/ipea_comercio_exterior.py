@@ -34,7 +34,7 @@ API_URL = "http://www.ipeadata.gov.br/api/odata4/ValoresSerie(SERCODIGO='{code}'
 class IpeaComercioExteriorScraper(BaseScraper):
     name = "ipea_comercio_exterior"
     group = "misc"
-    enabled = True
+    enabled = False
     phase = 1
     chaves_dedup = ["data_referencia", "codigo_ativo"]
 

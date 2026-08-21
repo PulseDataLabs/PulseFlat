@@ -41,7 +41,7 @@ API_URL = "http://www.ipeadata.gov.br/api/odata4/ValoresSerie(SERCODIGO='{code}'
 class IpeaProducaoMineralScraper(BaseScraper):
     name = "ipea_producao_mineral"
     group = "misc"
-    enabled = True
+    enabled = False
     phase = 1
     chaves_dedup = ["data_referencia", "codigo_ativo"]
 

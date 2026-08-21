@@ -48,7 +48,7 @@ API_URL = "http://www.ipeadata.gov.br/api/odata4/ValoresSerie(SERCODIGO='{code}'
 class IpeaFbcfScraper(BaseScraper):
     name = "ipea_fbcf"
     group = "misc"
-    enabled = True
+    enabled = False
     phase = 1
     chaves_dedup = ["data_referencia", "codigo_ativo"]
 

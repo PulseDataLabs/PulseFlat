@@ -135,4 +135,4 @@ def test_import_and_instantiation():
     ]
     for s in scrapers:
         assert s.name.startswith("ipea_")
-        assert s.enabled is True
+        assert s.enabled is False
