@@ -1554,6 +1554,481 @@
       font-size: 0.65rem;
       color: var(--accent);
     }
+
+    /* ── MONITOR DE CAPTURAS & SLA ───────────────────────── */
+    .monitor-section {
+      padding: 7rem 0 8rem;
+      background: var(--bg);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      position: relative;
+    }
+
+    .monitor-header {
+      margin-bottom: 2.5rem;
+    }
+
+    .monitor-kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .monitor-kpi-card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .monitor-kpi-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--border2);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+    }
+
+    .monitor-kpi-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+    }
+
+    .kpi-total::before { background: var(--accent); }
+    .kpi-ok::before { background: var(--green); }
+    .kpi-warning::before { background: var(--gold); }
+    .kpi-error::before { background: var(--red); }
+    .kpi-periodic::before { background: #bb86fc; }
+
+    .kpi-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .kpi-label {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text3);
+    }
+
+    .kpi-icon {
+      font-size: 1.1rem;
+    }
+
+    .kpi-value {
+      font-family: var(--font-head);
+      font-weight: 800;
+      font-size: 1.9rem;
+      line-height: 1.1;
+      color: var(--text);
+    }
+
+    .kpi-sub {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      color: var(--text3);
+    }
+
+    /* Health Bar */
+    .monitor-health-card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem 1.75rem;
+      margin-bottom: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .health-bar-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .health-bar-title {
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .health-bar-score {
+      font-family: var(--font-mono);
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--green);
+    }
+
+    .health-track {
+      width: 100%;
+      height: 10px;
+      background: rgba(255,255,255,0.06);
+      border-radius: 999px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .health-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #00d4ff, #00e5a0);
+      border-radius: 999px;
+      transition: width 1s ease-out;
+      box-shadow: 0 0 12px rgba(0, 229, 160, 0.4);
+    }
+
+    /* Controls Bar */
+    .monitor-controls {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      margin-bottom: 2rem;
+    }
+
+    .monitor-controls-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .monitor-search-wrapper {
+      position: relative;
+      flex: 1;
+      min-width: 260px;
+      max-width: 480px;
+    }
+
+    .monitor-search-input {
+      width: 100%;
+      padding: 0.7rem 1.2rem 0.7rem 2.6rem;
+      border-radius: 30px;
+      border: 1px solid var(--border);
+      background: var(--bg2);
+      color: var(--text);
+      font-size: 0.88rem;
+      outline: none;
+      transition: all 0.25s;
+    }
+
+    .monitor-search-input:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 15px rgba(0, 212, 255, 0.2);
+    }
+
+    .monitor-search-icon {
+      position: absolute;
+      left: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text3);
+      pointer-events: none;
+      font-size: 0.85rem;
+    }
+
+    .monitor-status-filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      align-items: center;
+    }
+
+    .status-filter-btn {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      color: var(--text2);
+      padding: 0.45rem 0.9rem;
+      border-radius: 20px;
+      font-size: 0.78rem;
+      font-family: var(--font-mono);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: all 0.2s;
+      user-select: none;
+    }
+
+    .status-filter-btn:hover {
+      border-color: var(--border2);
+      color: var(--text);
+      transform: translateY(-1px);
+    }
+
+    .status-filter-btn.active {
+      background: rgba(0, 212, 255, 0.12);
+      border-color: var(--accent);
+      color: var(--accent);
+      box-shadow: 0 0 12px rgba(0, 212, 255, 0.2);
+    }
+
+    .status-filter-btn.active[data-status="ok"] {
+      background: rgba(0, 229, 160, 0.12);
+      border-color: var(--green);
+      color: var(--green);
+      box-shadow: 0 0 12px rgba(0, 229, 160, 0.2);
+    }
+
+    .status-filter-btn.active[data-status="warning"] {
+      background: rgba(240, 180, 41, 0.12);
+      border-color: var(--gold);
+      color: var(--gold);
+      box-shadow: 0 0 12px rgba(240, 180, 41, 0.2);
+    }
+
+    .status-filter-btn.active[data-status="error"] {
+      background: rgba(255, 77, 109, 0.12);
+      border-color: var(--red);
+      color: var(--red);
+      box-shadow: 0 0 12px rgba(255, 77, 109, 0.2);
+    }
+
+    .status-filter-btn.active[data-status="periodic"] {
+      background: rgba(187, 134, 252, 0.12);
+      border-color: #bb86fc;
+      color: #bb86fc;
+      box-shadow: 0 0 12px rgba(187, 134, 252, 0.2);
+    }
+
+    .status-count-badge {
+      font-size: 0.68rem;
+      padding: 0.1rem 0.4rem;
+      border-radius: 10px;
+      background: rgba(255,255,255,0.06);
+    }
+
+    .monitor-select {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      color: var(--text2);
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      outline: none;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .monitor-select:hover, .monitor-select:focus {
+      border-color: var(--border2);
+      color: var(--text);
+    }
+
+    /* Monitor Cards Grid */
+    .monitor-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .monitor-card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+      overflow: hidden;
+    }
+
+    .monitor-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+      background: var(--surface);
+    }
+
+    /* Left border status styling */
+    .monitor-card.status-ok {
+      border-left: 4px solid var(--green);
+    }
+    .monitor-card.status-ok:hover {
+      border-color: var(--border2);
+      border-left-color: var(--green);
+      box-shadow: 0 10px 30px rgba(0, 229, 160, 0.12);
+    }
+
+    .monitor-card.status-warning {
+      border-left: 4px solid var(--gold);
+    }
+    .monitor-card.status-warning:hover {
+      border-color: var(--border2);
+      border-left-color: var(--gold);
+      box-shadow: 0 10px 30px rgba(240, 180, 41, 0.12);
+    }
+
+    .monitor-card.status-error {
+      border-left: 4px solid var(--red);
+    }
+    .monitor-card.status-error:hover {
+      border-color: var(--border2);
+      border-left-color: var(--red);
+      box-shadow: 0 10px 30px rgba(255, 77, 109, 0.15);
+    }
+
+    .monitor-card.status-periodic {
+      border-left: 4px solid #bb86fc;
+    }
+    .monitor-card.status-periodic:hover {
+      border-color: var(--border2);
+      border-left-color: #bb86fc;
+      box-shadow: 0 10px 30px rgba(187, 134, 252, 0.12);
+    }
+
+    .monitor-card-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 0.75rem;
+      margin-bottom: 0.85rem;
+    }
+
+    .monitor-source-tag {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      font-weight: 600;
+      padding: 0.2rem 0.55rem;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .monitor-status-pill {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      font-weight: 600;
+      padding: 0.25rem 0.65rem;
+      border-radius: 20px;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      white-space: nowrap;
+    }
+
+    .status-pill-ok {
+      background: rgba(0, 229, 160, 0.12);
+      color: var(--green);
+      border: 1px solid rgba(0, 229, 160, 0.25);
+    }
+
+    .status-pill-warning {
+      background: rgba(240, 180, 41, 0.12);
+      color: var(--gold);
+      border: 1px solid rgba(240, 180, 41, 0.25);
+    }
+
+    .status-pill-error {
+      background: rgba(255, 77, 109, 0.12);
+      color: var(--red);
+      border: 1px solid rgba(255, 77, 109, 0.25);
+    }
+
+    .status-pill-periodic {
+      background: rgba(187, 134, 252, 0.12);
+      color: #bb86fc;
+      border: 1px solid rgba(187, 134, 252, 0.25);
+    }
+
+    .pill-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: currentColor;
+      box-shadow: 0 0 6px currentColor;
+    }
+
+    .monitor-card-title {
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 1.02rem;
+      color: var(--text);
+      margin-bottom: 0.25rem;
+      line-height: 1.35;
+    }
+
+    .monitor-card-file {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--text3);
+      margin-bottom: 1.25rem;
+      word-break: break-all;
+    }
+
+    .monitor-data-box {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 8px;
+      padding: 0.85rem 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .monitor-data-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.78rem;
+    }
+
+    .monitor-data-label {
+      color: var(--text3);
+      font-family: var(--font-body);
+    }
+
+    .monitor-data-value {
+      font-family: var(--font-mono);
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .monitor-data-value.highlight-date {
+      color: var(--accent);
+      font-size: 0.85rem;
+    }
+
+    .monitor-card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+      gap: 0.5rem;
+    }
+
+    .monitor-lag-tag {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--text2);
+    }
+
+    .monitor-card-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
   </style>
 </head>
 <body>
@@ -1568,6 +2043,7 @@
   <ul class="nav-links" id="nav-links">
     <li><a href="#sobre">Sobre</a></li>
     <li><a href="#como-funciona">Pipeline</a></li>
+    <li><a href="#monitor">Capturas & SLA</a></li>
     <li><a href="consulta.html">Consulta</a></li>
     <li><a href="#datasets">Datasets</a></li>
     <li><a href="#schema">Schema</a></li>
@@ -1800,6 +2276,123 @@
           <span class="schedule-tag tag-b3">B3</span>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- MONITOR DE CAPTURAS & SLA -->
+<section class="monitor-section" id="monitor">
+  <div class="container">
+    <div class="monitor-header reveal">
+      <div class="section-label">Observabilidade & SLA</div>
+      <h2 class="section-title">Monitor de Capturas & Frescura</h2>
+      <p class="section-desc">Status em tempo real da última data capturada para cada base do pipeline. Identifique visualmente a defasagem e a conformidade dos dados.</p>
+    </div>
+
+    <!-- KPIs de Topo -->
+    <div class="monitor-kpi-grid reveal">
+      <div class="monitor-kpi-card kpi-total">
+        <div class="kpi-header">
+          <span class="kpi-label">Total Monitoradas</span>
+          <span class="kpi-icon">📊</span>
+        </div>
+        <div class="kpi-value" id="kpi-val-total">--</div>
+        <div class="kpi-sub">Bases ativas no pipeline</div>
+      </div>
+
+      <div class="monitor-kpi-card kpi-ok">
+        <div class="kpi-header">
+          <span class="kpi-label">Em Dia (D-0 / D-1)</span>
+          <span class="kpi-icon">🟢</span>
+        </div>
+        <div class="kpi-value" id="kpi-val-ok" style="color: var(--green);">--</div>
+        <div class="kpi-sub">Último fechamento de mercado</div>
+      </div>
+
+      <div class="monitor-kpi-card kpi-warning">
+        <div class="kpi-header">
+          <span class="kpi-label">Atenção (D-2 / D-3)</span>
+          <span class="kpi-icon">🟡</span>
+        </div>
+        <div class="kpi-value" id="kpi-val-warning" style="color: var(--gold);">--</div>
+        <div class="kpi-sub">Janela de tolerância / feriado</div>
+      </div>
+
+      <div class="monitor-kpi-card kpi-error">
+        <div class="kpi-header">
+          <span class="kpi-label">Atrasado (> D-3)</span>
+          <span class="kpi-icon">🔴</span>
+        </div>
+        <div class="kpi-value" id="kpi-val-error" style="color: var(--red);">--</div>
+        <div class="kpi-sub">Requer verificação da fonte</div>
+      </div>
+
+      <div class="monitor-kpi-card kpi-periodic">
+        <div class="kpi-header">
+          <span class="kpi-label">Periódicas</span>
+          <span class="kpi-icon">🔵</span>
+        </div>
+        <div class="kpi-value" id="kpi-val-periodic" style="color: #bb86fc;">--</div>
+        <div class="kpi-sub">Mensais, anuais e cadastros</div>
+      </div>
+    </div>
+
+    <!-- Barra de Saúde do Pipeline -->
+    <div class="monitor-health-card reveal">
+      <div class="health-bar-header">
+        <div class="health-bar-title">
+          <span>⚡ Índice Geral de Saúde dos Dados (SLA)</span>
+        </div>
+        <div class="health-bar-score" id="health-bar-score">0% em conformidade</div>
+      </div>
+      <div class="health-track">
+        <div class="health-fill" id="health-bar-fill"></div>
+      </div>
+    </div>
+
+    <!-- Barra de Controles & Filtros -->
+    <div class="monitor-controls reveal">
+      <div class="monitor-controls-row">
+        <div class="monitor-search-wrapper">
+          <span class="monitor-search-icon">🔍</span>
+          <input type="text" id="monitor-search-input" class="monitor-search-input" placeholder="Filtrar por nome, ticker, arquivo .csv ou fonte..." aria-label="Filtrar capturas" />
+        </div>
+
+        <div style="display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap;">
+          <select id="monitor-source-select" class="monitor-select" aria-label="Filtrar por fonte">
+            <option value="all">🌐 Todas as Fontes</option>
+            <option value="anbima">◈ ANBIMA</option>
+            <option value="b3">◉ B3</option>
+            <option value="cvm">⬢ CVM</option>
+            <option value="bcb">◆ Banco Central (BACEN)</option>
+            <option value="ibge">⬡ IBGE</option>
+            <option value="debentures">❖ SND (Debêntures)</option>
+            <option value="misc">⚡ Outros / Yahoo</option>
+          </select>
+
+          <select id="monitor-sort-select" class="monitor-select" aria-label="Ordenar capturas">
+            <option value="lag-desc">Defasagem (Mais atrasados)</option>
+            <option value="date-desc">Data mais recente</option>
+            <option value="name-asc">Nome (A-Z)</option>
+            <option value="status-asc">Status (Atrasados > Atenção > Em dia)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="monitor-status-filters">
+        <button class="status-filter-btn active" data-status="all">Todos <span class="status-count-badge" id="badge-count-all">0</span></button>
+        <button class="status-filter-btn" data-status="ok">🟢 Em dia <span class="status-count-badge" id="badge-count-ok">0</span></button>
+        <button class="status-filter-btn" data-status="warning">🟡 Atenção <span class="status-count-badge" id="badge-count-warning">0</span></button>
+        <button class="status-filter-btn" data-status="error">🔴 Atrasados <span class="status-count-badge" id="badge-count-error">0</span></button>
+        <button class="status-filter-btn" data-status="periodic">🔵 Periódicos <span class="status-count-badge" id="badge-count-periodic">0</span></button>
+      </div>
+    </div>
+
+    <!-- Grid de Cards do Monitor -->
+    <div class="monitor-grid reveal" id="monitor-grid">
+      <div class="skeleton-card"><div class="skeleton skeleton-line"></div><div class="skeleton skeleton-line"></div><div class="skeleton skeleton-line"></div></div>
+      <div class="skeleton-card"><div class="skeleton skeleton-line"></div><div class="skeleton skeleton-line"></div><div class="skeleton skeleton-line"></div></div>
+      <div class="skeleton-card"><div class="skeleton skeleton-line"></div><div class="skeleton skeleton-line"></div><div class="skeleton skeleton-line"></div></div>
     </div>
   </div>
 </section>
@@ -2823,6 +3416,414 @@
     container.style.display = '';
   }
 
+  // ─────────────────────────────────────────────────────────────
+  // MONITOR DE CAPTURAS & SLA DE DADOS
+  // ─────────────────────────────────────────────────────────────
+  let monitorData = [];
+  let monitorActiveStatus = 'all';
+  let monitorActiveSource = 'all';
+  let monitorSearchQuery = '';
+  let monitorSortOrder = 'lag-desc';
+
+  function getBusinessDaysDiff(startDateStr, endDate = new Date()) {
+    if (!startDateStr) return 999;
+    const cleanDate = startDateStr.split(' ')[0];
+    const parts = cleanDate.split('-');
+    if (parts.length !== 3) return 999;
+
+    const start = new Date(parseInt(parts[0], 10), parseInt(parts[1], 10) - 1, parseInt(parts[2], 10));
+    const end = new Date(endDate.getFullYear(), endDate.getMonth(), endDate.getDate());
+
+    if (start >= end) return 0;
+
+    let count = 0;
+    let cur = new Date(start.getTime());
+    cur.setDate(cur.getDate() + 1);
+
+    while (cur <= end) {
+      const day = cur.getDay();
+      if (day !== 0 && day !== 6) {
+        count++;
+      }
+      cur.setDate(cur.getDate() + 1);
+    }
+    return count;
+  }
+
+  function formatDisplayDate(dStr) {
+    if (!dStr) return '—';
+    const clean = dStr.split(' ')[0];
+    const parts = clean.split('-');
+    return parts.length === 3 ? `${parts[2]}/${parts[1]}/${parts[0]}` : dStr;
+  }
+
+  function isPeriodicDataset(dataset, filename) {
+    const fn = (filename || '').toLowerCase();
+    const badge = (dataset && dataset.badge ? dataset.badge : '').toLowerCase();
+    
+    if (badge.includes('mensal') || badge.includes('anual') || badge.includes('trimestral') || badge.includes('estático') || badge.includes('snapshot')) {
+      return true;
+    }
+    if (fn.includes('classificacao_setorial') || fn.includes('balancetes') || fn.includes('cotahist_anual') || fn.includes('cad_fi') || fn.includes('capital_social') || fn.includes('registro_fundo')) {
+      return true;
+    }
+    return false;
+  }
+
+  async function loadAndRenderMonitor() {
+    let updates = window.PULSEFLAT_LAST_UPDATES;
+    if (!updates) {
+      try {
+        const res = await fetch('./data/last_updates.json');
+        if (res.ok) updates = await res.json();
+      } catch (e) {
+        console.warn('Erro ao carregar last_updates.json para o monitor:', e);
+      }
+    }
+
+    let pipelineStatus = window.PULSEFLAT_PIPELINE_STATUS;
+    if (!pipelineStatus) {
+      try {
+        const res = await fetch('./data/pipeline_status.json');
+        if (res.ok) pipelineStatus = await res.json();
+      } catch (e) {
+        console.warn('Erro ao carregar pipeline_status.json para o monitor:', e);
+      }
+    }
+
+    const datasetMap = {};
+    allDatasets.forEach(d => {
+      if (d.file) datasetMap[d.file] = d;
+    });
+
+    const fileList = new Set([
+      ...Object.keys(updates || {}),
+      ...allDatasets.map(d => d.file)
+    ]);
+
+    const items = [];
+    const now = new Date();
+
+    fileList.forEach(file => {
+      if (!file) return;
+      const meta = (updates && updates[file]) || {};
+      const dataset = datasetMap[file] || {};
+
+      let minDate = '';
+      let maxDate = '';
+      if (typeof meta === 'object' && meta !== null) {
+        minDate = meta.min || '';
+        maxDate = meta.max || '';
+      } else if (typeof meta === 'string') {
+        maxDate = meta;
+      }
+
+      let hasPipelineError = false;
+      const scraperKey = file.replace(/\.csv(\.gz)?$/, '').replace(/\.zip$/, '');
+      if (pipelineStatus && pipelineStatus.scrapers && pipelineStatus.scrapers[scraperKey]) {
+        if (pipelineStatus.scrapers[scraperKey].status === 'error') {
+          hasPipelineError = true;
+        }
+      }
+
+      const isPeriodic = isPeriodicDataset(dataset, file);
+      const businessLag = maxDate ? getBusinessDaysDiff(maxDate, now) : 999;
+
+      let status = 'ok';
+      let statusLabel = '';
+      let pillClass = '';
+      let lagDesc = '';
+
+      if (hasPipelineError) {
+        status = 'error';
+        statusLabel = 'Falha';
+        pillClass = 'status-pill-error';
+        lagDesc = 'Última execução falhou';
+      } else if (isPeriodic) {
+        status = 'periodic';
+        statusLabel = dataset.badge || 'Periódico';
+        pillClass = 'status-pill-periodic';
+        lagDesc = `Cadência periódica (${formatDisplayDate(maxDate)})`;
+      } else if (!maxDate) {
+        status = 'error';
+        statusLabel = 'Sem dados';
+        pillClass = 'status-pill-error';
+        lagDesc = 'Nenhuma data registrada';
+      } else if (businessLag <= 0) {
+        status = 'ok';
+        statusLabel = 'D-0 • Hoje';
+        pillClass = 'status-pill-ok';
+        lagDesc = 'Atualizado hoje no intraday';
+      } else if (businessLag === 1) {
+        status = 'ok';
+        statusLabel = 'D-1 • Em dia';
+        pillClass = 'status-pill-ok';
+        lagDesc = 'Fechamento do último dia útil';
+      } else if (businessLag <= 3) {
+        status = 'warning';
+        statusLabel = `D-${businessLag} • Atenção`;
+        pillClass = 'status-pill-warning';
+        lagDesc = `Defasagem de ${businessLag} dias úteis (tolerância)`;
+      } else {
+        status = 'error';
+        statusLabel = `D-${businessLag} • Atrasado`;
+        pillClass = 'status-pill-error';
+        lagDesc = `Atrasado há ${businessLag} dias úteis`;
+      }
+
+      const lowerFile = file.toLowerCase();
+      let sourceKey = 'misc';
+      let sourceName = dataset.source || 'Outros';
+      let tagClass = 'tag-migrados';
+
+      if (lowerFile.startsWith('anbima_')) {
+        sourceKey = 'anbima';
+        sourceName = 'ANBIMA';
+        tagClass = 'tag-anbima';
+      } else if (lowerFile.startsWith('b3_')) {
+        sourceKey = 'b3';
+        sourceName = 'B3';
+        tagClass = 'tag-b3';
+      } else if (lowerFile.startsWith('bcb_') || lowerFile.startsWith('bacen_')) {
+        sourceKey = 'bcb';
+        sourceName = 'BACEN';
+        tagClass = 'tag-bcb';
+      } else if (lowerFile.startsWith('cvm_') || lowerFile.startsWith('registro_')) {
+        sourceKey = 'cvm';
+        sourceName = 'CVM';
+        tagClass = 'tag-cvm';
+      } else if (lowerFile.startsWith('ibge_')) {
+        sourceKey = 'ibge';
+        sourceName = 'IBGE';
+        tagClass = 'tag-ibge';
+      } else if (lowerFile.startsWith('debentures_')) {
+        sourceKey = 'debentures';
+        sourceName = 'SND / Debêntures';
+        tagClass = 'tag-anbima';
+      } else if (lowerFile.startsWith('yahoo_')) {
+        sourceKey = 'misc';
+        sourceName = 'Yahoo Finance';
+        tagClass = 'tag-b3';
+      }
+
+      const title = dataset.title || file.replace(/_/g, ' ').replace(/\.csv(\.gz)?$/, '');
+      const downloadUrl = dataset.url || `https://raw.githubusercontent.com/royopa/PulseFlat/main/data/${file}`;
+
+      items.push({
+        file,
+        title,
+        sourceKey,
+        sourceName,
+        tagClass,
+        minDate,
+        maxDate,
+        businessLag,
+        status,
+        statusLabel,
+        pillClass,
+        lagDesc,
+        downloadUrl,
+        dataset
+      });
+    });
+
+    monitorData = items;
+    updateMonitorKPIs();
+    renderMonitorCards();
+    initMonitorControls();
+  }
+
+  function updateMonitorKPIs() {
+    const total = monitorData.length;
+    const okCount = monitorData.filter(d => d.status === 'ok').length;
+    const warningCount = monitorData.filter(d => d.status === 'warning').length;
+    const errorCount = monitorData.filter(d => d.status === 'error').length;
+    const periodicCount = monitorData.filter(d => d.status === 'periodic').length;
+
+    const elTotal = document.getElementById('kpi-val-total');
+    const elOk = document.getElementById('kpi-val-ok');
+    const elWarning = document.getElementById('kpi-val-warning');
+    const elError = document.getElementById('kpi-val-error');
+    const elPeriodic = document.getElementById('kpi-val-periodic');
+
+    if (elTotal) elTotal.textContent = total;
+    if (elOk) elOk.textContent = okCount;
+    if (elWarning) elWarning.textContent = warningCount;
+    if (elError) elError.textContent = errorCount;
+    if (elPeriodic) elPeriodic.textContent = periodicCount;
+
+    const bAll = document.getElementById('badge-count-all');
+    const bOk = document.getElementById('badge-count-ok');
+    const bWarning = document.getElementById('badge-count-warning');
+    const bError = document.getElementById('badge-count-error');
+    const bPeriodic = document.getElementById('badge-count-periodic');
+
+    if (bAll) bAll.textContent = total;
+    if (bOk) bOk.textContent = okCount;
+    if (bWarning) bWarning.textContent = warningCount;
+    if (bError) bError.textContent = errorCount;
+    if (bPeriodic) bPeriodic.textContent = periodicCount;
+
+    const healthPercent = total > 0 ? Math.round(((okCount + periodicCount + (warningCount * 0.5)) / total) * 100) : 100;
+    const elScore = document.getElementById('health-bar-score');
+    const elFill = document.getElementById('health-bar-fill');
+
+    if (elScore) elScore.textContent = `${healthPercent}% em conformidade`;
+    if (elFill) {
+      elFill.style.width = `${healthPercent}%`;
+      if (healthPercent >= 90) {
+        elFill.style.background = 'linear-gradient(90deg, #00d4ff, #00e5a0)';
+      } else if (healthPercent >= 70) {
+        elFill.style.background = 'linear-gradient(90deg, #00d4ff, #f0b429)';
+      } else {
+        elFill.style.background = 'linear-gradient(90deg, #f0b429, #ff4d6d)';
+      }
+    }
+  }
+
+  function renderMonitorCards() {
+    const grid = document.getElementById('monitor-grid');
+    if (!grid) return;
+
+    let filtered = monitorData.filter(item => {
+      if (monitorActiveStatus !== 'all' && item.status !== monitorActiveStatus) {
+        return false;
+      }
+      if (monitorActiveSource !== 'all' && item.sourceKey !== monitorActiveSource) {
+        return false;
+      }
+      if (monitorSearchQuery) {
+        const q = monitorSearchQuery.toLowerCase();
+        const matchTitle = item.title.toLowerCase().includes(q);
+        const matchFile = item.file.toLowerCase().includes(q);
+        const matchSource = item.sourceName.toLowerCase().includes(q);
+        if (!matchTitle && !matchFile && !matchSource) return false;
+      }
+      return true;
+    });
+
+    filtered.sort((a, b) => {
+      if (monitorSortOrder === 'lag-desc') {
+        return (b.businessLag || 0) - (a.businessLag || 0);
+      } else if (monitorSortOrder === 'date-desc') {
+        return (b.maxDate || '').localeCompare(a.maxDate || '');
+      } else if (monitorSortOrder === 'name-asc') {
+        return a.title.localeCompare(b.title);
+      } else if (monitorSortOrder === 'status-asc') {
+        const order = { 'error': 1, 'warning': 2, 'periodic': 3, 'ok': 4 };
+        return (order[a.status] || 5) - (order[b.status] || 5);
+      }
+      return 0;
+    });
+
+    if (filtered.length === 0) {
+      grid.innerHTML = `
+        <div style="grid-column: 1 / -1; text-align: center; padding: 4rem 2rem; background: var(--bg2); border: 1px dashed var(--border); border-radius: 12px;">
+          <div style="font-size: 2rem; margin-bottom: 0.5rem;">🔍</div>
+          <div style="font-family: var(--font-head); font-size: 1.1rem; color: var(--text); margin-bottom: 0.25rem;">Nenhuma captura encontrada</div>
+          <div style="font-size: 0.85rem; color: var(--text3);">Tente alterar os filtros de status, fonte ou limpar a busca textual.</div>
+        </div>
+      `;
+      return;
+    }
+
+    let html = '';
+    filtered.forEach(item => {
+      const minFmt = formatDisplayDate(item.minDate);
+      const maxFmt = formatDisplayDate(item.maxDate);
+      const historyRange = (minFmt && minFmt !== maxFmt) ? `${minFmt} → ${maxFmt}` : (maxFmt || 'Não disponível');
+      const isGz = item.file.endsWith('.gz');
+      const downloadLabel = isGz ? 'CSV.GZ' : 'CSV';
+      const badgeText = item.dataset && item.dataset.badge ? item.dataset.badge : '';
+
+      html += `
+        <div class="monitor-card status-${item.status}">
+          <div>
+            <div class="monitor-card-top">
+              <span class="monitor-source-tag ${item.tagClass}">${item.sourceName}</span>
+              <span class="monitor-status-pill ${item.pillClass}">
+                <span class="pill-dot pulse-animation"></span>
+                ${item.statusLabel}
+              </span>
+            </div>
+
+            <div class="monitor-card-title">${item.title}</div>
+            <div class="monitor-card-file">${item.file}</div>
+
+            <div class="monitor-data-box">
+              <div class="monitor-data-row">
+                <span class="monitor-data-label">Última Captura:</span>
+                <span class="monitor-data-value highlight-date">${maxFmt}</span>
+              </div>
+              <div class="monitor-data-row">
+                <span class="monitor-data-label">Histórico:</span>
+                <span class="monitor-data-value" style="font-size: 0.72rem; color: var(--text2);">${historyRange}</span>
+              </div>
+              <div class="monitor-data-row" style="border-top: 1px dashed rgba(255,255,255,0.05); padding-top: 0.4rem;">
+                <span class="monitor-data-label">Diagnóstico SLA:</span>
+                <span class="monitor-lag-tag" style="color: ${item.status === 'ok' ? 'var(--green)' : item.status === 'warning' ? 'var(--gold)' : item.status === 'error' ? 'var(--red)' : '#bb86fc'};">${item.lagDesc}</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="monitor-card-footer">
+            <span style="font-family: var(--font-mono); font-size: 0.68rem; color: var(--text3);">
+              ${badgeText ? `• ${badgeText}` : ''}
+            </span>
+            <div class="monitor-card-actions">
+              <button class="copy-btn preview-btn" data-file="${item.file}" data-title="${item.title}" title="Visualizar prévia">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 12px; height: 12px;"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                Prévia
+              </button>
+              <a href="${item.downloadUrl}" class="download-btn" target="_blank" title="Baixar arquivo">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 12px; height: 12px;"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+                ${downloadLabel}
+              </a>
+            </div>
+          </div>
+        </div>
+      `;
+    });
+
+    grid.innerHTML = html;
+  }
+
+  function initMonitorControls() {
+    const statusBtns = document.querySelectorAll('.status-filter-btn');
+    statusBtns.forEach(btn => {
+      btn.onclick = () => {
+        statusBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        monitorActiveStatus = btn.getAttribute('data-status');
+        renderMonitorCards();
+      };
+    });
+
+    const sourceSelect = document.getElementById('monitor-source-select');
+    if (sourceSelect) {
+      sourceSelect.onchange = (e) => {
+        monitorActiveSource = e.target.value;
+        renderMonitorCards();
+      };
+    }
+
+    const sortSelect = document.getElementById('monitor-sort-select');
+    if (sortSelect) {
+      sortSelect.onchange = (e) => {
+        monitorSortOrder = e.target.value;
+        renderMonitorCards();
+      };
+    }
+
+    const searchInput = document.getElementById('monitor-search-input');
+    if (searchInput) {
+      searchInput.oninput = (e) => {
+        monitorSearchQuery = e.target.value.trim();
+        renderMonitorCards();
+      };
+    }
+  }
+
   document.addEventListener('DOMContentLoaded', async () => {
     await loadAndRenderDatasets();
     await loadLastUpdates();
@@ -2832,6 +3833,7 @@
     initPreviewModal();
     await loadPipelineStatus();
     await loadMarketLatest();
+    await loadAndRenderMonitor();
   });
 </script>
 </body>
