@@ -3609,6 +3609,8 @@
       ...Object.keys(updates || {}),
       ...allDatasets.map(d => d.file)
     ]);
+    fileList.delete('consolidated.csv');
+    fileList.delete('custom_tickers.csv');
 
     const items = [];
     const now = new Date();

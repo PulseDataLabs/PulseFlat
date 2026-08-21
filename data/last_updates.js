@@ -1,4 +1,4 @@
-window.PULSEFLAT_LAST_UPDATES = {
+window.DATASETS_LAST_UPDATES = {
   "b3_carteira_teorica_ifnc.csv": {
     "min": "2026-06-03",
     "max": "2026-08-21"
@@ -258,10 +258,6 @@ window.PULSEFLAT_LAST_UPDATES = {
   "b3_cotahist_anual.csv.gz": {
     "min": "2026-08-21",
     "max": "2026-08-21"
-  },
-  "consolidated.csv": {
-    "min": "2026-05-01",
-    "max": "2030-12-01"
   },
   "b3_isin_emissores.csv": {
     "min": "2026-08-21",

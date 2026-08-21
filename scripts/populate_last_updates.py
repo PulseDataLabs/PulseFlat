@@ -61,9 +61,14 @@ def main(dry_run: bool = False) -> None:
         except Exception as e:
             print_warn(f"Erro ao ler last_updates.json: {e}. Criando novo.")
 
-    last_updates = {k: v for k, v in last_updates.items() if (data_dir / k).exists()}
+    EXCLUDE_FILES = {"consolidated.csv", "custom_tickers.csv"}
+    last_updates = {k: v for k, v in last_updates.items() if (data_dir / k).exists() and k not in EXCLUDE_FILES}
 
-    csv_files = sorted(list(data_dir.glob("*.csv")) + list(data_dir.glob("*.csv.gz")))
+    EXCLUDE_FILES = {"consolidated.csv", "custom_tickers.csv"}
+    csv_files = sorted([
+        f for f in (list(data_dir.glob("*.csv")) + list(data_dir.glob("*.csv.gz")))
+        if f.name not in EXCLUDE_FILES
+    ])
     total_files = len(csv_files)
     total_ok = 0
     total_fail = 0
