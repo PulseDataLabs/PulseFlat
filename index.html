@@ -3555,15 +3555,10 @@
         pillClass = 'status-pill-error';
         lagDesc = 'Última execução falhou no pipeline';
       } else if (!maxDate) {
-        status = 'periodic';
-        statusLabel = 'Agendado';
-        pillClass = 'status-pill-periodic';
-        lagDesc = 'Aguardando execução / Sob demanda';
-      } else if (isPeriodic) {
-        status = 'periodic';
-        statusLabel = dataset.badge || 'Periódico';
-        pillClass = 'status-pill-periodic';
-        lagDesc = `Cadência periódica (${formatDisplayDate(maxDate)})`;
+        status = 'warning';
+        statusLabel = 'Sem dados';
+        pillClass = 'status-pill-warning';
+        lagDesc = 'Nenhuma data registrada';
       } else if (businessLag <= 0) {
         status = 'ok';
         statusLabel = 'D-0 • Hoje';
@@ -3573,7 +3568,12 @@
         status = 'ok';
         statusLabel = 'D-1 • Em dia';
         pillClass = 'status-pill-ok';
-        lagDesc = 'Fechamento do último dia útil';
+        lagDesc = 'Posição em D-1 (em dia)';
+      } else if (isPeriodic) {
+        status = 'periodic';
+        statusLabel = dataset.badge || 'Periódico';
+        pillClass = 'status-pill-periodic';
+        lagDesc = `Cadência periódica (${formatDisplayDate(maxDate)})`;
       } else if (businessLag <= 3) {
         status = 'warning';
         statusLabel = `D-${businessLag} • Atenção`;
@@ -3622,7 +3622,7 @@
       }
 
       const title = dataset.title || file.replace(/_/g, ' ').replace(/\.csv(\.gz)?$/, '');
-      const downloadUrl = dataset.url || `https://raw.githubusercontent.com/royopa/PulseFlat/main/data/${file}`;
+      const downloadUrl = dataset.url || `https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/${file}`;
 
       items.push({
         file,

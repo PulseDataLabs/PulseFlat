@@ -160,7 +160,7 @@ def generate(dry_run: bool = False) -> None:
         if url and url.endswith(".csv") and filename.endswith(".csv.gz"):
             url = url[:-4] + ".csv.gz"
         elif not url:
-            url = f"https://raw.githubusercontent.com/royopa/PulseFlat/main/data/{filename}"
+            url = f"https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/{filename}"
 
         target_path = datasets_json_path.parent / filename
         target_gz_path = datasets_json_path.parent / (filename if filename.endswith(".gz") else f"{filename}.gz")
@@ -176,7 +176,7 @@ def generate(dry_run: bool = False) -> None:
         if url and url.endswith(".csv") and actual_filename.endswith(".csv.gz"):
             url = url[:-4] + ".csv.gz"
         elif not url:
-            url = f"https://raw.githubusercontent.com/royopa/PulseFlat/main/data/{actual_filename}"
+            url = f"https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/{actual_filename}"
 
         dataset_entry = {
             "title": title,

@@ -14,7 +14,7 @@
       "tx_indicativa"
     ],
     "source": "ANBIMA",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/anbima_debentures.csv",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/anbima_debentures.csv",
     "accumulate": true
   },
   {
@@ -33,7 +33,7 @@
       "anbima"
     ],
     "source": "ANBIMA",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/anbima_idka.csv",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/anbima_idka.csv",
     "accumulate": true
   },
   {
@@ -52,7 +52,7 @@
       "duration"
     ],
     "source": "ANBIMA",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/anbima_ima_completo.csv",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/anbima_ima_completo.csv",
     "accumulate": true
   },
   {
@@ -75,7 +75,7 @@
       "fds"
     ],
     "source": "ANBIMA",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/anbima_indicadores.csv",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/anbima_indicadores.csv",
     "accumulate": true
   },
   {
@@ -90,7 +90,7 @@
       "anbima"
     ],
     "source": "ANBIMA",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/anbima_matriz_probabilidade_resgate.csv",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/anbima_matriz_probabilidade_resgate.csv",
     "accumulate": true
   },
   {
@@ -105,7 +105,7 @@
       "anbima"
     ],
     "source": "ANBIMA",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/anbima_ranking_global.csv",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/anbima_ranking_global.csv",
     "accumulate": true
   },
   {
@@ -122,7 +122,7 @@
       "custódia"
     ],
     "source": "ANBIMA",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/anbima_550.csv",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/anbima_550.csv",
     "accumulate": true
   },
   {
@@ -141,7 +141,7 @@
       "tx_indicativa"
     ],
     "source": "ANBIMA",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/anbima_titulos_publicos.csv",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/anbima_titulos_publicos.csv",
     "accumulate": true
   },
   {
@@ -156,7 +156,7 @@
       "anbima"
     ],
     "source": "ANBIMA",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/debentures_emissoes_caracteristicas.csv",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/debentures_emissoes_caracteristicas.csv",
     "accumulate": false
   },
   {
@@ -171,7 +171,7 @@
       "anbima"
     ],
     "source": "ANBIMA",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/debentures_mercado_secundario_precos_negociacao.csv.gz",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/debentures_mercado_secundario_precos_negociacao.csv.gz",
     "accumulate": true
   },
   {
@@ -190,7 +190,7 @@
       "num_instituições"
     ],
     "source": "ANBIMA API",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/anbima_projecoes.csv",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/anbima_projecoes.csv",
     "accumulate": true
   },
   {
@@ -207,7 +207,7 @@
       "rentabilidade"
     ],
     "source": "ANBIMA · S3",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/anbima_indice_imab.csv.gz",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/anbima_indice_imab.csv.gz",
     "accumulate": true
   },
   {
@@ -222,7 +222,7 @@
       "b3"
     ],
     "source": "B3",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_carteira_teorica_agfs_iagro.csv",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/b3_carteira_teorica_agfs_iagro.csv",
     "accumulate": true
   },
   {
@@ -237,7 +237,7 @@
       "b3"
     ],
     "source": "B3",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_carteira_teorica_bdrx.csv",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/b3_carteira_teorica_bdrx.csv",
     "accumulate": true
   },
   {
@@ -252,7 +252,7 @@
       "b3"
     ],
     "source": "B3",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_carteira_teorica_ibov.csv",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/b3_carteira_teorica_ibov.csv",
     "accumulate": true
   },
   {
@@ -267,7 +267,7 @@
       "b3"
     ],
     "source": "B3",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_carteira_teorica_ibsd.csv",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/b3_carteira_teorica_ibsd.csv",
     "accumulate": true
   },
   {
@@ -282,7 +282,7 @@
       "b3"
     ],
     "source": "B3",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_carteira_teorica_ibxl.csv",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/b3_carteira_teorica_ibxl.csv",
     "accumulate": true
   },
   {
@@ -297,7 +297,7 @@
       "b3"
     ],
     "source": "B3",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_carteira_teorica_ifnc.csv",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/b3_carteira_teorica_ifnc.csv",
     "accumulate": true
   },
   {
@@ -312,7 +312,7 @@
       "b3"
     ],
     "source": "B3",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_carteira_teorica_isee.csv",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/b3_carteira_teorica_isee.csv",
     "accumulate": true
   },
   {
@@ -327,7 +327,7 @@
       "b3"
     ],
     "source": "B3",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_carteira_teorica_smll.csv",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/b3_carteira_teorica_smll.csv",
     "accumulate": true
   },
   {
@@ -344,7 +344,7 @@
       "segmento"
     ],
     "source": "B3",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_classificacao_setorial.csv",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/b3_classificacao_setorial.csv",
     "accumulate": false
   },
   {
@@ -361,7 +361,7 @@
       "cadastro"
     ],
     "source": "B3",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_isin_ativos.csv.gz",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/b3_isin_ativos.csv.gz",
     "accumulate": false
   },
   {
@@ -378,7 +378,7 @@
       "cadastro"
     ],
     "source": "B3",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_isin_emissores.csv",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/b3_isin_emissores.csv",
     "accumulate": false
   },
   {
@@ -400,7 +400,7 @@
       "b3"
     ],
     "source": "B3",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_limites_garantias.csv",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/b3_limites_garantias.csv",
     "accumulate": true
   },
   {
@@ -419,7 +419,7 @@
       "b3"
     ],
     "source": "B3",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_titulos_negociaveis.csv.gz",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/b3_titulos_negociaveis.csv.gz",
     "accumulate": false
   },
   {
@@ -439,7 +439,7 @@
       "renda fixa"
     ],
     "source": "B3 API",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_etfs.csv",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/b3_etfs.csv",
     "accumulate": false
   },
   {
@@ -459,7 +459,7 @@
       "patrimônio"
     ],
     "source": "B3 API",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_fiis.csv",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/b3_fiis.csv",
     "accumulate": false
   },
   {
@@ -478,7 +478,7 @@
       "câmbio"
     ],
     "source": "B3 API",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_indicadores_financeiros.csv",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/b3_indicadores_financeiros.csv",
     "accumulate": true
   },
   {
@@ -503,7 +503,7 @@
       "pl"
     ],
     "source": "B3 API + CVM",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_fundos_listados.csv",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/b3_fundos_listados.csv",
     "accumulate": false
   },
   {
@@ -535,7 +535,7 @@
       "+ 5 índices"
     ],
     "source": "B3 API · ~1.000 linhas/dia",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_carteiras_teoricas.csv",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/b3_carteiras_teoricas.csv",
     "accumulate": true
   },
   {
@@ -555,7 +555,7 @@
       "preço"
     ],
     "source": "B3 BDI",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_bdi_etfrf.csv.gz",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/b3_bdi_etfrf.csv.gz",
     "accumulate": true
   },
   {
@@ -574,7 +574,7 @@
       "negócios"
     ],
     "source": "B3 BDI",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_bdi_trades_acoes.csv.gz",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/b3_bdi_trades_acoes.csv.gz",
     "accumulate": true
   },
   {
@@ -593,7 +593,7 @@
       "curva"
     ],
     "source": "B3 BDI",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_bmf_taxas_juros.csv",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/b3_bmf_taxas_juros.csv",
     "accumulate": true
   },
   {
@@ -611,7 +611,7 @@
       "selic"
     ],
     "source": "B3 · BDI",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_bdi_di_over.csv",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/b3_bdi_di_over.csv",
     "accumulate": true
   },
   {
@@ -629,7 +629,7 @@
       "b3"
     ],
     "source": "B3 · COTAHIST",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_cotahist_anual.csv.gz",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/b3_cotahist_anual.csv.gz",
     "accumulate": true
   },
   {
@@ -648,7 +648,7 @@
       "fwf"
     ],
     "source": "B3 · COTAHIST",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_cotahist_diario.csv.gz",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/b3_cotahist_diario.csv.gz",
     "accumulate": true
   },
   {
@@ -666,7 +666,7 @@
       "b3"
     ],
     "source": "B3 · FWF",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_indicadores_economicos_fwf.csv",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/b3_indicadores_economicos_fwf.csv",
     "accumulate": true
   },
   {
@@ -681,7 +681,7 @@
       "bcb"
     ],
     "source": "BCB",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/bacen_balancetes_bancos.csv",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/bacen_balancetes_bancos.csv",
     "accumulate": false
   },
   {
@@ -696,7 +696,7 @@
       "bcb"
     ],
     "source": "BCB",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/bacen_conglomerados.csv",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/bacen_conglomerados.csv",
     "accumulate": true
   },
   {
@@ -711,7 +711,7 @@
       "bcb"
     ],
     "source": "BCB",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/bacen_parcelas_capital_basileia.csv.gz",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/bacen_parcelas_capital_basileia.csv.gz",
     "accumulate": true
   },
   {
@@ -731,7 +731,7 @@
       "bcb"
     ],
     "source": "BCB",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/bcb_ptax.csv",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/bcb_ptax.csv",
     "accumulate": false
   },
   {
@@ -749,7 +749,7 @@
       "preço"
     ],
     "source": "BCB · DEMAB",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/bacen_negociacao_tpf_extragrupo.csv.gz",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/bacen_negociacao_tpf_extragrupo.csv.gz",
     "accumulate": true
   },
   {
@@ -768,7 +768,7 @@
       "dólar"
     ],
     "source": "BCB · SGS",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/bcb_sgs.csv",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/bcb_sgs.csv",
     "accumulate": false
   },
   {
@@ -783,7 +783,7 @@
       "cvm"
     ],
     "source": "CVM",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/registro_fundo_classe.csv.gz",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/registro_fundo_classe.csv.gz",
     "accumulate": false
   },
   {
@@ -802,7 +802,7 @@
       "resgate"
     ],
     "source": "CVM",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/cvm_fundos_informe_diario.csv.gz",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/cvm_fundos_informe_diario.csv.gz",
     "accumulate": false
   },
   {
@@ -819,7 +819,7 @@
       "cadastro cvm"
     ],
     "source": "CVM · Dados Abertos",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/cvm_cadastro_companhias_abertas.csv",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/cvm_cadastro_companhias_abertas.csv",
     "accumulate": false
   },
   {
@@ -836,7 +836,7 @@
       "inpc"
     ],
     "source": "IBGE · SIDRA",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/ibge_sidra.csv",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/ibge_sidra.csv",
     "accumulate": false
   },
   {
@@ -851,7 +851,7 @@
       "misc"
     ],
     "source": "MISC",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/ipea_calendario.csv",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/ipea_calendario.csv",
     "accumulate": true
   },
   {
@@ -866,7 +866,7 @@
       "misc"
     ],
     "source": "MISC",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/ipea_comercio_exterior.csv",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/ipea_comercio_exterior.csv",
     "accumulate": true
   },
   {
@@ -881,7 +881,7 @@
       "misc"
     ],
     "source": "MISC",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/ipea_fbcf.csv",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/ipea_fbcf.csv",
     "accumulate": true
   },
   {
@@ -896,7 +896,7 @@
       "misc"
     ],
     "source": "MISC",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/ipea_macroeconomia.csv",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/ipea_macroeconomia.csv",
     "accumulate": true
   },
   {
@@ -911,7 +911,7 @@
       "misc"
     ],
     "source": "MISC",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/ipea_mercados_diarios.csv",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/ipea_mercados_diarios.csv",
     "accumulate": true
   },
   {
@@ -926,7 +926,7 @@
       "misc"
     ],
     "source": "MISC",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/ipea_precos_inflacao.csv",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/ipea_precos_inflacao.csv",
     "accumulate": true
   },
   {
@@ -941,7 +941,7 @@
       "misc"
     ],
     "source": "MISC",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/ipea_producao_mineral.csv",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/ipea_producao_mineral.csv",
     "accumulate": true
   },
   {
@@ -956,7 +956,7 @@
       "misc"
     ],
     "source": "MISC",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/ipea_taxas_juros.csv",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/ipea_taxas_juros.csv",
     "accumulate": true
   },
   {
@@ -971,7 +971,7 @@
       "misc"
     ],
     "source": "MISC",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/onu_pacto_global.csv",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/onu_pacto_global.csv",
     "accumulate": false
   },
   {
@@ -986,7 +986,7 @@
       "misc"
     ],
     "source": "MISC",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/yahoo_acoes_brasileiras.csv",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/yahoo_acoes_brasileiras.csv",
     "accumulate": true
   },
   {
@@ -1001,7 +1001,7 @@
       "misc"
     ],
     "source": "MISC",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/yahoo_acoes_internacionais.csv",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/yahoo_acoes_internacionais.csv",
     "accumulate": true
   },
   {
@@ -1016,7 +1016,7 @@
       "misc"
     ],
     "source": "MISC",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/yahoo_cambio_moedas.csv",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/yahoo_cambio_moedas.csv",
     "accumulate": true
   },
   {
@@ -1031,7 +1031,7 @@
       "misc"
     ],
     "source": "MISC",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/yahoo_commodities.csv",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/yahoo_commodities.csv",
     "accumulate": true
   },
   {
@@ -1046,7 +1046,7 @@
       "misc"
     ],
     "source": "MISC",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/yahoo_criptoativos.csv",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/yahoo_criptoativos.csv",
     "accumulate": true
   },
   {
@@ -1061,7 +1061,7 @@
       "misc"
     ],
     "source": "MISC",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/yahoo_etfs.csv",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/yahoo_etfs.csv",
     "accumulate": true
   },
   {
@@ -1076,7 +1076,7 @@
       "misc"
     ],
     "source": "MISC",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/yahoo_fiis_fiagros.csv",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/yahoo_fiis_fiagros.csv",
     "accumulate": true
   },
   {
@@ -1091,7 +1091,7 @@
       "misc"
     ],
     "source": "MISC",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/yahoo_indices_globais.csv",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/yahoo_indices_globais.csv",
     "accumulate": true
   },
   {
@@ -1106,7 +1106,7 @@
       "misc"
     ],
     "source": "MISC",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/yahoo_renda_fixa.csv",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/yahoo_renda_fixa.csv",
     "accumulate": true
   },
   {
@@ -1129,7 +1129,7 @@
       "cac"
     ],
     "source": "Wikipedia",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/wikipedia_global_indices.csv",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/wikipedia_global_indices.csv",
     "accumulate": false
   }
 ]
