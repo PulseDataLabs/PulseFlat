@@ -11,7 +11,7 @@ class DebenturesMercadoSecundarioPrecosNegociacaoScraper(GenericScraper):
     title = "Debêntures — Mercado Secundário e Preços de Negociação"
     description = "Preços médios, quantidades, volumes e negócios diários de debêntures no mercado secundário."
     badge = "Diário"
-    source = "ANBIMA"
+    source = "Debêntures"
     tags = ['debentures', 'mercado_secundario', 'precos', 'negociacao', 'anbima', 'snd']
     group = "anbima"
     enabled = True

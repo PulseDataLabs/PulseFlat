@@ -148,45 +148,6 @@
     "accumulate": true
   },
   {
-    "title": "Debêntures — Emissões e Características",
-    "file": "debentures_emissoes_caracteristicas.csv",
-    "description": "Cadastro e características de registro de todas as emissões de debêntures no Brasil.",
-    "icon": "📊",
-    "iconClass": "icon-anbima",
-    "badge": "Diário",
-    "badgeClass": "badge-daily",
-    "tags": [
-      "debentures",
-      "emissoes",
-      "caracteristicas",
-      "anbima",
-      "snd"
-    ],
-    "source": "ANBIMA",
-    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/debentures_emissoes_caracteristicas.csv",
-    "accumulate": false
-  },
-  {
-    "title": "Debêntures — Mercado Secundário e Preços de Negociação",
-    "file": "debentures_mercado_secundario_precos_negociacao.csv.gz",
-    "description": "Preços médios, quantidades, volumes e negócios diários de debêntures no mercado secundário.",
-    "icon": "📊",
-    "iconClass": "icon-anbima",
-    "badge": "Diário",
-    "badgeClass": "badge-daily",
-    "tags": [
-      "debentures",
-      "mercado_secundario",
-      "precos",
-      "negociacao",
-      "anbima",
-      "snd"
-    ],
-    "source": "ANBIMA",
-    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/debentures_mercado_secundario_precos_negociacao.csv.gz",
-    "accumulate": true
-  },
-  {
     "title": "ANBIMA — Projeções Econômicas",
     "file": "anbima_projecoes.csv",
     "description": "Expectativas de mercado para IPCA, IGP-M, Taxa Selic e Câmbio divulgadas pela ANBIMA.",
@@ -871,6 +832,45 @@
     "source": "CVM · Dados Abertos",
     "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/cvm_cadastro_companhias_abertas.csv",
     "accumulate": false
+  },
+  {
+    "title": "Debêntures — Emissões e Características",
+    "file": "debentures_emissoes_caracteristicas.csv",
+    "description": "Cadastro e características de registro de todas as emissões de debêntures no Brasil.",
+    "icon": "📊",
+    "iconClass": "icon-anbima",
+    "badge": "Diário",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "debentures",
+      "emissoes",
+      "caracteristicas",
+      "anbima",
+      "snd"
+    ],
+    "source": "Debêntures",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/debentures_emissoes_caracteristicas.csv",
+    "accumulate": false
+  },
+  {
+    "title": "Debêntures — Mercado Secundário e Preços de Negociação",
+    "file": "debentures_mercado_secundario_precos_negociacao.csv.gz",
+    "description": "Preços médios, quantidades, volumes e negócios diários de debêntures no mercado secundário.",
+    "icon": "📊",
+    "iconClass": "icon-anbima",
+    "badge": "Diário",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "debentures",
+      "mercado_secundario",
+      "precos",
+      "negociacao",
+      "anbima",
+      "snd"
+    ],
+    "source": "Debêntures",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/debentures_mercado_secundario_precos_negociacao.csv.gz",
+    "accumulate": true
   },
   {
     "title": "IBGE SIDRA — Séries Estatísticas e Inflação",

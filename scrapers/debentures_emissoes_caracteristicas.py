@@ -9,7 +9,7 @@ class DebenturesEmissoesCaracteristicasScraper(GenericScraper):
     title = "Debêntures — Emissões e Características"
     description = "Cadastro e características de registro de todas as emissões de debêntures no Brasil."
     badge = "Diário"
-    source = "ANBIMA"
+    source = "Debêntures"
     tags = ['debentures', 'emissoes', 'caracteristicas', 'anbima', 'snd']
     group = "anbima"
     enabled = True
