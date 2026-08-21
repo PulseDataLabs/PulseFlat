@@ -1437,16 +1437,43 @@
     .modal-window {
       background: var(--surface);
       border: 1px solid var(--border);
-      border-radius: 12px;
-      width: 90%;
-      max-width: 800px;
-      max-height: 85vh;
+      border-radius: 14px;
+      width: 95vw;
+      max-width: 1400px;
+      height: 88vh;
+      max-height: 88vh;
       display: flex;
       flex-direction: column;
-      box-shadow: 0 10px 40px rgba(0, 212, 255, 0.15);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7), 0 0 40px rgba(0, 212, 255, 0.12);
       transform: translateY(20px);
-      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), width 0.25s ease, max-width 0.25s ease, height 0.25s ease;
       overflow: hidden;
+    }
+    .modal-window.fullscreen {
+      width: 99vw;
+      max-width: 99vw;
+      height: 98vh;
+      max-height: 98vh;
+      border-radius: 8px;
+    }
+    .modal-expand-btn {
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      color: var(--text3);
+      font-size: 1rem;
+      cursor: pointer;
+      padding: 0.35rem 0.55rem;
+      line-height: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+    }
+    .modal-expand-btn:hover {
+      color: var(--accent);
+      border-color: var(--accent);
+      background: rgba(0, 212, 255, 0.08);
     }
     .modal-backdrop.open .modal-window {
       transform: translateY(0);
@@ -1498,9 +1525,10 @@
     }
     
     .preview-table-container {
-      overflow-x: auto;
+      overflow: auto;
+      max-height: 48vh;
       border: 1px solid var(--border);
-      border-radius: 6px;
+      border-radius: 8px;
       background: var(--bg2);
     }
     .preview-table {
@@ -1509,22 +1537,32 @@
       font-size: 0.8rem;
     }
     .preview-table th {
-      background: var(--bg3);
-      color: var(--text2);
+      background: #111a24;
+      color: var(--accent);
       font-family: var(--font-mono);
-      font-size: 0.7rem;
+      font-size: 0.72rem;
+      font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
-      padding: 0.6rem 0.75rem;
-      border-bottom: 1px solid var(--border);
+      letter-spacing: 0.06em;
+      padding: 0.75rem 0.9rem;
+      border-bottom: 2px solid var(--border);
       text-align: left;
       white-space: nowrap;
+      position: sticky;
+      top: 0;
+      z-index: 2;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.3);
     }
     .preview-table td {
-      padding: 0.5rem 0.75rem;
+      padding: 0.6rem 0.9rem;
       border-bottom: 1px solid rgba(30, 45, 61, 0.4);
       color: var(--text);
       white-space: nowrap;
+      font-family: var(--font-mono);
+      font-size: 0.76rem;
+    }
+    .preview-table tbody tr:hover {
+      background: rgba(0, 212, 255, 0.04);
     }
     .preview-table tr:last-child td {
       border-bottom: none;
@@ -2630,10 +2668,16 @@
 
 <!-- PREVIEW MODAL -->
 <div id="preview-modal" class="modal-backdrop" aria-hidden="true">
-  <div class="modal-window" role="dialog" aria-modal="true" aria-labelledby="preview-modal-title">
+  <div class="modal-window" id="preview-modal-window" role="dialog" aria-modal="true" aria-labelledby="preview-modal-title">
     <div class="modal-header">
-      <h3 id="preview-modal-title" class="modal-title">Prévia do Dataset</h3>
-      <button class="modal-close" id="preview-modal-close" aria-label="Fechar modal">&times;</button>
+      <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;">
+        <h3 id="preview-modal-title" class="modal-title">Prévia do Dataset</h3>
+        <span id="preview-modal-chip" style="font-family: var(--font-mono); font-size: 0.7rem; padding: 0.2rem 0.6rem; border-radius: 4px; background: rgba(0, 212, 255, 0.1); color: var(--accent); border: 1px solid rgba(0, 212, 255, 0.25);"></span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 0.5rem;">
+        <button class="modal-expand-btn" id="preview-modal-expand" title="Alternar Tela Cheia" aria-label="Alternar Tela Cheia">⛶</button>
+        <button class="modal-close" id="preview-modal-close" aria-label="Fechar modal">&times;</button>
+      </div>
     </div>
     <div class="modal-body" id="preview-modal-body">
       <!-- Carregado via JS -->
@@ -3160,7 +3204,9 @@
   // Preview Modal functions
   function initPreviewModal() {
     const modal = document.getElementById('preview-modal');
+    const modalWindow = document.getElementById('preview-modal-window');
     const closeBtn = document.getElementById('preview-modal-close');
+    const expandBtn = document.getElementById('preview-modal-expand');
     let lastFocusedElement = null;
     
     if (!modal || !closeBtn) return;
@@ -3168,12 +3214,20 @@
     const closeModal = () => {
       modal.classList.remove('open');
       modal.setAttribute('aria-hidden', 'true');
+      if (modalWindow) modalWindow.classList.remove('fullscreen');
+      if (expandBtn) expandBtn.textContent = '⛶';
       if (lastFocusedElement) {
         lastFocusedElement.focus();
       }
     };
     
     closeBtn.addEventListener('click', closeModal);
+    if (expandBtn && modalWindow) {
+      expandBtn.addEventListener('click', () => {
+        modalWindow.classList.toggle('fullscreen');
+        expandBtn.textContent = modalWindow.classList.contains('fullscreen') ? '🗗' : '⛶';
+      });
+    }
     modal.addEventListener('click', (e) => {
       if (e.target === modal) closeModal();
     });
@@ -3214,8 +3268,10 @@
       const modalTitle = document.getElementById('preview-modal-title');
       const modalBody = document.getElementById('preview-modal-body');
       
+      const modalChip = document.getElementById('preview-modal-chip');
       if (modalTitle && modalBody) {
-        modalTitle.textContent = `Prévia: ${title}`;
+        modalTitle.textContent = `${title}`;
+        if (modalChip) modalChip.textContent = fileName;
         modalBody.innerHTML = `
           <div class="loading-state" style="padding: 3rem;">
             <div class="spinner" role="status" aria-label="Carregando"></div>
@@ -3273,7 +3329,7 @@
             } else {
               textBuffer += decoder.decode(value, { stream: true });
               const lineCount = (textBuffer.match(/\n/g) || []).length;
-              if (lineCount >= 10) {
+              if (lineCount >= 25) {
                 await reader.cancel();
                 readDone = true;
               }
@@ -3285,7 +3341,7 @@
           
           if (rows.length > 0) {
             const headers = rows[0];
-            const displayRows = rows.slice(1, 6);
+            const displayRows = rows.slice(1, 16);
             
             let tableHeader = headers.map(h => `<th>${escapeHtml(h)}</th>`).join('');
             let tableRows = displayRows.map(r => {
