@@ -211,24 +211,6 @@
     "accumulate": true
   },
   {
-    "title": "B3 Boletim Diário",
-    "file": "b3_boletim_diario.csv",
-    "description": "Downloads dos arquivos consolidados do boletim diário de derivativos e posições em aberto da B3.",
-    "icon": "📂",
-    "iconClass": "icon-b3",
-    "badge": "Diário",
-    "badgeClass": "badge-daily",
-    "tags": [
-      "boletim",
-      "derivativos",
-      "posição em aberto",
-      "B3"
-    ],
-    "source": "B3",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_boletim_diario.csv",
-    "accumulate": true
-  },
-  {
     "title": "B3 Carteira Teorica Agfs Iagro",
     "file": "b3_carteira_teorica_agfs_iagro.csv",
     "description": "Sem descrição fornecida.",
@@ -422,21 +404,6 @@
     "accumulate": true
   },
   {
-    "title": "B3 Series Historicas",
-    "file": "b3_series_historicas.csv",
-    "description": "Sem descrição fornecida.",
-    "icon": "📊",
-    "iconClass": "icon-b3",
-    "badge": "Diário",
-    "badgeClass": "badge-daily",
-    "tags": [
-      "b3"
-    ],
-    "source": "B3",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_series_historicas.csv",
-    "accumulate": true
-  },
-  {
     "title": "B3 Títulos Negociáveis",
     "file": "b3_titulos_negociaveis.csv.gz",
     "description": "Cadastro de todos os títulos e instrumentos negociáveis no mercado da B3, incluindo BDRs, ações e outros ativos.",
@@ -512,114 +479,6 @@
     ],
     "source": "B3 API",
     "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_indicadores_financeiros.csv",
-    "accumulate": true
-  },
-  {
-    "title": "B3 — Capital Social de Empresas",
-    "file": "b3_capital_social_empresas.csv",
-    "description": "Capital social de empresas listadas na B3: CNPJ, valor do capital e data de referência.",
-    "icon": "🏢",
-    "iconClass": "icon-b3",
-    "badge": "Diário",
-    "badgeClass": "badge-daily",
-    "tags": [
-      "cnpj",
-      "empresa",
-      "capital social"
-    ],
-    "source": "B3 API",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_capital_social_empresas.csv",
-    "accumulate": true
-  },
-  {
-    "title": "B3 — Detalhes de Companhias",
-    "file": "b3_companhias_detalhes.csv",
-    "description": "Detalhes cadastrais completos das companhias listadas na B3 via API JSON: segmento de listagem, CNPJ, setor, código CVM e dados de registro.",
-    "icon": "🏢",
-    "iconClass": "icon-b3",
-    "badge": "Diário",
-    "badgeClass": "badge-daily",
-    "tags": [
-      "companhias",
-      "cadastro",
-      "cnpj",
-      "setor"
-    ],
-    "source": "B3 API",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_companhias_detalhes.csv",
-    "accumulate": true
-  },
-  {
-    "title": "B3 — Dividendos em Dinheiro",
-    "file": "b3_dividendos_dinheiro.csv",
-    "description": "Histórico completo de dividendos em dinheiro pagos por companhias listadas na B3: valor por ação, data de pagamento, data ex e tipo de provento.",
-    "icon": "💰",
-    "iconClass": "icon-b3",
-    "badge": "Diário",
-    "badgeClass": "badge-daily",
-    "tags": [
-      "dividendos",
-      "proventos",
-      "dinheiro",
-      "b3"
-    ],
-    "source": "B3 API",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_dividendos_dinheiro.csv",
-    "accumulate": true
-  },
-  {
-    "title": "B3 — Informações de Companhias",
-    "file": "b3_companhias_info.csv",
-    "description": "Informações complementares e proventos (dividendos em dinheiro, bonificações em ações, subscrições) de todas as companhias listadas na B3.",
-    "icon": "📋",
-    "iconClass": "icon-b3",
-    "badge": "Diário",
-    "badgeClass": "badge-daily",
-    "tags": [
-      "proventos",
-      "dividendos",
-      "subscrições",
-      "b3"
-    ],
-    "source": "B3 API",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_companhias_info.csv",
-    "accumulate": true
-  },
-  {
-    "title": "B3 — Taxa de Câmbio de Referência",
-    "file": "b3_taxa_cambio_referencia.csv",
-    "description": "Taxas de câmbio de referência divulgadas pela B3: compra e venda por moeda.",
-    "icon": "💱",
-    "iconClass": "icon-b3",
-    "badge": "Diário",
-    "badgeClass": "badge-daily",
-    "tags": [
-      "câmbio",
-      "taxa compra",
-      "taxa venda",
-      "moeda"
-    ],
-    "source": "B3 API",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_taxa_cambio_referencia.csv",
-    "accumulate": true
-  },
-  {
-    "title": "B3 — Índices de Preços Históricos",
-    "file": "b3_indices_precos_historicos.csv",
-    "description": "Composição histórica e pesos de índices B3 (IBOV, IBRA, IFIX, IDIV, SMLL) com dados dos últimos 2 anos.",
-    "icon": "📈",
-    "iconClass": "icon-b3",
-    "badge": "Diário",
-    "badgeClass": "badge-daily",
-    "tags": [
-      "ibov",
-      "ibra",
-      "ifix",
-      "idiv",
-      "smll"
-    ],
-    "source": "B3 API",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_indices_precos_historicos.csv",
     "accumulate": true
   },
   {
@@ -808,24 +667,6 @@
     ],
     "source": "B3 · FWF",
     "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_indicadores_economicos_fwf.csv",
-    "accumulate": true
-  },
-  {
-    "title": "B3 — Negócios de Balcão (OTC)",
-    "file": "b3_negocios_balcao.csv",
-    "description": "Negócios realizados em mercado de balcão da B3, incluindo operações com instrumentos de renda fixa, derivativos e títulos fora do ambiente de bolsa.",
-    "icon": "🤝",
-    "iconClass": "icon-b3",
-    "badge": "Diário",
-    "badgeClass": "badge-daily",
-    "tags": [
-      "otc",
-      "balcão",
-      "negócios",
-      "b3"
-    ],
-    "source": "B3 · OTC",
-    "url": "https://raw.githubusercontent.com/royopa/PulseFlat/main/data/b3_negocios_balcao.csv",
     "accumulate": true
   },
   {

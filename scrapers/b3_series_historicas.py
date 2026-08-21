@@ -1,27 +1,23 @@
-from scripts.utils.ux import print_warn
-
 #!/usr/bin/env python
 # coding: utf-8
 """
 Scraper: B3 – Séries Históricas de Renda Fixa (Negociação Consolidada)
 Fonte:   https://arquivos.b3.com.br/bdi/tabelas
 Saída:   data/b3_series_historicas.csv
-
-A B3 disponibiliza endpoint de download direto via POST/GET com parâmetros
-de data. O scraper consulta o período dos últimos 7 dias úteis e retorna
-o CSV consolidado.
 """
 import datetime
 import os
 import sys
 import time
 from io import StringIO
+from pathlib import Path
 
 import pandas as pd
 import requests
 
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from scrapers.utils.base import BaseScraper
+from scripts.utils.ux import print_warn
 
 # Endpoint de download direto da B3 para tabelas BDI / séries históricas
 REQUEST_URL = "https://drp.b3.com.br/api/download/requestname"
@@ -44,9 +40,19 @@ class B3SeriesHistoricasScraper(BaseScraper):
     group = "b3"
     enabled = True
     phase = 1
+    accumulate = True
+
+    # Catálogo de Metadados
+    title = "B3 Séries Históricas"
+    description = "Séries históricas de negociação consolidada de Renda Fixa da B3."
+    icon = "📈"
+    icon_class = "icon-b3"
+    badge = "Diário"
+    badge_class = "badge-daily"
+    tags = ["renda fixa", "bdi", "negociação consolidada", "B3"]
+    source = "B3"
 
     def fetch(self) -> pd.DataFrame:
-
         data_final = datetime.date.today()
         session = requests.Session()
         resp = None
@@ -67,14 +73,14 @@ class B3SeriesHistoricasScraper(BaseScraper):
 
                 retries_429 = 0
                 while True:
-                    time.sleep(6)
+                    time.sleep(2)
                     resp = session.get(
-                        REQUEST_URL, params=params, headers=HEADERS, timeout=120
+                        REQUEST_URL, params=params, headers=HEADERS, timeout=60
                     )
                     if resp.status_code == 429 and retries_429 < 3:
                         retries_429 += 1
-                        print_warn(f"limite 429 ({retries_429}/3), aguardando 11s")
-                        time.sleep(11)
+                        print_warn(f"limite 429 ({retries_429}/3), aguardando 5s")
+                        time.sleep(5)
                         continue
                     break
 
@@ -98,14 +104,13 @@ class B3SeriesHistoricasScraper(BaseScraper):
                 if not token:
                     print_warn("token de download não encontrado")
                     return pd.DataFrame()
-                time.sleep(6)  # Garante intervalo mínimo para o download
+                time.sleep(2)
                 resp = session.get(
-                    DOWNLOAD_URL, params={"token": token}, headers=HEADERS, timeout=120
+                    DOWNLOAD_URL, params={"token": token}, headers=HEADERS, timeout=60
                 )
                 resp.raise_for_status()
                 content_type = resp.headers.get("Content-Type", "")
 
-            # Detecta encoding
             encoding = "utf-8"
             if "latin" in content_type or "iso-8859" in content_type:
                 encoding = "latin-1"
@@ -115,7 +120,7 @@ class B3SeriesHistoricasScraper(BaseScraper):
 
             df = pd.read_csv(StringIO(text), sep=sep, encoding=encoding)
             df.columns = [str(c).strip() for c in df.columns]
-            df.insert(0, "dt_captura", data_final)
+            df.insert(0, "data_captura", data_final.strftime("%Y-%m-%d"))
             return df
         except Exception as e:
             print_warn(f"erro ao baixar: {e}")

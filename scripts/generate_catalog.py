@@ -162,9 +162,25 @@ def generate(dry_run: bool = False) -> None:
         elif not url:
             url = f"https://raw.githubusercontent.com/royopa/PulseFlat/main/data/{filename}"
 
+        target_path = datasets_json_path.parent / filename
+        target_gz_path = datasets_json_path.parent / (filename if filename.endswith(".gz") else f"{filename}.gz")
+        
+        if not target_path.exists() and not target_gz_path.exists():
+            print_warn(f"Ignorando scraper sem arquivo gerado no disco: {module_name} ({filename})")
+            continue
+
+        actual_filename = filename
+        if not target_path.exists() and target_gz_path.exists():
+            actual_filename = f"{filename}.gz" if not filename.endswith(".gz") else filename
+
+        if url and url.endswith(".csv") and actual_filename.endswith(".csv.gz"):
+            url = url[:-4] + ".csv.gz"
+        elif not url:
+            url = f"https://raw.githubusercontent.com/royopa/PulseFlat/main/data/{actual_filename}"
+
         dataset_entry = {
             "title": title,
-            "file": filename,
+            "file": actual_filename,
             "description": description,
             "icon": icon,
             "iconClass": icon_class,
@@ -177,8 +193,8 @@ def generate(dry_run: bool = False) -> None:
         }
 
         new_catalog.append(dataset_entry)
-        processed_files.add(filename)
-        print_done(f"{module_name} → {filename}")
+        processed_files.add(actual_filename)
+        print_done(f"{module_name} → {actual_filename}")
 
     for file, old_item in old_datasets.items():
         if file not in processed_files:
