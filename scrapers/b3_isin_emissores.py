@@ -24,8 +24,8 @@ class B3IsinEmissoresScraper(BaseScraper):
     chaves_dedup = None
 
     # Metadados para o catálogo global
-    title = "B3 ISIN Emissores"
-    description = "Banco de dados completo de emissores de códigos ISIN da B3."
+    title = "B3 — Emissores de Código ISIN"
+    description = "Relação cadastral completa de emissores de instrumentos financeiros da B3."
     icon = "🏢"
     icon_class = "icon-b3"
     badge = "Semanal"

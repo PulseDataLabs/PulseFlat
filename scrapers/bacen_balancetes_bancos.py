@@ -45,9 +45,12 @@ class BacenBalancetesBancosScraper(BaseScraper):
     group = "bcb"
     enabled = True
     phase = 1
-    accumulate = (
-        False  # Sobrescreve diariamente para manter apenas o balancete mais recente
-    )
+    title = "BACEN — Balancetes Mensais dos Bancos (Cosif)"
+    description = "Demonstrações financeiras e balancetes contábeis padronizados das instituições bancárias."
+    badge = "Mensal"
+    source = "BACEN"
+    tags = ["bacen", "bcb", "balancetes", "bancos", "cosif"]
+    accumulate = False
 
     def fetch(self) -> pd.DataFrame:
         time.time()

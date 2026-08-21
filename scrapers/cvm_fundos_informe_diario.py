@@ -144,8 +144,8 @@ class CvmFundosInformeDiarioScraper(BaseScraper):
     chaves_dedup = ["data_captura", "cnpj_fundo_classe", "data_referencia"]
 
     # Catálogo de Metadados
-    title = "CVM — Informe Diário de Fundos"
-    description = "Desempenho diário de fundos de investimento: valor da cota, PL, captações, resgates e cotistas."
+    title = "CVM — Informe Diário de Fundos de Investimento"
+    description = "Cota diária, patrimônio líquido, captações e resgates de toda a indústria de fundos."
     icon = "📋"
     icon_class = "icon-cvm"
     badge = "Diário"

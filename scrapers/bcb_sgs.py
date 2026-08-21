@@ -118,8 +118,8 @@ class BcbSgsScraper(BaseScraper):
     chaves_dedup = ["data_captura", "codigo_serie", "data_referencia"]
 
     # Catálogo de Metadados
-    title = "BCB SGS — Séries Temporais"
-    description = "Séries históricas do Banco Central via SGS: SELIC, CDI, IPCA, IGP-M e Dólar. Snapshot com série histórica diária completa desde 01/01/2020 (não acumulativo)."
+    title = "BACEN — Sistema Gerenciador de Séries Temporais (SGS)"
+    description = "Séries macroeconômicas oficiais: Taxa Selic, IPCA, IGP-M, TR, CDI e agregados monetários."
     icon = "📈"
     icon_class = "icon-bcb"
     badge = "Diário"

@@ -139,8 +139,8 @@ class AnbimaDebenturesScraper(BaseScraper):
     chaves_dedup = ["data_referencia", "codigo"]
 
     # Catálogo de Metadados
-    title = "ANBIMA Debêntures"
-    description = "Preços e taxas indicativas de debêntures, com PU, duration, índice de correção e intervalo indicativo."
+    title = "ANBIMA — Debêntures"
+    description = "Preços de referência, taxas indicativas e spreads de debêntures no mercado secundário."
     icon = "📜"
     icon_class = "icon-anbima"
     badge = "Diário"

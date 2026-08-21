@@ -1,8 +1,8 @@
 [
   {
-    "title": "ANBIMA Debêntures",
+    "title": "ANBIMA — Debêntures",
     "file": "anbima_debentures.csv",
-    "description": "Preços e taxas indicativas de debêntures, com PU, duration, índice de correção e intervalo indicativo.",
+    "description": "Preços de referência, taxas indicativas e spreads de debêntures no mercado secundário.",
     "icon": "📜",
     "iconClass": "icon-anbima",
     "badge": "Diário",
@@ -18,28 +18,9 @@
     "accumulate": true
   },
   {
-    "title": "ANBIMA IDkA",
-    "file": "anbima_idka.csv",
-    "description": "Índice de Duração Constante ANBIMA (prefixado e inflação), apresentando retornos diários, mensais, anuais e volatilidade.",
-    "icon": "📈",
-    "iconClass": "icon-anbima",
-    "badge": "Diário",
-    "badgeClass": "badge-daily",
-    "tags": [
-      "idka",
-      "prefixado",
-      "inflação",
-      "duracao constante",
-      "anbima"
-    ],
-    "source": "ANBIMA",
-    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/anbima_idka.csv",
-    "accumulate": true
-  },
-  {
-    "title": "ANBIMA IMA / IDA",
+    "title": "ANBIMA — Família IMA / IDA Completo",
     "file": "anbima_ima_completo.csv",
-    "description": "Índices de mercado ANBIMA (IMA, IRF-M, IDA, IDKA): variações diárias, mensais e anuais, duration e peso geral.",
+    "description": "Índices de Mercado ANBIMA (IMA-B, IMA-C, IMA-S, IRF-M) e Índices de Debêntures ANBIMA (IDA).",
     "icon": "📊",
     "iconClass": "icon-anbima",
     "badge": "Diário",
@@ -56,9 +37,9 @@
     "accumulate": true
   },
   {
-    "title": "ANBIMA Indicadores",
+    "title": "ANBIMA — Indicadores Financeiros",
     "file": "anbima_indicadores.csv",
-    "description": "Quadro completo de indicadores do mercado: taxa SELIC, DI-B3, índices de preços, câmbio e taxas de referência. Atualizado duas vezes ao dia.",
+    "description": "Indicadores econômicos, inflação implícita e taxas médias de curto e longo prazo.",
     "icon": "📊",
     "iconClass": "icon-anbima",
     "badge": "Diário · 2×",
@@ -79,24 +60,27 @@
     "accumulate": true
   },
   {
-    "title": "Anbima Matriz Probabilidade Resgate",
+    "title": "ANBIMA — Matriz de Probabilidade de Resgate",
     "file": "anbima_matriz_probabilidade_resgate.csv",
-    "description": "Sem descrição fornecida.",
+    "description": "Matriz de liquidez e estimativa probabilística de resgates para fundos de investimento.",
     "icon": "📊",
     "iconClass": "icon-anbima",
-    "badge": "Diário",
+    "badge": "Mensal",
     "badgeClass": "badge-daily",
     "tags": [
-      "anbima"
+      "anbima",
+      "resgate",
+      "liquidez",
+      "fundos"
     ],
     "source": "ANBIMA",
     "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/anbima_matriz_probabilidade_resgate.csv",
     "accumulate": true
   },
   {
-    "title": "Anbima Ranking Global",
+    "title": "ANBIMA — Ranking Global de Fundos",
     "file": "anbima_ranking_global.csv",
-    "description": "Sem descrição fornecida.",
+    "description": "Classificação e patrimônio líquido dos principais fundos e gestoras do mercado brasileiro.",
     "icon": "📊",
     "iconClass": "icon-anbima",
     "badge": "Diário",
@@ -109,9 +93,9 @@
     "accumulate": true
   },
   {
-    "title": "ANBIMA Resolução 550",
+    "title": "ANBIMA — Resolução 550",
     "file": "anbima_550.csv",
-    "description": "Ativos de renda fixa da Resolução ANBIMA 550: preço unitário, preço de retorno e posição em custódia.",
+    "description": "Posição diária de custódia e ativos conforme Resolução CMN/CVM 550.",
     "icon": "📋",
     "iconClass": "icon-anbima",
     "badge": "Diário",
@@ -126,9 +110,9 @@
     "accumulate": true
   },
   {
-    "title": "ANBIMA Títulos Públicos",
+    "title": "ANBIMA — Títulos Públicos Federais",
     "file": "anbima_titulos_publicos.csv",
-    "description": "Preços e taxas indicativas de títulos públicos federais (LTN, NTN, LFT), incluindo PU, duration e desvio padrão.",
+    "description": "Taxas indicativas, PU base e curvas de rentabilidade de LFT, LTN, NTN-B e NTN-F.",
     "icon": "🏛️",
     "iconClass": "icon-anbima",
     "badge": "Diário",
@@ -145,39 +129,67 @@
     "accumulate": true
   },
   {
-    "title": "Debentures Emissoes Caracteristicas",
+    "title": "ANBIMA — Índices IDkA",
+    "file": "anbima_idka.csv",
+    "description": "Índice de Duração Constante ANBIMA para títulos públicos prefixados e indexados à inflação.",
+    "icon": "📈",
+    "iconClass": "icon-anbima",
+    "badge": "Diário",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "idka",
+      "prefixado",
+      "inflação",
+      "duracao constante",
+      "anbima"
+    ],
+    "source": "ANBIMA",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/anbima_idka.csv",
+    "accumulate": true
+  },
+  {
+    "title": "Debêntures — Emissões e Características",
     "file": "debentures_emissoes_caracteristicas.csv",
-    "description": "Sem descrição fornecida.",
+    "description": "Cadastro e características de registro de todas as emissões de debêntures no Brasil.",
     "icon": "📊",
     "iconClass": "icon-anbima",
     "badge": "Diário",
     "badgeClass": "badge-daily",
     "tags": [
-      "anbima"
+      "debentures",
+      "emissoes",
+      "caracteristicas",
+      "anbima",
+      "snd"
     ],
     "source": "ANBIMA",
     "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/debentures_emissoes_caracteristicas.csv",
     "accumulate": false
   },
   {
-    "title": "Debentures Mercado Secundario Precos Negociacao",
+    "title": "Debêntures — Mercado Secundário e Preços de Negociação",
     "file": "debentures_mercado_secundario_precos_negociacao.csv.gz",
-    "description": "Sem descrição fornecida.",
+    "description": "Preços médios, quantidades, volumes e negócios diários de debêntures no mercado secundário.",
     "icon": "📊",
     "iconClass": "icon-anbima",
     "badge": "Diário",
     "badgeClass": "badge-daily",
     "tags": [
-      "anbima"
+      "debentures",
+      "mercado_secundario",
+      "precos",
+      "negociacao",
+      "anbima",
+      "snd"
     ],
     "source": "ANBIMA",
     "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/debentures_mercado_secundario_precos_negociacao.csv.gz",
     "accumulate": true
   },
   {
-    "title": "ANBIMA Projeções",
+    "title": "ANBIMA — Projeções Econômicas",
     "file": "anbima_projecoes.csv",
-    "description": "Projeções de IPCA e IGP-M coletadas junto às instituições do Comitê Macroeconômico da ANBIMA para o mês corrente e seguinte.",
+    "description": "Expectativas de mercado para IPCA, IGP-M, Taxa Selic e Câmbio divulgadas pela ANBIMA.",
     "icon": "🔮",
     "iconClass": "icon-anbima",
     "badge": "Sob divulgação",
@@ -196,7 +208,7 @@
   {
     "title": "ANBIMA — Índice IMA-B",
     "file": "anbima_indice_imab.csv.gz",
-    "description": "Histórico completo do IMA-B (Índice de Mercado ANBIMA), incluindo subíndices como IMA-B5, IMA-B5+, IMA-C e IMA-S.",
+    "description": "Série histórica e composição de rentabilidade dos títulos públicos indexados ao IPCA (NTN-B).",
     "icon": "📈",
     "iconClass": "icon-anbima",
     "badge": "Diário",
@@ -211,146 +223,9 @@
     "accumulate": true
   },
   {
-    "title": "B3 Carteira Teorica Agfs Iagro",
-    "file": "b3_carteira_teorica_agfs_iagro.csv",
-    "description": "Sem descrição fornecida.",
-    "icon": "📊",
-    "iconClass": "icon-b3",
-    "badge": "Diário",
-    "badgeClass": "badge-daily",
-    "tags": [
-      "b3"
-    ],
-    "source": "B3",
-    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/b3_carteira_teorica_agfs_iagro.csv",
-    "accumulate": true
-  },
-  {
-    "title": "B3 Carteira Teorica Bdrx",
-    "file": "b3_carteira_teorica_bdrx.csv",
-    "description": "Sem descrição fornecida.",
-    "icon": "📊",
-    "iconClass": "icon-b3",
-    "badge": "Diário",
-    "badgeClass": "badge-daily",
-    "tags": [
-      "b3"
-    ],
-    "source": "B3",
-    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/b3_carteira_teorica_bdrx.csv",
-    "accumulate": true
-  },
-  {
-    "title": "B3 Carteira Teorica Ibov",
-    "file": "b3_carteira_teorica_ibov.csv",
-    "description": "Sem descrição fornecida.",
-    "icon": "📊",
-    "iconClass": "icon-b3",
-    "badge": "Diário",
-    "badgeClass": "badge-daily",
-    "tags": [
-      "b3"
-    ],
-    "source": "B3",
-    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/b3_carteira_teorica_ibov.csv",
-    "accumulate": true
-  },
-  {
-    "title": "B3 Carteira Teorica Ibsd",
-    "file": "b3_carteira_teorica_ibsd.csv",
-    "description": "Sem descrição fornecida.",
-    "icon": "📊",
-    "iconClass": "icon-b3",
-    "badge": "Diário",
-    "badgeClass": "badge-daily",
-    "tags": [
-      "b3"
-    ],
-    "source": "B3",
-    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/b3_carteira_teorica_ibsd.csv",
-    "accumulate": true
-  },
-  {
-    "title": "B3 Carteira Teorica Ibxl",
-    "file": "b3_carteira_teorica_ibxl.csv",
-    "description": "Sem descrição fornecida.",
-    "icon": "📊",
-    "iconClass": "icon-b3",
-    "badge": "Diário",
-    "badgeClass": "badge-daily",
-    "tags": [
-      "b3"
-    ],
-    "source": "B3",
-    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/b3_carteira_teorica_ibxl.csv",
-    "accumulate": true
-  },
-  {
-    "title": "B3 Carteira Teorica Ifnc",
-    "file": "b3_carteira_teorica_ifnc.csv",
-    "description": "Sem descrição fornecida.",
-    "icon": "📊",
-    "iconClass": "icon-b3",
-    "badge": "Diário",
-    "badgeClass": "badge-daily",
-    "tags": [
-      "b3"
-    ],
-    "source": "B3",
-    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/b3_carteira_teorica_ifnc.csv",
-    "accumulate": true
-  },
-  {
-    "title": "B3 Carteira Teorica Isee",
-    "file": "b3_carteira_teorica_isee.csv",
-    "description": "Sem descrição fornecida.",
-    "icon": "📊",
-    "iconClass": "icon-b3",
-    "badge": "Diário",
-    "badgeClass": "badge-daily",
-    "tags": [
-      "b3"
-    ],
-    "source": "B3",
-    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/b3_carteira_teorica_isee.csv",
-    "accumulate": true
-  },
-  {
-    "title": "B3 Carteira Teorica Smll",
-    "file": "b3_carteira_teorica_smll.csv",
-    "description": "Sem descrição fornecida.",
-    "icon": "📊",
-    "iconClass": "icon-b3",
-    "badge": "Diário",
-    "badgeClass": "badge-daily",
-    "tags": [
-      "b3"
-    ],
-    "source": "B3",
-    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/b3_carteira_teorica_smll.csv",
-    "accumulate": true
-  },
-  {
-    "title": "B3 Classificação Setorial",
-    "file": "b3_classificacao_setorial.csv",
-    "description": "Classificação setorial completa das empresas listadas na B3 (setor econômico, subsetor e segmento de atuação).",
-    "icon": "🗂️",
-    "iconClass": "icon-b3",
-    "badge": "Diário",
-    "badgeClass": "badge-daily",
-    "tags": [
-      "setor",
-      "subsetor",
-      "segmento"
-    ],
-    "source": "B3",
-    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/b3_classificacao_setorial.csv",
-    "accumulate": false
-  },
-  {
-    "title": "B3 ISIN Ativos",
+    "title": "B3 — Cadastro de Códigos ISIN",
     "file": "b3_isin_ativos.csv.gz",
-    "description": "Banco de dados completo de ativos com código ISIN cadastrados na B3.",
+    "description": "Tabela mestre de códigos ISIN atribuídos a ações, fundos e ativos negociáveis.",
     "icon": "🏷️",
     "iconClass": "icon-b3",
     "badge": "Semanal",
@@ -365,9 +240,176 @@
     "accumulate": false
   },
   {
-    "title": "B3 ISIN Emissores",
+    "title": "B3 — Carteira Teórica AGFS / IAGRO",
+    "file": "b3_carteira_teorica_agfs_iagro.csv",
+    "description": "Composição e pesos dos ativos do Índice do Agronegócio (IAGRO) da B3.",
+    "icon": "📊",
+    "iconClass": "icon-b3",
+    "badge": "Quadrimestral",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "b3",
+      "carteira_teorica",
+      "agfs",
+      "iagro",
+      "indices"
+    ],
+    "source": "B3",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/b3_carteira_teorica_agfs_iagro.csv",
+    "accumulate": true
+  },
+  {
+    "title": "B3 — Carteira Teórica BDRX",
+    "file": "b3_carteira_teorica_bdrx.csv",
+    "description": "Composição e pesos do Índice de BDRs Não Patrocinados (BDRX).",
+    "icon": "📊",
+    "iconClass": "icon-b3",
+    "badge": "Quadrimestral",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "b3",
+      "carteira_teorica",
+      "bdrx",
+      "indices"
+    ],
+    "source": "B3",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/b3_carteira_teorica_bdrx.csv",
+    "accumulate": true
+  },
+  {
+    "title": "B3 — Carteira Teórica IBOVESPA",
+    "file": "b3_carteira_teorica_ibov.csv",
+    "description": "Composição oficial e pesos das ações que compõem o Índice Bovespa (IBOV).",
+    "icon": "📊",
+    "iconClass": "icon-b3",
+    "badge": "Quadrimestral",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "b3",
+      "carteira_teorica",
+      "ibov",
+      "ibovespa",
+      "indices"
+    ],
+    "source": "B3",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/b3_carteira_teorica_ibov.csv",
+    "accumulate": true
+  },
+  {
+    "title": "B3 — Carteira Teórica IBSD",
+    "file": "b3_carteira_teorica_ibsd.csv",
+    "description": "Composição do Índice de Sustentabilidade Diferenciada da B3.",
+    "icon": "📊",
+    "iconClass": "icon-b3",
+    "badge": "Quadrimestral",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "b3",
+      "carteira_teorica",
+      "ibsd",
+      "indices"
+    ],
+    "source": "B3",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/b3_carteira_teorica_ibsd.csv",
+    "accumulate": true
+  },
+  {
+    "title": "B3 — Carteira Teórica IBX 50",
+    "file": "b3_carteira_teorica_ibxl.csv",
+    "description": "Composição e pesos das 50 ações mais negociadas da bolsa brasileira (IBrX-50).",
+    "icon": "📊",
+    "iconClass": "icon-b3",
+    "badge": "Quadrimestral",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "b3",
+      "carteira_teorica",
+      "ibxl",
+      "ibrx50",
+      "indices"
+    ],
+    "source": "B3",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/b3_carteira_teorica_ibxl.csv",
+    "accumulate": true
+  },
+  {
+    "title": "B3 — Carteira Teórica IFNC (Financeiro)",
+    "file": "b3_carteira_teorica_ifnc.csv",
+    "description": "Composição do Índice Financeiro da B3 com bancos e instituições financeiras.",
+    "icon": "📊",
+    "iconClass": "icon-b3",
+    "badge": "Quadrimestral",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "b3",
+      "carteira_teorica",
+      "ifnc",
+      "financeiro",
+      "indices"
+    ],
+    "source": "B3",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/b3_carteira_teorica_ifnc.csv",
+    "accumulate": true
+  },
+  {
+    "title": "B3 — Carteira Teórica ISEE (Sustentabilidade)",
+    "file": "b3_carteira_teorica_isee.csv",
+    "description": "Composição do Índice de Sustentabilidade Empresarial (ISE B3).",
+    "icon": "📊",
+    "iconClass": "icon-b3",
+    "badge": "Quadrimestral",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "b3",
+      "carteira_teorica",
+      "isee",
+      "sustentabilidade",
+      "indices"
+    ],
+    "source": "B3",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/b3_carteira_teorica_isee.csv",
+    "accumulate": true
+  },
+  {
+    "title": "B3 — Carteira Teórica SMLL (Small Caps)",
+    "file": "b3_carteira_teorica_smll.csv",
+    "description": "Composição e ponderação do Índice Small Cap da B3.",
+    "icon": "📊",
+    "iconClass": "icon-b3",
+    "badge": "Quadrimestral",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "b3",
+      "carteira_teorica",
+      "smll",
+      "small_caps",
+      "indices"
+    ],
+    "source": "B3",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/b3_carteira_teorica_smll.csv",
+    "accumulate": true
+  },
+  {
+    "title": "B3 — Classificação Setorial de Empresas",
+    "file": "b3_classificacao_setorial.csv",
+    "description": "Estrutura setorial completa: setor econômico, subsetor e segmento de listagem na B3.",
+    "icon": "🗂️",
+    "iconClass": "icon-b3",
+    "badge": "Diário",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "setor",
+      "subsetor",
+      "segmento"
+    ],
+    "source": "B3",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/b3_classificacao_setorial.csv",
+    "accumulate": false
+  },
+  {
+    "title": "B3 — Emissores de Código ISIN",
     "file": "b3_isin_emissores.csv",
-    "description": "Banco de dados completo de emissores de códigos ISIN da B3.",
+    "description": "Relação cadastral completa de emissores de instrumentos financeiros da B3.",
     "icon": "🏢",
     "iconClass": "icon-b3",
     "badge": "Semanal",
@@ -382,9 +424,9 @@
     "accumulate": false
   },
   {
-    "title": "B3 Limites de Garantias",
+    "title": "B3 — Limites e Garantias",
     "file": "b3_limites_garantias.csv",
-    "description": "Limites de aceitacao de acoes, BDRs, units, ETFs, ADRs, FIIs e debentures em garantia na B3.",
+    "description": "Parâmetros de margem, limites operacionais e garantias aceitas pela Clearing B3.",
     "icon": "🔒",
     "iconClass": "icon-b3",
     "badge": "Mensal",
@@ -404,9 +446,9 @@
     "accumulate": true
   },
   {
-    "title": "B3 Títulos Negociáveis",
+    "title": "B3 — Títulos e Valores Negociáveis",
     "file": "b3_titulos_negociaveis.csv.gz",
-    "description": "Cadastro de todos os títulos e instrumentos negociáveis no mercado da B3, incluindo BDRs, ações e outros ativos.",
+    "description": "Catálogo de instrumentos e títulos habilitados para negociação e registro na B3.",
     "icon": "📋",
     "iconClass": "icon-b3",
     "badge": "Snapshot",
@@ -423,9 +465,9 @@
     "accumulate": false
   },
   {
-    "title": "B3 ETFs Listados",
+    "title": "B3 — ETFs Listados",
     "file": "b3_etfs.csv",
-    "description": "ETFs de Renda Variável e Renda Fixa listados na B3, com índice de referência, administrador, gestor e patrimônio líquido.",
+    "description": "Cadastro e metadados dos Exchange Traded Funds (ETFs) negociados na B3.",
     "icon": "📈",
     "iconClass": "icon-b3",
     "badge": "Diário",
@@ -443,9 +485,9 @@
     "accumulate": false
   },
   {
-    "title": "B3 FIIs Listados",
+    "title": "B3 — Fundos Imobiliários (FIIs)",
     "file": "b3_fiis.csv",
-    "description": "Lista completa de Fundos de Investimento Imobiliário listados na B3, com dados cadastrais, administrador, segmento e patrimônio líquido.",
+    "description": "Cadastro geral, códigos ISIN e informações básicas de Fundos Imobiliários da B3.",
     "icon": "🏢",
     "iconClass": "icon-b3",
     "badge": "Diário",
@@ -463,9 +505,9 @@
     "accumulate": false
   },
   {
-    "title": "B3 Indicadores Financeiros",
+    "title": "B3 — Indicadores Financeiros",
     "file": "b3_indicadores_financeiros.csv",
-    "description": "Indicadores financeiros da B3 via API de derivativos: SELIC, CDI, IPCA, IGP-M, câmbio e taxas de juros.",
+    "description": "Indicadores financeiros oficiais e taxas de derivativos divulgadas pela B3.",
     "icon": "📊",
     "iconClass": "icon-b3",
     "badge": "Diário",
@@ -482,9 +524,9 @@
     "accumulate": true
   },
   {
-    "title": "B3 Fundos Listados",
+    "title": "B3 — Fundos Listados em Bolsa",
     "file": "b3_fundos_listados.csv",
-    "description": "Lista completa de fundos listados na B3: FII, FIAGRO, FIDC, FIP, ETFs (RV e RF) e Fundos Setoriais. Inclui dados cadastrais e patrimônio líquido via CVM.",
+    "description": "Relação de FIIs, FIAGROs, FIPs e fundos de investimento listados na bolsa.",
     "icon": "🏢",
     "iconClass": "icon-b3",
     "badge": "Diário",
@@ -507,9 +549,9 @@
     "accumulate": false
   },
   {
-    "title": "B3 Carteiras Teóricas",
+    "title": "B3 — Todas as Carteiras Teóricas",
     "file": "b3_carteiras_teoricas.csv",
-    "description": "Composição diária das carteiras teóricas dos 22 principais índices da B3. Permite acompanhar a evolução do peso de cada ativo ao longo do tempo e detectar entradas e saídas nas carteiras.",
+    "description": "Consolidado de todas as carteiras teóricas e composições de índices da B3.",
     "icon": "🗂️",
     "iconClass": "icon-b3",
     "badge": "Diário · 22 índices",
@@ -539,9 +581,9 @@
     "accumulate": true
   },
   {
-    "title": "B3 BDI — ETF de Renda Fixa",
+    "title": "B3 BDI — ETFs de Renda Fixa",
     "file": "b3_bdi_etfrf.csv.gz",
-    "description": "Resumo diário dos negócios de ETF de Renda Fixa no mercado da B3 (Boletim Diário), com preços de abertura, mínimo, máximo, médio e fechamento, quantidade negociada, número de negócios e volume financeiro.",
+    "description": "Negociação e cotações de fechamento dos ETFs de Renda Fixa na B3.",
     "icon": "📊",
     "iconClass": "icon-b3",
     "badge": "Diário",
@@ -561,7 +603,7 @@
   {
     "title": "B3 BDI — Negócios de Ações",
     "file": "b3_bdi_trades_acoes.csv.gz",
-    "description": "Resumo de negócios diários consolidados de ações negociadas no mercado de bolsa da B3, com preços e volumes.",
+    "description": "Consolidado diário de negócios, volumes e negócios realizados no mercado à vista de ações.",
     "icon": "📈",
     "iconClass": "icon-b3",
     "badge": "Diário",
@@ -578,9 +620,9 @@
     "accumulate": true
   },
   {
-    "title": "B3 BDI — Taxas de Swap",
+    "title": "B3 BDI — Taxas de Swap e Juros",
     "file": "b3_bmf_taxas_juros.csv",
-    "description": "Taxas de mercado e de referência para swaps e taxas referenciais da BM&F por prazo em dias corridos e úteis.",
+    "description": "Estrutura a termo das taxas de juros (DI x Pré) e taxas referenciais da BM&F.",
     "icon": "📊",
     "iconClass": "icon-b3",
     "badge": "Diário",
@@ -599,7 +641,7 @@
   {
     "title": "B3 BDI — DI Over",
     "file": "b3_bdi_di_over.csv",
-    "description": "Taxa DI Over overnight: número de operações, volume financeiro, taxa média, fator diário e SELIC.",
+    "description": "Boletim Diário de Informações para contratos de taxa de juros DI Over.",
     "icon": "🏦",
     "iconClass": "icon-b3",
     "badge": "Diário",
@@ -615,27 +657,9 @@
     "accumulate": true
   },
   {
-    "title": "B3 — COTAHIST Anual",
-    "file": "b3_cotahist_anual.csv.gz",
-    "description": "Cotações históricas anuais de todos os ativos da B3 no formato COTAHIST de largura fixa — mesmo conteúdo do diário, consolidado por ano para backfill histórico.",
-    "icon": "📅",
-    "iconClass": "icon-b3",
-    "badge": "Diário",
-    "badgeClass": "badge-daily",
-    "tags": [
-      "cotações anual",
-      "histórico",
-      "fwf",
-      "b3"
-    ],
-    "source": "B3 · COTAHIST",
-    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/b3_cotahist_anual.csv.gz",
-    "accumulate": true
-  },
-  {
     "title": "B3 — COTAHIST Diário",
     "file": "b3_cotahist_diario.csv.gz",
-    "description": "Cotações históricas diárias de todos os ativos da B3 (ações, BDRs, ETFs, FIIs) no formato COTAHIST de largura fixa, incluindo abertura, máxima, mínima, média, fechamento, volume e quantidade de negócios.",
+    "description": "Cotações históricas oficiais diárias negociadas nos mercados à vista e a termo da B3.",
     "icon": "📊",
     "iconClass": "icon-b3",
     "badge": "Diário",
@@ -652,9 +676,27 @@
     "accumulate": true
   },
   {
-    "title": "B3 — Indicadores Econômicos",
+    "title": "B3 — COTAHIST Histórico Anual",
+    "file": "b3_cotahist_anual.csv.gz",
+    "description": "Série histórica anual completa de cotações de ações, fundos e opções da B3.",
+    "icon": "📅",
+    "iconClass": "icon-b3",
+    "badge": "Diário",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "cotações anual",
+      "histórico",
+      "fwf",
+      "b3"
+    ],
+    "source": "B3 · COTAHIST",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/b3_cotahist_anual.csv.gz",
+    "accumulate": true
+  },
+  {
+    "title": "B3 — Indicadores Econômicos FWF",
     "file": "b3_indicadores_economicos_fwf.csv",
-    "description": "Indicadores macroeconômicos diários divulgados pela B3 em formato de largura fixa (FWF): taxas de juros, índices de inflação e parâmetros de mercado.",
+    "description": "Arquivo de tamanho fixo com moedas, taxas referenciais e índices econômicos da B3.",
     "icon": "📊",
     "iconClass": "icon-b3",
     "badge": "Diário",
@@ -670,24 +712,28 @@
     "accumulate": true
   },
   {
-    "title": "Bacen Balancetes Bancos",
+    "title": "BACEN — Balancetes Mensais dos Bancos (Cosif)",
     "file": "bacen_balancetes_bancos.csv",
-    "description": "Sem descrição fornecida.",
+    "description": "Demonstrações financeiras e balancetes contábeis padronizados das instituições bancárias.",
     "icon": "📊",
     "iconClass": "icon-bcb",
-    "badge": "Diário",
+    "badge": "Mensal",
     "badgeClass": "badge-daily",
     "tags": [
-      "bcb"
+      "bacen",
+      "bcb",
+      "balancetes",
+      "bancos",
+      "cosif"
     ],
-    "source": "BCB",
+    "source": "BACEN",
     "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/bacen_balancetes_bancos.csv",
     "accumulate": false
   },
   {
-    "title": "Bacen Conglomerados",
+    "title": "BACEN — Conglomerados Financeiros e Prudenciais",
     "file": "bacen_conglomerados.csv",
-    "description": "Sem descrição fornecida.",
+    "description": "Composição institucional e dados prudenciais dos conglomerados financeiros no Brasil.",
     "icon": "📊",
     "iconClass": "icon-bcb",
     "badge": "Diário",
@@ -700,24 +746,9 @@
     "accumulate": true
   },
   {
-    "title": "Bacen Parcelas Capital Basileia",
-    "file": "bacen_parcelas_capital_basileia.csv.gz",
-    "description": "Sem descrição fornecida.",
-    "icon": "📊",
-    "iconClass": "icon-bcb",
-    "badge": "Diário",
-    "badgeClass": "badge-daily",
-    "tags": [
-      "bcb"
-    ],
-    "source": "BCB",
-    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/bacen_parcelas_capital_basileia.csv.gz",
-    "accumulate": true
-  },
-  {
-    "title": "BCB PTAX",
+    "title": "BACEN — Câmbio PTAX",
     "file": "bcb_ptax.csv",
-    "description": "Cotações históricas diárias oficiais de compra e venda do dólar comercial (USD/BRL) publicadas pelo Banco Central do Brasil.",
+    "description": "Taxas de câmbio oficiais de compra e venda divulgadas pelo Banco Central do Brasil.",
     "icon": "💵",
     "iconClass": "icon-bcb",
     "badge": "Diário",
@@ -735,9 +766,24 @@
     "accumulate": false
   },
   {
-    "title": "BCB — Negociação TPF Extra-grupo",
+    "title": "BACEN — Parcelas de Capital e Basileia",
+    "file": "bacen_parcelas_capital_basileia.csv.gz",
+    "description": "Requerimentos de capital, patrimônio de referência e índice de Basileia do sistema financeiro.",
+    "icon": "📊",
+    "iconClass": "icon-bcb",
+    "badge": "Diário",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "bcb"
+    ],
+    "source": "BCB",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/bacen_parcelas_capital_basileia.csv.gz",
+    "accumulate": true
+  },
+  {
+    "title": "BACEN — Negociação de Títulos Públicos (Extra-grupo)",
     "file": "bacen_negociacao_tpf_extragrupo.csv.gz",
-    "description": "Operações de compra e venda de Títulos Públicos Federais extra-grupo realizadas no mercado aberto (BCB/DEMAB).",
+    "description": "Operações definitivas e compromissadas no mercado secundário de títulos públicos federais.",
     "icon": "📋",
     "iconClass": "icon-bcb",
     "badge": "Diário",
@@ -753,9 +799,9 @@
     "accumulate": true
   },
   {
-    "title": "BCB SGS — Séries Temporais",
+    "title": "BACEN — Sistema Gerenciador de Séries Temporais (SGS)",
     "file": "bcb_sgs.csv",
-    "description": "Séries históricas do Banco Central via SGS: SELIC, CDI, IPCA, IGP-M e Dólar. Snapshot com série histórica diária completa desde 01/01/2020 (não acumulativo).",
+    "description": "Séries macroeconômicas oficiais: Taxa Selic, IPCA, IGP-M, TR, CDI e agregados monetários.",
     "icon": "📈",
     "iconClass": "icon-bcb",
     "badge": "Diário",
@@ -772,24 +818,9 @@
     "accumulate": false
   },
   {
-    "title": "Cvm Fundos Classe",
-    "file": "registro_fundo_classe.csv.gz",
-    "description": "Sem descrição fornecida.",
-    "icon": "📊",
-    "iconClass": "icon-cvm",
-    "badge": "Diário",
-    "badgeClass": "badge-daily",
-    "tags": [
-      "cvm"
-    ],
-    "source": "CVM",
-    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/registro_fundo_classe.csv.gz",
-    "accumulate": false
-  },
-  {
-    "title": "CVM — Informe Diário de Fundos",
+    "title": "CVM — Informe Diário de Fundos de Investimento",
     "file": "cvm_fundos_informe_diario.csv.gz",
-    "description": "Desempenho diário de fundos de investimento: valor da cota, PL, captações, resgates e cotistas.",
+    "description": "Cota diária, patrimônio líquido, captações e resgates de toda a indústria de fundos.",
     "icon": "📋",
     "iconClass": "icon-cvm",
     "badge": "Diário",
@@ -806,9 +837,28 @@
     "accumulate": false
   },
   {
+    "title": "CVM — Registro de Classes e Subclasses de Fundos (RCVM 175)",
+    "file": "registro_fundo_classe.csv.gz",
+    "description": "Estrutura moderna de classes e subclasses de cotas sob a Resolução CVM 175.",
+    "icon": "📊",
+    "iconClass": "icon-cvm",
+    "badge": "Diário",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "cvm",
+      "fundos",
+      "classes",
+      "subclasses",
+      "rcvm175"
+    ],
+    "source": "CVM",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/registro_fundo_classe.csv.gz",
+    "accumulate": false
+  },
+  {
     "title": "CVM — Cadastro de Companhias Abertas",
     "file": "cvm_cadastro_companhias_abertas.csv",
-    "description": "Cadastro completo de companhias abertas registradas na CVM: CNPJ, razão social, nome de pregão, situação cadastral e código CVM.",
+    "description": "Relação cadastral oficial de emissores registrados na Comissão de Valores Mobiliários.",
     "icon": "🏛️",
     "iconClass": "icon-cvm",
     "badge": "Diário",
@@ -823,9 +873,9 @@
     "accumulate": false
   },
   {
-    "title": "IBGE SIDRA — Metadados",
+    "title": "IBGE SIDRA — Séries Estatísticas e Inflação",
     "file": "ibge_sidra.csv",
-    "description": "Metadados das tabelas do IBGE SIDRA: IPCA, IPCA-15 e INPC — períodos disponíveis e datas de modificação.",
+    "description": "Tabelas agregadas do SIDRA/IBGE com índices de preços, PIB e contas nacionais.",
     "icon": "📊",
     "iconClass": "icon-ibge",
     "badge": "Diário",
@@ -840,129 +890,153 @@
     "accumulate": false
   },
   {
-    "title": "Ipea Calendario",
+    "title": "IPEADATA — Calendário e Dias Úteis",
     "file": "ipea_calendario.csv",
-    "description": "Sem descrição fornecida.",
+    "description": "Número de dias úteis passados e estimados mensalmente pelo IPEA.",
     "icon": "📊",
     "iconClass": "icon-misc",
-    "badge": "Diário",
+    "badge": "Mensal",
     "badgeClass": "badge-daily",
     "tags": [
-      "misc"
+      "ipea",
+      "calendario",
+      "dias_uteis"
     ],
-    "source": "MISC",
+    "source": "IPEA",
     "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/ipea_calendario.csv",
     "accumulate": true
   },
   {
-    "title": "Ipea Comercio Exterior",
+    "title": "IPEADATA — Comércio Exterior e Balança Comercial",
     "file": "ipea_comercio_exterior.csv",
-    "description": "Sem descrição fornecida.",
+    "description": "Estatísticas mensais de exportação, importação e saldo da balança comercial brasileira.",
     "icon": "📊",
     "iconClass": "icon-misc",
-    "badge": "Diário",
+    "badge": "Mensal",
     "badgeClass": "badge-daily",
     "tags": [
-      "misc"
+      "ipea",
+      "comercio_exterior",
+      "exportacao",
+      "importacao"
     ],
-    "source": "MISC",
+    "source": "IPEA",
     "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/ipea_comercio_exterior.csv",
     "accumulate": true
   },
   {
-    "title": "Ipea Fbcf",
+    "title": "IPEADATA — Formação Bruta de Capital Fixo (FBCF)",
     "file": "ipea_fbcf.csv",
-    "description": "Sem descrição fornecida.",
+    "description": "Indicador mensal de investimentos e Formação Bruta de Capital Fixo na economia.",
     "icon": "📊",
     "iconClass": "icon-misc",
-    "badge": "Diário",
+    "badge": "Mensal",
     "badgeClass": "badge-daily",
     "tags": [
-      "misc"
+      "ipea",
+      "fbcf",
+      "investimentos",
+      "pib"
     ],
-    "source": "MISC",
+    "source": "IPEA",
     "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/ipea_fbcf.csv",
     "accumulate": true
   },
   {
-    "title": "Ipea Macroeconomia",
+    "title": "IPEADATA — Macroeconomia e Contas Nacionais",
     "file": "ipea_macroeconomia.csv",
-    "description": "Sem descrição fornecida.",
+    "description": "Séries temporais macroeconômicas consolidadas de PIB, consumo e produção.",
     "icon": "📊",
     "iconClass": "icon-misc",
-    "badge": "Diário",
+    "badge": "Mensal",
     "badgeClass": "badge-daily",
     "tags": [
-      "misc"
+      "ipea",
+      "macroeconomia",
+      "pib"
     ],
-    "source": "MISC",
+    "source": "IPEA",
     "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/ipea_macroeconomia.csv",
     "accumulate": true
   },
   {
-    "title": "Ipea Mercados Diarios",
+    "title": "IPEADATA — Mercados Financeiros Diários",
     "file": "ipea_mercados_diarios.csv",
-    "description": "Sem descrição fornecida.",
+    "description": "Cotações diárias de commodities internacionais (Petróleo Brent, WTI) e taxas globais.",
     "icon": "📊",
     "iconClass": "icon-misc",
     "badge": "Diário",
     "badgeClass": "badge-daily",
     "tags": [
-      "misc"
+      "ipea",
+      "mercados_diarios",
+      "brent",
+      "wti",
+      "commodities"
     ],
-    "source": "MISC",
+    "source": "IPEA",
     "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/ipea_mercados_diarios.csv",
     "accumulate": true
   },
   {
-    "title": "Ipea Precos Inflacao",
+    "title": "IPEADATA — Preços e Inflação",
     "file": "ipea_precos_inflacao.csv",
-    "description": "Sem descrição fornecida.",
+    "description": "Índices históricos de inflação (IPCA, IGP-M, INPC, IPA) apurados pelo IPEA.",
     "icon": "📊",
     "iconClass": "icon-misc",
-    "badge": "Diário",
+    "badge": "Mensal",
     "badgeClass": "badge-daily",
     "tags": [
-      "misc"
+      "ipea",
+      "inflacao",
+      "ipca",
+      "igpm"
     ],
-    "source": "MISC",
+    "source": "IPEA",
     "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/ipea_precos_inflacao.csv",
     "accumulate": true
   },
   {
-    "title": "Ipea Producao Mineral",
+    "title": "IPEADATA — Produção Mineral e Siderurgia",
     "file": "ipea_producao_mineral.csv",
-    "description": "Sem descrição fornecida.",
+    "description": "Estatísticas de produção de minério de ferro, aço bruto, laminados e ferro gusa.",
     "icon": "📊",
     "iconClass": "icon-misc",
-    "badge": "Diário",
+    "badge": "Mensal",
     "badgeClass": "badge-daily",
     "tags": [
-      "misc"
+      "ipea",
+      "producao_mineral",
+      "mineracao",
+      "siderurgia"
     ],
-    "source": "MISC",
+    "source": "IPEA",
     "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/ipea_producao_mineral.csv",
     "accumulate": true
   },
   {
-    "title": "Ipea Taxas Juros",
+    "title": "IPEADATA — Taxas de Juros e Rendimentos",
     "file": "ipea_taxas_juros.csv",
-    "description": "Sem descrição fornecida.",
+    "description": "Histórico das taxas Selic, CDI, Poupança, TJLP, TR e TBF.",
     "icon": "📊",
     "iconClass": "icon-misc",
-    "badge": "Diário",
+    "badge": "Mensal",
     "badgeClass": "badge-daily",
     "tags": [
-      "misc"
+      "ipea",
+      "taxas_juros",
+      "selic",
+      "cdi",
+      "poupanca"
     ],
-    "source": "MISC",
+    "source": "IPEA",
     "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/ipea_taxas_juros.csv",
     "accumulate": true
   },
   {
-    "title": "Onu Pacto Global",
+    "title": "ONU — Empresas Signatárias do Pacto Global",
     "file": "onu_pacto_global.csv",
-    "description": "Sem descrição fornecida.",
+    "description": "Empresas e organizações brasileiras participantes dos princípios ESG do Pacto Global da ONU.",
     "icon": "📊",
     "iconClass": "icon-misc",
     "badge": "Diário",
@@ -975,9 +1049,9 @@
     "accumulate": false
   },
   {
-    "title": "Yahoo Acoes Brasileiras",
+    "title": "Yahoo Finance — Ações Brasileiras (B3)",
     "file": "yahoo_acoes_brasileiras.csv",
-    "description": "Sem descrição fornecida.",
+    "description": "Cotações e variações diárias das principais ações negociadas na B3.",
     "icon": "📊",
     "iconClass": "icon-misc",
     "badge": "Diário",
@@ -990,9 +1064,9 @@
     "accumulate": true
   },
   {
-    "title": "Yahoo Acoes Internacionais",
+    "title": "Yahoo Finance — Ações Internacionais (ADRs & US)",
     "file": "yahoo_acoes_internacionais.csv",
-    "description": "Sem descrição fornecida.",
+    "description": "Cotações de grandes companhias globais e recibos de ações (ADRs).",
     "icon": "📊",
     "iconClass": "icon-misc",
     "badge": "Diário",
@@ -1005,24 +1079,9 @@
     "accumulate": true
   },
   {
-    "title": "Yahoo Cambio Moedas",
-    "file": "yahoo_cambio_moedas.csv",
-    "description": "Sem descrição fornecida.",
-    "icon": "📊",
-    "iconClass": "icon-misc",
-    "badge": "Diário",
-    "badgeClass": "badge-daily",
-    "tags": [
-      "misc"
-    ],
-    "source": "MISC",
-    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/yahoo_cambio_moedas.csv",
-    "accumulate": true
-  },
-  {
-    "title": "Yahoo Commodities",
+    "title": "Yahoo Finance — Commodities Globais",
     "file": "yahoo_commodities.csv",
-    "description": "Sem descrição fornecida.",
+    "description": "Contratos futuros de petróleo, ouro, prata, soja, milho, boi gordo e café.",
     "icon": "📊",
     "iconClass": "icon-misc",
     "badge": "Diário",
@@ -1035,9 +1094,9 @@
     "accumulate": true
   },
   {
-    "title": "Yahoo Criptoativos",
+    "title": "Yahoo Finance — Criptoativos",
     "file": "yahoo_criptoativos.csv",
-    "description": "Sem descrição fornecida.",
+    "description": "Preços em tempo real e fechamento de Bitcoin (BTC), Ethereum (ETH) e principais altcoins.",
     "icon": "📊",
     "iconClass": "icon-misc",
     "badge": "Diário",
@@ -1050,9 +1109,24 @@
     "accumulate": true
   },
   {
-    "title": "Yahoo Etfs",
+    "title": "Yahoo Finance — Câmbio e Moedas Globais",
+    "file": "yahoo_cambio_moedas.csv",
+    "description": "Pares de moedas globais (USD, EUR, GBP, JPY, CHF, CNY contra BRL).",
+    "icon": "📊",
+    "iconClass": "icon-misc",
+    "badge": "Diário",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "misc"
+    ],
+    "source": "MISC",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/yahoo_cambio_moedas.csv",
+    "accumulate": true
+  },
+  {
+    "title": "Yahoo Finance — ETFs Internacionais",
     "file": "yahoo_etfs.csv",
-    "description": "Sem descrição fornecida.",
+    "description": "Fundos de índice negociados nos Estados Unidos e bolsas globais.",
     "icon": "📊",
     "iconClass": "icon-misc",
     "badge": "Diário",
@@ -1065,9 +1139,9 @@
     "accumulate": true
   },
   {
-    "title": "Yahoo Fiis Fiagros",
+    "title": "Yahoo Finance — FIIs e FIAGROs",
     "file": "yahoo_fiis_fiagros.csv",
-    "description": "Sem descrição fornecida.",
+    "description": "Cotações de mercado e liquidez dos fundos imobiliários e do agronegócio.",
     "icon": "📊",
     "iconClass": "icon-misc",
     "badge": "Diário",
@@ -1080,24 +1154,9 @@
     "accumulate": true
   },
   {
-    "title": "Yahoo Indices Globais",
-    "file": "yahoo_indices_globais.csv",
-    "description": "Sem descrição fornecida.",
-    "icon": "📊",
-    "iconClass": "icon-misc",
-    "badge": "Diário",
-    "badgeClass": "badge-daily",
-    "tags": [
-      "misc"
-    ],
-    "source": "MISC",
-    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/yahoo_indices_globais.csv",
-    "accumulate": true
-  },
-  {
-    "title": "Yahoo Renda Fixa",
+    "title": "Yahoo Finance — Renda Fixa e Títulos Soberanos",
     "file": "yahoo_renda_fixa.csv",
-    "description": "Sem descrição fornecida.",
+    "description": "Yields dos US Treasuries (10Y, 2Y) e títulos de dívida soberana internacional.",
     "icon": "📊",
     "iconClass": "icon-misc",
     "badge": "Diário",
@@ -1110,9 +1169,24 @@
     "accumulate": true
   },
   {
-    "title": "Wikipedia Índices Globais",
+    "title": "Yahoo Finance — Índices Globais de Mercado",
+    "file": "yahoo_indices_globais.csv",
+    "description": "Benchmarks e índices das maiores bolsas do mundo.",
+    "icon": "📊",
+    "iconClass": "icon-misc",
+    "badge": "Diário",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "misc"
+    ],
+    "source": "MISC",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/yahoo_indices_globais.csv",
+    "accumulate": true
+  },
+  {
+    "title": "Mercado Global — Índices Mundiais de Ações",
     "file": "wikipedia_global_indices.csv",
-    "description": "Composição histórica/atual dos índices de ações mais representativos do mundo (S&P 500, NASDAQ-100, Dow Jones, FTSE 100, DAX 40, CAC 40 e Euro Stoxx 50) raspados da Wikipedia.",
+    "description": "Principais índices mundiais de ações (S&P 500, Nasdaq, Dow Jones, FTSE, DAX, Nikkei).",
     "icon": "🌐",
     "iconClass": "icon-global",
     "badge": "Diário",

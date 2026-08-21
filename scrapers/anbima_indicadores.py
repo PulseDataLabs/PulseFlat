@@ -243,8 +243,8 @@ class AnbimaIndicadoresScraper(BaseScraper):
     chaves_dedup = ["data_captura", "indicador"]
 
     # Catálogo de Metadados
-    title = "ANBIMA Indicadores"
-    description = "Quadro completo de indicadores do mercado: taxa SELIC, DI-B3, índices de preços, câmbio e taxas de referência. Atualizado duas vezes ao dia."
+    title = "ANBIMA — Indicadores Financeiros"
+    description = "Indicadores econômicos, inflação implícita e taxas médias de curto e longo prazo."
     icon = "📊"
     icon_class = "icon-anbima"
     badge = "Diário · 2×"

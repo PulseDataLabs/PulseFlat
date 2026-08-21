@@ -180,8 +180,8 @@ class B3LimitesGarantiasScraper(BaseScraper):
     accumulate = True
     chaves_dedup = ["data_referencia", "tipo_ativo", "codigo"]
 
-    title = "B3 Limites de Garantias"
-    description = "Limites de aceitacao de acoes, BDRs, units, ETFs, ADRs, FIIs e debentures em garantia na B3."
+    title = "B3 — Limites e Garantias"
+    description = "Parâmetros de margem, limites operacionais e garantias aceitas pela Clearing B3."
     icon = "🔒"
     icon_class = "icon-b3"
     badge = "Mensal"

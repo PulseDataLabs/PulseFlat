@@ -39,6 +39,11 @@ API_URL = "http://www.ipeadata.gov.br/api/odata4/ValoresSerie(SERCODIGO='{code}'
 
 
 class IpeaProducaoMineralScraper(BaseScraper):
+    title = "IPEADATA — Produção Mineral e Siderurgia"
+    description = "Estatísticas de produção de minério de ferro, aço bruto, laminados e ferro gusa."
+    badge = "Mensal"
+    source = "IPEA"
+    tags = ['ipea', 'producao_mineral', 'mineracao', 'siderurgia']
     name = "ipea_producao_mineral"
     group = "misc"
     enabled = False

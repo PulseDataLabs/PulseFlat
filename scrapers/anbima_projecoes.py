@@ -357,8 +357,8 @@ class AnbimaProjecoesScraper(BaseScraper):
     chaves_dedup = ["data_captura", "indice", "mes_referencia", "tipo_projecao"]
 
     # Catálogo de Metadados
-    title = "ANBIMA Projeções"
-    description = "Projeções de IPCA e IGP-M coletadas junto às instituições do Comitê Macroeconômico da ANBIMA para o mês corrente e seguinte."
+    title = "ANBIMA — Projeções Econômicas"
+    description = "Expectativas de mercado para IPCA, IGP-M, Taxa Selic e Câmbio divulgadas pela ANBIMA."
     icon = "🔮"
     icon_class = "icon-anbima"
     badge = "Sob divulgação"

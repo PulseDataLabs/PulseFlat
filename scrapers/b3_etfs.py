@@ -172,8 +172,8 @@ class B3EtfsScraper(BaseScraper):
     chaves_dedup = None
 
     # Catálogo de Metadados
-    title = "B3 ETFs Listados"
-    description = "ETFs de Renda Variável e Renda Fixa listados na B3, com índice de referência, administrador, gestor e patrimônio líquido."
+    title = "B3 — ETFs Listados"
+    description = "Cadastro e metadados dos Exchange Traded Funds (ETFs) negociados na B3."
     icon = "📈"
     icon_class = "icon-b3"
     badge = "Diário"

@@ -71,6 +71,8 @@ class YahooIndicesGlobaisScraper(BaseScraper):
     enabled = True
     phase = 1
     chaves_dedup = ["data_referencia", "codigo_ativo"]
+    title = "Yahoo Finance — Índices Globais de Mercado"
+    description = "Benchmarks e índices das maiores bolsas do mundo."
 
     def fetch(self) -> pd.DataFrame:
 

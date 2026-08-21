@@ -71,6 +71,8 @@ class YahooCambioMoedasScraper(BaseScraper):
     enabled = True
     phase = 1
     chaves_dedup = ["data_referencia", "codigo_ativo"]
+    title = "Yahoo Finance — Câmbio e Moedas Globais"
+    description = "Pares de moedas globais (USD, EUR, GBP, JPY, CHF, CNY contra BRL)."
 
     def fetch(self) -> pd.DataFrame:
 

@@ -71,6 +71,8 @@ class YahooEtfsScraper(BaseScraper):
     enabled = True
     phase = 1
     chaves_dedup = ["data_referencia", "codigo_ativo"]
+    title = "Yahoo Finance — ETFs Internacionais"
+    description = "Fundos de índice negociados nos Estados Unidos e bolsas globais."
 
     def fetch(self) -> pd.DataFrame:
 

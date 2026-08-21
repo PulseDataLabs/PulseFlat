@@ -143,7 +143,7 @@ class B3BdiTradesAcoesScraper(BaseScraper):
 
     # Catálogo de Metadados
     title = "B3 BDI — Negócios de Ações"
-    description = "Resumo de negócios diários consolidados de ações negociadas no mercado de bolsa da B3, com preços e volumes."
+    description = "Consolidado diário de negócios, volumes e negócios realizados no mercado à vista de ações."
     icon = "📈"
     icon_class = "icon-b3"
     badge = "Diário"

@@ -71,6 +71,8 @@ class YahooCriptoativosScraper(BaseScraper):
     enabled = True
     phase = 1
     chaves_dedup = ["data_referencia", "codigo_ativo"]
+    title = "Yahoo Finance — Criptoativos"
+    description = "Preços em tempo real e fechamento de Bitcoin (BTC), Ethereum (ETH) e principais altcoins."
 
     def fetch(self) -> pd.DataFrame:
 

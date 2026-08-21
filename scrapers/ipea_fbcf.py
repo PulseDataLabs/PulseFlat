@@ -46,6 +46,11 @@ API_URL = "http://www.ipeadata.gov.br/api/odata4/ValoresSerie(SERCODIGO='{code}'
 
 
 class IpeaFbcfScraper(BaseScraper):
+    title = "IPEADATA — Formação Bruta de Capital Fixo (FBCF)"
+    description = "Indicador mensal de investimentos e Formação Bruta de Capital Fixo na economia."
+    badge = "Mensal"
+    source = "IPEA"
+    tags = ['ipea', 'fbcf', 'investimentos', 'pib']
     name = "ipea_fbcf"
     group = "misc"
     enabled = False

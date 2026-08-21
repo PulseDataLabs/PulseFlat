@@ -148,6 +148,8 @@ class AnbimaRankingGlobalScraper(BaseScraper):
     group = "anbima"
     enabled = True
     phase = 1
+    title = "ANBIMA — Ranking Global de Fundos"
+    description = "Classificação e patrimônio líquido dos principais fundos e gestoras do mercado brasileiro."
 
     def fetch(self) -> pd.DataFrame:
 

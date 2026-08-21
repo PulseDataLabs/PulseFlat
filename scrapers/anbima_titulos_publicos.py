@@ -145,8 +145,8 @@ class AnbimaTitulosPublicosScraper(BaseScraper):
     chaves_dedup = ["data_captura", "titulo", "data_vencimento"]
 
     # Catálogo de Metadados
-    title = "ANBIMA Títulos Públicos"
-    description = "Preços e taxas indicativas de títulos públicos federais (LTN, NTN, LFT), incluindo PU, duration e desvio padrão."
+    title = "ANBIMA — Títulos Públicos Federais"
+    description = "Taxas indicativas, PU base e curvas de rentabilidade de LFT, LTN, NTN-B e NTN-F."
     icon = "🏛️"
     icon_class = "icon-anbima"
     badge = "Diário"

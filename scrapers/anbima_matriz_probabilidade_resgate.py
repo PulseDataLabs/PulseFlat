@@ -48,6 +48,11 @@ class AnbimaMatrizProbabilidadeResgateScraper(BaseScraper):
     group = "anbima"
     enabled = True
     phase = 1
+    title = "ANBIMA — Matriz de Probabilidade de Resgate"
+    description = "Matriz de liquidez e estimativa probabilística de resgates para fundos de investimento."
+    badge = "Mensal"
+    source = "ANBIMA"
+    tags = ["anbima", "resgate", "liquidez", "fundos"]
     chaves_dedup = [
         "data_referencia",
         "classe",

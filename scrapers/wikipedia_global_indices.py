@@ -207,8 +207,8 @@ class WikipediaGlobalIndicesScraper(BaseScraper):
     accumulate = False
     chaves_dedup = None
 
-    title = "Wikipedia Índices Globais"
-    description = "Composição histórica/atual dos índices de ações mais representativos do mundo (S&P 500, NASDAQ-100, Dow Jones, FTSE 100, DAX 40, CAC 40 e Euro Stoxx 50) raspados da Wikipedia."
+    title = "Mercado Global — Índices Mundiais de Ações"
+    description = "Principais índices mundiais de ações (S&P 500, Nasdaq, Dow Jones, FTSE, DAX, Nikkei)."
     icon = "🌐"
     icon_class = "icon-global"
     badge = "Diário"

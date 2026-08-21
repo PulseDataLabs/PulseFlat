@@ -154,8 +154,8 @@ class B3FiisScraper(BaseScraper):
     chaves_dedup = None
 
     # Catálogo de Metadados
-    title = "B3 FIIs Listados"
-    description = "Lista completa de Fundos de Investimento Imobiliário listados na B3, com dados cadastrais, administrador, segmento e patrimônio líquido."
+    title = "B3 — Fundos Imobiliários (FIIs)"
+    description = "Cadastro geral, códigos ISIN e informações básicas de Fundos Imobiliários da B3."
     icon = "🏢"
     icon_class = "icon-b3"
     badge = "Diário"

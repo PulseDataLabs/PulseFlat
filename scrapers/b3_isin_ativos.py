@@ -25,8 +25,8 @@ class B3IsinAtivosScraper(BaseScraper):
     chaves_dedup = None
 
     # Metadados para o catálogo global
-    title = "B3 ISIN Ativos"
-    description = "Banco de dados completo de ativos com código ISIN cadastrados na B3."
+    title = "B3 — Cadastro de Códigos ISIN"
+    description = "Tabela mestre de códigos ISIN atribuídos a ações, fundos e ativos negociáveis."
     icon = "🏷️"
     icon_class = "icon-b3"
     badge = "Semanal"

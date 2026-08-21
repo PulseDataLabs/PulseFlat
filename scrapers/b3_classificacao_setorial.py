@@ -137,8 +137,8 @@ class B3ClassificacaoSetorialScraper(BaseScraper):
     chaves_dedup = ["data_captura", "codigo"]
 
     # Catálogo de Metadados
-    title = "B3 Classificação Setorial"
-    description = "Classificação setorial completa das empresas listadas na B3 (setor econômico, subsetor e segmento de atuação)."
+    title = "B3 — Classificação Setorial de Empresas"
+    description = "Estrutura setorial completa: setor econômico, subsetor e segmento de listagem na B3."
     icon = "🗂️"
     icon_class = "icon-b3"
     badge = "Diário"

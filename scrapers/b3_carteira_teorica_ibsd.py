@@ -6,6 +6,11 @@ from scrapers.generic_scraper import GenericScraper
 
 
 class B3CarteiraTeoricaIbsdScraper(GenericScraper):
+    title = "B3 — Carteira Teórica IBSD"
+    description = "Composição do Índice de Sustentabilidade Diferenciada da B3."
+    badge = "Quadrimestral"
+    source = "B3"
+    tags = ['b3', 'carteira_teorica', 'ibsd', 'indices']
     group = "b3"
     enabled = True
     phase = 1

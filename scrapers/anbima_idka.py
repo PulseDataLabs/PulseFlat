@@ -44,8 +44,8 @@ class AnbimaIdkaScraper(BaseScraper):
     group = "anbima"
     enabled = True
     phase = 1
-    title = "ANBIMA IDkA"
-    description = "Índice de Duração Constante ANBIMA (prefixado e inflação), apresentando retornos diários, mensais, anuais e volatilidade."
+    title = "ANBIMA — Índices IDkA"
+    description = "Índice de Duração Constante ANBIMA para títulos públicos prefixados e indexados à inflação."
     icon = "📈"
     icon_class = "icon-anbima"
     badge = "Diário"

@@ -118,8 +118,8 @@ class Anbima550Scraper(BaseScraper):
     chaves_dedup = ["data_captura", "titulo", "vencimento"]
 
     # Catálogo de Metadados
-    title = "ANBIMA Resolução 550"
-    description = "Ativos de renda fixa da Resolução ANBIMA 550: preço unitário, preço de retorno e posição em custódia."
+    title = "ANBIMA — Resolução 550"
+    description = "Posição diária de custódia e ativos conforme Resolução CMN/CVM 550."
     icon = "📋"
     icon_class = "icon-anbima"
     badge = "Diário"

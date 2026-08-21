@@ -92,8 +92,8 @@ class BacenNegociacaoTpfScraper(BaseScraper):
         )
 
     # Catálogo de Metadados
-    title = "BCB — Negociação TPF Extra-grupo"
-    description = "Operações de compra e venda de Títulos Públicos Federais extra-grupo realizadas no mercado aberto (BCB/DEMAB)."
+    title = "BACEN — Negociação de Títulos Públicos (Extra-grupo)"
+    description = "Operações definitivas e compromissadas no mercado secundário de títulos públicos federais."
     icon = "📋"
     icon_class = "icon-bcb"
     badge = "Diário"

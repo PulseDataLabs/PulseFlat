@@ -314,8 +314,8 @@ class B3BdiEtfrfScraper(BaseScraper):
     chaves_dedup = ["data_referencia", "codigo_ativo"]
 
     # Catálogo de Metadados
-    title = "B3 BDI — ETF de Renda Fixa"
-    description = "Resumo diário dos negócios de ETF de Renda Fixa no mercado da B3 (Boletim Diário), com preços de abertura, mínimo, máximo, médio e fechamento, quantidade negociada, número de negócios e volume financeiro."
+    title = "B3 BDI — ETFs de Renda Fixa"
+    description = "Negociação e cotações de fechamento dos ETFs de Renda Fixa na B3."
     icon = "📊"
     icon_class = "icon-b3"
     badge = "Diário"

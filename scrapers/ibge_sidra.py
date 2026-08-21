@@ -156,8 +156,8 @@ class IbgeSidraScraper(BaseScraper):
     chaves_dedup = ["data_captura", "serie_id", "periodo_referencia"]
 
     # Catálogo de Metadados
-    title = "IBGE SIDRA — Metadados"
-    description = "Metadados das tabelas do IBGE SIDRA: IPCA, IPCA-15 e INPC — períodos disponíveis e datas de modificação."
+    title = "IBGE SIDRA — Séries Estatísticas e Inflação"
+    description = "Tabelas agregadas do SIDRA/IBGE com índices de preços, PIB e contas nacionais."
     icon = "📊"
     icon_class = "icon-ibge"
     badge = "Diário"

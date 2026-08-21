@@ -71,6 +71,8 @@ class YahooFiisFiagrosScraper(BaseScraper):
     enabled = True
     phase = 1
     chaves_dedup = ["data_referencia", "codigo_ativo"]
+    title = "Yahoo Finance — FIIs e FIAGROs"
+    description = "Cotações de mercado e liquidez dos fundos imobiliários e do agronegócio."
 
     def fetch(self) -> pd.DataFrame:
 

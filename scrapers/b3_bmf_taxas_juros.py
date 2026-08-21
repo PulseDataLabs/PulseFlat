@@ -226,8 +226,8 @@ class B3BmfTaxasJurosScraper(BaseScraper):
     chaves_dedup = ["data_captura", "data_referencia", "curva", "prazo_dias"]
 
     # Catálogo de Metadados
-    title = "B3 BDI — Taxas de Swap"
-    description = "Taxas de mercado e de referência para swaps e taxas referenciais da BM&F por prazo em dias corridos e úteis."
+    title = "B3 BDI — Taxas de Swap e Juros"
+    description = "Estrutura a termo das taxas de juros (DI x Pré) e taxas referenciais da BM&F."
     icon = "📊"
     icon_class = "icon-b3"
     badge = "Diário"

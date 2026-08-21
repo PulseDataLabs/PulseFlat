@@ -116,8 +116,8 @@ class BcbPtaxScraper(BaseScraper):
     chaves_dedup = ["data_captura", "data_referencia"]
 
     # Catálogo de Metadados
-    title = "BCB PTAX"
-    description = "Cotações históricas diárias oficiais de compra e venda do dólar comercial (USD/BRL) publicadas pelo Banco Central do Brasil."
+    title = "BACEN — Câmbio PTAX"
+    description = "Taxas de câmbio oficiais de compra e venda divulgadas pelo Banco Central do Brasil."
     icon = "💵"
     icon_class = "icon-bcb"
     badge = "Diário"

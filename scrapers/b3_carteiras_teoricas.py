@@ -200,8 +200,8 @@ class B3CarteirasTeoricasScraper(BaseScraper):
     chaves_dedup = ["data_captura", "indice", "codigo_ativo"]
 
     # Catálogo de Metadados
-    title = "B3 Carteiras Teóricas"
-    description = "Composição diária das carteiras teóricas dos 22 principais índices da B3. Permite acompanhar a evolução do peso de cada ativo ao longo do tempo e detectar entradas e saídas nas carteiras."
+    title = "B3 — Todas as Carteiras Teóricas"
+    description = "Consolidado de todas as carteiras teóricas e composições de índices da B3."
     icon = "🗂️"
     icon_class = "icon-b3"
     badge = "Diário · 22 índices"

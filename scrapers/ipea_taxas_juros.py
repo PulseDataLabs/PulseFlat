@@ -95,6 +95,11 @@ API_URL = "http://www.ipeadata.gov.br/api/odata4/ValoresSerie(SERCODIGO='{code}'
 
 
 class IpeaTaxasJurosScraper(BaseScraper):
+    title = "IPEADATA — Taxas de Juros e Rendimentos"
+    description = "Histórico das taxas Selic, CDI, Poupança, TJLP, TR e TBF."
+    badge = "Mensal"
+    source = "IPEA"
+    tags = ['ipea', 'taxas_juros', 'selic', 'cdi', 'poupanca']
     name = "ipea_taxas_juros"
     group = "misc"
     enabled = False

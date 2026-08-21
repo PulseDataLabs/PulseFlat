@@ -134,8 +134,8 @@ class B3CotahistAnualScraper(BaseScraper):
     chaves_dedup = ["data_captura", "conjunto", "registro_hash"]
 
     # Catálogo de Metadados
-    title = "B3 — COTAHIST Anual"
-    description = "Cotações históricas anuais de todos os ativos da B3 no formato COTAHIST de largura fixa — mesmo conteúdo do diário, consolidado por ano para backfill histórico."
+    title = "B3 — COTAHIST Histórico Anual"
+    description = "Série histórica anual completa de cotações de ações, fundos e opções da B3."
     icon = "📅"
     icon_class = "icon-b3"
     badge = "Diário"

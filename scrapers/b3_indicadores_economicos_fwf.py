@@ -83,8 +83,8 @@ class B3IndicadoresEconomicosFwfScraper(BaseScraper):
     chaves_dedup = ["data_captura", "conjunto", "registro_hash"]
 
     # Catálogo de Metadados
-    title = "B3 — Indicadores Econômicos"
-    description = "Indicadores macroeconômicos diários divulgados pela B3 em formato de largura fixa (FWF): taxas de juros, índices de inflação e parâmetros de mercado."
+    title = "B3 — Indicadores Econômicos FWF"
+    description = "Arquivo de tamanho fixo com moedas, taxas referenciais e índices econômicos da B3."
     icon = "📊"
     icon_class = "icon-b3"
     badge = "Diário"

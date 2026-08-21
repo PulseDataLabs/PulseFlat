@@ -46,6 +46,11 @@ API_URL = "http://www.ipeadata.gov.br/api/odata4/ValoresSerie(SERCODIGO='{code}'
 
 
 class IpeaMercadosDiariosScraper(BaseScraper):
+    title = "IPEADATA — Mercados Financeiros Diários"
+    description = "Cotações diárias de commodities internacionais (Petróleo Brent, WTI) e taxas globais."
+    badge = "Diário"
+    source = "IPEA"
+    tags = ['ipea', 'mercados_diarios', 'brent', 'wti', 'commodities']
     name = "ipea_mercados_diarios"
     group = "misc"
     enabled = False

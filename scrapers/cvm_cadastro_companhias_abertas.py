@@ -47,7 +47,7 @@ class CvmCadastroCompanhiasAbertasScraper(BaseScraper):
 
     # Catálogo de Metadados
     title = "CVM — Cadastro de Companhias Abertas"
-    description = "Cadastro completo de companhias abertas registradas na CVM: CNPJ, razão social, nome de pregão, situação cadastral e código CVM."
+    description = "Relação cadastral oficial de emissores registrados na Comissão de Valores Mobiliários."
     icon = "🏛️"
     icon_class = ""
     badge = "Diário"

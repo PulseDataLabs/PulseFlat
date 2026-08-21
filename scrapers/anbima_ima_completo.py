@@ -177,8 +177,8 @@ class AnbimaImaCompletoScraper(BaseScraper):
     chaves_dedup = ["data_captura", "data_referencia", "indice"]
 
     # Catálogo de Metadados
-    title = "ANBIMA IMA / IDA"
-    description = "Índices de mercado ANBIMA (IMA, IRF-M, IDA, IDKA): variações diárias, mensais e anuais, duration e peso geral."
+    title = "ANBIMA — Família IMA / IDA Completo"
+    description = "Índices de Mercado ANBIMA (IMA-B, IMA-C, IMA-S, IRF-M) e Índices de Debêntures ANBIMA (IDA)."
     icon = "📊"
     icon_class = "icon-anbima"
     badge = "Diário"

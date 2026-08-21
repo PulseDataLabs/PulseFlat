@@ -114,8 +114,8 @@ class B3IndicadoresFinanceirosScraper(BaseScraper):
     chaves_dedup = ["data_captura", "security_identification_code"]
 
     # Catálogo de Metadados
-    title = "B3 Indicadores Financeiros"
-    description = "Indicadores financeiros da B3 via API de derivativos: SELIC, CDI, IPCA, IGP-M, câmbio e taxas de juros."
+    title = "B3 — Indicadores Financeiros"
+    description = "Indicadores financeiros oficiais e taxas de derivativos divulgadas pela B3."
     icon = "📊"
     icon_class = "icon-b3"
     badge = "Diário"

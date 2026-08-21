@@ -6,6 +6,11 @@ from scrapers.generic_scraper import GenericScraper
 
 
 class B3CarteiraTeoricaIbxlScraper(GenericScraper):
+    title = "B3 — Carteira Teórica IBX 50"
+    description = "Composição e pesos das 50 ações mais negociadas da bolsa brasileira (IBrX-50)."
+    badge = "Quadrimestral"
+    source = "B3"
+    tags = ['b3', 'carteira_teorica', 'ibxl', 'ibrx50', 'indices']
     group = "b3"
     enabled = True
     phase = 1

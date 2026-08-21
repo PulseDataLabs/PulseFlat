@@ -318,8 +318,8 @@ class B3FundosListadosScraper(BaseScraper):
     accumulate = False
     chaves_dedup = None
 
-    title = "B3 Fundos Listados"
-    description = "Lista completa de fundos listados na B3: FII, FIAGRO, FIDC, FIP, ETFs (RV e RF) e Fundos Setoriais. Inclui dados cadastrais e patrimônio líquido via CVM."
+    title = "B3 — Fundos Listados em Bolsa"
+    description = "Relação de FIIs, FIAGROs, FIPs e fundos de investimento listados na bolsa."
     icon = "🏢"
     icon_class = "icon-b3"
     badge = "Diário"

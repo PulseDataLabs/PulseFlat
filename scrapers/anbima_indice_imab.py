@@ -49,7 +49,7 @@ class AnbimaIndiceImabScraper(BaseScraper):
 
     # Catálogo de Metadados
     title = "ANBIMA — Índice IMA-B"
-    description = "Histórico completo do IMA-B (Índice de Mercado ANBIMA), incluindo subíndices como IMA-B5, IMA-B5+, IMA-C e IMA-S."
+    description = "Série histórica e composição de rentabilidade dos títulos públicos indexados ao IPCA (NTN-B)."
     icon = "📈"
     icon_class = "icon-anbima"
     badge = "Diário"
