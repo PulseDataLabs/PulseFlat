@@ -1605,7 +1605,6 @@
     .kpi-ok::before { background: var(--green); }
     .kpi-warning::before { background: var(--gold); }
     .kpi-error::before { background: var(--red); }
-    .kpi-periodic::before { background: #bb86fc; }
 
     .kpi-header {
       display: flex;
@@ -1887,14 +1886,7 @@
       box-shadow: 0 10px 30px rgba(255, 77, 109, 0.15);
     }
 
-    .monitor-card.status-periodic {
-      border-left: 4px solid #bb86fc;
-    }
-    .monitor-card.status-periodic:hover {
-      border-color: var(--border2);
-      border-left-color: #bb86fc;
-      box-shadow: 0 10px 30px rgba(187, 134, 252, 0.12);
-    }
+
 
     .monitor-card-top {
       display: flex;
@@ -1944,11 +1936,7 @@
       border: 1px solid rgba(255, 77, 109, 0.25);
     }
 
-    .status-pill-periodic {
-      background: rgba(187, 134, 252, 0.12);
-      color: #bb86fc;
-      border: 1px solid rgba(187, 134, 252, 0.25);
-    }
+
 
     .pill-dot {
       width: 6px;
@@ -2327,14 +2315,7 @@
         <div class="kpi-sub">Requer verificação da fonte</div>
       </div>
 
-      <div class="monitor-kpi-card kpi-periodic">
-        <div class="kpi-header">
-          <span class="kpi-label">Periódicas</span>
-          <span class="kpi-icon">🔵</span>
-        </div>
-        <div class="kpi-value" id="kpi-val-periodic" style="color: #bb86fc;">--</div>
-        <div class="kpi-sub">Mensais, anuais e cadastros</div>
-      </div>
+
     </div>
 
     <!-- Barra de Saúde do Pipeline -->
@@ -2384,7 +2365,7 @@
         <button class="status-filter-btn" data-status="ok">🟢 Em dia <span class="status-count-badge" id="badge-count-ok">0</span></button>
         <button class="status-filter-btn" data-status="warning">🟡 Atenção <span class="status-count-badge" id="badge-count-warning">0</span></button>
         <button class="status-filter-btn" data-status="error">🔴 Atrasados <span class="status-count-badge" id="badge-count-error">0</span></button>
-        <button class="status-filter-btn" data-status="periodic">🔵 Periódicos <span class="status-count-badge" id="badge-count-periodic">0</span></button>
+
       </div>
     </div>
 
@@ -3569,11 +3550,6 @@
         statusLabel = 'D-1 • Em dia';
         pillClass = 'status-pill-ok';
         lagDesc = 'Posição em D-1 (em dia)';
-      } else if (isPeriodic) {
-        status = 'periodic';
-        statusLabel = dataset.badge || 'Periódico';
-        pillClass = 'status-pill-periodic';
-        lagDesc = `Cadência periódica (${formatDisplayDate(maxDate)})`;
       } else if (businessLag <= 3) {
         status = 'warning';
         statusLabel = `D-${businessLag} • Atenção`;
@@ -3653,33 +3629,28 @@
     const okCount = monitorData.filter(d => d.status === 'ok').length;
     const warningCount = monitorData.filter(d => d.status === 'warning').length;
     const errorCount = monitorData.filter(d => d.status === 'error').length;
-    const periodicCount = monitorData.filter(d => d.status === 'periodic').length;
 
     const elTotal = document.getElementById('kpi-val-total');
     const elOk = document.getElementById('kpi-val-ok');
     const elWarning = document.getElementById('kpi-val-warning');
     const elError = document.getElementById('kpi-val-error');
-    const elPeriodic = document.getElementById('kpi-val-periodic');
 
     if (elTotal) elTotal.textContent = total;
     if (elOk) elOk.textContent = okCount;
     if (elWarning) elWarning.textContent = warningCount;
     if (elError) elError.textContent = errorCount;
-    if (elPeriodic) elPeriodic.textContent = periodicCount;
 
     const bAll = document.getElementById('badge-count-all');
     const bOk = document.getElementById('badge-count-ok');
     const bWarning = document.getElementById('badge-count-warning');
     const bError = document.getElementById('badge-count-error');
-    const bPeriodic = document.getElementById('badge-count-periodic');
 
     if (bAll) bAll.textContent = total;
     if (bOk) bOk.textContent = okCount;
     if (bWarning) bWarning.textContent = warningCount;
     if (bError) bError.textContent = errorCount;
-    if (bPeriodic) bPeriodic.textContent = periodicCount;
 
-    const healthPercent = total > 0 ? Math.round(((okCount + periodicCount + (warningCount * 0.5)) / total) * 100) : 100;
+    const healthPercent = total > 0 ? Math.round(((okCount + (warningCount * 0.5)) / total) * 100) : 100;
     const elScore = document.getElementById('health-bar-score');
     const elFill = document.getElementById('health-bar-fill');
 
@@ -3725,7 +3696,7 @@
       } else if (monitorSortOrder === 'name-asc') {
         return a.title.localeCompare(b.title);
       } else if (monitorSortOrder === 'status-asc') {
-        const order = { 'error': 1, 'warning': 2, 'periodic': 3, 'ok': 4 };
+        const order = { 'error': 1, 'warning': 2, 'ok': 3 };
         return (order[a.status] || 5) - (order[b.status] || 5);
       }
       return 0;
@@ -3776,7 +3747,7 @@
               </div>
               <div class="monitor-data-row" style="border-top: 1px dashed rgba(255,255,255,0.05); padding-top: 0.4rem;">
                 <span class="monitor-data-label">Diagnóstico SLA:</span>
-                <span class="monitor-lag-tag" style="color: ${item.status === 'ok' ? 'var(--green)' : item.status === 'warning' ? 'var(--gold)' : item.status === 'error' ? 'var(--red)' : '#bb86fc'};">${item.lagDesc}</span>
+                <span class="monitor-lag-tag" style="color: ${item.status === 'ok' ? 'var(--green)' : item.status === 'warning' ? 'var(--gold)' : item.status === 'error' ? 'var(--red)' : 'var(--red)'};">${item.lagDesc}</span>
               </div>
             </div>
           </div>
