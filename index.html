@@ -1880,6 +1880,78 @@
     .monitor-card.status-error {
       border-left: 4px solid var(--red);
     }
+    .monitor-error-box {
+      margin-top: 0.75rem;
+      margin-bottom: 0.5rem;
+      background: rgba(255, 77, 109, 0.07);
+      border: 1px solid rgba(255, 77, 109, 0.22);
+      border-radius: 6px;
+      padding: 0.65rem 0.8rem;
+    }
+    .monitor-error-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 0.35rem;
+    }
+    .monitor-error-badge {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: var(--red);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+    .monitor-error-meta {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      color: var(--text3);
+    }
+    .monitor-error-details {
+      margin-top: 0.35rem;
+    }
+    .monitor-error-summary {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--accent);
+      cursor: pointer;
+      user-select: none;
+      outline: none;
+      transition: color 0.2s;
+    }
+    .monitor-error-summary:hover {
+      color: var(--text);
+      text-decoration: underline;
+    }
+    .monitor-error-pre-wrap {
+      margin-top: 0.4rem;
+      position: relative;
+    }
+    .monitor-error-pre {
+      background: rgba(0, 0, 0, 0.55);
+      border: 1px solid rgba(255, 77, 109, 0.2);
+      border-radius: 4px;
+      padding: 0.6rem 0.75rem;
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      color: #ff99aa;
+      line-height: 1.45;
+      max-height: 160px;
+      overflow-y: auto;
+      white-space: pre-wrap;
+      word-break: break-all;
+    }
+    .monitor-error-desc {
+      font-size: 0.72rem;
+      color: var(--text3);
+      line-height: 1.35;
+    }
+
     .monitor-card.status-error:hover {
       border-color: var(--border2);
       border-left-color: var(--red);
@@ -3511,14 +3583,35 @@
       }
 
       let hasPipelineError = false;
+      let pipelineTime = '';
+      let pipelineElapsed = '';
+      let pipelineError = '';
       const scraperKey = file.replace(/\.csv(\.gz)?$/, '').replace(/\.zip$/, '');
       if (pipelineStatus && pipelineStatus.scrapers && pipelineStatus.scrapers[scraperKey]) {
         const scInfo = pipelineStatus.scrapers[scraperKey];
         if (scInfo.status === 'error') {
           hasPipelineError = true;
+          pipelineError = scInfo.error || '';
         } else if (!maxDate && scInfo.status === 'success' && scInfo.timestamp) {
           maxDate = scInfo.timestamp.split('T')[0];
           minDate = minDate || maxDate;
+        }
+        if (scInfo.timestamp) {
+          try {
+            const dt = new Date(scInfo.timestamp);
+            if (!isNaN(dt.getTime())) {
+              const d = String(dt.getDate()).padStart(2, '0');
+              const m = String(dt.getMonth() + 1).padStart(2, '0');
+              const y = dt.getFullYear();
+              const hh = String(dt.getHours()).padStart(2, '0');
+              const mm = String(dt.getMinutes()).padStart(2, '0');
+              const ss = String(dt.getSeconds()).padStart(2, '0');
+              pipelineTime = `${d}/${m}/${y} ${hh}:${mm}:${ss}`;
+            }
+          } catch(e) {}
+        }
+        if (typeof scInfo.elapsed_seconds === 'number') {
+          pipelineElapsed = `${scInfo.elapsed_seconds.toFixed(2)}s`;
         }
       }
 
@@ -3614,6 +3707,9 @@
         pillClass,
         lagDesc,
         downloadUrl,
+        pipelineTime,
+        pipelineElapsed,
+        pipelineError,
         dataset
       });
     });
@@ -3747,9 +3843,28 @@
               </div>
               <div class="monitor-data-row" style="border-top: 1px dashed rgba(255,255,255,0.05); padding-top: 0.4rem;">
                 <span class="monitor-data-label">Diagnóstico SLA:</span>
-                <span class="monitor-lag-tag" style="color: ${item.status === 'ok' ? 'var(--green)' : item.status === 'warning' ? 'var(--gold)' : item.status === 'error' ? 'var(--red)' : 'var(--red)'};">${item.lagDesc}</span>
+                <span class="monitor-lag-tag" style="color: ${item.status === 'ok' ? 'var(--green)' : item.status === 'warning' ? 'var(--gold)' : 'var(--red)'};">${item.lagDesc}</span>
               </div>
             </div>
+
+            ${(item.status === 'error' || item.pipelineError) ? `
+              <div class="monitor-error-box">
+                <div class="monitor-error-header">
+                  <span class="monitor-error-badge">⚠️ Falha na Execução</span>
+                  <span class="monitor-error-meta">${item.pipelineTime ? `${item.pipelineTime} ${item.pipelineElapsed ? `(${item.pipelineElapsed})` : ''}` : 'Execução recente'}</span>
+                </div>
+                ${item.pipelineError ? `
+                  <details class="monitor-error-details">
+                    <summary class="monitor-error-summary">Ver log do erro / Traceback</summary>
+                    <div class="monitor-error-pre-wrap">
+                      <pre class="monitor-error-pre"><code>${escapeHtml(item.pipelineError)}</code></pre>
+                    </div>
+                  </details>
+                ` : `
+                  <div class="monitor-error-desc">Sem log capturado pelo runner (defasagem de data da fonte).</div>
+                `}
+              </div>
+            ` : ''}
           </div>
 
           <div class="monitor-card-footer">
