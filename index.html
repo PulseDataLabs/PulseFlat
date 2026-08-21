@@ -3869,7 +3869,9 @@
     filtered.forEach(item => {
       const minFmt = formatDisplayDate(item.minDate);
       const maxFmt = formatDisplayDate(item.maxDate);
-      const historyRange = (minFmt && minFmt !== maxFmt) ? `${minFmt} → ${maxFmt}` : (maxFmt || 'Não disponível');
+      const hasHistory = !!(minFmt && maxFmt && minFmt !== maxFmt);
+      const historyLabel = hasHistory ? 'Histórico:' : 'Tipo de Carga:';
+      const historyValue = hasHistory ? `${minFmt} → ${maxFmt}` : 'Snapshot (posição diária)';
       const isGz = item.file.endsWith('.gz');
       const downloadLabel = isGz ? 'CSV.GZ' : 'CSV';
       const badgeText = item.dataset && item.dataset.badge ? item.dataset.badge : '';
@@ -3891,11 +3893,11 @@
             <div class="monitor-data-box">
               <div class="monitor-data-row">
                 <span class="monitor-data-label">Última Captura:</span>
-                <span class="monitor-data-value highlight-date">${maxFmt}</span>
+                <span class="monitor-data-value highlight-date">${maxFmt || 'Não disponível'}</span>
               </div>
               <div class="monitor-data-row">
-                <span class="monitor-data-label">Histórico:</span>
-                <span class="monitor-data-value" style="font-size: 0.72rem; color: var(--text2);">${historyRange}</span>
+                <span class="monitor-data-label">${historyLabel}</span>
+                <span class="monitor-data-value" style="font-size: 0.72rem; color: ${hasHistory ? 'var(--text2)' : 'var(--text3)'}; ${hasHistory ? '' : 'font-style: italic;'}">${historyValue}</span>
               </div>
               <div class="monitor-data-row" style="border-top: 1px dashed rgba(255,255,255,0.05); padding-top: 0.4rem;">
                 <span class="monitor-data-label">Diagnóstico SLA:</span>
