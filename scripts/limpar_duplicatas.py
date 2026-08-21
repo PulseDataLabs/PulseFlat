@@ -165,9 +165,8 @@ exemplos:
     )
     add_common_args(parser)
     args = parser.parse_args()
+    apply_common_args(args)
 
     if args.dry_run:
         log.info("Modo dry-run: nenhum arquivo será alterado.")
-
-    apply_common_args(args)
     main(dry_run=args.dry_run)

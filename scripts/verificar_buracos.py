@@ -446,11 +446,10 @@ exemplos:
     )
 
     args = parser.parse_args()
+    apply_common_args(args)
 
     if args.dry_run:
         log.info("Modo dry-run: nenhuma verificação será executada de fato.")
-
-    apply_common_args(args)
 
     if args.list:
         root_dir = Path(__file__).resolve().parents[1]

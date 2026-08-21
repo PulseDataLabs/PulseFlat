@@ -319,9 +319,8 @@ exemplos:
     )
     add_common_args(parser)
     args = parser.parse_args()
+    apply_common_args(args)
 
     if args.dry_run:
         log.info("Modo dry-run: market_latest.json não será salvo.")
-
-    apply_common_args(args)
     generate(dry_run=args.dry_run)
