@@ -93,7 +93,7 @@ class BacenNegociacaoTpfScraper(BaseScraper):
 
     # Catálogo de Metadados
     title = "BACEN — Negociação de Títulos Públicos (Extra-grupo)"
-    description = "Operações definitivas e compromissadas no mercado secundário de títulos públicos federais."
+    description = "Volume financeiro e taxas médias das operações definitivas e compromissadas no mercado secundário de Títulos Públicos Federais (TPF) realizadas fora do grupo das instituições financeiras."
     icon = "📋"
     icon_class = "icon-bcb"
     badge = "Diário"

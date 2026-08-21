@@ -69,7 +69,7 @@ class OnuPactoGlobalScraper(BaseScraper):
     phase = 1
     accumulate = False  # Sobrescreve diariamente para manter a lista ativa atualizada
     title = "ONU — Empresas Signatárias do Pacto Global"
-    description = "Empresas e organizações brasileiras participantes dos princípios ESG do Pacto Global da ONU."
+    description = "Lista oficial de empresas, fundações e organizações brasileiras signatárias dos 10 Princípios do Pacto Global da ONU sobre Direitos Humanos, Trabalho, Meio Ambiente e Anticorrupção."
 
     def fetch(self) -> pd.DataFrame:
 

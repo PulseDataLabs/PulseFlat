@@ -47,7 +47,7 @@ API_URL = "http://www.ipeadata.gov.br/api/odata4/ValoresSerie(SERCODIGO='{code}'
 
 class IpeaPrecosInflacaoScraper(BaseScraper):
     title = "IPEADATA — Preços e Inflação"
-    description = "Índices históricos de inflação (IPCA, IGP-M, INPC, IPA) apurados pelo IPEA."
+    description = "Série histórica completa dos índices de preços ao consumidor e no atacado no Brasil (IPCA, IGP-DI, IGP-M, IPC-Fipe, IPA-OG) apurados desde a década de 1980."
     badge = "Mensal"
     source = "IPEA"
     tags = ['ipea', 'inflacao', 'ipca', 'igpm']

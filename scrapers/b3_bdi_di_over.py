@@ -124,7 +124,7 @@ class B3BdiDiOverScraper(BaseScraper):
 
     # Catálogo de Metadados
     title = "B3 BDI — DI Over"
-    description = "Boletim Diário de Informações para contratos de taxa de juros DI Over."
+    description = "Boletim Diário de Informações (BDI) da B3 para a taxa média de juros de um dia (DI Over), contendo volume financeiro, quantidade de operações e fator diário acumulado."
     icon = "🏦"
     icon_class = "icon-b3"
     badge = "Diário"

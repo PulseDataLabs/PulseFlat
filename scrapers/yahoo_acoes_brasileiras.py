@@ -72,7 +72,7 @@ class YahooAcoesBrasileirasScraper(BaseScraper):
     phase = 1
     chaves_dedup = ["data_referencia", "codigo_ativo"]
     title = "Yahoo Finance — Ações Brasileiras (B3)"
-    description = "Cotações e variações diárias das principais ações negociadas na B3."
+    description = "Cotações históricas diárias (abertura, máxima, mínima, fechamento ajustado e volume) das ações mais negociadas na B3 (PETR4, VALE3, ITUB4, BBDC4, etc.) via Yahoo Finance."
 
     def fetch(self) -> pd.DataFrame:
 

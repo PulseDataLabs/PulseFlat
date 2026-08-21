@@ -157,7 +157,7 @@ class IbgeSidraScraper(BaseScraper):
 
     # Catálogo de Metadados
     title = "IBGE SIDRA — Séries Estatísticas e Inflação"
-    description = "Tabelas agregadas do SIDRA/IBGE com índices de preços, PIB e contas nacionais."
+    description = "Tabelas e séries estatísticas agregadas do Sistema IBGE de Recuperação Automática (SIDRA), abrangendo índices oficiais de preços ao consumidor (IPCA, INPC, IPCA-15), PIB e Contas Nacionais."
     icon = "📊"
     icon_class = "icon-ibge"
     badge = "Diário"

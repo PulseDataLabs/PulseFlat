@@ -181,7 +181,7 @@ class B3LimitesGarantiasScraper(BaseScraper):
     chaves_dedup = ["data_referencia", "tipo_ativo", "codigo"]
 
     title = "B3 — Limites e Garantias"
-    description = "Parâmetros de margem, limites operacionais e garantias aceitas pela Clearing B3."
+    description = "Parâmetros operacionais e percentuais de deságio/garantia aceitos pela B3 Clearinghouse para margem de garantia em operações de derivativos, empréstimo de ativos e liquidação física."
     icon = "🔒"
     icon_class = "icon-b3"
     badge = "Mensal"

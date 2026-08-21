@@ -138,7 +138,7 @@ class B3ClassificacaoSetorialScraper(BaseScraper):
 
     # Catálogo de Metadados
     title = "B3 — Classificação Setorial de Empresas"
-    description = "Estrutura setorial completa: setor econômico, subsetor e segmento de listagem na B3."
+    description = "Mapeamento hierárquico oficial da B3 de todas as companhias listadas por Setor Econômico, Subsetor e Segmento de Atuação (ex: Financeiro > Bancos > Bancos Múltiplos)."
     icon = "🗂️"
     icon_class = "icon-b3"
     badge = "Diário"

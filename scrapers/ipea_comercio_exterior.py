@@ -33,7 +33,7 @@ API_URL = "http://www.ipeadata.gov.br/api/odata4/ValoresSerie(SERCODIGO='{code}'
 
 class IpeaComercioExteriorScraper(BaseScraper):
     title = "IPEADATA — Comércio Exterior e Balança Comercial"
-    description = "Estatísticas mensais de exportação, importação e saldo da balança comercial brasileira."
+    description = "Estatísticas mensais consolidadas de comércio exterior brasileiro (exportações, importações, saldo comercial, termos de troca e quantum) disponibilizadas pelo IPEADATA."
     badge = "Mensal"
     source = "IPEA"
     tags = ['ipea', 'comercio_exterior', 'exportacao', 'importacao']

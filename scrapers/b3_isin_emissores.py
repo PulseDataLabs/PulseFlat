@@ -25,7 +25,7 @@ class B3IsinEmissoresScraper(BaseScraper):
 
     # Metadados para o catálogo global
     title = "B3 — Emissores de Código ISIN"
-    description = "Relação cadastral completa de emissores de instrumentos financeiros da B3."
+    description = "Relação cadastral e códigos de identificação de todos os emissores de instrumentos financeiros registrados no sistema de numeração ISIN da B3."
     icon = "🏢"
     icon_class = "icon-b3"
     badge = "Semanal"

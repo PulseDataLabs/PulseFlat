@@ -2,7 +2,7 @@
   {
     "title": "ANBIMA — Debêntures",
     "file": "anbima_debentures.csv",
-    "description": "Preços de referência, taxas indicativas e spreads de debêntures no mercado secundário.",
+    "description": "Curva de taxas indicativas de mercado secundário, spreads de crédito (NTN-B e DI), duration e preços unitários (PU) de debêntures prefixadas, pós-fixadas e indexadas à inflação calculadas diariamente pela ANBIMA.",
     "icon": "📜",
     "iconClass": "icon-anbima",
     "badge": "Diário",
@@ -20,7 +20,7 @@
   {
     "title": "ANBIMA — Família IMA / IDA Completo",
     "file": "anbima_ima_completo.csv",
-    "description": "Índices de Mercado ANBIMA (IMA-B, IMA-C, IMA-S, IRF-M) e Índices de Debêntures ANBIMA (IDA).",
+    "description": "Série histórica e diária da família completa de Índices de Mercado ANBIMA (IMA-Geral, IMA-B, IMA-B 5, IMA-B 5+, IMA-C, IRF-M e IRF-M 1/1+), incluindo número índice, variação diária, rentabilidade mensal/anual, duration e yield médio.",
     "icon": "📊",
     "iconClass": "icon-anbima",
     "badge": "Diário",
@@ -39,7 +39,7 @@
   {
     "title": "ANBIMA — Indicadores Financeiros",
     "file": "anbima_indicadores.csv",
-    "description": "Indicadores econômicos, inflação implícita e taxas médias de curto e longo prazo.",
+    "description": "Painel consolidado dos principais indicadores financeiros oficiais da ANBIMA, como taxa pré-fixada indicativa de 252 dias úteis, taxa média de juros de mercado aberto e índices de referência de renda fixa.",
     "icon": "📊",
     "iconClass": "icon-anbima",
     "badge": "Diário · 2×",
@@ -62,7 +62,7 @@
   {
     "title": "ANBIMA — Matriz de Probabilidade de Resgate",
     "file": "anbima_matriz_probabilidade_resgate.csv",
-    "description": "Matriz de liquidez e estimativa probabilística de resgates para fundos de investimento.",
+    "description": "Matrizes estimadas de probabilidade de resgate em fundos de investimento abertos por classe e horizonte temporal (1D, 5D, 21D, 63D), utilizadas para gestão de risco de liquidez e estresse regulatório.",
     "icon": "📊",
     "iconClass": "icon-anbima",
     "badge": "Mensal",
@@ -80,7 +80,7 @@
   {
     "title": "ANBIMA — Ranking Global de Fundos",
     "file": "anbima_ranking_global.csv",
-    "description": "Classificação e patrimônio líquido dos principais fundos e gestoras do mercado brasileiro.",
+    "description": "Ranking global e setorial de administradores e gestores de recursos de terceiros da ANBIMA, com volume de ativos sob gestão (AUM), número de fundos geridos e participação de mercado.",
     "icon": "📊",
     "iconClass": "icon-anbima",
     "badge": "Diário",
@@ -95,7 +95,7 @@
   {
     "title": "ANBIMA — Resolução 550",
     "file": "anbima_550.csv",
-    "description": "Posição diária de custódia e ativos conforme Resolução CMN/CVM 550.",
+    "description": "Estatísticas diárias consolidadas de fundos de investimento regulados pela instrução CVM 550 / Resolução 175, abrangendo patrimônio líquido total, captação líquida, número de cotistas e taxa de administração média por segmento ANBIMA.",
     "icon": "📋",
     "iconClass": "icon-anbima",
     "badge": "Diário",
@@ -112,7 +112,7 @@
   {
     "title": "ANBIMA — Títulos Públicos Federais",
     "file": "anbima_titulos_publicos.csv",
-    "description": "Taxas indicativas, PU base e curvas de rentabilidade de LFT, LTN, NTN-B e NTN-F.",
+    "description": "Taxas indicativas de negociação no mercado secundário e preços unitários (PU Par, PU Máximo, PU Mínimo) de Títulos Públicos Federais (LTN, LFT, NTN-B, NTN-F) apurados diariamente pela ANBIMA.",
     "icon": "🏛️",
     "iconClass": "icon-anbima",
     "badge": "Diário",
@@ -131,7 +131,7 @@
   {
     "title": "ANBIMA — Índices IDkA",
     "file": "anbima_idka.csv",
-    "description": "Índice de Duração Constante ANBIMA para títulos públicos prefixados e indexados à inflação.",
+    "description": "Índice de Duração Constante ANBIMA (IDkA), medindo o retorno e a volatilidade de carteiras sintéticas de títulos públicos federais com prazos pré-determinados (2A, 3A, 5A, 10A, 20A, 30A) para NTN-F e NTN-B.",
     "icon": "📈",
     "iconClass": "icon-anbima",
     "badge": "Diário",
@@ -150,7 +150,7 @@
   {
     "title": "ANBIMA — Projeções Econômicas",
     "file": "anbima_projecoes.csv",
-    "description": "Expectativas de mercado para IPCA, IGP-M, Taxa Selic e Câmbio divulgadas pela ANBIMA.",
+    "description": "Expectativas e projeções econômicas coletadas pela ANBIMA junto às instituições associadas para a inflação oficial (IPCA, IGP-M), Taxa Selic meta e Taxa de Câmbio de curto e médio prazo.",
     "icon": "🔮",
     "iconClass": "icon-anbima",
     "badge": "Sob divulgação",
@@ -169,7 +169,7 @@
   {
     "title": "ANBIMA — Índice IMA-B",
     "file": "anbima_indice_imab.csv.gz",
-    "description": "Série histórica e composição de rentabilidade dos títulos públicos indexados ao IPCA (NTN-B).",
+    "description": "Série temporal detalhada do índice IMA-B (referência para títulos públicos indexados ao IPCA - NTN-B), contendo valor do número índice, cupom de juros, amortizações acumuladas e parâmetros de marcação a mercado.",
     "icon": "📈",
     "iconClass": "icon-anbima",
     "badge": "Diário",
@@ -186,7 +186,7 @@
   {
     "title": "B3 — Cadastro de Códigos ISIN",
     "file": "b3_isin_ativos.csv.gz",
-    "description": "Tabela mestre de códigos ISIN atribuídos a ações, fundos e ativos negociáveis.",
+    "description": "Catálogo oficial completo de códigos internacionais ISIN (International Securities Identification Number) para todos os instrumentos e ativos financeiros emitidos e custodiados na B3.",
     "icon": "🏷️",
     "iconClass": "icon-b3",
     "badge": "Semanal",
@@ -203,7 +203,7 @@
   {
     "title": "B3 — Carteira Teórica AGFS / IAGRO",
     "file": "b3_carteira_teorica_agfs_iagro.csv",
-    "description": "Composição e pesos dos ativos do Índice do Agronegócio (IAGRO) da B3.",
+    "description": "Composição diária e ponderação teórica das ações e ativos elegíveis ao Índice Agro B3 (IAGRO / AGFS), refletindo a representatividade do agronegócio no mercado acionário brasileiro.",
     "icon": "📊",
     "iconClass": "icon-b3",
     "badge": "Quadrimestral",
@@ -222,7 +222,7 @@
   {
     "title": "B3 — Carteira Teórica BDRX",
     "file": "b3_carteira_teorica_bdrx.csv",
-    "description": "Composição e pesos do Índice de BDRs Não Patrocinados (BDRX).",
+    "description": "Composição teórica e pesos ponderados dos Brazilian Depositary Receipts (BDRs Não Patrocinados e Patrocinados) integrantes do Índice de BDRs da B3 (BDRX).",
     "icon": "📊",
     "iconClass": "icon-b3",
     "badge": "Quadrimestral",
@@ -240,7 +240,7 @@
   {
     "title": "B3 — Carteira Teórica IBOVESPA",
     "file": "b3_carteira_teorica_ibov.csv",
-    "description": "Composição oficial e pesos das ações que compõem o Índice Bovespa (IBOV).",
+    "description": "Composição oficial, quantidade teórica e participação percentual ponderada de todas as ações e units componentes do Índice Bovespa (IBOVESPA), o principal benchmark de renda variável da B3.",
     "icon": "📊",
     "iconClass": "icon-b3",
     "badge": "Quadrimestral",
@@ -259,7 +259,7 @@
   {
     "title": "B3 — Carteira Teórica IBSD",
     "file": "b3_carteira_teorica_ibsd.csv",
-    "description": "Composição do Índice de Sustentabilidade Diferenciada da B3.",
+    "description": "Composição diária e participação teórica das ações componentes do Índice Bovespa Smart Dividendos (IBSD B3), focado em empresas pagadoras consistentes de proventos.",
     "icon": "📊",
     "iconClass": "icon-b3",
     "badge": "Quadrimestral",
@@ -277,7 +277,7 @@
   {
     "title": "B3 — Carteira Teórica IBX 50",
     "file": "b3_carteira_teorica_ibxl.csv",
-    "description": "Composição e pesos das 50 ações mais negociadas da bolsa brasileira (IBrX-50).",
+    "description": "Composição teórica e pesos relativos das 50 ações de maior liquidez e negociabilidade no mercado à vista da B3 integrantes do Índice Brasil 50 (IBrX 50 / IBXL).",
     "icon": "📊",
     "iconClass": "icon-b3",
     "badge": "Quadrimestral",
@@ -296,7 +296,7 @@
   {
     "title": "B3 — Carteira Teórica IFNC (Financeiro)",
     "file": "b3_carteira_teorica_ifnc.csv",
-    "description": "Composição do Índice Financeiro da B3 com bancos e instituições financeiras.",
+    "description": "Composição e pesos da carteira teórica do Índice Financeiro da B3 (IFNC), reunindo empresas listadas do setor de intermediação financeira, bancos, seguros e previdência.",
     "icon": "📊",
     "iconClass": "icon-b3",
     "badge": "Quadrimestral",
@@ -315,7 +315,7 @@
   {
     "title": "B3 — Carteira Teórica ISEE (Sustentabilidade)",
     "file": "b3_carteira_teorica_isee.csv",
-    "description": "Composição do Índice de Sustentabilidade Empresarial (ISE B3).",
+    "description": "Composição oficial e ponderação das empresas que compõem a carteira do Índice de Sustentabilidade Empresarial (ISE B3), avaliadas sob critérios ESG e boas práticas corporativas.",
     "icon": "📊",
     "iconClass": "icon-b3",
     "badge": "Quadrimestral",
@@ -334,7 +334,7 @@
   {
     "title": "B3 — Carteira Teórica SMLL (Small Caps)",
     "file": "b3_carteira_teorica_smll.csv",
-    "description": "Composição e ponderação do Índice Small Cap da B3.",
+    "description": "Composição teórica e fatores de ponderação das ações que integram o Índice Small Cap (SMLL B3), representando empresas de menor e média capitalização bolsista.",
     "icon": "📊",
     "iconClass": "icon-b3",
     "badge": "Quadrimestral",
@@ -353,7 +353,7 @@
   {
     "title": "B3 — Classificação Setorial de Empresas",
     "file": "b3_classificacao_setorial.csv",
-    "description": "Estrutura setorial completa: setor econômico, subsetor e segmento de listagem na B3.",
+    "description": "Mapeamento hierárquico oficial da B3 de todas as companhias listadas por Setor Econômico, Subsetor e Segmento de Atuação (ex: Financeiro > Bancos > Bancos Múltiplos).",
     "icon": "🗂️",
     "iconClass": "icon-b3",
     "badge": "Diário",
@@ -370,7 +370,7 @@
   {
     "title": "B3 — Emissores de Código ISIN",
     "file": "b3_isin_emissores.csv",
-    "description": "Relação cadastral completa de emissores de instrumentos financeiros da B3.",
+    "description": "Relação cadastral e códigos de identificação de todos os emissores de instrumentos financeiros registrados no sistema de numeração ISIN da B3.",
     "icon": "🏢",
     "iconClass": "icon-b3",
     "badge": "Semanal",
@@ -387,7 +387,7 @@
   {
     "title": "B3 — Limites e Garantias",
     "file": "b3_limites_garantias.csv",
-    "description": "Parâmetros de margem, limites operacionais e garantias aceitas pela Clearing B3.",
+    "description": "Parâmetros operacionais e percentuais de deságio/garantia aceitos pela B3 Clearinghouse para margem de garantia em operações de derivativos, empréstimo de ativos e liquidação física.",
     "icon": "🔒",
     "iconClass": "icon-b3",
     "badge": "Mensal",
@@ -409,7 +409,7 @@
   {
     "title": "B3 — Títulos e Valores Negociáveis",
     "file": "b3_titulos_negociaveis.csv.gz",
-    "description": "Catálogo de instrumentos e títulos habilitados para negociação e registro na B3.",
+    "description": "Lista exaustiva de todos os instrumentos, títulos públicos e privados, ações, derivativos e cotas de fundos habilitados para negociação nos sistemas da B3.",
     "icon": "📋",
     "iconClass": "icon-b3",
     "badge": "Snapshot",
@@ -428,7 +428,7 @@
   {
     "title": "B3 — ETFs Listados",
     "file": "b3_etfs.csv",
-    "description": "Cadastro e metadados dos Exchange Traded Funds (ETFs) negociados na B3.",
+    "description": "Cadastro completo de Exchange Traded Funds (ETFs) de Renda Variável e Renda Fixa listados na B3, contendo razão social, código de negociação (ticker), administrador, gestor e índice de referência.",
     "icon": "📈",
     "iconClass": "icon-b3",
     "badge": "Diário",
@@ -448,7 +448,7 @@
   {
     "title": "B3 — Fundos Imobiliários (FIIs)",
     "file": "b3_fiis.csv",
-    "description": "Cadastro geral, códigos ISIN e informações básicas de Fundos Imobiliários da B3.",
+    "description": "Cadastro abrangente de Fundos de Investimento Imobiliário (FIIs) negociados na B3, com códigos de negociação, segmento de atuação (papel, tijolo, híbrido, FoF), CNPJ e administrador.",
     "icon": "🏢",
     "iconClass": "icon-b3",
     "badge": "Diário",
@@ -468,7 +468,7 @@
   {
     "title": "B3 — Indicadores Financeiros",
     "file": "b3_indicadores_financeiros.csv",
-    "description": "Indicadores financeiros oficiais e taxas de derivativos divulgadas pela B3.",
+    "description": "Indicadores financeiros diários apurados pela B3, incluindo taxas de juros de balcão, taxas de desconto e indicadores operacionais de compensação e liquidação.",
     "icon": "📊",
     "iconClass": "icon-b3",
     "badge": "Diário",
@@ -487,7 +487,7 @@
   {
     "title": "B3 — Fundos Listados em Bolsa",
     "file": "b3_fundos_listados.csv",
-    "description": "Relação de FIIs, FIAGROs, FIPs e fundos de investimento listados na bolsa.",
+    "description": "Relação cadastral de todos os fundos com cotas negociadas em bolsa na B3, incluindo FIIs, FIAGROs, FIPs (Participações) e Fundos de Índice.",
     "icon": "🏢",
     "iconClass": "icon-b3",
     "badge": "Diário",
@@ -512,7 +512,7 @@
   {
     "title": "B3 — Todas as Carteiras Teóricas",
     "file": "b3_carteiras_teoricas.csv",
-    "description": "Consolidado de todas as carteiras teóricas e composições de índices da B3.",
+    "description": "Consolidado geral contendo a composição teórica, códigos de negociação, participação percentual e quantidade teórica de todos os índices de ações e setoriais calculados pela B3.",
     "icon": "🗂️",
     "iconClass": "icon-b3",
     "badge": "Diário · 22 índices",
@@ -544,7 +544,7 @@
   {
     "title": "B3 BDI — ETFs de Renda Fixa",
     "file": "b3_bdi_etfrf.csv.gz",
-    "description": "Negociação e cotações de fechamento dos ETFs de Renda Fixa na B3.",
+    "description": "Boletim Diário de Informações (BDI) de negociações de Exchange Traded Funds (ETFs) de Renda Fixa negociados na B3, contendo código do fundo, quantidade negociada, volume financeiro e preços de abertura, médio e fechamento.",
     "icon": "📊",
     "iconClass": "icon-b3",
     "badge": "Diário",
@@ -564,7 +564,7 @@
   {
     "title": "B3 BDI — Negócios de Ações",
     "file": "b3_bdi_trades_acoes.csv.gz",
-    "description": "Consolidado diário de negócios, volumes e negócios realizados no mercado à vista de ações.",
+    "description": "Boletim Diário de Informações (BDI) com o resumo consolidado de negociações no mercado à vista de ações da B3, incluindo número de negócios, volume financeiro total, títulos negociados e variação percentual diária.",
     "icon": "📈",
     "iconClass": "icon-b3",
     "badge": "Diário",
@@ -583,7 +583,7 @@
   {
     "title": "B3 BDI — Taxas de Swap e Juros",
     "file": "b3_bmf_taxas_juros.csv",
-    "description": "Estrutura a termo das taxas de juros (DI x Pré) e taxas referenciais da BM&F.",
+    "description": "Curvas de taxas referenciais de juros (DI x Pré, Cupom Limpo, Cupom Cambial) e estrutura a termo das taxas de juros (ETTJ) calculadas diariamente a partir dos contratos futuros da B3 (BM&F).",
     "icon": "📊",
     "iconClass": "icon-b3",
     "badge": "Diário",
@@ -602,7 +602,7 @@
   {
     "title": "B3 BDI — DI Over",
     "file": "b3_bdi_di_over.csv",
-    "description": "Boletim Diário de Informações para contratos de taxa de juros DI Over.",
+    "description": "Boletim Diário de Informações (BDI) da B3 para a taxa média de juros de um dia (DI Over), contendo volume financeiro, quantidade de operações e fator diário acumulado.",
     "icon": "🏦",
     "iconClass": "icon-b3",
     "badge": "Diário",
@@ -620,7 +620,7 @@
   {
     "title": "B3 — COTAHIST Diário",
     "file": "b3_cotahist_diario.csv.gz",
-    "description": "Cotações históricas oficiais diárias negociadas nos mercados à vista e a termo da B3.",
+    "description": "Arquivo oficial diário COTAHIST da B3, contendo o resumo completo das cotações, preços médios e volumes negociados no pregão de ações, FIIs, BDRs e derivativos.",
     "icon": "📊",
     "iconClass": "icon-b3",
     "badge": "Diário",
@@ -639,7 +639,7 @@
   {
     "title": "B3 — COTAHIST Histórico Anual",
     "file": "b3_cotahist_anual.csv.gz",
-    "description": "Série histórica anual completa de cotações de ações, fundos e opções da B3.",
+    "description": "Série histórica anual consolidada do arquivo COTAHIST da B3, com registro diário de todas as transações, preços (abertura, máxima, mínima, médio, fechamento), volume e negócios de ações, opções e fundos.",
     "icon": "📅",
     "iconClass": "icon-b3",
     "badge": "Diário",
@@ -657,7 +657,7 @@
   {
     "title": "B3 — Indicadores Econômicos FWF",
     "file": "b3_indicadores_economicos_fwf.csv",
-    "description": "Arquivo de tamanho fixo com moedas, taxas referenciais e índices econômicos da B3.",
+    "description": "Arquivo posicional de tamanho fixo (FWF) da B3 com cotações de moedas internacionais, taxas de referência (Selic, CDI, TR, TJLP) e índices de preços utilizados na liquidação de contratos.",
     "icon": "📊",
     "iconClass": "icon-b3",
     "badge": "Diário",
@@ -675,7 +675,7 @@
   {
     "title": "BACEN — Balancetes Mensais dos Bancos (Cosif)",
     "file": "bacen_balancetes_bancos.csv",
-    "description": "Demonstrações financeiras e balancetes contábeis padronizados das instituições bancárias.",
+    "description": "Demonstrações financeiras e balancetes contábeis mensais padronizados (Plano Contábil Cosif) de todas as instituições financeiras e bancos em operação no Brasil, divulgados pelo Banco Central.",
     "icon": "📊",
     "iconClass": "icon-bcb",
     "badge": "Mensal",
@@ -694,7 +694,7 @@
   {
     "title": "BACEN — Conglomerados Financeiros e Prudenciais",
     "file": "bacen_conglomerados.csv",
-    "description": "Composição institucional e dados prudenciais dos conglomerados financeiros no Brasil.",
+    "description": "Quadro societário, composição patrimonial e demonstrações consolidadas dos Conglomerados Financeiros e Prudenciais regulados pelo Banco Central do Brasil.",
     "icon": "📊",
     "iconClass": "icon-bcb",
     "badge": "Diário",
@@ -709,7 +709,7 @@
   {
     "title": "BACEN — Câmbio PTAX",
     "file": "bcb_ptax.csv",
-    "description": "Taxas de câmbio oficiais de compra e venda divulgadas pelo Banco Central do Brasil.",
+    "description": "Série histórica e boletim diário da taxa de câmbio oficial PTAX (Dólar, Euro e outras moedas) apurada e divulgada pelo Banco Central do Brasil com base em quatro janelas diárias de consulta.",
     "icon": "💵",
     "iconClass": "icon-bcb",
     "badge": "Diário",
@@ -729,7 +729,7 @@
   {
     "title": "BACEN — Parcelas de Capital e Basileia",
     "file": "bacen_parcelas_capital_basileia.csv.gz",
-    "description": "Requerimentos de capital, patrimônio de referência e índice de Basileia do sistema financeiro.",
+    "description": "Requerimentos de capital regulatório, Patrimônio de Referência (PR), ativos ponderados pelo risco (RWA) e Índice de Basileia de cada instituição bancária reportado ao BACEN.",
     "icon": "📊",
     "iconClass": "icon-bcb",
     "badge": "Diário",
@@ -744,7 +744,7 @@
   {
     "title": "BACEN — Negociação de Títulos Públicos (Extra-grupo)",
     "file": "bacen_negociacao_tpf_extragrupo.csv.gz",
-    "description": "Operações definitivas e compromissadas no mercado secundário de títulos públicos federais.",
+    "description": "Volume financeiro e taxas médias das operações definitivas e compromissadas no mercado secundário de Títulos Públicos Federais (TPF) realizadas fora do grupo das instituições financeiras.",
     "icon": "📋",
     "iconClass": "icon-bcb",
     "badge": "Diário",
@@ -762,7 +762,7 @@
   {
     "title": "BACEN — Sistema Gerenciador de Séries Temporais (SGS)",
     "file": "bcb_sgs.csv",
-    "description": "Séries macroeconômicas oficiais: Taxa Selic, IPCA, IGP-M, TR, CDI e agregados monetários.",
+    "description": "Séries temporais macroeconômicas oficiais do Sistema Gerenciador de Séries Temporais (SGS) do Banco Central, incluindo Meta Selic, taxa CDI, IPCA, IGP-M, TR, reservas internacionais e agregado monetário M1-M4.",
     "icon": "📈",
     "iconClass": "icon-bcb",
     "badge": "Diário",
@@ -781,7 +781,7 @@
   {
     "title": "CVM — Informe Diário de Fundos de Investimento",
     "file": "cvm_fundos_informe_diario.csv.gz",
-    "description": "Cota diária, patrimônio líquido, captações e resgates de toda a indústria de fundos.",
+    "description": "Informe diário regulatório de todos os fundos de investimento em operação no Brasil (ICVM 555 / RCVM 175), com valor da cota diária, patrimônio líquido, captação do dia, resgates e número total de cotistas.",
     "icon": "📋",
     "iconClass": "icon-cvm",
     "badge": "Diário",
@@ -800,7 +800,7 @@
   {
     "title": "CVM — Registro de Classes e Subclasses de Fundos (RCVM 175)",
     "file": "registro_fundo_classe.csv.gz",
-    "description": "Estrutura moderna de classes e subclasses de cotas sob a Resolução CVM 175.",
+    "description": "Base cadastral de classes e subclasses de cotas de fundos de investimento constituídos sob o marco regulatório da Resolução CVM 175, contendo CNPJ da classe, administrador e público-alvo.",
     "icon": "📊",
     "iconClass": "icon-cvm",
     "badge": "Diário",
@@ -819,7 +819,7 @@
   {
     "title": "CVM — Cadastro de Companhias Abertas",
     "file": "cvm_cadastro_companhias_abertas.csv",
-    "description": "Relação cadastral oficial de emissores registrados na Comissão de Valores Mobiliários.",
+    "description": "Cadastro geral oficial de companhias abertas registradas na Comissão de Valores Mobiliários (CVM), incluindo CNPJ, código CVM, situação de registro, setor de atividade e dados de contato do DRI.",
     "icon": "🏛️",
     "iconClass": "icon-cvm",
     "badge": "Diário",
@@ -836,7 +836,7 @@
   {
     "title": "Debêntures — Emissões e Características",
     "file": "debentures_emissoes_caracteristicas.csv",
-    "description": "Cadastro e características de registro de todas as emissões de debêntures no Brasil.",
+    "description": "Cadastro detalhado de todas as emissões públicas e privadas de debêntures registradas no Brasil, com taxa de remuneração (spread), indexador, data de emissão, vencimento e garantias.",
     "icon": "📊",
     "iconClass": "icon-anbima",
     "badge": "Diário",
@@ -855,7 +855,7 @@
   {
     "title": "Debêntures — Mercado Secundário e Preços de Negociação",
     "file": "debentures_mercado_secundario_precos_negociacao.csv.gz",
-    "description": "Preços médios, quantidades, volumes e negócios diários de debêntures no mercado secundário.",
+    "description": "Histórico e boletim diário de negociações no mercado secundário de debêntures, contendo preço unitário médio, quantidade de títulos transacionados, volume financeiro e taxas praticadas.",
     "icon": "📊",
     "iconClass": "icon-anbima",
     "badge": "Diário",
@@ -875,7 +875,7 @@
   {
     "title": "IBGE SIDRA — Séries Estatísticas e Inflação",
     "file": "ibge_sidra.csv",
-    "description": "Tabelas agregadas do SIDRA/IBGE com índices de preços, PIB e contas nacionais.",
+    "description": "Tabelas e séries estatísticas agregadas do Sistema IBGE de Recuperação Automática (SIDRA), abrangendo índices oficiais de preços ao consumidor (IPCA, INPC, IPCA-15), PIB e Contas Nacionais.",
     "icon": "📊",
     "iconClass": "icon-ibge",
     "badge": "Diário",
@@ -892,7 +892,7 @@
   {
     "title": "IPEADATA — Calendário e Dias Úteis",
     "file": "ipea_calendario.csv",
-    "description": "Número de dias úteis passados e estimados mensalmente pelo IPEA.",
+    "description": "Calendário de dias úteis e feriados nacionais compilado pelo IPEADATA para ajuste sazonal e conversão de séries temporais financeiras e econômicas.",
     "icon": "📊",
     "iconClass": "icon-misc",
     "badge": "Mensal",
@@ -909,7 +909,7 @@
   {
     "title": "IPEADATA — Comércio Exterior e Balança Comercial",
     "file": "ipea_comercio_exterior.csv",
-    "description": "Estatísticas mensais de exportação, importação e saldo da balança comercial brasileira.",
+    "description": "Estatísticas mensais consolidadas de comércio exterior brasileiro (exportações, importações, saldo comercial, termos de troca e quantum) disponibilizadas pelo IPEADATA.",
     "icon": "📊",
     "iconClass": "icon-misc",
     "badge": "Mensal",
@@ -927,7 +927,7 @@
   {
     "title": "IPEADATA — Formação Bruta de Capital Fixo (FBCF)",
     "file": "ipea_fbcf.csv",
-    "description": "Indicador mensal de investimentos e Formação Bruta de Capital Fixo na economia.",
+    "description": "Indicador mensal do IPEA para a Formação Bruta de Capital Fixo (FBCF), medindo a taxa de investimentos da economia brasileira em máquinas, equipamentos e construção civil.",
     "icon": "📊",
     "iconClass": "icon-misc",
     "badge": "Mensal",
@@ -945,7 +945,7 @@
   {
     "title": "IPEADATA — Macroeconomia e Contas Nacionais",
     "file": "ipea_macroeconomia.csv",
-    "description": "Séries temporais macroeconômicas consolidadas de PIB, consumo e produção.",
+    "description": "Conjunto de séries temporais macroeconômicas de longo prazo compiladas pelo IPEA, abrangendo consumo das famílias, arrecadação tributária, dívida pública e produtividade industrial.",
     "icon": "📊",
     "iconClass": "icon-misc",
     "badge": "Mensal",
@@ -962,7 +962,7 @@
   {
     "title": "IPEADATA — Mercados Financeiros Diários",
     "file": "ipea_mercados_diarios.csv",
-    "description": "Cotações diárias de commodities internacionais (Petróleo Brent, WTI) e taxas globais.",
+    "description": "Cotações financeiras diárias de mercados internacionais compiladas pelo IPEA, incluindo Petróleo Brent, WTI, Ouro e índices cambiais de economias emergentes.",
     "icon": "📊",
     "iconClass": "icon-misc",
     "badge": "Diário",
@@ -981,7 +981,7 @@
   {
     "title": "IPEADATA — Preços e Inflação",
     "file": "ipea_precos_inflacao.csv",
-    "description": "Índices históricos de inflação (IPCA, IGP-M, INPC, IPA) apurados pelo IPEA.",
+    "description": "Série histórica completa dos índices de preços ao consumidor e no atacado no Brasil (IPCA, IGP-DI, IGP-M, IPC-Fipe, IPA-OG) apurados desde a década de 1980.",
     "icon": "📊",
     "iconClass": "icon-misc",
     "badge": "Mensal",
@@ -999,7 +999,7 @@
   {
     "title": "IPEADATA — Produção Mineral e Siderurgia",
     "file": "ipea_producao_mineral.csv",
-    "description": "Estatísticas de produção de minério de ferro, aço bruto, laminados e ferro gusa.",
+    "description": "Série histórica mensal da produção, extração e beneficiamento de minério de ferro, petróleo, gás natural e produtos siderúrgicos no Brasil apurados pelo IPEA.",
     "icon": "📊",
     "iconClass": "icon-misc",
     "badge": "Mensal",
@@ -1017,7 +1017,7 @@
   {
     "title": "IPEADATA — Taxas de Juros e Rendimentos",
     "file": "ipea_taxas_juros.csv",
-    "description": "Histórico das taxas Selic, CDI, Poupança, TJLP, TR e TBF.",
+    "description": "Série histórica abrangente das taxas nominais e reais de juros brasileiras (Selic over, Selic meta, TJLP, TLP, TR, TBF e Caderneta de Poupança) disponibilizada pelo IPEA.",
     "icon": "📊",
     "iconClass": "icon-misc",
     "badge": "Mensal",
@@ -1036,7 +1036,7 @@
   {
     "title": "ONU — Empresas Signatárias do Pacto Global",
     "file": "onu_pacto_global.csv",
-    "description": "Empresas e organizações brasileiras participantes dos princípios ESG do Pacto Global da ONU.",
+    "description": "Lista oficial de empresas, fundações e organizações brasileiras signatárias dos 10 Princípios do Pacto Global da ONU sobre Direitos Humanos, Trabalho, Meio Ambiente e Anticorrupção.",
     "icon": "📊",
     "iconClass": "icon-misc",
     "badge": "Diário",
@@ -1051,7 +1051,7 @@
   {
     "title": "Yahoo Finance — Ações Brasileiras (B3)",
     "file": "yahoo_acoes_brasileiras.csv",
-    "description": "Cotações e variações diárias das principais ações negociadas na B3.",
+    "description": "Cotações históricas diárias (abertura, máxima, mínima, fechamento ajustado e volume) das ações mais negociadas na B3 (PETR4, VALE3, ITUB4, BBDC4, etc.) via Yahoo Finance.",
     "icon": "📊",
     "iconClass": "icon-misc",
     "badge": "Diário",
@@ -1066,7 +1066,7 @@
   {
     "title": "Yahoo Finance — Ações Internacionais (ADRs & US)",
     "file": "yahoo_acoes_internacionais.csv",
-    "description": "Cotações de grandes companhias globais e recibos de ações (ADRs).",
+    "description": "Cotações diárias e séries históricas de grandes corporações internacionais (Apple, Microsoft, Google, Nvidia, Amazon, Tesla) e ADRs brasileiras negociadas em Nova York.",
     "icon": "📊",
     "iconClass": "icon-misc",
     "badge": "Diário",
@@ -1081,7 +1081,7 @@
   {
     "title": "Yahoo Finance — Commodities Globais",
     "file": "yahoo_commodities.csv",
-    "description": "Contratos futuros de petróleo, ouro, prata, soja, milho, boi gordo e café.",
+    "description": "Preços de fechamento e séries históricas de contratos futuros de commodities agrícolas, metálicas e energéticas (Petróleo Brent, WTI, Ouro, Prata, Soja, Milho, Boi Gordo, Café).",
     "icon": "📊",
     "iconClass": "icon-misc",
     "badge": "Diário",
@@ -1096,7 +1096,7 @@
   {
     "title": "Yahoo Finance — Criptoativos",
     "file": "yahoo_criptoativos.csv",
-    "description": "Preços em tempo real e fechamento de Bitcoin (BTC), Ethereum (ETH) e principais altcoins.",
+    "description": "Histórico de preços de fechamento, máximas, mínimas e volume dos principais criptoativos globais (Bitcoin - BTC, Ethereum - ETH, Solana - SOL, Ripple - XRP, Cardano - ADA).",
     "icon": "📊",
     "iconClass": "icon-misc",
     "badge": "Diário",
@@ -1111,7 +1111,7 @@
   {
     "title": "Yahoo Finance — Câmbio e Moedas Globais",
     "file": "yahoo_cambio_moedas.csv",
-    "description": "Pares de moedas globais (USD, EUR, GBP, JPY, CHF, CNY contra BRL).",
+    "description": "Cotações diárias dos principais pares de moedas do mercado forex global (USD/BRL, EUR/BRL, GBP/BRL, USD/EUR, USD/JPY, USD/CNY) via Yahoo Finance.",
     "icon": "📊",
     "iconClass": "icon-misc",
     "badge": "Diário",
@@ -1126,7 +1126,7 @@
   {
     "title": "Yahoo Finance — ETFs Internacionais",
     "file": "yahoo_etfs.csv",
-    "description": "Fundos de índice negociados nos Estados Unidos e bolsas globais.",
+    "description": "Cotações e histórico dos maiores Exchange Traded Funds (ETFs) mundiais (SPY, QQQ, IVV, VOO, EWZ, VEA, VWO, IWM) negociados nas bolsas americanas.",
     "icon": "📊",
     "iconClass": "icon-misc",
     "badge": "Diário",
@@ -1141,7 +1141,7 @@
   {
     "title": "Yahoo Finance — FIIs e FIAGROs",
     "file": "yahoo_fiis_fiagros.csv",
-    "description": "Cotações de mercado e liquidez dos fundos imobiliários e do agronegócio.",
+    "description": "Cotações diárias, volume e histórico dos principais Fundos de Investimento Imobiliário (FIIs) e FIAGROs de maior liquidez negociados na B3 (HGLG11, KNIP11, MXRF11, XPLG11, etc.).",
     "icon": "📊",
     "iconClass": "icon-misc",
     "badge": "Diário",
@@ -1156,7 +1156,7 @@
   {
     "title": "Yahoo Finance — Renda Fixa e Títulos Soberanos",
     "file": "yahoo_renda_fixa.csv",
-    "description": "Yields dos US Treasuries (10Y, 2Y) e títulos de dívida soberana internacional.",
+    "description": "Séries diárias de taxas de rendimento (yields) de títulos públicos soberanos internacionais, com destaque para os US Treasuries de 10 anos (^TNX), 5 anos (^FVX), 30 anos (^TYX) e 13 semanas (^IRX).",
     "icon": "📊",
     "iconClass": "icon-misc",
     "badge": "Diário",
@@ -1171,7 +1171,7 @@
   {
     "title": "Yahoo Finance — Índices Globais de Mercado",
     "file": "yahoo_indices_globais.csv",
-    "description": "Benchmarks e índices das maiores bolsas do mundo.",
+    "description": "Cotações diárias de fechamento e variação percentual dos principais índices de bolsas mundiais (^GSPC, ^IXIC, ^DJI, ^FTSE, ^N225, ^BVSP, ^STOXX50E).",
     "icon": "📊",
     "iconClass": "icon-misc",
     "badge": "Diário",
@@ -1186,7 +1186,7 @@
   {
     "title": "Mercado Global — Índices Mundiais de Ações",
     "file": "wikipedia_global_indices.csv",
-    "description": "Principais índices mundiais de ações (S&P 500, Nasdaq, Dow Jones, FTSE, DAX, Nikkei).",
+    "description": "Relação enciclopédica, composição e tickers dos principais índices de ações globais mundiais (S&P 500, Nasdaq 100, Dow Jones, FTSE 100, DAX, Nikkei 225, Hang Seng, Euro Stoxx 50).",
     "icon": "🌐",
     "iconClass": "icon-global",
     "badge": "Diário",

@@ -227,7 +227,7 @@ class B3BmfTaxasJurosScraper(BaseScraper):
 
     # Catálogo de Metadados
     title = "B3 BDI — Taxas de Swap e Juros"
-    description = "Estrutura a termo das taxas de juros (DI x Pré) e taxas referenciais da BM&F."
+    description = "Curvas de taxas referenciais de juros (DI x Pré, Cupom Limpo, Cupom Cambial) e estrutura a termo das taxas de juros (ETTJ) calculadas diariamente a partir dos contratos futuros da B3 (BM&F)."
     icon = "📊"
     icon_class = "icon-b3"
     badge = "Diário"

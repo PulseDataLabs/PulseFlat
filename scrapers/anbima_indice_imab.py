@@ -49,7 +49,7 @@ class AnbimaIndiceImabScraper(BaseScraper):
 
     # Catálogo de Metadados
     title = "ANBIMA — Índice IMA-B"
-    description = "Série histórica e composição de rentabilidade dos títulos públicos indexados ao IPCA (NTN-B)."
+    description = "Série temporal detalhada do índice IMA-B (referência para títulos públicos indexados ao IPCA - NTN-B), contendo valor do número índice, cupom de juros, amortizações acumuladas e parâmetros de marcação a mercado."
     icon = "📈"
     icon_class = "icon-anbima"
     badge = "Diário"

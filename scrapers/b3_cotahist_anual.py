@@ -135,7 +135,7 @@ class B3CotahistAnualScraper(BaseScraper):
 
     # Catálogo de Metadados
     title = "B3 — COTAHIST Histórico Anual"
-    description = "Série histórica anual completa de cotações de ações, fundos e opções da B3."
+    description = "Série histórica anual consolidada do arquivo COTAHIST da B3, com registro diário de todas as transações, preços (abertura, máxima, mínima, médio, fechamento), volume e negócios de ações, opções e fundos."
     icon = "📅"
     icon_class = "icon-b3"
     badge = "Diário"

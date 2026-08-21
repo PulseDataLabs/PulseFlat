@@ -208,7 +208,7 @@ class WikipediaGlobalIndicesScraper(BaseScraper):
     chaves_dedup = None
 
     title = "Mercado Global — Índices Mundiais de Ações"
-    description = "Principais índices mundiais de ações (S&P 500, Nasdaq, Dow Jones, FTSE, DAX, Nikkei)."
+    description = "Relação enciclopédica, composição e tickers dos principais índices de ações globais mundiais (S&P 500, Nasdaq 100, Dow Jones, FTSE 100, DAX, Nikkei 225, Hang Seng, Euro Stoxx 50)."
     icon = "🌐"
     icon_class = "icon-global"
     badge = "Diário"

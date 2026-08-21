@@ -136,7 +136,7 @@ class B3CotahistDiarioScraper(BaseScraper):
 
     # Catálogo de Metadados
     title = "B3 — COTAHIST Diário"
-    description = "Cotações históricas oficiais diárias negociadas nos mercados à vista e a termo da B3."
+    description = "Arquivo oficial diário COTAHIST da B3, contendo o resumo completo das cotações, preços médios e volumes negociados no pregão de ações, FIIs, BDRs e derivativos."
     icon = "📊"
     icon_class = "icon-b3"
     badge = "Diário"

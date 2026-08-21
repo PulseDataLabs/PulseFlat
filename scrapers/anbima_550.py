@@ -119,7 +119,7 @@ class Anbima550Scraper(BaseScraper):
 
     # Catálogo de Metadados
     title = "ANBIMA — Resolução 550"
-    description = "Posição diária de custódia e ativos conforme Resolução CMN/CVM 550."
+    description = "Estatísticas diárias consolidadas de fundos de investimento regulados pela instrução CVM 550 / Resolução 175, abrangendo patrimônio líquido total, captação líquida, número de cotistas e taxa de administração média por segmento ANBIMA."
     icon = "📋"
     icon_class = "icon-anbima"
     badge = "Diário"

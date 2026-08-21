@@ -178,7 +178,7 @@ class AnbimaImaCompletoScraper(BaseScraper):
 
     # Catálogo de Metadados
     title = "ANBIMA — Família IMA / IDA Completo"
-    description = "Índices de Mercado ANBIMA (IMA-B, IMA-C, IMA-S, IRF-M) e Índices de Debêntures ANBIMA (IDA)."
+    description = "Série histórica e diária da família completa de Índices de Mercado ANBIMA (IMA-Geral, IMA-B, IMA-B 5, IMA-B 5+, IMA-C, IRF-M e IRF-M 1/1+), incluindo número índice, variação diária, rentabilidade mensal/anual, duration e yield médio."
     icon = "📊"
     icon_class = "icon-anbima"
     badge = "Diário"

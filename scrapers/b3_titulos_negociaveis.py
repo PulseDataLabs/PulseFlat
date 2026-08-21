@@ -25,7 +25,7 @@ class B3TitulosNegociaveisScraper(BaseScraper):
     chaves_dedup = ["data_captura", "codigo_ativo", "codigo_isin"]
 
     title = "B3 — Títulos e Valores Negociáveis"
-    description = "Catálogo de instrumentos e títulos habilitados para negociação e registro na B3."
+    description = "Lista exaustiva de todos os instrumentos, títulos públicos e privados, ações, derivativos e cotas de fundos habilitados para negociação nos sistemas da B3."
     icon = "📋"
     icon_class = "icon-b3"
     badge = "Snapshot"

@@ -7,7 +7,7 @@ from scrapers.generic_scraper import GenericScraper
 
 class B3CarteiraTeoricaIseeScraper(GenericScraper):
     title = "B3 — Carteira Teórica ISEE (Sustentabilidade)"
-    description = "Composição do Índice de Sustentabilidade Empresarial (ISE B3)."
+    description = "Composição oficial e ponderação das empresas que compõem a carteira do Índice de Sustentabilidade Empresarial (ISE B3), avaliadas sob critérios ESG e boas práticas corporativas."
     badge = "Quadrimestral"
     source = "B3"
     tags = ['b3', 'carteira_teorica', 'isee', 'sustentabilidade', 'indices']

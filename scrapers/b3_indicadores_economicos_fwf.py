@@ -84,7 +84,7 @@ class B3IndicadoresEconomicosFwfScraper(BaseScraper):
 
     # Catálogo de Metadados
     title = "B3 — Indicadores Econômicos FWF"
-    description = "Arquivo de tamanho fixo com moedas, taxas referenciais e índices econômicos da B3."
+    description = "Arquivo posicional de tamanho fixo (FWF) da B3 com cotações de moedas internacionais, taxas de referência (Selic, CDI, TR, TJLP) e índices de preços utilizados na liquidação de contratos."
     icon = "📊"
     icon_class = "icon-b3"
     badge = "Diário"

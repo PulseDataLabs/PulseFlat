@@ -315,7 +315,7 @@ class B3BdiEtfrfScraper(BaseScraper):
 
     # Catálogo de Metadados
     title = "B3 BDI — ETFs de Renda Fixa"
-    description = "Negociação e cotações de fechamento dos ETFs de Renda Fixa na B3."
+    description = "Boletim Diário de Informações (BDI) de negociações de Exchange Traded Funds (ETFs) de Renda Fixa negociados na B3, contendo código do fundo, quantidade negociada, volume financeiro e preços de abertura, médio e fechamento."
     icon = "📊"
     icon_class = "icon-b3"
     badge = "Diário"

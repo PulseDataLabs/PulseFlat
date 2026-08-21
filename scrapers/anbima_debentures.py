@@ -140,7 +140,7 @@ class AnbimaDebenturesScraper(BaseScraper):
 
     # Catálogo de Metadados
     title = "ANBIMA — Debêntures"
-    description = "Preços de referência, taxas indicativas e spreads de debêntures no mercado secundário."
+    description = "Curva de taxas indicativas de mercado secundário, spreads de crédito (NTN-B e DI), duration e preços unitários (PU) de debêntures prefixadas, pós-fixadas e indexadas à inflação calculadas diariamente pela ANBIMA."
     icon = "📜"
     icon_class = "icon-anbima"
     badge = "Diário"

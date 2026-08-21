@@ -53,7 +53,7 @@ class BacenConglomeradosScraper(BaseScraper):
     enabled = True
     phase = 1
     title = "BACEN — Conglomerados Financeiros e Prudenciais"
-    description = "Composição institucional e dados prudenciais dos conglomerados financeiros no Brasil."
+    description = "Quadro societário, composição patrimonial e demonstrações consolidadas dos Conglomerados Financeiros e Prudenciais regulados pelo Banco Central do Brasil."
 
     def fetch(self) -> pd.DataFrame:
 

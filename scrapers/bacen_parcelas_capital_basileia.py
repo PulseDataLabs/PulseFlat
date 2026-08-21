@@ -115,7 +115,7 @@ class BacenParcelasCapitalBasileiaScraper(BaseScraper):
     compress = True
     chaves_dedup = ["AnoMes", "TipoInstituicao", "CodInst", "Conta", "Grupo"]
     title = "BACEN — Parcelas de Capital e Basileia"
-    description = "Requerimentos de capital, patrimônio de referência e índice de Basileia do sistema financeiro."
+    description = "Requerimentos de capital regulatório, Patrimônio de Referência (PR), ativos ponderados pelo risco (RWA) e Índice de Basileia de cada instituição bancária reportado ao BACEN."
 
     def fetch(self) -> pd.DataFrame:
 

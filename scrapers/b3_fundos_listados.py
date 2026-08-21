@@ -319,7 +319,7 @@ class B3FundosListadosScraper(BaseScraper):
     chaves_dedup = None
 
     title = "B3 — Fundos Listados em Bolsa"
-    description = "Relação de FIIs, FIAGROs, FIPs e fundos de investimento listados na bolsa."
+    description = "Relação cadastral de todos os fundos com cotas negociadas em bolsa na B3, incluindo FIIs, FIAGROs, FIPs (Participações) e Fundos de Índice."
     icon = "🏢"
     icon_class = "icon-b3"
     badge = "Diário"

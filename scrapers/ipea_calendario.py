@@ -33,7 +33,7 @@ API_URL = "http://www.ipeadata.gov.br/api/odata4/ValoresSerie(SERCODIGO='{code}'
 
 class IpeaCalendarioScraper(BaseScraper):
     title = "IPEADATA — Calendário e Dias Úteis"
-    description = "Número de dias úteis passados e estimados mensalmente pelo IPEA."
+    description = "Calendário de dias úteis e feriados nacionais compilado pelo IPEADATA para ajuste sazonal e conversão de séries temporais financeiras e econômicas."
     badge = "Mensal"
     source = "IPEA"
     tags = ['ipea', 'calendario', 'dias_uteis']

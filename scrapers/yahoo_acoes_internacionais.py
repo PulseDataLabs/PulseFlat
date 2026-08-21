@@ -72,7 +72,7 @@ class YahooAcoesInternacionaisScraper(BaseScraper):
     phase = 1
     chaves_dedup = ["data_referencia", "codigo_ativo"]
     title = "Yahoo Finance — Ações Internacionais (ADRs & US)"
-    description = "Cotações de grandes companhias globais e recibos de ações (ADRs)."
+    description = "Cotações diárias e séries históricas de grandes corporações internacionais (Apple, Microsoft, Google, Nvidia, Amazon, Tesla) e ADRs brasileiras negociadas em Nova York."
 
     def fetch(self) -> pd.DataFrame:
 

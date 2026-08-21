@@ -72,7 +72,7 @@ class YahooRendaFixaScraper(BaseScraper):
     phase = 1
     chaves_dedup = ["data_referencia", "codigo_ativo"]
     title = "Yahoo Finance — Renda Fixa e Títulos Soberanos"
-    description = "Yields dos US Treasuries (10Y, 2Y) e títulos de dívida soberana internacional."
+    description = "Séries diárias de taxas de rendimento (yields) de títulos públicos soberanos internacionais, com destaque para os US Treasuries de 10 anos (^TNX), 5 anos (^FVX), 30 anos (^TYX) e 13 semanas (^IRX)."
 
     def fetch(self) -> pd.DataFrame:
 

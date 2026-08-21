@@ -9,7 +9,7 @@ from scrapers.generic_scraper import GenericScraper
 
 class DebenturesMercadoSecundarioPrecosNegociacaoScraper(GenericScraper):
     title = "Debêntures — Mercado Secundário e Preços de Negociação"
-    description = "Preços médios, quantidades, volumes e negócios diários de debêntures no mercado secundário."
+    description = "Histórico e boletim diário de negociações no mercado secundário de debêntures, contendo preço unitário médio, quantidade de títulos transacionados, volume financeiro e taxas praticadas."
     badge = "Diário"
     source = "Debêntures"
     tags = ['debentures', 'mercado_secundario', 'precos', 'negociacao', 'anbima', 'snd']

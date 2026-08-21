@@ -46,7 +46,7 @@ class BacenBalancetesBancosScraper(BaseScraper):
     enabled = True
     phase = 1
     title = "BACEN — Balancetes Mensais dos Bancos (Cosif)"
-    description = "Demonstrações financeiras e balancetes contábeis padronizados das instituições bancárias."
+    description = "Demonstrações financeiras e balancetes contábeis mensais padronizados (Plano Contábil Cosif) de todas as instituições financeiras e bancos em operação no Brasil, divulgados pelo Banco Central."
     badge = "Mensal"
     source = "BACEN"
     tags = ["bacen", "bcb", "balancetes", "bancos", "cosif"]

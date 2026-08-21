@@ -201,7 +201,7 @@ class B3CarteirasTeoricasScraper(BaseScraper):
 
     # Catálogo de Metadados
     title = "B3 — Todas as Carteiras Teóricas"
-    description = "Consolidado de todas as carteiras teóricas e composições de índices da B3."
+    description = "Consolidado geral contendo a composição teórica, códigos de negociação, participação percentual e quantidade teórica de todos os índices de ações e setoriais calculados pela B3."
     icon = "🗂️"
     icon_class = "icon-b3"
     badge = "Diário · 22 índices"

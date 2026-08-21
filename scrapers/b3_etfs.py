@@ -173,7 +173,7 @@ class B3EtfsScraper(BaseScraper):
 
     # Catálogo de Metadados
     title = "B3 — ETFs Listados"
-    description = "Cadastro e metadados dos Exchange Traded Funds (ETFs) negociados na B3."
+    description = "Cadastro completo de Exchange Traded Funds (ETFs) de Renda Variável e Renda Fixa listados na B3, contendo razão social, código de negociação (ticker), administrador, gestor e índice de referência."
     icon = "📈"
     icon_class = "icon-b3"
     badge = "Diário"

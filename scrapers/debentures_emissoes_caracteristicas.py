@@ -7,7 +7,7 @@ from scrapers.generic_scraper import GenericScraper
 
 class DebenturesEmissoesCaracteristicasScraper(GenericScraper):
     title = "Debêntures — Emissões e Características"
-    description = "Cadastro e características de registro de todas as emissões de debêntures no Brasil."
+    description = "Cadastro detalhado de todas as emissões públicas e privadas de debêntures registradas no Brasil, com taxa de remuneração (spread), indexador, data de emissão, vencimento e garantias."
     badge = "Diário"
     source = "Debêntures"
     tags = ['debentures', 'emissoes', 'caracteristicas', 'anbima', 'snd']

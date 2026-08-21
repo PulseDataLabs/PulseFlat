@@ -244,7 +244,7 @@ class AnbimaIndicadoresScraper(BaseScraper):
 
     # Catálogo de Metadados
     title = "ANBIMA — Indicadores Financeiros"
-    description = "Indicadores econômicos, inflação implícita e taxas médias de curto e longo prazo."
+    description = "Painel consolidado dos principais indicadores financeiros oficiais da ANBIMA, como taxa pré-fixada indicativa de 252 dias úteis, taxa média de juros de mercado aberto e índices de referência de renda fixa."
     icon = "📊"
     icon_class = "icon-anbima"
     badge = "Diário · 2×"

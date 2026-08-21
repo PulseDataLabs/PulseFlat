@@ -7,7 +7,7 @@ from scrapers.generic_scraper import GenericScraper
 
 class B3CarteiraTeoricaAgfsIagroScraper(GenericScraper):
     title = "B3 — Carteira Teórica AGFS / IAGRO"
-    description = "Composição e pesos dos ativos do Índice do Agronegócio (IAGRO) da B3."
+    description = "Composição diária e ponderação teórica das ações e ativos elegíveis ao Índice Agro B3 (IAGRO / AGFS), refletindo a representatividade do agronegócio no mercado acionário brasileiro."
     badge = "Quadrimestral"
     source = "B3"
     tags = ['b3', 'carteira_teorica', 'agfs', 'iagro', 'indices']

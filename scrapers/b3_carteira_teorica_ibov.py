@@ -7,7 +7,7 @@ from scrapers.generic_scraper import GenericScraper
 
 class B3CarteiraTeoricaIbovScraper(GenericScraper):
     title = "B3 — Carteira Teórica IBOVESPA"
-    description = "Composição oficial e pesos das ações que compõem o Índice Bovespa (IBOV)."
+    description = "Composição oficial, quantidade teórica e participação percentual ponderada de todas as ações e units componentes do Índice Bovespa (IBOVESPA), o principal benchmark de renda variável da B3."
     badge = "Quadrimestral"
     source = "B3"
     tags = ['b3', 'carteira_teorica', 'ibov', 'ibovespa', 'indices']

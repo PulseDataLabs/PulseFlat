@@ -145,7 +145,7 @@ class CvmFundosInformeDiarioScraper(BaseScraper):
 
     # Catálogo de Metadados
     title = "CVM — Informe Diário de Fundos de Investimento"
-    description = "Cota diária, patrimônio líquido, captações e resgates de toda a indústria de fundos."
+    description = "Informe diário regulatório de todos os fundos de investimento em operação no Brasil (ICVM 555 / RCVM 175), com valor da cota diária, patrimônio líquido, captação do dia, resgates e número total de cotistas."
     icon = "📋"
     icon_class = "icon-cvm"
     badge = "Diário"

@@ -117,7 +117,7 @@ class BcbPtaxScraper(BaseScraper):
 
     # Catálogo de Metadados
     title = "BACEN — Câmbio PTAX"
-    description = "Taxas de câmbio oficiais de compra e venda divulgadas pelo Banco Central do Brasil."
+    description = "Série histórica e boletim diário da taxa de câmbio oficial PTAX (Dólar, Euro e outras moedas) apurada e divulgada pelo Banco Central do Brasil com base em quatro janelas diárias de consulta."
     icon = "💵"
     icon_class = "icon-bcb"
     badge = "Diário"

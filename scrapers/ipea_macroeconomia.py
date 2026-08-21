@@ -54,7 +54,7 @@ API_URL = "http://www.ipeadata.gov.br/api/odata4/ValoresSerie(SERCODIGO='{code}'
 
 class IpeaMacroeconomiaScraper(BaseScraper):
     title = "IPEADATA — Macroeconomia e Contas Nacionais"
-    description = "Séries temporais macroeconômicas consolidadas de PIB, consumo e produção."
+    description = "Conjunto de séries temporais macroeconômicas de longo prazo compiladas pelo IPEA, abrangendo consumo das famílias, arrecadação tributária, dívida pública e produtividade industrial."
     badge = "Mensal"
     source = "IPEA"
     tags = ['ipea', 'macroeconomia', 'pib']

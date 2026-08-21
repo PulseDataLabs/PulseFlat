@@ -7,7 +7,7 @@ from scrapers.generic_scraper import GenericScraper
 
 class B3CarteiraTeoricaIbsdScraper(GenericScraper):
     title = "B3 — Carteira Teórica IBSD"
-    description = "Composição do Índice de Sustentabilidade Diferenciada da B3."
+    description = "Composição diária e participação teórica das ações componentes do Índice Bovespa Smart Dividendos (IBSD B3), focado em empresas pagadoras consistentes de proventos."
     badge = "Quadrimestral"
     source = "B3"
     tags = ['b3', 'carteira_teorica', 'ibsd', 'indices']

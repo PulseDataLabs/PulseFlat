@@ -358,7 +358,7 @@ class AnbimaProjecoesScraper(BaseScraper):
 
     # Catálogo de Metadados
     title = "ANBIMA — Projeções Econômicas"
-    description = "Expectativas de mercado para IPCA, IGP-M, Taxa Selic e Câmbio divulgadas pela ANBIMA."
+    description = "Expectativas e projeções econômicas coletadas pela ANBIMA junto às instituições associadas para a inflação oficial (IPCA, IGP-M), Taxa Selic meta e Taxa de Câmbio de curto e médio prazo."
     icon = "🔮"
     icon_class = "icon-anbima"
     badge = "Sob divulgação"

@@ -115,7 +115,7 @@ class B3IndicadoresFinanceirosScraper(BaseScraper):
 
     # Catálogo de Metadados
     title = "B3 — Indicadores Financeiros"
-    description = "Indicadores financeiros oficiais e taxas de derivativos divulgadas pela B3."
+    description = "Indicadores financeiros diários apurados pela B3, incluindo taxas de juros de balcão, taxas de desconto e indicadores operacionais de compensação e liquidação."
     icon = "📊"
     icon_class = "icon-b3"
     badge = "Diário"

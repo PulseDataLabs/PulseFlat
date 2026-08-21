@@ -146,7 +146,7 @@ class AnbimaTitulosPublicosScraper(BaseScraper):
 
     # Catálogo de Metadados
     title = "ANBIMA — Títulos Públicos Federais"
-    description = "Taxas indicativas, PU base e curvas de rentabilidade de LFT, LTN, NTN-B e NTN-F."
+    description = "Taxas indicativas de negociação no mercado secundário e preços unitários (PU Par, PU Máximo, PU Mínimo) de Títulos Públicos Federais (LTN, LFT, NTN-B, NTN-F) apurados diariamente pela ANBIMA."
     icon = "🏛️"
     icon_class = "icon-anbima"
     badge = "Diário"

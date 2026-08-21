@@ -119,7 +119,7 @@ class BcbSgsScraper(BaseScraper):
 
     # Catálogo de Metadados
     title = "BACEN — Sistema Gerenciador de Séries Temporais (SGS)"
-    description = "Séries macroeconômicas oficiais: Taxa Selic, IPCA, IGP-M, TR, CDI e agregados monetários."
+    description = "Séries temporais macroeconômicas oficiais do Sistema Gerenciador de Séries Temporais (SGS) do Banco Central, incluindo Meta Selic, taxa CDI, IPCA, IGP-M, TR, reservas internacionais e agregado monetário M1-M4."
     icon = "📈"
     icon_class = "icon-bcb"
     badge = "Diário"

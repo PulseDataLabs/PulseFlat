@@ -72,7 +72,7 @@ class YahooCommoditiesScraper(BaseScraper):
     phase = 1
     chaves_dedup = ["data_referencia", "codigo_ativo"]
     title = "Yahoo Finance — Commodities Globais"
-    description = "Contratos futuros de petróleo, ouro, prata, soja, milho, boi gordo e café."
+    description = "Preços de fechamento e séries históricas de contratos futuros de commodities agrícolas, metálicas e energéticas (Petróleo Brent, WTI, Ouro, Prata, Soja, Milho, Boi Gordo, Café)."
 
     def fetch(self) -> pd.DataFrame:
 
