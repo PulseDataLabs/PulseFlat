@@ -182,8 +182,12 @@ def generate(dry_run: bool = False) -> None:
 
     for file, old_item in old_datasets.items():
         if file not in processed_files:
-            print_info(f"Mantendo dataset secundário: {file}")
-            new_catalog.append(old_item)
+            file_path = datasets_json_path.parent / file
+            if file_path.exists():
+                print_info(f"Mantendo dataset secundário existente: {file}")
+                new_catalog.append(old_item)
+            else:
+                print_warn(f"Ignorando dataset fantasma inexistente no disco: {file}")
 
     new_catalog.sort(key=lambda x: (x["source"].lower(), x["title"].lower()))
 

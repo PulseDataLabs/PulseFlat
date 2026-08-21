@@ -55,10 +55,6 @@
     "min": "2026-06-01",
     "max": "2026-08-21"
   },
-  "b3_isin_emissores.csv": {
-    "min": "2026-08-21",
-    "max": "2026-08-21"
-  },
   "bacen_conglomerados.csv": {
     "min": "2026-06-03",
     "max": "2026-08-21"
@@ -258,5 +254,13 @@
   "b3_bdi_etfrf.csv.gz": {
     "min": "2026-08-02",
     "max": "2026-08-21"
+  },
+  "b3_cotahist_anual.csv.gz": {
+    "min": "2026-08-21",
+    "max": "2026-08-21"
+  },
+  "consolidated.csv": {
+    "min": "2026-05-01",
+    "max": "2030-12-01"
   }
 }

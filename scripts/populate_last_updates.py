@@ -13,6 +13,7 @@ Uso:
 
 import argparse
 import csv
+import gzip
 import json
 import sys
 import time
@@ -62,7 +63,7 @@ def main(dry_run: bool = False) -> None:
 
     last_updates = {k: v for k, v in last_updates.items() if (data_dir / k).exists()}
 
-    csv_files = sorted(data_dir.glob("*.csv"))
+    csv_files = sorted(list(data_dir.glob("*.csv")) + list(data_dir.glob("*.csv.gz")))
     total_files = len(csv_files)
     total_ok = 0
     total_fail = 0
@@ -74,7 +75,8 @@ def main(dry_run: bool = False) -> None:
         print_start(f"[{idx}/{total_files}] {nome}", icon="file")
 
         try:
-            with csv_file.open("r", newline="", encoding="utf-8") as f:
+            f_obj = gzip.open(csv_file, "rt", newline="", encoding="utf-8") if csv_file.name.endswith(".gz") else csv_file.open("r", newline="", encoding="utf-8")
+            with f_obj as f:
                 reader = csv.DictReader(f)
                 if not reader.fieldnames:
                     print_warn(f"{nome}: sem colunas.")

@@ -2799,7 +2799,7 @@
       if (!fileElement) return;
 
       const fileName = fileElement.textContent.trim();
-      const entry = updates[fileName];
+      const entry = updates[fileName] || (fileName.endsWith('.csv.gz') ? updates[fileName.replace('.csv.gz', '.csv')] : updates[fileName + '.gz']);
 
       if (entry) {
         let minDate = '';
@@ -3506,8 +3506,19 @@
 
     fileList.forEach(file => {
       if (!file) return;
-      const meta = (updates && updates[file]) || {};
-      const dataset = datasetMap[file] || {};
+      let meta = updates && updates[file];
+      if (!meta) {
+        if (file.endsWith('.csv.gz')) meta = updates && updates[file.replace('.csv.gz', '.csv')];
+        else if (file.endsWith('.csv')) meta = updates && updates[file + '.gz'];
+      }
+      meta = meta || {};
+
+      let dataset = datasetMap[file];
+      if (!dataset) {
+        if (file.endsWith('.csv.gz')) dataset = datasetMap[file.replace('.csv.gz', '.csv')];
+        else if (file.endsWith('.csv')) dataset = datasetMap[file + '.gz'];
+      }
+      dataset = dataset || {};
 
       let minDate = '';
       let maxDate = '';
@@ -3521,8 +3532,12 @@
       let hasPipelineError = false;
       const scraperKey = file.replace(/\.csv(\.gz)?$/, '').replace(/\.zip$/, '');
       if (pipelineStatus && pipelineStatus.scrapers && pipelineStatus.scrapers[scraperKey]) {
-        if (pipelineStatus.scrapers[scraperKey].status === 'error') {
+        const scInfo = pipelineStatus.scrapers[scraperKey];
+        if (scInfo.status === 'error') {
           hasPipelineError = true;
+        } else if (!maxDate && scInfo.status === 'success' && scInfo.timestamp) {
+          maxDate = scInfo.timestamp.split('T')[0];
+          minDate = minDate || maxDate;
         }
       }
 
@@ -3538,17 +3553,17 @@
         status = 'error';
         statusLabel = 'Falha';
         pillClass = 'status-pill-error';
-        lagDesc = 'Última execução falhou';
+        lagDesc = 'Última execução falhou no pipeline';
+      } else if (!maxDate) {
+        status = 'periodic';
+        statusLabel = 'Agendado';
+        pillClass = 'status-pill-periodic';
+        lagDesc = 'Aguardando execução / Sob demanda';
       } else if (isPeriodic) {
         status = 'periodic';
         statusLabel = dataset.badge || 'Periódico';
         pillClass = 'status-pill-periodic';
         lagDesc = `Cadência periódica (${formatDisplayDate(maxDate)})`;
-      } else if (!maxDate) {
-        status = 'error';
-        statusLabel = 'Sem dados';
-        pillClass = 'status-pill-error';
-        lagDesc = 'Nenhuma data registrada';
       } else if (businessLag <= 0) {
         status = 'ok';
         statusLabel = 'D-0 • Hoje';
