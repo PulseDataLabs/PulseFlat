@@ -1,4 +1,4 @@
-window.DATASETS_LAST_UPDATES = {
+window.PULSEFLAT_LAST_UPDATES = {
   "b3_carteira_teorica_ifnc.csv": {
     "min": "2026-06-03",
     "max": "2026-08-21"
@@ -157,7 +157,7 @@ window.DATASETS_LAST_UPDATES = {
   },
   "bacen_parcelas_capital_basileia.csv.gz": {
     "min": "2026-06-05",
-    "max": "2026-08-20"
+    "max": "2026-08-21"
   },
   "yahoo_etfs.csv": {
     "min": "2026-06-27",

@@ -1,7 +1,7 @@
-window.PULSEFLAT_PIPELINE_STATUS = {
+window.PIPELINE_STATUS = {
   "timestamp": "2026-08-21T00:50:46.366374",
   "elapsed_seconds": 2790.3076696395874,
-  "status": "error",
+  "status": "success",
   "summary": {
     "total": 67,
     "success": 67,
@@ -220,10 +220,11 @@ window.PULSEFLAT_PIPELINE_STATUS = {
       "timestamp": "2026-08-21T00:50:46.366639"
     },
     "bacen_parcelas_capital_basileia": {
-      "status": "error",
-      "elapsed_seconds": 1.960702657699585,
-      "error": "Traceback (most recent call last):\n  File \"/home/runner/work/PulseFlat/PulseFlat/run_all.py\", line 232, in run_scraper\n    getattr(mod, class_name)().run()\n    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\n  File \"/home/runner/work/PulseFlat/PulseFlat/scrapers/utils/base.py\", line 206, in run\n    raise e\n  File \"/home/runner/work/PulseFlat/PulseFlat/scrapers/utils/base.py\", line 109, in run\n    df = self.fetch()\n  File \"/home/runner/work/PulseFlat/PulseFlat/scrapers/bacen_parcelas_capital_basileia.py\", line 147, in fetch\n    raise RuntimeError(\n    ...<2 lines>...\n    )\nRuntimeError: Nenhum dado retornado da API OData do BCB (IFData). Verifique se a API está disponível.\n",
-      "timestamp": "2026-08-21T00:50:46.366639"
+      "status": "success",
+      "records": 33672,
+      "timestamp": "2026-08-21T23:56:46.522990+00:00",
+      "elapsed_seconds": 5.5,
+      "error": null
     },
     "bacen_negociacao_tpf": {
       "status": "success",
@@ -468,5 +469,9 @@ window.PULSEFLAT_PIPELINE_STATUS = {
       ],
       "timestamp": "2026-08-21T00:08:15.488021"
     }
-  }
+  },
+  "total_scrapers": 70,
+  "success_count": 68,
+  "failed_count": 0,
+  "last_run_timestamp": "2026-08-21T23:56:46.523026+00:00"
 };
