@@ -164,7 +164,7 @@ def generate(dry_run: bool = False) -> None:
 
         target_path = datasets_json_path.parent / filename
         target_gz_path = datasets_json_path.parent / (filename if filename.endswith(".gz") else f"{filename}.gz")
-        
+
         if not target_path.exists() and not target_gz_path.exists():
             print_warn(f"Ignorando scraper sem arquivo gerado no disco: {module_name} ({filename})")
             continue

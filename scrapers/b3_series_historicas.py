@@ -6,7 +6,6 @@ Fonte:   https://arquivos.b3.com.br/bdi/tabelas
 Saída:   data/b3_series_historicas.csv
 """
 import datetime
-import os
 import sys
 import time
 from io import StringIO
