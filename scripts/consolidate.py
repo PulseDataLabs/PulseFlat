@@ -46,11 +46,32 @@ DATA_DIR = ROOT / "data"
 # ── Helpers ────────────────────────────────────────────────────────────
 
 
+import gzip
+
+_CSV_CACHE: dict[str, list[dict]] = {}
+
 def _read_csv(path: str) -> list[dict]:
-    if not Path(path).exists():
-        return []
-    with open(path, encoding="utf-8") as f:
-        return list(csv.DictReader(f))
+    p = Path(path)
+    if not p.exists():
+        gz_p = Path(f"{path}.gz")
+        if gz_p.exists():
+            p = gz_p
+        else:
+            return []
+
+    p_str = str(p.resolve())
+    if p_str in _CSV_CACHE:
+        return _CSV_CACHE[p_str]
+
+    if p.name.endswith(".gz"):
+        with gzip.open(p, "rt", encoding="utf-8", newline="") as f:
+            rows = list(csv.DictReader(f))
+    else:
+        with open(p, encoding="utf-8", newline="") as f:
+            rows = list(csv.DictReader(f))
+
+    _CSV_CACHE[p_str] = rows
+    return rows
 
 
 def _sorted_by(rows: list[dict], col: str, reverse: bool = True) -> list[dict]:
@@ -644,16 +665,7 @@ INDICATOR_DEFS = [
         "date_col": "data_referencia",
         "category": "Indicadores B3",
     },
-    # ── B3 Taxa de Câmbio ──────────────────────────────────────────
-    {
-        "dataset": "b3_taxa_cambio_referencia.csv",
-        "source": "B3",
-        "indicator_col": "description",
-        "value_col_main": "value",
-        "value_col_fallback": "rate",
-        "date_col": "lastupdate",
-        "category": "Taxas de Câmbio",
-    },
+
     # ── BCB PTAX ───────────────────────────────────────────────────
     {
         "dataset": "bcb_ptax.csv",
@@ -753,22 +765,7 @@ INDICATOR_DEFS = [
         ]
         for ticker in YAHOO_SECTIONS[category]
     ],
-    # ── IPEADATA ───────────────────────────────────────────────────
-    *[
-        {
-            "dataset": filename,
-            "source": "IPEA",
-            "label": item["label"],
-            "value_col": "valor",
-            "date_col": "data_referencia",
-            "filter_col": "codigo_ativo",
-            "filter_val": item["code"],
-            "category": item["category"],
-            **({"fmt": item["fmt"]} if "fmt" in item else {}),
-        }
-        for filename, items in IPEADATA_SECTIONS.items()
-        for item in items
-    ],
+
 ]
 
 
@@ -969,7 +966,7 @@ def generate(dry_run: bool = False) -> None:
         print_start(f"[{idx}/{total}] {label} ({idef['dataset']})", icon="search")
 
         csv_path = DATA_DIR / idef["dataset"]
-        if not csv_path.exists():
+        if not csv_path.exists() and not (DATA_DIR / f"{idef['dataset']}.gz").exists():
             print_warn(f"{idef['dataset']}: arquivo não encontrado")
             continue
 

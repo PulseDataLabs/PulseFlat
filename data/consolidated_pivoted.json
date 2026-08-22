@@ -1,59 +1,12 @@
 [
   {
-    "data_referencia": "2026-05-01",
-    "indicador": "Exportações - Preços - Índice",
-    "fonte": "IPEA",
-    "dataset_label": "IPEA Comércio Exterior",
-    "categoria": "Macroeconomia",
-    "Valor": "129,58"
-  },
-  {
-    "data_referencia": "2026-05-01",
-    "indicador": "Importações - Preços - Índice",
-    "fonte": "IPEA",
-    "dataset_label": "IPEA Comércio Exterior",
-    "categoria": "Macroeconomia",
-    "Valor": "115,13"
-  },
-  {
-    "data_referencia": "2026-05-01",
-    "indicador": "Indicador IPEA de FBCF - Construção Civil",
-    "fonte": "IPEA",
-    "dataset_label": "IPEA FBCF",
-    "categoria": "Macroeconomia",
-    "Valor": "159,78"
-  },
-  {
-    "data_referencia": "2026-05-01",
-    "indicador": "Indicador IPEA de FBCF - Construção Dessazonalizado",
-    "fonte": "IPEA",
-    "dataset_label": "IPEA FBCF",
-    "categoria": "Macroeconomia",
-    "Valor": "161,59"
-  },
-  {
-    "data_referencia": "2026-05-01",
-    "indicador": "Indicador IPEA de FBCF - Dessazonalizado",
-    "fonte": "IPEA",
-    "dataset_label": "IPEA FBCF",
-    "categoria": "Macroeconomia",
-    "Valor": "176,59"
-  },
-  {
-    "data_referencia": "2026-05-01",
-    "indicador": "Indicador IPEA de FBCF - Índice Real",
-    "fonte": "IPEA",
-    "dataset_label": "IPEA FBCF",
-    "categoria": "Macroeconomia",
-    "Valor": "177,89"
-  },
-  {
-    "data_referencia": "2026-06-01",
-    "indicador": "Taxa de desocupação (PNAD Contínua)",
-    "fonte": "IPEA",
-    "dataset_label": "IPEA Macroeconomia",
-    "categoria": "Macroeconomia",
-    "Valor": "5,40%"
+    "data_referencia": "2025-12-26",
+    "indicador": "IMA-GERAL",
+    "fonte": "ANBIMA",
+    "dataset_label": "ANBIMA IMA-B",
+    "categoria": "IMA-B",
+    "Número-índice": "9.573",
+    "Variação diária": "0,15%"
   },
   {
     "data_referencia": "2026-06-26",
@@ -161,14 +114,6 @@
   },
   {
     "data_referencia": "2026-07-01",
-    "indicador": "IGP-DI - Geral - Índice",
-    "fonte": "IPEA",
-    "dataset_label": "IPEA Preços e Inflação",
-    "categoria": "Macroeconomia",
-    "Valor": "1.192"
-  },
-  {
-    "data_referencia": "2026-07-01",
     "indicador": "IGP-M (índice)",
     "fonte": "BCB",
     "dataset_label": "BCB SGS",
@@ -201,30 +146,6 @@
   },
   {
     "data_referencia": "2026-07-01",
-    "indicador": "INCC-DI - Geral - Índice",
-    "fonte": "IPEA",
-    "dataset_label": "IPEA Preços e Inflação",
-    "categoria": "Macroeconomia",
-    "Valor": "1.288"
-  },
-  {
-    "data_referencia": "2026-07-01",
-    "indicador": "INPC - Geral - Taxa de Variação",
-    "fonte": "IPEA",
-    "dataset_label": "IPEA Preços e Inflação",
-    "categoria": "Macroeconomia",
-    "Valor": "-0,01%"
-  },
-  {
-    "data_referencia": "2026-07-01",
-    "indicador": "INPC - Geral - Índice",
-    "fonte": "IPEA",
-    "dataset_label": "IPEA Preços e Inflação",
-    "categoria": "Macroeconomia",
-    "Valor": "7.835"
-  },
-  {
-    "data_referencia": "2026-07-01",
     "indicador": "IPCA 12m",
     "fonte": "BCB",
     "dataset_label": "BCB SGS",
@@ -246,54 +167,6 @@
     "dataset_label": "ANBIMA Indicadores",
     "categoria": "Índice de Preços",
     "Valor": "0,0700"
-  },
-  {
-    "data_referencia": "2026-07-01",
-    "indicador": "Mineral - Aço Bruto - Produção",
-    "fonte": "IPEA",
-    "dataset_label": "IPEA Produção Mineral",
-    "categoria": "Produção",
-    "Valor": "2.804"
-  },
-  {
-    "data_referencia": "2026-07-01",
-    "indicador": "Mineral - Ferro-Gusa - Produção",
-    "fonte": "IPEA",
-    "dataset_label": "IPEA Produção Mineral",
-    "categoria": "Produção",
-    "Valor": "2.205"
-  },
-  {
-    "data_referencia": "2026-07-01",
-    "indicador": "Mineral - Laminados - Produção",
-    "fonte": "IPEA",
-    "dataset_label": "IPEA Produção Mineral",
-    "categoria": "Produção",
-    "Valor": "2.052"
-  },
-  {
-    "data_referencia": "2026-07-01",
-    "indicador": "PIB (acumulado 12m)",
-    "fonte": "IPEA",
-    "dataset_label": "IPEA Macroeconomia",
-    "categoria": "Macroeconomia",
-    "Valor": "13.267.298"
-  },
-  {
-    "data_referencia": "2026-07-01",
-    "indicador": "Saldo Total da Poupança (SBPE/Rural)",
-    "fonte": "IPEA",
-    "dataset_label": "IPEA Macroeconomia",
-    "categoria": "Macroeconomia",
-    "Valor": "1.019.852"
-  },
-  {
-    "data_referencia": "2026-07-01",
-    "indicador": "Salário Mínimo Real",
-    "fonte": "IPEA",
-    "dataset_label": "IPEA Macroeconomia",
-    "categoria": "Macroeconomia",
-    "Valor": "1.621"
   },
   {
     "data_referencia": "2026-07-06",
@@ -321,46 +194,6 @@
   },
   {
     "data_referencia": "2026-08-01",
-    "indicador": "CDI Acumulado no Mês",
-    "fonte": "IPEA",
-    "dataset_label": "IPEA Taxas de Juros",
-    "categoria": "Taxas de Juros",
-    "Valor": "0,68%"
-  },
-  {
-    "data_referencia": "2026-08-01",
-    "indicador": "Estrutura Termo LTN - 1 mês",
-    "fonte": "IPEA",
-    "dataset_label": "IPEA Taxas de Juros",
-    "categoria": "Taxas de Juros",
-    "Valor": "13,71%"
-  },
-  {
-    "data_referencia": "2026-08-01",
-    "indicador": "Estrutura Termo LTN - 12 meses",
-    "fonte": "IPEA",
-    "dataset_label": "IPEA Taxas de Juros",
-    "categoria": "Taxas de Juros",
-    "Valor": "13,73%"
-  },
-  {
-    "data_referencia": "2026-08-01",
-    "indicador": "Estrutura Termo LTN - 3 meses",
-    "fonte": "IPEA",
-    "dataset_label": "IPEA Taxas de Juros",
-    "categoria": "Taxas de Juros",
-    "Valor": "13,61%"
-  },
-  {
-    "data_referencia": "2026-08-01",
-    "indicador": "Estrutura Termo LTN - 6 meses",
-    "fonte": "IPEA",
-    "dataset_label": "IPEA Taxas de Juros",
-    "categoria": "Taxas de Juros",
-    "Valor": "13,58%"
-  },
-  {
-    "data_referencia": "2026-08-01",
     "indicador": "IGP-M Projeção",
     "fonte": "ANBIMA",
     "dataset_label": "ANBIMA Indicadores",
@@ -385,75 +218,11 @@
   },
   {
     "data_referencia": "2026-08-01",
-    "indicador": "Poupança Rentabilidade Antiga (dep. até 2012)",
-    "fonte": "IPEA",
-    "dataset_label": "IPEA Taxas de Juros",
-    "categoria": "Taxas de Juros",
-    "Valor": "0,67%"
-  },
-  {
-    "data_referencia": "2026-08-01",
-    "indicador": "Poupança Rentabilidade Nova (dep. pós 2012)",
-    "fonte": "IPEA",
-    "dataset_label": "IPEA Taxas de Juros",
-    "categoria": "Taxas de Juros",
-    "Valor": "0,67%"
-  },
-  {
-    "data_referencia": "2026-08-01",
-    "indicador": "Selic Acumulada no Mês",
-    "fonte": "IPEA",
-    "dataset_label": "IPEA Taxas de Juros",
-    "categoria": "Taxas de Juros",
-    "Valor": "0,68%"
-  },
-  {
-    "data_referencia": "2026-08-01",
-    "indicador": "Taxa Básica Financeira (TBF)",
-    "fonte": "IPEA",
-    "dataset_label": "IPEA Taxas de Juros",
-    "categoria": "Taxas de Juros",
-    "Valor": "1,00%"
-  },
-  {
-    "data_referencia": "2026-08-01",
-    "indicador": "Taxa Referencial (TR)",
-    "fonte": "IPEA",
-    "dataset_label": "IPEA Taxas de Juros",
-    "categoria": "Taxas de Juros",
-    "Valor": "0,17%"
-  },
-  {
-    "data_referencia": "2026-08-01",
-    "indicador": "Taxa de Juros de Longo Prazo (TJLP)",
-    "fonte": "IPEA",
-    "dataset_label": "IPEA Taxas de Juros",
-    "categoria": "Taxas de Juros",
-    "Valor": "0,73%"
-  },
-  {
-    "data_referencia": "2026-08-01",
     "indicador": "UNI-USD",
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
     "Valor": "0,000163"
-  },
-  {
-    "data_referencia": "2026-08-18",
-    "indicador": "Petróleo Brent",
-    "fonte": "IPEA",
-    "dataset_label": "IPEA Mercados Diários",
-    "categoria": "Mercados Globais",
-    "Valor": "95,29"
-  },
-  {
-    "data_referencia": "2026-08-18",
-    "indicador": "Petróleo WTI",
-    "fonte": "IPEA",
-    "dataset_label": "IPEA Mercados Diários",
-    "categoria": "Mercados Globais",
-    "Valor": "86,48"
   },
   {
     "data_referencia": "2026-08-19",
@@ -478,22 +247,6 @@
     "dataset_label": "ANBIMA Indicadores",
     "categoria": "Taxa de Referência",
     "Valor": "0,1707"
-  },
-  {
-    "data_referencia": "2026-08-19",
-    "indicador": "Índice Dow Jones",
-    "fonte": "IPEA",
-    "dataset_label": "IPEA Mercados Diários",
-    "categoria": "Mercados Globais",
-    "Valor": "53.463"
-  },
-  {
-    "data_referencia": "2026-08-19",
-    "indicador": "Índice NASDAQ",
-    "fonte": "IPEA",
-    "dataset_label": "IPEA Mercados Diários",
-    "categoria": "Mercados Globais",
-    "Valor": "26.331"
   },
   {
     "data_referencia": "2026-08-20",
@@ -1195,6 +948,15 @@
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "Valor": "23,05"
+  },
+  {
+    "data_referencia": "2026-08-20",
+    "indicador": "IMA - Geral",
+    "fonte": "ANBIMA",
+    "dataset_label": "ANBIMA IMA-B",
+    "categoria": "IMA-B",
+    "Número-índice": "10.351",
+    "Variação diária": "0,06%"
   },
   {
     "data_referencia": "2026-08-20",
@@ -2419,29 +2181,5 @@
     "dataset_label": "Yahoo Índices Globais",
     "categoria": "Índices de Ações Globais",
     "Valor": "45.247"
-  },
-  {
-    "data_referencia": "2026-12-01",
-    "indicador": "Número de Dias Úteis Passados",
-    "fonte": "IPEA",
-    "dataset_label": "IPEA Calendário",
-    "categoria": "Calendário",
-    "Valor": "22,00"
-  },
-  {
-    "data_referencia": "2026-12-01",
-    "indicador": "Salário Mínimo Vigente",
-    "fonte": "IPEA",
-    "dataset_label": "IPEA Macroeconomia",
-    "categoria": "Macroeconomia",
-    "Valor": "1.621"
-  },
-  {
-    "data_referencia": "2030-12-01",
-    "indicador": "Número de Dias Úteis Futuros",
-    "fonte": "IPEA",
-    "dataset_label": "IPEA Calendário",
-    "categoria": "Calendário",
-    "Valor": "21,00"
   }
 ]

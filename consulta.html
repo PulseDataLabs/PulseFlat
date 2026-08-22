@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Consulta de indicadores financeiros brasileiros consolidados — ANBIMA, B3, BCB, IPEA e Yahoo Finance." />
+  <meta name="description" content="Consulta de indicadores financeiros brasileiros consolidados — ANBIMA, B3, BACEN, Debêntures e Yahoo Finance." />
   <meta property="og:title" content="PulseFlat — Consulta de Indicadores Financeiros" />
   <meta property="og:description" content="Painel analítico em tempo real com séries históricas, gráficos e exportações de dados financeiros brasileiros." />
   <title>Consulta — PulseFlat | Pulse Data Labs</title>
@@ -677,7 +677,7 @@
     .source-tag.b3 { background: var(--accent-dim); color: var(--accent); border: 1px solid var(--accent); }
     .source-tag.bcb { background: var(--emerald-dim); color: var(--emerald); border: 1px solid var(--emerald); }
     .source-tag.yahoo { background: var(--purple-dim); color: var(--purple); border: 1px solid var(--purple); }
-    .source-tag.ipea { background: rgba(239, 68, 68, 0.12); color: #ef4444; border: 1px solid #ef4444; }
+    .source-tag.debentures { background: rgba(0, 212, 255, 0.12); color: #00d4ff; border: 1px solid rgba(0, 212, 255, 0.4); }
 
     .dataset-label {
       font-family: var(--font-mono);
@@ -867,7 +867,7 @@
       <div>
         <div class="hero-eyebrow">Indicadores Financeiros Brasileiros</div>
         <h1 class="hero-title">Consulta Consolidada</h1>
-        <p class="hero-subtitle">Painel analítico em tempo real com séries históricas, gráficos e exportações de ANBIMA, B3, BCB, IPEA e Yahoo Finance.</p>
+        <p class="hero-subtitle">Painel analítico em tempo real com séries históricas, gráficos e exportações de ANBIMA, B3, BACEN, Debêntures e Yahoo Finance.</p>
       </div>
 
       <div class="stats-ribbon" id="stats-ribbon">
@@ -893,7 +893,7 @@
         </div>
         <div class="stat-box misc">
           <div class="stat-val" id="stat-misc">—</div>
-          <div class="stat-lbl">Yahoo / IPEA</div>
+          <div class="stat-lbl">Yahoo / Outros</div>
         </div>
       </div>
     </div>
@@ -1091,21 +1091,12 @@
   const LABEL_TO_FILE_MAP = {
     "ANBIMA Indicadores": "anbima_indicadores.csv",
     "ANBIMA Títulos Públicos": "anbima_titulos_publicos.csv",
-    "ANBIMA Índice IMA-B": "anbima_indice_imab.csv",
+    "ANBIMA Índice IMA-B": "anbima_indice_imab.csv.gz",
     "B3 DI Over": "b3_bdi_di_over.csv",
     "B3 BMF Taxas": "b3_bmf_taxas_juros.csv",
-    "B3 Taxas de Câmbio": "b3_taxa_cambio_referencia.csv",
     "B3 Indicadores": "b3_indicadores_financeiros.csv",
     "BCB PTAX": "bcb_ptax.csv",
     "BCB SGS": "bcb_sgs.csv",
-    "IPEA Calendário": "ipea_calendario.csv",
-    "IPEA Comércio Exterior": "ipea_comercio_exterior.csv",
-    "IPEA FBCF": "ipea_fbcf.csv",
-    "IPEA Macroeconomia": "ipea_macroeconomia.csv",
-    "IPEA Mercados Diários": "ipea_mercados_diarios.csv",
-    "IPEA Preços e Inflação": "ipea_precos_inflacao.csv",
-    "IPEA Produção Mineral": "ipea_producao_mineral.csv",
-    "IPEA Taxas de Juros": "ipea_taxas_juros.csv",
     "Yahoo Ações Brasileiras": "yahoo_acoes_brasileiras.csv",
     "Yahoo Ações Internacionais": "yahoo_acoes_internacionais.csv",
     "Yahoo Câmbio e Moedas": "yahoo_cambio_moedas.csv",
@@ -1281,7 +1272,7 @@
     document.getElementById('stat-anbima').textContent = (fonteCounts['ANBIMA'] || 0).toLocaleString('pt-BR');
     document.getElementById('stat-b3').textContent = (fonteCounts['B3'] || 0).toLocaleString('pt-BR');
     document.getElementById('stat-bcb').textContent = (fonteCounts['BCB'] || 0).toLocaleString('pt-BR');
-    document.getElementById('stat-misc').textContent = ((fonteCounts['Yahoo Finance'] || 0) + (fonteCounts['IPEA'] || 0) + (fonteCounts['IBGE'] || 0)).toLocaleString('pt-BR');
+    document.getElementById('stat-misc').textContent = ((fonteCounts['Yahoo Finance'] || 0) + (fonteCounts['IBGE'] || 0) + (fonteCounts['Debêntures'] || 0)).toLocaleString('pt-BR');
 
     // Update Favorites Counter
     function updateFavCount() {
@@ -1295,7 +1286,7 @@
       'B3': 'b3',
       'BCB': 'bcb',
       'Yahoo Finance': 'yahoo',
-      'IPEA': 'ipea'
+      'Debêntures': 'debentures'
     };
     
     sources.forEach(src => {
@@ -1594,7 +1585,7 @@
             filtered = parsedData;
           }
           if (typeof config.transform === 'function') filtered = config.transform(filtered);
-        } else if (datasetFile.startsWith('yahoo_') || datasetFile.startsWith('ipea_')) {
+        } else if (datasetFile.startsWith('yahoo_')) {
           dateCol = headers.find(h => h.includes('data') || h.includes('dt')) || 'data_referencia';
           valCols = [headers.includes('preco_fechamento') ? 'preco_fechamento' : 'valor'];
           filtered = parsedData.filter(r => (r.codigo_ativo === indicadorName) || (r.indicador === indicadorName));
