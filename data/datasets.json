@@ -800,7 +800,7 @@
   {
     "title": "CVM — Registro de Classes e Subclasses de Fundos (RCVM 175)",
     "file": "registro_fundo_classe.csv.gz",
-    "description": "Base cadastral de classes e subclasses de cotas de fundos de investimento constituídos sob o marco regulatório da Resolução CVM 175, contendo CNPJ da classe, administrador e público-alvo.",
+    "description": "Estrutura moderna de classes e subclasses de cotas sob a Resolução CVM 175.",
     "icon": "📊",
     "iconClass": "icon-cvm",
     "badge": "Diário",
