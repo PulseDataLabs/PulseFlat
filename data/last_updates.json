@@ -60,8 +60,8 @@
     "max": "2026-09-07"
   },
   "b3_isin_emissores.csv": {
-    "min": "2026-09-07",
-    "max": "2026-09-07"
+    "min": "2026-08-21",
+    "max": "2026-08-21"
   },
   "b3_titulos_negociaveis.csv.gz": {
     "min": "2026-09-07",
@@ -163,12 +163,24 @@
     "min": "2026-06-01",
     "max": "2026-09-07"
   },
-  "anbima_indicadores.csv": {
-    "min": "2026-06-01",
+  "anbima_idka.csv": {
+    "min": "2026-06-03",
+    "max": "2026-09-07"
+  },
+  "anbima_titulos_publicos.csv": {
+    "min": "2026-02-23",
     "max": "2026-09-07"
   },
   "anbima_ima_completo.csv": {
     "min": "2026-06-01",
+    "max": "2026-09-07"
+  },
+  "anbima_indicadores.csv": {
+    "min": "2026-06-01",
+    "max": "2026-09-07"
+  },
+  "anbima_matriz_probabilidade_resgate.csv": {
+    "min": "2026-06-19",
     "max": "2026-09-07"
   },
   "anbima_projecoes.csv": {
@@ -179,23 +191,11 @@
     "min": "2026-06-03",
     "max": "2026-09-07"
   },
-  "anbima_titulos_publicos.csv": {
-    "min": "2025-08-01",
-    "max": "2026-09-07"
-  },
-  "anbima_idka.csv": {
-    "min": "2026-06-03",
-    "max": "2026-09-07"
-  },
-  "anbima_matriz_probabilidade_resgate.csv": {
-    "min": "2026-06-19",
-    "max": "2026-09-07"
-  },
   "b3_carteira_teorica_agfs_iagro.csv": {
     "min": "2026-06-03",
     "max": "2026-09-07"
   },
-  "b3_carteira_teorica_ibsd.csv": {
+  "b3_carteira_teorica_bdrx.csv": {
     "min": "2026-06-03",
     "max": "2026-09-07"
   },
@@ -203,7 +203,7 @@
     "min": "2026-06-03",
     "max": "2026-09-07"
   },
-  "b3_carteira_teorica_bdrx.csv": {
+  "b3_carteira_teorica_ibsd.csv": {
     "min": "2026-06-03",
     "max": "2026-09-07"
   },
@@ -219,9 +219,45 @@
     "min": "2026-06-03",
     "max": "2026-09-07"
   },
+  "b3_cotahist_anual.csv.gz": {
+    "min": "2026-09-07",
+    "max": "2026-09-07"
+  },
   "cvm_cadastro_companhias_abertas.csv": {
     "min": "2026-09-07",
     "max": "2026-09-07"
+  },
+  "ipea_calendario.csv": {
+    "min": "2026-08-21",
+    "max": "2026-08-21"
+  },
+  "ipea_comercio_exterior.csv": {
+    "min": "2026-08-21",
+    "max": "2026-08-21"
+  },
+  "ipea_fbcf.csv": {
+    "min": "2026-08-21",
+    "max": "2026-08-21"
+  },
+  "ipea_macroeconomia.csv": {
+    "min": "2026-08-21",
+    "max": "2026-08-21"
+  },
+  "ipea_mercados_diarios.csv": {
+    "min": "2026-08-21",
+    "max": "2026-08-21"
+  },
+  "ipea_precos_inflacao.csv": {
+    "min": "2026-08-21",
+    "max": "2026-08-21"
+  },
+  "ipea_producao_mineral.csv": {
+    "min": "2026-08-21",
+    "max": "2026-08-21"
+  },
+  "ipea_taxas_juros.csv": {
+    "min": "2026-08-21",
+    "max": "2026-08-21"
   },
   "yahoo_indices_globais.csv": {
     "min": "2026-06-28",

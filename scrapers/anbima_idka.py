@@ -55,7 +55,7 @@ class AnbimaIdkaScraper(BaseScraper):
 
     def fetch(self) -> pd.DataFrame:
         # Usa a data útil anterior (D-1) como referência
-        dt = date_ref("dia_anterior")
+        dt = self.target_date or date_ref("dia_anterior")
         dt_ref = dt.strftime("%d/%m/%Y")
         url = URL_TEMPLATE.format(dt=dt_ref)
 

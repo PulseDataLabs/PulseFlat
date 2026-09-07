@@ -72,9 +72,9 @@ jobs:
         fi
         python run_all.py --parallel --max-workers 8 || true
 
-    # Verifica integridade das séries temporais (não falha o pipeline por padrão)
-    - name: Verificar integridade das séries temporais
-      run: python scripts/verificar_buracos.py --fail-on-holes || true
+    # Verifica e resolve integridade das séries temporais via backfill automático
+    - name: Verificar e resolver integridade das séries temporais
+      run: python scripts/verificar_buracos.py --resolve || true
 
     # Identifica mudanças na pasta data/ e faz o push se houver novos dados
     - name: Commitar e enviar novas alterações de dados

@@ -30,7 +30,7 @@ from scripts.utils.ux import (
     print_warn,
     section,
 )
-from scripts.verificar_buracos import CONFIG, check_gaps, load_entity_dates
+from scripts.verificar_buracos import CONFIG, check_gaps, get_extra_holidays, load_entity_dates
 
 log = ColorLogger("backfill_buracos")
 
@@ -80,9 +80,13 @@ def main(
         if not entity_dates:
             continue
 
-        gaps = check_gaps(entity_dates, threshold=threshold)
+        gaps: dict[tuple[str, ...], list[str]] = {}
+        for key, dates in entity_dates.items():
+            extra_hols = get_extra_holidays(key, config, csv_name)
+            res = check_gaps({key: dates}, threshold=threshold, extra_holidays=extra_hols)
+            if res:
+                gaps.update(res)
         if gaps:
-            # Reúne todas as datas faltantes únicas deste CSV
             all_missing = sorted(list({d for dates in gaps.values() for d in dates}))
             gaps_by_csv[csv_name] = all_missing
 
@@ -122,17 +126,20 @@ def main(
         try:
             # Importa o scraper dinamicamente
             mod = importlib.import_module(f"scrapers.{scraper_name}")
-            class_name = (
+            expected_class = (
                 "".join(w.capitalize() for w in scraper_name.split("_")) + "Scraper"
             )
-            if not hasattr(mod, class_name):
+            scraper_class = None
+            for attr in dir(mod):
+                if attr.lower() == expected_class.lower():
+                    scraper_class = getattr(mod, attr)
+                    break
+            if not scraper_class:
                 if not quiet:
                     print_fail(
-                        f"Scraper classe '{class_name}' não encontrada no módulo scrapers.{scraper_name}"
+                        f"Scraper classe '{expected_class}' não encontrada no módulo scrapers.{scraper_name}"
                     )
                 continue
-
-            scraper_class = getattr(mod, class_name)
 
             if scraper_name.startswith("yahoo_"):
                 # Yahoo Finance suporta período/intervalo
@@ -192,7 +199,12 @@ def main(
         if not entity_dates:
             continue
 
-        gaps = check_gaps(entity_dates, threshold=threshold)
+        gaps = {}
+        for key, dates in entity_dates.items():
+            extra_hols = get_extra_holidays(key, config, csv_name)
+            res = check_gaps({key: dates}, threshold=threshold, extra_holidays=extra_hols)
+            if res:
+                gaps.update(res)
         if gaps:
             all_missing = sorted(list({d for dates in gaps.values() for d in dates}))
             total_remaining += len(all_missing)

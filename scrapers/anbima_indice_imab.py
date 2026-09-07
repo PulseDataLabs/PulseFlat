@@ -63,6 +63,12 @@ class AnbimaIndiceImabScraper(BaseScraper):
         # Reordena para garantir o cabeçalho original
         df = pd.DataFrame(rows)
         if not df.empty:
+            if 'data_referencia' not in df.columns and 'data_de_referencia' in df.columns:
+                df['data_referencia'] = df['data_de_referencia']
+            elif 'data_de_referencia' in df.columns:
+                df['data_referencia'] = df['data_referencia'].fillna(df['data_de_referencia'])
+            if 'indice' in df.columns:
+                df['indice'] = df['indice'].replace({'IMA - Geral': 'IMA-GERAL'})
             colunas = [c for c in header if c in df.columns]
             return df[colunas]
         return df

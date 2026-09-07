@@ -55,7 +55,7 @@ def _fetch_ticker(
 
     df = pd.DataFrame({"timestamp": timestamps, "close": closes})
     df["data_referencia"] = (
-        pd.to_datetime(df["timestamp"], unit="s").dt.normalize().dt.date
+        pd.to_datetime(df["timestamp"] + 7200, unit="s").dt.normalize().dt.date
     )
     df["codigo_ativo"] = ticker
     df["label"] = label

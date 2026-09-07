@@ -418,7 +418,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2025-08-01"
+        "example": "2026-02-23"
       },
       {
         "name": "titulo",
@@ -428,7 +428,7 @@
       {
         "name": "data_referencia",
         "type": "date",
-        "example": "2025-08-01"
+        "example": "2026-02-23"
       },
       {
         "name": "codigo_selic",
@@ -438,57 +438,57 @@
       {
         "name": "data_base_emissao",
         "type": "date",
-        "example": "2023-07-07"
+        "example": "2024-01-05"
       },
       {
         "name": "data_vencimento",
         "type": "date",
-        "example": "2025-10-01"
+        "example": "2026-04-01"
       },
       {
         "name": "tx_compra",
         "type": "str",
-        "example": "14.9031"
+        "example": "14.575"
       },
       {
         "name": "tx_venda",
         "type": "str",
-        "example": "14.8734"
+        "example": "14.5537"
       },
       {
         "name": "tx_indicativa",
         "type": "str",
-        "example": "14.8857"
+        "example": "14.5669"
       },
       {
         "name": "pu",
         "type": "str",
-        "example": "976.59955"
+        "example": "985.535409"
       },
       {
         "name": "desvio_padrao",
         "type": "str",
-        "example": "0.00359632487687"
+        "example": "0.00318369383421"
       },
       {
         "name": "interv_ind_inf_d0",
         "type": "str",
-        "example": "14.8187"
+        "example": "14.5125"
       },
       {
         "name": "interv_ind_sup_d0",
         "type": "str",
-        "example": "15.0566"
+        "example": "14.7984"
       },
       {
         "name": "interv_ind_inf_dma1",
         "type": "str",
-        "example": "14.8172"
+        "example": "14.5047"
       },
       {
         "name": "interv_ind_sup_dma1",
         "type": "str",
-        "example": "15.0525"
+        "example": "14.7973"
       },
       {
         "name": "criterio",

@@ -68,7 +68,7 @@ CONFIG: dict[str, dict] = {
         "group_by": ["codigo"],
     },
     "anbima_indice_imab.csv": {
-        "date_col": "data_captura",
+        "date_col": "data_referencia",
         "group_by": ["indice"],
     },
     "b3_bdi_di_over.csv": {
@@ -82,6 +82,7 @@ CONFIG: dict[str, dict] = {
     "yahoo_acoes_brasileiras.csv": {
         "date_col": "data_referencia",
         "group_by": ["codigo_ativo"],
+        "market": "B3",
     },
     "yahoo_acoes_internacionais.csv": {
         "date_col": "data_referencia",
@@ -118,10 +119,12 @@ CONFIG: dict[str, dict] = {
     "yahoo_fiis_fiagros.csv": {
         "date_col": "data_referencia",
         "group_by": ["codigo_ativo"],
+        "market": "B3",
     },
     "ipea_mercados_diarios.csv": {
         "date_col": "data_referencia",
         "group_by": ["codigo_ativo"],
+        "market": "US",
     },
 }
 
@@ -194,17 +197,56 @@ def load_entity_dates(
     return entity_dates
 
 
+B3_EXCHANGE_HOLIDAYS = {
+    # Vésperas de Natal e Ano Novo (Pregão B3 fechado)
+    "2024-12-24", "2024-12-31",
+    "2025-12-24", "2025-12-31",
+    "2026-12-24", "2026-12-31",
+}
+
 US_MARKET_HOLIDAYS = {
     # 2024
     "2024-01-01", "2024-01-15", "2024-02-19", "2024-03-29", "2024-05-27",
     "2024-06-19", "2024-07-04", "2024-09-02", "2024-11-28", "2024-12-25",
-    # 2025
-    "2025-01-01", "2025-01-20", "2025-02-17", "2025-04-18", "2025-05-26",
+    # 2025 (inclui luto nacional Jimmy Carter 09/01/2025)
+    "2025-01-01", "2025-01-09", "2025-01-20", "2025-02-17", "2025-04-18", "2025-05-26",
     "2025-06-19", "2025-07-04", "2025-09-01", "2025-11-27", "2025-12-25",
     # 2026
     "2026-01-01", "2026-01-19", "2026-02-16", "2026-04-03", "2026-05-25",
     "2026-06-19", "2026-07-03", "2026-09-07", "2026-11-26", "2026-12-25",
 }
+
+UK_MARKET_HOLIDAYS = {
+    # 2024
+    "2024-01-01", "2024-03-29", "2024-04-01", "2024-05-06", "2024-05-27", "2024-08-26", "2024-12-25", "2024-12-26",
+    # 2025
+    "2025-01-01", "2025-04-18", "2025-04-21", "2025-05-05", "2025-05-26", "2025-08-25", "2025-12-25", "2025-12-26",
+    # 2026
+    "2026-01-01", "2026-04-03", "2026-04-06", "2026-05-04", "2026-05-25", "2026-08-31", "2026-12-25", "2026-12-28",
+}
+
+
+def get_extra_holidays(key: tuple[str, ...], config: dict, csv_name: str) -> set[str]:
+    hols = set()
+    market = config.get("market")
+    if market == "US":
+        hols.update(US_MARKET_HOLIDAYS)
+    elif market == "B3":
+        hols.update(B3_EXCHANGE_HOLIDAYS)
+    elif market == "UK":
+        hols.update(UK_MARKET_HOLIDAYS)
+
+    ticker = key[0] if key and key[0] != "*" else ""
+    if ticker.endswith(".SA") or "acoes_brasileiras" in csv_name or "fiis_fiagros" in csv_name:
+        hols.update(B3_EXCHANGE_HOLIDAYS)
+    elif ticker.endswith(".L"):
+        hols.update(UK_MARKET_HOLIDAYS)
+    elif ticker and not ticker.endswith(".SA") and not ticker.endswith(".L") and config.get("group_by") == ["codigo_ativo"]:
+        hols.update(US_MARKET_HOLIDAYS)
+        if "BRENT" in ticker:
+            hols.update(UK_MARKET_HOLIDAYS)
+
+    return hols
 
 def check_gaps(
     entity_dates: dict[tuple[str, ...], set[str]],
@@ -262,8 +304,13 @@ def run_csv(
         return 0, 0, {}
 
     total_entities = len(entity_dates)
-    extra_hols = US_MARKET_HOLIDAYS if config.get("market") == "US" else None
-    gaps = check_gaps(entity_dates, threshold=threshold, extra_holidays=extra_hols)
+    gaps: dict[tuple[str, ...], list[str]] = {}
+    csv_name = csv_path.name
+    for key, dates in entity_dates.items():
+        extra_hols = get_extra_holidays(key, config, csv_name)
+        res = check_gaps({key: dates}, threshold=threshold, extra_holidays=extra_hols)
+        if res:
+            gaps.update(res)
     gaps_count = len(gaps)
 
     sum(len(missing) for missing in gaps.values())
@@ -285,6 +332,7 @@ def main(
     csv_filter: list[str] | None = None,
     threshold: int = 3,
     fail_on_holes: bool = False,
+    resolve: bool = False,
     dry_run: bool = False,
     quiet: bool = False,
     verbose: bool = False,
@@ -324,6 +372,7 @@ def main(
     total_gaps_found = 0
     total_entities_checked = 0
     details = []
+    gaps_by_csv: dict[str, list[str]] = {}
 
     for idx, (csv_name, config) in enumerate(sorted(targets.items()), 1):
         if not quiet:
@@ -374,6 +423,8 @@ def main(
             total_gaps = sum(len(m) for m in gaps.values())
             total_holes += 1
             total_gaps_found += total_gaps
+            all_missing = sorted(list({d for dates in gaps.values() for d in dates}))
+            gaps_by_csv[csv_name] = all_missing
             if not quiet:
                 print_fail(
                     f"BURACOS: {gaps_count} entidade{'s' if gaps_count > 1 else ''} "
@@ -423,6 +474,30 @@ def main(
             ],
         )
 
+    if resolve and gaps_by_csv:
+        if not quiet:
+            section("Resolvendo buracos detectados via Backfill", "gear")
+            print_info(f"Iniciando backfill automático em {len(gaps_by_csv)} arquivo(s)...", icon="refresh")
+        from scripts.backfill_buracos import main as run_backfill
+        run_backfill(
+            csv_filter=list(gaps_by_csv.keys()),
+            threshold=threshold,
+            dry_run=dry_run,
+            quiet=quiet,
+            verbose=verbose,
+        )
+        if not quiet:
+            section("Reavaliando séries pós-backfill", "search")
+        return main(
+            csv_filter=csv_filter,
+            threshold=threshold,
+            fail_on_holes=fail_on_holes,
+            resolve=False,
+            dry_run=dry_run,
+            quiet=quiet,
+            verbose=verbose,
+        )
+
     if fail_on_holes and total_holes > 0:
         sys.exit(1)
 
@@ -461,6 +536,11 @@ exemplos:
         help="Sair com exit code 1 se houver buracos",
     )
     parser.add_argument(
+        "--resolve",
+        action="store_true",
+        help="Executar backfill automático para resolver os buracos encontrados",
+    )
+    parser.add_argument(
         "--list",
         action="store_true",
         help="Listar CSVs habilitados para verificação e sair",
@@ -487,6 +567,7 @@ exemplos:
         csv_filter=args.csv,
         threshold=args.threshold,
         fail_on_holes=args.fail_on_holes,
+        resolve=args.resolve,
         dry_run=args.dry_run,
         quiet=args.quiet,
         verbose=args.verbose,
