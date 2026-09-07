@@ -48,7 +48,7 @@ window.PULSEFLAT_LAST_UPDATES = {
     "max": "2026-09-07"
   },
   "bacen_conglomerados.csv": {
-    "min": "2026-06-03",
+    "min": "2026-09-07",
     "max": "2026-09-07"
   },
   "bacen_balancetes_bancos.csv": {
@@ -161,6 +161,70 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "anbima_550.csv": {
     "min": "2026-06-01",
+    "max": "2026-09-07"
+  },
+  "anbima_indicadores.csv": {
+    "min": "2026-06-01",
+    "max": "2026-09-07"
+  },
+  "anbima_ima_completo.csv": {
+    "min": "2026-06-01",
+    "max": "2026-09-07"
+  },
+  "anbima_projecoes.csv": {
+    "min": "2026-06-01",
+    "max": "2026-09-07"
+  },
+  "anbima_ranking_global.csv": {
+    "min": "2026-06-03",
+    "max": "2026-09-07"
+  },
+  "anbima_titulos_publicos.csv": {
+    "min": "2025-08-01",
+    "max": "2026-09-07"
+  },
+  "anbima_idka.csv": {
+    "min": "2026-06-03",
+    "max": "2026-09-07"
+  },
+  "anbima_matriz_probabilidade_resgate.csv": {
+    "min": "2026-06-19",
+    "max": "2026-09-07"
+  },
+  "b3_carteira_teorica_agfs_iagro.csv": {
+    "min": "2026-06-03",
+    "max": "2026-09-07"
+  },
+  "b3_carteira_teorica_ibsd.csv": {
+    "min": "2026-06-03",
+    "max": "2026-09-07"
+  },
+  "b3_carteira_teorica_ibov.csv": {
+    "min": "2026-06-03",
+    "max": "2026-09-07"
+  },
+  "b3_carteira_teorica_bdrx.csv": {
+    "min": "2026-06-03",
+    "max": "2026-09-07"
+  },
+  "b3_carteira_teorica_ibxl.csv": {
+    "min": "2026-06-03",
+    "max": "2026-09-07"
+  },
+  "b3_carteira_teorica_ifnc.csv": {
+    "min": "2026-06-03",
+    "max": "2026-09-07"
+  },
+  "b3_carteira_teorica_smll.csv": {
+    "min": "2026-06-03",
+    "max": "2026-09-07"
+  },
+  "cvm_cadastro_companhias_abertas.csv": {
+    "min": "2026-09-07",
+    "max": "2026-09-07"
+  },
+  "yahoo_indices_globais.csv": {
+    "min": "2026-06-28",
     "max": "2026-09-07"
   }
 };
