@@ -60,8 +60,8 @@ window.PULSEFLAT_LAST_UPDATES = {
     "max": "2026-09-07"
   },
   "b3_isin_emissores.csv": {
-    "min": "2026-08-21",
-    "max": "2026-08-21"
+    "min": "2026-09-07",
+    "max": "2026-09-07"
   },
   "b3_titulos_negociaveis.csv.gz": {
     "min": "2026-09-07",
