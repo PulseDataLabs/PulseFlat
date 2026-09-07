@@ -26,7 +26,7 @@ import logging
 import sys
 import time
 import traceback
-from concurrent.futures import ThreadPoolExecutor, as_completed
+from concurrent.futures import FIRST_COMPLETED, ThreadPoolExecutor, wait
 from datetime import datetime
 from pathlib import Path
 
@@ -222,9 +222,14 @@ def discover_scrapers() -> dict[str, dict]:
 # ── Execução individual ───────────────────────────────────────────────────────
 
 
-def run_scraper(module_name: str) -> tuple[bool, float, str | None]:
+def run_scraper(
+    module_name: str,
+    running_tracker: dict[str, float] | None = None,
+) -> tuple[bool, float, str | None]:
     """Executa um scraper. Retorna (success, elapsed_s, error_msg_or_None)."""
     t0 = time.time()
+    if running_tracker is not None:
+        running_tracker[module_name] = t0
     try:
         mod = importlib.import_module(f"scrapers.{module_name}")
         class_name = "".join(w.capitalize() for w in module_name.split("_")) + "Scraper"
@@ -245,6 +250,9 @@ def run_scraper(module_name: str) -> tuple[bool, float, str | None]:
             else:
                 return False, time.time() - t0, f"SystemExit({e.code})"
         return False, time.time() - t0, traceback.format_exc()
+    finally:
+        if running_tracker is not None:
+            running_tracker.pop(module_name, None)
 
 
 # ── Execução de subconjuntos (paralelo / sequencial) ──────────────────────────
@@ -269,28 +277,61 @@ def run_subset(
             f"  {dim('Modo')} {cyan('paralelo')}  {dim(f'max_workers={max_workers}')}\n"
         )
         done_count = 0
+        running_tracker: dict[str, float] = {}
         with ThreadPoolExecutor(max_workers=max_workers) as ex:
-            future_map = {ex.submit(run_scraper, n): n for n in names}
-            for future in as_completed(future_map):
-                name = future_map[future]
-                group = registry.get(name, {}).get("group", "misc")
-                done_count += 1
-                try:
-                    success, elapsed, err = future.result()
-                except Exception:
-                    success, elapsed, err = False, 0.0, traceback.format_exc()
+            future_map = {ex.submit(run_scraper, n, running_tracker): n for n in names}
+            active_futures = set(future_map.keys())
+            last_heartbeat = time.time()
 
-                if success:
-                    _scraper_done(name, group, elapsed, done_count, total)
-                else:
-                    _scraper_fail(name, group, elapsed, done_count, total)
-
-                results[name] = (success, elapsed, err)
-                # Barra de progresso inline
-                print(
-                    f"  {_progress_bar(done_count, total)}",
-                    end="\r" if done_count < total else "\n",
+            while active_futures:
+                done, not_done = wait(
+                    active_futures, timeout=5, return_when=FIRST_COMPLETED
                 )
+                for future in done:
+                    name = future_map[future]
+                    group = registry.get(name, {}).get("group", "misc")
+                    done_count += 1
+                    try:
+                        success, elapsed, err = future.result()
+                    except Exception:
+                        success, elapsed, err = False, 0.0, traceback.format_exc()
+
+                    if success:
+                        _scraper_done(name, group, elapsed, done_count, total)
+                    else:
+                        _scraper_fail(name, group, elapsed, done_count, total)
+
+                    results[name] = (success, elapsed, err)
+                    # Barra de progresso inline
+                    print(
+                        f"  {_progress_bar(done_count, total)}",
+                        end="\r" if done_count < total else "\n",
+                    )
+                    last_heartbeat = time.time()
+
+                active_futures = not_done
+                if active_futures and (time.time() - last_heartbeat >= 20):
+                    last_heartbeat = time.time()
+                    now = time.time()
+                    active_items = []
+                    for n, start_t in list(running_tracker.items()):
+                        dur = now - start_t
+                        mins, secs = divmod(int(dur), 60)
+                        dur_str = f"{mins}m{secs:02d}s" if mins else f"{secs}s"
+                        active_items.append((dur, f"{n} ({dur_str})"))
+
+                    active_items.sort(reverse=True)
+                    items_str = (
+                        ", ".join(item[1] for item in active_items)
+                        if active_items
+                        else "aguardando slots de execução..."
+                    )
+                    pending_count = len(active_futures)
+                    pct = int(done_count / total * 100) if total else 0
+                    print(
+                        f"\n  ⏳ {yellow('Progresso')}: {done_count}/{total} concluídos ({pct}%). "
+                        f"Ainda em execução ({len(active_items)} ativos, {pending_count} restantes): {items_str}"
+                    )
     else:
         print(f"  {dim('Modo')} {yellow('sequencial')}\n")
         for idx, name in enumerate(names, 1):

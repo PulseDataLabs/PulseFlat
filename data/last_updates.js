@@ -132,8 +132,8 @@ window.PULSEFLAT_LAST_UPDATES = {
     "max": "2026-08-27"
   },
   "wikipedia_global_indices.csv": {
-    "min": "2026-08-27",
-    "max": "2026-08-27"
+    "min": "2026-09-07",
+    "max": "2026-09-07"
   },
   "ipea_mercados_diarios.csv": {
     "min": "2026-08-21",

@@ -3770,7 +3770,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-27"
+        "example": "2026-09-07"
       },
       {
         "name": "codigo_ativo",

@@ -350,6 +350,8 @@ def upload_dataframe(
     try:
         conn = get_connection()
         cursor = conn.cursor()
+        cursor.arraysize = 5000
+        cursor.prefetchrows = 5000
 
         # 1. Garantir que a tabela existe
         exists = create_table_from_df(cursor, table_name, df, clean_cols)
@@ -497,7 +499,13 @@ def upload_dataframe(
                             else:
                                 formatted_periods.append(p)
                         else:
-                            formatted_periods.append(str(p))
+                            if "NUMBER" in db_col_type:
+                                try:
+                                    formatted_periods.append(int(p))
+                                except (ValueError, TypeError):
+                                    formatted_periods.append(p.item() if hasattr(p, "item") else p)
+                            else:
+                                formatted_periods.append(str(p))
 
                     if len(formatted_periods) == 1:
                         select_sql = f"SELECT {cols_str} FROM {table_name} WHERE {clean_period_col} = :1"
