@@ -81,6 +81,8 @@ def capturar(target_date: date | None = None) -> list[dict]:
             log.warning(f"Tentativa {tentativa}/3: {e}")
             if tentativa == 3:
                 log.error("Falha ao baixar arquivo ANBIMA títulos públicos.")
+                if target_date:
+                    return []
                 sys.exit(1)
             time.sleep(5)
 

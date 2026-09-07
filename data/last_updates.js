@@ -146,5 +146,21 @@ window.PULSEFLAT_LAST_UPDATES = {
   "b3_bdi_trades_acoes.csv.gz": {
     "min": "2026-06-03",
     "max": "2026-09-07"
+  },
+  "anbima_debentures.csv": {
+    "min": "2026-06-05",
+    "max": "2026-09-07"
+  },
+  "b3_bmf_taxas_juros.csv": {
+    "min": "2026-06-04",
+    "max": "2026-09-07"
+  },
+  "b3_bdi_di_over.csv": {
+    "min": "2026-06-01",
+    "max": "2026-09-07"
+  },
+  "anbima_550.csv": {
+    "min": "2026-06-01",
+    "max": "2026-09-07"
   }
 };

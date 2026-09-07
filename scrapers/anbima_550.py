@@ -51,9 +51,13 @@ def _url_referencia(session) -> tuple[str, date]:
     return URL_TPL.format(yyyymmdd=ref.strftime("%Y%m%d")), ref
 
 
-def capturar() -> list[dict]:
+def capturar(target_date: date | None = None) -> list[dict]:
     session = nova_session()
-    url, data_ref = _url_referencia(session)
+    if target_date:
+        url = URL_TPL.format(yyyymmdd=target_date.strftime("%Y%m%d"))
+        data_ref = target_date
+    else:
+        url, data_ref = _url_referencia(session)
     log.info(f"Buscando ANBIMA 550: {url}")
 
     for tentativa in range(1, 4):
@@ -130,7 +134,7 @@ class Anbima550Scraper(BaseScraper):
     def fetch(self) -> pd.DataFrame:
         log.info("=== ANBIMA 550 — Renda Fixa ===")
         # Reordena para garantir o cabeçalho original
-        df = pd.DataFrame(capturar())
+        df = pd.DataFrame(capturar(self.target_date))
         if not df.empty:
             colunas = [c for c in CABECALHO if c in df.columns]
             return df[colunas]

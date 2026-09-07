@@ -52,7 +52,7 @@ CONFIG: dict[str, dict] = {
         "group_by": ["indice"],
     },
     "anbima_idka.csv": {
-        "date_col": "data_referencia",
+        "date_col": "data_captura",
         "group_by": ["no_indexador", "no_indice"],
     },
     "anbima_titulos_publicos.csv": {
