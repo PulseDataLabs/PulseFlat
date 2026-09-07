@@ -174,7 +174,7 @@ class AnbimaImaCompletoScraper(BaseScraper):
     enabled = True
     phase = 1
     accumulate = True
-    chaves_dedup = ["data_captura", "data_referencia", "indice"]
+    chaves_dedup = ["data_referencia", "indice"]
 
     # Catálogo de Metadados
     title = "ANBIMA — Família IMA / IDA Completo"
@@ -188,12 +188,120 @@ class AnbimaImaCompletoScraper(BaseScraper):
 
     def fetch(self) -> pd.DataFrame:
         log.info("=== ANBIMA IMA Completo ===")
-        # Reordena para garantir o cabeçalho original
-        df = pd.DataFrame(capturar())
-        if not df.empty:
-            colunas = [c for c in CABECALHO if c in df.columns]
-            return df[colunas]
-        return df
+        # Se datas específicas foram solicitadas (ex: via backfill ou target_date)
+        target_dates = getattr(self, "missing_dates", None)
+        if not target_dates and self.target_date:
+            target_dates = [self.target_date]
+
+        if target_dates:
+            log.info(f"Modo histórico/backfill ativo para {len(target_dates)} data(s).")
+            registros = capturar_historico(target_dates)
+            if registros:
+                df = pd.DataFrame(registros)
+                colunas = [c for c in CABECALHO if c in df.columns]
+                return df[colunas]
+
+        # Modo diário padrão via ima_completo.txt
+        try:
+            dados = capturar()
+            df = pd.DataFrame(dados)
+            if not df.empty:
+                colunas = [c for c in CABECALHO if c in df.columns]
+                return df[colunas]
+        except Exception as e:
+            log.warning(f"Falha no endpoint txt diário ({e}). Tentando fallback S3 histórico ANBIMA...")
+            try:
+                ref_d1 = _formatar_data_iso(obter_d1_util())
+                registros = capturar_historico([ref_d1])
+                if registros:
+                    df = pd.DataFrame(registros)
+                    colunas = [c for c in CABECALHO if c in df.columns]
+                    return df[colunas]
+            except Exception as e_s3:
+                log.error(f"Fallback S3 também falhou: {e_s3}")
+            raise
+
+        return pd.DataFrame()
+
+
+HISTORICAL_S3_BASE = "https://s3-data-prd-use1-precos.s3.us-east-1.amazonaws.com/arquivos/indices-historico/"
+HISTORICAL_S3_FILES = {
+    "IRFM1-HISTORICO.xls": "IRF-M 1",
+    "IRFM1MAIS-HISTORICO.xls": "IRF-M 1+",
+    "IRFM-HISTORICO.xls": "IRF-M",
+    "IMAB5-HISTORICO.xls": "IMA-B 5",
+    "IMAB5MAIS-HISTORICO.xls": "IMA-B 5+",
+    "IMAB-HISTORICO.xls": "IMA-B",
+    "IMAS-HISTORICO.xls": "IMA-S",
+    "IMAGERALEXC-HISTORICO.xls": "IMA-GERAL-EX-C",
+    "IMAGERAL-HISTORICO.xls": "IMA-GERAL",
+}
+
+
+def capturar_historico(datas: set[str] | list[str] | None = None) -> list[dict]:
+    """Baixa séries históricas dos 9 índices ANBIMA a partir do repositório oficial S3."""
+    import io
+    import openpyxl
+
+    alvo_datas = {d if isinstance(d, str) else d.strftime("%Y-%m-%d") for d in datas} if datas else None
+    log.info(f"Buscando histórico ANBIMA S3 (datas: {sorted(alvo_datas) if alvo_datas else 'todas'})...")
+    session = nova_session()
+    registros = []
+
+    for fname, idx_name in HISTORICAL_S3_FILES.items():
+        url = f"{HISTORICAL_S3_BASE}{fname}"
+        resp = None
+        for tentativa in range(1, 4):
+            try:
+                resp = session.get(url, timeout=30)
+                resp.raise_for_status()
+                break
+            except requests.RequestException as e:
+                log.warning(f"Tentativa {tentativa}/3 para {fname}: {e}")
+                if tentativa == 3:
+                    log.error(f"Falha ao baixar {fname} do S3")
+                time.sleep(2)
+
+        if not resp or resp.status_code != 200:
+            continue
+
+        try:
+            wb = openpyxl.load_workbook(io.BytesIO(resp.content), data_only=True)
+            ws = wb.active
+            for row in list(ws.iter_rows(values_only=True))[1:]:
+                dt_val = row[1]
+                if not dt_val:
+                    continue
+                dt_str = dt_val.strftime("%Y-%m-%d") if hasattr(dt_val, "strftime") else str(dt_val)[:10]
+                if alvo_datas and dt_str not in alvo_datas:
+                    continue
+
+                registros.append({
+                    "data_captura": dt_str,
+                    "data_referencia": dt_str,
+                    "indice": idx_name,
+                    "numero_indice": float(row[2]) if row[2] is not None else None,
+                    "variacao_diaria": float(row[3]) if row[3] is not None else None,
+                    "variacao_mensal": float(row[4]) if row[4] is not None else None,
+                    "variacao_anual": float(row[5]) if row[5] is not None else None,
+                    "variacao_ultimos_12_meses": float(row[6]) if row[6] is not None else None,
+                    "variacao_ultimos_24_meses": float(row[7]) if row[7] is not None else None,
+                    "duration_du": row[8],
+                    "peso_geral": 100.0 if idx_name == "IMA-GERAL" else None,
+                    "carteira_a_mercado_rs_mil": None,
+                    "numero_operacoes": None,
+                    "quant_negociada_1000_titulos": None,
+                    "valor_negociado_rs_mil": None,
+                    "pmr": float(row[9]) if row[9] is not None else None,
+                    "convexidade": None,
+                    "yield_": None,
+                    "redemption_yield": None,
+                })
+        except Exception as e:
+            log.error(f"Erro ao processar planilha {fname}: {e}")
+
+    log.info(f"{len(registros)} registros extraídos do S3 histórico ANBIMA.")
+    return registros
 
 
 if __name__ == "__main__":

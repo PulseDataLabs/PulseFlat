@@ -159,6 +159,15 @@ def main(
                 scraper.end_date = max_d
                 scraper.run()
                 total_scrapers_run += 1
+            elif scraper_name == "anbima_ima_completo":
+                if not quiet:
+                    print_info(
+                        f"Executando ANBIMA IMA Completo para {len(missing_dates)} data(s) via histórico S3"
+                    )
+                scraper = scraper_class()
+                scraper.missing_dates = missing_dates
+                scraper.run()
+                total_scrapers_run += 1
             else:
                 # Scrapers diários: roda uma execução para cada data individual
                 for d_str in missing_dates:

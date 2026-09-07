@@ -59,6 +59,32 @@ def test_anbima_ima_completo_scraper_fetch(requests_mock, monkeypatch):
     assert "indice" in df.columns
 
 
+def test_anbima_ima_completo_historico_s3(requests_mock):
+    """Deve testar a captura histórica via arquivos S3 da ANBIMA."""
+    import io, openpyxl, datetime
+
+    wb = openpyxl.Workbook()
+    ws = wb.active
+    ws.append(['Índice', 'Data de Referência', 'Número Índice', 'Variação Diária (%)', 'Variação no Mês (%)', 'Variação no Ano (%)', 'Variação 12 Meses (%)', 'Variação 24 Meses (%)', 'Duration (d.u.)', 'PMR'])
+    ws.append(['IRF - M 1', datetime.datetime(2026, 8, 25, 0, 0), 20900.0, 0.05, 0.20, 9.0, 14.0, 29.0, 114.0, 170.0])
+    buf = io.BytesIO()
+    wb.save(buf)
+    excel_bytes = buf.getvalue()
+
+    for fname in aic.HISTORICAL_S3_FILES.keys():
+        requests_mock.get(f'{aic.HISTORICAL_S3_BASE}{fname}', content=excel_bytes, status_code=200)
+
+    scraper = aic.AnbimaImaCompletoScraper()
+    scraper.missing_dates = ['2026-08-25']
+    df = scraper.fetch()
+
+    assert isinstance(df, pd.DataFrame)
+    assert not df.empty
+    assert (df['data_referencia'] == '2026-08-25').all()
+    assert 'indice' in df.columns
+
+
+
 def test_anbima_indicadores_sucesso(requests_mock):
     """Deve capturar, parsear e limpar corretamente os indicadores do HTML da ANBIMA."""
     mock_html = """
