@@ -51,20 +51,36 @@ URL_TPL = (
 )
 
 
-def _url_hoje() -> str:
+def _url_hoje(
+    target_date: date | None = None,
+    start_date: date | None = None,
+    end_date: date | None = None,
+) -> str:
     hoje = date.today()
-    if ARQUIVO.exists() and ARQUIVO.stat().st_size > 100:
+    if target_date:
+        inicio = target_date
+        fim = target_date
+    elif start_date and end_date:
+        inicio = start_date
+        fim = end_date
+    elif ARQUIVO.exists() and ARQUIVO.stat().st_size > 100:
         inicio = hoje - timedelta(days=90)
+        fim = hoje
     else:
         inicio = date(2020, 1, 1)
+        fim = hoje
     return URL_TPL.format(
         inicio=inicio.strftime("%m-%d-%Y"),
-        fim=hoje.strftime("%m-%d-%Y"),
+        fim=fim.strftime("%m-%d-%Y"),
     )
 
 
-def capturar() -> list[dict]:
-    url = _url_hoje()
+def capturar(
+    target_date: date | None = None,
+    start_date: date | None = None,
+    end_date: date | None = None,
+) -> list[dict]:
+    url = _url_hoje(target_date, start_date, end_date)
     log.info(f"Consultando PTAX: {url}")
     session = nova_session()
 
@@ -131,7 +147,7 @@ class BcbPtaxScraper(BaseScraper):
     def fetch(self) -> pd.DataFrame:
         log.info("=== BCB PTAX (USD/BRL) ===")
         # Reordena para garantir o cabeçalho original
-        df = pd.DataFrame(capturar())
+        df = pd.DataFrame(capturar(self.target_date, self.start_date, self.end_date))
         if not df.empty:
             colunas = [c for c in CABECALHO if c in df.columns]
             return df[colunas]

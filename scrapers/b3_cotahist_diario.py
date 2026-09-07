@@ -10,6 +10,7 @@ Fonte: https://bvmf.bmfbovespa.com.br/InstDados/SerHist/COTAHIST_D%d%m%Y.ZIP
 import io
 import sys
 import zipfile
+from datetime import date
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
@@ -93,9 +94,9 @@ ARQUIVO = Path("data/b3_cotahist_diario.csv.gz")
 MERCADOS_KEEP = ("010", "020")
 
 
-def capturar() -> tuple[list[dict], list[str]]:
+def capturar(target_date: date | None = None) -> tuple[list[dict], list[str]]:
     session = nova_session()
-    dt = date_ref("dia_anterior")
+    dt = target_date or date_ref("dia_anterior")
     url = replace_date_vars(URL, dt)
     log.info(f"Baixando {url}")
     try:
@@ -153,7 +154,7 @@ class B3CotahistDiarioScraper(BaseScraper):
 
     def fetch(self) -> pd.DataFrame:
         log.info("=== B3 — COTAHIST Diário ===")
-        rows, header = capturar()
+        rows, header = capturar(self.target_date)
         # Reordena para garantir o cabeçalho original
         df = pd.DataFrame(rows)
         if not df.empty:

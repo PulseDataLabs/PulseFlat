@@ -49,9 +49,9 @@ URL_TPL = (
 )
 
 
-def _url_referencia() -> tuple[str, date]:
-    """Tenta o mês atual, depois o anterior."""
-    ref = date.today() - timedelta(days=4)  # CVM publica com ~4 dias de atraso
+def _url_referencia(target_date: date | None = None) -> tuple[str, date]:
+    """Tenta o mês alvo ou atual, depois o anterior."""
+    ref = target_date or (date.today() - timedelta(days=4))
     for _ in range(3):
         url = URL_TPL.format(yyyymm=ref.strftime("%Y%m"))
         try:
@@ -65,8 +65,8 @@ def _url_referencia() -> tuple[str, date]:
     return URL_TPL.format(yyyymm=ref.strftime("%Y%m")), ref
 
 
-def capturar() -> list[dict]:
-    url, data_ref = _url_referencia()
+def capturar(target_date: date | None = None) -> list[dict]:
+    url, data_ref = _url_referencia(target_date)
     log.info(f"Baixando informe diário CVM: {url}")
 
     for tentativa in range(1, 4):
@@ -156,7 +156,7 @@ class CvmFundosInformeDiarioScraper(BaseScraper):
     def fetch(self) -> pd.DataFrame:
         log.info("=== CVM — Informe Diário de Fundos ===")
         # Reordena para garantir o cabeçalho original
-        df = pd.DataFrame(capturar())
+        df = pd.DataFrame(capturar(self.target_date))
         if not df.empty:
             colunas = [c for c in CABECALHO if c in df.columns]
             return df[colunas]

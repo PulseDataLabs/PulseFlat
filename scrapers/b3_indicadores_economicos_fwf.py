@@ -10,6 +10,7 @@ Fonte: https://www.b3.com.br/pesquisapregao/download?filelist=ID%y%m%d.ex_
 import io
 import sys
 import zipfile
+from datetime import date
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
@@ -46,9 +47,9 @@ INDICADORES_FIELDS = [
 ARQUIVO = Path("data/b3_indicadores_economicos_fwf.csv")
 
 
-def capturar() -> tuple[list[dict], list[str]]:
+def capturar(target_date: date | None = None) -> tuple[list[dict], list[str]]:
     session = nova_session()
-    dt = date_ref("dia_anterior")
+    dt = target_date or date_ref("dia_anterior")
     url = replace_date_vars(URL, dt)
     log.info(f"Baixando {url}")
     resp = session.get(url, timeout=180)
@@ -94,7 +95,7 @@ class B3IndicadoresEconomicosFwfScraper(BaseScraper):
 
     def fetch(self) -> pd.DataFrame:
         log.info("=== B3 — Indicadores Econômicos (FWF) ===")
-        rows, header = capturar()
+        rows, header = capturar(self.target_date)
         # Reordena para garantir o cabeçalho original
         df = pd.DataFrame(rows)
         if not df.empty:
