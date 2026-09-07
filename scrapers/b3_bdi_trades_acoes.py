@@ -104,7 +104,7 @@ def capturar() -> list[dict]:
             todos.append(
                 {
                     "data_captura": data_captura,
-                    "data_referencia": limpar(str(item.get("rpt_dt", ""))),
+                    "data_referencia": limpar(str(item.get("rpt_dt", "")))[:10],
                     "codigo_ativo": limpar(item.get("tckr_symb", "")),
                     "isin": limpar(item.get("isin", "")),
                     "sgmt_nm": limpar(item.get("sgmt_nm", "")),

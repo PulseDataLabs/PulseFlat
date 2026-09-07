@@ -2180,6 +2180,41 @@
         "name": "Unnamed: 6",
         "type": "str",
         "example": ""
+      },
+      {
+        "name": "NOME DO CONGLOMERADO",
+        "type": "str",
+        "example": ""
+      },
+      {
+        "name": "CLASSE DO CONGLOMERADO",
+        "type": "str",
+        "example": ""
+      },
+      {
+        "name": "CNPJ PARTICIPANTE",
+        "type": "str",
+        "example": ""
+      },
+      {
+        "name": "NOME DO PARTICIPANTE",
+        "type": "str",
+        "example": ""
+      },
+      {
+        "name": "TIPO PARTICIPAÇÃO",
+        "type": "str",
+        "example": ""
+      },
+      {
+        "name": "DATA INÍCIO",
+        "type": "date",
+        "example": ""
+      },
+      {
+        "name": "UF",
+        "type": "str",
+        "example": ""
       }
     ]
   },

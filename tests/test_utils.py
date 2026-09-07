@@ -410,3 +410,85 @@ def test_upload_dataframe_new_table(monkeypatch):
     assert mock_cursor.executemany.called
     batch = mock_cursor.executemany.call_args[0][1]
     assert len(batch) == 1
+
+
+def test_upload_dataframe_date_safety_and_varchar_conversion(monkeypatch):
+    """Valida prevenção contra DPY-3013, ORA-01841 e ORA-00904."""
+    monkeypatch.setenv("ORACLE_DB_USER", "test_user")
+    monkeypatch.setenv("ORACLE_DB_PASSWORD", "test_pass")
+    monkeypatch.setenv("ORACLE_DB_DSN", "test_dsn")
+
+    from datetime import date
+    from unittest.mock import MagicMock, patch
+
+    import pandas as pd
+
+    from utils.db import upload_dataframe
+
+    mock_conn = MagicMock()
+    mock_cursor = MagicMock()
+    mock_conn.cursor.return_value = mock_cursor
+
+    # Tabela existe com 3 colunas: DATA_REF (DATE), CODIGO (VARCHAR2), EXTRA_COL (VARCHAR2)
+    mock_cursor.fetchone.return_value = (1,)  # table exists
+    def mock_execute(sql, *args, **kwargs):
+        if "ALTER TABLE" in sql:
+            raise Exception("ORA-00904: invalid identifier or permission denied")
+        return MagicMock()
+
+    mock_cursor.execute.side_effect = mock_execute
+
+    def mock_fetchall():
+        # Se for user_tab_columns:
+        calls = [c[0][0] for c in mock_cursor.execute.call_args_list if c[0]]
+        last_sql = calls[-1] if calls else ""
+        if "user_tab_columns" in last_sql:
+            return [
+                ("DATA_REF", "DATE"),
+                ("CODIGO", "VARCHAR2(50)"),
+                ("VAL_STR", "VARCHAR2(100)"),
+            ]
+        return []
+
+    mock_cursor.fetchall.side_effect = mock_fetchall
+
+    # DataFrame contém:
+    # 1. coluna válida DATA_REF com data normal e com invalid date ("00000000")
+    # 2. coluna CODIGO onde passamos objeto date do Python (testa prevenção DPY-3013)
+    # 3. coluna INEXISTENTE_COL (testa prevenção ORA-00904)
+    df = pd.DataFrame([
+        {
+            "data_ref": "2026-09-04 00:00:00",
+            "codigo": date(2026, 9, 4),
+            "val_str": "OK",
+            "inexistente_col": "DROP_ME",
+        },
+        {
+            "data_ref": "00000000",
+            "codigo": "TEST",
+            "val_str": "INVALID_DATE_ROW",
+            "inexistente_col": "DROP_ME",
+        }
+    ])
+
+    with patch("utils.db.get_connection", return_value=mock_conn):
+        with patch("utils.db.oracledb", new=MagicMock()):
+            with patch("utils.db.create_engine", new=MagicMock()):
+                success = upload_dataframe(df, "TEST_SAFETY_TABLE", chaves_dedup=["data_ref", "codigo"])
+
+    assert success is True
+    assert mock_cursor.executemany.called
+    insert_sql, batch = mock_cursor.executemany.call_args[0]
+
+    # Inexistente_col não deve estar no INSERT SQL
+    assert "INEXISTENTE_COL" not in insert_sql
+
+    # Linha 1: date objeto convertido para string no campo VARCHAR2
+    row1 = batch[0]
+    assert row1[1] == "2026-09-04"
+    from datetime import datetime
+    assert row1[0] == datetime(2026, 9, 4, 0, 0)
+
+    # Linha 2: data inválida "00000000" convertida para None (evitando ORA-01841)
+    row2 = batch[1]
+    assert row2[0] is None

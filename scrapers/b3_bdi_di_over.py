@@ -94,7 +94,7 @@ def capturar(target_date: date | None = None) -> list[dict]:
             todos.append(
                 {
                     "data_captura": data_captura,
-                    "data_referencia": limpar(str(item.get("rpt_dt", ""))),
+                    "data_referencia": limpar(str(item.get("rpt_dt", "")))[:10],
                     "number_of_operations": limpar(str(n_ops)),
                     "financial_volume": limpar(str(item.get("financial_volume", ""))),
                     "average": limpar(str(item.get("average", ""))),

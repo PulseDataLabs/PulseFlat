@@ -3,7 +3,7 @@ import logging
 import os
 import re
 import urllib.parse
-from datetime import datetime
+from datetime import date, datetime
 
 import numpy as np
 import pandas as pd
@@ -253,7 +253,7 @@ def standardize_val(val):
         return None
 
     # Se for uma data, datetime ou Timestamp
-    if isinstance(val, (datetime, pd.Timestamp)):
+    if isinstance(val, (datetime, date, pd.Timestamp)):
         return val.strftime("%Y-%m-%d")
     if hasattr(val, "strftime"):
         return val.strftime("%Y-%m-%d")
@@ -354,10 +354,41 @@ def upload_dataframe(
         # 1. Garantir que a tabela existe
         exists = create_table_from_df(cursor, table_name, df, clean_cols)
 
+        # Identificar tipos e colunas reais no banco de dados para evitar ORA-00904
+        db_col_types = {}
+        try:
+            cursor.execute(
+                "SELECT column_name, data_type FROM user_tab_columns WHERE table_name = :1",
+                [table_name.upper()],
+            )
+            for row in cursor.fetchall():
+                db_col_types[row[0].upper()] = row[1].upper()
+        except Exception:
+            pass
+
+        # Se a tabela já existia, sincronizar novas colunas ou descartar colunas inexistentes
+        if exists and db_col_types:
+            for col_orig, col_clean in list(clean_cols.items()):
+                if col_clean not in db_col_types:
+                    sql_type = infer_oracle_type(df[col_orig])
+                    try:
+                        cursor.execute(
+                            f"ALTER TABLE {table_name.upper()} ADD ({col_clean} {sql_type})"
+                        )
+                        log.info(
+                            f"Coluna '{col_clean}' adicionada à tabela {table_name.upper()}."
+                        )
+                        db_col_types[col_clean] = sql_type.split("(")[0].upper()
+                    except Exception as alter_err:
+                        log.warning(
+                            f"Coluna '{col_clean}' não existe na tabela {table_name.upper()} e não pôde ser adicionada: {alter_err}. Ignorando coluna no insert."
+                        )
+            clean_cols = {k: v for k, v in clean_cols.items() if v in db_col_types}
+
         # 2. Identificar as chaves para identificação de duplicatas
         keys_to_check = []
         if chaves_dedup:
-            keys_to_check = [k for k in chaves_dedup if k in df.columns]
+            keys_to_check = [k for k in chaves_dedup if k in df.columns and k in clean_cols]
 
         # Identificar coluna de período para filtrar a busca se necessário
         period_col = None
@@ -376,7 +407,7 @@ def upload_dataframe(
             "DT_CAPTURA",
         ]
         for col_cand in candidates:
-            found = [c for c in df.columns if clean_cols[c] == col_cand.upper()]
+            found = [c for c in df.columns if c in clean_cols and clean_cols[c] == col_cand.upper()]
             if found:
                 period_col = found[0]
                 break
@@ -385,7 +416,7 @@ def upload_dataframe(
             if period_col:
                 keys_to_check = [period_col]
             else:
-                keys_to_check = list(df.columns)
+                keys_to_check = [c for c in df.columns if c in clean_cols]
 
         # Garantir índices para buscas rápidas
         idx_targets = []
@@ -405,19 +436,7 @@ def upload_dataframe(
                 clean_period_col = clean_cols[period_col]
                 unique_periods = df[period_col].dropna().unique()
                 if len(unique_periods) > 0:
-                    # Obter tipo da coluna de período no banco
-                    db_col_type = "VARCHAR"
-                    try:
-                        cursor.execute(
-                            "SELECT data_type FROM user_tab_columns WHERE table_name = :1 AND column_name = :2",
-                            [table_name, clean_period_col],
-                        )
-                        res = cursor.fetchone()
-                        if res:
-                            db_col_type = res[0]
-                    except Exception:
-                        pass
-
+                    db_col_type = db_col_types.get(clean_period_col, "VARCHAR")
                     formatted_periods = []
                     is_date_col = (
                         "DATE" in db_col_type
@@ -426,12 +445,24 @@ def upload_dataframe(
                     )
                     for p in unique_periods:
                         if is_date_col:
-                            if isinstance(p, (datetime, pd.Timestamp)):
-                                formatted_periods.append(p.date() if hasattr(p, "date") else p)
+                            if isinstance(p, (datetime, date, pd.Timestamp)):
+                                formatted_periods.append(
+                                    p.date() if hasattr(p, "date") and callable(p.date) else p
+                                )
                             elif isinstance(p, str):
                                 p_strip = p.strip()
                                 parsed_p = None
-                                for fmt in ("%Y-%m-%d", "%d/%m/%Y", "%Y/%m/%d", "%Y%m%d"):
+                                for fmt in (
+                                    "%Y-%m-%d %H:%M:%S",
+                                    "%Y-%m-%dT%H:%M:%S",
+                                    "%Y-%m-%d %H:%M:%S.%f",
+                                    "%d/%m/%Y %H:%M:%S",
+                                    "%d/%m/%Y %H:%M",
+                                    "%Y-%m-%d",
+                                    "%d/%m/%Y",
+                                    "%Y/%m/%d",
+                                    "%Y%m%d",
+                                ):
                                     try:
                                         parsed_p = datetime.strptime(
                                             p_strip, fmt
@@ -441,8 +472,15 @@ def upload_dataframe(
                                         continue
                                 if parsed_p is not None:
                                     formatted_periods.append(parsed_p)
+                                elif len(p_strip) >= 10 and p_strip[:10].replace("-", "").isdigit():
+                                    try:
+                                        formatted_periods.append(
+                                            datetime.strptime(p_strip[:10], "%Y-%m-%d").date()
+                                        )
+                                    except Exception:
+                                        formatted_periods.append(p_strip)
                                 else:
-                                    formatted_periods.append(p)
+                                    formatted_periods.append(p_strip)
                             else:
                                 formatted_periods.append(p)
                         else:
@@ -514,27 +552,21 @@ def upload_dataframe(
             )
             return True
 
-        # 5. Montar a query de inserção em lotes
-        cols_str = ", ".join(clean_cols.values())
-        binds_str = ", ".join([f":{i+1}" for i in range(len(clean_cols))])
+        # 5. Montar a query de inserção em lotes apenas com as colunas válidas
+        cols_to_insert = [c for c in df.columns if c in clean_cols]
+        if not cols_to_insert:
+            log.warning(f"Nenhuma coluna compatível encontrada para inserção em {table_name}.")
+            return False
+
+        cols_str = ", ".join([clean_cols[c] for c in cols_to_insert])
+        binds_str = ", ".join([f":{i+1}" for i in range(len(cols_to_insert))])
         insert_sql = f"INSERT INTO {table_name} ({cols_str}) VALUES ({binds_str})"
 
-        # Identificar tipos das colunas no banco de dados para tratar no insert
-        db_col_types = {}
-        try:
-            cursor.execute(
-                "SELECT column_name, data_type FROM user_tab_columns WHERE table_name = :1",
-                [table_name],
-            )
-            for row in cursor.fetchall():
-                db_col_types[row[0].upper()] = row[1].upper()
-        except Exception:
-            pass
         date_cols = {
             col for col, dt in db_col_types.items() if "DATE" in dt or "TIMESTAMP" in dt
         } or {
             clean_cols[col]
-            for col in df.columns
+            for col in cols_to_insert
             if infer_oracle_type(df[col]) == "DATE"
         }
 
@@ -550,23 +582,36 @@ def upload_dataframe(
 
             # Limpar os dados do chunk local
             batch = []
-            for row in chunk.itertuples(index=False):
+            for row in chunk[cols_to_insert].itertuples(index=False):
                 clean_row = []
                 for idx, val in enumerate(row):
-                    col_orig = df.columns[idx]
+                    col_orig = cols_to_insert[idx]
                     col_clean = clean_cols[col_orig]
-
                     col_db_type = db_col_types.get(col_clean, "")
+
                     if (
                         val is None
                         or (isinstance(val, float) and (np.isnan(val) or np.isinf(val)))
                         or pd.isna(val)
                     ):
                         clean_row.append(None)
+                    elif (
+                        "VARCHAR" in col_db_type
+                        or "CHAR" in col_db_type
+                        or "CLOB" in col_db_type
+                    ):
+                        # Coluna string no Oracle: converter date/datetime/Timestamp explicitamente para str
+                        if isinstance(val, (datetime, date, pd.Timestamp)):
+                            has_time = getattr(val, "hour", 0) or getattr(val, "minute", 0) or getattr(val, "second", 0)
+                            clean_row.append(val.strftime("%Y-%m-%d %H:%M:%S" if has_time else "%Y-%m-%d"))
+                        elif hasattr(val, "strftime"):
+                            clean_row.append(val.strftime("%Y-%m-%d"))
+                        else:
+                            clean_row.append(str(val))
                     elif col_clean in date_cols or "DATE" in col_db_type or "TIMESTAMP" in col_db_type:
                         if isinstance(val, (pd.Timestamp, datetime)):
                             clean_row.append(val.to_pydatetime() if hasattr(val, "to_pydatetime") else val)
-                        elif hasattr(val, "date") and callable(val.date):
+                        elif isinstance(val, date):
                             clean_row.append(val)
                         elif isinstance(val, str):
                             val_strip = val.strip()
@@ -595,20 +640,22 @@ def upload_dataframe(
                                     except ValueError:
                                         continue
 
-                            clean_row.append(parsed_dt if parsed_dt is not None else val)
+                            if parsed_dt is not None:
+                                if 1 <= parsed_dt.year <= 9999:
+                                    clean_row.append(parsed_dt)
+                                else:
+                                    clean_row.append(None)
+                            else:
+                                # String inválida para coluna DATE no Oracle -> None para evitar ORA-01841/ORA-01830
+                                clean_row.append(None)
                         else:
                             clean_row.append(val)
-                    elif "VARCHAR" in col_db_type or "CHAR" in col_db_type or "CLOB" in col_db_type:
-                        # Coluna string no Oracle: se o valor for date/datetime/Timestamp, converter para string
-                        if isinstance(val, (datetime, pd.Timestamp)):
+                    else:
+                        if isinstance(val, (datetime, date, pd.Timestamp)):
                             has_time = getattr(val, "hour", 0) or getattr(val, "minute", 0) or getattr(val, "second", 0)
                             clean_row.append(val.strftime("%Y-%m-%d %H:%M:%S" if has_time else "%Y-%m-%d"))
-                        elif hasattr(val, "strftime"):
-                            clean_row.append(val.strftime("%Y-%m-%d"))
                         else:
-                            clean_row.append(str(val))
-                    else:
-                        clean_row.append(val)
+                            clean_row.append(val)
                 batch.append(tuple(clean_row))
 
             cursor.executemany(insert_sql, batch)

@@ -87,9 +87,31 @@ class BacenConglomeradosScraper(BaseScraper):
                 raise RuntimeError("Nenhum XLSX encontrado no arquivo ZIP.")
             xlsx_bytes = zf.read(xlsx_names[0])
 
-        df = pd.read_excel(BytesIO(xlsx_bytes), engine="openpyxl")
+        df_raw = pd.read_excel(BytesIO(xlsx_bytes), header=None, engine="openpyxl")
+        header_idx = None
+        for idx in range(min(25, len(df_raw))):
+            row_vals = [
+                str(x).strip().upper()
+                for x in df_raw.iloc[idx].values
+                if pd.notna(x) and str(x).strip()
+            ]
+            if (
+                len(row_vals) >= 3
+                and any("CONGLOMERADO" in v for v in row_vals)
+                and any("CNPJ" in v or "PARTICIPANTE" in v for v in row_vals)
+            ):
+                header_idx = idx
+                break
+
+        if header_idx is not None:
+            df = df_raw.iloc[header_idx + 1 :].copy()
+            df.columns = [str(c).strip() for c in df_raw.iloc[header_idx].values]
+        else:
+            df = pd.read_excel(BytesIO(xlsx_bytes), engine="openpyxl")
+
         df = df.loc[:, ~df.columns.astype(str).str.contains(r"^Unnamed", case=False, na=False)]
         df = df.dropna(how="all", axis=1)
+        df = df.dropna(how="all", axis=0)
         df.columns = [str(c).strip() for c in df.columns]
         df.insert(0, "data_referencia", ref.replace(day=1))
         return df

@@ -184,7 +184,7 @@ def capturar(target_date: date | None = None) -> list[dict]:
                 {
                     "data_captura": data_captura,
                     "tabela_origem": tabela,
-                    "data_referencia": limpar(str(item.get("rpt_dt", str_data))),
+                    "data_referencia": limpar(str(item.get("rpt_dt", str_data)))[:10],
                     "curva": limpar(str(curva)),
                     "prazo_dias": limpar(str(prazo)),
                     "taxa": limpar(str(taxa)),
