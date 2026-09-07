@@ -2268,11 +2268,11 @@
           <span style="font-family: var(--font-mono); font-size: 0.65rem; color: var(--text3); text-transform: uppercase; letter-spacing: 0.1em;">Custo de infra</span>
         </div>
         <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1.5rem; text-align: center;">
-          <span style="font-family: var(--font-head); font-weight: 800; font-size: 2rem; color: var(--gold); display: block;">7×</span>
+          <span style="font-family: var(--font-head); font-weight: 800; font-size: 2rem; color: var(--gold); display: block;">9×</span>
           <span style="font-family: var(--font-mono); font-size: 0.65rem; color: var(--text3); text-transform: uppercase; letter-spacing: 0.1em;">Atualizações/dia</span>
         </div>
         <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1.5rem; text-align: center;">
-          <span style="font-family: var(--font-head); font-weight: 800; font-size: 2rem; color: var(--accent); display: block;">5</span>
+          <span style="font-family: var(--font-head); font-weight: 800; font-size: 2rem; color: var(--accent); display: block;">8+</span>
           <span style="font-family: var(--font-mono); font-size: 0.65rem; color: var(--text3); text-transform: uppercase; letter-spacing: 0.1em;">Fontes oficiais</span>
         </div>
       </div>
@@ -2286,8 +2286,7 @@
     <div class="section-label">Pipeline</div>
     <h2 class="section-title">Como funciona</h2>
     <p class="section-desc">
-      Dois jobs independentes rodam automaticamente todos os dias úteis, coletando,
-      processando e versionando os dados diretamente no repositório GitHub.
+      O pipeline automatizado roda em 9 janelas estratégicas ao longo de cada dia útil, além de monitoramento contínuo a cada 15 minutos, coletando, tratando, exportando para Parquet e versionando diretamente no repositório GitHub e no Oracle Database Cloud.
     </p>
 
     <div class="how-grid reveal">
@@ -2295,106 +2294,112 @@
         <div class="pipeline-step">
           <div class="step-icon">⏰</div>
           <div class="step-content">
-            <div class="step-title">GitHub Actions dispara o job</div>
-            <div class="step-desc">Cron agendado para 09h30 (ANBIMA) e 10h00 (B3) no horário de Brasília, apenas em dias úteis (seg–sex).</div>
+            <div class="step-title">GitHub Actions orquestra o pipeline</div>
+            <div class="step-desc">9 execuções programadas ao longo dos dias úteis (06h00 às 23h00 BRT) sincronizadas com os órgãos reguladores, além de verificação de debêntures a cada 15 min.</div>
           </div>
         </div>
         <div class="pipeline-step">
           <div class="step-icon">🔗</div>
           <div class="step-content">
-            <div class="step-title">Scraper acessa a fonte</div>
-            <div class="step-desc">ANBIMA via HTML scraping (com OAuth 2.0 opcional). B3 via API interna JSON + parâmetros Base64.</div>
+            <div class="step-title">Scrapers acessam as fontes oficiais</div>
+            <div class="step-desc">Arquitetura modular em Python (BaseScraper) com coleta resiliente em APIs REST, feeds JSON, arquivos FWF e planilhas (B3, ANBIMA, BCB, CVM, IBGE, IPEA, Yahoo Finance).</div>
           </div>
         </div>
         <div class="pipeline-step">
           <div class="step-icon">🧹</div>
           <div class="step-content">
-            <div class="step-title">Dados são normalizados</div>
-            <div class="step-desc">Encoding, separadores decimais e campos ausentes padronizados. Sem dados duplicados.</div>
+            <div class="step-title">Normalização, auditoria e integridade</div>
+            <div class="step-desc">Encoding UTF-8 padronizado, conversão numérica defensiva, deduplicação por hash de registro e auditoria de continuidade temporal via bizdays.</div>
           </div>
         </div>
         <div class="pipeline-step">
           <div class="step-icon">📄</div>
           <div class="step-content">
-            <div class="step-title">Atualização dos arquivos CSV</div>
-            <div class="step-desc">Geração de arquivos no formato padrão (UTF-8, decimal ponto). Históricos acumulados ou snapshots diários conforme a natureza do dado.</div>
+            <div class="step-title">Exportação Multiformato (CSV, GZ e Parquet)</div>
+            <div class="step-desc">Geração de arquivos planos CSV, compactados (.csv.gz) e colunares de alta performance Apache Parquet para análise quantitativa direta (DuckDB, Polars, Pandas).</div>
           </div>
         </div>
         <div class="pipeline-step">
           <div class="step-icon">✅</div>
           <div class="step-content">
-            <div class="step-title">Commit automático no repositório</div>
-            <div class="step-desc">git add → git commit → git push. O CSV atualizado fica disponível imediatamente para download.</div>
+            <div class="step-title">Versionamento no Git e Carga em Nuvem</div>
+            <div class="step-desc">Persistência incremental no Oracle Autonomous Database (mTLS Wallet) e commit automático no repositório GitHub, alimentando catálogos e o dashboard em tempo real.</div>
           </div>
         </div>
       </div>
 
       <div class="schedule-card">
         <div class="schedule-header">
-          🕐 &nbsp;Agenda de execução
+          🕐 &nbsp;Agenda de execução diária (Horário de Brasília)
         </div>
         <div class="schedule-row">
           <span class="schedule-time">06h00</span>
-          <span class="schedule-name">Pipeline completo</span>
+          <span class="schedule-name">Abertura & Séries Históricas</span>
           <span class="schedule-tag tag-anbima">ANBIMA</span>
           <span class="schedule-tag tag-bcb">BCB</span>
-          <span class="schedule-tag tag-ibge">IBGE</span>
           <span class="schedule-tag tag-cvm">CVM</span>
-          <span class="schedule-tag tag-b3">B3</span>
         </div>
         <div class="schedule-row">
           <span class="schedule-time">08h00</span>
-          <span class="schedule-name">Pipeline completo</span>
+          <span class="schedule-name">Carga Matinal & Cadastros</span>
           <span class="schedule-tag tag-anbima">ANBIMA</span>
           <span class="schedule-tag tag-bcb">BCB</span>
           <span class="schedule-tag tag-ibge">IBGE</span>
-          <span class="schedule-tag tag-cvm">CVM</span>
           <span class="schedule-tag tag-b3">B3</span>
         </div>
         <div class="schedule-row">
           <span class="schedule-time">09h00</span>
-          <span class="schedule-name">Pipeline completo</span>
-          <span class="schedule-tag tag-anbima">ANBIMA</span>
-          <span class="schedule-tag tag-bcb">BCB</span>
-          <span class="schedule-tag tag-ibge">IBGE</span>
-          <span class="schedule-tag tag-cvm">CVM</span>
+          <span class="schedule-name">Abertura de Mercado & Pré-Pregão</span>
           <span class="schedule-tag tag-b3">B3</span>
+          <span class="schedule-tag tag-bcb">BCB</span>
         </div>
         <div class="schedule-row">
           <span class="schedule-time">09h30</span>
-          <span class="schedule-name">Pipeline completo</span>
+          <span class="schedule-name">Boletins Matinais & Cotações</span>
           <span class="schedule-tag tag-anbima">ANBIMA</span>
+          <span class="schedule-tag tag-b3">B3</span>
           <span class="schedule-tag tag-bcb">BCB</span>
-          <span class="schedule-tag tag-ibge">IBGE</span>
+        </div>
+        <div class="schedule-row">
+          <span class="schedule-time">10h30</span>
+          <span class="schedule-name">Pregão B3 em Andamento & PTAX</span>
+          <span class="schedule-tag tag-b3">B3</span>
+          <span class="schedule-tag tag-bcb">BCB</span>
+        </div>
+        <div class="schedule-row">
+          <span class="schedule-time">11h30</span>
+          <span class="schedule-name">Consolidação Meio-Dia & Moedas</span>
+          <span class="schedule-tag tag-bcb">BCB</span>
           <span class="schedule-tag tag-cvm">CVM</span>
           <span class="schedule-tag tag-b3">B3</span>
         </div>
         <div class="schedule-row">
           <span class="schedule-time">18h00</span>
-          <span class="schedule-name">Pipeline completo</span>
-          <span class="schedule-tag tag-anbima">ANBIMA</span>
-          <span class="schedule-tag tag-bcb">BCB</span>
-          <span class="schedule-tag tag-ibge">IBGE</span>
-          <span class="schedule-tag tag-cvm">CVM</span>
+          <span class="schedule-name">Fechamento do Pregão B3</span>
           <span class="schedule-tag tag-b3">B3</span>
+          <span class="schedule-tag tag-bcb">BCB</span>
+          <span class="schedule-tag tag-anbima">ANBIMA</span>
         </div>
         <div class="schedule-row">
           <span class="schedule-time">21h00</span>
-          <span class="schedule-name">Pipeline completo</span>
+          <span class="schedule-name">Consolidação Noturna & Fundos</span>
           <span class="schedule-tag tag-anbima">ANBIMA</span>
-          <span class="schedule-tag tag-bcb">BCB</span>
-          <span class="schedule-tag tag-ibge">IBGE</span>
           <span class="schedule-tag tag-cvm">CVM</span>
           <span class="schedule-tag tag-b3">B3</span>
         </div>
         <div class="schedule-row">
           <span class="schedule-time">23h00</span>
-          <span class="schedule-name">Pipeline completo</span>
+          <span class="schedule-name">Fechamento Definitivo & Parquet</span>
           <span class="schedule-tag tag-anbima">ANBIMA</span>
           <span class="schedule-tag tag-bcb">BCB</span>
           <span class="schedule-tag tag-ibge">IBGE</span>
           <span class="schedule-tag tag-cvm">CVM</span>
           <span class="schedule-tag tag-b3">B3</span>
+        </div>
+        <div class="schedule-row" style="border-top: 1px dashed var(--border); padding-top: 0.8rem; margin-top: 0.4rem;">
+          <span class="schedule-time" style="color: var(--accent);">⚡ 15 min</span>
+          <span class="schedule-name">Monitor & Alerta de Debêntures (05h–20h)</span>
+          <span class="schedule-tag tag-anbima">ANBIMA</span>
         </div>
       </div>
     </div>
