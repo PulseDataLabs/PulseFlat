@@ -61,7 +61,10 @@ def test_anbima_ima_completo_scraper_fetch(requests_mock, monkeypatch):
 
 def test_anbima_ima_completo_historico_s3(requests_mock):
     """Deve testar a captura histórica via arquivos S3 da ANBIMA."""
-    import io, openpyxl, datetime
+    import datetime
+    import io
+
+    import openpyxl
 
     wb = openpyxl.Workbook()
     ws = wb.active

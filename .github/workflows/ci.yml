@@ -27,10 +27,14 @@ jobs:
     name: Testes e Linting
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    permissions:
+      contents: write
 
     steps:
     - name: Checkout do código
       uses: actions/checkout@v4
+      with:
+        ref: ${{ github.head_ref || github.ref_name }}
 
     - name: Configurar Python
       uses: actions/setup-python@v5
@@ -44,8 +48,17 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
         pip install ruff
 
-    - name: Executar Linting (Ruff)
-      run: ruff check .
+    - name: Executar Linting (Ruff) com Auto-fix
+      run: |
+        ruff check --fix .
+        if [ -n "$(git status --porcelain)" ] && [ "${{ github.event_name }}" = "push" ]; then
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "style: auto-fix linting issues via ruff [skip ci]"
+          git push || true
+        fi
+        ruff check .
 
     - name: Executar Testes Unitários e de Integração (Pytest)
       run: pytest

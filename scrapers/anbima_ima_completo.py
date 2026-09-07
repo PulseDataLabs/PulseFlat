@@ -241,6 +241,7 @@ HISTORICAL_S3_FILES = {
 def capturar_historico(datas: set[str] | list[str] | None = None) -> list[dict]:
     """Baixa séries históricas dos 9 índices ANBIMA a partir do repositório oficial S3."""
     import io
+
     import openpyxl
 
     alvo_datas = {d if isinstance(d, str) else d.strftime("%Y-%m-%d") for d in datas} if datas else None
