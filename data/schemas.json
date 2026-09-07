@@ -1080,7 +1080,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-27"
+        "example": "2026-09-07"
       },
       {
         "name": "setor_economico",
@@ -1321,7 +1321,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-27"
+        "example": "2026-09-07"
       },
       {
         "name": "categoria_etf",
@@ -1398,7 +1398,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-27"
+        "example": "2026-09-07"
       },
       {
         "name": "codigo_fundo",
@@ -1470,7 +1470,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-27"
+        "example": "2026-09-07"
       },
       {
         "name": "tipo_fundo",
@@ -1726,12 +1726,12 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-27"
+        "example": "2026-09-07"
       },
       {
         "name": "data_geracao",
         "type": "date",
-        "example": "2026-08-27"
+        "example": "2026-09-04"
       },
       {
         "name": "acao",
@@ -2072,7 +2072,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-27"
+        "example": "2026-09-07"
       },
       {
         "name": "codigo_emissor",
@@ -2263,12 +2263,12 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-27"
+        "example": "2026-09-07"
       },
       {
         "name": "data_base",
         "type": "date",
-        "example": "202603"
+        "example": "202606"
       },
       {
         "name": "documento",
@@ -2318,7 +2318,7 @@
       {
         "name": "saldo",
         "type": "float",
-        "example": "2409477025240.00"
+        "example": "2380735804252.21"
       }
     ]
   },
@@ -2412,7 +2412,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-24"
+        "example": "2026-09-07"
       },
       {
         "name": "auditor",
@@ -2691,7 +2691,7 @@
       {
         "name": "id_registro_classe",
         "type": "int",
-        "example": "34469"
+        "example": "34512"
       },
       {
         "name": "cnpj_classe",
@@ -2836,7 +2836,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-24"
+        "example": "2026-09-07"
       },
       {
         "name": "cnpj_fundo",
@@ -3123,7 +3123,7 @@
       {
         "name": "data_ult_vna",
         "type": "date",
-        "example": "2026-08-26"
+        "example": "2026-09-08"
       },
       {
         "name": "indice",
@@ -3348,7 +3348,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-27"
+        "example": "2026-09-07"
       }
     ]
   },
@@ -3360,7 +3360,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-24"
+        "example": "2026-09-07"
       },
       {
         "name": "serie_id",
@@ -3397,7 +3397,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-27"
+        "example": "2026-09-07"
       },
       {
         "name": "codigo_ativo",
@@ -3727,12 +3727,12 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-27"
+        "example": "2026-09-07"
       },
       {
         "name": "name",
         "type": "str",
-        "example": "ESTALK E ADVOGADOS ASSOCIADOS"
+        "example": "ESPECTRO INDUSTRIA E COMERCIO DE PRODUTOS ERGONOMICOS LTDA EPP"
       },
       {
         "name": "type",
@@ -3742,7 +3742,7 @@
       {
         "name": "sector",
         "type": "str",
-        "example": "Consumer Services: Misc."
+        "example": "Plastics"
       },
       {
         "name": "country",
@@ -3752,12 +3752,12 @@
       {
         "name": "joined_on",
         "type": "str",
-        "example": "2026-08-24"
+        "example": "2026-09-03"
       },
       {
         "name": "link",
         "type": "str",
-        "example": "https://unglobalcompact.org/what-is-gc/participants/219697-ESTALK-E-ADVOGADOS-ASSOCIADOS"
+        "example": "https://unglobalcompact.org/what-is-gc/participants/222082-ESPECTRO-INDUSTRIA-E-COMERCIO-DE-PRODUTOS-ERGONOMICOS-LTDA-EPP"
       }
     ]
   },
@@ -4089,7 +4089,7 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-08-24"
+        "example": "2026-09-07"
       },
       {
         "name": "tp_fundo_classe",
@@ -4109,22 +4109,22 @@
       {
         "name": "data_referencia",
         "type": "date",
-        "example": "2026-08-03"
+        "example": "2026-09-01"
       },
       {
         "name": "valor_total",
         "type": "str",
-        "example": "1095646.22"
+        "example": "1107741.39"
       },
       {
         "name": "valor_cota",
         "type": "str",
-        "example": "44.275588000000"
+        "example": "44.636723400000"
       },
       {
         "name": "patrimonio_liquido",
         "type": "float",
-        "example": "1207786.03"
+        "example": "1214792.63"
       },
       {
         "name": "captc_dia",
