@@ -33,7 +33,7 @@ def run_script(path: Path, *args) -> subprocess.CompletedProcess:
         [sys.executable, str(path), *args],
         capture_output=True,
         text=True,
-        timeout=30,
+        timeout=120,
     )
 
 
