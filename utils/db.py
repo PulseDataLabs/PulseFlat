@@ -93,7 +93,15 @@ def get_connection():
     Mantém compatibilidade com inserções em lote executemany de alta performance.
     """
     engine = get_engine()
-    return engine.raw_connection()
+    conn = engine.raw_connection()
+    try:
+        cur = conn.cursor()
+        cur.execute("ALTER SESSION SET NLS_DATE_FORMAT = 'YYYY-MM-DD'")
+        cur.execute("ALTER SESSION SET NLS_TIMESTAMP_FORMAT = 'YYYY-MM-DD HH24:MI:SS'")
+        cur.close()
+    except Exception:
+        pass
+    return conn
 
 
 def sanitize_column_name(col_name: str) -> str:
@@ -411,12 +419,19 @@ def upload_dataframe(
                         pass
 
                     formatted_periods = []
+                    is_date_col = (
+                        "DATE" in db_col_type
+                        or "TIMESTAMP" in db_col_type
+                        or any(k in clean_period_col for k in ("DATA", "DT", "DATE"))
+                    )
                     for p in unique_periods:
-                        if "DATE" in db_col_type:
-                            if isinstance(p, str):
+                        if is_date_col:
+                            if isinstance(p, (datetime, pd.Timestamp)):
+                                formatted_periods.append(p.date() if hasattr(p, "date") else p)
+                            elif isinstance(p, str):
                                 p_strip = p.strip()
                                 parsed_p = None
-                                for fmt in ("%Y-%m-%d", "%d/%m/%Y", "%Y/%m/%d"):
+                                for fmt in ("%Y-%m-%d", "%d/%m/%Y", "%Y/%m/%d", "%Y%m%d"):
                                     try:
                                         parsed_p = datetime.strptime(
                                             p_strip, fmt
