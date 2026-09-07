@@ -26,10 +26,10 @@ from pathlib import Path
 import requests
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from scripts.utils.ux import print_done, print_warn
 import pandas as pd
 
 from scrapers.utils.base import BaseScraper
+from scripts.utils.ux import print_done, print_warn
 from utils import agora_brt, limpar, nova_session
 
 ARQUIVO = Path("data/bcb_sgs.csv")

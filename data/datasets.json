@@ -724,7 +724,7 @@
     ],
     "source": "BCB",
     "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/bcb_ptax.csv",
-    "accumulate": false
+    "accumulate": true
   },
   {
     "title": "BACEN — Parcelas de Capital e Basileia",
@@ -776,7 +776,7 @@
     ],
     "source": "BCB · SGS",
     "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/bcb_sgs.csv",
-    "accumulate": false
+    "accumulate": true
   },
   {
     "title": "CVM — Informe Diário de Fundos de Investimento",

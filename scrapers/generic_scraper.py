@@ -14,8 +14,8 @@ import pandas as pd
 import yaml
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from scripts.utils.ux import print_done, print_warn
 from scrapers.utils.base import BaseScraper
+from scripts.utils.ux import print_done, print_warn
 from utils.base import agora_brt, get_logger, nova_session
 from utils.parsers import (
     csv_rows,

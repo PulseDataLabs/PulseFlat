@@ -21,8 +21,8 @@ import requests
 from dateutil.relativedelta import relativedelta
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from scripts.utils.ux import print_done, print_warn
 from scrapers.utils.base import BaseScraper
+from scripts.utils.ux import print_done, print_warn
 
 BASE_URL = (
     "https://www.bcb.gov.br/content/estabilidadefinanceira/"

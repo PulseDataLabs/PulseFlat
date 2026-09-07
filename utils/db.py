@@ -551,7 +551,7 @@ def upload_dataframe(
                     elif col_clean in date_cols or "DATE" in col_db_type or "TIMESTAMP" in col_db_type:
                         if isinstance(val, (pd.Timestamp, datetime)):
                             clean_row.append(val.to_pydatetime() if hasattr(val, "to_pydatetime") else val)
-                        elif hasattr(val, "date") and callable(getattr(val, "date")):
+                        elif hasattr(val, "date") and callable(val.date):
                             clean_row.append(val)
                         elif isinstance(val, str):
                             val_strip = val.strip()

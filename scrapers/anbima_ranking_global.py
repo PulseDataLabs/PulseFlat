@@ -21,8 +21,8 @@ import pandas as pd
 import requests
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from scripts.utils.ux import print_done, print_warn
 from scrapers.utils.base import BaseScraper
+from scripts.utils.ux import print_done, print_warn
 
 STRAPI_HOST = "https://data-strapi.prd.anbima.com.br"
 STRAPI_API_URL = f"{STRAPI_HOST}/api/ranking-global-de-adm-de-fundo?populate[template][populate][publication_document][populate]=*"

@@ -17,8 +17,8 @@ import requests
 from bs4 import BeautifulSoup
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from scripts.utils.ux import print_done, print_fail, print_warn
 from scrapers.utils.base import BaseScraper
+from scripts.utils.ux import print_done, print_fail, print_warn
 
 BASE_URL = "https://unglobalcompact.org"
 HEADERS = {
