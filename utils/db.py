@@ -406,11 +406,24 @@ def upload_dataframe(
             "dt_captura",
             "DT_CAPTURA",
         ]
+        # Priorizar uma coluna de período que faça parte das chaves de deduplicação
         for col_cand in candidates:
-            found = [c for c in df.columns if c in clean_cols and clean_cols[c] == col_cand.upper()]
+            found = [
+                c for c in df.columns
+                if c in clean_cols
+                and clean_cols[c] == col_cand.upper()
+                and (not keys_to_check or c in keys_to_check)
+            ]
             if found:
                 period_col = found[0]
                 break
+
+        if not period_col:
+            for col_cand in candidates:
+                found = [c for c in df.columns if c in clean_cols and clean_cols[c] == col_cand.upper()]
+                if found:
+                    period_col = found[0]
+                    break
 
         if not keys_to_check:
             if period_col:
@@ -432,7 +445,7 @@ def upload_dataframe(
             cols_to_select = [clean_cols[k] for k in keys_to_check]
             cols_str = ", ".join(cols_to_select)
 
-            if period_col and period_col in keys_to_check:
+            if period_col:
                 clean_period_col = clean_cols[period_col]
                 unique_periods = df[period_col].dropna().unique()
                 if len(unique_periods) > 0:
