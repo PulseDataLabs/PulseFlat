@@ -1763,7 +1763,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "0,2216"
+    "Valor": "0,2202"
   },
   {
     "data_referencia": "2026-09-07",
@@ -1787,7 +1787,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "8,16"
+    "Valor": "8,11"
   },
   {
     "data_referencia": "2026-09-07",
@@ -1795,7 +1795,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "739,70"
+    "Valor": "739,47"
   },
   {
     "data_referencia": "2026-09-07",
@@ -1811,7 +1811,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "79.222"
+    "Valor": "79.190"
   },
   {
     "data_referencia": "2026-09-07",
@@ -1851,7 +1851,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "0,7636"
+    "Valor": "0,7632"
   },
   {
     "data_referencia": "2026-09-07",
@@ -1867,7 +1867,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "0,0905"
+    "Valor": "0,0904"
   },
   {
     "data_referencia": "2026-09-07",
@@ -1883,7 +1883,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "2.493"
+    "Valor": "2.491"
   },
   {
     "data_referencia": "2026-09-07",
@@ -1939,7 +1939,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "3,07"
+    "Valor": "3,06"
   },
   {
     "data_referencia": "2026-09-07",
@@ -1955,7 +1955,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "12,78"
+    "Valor": "12,74"
   },
   {
     "data_referencia": "2026-09-07",
@@ -1963,7 +1963,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "55,65"
+    "Valor": "55,66"
   },
   {
     "data_referencia": "2026-09-07",
@@ -1979,7 +1979,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "2,33"
+    "Valor": "2,31"
   },
   {
     "data_referencia": "2026-09-07",
@@ -1995,7 +1995,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "0,1103"
+    "Valor": "0,1094"
   },
   {
     "data_referencia": "2026-09-07",
@@ -2035,7 +2035,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "104,05"
+    "Valor": "103,91"
   },
   {
     "data_referencia": "2026-09-07",
@@ -2043,7 +2043,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "0,3347"
+    "Valor": "0,3346"
   },
   {
     "data_referencia": "2026-09-07",
@@ -2099,7 +2099,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "0,1934"
+    "Valor": "0,1939"
   },
   {
     "data_referencia": "2026-09-07",
