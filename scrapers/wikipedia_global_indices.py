@@ -49,54 +49,105 @@ def scrape_sp500(session: requests.Session) -> list[dict]:
 
 
 def scrape_nasdaq100(session: requests.Session) -> list[dict]:
-    url = "https://en.wikipedia.org/wiki/NASDAQ-100"
+    urls = [
+        "https://en.wikipedia.org/wiki/List_of_NASDAQ-100_companies",
+        "https://en.wikipedia.org/wiki/NASDAQ-100",
+    ]
     log.info("Buscando NASDAQ-100...")
-    r = session.get(url, timeout=30)
-    r.raise_for_status()
-    soup = BeautifulSoup(r.text, "html.parser")
-    table = soup.find("table", {"id": "constituents"})
+    table = None
+    for url in urls:
+        try:
+            r = session.get(url, timeout=30)
+            if r.status_code == 200:
+                soup = BeautifulSoup(r.text, "html.parser")
+                table = soup.find("table", {"id": "constituents"})
+                if table:
+                    break
+        except Exception:
+            continue
+
     if not table:
         raise ValueError("Tabela constituents do NASDAQ-100 não encontrada")
 
     res = []
+    header_tr = table.find("tr")
+    headers = (
+        [c.text.strip().lower() for c in header_tr.find_all(["th", "td"])]
+        if header_tr
+        else []
+    )
+    ticker_idx = next(
+        (i for i, h in enumerate(headers) if "ticker" in h or "symbol" in h), 0
+    )
+    name_idx = next(
+        (i for i, h in enumerate(headers) if "company" in h or "name" in h or "security" in h),
+        1,
+    )
+
     for row in table.find_all("tr")[1:]:
-        tds = row.find_all("td")
-        if len(tds) >= 2:
-            ticker = clean_us_ticker(tds[0].text.strip())
-            name = tds[1].text.strip()
-            res.append(
-                {
-                    "codigo_ativo": ticker,
-                    "nome_ativo": name,
-                    "indice_origem": "NASDAQ-100",
-                }
-            )
+        cells = [c.text.strip() for c in row.find_all(["th", "td"])]
+        if len(cells) > max(ticker_idx, name_idx):
+            ticker = clean_us_ticker(cells[ticker_idx])
+            name = cells[name_idx]
+            if ticker and name:
+                res.append(
+                    {
+                        "codigo_ativo": ticker,
+                        "nome_ativo": name,
+                        "indice_origem": "NASDAQ-100",
+                    }
+                )
     return res
 
 
 def scrape_dowjones(session: requests.Session) -> list[dict]:
-    url = "https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average"
+    urls = [
+        "https://en.wikipedia.org/wiki/List_of_Dow_Jones_Industrial_Average_companies",
+        "https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average",
+    ]
     log.info("Buscando Dow Jones...")
-    r = session.get(url, timeout=30)
-    r.raise_for_status()
-    soup = BeautifulSoup(r.text, "html.parser")
-    table = soup.find("table", {"id": "constituents"})
+    table = None
+    for url in urls:
+        try:
+            r = session.get(url, timeout=30)
+            if r.status_code == 200:
+                soup = BeautifulSoup(r.text, "html.parser")
+                table = soup.find("table", {"id": "constituents"})
+                if table:
+                    break
+        except Exception:
+            continue
+
     if not table:
         raise ValueError("Tabela constituents do Dow Jones não encontrada")
 
     res = []
+    header_tr = table.find("tr")
+    headers = (
+        [c.text.strip().lower() for c in header_tr.find_all(["th", "td"])]
+        if header_tr
+        else []
+    )
+    name_idx = next(
+        (i for i, h in enumerate(headers) if "company" in h or "name" in h), 0
+    )
+    ticker_idx = next(
+        (i for i, h in enumerate(headers) if "symbol" in h or "ticker" in h), 1
+    )
+
     for row in table.find_all("tr")[1:]:
-        tds = row.find_all("td")
-        if len(tds) >= 2:
-            name = tds[0].text.strip()
-            ticker = clean_us_ticker(tds[1].text.strip())
-            res.append(
-                {
-                    "codigo_ativo": ticker,
-                    "nome_ativo": name,
-                    "indice_origem": "Dow Jones",
-                }
-            )
+        cells = [c.text.strip() for c in row.find_all(["th", "td"])]
+        if len(cells) > max(name_idx, ticker_idx):
+            name = cells[name_idx]
+            ticker = clean_us_ticker(cells[ticker_idx])
+            if ticker and name:
+                res.append(
+                    {
+                        "codigo_ativo": ticker,
+                        "nome_ativo": name,
+                        "indice_origem": "Dow Jones",
+                    }
+                )
     return res
 
 
