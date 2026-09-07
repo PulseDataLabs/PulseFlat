@@ -2104,117 +2104,47 @@
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-06-03"
+        "example": "2026-09-07"
       },
       {
         "name": "data_referencia",
         "type": "date",
-        "example": "2026-04-01"
-      },
-      {
-        "name": "departamento",
-        "type": "str",
-        "example": "DEPARTAMENTO DE MONITORAMENTO DO SISTEMA FINANCEIRO - DESIG"
-      },
-      {
-        "name": "secao_1",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "secao_2",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "secao_3",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "tipo_documento",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "data_documento",
-        "type": "date",
-        "example": ""
-      },
-      {
-        "name": "detalhe",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "BANCO CENTRAL DO BRASIL - BACEN",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "Unnamed: 1",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "Unnamed: 2",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "Unnamed: 3",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "Unnamed: 4",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "Unnamed: 5",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "Unnamed: 6",
-        "type": "str",
-        "example": ""
+        "example": "2026-08-01"
       },
       {
         "name": "NOME DO CONGLOMERADO",
         "type": "str",
-        "example": ""
+        "example": "99PAY IP - PRUDENCIAL"
       },
       {
         "name": "CLASSE DO CONGLOMERADO",
         "type": "str",
-        "example": ""
+        "example": "Privado Nacional"
       },
       {
         "name": "CNPJ PARTICIPANTE",
         "type": "str",
-        "example": ""
+        "example": "2431-31-02"
       },
       {
         "name": "NOME DO PARTICIPANTE",
         "type": "str",
-        "example": ""
+        "example": "99PAY INSTITUICAO DE PAGAMENTO S.A."
       },
       {
         "name": "TIPO PARTICIPAÇÃO",
         "type": "str",
-        "example": ""
+        "example": "LIDER"
       },
       {
         "name": "DATA INÍCIO",
         "type": "date",
-        "example": ""
+        "example": "2024-07-10 00:00:00"
       },
       {
         "name": "UF",
         "type": "str",
-        "example": ""
+        "example": "SP"
       }
     ]
   },

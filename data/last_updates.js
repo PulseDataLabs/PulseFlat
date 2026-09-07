@@ -56,7 +56,7 @@ window.PULSEFLAT_LAST_UPDATES = {
     "max": "2026-08-27"
   },
   "bacen_conglomerados.csv": {
-    "min": "2026-06-03",
+    "min": "2026-09-07",
     "max": "2026-09-07"
   },
   "bacen_negociacao_tpf_extragrupo.csv.gz": {
