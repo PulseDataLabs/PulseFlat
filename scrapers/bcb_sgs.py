@@ -1,4 +1,3 @@
-from scripts.utils.ux import print_done, print_warn
 
 """
 scrapers/bcb_sgs.py
@@ -21,12 +20,13 @@ Fonte: https://api.bcb.gov.br/dados/serie/bcdata.sgs.{codigo}/dados
 
 import sys
 import time
-from datetime import date
+from datetime import date, timedelta
 from pathlib import Path
 
 import requests
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from scripts.utils.ux import print_done, print_warn
 import pandas as pd
 
 from scrapers.utils.base import BaseScraper
@@ -64,7 +64,10 @@ URL_TPL = (
 def capturar() -> list[dict]:
 
     hoje = date.today()
-    inicio = "01/01/2020"
+    if ARQUIVO.exists() and ARQUIVO.stat().st_size > 100:
+        inicio = (hoje - timedelta(days=90)).strftime("%d/%m/%Y")
+    else:
+        inicio = "01/01/2020"
     fim = hoje.strftime("%d/%m/%Y")
     data_captura, _ = agora_brt()
 
@@ -114,8 +117,8 @@ class BcbSgsScraper(BaseScraper):
     group = "bcb"
     enabled = True
     phase = 1
-    accumulate = False
-    chaves_dedup = ["data_captura", "codigo_serie", "data_referencia"]
+    accumulate = True
+    chaves_dedup = ["codigo_serie", "data_referencia"]
 
     # Catálogo de Metadados
     title = "BACEN — Sistema Gerenciador de Séries Temporais (SGS)"

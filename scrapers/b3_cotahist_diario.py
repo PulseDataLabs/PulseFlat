@@ -98,8 +98,15 @@ def capturar() -> tuple[list[dict], list[str]]:
     dt = date_ref("dia_anterior")
     url = replace_date_vars(URL, dt)
     log.info(f"Baixando {url}")
-    resp = session.get(url, timeout=180)
-    resp.raise_for_status()
+    try:
+        resp = session.get(url, timeout=180)
+        if resp.status_code == 404:
+            log.warning(f"Arquivo COTAHIST diário ainda não disponível na B3 para a data (404 Not Found): {url}")
+            return [], []
+        resp.raise_for_status()
+    except Exception as e:
+        log.warning(f"Erro ao baixar COTAHIST diário: {e}")
+        return [], []
 
     rows = []
     with zipfile.ZipFile(io.BytesIO(resp.content)) as zf:

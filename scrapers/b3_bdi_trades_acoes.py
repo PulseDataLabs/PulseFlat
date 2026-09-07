@@ -125,8 +125,8 @@ def capturar() -> list[dict]:
         time.sleep(1.5)
 
     if not todos:
-        log.error("Nenhum trade de ação retornado.")
-        sys.exit(1)
+        log.warning("Nenhum trade de ação retornado da API da B3 (possível fim de semana/feriado ou indisponibilidade temporária).")
+        return []
 
     log.info(f"{len(todos)} trades consolidados capturados (ref: {data_ref}).")
     return todos

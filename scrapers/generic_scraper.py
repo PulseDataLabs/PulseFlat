@@ -1,4 +1,3 @@
-from scripts.utils.ux import print_done, print_warn
 
 """
 scrapers/generic_scraper.py
@@ -15,6 +14,7 @@ import pandas as pd
 import yaml
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from scripts.utils.ux import print_done, print_warn
 from scrapers.utils.base import BaseScraper
 from utils.base import agora_brt, get_logger, nova_session
 from utils.parsers import (

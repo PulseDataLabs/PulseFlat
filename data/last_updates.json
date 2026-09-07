@@ -57,7 +57,7 @@
   },
   "bacen_conglomerados.csv": {
     "min": "2026-06-03",
-    "max": "2026-08-27"
+    "max": "2026-09-07"
   },
   "bacen_negociacao_tpf_extragrupo.csv.gz": {
     "min": "2020-01-31",
@@ -69,7 +69,7 @@
   },
   "bcb_ptax.csv": {
     "min": "2026-08-27",
-    "max": "2026-08-27"
+    "max": "2026-09-07"
   },
   "cvm_cadastro_companhias_abertas.csv": {
     "min": "2026-08-24",
@@ -89,7 +89,7 @@
   },
   "bcb_sgs.csv": {
     "min": "2026-08-27",
-    "max": "2026-08-27"
+    "max": "2026-09-07"
   },
   "debentures_mercado_secundario_precos_negociacao.csv.gz": {
     "min": "2026-08-01",
@@ -157,7 +157,7 @@
   },
   "bacen_parcelas_capital_basileia.csv.gz": {
     "min": "2026-06-05",
-    "max": "2026-08-27"
+    "max": "2026-09-07"
   },
   "yahoo_etfs.csv": {
     "min": "2026-06-27",
@@ -221,7 +221,7 @@
   },
   "b3_bdi_di_over.csv": {
     "min": "2026-06-01",
-    "max": "2026-08-27"
+    "max": "2026-09-07"
   },
   "b3_carteira_teorica_agfs_iagro.csv": {
     "min": "2026-06-03",
@@ -249,7 +249,7 @@
   },
   "b3_cotahist_diario.csv.gz": {
     "min": "2026-08-02",
-    "max": "2026-08-27"
+    "max": "2026-09-07"
   },
   "b3_bdi_etfrf.csv.gz": {
     "min": "2026-08-02",

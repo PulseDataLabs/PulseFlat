@@ -1,4 +1,3 @@
-from scripts.utils.ux import print_done, print_warn
 
 #!/usr/bin/env python
 # coding: utf-8
@@ -22,6 +21,7 @@ import requests
 from dateutil.relativedelta import relativedelta
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from scripts.utils.ux import print_done, print_warn
 from scrapers.utils.base import BaseScraper
 
 BASE_URL = (
@@ -88,6 +88,8 @@ class BacenConglomeradosScraper(BaseScraper):
             xlsx_bytes = zf.read(xlsx_names[0])
 
         df = pd.read_excel(BytesIO(xlsx_bytes), engine="openpyxl")
+        df = df.loc[:, ~df.columns.astype(str).str.contains(r"^Unnamed", case=False, na=False)]
+        df = df.dropna(how="all", axis=1)
         df.columns = [str(c).strip() for c in df.columns]
         df.insert(0, "data_referencia", ref.replace(day=1))
         return df

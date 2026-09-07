@@ -1,4 +1,3 @@
-from scripts.utils.ux import print_done, print_fail, print_warn
 
 #!/usr/bin/env python
 # coding: utf-8
@@ -18,6 +17,7 @@ import requests
 from bs4 import BeautifulSoup
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from scripts.utils.ux import print_done, print_fail, print_warn
 from scrapers.utils.base import BaseScraper
 
 BASE_URL = "https://unglobalcompact.org"

@@ -107,8 +107,8 @@ def capturar(target_date: date | None = None) -> list[dict]:
         time.sleep(1)
 
     if not todos:
-        log.error("Nenhum dado DI Over retornado.")
-        sys.exit(1)
+        log.warning("Nenhum dado DI Over retornado da API da B3 (possível fim de semana/feriado ou indisponibilidade temporária).")
+        return []
 
     log.info(f"{len(todos)} registros DI Over capturados.")
     return todos

@@ -9,7 +9,7 @@ Campos: cotacao_compra, cotacao_venda, data_hora_cotacao
 
 import sys
 import time
-from datetime import date
+from datetime import date, timedelta
 from pathlib import Path
 
 import requests
@@ -53,7 +53,10 @@ URL_TPL = (
 
 def _url_hoje() -> str:
     hoje = date.today()
-    inicio = date(2020, 1, 1)
+    if ARQUIVO.exists() and ARQUIVO.stat().st_size > 100:
+        inicio = hoje - timedelta(days=90)
+    else:
+        inicio = date(2020, 1, 1)
     return URL_TPL.format(
         inicio=inicio.strftime("%m-%d-%Y"),
         fim=hoje.strftime("%m-%d-%Y"),
@@ -112,8 +115,8 @@ class BcbPtaxScraper(BaseScraper):
     group = "bcb"
     enabled = True
     phase = 1
-    accumulate = False
-    chaves_dedup = ["data_captura", "data_referencia"]
+    accumulate = True
+    chaves_dedup = ["data_referencia"]
 
     # Catálogo de Metadados
     title = "BACEN — Câmbio PTAX"

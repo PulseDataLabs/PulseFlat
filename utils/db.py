@@ -206,6 +206,37 @@ def create_table_from_df(
     return False
 
 
+def ensure_indexes(cursor, table_name: str, cols: list[str]) -> None:
+    """
+    Garante que as colunas especificadas possuem índice no Oracle para acelerar deduplicações.
+    """
+    if not cols:
+        return
+    try:
+        cursor.execute(
+            "SELECT column_name FROM user_ind_columns WHERE table_name = :1",
+            [table_name.upper()],
+        )
+        indexed_cols = {row[0].upper() for row in cursor.fetchall()}
+
+        for col in cols:
+            col_upper = col.upper()
+            if col_upper not in indexed_cols:
+                idx_name = f"IDX_{table_name[:18]}_{col_upper[:8]}"
+                try:
+                    cursor.execute(
+                        f"CREATE INDEX {idx_name} ON {table_name} ({col_upper})"
+                    )
+                    log.info(
+                        f"Índice {idx_name} criado com sucesso na tabela {table_name} ({col_upper})."
+                    )
+                    indexed_cols.add(col_upper)
+                except Exception as e:
+                    log.debug(f"Aviso ao criar índice {idx_name}: {e}")
+    except Exception as e:
+        log.debug(f"Erro ao verificar índices para {table_name}: {e}")
+
+
 def standardize_val(val):
     """
     Padroniza um valor para comparação de chaves sem depender de tipo exato.
@@ -300,6 +331,11 @@ def upload_dataframe(
 
     table_name = table_name.upper()
 
+    # Remover colunas não nomeadas/vazias do DataFrame
+    cols_validas = [c for c in df.columns if str(c).strip() and not str(c).strip().lower().startswith('unnamed')]
+    if len(cols_validas) < len(df.columns):
+        df = df[cols_validas]
+
     # Mapear e higienizar nomes de colunas
     clean_cols = {col: sanitize_column_name(col) for col in df.columns}
 
@@ -342,6 +378,14 @@ def upload_dataframe(
                 keys_to_check = [period_col]
             else:
                 keys_to_check = list(df.columns)
+
+        # Garantir índices para buscas rápidas
+        idx_targets = []
+        if period_col:
+            idx_targets.append(clean_cols[period_col])
+        if keys_to_check:
+            idx_targets.extend([clean_cols[k] for k in keys_to_check[:2] if clean_cols[k] not in idx_targets])
+        ensure_indexes(cursor, table_name, idx_targets)
 
         # 3. Buscar chaves existentes se a tabela já existia
         existing_set = set()
@@ -460,21 +504,24 @@ def upload_dataframe(
         binds_str = ", ".join([f":{i+1}" for i in range(len(clean_cols))])
         insert_sql = f"INSERT INTO {table_name} ({cols_str}) VALUES ({binds_str})"
 
-        # Identificar quais colunas são do tipo DATE no banco de dados para tratar no insert
-        date_cols = set()
+        # Identificar tipos das colunas no banco de dados para tratar no insert
+        db_col_types = {}
         try:
             cursor.execute(
-                "SELECT column_name FROM user_tab_columns WHERE table_name = :1 AND data_type = 'DATE'",
+                "SELECT column_name, data_type FROM user_tab_columns WHERE table_name = :1",
                 [table_name],
             )
-            date_cols = {row[0].upper() for row in cursor.fetchall()}
+            for row in cursor.fetchall():
+                db_col_types[row[0].upper()] = row[1].upper()
         except Exception:
-            # Fallback para inferência baseada no DataFrame original
-            date_cols = {
-                clean_cols[col]
-                for col in df.columns
-                if infer_oracle_type(df[col]) == "DATE"
-            }
+            pass
+        date_cols = {
+            col for col, dt in db_col_types.items() if "DATE" in dt or "TIMESTAMP" in dt
+        } or {
+            clean_cols[col]
+            for col in df.columns
+            if infer_oracle_type(df[col]) == "DATE"
+        }
 
         # 6. Executar a inserção em blocos com limpeza sob demanda para economizar RAM
         total_rows = len(df)
@@ -494,20 +541,18 @@ def upload_dataframe(
                     col_orig = df.columns[idx]
                     col_clean = clean_cols[col_orig]
 
+                    col_db_type = db_col_types.get(col_clean, "")
                     if (
                         val is None
                         or (isinstance(val, float) and (np.isnan(val) or np.isinf(val)))
                         or pd.isna(val)
                     ):
                         clean_row.append(None)
-                    elif col_clean in date_cols:
+                    elif col_clean in date_cols or "DATE" in col_db_type or "TIMESTAMP" in col_db_type:
                         if isinstance(val, (pd.Timestamp, datetime)):
-                            if hasattr(val, "to_pydatetime"):
-                                clean_row.append(val.to_pydatetime())
-                            else:
-                                clean_row.append(val)
-                        elif hasattr(val, "to_pydatetime"):
-                            clean_row.append(val.to_pydatetime())
+                            clean_row.append(val.to_pydatetime() if hasattr(val, "to_pydatetime") else val)
+                        elif hasattr(val, "date") and callable(getattr(val, "date")):
+                            clean_row.append(val)
                         elif isinstance(val, str):
                             val_strip = val.strip()
                             parsed_dt = None
@@ -526,7 +571,7 @@ def upload_dataframe(
                                         continue
 
                             if parsed_dt is None:
-                                for fmt in ("%Y-%m-%d", "%d/%m/%Y", "%Y/%m/%d"):
+                                for fmt in ("%Y-%m-%d", "%d/%m/%Y", "%Y/%m/%d", "%Y%m%d"):
                                     try:
                                         parsed_dt = datetime.strptime(
                                             val_strip, fmt
@@ -535,12 +580,18 @@ def upload_dataframe(
                                     except ValueError:
                                         continue
 
-                            if parsed_dt is not None:
-                                clean_row.append(parsed_dt)
-                            else:
-                                clean_row.append(val)
+                            clean_row.append(parsed_dt if parsed_dt is not None else val)
                         else:
                             clean_row.append(val)
+                    elif "VARCHAR" in col_db_type or "CHAR" in col_db_type or "CLOB" in col_db_type:
+                        # Coluna string no Oracle: se o valor for date/datetime/Timestamp, converter para string
+                        if isinstance(val, (datetime, pd.Timestamp)):
+                            has_time = getattr(val, "hour", 0) or getattr(val, "minute", 0) or getattr(val, "second", 0)
+                            clean_row.append(val.strftime("%Y-%m-%d %H:%M:%S" if has_time else "%Y-%m-%d"))
+                        elif hasattr(val, "strftime"):
+                            clean_row.append(val.strftime("%Y-%m-%d"))
+                        else:
+                            clean_row.append(str(val))
                     else:
                         clean_row.append(val)
                 batch.append(tuple(clean_row))

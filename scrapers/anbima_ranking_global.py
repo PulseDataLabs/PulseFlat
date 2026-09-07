@@ -1,4 +1,3 @@
-from scripts.utils.ux import print_done, print_warn
 
 #!/usr/bin/env python
 # coding: utf-8
@@ -22,6 +21,7 @@ import pandas as pd
 import requests
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from scripts.utils.ux import print_done, print_warn
 from scrapers.utils.base import BaseScraper
 
 STRAPI_HOST = "https://data-strapi.prd.anbima.com.br"
