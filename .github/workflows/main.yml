@@ -7,8 +7,8 @@ on:
     # 06h00, 08h00 e 09h00 de Segunda a Sexta
     - cron: '0 9,11,12 * * 1-5'
     
-    # 09h30 de Segunda a Sexta
-    - cron: '30 12 * * 1-5'
+    # 09h30, 10h30 e 11h30 de Segunda a Sexta
+    - cron: '30 12,13,14 * * 1-5'
     
     # 18h00 de Segunda a Sexta
     - cron: '0 21 * * 1-5'
