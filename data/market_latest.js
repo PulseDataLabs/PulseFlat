@@ -19,23 +19,23 @@ window.PULSEFLAT_MARKET_LATEST = [
   },
   {
     "label": "IGP-M 12m",
-    "value": "-0,86%",
-    "reference_date": "2026-07-01",
+    "value": "0,06%",
+    "reference_date": "2026-08-01",
     "type": "neutral"
   },
   {
     "label": "PTAX USD Venda",
-    "value": "5,1253",
-    "reference_date": "2026-09-04",
-    "type": "up",
-    "change": "+0,57%"
+    "value": "5,0856",
+    "reference_date": "2026-09-08",
+    "type": "down",
+    "change": "-0,77%"
   },
   {
     "label": "PTAX USD Compra",
-    "value": "5,1247",
-    "reference_date": "2026-09-04",
-    "type": "up",
-    "change": "+0,57%"
+    "value": "5,0850",
+    "reference_date": "2026-09-08",
+    "type": "down",
+    "change": "-0,77%"
   },
   {
     "label": "IBOVESPA",
