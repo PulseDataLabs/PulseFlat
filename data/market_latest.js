@@ -2,7 +2,7 @@ window.PULSEFLAT_MARKET_LATEST = [
   {
     "label": "CDI",
     "value": "13,90%",
-    "reference_date": "2026-09-04",
+    "reference_date": "2026-09-08",
     "type": "neutral"
   },
   {
