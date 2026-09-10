@@ -1,5 +1,62 @@
 [
   {
+    "title": "B3 Carteira Teorica Agfs Iagro",
+    "files": "b3_carteira_teorica_agfs_iagro.csv",
+    "source": "b3",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-06-03"
+      },
+      {
+        "name": "indice",
+        "type": "str",
+        "example": "AGFS"
+      },
+      {
+        "name": "indice_nome",
+        "type": "str",
+        "example": "AGFS"
+      },
+      {
+        "name": "codigo_ativo",
+        "type": "str",
+        "example": "TTEN3"
+      },
+      {
+        "name": "nome_ativo",
+        "type": "str",
+        "example": "3TENTOS"
+      },
+      {
+        "name": "tipo_ativo",
+        "type": "str",
+        "example": "ON      NM"
+      },
+      {
+        "name": "quantidade_teorica",
+        "type": "int",
+        "example": "216464847"
+      },
+      {
+        "name": "participacao_pct",
+        "type": "str",
+        "example": "3.895"
+      },
+      {
+        "name": "reducao_capital",
+        "type": "str",
+        "example": ""
+      },
+      {
+        "name": "segmento",
+        "type": "str",
+        "example": ""
+      }
+    ]
+  },
+  {
     "title": "B3 Carteira Teorica Ibov",
     "files": "b3_carteira_teorica_ibov.csv",
     "source": "b3",
@@ -43,6 +100,120 @@
         "name": "participacao_pct",
         "type": "str",
         "example": "0.547"
+      },
+      {
+        "name": "reducao_capital",
+        "type": "str",
+        "example": ""
+      },
+      {
+        "name": "segmento",
+        "type": "str",
+        "example": ""
+      }
+    ]
+  },
+  {
+    "title": "B3 Carteira Teorica Bdrx",
+    "files": "b3_carteira_teorica_bdrx.csv",
+    "source": "b3",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-06-03"
+      },
+      {
+        "name": "indice",
+        "type": "str",
+        "example": "BDRX"
+      },
+      {
+        "name": "indice_nome",
+        "type": "str",
+        "example": "BDRX"
+      },
+      {
+        "name": "codigo_ativo",
+        "type": "str",
+        "example": "MMMC34"
+      },
+      {
+        "name": "nome_ativo",
+        "type": "str",
+        "example": "3M"
+      },
+      {
+        "name": "tipo_ativo",
+        "type": "str",
+        "example": "DRN"
+      },
+      {
+        "name": "quantidade_teorica",
+        "type": "int",
+        "example": "20895848"
+      },
+      {
+        "name": "participacao_pct",
+        "type": "str",
+        "example": "0.159"
+      },
+      {
+        "name": "reducao_capital",
+        "type": "str",
+        "example": ""
+      },
+      {
+        "name": "segmento",
+        "type": "str",
+        "example": ""
+      }
+    ]
+  },
+  {
+    "title": "B3 Carteira Teorica Ibsd",
+    "files": "b3_carteira_teorica_ibsd.csv",
+    "source": "b3",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-06-03"
+      },
+      {
+        "name": "indice",
+        "type": "str",
+        "example": "IBSD"
+      },
+      {
+        "name": "indice_nome",
+        "type": "str",
+        "example": "IBSD"
+      },
+      {
+        "name": "codigo_ativo",
+        "type": "str",
+        "example": "BBSE3"
+      },
+      {
+        "name": "nome_ativo",
+        "type": "str",
+        "example": "BBSEGURIDADE"
+      },
+      {
+        "name": "tipo_ativo",
+        "type": "str",
+        "example": "ON      NM"
+      },
+      {
+        "name": "quantidade_teorica",
+        "type": "int",
+        "example": "1791598595"
+      },
+      {
+        "name": "participacao_pct",
+        "type": "str",
+        "example": "6.731"
       },
       {
         "name": "reducao_capital",
@@ -110,48 +281,6 @@
         "name": "segmento",
         "type": "str",
         "example": ""
-      }
-    ]
-  },
-  {
-    "title": "B3 Bmf Taxas Juros",
-    "files": "b3_bmf_taxas_juros.csv",
-    "source": "b3",
-    "fields": [
-      {
-        "name": "data_captura",
-        "type": "date",
-        "example": "2026-06-04"
-      },
-      {
-        "name": "tabela_origem",
-        "type": "str",
-        "example": "DerivativesMarketSwapRates"
-      },
-      {
-        "name": "data_referencia",
-        "type": "date",
-        "example": "2026-06-03"
-      },
-      {
-        "name": "curva",
-        "type": "str",
-        "example": "DI1"
-      },
-      {
-        "name": "prazo_dias",
-        "type": "int",
-        "example": "30"
-      },
-      {
-        "name": "taxa",
-        "type": "float",
-        "example": "13.65"
-      },
-      {
-        "name": "base",
-        "type": "str",
-        "example": "252"
       }
     ]
   },
@@ -266,6 +395,48 @@
         "name": "segmento",
         "type": "str",
         "example": ""
+      }
+    ]
+  },
+  {
+    "title": "B3 Bmf Taxas Juros",
+    "files": "b3_bmf_taxas_juros.csv",
+    "source": "b3",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-06-04"
+      },
+      {
+        "name": "tabela_origem",
+        "type": "str",
+        "example": "DerivativesMarketSwapRates"
+      },
+      {
+        "name": "data_referencia",
+        "type": "date",
+        "example": "2026-06-03"
+      },
+      {
+        "name": "curva",
+        "type": "str",
+        "example": "DI1"
+      },
+      {
+        "name": "prazo_dias",
+        "type": "int",
+        "example": "30"
+      },
+      {
+        "name": "taxa",
+        "type": "float",
+        "example": "13.65"
+      },
+      {
+        "name": "base",
+        "type": "str",
+        "example": "252"
       }
     ]
   },
@@ -518,225 +689,6 @@
     ]
   },
   {
-    "title": "B3 Bdi Etfrf.Gz",
-    "files": "b3_bdi_etfrf.csv.gz",
-    "source": "b3",
-    "fields": [
-      {
-        "name": "data_captura",
-        "type": "date",
-        "example": "2026-08-02"
-      },
-      {
-        "name": "data_referencia",
-        "type": "date",
-        "example": "2026-01-02"
-      },
-      {
-        "name": "codigo_ativo",
-        "type": "str",
-        "example": "AREA"
-      },
-      {
-        "name": "preco_abertura",
-        "type": "float",
-        "example": "102.96"
-      },
-      {
-        "name": "preco_minimo",
-        "type": "float",
-        "example": "102.96"
-      },
-      {
-        "name": "preco_maximo",
-        "type": "float",
-        "example": "103.52"
-      },
-      {
-        "name": "preco_medio",
-        "type": "float",
-        "example": "103.31"
-      },
-      {
-        "name": "preco_fechamento",
-        "type": "float",
-        "example": "103.23"
-      },
-      {
-        "name": "preco_referencia_d1",
-        "type": "float",
-        "example": "102.75"
-      },
-      {
-        "name": "oferta_compra",
-        "type": "str",
-        "example": "103.23"
-      },
-      {
-        "name": "oferta_venda",
-        "type": "str",
-        "example": "103.52"
-      },
-      {
-        "name": "quantidade",
-        "type": "int",
-        "example": "1858"
-      },
-      {
-        "name": "negocios",
-        "type": "str",
-        "example": "136"
-      },
-      {
-        "name": "volume",
-        "type": "str",
-        "example": "191958.12"
-      }
-    ]
-  },
-  {
-    "title": "B3 Cotahist Diario.Gz",
-    "files": "b3_cotahist_diario.csv.gz",
-    "source": "b3",
-    "fields": [
-      {
-        "name": "data_captura",
-        "type": "date",
-        "example": "2026-08-02"
-      },
-      {
-        "name": "allocation_lot_size",
-        "type": "str",
-        "example": "0000001"
-      },
-      {
-        "name": "average",
-        "type": "str",
-        "example": "0000000004908"
-      },
-      {
-        "name": "bdi_code",
-        "type": "str",
-        "example": "02"
-      },
-      {
-        "name": "best_ask",
-        "type": "str",
-        "example": "0000000004905"
-      },
-      {
-        "name": "best_bid",
-        "type": "str",
-        "example": "0000000004903"
-      },
-      {
-        "name": "close",
-        "type": "str",
-        "example": "0000000004904"
-      },
-      {
-        "name": "corporation_name",
-        "type": "str",
-        "example": "PETROBRAS"
-      },
-      {
-        "name": "days_to_settlement",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "distribution_id",
-        "type": "str",
-        "example": "214"
-      },
-      {
-        "name": "high",
-        "type": "str",
-        "example": "0000000004943"
-      },
-      {
-        "name": "instrument_market",
-        "type": "str",
-        "example": "010"
-      },
-      {
-        "name": "isin",
-        "type": "str",
-        "example": "BRPETRACNOR9"
-      },
-      {
-        "name": "low",
-        "type": "str",
-        "example": "0000000004856"
-      },
-      {
-        "name": "maturity_date",
-        "type": "date",
-        "example": "9999-12-31"
-      },
-      {
-        "name": "open",
-        "type": "str",
-        "example": "0000000004896"
-      },
-      {
-        "name": "refdate",
-        "type": "date",
-        "example": "2026-07-31"
-      },
-      {
-        "name": "regtype",
-        "type": "str",
-        "example": "01"
-      },
-      {
-        "name": "specification_code",
-        "type": "str",
-        "example": "ON      N2"
-      },
-      {
-        "name": "strike_price",
-        "type": "str",
-        "example": "0000000000000"
-      },
-      {
-        "name": "strike_price_adjustment_indicator",
-        "type": "str",
-        "example": "0"
-      },
-      {
-        "name": "strike_price_in_points",
-        "type": "str",
-        "example": "0000000000000"
-      },
-      {
-        "name": "symbol",
-        "type": "str",
-        "example": "PETR3"
-      },
-      {
-        "name": "trade_quantity",
-        "type": "str",
-        "example": "10105"
-      },
-      {
-        "name": "traded_contracts",
-        "type": "str",
-        "example": "000000000007065500"
-      },
-      {
-        "name": "trading_currency",
-        "type": "str",
-        "example": "R$"
-      },
-      {
-        "name": "volume",
-        "type": "str",
-        "example": "000000034680084900"
-      }
-    ]
-  },
-  {
     "title": "B3 Indicadores Financeiros",
     "files": "b3_indicadores_financeiros.csv",
     "source": "b3",
@@ -936,74 +888,181 @@
     ]
   },
   {
-    "title": "Anbima Indice Imab.Gz",
-    "files": "anbima_indice_imab.csv.gz",
-    "source": "anbima",
+    "title": "B3 Cotahist Diario.Gz",
+    "files": "b3_cotahist_diario.csv.gz",
+    "source": "b3",
     "fields": [
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-06-01"
+        "example": "2026-08-02"
+      },
+      {
+        "name": "allocation_lot_size",
+        "type": "str",
+        "example": "0000001"
+      },
+      {
+        "name": "average",
+        "type": "str",
+        "example": "0000000004908"
+      },
+      {
+        "name": "bdi_code",
+        "type": "str",
+        "example": "02"
+      },
+      {
+        "name": "best_ask",
+        "type": "str",
+        "example": "0000000004905"
+      },
+      {
+        "name": "best_bid",
+        "type": "str",
+        "example": "0000000004903"
+      },
+      {
+        "name": "close",
+        "type": "str",
+        "example": "0000000004904"
+      },
+      {
+        "name": "corporation_name",
+        "type": "str",
+        "example": "PETROBRAS"
+      },
+      {
+        "name": "days_to_settlement",
+        "type": "str",
+        "example": ""
+      },
+      {
+        "name": "distribution_id",
+        "type": "str",
+        "example": "214"
+      },
+      {
+        "name": "high",
+        "type": "str",
+        "example": "0000000004943"
+      },
+      {
+        "name": "instrument_market",
+        "type": "str",
+        "example": "010"
+      },
+      {
+        "name": "isin",
+        "type": "str",
+        "example": "BRPETRACNOR9"
+      },
+      {
+        "name": "low",
+        "type": "str",
+        "example": "0000000004856"
+      },
+      {
+        "name": "maturity_date",
+        "type": "date",
+        "example": "9999-12-31"
+      },
+      {
+        "name": "open",
+        "type": "str",
+        "example": "0000000004896"
+      },
+      {
+        "name": "refdate",
+        "type": "date",
+        "example": "2026-07-31"
+      },
+      {
+        "name": "regtype",
+        "type": "str",
+        "example": "01"
+      },
+      {
+        "name": "specification_code",
+        "type": "str",
+        "example": "ON      N2"
+      },
+      {
+        "name": "strike_price",
+        "type": "str",
+        "example": "0000000000000"
+      },
+      {
+        "name": "strike_price_adjustment_indicator",
+        "type": "str",
+        "example": "0"
+      },
+      {
+        "name": "strike_price_in_points",
+        "type": "str",
+        "example": "0000000000000"
+      },
+      {
+        "name": "symbol",
+        "type": "str",
+        "example": "PETR3"
+      },
+      {
+        "name": "trade_quantity",
+        "type": "str",
+        "example": "10105"
+      },
+      {
+        "name": "traded_contracts",
+        "type": "str",
+        "example": "000000000007065500"
+      },
+      {
+        "name": "trading_currency",
+        "type": "str",
+        "example": "R$"
+      },
+      {
+        "name": "volume",
+        "type": "str",
+        "example": "000000034680084900"
+      }
+    ]
+  },
+  {
+    "title": "B3 Limites Garantias",
+    "files": "b3_limites_garantias.csv",
+    "source": "b3",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2025-01-01"
       },
       {
         "name": "data_referencia",
         "type": "date",
-        "example": "2001-12-04"
+        "example": "2025-06-01"
       },
       {
-        "name": "duration_du",
+        "name": "tipo_ativo",
         "type": "str",
-        "example": ""
+        "example": "Ações_BDRs_ETFs_Units"
       },
       {
-        "name": "numero_indice",
+        "name": "codigo",
+        "type": "str",
+        "example": "A1AP34"
+      },
+      {
+        "name": "isin",
+        "type": "str",
+        "example": "BRA1APBDR001"
+      },
+      {
+        "name": "limite_quantidade",
         "type": "int",
-        "example": "532.621995"
-      },
-      {
-        "name": "indice",
-        "type": "str",
-        "example": "IMA-GERAL"
-      },
-      {
-        "name": "pmr",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "variacao_12_meses",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "variacao_24_meses",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "variacao_diaria",
-        "type": "str",
-        "example": "0.0708"
-      },
-      {
-        "name": "variacao_no_ano",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "variacao_no_mes",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "data_de_referencia",
-        "type": "date",
-        "example": ""
-      },
-      {
-        "name": "duration_d_u",
-        "type": "str",
-        "example": ""
+        "example": "12453000.0"
       }
     ]
   },
@@ -1065,39 +1124,59 @@
     ]
   },
   {
-    "title": "B3 Limites Garantias",
-    "files": "b3_limites_garantias.csv",
+    "title": "B3 Indicadores Economicos Fwf",
+    "files": "b3_indicadores_economicos_fwf.csv",
     "source": "b3",
     "fields": [
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2025-01-01"
+        "example": "2026-06-16"
       },
       {
-        "name": "data_referencia",
+        "name": "cod_indicador",
+        "type": "str",
+        "example": ""
+      },
+      {
+        "name": "compl_transacao",
+        "type": "str",
+        "example": ""
+      },
+      {
+        "name": "data_geracao_arquivo",
         "type": "date",
-        "example": "2025-06-01"
+        "example": ""
       },
       {
-        "name": "tipo_ativo",
+        "name": "grupo_indicador",
         "type": "str",
-        "example": "Ações_BDRs_ETFs_Units"
+        "example": ""
       },
       {
-        "name": "codigo",
+        "name": "id_transacao",
         "type": "str",
-        "example": "A1AP34"
+        "example": "MZ¡"
       },
       {
-        "name": "isin",
+        "name": "num_casas_decimais",
         "type": "str",
-        "example": "BRA1APBDR001"
+        "example": ""
       },
       {
-        "name": "limite_quantidade",
-        "type": "int",
-        "example": "12453000.0"
+        "name": "reserva",
+        "type": "str",
+        "example": ""
+      },
+      {
+        "name": "tipo_registro",
+        "type": "str",
+        "example": ""
+      },
+      {
+        "name": "valor_indicador",
+        "type": "str",
+        "example": ""
       }
     ]
   },
@@ -1154,59 +1233,205 @@
     ]
   },
   {
-    "title": "B3 Indicadores Economicos Fwf",
-    "files": "b3_indicadores_economicos_fwf.csv",
+    "title": "B3 Bdi Etfrf.Gz",
+    "files": "b3_bdi_etfrf.csv.gz",
     "source": "b3",
     "fields": [
       {
         "name": "data_captura",
         "type": "date",
-        "example": "2026-06-16"
+        "example": "2026-08-02"
       },
       {
-        "name": "cod_indicador",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "compl_transacao",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "data_geracao_arquivo",
+        "name": "data_referencia",
         "type": "date",
-        "example": ""
+        "example": "2026-01-02"
       },
       {
-        "name": "grupo_indicador",
+        "name": "codigo_ativo",
+        "type": "str",
+        "example": "AREA"
+      },
+      {
+        "name": "preco_abertura",
+        "type": "float",
+        "example": "102.96"
+      },
+      {
+        "name": "preco_minimo",
+        "type": "float",
+        "example": "102.96"
+      },
+      {
+        "name": "preco_maximo",
+        "type": "float",
+        "example": "103.52"
+      },
+      {
+        "name": "preco_medio",
+        "type": "float",
+        "example": "103.31"
+      },
+      {
+        "name": "preco_fechamento",
+        "type": "float",
+        "example": "103.23"
+      },
+      {
+        "name": "preco_referencia_d1",
+        "type": "float",
+        "example": "102.75"
+      },
+      {
+        "name": "oferta_compra",
+        "type": "str",
+        "example": "103.23"
+      },
+      {
+        "name": "oferta_venda",
+        "type": "str",
+        "example": "103.52"
+      },
+      {
+        "name": "quantidade",
+        "type": "int",
+        "example": "1858"
+      },
+      {
+        "name": "negocios",
+        "type": "str",
+        "example": "136"
+      },
+      {
+        "name": "volume",
+        "type": "str",
+        "example": "191958.12"
+      }
+    ]
+  },
+  {
+    "title": "B3 Isin Emissores",
+    "files": "b3_isin_emissores.csv",
+    "source": "b3",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-09-10"
+      },
+      {
+        "name": "codigo_emissor",
+        "type": "str",
+        "example": "0001"
+      },
+      {
+        "name": "nome_emissor",
+        "type": "str",
+        "example": "ANTUERPIA ICATU PREVIDÃNCIA FUNDO INVESTIMENTO COTAS DE FUNDOS INVESTIMENTOS MULTIMERCADO PREVIDENCIÃRIO"
+      },
+      {
+        "name": "cnpj_emissor",
+        "type": "str",
+        "example": "30493220000165"
+      },
+      {
+        "name": "data_criacao_emissor",
+        "type": "date",
+        "example": "2018-06-30"
+      }
+    ]
+  },
+  {
+    "title": "Bcb Ptax",
+    "files": "bcb_ptax.csv",
+    "source": "bcb",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-08-27"
+      },
+      {
+        "name": "data_referencia",
+        "type": "date",
+        "example": "2020-01-02"
+      },
+      {
+        "name": "cotacao_compra",
+        "type": "str",
+        "example": "4.0207"
+      },
+      {
+        "name": "cotacao_venda",
+        "type": "str",
+        "example": "4.0213"
+      }
+    ]
+  },
+  {
+    "title": "Bacen Balancetes Bancos",
+    "files": "bacen_balancetes_bancos.csv",
+    "source": "bcb",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-09-10"
+      },
+      {
+        "name": "data_base",
+        "type": "date",
+        "example": "202606"
+      },
+      {
+        "name": "documento",
+        "type": "str",
+        "example": "4010"
+      },
+      {
+        "name": "cnpj",
+        "type": "str",
+        "example": "0000-00-00"
+      },
+      {
+        "name": "agencia",
         "type": "str",
         "example": ""
       },
       {
-        "name": "id_transacao",
+        "name": "nome_instituicao",
         "type": "str",
-        "example": "MZ¡"
+        "example": "BCO DO BRASIL S.A."
       },
       {
-        "name": "num_casas_decimais",
+        "name": "cod_congl",
         "type": "str",
         "example": ""
       },
       {
-        "name": "reserva",
+        "name": "nome_congl",
         "type": "str",
         "example": ""
       },
       {
-        "name": "tipo_registro",
+        "name": "taxonomia",
         "type": "str",
-        "example": ""
+        "example": "BANCO DO BRASIL - BANCO MULTIPLO"
       },
       {
-        "name": "valor_indicador",
+        "name": "conta",
         "type": "str",
-        "example": ""
+        "example": "1000000009"
+      },
+      {
+        "name": "nome_conta",
+        "type": "str",
+        "example": "Ativo Realizável"
+      },
+      {
+        "name": "saldo",
+        "type": "float",
+        "example": "2380735804252.21"
       }
     ]
   },
@@ -1318,102 +1543,8 @@
     ]
   },
   {
-    "title": "Bacen Balancetes Bancos",
-    "files": "bacen_balancetes_bancos.csv",
-    "source": "bcb",
-    "fields": [
-      {
-        "name": "data_captura",
-        "type": "date",
-        "example": "2026-09-10"
-      },
-      {
-        "name": "data_base",
-        "type": "date",
-        "example": "202606"
-      },
-      {
-        "name": "documento",
-        "type": "str",
-        "example": "4010"
-      },
-      {
-        "name": "cnpj",
-        "type": "str",
-        "example": "0000-00-00"
-      },
-      {
-        "name": "agencia",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "nome_instituicao",
-        "type": "str",
-        "example": "BCO DO BRASIL S.A."
-      },
-      {
-        "name": "cod_congl",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "nome_congl",
-        "type": "str",
-        "example": ""
-      },
-      {
-        "name": "taxonomia",
-        "type": "str",
-        "example": "BANCO DO BRASIL - BANCO MULTIPLO"
-      },
-      {
-        "name": "conta",
-        "type": "str",
-        "example": "1000000009"
-      },
-      {
-        "name": "nome_conta",
-        "type": "str",
-        "example": "Ativo Realizável"
-      },
-      {
-        "name": "saldo",
-        "type": "float",
-        "example": "2380735804252.21"
-      }
-    ]
-  },
-  {
-    "title": "Bcb Ptax",
-    "files": "bcb_ptax.csv",
-    "source": "bcb",
-    "fields": [
-      {
-        "name": "data_captura",
-        "type": "date",
-        "example": "2026-08-27"
-      },
-      {
-        "name": "data_referencia",
-        "type": "date",
-        "example": "2020-01-02"
-      },
-      {
-        "name": "cotacao_compra",
-        "type": "str",
-        "example": "4.0207"
-      },
-      {
-        "name": "cotacao_venda",
-        "type": "str",
-        "example": "4.0213"
-      }
-    ]
-  },
-  {
-    "title": "B3 Isin Emissores",
-    "files": "b3_isin_emissores.csv",
+    "title": "B3 Titulos Negociaveis.Gz",
+    "files": "b3_titulos_negociaveis.csv.gz",
     "source": "b3",
     "fields": [
       {
@@ -1422,24 +1553,71 @@
         "example": "2026-09-10"
       },
       {
-        "name": "codigo_emissor",
+        "name": "codigo_ativo",
         "type": "str",
-        "example": "0001"
+        "example": "A1AP34"
       },
       {
         "name": "nome_emissor",
         "type": "str",
-        "example": "ANTUERPIA ICATU PREVIDÃNCIA FUNDO INVESTIMENTO COTAS DE FUNDOS INVESTIMENTOS MULTIMERCADO PREVIDENCIÃRIO"
+        "example": "ADVANCE AUTO PARTS INC"
       },
       {
-        "name": "cnpj_emissor",
+        "name": "nome_curto",
         "type": "str",
-        "example": "30493220000165"
+        "example": "ADVANCE AUTO"
       },
       {
-        "name": "data_criacao_emissor",
+        "name": "codigo_isin",
+        "type": "str",
+        "example": "BRA1APBDR001"
+      },
+      {
+        "name": "tipo_ativo",
+        "type": "str",
+        "example": "LOTE PADRAO"
+      },
+      {
+        "name": "tipo_mercado",
+        "type": "str",
+        "example": "VISTA"
+      },
+      {
+        "name": "tipo_titulo",
+        "type": "str",
+        "example": "DRN"
+      }
+    ]
+  },
+  {
+    "title": "Bcb Sgs",
+    "files": "bcb_sgs.csv",
+    "source": "bcb",
+    "fields": [
+      {
+        "name": "data_captura",
         "type": "date",
-        "example": "2018-06-30"
+        "example": "2026-08-27"
+      },
+      {
+        "name": "codigo_serie",
+        "type": "str",
+        "example": "11"
+      },
+      {
+        "name": "nome_serie",
+        "type": "str",
+        "example": "Taxa SELIC diária (% a.d.)"
+      },
+      {
+        "name": "data_referencia",
+        "type": "date",
+        "example": "2020-01-02"
+      },
+      {
+        "name": "valor",
+        "type": "str",
+        "example": "0.017089"
       }
     ]
   },
@@ -1687,122 +1865,6 @@
         "name": "uf_resp",
         "type": "str",
         "example": "SP"
-      }
-    ]
-  },
-  {
-    "title": "Bcb Sgs",
-    "files": "bcb_sgs.csv",
-    "source": "bcb",
-    "fields": [
-      {
-        "name": "data_captura",
-        "type": "date",
-        "example": "2026-08-27"
-      },
-      {
-        "name": "codigo_serie",
-        "type": "str",
-        "example": "11"
-      },
-      {
-        "name": "nome_serie",
-        "type": "str",
-        "example": "Taxa SELIC diária (% a.d.)"
-      },
-      {
-        "name": "data_referencia",
-        "type": "date",
-        "example": "2020-01-02"
-      },
-      {
-        "name": "valor",
-        "type": "str",
-        "example": "0.017089"
-      }
-    ]
-  },
-  {
-    "title": "B3 Titulos Negociaveis.Gz",
-    "files": "b3_titulos_negociaveis.csv.gz",
-    "source": "b3",
-    "fields": [
-      {
-        "name": "data_captura",
-        "type": "date",
-        "example": "2026-09-10"
-      },
-      {
-        "name": "codigo_ativo",
-        "type": "str",
-        "example": "A1AP34"
-      },
-      {
-        "name": "nome_emissor",
-        "type": "str",
-        "example": "ADVANCE AUTO PARTS INC"
-      },
-      {
-        "name": "nome_curto",
-        "type": "str",
-        "example": "ADVANCE AUTO"
-      },
-      {
-        "name": "codigo_isin",
-        "type": "str",
-        "example": "BRA1APBDR001"
-      },
-      {
-        "name": "tipo_ativo",
-        "type": "str",
-        "example": "LOTE PADRAO"
-      },
-      {
-        "name": "tipo_mercado",
-        "type": "str",
-        "example": "VISTA"
-      },
-      {
-        "name": "tipo_titulo",
-        "type": "str",
-        "example": "DRN"
-      }
-    ]
-  },
-  {
-    "title": "Ibge Sidra",
-    "files": "ibge_sidra.csv",
-    "source": "ibge",
-    "fields": [
-      {
-        "name": "data_captura",
-        "type": "date",
-        "example": "2026-09-10"
-      },
-      {
-        "name": "serie_id",
-        "type": "str",
-        "example": "1737"
-      },
-      {
-        "name": "nome_serie",
-        "type": "str",
-        "example": "IPCA - Série histórica com número-índice, variação mensal e variações acumuladas em 3 meses, em 6 meses, no ano e em 12 meses (a partir de dezembro/1979)"
-      },
-      {
-        "name": "fonte",
-        "type": "str",
-        "example": "IBGE - Índice Nacional de Preços ao Consumidor Amplo"
-      },
-      {
-        "name": "periodo_referencia",
-        "type": "str",
-        "example": "dezembro de 1979"
-      },
-      {
-        "name": "data_modificacao",
-        "type": "date",
-        "example": "2008-07-10"
       }
     ]
   },
@@ -2239,6 +2301,110 @@
     ]
   },
   {
+    "title": "Bacen Parcelas Capital Basileia.Gz",
+    "files": "bacen_parcelas_capital_basileia.csv.gz",
+    "source": "bcb",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-06-05"
+      },
+      {
+        "name": "TipoInstituicao",
+        "type": "str",
+        "example": "1"
+      },
+      {
+        "name": "CodInst",
+        "type": "str",
+        "example": "31804966"
+      },
+      {
+        "name": "AnoMes",
+        "type": "str",
+        "example": "202512"
+      },
+      {
+        "name": "NomeRelatorio",
+        "type": "str",
+        "example": "Informações de Capital"
+      },
+      {
+        "name": "NumeroRelatorio",
+        "type": "int",
+        "example": "5"
+      },
+      {
+        "name": "Grupo",
+        "type": "str",
+        "example": ""
+      },
+      {
+        "name": "Conta",
+        "type": "str",
+        "example": "79662"
+      },
+      {
+        "name": "NomeColuna",
+        "type": "str",
+        "example": "Índice de Imobilização \n(p)"
+      },
+      {
+        "name": "DescricaoColuna",
+        "type": "str",
+        "example": "Relação entre Ativo Permanente e Patrimônio de Referência"
+      },
+      {
+        "name": "Saldo",
+        "type": "float",
+        "example": "0.0488819981004252"
+      },
+      {
+        "name": "tipo_instituicao_label",
+        "type": "str",
+        "example": "conglomerados_prudenciais"
+      }
+    ]
+  },
+  {
+    "title": "Ibge Sidra",
+    "files": "ibge_sidra.csv",
+    "source": "ibge",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-09-10"
+      },
+      {
+        "name": "serie_id",
+        "type": "str",
+        "example": "1737"
+      },
+      {
+        "name": "nome_serie",
+        "type": "str",
+        "example": "IPCA - Série histórica com número-índice, variação mensal e variações acumuladas em 3 meses, em 6 meses, no ano e em 12 meses (a partir de dezembro/1979)"
+      },
+      {
+        "name": "fonte",
+        "type": "str",
+        "example": "IBGE - Índice Nacional de Preços ao Consumidor Amplo"
+      },
+      {
+        "name": "periodo_referencia",
+        "type": "str",
+        "example": "dezembro de 1979"
+      },
+      {
+        "name": "data_modificacao",
+        "type": "date",
+        "example": "2008-07-10"
+      }
+    ]
+  },
+  {
     "title": "Wikipedia Global Indices",
     "files": "wikipedia_global_indices.csv",
     "source": "other",
@@ -2594,70 +2760,6 @@
     ]
   },
   {
-    "title": "Yahoo Acoes Internacionais",
-    "files": "yahoo_acoes_internacionais.csv",
-    "source": "misc",
-    "fields": [
-      {
-        "name": "data_captura",
-        "type": "date",
-        "example": "2026-06-28"
-      },
-      {
-        "name": "data_referencia",
-        "type": "date",
-        "example": "2026-05-29"
-      },
-      {
-        "name": "codigo_ativo",
-        "type": "str",
-        "example": "AAPL"
-      },
-      {
-        "name": "label",
-        "type": "str",
-        "example": "APPLE"
-      },
-      {
-        "name": "preco_fechamento",
-        "type": "float",
-        "example": "312.05999755859375"
-      }
-    ]
-  },
-  {
-    "title": "Yahoo Fiis Fiagros",
-    "files": "yahoo_fiis_fiagros.csv",
-    "source": "misc",
-    "fields": [
-      {
-        "name": "data_captura",
-        "type": "date",
-        "example": "2026-06-28"
-      },
-      {
-        "name": "data_referencia",
-        "type": "date",
-        "example": "2026-06-26"
-      },
-      {
-        "name": "codigo_ativo",
-        "type": "str",
-        "example": "IFIX.SA"
-      },
-      {
-        "name": "label",
-        "type": "str",
-        "example": "IFIX"
-      },
-      {
-        "name": "preco_fechamento",
-        "type": "float",
-        "example": "3806.5"
-      }
-    ]
-  },
-  {
     "title": "Registro Fundo Classe.Gz",
     "files": "registro_fundo_classe.csv.gz",
     "source": "cvm",
@@ -2670,7 +2772,7 @@
       {
         "name": "id_registro_classe",
         "type": "int",
-        "example": "34517"
+        "example": "34523"
       },
       {
         "name": "cnpj_classe",
@@ -2900,6 +3002,38 @@
     ]
   },
   {
+    "title": "Yahoo Acoes Internacionais",
+    "files": "yahoo_acoes_internacionais.csv",
+    "source": "misc",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-06-28"
+      },
+      {
+        "name": "data_referencia",
+        "type": "date",
+        "example": "2026-05-29"
+      },
+      {
+        "name": "codigo_ativo",
+        "type": "str",
+        "example": "AAPL"
+      },
+      {
+        "name": "label",
+        "type": "str",
+        "example": "APPLE"
+      },
+      {
+        "name": "preco_fechamento",
+        "type": "float",
+        "example": "312.05999755859375"
+      }
+    ]
+  },
+  {
     "title": "Debentures Mercado Secundario Precos Negociacao.Gz",
     "files": "debentures_mercado_secundario_precos_negociacao.csv.gz",
     "source": "debentures",
@@ -2974,7 +3108,7 @@
       {
         "name": "data_geracao",
         "type": "date",
-        "example": "2026-09-09"
+        "example": "2026-09-10"
       },
       {
         "name": "acao",
@@ -3195,6 +3329,38 @@
         "name": "exchange",
         "type": "str",
         "example": "B3"
+      }
+    ]
+  },
+  {
+    "title": "Yahoo Fiis Fiagros",
+    "files": "yahoo_fiis_fiagros.csv",
+    "source": "misc",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-06-28"
+      },
+      {
+        "name": "data_referencia",
+        "type": "date",
+        "example": "2026-06-26"
+      },
+      {
+        "name": "codigo_ativo",
+        "type": "str",
+        "example": "IFIX.SA"
+      },
+      {
+        "name": "label",
+        "type": "str",
+        "example": "IFIX"
+      },
+      {
+        "name": "preco_fechamento",
+        "type": "float",
+        "example": "3806.5"
       }
     ]
   },

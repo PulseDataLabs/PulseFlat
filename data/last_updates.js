@@ -5,7 +5,7 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "b3_bdi_di_over.csv": {
     "min": "2026-06-01",
-    "max": "2026-09-09"
+    "max": "2026-09-10"
   },
   "b3_carteira_teorica_agfs_iagro.csv": {
     "min": "2026-06-03",
@@ -17,7 +17,7 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "b3_carteira_teorica_bdrx.csv": {
     "min": "2026-06-03",
-    "max": "2026-09-09"
+    "max": "2026-09-10"
   },
   "b3_carteira_teorica_ibsd.csv": {
     "min": "2026-06-03",
@@ -229,6 +229,6 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "bacen_parcelas_capital_basileia.csv.gz": {
     "min": "2026-06-05",
-    "max": "2026-09-09"
+    "max": "2026-09-10"
   }
 };
