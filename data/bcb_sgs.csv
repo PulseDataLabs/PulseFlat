@@ -6113,10 +6113,11 @@ data_captura,codigo_serie,nome_serie,data_referencia,valor
 2026-09-11,11,Taxa SELIC diária (% a.d.),2026-09-08,0.051660
 2026-09-11,11,Taxa SELIC diária (% a.d.),2026-09-09,0.051660
 2026-09-11,11,Taxa SELIC diária (% a.d.),2026-09-10,0.051660
+2026-09-11,11,Taxa SELIC diária (% a.d.),2026-09-11,0.051660
 2026-09-11,4390,SELIC acumulada no mês (% a.m.),2026-06-01,1.12
 2026-09-11,4390,SELIC acumulada no mês (% a.m.),2026-07-01,1.22
 2026-09-11,4390,SELIC acumulada no mês (% a.m.),2026-08-01,1.09
-2026-09-11,4390,SELIC acumulada no mês (% a.m.),2026-09-01,0.36
+2026-09-11,4390,SELIC acumulada no mês (% a.m.),2026-09-01,0.41
 2026-09-11,432,CDI diário (% a.d.),2026-06-13,14.50
 2026-09-11,432,CDI diário (% a.d.),2026-06-14,14.50
 2026-09-11,432,CDI diário (% a.d.),2026-06-15,14.50

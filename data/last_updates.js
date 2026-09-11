@@ -197,7 +197,7 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "anbima_ima_completo.csv": {
     "min": "2026-06-01",
-    "max": "2026-09-11"
+    "max": "2026-09-10"
   },
   "anbima_550.csv": {
     "min": "2026-06-01",
