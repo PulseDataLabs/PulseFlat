@@ -13,8 +13,8 @@ window.PULSEFLAT_MARKET_LATEST = [
   },
   {
     "label": "IPCA 12m",
-    "value": "0,07%",
-    "reference_date": "2026-07-01",
+    "value": "-0,32%",
+    "reference_date": "2026-08-01",
     "type": "neutral"
   },
   {
