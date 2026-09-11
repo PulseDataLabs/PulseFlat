@@ -854,14 +854,6 @@
   },
   {
     "data_referencia": "2026-09-10",
-    "indicador": "IGP-M",
-    "fonte": "BCB",
-    "dataset_label": "BCB SGS",
-    "categoria": "Séries SGS",
-    "Valor": "5,11%"
-  },
-  {
-    "data_referencia": "2026-09-10",
     "indicador": "IGTI11.SA",
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
@@ -1207,22 +1199,6 @@
   },
   {
     "data_referencia": "2026-09-10",
-    "indicador": "PTAX USD — Compra",
-    "fonte": "BCB",
-    "dataset_label": "BCB PTAX",
-    "categoria": "Taxas de Câmbio",
-    "Valor": "5,11"
-  },
-  {
-    "data_referencia": "2026-09-10",
-    "indicador": "PTAX USD — Venda",
-    "fonte": "BCB",
-    "dataset_label": "BCB PTAX",
-    "categoria": "Taxas de Câmbio",
-    "Valor": "5,11"
-  },
-  {
-    "data_referencia": "2026-09-10",
     "indicador": "PVBI11.SA",
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo FIIs e Fiagros",
@@ -1396,14 +1372,6 @@
     "dataset_label": "B3 Indicadores Financeiros",
     "categoria": "Indicadores B3",
     "Valor": "13,90"
-  },
-  {
-    "data_referencia": "2026-09-10",
-    "indicador": "TAXA SOFR",
-    "fonte": "B3",
-    "dataset_label": "B3 Indicadores Financeiros",
-    "categoria": "Indicadores B3",
-    "Valor": "3,64"
   },
   {
     "data_referencia": "2026-09-10",
@@ -1715,7 +1683,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "0,2072"
+    "Valor": "0,2095"
   },
   {
     "data_referencia": "2026-09-11",
@@ -1739,7 +1707,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "7,53"
+    "Valor": "7,57"
   },
   {
     "data_referencia": "2026-09-11",
@@ -1747,7 +1715,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "720,26"
+    "Valor": "730,32"
   },
   {
     "data_referencia": "2026-09-11",
@@ -1763,7 +1731,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "77.684"
+    "Valor": "77.821"
   },
   {
     "data_referencia": "2026-09-11",
@@ -1795,7 +1763,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "0,005374"
+    "Valor": "0,005363"
   },
   {
     "data_referencia": "2026-09-11",
@@ -1803,7 +1771,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "0,7572"
+    "Valor": "0,7603"
   },
   {
     "data_referencia": "2026-09-11",
@@ -1811,7 +1779,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "0,001652"
+    "Valor": "0,001658"
   },
   {
     "data_referencia": "2026-09-11",
@@ -1819,7 +1787,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "0,0848"
+    "Valor": "0,0856"
   },
   {
     "data_referencia": "2026-09-11",
@@ -1827,7 +1795,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "1,09"
+    "Valor": "1,07"
   },
   {
     "data_referencia": "2026-09-11",
@@ -1835,7 +1803,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "2.501"
+    "Valor": "2.572"
   },
   {
     "data_referencia": "2026-09-11",
@@ -1899,7 +1867,15 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "2,79"
+    "Valor": "2,82"
+  },
+  {
+    "data_referencia": "2026-09-11",
+    "indicador": "IGP-M",
+    "fonte": "BCB",
+    "dataset_label": "BCB SGS",
+    "categoria": "Séries SGS",
+    "Valor": "5,09%"
   },
   {
     "data_referencia": "2026-09-11",
@@ -1915,7 +1891,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "11,67"
+    "Valor": "11,77"
   },
   {
     "data_referencia": "2026-09-11",
@@ -1923,7 +1899,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "53,29"
+    "Valor": "53,90"
   },
   {
     "data_referencia": "2026-09-11",
@@ -1939,7 +1915,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "2,61"
+    "Valor": "2,59"
   },
   {
     "data_referencia": "2026-09-11",
@@ -1955,7 +1931,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "0,0958"
+    "Valor": "0,0980"
   },
   {
     "data_referencia": "2026-09-11",
@@ -1972,6 +1948,22 @@
     "dataset_label": "Yahoo Commodities",
     "categoria": "Commodities Globais",
     "Valor": "1.779"
+  },
+  {
+    "data_referencia": "2026-09-11",
+    "indicador": "PTAX USD — Compra",
+    "fonte": "BCB",
+    "dataset_label": "BCB PTAX",
+    "categoria": "Taxas de Câmbio",
+    "Valor": "5,09"
+  },
+  {
+    "data_referencia": "2026-09-11",
+    "indicador": "PTAX USD — Venda",
+    "fonte": "BCB",
+    "dataset_label": "BCB PTAX",
+    "categoria": "Taxas de Câmbio",
+    "Valor": "5,09"
   },
   {
     "data_referencia": "2026-09-11",
@@ -1995,7 +1987,15 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "101,47"
+    "Valor": "102,05"
+  },
+  {
+    "data_referencia": "2026-09-11",
+    "indicador": "TAXA SOFR",
+    "fonte": "B3",
+    "dataset_label": "B3 Indicadores Financeiros",
+    "categoria": "Indicadores B3",
+    "Valor": "3,62"
   },
   {
     "data_referencia": "2026-09-11",
@@ -2003,7 +2003,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "0,3362"
+    "Valor": "0,3358"
   },
   {
     "data_referencia": "2026-09-11",
@@ -2059,7 +2059,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "0,1782"
+    "Valor": "0,1816"
   },
   {
     "data_referencia": "2026-09-11",
@@ -2067,7 +2067,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "1,36"
+    "Valor": "1,37"
   },
   {
     "data_referencia": "2026-09-11",
@@ -2115,7 +2115,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Índices Globais",
     "categoria": "Índices de Ações Globais",
-    "Valor": "8.741"
+    "Valor": "8.819"
   },
   {
     "data_referencia": "2026-09-11",
@@ -2123,7 +2123,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Índices Globais",
     "categoria": "Índices de Ações Globais",
-    "Valor": "24.806"
+    "Valor": "24.954"
   },
   {
     "data_referencia": "2026-09-11",
@@ -2139,7 +2139,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Índices Globais",
     "categoria": "Índices de Ações Globais",
-    "Valor": "1.687"
+    "Valor": "1.706"
   },
   {
     "data_referencia": "2026-09-11",
@@ -2147,7 +2147,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Índices Globais",
     "categoria": "Índices de Ações Globais",
-    "Valor": "6.910"
+    "Valor": "7.034"
   },
   {
     "data_referencia": "2026-09-11",
@@ -2155,7 +2155,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Índices Globais",
     "categoria": "Índices de Ações Globais",
-    "Valor": "64.011"
+    "Valor": "65.271"
   },
   {
     "data_referencia": "2026-09-11",
@@ -2163,7 +2163,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Índices Globais",
     "categoria": "Índices de Ações Globais",
-    "Valor": "5.696"
+    "Valor": "5.690"
   },
   {
     "data_referencia": "2026-09-11",
@@ -2171,6 +2171,6 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Índices Globais",
     "categoria": "Índices de Ações Globais",
-    "Valor": "46.185"
+    "Valor": "46.940"
   }
 ]
