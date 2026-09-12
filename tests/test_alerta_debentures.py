@@ -108,8 +108,18 @@ class MockDatetime:
 class MockDatetimeEarly:
     @classmethod
     def now(cls, tz=None):
-        # Congela em 16/07/2026 às 07:30:00 (antes das 08h00)
+        # Congela em 16/07/2026 às 07:30:00 (antes das 08h37)
         dt = real_datetime(2026, 7, 16, 7, 30, 0)
+        if tz:
+            return tz.localize(dt) if hasattr(tz, "localize") else dt.replace(tzinfo=tz)
+        return dt
+
+
+class MockDatetimeBefore837:
+    @classmethod
+    def now(cls, tz=None):
+        # Congela em 16/07/2026 às 08:22:00 (entre 08h00 e 08h37)
+        dt = real_datetime(2026, 7, 16, 8, 22, 0)
         if tz:
             return tz.localize(dt) if hasattr(tz, "localize") else dt.replace(tzinfo=tz)
         return dt
@@ -198,7 +208,7 @@ def test_main_not_available_before_8am(
 def test_main_not_available_after_8am(
     mock_pa, mock_email, mock_tg, tmp_path, monkeypatch, requests_mock
 ):
-    """A partir das 08h00, se dados estiverem indisponíveis, envia e-mail de aviso de indisponibilidade e não salva estado de sucesso."""
+    """A partir das 08h37, se dados estiverem indisponíveis, envia e-mail de aviso de indisponibilidade uma única vez ao dia."""
     temp_state = tmp_path / "debentures_alert_state.json"
     monkeypatch.setattr(ad, "STATE_FILE_PATH", temp_state)
     monkeypatch.setattr(ad, "datetime", MockDatetime)
@@ -229,10 +239,22 @@ def test_main_not_available_after_8am(
     args, kwargs = mock_email.call_args
     # args: server, port, user, password, from_email, to_email, subject, html_content
     subject = args[6]
-    assert "Ainda Não Disponível" in subject
+    assert subject == "Debêntures - Arquivo D-1 Ainda Não Disponível"
 
-    # Garante que o arquivo de estado NÃO foi gravado como sucesso
-    assert not temp_state.exists()
+    # Garante que o estado foi gravado com o aviso de indisponibilidade, mas NÃO como sucesso (ultima_notificacao vazia)
+    assert temp_state.exists()
+    with temp_state.open("r", encoding="utf-8") as f:
+        saved_state = json.load(f)
+    assert "ultimo_aviso_indisponivel" in saved_state
+    assert saved_state["ultimo_aviso_indisponivel"].startswith("2026-07-16")
+    assert not saved_state.get("ultima_notificacao")
+
+    # Execução subsequente no mesmo dia: não deve reenviar o e-mail de indisponibilidade (trava de 1x ao dia)
+    mock_email.reset_mock()
+    with pytest.raises(SystemExit) as exc_info_2:
+        ad.main()
+    assert exc_info_2.value.code == 0
+    mock_email.assert_not_called()
 
 
 @patch("scripts.alerta_debentures.send_telegram")
@@ -342,3 +364,37 @@ def test_verificar_dados_real_queries():
         assert ad.verificar_dados(resp_sunday.text) is False
     except Exception as e:
         pytest.fail(f"Falha na consulta real com domingo sem dados: {e}")
+
+@patch("scripts.alerta_debentures.send_telegram")
+@patch("scripts.alerta_debentures.send_email")
+@patch("scripts.alerta_debentures.send_power_automate")
+def test_main_not_available_between_8am_and_837am(
+    mock_pa, mock_email, mock_tg, tmp_path, monkeypatch, requests_mock
+):
+    """Às 08h22 (antes das 08h37), se dados estiverem indisponíveis, não deve enviar e-mail."""
+    temp_state = tmp_path / "debentures_alert_state.json"
+    monkeypatch.setattr(ad, "STATE_FILE_PATH", temp_state)
+    monkeypatch.setattr(ad, "datetime", MockDatetimeBefore837)
+
+    monkeypatch.setenv("SMTP_SERVER", "smtp.fake.com")
+    monkeypatch.setenv("SMTP_USER", "user@fake.com")
+    monkeypatch.setenv("SMTP_PASSWORD", "password123")
+
+    requests_mock.get(
+        "https://www.debentures.com.br/exploreosnd/consultaadados/mercadosecundario/precosdenegociacao_f.asp",
+        status_code=200,
+    )
+    requests_mock.post(
+        "https://www.debentures.com.br/exploreosnd/consultaadados/mercadosecundario/precosdenegociacao_r.asp",
+        text=MOCK_HTML_EMPTY,
+        status_code=200,
+    )
+
+    with pytest.raises(SystemExit) as exc_info:
+        ad.main()
+
+    assert exc_info.value.code == 0
+    mock_tg.assert_not_called()
+    mock_email.assert_not_called()
+    mock_pa.assert_not_called()
+    assert not temp_state.exists()

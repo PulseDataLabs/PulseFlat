@@ -233,78 +233,95 @@ def main():
     if not tem_dados:
         agora = datetime.now(FUSO)
         hora_atual = agora.hour
+        minuto_atual = agora.minute
         hora_str = agora.strftime("%H:%M:%S")
 
-        # A partir das 08h00 (BRT), se os dados ainda não estiverem disponíveis, envia e-mail informando indisponibilidade
-        if hora_atual >= 8:
-            log.info(
-                f"Horário atual ({hora_str} BRT) >= 08h00 e dados ainda indisponíveis. Disparando aviso por e-mail..."
-            )
-            smtp_server = os.getenv("SMTP_SERVER")
-            smtp_port = os.getenv("SMTP_PORT", "587")
-            smtp_user = os.getenv("SMTP_USER")
-            smtp_pass = os.getenv("SMTP_PASSWORD")
-            smtp_from = os.getenv("SMTP_FROM", "royopa@gmail.com")
-            smtp_to = os.getenv("SMTP_TO", "gerat05@caixa.gov.br")
-
-            if smtp_server and smtp_user and smtp_pass:
-                email_subject = os.getenv(
-                    "SMTP_SUBJECT_INDISPONIVEL",
-                    "Debêntures - Arquivo D-1 Ainda Não Disponível ({data})",
-                )
-                email_subject = email_subject.replace("{data}", ref_date_str).replace(
-                    "{dt_ini}", ref_date_str
-                )
-
-                ref_date_param = urllib.parse.quote(ref_date_str)
-                page_url = (
-                    f"https://www.debentures.com.br/exploreosnd/consultaadados/mercadosecundario/precosdenegociacao_r.asp?"
-                    f"op_exc=False&emissor=&ativo=&ISIN=&dt_ini={ref_date_param}&dt_fim={ref_date_param}&Submit32.x=38&Submit32.y=16"
-                )
-
-                email_html = f"""
-                <html>
-                <body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333333; margin: 0; padding: 20px;">
-                    <div style="max-width: 600px; margin: 0 auto; border: 1px solid #e0e0e0; border-radius: 8px; padding: 24px; background-color: #ffffff; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
-                        <h2 style="color: #d83b01; margin-top: 0;">⏳ Debêntures — Arquivo Ainda Não Disponível</h2>
-                        <p>A checagem automática foi realizada, porém os preços de negociação de debêntures da ANBIMA para a data de referência ainda não foram publicados no portal.</p>
-
-                        <div style="background-color: #fff4ce; border-left: 4px solid #ffb900; padding: 12px 16px; border-radius: 4px; margin: 20px 0;">
-                            <p style="margin: 0; font-size: 14px; color: #333333;"><b>Data de Referência (D-1):</b> {ref_date_str}</p>
-                            <p style="margin: 4px 0 0 0; font-size: 13px; color: #666666;"><b>Horário da Checagem:</b> {hora_str} (Horário de Brasília)</p>
-                        </div>
-
-                        <p style="font-size: 14px; color: #555555;">O monitoramento continuará ativo a cada 15 minutos. Um novo e-mail de confirmação será enviado automaticamente assim que o arquivo for liberado.</p>
-
-                        <div style="margin: 24px 0; text-align: left;">
-                            <a href="{page_url}" style="background-color: #f3f2f1; color: #333333; text-decoration: none; padding: 10px 20px; border-radius: 4px; font-weight: 600; font-size: 13px; border: 1px solid #d1d1d1; display: inline-block;">
-                                Consultar Portal ANBIMA ↗
-                            </a>
-                        </div>
-
-                        <hr style="border: none; border-top: 1px solid #eaeaea; margin: 24px 0;" />
-                        <p style="font-size: 11px; color: #888888; margin: 0;">Este é um alerta automático enviado pelo pipeline de dados PulseFlat.</p>
-                    </div>
-                </body>
-                </html>
-                """
-                send_email(
-                    smtp_server,
-                    smtp_port,
-                    smtp_user,
-                    smtp_pass,
-                    smtp_from,
-                    smtp_to,
-                    email_subject,
-                    email_html,
+        # A partir das 08h37 (BRT), se os dados ainda não estiverem disponíveis, envia e-mail informando indisponibilidade (no máximo 1x ao dia)
+        if hora_atual > 8 or (hora_atual == 8 and minuto_atual >= 37):
+            if state.get("ultimo_aviso_indisponivel", "").startswith(hoje_iso):
+                log.info(
+                    f"Aviso de indisponibilidade já foi enviado hoje ({hoje_iso}) às {state.get('ultimo_aviso_indisponivel')}. "
+                    f"Aguardando liberação dos dados na ANBIMA."
                 )
             else:
-                log.warning(
-                    "Credenciais de SMTP incompletas. Notificação de indisponibilidade não enviada."
+                log.info(
+                    f"Horário atual ({hora_str} BRT) >= 08h37 e dados ainda indisponíveis. Disparando aviso por e-mail..."
                 )
+                smtp_server = os.getenv("SMTP_SERVER")
+                smtp_port = os.getenv("SMTP_PORT", "587")
+                smtp_user = os.getenv("SMTP_USER")
+                smtp_pass = os.getenv("SMTP_PASSWORD")
+                smtp_from = os.getenv("SMTP_FROM", "royopa@gmail.com")
+                smtp_to = os.getenv("SMTP_TO", "gerat05@caixa.gov.br")
+
+                if smtp_server and smtp_user and smtp_pass:
+                    email_subject = os.getenv(
+                        "SMTP_SUBJECT_INDISPONIVEL",
+                        "Debêntures - Arquivo D-1 Ainda Não Disponível",
+                    )
+                    email_subject = email_subject.replace("{data}", ref_date_str).replace(
+                        "{dt_ini}", ref_date_str
+                    )
+
+                    ref_date_param = urllib.parse.quote(ref_date_str)
+                    page_url = (
+                        f"https://www.debentures.com.br/exploreosnd/consultaadados/mercadosecundario/precosdenegociacao_r.asp?"
+                        f"op_exc=False&emissor=&ativo=&ISIN=&dt_ini={ref_date_param}&dt_fim={ref_date_param}&Submit32.x=38&Submit32.y=16"
+                    )
+
+                    email_html = f"""
+                    <html>
+                    <body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333333; margin: 0; padding: 20px;">
+                        <div style="max-width: 600px; margin: 0 auto; border: 1px solid #e0e0e0; border-radius: 8px; padding: 24px; background-color: #ffffff; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+                            <h2 style="color: #d83b01; margin-top: 0;">⏳ Debêntures — Arquivo Ainda Não Disponível</h2>
+                            <p>A checagem automática foi realizada, porém os preços de negociação de debêntures da ANBIMA para a data de referência ainda não foram publicados no portal.</p>
+
+                            <div style="background-color: #fff4ce; border-left: 4px solid #ffb900; padding: 12px 16px; border-radius: 4px; margin: 20px 0;">
+                                <p style="margin: 0; font-size: 14px; color: #333333;"><b>Data de Referência (D-1):</b> {ref_date_str}</p>
+                                <p style="margin: 4px 0 0 0; font-size: 13px; color: #666666;"><b>Horário da Checagem:</b> {hora_str} (Horário de Brasília)</p>
+                            </div>
+
+                            <p style="font-size: 14px; color: #555555;">O monitoramento continuará ativo a cada 15 minutos. Um novo e-mail de confirmação será enviado automaticamente assim que o arquivo for liberado.</p>
+
+                            <div style="margin: 24px 0; text-align: left;">
+                                <a href="{page_url}" style="background-color: #f3f2f1; color: #333333; text-decoration: none; padding: 10px 20px; border-radius: 4px; font-weight: 600; font-size: 13px; border: 1px solid #d1d1d1; display: inline-block;">
+                                    Consultar Portal ANBIMA ↗
+                                </a>
+                            </div>
+
+                            <hr style="border: none; border-top: 1px solid #eaeaea; margin: 24px 0;" />
+                            <p style="font-size: 11px; color: #888888; margin: 0;">Este é um alerta automático enviado pelo pipeline de dados PulseFlat.</p>
+                        </div>
+                    </body>
+                    </html>
+                    """
+                    send_email(
+                        smtp_server,
+                        smtp_port,
+                        smtp_user,
+                        smtp_pass,
+                        smtp_from,
+                        smtp_to,
+                        email_subject,
+                        email_html,
+                    )
+
+                    # Grava no estado para evitar múltiplos envios de aviso de indisponibilidade hoje
+                    state["ultimo_aviso_indisponivel"] = agora.strftime("%Y-%m-%d %H:%M:%S")
+                    try:
+                        state_path.parent.mkdir(parents=True, exist_ok=True)
+                        with state_path.open("w", encoding="utf-8") as f:
+                            json.dump(state, f, indent=2, ensure_ascii=False)
+                        log.info(f"Estado atualizado com envio do aviso de indisponibilidade para {hoje_iso}.")
+                    except Exception as e:
+                        log.error(f"Erro ao salvar arquivo de estado: {e}")
+                else:
+                    log.warning(
+                        "Credenciais de SMTP incompletas. Notificação de indisponibilidade não enviada."
+                    )
         else:
             log.info(
-                f"Horário atual ({hora_str} BRT) < 08h00. Dados ainda indisponíveis na ANBIMA. Encerrando e aguardando próxima checagem."
+                f"Horário atual ({hora_str} BRT) < 08h37. Dados ainda indisponíveis na ANBIMA. Encerrando e aguardando próxima checagem."
             )
         sys.exit(0)
 

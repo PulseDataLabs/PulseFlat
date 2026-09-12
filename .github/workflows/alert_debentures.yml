@@ -4,8 +4,8 @@ on:
   schedule:
     # 5h00 às 20h00 Horário de Brasília (BRT = UTC-3) de segunda a sexta-feira.
     # Em UTC, isso equivale a 8h00 às 23h00.
-    # Roda a cada 15 minutos.
-    - cron: '*/15 8-23 * * 1-5'
+    # Roda a cada ~15 minutos em minutos quebrados (07, 22, 37, 52) para evitar descarte/atraso no GitHub Actions.
+    - cron: '7,22,37,52 8-23 * * 1-5'
   
   # Permite execução manual pelo painel do GitHub
   workflow_dispatch:

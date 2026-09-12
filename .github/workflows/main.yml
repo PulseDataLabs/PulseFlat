@@ -4,17 +4,17 @@ on:
   schedule:
     # Horários convertidos para UTC (Horário de Brasília + 3 horas)
     
-    # 06h00, 08h00 e 09h00 de Segunda a Sexta
-    - cron: '0 9,11,12 * * 1-5'
+    # 06h03, 08h03 e 09h03 de Segunda a Sexta (UTC: 09h03, 11h03 e 12h03)
+    - cron: '3 9,11,12 * * 1-5'
     
-    # 09h30, 10h30 e 11h30 de Segunda a Sexta
-    - cron: '30 12,13,14 * * 1-5'
+    # 09h33, 10h33 e 11h33 de Segunda a Sexta (UTC: 12h33, 13h33 e 14h33)
+    - cron: '33 12,13,14 * * 1-5'
     
-    # 18h00 de Segunda a Sexta
-    - cron: '0 21 * * 1-5'
+    # 18h03 de Segunda a Sexta (UTC: 21h03)
+    - cron: '3 21 * * 1-5'
     
-    # 21h00 e 23h00 de Segunda a Sexta (No UTC vira 00h e 02h de Terça a Sábado)
-    - cron: '0 0,2 * * 2-6'
+    # 21h03 e 23h03 de Segunda a Sexta (No UTC vira 00h03 e 02h03 de Terça a Sábado)
+    - cron: '3 0,2 * * 2-6'
   
   # Permite execução manual pelo painel do GitHub
   workflow_dispatch:
