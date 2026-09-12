@@ -48,18 +48,39 @@ DATA_DIR = REPO_ROOT / "data"
 
 print(f"Varrendo diretório de dados: {DATA_DIR}")
 
-# Encontra todos os arquivos parquet e csv dentro de data/
-parquet_files = list(DATA_DIR.rglob("*.parquet"))
+# Encontra todos os arquivos parquet, csv e csv.gz dentro de data/
+data_files = []
+for ext in ("*.parquet", "*.csv.gz", "*.csv"):
+    data_files.extend(list(DATA_DIR.glob(ext)))
+
+# Remove duplicatas lógicas (preferindo parquet se existir com mesmo nome base)
+data_files = sorted(data_files, key=lambda f: f.name)
 
 total_converted = 0
 
-# Processa Parquets
-for pfile in parquet_files:
-    table_name = pfile.stem.lower().replace("-", "_").replace(" ", "_")
+for dfile in data_files:
+    # Remove extensões (.csv.gz, .csv, .parquet) para formar o nome da tabela
+    base_name = dfile.name
+    for ext in (".csv.gz", ".csv", ".parquet"):
+        if base_name.endswith(ext):
+            base_name = base_name[: -len(ext)]
+            break
+
+    table_name = base_name.lower().replace("-", "_").replace(" ", "_")
     target_table = f"{catalog}.{database}.{table_name}"
 
     try:
-        df = spark.read.parquet(str(pfile))  # noqa: F821
+        if dfile.name.endswith(".parquet"):
+            df = spark.read.parquet(str(dfile))  # noqa: F821
+        else:
+            # Lê CSV ou CSV.GZ com Spark nativo inferindo schema e tratando aspas/vírgulas
+            df = (
+                spark.read.format("csv")  # noqa: F821
+                .option("header", "true")
+                .option("inferSchema", "true")
+                .load(str(dfile))
+            )
+
         # Adiciona metadados de ingestão
         df = df.withColumn("_ingested_at", F.current_timestamp())
 
@@ -69,6 +90,6 @@ for pfile in parquet_files:
         print(f"✓ Tabela Delta atualizada: {target_table} ({df.count()} registros)")
         total_converted += 1
     except Exception as e:
-        print(f"✗ Erro ao carregar {pfile.name} para {target_table}: {e}")
+        print(f"✗ Erro ao carregar {dfile.name} para {target_table}: {e}")
 
 print(f"\nConcluído! {total_converted} tabelas Delta sincronizadas.")

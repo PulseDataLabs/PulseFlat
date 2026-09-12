@@ -31,7 +31,7 @@ except NameError:
 dbutils.widgets.dropdown(
     "group",
     "all",
-    ["all", "anbima", "bcb", "b3", "cvm", "ibge", "ratings", "misc"],
+    ["all", "anbima", "bcb", "b3", "cvm", "fred", "ibge", "global", "ratings", "misc"],
     "Grupo de Dados",
 )
 dbutils.widgets.text("scraper", "", "Scraper Específico (opcional)")
