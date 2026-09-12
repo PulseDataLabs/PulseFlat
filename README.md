@@ -46,6 +46,7 @@ A **PulseDataLabs** nasceu da missão de democratizar o acesso a dados financeir
 *   **Suporte Oficial à ANBIMA Developers (ANBIMA Data)**: Cliente HTTP nativo com autenticação OAuth 2.0 (Client Credentials), auto-renovação de tokens em cache, resiliência contra rate-limiting (429) e classe base `BaseAnbimaDataScraper` pronta para novos feeds.
 *   **Suporte Oficial à Eulerpool Financial Data API**: Cliente HTTP dedicado para os 375+ endpoints globais de ações, ETFs, opções, commodities e finanças da Eulerpool (`api.eulerpool.com`), com autenticação Bearer, retries e classe base `BaseEulerpoolScraper`.
 *   **Suporte Oficial à BrasilAPI**: Cliente HTTP nativo para dados abertos brasileiros (taxas Selic/CDI/IPCA, bancos, corretoras CVM e feriados nacionais), com retries e classe base `BaseBrasilApiScraper`.
+*   **Suporte a BCB Olinda, Tesouro Transparente e FRED**: Clientes HTTP e classes base dedicadas para expectativas Focus (OData do Banco Central), títulos e leilões do Tesouro Direto (CKAN) e benchmarks globais do Federal Reserve (FRED).
 *   **Descoberta Dinâmica (Reflection)**: O orquestrador detecta scrapers automaticamente inspecionando o diretório `scrapers/`, eliminando a necessidade de registros estáticos.
 *   **Sanitização e Blindagem Defensiva**: Padronização de datas (`DD/MM/YYYY` ou `DD/MM/YY` para ISO `YYYY-MM-DD`), conversão de números decimais com vírgula para ponto e fallbacks automáticos para dados corrompidos.
 *   **Concorrência Multicondicional**: Paralelização segura de scrapers independentes e ordenação controlada para scrapers que dependem de resultados prévios.
@@ -167,15 +168,27 @@ PulseFlat/
 │   │   ├── eulerpool_client.py      # Cliente HTTP Bearer para Eulerpool Financial Data
 │   │   ├── eulerpool_base.py        # Classe BaseEulerpoolScraper
 │   │   ├── brasilapi_client.py      # Cliente HTTP para dados abertos da BrasilAPI
-│   │   └── brasilapi_base.py        # Classe BaseBrasilApiScraper
+│   │   ├── brasilapi_base.py        # Classe BaseBrasilApiScraper
+│   │   ├── bcb_olinda_client.py     # Cliente HTTP OData para BCB Olinda (Focus/Crédito)
+│   │   ├── bcb_olinda_base.py       # Classe BaseBcbOlindaScraper
+│   │   ├── tesouro_transparente_client.py # Cliente HTTP CKAN para o Tesouro Nacional
+│   │   ├── tesouro_transparente_base.py   # Classe BaseTesouroTransparenteScraper
+│   │   ├── fred_client.py           # Cliente HTTP para o Federal Reserve (FRED)
+│   │   └── fred_base.py             # Classe BaseFredScraper
 │   ├── anbima_data_template.py      # Template modelo para novos scrapers ANBIMA Data
 │   ├── eulerpool_template.py        # Template modelo para novos scrapers Eulerpool
 │   ├── brasilapi_template.py        # Template modelo para novos scrapers BrasilAPI
+│   ├── bcb_olinda_template.py       # Template modelo para novos scrapers BCB Olinda
+│   ├── tesouro_transparente_template.py # Template modelo para novos scrapers Tesouro
+│   ├── fred_template.py             # Template modelo para novos scrapers FRED
 │   └── *.py                         # Scripts específicos de coleta por dataset
 ├── scripts/                         # Pós-processamento, catálogo e alertas
 │   ├── test_anbima_connection.py    # Teste e diagnóstico de credenciais ANBIMA Data
 │   ├── test_eulerpool_connection.py # Teste e diagnóstico de credenciais Eulerpool API
 │   ├── test_brasilapi_connection.py # Teste e diagnóstico de conectividade BrasilAPI
+│   ├── test_bcb_olinda_connection.py # Teste e diagnóstico OData do BCB Olinda
+│   ├── test_tesouro_transparente_connection.py # Teste e diagnóstico CKAN do Tesouro
+│   ├── test_fred_connection.py      # Teste e diagnóstico de autenticação do FRED
 │   ├── export_to_parquet.py         # Conversão colunar de CSV/GZ para Parquet
 │   ├── alerta_debentures.py         # Monitoramento e disparo de alertas
 │   ├── sanitizar_debentures.py      # Sanitização e limpeza de debêntures
@@ -407,6 +420,54 @@ O `BaseBrasilApiScraper` cuida da injeção de headers adequados, tratamento de 
 
 ---
 
+### 🏛️ Integração com BCB Olinda (OData)
+
+O PulseFlat possui suporte especializado para a API OData do Banco Central (`https://olinda.bcb.gov.br/olinda/servico`), permitindo coletar com facilidade expectativas do Boletim Focus, taxas de juros de operações de crédito e tarifas bancárias.
+
+#### 1. Diagnóstico de Conexão
+```bash
+python scripts/test_bcb_olinda_connection.py
+```
+
+#### 2. Criando um Scraper OData
+Utilize o template `scrapers/bcb_olinda_template.py` e herde de `BaseBcbOlindaScraper`. A classe base injeta `$format=json`, cuida da paginação OData e desempacota o array `value` automaticamente.
+
+---
+
+### 🪙 Integração com Tesouro Transparente (CKAN)
+
+Acesso à API aberta CKAN do Tesouro Nacional (`https://www.tesourotransparente.gov.br/ckan/api/3`) para preços históricos do Tesouro Direto, dados da Dívida Pública Federal (DPF) e leilões soberanos.
+
+#### 1. Diagnóstico de Conexão
+```bash
+python scripts/test_tesouro_transparente_connection.py
+```
+
+#### 2. Criando um Scraper do Tesouro
+Utilize o template `scrapers/tesouro_transparente_template.py` e herde de `BaseTesouroTransparenteScraper`.
+
+---
+
+### 🦅 Integração com FRED (Federal Reserve Economic Data)
+
+Acesso a mais de 800.000 séries macroeconômicas globais do Federal Reserve Bank of St. Louis (`https://api.stlouisfed.org/fred`), incluindo US 10Y/2Y Treasuries, Fed Funds e DXY.
+
+#### 1. Configuração da API Key
+Gere sua chave gratuita em [fred.stlouisfed.org](https://fred.stlouisfed.org/docs/api/api_key.html) e adicione ao `.env` (ou GitHub Secrets):
+```env
+FRED_API_KEY=sua_chave_fred_aqui
+```
+
+#### 2. Diagnóstico de Conexão
+```bash
+python scripts/test_fred_connection.py
+```
+
+#### 3. Criando um Scraper do FRED
+Utilize o template `scrapers/fred_template.py` e herde de `BaseFredScraper`, definindo apenas `series_id` (ex: `'DGS10'` para o juro do título de 10 anos americano).
+
+---
+
 ## 📊 Fontes e Datasets
 
 | Grupo | Fonte Primária | Exemplos de Dados Disponibilizados | Frequência |
@@ -416,6 +477,9 @@ O `BaseBrasilApiScraper` cuida da injeção de headers adequados, tratamento de 
 | **CVM** | [Portal Brasileiro de Dados Abertos](https://dados.cvm.gov.br) | Cadastro geral de companhias abertas, informes diários e dados de cotas/classes de fundos. | Diária |
 | **B3** | [B3 Market Data](https://www.b3.com.br) | FIIs/ETFs listados, composição de carteiras teóricas (IBOV, SMLL, ISEE, BDRX, IFNC), taxas DI Over, dados cadastrais e financeiros de companhias, limites de garantias. | Diária / Snapshot |
 | **IBGE** | [IBGE SIDRA API](https://sidra.ibge.gov.br) | Índices oficiais de inflação (IPCA, IPCA-15, INPC). | Mensal |
+| **BCB Olinda** | [BCB Olinda](https://olinda.bcb.gov.br/olinda/servico) | Expectativas de mercado (Boletim Focus diário), taxas de juros de operações de crédito e tarifas bancárias por instituição. | Diária / Semanal |
+| **Tesouro Transparente** | [Tesouro Transparente](https://www.tesourotransparente.gov.br) | Preços e taxas históricas do Tesouro Direto, estoque e custo da Dívida Pública Federal (DPF) e leilões soberanos. | Diária / Mensal |
+| **FRED** | [St. Louis Fed (FRED)](https://fred.stlouisfed.org) | US 10Y e 2Y Treasuries, Fed Funds Rate, inflação americana (CPI/PCE), Índice Dólar (DXY) e liquidez global. | Diária / Mensal |
 | **BrasilAPI** | [BrasilAPI](https://brasilapi.com.br/docs) | Taxas de juros oficiais (Selic, CDI, IPCA), códigos de compensação bancária e ISPB, corretoras CVM e feriados bancários nacionais. | Diária / Sob demanda |
 | **Eulerpool** | [Eulerpool Financial Data](https://eulerpool.com/developers) | Ações globais (EUA, Europa, Ásia), ETFs, opções, commodities, dividendos, estimativas de analistas e finanças globais. | Diária / Realtime |
 | **Misc** | [Yahoo Finance](https://finance.yahoo.com) / [Wikipedia](https://www.wikipedia.org) / [ONU](https://unglobalcompact.org) | Ações brasileiras e globais, ETFs, moedas, criptoativos, commodities e Pacto Global da ONU. | Diária |

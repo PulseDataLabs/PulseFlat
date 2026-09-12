@@ -14,6 +14,13 @@ from .anbima_data_client import (
     AnbimaRateLimitError,
 )
 from .base import BaseScraper
+from .bcb_olinda_base import BaseBcbOlindaScraper
+from .bcb_olinda_client import (
+    BcbOlindaApiError,
+    BcbOlindaClient,
+    BcbOlindaError,
+    BcbOlindaRateLimitError,
+)
 from .brasilapi_base import BaseBrasilApiScraper
 from .brasilapi_client import (
     BrasilApiClient,
@@ -30,6 +37,22 @@ from .eulerpool_client import (
     EulerpoolError,
     EulerpoolMissingApiKeyError,
     EulerpoolRateLimitError,
+)
+from .fred_base import BaseFredScraper
+from .fred_client import (
+    FredApiError,
+    FredAuthError,
+    FredClient,
+    FredError,
+    FredMissingApiKeyError,
+    FredRateLimitError,
+)
+from .tesouro_transparente_base import BaseTesouroTransparenteScraper
+from .tesouro_transparente_client import (
+    TesouroTransparenteApiError,
+    TesouroTransparenteClient,
+    TesouroTransparenteError,
+    TesouroTransparenteRateLimitError,
 )
 
 __all__ = [
@@ -54,4 +77,21 @@ __all__ = [
     "BrasilApiNotFoundError",
     "BrasilApiRateLimitError",
     "BrasilApiHttpError",
+    "BcbOlindaClient",
+    "BaseBcbOlindaScraper",
+    "BcbOlindaError",
+    "BcbOlindaRateLimitError",
+    "BcbOlindaApiError",
+    "TesouroTransparenteClient",
+    "BaseTesouroTransparenteScraper",
+    "TesouroTransparenteError",
+    "TesouroTransparenteRateLimitError",
+    "TesouroTransparenteApiError",
+    "FredClient",
+    "BaseFredScraper",
+    "FredError",
+    "FredMissingApiKeyError",
+    "FredAuthError",
+    "FredRateLimitError",
+    "FredApiError",
 ]

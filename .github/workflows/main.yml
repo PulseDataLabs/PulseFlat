@@ -61,6 +61,7 @@ jobs:
         ANBIMA_CLIENT_ID: ${{ secrets.ANBIMA_CLIENT_ID || vars.ANBIMA_CLIENT_ID }}
         ANBIMA_CLIENT_SECRET: ${{ secrets.ANBIMA_CLIENT_SECRET || vars.ANBIMA_CLIENT_SECRET }}
         EULERPOOL_API_KEY: ${{ secrets.EULERPOOL_API_KEY || vars.EULERPOOL_API_KEY }}
+        FRED_API_KEY: ${{ secrets.FRED_API_KEY || vars.FRED_API_KEY }}
       # O "|| true" força o terminal a entender que a execução terminou com sucesso mesmo se o Python falhar
       run: |
         if [ -n "$ORACLE_DB_WALLET_BASE64" ]; then
