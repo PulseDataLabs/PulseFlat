@@ -112,8 +112,8 @@
     "max": "2026-09-12"
   },
   "b3_isin_emissores.csv": {
-    "min": "2026-09-12",
-    "max": "2026-09-12"
+    "min": "2026-08-21",
+    "max": "2026-08-21"
   },
   "b3_titulos_negociaveis.csv.gz": {
     "min": "2026-09-12",
@@ -232,47 +232,127 @@
     "max": "2026-09-11"
   },
   "debentures_mercado_secundario_precos_negociacao_api.csv.gz": {
-    "min": "2020-01-02",
-    "max": "2026-09-11"
+    "min": "2026-08-01",
+    "max": "2026-09-12"
   },
   "debentures_emissoes_caracteristicas_api.csv": {
-    "min": "2026-09-11",
-    "max": "2026-09-11"
+    "min": "2026-09-12",
+    "max": "2026-09-12"
   },
   "anbima_cri_cra_mercado_secundario.csv.gz": {
-    "min": "2020-01-02",
-    "max": "2026-09-11"
+    "min": "2026-09-12",
+    "max": "2026-09-12"
   },
   "anbima_letras_financeiras.csv.gz": {
-    "min": "2023-10-09",
-    "max": "2026-09-11"
+    "min": "2026-09-12",
+    "max": "2026-09-12"
   },
   "anbima_fidc_mercado_secundario.csv.gz": {
-    "min": "2021-10-18",
-    "max": "2026-09-11"
+    "min": "2026-09-12",
+    "max": "2026-09-12"
   },
   "anbima_curvas_credito.csv.gz": {
-    "min": "2020-01-02",
-    "max": "2026-09-10"
+    "min": "2026-09-12",
+    "max": "2026-09-12"
   },
   "anbima_curvas_juros_ettj.csv.gz": {
-    "min": "2020-01-02",
-    "max": "2026-09-11"
+    "min": "2026-09-12",
+    "max": "2026-09-12"
   },
   "anbima_indice_ida.csv.gz": {
-    "min": "2020-01-02",
-    "max": "2026-09-10"
+    "min": "2026-09-12",
+    "max": "2026-09-12"
   },
   "anbima_indices_ima_resultados.csv.gz": {
-    "min": "2020-01-02",
-    "max": "2026-09-11"
+    "min": "2026-09-12",
+    "max": "2026-09-12"
   },
   "anbima_titulos_publicos_mercado_secundario.csv.gz": {
+    "min": "2026-09-12",
+    "max": "2026-09-12"
+  },
+  "anbima_titulos_publicos_vna.csv.gz": {
+    "min": "2026-09-12",
+    "max": "2026-09-12"
+  },
+  "anbima_indices_idka_resultados.csv.gz": {
     "min": "2020-01-02",
     "max": "2026-09-11"
   },
-  "anbima_titulos_publicos_vna.csv.gz": {
+  "anbima_projecoes_inflacao.csv.gz": {
+    "min": "2026-09-10",
+    "max": "2026-09-11"
+  },
+  "anbima_indices_carteira_teorica_ima.csv.gz": {
+    "min": "2026-09-02",
+    "max": "2026-09-02"
+  },
+  "anbima_indices_carteira_teorica_ida.csv.gz": {
+    "min": "2026-09-02",
+    "max": "2026-09-02"
+  },
+  "anbima_curvas_juros_parametros_svensson.csv.gz": {
     "min": "2020-01-02",
     "max": "2026-09-11"
+  },
+  "anbima_titulos_publicos_estimativa_selic.csv.gz": {
+    "min": "2020-01-02",
+    "max": "2026-09-11"
+  },
+  "anbima_reune_negociacoes.csv.gz": {
+    "min": "2026-09-12",
+    "max": "2026-09-12"
+  },
+  "b3_cotahist_anual.csv.gz": {
+    "min": "2026-09-12",
+    "max": "2026-09-12"
+  },
+  "ipea_calendario.csv": {
+    "min": "2026-08-21",
+    "max": "2026-08-21"
+  },
+  "ipea_comercio_exterior.csv": {
+    "min": "2026-08-21",
+    "max": "2026-08-21"
+  },
+  "ipea_fbcf.csv": {
+    "min": "2026-08-21",
+    "max": "2026-08-21"
+  },
+  "ipea_macroeconomia.csv": {
+    "min": "2026-08-21",
+    "max": "2026-08-21"
+  },
+  "ipea_precos_inflacao.csv": {
+    "min": "2026-08-21",
+    "max": "2026-08-21"
+  },
+  "ipea_producao_mineral.csv": {
+    "min": "2026-08-21",
+    "max": "2026-08-21"
+  },
+  "ipea_taxas_juros.csv": {
+    "min": "2026-08-21",
+    "max": "2026-08-21"
+  },
+  "fred_us_treasuries_yield_curve.csv.gz": {
+    "min": "2026-09-11",
+    "max": "2026-09-12"
+  },
+  "fred_global_liquidity_credit_spreads.csv.gz": {
+    "min": "2026-09-11",
+    "max": "2026-09-12"
+  },
+  "fred_us_macro_indicators.csv.gz": {
+    "min": "2026-09-11",
+    "max": "2026-09-12"
+  },
+  "fred_brazil_macro_fx_and_cycles.csv.gz": {
+    "min": "2026-09-12",
+    "max": "2026-09-12"
+  },
+  "fred_brazil_export_commodities.csv.gz": {
+    "min": "2026-09-12",
+    "max": "2026-09-12"
   }
 }

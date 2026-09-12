@@ -4426,5 +4426,704 @@
         "example": "2026-09-10"
       }
     ]
+  },
+  {
+    "title": "Anbima Indices Idka Resultados.Gz",
+    "files": "anbima_indices_idka_resultados.csv.gz",
+    "source": "anbima",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-09-12"
+      },
+      {
+        "name": "data_referencia",
+        "type": "date",
+        "example": "2026-09-11"
+      },
+      {
+        "name": "nome",
+        "type": "str",
+        "example": "IDkA IPCA 10A"
+      },
+      {
+        "name": "numero_indice",
+        "type": "int",
+        "example": "11100.759506"
+      },
+      {
+        "name": "tx_compra",
+        "type": "str",
+        "example": "7.4738"
+      },
+      {
+        "name": "tx_venda",
+        "type": "str",
+        "example": "7.4329"
+      },
+      {
+        "name": "variacao_diaria",
+        "type": "str",
+        "example": "0.3597"
+      },
+      {
+        "name": "variacao_mensal",
+        "type": "str",
+        "example": "3.1699"
+      },
+      {
+        "name": "variacao_anual",
+        "type": "str",
+        "example": "7.2785"
+      },
+      {
+        "name": "variacao_ult12m",
+        "type": "str",
+        "example": "11.6312"
+      },
+      {
+        "name": "volatilidade",
+        "type": "str",
+        "example": "6.1469"
+      }
+    ]
+  },
+  {
+    "title": "Anbima Projecoes Inflacao.Gz",
+    "files": "anbima_projecoes_inflacao.csv.gz",
+    "source": "anbima",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-09-12"
+      },
+      {
+        "name": "data_coleta",
+        "type": "date",
+        "example": "2026-09-10"
+      },
+      {
+        "name": "data_validade",
+        "type": "date",
+        "example": "2026-09-11"
+      },
+      {
+        "name": "indice",
+        "type": "str",
+        "example": "IGP-M"
+      },
+      {
+        "name": "tipo_projecao",
+        "type": "str",
+        "example": "PROJEÇÕES PARA O MÊS CORRENTE"
+      },
+      {
+        "name": "mes_referencia",
+        "type": "str",
+        "example": "09/2026"
+      },
+      {
+        "name": "variacao_projetada",
+        "type": "str",
+        "example": "0.95"
+      }
+    ]
+  },
+  {
+    "title": "Anbima Indices Carteira Teorica Ima.Gz",
+    "files": "anbima_indices_carteira_teorica_ima.csv.gz",
+    "source": "anbima",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-09-12"
+      },
+      {
+        "name": "data_referencia",
+        "type": "date",
+        "example": "2026-09-11"
+      },
+      {
+        "name": "indice",
+        "type": "str",
+        "example": "IMA-GERAL"
+      },
+      {
+        "name": "data_inicio",
+        "type": "date",
+        "example": "2026-09-02"
+      },
+      {
+        "name": "data_fim",
+        "type": "date",
+        "example": "2026-09-15"
+      },
+      {
+        "name": "tipo_titulo",
+        "type": "str",
+        "example": "LFT"
+      },
+      {
+        "name": "codigo_selic_titulo",
+        "type": "str",
+        "example": "210100"
+      },
+      {
+        "name": "codigo_isin",
+        "type": "str",
+        "example": "BRSTNCLF1RG5"
+      },
+      {
+        "name": "data_vencimento",
+        "type": "date",
+        "example": "2027-03-01"
+      },
+      {
+        "name": "pu",
+        "type": "str",
+        "example": "19783.038283"
+      },
+      {
+        "name": "quantidade_indice",
+        "type": "int",
+        "example": "29140.881"
+      },
+      {
+        "name": "peso",
+        "type": "str",
+        "example": ""
+      },
+      {
+        "name": "duration",
+        "type": "str",
+        "example": ""
+      }
+    ]
+  },
+  {
+    "title": "Anbima Indices Carteira Teorica Ida.Gz",
+    "files": "anbima_indices_carteira_teorica_ida.csv.gz",
+    "source": "anbima",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-09-12"
+      },
+      {
+        "name": "data_referencia",
+        "type": "date",
+        "example": "2026-09-11"
+      },
+      {
+        "name": "indice",
+        "type": "str",
+        "example": "IDA-DI"
+      },
+      {
+        "name": "data_inicio",
+        "type": "date",
+        "example": "2026-09-02"
+      },
+      {
+        "name": "data_fim",
+        "type": "date",
+        "example": "2026-10-01"
+      },
+      {
+        "name": "codigo_titulo",
+        "type": "str",
+        "example": "AALM12"
+      },
+      {
+        "name": "emissor",
+        "type": "str",
+        "example": "AURA ALMAS MINERACAO S.A."
+      },
+      {
+        "name": "codigo_isin_titulo",
+        "type": "str",
+        "example": "BRAALMDBS017"
+      },
+      {
+        "name": "data_vencimento",
+        "type": "date",
+        "example": "2030-10-02"
+      },
+      {
+        "name": "indexador",
+        "type": "str",
+        "example": "DI"
+      },
+      {
+        "name": "pu",
+        "type": "str",
+        "example": "1082.783718"
+      },
+      {
+        "name": "quantidade_indice",
+        "type": "int",
+        "example": ""
+      },
+      {
+        "name": "peso",
+        "type": "str",
+        "example": "0.27"
+      },
+      {
+        "name": "duration",
+        "type": "str",
+        "example": ""
+      }
+    ]
+  },
+  {
+    "title": "Anbima Curvas Juros Parametros Svensson.Gz",
+    "files": "anbima_curvas_juros_parametros_svensson.csv.gz",
+    "source": "anbima",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-09-12"
+      },
+      {
+        "name": "data_referencia",
+        "type": "date",
+        "example": "2026-09-11"
+      },
+      {
+        "name": "grupo_indexador",
+        "type": "str",
+        "example": "IPCA"
+      },
+      {
+        "name": "b1",
+        "type": "str",
+        "example": "0.07092492"
+      },
+      {
+        "name": "b2",
+        "type": "str",
+        "example": "0.11545783"
+      },
+      {
+        "name": "b3",
+        "type": "str",
+        "example": "-0.17806709"
+      },
+      {
+        "name": "b4",
+        "type": "str",
+        "example": "0.02952431"
+      },
+      {
+        "name": "l1",
+        "type": "str",
+        "example": "5.99990573"
+      },
+      {
+        "name": "l2",
+        "type": "str",
+        "example": "0.65689446"
+      },
+      {
+        "name": "valor_erro",
+        "type": "str",
+        "example": ""
+      }
+    ]
+  },
+  {
+    "title": "Anbima Titulos Publicos Estimativa Selic.Gz",
+    "files": "anbima_titulos_publicos_estimativa_selic.csv.gz",
+    "source": "anbima",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-09-12"
+      },
+      {
+        "name": "data_referencia",
+        "type": "date",
+        "example": "2026-09-11"
+      },
+      {
+        "name": "estimativa_taxa_selic",
+        "type": "float",
+        "example": "13.9"
+      }
+    ]
+  },
+  {
+    "title": "Anbima Reune Negociacoes.Gz",
+    "files": "anbima_reune_negociacoes.csv.gz",
+    "source": "anbima",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-09-12"
+      },
+      {
+        "name": "data_operacao",
+        "type": "date",
+        "example": "2026-09-11"
+      },
+      {
+        "name": "hora_operacao",
+        "type": "str",
+        "example": "08:11"
+      },
+      {
+        "name": "tipo_ativo",
+        "type": "str",
+        "example": "CFF"
+      },
+      {
+        "name": "codigo_ativo",
+        "type": "str",
+        "example": "4631322FII"
+      },
+      {
+        "name": "isin",
+        "type": "str",
+        "example": ""
+      },
+      {
+        "name": "emissor",
+        "type": "str",
+        "example": "BTG PACTUAL CREDITO PARA INCORPORACAO FII FI IMOBILIARIO RESPONSABILIDADE LIMITADA"
+      },
+      {
+        "name": "cnpj_emissor",
+        "type": "str",
+        "example": "43008233000143"
+      },
+      {
+        "name": "emissao",
+        "type": "str",
+        "example": ""
+      },
+      {
+        "name": "data_emissao",
+        "type": "date",
+        "example": ""
+      },
+      {
+        "name": "data_vencimento",
+        "type": "date",
+        "example": ""
+      },
+      {
+        "name": "data_liquidacao",
+        "type": "date",
+        "example": "2026-09-11"
+      },
+      {
+        "name": "tipo_liquidacao",
+        "type": "str",
+        "example": "Não Informada"
+      },
+      {
+        "name": "situacao_negociacao",
+        "type": "str",
+        "example": "Confirmado"
+      },
+      {
+        "name": "qtd_negociada",
+        "type": "str",
+        "example": "150"
+      },
+      {
+        "name": "vl_pu_negociado",
+        "type": "float",
+        "example": "10.349467"
+      },
+      {
+        "name": "vl_volume_negociado",
+        "type": "float",
+        "example": "1552.42"
+      },
+      {
+        "name": "taxa_negociada",
+        "type": "float",
+        "example": ""
+      },
+      {
+        "name": "data_atualizacao",
+        "type": "date",
+        "example": "2026-09-11T12:16:54.088368"
+      }
+    ]
+  },
+  {
+    "title": "FRED US Treasuries Yield Curve",
+    "files": "fred_us_treasuries_yield_curve.csv.gz",
+    "source": "fred",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-09-12"
+      },
+      {
+        "name": "data_referencia",
+        "type": "date",
+        "example": "2026-09-11"
+      },
+      {
+        "name": "dgs3mo",
+        "type": "number",
+        "example": "4.85"
+      },
+      {
+        "name": "dgs2",
+        "type": "number",
+        "example": "3.58"
+      },
+      {
+        "name": "dgs5",
+        "type": "number",
+        "example": "3.45"
+      },
+      {
+        "name": "dgs10",
+        "type": "number",
+        "example": "3.66"
+      },
+      {
+        "name": "dgs30",
+        "type": "number",
+        "example": "3.98"
+      },
+      {
+        "name": "t10y2y_spread",
+        "type": "number",
+        "example": "0.08"
+      },
+      {
+        "name": "t5y_breakeven",
+        "type": "number",
+        "example": "2.05"
+      },
+      {
+        "name": "t10y_breakeven",
+        "type": "number",
+        "example": "2.12"
+      },
+      {
+        "name": "registro_hash",
+        "type": "string",
+        "example": "a1b2c3d4e5f6..."
+      }
+    ]
+  },
+  {
+    "title": "FRED Global Liquidity and Credit Spreads",
+    "files": "fred_global_liquidity_credit_spreads.csv.gz",
+    "source": "fred",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-09-12"
+      },
+      {
+        "name": "data_referencia",
+        "type": "date",
+        "example": "2026-09-11"
+      },
+      {
+        "name": "fed_funds_rate",
+        "type": "number",
+        "example": "5.33"
+      },
+      {
+        "name": "sofr_rate",
+        "type": "number",
+        "example": "5.35"
+      },
+      {
+        "name": "credit_spread_corp_ig",
+        "type": "number",
+        "example": "1.15"
+      },
+      {
+        "name": "credit_spread_corp_hy",
+        "type": "number",
+        "example": "3.65"
+      },
+      {
+        "name": "credit_spread_em_hy",
+        "type": "number",
+        "example": "5.42"
+      },
+      {
+        "name": "vix",
+        "type": "number",
+        "example": "15.2"
+      },
+      {
+        "name": "dxy_broad",
+        "type": "number",
+        "example": "122.5"
+      },
+      {
+        "name": "registro_hash",
+        "type": "string",
+        "example": "a1b2c3d4e5f6..."
+      }
+    ]
+  },
+  {
+    "title": "FRED US Macro Indicators",
+    "files": "fred_us_macro_indicators.csv.gz",
+    "source": "fred",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-09-12"
+      },
+      {
+        "name": "data_referencia",
+        "type": "date",
+        "example": "2026-08-01"
+      },
+      {
+        "name": "cpi_headline",
+        "type": "number",
+        "example": "314.8"
+      },
+      {
+        "name": "cpi_core",
+        "type": "number",
+        "example": "320.1"
+      },
+      {
+        "name": "pce_headline",
+        "type": "number",
+        "example": "122.4"
+      },
+      {
+        "name": "pce_core",
+        "type": "number",
+        "example": "121.8"
+      },
+      {
+        "name": "nonfarm_payroll",
+        "type": "number",
+        "example": "158600.0"
+      },
+      {
+        "name": "unemployment_rate",
+        "type": "number",
+        "example": "4.2"
+      },
+      {
+        "name": "registro_hash",
+        "type": "string",
+        "example": "a1b2c3d4e5f6..."
+      }
+    ]
+  },
+  {
+    "title": "Fred Brazil Macro Fx And Cycles.Gz",
+    "files": "fred_brazil_macro_fx_and_cycles.csv.gz",
+    "source": "other",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-09-12"
+      },
+      {
+        "name": "data_referencia",
+        "type": "date",
+        "example": "2020-01-01"
+      },
+      {
+        "name": "cambio_brl_usd_fed",
+        "type": "str",
+        "example": ""
+      },
+      {
+        "name": "reer_bis_brasil",
+        "type": "str",
+        "example": "121.58"
+      },
+      {
+        "name": "neer_bis_brasil",
+        "type": "str",
+        "example": "121.98"
+      },
+      {
+        "name": "cli_ocde_brasil",
+        "type": "str",
+        "example": "102.8118"
+      },
+      {
+        "name": "confianca_consumidor_ocde",
+        "type": "str",
+        "example": "100.427"
+      },
+      {
+        "name": "confianca_empresarial_ocde",
+        "type": "str",
+        "example": "100.6321"
+      },
+      {
+        "name": "spread_high_yield_emergentes_oas",
+        "type": "str",
+        "example": ""
+      }
+    ]
+  },
+  {
+    "title": "Fred Brazil Export Commodities.Gz",
+    "files": "fred_brazil_export_commodities.csv.gz",
+    "source": "other",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-09-12"
+      },
+      {
+        "name": "data_referencia",
+        "type": "date",
+        "example": "2020-01-01"
+      },
+      {
+        "name": "minerio_ferro_global_usd",
+        "type": "str",
+        "example": "95.22"
+      },
+      {
+        "name": "soja_global_usd",
+        "type": "str",
+        "example": "337.08"
+      },
+      {
+        "name": "petroleo_brent_global_usd",
+        "type": "str",
+        "example": "63.9"
+      },
+      {
+        "name": "acucar_global_usd",
+        "type": "str",
+        "example": "25.8981"
+      },
+      {
+        "name": "cafe_arabica_global_usd",
+        "type": "str",
+        "example": "142.9365"
+      }
+    ]
   }
 ]

@@ -494,6 +494,66 @@ window.PULSEFLAT_PIPELINE_STATUS = {
       "elapsed_seconds": 0.8,
       "error": null,
       "timestamp": "2026-09-12T18:13:58.196000"
+    },
+    "anbima_indices_idka_resultados": {
+      "status": "success",
+      "elapsed_seconds": 0.85,
+      "error": null,
+      "timestamp": "2026-09-12T19:21:30.437638"
+    },
+    "anbima_projecoes_inflacao": {
+      "status": "success",
+      "elapsed_seconds": 0.85,
+      "error": null,
+      "timestamp": "2026-09-12T19:21:30.437638"
+    },
+    "anbima_indices_carteira_teorica_ima": {
+      "status": "success",
+      "elapsed_seconds": 0.85,
+      "error": null,
+      "timestamp": "2026-09-12T19:21:30.437638"
+    },
+    "anbima_indices_carteira_teorica_ida": {
+      "status": "success",
+      "elapsed_seconds": 0.85,
+      "error": null,
+      "timestamp": "2026-09-12T19:21:30.437638"
+    },
+    "anbima_curvas_juros_parametros_svensson": {
+      "status": "success",
+      "elapsed_seconds": 0.85,
+      "error": null,
+      "timestamp": "2026-09-12T19:21:30.437638"
+    },
+    "anbima_titulos_publicos_estimativa_selic": {
+      "status": "success",
+      "elapsed_seconds": 0.85,
+      "error": null,
+      "timestamp": "2026-09-12T19:21:30.437638"
+    },
+    "anbima_reune_negociacoes": {
+      "status": "success",
+      "elapsed_seconds": 0.85,
+      "error": null,
+      "timestamp": "2026-09-12T19:21:30.437638"
+    },
+    "fred_us_treasuries_yield_curve": {
+      "status": "success",
+      "elapsed_seconds": 1.2,
+      "error": null,
+      "timestamp": "2026-09-12T19:43:45.887411"
+    },
+    "fred_global_liquidity_credit_spreads": {
+      "status": "success",
+      "elapsed_seconds": 1.2,
+      "error": null,
+      "timestamp": "2026-09-12T19:43:45.887411"
+    },
+    "fred_us_macro_indicators": {
+      "status": "success",
+      "elapsed_seconds": 1.2,
+      "error": null,
+      "timestamp": "2026-09-12T19:43:45.887411"
     }
   },
   "drifts": {
