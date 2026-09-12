@@ -230,5 +230,9 @@ window.PULSEFLAT_LAST_UPDATES = {
   "bacen_parcelas_capital_basileia.csv.gz": {
     "min": "2026-06-05",
     "max": "2026-09-11"
+  },
+  "debentures_mercado_secundario_precos_negociacao_api.csv.gz": {
+    "min": "2026-09-10",
+    "max": "2026-09-12"
   }
 };

@@ -3574,5 +3574,107 @@
         "example": "18.63"
       }
     ]
+  },
+  {
+    "title": "Debentures Mercado Secundario Precos Negociacao Api.Gz",
+    "files": "debentures_mercado_secundario_precos_negociacao_api.csv.gz",
+    "source": "debentures",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-09-10"
+      },
+      {
+        "name": "data_referencia",
+        "type": "date",
+        "example": "2026-09-10"
+      },
+      {
+        "name": "emissor",
+        "type": "str",
+        "example": "AURA ALMAS MINERACAO S.A. (*)"
+      },
+      {
+        "name": "codigo_ativo",
+        "type": "str",
+        "example": "AALM12"
+      },
+      {
+        "name": "isin",
+        "type": "str",
+        "example": ""
+      },
+      {
+        "name": "quantidade",
+        "type": "int",
+        "example": "0"
+      },
+      {
+        "name": "numero_de_negocios",
+        "type": "int",
+        "example": "0"
+      },
+      {
+        "name": "pu_minimo",
+        "type": "str",
+        "example": ""
+      },
+      {
+        "name": "pu_medio",
+        "type": "str",
+        "example": ""
+      },
+      {
+        "name": "pu_maximo",
+        "type": "str",
+        "example": ""
+      },
+      {
+        "name": "pu_da_curva",
+        "type": "str",
+        "example": "101.78"
+      },
+      {
+        "name": "pu_indicativo",
+        "type": "str",
+        "example": "1086.276425"
+      },
+      {
+        "name": "taxa_indicativa",
+        "type": "float",
+        "example": "0.7162"
+      },
+      {
+        "name": "taxa_compra",
+        "type": "float",
+        "example": "0.8458"
+      },
+      {
+        "name": "taxa_venda",
+        "type": "float",
+        "example": "0.5865"
+      },
+      {
+        "name": "percentual_taxa",
+        "type": "float",
+        "example": "DI + 1,6000%"
+      },
+      {
+        "name": "volume_total_rs",
+        "type": "str",
+        "example": "0.00"
+      },
+      {
+        "name": "percent_reune",
+        "type": "str",
+        "example": "15%"
+      },
+      {
+        "name": "data_vencimento",
+        "type": "date",
+        "example": "2030-10-02"
+      }
+    ]
   }
 ]

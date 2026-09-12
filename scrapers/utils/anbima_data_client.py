@@ -208,6 +208,7 @@ class AnbimaDataClient:
         for tentativa in range(1, self.max_retries + 1):
             token = self.get_access_token()
             req_headers["Authorization"] = f"Bearer {token}"
+            req_headers["access_token"] = token
 
             try:
                 log.debug(

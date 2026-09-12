@@ -167,6 +167,27 @@
     "accumulate": true
   },
   {
+    "title": "Debêntures — Mercado Secundário e Preços de Negociação (API ANBIMA)",
+    "file": "debentures_mercado_secundario_precos_negociacao_api.csv.gz",
+    "description": "Histórico e boletim diário de negociações no mercado secundário de debêntures capturados via APIs oficiais da ANBIMA e REUNE, contendo preços realizados (mínimo, médio ponderado, máximo), quantidade negociada, número de negócios, volume financeiro e parâmetros oficiais da ANBIMA. Padronizado com zeros para cálculo exato de liquidez média.",
+    "icon": "🏛️",
+    "iconClass": "icon-anbima",
+    "badge": "ANBIMA API",
+    "badgeClass": "badge-dynamic",
+    "tags": [
+      "debentures",
+      "mercado_secundario",
+      "precos",
+      "negociacao",
+      "anbima",
+      "reune",
+      "api"
+    ],
+    "source": "ANBIMA Data (developers.anbima.com.br)",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/debentures_mercado_secundario_precos_negociacao_api.csv.gz",
+    "accumulate": true
+  },
+  {
     "title": "ANBIMA — Índice IMA-B",
     "file": "anbima_indice_imab.csv.gz",
     "description": "Série temporal detalhada do índice IMA-B (referência para títulos públicos indexados ao IPCA - NTN-B), contendo valor do número índice, cupom de juros, amortizações acumuladas e parâmetros de marcação a mercado.",

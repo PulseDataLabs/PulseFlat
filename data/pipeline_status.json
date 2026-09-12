@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-09-12T04:13:41.141512",
-  "elapsed_seconds": 429.5340509414673,
+  "timestamp": "2026-09-12T17:41:41.824806",
+  "elapsed_seconds": 11.649542808532715,
   "status": "error",
   "summary": {
-    "total": 59,
-    "success": 67,
+    "total": 60,
+    "success": 68,
     "failed": 1,
     "drifts": 2
   },
@@ -428,6 +428,12 @@
       "elapsed_seconds": 379.8087546825409,
       "error": null,
       "timestamp": "2026-09-12T04:13:41.141738"
+    },
+    "debentures_mercado_secundario_precos_negociacao_api": {
+      "status": "success",
+      "elapsed_seconds": 11.648303747177124,
+      "error": null,
+      "timestamp": "2026-09-12T17:41:41.825227"
     }
   },
   "drifts": {
