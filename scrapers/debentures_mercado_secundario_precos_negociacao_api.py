@@ -15,10 +15,9 @@ Padronizado para regras de liquidez média:
 """
 
 import sys
-import time
+from collections import defaultdict
 from datetime import date
 from pathlib import Path
-from collections import defaultdict
 from typing import Any
 
 import pandas as pd
@@ -26,7 +25,7 @@ import pandas as pd
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from scrapers.utils.anbima_data_base import BaseAnbimaDataScraper
-from utils.base import get_logger, limpar
+from utils.base import get_logger
 from utils.parsers import _CAL, hash_row
 
 log = get_logger("debentures_mercado_secundario_precos_negociacao_api")
