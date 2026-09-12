@@ -14,6 +14,14 @@ from .anbima_data_client import (
     AnbimaRateLimitError,
 )
 from .base import BaseScraper
+from .brasilapi_base import BaseBrasilApiScraper
+from .brasilapi_client import (
+    BrasilApiClient,
+    BrasilApiError,
+    BrasilApiHttpError,
+    BrasilApiNotFoundError,
+    BrasilApiRateLimitError,
+)
 from .eulerpool_base import BaseEulerpoolScraper
 from .eulerpool_client import (
     EulerpoolApiError,
@@ -40,4 +48,10 @@ __all__ = [
     "EulerpoolAuthError",
     "EulerpoolRateLimitError",
     "EulerpoolApiError",
+    "BrasilApiClient",
+    "BaseBrasilApiScraper",
+    "BrasilApiError",
+    "BrasilApiNotFoundError",
+    "BrasilApiRateLimitError",
+    "BrasilApiHttpError",
 ]

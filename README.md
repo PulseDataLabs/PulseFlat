@@ -45,6 +45,7 @@ A **PulseDataLabs** nasceu da missão de democratizar o acesso a dados financeir
 *   **OOP & Abstração Sólida**: Scrapers estruturados sob a classe base `BaseScraper` com ciclo de vida unificado, logs padronizados e persistência inteligente.
 *   **Suporte Oficial à ANBIMA Developers (ANBIMA Data)**: Cliente HTTP nativo com autenticação OAuth 2.0 (Client Credentials), auto-renovação de tokens em cache, resiliência contra rate-limiting (429) e classe base `BaseAnbimaDataScraper` pronta para novos feeds.
 *   **Suporte Oficial à Eulerpool Financial Data API**: Cliente HTTP dedicado para os 375+ endpoints globais de ações, ETFs, opções, commodities e finanças da Eulerpool (`api.eulerpool.com`), com autenticação Bearer, retries e classe base `BaseEulerpoolScraper`.
+*   **Suporte Oficial à BrasilAPI**: Cliente HTTP nativo para dados abertos brasileiros (taxas Selic/CDI/IPCA, bancos, corretoras CVM e feriados nacionais), com retries e classe base `BaseBrasilApiScraper`.
 *   **Descoberta Dinâmica (Reflection)**: O orquestrador detecta scrapers automaticamente inspecionando o diretório `scrapers/`, eliminando a necessidade de registros estáticos.
 *   **Sanitização e Blindagem Defensiva**: Padronização de datas (`DD/MM/YYYY` ou `DD/MM/YY` para ISO `YYYY-MM-DD`), conversão de números decimais com vírgula para ponto e fallbacks automáticos para dados corrompidos.
 *   **Concorrência Multicondicional**: Paralelização segura de scrapers independentes e ordenação controlada para scrapers que dependem de resultados prévios.
@@ -164,13 +165,17 @@ PulseFlat/
 │   │   ├── anbima_data_client.py    # Cliente HTTP OAuth 2.0 para ANBIMA Developers
 │   │   ├── anbima_data_base.py      # Classe BaseAnbimaDataScraper
 │   │   ├── eulerpool_client.py      # Cliente HTTP Bearer para Eulerpool Financial Data
-│   │   └── eulerpool_base.py        # Classe BaseEulerpoolScraper
+│   │   ├── eulerpool_base.py        # Classe BaseEulerpoolScraper
+│   │   ├── brasilapi_client.py      # Cliente HTTP para dados abertos da BrasilAPI
+│   │   └── brasilapi_base.py        # Classe BaseBrasilApiScraper
 │   ├── anbima_data_template.py      # Template modelo para novos scrapers ANBIMA Data
 │   ├── eulerpool_template.py        # Template modelo para novos scrapers Eulerpool
+│   ├── brasilapi_template.py        # Template modelo para novos scrapers BrasilAPI
 │   └── *.py                         # Scripts específicos de coleta por dataset
 ├── scripts/                         # Pós-processamento, catálogo e alertas
 │   ├── test_anbima_connection.py    # Teste e diagnóstico de credenciais ANBIMA Data
 │   ├── test_eulerpool_connection.py # Teste e diagnóstico de credenciais Eulerpool API
+│   ├── test_brasilapi_connection.py # Teste e diagnóstico de conectividade BrasilAPI
 │   ├── export_to_parquet.py         # Conversão colunar de CSV/GZ para Parquet
 │   ├── alerta_debentures.py         # Monitoramento e disparo de alertas
 │   ├── sanitizar_debentures.py      # Sanitização e limpeza de debêntures
@@ -368,6 +373,40 @@ O `BaseEulerpoolScraper` gerencia automaticamente a autenticação Bearer, retri
 
 ---
 
+### 🇧🇷 Integração com BrasilAPI
+
+O PulseFlat possui suporte nativo e modular para consumir os endpoints abertos da [BrasilAPI](https://brasilapi.com.br/docs) (`https://brasilapi.com.br/api`).
+
+#### 1. Conectividade e Latência
+A BrasilAPI é pública e aberta (não requer API key por padrão). Para validar a conectividade e medir o tempo de resposta em tempo real, execute:
+```bash
+python scripts/test_brasilapi_connection.py
+```
+
+#### 2. Criando um Novo Scraper da BrasilAPI
+O PulseFlat disponibiliza o template documentado `scrapers/brasilapi_template.py`. Para criar uma nova coleta, herde de `BaseBrasilApiScraper`:
+
+```python
+from scrapers.utils.brasilapi_base import BaseBrasilApiScraper
+import pandas as pd
+
+class BrasilapiTaxasScraper(BaseBrasilApiScraper):
+    name = "brasilapi_taxas"
+    title = "BrasilAPI — Taxas de Juros Oficiais"
+    endpoint = "/taxas/v1"
+    chaves_dedup = ["data_captura", "codigo"]
+
+    def fetch(self) -> pd.DataFrame:
+        registros = self.fetch_endpoint(self.endpoint)
+        return pd.DataFrame(registros)
+
+if __name__ == "__main__":
+    BrasilapiTaxasScraper().run()
+```
+O `BaseBrasilApiScraper` cuida da injeção de headers adequados, tratamento de rate-limiting (HTTP 429), extração de registros JSON e integração com o pipeline do `run_all.py`.
+
+---
+
 ## 📊 Fontes e Datasets
 
 | Grupo | Fonte Primária | Exemplos de Dados Disponibilizados | Frequência |
@@ -377,6 +416,7 @@ O `BaseEulerpoolScraper` gerencia automaticamente a autenticação Bearer, retri
 | **CVM** | [Portal Brasileiro de Dados Abertos](https://dados.cvm.gov.br) | Cadastro geral de companhias abertas, informes diários e dados de cotas/classes de fundos. | Diária |
 | **B3** | [B3 Market Data](https://www.b3.com.br) | FIIs/ETFs listados, composição de carteiras teóricas (IBOV, SMLL, ISEE, BDRX, IFNC), taxas DI Over, dados cadastrais e financeiros de companhias, limites de garantias. | Diária / Snapshot |
 | **IBGE** | [IBGE SIDRA API](https://sidra.ibge.gov.br) | Índices oficiais de inflação (IPCA, IPCA-15, INPC). | Mensal |
+| **BrasilAPI** | [BrasilAPI](https://brasilapi.com.br/docs) | Taxas de juros oficiais (Selic, CDI, IPCA), códigos de compensação bancária e ISPB, corretoras CVM e feriados bancários nacionais. | Diária / Sob demanda |
 | **Eulerpool** | [Eulerpool Financial Data](https://eulerpool.com/developers) | Ações globais (EUA, Europa, Ásia), ETFs, opções, commodities, dividendos, estimativas de analistas e finanças globais. | Diária / Realtime |
 | **Misc** | [Yahoo Finance](https://finance.yahoo.com) / [Wikipedia](https://www.wikipedia.org) / [ONU](https://unglobalcompact.org) | Ações brasileiras e globais, ETFs, moedas, criptoativos, commodities e Pacto Global da ONU. | Diária |
 
