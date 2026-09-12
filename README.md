@@ -26,6 +26,7 @@
   <a href="#-exportação-parquet--analytics-duckdb">Parquet & DuckDB</a> •
   <a href="#-estrutura-do-projeto">Estrutura</a> •
   <a href="#-para-analistas-consuma-os-dados-sem-código">Analistas</a> •
+  <a href="#-execução-no-databricks-workflows--repos">Databricks</a> •
   <a href="#-guia-do-desenvolvedor">Desenvolvedor</a> •
   <a href="#-fontes-e-datasets">Datasets</a>
 </p>
@@ -196,6 +197,12 @@ PulseFlat/
 │   ├── generate_market_latest.py    # Gera market_latest.json
 │   ├── verificar_buracos.py         # Valida continuidade de datas temporais
 │   └── utils/ux.py                  # UX compartilhada de terminal
+├── databricks/                      # Integração nativa com Databricks Workflows & Repos
+│   ├── README.md                    # Guia completo de configuração e agendamento de Jobs
+│   ├── run_pulseflat_job.py         # Entrypoint Python para execução via Databricks Task
+│   └── notebooks/
+│       ├── 01_orchestrator_notebook # Execução interativa via Databricks com widgets
+│       └── 02_delta_lake_exporter   # Ingestão e upsert para tabelas Delta Lake
 ├── utils/                           # Utilitários de baixo nível
 │   ├── base.py                      # Conexões HTTP resilientes, locks e persistência
 │   ├── db.py                        # Persistência Oracle DB / SQLAlchemy
@@ -232,6 +239,46 @@ Basta copiar a URL de qualquer dataset no [dashboard](https://pulsedatalabs.gith
 
 ### Download Direto
 Acesse o [dashboard interativo](https://pulsedatalabs.github.io/PulseFlat/#datasets), encontre o dataset desejado e clique em **Download CSV**.
+
+---
+
+## ☁️ Execução no Databricks (Workflows & Repos)
+
+O **PulseFlat** possui integração nativa com o **Databricks**, permitindo replicar as automações diárias do GitHub Actions em clusters sob demanda ou Serverless Compute, aproveitando computação distribuída e governança corporativa.
+
+### 🌟 Benefícios no Databricks
+- **Zero Retrabalho**: O código fonte (`scrapers/`, `utils/`, `run_all.py`) é reutilizado integralmente via **Databricks Git Folders (Repos)**.
+- **Execução Agendada**: Substitua o cron do GitHub Actions pelo **Databricks Workflows (Jobs)** com Quartz cron nativo e alertas automáticos.
+- **Segredos Transparentes**: Lê credenciais tanto de *Databricks Secrets* (`scope="pulseflat"`) quanto de *Environment Variables* configuradas no cluster.
+- **Exportação Delta Lake**: Ingestão opcional e automatizada para tabelas **Delta Lake / Unity Catalog** com suporte a versionamento ACID e time-travel.
+
+---
+
+### 🚀 Como Configurar em 3 Passos
+
+#### 1. Conectar o Repositório no Databricks (Git Folders)
+1. No menu lateral esquerdo do Databricks, acesse **Workspace > Users > seu.email**.
+2. Clique em **Add > Git Folder** (ou **Create > Git Folder**).
+3. Informe a URL: `https://github.com/PulseDataLabs/PulseFlat.git` e confirme.
+
+#### 2. Criar o Workflow Agendado (Databricks Job)
+1. Acesse **Workflows** no menu lateral e clique no botão azul **Create Job**.
+2. Configure a tarefa principal:
+   - **Task name**: `run_scrapers`
+   - **Type**: `Python script`
+   - **Source**: `Workspace` (selecione `PulseFlat/databricks/run_pulseflat_job.py`)
+   - **Parameters** (opcional): `["--parallel", "--max-workers", "8"]` *(você também pode filtrar por grupo: `["--group", "anbima"]`)*
+   - **Dependent Libraries**: Instale as bibliotecas de `requirements.txt` via PyPI (ex: `requests`, `beautifulsoup4`, `curl-cffi`, `pandas`, `openpyxl`, `bizdays`, `oracledb`).
+3. Configure o agendamento em **Schedule** definindo os horários desejados (ex: dias úteis às 06h, 08h e 18h).
+
+#### 3. Execução Interativa via Notebook (Depuração e Testes)
+Para testar scrapers pontualmente ou fazer cargas manuais:
+- Abra o notebook [`databricks/notebooks/01_orchestrator_notebook.py`](databricks/notebooks/01_orchestrator_notebook.py).
+- Use os widgets visuais no topo para escolher o **Grupo de Dados**, quantidade de **Workers** e se deseja validar buracos históricos.
+- Clique em **Run All**.
+
+> [!TIP]
+> Consulte o guia detalhado em [`databricks/README.md`](databricks/README.md) para detalhes adicionais de exportação Delta Lake e configuração de Secrets Scopes.
 
 ---
 
