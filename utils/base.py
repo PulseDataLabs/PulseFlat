@@ -253,16 +253,19 @@ def salvar_csv(
                 if c not in df_antigo.columns:
                     df_antigo[c] = ""
 
-            if chaves_dedup:
+            if df_antigo.empty:
+                substituidas = 0
+                df_antigo_filtrado = df_antigo
+            elif chaves_dedup:
                 keys_new = df_novos[chaves_dedup].astype(str).agg("-".join, axis=1)
                 keys_old = df_antigo[chaves_dedup].astype(str).agg("-".join, axis=1)
                 mask_keep = ~keys_old.isin(keys_new)
-                substituidas = len(df_antigo) - mask_keep.sum()
+                substituidas = int(len(df_antigo) - mask_keep.sum())
                 df_antigo_filtrado = df_antigo[mask_keep]
             else:
                 datas_novas = df_novos["data_captura"].unique()
                 mask_keep = ~df_antigo["data_captura"].isin(datas_novas)
-                substituidas = len(df_antigo) - mask_keep.sum()
+                substituidas = int(len(df_antigo) - mask_keep.sum())
                 df_antigo_filtrado = df_antigo[mask_keep]
 
             if df_antigo_filtrado.empty:

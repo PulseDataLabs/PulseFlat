@@ -336,15 +336,15 @@ window.PULSEFLAT_LAST_UPDATES = {
     "max": "2026-08-21"
   },
   "fred_us_treasuries_yield_curve.csv.gz": {
-    "min": "2026-09-11",
+    "min": "2026-09-12",
     "max": "2026-09-12"
   },
   "fred_global_liquidity_credit_spreads.csv.gz": {
-    "min": "2026-09-11",
+    "min": "2026-09-12",
     "max": "2026-09-12"
   },
   "fred_us_macro_indicators.csv.gz": {
-    "min": "2026-09-11",
+    "min": "2026-09-12",
     "max": "2026-09-12"
   },
   "fred_brazil_macro_fx_and_cycles.csv.gz": {

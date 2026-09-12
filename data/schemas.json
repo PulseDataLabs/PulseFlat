@@ -4874,52 +4874,47 @@
       {
         "name": "data_referencia",
         "type": "date",
-        "example": "2026-09-11"
+        "example": "2020-01-02"
       },
       {
         "name": "dgs3mo",
-        "type": "number",
-        "example": "4.85"
+        "type": "str",
+        "example": "1.54"
       },
       {
         "name": "dgs2",
-        "type": "number",
-        "example": "3.58"
+        "type": "str",
+        "example": "1.58"
       },
       {
         "name": "dgs5",
-        "type": "number",
-        "example": "3.45"
+        "type": "str",
+        "example": "1.67"
       },
       {
         "name": "dgs10",
-        "type": "number",
-        "example": "3.66"
+        "type": "str",
+        "example": "1.88"
       },
       {
         "name": "dgs30",
-        "type": "number",
-        "example": "3.98"
+        "type": "str",
+        "example": "2.33"
       },
       {
         "name": "t10y2y_spread",
-        "type": "number",
-        "example": "0.08"
+        "type": "str",
+        "example": "0.3"
       },
       {
         "name": "t5y_breakeven",
-        "type": "number",
-        "example": "2.05"
+        "type": "str",
+        "example": "1.72"
       },
       {
         "name": "t10y_breakeven",
-        "type": "number",
-        "example": "2.12"
-      },
-      {
-        "name": "registro_hash",
-        "type": "string",
-        "example": "a1b2c3d4e5f6..."
+        "type": "str",
+        "example": "1.8"
       }
     ]
   },
@@ -4936,47 +4931,42 @@
       {
         "name": "data_referencia",
         "type": "date",
-        "example": "2026-09-11"
+        "example": "2020-01-01"
       },
       {
         "name": "fed_funds_rate",
-        "type": "number",
-        "example": "5.33"
+        "type": "str",
+        "example": "1.55"
       },
       {
         "name": "sofr_rate",
-        "type": "number",
-        "example": "5.35"
+        "type": "str",
+        "example": ""
       },
       {
         "name": "credit_spread_corp_ig",
-        "type": "number",
-        "example": "1.15"
+        "type": "str",
+        "example": ""
       },
       {
         "name": "credit_spread_corp_hy",
-        "type": "number",
-        "example": "3.65"
+        "type": "str",
+        "example": ""
       },
       {
         "name": "credit_spread_em_hy",
-        "type": "number",
-        "example": "5.42"
+        "type": "str",
+        "example": ""
       },
       {
         "name": "vix",
-        "type": "number",
-        "example": "15.2"
+        "type": "str",
+        "example": ""
       },
       {
         "name": "dxy_broad",
-        "type": "number",
-        "example": "122.5"
-      },
-      {
-        "name": "registro_hash",
-        "type": "string",
-        "example": "a1b2c3d4e5f6..."
+        "type": "str",
+        "example": ""
       }
     ]
   },
@@ -4993,42 +4983,37 @@
       {
         "name": "data_referencia",
         "type": "date",
-        "example": "2026-08-01"
+        "example": "2020-01-01"
       },
       {
         "name": "cpi_headline",
-        "type": "number",
-        "example": "314.8"
+        "type": "str",
+        "example": "259.127"
       },
       {
         "name": "cpi_core",
-        "type": "number",
-        "example": "320.1"
+        "type": "str",
+        "example": "266.716"
       },
       {
         "name": "pce_headline",
-        "type": "number",
-        "example": "122.4"
+        "type": "str",
+        "example": "104.49"
       },
       {
         "name": "pce_core",
-        "type": "number",
-        "example": "121.8"
+        "type": "str",
+        "example": "104.507"
       },
       {
         "name": "nonfarm_payroll",
-        "type": "number",
-        "example": "158600.0"
+        "type": "str",
+        "example": "152031"
       },
       {
         "name": "unemployment_rate",
-        "type": "number",
-        "example": "4.2"
-      },
-      {
-        "name": "registro_hash",
-        "type": "string",
-        "example": "a1b2c3d4e5f6..."
+        "type": "str",
+        "example": "3.6"
       }
     ]
   },
