@@ -434,6 +434,66 @@
       "elapsed_seconds": 11.648303747177124,
       "error": null,
       "timestamp": "2026-09-12T17:41:41.825227"
+    },
+    "debentures_emissoes_caracteristicas_api": {
+      "status": "success",
+      "elapsed_seconds": 2.9,
+      "error": null,
+      "timestamp": "2026-09-12T18:02:37.226531"
+    },
+    "anbima_cri_cra_mercado_secundario": {
+      "status": "success",
+      "elapsed_seconds": 0.8,
+      "error": null,
+      "timestamp": "2026-09-12T18:13:58.196000"
+    },
+    "anbima_letras_financeiras": {
+      "status": "success",
+      "elapsed_seconds": 0.8,
+      "error": null,
+      "timestamp": "2026-09-12T18:13:58.196000"
+    },
+    "anbima_fidc_mercado_secundario": {
+      "status": "success",
+      "elapsed_seconds": 0.8,
+      "error": null,
+      "timestamp": "2026-09-12T18:13:58.196000"
+    },
+    "anbima_curvas_credito": {
+      "status": "success",
+      "elapsed_seconds": 0.8,
+      "error": null,
+      "timestamp": "2026-09-12T18:13:58.196000"
+    },
+    "anbima_curvas_juros_ettj": {
+      "status": "success",
+      "elapsed_seconds": 0.8,
+      "error": null,
+      "timestamp": "2026-09-12T18:13:58.196000"
+    },
+    "anbima_indice_ida": {
+      "status": "success",
+      "elapsed_seconds": 0.8,
+      "error": null,
+      "timestamp": "2026-09-12T18:13:58.196000"
+    },
+    "anbima_indices_ima_resultados": {
+      "status": "success",
+      "elapsed_seconds": 0.8,
+      "error": null,
+      "timestamp": "2026-09-12T18:13:58.196000"
+    },
+    "anbima_titulos_publicos_mercado_secundario": {
+      "status": "success",
+      "elapsed_seconds": 0.8,
+      "error": null,
+      "timestamp": "2026-09-12T18:13:58.196000"
+    },
+    "anbima_titulos_publicos_vna": {
+      "status": "success",
+      "elapsed_seconds": 0.8,
+      "error": null,
+      "timestamp": "2026-09-12T18:13:58.196000"
     }
   },
   "drifts": {

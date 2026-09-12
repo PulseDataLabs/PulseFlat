@@ -3676,5 +3676,755 @@
         "example": "2030-10-02"
       }
     ]
+  },
+  {
+    "title": "Debentures Emissoes Caracteristicas Api",
+    "files": "debentures_emissoes_caracteristicas_api.csv",
+    "source": "debentures",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-09-12"
+      },
+      {
+        "name": "data_referencia",
+        "type": "date",
+        "example": "2026-09-11"
+      },
+      {
+        "name": "codigo_ativo",
+        "type": "str",
+        "example": "AALM12"
+      },
+      {
+        "name": "emissor",
+        "type": "str",
+        "example": "AURA ALMAS MINERACAO S.A. (*)"
+      },
+      {
+        "name": "isin",
+        "type": "str",
+        "example": "BRAALMDBS017"
+      },
+      {
+        "name": "grupo",
+        "type": "str",
+        "example": "DI SPREAD"
+      },
+      {
+        "name": "percentual_taxa",
+        "type": "str",
+        "example": "DI + 1,6000%"
+      },
+      {
+        "name": "data_vencimento",
+        "type": "date",
+        "example": "2030-10-02"
+      },
+      {
+        "name": "vna",
+        "type": "float",
+        "example": "1000"
+      },
+      {
+        "name": "pu_par",
+        "type": "float",
+        "example": "1067.871104"
+      },
+      {
+        "name": "pu_indicativo",
+        "type": "float",
+        "example": "1086.508009"
+      },
+      {
+        "name": "percent_pu_par",
+        "type": "float",
+        "example": "101.74"
+      },
+      {
+        "name": "duration",
+        "type": "float",
+        "example": "509"
+      },
+      {
+        "name": "z_spread",
+        "type": "float",
+        "example": "0.7327"
+      },
+      {
+        "name": "spread_incentivado_sem_gross_up",
+        "type": "float",
+        "example": "nan"
+      },
+      {
+        "name": "referencia_ntnb",
+        "type": "str",
+        "example": "nan"
+      },
+      {
+        "name": "lei_12431",
+        "type": "str",
+        "example": "NÃO"
+      },
+      {
+        "name": "taxa_indicativa",
+        "type": "float",
+        "example": "0.7327"
+      },
+      {
+        "name": "taxa_compra",
+        "type": "float",
+        "example": "0.8205"
+      },
+      {
+        "name": "taxa_venda",
+        "type": "float",
+        "example": "0.5917"
+      },
+      {
+        "name": "desvio_padrao",
+        "type": "float",
+        "example": "0.06"
+      },
+      {
+        "name": "val_min_intervalo",
+        "type": "float",
+        "example": "0.67"
+      },
+      {
+        "name": "val_max_intervalo",
+        "type": "float",
+        "example": "0.79"
+      },
+      {
+        "name": "percent_reune",
+        "type": "str",
+        "example": "5%"
+      }
+    ]
+  },
+  {
+    "title": "Anbima Cri Cra Mercado Secundario.Gz",
+    "files": "anbima_cri_cra_mercado_secundario.csv.gz",
+    "source": "anbima",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-09-12"
+      },
+      {
+        "name": "data_referencia",
+        "type": "date",
+        "example": "2026-09-11"
+      },
+      {
+        "name": "codigo_ativo",
+        "type": "str",
+        "example": "21D0694886"
+      },
+      {
+        "name": "emissor",
+        "type": "str",
+        "example": "OPEA SECURITIZADORA S/A"
+      },
+      {
+        "name": "originador",
+        "type": "str",
+        "example": "CONSTRUTORA TENDA S.A."
+      },
+      {
+        "name": "originador_credito",
+        "type": "str",
+        "example": "CONSTRUTORA TENDA S.A."
+      },
+      {
+        "name": "tipo_contrato",
+        "type": "str",
+        "example": "CRI"
+      },
+      {
+        "name": "serie",
+        "type": "str",
+        "example": "378"
+      },
+      {
+        "name": "emissao",
+        "type": "str",
+        "example": "1"
+      },
+      {
+        "name": "data_vencimento",
+        "type": "date",
+        "example": "2028-04-17"
+      },
+      {
+        "name": "tipo_remuneracao",
+        "type": "str",
+        "example": "IPCA"
+      },
+      {
+        "name": "taxa_correcao",
+        "type": "float",
+        "example": "5.3621"
+      },
+      {
+        "name": "taxa_indicativa",
+        "type": "float",
+        "example": "8.7314"
+      },
+      {
+        "name": "taxa_compra",
+        "type": "float",
+        "example": "9.5103"
+      },
+      {
+        "name": "taxa_venda",
+        "type": "float",
+        "example": ""
+      },
+      {
+        "name": "pu",
+        "type": "str",
+        "example": "886.289738"
+      },
+      {
+        "name": "duration",
+        "type": "str",
+        "example": "259.3"
+      },
+      {
+        "name": "z_spread",
+        "type": "str",
+        "example": ""
+      },
+      {
+        "name": "percent_reune",
+        "type": "str",
+        "example": ""
+      }
+    ]
+  },
+  {
+    "title": "Anbima Letras Financeiras.Gz",
+    "files": "anbima_letras_financeiras.csv.gz",
+    "source": "anbima",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-09-12"
+      },
+      {
+        "name": "data_referencia",
+        "type": "date",
+        "example": "2026-09-11"
+      },
+      {
+        "name": "emissor",
+        "type": "str",
+        "example": "ABC"
+      },
+      {
+        "name": "cnpj_emissor",
+        "type": "str",
+        "example": "28.195.667/0001-06"
+      },
+      {
+        "name": "letra_financeira",
+        "type": "str",
+        "example": "LF"
+      },
+      {
+        "name": "indexador",
+        "type": "str",
+        "example": "DI+"
+      },
+      {
+        "name": "fluxo",
+        "type": "str",
+        "example": "BULLET"
+      },
+      {
+        "name": "vertice_meses",
+        "type": "str",
+        "example": "1"
+      },
+      {
+        "name": "taxa_indicativa",
+        "type": "float",
+        "example": "0.1325"
+      },
+      {
+        "name": "taxa_compra",
+        "type": "float",
+        "example": "0.149"
+      },
+      {
+        "name": "taxa_venda",
+        "type": "float",
+        "example": "0.119"
+      }
+    ]
+  },
+  {
+    "title": "Anbima Fidc Mercado Secundario.Gz",
+    "files": "anbima_fidc_mercado_secundario.csv.gz",
+    "source": "anbima",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-09-12"
+      },
+      {
+        "name": "data_referencia",
+        "type": "date",
+        "example": "2026-09-11"
+      },
+      {
+        "name": "codigo_b3",
+        "type": "str",
+        "example": "0579119S23"
+      },
+      {
+        "name": "nome",
+        "type": "str",
+        "example": "FIDC CREDITO UNIVERSITARIO SR23"
+      },
+      {
+        "name": "serie",
+        "type": "str",
+        "example": "23"
+      },
+      {
+        "name": "emissor",
+        "type": "str",
+        "example": "CRÉDITO UNIVERSITÁRIO FIDC"
+      },
+      {
+        "name": "isin",
+        "type": "str",
+        "example": "BRIDLQCTF0R5"
+      },
+      {
+        "name": "data_vencimento",
+        "type": "date",
+        "example": "2027-01-12"
+      },
+      {
+        "name": "tipo_remuneracao",
+        "type": "str",
+        "example": "DI ADITIVO"
+      },
+      {
+        "name": "taxa_correcao",
+        "type": "float",
+        "example": "1.7"
+      },
+      {
+        "name": "taxa_indicativa",
+        "type": "float",
+        "example": "1.7666"
+      },
+      {
+        "name": "taxa_compra",
+        "type": "float",
+        "example": "2"
+      },
+      {
+        "name": "taxa_venda",
+        "type": "float",
+        "example": ""
+      },
+      {
+        "name": "pu",
+        "type": "str",
+        "example": "0.071282"
+      },
+      {
+        "name": "percent_pu_par",
+        "type": "str",
+        "example": "99.98"
+      },
+      {
+        "name": "duration",
+        "type": "str",
+        "example": "40.81"
+      },
+      {
+        "name": "desvio_padrao",
+        "type": "str",
+        "example": "0.4"
+      }
+    ]
+  },
+  {
+    "title": "Anbima Curvas Credito.Gz",
+    "files": "anbima_curvas_credito.csv.gz",
+    "source": "anbima",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-09-12"
+      },
+      {
+        "name": "data_referencia",
+        "type": "date",
+        "example": "2026-09-10"
+      },
+      {
+        "name": "vertice_anos",
+        "type": "str",
+        "example": "0.5"
+      },
+      {
+        "name": "aaa",
+        "type": "str",
+        "example": "0.3693"
+      },
+      {
+        "name": "aa",
+        "type": "str",
+        "example": "0.6475"
+      },
+      {
+        "name": "a",
+        "type": "str",
+        "example": "1.675"
+      }
+    ]
+  },
+  {
+    "title": "Anbima Curvas Juros Ettj.Gz",
+    "files": "anbima_curvas_juros_ettj.csv.gz",
+    "source": "anbima",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-09-12"
+      },
+      {
+        "name": "data_referencia",
+        "type": "date",
+        "example": "2026-09-11"
+      },
+      {
+        "name": "vertice_du",
+        "type": "str",
+        "example": "21"
+      },
+      {
+        "name": "taxa_prefixadas",
+        "type": "float",
+        "example": "13.68"
+      },
+      {
+        "name": "taxa_ipca",
+        "type": "float",
+        "example": ""
+      },
+      {
+        "name": "taxa_implicita",
+        "type": "float",
+        "example": ""
+      }
+    ]
+  },
+  {
+    "title": "Anbima Indice Ida.Gz",
+    "files": "anbima_indice_ida.csv.gz",
+    "source": "anbima",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-09-12"
+      },
+      {
+        "name": "data_referencia",
+        "type": "date",
+        "example": "2026-09-10"
+      },
+      {
+        "name": "indice",
+        "type": "str",
+        "example": "IDA-DI"
+      },
+      {
+        "name": "numero_indice",
+        "type": "int",
+        "example": "4918.979963"
+      },
+      {
+        "name": "variacao_diaria",
+        "type": "str",
+        "example": "0.0728"
+      },
+      {
+        "name": "variacao_mensal",
+        "type": "str",
+        "example": "0.3575"
+      },
+      {
+        "name": "variacao_anual",
+        "type": "str",
+        "example": "10.2012"
+      },
+      {
+        "name": "variacao_ult12m",
+        "type": "str",
+        "example": "14.7457"
+      },
+      {
+        "name": "variacao_ult24m",
+        "type": "str",
+        "example": "30.8466"
+      },
+      {
+        "name": "duration",
+        "type": "str",
+        "example": "682"
+      },
+      {
+        "name": "peso",
+        "type": "str",
+        "example": "50.91"
+      },
+      {
+        "name": "valor_mercado",
+        "type": "str",
+        "example": "395233.01"
+      }
+    ]
+  },
+  {
+    "title": "Anbima Indices Ima Resultados.Gz",
+    "files": "anbima_indices_ima_resultados.csv.gz",
+    "source": "anbima",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-09-12"
+      },
+      {
+        "name": "data_referencia",
+        "type": "date",
+        "example": "2026-09-11"
+      },
+      {
+        "name": "indice",
+        "type": "str",
+        "example": "IMA-B"
+      },
+      {
+        "name": "numero_indice",
+        "type": "int",
+        "example": "11889.177861"
+      },
+      {
+        "name": "variacao_diaria",
+        "type": "str",
+        "example": "0.247"
+      },
+      {
+        "name": "variacao_mensal",
+        "type": "str",
+        "example": "1.8237"
+      },
+      {
+        "name": "variacao_anual",
+        "type": "str",
+        "example": "8.6944"
+      },
+      {
+        "name": "variacao_ult12m",
+        "type": "str",
+        "example": "12.6978"
+      },
+      {
+        "name": "variacao_ult24m",
+        "type": "str",
+        "example": "17.9108"
+      },
+      {
+        "name": "duration",
+        "type": "str",
+        "example": "1721.14"
+      },
+      {
+        "name": "pmr",
+        "type": "str",
+        "example": "3240.45"
+      },
+      {
+        "name": "yield",
+        "type": "str",
+        "example": "7.3763"
+      },
+      {
+        "name": "redemption_yield",
+        "type": "str",
+        "example": "7.3955"
+      },
+      {
+        "name": "convexidade",
+        "type": "str",
+        "example": "86.1228"
+      },
+      {
+        "name": "peso_indice",
+        "type": "str",
+        "example": "20.8006"
+      },
+      {
+        "name": "valor_mercado",
+        "type": "str",
+        "example": "1742639170.67"
+      }
+    ]
+  },
+  {
+    "title": "Anbima Titulos Publicos Mercado Secundario.Gz",
+    "files": "anbima_titulos_publicos_mercado_secundario.csv.gz",
+    "source": "anbima",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-09-12"
+      },
+      {
+        "name": "data_referencia",
+        "type": "date",
+        "example": "2026-09-11"
+      },
+      {
+        "name": "tipo_titulo",
+        "type": "str",
+        "example": "LFT"
+      },
+      {
+        "name": "codigo_selic",
+        "type": "str",
+        "example": "210100"
+      },
+      {
+        "name": "codigo_isin",
+        "type": "str",
+        "example": "BRSTNCLF1RG5"
+      },
+      {
+        "name": "data_vencimento",
+        "type": "date",
+        "example": "2027-03-01"
+      },
+      {
+        "name": "data_base",
+        "type": "date",
+        "example": "2000-07-01"
+      },
+      {
+        "name": "expressao",
+        "type": "str",
+        "example": "Rentabilidade (% a.a.)/252"
+      },
+      {
+        "name": "taxa_indicativa",
+        "type": "float",
+        "example": "0.0066"
+      },
+      {
+        "name": "taxa_compra",
+        "type": "float",
+        "example": "0.0086"
+      },
+      {
+        "name": "taxa_venda",
+        "type": "float",
+        "example": "0.0056"
+      },
+      {
+        "name": "pu",
+        "type": "str",
+        "example": "19854.013617"
+      },
+      {
+        "name": "desvio_padrao",
+        "type": "str",
+        "example": "0.001054"
+      },
+      {
+        "name": "intervalo_min_d0",
+        "type": "str",
+        "example": "-0.0194"
+      },
+      {
+        "name": "intervalo_max_d0",
+        "type": "str",
+        "example": "0.0209"
+      },
+      {
+        "name": "intervalo_min_d1",
+        "type": "str",
+        "example": "-0.0177"
+      },
+      {
+        "name": "intervalo_max_d1",
+        "type": "str",
+        "example": "0.0236"
+      }
+    ]
+  },
+  {
+    "title": "Anbima Titulos Publicos Vna.Gz",
+    "files": "anbima_titulos_publicos_vna.csv.gz",
+    "source": "anbima",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-09-12"
+      },
+      {
+        "name": "data_referencia",
+        "type": "date",
+        "example": "2026-09-11"
+      },
+      {
+        "name": "tipo_titulo",
+        "type": "str",
+        "example": "LFT"
+      },
+      {
+        "name": "codigo_selic",
+        "type": "str",
+        "example": "210100"
+      },
+      {
+        "name": "vna",
+        "type": "str",
+        "example": "19854.609256"
+      },
+      {
+        "name": "index",
+        "type": "str",
+        "example": "13.9"
+      },
+      {
+        "name": "tipo_correcao",
+        "type": "str",
+        "example": "O"
+      },
+      {
+        "name": "data_validade",
+        "type": "date",
+        "example": "2026-09-10"
+      }
+    ]
   }
 ]

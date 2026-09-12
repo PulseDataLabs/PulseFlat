@@ -232,7 +232,47 @@ window.PULSEFLAT_LAST_UPDATES = {
     "max": "2026-09-11"
   },
   "debentures_mercado_secundario_precos_negociacao_api.csv.gz": {
-    "min": "2026-09-10",
-    "max": "2026-09-12"
+    "min": "2020-01-02",
+    "max": "2026-09-11"
+  },
+  "debentures_emissoes_caracteristicas_api.csv": {
+    "min": "2026-09-11",
+    "max": "2026-09-11"
+  },
+  "anbima_cri_cra_mercado_secundario.csv.gz": {
+    "min": "2020-01-02",
+    "max": "2026-09-11"
+  },
+  "anbima_letras_financeiras.csv.gz": {
+    "min": "2023-10-09",
+    "max": "2026-09-11"
+  },
+  "anbima_fidc_mercado_secundario.csv.gz": {
+    "min": "2021-10-18",
+    "max": "2026-09-11"
+  },
+  "anbima_curvas_credito.csv.gz": {
+    "min": "2020-01-02",
+    "max": "2026-09-10"
+  },
+  "anbima_curvas_juros_ettj.csv.gz": {
+    "min": "2020-01-02",
+    "max": "2026-09-11"
+  },
+  "anbima_indice_ida.csv.gz": {
+    "min": "2020-01-02",
+    "max": "2026-09-10"
+  },
+  "anbima_indices_ima_resultados.csv.gz": {
+    "min": "2020-01-02",
+    "max": "2026-09-11"
+  },
+  "anbima_titulos_publicos_mercado_secundario.csv.gz": {
+    "min": "2020-01-02",
+    "max": "2026-09-11"
+  },
+  "anbima_titulos_publicos_vna.csv.gz": {
+    "min": "2020-01-02",
+    "max": "2026-09-11"
   }
 };

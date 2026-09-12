@@ -874,6 +874,29 @@
     "accumulate": false
   },
   {
+    "title": "Debêntures — Emissões e Características (API ANBIMA)",
+    "file": "debentures_emissoes_caracteristicas_api.csv",
+    "description": "Cadastro e características oficiais de debêntures capturados via API oficial ANBIMA Data (Debêntures+), incluindo VNA, PU Par, Duration, Z-Spread, enquadramento na Lei 12.431 (debênture incentivada), NTN-B de referência, taxas indicativas e parâmetros contratuais.",
+    "icon": "🏛️",
+    "iconClass": "icon-anbima",
+    "badge": "ANBIMA API",
+    "badgeClass": "badge-dynamic",
+    "tags": [
+      "debentures",
+      "emissoes",
+      "caracteristicas",
+      "vna",
+      "duration",
+      "z_spread",
+      "lei_12431",
+      "anbima",
+      "api"
+    ],
+    "source": "ANBIMA Data (developers.anbima.com.br)",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/debentures_emissoes_caracteristicas_api.csv",
+    "accumulate": false
+  },
+  {
     "title": "Debêntures — Mercado Secundário e Preços de Negociação",
     "file": "debentures_mercado_secundario_precos_negociacao.csv.gz",
     "description": "Histórico e boletim diário de negociações no mercado secundário de debêntures, contendo preço unitário médio, quantidade de títulos transacionados, volume financeiro e taxas praticadas.",
@@ -1226,5 +1249,201 @@
     "source": "Wikipedia",
     "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/wikipedia_global_indices.csv",
     "accumulate": false
+  },
+  {
+    "title": "ANBIMA — CRI e CRA (Mercado Secundário e Preços)",
+    "file": "anbima_cri_cra_mercado_secundario.csv.gz",
+    "description": "Boletim diário oficial de taxas indicativas, preços unitários (PU), duration, z-spread e percentual REUNE para Certificados de Recebíveis Imobiliários (CRI) e do Agronegócio (CRA) apurados pela ANBIMA, com identificação do emissor e originador.",
+    "icon": "🌾",
+    "iconClass": "icon-anbima",
+    "badge": "ANBIMA API",
+    "badgeClass": "badge-dynamic",
+    "tags": [
+      "anbima",
+      "cri",
+      "cra",
+      "credito_privado",
+      "mercado_secundario",
+      "precos",
+      "taxas",
+      "api"
+    ],
+    "source": "ANBIMA Data (developers.anbima.com.br)",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/anbima_cri_cra_mercado_secundario.csv.gz",
+    "accumulate": true
+  },
+  {
+    "title": "ANBIMA — Letras Financeiras (Matrizes de Vértices por Emissor)",
+    "file": "anbima_letras_financeiras.csv.gz",
+    "description": "Matriz diária oficial de taxas indicativas, taxas de compra e venda de Letras Financeiras (LFs) por instituição bancária emissora e por vértices de prazos (em meses), apuradas pela ANBIMA.",
+    "icon": "🏦",
+    "iconClass": "icon-anbima",
+    "badge": "ANBIMA API",
+    "badgeClass": "badge-dynamic",
+    "tags": [
+      "anbima",
+      "letras_financeiras",
+      "bancos",
+      "renda_fixa",
+      "taxas",
+      "curvas",
+      "api"
+    ],
+    "source": "ANBIMA Data (developers.anbima.com.br)",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/anbima_letras_financeiras.csv.gz",
+    "accumulate": true
+  },
+  {
+    "title": "ANBIMA — FIDC (Mercado Secundário e Preços)",
+    "file": "anbima_fidc_mercado_secundario.csv.gz",
+    "description": "Boletim oficial diário de preços unitários (PU), taxas indicativas, duration e parâmetros de negociação para cotas seniores de Fundos de Investimento em Direitos Creditórios (FIDC) apurados pela ANBIMA.",
+    "icon": "📑",
+    "iconClass": "icon-anbima",
+    "badge": "ANBIMA API",
+    "badgeClass": "badge-dynamic",
+    "tags": [
+      "anbima",
+      "fidc",
+      "direitos_creditorios",
+      "mercado_secundario",
+      "precos",
+      "taxas",
+      "api"
+    ],
+    "source": "ANBIMA Data (developers.anbima.com.br)",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/anbima_fidc_mercado_secundario.csv.gz",
+    "accumulate": true
+  },
+  {
+    "title": "ANBIMA — Curvas de Crédito Corporativo por Rating",
+    "file": "anbima_curvas_credito.csv.gz",
+    "description": "Spreads médios oficiais de crédito corporativo (em % sobre a taxa soberana) apurados pela ANBIMA para debêntures, organizados por classificação de rating (AAA, AA, A) ao longo de vértices de prazos (em anos).",
+    "icon": "📈",
+    "iconClass": "icon-anbima",
+    "badge": "ANBIMA API",
+    "badgeClass": "badge-dynamic",
+    "tags": [
+      "anbima",
+      "curvas_credito",
+      "spreads",
+      "ratings",
+      "debentures",
+      "modelagem",
+      "api"
+    ],
+    "source": "ANBIMA Data (developers.anbima.com.br)",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/anbima_curvas_credito.csv.gz",
+    "accumulate": true
+  },
+  {
+    "title": "ANBIMA — Curvas de Juros ETTJ (Taxas Zero-Cupom TPF)",
+    "file": "anbima_curvas_juros_ettj.csv.gz",
+    "description": "Estrutura a Termo das Taxas de Juros (ETTJ) oficial da ANBIMA, contendo as curvas de juros zero-cupom ponto a ponto por vértice de dias úteis (DU) para taxas prefixadas, taxas reais (IPCA) e inflação implícita.",
+    "icon": "📉",
+    "iconClass": "icon-anbima",
+    "badge": "ANBIMA API",
+    "badgeClass": "badge-dynamic",
+    "tags": [
+      "anbima",
+      "ettj",
+      "curvas_juros",
+      "zero_cupom",
+      "titulos_publicos",
+      "ipca",
+      "prefixado",
+      "api"
+    ],
+    "source": "ANBIMA Data (developers.anbima.com.br)",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/anbima_curvas_juros_ettj.csv.gz",
+    "accumulate": true
+  },
+  {
+    "title": "ANBIMA — Índice IDA (Índice de Debêntures ANBIMA)",
+    "file": "anbima_indice_ida.csv.gz",
+    "description": "Resultados oficiais diários de fechamento da família do Índice de Debêntures ANBIMA (IDA), incluindo IDA-Geral, IDA-DI, IDA-IPCA, IDA-IPCA Infraestrutura e IDA-IPCA Ex-Infraestrutura.",
+    "icon": "🏆",
+    "iconClass": "icon-anbima",
+    "badge": "ANBIMA API",
+    "badgeClass": "badge-dynamic",
+    "tags": [
+      "anbima",
+      "ida",
+      "indices",
+      "debentures",
+      "credito_privado",
+      "benchmark",
+      "rentabilidade",
+      "api"
+    ],
+    "source": "ANBIMA Data (developers.anbima.com.br)",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/anbima_indice_ida.csv.gz",
+    "accumulate": true
+  },
+  {
+    "title": "ANBIMA — Família de Índices IMA (Resultados Oficiais)",
+    "file": "anbima_indices_ima_resultados.csv.gz",
+    "description": "Resultados oficiais consolidados da família de índices de renda fixa soberana da ANBIMA (IMA-Geral, IMA-B, IMA-B 5, IMA-B 5+, IRF-M, IRF-M 1, IRF-M 1+, IMA-S).",
+    "icon": "📊",
+    "iconClass": "icon-anbima",
+    "badge": "ANBIMA API",
+    "badgeClass": "badge-dynamic",
+    "tags": [
+      "anbima",
+      "ima",
+      "indices",
+      "renda_fixa",
+      "titulos_publicos",
+      "benchmark",
+      "rentabilidade",
+      "api"
+    ],
+    "source": "ANBIMA Data (developers.anbima.com.br)",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/anbima_indices_ima_resultados.csv.gz",
+    "accumulate": true
+  },
+  {
+    "title": "ANBIMA — Títulos Públicos Federais (Mercado Secundário e Preços)",
+    "file": "anbima_titulos_publicos_mercado_secundario.csv.gz",
+    "description": "Boletim diário oficial de preços unitários (PU), taxas indicativas, taxas de compra/venda e intervalos estatísticos de negociação no mercado secundário de títulos públicos federais (LTN, LFT, NTN-B e NTN-F).",
+    "icon": "🏛️",
+    "iconClass": "icon-anbima",
+    "badge": "ANBIMA API",
+    "badgeClass": "badge-dynamic",
+    "tags": [
+      "anbima",
+      "titulos_publicos",
+      "tpf",
+      "mercado_secundario",
+      "precos",
+      "taxas",
+      "tesouro",
+      "api"
+    ],
+    "source": "ANBIMA Data (developers.anbima.com.br)",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/anbima_titulos_publicos_mercado_secundario.csv.gz",
+    "accumulate": true
+  },
+  {
+    "title": "ANBIMA — Títulos Públicos Federais (VNA Oficial)",
+    "file": "anbima_titulos_publicos_vna.csv.gz",
+    "description": "Série histórica oficial do Valor Nominal Atualizado (VNA) de títulos públicos federais (NTN-B, NTN-C e LFT) apurado e divulgado diariamente pela ANBIMA com base nos indexadores oficiais.",
+    "icon": "💵",
+    "iconClass": "icon-anbima",
+    "badge": "ANBIMA API",
+    "badgeClass": "badge-dynamic",
+    "tags": [
+      "anbima",
+      "vna",
+      "titulos_publicos",
+      "ntnb",
+      "lft",
+      "ntnc",
+      "ipca",
+      "selic",
+      "api"
+    ],
+    "source": "ANBIMA Data (developers.anbima.com.br)",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/anbima_titulos_publicos_vna.csv.gz",
+    "accumulate": true
   }
 ]
