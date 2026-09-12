@@ -14,6 +14,15 @@ from .anbima_data_client import (
     AnbimaRateLimitError,
 )
 from .base import BaseScraper
+from .eulerpool_base import BaseEulerpoolScraper
+from .eulerpool_client import (
+    EulerpoolApiError,
+    EulerpoolAuthError,
+    EulerpoolClient,
+    EulerpoolError,
+    EulerpoolMissingApiKeyError,
+    EulerpoolRateLimitError,
+)
 
 __all__ = [
     "BaseScraper",
@@ -24,4 +33,11 @@ __all__ = [
     "AnbimaAuthError",
     "AnbimaRateLimitError",
     "AnbimaApiError",
+    "EulerpoolClient",
+    "BaseEulerpoolScraper",
+    "EulerpoolError",
+    "EulerpoolMissingApiKeyError",
+    "EulerpoolAuthError",
+    "EulerpoolRateLimitError",
+    "EulerpoolApiError",
 ]

@@ -44,6 +44,7 @@ A **PulseDataLabs** nasceu da missão de democratizar o acesso a dados financeir
 
 *   **OOP & Abstração Sólida**: Scrapers estruturados sob a classe base `BaseScraper` com ciclo de vida unificado, logs padronizados e persistência inteligente.
 *   **Suporte Oficial à ANBIMA Developers (ANBIMA Data)**: Cliente HTTP nativo com autenticação OAuth 2.0 (Client Credentials), auto-renovação de tokens em cache, resiliência contra rate-limiting (429) e classe base `BaseAnbimaDataScraper` pronta para novos feeds.
+*   **Suporte Oficial à Eulerpool Financial Data API**: Cliente HTTP dedicado para os 375+ endpoints globais de ações, ETFs, opções, commodities e finanças da Eulerpool (`api.eulerpool.com`), com autenticação Bearer, retries e classe base `BaseEulerpoolScraper`.
 *   **Descoberta Dinâmica (Reflection)**: O orquestrador detecta scrapers automaticamente inspecionando o diretório `scrapers/`, eliminando a necessidade de registros estáticos.
 *   **Sanitização e Blindagem Defensiva**: Padronização de datas (`DD/MM/YYYY` ou `DD/MM/YY` para ISO `YYYY-MM-DD`), conversão de números decimais com vírgula para ponto e fallbacks automáticos para dados corrompidos.
 *   **Concorrência Multicondicional**: Paralelização segura de scrapers independentes e ordenação controlada para scrapers que dependem de resultados prévios.
@@ -161,11 +162,15 @@ PulseFlat/
 │   ├── utils/
 │   │   ├── base.py                  # Classe BaseScraper
 │   │   ├── anbima_data_client.py    # Cliente HTTP OAuth 2.0 para ANBIMA Developers
-│   │   └── anbima_data_base.py      # Classe BaseAnbimaDataScraper
+│   │   ├── anbima_data_base.py      # Classe BaseAnbimaDataScraper
+│   │   ├── eulerpool_client.py      # Cliente HTTP Bearer para Eulerpool Financial Data
+│   │   └── eulerpool_base.py        # Classe BaseEulerpoolScraper
 │   ├── anbima_data_template.py      # Template modelo para novos scrapers ANBIMA Data
+│   ├── eulerpool_template.py        # Template modelo para novos scrapers Eulerpool
 │   └── *.py                         # Scripts específicos de coleta por dataset
 ├── scripts/                         # Pós-processamento, catálogo e alertas
 │   ├── test_anbima_connection.py    # Teste e diagnóstico de credenciais ANBIMA Data
+│   ├── test_eulerpool_connection.py # Teste e diagnóstico de credenciais Eulerpool API
 │   ├── export_to_parquet.py         # Conversão colunar de CSV/GZ para Parquet
 │   ├── alerta_debentures.py         # Monitoramento e disparo de alertas
 │   ├── sanitizar_debentures.py      # Sanitização e limpeza de debêntures
@@ -322,6 +327,47 @@ O `BaseAnbimaDataScraper` gerencia automaticamente a autenticação Bearer, reno
 
 ---
 
+### 🌐 Integração com Eulerpool Financial Data API
+
+O PulseFlat possui suporte nativo e modular para consumir os 375+ endpoints do portal [Eulerpool Developers](https://eulerpool.com/developers) (`https://api.eulerpool.com`).
+
+#### 1. Configuração da API Key
+Adicione sua chave no arquivo `.env` (ou em *Settings → Secrets and variables → Actions* no GitHub):
+```env
+EULERPOOL_API_KEY=sua_chave_aqui
+```
+*(Nota: os aliases `API_EULERPOOL_KEY` e `EULERPOOL_TOKEN` também são aceitos automaticamente).*
+
+#### 2. Validando a Conexão
+Para testar se sua chave está ativa e comunicando com a API da Eulerpool, execute o diagnóstico:
+```bash
+python scripts/test_eulerpool_connection.py
+```
+
+#### 3. Criando um Novo Scraper da Eulerpool
+O PulseFlat disponibiliza o template documentado `scrapers/eulerpool_template.py`. Para criar uma nova coleta, herde de `BaseEulerpoolScraper`:
+
+```python
+from scrapers.utils.eulerpool_base import BaseEulerpoolScraper
+import pandas as pd
+
+class EulerpoolExemploScraper(BaseEulerpoolScraper):
+    name = "eulerpool_exemplo"
+    title = "Eulerpool — Exemplo de Cotações"
+    endpoint = "/api/1/..."
+    chaves_dedup = ["data_captura", "data_referencia", "ticker"]
+
+    def fetch(self) -> pd.DataFrame:
+        registros = self.fetch_endpoint(self.endpoint)
+        return pd.DataFrame(registros)
+
+if __name__ == "__main__":
+    EulerpoolExemploScraper().run()
+```
+O `BaseEulerpoolScraper` gerencia automaticamente a autenticação Bearer, retries automáticos com backoff para rate-limiting (HTTP 429), desempacotamento de respostas JSON e integração direta com o orquestrador `run_all.py`.
+
+---
+
 ## 📊 Fontes e Datasets
 
 | Grupo | Fonte Primária | Exemplos de Dados Disponibilizados | Frequência |
@@ -331,6 +377,7 @@ O `BaseAnbimaDataScraper` gerencia automaticamente a autenticação Bearer, reno
 | **CVM** | [Portal Brasileiro de Dados Abertos](https://dados.cvm.gov.br) | Cadastro geral de companhias abertas, informes diários e dados de cotas/classes de fundos. | Diária |
 | **B3** | [B3 Market Data](https://www.b3.com.br) | FIIs/ETFs listados, composição de carteiras teóricas (IBOV, SMLL, ISEE, BDRX, IFNC), taxas DI Over, dados cadastrais e financeiros de companhias, limites de garantias. | Diária / Snapshot |
 | **IBGE** | [IBGE SIDRA API](https://sidra.ibge.gov.br) | Índices oficiais de inflação (IPCA, IPCA-15, INPC). | Mensal |
+| **Eulerpool** | [Eulerpool Financial Data](https://eulerpool.com/developers) | Ações globais (EUA, Europa, Ásia), ETFs, opções, commodities, dividendos, estimativas de analistas e finanças globais. | Diária / Realtime |
 | **Misc** | [Yahoo Finance](https://finance.yahoo.com) / [Wikipedia](https://www.wikipedia.org) / [ONU](https://unglobalcompact.org) | Ações brasileiras e globais, ETFs, moedas, criptoativos, commodities e Pacto Global da ONU. | Diária |
 
 ---
