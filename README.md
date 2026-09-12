@@ -43,6 +43,7 @@ A **PulseDataLabs** nasceu da missão de democratizar o acesso a dados financeir
 ## 🚀 Recursos e Diferenciais
 
 *   **OOP & Abstração Sólida**: Scrapers estruturados sob a classe base `BaseScraper` com ciclo de vida unificado, logs padronizados e persistência inteligente.
+*   **Suporte Oficial à ANBIMA Developers (ANBIMA Data)**: Cliente HTTP nativo com autenticação OAuth 2.0 (Client Credentials), auto-renovação de tokens em cache, resiliência contra rate-limiting (429) e classe base `BaseAnbimaDataScraper` pronta para novos feeds.
 *   **Descoberta Dinâmica (Reflection)**: O orquestrador detecta scrapers automaticamente inspecionando o diretório `scrapers/`, eliminando a necessidade de registros estáticos.
 *   **Sanitização e Blindagem Defensiva**: Padronização de datas (`DD/MM/YYYY` ou `DD/MM/YY` para ISO `YYYY-MM-DD`), conversão de números decimais com vírgula para ponto e fallbacks automáticos para dados corrompidos.
 *   **Concorrência Multicondicional**: Paralelização segura de scrapers independentes e ordenação controlada para scrapers que dependem de resultados prévios.
@@ -157,9 +158,14 @@ PulseFlat/
 │   ├── schemas.json                 # Definição e mapeamento de campos e tipos
 │   └── *.csv / *.csv.gz             # Séries temporais de dados financeiros
 ├── scrapers/                        # Módulos de coleta estruturados por fonte
-│   ├── utils/base.py                # Classe BaseScraper
+│   ├── utils/
+│   │   ├── base.py                  # Classe BaseScraper
+│   │   ├── anbima_data_client.py    # Cliente HTTP OAuth 2.0 para ANBIMA Developers
+│   │   └── anbima_data_base.py      # Classe BaseAnbimaDataScraper
+│   ├── anbima_data_template.py      # Template modelo para novos scrapers ANBIMA Data
 │   └── *.py                         # Scripts específicos de coleta por dataset
 ├── scripts/                         # Pós-processamento, catálogo e alertas
+│   ├── test_anbima_connection.py    # Teste e diagnóstico de credenciais ANBIMA Data
 │   ├── export_to_parquet.py         # Conversão colunar de CSV/GZ para Parquet
 │   ├── alerta_debentures.py         # Monitoramento e disparo de alertas
 │   ├── sanitizar_debentures.py      # Sanitização e limpeza de debêntures
@@ -271,6 +277,48 @@ Configure as variáveis no `.env`:
 * `ORACLE_DB_WALLET_PASSWORD` (opcional): Senha da carteira
 
 > **Dica:** Para desativar a conexão com o banco em execuções locais, use `SKIP_ORACLE_DB=1` no `.env` ou passe `--skip-db`.
+
+---
+
+### 🏛️ Integração com ANBIMA Developers (ANBIMA Data)
+
+O PulseFlat possui suporte nativo e modular para consumir feeds e APIs do portal [ANBIMA Developers](https://developers.anbima.com.br/pt/).
+
+#### 1. Configuração das Credenciais
+Adicione suas credenciais no arquivo `.env` (ou em *Settings → Secrets and variables → Actions* no GitHub):
+```env
+ANBIMA_CLIENT_ID=seu_client_id
+ANBIMA_CLIENT_SECRET=seu_client_secret
+```
+*(Nota: as variáveis alternativas `API_ANBIMA_CLIENT_ID` e `API_ANBIMA_CLIENT_SECRET` também são aceitas automaticamente).*
+
+#### 2. Validando a Conexão
+Para verificar o status das credenciais e a emissão do token OAuth 2.0 em tempo real, execute o utilitário de diagnóstico:
+```bash
+python scripts/test_anbima_connection.py
+```
+
+#### 3. Criando um Novo Scraper da ANBIMA Data
+O PulseFlat disponibiliza o template documentado `scrapers/anbima_data_template.py`. Para criar uma nova coleta, basta herdar de `BaseAnbimaDataScraper`:
+
+```python
+from scrapers.utils.anbima_data_base import BaseAnbimaDataScraper
+import pandas as pd
+
+class AnbimaExemploScraper(BaseAnbimaDataScraper):
+    name = "anbima_exemplo"
+    title = "ANBIMA — Exemplo de Dataset"
+    endpoint = "/feed/precos-indices/v1/..."
+    chaves_dedup = ["data_captura", "data_referencia", "codigo"]
+
+    def fetch(self) -> pd.DataFrame:
+        registros = self.fetch_endpoint(self.endpoint)
+        return pd.DataFrame(registros)
+
+if __name__ == "__main__":
+    AnbimaExemploScraper().run()
+```
+O `BaseAnbimaDataScraper` gerencia automaticamente a autenticação Bearer, renovação de token em background, injeção de headers (`client_id`), tratamento de rate-limiting (HTTP 429), extração de payloads envelopados e a integração com o orquestrador `run_all.py`.
 
 ---
 

@@ -58,6 +58,8 @@ jobs:
         ORACLE_DB_PASSWORD: ${{ secrets.ORACLE_DB_PASSWORD || vars.ORACLE_DB_PASSWORD }}
         ORACLE_DB_WALLET_PASSWORD: ${{ secrets.ORACLE_DB_WALLET_PASSWORD || vars.ORACLE_DB_WALLET_PASSWORD }}
         ORACLE_DB_WALLET_BASE64: ${{ secrets.ORACLE_DB_WALLET_BASE64 || vars.ORACLE_DB_WALLET_BASE64 }}
+        ANBIMA_CLIENT_ID: ${{ secrets.ANBIMA_CLIENT_ID || vars.ANBIMA_CLIENT_ID }}
+        ANBIMA_CLIENT_SECRET: ${{ secrets.ANBIMA_CLIENT_SECRET || vars.ANBIMA_CLIENT_SECRET }}
       # O "|| true" força o terminal a entender que a execução terminou com sucesso mesmo se o Python falhar
       run: |
         if [ -n "$ORACLE_DB_WALLET_BASE64" ]; then
