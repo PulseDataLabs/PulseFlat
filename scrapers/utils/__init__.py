@@ -47,19 +47,19 @@ from .fred_client import (
     FredMissingApiKeyError,
     FredRateLimitError,
 )
-from .tesouro_transparente_base import BaseTesouroTransparenteScraper
-from .tesouro_transparente_client import (
-    TesouroTransparenteApiError,
-    TesouroTransparenteClient,
-    TesouroTransparenteError,
-    TesouroTransparenteRateLimitError,
-)
 from .ipea_base import BaseIpeaScraper
 from .ipea_client import (
     IpeaApiError,
     IpeaClient,
     IpeaError,
     IpeaRateLimitError,
+)
+from .tesouro_transparente_base import BaseTesouroTransparenteScraper
+from .tesouro_transparente_client import (
+    TesouroTransparenteApiError,
+    TesouroTransparenteClient,
+    TesouroTransparenteError,
+    TesouroTransparenteRateLimitError,
 )
 
 __all__ = [
