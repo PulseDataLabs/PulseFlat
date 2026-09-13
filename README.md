@@ -248,19 +248,38 @@ Acesse o [dashboard interativo](https://pulsedatalabs.github.io/PulseFlat/#datas
 
 ---
 
-## ☁️ Execução no Databricks (Workflows & Repos)
+## ☁️ Execução no Databricks (Workflows & Community Edition)
 
-O **PulseFlat** possui integração nativa com o **Databricks**, permitindo replicar as automações diárias do GitHub Actions em clusters sob demanda ou Serverless Compute, aproveitando computação distribuída e governança corporativa.
+O **PulseFlat** possui integração nativa com o **Databricks**, permitindo replicar as automações diárias do GitHub Actions em clusters sob demanda, Serverless Compute ou na conta gratuita **Community Edition**.
 
 ### 🌟 Benefícios no Databricks
 - **Zero Retrabalho**: O código fonte (`scrapers/`, `utils/`, `run_all.py`) é reutilizado integralmente via **Databricks Git Folders (Repos)**.
-- **Execução Agendada**: Substitua o cron do GitHub Actions pelo **Databricks Workflows (Jobs)** com Quartz cron nativo e alertas automáticos.
-- **Segredos Transparentes**: Lê credenciais tanto de *Databricks Secrets* (`scope="pulseflat"`) quanto de *Environment Variables* configuradas no cluster.
-- **Exportação Delta Lake**: Ingestão opcional e automatizada para tabelas **Delta Lake / Unity Catalog** com suporte a versionamento ACID e time-travel.
+- **Execução Agendada**: Substitua o cron do GitHub Actions pelo **Databricks Workflows (Jobs)** com Quartz cron nativo e alertas automáticos (Databricks Comercial).
+- **Segredos Transparentes**: Lê credenciais de *Databricks Secrets* (`scope="pulseflat"`), variáveis de ambiente do cluster ou arquivo `.env`.
+- **Exportação Delta Lake**: Ingestão opcional e automatizada para tabelas **Delta Lake** (compatível com Unity Catalog e Hive Metastore) com suporte a versionamento ACID e time-travel.
 
 ---
 
-### 🚀 Como Configurar em 3 Passos
+### 🎓 Guia Rápido: Databricks Community Edition (Conta Gratuita)
+
+O PulseFlat é **100% compatível com a conta gratuita do Databricks Community Edition**. Você pode rodar todas as extrações e gerar tabelas Delta Lake sem custos de nuvem:
+
+1. **Clonar via Git Folders**: Em **Workspace > Users > seu.email**, clique em **Create > Git Folder** e aponte para `https://github.com/PulseDataLabs/PulseFlat.git`.
+2. **Criar Cluster Single-Node**: Crie um cluster com Runtime LTS (ex: `14.3 LTS`). Em *Advanced Options > Spark > Environment Variables*, insira credenciais opcionais (ex: `ANBIMA_CLIENT_ID`, `FRED_API_KEY`) ou crie um arquivo `.env` na raiz do repositório.
+3. **Executar via Notebook**: Abra [`databricks/notebooks/01_orchestrator_notebook.py`](databricks/notebooks/01_orchestrator_notebook.py), selecione `max_workers = 2` ou `4` (adequado para os 2 vCPUs do CE) e clique em **Run All**.
+4. **Gerar Tabelas Delta**: Abra [`databricks/notebooks/02_delta_lake_exporter.py`](databricks/notebooks/02_delta_lake_exporter.py) e clique em **Run All**. Os dados serão salvos no banco `pulseflat` do Hive Metastore para consultas SQL:
+   ```sql
+   SELECT * FROM pulseflat.bcb_selic_meta LIMIT 10;
+   ```
+
+> [!NOTE]
+> **Particularidades do Community Edition:**
+> - A aba **Workflows (Jobs)** com agendador automático via cron é desabilitada na conta gratuita. A execução no CE é disparada manualmente pelo notebook interativo.
+> - O cluster gratuito é *Single-Node* (2 vCPUs, 15 GB RAM) e auto-termina após 2 horas de inatividade. O código e os dados versionados no Git Folder permanecem salvos.
+
+---
+
+### 🏢 Databricks Comercial (AWS / Azure / GCP)
 
 #### 1. Conectar o Repositório no Databricks (Git Folders)
 1. No menu lateral esquerdo do Databricks, acesse **Workspace > Users > seu.email**.
@@ -284,7 +303,7 @@ Para testar scrapers pontualmente ou fazer cargas manuais:
 - Clique em **Run All**.
 
 > [!TIP]
-> Consulte o guia detalhado em [`databricks/README.md`](databricks/README.md) para detalhes adicionais de exportação Delta Lake e configuração de Secrets Scopes.
+> Consulte o guia detalhado e tabela comparativa completa em [`databricks/README.md`](databricks/README.md).
 
 ---
 
