@@ -629,8 +629,9 @@ Séries macroeconômicas globais do Banco Central dos Estados Unidos (St. Louis 
 
 ---
 
-### ◉ B3 — Brasil, Bolsa, Balcão (28 Datasets)
+### ◉ B3 — Brasil, Bolsa, Balcão (30 Datasets)
 
+* **Mercado a Termo e Posições em Aberto**: Posições em Aberto no Mercado a Termo (`b3_termo_posicoes_aberto.csv`) detalhando contratos, ativos, volume financeiro em R$ e preço médio por ativo/empresa (ações, units e BDRs); e Resumo Histórico Consolidado de Termo (`b3_termo_posicoes_resumo.csv`) agregando volume total de contratos, ativos e capital negociado a termo no pregão.
 * **Valor de Mercado das Empresas Listadas**: Capitalização de Mercado Mensal das Empresas Listadas (`b3_valor_mercado_empresas.csv`) cobrindo ~350 companhias com valor em R$, valor em US$, variação percentual mensal e flags de pertencimento ao IBOV e IBrX-100; e Totais Consolidados de Mercado (`b3_valor_mercado_totais.csv`) com total geral da bolsa, IBOVESPA e IBrX-100 em moeda local e estrangeira.
 * **Opções e Posições em Aberto**: Snapshot Completo de Opções em Aberto (`b3_opcoes_posicoes_aberto.csv.gz`) cobrindo ~50.000 séries diárias de ações e índices com detalhamento de posições cobertas, descobertas, em travas e número de titulares/lançadores; e Resumo Histórico por Ativo e Put/Call Ratio (`b3_opcoes_posicoes_resumo.csv`) agregando Open Interest de CALLs e PUTs, Put/Call Ratio e strikes de maior liquidez.
 * **Carteiras Teóricas de Índices**: IBOVESPA (`b3_carteira_teorica_ibov.csv`), Small Caps SMLL (`b3_carteira_teorica_smll.csv`), Sustentabilidade ISEE (`b3_carteira_teorica_isee.csv`), BDRX (`b3_carteira_teorica_bdrx.csv`), Financeiro IFNC (`b3_carteira_teorica_ifnc.csv`), Dividendos IBSD (`b3_carteira_teorica_ibsd.csv`), IBX 50 (`b3_carteira_teorica_ibxl.csv`), Agronegócio AGFS/IAGRO (`b3_carteira_teorica_agfs_iagro.csv`) e Composição Completa Consolidada de todos os índices B3 (`b3_carteiras_teoricas.csv`).

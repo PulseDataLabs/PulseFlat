@@ -1480,6 +1480,26 @@
     "accumulate": true
   },
   {
+    "title": "B3 Posições em Aberto de Termo",
+    "file": "b3_termo_posicoes_aberto.csv",
+    "description": "Posições em aberto e volumes financeiros no mercado a termo da B3 por empresa/ativo e totalizadores consolidados do mercado.",
+    "icon": "🤝",
+    "iconClass": "icon-b3",
+    "badge": "Diário",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "b3",
+      "termo",
+      "mercado a termo",
+      "posicoes em aberto",
+      "acoes",
+      "bdrs"
+    ],
+    "source": "https://www.b3.com.br/pt_br/market-data-e-indices/servicos-de-dados/market-data/consultas/mercado-a-vista/termo/posicoes-em-aberto/",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/b3_termo_posicoes_aberto.csv",
+    "accumulate": true
+  },
+  {
     "title": "IBGE SIDRA — Séries Estatísticas e Inflação",
     "file": "ibge_sidra.csv",
     "description": "Tabelas e séries estatísticas agregadas do Sistema IBGE de Recuperação Automática (SIDRA), abrangendo índices oficiais de preços ao consumidor (IPCA, INPC, IPCA-15), PIB e Contas Nacionais.",

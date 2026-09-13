@@ -5557,5 +5557,94 @@
         "example": "0.92"
       }
     ]
+  },
+  {
+    "title": "B3 Termo Posicoes Resumo",
+    "files": "b3_termo_posicoes_resumo.csv",
+    "source": "b3",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-09-13"
+      },
+      {
+        "name": "data_referencia",
+        "type": "date",
+        "example": "2026-09-11"
+      },
+      {
+        "name": "total_empresas_termo",
+        "type": "str",
+        "example": "335"
+      },
+      {
+        "name": "quantidade_contratos",
+        "type": "int",
+        "example": "37176"
+      },
+      {
+        "name": "quantidade_ativos",
+        "type": "int",
+        "example": "320752049"
+      },
+      {
+        "name": "valor_contratos",
+        "type": "str",
+        "example": "4678626251.93"
+      }
+    ]
+  },
+  {
+    "title": "B3 Termo Posicoes Aberto",
+    "files": "b3_termo_posicoes_aberto.csv",
+    "source": "b3",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-09-13"
+      },
+      {
+        "name": "data_referencia",
+        "type": "date",
+        "example": "2026-09-11"
+      },
+      {
+        "name": "codigo",
+        "type": "str",
+        "example": "A1MD34T"
+      },
+      {
+        "name": "empresa",
+        "type": "str",
+        "example": "ADVANCED MICRO DEVICES INC"
+      },
+      {
+        "name": "tipo",
+        "type": "str",
+        "example": "DRN"
+      },
+      {
+        "name": "quantidade_contratos",
+        "type": "int",
+        "example": "2"
+      },
+      {
+        "name": "quantidade_ativos",
+        "type": "int",
+        "example": "300"
+      },
+      {
+        "name": "valor_contratos",
+        "type": "str",
+        "example": "104298.89"
+      },
+      {
+        "name": "preco_medio_termo",
+        "type": "float",
+        "example": "347.66"
+      }
+    ]
   }
 ]

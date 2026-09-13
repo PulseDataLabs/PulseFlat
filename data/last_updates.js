@@ -386,5 +386,13 @@ window.PULSEFLAT_LAST_UPDATES = {
   "b3_valor_mercado_empresas.csv": {
     "min": "2026-09-13",
     "max": "2026-09-13"
+  },
+  "b3_termo_posicoes_resumo.csv": {
+    "min": "2026-09-13",
+    "max": "2026-09-13"
+  },
+  "b3_termo_posicoes_aberto.csv": {
+    "min": "2026-09-13",
+    "max": "2026-09-13"
   }
 };

@@ -521,5 +521,116 @@ def test_b3_valor_mercado_empresas_captura_mock(requests_mock):
     assert tot["variacao_brl_pct"] == -1.40
 
 
+def test_b3_termo_posicoes_aberto_metadata():
+    """Verifica metadados e configuração do scraper de Termo B3."""
+    from scrapers.b3_termo_posicoes_aberto import (
+        CABECALHO_POSICOES,
+        CABECALHO_RESUMO,
+        B3TermoPosicoesAbertoScraper,
+    )
+
+    s = B3TermoPosicoesAbertoScraper()
+    assert s.name == "b3_termo_posicoes_aberto"
+    assert s.group == "b3"
+    assert s.enabled is True
+    assert s.accumulate is True
+    assert s.chaves_dedup == ["data_referencia", "codigo"]
+    assert len(CABECALHO_POSICOES) == 9
+    assert len(CABECALHO_RESUMO) == 6
+
+
+def test_b3_termo_posicoes_aberto_captura_mock(requests_mock):
+    """Testa o parse de tabelas de resumo e posições granulares de termo da B3 com mock HTML."""
+    import datetime
+    import re
+    from scrapers.b3_termo_posicoes_aberto import capturar_dia
+
+    mock_html = """
+    <html>
+    <body>
+        <p>Dados de Fechamento do Pregão de 11/09/2026</p>
+        <table id="tabelaTotais">
+            <tr>
+                <th>Qtde de Contratos</th>
+                <th>Qtde de Ativos</th>
+                <th>Valor de Contratos (R$)</th>
+            </tr>
+            <tr>
+                <td>37.176</td>
+                <td>320.752.049</td>
+                <td>4.678.626.251,93</td>
+            </tr>
+        </table>
+        <table id="tabelaDetalhes">
+            <tr>
+                <th>Código</th>
+                <th>Empresa</th>
+                <th>Tipo</th>
+                <th>Qtde de Contratos</th>
+                <th>Qtde de Ativos</th>
+                <th>Valor de Contratos (R$)</th>
+            </tr>
+            <tr>
+                <td>A1MD34T</td>
+                <td>ADVANCED MICRO DEVICES INC</td>
+                <td>DRN</td>
+                <td>2</td>
+                <td>300</td>
+                <td>104.298,89</td>
+            </tr>
+            <tr>
+                <td>PETR4T</td>
+                <td>PETROBRAS</td>
+                <td>PN   N2</td>
+                <td>1.500</td>
+                <td>2.000.000</td>
+                <td>74.500.000,00</td>
+            </tr>
+        </table>
+    </body>
+    </html>
+    """
+
+    requests_mock.get(
+        re.compile(r"https://www\.b3\.com\.br/.*/posicoes-em-aberto-8AE490C99D724062019D7901CD91500D\.htm.*"),
+        text=mock_html,
+        status_code=200,
+    )
+
+    data_alvo = datetime.date(2026, 9, 11)
+    posicoes, resumo, ref_iso = capturar_dia(data_alvo)
+
+    assert ref_iso == "2026-09-11"
+    assert len(posicoes) == 2
+    assert resumo is not None
+
+    # Resumo
+    assert resumo["quantidade_contratos"] == 37176
+    assert resumo["quantidade_ativos"] == 320752049
+    assert resumo["valor_contratos"] == 4678626251.93
+    assert resumo["total_empresas_termo"] == 2
+
+    # Item 1
+    amd = posicoes[0]
+    assert amd["codigo"] == "A1MD34T"
+    assert amd["empresa"] == "ADVANCED MICRO DEVICES INC"
+    assert amd["tipo"] == "DRN"
+    assert amd["quantidade_contratos"] == 2
+    assert amd["quantidade_ativos"] == 300
+    assert amd["valor_contratos"] == 104298.89
+    assert amd["preco_medio_termo"] == 347.66
+
+    # Item 2
+    petr = posicoes[1]
+    assert petr["codigo"] == "PETR4T"
+    assert petr["empresa"] == "PETROBRAS"
+    assert petr["tipo"] == "PN N2"
+    assert petr["quantidade_contratos"] == 1500
+    assert petr["quantidade_ativos"] == 2000000
+    assert petr["valor_contratos"] == 74500000.00
+    assert petr["preco_medio_termo"] == 37.25
+
+
+
 
 
