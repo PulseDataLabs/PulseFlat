@@ -39,7 +39,6 @@ from scripts.utils.ux import (
     banner,
     print_done,
     print_info,
-    print_start,
     print_summary,
     print_warn,
     section,
