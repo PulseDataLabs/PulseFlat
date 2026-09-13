@@ -763,23 +763,6 @@
     "accumulate": false
   },
   {
-    "title": "B3 — Emissores de Código ISIN",
-    "file": "b3_isin_emissores.csv",
-    "description": "Relação cadastral e códigos de identificação de todos os emissores de instrumentos financeiros registrados no sistema de numeração ISIN da B3.",
-    "icon": "🏢",
-    "iconClass": "icon-b3",
-    "badge": "Semanal",
-    "badgeClass": "badge-weekly",
-    "tags": [
-      "isin",
-      "emissores",
-      "cadastro"
-    ],
-    "source": "B3",
-    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/b3_isin_emissores.csv",
-    "accumulate": false
-  },
-  {
     "title": "B3 — Limites e Garantias",
     "file": "b3_limites_garantias.csv",
     "description": "Parâmetros operacionais e percentuais de deságio/garantia aceitos pela B3 Clearinghouse para margem de garantia em operações de derivativos, empréstimo de ativos e liquidação física.",

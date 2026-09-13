@@ -28,6 +28,7 @@ anbima_titulos_publicos.csv,ANBIMA Títulos Públicos,ANBIMA,Títulos Públicos,
 anbima_titulos_publicos.csv,ANBIMA Títulos Públicos,ANBIMA,Títulos Públicos,indicador,770100 (NTN-C),7.675,PU,2026-09-11,2026-09-12,pu
 anbima_titulos_publicos.csv,ANBIMA Títulos Públicos,ANBIMA,Títulos Públicos,indicador,950199 (NTN-F),"13,39%",Taxa indicativa,2026-09-11,2026-09-12,tx_indicativa
 anbima_titulos_publicos.csv,ANBIMA Títulos Públicos,ANBIMA,Títulos Públicos,indicador,950199 (NTN-F),1.010,PU,2026-09-11,2026-09-12,pu
+anbima_titulos_publicos_estimativa_selic.csv.gz,ANBIMA Estimativa Selic,ANBIMA,Taxas de Juros,indicador,Estimativa Taxa Selic,"13,90%",,2026-09-11,2026-09-12,estimativa_taxa_selic
 b3_bdi_di_over.csv,B3 DI Over,B3,,indicador,DI Over (SELIC equivalente),"13,90%",,2026-09-10,2026-09-11,average
 b3_bdi_di_over.csv,B3 DI Over,B3,,indicador,DI Over — Volume financeiro,3.069.011,,2026-09-10,2026-09-11,financial_volume
 b3_bmf_taxas_juros.csv,B3 BMF Taxas,B3,Taxas de Juros,indicador,DI1,"13,65%",,2026-09-11,2026-09-12,taxa
@@ -45,6 +46,24 @@ bcb_sgs.csv,BCB SGS,BCB,Séries SGS,indicador,IGP-M (índice),"-0,22%",,2026-08-
 bcb_sgs.csv,BCB SGS,BCB,Séries SGS,indicador,IGP-M 12m,"0,06%",,2026-08-01,2026-09-12,190
 bcb_sgs.csv,BCB SGS,BCB,Séries SGS,indicador,IPCA 12m,"-0,32%",,2026-08-01,2026-09-12,433
 bcb_sgs.csv,BCB SGS,BCB,Séries SGS,indicador,SELIC (% a.d.),"0,05%",,2026-09-11,2026-09-12,11
+fred_brazil_export_commodities.csv.gz,FRED Commodities Exportação Brasil,FRED,Commodities Globais,indicador,Açúcar Global (US cents/lb),"36,06",,2026-07-01,2026-09-12,acucar_global_usd
+fred_brazil_export_commodities.csv.gz,FRED Commodities Exportação Brasil,FRED,Commodities Globais,indicador,Café Arábica Global (US cents/lb),"359,16",,2026-07-01,2026-09-12,cafe_arabica_global_usd
+fred_brazil_export_commodities.csv.gz,FRED Commodities Exportação Brasil,FRED,Commodities Globais,indicador,Minério de Ferro Global (USD/dmtu),"101,60",,2026-07-01,2026-09-12,minerio_ferro_global_usd
+fred_brazil_export_commodities.csv.gz,FRED Commodities Exportação Brasil,FRED,Commodities Globais,indicador,Petróleo Brent Global (USD/bbl),"83,73",,2026-07-01,2026-09-12,petroleo_brent_global_usd
+fred_brazil_export_commodities.csv.gz,FRED Commodities Exportação Brasil,FRED,Commodities Globais,indicador,Soja Global (USD/mt),"442,45",,2026-07-01,2026-09-12,soja_global_usd
+fred_brazil_macro_fx_and_cycles.csv.gz,FRED Brasil Macro e Ciclos,FRED,Macroeconomia Brasil,indicador,Spread High Yield Emergentes OAS,"2,79",,2026-09-10,2026-09-12,spread_high_yield_emergentes_oas
+fred_global_liquidity_credit_spreads.csv.gz,FRED Liquidez e Spreads,FRED,Liquidez & Crédito Global,indicador,CBOE VIX Volatility,"17,84",,2026-09-10,2026-09-12,vix
+fred_global_liquidity_credit_spreads.csv.gz,FRED Liquidez e Spreads,FRED,Liquidez & Crédito Global,indicador,Fed Funds Effective Rate,"3,63%",,2026-09-10,2026-09-12,fed_funds_rate
+fred_global_liquidity_credit_spreads.csv.gz,FRED Liquidez e Spreads,FRED,Liquidez & Crédito Global,indicador,SOFR Rate,"3,62%",,2026-09-10,2026-09-12,sofr_rate
+fred_global_liquidity_credit_spreads.csv.gz,FRED Liquidez e Spreads,FRED,Liquidez & Crédito Global,indicador,US Corp IG Spread,"0,8000",,2026-09-10,2026-09-12,credit_spread_corp_ig
+fred_global_liquidity_credit_spreads.csv.gz,FRED Liquidez e Spreads,FRED,Liquidez & Crédito Global,indicador,US High Yield Spread,"2,70",,2026-09-10,2026-09-12,credit_spread_corp_hy
+fred_us_macro_indicators.csv.gz,FRED US Macro,FRED,Macroeconomia EUA,indicador,US CPI Core,"337,76",,2026-08-01,2026-09-12,cpi_core
+fred_us_macro_indicators.csv.gz,FRED US Macro,FRED,Macroeconomia EUA,indicador,US CPI Headline,"334,13",,2026-08-01,2026-09-12,cpi_headline
+fred_us_macro_indicators.csv.gz,FRED US Macro,FRED,Macroeconomia EUA,indicador,US Nonfarm Payrolls (k),159.075,,2026-08-01,2026-09-12,nonfarm_payroll
+fred_us_macro_indicators.csv.gz,FRED US Macro,FRED,Macroeconomia EUA,indicador,US Unemployment Rate,"4,10%",,2026-08-01,2026-09-12,unemployment_rate
+fred_us_treasuries_yield_curve.csv.gz,FRED US Treasuries,FRED,Curva Soberana EUA,indicador,US Breakeven Inflation 10Y,"2,36%",,2026-09-11,2026-09-12,t10y_breakeven
+fred_us_treasuries_yield_curve.csv.gz,FRED US Treasuries,FRED,Curva Soberana EUA,indicador,US Breakeven Inflation 5Y,"2,40%",,2026-09-11,2026-09-12,t5y_breakeven
+fred_us_treasuries_yield_curve.csv.gz,FRED US Treasuries,FRED,Curva Soberana EUA,indicador,US Yield Curve Spread 10Y-2Y,"0,33%",,2026-09-11,2026-09-12,t10y2y_spread
 yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,ABEV3.SA,"15,74",,2026-09-11,2026-09-12,ABEV3.SA
 yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,ALOS3.SA,"29,07",,2026-09-11,2026-09-12,ALOS3.SA
 yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,ASAI3.SA,"9,86",,2026-09-11,2026-09-12,ASAI3.SA

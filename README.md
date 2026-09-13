@@ -5,18 +5,19 @@
 <h1 align="center">PulseFlat</h1>
 
 <p align="center">
-  <strong>Pipeline Serverless, Resiliente e Automatizado de Dados Financeiros Brasileiros</strong>
+  <strong>Pipeline Serverless, Resiliente e Automatizado de Dados Financeiros Brasileiros e Internacionais</strong>
 </p>
 
 <p align="center">
   <a href="https://github.com/PulseDataLabs/PulseFlat/actions/workflows/ci.yml"><img src="https://github.com/PulseDataLabs/PulseFlat/actions/workflows/ci.yml/badge.svg" alt="CI Status"></a>
   <a href="https://github.com/PulseDataLabs/PulseFlat/actions/workflows/main.yml"><img src="https://github.com/PulseDataLabs/PulseFlat/actions/workflows/main.yml/badge.svg" alt="Daily Automation"></a>
-  <img src="https://img.shields.io/badge/python-3.13%2B-blue.svg" alt="Python Versions">
+  <img src="https://img.shields.io/badge/datasets-88%2B-brightgreen.svg" alt="Datasets">
+  <img src="https://img.shields.io/badge/fontes-10%2B-blue.svg" alt="Fontes">
+  <img src="https://img.shields.io/badge/python-3.11%2B-blue.svg" alt="Python Versions">
   <img src="https://img.shields.io/badge/code%20style-ruff-000000.svg" alt="Ruff Code Style">
   <img src="https://img.shields.io/badge/format-CSV%20%7C%20Parquet-purple.svg" alt="CSV & Parquet">
   <img src="https://img.shields.io/badge/license-MIT-green.svg" alt="License">
   <a href="https://pulsedatalabs.github.io/PulseFlat/"><img src="https://img.shields.io/badge/dashboard-live-brightgreen.svg" alt="Live Dashboard"></a>
-  <img src="https://img.shields.io/badge/atualização-diária-blue.svg" alt="Atualização Diária">
 </p>
 
 <p align="center">
@@ -33,28 +34,29 @@
 
 ---
 
-**PulseFlat** é um pipeline de ETL (Extração, Transformação e Carga) serverless projetado para coletar, tratar e disponibilizar dados financeiros brasileiros históricos de fontes oficiais diariamente. Ele funciona 100% de forma automatizada via **GitHub Actions**, versionando o histórico diretamente no repositório em formatos **CSV plano**, **CSV.GZ** e **Apache Parquet**, sem custos com infraestrutura pesada ou servidores dedicados.
+**PulseFlat** é um pipeline de ETL (Extração, Transformação e Carga) serverless projetado para coletar, tratar e disponibilizar dados financeiros brasileiros e internacionais de fontes oficiais diariamente. Ele funciona 100% de forma automatizada via **GitHub Actions** (9 execuções por dia útil), versionando o histórico diretamente no repositório em formatos **CSV plano**, **CSV.GZ** e **Apache Parquet**, sem custos com infraestrutura pesada ou servidores dedicados.
 
-A **PulseDataLabs** nasceu da missão de democratizar o acesso a dados financeiros brasileiros de qualidade. Acreditamos que informações financeiras confiáveis e estruturadas não deveriam ser um privilégio restrito — por isso construímos o PulseFlat como um projeto 100% *open-source*.
+A **PulseDataLabs** nasceu da missão de democratizar o acesso a dados financeiros de qualidade. Acreditamos que informações financeiras confiáveis e estruturadas não deveriam ser um privilégio restrito — por isso construímos o PulseFlat como um projeto 100% *open-source*.
 
-> 💡 Quer apenas consumir os dados sem instalar nada? Acesse o **[dashboard online](https://pulsedatalabs.github.io/PulseFlat/)** ou veja o guia rápido na seção [Para Analistas](#-para-analistas-consuma-os-dados-sem-código).
+> 💡 Quer apenas consumir os dados sem instalar nada? Acesse o **[dashboard online](https://pulsedatalabs.github.io/PulseFlat/)**, consulte o **[explorador de indicadores](https://pulsedatalabs.github.io/PulseFlat/consulta.html)** ou veja o guia rápido na seção [Para Analistas](#-para-analistas-consuma-os-dados-sem-código).
 
 ---
 
 ## 🚀 Recursos e Diferenciais
 
-*   **OOP & Abstração Sólida**: Scrapers estruturados sob a classe base `BaseScraper` com ciclo de vida unificado, logs padronizados e persistência inteligente.
-*   **Suporte Oficial à ANBIMA Developers (ANBIMA Data)**: Cliente HTTP nativo com autenticação OAuth 2.0 (Client Credentials), auto-renovação de tokens em cache, resiliência contra rate-limiting (429) e classe base `BaseAnbimaDataScraper` pronta para novos feeds.
-*   **Suporte Oficial à Eulerpool Financial Data API**: Cliente HTTP dedicado para os 375+ endpoints globais de ações, ETFs, opções, commodities e finanças da Eulerpool (`api.eulerpool.com`), com autenticação Bearer, retries e classe base `BaseEulerpoolScraper`.
-*   **Suporte Oficial à BrasilAPI**: Cliente HTTP nativo para dados abertos brasileiros (taxas Selic/CDI/IPCA, bancos, corretoras CVM e feriados nacionais), com retries e classe base `BaseBrasilApiScraper`.
-*   **Suporte a BCB Olinda, Tesouro Transparente e FRED**: Clientes HTTP e classes base dedicadas para expectativas Focus (OData do Banco Central), títulos e leilões do Tesouro Direto (CKAN) e benchmarks globais do Federal Reserve (FRED).
+*   **88+ Datasets Estruturados & 100+ Rotinas de Extração**: Cobertura massiva de renda fixa, renda variável, derivativos, câmbio, fundos e macroeconomia, sem paywalls nem limites artificiais.
+*   **OOP & Abstração Sólida**: Scrapers estruturados sob a classe base `BaseScraper` com ciclo de vida unificado, logs padronizados, checagem defensiva de schemas e persistência incremental.
+*   **Ecossistema Completo ANBIMA Data (1ª e 2ª Onda)**: Cliente HTTP OAuth 2.0 (Client Credentials) com 17 feeds oficiais via API: Curvas ETTJ (Prefixados, IPCA, Selic), Parâmetros Svensson, Letras Financeiras, CRI/CRA, FIDC, IMA/IDkA (resultados e carteiras teóricas), Selic Estimativa, VNA e REUNE Negociações.
+*   **Suite Macroeconômica Global FRED (Federal Reserve)**: Integração consolidada com o Federal Reserve Bank of St. Louis em 5 grandes datasets (Curva Soberana dos US Treasuries 1M-30Y, Indicadores Macro dos EUA, Liquidez Global & Spreads de Crédito, Macro/Câmbio Brasil e Commodities Globais de Exportação).
+*   **Cobertura IPEADATA**: 8 módulos temáticos contínuos cobrindo Macroeconomia, Taxas de Juros, Inflação e Preços, Formação Bruta de Capital Fixo (FBCF), Balança Comercial, Mercados Diários e Produção Mineral.
+*   **Suporte a BCB Olinda, Tesouro Transparente, BrasilAPI e Eulerpool**: Clientes HTTP e classes base dedicadas para expectativas Focus (OData), títulos e leilões do Tesouro Direto (CKAN), dados abertos de instituições brasileiras (BrasilAPI) e ações/ETFs globais (Eulerpool).
 *   **Descoberta Dinâmica (Reflection)**: O orquestrador detecta scrapers automaticamente inspecionando o diretório `scrapers/`, eliminando a necessidade de registros estáticos.
-*   **Sanitização e Blindagem Defensiva**: Padronização de datas (`DD/MM/YYYY` ou `DD/MM/YY` para ISO `YYYY-MM-DD`), conversão de números decimais com vírgula para ponto e fallbacks automáticos para dados corrompidos.
+*   **Sanitização e Blindagem Defensiva**: Padronização estrita de datas (`YYYY-MM-DD`), conversão numérica de ponto flutuante internacional, remoção de lixo de encoding e fallbacks automáticos para integridade de esquemas.
 *   **Concorrência Multicondicional**: Paralelização segura de scrapers independentes e ordenação controlada para scrapers que dependem de resultados prévios.
 *   **Exportação Colunar Parquet**: Conversão rápida com `scripts/export_to_parquet.py` para integração direta de alta performance com **DuckDB**, **Polars**, **Pandas** e **Spark**.
 *   **Monitoramento e Alertas de Mercado**: Sistema de alerta de debêntures e indicadores com disparos para **Telegram**, **E-mail (SMTP)** e **Webhooks (Power Automate / Teams)**.
-*   **Validação de Integridade Temporal**: Verificação automática de dias úteis faltantes em séries temporais via `bizdays.Calendar`.
-*   **Frontend Otimizado**: Dashboard interativo em vanilla HTML/CSS com busca instantânea debouncada e consulta rápida.
+*   **Validação de Integridade Temporal**: Verificação automática de dias úteis faltantes em séries temporais via calendário de feriados de mercado (`bizdays.Calendar`).
+*   **Frontend Otimizado & Consulta Unificada**: Dashboard interativo com monitor de integridade D-N (`index.html`) e motor de consulta dinâmica com séries históricas pivotadas e gráficos Highcharts (`consulta.html`).
 *   **Terminal UX Colorido**: Indicadores ANSI com ícones Unicode e tempos de execução via `scripts/utils/ux.py`.
 
 ---
@@ -267,7 +269,7 @@ O **PulseFlat** possui integração nativa com o **Databricks**, permitindo repl
    - **Task name**: `run_scrapers`
    - **Type**: `Python script`
    - **Source**: `Workspace` (selecione `PulseFlat/databricks/run_pulseflat_job.py`)
-   - **Parameters** (opcional): `["--parallel", "--max-workers", "8"]` *(você também pode filtrar por grupo: `["--group", "anbima"]`)*
+   - **Parameters** (opcional): `["--parallel", "--max-workers", "8"]` *(você também pode filtrar por grupo: `["--group", "anbima"]`, `["--group", "fred"]` ou `["--group", "b3"]`)*
    - **Dependent Libraries**: Instale as bibliotecas de `requirements.txt` via PyPI (ex: `requests`, `beautifulsoup4`, `curl-cffi`, `pandas`, `openpyxl`, `bizdays`, `oracledb`).
 3. Configure o agendamento em **Schedule** definindo os horários desejados (ex: dias úteis às 06h, 08h e 18h).
 
@@ -517,19 +519,103 @@ Utilize o template `scrapers/fred_template.py` e herde de `BaseFredScraper`, def
 
 ## 📊 Fontes e Datasets
 
-| Grupo | Fonte Primária | Exemplos de Dados Disponibilizados | Frequência |
-|---|---|---|---|
-| **ANBIMA** | [Portal ANBIMA](https://www.anbima.com.br) / [Portal Debêntures](https://www.debentures.com.br) | Taxas indicativas, Projeções de Inflação (IPCA/IGPM), Títulos Públicos, Emissões e Mercado Secundário de Debêntures, Índices IMA/IDkA. | Diária |
-| **BCB** | [Banco Central do Brasil](https://www.bcb.gov.br) | Cotações diárias do Dólar (PTAX), Séries SGS (SELIC, CDI, Inflação), Negociação de títulos públicos (DEMAB), Balancetes cadastrais de bancos. | Diária |
-| **CVM** | [Portal Brasileiro de Dados Abertos](https://dados.cvm.gov.br) | Cadastro geral de companhias abertas, informes diários e dados de cotas/classes de fundos. | Diária |
-| **B3** | [B3 Market Data](https://www.b3.com.br) | FIIs/ETFs listados, composição de carteiras teóricas (IBOV, SMLL, ISEE, BDRX, IFNC), taxas DI Over, dados cadastrais e financeiros de companhias, limites de garantias. | Diária / Snapshot |
-| **IBGE** | [IBGE SIDRA API](https://sidra.ibge.gov.br) | Índices oficiais de inflação (IPCA, IPCA-15, INPC). | Mensal |
-| **BCB Olinda** | [BCB Olinda](https://olinda.bcb.gov.br/olinda/servico) | Expectativas de mercado (Boletim Focus diário), taxas de juros de operações de crédito e tarifas bancárias por instituição. | Diária / Semanal |
-| **Tesouro Transparente** | [Tesouro Transparente](https://www.tesourotransparente.gov.br) | Preços e taxas históricas do Tesouro Direto, estoque e custo da Dívida Pública Federal (DPF) e leilões soberanos. | Diária / Mensal |
-| **FRED** | [St. Louis Fed (FRED)](https://fred.stlouisfed.org) | US 10Y e 2Y Treasuries, Fed Funds Rate, inflação americana (CPI/PCE), Índice Dólar (DXY) e liquidez global. | Diária / Mensal |
-| **BrasilAPI** | [BrasilAPI](https://brasilapi.com.br/docs) | Taxas de juros oficiais (Selic, CDI, IPCA), códigos de compensação bancária e ISPB, corretoras CVM e feriados bancários nacionais. | Diária / Sob demanda |
-| **Eulerpool** | [Eulerpool Financial Data](https://eulerpool.com/developers) | Ações globais (EUA, Europa, Ásia), ETFs, opções, commodities, dividendos, estimativas de analistas e finanças globais. | Diária / Realtime |
-| **Misc** | [Yahoo Finance](https://finance.yahoo.com) / [Wikipedia](https://www.wikipedia.org) / [ONU](https://unglobalcompact.org) | Ações brasileiras e globais, ETFs, moedas, criptoativos, commodities e Pacto Global da ONU. | Diária |
+O repositório mantém **88+ datasets estruturados** e versionados, totalizando mais de 100 rotinas de coleta automáticas diárias. Todos os dados são padronizados em UTF-8 com separador vírgula e datas no padrão ISO 8601 (`YYYY-MM-DD`).
+
+### Visão Geral por Grupo de Origem
+
+| Grupo | Fonte Primária | Datasets Ativos | Exemplos de Dados Disponibilizados | Frequência |
+|---|---|:---:|---|---|
+| **ANBIMA & Crédito** | [ANBIMA Developers](https://developers.anbima.com.br) / [Portal ANBIMA](https://www.anbima.com.br) / [Debêntures](https://www.debentures.com.br) | **30** | Curvas ETTJ, Parâmetros Svensson, Letras Financeiras, CRI/CRA, FIDC, Índices IMA/IDkA, Selic Estimativa, VNA, REUNE e Debêntures. | Diária / D+1 |
+| **B3** | [B3 Market Data](https://www.b3.com.br) | **23** | Carteiras Teóricas (IBOV, SMLL, etc.), Negócios BDI, Taxas Swap/Juros, FIIs/ETFs, ISIN, COTAHIST e Limites de Garantias. | Diária / D-0 |
+| **FRED** | [Federal Reserve Bank of St. Louis](https://fred.stlouisfed.org) | **5** | Curva Soberana dos US Treasuries (1M-30Y), Macro EUA (CPI, PCE, Emprego), Liquidez Global & Spreads, Ciclos Brasil e Commodities. | Diária / Mensal |
+| **IPEADATA** | [IPEA](http://www.ipeadata.gov.br) | **8** | Macroeconomia, Taxas de Juros, Inflação e Preços, Formação Bruta de Capital Fixo (FBCF), Balança Comercial e Produção Mineral. | Diária / Mensal |
+| **Banco Central (BCB)** | [Banco Central do Brasil](https://www.bcb.gov.br) | **6** | Câmbio PTAX, Séries Temporais SGS (Selic, CDI, IGP-M), DEMAB Títulos Públicos, Balancetes Cosif e Capital Basileia. | Diária / Mensal |
+| **CVM** | [Dados Abertos CVM](https://dados.cvm.gov.br) | **3** | Informes Diários de Fundos, Registro de Classes/Subclasses RCVM 175 e Cadastro Geral de Companhias Abertas. | Diária / D+1 |
+| **IBGE** | [IBGE SIDRA](https://sidra.ibge.gov.br) | **1** | Índices oficiais de inflação (IPCA, IPCA-15, INPC) e agregados macroeconômicos. | Mensal |
+| **Mercado Global & Outros** | [Yahoo Finance](https://finance.yahoo.com) / [Wikipedia](https://www.wikipedia.org) / [ONU](https://unglobalcompact.org) | **12** | Ações BR e Globais, FIIs, Criptoativos, Commodities, Câmbio Global, Títulos Soberanos Internacionais e Pacto Global ONU. | Diária / Tempo Real |
+
+---
+
+### 🏛️ ANBIMA Data & Mercado de Crédito Privado (30 Datasets)
+
+Integração oficial via API OAuth 2.0 (`developers.anbima.com.br`), web scraping do portal clássico e do Portal Debêntures:
+
+* **Curvas de Juros ETTJ** (`anbima_curvas_juros_ettj.csv.gz`): Estrutura a termo da taxa de juros zero-cupom dos Títulos Públicos Federais (Prefixados, IPCA e Selic).
+* **Parâmetros Svensson** (`anbima_curvas_juros_parametros_svensson.csv.gz`): Parâmetros do modelo paramétrico de Svensson (Beta 1 a 4, Tau 1 e 2) calibrados diariamente.
+* **Curvas de Crédito Corporativo** (`anbima_curvas_credito.csv.gz`): Spreads e taxas de crédito privado por classificação de risco / rating.
+* **Letras Financeiras** (`anbima_letras_financeiras.csv.gz`): Matrizes de vértices, taxas indicativas e spreads de Letras Financeiras por emissor.
+* **CRI e CRA Mercado Secundário** (`anbima_cri_cra_mercado_secundario.csv.gz`): Preços, taxas indicativas e negociações de Certificados de Recebíveis Imobiliários e do Agronegócio.
+* **FIDC Mercado Secundário** (`anbima_fidc_mercado_secundario.csv.gz`): Preços e taxas indicativas de Fundos de Investimento em Direitos Creditórios.
+* **Títulos Públicos — Mercado Secundário** (`anbima_titulos_publicos_mercado_secundario.csv.gz`): Preços de negociação, taxas de compra/venda e PU de mercado de LTN, LFT, NTN-B e NTN-F.
+* **Títulos Públicos Federais** (`anbima_titulos_publicos.csv`): Taxas indicativas, desvios e preços unitários do portal clássico.
+* **Títulos Públicos — VNA Oficial** (`anbima_titulos_publicos_vna.csv.gz`): Valor Nominal Atualizado oficial de cada título público federal.
+* **Estimativa Oficial da Taxa Selic** (`anbima_titulos_publicos_estimativa_selic.csv.gz`): Projeção de curto prazo da taxa Selic calculada pela ANBIMA.
+* **Família de Índices IMA** (`anbima_indices_ima_resultados.csv.gz`): Resultados diários dos subíndices de renda fixa pública (IMA-B, IMA-B 5, IMA-B 5+, IMA-C, IMA-S, IRF-M, IRF-M 1, IRF-M 1+).
+* **Carteira Teórica do IMA** (`anbima_indices_carteira_teorica_ima.csv.gz`): Composição analítica e pesos dos títulos componentes de cada subíndice IMA.
+* **Resultados do Índice IDkA** (`anbima_indices_idka_resultados.csv.gz`): Índices de Duração Constante ANBIMA (Pré e IPCA com durações de 2 a 30 anos).
+* **Índices IDkA** (`anbima_idka.csv`): Série histórica clássica dos índices de duração constante.
+* **Índice IDA** (`anbima_indice_ida.csv.gz`): Índice de Debêntures ANBIMA (Geral, DI e IPCA).
+* **Carteira Teórica do IDA** (`anbima_indices_carteira_teorica_ida.csv.gz`): Ativos componentes e peso no índice de debêntures.
+* **Índice IMA-B Histórico** (`anbima_indice_imab.csv.gz`): Série diária do IMA-B com número índice e variação percentual.
+* **REUNE Negociações** (`anbima_reune_negociacoes.csv.gz`): Tape diário de operações de crédito privado reportadas ao sistema REUNE.
+* **Debêntures — Emissões e Características (API ANBIMA)** (`debentures_emissoes_caracteristicas_api.csv`): Metadados completos, remuneração, garantias e escrituras via API.
+* **Debêntures — Mercado Secundário (API ANBIMA)** (`debentures_mercado_secundario_precos_negociacao_api.csv.gz`): Preços, taxas médias e volumes negociados via API.
+* **Debêntures — Emissões e Características (Web)** (`debentures_emissoes_caracteristicas.csv`): Base cadastral de debêntures do portal clássico.
+* **Debêntures — Mercado Secundário (Web)** (`debentures_mercado_secundario_precos_negociacao.csv.gz`): Negociações secundárias diárias do portal clássico.
+* **Indicadores Financeiros ANBIMA** (`anbima_indicadores.csv`): Taxa DI, SELIC, poupança, TR e TBF.
+* **Projeções Econômicas** (`anbima_projecoes.csv`): Projeções de mercado para inflação, taxa de juros e câmbio.
+* **Projeções Oficiais de Inflação** (`anbima_projecoes_inflacao.csv.gz`): Projeções detalhadas da inflação (IPCA e IGP-M) via API.
+* **Matriz de Probabilidade de Resgate** (`anbima_matriz_probabilidade_resgate.csv`): Matrizes de liquidez e resgate de fundos de investimento.
+* **Resolução 550** (`anbima_550.csv`): Base cadastral de fundos regulados sob a instrução 550.
+* **Ranking Global de Fundos** (`anbima_ranking_global.csv`): Patrimônio líquido e captação líquida por gestor/administrador.
+
+---
+
+### 🌐 FRED — Federal Reserve Economic Data (5 Datasets Consolidados)
+
+Séries macroeconômicas globais do Banco Central dos Estados Unidos (St. Louis Fed):
+
+* **Curva de Juros dos US Treasuries** (`fred_us_treasuries_yield_curve.csv.gz`): Estrutura a termo soberana americana completa: 1M, 3M, 6M, 1Y, 2Y, 3Y, 5Y, 7Y, 10Y, 20Y e 30Y (`DGS1MO` a `DGS30`), incluindo a inclinação 10Y-2Y Spread (`T10Y2Y`) e a expectativa de inflação implícita 10-Year Breakeven (`T10YIE`).
+* **Indicadores Macroeconômicos dos EUA** (`fred_us_macro_indicators.csv.gz`): Inflação CPI Headline e Core (`CPIAUCSL`, `CPILFESL`), PCE Headline e Core (`PCEPI`, `PCEPILFE`), Taxa de Desemprego (`UNRATE`), Emprego Não-Agrícola Nonfarm Payrolls (`PAYEMS`), PIB Real (`GDPC1`), Vendas no Varejo (`RSAFS`) e Produção Industrial (`INDPRO`).
+* **Liquidez Global e Spreads de Crédito** (`fred_global_liquidity_credit_spreads.csv.gz`): Fed Funds Effective Rate (`FEDFUNDS`), Balanço Total de Ativos do Fed (`WALCL`), Taxa SOFR (`SOFR`), Spread TED (`TEDRATE`), Spread de Crédito High Yield Corporativo ICE BofA OAS (`BAMLH0A0HYM2`), Volatilidade VIX CBOE (`VIXCLS`) e Taxas de Commercial Paper (`RIFSPPNA270NB`).
+* **Brasil: Macro, Câmbio Fed/BIS e Ciclos OCDE** (`fred_brazil_macro_fx_and_cycles.csv.gz`): Taxa de Câmbio Fed Dólar/Real (`DEXBZUS`), Câmbio Real Efetivo Broad BIS Brasil (`RBBRBIS`), Indicador Antecipador Composto de Ciclos Econômicos OCDE CLI (`BRALORSGPNOSTSAM`), Selic vs Fed Funds, M2 Money Supply Brasil (`MABMM301BRM189S`) e Spread de Risco Emergente OAS ICE BofA (`BAMLEMHBHYCRPIOAS`).
+* **Commodities Globais da Pauta Exportadora do Brasil** (`fred_brazil_export_commodities.csv.gz`): Preço global da Soja FMI (`PSOYBUSDM`), Petróleo Bruto Brent (`DCOILBRENTEU`), Petróleo WTI (`DCOILWTICO`), Minério de Ferro Global 62% Fe CFR China FMI (`PIORECRUSDM`), Café Arábica (`PCOFFOTMUSDM`) e Açúcar Global FMI (`PSUGAISAUSDM`).
+
+---
+
+### 🏛️ IPEADATA (8 Datasets)
+
+* **Macroeconomia e Contas Nacionais** (`ipea_macroeconomia.csv`): Agregados do PIB, consumo das famílias, consumo do governo e poupança nacional.
+* **Taxas de Juros e Rendimentos** (`ipea_taxas_juros.csv`): Taxas Selic over, Selic meta, TJLP, TLP e taxas referenciais do mercado.
+* **Preços e Inflação** (`ipea_precos_inflacao.csv`): Séries históricas de IPCA, IGP-DI, IGP-M, INPC e IPC-Fipe.
+* **Formação Bruta de Capital Fixo (FBCF)** (`ipea_fbcf.csv`): Indicadores mensais de investimentos e absorção de bens de capital.
+* **Comércio Exterior** (`ipea_comercio_exterior.csv`): Exportações, importações, saldo comercial e termos de troca.
+* **Mercados Financeiros Diários** (`ipea_mercados_diarios.csv`): Indicadores diários de mercado de capitais e crédito.
+* **Produção Mineral e Siderurgia** (`ipea_producao_mineral.csv`): Produção de minério de ferro, aço bruto e laminados.
+* **Calendário e Dias Úteis** (`ipea_calendario.csv`): Número de dias úteis e dias corridos por mês segundo feriados nacionais.
+
+---
+
+### ◉ B3 — Brasil, Bolsa, Balcão (23 Datasets)
+
+* **Carteiras Teóricas de Índices**: IBOVESPA (`b3_carteira_teorica_ibov.csv`), Small Caps SMLL (`b3_carteira_teorica_smll.csv`), Sustentabilidade ISEE (`b3_carteira_teorica_isee.csv`), BDRX (`b3_carteira_teorica_bdrx.csv`), Financeiro IFNC (`b3_carteira_teorica_ifnc.csv`), Dividendos IBSD (`b3_carteira_teorica_ibsd.csv`), IBX 50 (`b3_carteira_teorica_ibxl.csv`), Agronegócio AGFS/IAGRO (`b3_carteira_teorica_agfs_iagro.csv`) e Composição Completa Consolidada de todos os índices B3 (`b3_carteiras_teoricas.csv`).
+* **Cotações e Histórico**: COTAHIST Diário (`b3_cotahist_diario.csv.gz`), COTAHIST Anual Histórico (`b3_cotahist_anual.csv.gz`) e Negócios de Ações BDI Trades (`b3_bdi_trades_acoes.csv.gz`).
+* **Derivativos e Renda Fixa**: Taxas de Swap e Juros BMF (`b3_bmf_taxas_juros.csv`), DI Over BDI (`b3_bdi_di_over.csv`), ETFs de Renda Fixa BDI (`b3_bdi_etfrf.csv.gz`), Indicadores Econômicos FWF (`b3_indicadores_economicos_fwf.csv`) e Indicadores Financeiros (`b3_indicadores_financeiros.csv`).
+* **Cadastros e Regulação**: Títulos e Valores Negociáveis (`b3_titulos_negociaveis.csv.gz`), Cadastro de Códigos ISIN de Ativos (`b3_isin_ativos.csv.gz`), Classificação Setorial (`b3_classificacao_setorial.csv`), Limites de Garantias (`b3_limites_garantias.csv`), Fundos Listados (`b3_fundos_listados.csv`), FIIs (`b3_fiis.csv`) e ETFs Listados (`b3_etfs.csv`).
+
+---
+
+### ◆ Banco Central do Brasil (6 Datasets) & ⬢ CVM (3 Datasets)
+
+* **BCB PTAX** (`bcb_ptax.csv`): Cotações diárias oficiais de compra e venda de moedas estrangeiras.
+* **BCB SGS** (`bcb_sgs.csv`): Séries temporais essenciais (Selic a.d. e a.a., CDI, IGP-M, IPCA acumulado).
+* **BCB DEMAB Títulos Públicos** (`bacen_negociacao_tpf_extragrupo.csv.gz`): Operações definitivas de compra/venda de títulos federais no mercado secundário.
+* **BCB Balancetes Cosif** (`bacen_balancetes_bancos.csv`): Balancetes patrimoniais contábeis das instituições financeiras autorizadas.
+* **BCB Conglomerados** (`bacen_conglomerados.csv`): Estrutura de conglomerados financeiros e prudenciais.
+* **BCB Basileia** (`bacen_parcelas_capital_basileia.csv.gz`): Requerimentos de capital e patrimônio de referência.
+* **CVM Informe Diário** (`cvm_fundos_informe_diario.csv.gz`): Cota diária, patrimônio líquido e número de cotistas de todos os fundos de investimento abertos no Brasil.
+* **CVM RCVM 175** (`registro_fundo_classe.csv.gz`): Cadastro unificado de classes e subclasses de fundos de investimento sob a nova regulação 175.
+* **CVM Companhias Abertas** (`cvm_cadastro_companhias_abertas.csv`): Cadastro oficial de emissores de ações e debêntures.
 
 ---
 

@@ -111,10 +111,6 @@
     "min": "2026-09-12",
     "max": "2026-09-12"
   },
-  "b3_isin_emissores.csv": {
-    "min": "2026-08-21",
-    "max": "2026-08-21"
-  },
   "b3_titulos_negociaveis.csv.gz": {
     "min": "2026-09-12",
     "max": "2026-09-12"
@@ -276,28 +272,28 @@
     "max": "2026-09-12"
   },
   "anbima_indices_idka_resultados.csv.gz": {
-    "min": "2020-01-02",
-    "max": "2026-09-11"
+    "min": "2026-09-12",
+    "max": "2026-09-12"
   },
   "anbima_projecoes_inflacao.csv.gz": {
-    "min": "2026-09-10",
-    "max": "2026-09-11"
+    "min": "2026-09-12",
+    "max": "2026-09-12"
   },
   "anbima_indices_carteira_teorica_ima.csv.gz": {
-    "min": "2026-09-02",
-    "max": "2026-09-02"
+    "min": "2026-09-12",
+    "max": "2026-09-12"
   },
   "anbima_indices_carteira_teorica_ida.csv.gz": {
-    "min": "2026-09-02",
-    "max": "2026-09-02"
+    "min": "2026-09-12",
+    "max": "2026-09-12"
   },
   "anbima_curvas_juros_parametros_svensson.csv.gz": {
-    "min": "2020-01-02",
-    "max": "2026-09-11"
+    "min": "2026-09-12",
+    "max": "2026-09-12"
   },
   "anbima_titulos_publicos_estimativa_selic.csv.gz": {
-    "min": "2020-01-02",
-    "max": "2026-09-11"
+    "min": "2026-09-12",
+    "max": "2026-09-12"
   },
   "anbima_reune_negociacoes.csv.gz": {
     "min": "2026-09-12",
@@ -354,5 +350,17 @@
   "fred_brazil_export_commodities.csv.gz": {
     "min": "2026-09-12",
     "max": "2026-09-12"
+  },
+  "b3_titulos_negociaveis.csv": {
+    "min": "2026-06-06",
+    "max": "2026-06-06"
+  },
+  "cvm_fundos_informe_diario.csv": {
+    "min": "2026-06-06",
+    "max": "2026-06-06"
+  },
+  "registro_fundo_classe.csv": {
+    "min": "2026-06-06",
+    "max": "2026-06-06"
   }
 }

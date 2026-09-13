@@ -104,6 +104,46 @@ window.PULSEFLAT_PIVOTED = [
     "Valor": "0,0713"
   },
   {
+    "data_referencia": "2026-07-01",
+    "indicador": "Açúcar Global (US cents/lb)",
+    "fonte": "FRED",
+    "dataset_label": "FRED Commodities Exportação Brasil",
+    "categoria": "Commodities Globais",
+    "Valor": "36,06"
+  },
+  {
+    "data_referencia": "2026-07-01",
+    "indicador": "Café Arábica Global (US cents/lb)",
+    "fonte": "FRED",
+    "dataset_label": "FRED Commodities Exportação Brasil",
+    "categoria": "Commodities Globais",
+    "Valor": "359,16"
+  },
+  {
+    "data_referencia": "2026-07-01",
+    "indicador": "Minério de Ferro Global (USD/dmtu)",
+    "fonte": "FRED",
+    "dataset_label": "FRED Commodities Exportação Brasil",
+    "categoria": "Commodities Globais",
+    "Valor": "101,60"
+  },
+  {
+    "data_referencia": "2026-07-01",
+    "indicador": "Petróleo Brent Global (USD/bbl)",
+    "fonte": "FRED",
+    "dataset_label": "FRED Commodities Exportação Brasil",
+    "categoria": "Commodities Globais",
+    "Valor": "83,73"
+  },
+  {
+    "data_referencia": "2026-07-01",
+    "indicador": "Soja Global (USD/mt)",
+    "fonte": "FRED",
+    "dataset_label": "FRED Commodities Exportação Brasil",
+    "categoria": "Commodities Globais",
+    "Valor": "442,45"
+  },
+  {
     "data_referencia": "2026-07-06",
     "indicador": "ODPV3.SA",
     "fonte": "Yahoo Finance",
@@ -208,12 +248,52 @@ window.PULSEFLAT_PIVOTED = [
     "Valor": "0,000163"
   },
   {
+    "data_referencia": "2026-08-01",
+    "indicador": "US CPI Core",
+    "fonte": "FRED",
+    "dataset_label": "FRED US Macro",
+    "categoria": "Macroeconomia EUA",
+    "Valor": "337,76"
+  },
+  {
+    "data_referencia": "2026-08-01",
+    "indicador": "US CPI Headline",
+    "fonte": "FRED",
+    "dataset_label": "FRED US Macro",
+    "categoria": "Macroeconomia EUA",
+    "Valor": "334,13"
+  },
+  {
+    "data_referencia": "2026-08-01",
+    "indicador": "US Nonfarm Payrolls (k)",
+    "fonte": "FRED",
+    "dataset_label": "FRED US Macro",
+    "categoria": "Macroeconomia EUA",
+    "Valor": "159.075"
+  },
+  {
+    "data_referencia": "2026-08-01",
+    "indicador": "US Unemployment Rate",
+    "fonte": "FRED",
+    "dataset_label": "FRED US Macro",
+    "categoria": "Macroeconomia EUA",
+    "Valor": "4,10%"
+  },
+  {
     "data_referencia": "2026-09-01",
     "indicador": "IGP-M Projeção",
     "fonte": "ANBIMA",
     "dataset_label": "ANBIMA Indicadores",
     "categoria": "Índice de Preços",
     "Valor": "0,7700"
+  },
+  {
+    "data_referencia": "2026-09-10",
+    "indicador": "CBOE VIX Volatility",
+    "fonte": "FRED",
+    "dataset_label": "FRED Liquidez e Spreads",
+    "categoria": "Liquidez & Crédito Global",
+    "Valor": "17,84"
   },
   {
     "data_referencia": "2026-09-10",
@@ -241,6 +321,30 @@ window.PULSEFLAT_PIVOTED = [
   },
   {
     "data_referencia": "2026-09-10",
+    "indicador": "Fed Funds Effective Rate",
+    "fonte": "FRED",
+    "dataset_label": "FRED Liquidez e Spreads",
+    "categoria": "Liquidez & Crédito Global",
+    "Valor": "3,63%"
+  },
+  {
+    "data_referencia": "2026-09-10",
+    "indicador": "SOFR Rate",
+    "fonte": "FRED",
+    "dataset_label": "FRED Liquidez e Spreads",
+    "categoria": "Liquidez & Crédito Global",
+    "Valor": "3,62%"
+  },
+  {
+    "data_referencia": "2026-09-10",
+    "indicador": "Spread High Yield Emergentes OAS",
+    "fonte": "FRED",
+    "dataset_label": "FRED Brasil Macro e Ciclos",
+    "categoria": "Macroeconomia Brasil",
+    "Valor": "2,79"
+  },
+  {
+    "data_referencia": "2026-09-10",
     "indicador": "TBF",
     "fonte": "ANBIMA",
     "dataset_label": "ANBIMA Indicadores",
@@ -254,6 +358,22 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "ANBIMA Indicadores",
     "categoria": "Taxa de Referência",
     "Valor": "0,1707"
+  },
+  {
+    "data_referencia": "2026-09-10",
+    "indicador": "US Corp IG Spread",
+    "fonte": "FRED",
+    "dataset_label": "FRED Liquidez e Spreads",
+    "categoria": "Liquidez & Crédito Global",
+    "Valor": "0,8000"
+  },
+  {
+    "data_referencia": "2026-09-10",
+    "indicador": "US High Yield Spread",
+    "fonte": "FRED",
+    "dataset_label": "FRED Liquidez e Spreads",
+    "categoria": "Liquidez & Crédito Global",
+    "Valor": "2,70"
   },
   {
     "data_referencia": "2026-09-11",
@@ -787,6 +907,14 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "ANBIMA Indicadores",
     "categoria": "Taxa de Juros",
     "Valor": "13,90"
+  },
+  {
+    "data_referencia": "2026-09-11",
+    "indicador": "Estimativa Taxa Selic",
+    "fonte": "ANBIMA",
+    "dataset_label": "ANBIMA Estimativa Selic",
+    "categoria": "Taxas de Juros",
+    "Valor": "13,90%"
   },
   {
     "data_referencia": "2026-09-11",
@@ -1580,6 +1708,30 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Ações Internacionais",
     "categoria": "Ações Internacionais",
     "Valor": "379,09"
+  },
+  {
+    "data_referencia": "2026-09-11",
+    "indicador": "US Breakeven Inflation 10Y",
+    "fonte": "FRED",
+    "dataset_label": "FRED US Treasuries",
+    "categoria": "Curva Soberana EUA",
+    "Valor": "2,36%"
+  },
+  {
+    "data_referencia": "2026-09-11",
+    "indicador": "US Breakeven Inflation 5Y",
+    "fonte": "FRED",
+    "dataset_label": "FRED US Treasuries",
+    "categoria": "Curva Soberana EUA",
+    "Valor": "2,40%"
+  },
+  {
+    "data_referencia": "2026-09-11",
+    "indicador": "US Yield Curve Spread 10Y-2Y",
+    "fonte": "FRED",
+    "dataset_label": "FRED US Treasuries",
+    "categoria": "Curva Soberana EUA",
+    "Valor": "0,33%"
   },
   {
     "data_referencia": "2026-09-11",

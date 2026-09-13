@@ -629,6 +629,9 @@
     .tag-ibge   { background: rgba(187,134,252,0.1); color: #bb86fc; border: 1px solid rgba(187,134,252,0.2); }
     .tag-migrados{ background: rgba(240,180,41,0.08); color: var(--gold2); border: 1px solid rgba(240,180,41,0.15); }
     .tag-cvm    { background: rgba(0,212,255,0.1);  color: var(--accent2); border: 1px solid rgba(0,212,255,0.15); }
+    .tag-fred   { background: rgba(59,130,246,0.12); color: #60a5fa; border: 1px solid rgba(59,130,246,0.25); }
+    .tag-eulerpool { background: rgba(168,85,247,0.12); color: #c084fc; border: 1px solid rgba(168,85,247,0.25); }
+    .tag-brasilapi { background: rgba(16,185,129,0.12); color: #34d399; border: 1px solid rgba(16,185,129,0.25); }
 
     /* ── DATASETS ───────────────────────────────────────── */
     .datasets-section {
@@ -716,6 +719,13 @@
       color: var(--accent2);
       box-shadow: 0 0 15px rgba(0, 149, 200, 0.15);
     }
+    
+    .filter-btn.active[data-source="fred"] {
+      background: rgba(59, 130, 246, 0.12);
+      border-color: #60a5fa;
+      color: #60a5fa;
+      box-shadow: 0 0 15px rgba(59, 130, 246, 0.2);
+    }
 
     .filter-btn.active[data-source="ibge"] {
       background: rgba(255, 77, 109, 0.1);
@@ -761,6 +771,7 @@
 
     .dataset-card.anbima-card::after { background: radial-gradient(circle at top right, rgba(240,180,41,0.05), transparent 60%); }
     .dataset-card.b3-card::after     { background: radial-gradient(circle at top right, rgba(0,212,255,0.04), transparent 60%); }
+    .dataset-card.fred-card::after   { background: radial-gradient(circle at top right, rgba(59,130,246,0.05), transparent 60%); }
 
     .dataset-card:hover { background: var(--surface); }
     .dataset-card:hover::after { opacity: 1; }
@@ -784,6 +795,10 @@
     .icon-anbima { background: rgba(240,180,41,0.1); border: 1px solid rgba(240,180,41,0.2); }
     .icon-b3     { background: rgba(0,212,255,0.08); border: 1px solid rgba(0,212,255,0.15); }
     .icon-bcb    { background: rgba(0,229,160,0.08); border: 1px solid rgba(0,229,160,0.15); }
+    .icon-fred   { background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.2); }
+    .icon-eulerpool { background: rgba(168,85,247,0.1); border: 1px solid rgba(168,85,247,0.2); }
+    .icon-brasilapi { background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.2); }
+    .icon-tesouro { background: rgba(245,158,11,0.1); border: 1px solid rgba(245,158,11,0.2); }
     .icon-ibge   { background: rgba(187,134,252,0.08); border: 1px solid rgba(187,134,252,0.15); }
     .icon-migrados{ background: rgba(240,180,41,0.08); border: 1px solid rgba(240,180,41,0.15); }
     .icon-misc    { background: rgba(0,229,160,0.08); border: 1px solid rgba(0,229,160,0.15); }
@@ -2212,13 +2227,13 @@
     <span class="line-accent">Flat</span>
   </h1>
 
-  <span class="hero-subtitle">Pipeline de Dados Financeiros Brasileiros</span>
+  <span class="hero-subtitle">Pipeline de Dados Financeiros Brasileiros & Globais</span>
 
   <p class="hero-description">
-    Dados financeiros brasileiros confiáveis, atualizados diariamente e 100% gratuitos.
-    O PulseFlat coleta automaticamente indicadores da ANBIMA, B3, BCB, CVM e IBGE —
-    padroniza, versiona e disponibiliza em CSV para você importar direto no seu
-    Excel, Google Sheets, Python ou ferramenta de BI favorita.
+    Dados financeiros brasileiros e benchmarks macroeconômicos globais confiáveis, atualizados diariamente e 100% gratuitos.
+    O PulseFlat coleta automaticamente indicadores da ANBIMA, B3, BCB, CVM, FRED (St. Louis Fed), IBGE, IPEA e Yahoo Finance —
+    padroniza, versiona e disponibiliza em CSV e Apache Parquet para você importar direto no seu
+    Excel, Google Sheets, Python, DuckDB ou ferramenta de BI favorita.
   </p>
 
   <div class="hero-ctas">
@@ -2231,15 +2246,15 @@
 <!-- STATS STRIP -->
 <div class="hero-stats reveal">
   <div class="stat-item">
-    <span class="stat-value">59</span>
+    <span class="stat-value">88+</span>
     <span class="stat-label">Datasets</span>
   </div>
   <div class="stat-item">
-    <span class="stat-value">6</span>
+    <span class="stat-value">10+</span>
     <span class="stat-label">Fontes de dados</span>
   </div>
   <div class="stat-item">
-    <span class="stat-value">7×</span>
+    <span class="stat-value">9×</span>
     <span class="stat-label">Execuções por dia útil</span>
   </div>
 </div>
@@ -2255,7 +2270,7 @@
           A <strong style="color: var(--text);">PulseDataLabs</strong> nasceu da missão de democratizar o acesso a dados financeiros brasileiros de qualidade. Acreditamos que informações financeiras confiáveis não deveriam ser um privilégio de grandes instituições.
         </p>
         <p style="font-size: 1rem; line-height: 1.8; color: var(--text2);">
-          Por isso, construímos o PulseFlat: um pipeline open-source que coleta, padroniza e disponibiliza gratuitamente dezenas de indicadores do mercado financeiro brasileiro — da ANBIMA, B3, BCB, CVM e IBGE — atualizados automaticamente todos os dias úteis.
+          Por isso, construímos o PulseFlat: um pipeline open-source que coleta, padroniza e disponibiliza gratuitamente dezenas de indicadores do mercado financeiro brasileiro e internacional — de ANBIMA (Data & APIs), B3, BCB, CVM, FRED (St. Louis Fed), IBGE, IPEA e Yahoo Finance — atualizados automaticamente todos os dias úteis.
         </p>
       </div>
       <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; align-content: start;">
@@ -2272,7 +2287,7 @@
           <span style="font-family: var(--font-mono); font-size: 0.65rem; color: var(--text3); text-transform: uppercase; letter-spacing: 0.1em;">Atualizações/dia</span>
         </div>
         <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1.5rem; text-align: center;">
-          <span style="font-family: var(--font-head); font-weight: 800; font-size: 2rem; color: var(--accent); display: block;">8+</span>
+          <span style="font-family: var(--font-head); font-weight: 800; font-size: 2rem; color: var(--accent); display: block;">10+</span>
           <span style="font-family: var(--font-mono); font-size: 0.65rem; color: var(--text3); text-transform: uppercase; letter-spacing: 0.1em;">Fontes oficiais</span>
         </div>
       </div>
@@ -2484,6 +2499,7 @@
             <option value="b3">◉ B3</option>
             <option value="cvm">⬢ CVM</option>
             <option value="bcb">◆ Banco Central (BACEN)</option>
+            <option value="fred">🏛️ FRED (St. Louis Fed)</option>
             <option value="ibge">⬡ IBGE</option>
             <option value="debentures">❖ Debêntures</option>
             <option value="misc">⚡ Outros / Yahoo</option>
@@ -2540,6 +2556,7 @@
       <button class="filter-btn" data-source="b3" aria-pressed="false">◉ B3</button>
       <button class="filter-btn" data-source="cvm" aria-pressed="false">⬢ CVM</button>
       <button class="filter-btn" data-source="bcb" aria-pressed="false">◆ Banco Central</button>
+      <button class="filter-btn" data-source="fred" aria-pressed="false">🏛️ FRED</button>
       <button class="filter-btn" data-source="ibge" aria-pressed="false">⬡ IBGE</button>
       <button class="filter-btn" data-source="debentures" aria-pressed="false">❖ Debêntures</button>
       <button class="filter-btn" data-source="misc" aria-pressed="false">⚡ Outros</button>
@@ -2577,6 +2594,7 @@
       <button class="filter-btn" data-source="b3" aria-pressed="false">◉ B3</button>
       <button class="filter-btn" data-source="cvm" aria-pressed="false">⬢ CVM</button>
       <button class="filter-btn" data-source="bcb" aria-pressed="false">◆ Banco Central</button>
+      <button class="filter-btn" data-source="fred" aria-pressed="false">🏛️ FRED</button>
       <button class="filter-btn" data-source="ibge" aria-pressed="false">⬡ IBGE</button>
       <button class="filter-btn" data-source="debentures" aria-pressed="false">❖ Debêntures</button>
       <button class="filter-btn" data-source="misc" aria-pressed="false">⚡ Outros</button>
@@ -2781,6 +2799,8 @@
         cardClass = 'anbima-card';
       } else if (lowerFile.startsWith('b3_')) {
         cardClass = 'b3-card';
+      } else if (lowerFile.startsWith('fred_')) {
+        cardClass = 'fred-card';
       }
 
       // Determine source mapping
@@ -2797,7 +2817,9 @@
         sourceMapped = 'ibge';
       } else if (lowerFile.startsWith('debentures_')) {
         sourceMapped = 'debentures';
-      } else if (lowerFile.startsWith('yahoo_') || lowerFile.startsWith('onu_')) {
+      } else if (lowerFile.startsWith('fred_')) {
+        sourceMapped = 'fred';
+      } else if (lowerFile.startsWith('yahoo_') || lowerFile.startsWith('onu_') || lowerFile.startsWith('ipea_') || lowerFile.startsWith('wikipedia_')) {
         sourceMapped = 'misc';
       }
 
@@ -3770,10 +3792,18 @@
         sourceKey = 'debentures';
         sourceName = 'Debêntures';
         tagClass = 'tag-anbima';
+      } else if (lowerFile.startsWith('fred_')) {
+        sourceKey = 'fred';
+        sourceName = 'FRED';
+        tagClass = 'tag-fred';
       } else if (lowerFile.startsWith('yahoo_')) {
         sourceKey = 'misc';
         sourceName = 'Yahoo Finance';
         tagClass = 'tag-b3';
+      } else if (lowerFile.startsWith('ipea_')) {
+        sourceKey = 'misc';
+        sourceName = 'IPEA';
+        tagClass = 'tag-migrados';
       }
 
       const title = dataset.title || file.replace(/_/g, ' ').replace(/\.csv(\.gz)?$/, '');

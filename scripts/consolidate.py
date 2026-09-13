@@ -143,6 +143,13 @@ DATASET_LABEL = {
     "ipea_comercio_exterior.csv": "IPEA Comércio Exterior",
     "ipea_producao_mineral.csv": "IPEA Produção Mineral",
     "ipea_calendario.csv": "IPEA Calendário",
+    "anbima_titulos_publicos_estimativa_selic.csv.gz": "ANBIMA Estimativa Selic",
+    "anbima_projecoes_inflacao.csv.gz": "ANBIMA Projeções Inflação",
+    "fred_us_treasuries_yield_curve.csv.gz": "FRED US Treasuries",
+    "fred_us_macro_indicators.csv.gz": "FRED US Macro",
+    "fred_global_liquidity_credit_spreads.csv.gz": "FRED Liquidez e Spreads",
+    "fred_brazil_export_commodities.csv.gz": "FRED Commodities Exportação Brasil",
+    "fred_brazil_macro_fx_and_cycles.csv.gz": "FRED Brasil Macro e Ciclos",
 }
 
 
@@ -740,6 +747,116 @@ INDICATOR_DEFS = [
         "date_col": "data_de_referencia",
         "category": "IMA-B",
     },
+    # ── ANBIMA Estimativa Selic ────────────────────────────────────
+    {
+        "dataset": "anbima_titulos_publicos_estimativa_selic.csv.gz",
+        "source": "ANBIMA",
+        "label": "Estimativa Taxa Selic",
+        "value_col": "estimativa_taxa_selic",
+        "date_col": "data_referencia",
+        "fmt": "pct",
+        "category": "Taxas de Juros",
+    },
+    # ── FRED US Treasuries Yield Curve ────────────────────────────
+    *[
+        {
+            "dataset": "fred_us_treasuries_yield_curve.csv.gz",
+            "source": "FRED",
+            "label": label,
+            "value_col": col,
+            "date_col": "data_referencia",
+            "fmt": fmt,
+            "category": "Curva Soberana EUA",
+        }
+        for col, label, fmt in [
+            ("dgs3mo", "US Treasury 3M", "pct"),
+            ("dgs2", "US Treasury 2Y", "pct"),
+            ("dgs5", "US Treasury 5Y", "pct"),
+            ("dgs10", "US Treasury 10Y", "pct"),
+            ("dgs30", "US Treasury 30Y", "pct"),
+            ("t10y2y_spread", "US Yield Curve Spread 10Y-2Y", "pct"),
+            ("t5y_breakeven", "US Breakeven Inflation 5Y", "pct"),
+            ("t10y_breakeven", "US Breakeven Inflation 10Y", "pct"),
+        ]
+    ],
+    # ── FRED US Macro Indicators ──────────────────────────────────
+    *[
+        {
+            "dataset": "fred_us_macro_indicators.csv.gz",
+            "source": "FRED",
+            "label": label,
+            "value_col": col,
+            "date_col": "data_referencia",
+            "fmt": fmt,
+            "category": "Macroeconomia EUA",
+        }
+        for col, label, fmt in [
+            ("cpi_headline", "US CPI Headline", "number"),
+            ("cpi_core", "US CPI Core", "number"),
+            ("pce_core", "US PCE Core", "number"),
+            ("unemployment_rate", "US Unemployment Rate", "pct"),
+            ("nonfarm_payroll", "US Nonfarm Payrolls (k)", "number"),
+        ]
+    ],
+    # ── FRED Global Liquidity & Credit Spreads ────────────────────
+    *[
+        {
+            "dataset": "fred_global_liquidity_credit_spreads.csv.gz",
+            "source": "FRED",
+            "label": label,
+            "value_col": col,
+            "date_col": "data_referencia",
+            "fmt": fmt,
+            "category": "Liquidez & Crédito Global",
+        }
+        for col, label, fmt in [
+            ("fed_funds_rate", "Fed Funds Effective Rate", "pct"),
+            ("sofr_rate", "SOFR Rate", "pct"),
+            ("credit_spread_corp_ig", "US Corp IG Spread", "number"),
+            ("credit_spread_corp_hy", "US High Yield Spread", "number"),
+            ("vix", "CBOE VIX Volatility", "number"),
+            ("dxy_broad", "Trade Weighted U.S. Dollar Index", "number"),
+        ]
+    ],
+    # ── FRED Brazil Export Commodities ────────────────────────────
+    *[
+        {
+            "dataset": "fred_brazil_export_commodities.csv.gz",
+            "source": "FRED",
+            "label": label,
+            "value_col": col,
+            "date_col": "data_referencia",
+            "fmt": "number",
+            "category": "Commodities Globais",
+        }
+        for col, label in [
+            ("minerio_ferro_global_usd", "Minério de Ferro Global (USD/dmtu)"),
+            ("soja_global_usd", "Soja Global (USD/mt)"),
+            ("petroleo_brent_global_usd", "Petróleo Brent Global (USD/bbl)"),
+            ("acucar_global_usd", "Açúcar Global (US cents/lb)"),
+            ("cafe_arabica_global_usd", "Café Arábica Global (US cents/lb)"),
+        ]
+    ],
+    # ── FRED Brazil Macro & FX Cycles ─────────────────────────────
+    *[
+        {
+            "dataset": "fred_brazil_macro_fx_and_cycles.csv.gz",
+            "source": "FRED",
+            "label": label,
+            "value_col": col,
+            "date_col": "data_referencia",
+            "fmt": fmt,
+            "category": "Macroeconomia Brasil",
+        }
+        for col, label, fmt in [
+            ("reer_bis_brasil", "Brasil Câmbio Efetivo Real (REER BIS)", "number"),
+            ("neer_bis_brasil", "Brasil Câmbio Efetivo Nominal (NEER BIS)", "number"),
+            ("cli_ocde_brasil", "Brasil Indicador Antecedente OCDE (CLI)", "number"),
+            ("confianca_consumidor_ocde", "Brasil Confiança Consumidor (OCDE)", "number"),
+            ("confianca_empresarial_ocde", "Brasil Confiança Empresarial (OCDE)", "number"),
+            ("spread_high_yield_emergentes_oas", "Spread High Yield Emergentes OAS", "number"),
+        ]
+    ],
     # ── Yahoo Finance ──────────────────────────────────────────────
     *[
         {

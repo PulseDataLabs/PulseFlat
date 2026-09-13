@@ -282,6 +282,7 @@
     .stat-box.anbima .stat-val { color: var(--gold); }
     .stat-box.b3 .stat-val { color: var(--accent); }
     .stat-box.bcb .stat-val { color: var(--emerald); }
+    .stat-box.fred .stat-val { color: #60a5fa; }
     .stat-box.misc .stat-val { color: var(--purple); }
 
     /* ── Dashboard Grid (3 Cards) ── */
@@ -547,6 +548,7 @@
     .source-chip.anbima.active { background: var(--gold-dim); border-color: var(--gold); color: var(--gold); }
     .source-chip.b3.active { background: var(--accent-dim); border-color: var(--accent); color: var(--accent); }
     .source-chip.bcb.active { background: var(--emerald-dim); border-color: var(--emerald); color: var(--emerald); }
+    .source-chip.fred.active { background: rgba(59, 130, 246, 0.15); border-color: #3b82f6; color: #60a5fa; }
     .source-chip.yahoo.active { background: var(--purple-dim); border-color: var(--purple); color: var(--purple); }
 
     .table-actions {
@@ -676,6 +678,7 @@
     .source-tag.anbima { background: var(--gold-dim); color: var(--gold); border: 1px solid var(--gold); }
     .source-tag.b3 { background: var(--accent-dim); color: var(--accent); border: 1px solid var(--accent); }
     .source-tag.bcb { background: var(--emerald-dim); color: var(--emerald); border: 1px solid var(--emerald); }
+    .source-tag.fred { background: rgba(59, 130, 246, 0.15); color: #60a5fa; border: 1px solid #3b82f6; }
     .source-tag.yahoo { background: var(--purple-dim); color: var(--purple); border: 1px solid var(--purple); }
     .source-tag.debentures { background: rgba(0, 212, 255, 0.12); color: #00d4ff; border: 1px solid rgba(0, 212, 255, 0.4); }
 
@@ -867,7 +870,7 @@
       <div>
         <div class="hero-eyebrow">Indicadores Financeiros Brasileiros</div>
         <h1 class="hero-title">Consulta Consolidada</h1>
-        <p class="hero-subtitle">Painel analítico em tempo real com séries históricas, gráficos e exportações de ANBIMA, B3, BACEN, Debêntures e Yahoo Finance.</p>
+        <p class="hero-subtitle">Painel analítico em tempo real com séries históricas, gráficos e exportações de ANBIMA, B3, BACEN, FRED, Debêntures e Yahoo Finance.</p>
       </div>
 
       <div class="stats-ribbon" id="stats-ribbon">
@@ -890,6 +893,10 @@
         <div class="stat-box bcb">
           <div class="stat-val" id="stat-bcb">—</div>
           <div class="stat-lbl">BCB</div>
+        </div>
+        <div class="stat-box fred">
+          <div class="stat-val" id="stat-fred">—</div>
+          <div class="stat-lbl">FRED (Fed)</div>
         </div>
         <div class="stat-box misc">
           <div class="stat-val" id="stat-misc">—</div>
@@ -1092,11 +1099,18 @@
     "ANBIMA Indicadores": "anbima_indicadores.csv",
     "ANBIMA Títulos Públicos": "anbima_titulos_publicos.csv",
     "ANBIMA Índice IMA-B": "anbima_indice_imab.csv.gz",
+    "ANBIMA Estimativa Selic": "anbima_titulos_publicos_estimativa_selic.csv.gz",
+    "ANBIMA Projeções Inflação": "anbima_projecoes_inflacao.csv.gz",
     "B3 DI Over": "b3_bdi_di_over.csv",
     "B3 BMF Taxas": "b3_bmf_taxas_juros.csv",
     "B3 Indicadores": "b3_indicadores_financeiros.csv",
     "BCB PTAX": "bcb_ptax.csv",
     "BCB SGS": "bcb_sgs.csv",
+    "FRED US Treasuries": "fred_us_treasuries_yield_curve.csv.gz",
+    "FRED US Macro": "fred_us_macro_indicators.csv.gz",
+    "FRED Liquidez e Spreads": "fred_global_liquidity_credit_spreads.csv.gz",
+    "FRED Commodities Exportação Brasil": "fred_brazil_export_commodities.csv.gz",
+    "FRED Brasil Macro e Ciclos": "fred_brazil_macro_fx_and_cycles.csv.gz",
     "Yahoo Ações Brasileiras": "yahoo_acoes_brasileiras.csv",
     "Yahoo Ações Internacionais": "yahoo_acoes_internacionais.csv",
     "Yahoo Câmbio e Moedas": "yahoo_cambio_moedas.csv",
@@ -1109,6 +1123,30 @@
   };
 
   const DATASET_CONFIGS = {
+    'anbima_titulos_publicos_estimativa_selic.csv.gz': {
+      date: 'data_referencia',
+      values: ['estimativa_taxa_selic']
+    },
+    'fred_us_treasuries_yield_curve.csv.gz': {
+      date: 'data_referencia',
+      values: ['dgs10', 'dgs2', 't10y2y_spread', 't10y_breakeven']
+    },
+    'fred_us_macro_indicators.csv.gz': {
+      date: 'data_referencia',
+      values: ['unemployment_rate', 'cpi_headline', 'pce_core']
+    },
+    'fred_global_liquidity_credit_spreads.csv.gz': {
+      date: 'data_referencia',
+      values: ['fed_funds_rate', 'credit_spread_corp_hy', 'vix']
+    },
+    'fred_brazil_export_commodities.csv.gz': {
+      date: 'data_referencia',
+      values: ['minerio_ferro_global_usd', 'soja_global_usd', 'petroleo_brent_global_usd']
+    },
+    'fred_brazil_macro_fx_and_cycles.csv.gz': {
+      date: 'data_referencia',
+      values: ['reer_bis_brasil', 'cli_ocde_brasil', 'spread_high_yield_emergentes_oas']
+    },
     'bcb_sgs.csv': {
       date: 'data',
       values: ['valor'],
@@ -1243,19 +1281,19 @@
       const ind = (r.indicador || '').toLowerCase();
       const cat = (r.categoria || '').toLowerCase();
       
-      if (ind.includes('selic') || ind.includes('cdi') || ind.includes('juro') || ind.includes('di over') || ind.includes('swap') || cat.includes('juros') || cat.includes('renda fixa') || cat.includes('títulos')) {
+      if (ind.includes('selic') || ind.includes('cdi') || ind.includes('juro') || ind.includes('di over') || ind.includes('swap') || ind.includes('treasury') || ind.includes('fed funds') || ind.includes('sofr') || ind.includes('spread') || cat.includes('juros') || cat.includes('renda fixa') || cat.includes('títulos') || cat.includes('curva soberana')) {
         return 'juros';
       }
-      if (ind.includes('dólar') || ind.includes('dolar') || ind.includes('ptax') || ind.includes('euro') || ind.includes('câmbio') || ind.includes('cambio') || cat.includes('câmbio') || cat.includes('moedas')) {
+      if (ind.includes('dólar') || ind.includes('dolar') || ind.includes('ptax') || ind.includes('euro') || ind.includes('câmbio') || ind.includes('cambio') || ind.includes('dxy') || ind.includes('reer') || ind.includes('neer') || cat.includes('câmbio') || cat.includes('moedas')) {
         return 'cambio';
       }
-      if (ind.includes('ipca') || ind.includes('igp') || ind.includes('inpc') || ind.includes('inflação') || ind.includes('inflacao') || cat.includes('inflação') || cat.includes('preços')) {
+      if (ind.includes('ipca') || ind.includes('igp') || ind.includes('inpc') || ind.includes('inflação') || ind.includes('inflacao') || ind.includes('cpi') || ind.includes('pce') || ind.includes('breakeven') || cat.includes('inflação') || cat.includes('preços')) {
         return 'inflacao';
       }
       if (ind.includes('b3') || ind.includes('ibov') || ind.includes('ação') || ind.includes('acao') || ind.includes('etf') || ind.includes('fii') || cat.includes('ações') || cat.includes('etf') || cat.includes('fiis')) {
         return 'acoes';
       }
-      if (ind.includes('petróleo') || ind.includes('petroleo') || ind.includes('brent') || ind.includes('ouro') || ind.includes('commodit') || ind.includes('nasdaq') || ind.includes('dow') || cat.includes('commodities') || cat.includes('globais')) {
+      if (ind.includes('petróleo') || ind.includes('petroleo') || ind.includes('brent') || ind.includes('ouro') || ind.includes('minério') || ind.includes('minerio') || ind.includes('soja') || ind.includes('café') || ind.includes('cafe') || ind.includes('açúcar') || ind.includes('acucar') || ind.includes('commodit') || ind.includes('nasdaq') || ind.includes('dow') || cat.includes('commodities') || cat.includes('globais')) {
         return 'commodities';
       }
       return 'macro';
@@ -1272,7 +1310,9 @@
     document.getElementById('stat-anbima').textContent = (fonteCounts['ANBIMA'] || 0).toLocaleString('pt-BR');
     document.getElementById('stat-b3').textContent = (fonteCounts['B3'] || 0).toLocaleString('pt-BR');
     document.getElementById('stat-bcb').textContent = (fonteCounts['BCB'] || 0).toLocaleString('pt-BR');
-    document.getElementById('stat-misc').textContent = ((fonteCounts['Yahoo Finance'] || 0) + (fonteCounts['IBGE'] || 0) + (fonteCounts['Debêntures'] || 0)).toLocaleString('pt-BR');
+    const statFredEl = document.getElementById('stat-fred');
+    if (statFredEl) statFredEl.textContent = (fonteCounts['FRED'] || 0).toLocaleString('pt-BR');
+    document.getElementById('stat-misc').textContent = ((fonteCounts['Yahoo Finance'] || 0) + (fonteCounts['IBGE'] || 0) + (fonteCounts['Debêntures'] || 0) + (fonteCounts['Outros'] || 0)).toLocaleString('pt-BR');
 
     // Update Favorites Counter
     function updateFavCount() {
@@ -1285,6 +1325,7 @@
       'ANBIMA': 'anbima',
       'B3': 'b3',
       'BCB': 'bcb',
+      'FRED': 'fred',
       'Yahoo Finance': 'yahoo',
       'Debêntures': 'debentures'
     };

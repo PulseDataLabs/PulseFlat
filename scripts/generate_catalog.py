@@ -51,6 +51,14 @@ def get_source_class(source_name: str) -> str:
         return "icon-cvm"
     if "ibge" in src:
         return "icon-ibge"
+    if "fred" in src:
+        return "icon-fred"
+    if "eulerpool" in src:
+        return "icon-eulerpool"
+    if "brasilapi" in src:
+        return "icon-brasilapi"
+    if "tesouro" in src:
+        return "icon-tesouro"
     return "icon-misc"
 
 
