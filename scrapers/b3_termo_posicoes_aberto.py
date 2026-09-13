@@ -19,9 +19,9 @@ import time
 from datetime import date
 from pathlib import Path
 
-from bs4 import BeautifulSoup
 import pandas as pd
 import requests
+from bs4 import BeautifulSoup
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
@@ -90,7 +90,9 @@ def _parse_int_br(val) -> int:
 def _extrair_data_referencia_html(soup: BeautifulSoup, default_iso: str) -> str:
     """Extrai data no formato DD/MM/YYYY do texto 'Dados de Fechamento do Pregão de DD/MM/YYYY'."""
     text = soup.get_text()
-    match = re.search(r"Dados de Fechamento do Pregão de\s*(\d{2}/\d{2}/\d{4})", text, re.IGNORECASE)
+    match = re.search(
+        r"Dados de Fechamento do Pregão de\s*(\d{2}/\d{2}/\d{4})", text, re.IGNORECASE
+    )
     if match:
         d, m, y = match.group(1).split("/")
         return f"{y}-{m}-{d}"

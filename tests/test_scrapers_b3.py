@@ -489,7 +489,9 @@ def test_b3_valor_mercado_empresas_captura_mock(requests_mock):
     }
 
     requests_mock.get(
-        re.compile(r"https://sistemaswebb3-listados\.b3\.com\.br/marketValueProxy/marketValueCall/GetStockExchangeMonthly/.*"),
+        re.compile(
+            r"https://sistemaswebb3-listados\.b3\.com\.br/marketValueProxy/marketValueCall/GetStockExchangeMonthly/.*"
+        ),
         json=mock_json,
         status_code=200,
     )
@@ -543,6 +545,7 @@ def test_b3_termo_posicoes_aberto_captura_mock(requests_mock):
     """Testa o parse de tabelas de resumo e posições granulares de termo da B3 com mock HTML."""
     import datetime
     import re
+
     from scrapers.b3_termo_posicoes_aberto import capturar_dia
 
     mock_html = """
@@ -592,7 +595,9 @@ def test_b3_termo_posicoes_aberto_captura_mock(requests_mock):
     """
 
     requests_mock.get(
-        re.compile(r"https://www\.b3\.com\.br/.*/posicoes-em-aberto-8AE490C99D724062019D7901CD91500D\.htm.*"),
+        re.compile(
+            r"https://www\.b3\.com\.br/.*/posicoes-em-aberto-8AE490C99D724062019D7901CD91500D\.htm.*"
+        ),
         text=mock_html,
         status_code=200,
     )
@@ -629,8 +634,3 @@ def test_b3_termo_posicoes_aberto_captura_mock(requests_mock):
     assert petr["quantidade_ativos"] == 2000000
     assert petr["valor_contratos"] == 74500000.00
     assert petr["preco_medio_termo"] == 37.25
-
-
-
-
-
