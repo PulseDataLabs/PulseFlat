@@ -197,3 +197,82 @@ def test_b3_limites_garantias_sheet_legacy(requests_mock):
     assert not df.empty
     assert df["tipo_ativo"].iloc[0] == "Ações_BDRs_ETFs_Units"
     assert df["data_referencia"].iloc[0] == "2025-06-01"
+
+
+def test_b3_bdi_derivativos_resumo_metadata():
+    """Verifica metadados e configuração do scraper B3 BDI Derivativos."""
+    from scrapers.b3_bdi_derivativos_resumo import B3BdiDerivativosResumoScraper, CABECALHO
+
+    s = B3BdiDerivativosResumoScraper()
+    assert s.name == "b3_bdi_derivativos_resumo"
+    assert s.group == "b3"
+    assert s.enabled is True
+    assert s.accumulate is True
+    assert "data_referencia" in s.chaves_dedup
+    assert "ticker_simb" in s.chaves_dedup
+    assert len(CABECALHO) == 11
+
+
+def test_b3_bdi_derivativos_resumo_captura_mock(requests_mock):
+    """Testa a captura e parsing dos contratos de derivativos com mock de resposta BDI."""
+    import datetime
+    from scrapers.b3_bdi_derivativos_resumo import B3BdiDerivativosResumoScraper, capturar_dia
+
+    mock_payload = {
+        "table": {
+            "columns": [
+                {"name": "TckrSymb"},
+                {"name": "Category"},
+                {"name": "Market"},
+                {"name": "Derivatives"},
+                {"name": "Tipo"},
+                {"name": "NmbrTradesDay"},
+                {"name": "NmbrCntrctsDay"},
+                {"name": "TotalVlmRS"},
+                {"name": "TotalVlmUS"},
+                {"name": "OrderCol"},
+            ],
+            "values": [
+                [
+                    "BGI: BOI GORDO - FUTURO",
+                    "PREGÃO ELETRÔNICO",
+                    "COMMODITIES",
+                    "BGI: BOI GORDO",
+                    "FUTURO",
+                    5158,
+                    8050,
+                    997840254,
+                    194529730,
+                    1,
+                    None,
+                ],
+                [
+                    "DOL: DÓLAR COMERCIAL - FUTURO",
+                    "PREGÃO ELETRÔNICO",
+                    "MOEDAS",
+                    "DOL: DÓLAR",
+                    "FUTURO",
+                    12000,
+                    45000,
+                    12500000000,
+                    2400000000,
+                    2,
+                    None,
+                ],
+            ],
+        }
+    }
+
+    url = "https://arquivos.b3.com.br/bdi/table/DerivativesOperation2/2026-09-11/2026-09-11/1/500"
+    requests_mock.post(url, json=mock_payload, status_code=200)
+
+    registros = capturar_dia(datetime.date(2026, 9, 11))
+    assert len(registros) == 2
+    assert registros[0]["ticker_simb"] == "BGI: BOI GORDO - FUTURO"
+    assert registros[0]["mercado"] == "COMMODITIES"
+    assert registros[0]["quantidade_negocios"] == 5158
+    assert registros[0]["quantidade_contratos"] == 8050
+    assert registros[0]["volume_financeiro_brl"] == 997840254
+    assert registros[1]["ticker_simb"] == "DOL: DÓLAR COMERCIAL - FUTURO"
+    assert registros[1]["mercado"] == "MOEDAS"
+

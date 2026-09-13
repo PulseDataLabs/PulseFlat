@@ -978,6 +978,28 @@
     "accumulate": true
   },
   {
+    "title": "B3 BDI — Derivativos (Resumo das Operações)",
+    "file": "b3_bdi_derivativos_resumo.csv",
+    "description": "Resumo oficial das operações de derivativos do Boletim Diário do Mercado (BDI) da B3, abrangendo contratos futuros, opções e rolagens de commodities, juros, câmbio e índices, com contagem de negócios, contratos e volumes financeiros em R$ e US$.",
+    "icon": "⚡",
+    "iconClass": "icon-b3",
+    "badge": "Diário",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "derivativos",
+      "futuros",
+      "opções",
+      "bdi",
+      "commodities",
+      "juros",
+      "dólar",
+      "B3"
+    ],
+    "source": "B3 · BDI",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/b3_bdi_derivativos_resumo.csv",
+    "accumulate": true
+  },
+  {
     "title": "B3 BDI — DI Over",
     "file": "b3_bdi_di_over.csv",
     "description": "Boletim Diário de Informações (BDI) da B3 para a taxa média de juros de um dia (DI Over), contendo volume financeiro, quantidade de operações e fator diário acumulado.",

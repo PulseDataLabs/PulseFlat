@@ -362,5 +362,9 @@ window.PULSEFLAT_LAST_UPDATES = {
   "registro_fundo_classe.csv": {
     "min": "2026-06-06",
     "max": "2026-06-06"
+  },
+  "b3_bdi_derivativos_resumo.csv": {
+    "min": "2026-09-13",
+    "max": "2026-09-13"
   }
 };
