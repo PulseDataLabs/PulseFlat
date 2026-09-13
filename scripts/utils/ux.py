@@ -149,6 +149,8 @@ GROUP_ICON = {
     "bcb": "🟢",
     "cvm": "🟣",
     "ibge": "🔴",
+    "fred": "🏛️",
+    "ipea": "📊",
     "ratings": "⚪",
     "misc": "🟤",
 }
@@ -159,6 +161,8 @@ GROUP_COLOR = {
     "bcb": green,
     "cvm": magenta,
     "ibge": red,
+    "fred": blue,
+    "ipea": cyan,
     "ratings": white,
     "misc": blue,
 }

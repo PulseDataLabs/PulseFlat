@@ -630,6 +630,7 @@
     .tag-migrados{ background: rgba(240,180,41,0.08); color: var(--gold2); border: 1px solid rgba(240,180,41,0.15); }
     .tag-cvm    { background: rgba(0,212,255,0.1);  color: var(--accent2); border: 1px solid rgba(0,212,255,0.15); }
     .tag-fred   { background: rgba(59,130,246,0.12); color: #60a5fa; border: 1px solid rgba(59,130,246,0.25); }
+    .tag-ipea   { background: rgba(14,165,233,0.12); color: #38bdf8; border: 1px solid rgba(14,165,233,0.25); }
     .tag-eulerpool { background: rgba(168,85,247,0.12); color: #c084fc; border: 1px solid rgba(168,85,247,0.25); }
     .tag-brasilapi { background: rgba(16,185,129,0.12); color: #34d399; border: 1px solid rgba(16,185,129,0.25); }
 
@@ -720,6 +721,13 @@
       box-shadow: 0 0 15px rgba(0, 149, 200, 0.15);
     }
     
+    .filter-btn.active[data-source="ipea"] {
+      background: rgba(14, 165, 233, 0.12);
+      border-color: #38bdf8;
+      color: #38bdf8;
+      box-shadow: 0 0 15px rgba(14, 165, 233, 0.2);
+    }
+
     .filter-btn.active[data-source="fred"] {
       background: rgba(59, 130, 246, 0.12);
       border-color: #60a5fa;
@@ -772,6 +780,7 @@
     .dataset-card.anbima-card::after { background: radial-gradient(circle at top right, rgba(240,180,41,0.05), transparent 60%); }
     .dataset-card.b3-card::after     { background: radial-gradient(circle at top right, rgba(0,212,255,0.04), transparent 60%); }
     .dataset-card.fred-card::after   { background: radial-gradient(circle at top right, rgba(59,130,246,0.05), transparent 60%); }
+    .dataset-card.ipea-card::after   { background: radial-gradient(circle at top right, rgba(14,165,233,0.05), transparent 60%); }
 
     .dataset-card:hover { background: var(--surface); }
     .dataset-card:hover::after { opacity: 1; }
@@ -795,6 +804,7 @@
     .icon-anbima { background: rgba(240,180,41,0.1); border: 1px solid rgba(240,180,41,0.2); }
     .icon-b3     { background: rgba(0,212,255,0.08); border: 1px solid rgba(0,212,255,0.15); }
     .icon-bcb    { background: rgba(0,229,160,0.08); border: 1px solid rgba(0,229,160,0.15); }
+    .icon-ipea   { background: rgba(14,165,233,0.1); border: 1px solid rgba(14,165,233,0.25); }
     .icon-fred   { background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.2); }
     .icon-eulerpool { background: rgba(168,85,247,0.1); border: 1px solid rgba(168,85,247,0.2); }
     .icon-brasilapi { background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.2); }
@@ -2499,6 +2509,7 @@
             <option value="b3">◉ B3</option>
             <option value="cvm">⬢ CVM</option>
             <option value="bcb">◆ Banco Central (BACEN)</option>
+            <option value="ipea">🏛️ IPEA (Ipeadata)</option>
             <option value="fred">🏛️ FRED (St. Louis Fed)</option>
             <option value="ibge">⬡ IBGE</option>
             <option value="debentures">❖ Debêntures</option>
@@ -2556,6 +2567,7 @@
       <button class="filter-btn" data-source="b3" aria-pressed="false">◉ B3</button>
       <button class="filter-btn" data-source="cvm" aria-pressed="false">⬢ CVM</button>
       <button class="filter-btn" data-source="bcb" aria-pressed="false">◆ Banco Central</button>
+      <button class="filter-btn" data-source="ipea" aria-pressed="false">🏛️ IPEA</button>
       <button class="filter-btn" data-source="fred" aria-pressed="false">🏛️ FRED</button>
       <button class="filter-btn" data-source="ibge" aria-pressed="false">⬡ IBGE</button>
       <button class="filter-btn" data-source="debentures" aria-pressed="false">❖ Debêntures</button>
@@ -2594,6 +2606,7 @@
       <button class="filter-btn" data-source="b3" aria-pressed="false">◉ B3</button>
       <button class="filter-btn" data-source="cvm" aria-pressed="false">⬢ CVM</button>
       <button class="filter-btn" data-source="bcb" aria-pressed="false">◆ Banco Central</button>
+      <button class="filter-btn" data-source="ipea" aria-pressed="false">🏛️ IPEA</button>
       <button class="filter-btn" data-source="fred" aria-pressed="false">🏛️ FRED</button>
       <button class="filter-btn" data-source="ibge" aria-pressed="false">⬡ IBGE</button>
       <button class="filter-btn" data-source="debentures" aria-pressed="false">❖ Debêntures</button>
@@ -2801,6 +2814,8 @@
         cardClass = 'b3-card';
       } else if (lowerFile.startsWith('fred_')) {
         cardClass = 'fred-card';
+      } else if (lowerFile.startsWith('ipea_')) {
+        cardClass = 'ipea-card';
       }
 
       // Determine source mapping
@@ -2817,9 +2832,11 @@
         sourceMapped = 'ibge';
       } else if (lowerFile.startsWith('debentures_')) {
         sourceMapped = 'debentures';
+      } else if (lowerFile.startsWith('ipea_')) {
+        sourceMapped = 'ipea';
       } else if (lowerFile.startsWith('fred_')) {
         sourceMapped = 'fred';
-      } else if (lowerFile.startsWith('yahoo_') || lowerFile.startsWith('onu_') || lowerFile.startsWith('ipea_') || lowerFile.startsWith('wikipedia_')) {
+      } else if (lowerFile.startsWith('yahoo_') || lowerFile.startsWith('onu_') || lowerFile.startsWith('wikipedia_')) {
         sourceMapped = 'misc';
       }
 
@@ -3801,9 +3818,9 @@
         sourceName = 'Yahoo Finance';
         tagClass = 'tag-b3';
       } else if (lowerFile.startsWith('ipea_')) {
-        sourceKey = 'misc';
+        sourceKey = 'ipea';
         sourceName = 'IPEA';
-        tagClass = 'tag-migrados';
+        tagClass = 'tag-ipea';
       }
 
       const title = dataset.title || file.replace(/_/g, ' ').replace(/\.csv(\.gz)?$/, '');

@@ -116,7 +116,7 @@ class TestIcons:
         assert set(ux.ICON.keys()) == expected_keys
 
     def test_group_icons_complete(self):
-        expected_groups = {"anbima", "b3", "bcb", "cvm", "ibge", "ratings", "misc"}
+        expected_groups = {"anbima", "b3", "bcb", "cvm", "ibge", "ratings", "misc", "fred", "ipea"}
         assert set(ux.GROUP_ICON.keys()) == expected_groups
         assert set(ux.GROUP_COLOR.keys()) == expected_groups
 

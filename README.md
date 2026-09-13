@@ -176,6 +176,8 @@ PulseFlat/
 │   │   ├── bcb_olinda_base.py       # Classe BaseBcbOlindaScraper
 │   │   ├── tesouro_transparente_client.py # Cliente HTTP CKAN para o Tesouro Nacional
 │   │   ├── tesouro_transparente_base.py   # Classe BaseTesouroTransparenteScraper
+│   │   ├── ipea_client.py           # Cliente HTTP OData v4 para IPEADATA
+│   │   ├── ipea_base.py             # Classe BaseIpeaScraper
 │   │   ├── fred_client.py           # Cliente HTTP para o Federal Reserve (FRED)
 │   │   └── fred_base.py             # Classe BaseFredScraper
 │   ├── anbima_data_template.py      # Template modelo para novos scrapers ANBIMA Data
@@ -183,6 +185,7 @@ PulseFlat/
 │   ├── brasilapi_template.py        # Template modelo para novos scrapers BrasilAPI
 │   ├── bcb_olinda_template.py       # Template modelo para novos scrapers BCB Olinda
 │   ├── tesouro_transparente_template.py # Template modelo para novos scrapers Tesouro
+│   ├── ipea_template.py             # Template modelo para novos scrapers IPEADATA
 │   ├── fred_template.py             # Template modelo para novos scrapers FRED
 │   └── *.py                         # Scripts específicos de coleta por dataset
 ├── scripts/                         # Pós-processamento, catálogo e alertas
@@ -191,6 +194,7 @@ PulseFlat/
 │   ├── test_brasilapi_connection.py # Teste e diagnóstico de conectividade BrasilAPI
 │   ├── test_bcb_olinda_connection.py # Teste e diagnóstico OData do BCB Olinda
 │   ├── test_tesouro_transparente_connection.py # Teste e diagnóstico CKAN do Tesouro
+│   ├── test_ipea_connection.py      # Teste e diagnóstico OData v4 do IPEADATA
 │   ├── test_fred_connection.py      # Teste e diagnóstico de autenticação do FRED
 │   ├── export_to_parquet.py         # Conversão colunar de CSV/GZ para Parquet
 │   ├── alerta_debentures.py         # Monitoramento e disparo de alertas
@@ -514,6 +518,35 @@ python scripts/test_fred_connection.py
 
 #### 3. Criando um Scraper do FRED
 Utilize o template `scrapers/fred_template.py` e herde de `BaseFredScraper`, definindo apenas `series_id` (ex: `'DGS10'` para o juro do título de 10 anos americano).
+
+### 🏛️ Integração com IPEADATA (OData v4)
+
+Acesso à API OData v4 aberta do Instituto de Pesquisa Econômica Aplicada (`http://www.ipeadata.gov.br/api/odata4/`), disponibilizando milhares de séries históricas macroeconômicas brasileiras e internacionais sem necessidade de chaves de API.
+
+#### 1. Diagnóstico de Conexão
+```bash
+python scripts/test_ipea_connection.py
+```
+
+#### 2. Criando um Scraper do IPEADATA
+Utilize o template `scrapers/ipea_template.py` e herde de `BaseIpeaScraper`. Basta definir o dicionário `SERIES` com os códigos oficiais e nomes de colunas:
+
+```python
+from scrapers.utils.ipea_base import BaseIpeaScraper
+
+class IpeaMeuDatasetScraper(BaseIpeaScraper):
+    name = "ipea_meu_dataset"
+    title = "IPEA — Meu Dataset Macroeconômico"
+    description = "Séries históricas extraídas do IPEADATA OData v4."
+
+    SERIES = {
+        "BM12_TJOVER12": "taxa_over_ano",
+        "BM12_TJTLP12": "taxa_tlp_ano",
+    }
+
+    def fetch(self):
+        return self.fetch_series_list(self.SERIES)
+```
 
 ---
 

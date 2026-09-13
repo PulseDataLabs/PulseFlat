@@ -54,6 +54,13 @@ from .tesouro_transparente_client import (
     TesouroTransparenteError,
     TesouroTransparenteRateLimitError,
 )
+from .ipea_base import BaseIpeaScraper
+from .ipea_client import (
+    IpeaApiError,
+    IpeaClient,
+    IpeaError,
+    IpeaRateLimitError,
+)
 
 __all__ = [
     "BaseScraper",
@@ -94,4 +101,9 @@ __all__ = [
     "FredAuthError",
     "FredRateLimitError",
     "FredApiError",
+    "IpeaClient",
+    "BaseIpeaScraper",
+    "IpeaError",
+    "IpeaRateLimitError",
+    "IpeaApiError",
 ]
