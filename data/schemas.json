@@ -5345,47 +5345,47 @@
       {
         "name": "data_base",
         "type": "date",
-        "example": "2026-06-30"
+        "example": "2020-03-31"
       },
       {
         "name": "codigo_instituicao",
         "type": "str",
-        "example": "2381-92-90"
+        "example": "7662-14-57"
       },
       {
         "name": "nome_instituicao",
         "type": "str",
-        "example": "2GO INSTITUICAO DE PAGAMENTO LTDA"
+        "example": "4UM DISTRIBUIDORA DE TÍTULOS E VALORES MOBILIÁRIOS LTDA."
       },
       {
         "name": "cnpj_instituicao_lider",
         "type": "str",
-        "example": ""
+        "example": "14.388.334"
       },
       {
         "name": "situacao",
         "type": "str",
-        "example": "I"
+        "example": "A"
       },
       {
         "name": "situacao_desc",
         "type": "str",
-        "example": "Inativa / Cancelada"
+        "example": "Ativa"
       },
       {
         "name": "segmento_prudencial",
         "type": "str",
-        "example": ""
+        "example": "S4"
       },
       {
         "name": "tipo_consolidacao",
         "type": "str",
-        "example": "N4"
+        "example": "N2"
       },
       {
         "name": "tipo_consolidacao_desc",
         "type": "str",
-        "example": "Instituições de Pagamento, SCDs, SEPs e Outras Não Bancárias"
+        "example": "Sociedades de Crédito, Financiamento e Investimento e Arrendamento Mercantil"
       },
       {
         "name": "tipo_detalhamento",
@@ -5415,27 +5415,27 @@
       {
         "name": "uf",
         "type": "str",
-        "example": "SP"
+        "example": "PR"
       },
       {
         "name": "municipio",
         "type": "str",
-        "example": "São Paulo"
+        "example": "Curitiba"
       },
       {
         "name": "ano_mes_inicio_atividade",
         "type": "str",
-        "example": "1800-01"
+        "example": "1968-01"
       },
       {
         "name": "codigo_conglomerado_financeiro",
         "type": "str",
-        "example": ""
+        "example": "C0030881"
       },
       {
         "name": "codigo_conglomerado_prudencial",
         "type": "str",
-        "example": ""
+        "example": "C0080233"
       }
     ]
   },

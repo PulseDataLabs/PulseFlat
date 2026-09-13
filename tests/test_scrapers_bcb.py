@@ -165,7 +165,7 @@ def test_bacen_cadastro_instituicoes_metadata():
     assert s.name == "bacen_cadastro_instituicoes"
     assert s.group == "bcb"
     assert s.enabled is True
-    assert s.accumulate is False
+    assert s.accumulate is True
     assert "data_base" in s.chaves_dedup
     assert "codigo_instituicao" in s.chaves_dedup
     assert "instituições financeiras" in s.tags

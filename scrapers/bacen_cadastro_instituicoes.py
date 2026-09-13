@@ -122,33 +122,33 @@ def _formatar_cnpj_raiz(cnpj_str: str) -> str:
     return s
 
 
+def _gerar_trimestres_desde(ano_inicio: int = 2020) -> list[str]:
+    """Retorna lista de todos os trimestres desde ano_inicio até a data atual (ex.: ['202606', '202603', ...])."""
+    hoje = datetime.date.today()
+    trimestres = []
+    for ano in range(ano_inicio, hoje.year + 1):
+        for mes in [3, 6, 9, 12]:
+            if ano == hoje.year and mes > hoje.month:
+                break
+            trimestres.append(f"{ano}{mes:02d}")
+    return sorted(trimestres, reverse=True)
+
+
 def _gerar_trimestres_recentes(n_trimestres: int = 4) -> list[str]:
     """Retorna lista dos últimos períodos trimestrais (ex.: ['202606', '202603', ...])."""
-    hoje = datetime.date.today()
-    ano = hoje.year
-    mes = hoje.month
+    return _gerar_trimestres_desde()[:n_trimestres]
 
-    # Meses padrão de divulgação do IFData: 3, 6, 9, 12
-    meses_trimestre = [3, 6, 9, 12]
-    # Determina o trimestre corrente ou anterior
-    trimestres = []
-    curr_ano = ano
-    # Encontra o último trimestre fechado
-    curr_mes = max([m for m in meses_trimestre if m <= mes] or [12])
-    if mes < 3:
-        curr_ano -= 1
-        curr_mes = 12
 
-    for _ in range(n_trimestres):
-        trimestres.append(f"{curr_ano}{curr_mes:02d}")
-        idx = meses_trimestre.index(curr_mes)
-        if idx == 0:
-            curr_mes = 12
-            curr_ano -= 1
-        else:
-            curr_mes = meses_trimestre[idx - 1]
-
-    return trimestres
+def _obter_datas_bases_existentes(arquivo: Path) -> set[str]:
+    """Lê as datas-base (ISO 'YYYY-MM-DD') já presentes no arquivo CSV."""
+    if not arquivo.exists() or arquivo.stat().st_size == 0:
+        return set()
+    try:
+        df_existente = pd.read_csv(arquivo, usecols=["data_base"], dtype=str)
+        return set(df_existente["data_base"].dropna().unique())
+    except Exception as e:
+        log.warning(f"Não foi possível ler datas-base existentes de {arquivo}: {e}")
+        return set()
 
 
 def capturar_cadastro_trimestre(anomes: str) -> list[dict]:
@@ -160,7 +160,7 @@ def capturar_cadastro_trimestre(anomes: str) -> list[dict]:
     log.info(f"Requisitando cadastro IFData para o período {anomes}...")
 
     try:
-        resp = requests.get(url, headers=HEADERS, timeout=30)
+        resp = requests.get(url, headers=HEADERS, timeout=45)
         if resp.status_code != 200:
             log.warning(f"Status HTTP {resp.status_code} ao buscar período {anomes}.")
             return []
@@ -219,18 +219,35 @@ def capturar_cadastro_trimestre(anomes: str) -> list[dict]:
         return []
 
 
-def capturar() -> list[dict]:
+def capturar(ano_inicio: int = 2020, recalcular_tudo: bool = False) -> list[dict]:
     """
-    Busca o período trimestral mais recente disponível no Olinda BCB.
-    Tenta os trimestres mais recentes em ordem decrescente até obter sucesso.
+    Busca o cadastro de instituições financeiras no Olinda BCB.
+    Se recalcular_tudo for False, identifica os trimestres faltantes no arquivo data/bacen_cadastro_instituicoes.csv
+    desde ano_inicio, além de garantir a atualização dos 2 trimestres mais recentes.
     """
-    periodos = _gerar_trimestres_recentes(n_trimestres=4)
-    for anomes in periodos:
+    todos_trimestres = _gerar_trimestres_desde(ano_inicio=ano_inicio)
+    datas_existentes = set() if recalcular_tudo else _obter_datas_bases_existentes(ARQUIVO)
+
+    trimestres_alvo = []
+    for anomes in todos_trimestres:
+        dt_iso = _formatar_data_base(anomes)
+        # Sempre busca os 2 trimestres mais recentes (para revisões) ou se não estiver no CSV
+        if recalcular_tudo or dt_iso not in datas_existentes or anomes in todos_trimestres[:2]:
+            trimestres_alvo.append(anomes)
+
+    if not trimestres_alvo:
+        log.info("Todos os trimestres desde 2020 já estão presentes no dataset. Buscando o mais recente para checagem.")
+        trimestres_alvo = todos_trimestres[:1]
+
+    log.info(f"Trimestres a capturar ({len(trimestres_alvo)}): {trimestres_alvo}")
+    todos_registros = []
+
+    for anomes in trimestres_alvo:
         regs = capturar_cadastro_trimestre(anomes)
         if regs:
-            return regs
-    log.warning("Nenhum dado retornado em nenhum dos trimestres recentes testados.")
-    return []
+            todos_registros.extend(regs)
+
+    return todos_registros
 
 
 class BacenCadastroInstituicoesScraper(BaseScraper):
@@ -238,7 +255,7 @@ class BacenCadastroInstituicoesScraper(BaseScraper):
     group = "bcb"
     enabled = True
     phase = 1
-    accumulate = False
+    accumulate = True
     compress = False
     chaves_dedup = ["data_base", "codigo_instituicao"]
 
@@ -266,18 +283,30 @@ class BacenCadastroInstituicoesScraper(BaseScraper):
     ]
     source = "BACEN"
 
+    def __init__(self, ano_inicio: int = 2020, recalcular_tudo: bool = False):
+        super().__init__()
+        self.ano_inicio = ano_inicio
+        self.recalcular_tudo = recalcular_tudo
+
     def fetch(self) -> pd.DataFrame:
-        log.info("=== BACEN — Cadastro de Instituições Financeiras (IFData) ===")
-        dados = capturar()
+        log.info(f"=== BACEN — Cadastro de Instituições Financeiras (IFData desde {self.ano_inicio}) ===")
+        dados = capturar(ano_inicio=self.ano_inicio, recalcular_tudo=self.recalcular_tudo)
         if not dados:
             return pd.DataFrame(columns=CABECALHO)
 
         df = pd.DataFrame(dados)
-        # Ordena por nome da instituição
-        df = df.sort_values(by=["nome_instituicao", "codigo_instituicao"])
+        df = df.sort_values(by=["data_base", "nome_instituicao", "codigo_instituicao"])
         colunas = [c for c in CABECALHO if c in df.columns]
         return df[colunas]
 
 
 if __name__ == "__main__":
-    BacenCadastroInstituicoesScraper().run()
+    import argparse
+
+    parser = argparse.ArgumentParser(description="Scraper BACEN Cadastro de Instituições (IF.data)")
+    parser.add_argument("--desde", type=int, default=2020, help="Ano inicial para a carga histórica (padrão: 2020)")
+    parser.add_argument("--recalcular-tudo", action="store_true", help="Força a recarga completa de todos os trimestres")
+    args = parser.parse_args()
+
+    scraper = BacenCadastroInstituicoesScraper(ano_inicio=args.desde, recalcular_tudo=args.recalcular_tudo)
+    scraper.run()
