@@ -36,12 +36,13 @@ dbutils.widgets.dropdown(
 )
 dbutils.widgets.text("scraper", "", "Scraper Específico (opcional)")
 dbutils.widgets.dropdown("mode", "parallel", ["parallel", "sequential"], "Modo de Execução")
-dbutils.widgets.text("max_workers", "8", "Workers Concorrentes")
+dbutils.widgets.text("max_workers", "4", "Workers Concorrentes (CE: 2-4)")
 dbutils.widgets.dropdown("check_holes", "false", ["true", "false"], "Verificar Buracos Históricos")
 
 # COMMAND ----------
 # MAGIC %md
 # MAGIC ### 3. Setup de Ambiente e Segredos
+# MAGIC No Databricks Community Edition, segredos podem ser definidos nas variáveis de ambiente do cluster ou em um arquivo `.env` na raiz do projeto.
 
 # COMMAND ----------
 import os
@@ -57,7 +58,18 @@ if str(REPO_ROOT) not in sys.path:
 
 os.chdir(str(REPO_ROOT))
 
-# Carrega segredos se disponíveis no Scope 'pulseflat'
+# 1. Tenta carregar de arquivo .env (ideal para Databricks Community Edition)
+try:
+    from dotenv import load_dotenv
+
+    env_path = REPO_ROOT / ".env"
+    if env_path.exists():
+        load_dotenv(env_path)
+        print("✓ Credenciais carregadas a partir de .env")
+except Exception:
+    pass
+
+# 2. Carrega segredos se disponíveis no Scope 'pulseflat' (Databricks Comercial)
 SECRET_SCOPE = "pulseflat"
 KEYS = [
     "ORACLE_DB_DSN",
@@ -80,7 +92,7 @@ for key in KEYS:
         except Exception:
             pass
 
-# Setup de Wallet Oracle se aplicável
+# 3. Setup de Wallet Oracle se aplicável
 wallet_b64 = os.getenv("ORACLE_DB_WALLET_BASE64")
 if wallet_b64 and not os.getenv("ORACLE_DB_WALLET_DIR"):
     import base64
@@ -93,6 +105,7 @@ if wallet_b64 and not os.getenv("ORACLE_DB_WALLET_DIR"):
     with zipfile.ZipFile(BytesIO(zip_data)) as z:
         z.extractall(wallet_dir)
     os.environ["ORACLE_DB_WALLET_DIR"] = str(wallet_dir)
+    print(f"✓ Oracle Wallet configurada em: {wallet_dir}")
 
 # COMMAND ----------
 # MAGIC %md
@@ -105,25 +118,28 @@ mode = dbutils.widgets.get("mode")
 max_workers = dbutils.widgets.get("max_workers")
 check_holes = dbutils.widgets.get("check_holes") == "true"
 
-args = []
-if group and group != "all":
-    args.extend(["--group", group])
+group_val = group if group and group != "all" else None
+scraper_val = scraper.strip() if scraper and scraper.strip() else None
+parallel_val = mode == "parallel"
+workers_val = int(max_workers) if str(max_workers).isdigit() else 4
 
-if scraper.strip():
-    args.extend(["--scraper", scraper.strip()])
-
-if mode == "parallel":
-    args.extend(["--parallel", "--max-workers", str(max_workers)])
-else:
-    args.append("--sequential")
-
-if check_holes:
-    args.append("--check-holes")
-
-# Simula sys.argv para o orquestrador run_all
-sys.argv = ["run_all.py"] + args
+print(
+    f"⚡ Disparando PulseFlat: group={group_val}, scraper={scraper_val}, mode={mode}, workers={workers_val}, check_holes={check_holes}"
+)
 
 import run_all
 
-print(f"Disparando PulseFlat com argumentos: {args}")
-run_all.main()
+try:
+    run_all.main(
+        group=group_val,
+        scraper=scraper_val,
+        parallel=parallel_val,
+        max_workers=workers_val,
+        check_holes=check_holes,
+    )
+    print("✔ Pipeline concluído com sucesso!")
+except SystemExit as se:
+    if se.code != 0:
+        print(f"⚠ Pipeline finalizado com avisos/código de saída: {se.code}")
+    else:
+        print("✔ Pipeline concluído com sucesso!")

@@ -29,11 +29,17 @@ if str(REPO_ROOT) not in sys.path:
 os.chdir(str(REPO_ROOT))
 
 
-# ── 2. Carregar segredos do Databricks (se disponíveis) ──────────────────────
+# ── 2. Carregar segredos do Databricks / .env ──────────────────────────────
 def load_databricks_secrets(scope_name: str = "pulseflat") -> None:
-    """Tenta carregar segredos do Databricks Secret Scope para os.environ.
-    Se o scope não existir ou estiver rodando fora do Databricks, ignora silenciosamente.
-    """
+    """Carrega segredos do .env local ou do Databricks Secret Scope para os.environ."""
+    try:
+        from dotenv import load_dotenv
+
+        env_file = REPO_ROOT / ".env"
+        if env_file.exists():
+            load_dotenv(env_file)
+    except Exception:
+        pass
     try:
         from pyspark.dbutils import DBUtils
         from pyspark.sql import SparkSession

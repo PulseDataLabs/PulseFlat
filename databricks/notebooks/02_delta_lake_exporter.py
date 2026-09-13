@@ -24,13 +24,19 @@ dbutils.widgets.text("catalog", "hive_metastore", "Catálogo (Unity Catalog)")
 dbutils.widgets.text("database", "pulseflat", "Database / Schema")
 dbutils.widgets.dropdown("write_mode", "append", ["append", "overwrite"], "Modo de Escrita Padrão")
 
-catalog = dbutils.widgets.get("catalog")
-database = dbutils.widgets.get("database")
-write_mode = dbutils.widgets.get("write_mode")
+catalog = str(dbutils.widgets.get("catalog") or "").strip()
+database = str(dbutils.widgets.get("database") or "pulseflat").strip()
+write_mode = str(dbutils.widgets.get("write_mode") or "append").strip()
+
+# Resiliência: no Databricks Community Edition (sem Unity Catalog),
+# tabelas são criadas em 2 níveis (database.table).
+# Com Unity Catalog ativo, usa-se 3 níveis (catalog.database.table).
+use_unity_catalog = bool(catalog and catalog.lower() not in ("hive_metastore", "", "none"))
+target_schema = f"{catalog}.{database}" if use_unity_catalog else database
 
 # Criação do banco/schema caso não exista
-spark.sql(f"CREATE DATABASE IF NOT EXISTS {catalog}.{database}")  # noqa: F821
-print(f"Alvo configurado: {catalog}.{database}")
+spark.sql(f"CREATE DATABASE IF NOT EXISTS {target_schema}")
+print(f"Alvo configurado: {target_schema} (Unity Catalog: {use_unity_catalog})")
 
 # COMMAND ----------
 # MAGIC %md
@@ -67,7 +73,7 @@ for dfile in data_files:
             break
 
     table_name = base_name.lower().replace("-", "_").replace(" ", "_")
-    target_table = f"{catalog}.{database}.{table_name}"
+    target_table = f"{target_schema}.{table_name}"
 
     try:
         if dfile.name.endswith(".parquet"):

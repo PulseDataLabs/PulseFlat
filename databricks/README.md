@@ -104,8 +104,70 @@ Se quiser testar os scrapers manualmente ou rodar apenas um coletor específico:
 
 ---
 
-### 5. Opcional: Ingestão Direta para Delta Lake (Unity Catalog)
+### 5. Opcional: Ingestão Direta para Delta Lake
 Se você quiser que os dados coletados fiquem disponíveis para consultas SQL no Databricks:
-- Adicione uma **Task 2** no seu Workflow dependente da Task 1 apontando para:
+- Adicione uma **Task 2** no seu Workflow dependente da Task 1 (ou execute interativamente o notebook):
   `databricks/notebooks/02_delta_lake_exporter`
-- Esse notebook lê todos os arquivos gerados em `./data` e atualiza tabelas Delta com suporte a versionamento ACID e Time Travel.
+- Esse notebook lê todos os arquivos gerados em `./data` (`.csv.gz`, `.csv`, `.parquet`) e atualiza tabelas Delta com suporte a versionamento ACID e Time Travel.
+- Detecta automaticamente se o ambiente usa **Unity Catalog** (3 níveis: `catalog.schema.table`) ou **Hive Metastore clássico / Community Edition** (2 níveis: `pulseflat.table`).
+
+---
+
+## 🎓 Guia Específico: Databricks Community Edition (CE)
+
+O **Databricks Community Edition** é gratuito para fins de estudo e prototipação. O PulseFlat é **100% funcional** para execução de scrapers e criação de tabelas Delta no CE, mas é fundamental conhecer as limitações da conta gratuita:
+
+### Comparativo: Community Edition vs Databricks Comercial
+
+| Recurso | Databricks Comercial (AWS/Azure/GCP) | Databricks Community Edition (Gratuito) | Impacto no PulseFlat |
+|---|---|---|---|
+| **Git Folders (Repos)** | ✅ Sim | ✅ Sim | Repositório clona perfeitamente |
+| **Notebooks Interativos** | ✅ Sim | ✅ Sim | Execução 100% compatível |
+| **Delta Lake & SQL** | ✅ Unity Catalog ou Hive | ✅ Hive Metastore (`pulseflat.<tabela>`) | Tabelas Delta criadas com sucesso |
+| **Acesso Externo à Internet** | ✅ Sim | ✅ Sim (HTTPS liberado) | Todos os scrapers conectam nas APIs/portais |
+| **Workflows / Jobs Agendados** | ✅ Sim (Cron nativo) | ❌ **Desabilitado no CE** | Não é possível agendar execuções diárias automáticas pelo Databricks CE |
+| **Databricks Secret Scopes** | ✅ Sim (`databricks secrets`) | ❌ **Desabilitado no CE** | Use `.env` no Git Folder ou Environment Variables do Cluster |
+| **Recursos de Hardware** | Multi-node, Serverless, vCPUs ilimitadas | Single-node (1 Driver, ~15 GB RAM, 2 vCPUs) | Reduza `max_workers` para 2 ou 4 para não sobrecarregar |
+| **Persistência do Cluster** | Clusters fixos ou sob demanda | Auto-termina após **2 horas ocioso** | Necessário religar o cluster ao acessar |
+
+---
+
+### Passo a Passo para rodar no Databricks Community Edition
+
+1. **Clonar o Repositório no Workspace:**
+   - Acesse `Workspace > Users > seu.email`.
+   - Clique com botão direito > **Create > Git Folder**.
+   - Coloque a URL: `https://github.com/PulseDataLabs/PulseFlat.git`.
+
+2. **Criar e Iniciar o Cluster Community:**
+   - Acesse **Compute > Create Cluster**.
+   - Dê um nome (ex: `PulseFlat-CE`).
+   - Escolha o Databricks Runtime LTS recente (ex: `14.3 LTS` ou `15.4 LTS`).
+   - Em **Advanced Options > Spark > Environment Variables**, configure suas credenciais se for usar scrapers autenticados (ex: ANBIMA, FRED):
+     ```bash
+     ANBIMA_CLIENT_ID=seu_client_id
+     ANBIMA_CLIENT_SECRET=seu_client_secret
+     FRED_API_KEY=sua_chave_fred
+     ```
+     *(Alternativamente, crie um arquivo `.env` dentro da pasta raiz do repositório no Workspace).*
+   - Clique em **Create Cluster**.
+
+3. **Executar os Scrapers via Notebook:**
+   - Abra `databricks/notebooks/01_orchestrator_notebook`.
+   - Conecte ao cluster criado.
+   - Ajuste os widgets:
+     - `Group`: `all` (ou escolha um grupo específico como `bcb`, `cvm`, `anbima`).
+     - `Parallel`: `True`.
+     - `Max Workers`: `2` ou `4` (ideal para os 2 vCPUs do CE).
+   - Clique em **Run All**.
+   - O notebook instalará os requisitos, carregará o ambiente e disparará as coletas salvando em `./data/`.
+
+4. **Carregar no Delta Lake (Query via SQL):**
+   - Abra `databricks/notebooks/02_delta_lake_exporter`.
+   - Conecte ao cluster e clique em **Run All**.
+   - As tabelas serão salvas no banco `pulseflat` do Hive Metastore.
+   - Vá no menu lateral **Catalog** ou crie um notebook SQL para consultar:
+     ```sql
+     SELECT * FROM pulseflat.bcb_selic_meta LIMIT 10;
+     ```
+
