@@ -201,7 +201,7 @@ def test_b3_limites_garantias_sheet_legacy(requests_mock):
 
 def test_b3_bdi_derivativos_resumo_metadata():
     """Verifica metadados e configuração do scraper B3 BDI Derivativos."""
-    from scrapers.b3_bdi_derivativos_resumo import B3BdiDerivativosResumoScraper, CABECALHO
+    from scrapers.b3_bdi_derivativos_resumo import CABECALHO, B3BdiDerivativosResumoScraper
 
     s = B3BdiDerivativosResumoScraper()
     assert s.name == "b3_bdi_derivativos_resumo"
@@ -216,7 +216,8 @@ def test_b3_bdi_derivativos_resumo_metadata():
 def test_b3_bdi_derivativos_resumo_captura_mock(requests_mock):
     """Testa a captura e parsing dos contratos de derivativos com mock de resposta BDI."""
     import datetime
-    from scrapers.b3_bdi_derivativos_resumo import B3BdiDerivativosResumoScraper, capturar_dia
+
+    from scrapers.b3_bdi_derivativos_resumo import capturar_dia
 
     mock_payload = {
         "table": {

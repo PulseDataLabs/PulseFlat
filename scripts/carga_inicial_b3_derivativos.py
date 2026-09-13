@@ -15,7 +15,7 @@ Uso:
 import argparse
 import sys
 import time
-from datetime import date, timedelta
+from datetime import date
 from pathlib import Path
 
 import pandas as pd
