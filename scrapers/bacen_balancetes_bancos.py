@@ -51,6 +51,7 @@ class BacenBalancetesBancosScraper(BaseScraper):
     source = "BACEN"
     tags = ["bacen", "bcb", "balancetes", "bancos", "cosif"]
     accumulate = False
+    compress = True
 
     def fetch(self) -> pd.DataFrame:
         time.time()

@@ -71,10 +71,6 @@ window.PULSEFLAT_LAST_UPDATES = {
     "min": "2026-08-02",
     "max": "2026-09-12"
   },
-  "b3_carteiras_teoricas.csv": {
-    "min": "2026-06-01",
-    "max": "2026-09-12"
-  },
   "b3_cotahist_diario.csv.gz": {
     "min": "2026-08-02",
     "max": "2026-09-12"
@@ -95,10 +91,6 @@ window.PULSEFLAT_LAST_UPDATES = {
     "min": "2026-08-27",
     "max": "2026-09-12"
   },
-  "bacen_balancetes_bancos.csv": {
-    "min": "2026-09-12",
-    "max": "2026-09-12"
-  },
   "bacen_negociacao_tpf_extragrupo.csv.gz": {
     "min": "2020-01-31",
     "max": "2026-09-12"
@@ -116,10 +108,6 @@ window.PULSEFLAT_LAST_UPDATES = {
     "max": "2026-09-12"
   },
   "ibge_sidra.csv": {
-    "min": "2026-09-12",
-    "max": "2026-09-12"
-  },
-  "debentures_emissoes_caracteristicas.csv": {
     "min": "2026-09-12",
     "max": "2026-09-12"
   },
@@ -147,14 +135,6 @@ window.PULSEFLAT_LAST_UPDATES = {
     "min": "2026-06-28",
     "max": "2026-09-12"
   },
-  "yahoo_acoes_brasileiras.csv": {
-    "min": "2026-06-28",
-    "max": "2026-09-12"
-  },
-  "yahoo_etfs.csv": {
-    "min": "2026-06-27",
-    "max": "2026-09-12"
-  },
   "yahoo_acoes_internacionais.csv": {
     "min": "2026-06-28",
     "max": "2026-09-12"
@@ -169,10 +149,6 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "registro_fundo_classe.csv.gz": {
     "min": "2026-09-12",
-    "max": "2026-09-12"
-  },
-  "yahoo_fiis_fiagros.csv": {
-    "min": "2026-06-28",
     "max": "2026-09-12"
   },
   "debentures_mercado_secundario_precos_negociacao.csv.gz": {
@@ -213,10 +189,6 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "anbima_ranking_global.csv": {
     "min": "2026-06-03",
-    "max": "2026-09-12"
-  },
-  "anbima_debentures.csv": {
-    "min": "2026-06-05",
     "max": "2026-09-12"
   },
   "anbima_matriz_probabilidade_resgate.csv": {
@@ -367,15 +339,7 @@ window.PULSEFLAT_LAST_UPDATES = {
     "min": "2026-09-13",
     "max": "2026-09-13"
   },
-  "b3_opcoes_posicoes_resumo.csv": {
-    "min": "2026-09-13",
-    "max": "2026-09-13"
-  },
   "b3_opcoes_posicoes_aberto.csv.gz": {
-    "min": "2026-09-13",
-    "max": "2026-09-13"
-  },
-  "bacen_cadastro_instituicoes.csv": {
     "min": "2026-09-13",
     "max": "2026-09-13"
   },
@@ -394,5 +358,41 @@ window.PULSEFLAT_LAST_UPDATES = {
   "b3_termo_posicoes_aberto.csv": {
     "min": "2026-09-13",
     "max": "2026-09-13"
+  },
+  "anbima_debentures.csv.gz": {
+    "min": "2026-06-05",
+    "max": "2026-09-12"
+  },
+  "b3_carteiras_teoricas.csv.gz": {
+    "min": "2026-06-01",
+    "max": "2026-09-12"
+  },
+  "b3_opcoes_posicoes_resumo.csv.gz": {
+    "min": "2026-09-13",
+    "max": "2026-09-13"
+  },
+  "bacen_balancetes_bancos.csv.gz": {
+    "min": "2026-09-12",
+    "max": "2026-09-12"
+  },
+  "bacen_cadastro_instituicoes.csv.gz": {
+    "min": "2026-09-13",
+    "max": "2026-09-13"
+  },
+  "debentures_emissoes_caracteristicas.csv.gz": {
+    "min": "2026-09-12",
+    "max": "2026-09-12"
+  },
+  "yahoo_acoes_brasileiras.csv.gz": {
+    "min": "2026-06-28",
+    "max": "2026-09-12"
+  },
+  "yahoo_etfs.csv.gz": {
+    "min": "2026-06-27",
+    "max": "2026-09-12"
+  },
+  "yahoo_fiis_fiagros.csv.gz": {
+    "min": "2026-06-28",
+    "max": "2026-09-12"
   }
 };

@@ -230,6 +230,15 @@ data/b3_isin_ativos.csv
 data/b3_isin_emissores.csv
 data/isinp.zip
 data/anbima_matriz_probabilidade_resgate.csv
+data/bacen_cadastro_instituicoes.csv
+data/yahoo_acoes_brasileiras.csv
+data/yahoo_fiis_fiagros.csv
+data/b3_opcoes_posicoes_resumo.csv
+data/anbima_debentures.csv
+data/bacen_balancetes_bancos.csv
+data/b3_carteiras_teoricas.csv
+data/yahoo_etfs.csv
+data/debentures_emissoes_caracteristicas.csv
 # OS / Caches / Parquet
 .DS_Store
 *.DS_Store

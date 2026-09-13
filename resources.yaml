@@ -74,9 +74,10 @@ resources:
   ##############################################################################
   - name: Debêntures - Características de Emissões
     url: https://www.debentures.com.br/exploreosnd/consultaadados/emissoesdedebentures/caracteristicas_e.asp?tip_deb=publicas&op_exc=Nada
-    file_name: 'debentures_emissoes_caracteristicas.csv'
+    file_name: 'debentures_emissoes_caracteristicas.csv.gz'
     type_response: csv
     acumular: false
+    compress: true
     column_mapping:
       codigo_do_ativo: codigo_ativo
   - name: Debêntures - Preços de Negociação

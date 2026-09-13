@@ -23,7 +23,7 @@ from utils.parsers import _CAL
 
 log = get_logger("anbima_debentures")
 
-ARQUIVO = Path("data/anbima_debentures.csv")
+ARQUIVO = Path("data/anbima_debentures.csv.gz")
 
 CABECALHO = [
     "data_referencia",
@@ -140,6 +140,7 @@ class AnbimaDebenturesScraper(BaseScraper):
     enabled = True
     phase = 1
     accumulate = True
+    compress = True
     chaves_dedup = ["data_referencia", "codigo"]
 
     # Catálogo de Metadados

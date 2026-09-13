@@ -117,3 +117,36 @@ def test_base_scraper_run_empty_dataframe(tmp_path, caplog):
     # Executa e verifica se não salvou arquivo
     scraper.run()
     assert not scraper.output_file.exists()
+
+
+def test_large_datasets_compression_configured():
+    """Garante que todos os datasets de grande porte (> 5 MB) estejam configurados com compress=True."""
+    from scrapers.anbima_debentures import AnbimaDebenturesScraper
+    from scrapers.b3_carteiras_teoricas import B3CarteirasTeoricasScraper
+    from scrapers.b3_opcoes_posicoes_resumo import B3OpcoesPosicoesResumoScraper
+    from scrapers.bacen_balancetes_bancos import BacenBalancetesBancosScraper
+    from scrapers.bacen_cadastro_instituicoes import BacenCadastroInstituicoesScraper
+    from scrapers.debentures_emissoes_caracteristicas import (
+        DebenturesEmissoesCaracteristicasScraper,
+    )
+    from scrapers.yahoo_acoes_brasileiras import YahooAcoesBrasileirasScraper
+    from scrapers.yahoo_etfs import YahooEtfsScraper
+    from scrapers.yahoo_fiis_fiagros import YahooFiisFiagrosScraper
+
+    scrapers = [
+        AnbimaDebenturesScraper(),
+        B3CarteirasTeoricasScraper(),
+        B3OpcoesPosicoesResumoScraper(),
+        BacenBalancetesBancosScraper(),
+        BacenCadastroInstituicoesScraper(),
+        DebenturesEmissoesCaracteristicasScraper(),
+        YahooAcoesBrasileirasScraper(),
+        YahooEtfsScraper(),
+        YahooFiisFiagrosScraper(),
+    ]
+
+    for s in scrapers:
+        assert s.compress is True, f"{s.name} deve possuir compress=True"
+        assert s.output_file.name.endswith(".csv.gz"), f"{s.name} deve salvar em .csv.gz"
+        assert s.output_file.exists(), f"Arquivo compactado {s.output_file} deve existir no disco"
+

@@ -8,7 +8,7 @@ Consome os dados oficiais da API OData Olinda do Banco Central do Brasil:
 https://olinda.bcb.gov.br/olinda/servico/IFDATA/versao/v1/odata/IfDataCadastro
 
 Saída:
-- data/bacen_cadastro_instituicoes.csv (Snapshot cadastral com enriquecimento semântico)
+- data/bacen_cadastro_instituicoes.csv.gz (Snapshot cadastral com enriquecimento semântico)
 """
 
 import datetime
@@ -25,7 +25,7 @@ from utils import agora_brt, get_logger, limpar
 
 log = get_logger("bacen_cadastro_instituicoes")
 
-ARQUIVO = Path("data/bacen_cadastro_instituicoes.csv")
+ARQUIVO = Path("data/bacen_cadastro_instituicoes.csv.gz")
 
 CABECALHO = [
     "data_captura",
@@ -140,14 +140,21 @@ def _gerar_trimestres_recentes(n_trimestres: int = 4) -> list[str]:
 
 
 def _obter_datas_bases_existentes(arquivo: Path) -> set[str]:
-    """Lê as datas-base (ISO 'YYYY-MM-DD') já presentes no arquivo CSV."""
-    if not arquivo.exists() or arquivo.stat().st_size == 0:
+    """Lê as datas-base (ISO 'YYYY-MM-DD') já presentes no arquivo CSV/GZ."""
+    alvo = arquivo
+    if not alvo.exists():
+        if alvo.suffix == ".gz" and alvo.with_suffix("").exists():
+            alvo = alvo.with_suffix("")
+        elif alvo.suffix != ".gz" and Path(f"{alvo}.gz").exists():
+            alvo = Path(f"{alvo}.gz")
+
+    if not alvo.exists() or alvo.stat().st_size == 0:
         return set()
     try:
-        df_existente = pd.read_csv(arquivo, usecols=["data_base"], dtype=str)
+        df_existente = pd.read_csv(alvo, usecols=["data_base"], dtype=str)
         return set(df_existente["data_base"].dropna().unique())
     except Exception as e:
-        log.warning(f"Não foi possível ler datas-base existentes de {arquivo}: {e}")
+        log.warning(f"Não foi possível ler datas-base existentes de {alvo}: {e}")
         return set()
 
 
@@ -173,8 +180,8 @@ def capturar_cadastro_trimestre(anomes: str) -> list[dict]:
 
         data_captura, _ = agora_brt()
         data_base_iso = _formatar_data_base(anomes)
-        registros = []
 
+        registros = []
         for item in itens:
             cod_inst = limpar(str(item.get("CodInst") or ""))
             if not cod_inst:
@@ -222,7 +229,7 @@ def capturar_cadastro_trimestre(anomes: str) -> list[dict]:
 def capturar(ano_inicio: int = 2020, recalcular_tudo: bool = False) -> list[dict]:
     """
     Busca o cadastro de instituições financeiras no Olinda BCB.
-    Se recalcular_tudo for False, identifica os trimestres faltantes no arquivo data/bacen_cadastro_instituicoes.csv
+    Se recalcular_tudo for False, identifica os trimestres faltantes no arquivo data/bacen_cadastro_instituicoes.csv.gz
     desde ano_inicio, além de garantir a atualização dos 2 trimestres mais recentes.
     """
     todos_trimestres = _gerar_trimestres_desde(ano_inicio=ano_inicio)
@@ -231,7 +238,7 @@ def capturar(ano_inicio: int = 2020, recalcular_tudo: bool = False) -> list[dict
     trimestres_alvo = []
     for anomes in todos_trimestres:
         dt_iso = _formatar_data_base(anomes)
-        # Sempre busca os 2 trimestres mais recentes (para revisões) ou se não estiver no CSV
+        # Sempre busca os 2 trimestres mais recentes (para revisões) ou se não estiver no CSV/GZ
         if recalcular_tudo or dt_iso not in datas_existentes or anomes in todos_trimestres[:2]:
             trimestres_alvo.append(anomes)
 
@@ -256,7 +263,7 @@ class BacenCadastroInstituicoesScraper(BaseScraper):
     enabled = True
     phase = 1
     accumulate = True
-    compress = False
+    compress = True
     chaves_dedup = ["data_base", "codigo_instituicao"]
 
     # Catálogo de Metadados

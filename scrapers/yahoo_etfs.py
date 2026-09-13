@@ -70,6 +70,7 @@ class YahooEtfsScraper(BaseScraper):
     group = "misc"
     enabled = True
     phase = 1
+    compress = True
     chaves_dedup = ["data_referencia", "codigo_ativo"]
     title = "Yahoo Finance — ETFs Internacionais"
     description = "Cotações e histórico dos maiores Exchange Traded Funds (ETFs) mundiais (SPY, QQQ, IVV, VOO, EWZ, VEA, VWO, IWM) negociados nas bolsas americanas."
@@ -109,6 +110,11 @@ class YahooEtfsScraper(BaseScraper):
 
         if DYNAMIC_CSV:
             csv_path = root_dir / "data" / DYNAMIC_CSV
+            if not csv_path.exists() and (root_dir / "data" / f"{DYNAMIC_CSV}.gz").exists():
+                csv_path = root_dir / "data" / f"{DYNAMIC_CSV}.gz"
+            elif not csv_path.exists() and csv_path.suffix == ".gz" and csv_path.with_suffix("").exists():
+                csv_path = csv_path.with_suffix("")
+
             if csv_path.exists():
                 try:
                     df_b3 = pd.read_csv(csv_path)

@@ -166,6 +166,8 @@ def test_bacen_cadastro_instituicoes_metadata():
     assert s.group == "bcb"
     assert s.enabled is True
     assert s.accumulate is True
+    assert s.compress is True
+    assert s.output_file.name == "bacen_cadastro_instituicoes.csv.gz"
     assert "data_base" in s.chaves_dedup
     assert "codigo_instituicao" in s.chaves_dedup
     assert "instituições financeiras" in s.tags

@@ -84,6 +84,7 @@ class DebenturesEmissoesCaracteristicasApiScraper(BaseAnbimaDataScraper):
         root_data = Path(__file__).resolve().parents[1] / "data"
         for ref_file in [
             root_data / "debentures_mercado_secundario_precos_negociacao_api.csv.gz",
+            root_data / "anbima_debentures.csv.gz",
             root_data / "anbima_debentures.csv",
         ]:
             if ref_file.exists():

@@ -406,6 +406,8 @@ def test_b3_opcoes_posicoes_resumo_metadata():
     assert s.group == "b3"
     assert s.enabled is True
     assert s.accumulate is True
+    assert s.compress is True
+    assert s.output_file.name == "b3_opcoes_posicoes_resumo.csv.gz"
     assert "data_referencia" in s.chaves_dedup
     assert "codigo_ativo_objeto" in s.chaves_dedup
     assert "put call ratio" in s.tags

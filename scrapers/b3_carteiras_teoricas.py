@@ -29,7 +29,7 @@ BASE_URL = (
     "https://sistemaswebb3-listados.b3.com.br/indexProxy/indexCall/GetPortfolioDay/"
 )
 PAGE_SIZE = 120
-ARQUIVO = Path("data/b3_carteiras_teoricas.csv")
+ARQUIVO = Path("data/b3_carteiras_teoricas.csv.gz")
 
 # (código, segment, nome completo)
 INDICES = [
@@ -197,6 +197,7 @@ class B3CarteirasTeoricasScraper(BaseScraper):
     enabled = True
     phase = 1
     accumulate = True
+    compress = True
     chaves_dedup = ["data_captura", "indice", "codigo_ativo"]
 
     # Catálogo de Metadados

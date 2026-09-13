@@ -70,6 +70,7 @@ class YahooFiisFiagrosScraper(BaseScraper):
     group = "misc"
     enabled = True
     phase = 1
+    compress = True
     chaves_dedup = ["data_referencia", "codigo_ativo"]
     title = "Yahoo Finance — FIIs e FIAGROs"
     description = "Cotações diárias, volume e histórico dos principais Fundos de Investimento Imobiliário (FIIs) e FIAGROs de maior liquidez negociados na B3 (HGLG11, KNIP11, MXRF11, XPLG11, etc.)."
@@ -109,6 +110,11 @@ class YahooFiisFiagrosScraper(BaseScraper):
 
         if DYNAMIC_CSV:
             csv_path = root_dir / "data" / DYNAMIC_CSV
+            if not csv_path.exists() and (root_dir / "data" / f"{DYNAMIC_CSV}.gz").exists():
+                csv_path = root_dir / "data" / f"{DYNAMIC_CSV}.gz"
+            elif not csv_path.exists() and csv_path.suffix == ".gz" and csv_path.with_suffix("").exists():
+                csv_path = csv_path.with_suffix("")
+
             if csv_path.exists():
                 try:
                     df_b3 = pd.read_csv(csv_path)

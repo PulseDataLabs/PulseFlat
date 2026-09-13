@@ -9,7 +9,7 @@ e em travas, e identificação dos strikes com maior concentração de Open Inte
 Fonte:
 - Derivado do dataset granular de posições em aberto da B3.
 Saída:
-- data/b3_opcoes_posicoes_resumo.csv (Resumo acumulado por pregão e ativo)
+- data/b3_opcoes_posicoes_resumo.csv.gz (Resumo acumulado por pregão e ativo)
 """
 
 import sys
@@ -37,7 +37,7 @@ class B3OpcoesPosicoesResumoScraper(BaseScraper):
     enabled = True
     phase = 1
     accumulate = True
-    compress = False
+    compress = True
     chaves_dedup = ["data_referencia", "codigo_ativo_objeto"]
 
     # Catálogo de Metadados

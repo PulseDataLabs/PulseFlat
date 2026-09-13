@@ -1,7 +1,7 @@
 [
   {
     "title": "ANBIMA — Debêntures",
-    "file": "anbima_debentures.csv",
+    "file": "anbima_debentures.csv.gz",
     "description": "Curva de taxas indicativas de mercado secundário, spreads de crédito (NTN-B e DI), duration e preços unitários (PU) de debêntures prefixadas, pós-fixadas e indexadas à inflação calculadas diariamente pela ANBIMA.",
     "icon": "📜",
     "iconClass": "icon-anbima",
@@ -14,7 +14,7 @@
       "tx_indicativa"
     ],
     "source": "ANBIMA",
-    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/anbima_debentures.csv",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/anbima_debentures.csv.gz",
     "accumulate": true
   },
   {
@@ -601,7 +601,7 @@
   },
   {
     "title": "B3 Opções — Resumo de Posições em Aberto e Put/Call Ratio",
-    "file": "b3_opcoes_posicoes_resumo.csv",
+    "file": "b3_opcoes_posicoes_resumo.csv.gz",
     "description": "Consolidado diário e histórico de Open Interest por ativo objeto negociado na B3. Inclui total de contratos em CALL e PUT, Put/Call Ratio, posições cobertas/descobertas/travadas e os strikes com maior concentração de posições em aberto.",
     "icon": "📊",
     "iconClass": "icon-b3",
@@ -618,7 +618,7 @@
       "B3"
     ],
     "source": "B3",
-    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/b3_opcoes_posicoes_resumo.csv",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/b3_opcoes_posicoes_resumo.csv.gz",
     "accumulate": true
   },
   {
@@ -954,7 +954,7 @@
   },
   {
     "title": "B3 — Todas as Carteiras Teóricas",
-    "file": "b3_carteiras_teoricas.csv",
+    "file": "b3_carteiras_teoricas.csv.gz",
     "description": "Consolidado geral contendo a composição teórica, códigos de negociação, participação percentual e quantidade teórica de todos os índices de ações e setoriais calculados pela B3.",
     "icon": "🗂️",
     "iconClass": "icon-b3",
@@ -981,7 +981,7 @@
       "+ 5 índices"
     ],
     "source": "B3 API · ~1.000 linhas/dia",
-    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/b3_carteiras_teoricas.csv",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/b3_carteiras_teoricas.csv.gz",
     "accumulate": true
   },
   {
@@ -1139,7 +1139,7 @@
   },
   {
     "title": "BACEN — Balancetes Mensais dos Bancos (Cosif)",
-    "file": "bacen_balancetes_bancos.csv",
+    "file": "bacen_balancetes_bancos.csv.gz",
     "description": "Demonstrações financeiras e balancetes contábeis mensais padronizados (Plano Contábil Cosif) de todas as instituições financeiras e bancos em operação no Brasil, divulgados pelo Banco Central.",
     "icon": "📊",
     "iconClass": "icon-bcb",
@@ -1153,12 +1153,12 @@
       "cosif"
     ],
     "source": "BACEN",
-    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/bacen_balancetes_bancos.csv",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/bacen_balancetes_bancos.csv.gz",
     "accumulate": false
   },
   {
     "title": "BACEN — Cadastro de Instituições Financeiras (IF.data)",
-    "file": "bacen_cadastro_instituicoes.csv",
+    "file": "bacen_cadastro_instituicoes.csv.gz",
     "description": "Cadastro completo de instituições financeiras e entidades autorizadas pelo Banco Central do Brasil no Sistema Financeiro Nacional (SFN / IF.data). Inclui classificação prudencial (S1-S5), tipo de consolidação, conglomerados, atividade regulatória, tipo de controle, localização e situação cadastral.",
     "icon": "🏛️",
     "iconClass": "icon-bcb",
@@ -1176,7 +1176,7 @@
       "fintech"
     ],
     "source": "BACEN",
-    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/bacen_cadastro_instituicoes.csv",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/bacen_cadastro_instituicoes.csv.gz",
     "accumulate": true
   },
   {
@@ -1323,7 +1323,7 @@
   },
   {
     "title": "Debêntures — Emissões e Características",
-    "file": "debentures_emissoes_caracteristicas.csv",
+    "file": "debentures_emissoes_caracteristicas.csv.gz",
     "description": "Cadastro detalhado de todas as emissões públicas e privadas de debêntures registradas no Brasil, com taxa de remuneração (spread), indexador, data de emissão, vencimento e garantias.",
     "icon": "📊",
     "iconClass": "icon-anbima",
@@ -1337,7 +1337,7 @@
       "snd"
     ],
     "source": "Debêntures",
-    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/debentures_emissoes_caracteristicas.csv",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/debentures_emissoes_caracteristicas.csv.gz",
     "accumulate": false
   },
   {
@@ -1677,7 +1677,7 @@
   },
   {
     "title": "Yahoo Finance — Ações Brasileiras (B3)",
-    "file": "yahoo_acoes_brasileiras.csv",
+    "file": "yahoo_acoes_brasileiras.csv.gz",
     "description": "Cotações históricas diárias (abertura, máxima, mínima, fechamento ajustado e volume) das ações mais negociadas na B3 (PETR4, VALE3, ITUB4, BBDC4, etc.) via Yahoo Finance.",
     "icon": "📊",
     "iconClass": "icon-misc",
@@ -1687,7 +1687,7 @@
       "misc"
     ],
     "source": "MISC",
-    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/yahoo_acoes_brasileiras.csv",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/yahoo_acoes_brasileiras.csv.gz",
     "accumulate": true
   },
   {
@@ -1752,7 +1752,7 @@
   },
   {
     "title": "Yahoo Finance — ETFs Internacionais",
-    "file": "yahoo_etfs.csv",
+    "file": "yahoo_etfs.csv.gz",
     "description": "Cotações e histórico dos maiores Exchange Traded Funds (ETFs) mundiais (SPY, QQQ, IVV, VOO, EWZ, VEA, VWO, IWM) negociados nas bolsas americanas.",
     "icon": "📊",
     "iconClass": "icon-misc",
@@ -1762,12 +1762,12 @@
       "misc"
     ],
     "source": "MISC",
-    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/yahoo_etfs.csv",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/yahoo_etfs.csv.gz",
     "accumulate": true
   },
   {
     "title": "Yahoo Finance — FIIs e FIAGROs",
-    "file": "yahoo_fiis_fiagros.csv",
+    "file": "yahoo_fiis_fiagros.csv.gz",
     "description": "Cotações diárias, volume e histórico dos principais Fundos de Investimento Imobiliário (FIIs) e FIAGROs de maior liquidez negociados na B3 (HGLG11, KNIP11, MXRF11, XPLG11, etc.).",
     "icon": "📊",
     "iconClass": "icon-misc",
@@ -1777,7 +1777,7 @@
       "misc"
     ],
     "source": "MISC",
-    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/yahoo_fiis_fiagros.csv",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/yahoo_fiis_fiagros.csv.gz",
     "accumulate": true
   },
   {

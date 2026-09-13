@@ -32,7 +32,7 @@ log = get_logger("b3_opcoes_posicoes_aberto")
 
 ROOT_DIR = Path(__file__).resolve().parents[1]
 ARQUIVO_GRANULAR = ROOT_DIR / "data" / "b3_opcoes_posicoes_aberto.csv.gz"
-ARQUIVO_RESUMO = ROOT_DIR / "data" / "b3_opcoes_posicoes_resumo.csv"
+ARQUIVO_RESUMO = ROOT_DIR / "data" / "b3_opcoes_posicoes_resumo.csv.gz"
 
 CABECALHO_GRANULAR = [
     "data_captura",

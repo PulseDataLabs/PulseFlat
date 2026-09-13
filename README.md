@@ -593,8 +593,9 @@ Integração oficial via API OAuth 2.0 (`developers.anbima.com.br`), web scrapin
 * **REUNE Negociações** (`anbima_reune_negociacoes.csv.gz`): Tape diário de operações de crédito privado reportadas ao sistema REUNE.
 * **Debêntures — Emissões e Características (API ANBIMA)** (`debentures_emissoes_caracteristicas_api.csv`): Metadados completos, remuneração, garantias e escrituras via API.
 * **Debêntures — Mercado Secundário (API ANBIMA)** (`debentures_mercado_secundario_precos_negociacao_api.csv.gz`): Preços, taxas médias e volumes negociados via API.
-* **Debêntures — Emissões e Características (Web)** (`debentures_emissoes_caracteristicas.csv`): Base cadastral de debêntures do portal clássico.
+* **Debêntures — Emissões e Características (Web)** (`debentures_emissoes_caracteristicas.csv.gz`): Base cadastral de debêntures do portal clássico.
 * **Debêntures — Mercado Secundário (Web)** (`debentures_mercado_secundario_precos_negociacao.csv.gz`): Negociações secundárias diárias do portal clássico.
+* **Debêntures — Taxas e Preços Indicativos (ANBIMA)** (`anbima_debentures.csv.gz`): Curva de taxas indicativas de mercado secundário, spreads de crédito (NTN-B e DI), duration e preços unitários (PU).
 * **Indicadores Financeiros ANBIMA** (`anbima_indicadores.csv`): Taxa DI, SELIC, poupança, TR e TBF.
 * **Projeções Econômicas** (`anbima_projecoes.csv`): Projeções de mercado para inflação, taxa de juros e câmbio.
 * **Projeções Oficiais de Inflação** (`anbima_projecoes_inflacao.csv.gz`): Projeções detalhadas da inflação (IPCA e IGP-M) via API.
@@ -633,8 +634,8 @@ Séries macroeconômicas globais do Banco Central dos Estados Unidos (St. Louis 
 
 * **Mercado a Termo e Posições em Aberto**: Posições em Aberto no Mercado a Termo (`b3_termo_posicoes_aberto.csv`) detalhando contratos, ativos, volume financeiro em R$ e preço médio por ativo/empresa (ações, units e BDRs); e Resumo Histórico Consolidado de Termo (`b3_termo_posicoes_resumo.csv`) agregando volume total de contratos, ativos e capital negociado a termo no pregão.
 * **Valor de Mercado das Empresas Listadas**: Capitalização de Mercado Mensal das Empresas Listadas (`b3_valor_mercado_empresas.csv`) cobrindo ~350 companhias com valor em R$, valor em US$, variação percentual mensal e flags de pertencimento ao IBOV e IBrX-100; e Totais Consolidados de Mercado (`b3_valor_mercado_totais.csv`) com total geral da bolsa, IBOVESPA e IBrX-100 em moeda local e estrangeira.
-* **Opções e Posições em Aberto**: Snapshot Completo de Opções em Aberto (`b3_opcoes_posicoes_aberto.csv.gz`) cobrindo ~50.000 séries diárias de ações e índices com detalhamento de posições cobertas, descobertas, em travas e número de titulares/lançadores; e Resumo Histórico por Ativo e Put/Call Ratio (`b3_opcoes_posicoes_resumo.csv`) agregando Open Interest de CALLs e PUTs, Put/Call Ratio e strikes de maior liquidez.
-* **Carteiras Teóricas de Índices**: IBOVESPA (`b3_carteira_teorica_ibov.csv`), Small Caps SMLL (`b3_carteira_teorica_smll.csv`), Sustentabilidade ISEE (`b3_carteira_teorica_isee.csv`), BDRX (`b3_carteira_teorica_bdrx.csv`), Financeiro IFNC (`b3_carteira_teorica_ifnc.csv`), Dividendos IBSD (`b3_carteira_teorica_ibsd.csv`), IBX 50 (`b3_carteira_teorica_ibxl.csv`), Agronegócio AGFS/IAGRO (`b3_carteira_teorica_agfs_iagro.csv`) e Composição Completa Consolidada de todos os índices B3 (`b3_carteiras_teoricas.csv`).
+* **Opções e Posições em Aberto**: Snapshot Completo de Opções em Aberto (`b3_opcoes_posicoes_aberto.csv.gz`) cobrindo ~50.000 séries diárias de ações e índices com detalhamento de posições cobertas, descobertas, em travas e número de titulares/lançadores; e Resumo Histórico por Ativo e Put/Call Ratio (`b3_opcoes_posicoes_resumo.csv.gz`) agregando Open Interest de CALLs e PUTs, Put/Call Ratio e strikes de maior liquidez.
+* **Carteiras Teóricas de Índices**: IBOVESPA (`b3_carteira_teorica_ibov.csv`), Small Caps SMLL (`b3_carteira_teorica_smll.csv`), Sustentabilidade ISEE (`b3_carteira_teorica_isee.csv`), BDRX (`b3_carteira_teorica_bdrx.csv`), Financeiro IFNC (`b3_carteira_teorica_ifnc.csv`), Dividendos IBSD (`b3_carteira_teorica_ibsd.csv`), IBX 50 (`b3_carteira_teorica_ibxl.csv`), Agronegócio AGFS/IAGRO (`b3_carteira_teorica_agfs_iagro.csv`) e Composição Completa Consolidada de todos os índices B3 (`b3_carteiras_teoricas.csv.gz`).
 * **Cotações e Histórico**: COTAHIST Diário (`b3_cotahist_diario.csv.gz`), COTAHIST Anual Histórico (`b3_cotahist_anual.csv.gz`) e Negócios de Ações BDI Trades (`b3_bdi_trades_acoes.csv.gz`).
 * **Derivativos e Renda Fixa**: Derivativos — Resumo das Operações BDI (`b3_bdi_derivativos_resumo.csv`), Taxas de Swap e Juros BMF (`b3_bmf_taxas_juros.csv`), DI Over BDI (`b3_bdi_di_over.csv`), ETFs de Renda Fixa BDI (`b3_bdi_etfrf.csv.gz`), Indicadores Econômicos FWF (`b3_indicadores_economicos_fwf.csv`) e Indicadores Financeiros (`b3_indicadores_financeiros.csv`).
 * **Cadastros e Regulação**: Títulos e Valores Negociáveis (`b3_titulos_negociaveis.csv.gz`), Cadastro de Códigos ISIN de Ativos (`b3_isin_ativos.csv.gz`), Classificação Setorial (`b3_classificacao_setorial.csv`), Limites de Garantias (`b3_limites_garantias.csv`), Fundos Listados (`b3_fundos_listados.csv`), FIIs (`b3_fiis.csv`) e ETFs Listados (`b3_etfs.csv`).
@@ -643,16 +644,32 @@ Séries macroeconômicas globais do Banco Central dos Estados Unidos (St. Louis 
 
 ### ◆ Banco Central do Brasil (7 Datasets) & ⬢ CVM (3 Datasets)
 
-* **BCB Cadastro de Instituições** (`bacen_cadastro_instituicoes.csv`): Histórico trimestral completo desde 2020 (26 trimestres, +143.000 registros) de todas as instituições financeiras e entidades autorizadas pelo BACEN (IF.data / SFN) com classificação prudencial (S1-S5), tipo de controle, consolidação, atividade e situação cadastral.
+* **BCB Cadastro de Instituições** (`bacen_cadastro_instituicoes.csv.gz`): Histórico trimestral completo desde 2020 (26 trimestres, +143.000 registros) de todas as instituições financeiras e entidades autorizadas pelo BACEN (IF.data / SFN) com classificação prudencial (S1-S5), tipo de controle, consolidação, atividade e situação cadastral.
 * **BCB PTAX** (`bcb_ptax.csv`): Cotações diárias oficiais de compra e venda de moedas estrangeiras.
 * **BCB SGS** (`bcb_sgs.csv`): Séries temporais essenciais (Selic a.d. e a.a., CDI, IGP-M, IPCA acumulado).
 * **BCB DEMAB Títulos Públicos** (`bacen_negociacao_tpf_extragrupo.csv.gz`): Operações definitivas de compra/venda de títulos federais no mercado secundário.
-* **BCB Balancetes Cosif** (`bacen_balancetes_bancos.csv`): Balancetes patrimoniais contábeis das instituições financeiras autorizadas.
+* **BCB Balancetes Cosif** (`bacen_balancetes_bancos.csv.gz`): Balancetes patrimoniais contábeis das instituições financeiras autorizadas.
 * **BCB Conglomerados** (`bacen_conglomerados.csv`): Estrutura de conglomerados financeiros e prudenciais.
 * **BCB Basileia** (`bacen_parcelas_capital_basileia.csv.gz`): Requerimentos de capital e patrimônio de referência.
 * **CVM Informe Diário** (`cvm_fundos_informe_diario.csv.gz`): Cota diária, patrimônio líquido e número de cotistas de todos os fundos de investimento abertos no Brasil.
 * **CVM RCVM 175** (`registro_fundo_classe.csv.gz`): Cadastro unificado de classes e subclasses de fundos de investimento sob a nova regulação 175.
 * **CVM Companhias Abertas** (`cvm_cadastro_companhias_abertas.csv`): Cadastro oficial de emissores de ações e debêntures.
+
+---
+
+### 🌐 Mercado Global & Yahoo Finance (9 Datasets)
+
+Cotações diárias, volume e séries históricas consolidadas via Yahoo Finance:
+
+* **Ações Brasileiras B3** (`yahoo_acoes_brasileiras.csv.gz`): Cotações históricas diárias (abertura, máxima, mínima, fechamento ajustado e volume) das ações mais líquidas da B3 (PETR4, VALE3, ITUB4, etc.).
+* **FIIs e FIAGROs** (`yahoo_fiis_fiagros.csv.gz`): Histórico e volume dos principais Fundos Imobiliários e Fiagros listados na B3.
+* **ETFs Internacionais** (`yahoo_etfs.csv.gz`): Cotações dos maiores ETFs mundiais negociados nos EUA (SPY, QQQ, IVV, VOO, EWZ, etc.).
+* **Ações Internacionais** (`yahoo_acoes_internacionais.csv`): Principais ativos e big techs dos mercados globais.
+* **Criptoativos** (`yahoo_criptoativos.csv`): Cotações históricas dos maiores criptoativos (BTC, ETH, SOL, etc.).
+* **Commodities** (`yahoo_commodities.csv`): Petróleo, ouro, prata, grãos e energia.
+* **Câmbio & Moedas Globais** (`yahoo_cambio_moedas.csv`): Pares de moedas (USD/BRL, EUR/BRL, etc.).
+* **Índices Globais** (`yahoo_indices_globais.csv`): S&P 500, Nasdaq, Dow Jones, DAX, Nikkei, etc.
+* **Renda Fixa Global** (`yahoo_renda_fixa.csv`): US Treasury yields e índices soberanos.
 
 ---
 

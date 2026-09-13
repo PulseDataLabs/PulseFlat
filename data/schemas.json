@@ -1,7 +1,7 @@
 [
   {
     "title": "Anbima Debentures",
-    "files": "anbima_debentures.csv",
+    "files": "anbima_debentures.csv.gz",
     "source": "anbima",
     "fields": [
       {
@@ -1011,7 +1011,7 @@
   },
   {
     "title": "B3 Carteiras Teoricas",
-    "files": "b3_carteiras_teoricas.csv",
+    "files": "b3_carteiras_teoricas.csv.gz",
     "source": "b3",
     "fields": [
       {
@@ -1534,7 +1534,7 @@
   },
   {
     "title": "Bacen Balancetes Bancos",
-    "files": "bacen_balancetes_bancos.csv",
+    "files": "bacen_balancetes_bancos.csv.gz",
     "source": "bcb",
     "fields": [
       {
@@ -2034,7 +2034,7 @@
   },
   {
     "title": "Debentures Emissoes Caracteristicas",
-    "files": "debentures_emissoes_caracteristicas.csv",
+    "files": "debentures_emissoes_caracteristicas.csv.gz",
     "source": "debentures",
     "fields": [
       {
@@ -2572,7 +2572,7 @@
   },
   {
     "title": "Yahoo Acoes Brasileiras",
-    "files": "yahoo_acoes_brasileiras.csv",
+    "files": "yahoo_acoes_brasileiras.csv.gz",
     "source": "misc",
     "fields": [
       {
@@ -2700,7 +2700,7 @@
   },
   {
     "title": "Yahoo Etfs",
-    "files": "yahoo_etfs.csv",
+    "files": "yahoo_etfs.csv.gz",
     "source": "misc",
     "fields": [
       {
@@ -3194,7 +3194,7 @@
   },
   {
     "title": "Yahoo Fiis Fiagros",
-    "files": "yahoo_fiis_fiagros.csv",
+    "files": "yahoo_fiis_fiagros.csv.gz",
     "source": "misc",
     "fields": [
       {
@@ -5175,7 +5175,7 @@
   },
   {
     "title": "B3 Opcoes Posicoes Resumo",
-    "files": "b3_opcoes_posicoes_resumo.csv",
+    "files": "b3_opcoes_posicoes_resumo.csv.gz",
     "source": "b3",
     "fields": [
       {
@@ -5334,7 +5334,7 @@
   },
   {
     "title": "Bacen Cadastro Instituicoes",
-    "files": "bacen_cadastro_instituicoes.csv",
+    "files": "bacen_cadastro_instituicoes.csv.gz",
     "source": "bcb",
     "fields": [
       {

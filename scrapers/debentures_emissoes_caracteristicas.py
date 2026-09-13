@@ -14,6 +14,7 @@ class DebenturesEmissoesCaracteristicasScraper(GenericScraper):
     group = "anbima"
     enabled = True
     phase = 1
+    compress = True
     resource_name = "Debêntures - Características de Emissões"
 
 

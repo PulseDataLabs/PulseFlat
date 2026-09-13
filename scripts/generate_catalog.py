@@ -209,8 +209,17 @@ def generate(dry_run: bool = False) -> None:
     for file, old_item in old_datasets.items():
         if file not in processed_files:
             file_path = datasets_json_path.parent / file
+            file_gz_path = datasets_json_path.parent / (file if file.endswith(".gz") else f"{file}.gz")
+
             if file_path.exists():
                 print_info(f"Mantendo dataset secundário existente: {file}")
+                new_catalog.append(old_item)
+            elif file_gz_path.exists():
+                actual_name = file_gz_path.name
+                old_item["file"] = actual_name
+                if old_item.get("url") and old_item["url"].endswith(".csv"):
+                    old_item["url"] = old_item["url"][:-4] + ".csv.gz"
+                print_info(f"Mantendo dataset secundário existente (compactado): {actual_name}")
                 new_catalog.append(old_item)
             else:
                 print_warn(f"Ignorando dataset fantasma inexistente no disco: {file}")
