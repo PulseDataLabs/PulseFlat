@@ -61,4 +61,9 @@ jobs:
         ruff check .
 
     - name: Executar Testes Unitários e de Integração (Pytest)
+      env:
+        ANBIMA_CLIENT_ID: ${{ secrets.ANBIMA_CLIENT_ID || vars.ANBIMA_CLIENT_ID || 'mock_client_id' }}
+        ANBIMA_CLIENT_SECRET: ${{ secrets.ANBIMA_CLIENT_SECRET || vars.ANBIMA_CLIENT_SECRET || 'mock_client_secret' }}
+        EULERPOOL_API_KEY: ${{ secrets.EULERPOOL_API_KEY || vars.EULERPOOL_API_KEY || 'mock_key' }}
+        FRED_API_KEY: ${{ secrets.FRED_API_KEY || vars.FRED_API_KEY || 'mock_key' }}
       run: pytest

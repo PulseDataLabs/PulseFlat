@@ -42,6 +42,13 @@ SEGUNDA_ONDA_SCRAPERS = [
 ]
 
 
+@pytest.fixture(autouse=True)
+def mock_anbima_credentials(monkeypatch):
+    """Garante que credenciais dummy existam durante a execução dos testes sem depender de .env."""
+    monkeypatch.setenv("ANBIMA_CLIENT_ID", "mock_client_id")
+    monkeypatch.setenv("ANBIMA_CLIENT_SECRET", "mock_client_secret")
+
+
 @pytest.mark.parametrize("cls,expected_name", SEGUNDA_ONDA_SCRAPERS)
 def test_metadata_segunda_onda(cls, expected_name):
     inst = cls()
@@ -81,6 +88,8 @@ def test_idka_fetch_mock(requests_mock):
     )
 
     scraper = AnbimaIndicesIdkaResultadosScraper()
+    scraper.client.client_id = "mock_client_id"
+    scraper.client.client_secret = "mock_client_secret"
     scraper.target_date = date(2026, 9, 11)
     df = scraper.fetch()
 
@@ -113,6 +122,8 @@ def test_projecoes_fetch_mock(requests_mock):
     )
 
     scraper = AnbimaProjecoesInflacaoScraper()
+    scraper.client.client_id = "mock_client_id"
+    scraper.client.client_secret = "mock_client_secret"
     scraper.target_date = date(2026, 9, 11)
     df = scraper.fetch()
 
@@ -142,6 +153,8 @@ def test_selic_fetch_mock(requests_mock):
     )
 
     scraper = AnbimaTitulosPublicosEstimativaSelicScraper()
+    scraper.client.client_id = "mock_client_id"
+    scraper.client.client_secret = "mock_client_secret"
     scraper.target_date = date(2026, 9, 11)
     df = scraper.fetch()
 
