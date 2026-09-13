@@ -559,7 +559,7 @@ O repositório mantém **88+ datasets estruturados** e versionados, totalizando 
 | Grupo | Fonte Primária | Datasets Ativos | Exemplos de Dados Disponibilizados | Frequência |
 |---|---|:---:|---|---|
 | **ANBIMA & Crédito** | [ANBIMA Developers](https://developers.anbima.com.br) / [Portal ANBIMA](https://www.anbima.com.br) / [Debêntures](https://www.debentures.com.br) | **30** | Curvas ETTJ, Parâmetros Svensson, Letras Financeiras, CRI/CRA, FIDC, Índices IMA/IDkA, Selic Estimativa, VNA, REUNE e Debêntures. | Diária / D+1 |
-| **B3** | [B3 Market Data](https://www.b3.com.br) | **24** | Carteiras Teóricas (IBOV, SMLL, etc.), Negócios BDI, Resumo de Derivativos, Taxas Swap/Juros, FIIs/ETFs, ISIN, COTAHIST e Limites de Garantias. | Diária / D-0 |
+| **B3** | [B3 Market Data](https://www.b3.com.br) | **26** | Posições em Aberto de Opções (Open Interest & Put/Call Ratio), Carteiras Teóricas (IBOV, SMLL, etc.), Negócios BDI, Resumo de Derivativos, Taxas Swap/Juros, FIIs/ETFs, ISIN, COTAHIST e Limites de Garantias. | Diária / D-0 |
 | **FRED** | [Federal Reserve Bank of St. Louis](https://fred.stlouisfed.org) | **5** | Curva Soberana dos US Treasuries (1M-30Y), Macro EUA (CPI, PCE, Emprego), Liquidez Global & Spreads, Ciclos Brasil e Commodities. | Diária / Mensal |
 | **IPEADATA** | [IPEA](http://www.ipeadata.gov.br) | **8** | Macroeconomia, Taxas de Juros, Inflação e Preços, Formação Bruta de Capital Fixo (FBCF), Balança Comercial e Produção Mineral. | Diária / Mensal |
 | **Banco Central (BCB)** | [Banco Central do Brasil](https://www.bcb.gov.br) | **6** | Câmbio PTAX, Séries Temporais SGS (Selic, CDI, IGP-M), DEMAB Títulos Públicos, Balancetes Cosif e Capital Basileia. | Diária / Mensal |
@@ -629,8 +629,9 @@ Séries macroeconômicas globais do Banco Central dos Estados Unidos (St. Louis 
 
 ---
 
-### ◉ B3 — Brasil, Bolsa, Balcão (24 Datasets)
+### ◉ B3 — Brasil, Bolsa, Balcão (26 Datasets)
 
+* **Opções e Posições em Aberto**: Snapshot Completo de Opções em Aberto (`b3_opcoes_posicoes_aberto.csv.gz`) cobrindo ~50.000 séries diárias de ações e índices com detalhamento de posições cobertas, descobertas, em travas e número de titulares/lançadores; e Resumo Histórico por Ativo e Put/Call Ratio (`b3_opcoes_posicoes_resumo.csv`) agregando Open Interest de CALLs e PUTs, Put/Call Ratio e strikes de maior liquidez.
 * **Carteiras Teóricas de Índices**: IBOVESPA (`b3_carteira_teorica_ibov.csv`), Small Caps SMLL (`b3_carteira_teorica_smll.csv`), Sustentabilidade ISEE (`b3_carteira_teorica_isee.csv`), BDRX (`b3_carteira_teorica_bdrx.csv`), Financeiro IFNC (`b3_carteira_teorica_ifnc.csv`), Dividendos IBSD (`b3_carteira_teorica_ibsd.csv`), IBX 50 (`b3_carteira_teorica_ibxl.csv`), Agronegócio AGFS/IAGRO (`b3_carteira_teorica_agfs_iagro.csv`) e Composição Completa Consolidada de todos os índices B3 (`b3_carteiras_teoricas.csv`).
 * **Cotações e Histórico**: COTAHIST Diário (`b3_cotahist_diario.csv.gz`), COTAHIST Anual Histórico (`b3_cotahist_anual.csv.gz`) e Negócios de Ações BDI Trades (`b3_bdi_trades_acoes.csv.gz`).
 * **Derivativos e Renda Fixa**: Derivativos — Resumo das Operações BDI (`b3_bdi_derivativos_resumo.csv`), Taxas de Swap e Juros BMF (`b3_bmf_taxas_juros.csv`), DI Over BDI (`b3_bdi_di_over.csv`), ETFs de Renda Fixa BDI (`b3_bdi_etfrf.csv.gz`), Indicadores Econômicos FWF (`b3_indicadores_economicos_fwf.csv`) e Indicadores Financeiros (`b3_indicadores_financeiros.csv`).

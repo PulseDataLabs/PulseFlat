@@ -579,6 +579,49 @@
     "accumulate": true
   },
   {
+    "title": "B3 Opções — Posições em Aberto (Open Interest)",
+    "file": "b3_opcoes_posicoes_aberto.csv.gz",
+    "description": "Posições em aberto (Open Interest) de todas as séries de opções de ações e índices da B3, com detalhamento de posições cobertas, descobertas, em travas e número de clientes titulares e lançadores.",
+    "icon": "🎯",
+    "iconClass": "icon-b3",
+    "badge": "Diário",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "opções",
+      "open interest",
+      "posições em aberto",
+      "call",
+      "put",
+      "derivativos",
+      "B3"
+    ],
+    "source": "B3",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/b3_opcoes_posicoes_aberto.csv.gz",
+    "accumulate": false
+  },
+  {
+    "title": "B3 Opções — Resumo de Posições em Aberto e Put/Call Ratio",
+    "file": "b3_opcoes_posicoes_resumo.csv",
+    "description": "Consolidado diário e histórico de Open Interest por ativo objeto negociado na B3. Inclui total de contratos em CALL e PUT, Put/Call Ratio, posições cobertas/descobertas/travadas e os strikes com maior concentração de posições em aberto.",
+    "icon": "📊",
+    "iconClass": "icon-b3",
+    "badge": "Diário",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "opções",
+      "put call ratio",
+      "open interest",
+      "posições em aberto",
+      "call",
+      "put",
+      "derivativos",
+      "B3"
+    ],
+    "source": "B3",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/b3_opcoes_posicoes_resumo.csv",
+    "accumulate": true
+  },
+  {
     "title": "B3 — Cadastro de Códigos ISIN",
     "file": "b3_isin_ativos.csv.gz",
     "description": "Catálogo oficial completo de códigos internacionais ISIN (International Securities Identification Number) para todos os instrumentos e ativos financeiros emitidos e custodiados na B3.",

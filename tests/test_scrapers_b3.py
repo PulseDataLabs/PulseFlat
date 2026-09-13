@@ -277,3 +277,137 @@ def test_b3_bdi_derivativos_resumo_captura_mock(requests_mock):
     assert registros[1]["ticker_simb"] == "DOL: DÓLAR COMERCIAL - FUTURO"
     assert registros[1]["mercado"] == "MOEDAS"
 
+
+def test_b3_opcoes_posicoes_aberto_metadata():
+    """Verifica metadados e configuração do scraper B3 Opções Posições em Aberto."""
+    from scrapers.b3_opcoes_posicoes_aberto import (
+        CABECALHO_GRANULAR,
+        CABECALHO_RESUMO,
+        B3OpcoesPosicoesAbertoScraper,
+    )
+
+    s = B3OpcoesPosicoesAbertoScraper()
+    assert s.name == "b3_opcoes_posicoes_aberto"
+    assert s.group == "b3"
+    assert s.enabled is True
+    assert s.accumulate is False
+    assert s.compress is True
+    assert "opções" in s.tags
+    assert len(CABECALHO_GRANULAR) == 16
+    assert len(CABECALHO_RESUMO) == 13
+
+
+def test_b3_opcoes_posicoes_aberto_captura_mock(requests_mock):
+    """Testa a captura de opções de empresas e índices e o cálculo do resumo com Put/Call Ratio."""
+    import datetime
+    from scrapers.b3_opcoes_posicoes_aberto import capturar_dia, gerar_resumo_por_ativo
+
+    mock_emp = {
+        "Empresa": {
+            "P": [
+                {
+                    "ser": "PETRJ300",
+                    "prEx": 30.50,
+                    "nmEmp": "PETROBRAS",
+                    "mer": "PETR",
+                    "espPap": "PN",
+                    "tMerc": "70",  # CALL
+                    "dtVen": "20261016",
+                    "poCob": 1000,
+                    "posTr": 200,
+                    "posDe": 300,
+                    "posTo": 1500,
+                    "qtdClTit": 50,
+                    "qtdClLan": 30,
+                },
+                {
+                    "ser": "PETRV300",
+                    "prEx": 29.00,
+                    "nmEmp": "PETROBRAS",
+                    "mer": "PETR",
+                    "espPap": "PN",
+                    "tMerc": "80",  # PUT
+                    "dtVen": "20261016",
+                    "poCob": 500,
+                    "posTr": 100,
+                    "posDe": 400,
+                    "posTo": 1000,
+                    "qtdClTit": 40,
+                    "qtdClLan": 20,
+                },
+            ]
+        }
+    }
+
+    mock_ind = {
+        "Indice": [
+            {
+                "ser": "IBOVJ130",
+                "prEx": 130000.0,
+                "nmEmp": "",
+                "mer": "IBOV",
+                "espPap": "",
+                "tMerc": "70",  # CALL
+                "dtVen": "20261014",
+                "poCob": 0,
+                "posTr": 50,
+                "posDe": 50,
+                "posTo": 100,
+                "qtdClTit": 10,
+                "qtdClLan": 5,
+            }
+        ]
+    }
+
+    url_emp = "https://www.b3.com.br/json/20260911/Posicoes/Empresa/SI_C_OPCPOSABEMP.json"
+    url_ind = "https://www.b3.com.br/json/20260911/Posicoes/Indice/SI_C_OPCPOSABIND.json"
+
+    requests_mock.get(url_emp, json=mock_emp, status_code=200)
+    requests_mock.get(url_ind, json=mock_ind, status_code=200)
+
+    registros, str_ref = capturar_dia(datetime.date(2026, 9, 11))
+    assert str_ref == "2026-09-11"
+    assert len(registros) == 3
+
+    # Verifica empresa (PETR)
+    petr_call = [r for r in registros if r["serie"] == "PETRJ300"][0]
+    assert petr_call["tipo_mercado"] == "CALL"
+    assert petr_call["codigo_ativo_objeto"] == "PETR"
+    assert petr_call["data_vencimento"] == "2026-10-16"
+    assert petr_call["preco_exercicio"] == 30.50
+    assert petr_call["posicao_total"] == 1500
+
+    # Verifica índice (IBOV)
+    ibov_call = [r for r in registros if r["codigo_ativo_objeto"] == "IBOV"][0]
+    assert ibov_call["categoria_ativo"] == "INDICE"
+    assert ibov_call["posicao_total"] == 100
+
+    # Testa cálculo de resumo e Put/Call Ratio
+    df_granular = pd.DataFrame(registros)
+    df_resumo = gerar_resumo_por_ativo(df_granular, str_ref)
+
+    assert len(df_resumo) == 2  # PETR e IBOV
+    row_petr = df_resumo[df_resumo["codigo_ativo_objeto"] == "PETR"].iloc[0]
+    assert row_petr["posicao_aberta_call"] == 1500
+    assert row_petr["posicao_aberta_put"] == 1000
+    assert row_petr["posicao_aberta_total"] == 2500
+    assert row_petr["put_call_ratio"] == round(1000 / 1500, 4)
+    assert row_petr["strike_max_oi_call"] == 30.50
+    assert row_petr["strike_max_oi_put"] == 29.00
+
+
+def test_b3_opcoes_posicoes_resumo_metadata():
+    """Verifica metadados do scraper B3 Opções Posições Resumo."""
+    from scrapers.b3_opcoes_posicoes_resumo import B3OpcoesPosicoesResumoScraper
+
+    s = B3OpcoesPosicoesResumoScraper()
+    assert s.name == "b3_opcoes_posicoes_resumo"
+    assert s.group == "b3"
+    assert s.enabled is True
+    assert s.accumulate is True
+    assert "data_referencia" in s.chaves_dedup
+    assert "codigo_ativo_objeto" in s.chaves_dedup
+    assert "put call ratio" in s.tags
+
+
+

@@ -5172,5 +5172,164 @@
         "example": "361085380"
       }
     ]
+  },
+  {
+    "title": "B3 Opcoes Posicoes Resumo",
+    "files": "b3_opcoes_posicoes_resumo.csv",
+    "source": "b3",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-09-13"
+      },
+      {
+        "name": "data_referencia",
+        "type": "date",
+        "example": "2026-09-11"
+      },
+      {
+        "name": "codigo_ativo_objeto",
+        "type": "str",
+        "example": "PETR"
+      },
+      {
+        "name": "total_series",
+        "type": "str",
+        "example": "2671"
+      },
+      {
+        "name": "posicao_aberta_call",
+        "type": "str",
+        "example": "518560200"
+      },
+      {
+        "name": "posicao_aberta_put",
+        "type": "str",
+        "example": "538407900"
+      },
+      {
+        "name": "posicao_aberta_total",
+        "type": "str",
+        "example": "1056968100"
+      },
+      {
+        "name": "put_call_ratio",
+        "type": "str",
+        "example": "1.0383"
+      },
+      {
+        "name": "posicao_coberta",
+        "type": "str",
+        "example": "25887077"
+      },
+      {
+        "name": "posicao_descoberta",
+        "type": "str",
+        "example": "652999939"
+      },
+      {
+        "name": "posicao_trava",
+        "type": "str",
+        "example": "378081084"
+      },
+      {
+        "name": "strike_max_oi_call",
+        "type": "str",
+        "example": "36.67"
+      },
+      {
+        "name": "strike_max_oi_put",
+        "type": "str",
+        "example": "36.67"
+      }
+    ]
+  },
+  {
+    "title": "B3 Opcoes Posicoes Aberto.Gz",
+    "files": "b3_opcoes_posicoes_aberto.csv.gz",
+    "source": "b3",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-09-13"
+      },
+      {
+        "name": "data_referencia",
+        "type": "date",
+        "example": "2026-09-11"
+      },
+      {
+        "name": "categoria_ativo",
+        "type": "str",
+        "example": "EMPRESA"
+      },
+      {
+        "name": "empresa",
+        "type": "str",
+        "example": "ADVANCED MICRO DEVICES INC"
+      },
+      {
+        "name": "codigo_ativo_objeto",
+        "type": "str",
+        "example": "A1MD"
+      },
+      {
+        "name": "especificacao",
+        "type": "str",
+        "example": "DRN"
+      },
+      {
+        "name": "serie",
+        "type": "str",
+        "example": "A1MDI285"
+      },
+      {
+        "name": "tipo_mercado",
+        "type": "str",
+        "example": "CALL"
+      },
+      {
+        "name": "preco_exercicio",
+        "type": "float",
+        "example": "285.0"
+      },
+      {
+        "name": "data_vencimento",
+        "type": "date",
+        "example": "2026-09-18"
+      },
+      {
+        "name": "posicao_coberta",
+        "type": "str",
+        "example": "130"
+      },
+      {
+        "name": "posicao_trava",
+        "type": "str",
+        "example": "0"
+      },
+      {
+        "name": "posicao_descoberta",
+        "type": "str",
+        "example": "20"
+      },
+      {
+        "name": "posicao_total",
+        "type": "str",
+        "example": "150"
+      },
+      {
+        "name": "clientes_titulares",
+        "type": "str",
+        "example": "1"
+      },
+      {
+        "name": "clientes_lancadores",
+        "type": "str",
+        "example": "1"
+      }
+    ]
   }
 ]
