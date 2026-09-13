@@ -307,9 +307,20 @@ Para testar scrapers pontualmente ou fazer cargas manuais:
 
 ---
 
-## 💻 Guia do Desenvolvedor
+## 💻 Guia do Desenvolvedor & Uso Local
 
-### Instalação Local
+Esta seção traz o passo a passo completo para configurar, executar, testar e debugar o **PulseFlat** na sua máquina local.
+
+---
+
+### 1. Pré-requisitos
+* **Python**: versão `3.11+` (recomendado `3.12` ou `3.13`).
+* **Git**: instalado e configurado no terminal.
+* **uv** (altamente recomendado): gerenciador ultra-rápido de ambientes Python (`curl -LsSf https://astral.sh/uv/install.sh | sh` ou `brew install uv`).
+
+---
+
+### 2. Instalação e Ambiente Virtual
 
 1. **Clone o repositório:**
    ```bash
@@ -319,42 +330,136 @@ Para testar scrapers pontualmente ou fazer cargas manuais:
 
 2. **Crie o ambiente virtual e instale as dependências:**
 
-   **Usando `uv` (Recomendado — ultra-rápido):**
+   **Opção A: Usando `uv` (Recomendado — instalação em ~2 segundos):**
    ```bash
    uv venv
    source .venv/bin/activate
    uv pip install -r requirements.txt
    ```
 
-   **Usando `pip` padrão:**
+   **Opção B: Usando `python -m venv` padrão:**
    ```bash
    python3 -m venv .venv
    source .venv/bin/activate
    pip install -r requirements.txt
    ```
 
-3. **Configure as variáveis de ambiente:**
-   ```bash
-   cp .env.example .env
-   ```
+---
+
+### 3. Configuração do Arquivo `.env`
+
+Copie o arquivo de exemplo para criar a sua configuração local:
+```bash
+cp .env.example .env
+```
+
+> [!NOTE]
+> **Quais credenciais são necessárias?**
+> - **Nenhuma chave é obrigatória para começar**: Mais de 80% dos datasets (B3, Banco Central, CVM, Tesouro Direto, IPEA) são de dados abertos públicos e **não exigem qualquer autenticação ou API Key**.
+> - `ANBIMA_CLIENT_ID` e `ANBIMA_CLIENT_SECRET`: Apenas se for rodar os 17 scrapers do portal ANBIMA Developers.
+> - `FRED_API_KEY`: Apenas se for rodar os 5 scrapers de macroeconomia do Federal Reserve.
+> - `EULERPOOL_API_KEY`: Apenas para os scrapers de ações/ETFs globais da Eulerpool.
+> - `SKIP_ORACLE_DB=1`: Já vem configurado por padrão para que as coletas locais salvem apenas em arquivos CSV/Parquet em `./data`, sem tentar conectar ao banco de dados Oracle.
 
 ---
 
-### Executando Testes e Qualidade de Código
+### 4. Como Executar Localmente
 
-O projeto está configurado com `pytest` e `ruff` através do `pyproject.toml`.
+Você tem flexibilidade total para rodar coletas completas, por grupos ou scrapers individuais:
+
+#### A. Executar um Scraper Específico (Ideal para Desenvolvimento e Debug)
+```bash
+# Via orquestrador central
+python run_all.py --scraper b3_termo_posicoes_em_aberto
+
+# Ou executando o script diretamente
+python scrapers/b3_termo_posicoes_em_aberto.py
+```
+
+#### B. Executar um Grupo Temático
+```bash
+# Executa apenas scrapers do Banco Central
+python run_all.py --group bcb
+
+# Executa apenas scrapers da B3 (Ações, Termo, Índices, Empréstimo)
+python run_all.py --group b3
+
+# Executa apenas scrapers da CVM
+python run_all.py --group cvm
+
+# Executa apenas scrapers do IPEA
+python run_all.py --group ipea
+```
+
+#### C. Executar em Paralelo ou Sequencial
+```bash
+# Execução paralela com controle de concorrência (ex: 4 workers)
+python run_all.py --parallel --max-workers 4
+
+# Execução sequencial com traces e logs detalhados
+python run_all.py --sequential
+```
+
+#### D. Validar Séries Temporais e Exportar Parquet
+```bash
+# Verifica se há buracos de datas úteis nas séries históricas
+python run_all.py --check-holes
+
+# Converte toda a pasta data/ para Apache Parquet colunar otimizado
+python scripts/export_to_parquet.py
+```
+
+---
+
+### 5. Visualizando os Dados e Dashboard Localmente
+
+O PulseFlat inclui um frontend estático leve para visualização dos datasets e séries históricas. Para abri-lo localmente na sua máquina:
 
 ```bash
-# Executa apenas os testes unitários rápidos (~15 segundos)
+# Inicie um servidor HTTP local na raiz do projeto
+python -m http.server 8000
+```
+Em seguida, acesse no navegador:
+* **Dashboard Principal**: [http://localhost:8000](http://localhost:8000) (status das coletas, links para download e monitor D-N).
+* **Explorador de Séries**: [http://localhost:8000/consulta.html](http://localhost:8000/consulta.html) (gráficos interativos e consultas dinâmicas).
+
+---
+
+### 6. Diagnóstico e Testes de Conectividade
+
+Se quiser validar se suas APIs ou conexões de rede estão respondendo com baixa latência:
+
+```bash
+# Testa conexão e emissão de token OAuth 2.0 da ANBIMA
+python scripts/test_anbima_connection.py
+
+# Testa comunicação e API Key com o Federal Reserve (FRED)
+python scripts/test_fred_connection.py
+
+# Testa comunicação com a BrasilAPI
+python scripts/test_brasilapi_connection.py
+
+# Testa API Key com a Eulerpool Financial Data
+python scripts/test_eulerpool_connection.py
+```
+
+---
+
+### 7. Testes Automatizados e Qualidade de Código
+
+O projeto conta com suíte de testes com `pytest` e regras de lint com `ruff`:
+
+```bash
+# Executa apenas testes unitários rápidos (~15 segundos)
 pytest -m "not slow"
 
-# Executa a suíte completa de testes (unitários + integração de CLI)
+# Executa a suíte completa de testes
 pytest
 
-# Executa verificação e linting com Ruff
+# Executa análise estática de código com Ruff
 ruff check .
 
-# Formatação automática de código
+# Aplica formatação automática com estilo consistente
 ruff format .
 ```
 
