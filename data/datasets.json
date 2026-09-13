@@ -1177,7 +1177,7 @@
     ],
     "source": "BACEN",
     "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/bacen_cadastro_instituicoes.csv",
-    "accumulate": false
+    "accumulate": true
   },
   {
     "title": "BACEN — Conglomerados Financeiros e Prudenciais",

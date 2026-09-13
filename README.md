@@ -11,7 +11,7 @@
 <p align="center">
   <a href="https://github.com/PulseDataLabs/PulseFlat/actions/workflows/ci.yml"><img src="https://github.com/PulseDataLabs/PulseFlat/actions/workflows/ci.yml/badge.svg" alt="CI Status"></a>
   <a href="https://github.com/PulseDataLabs/PulseFlat/actions/workflows/main.yml"><img src="https://github.com/PulseDataLabs/PulseFlat/actions/workflows/main.yml/badge.svg" alt="Daily Automation"></a>
-  <img src="https://img.shields.io/badge/datasets-88%2B-brightgreen.svg" alt="Datasets">
+  <img src="https://img.shields.io/badge/datasets-94%2B-brightgreen.svg" alt="Datasets">
   <img src="https://img.shields.io/badge/fontes-10%2B-blue.svg" alt="Fontes">
   <img src="https://img.shields.io/badge/python-3.11%2B-blue.svg" alt="Python Versions">
   <img src="https://img.shields.io/badge/code%20style-ruff-000000.svg" alt="Ruff Code Style">
@@ -44,7 +44,7 @@ A **PulseDataLabs** nasceu da missão de democratizar o acesso a dados financeir
 
 ## 🚀 Recursos e Diferenciais
 
-*   **88+ Datasets Estruturados & 100+ Rotinas de Extração**: Cobertura massiva de renda fixa, renda variável, derivativos, câmbio, fundos e macroeconomia, sem paywalls nem limites artificiais.
+*   **94+ Datasets Estruturados & 100+ Rotinas de Extração**: Cobertura massiva de renda fixa, renda variável, derivativos, câmbio, fundos e macroeconomia, sem paywalls nem limites artificiais.
 *   **OOP & Abstração Sólida**: Scrapers estruturados sob a classe base `BaseScraper` com ciclo de vida unificado, logs padronizados, checagem defensiva de schemas e persistência incremental.
 *   **Ecossistema Completo ANBIMA Data (1ª e 2ª Onda)**: Cliente HTTP OAuth 2.0 (Client Credentials) com 17 feeds oficiais via API: Curvas ETTJ (Prefixados, IPCA, Selic), Parâmetros Svensson, Letras Financeiras, CRI/CRA, FIDC, IMA/IDkA (resultados e carteiras teóricas), Selic Estimativa, VNA e REUNE Negociações.
 *   **Suite Macroeconômica Global FRED (Federal Reserve)**: Integração consolidada com o Federal Reserve Bank of St. Louis em 5 grandes datasets (Curva Soberana dos US Treasuries 1M-30Y, Indicadores Macro dos EUA, Liquidez Global & Spreads de Crédito, Macro/Câmbio Brasil e Commodities Globais de Exportação).
@@ -552,17 +552,17 @@ class IpeaMeuDatasetScraper(BaseIpeaScraper):
 
 ## 📊 Fontes e Datasets
 
-O repositório mantém **88+ datasets estruturados** e versionados, totalizando mais de 100 rotinas de coleta automáticas diárias. Todos os dados são padronizados em UTF-8 com separador vírgula e datas no padrão ISO 8601 (`YYYY-MM-DD`).
+O repositório mantém **94+ datasets estruturados** e versionados, totalizando mais de 100 rotinas de coleta automáticas diárias. Todos os dados são padronizados em UTF-8 com separador vírgula e datas no padrão ISO 8601 (`YYYY-MM-DD`).
 
 ### Visão Geral por Grupo de Origem
 
 | Grupo | Fonte Primária | Datasets Ativos | Exemplos de Dados Disponibilizados | Frequência |
 |---|---|:---:|---|---|
 | **ANBIMA & Crédito** | [ANBIMA Developers](https://developers.anbima.com.br) / [Portal ANBIMA](https://www.anbima.com.br) / [Debêntures](https://www.debentures.com.br) | **30** | Curvas ETTJ, Parâmetros Svensson, Letras Financeiras, CRI/CRA, FIDC, Índices IMA/IDkA, Selic Estimativa, VNA, REUNE e Debêntures. | Diária / D+1 |
-| **B3** | [B3 Market Data](https://www.b3.com.br) | **26** | Posições em Aberto de Opções (Open Interest & Put/Call Ratio), Carteiras Teóricas (IBOV, SMLL, etc.), Negócios BDI, Resumo de Derivativos, Taxas Swap/Juros, FIIs/ETFs, ISIN, COTAHIST e Limites de Garantias. | Diária / D-0 |
+| **B3** | [B3 Market Data](https://www.b3.com.br) | **30** | Valor de Mercado Mensal, Mercado a Termo (Posições e Resumo), Posições em Aberto de Opções (Open Interest & Put/Call Ratio), Carteiras Teóricas (IBOV, SMLL, etc.), Negócios BDI, Resumo de Derivativos, Taxas Swap/Juros, FIIs/ETFs, ISIN, COTAHIST e Limites de Garantias. | Diária / D-0 |
 | **FRED** | [Federal Reserve Bank of St. Louis](https://fred.stlouisfed.org) | **5** | Curva Soberana dos US Treasuries (1M-30Y), Macro EUA (CPI, PCE, Emprego), Liquidez Global & Spreads, Ciclos Brasil e Commodities. | Diária / Mensal |
 | **IPEADATA** | [IPEA](http://www.ipeadata.gov.br) | **8** | Macroeconomia, Taxas de Juros, Inflação e Preços, Formação Bruta de Capital Fixo (FBCF), Balança Comercial e Produção Mineral. | Diária / Mensal |
-| **Banco Central (BCB)** | [Banco Central do Brasil](https://www.bcb.gov.br) | **7** | Cadastro de Instituições (IF.data / SFN), Câmbio PTAX, Séries Temporais SGS (Selic, CDI, IGP-M), DEMAB Títulos Públicos, Balancetes Cosif e Capital Basileia. | Diária / Trimestral |
+| **Banco Central (BCB)** | [Banco Central do Brasil](https://www.bcb.gov.br) | **7** | Cadastro de Instituições (IF.data / SFN com histórico desde 2020), Câmbio PTAX, Séries Temporais SGS (Selic, CDI, IGP-M), DEMAB Títulos Públicos, Balancetes Cosif e Capital Basileia. | Diária / Trimestral |
 | **CVM** | [Dados Abertos CVM](https://dados.cvm.gov.br) | **3** | Informes Diários de Fundos, Registro de Classes/Subclasses RCVM 175 e Cadastro Geral de Companhias Abertas. | Diária / D+1 |
 | **IBGE** | [IBGE SIDRA](https://sidra.ibge.gov.br) | **1** | Índices oficiais de inflação (IPCA, IPCA-15, INPC) e agregados macroeconômicos. | Mensal |
 | **Mercado Global & Outros** | [Yahoo Finance](https://finance.yahoo.com) / [Wikipedia](https://www.wikipedia.org) / [ONU](https://unglobalcompact.org) | **12** | Ações BR e Globais, FIIs, Criptoativos, Commodities, Câmbio Global, Títulos Soberanos Internacionais e Pacto Global ONU. | Diária / Tempo Real |
@@ -643,7 +643,7 @@ Séries macroeconômicas globais do Banco Central dos Estados Unidos (St. Louis 
 
 ### ◆ Banco Central do Brasil (7 Datasets) & ⬢ CVM (3 Datasets)
 
-* **BCB Cadastro de Instituições** (`bacen_cadastro_instituicoes.csv`): Cadastro completo de todas as instituições financeiras e entidades autorizadas pelo BACEN (IF.data / SFN) com classificação prudencial (S1-S5), tipo de controle, consolidação, atividade e situação cadastral.
+* **BCB Cadastro de Instituições** (`bacen_cadastro_instituicoes.csv`): Histórico trimestral completo desde 2020 (26 trimestres, +143.000 registros) de todas as instituições financeiras e entidades autorizadas pelo BACEN (IF.data / SFN) com classificação prudencial (S1-S5), tipo de controle, consolidação, atividade e situação cadastral.
 * **BCB PTAX** (`bcb_ptax.csv`): Cotações diárias oficiais de compra e venda de moedas estrangeiras.
 * **BCB SGS** (`bcb_sgs.csv`): Séries temporais essenciais (Selic a.d. e a.a., CDI, IGP-M, IPCA acumulado).
 * **BCB DEMAB Títulos Públicos** (`bacen_negociacao_tpf_extragrupo.csv.gz`): Operações definitivas de compra/venda de títulos federais no mercado secundário.
