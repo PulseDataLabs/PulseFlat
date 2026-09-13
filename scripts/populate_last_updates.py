@@ -102,15 +102,19 @@ def main(dry_run: bool = False) -> None:
                     total_warn += 1
                     continue
 
-                datas = []
+                min_date = None
+                max_date = None
                 for row in reader:
                     val = row.get(date_col)
-                    if val and val.strip():
-                        datas.append(val.strip())
+                    if val:
+                        val = val.strip()
+                        if val:
+                            if min_date is None or val < min_date:
+                                min_date = val
+                            if max_date is None or val > max_date:
+                                max_date = val
 
-                if datas:
-                    min_date = min(datas)
-                    max_date = max(datas)
+                if min_date and max_date:
                     last_updates[nome] = {"min": min_date, "max": max_date}
                     print_done(f"{nome}: {min_date} a {max_date}")
                     total_ok += 1

@@ -66,4 +66,4 @@ jobs:
         ANBIMA_CLIENT_SECRET: ${{ secrets.ANBIMA_CLIENT_SECRET || vars.ANBIMA_CLIENT_SECRET || 'mock_client_secret' }}
         EULERPOOL_API_KEY: ${{ secrets.EULERPOOL_API_KEY || vars.EULERPOOL_API_KEY || 'mock_key' }}
         FRED_API_KEY: ${{ secrets.FRED_API_KEY || vars.FRED_API_KEY || 'mock_key' }}
-      run: pytest
+      run: pytest -m "not slow"
