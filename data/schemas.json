@@ -5331,5 +5331,112 @@
         "example": "1"
       }
     ]
+  },
+  {
+    "title": "Bacen Cadastro Instituicoes",
+    "files": "bacen_cadastro_instituicoes.csv",
+    "source": "bcb",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-09-13"
+      },
+      {
+        "name": "data_base",
+        "type": "date",
+        "example": "2026-06-30"
+      },
+      {
+        "name": "codigo_instituicao",
+        "type": "str",
+        "example": "2381-92-90"
+      },
+      {
+        "name": "nome_instituicao",
+        "type": "str",
+        "example": "2GO INSTITUICAO DE PAGAMENTO LTDA"
+      },
+      {
+        "name": "cnpj_instituicao_lider",
+        "type": "str",
+        "example": ""
+      },
+      {
+        "name": "situacao",
+        "type": "str",
+        "example": "I"
+      },
+      {
+        "name": "situacao_desc",
+        "type": "str",
+        "example": "Inativa / Cancelada"
+      },
+      {
+        "name": "segmento_prudencial",
+        "type": "str",
+        "example": ""
+      },
+      {
+        "name": "tipo_consolidacao",
+        "type": "str",
+        "example": "N4"
+      },
+      {
+        "name": "tipo_consolidacao_desc",
+        "type": "str",
+        "example": "Instituições de Pagamento, SCDs, SEPs e Outras Não Bancárias"
+      },
+      {
+        "name": "tipo_detalhamento",
+        "type": "str",
+        "example": "I"
+      },
+      {
+        "name": "tipo_detalhamento_desc",
+        "type": "str",
+        "example": "Individual"
+      },
+      {
+        "name": "tipo_controle",
+        "type": "str",
+        "example": "2"
+      },
+      {
+        "name": "tipo_controle_desc",
+        "type": "str",
+        "example": "Privado Nacional"
+      },
+      {
+        "name": "atividade",
+        "type": "str",
+        "example": ""
+      },
+      {
+        "name": "uf",
+        "type": "str",
+        "example": "SP"
+      },
+      {
+        "name": "municipio",
+        "type": "str",
+        "example": "São Paulo"
+      },
+      {
+        "name": "ano_mes_inicio_atividade",
+        "type": "str",
+        "example": "1800-01"
+      },
+      {
+        "name": "codigo_conglomerado_financeiro",
+        "type": "str",
+        "example": ""
+      },
+      {
+        "name": "codigo_conglomerado_prudencial",
+        "type": "str",
+        "example": ""
+      }
+    ]
   }
 ]

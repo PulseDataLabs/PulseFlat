@@ -152,3 +152,96 @@ def test_bcb_sgs_scraper_fetch(requests_mock, monkeypatch):
     assert not df.empty
     assert "codigo_serie" in df.columns
     assert "valor" in df.columns
+
+
+def test_bacen_cadastro_instituicoes_metadata():
+    """Verifica metadados e configuração do scraper BACEN Cadastro de Instituições."""
+    from scrapers.bacen_cadastro_instituicoes import (
+        CABECALHO,
+        BacenCadastroInstituicoesScraper,
+    )
+
+    s = BacenCadastroInstituicoesScraper()
+    assert s.name == "bacen_cadastro_instituicoes"
+    assert s.group == "bcb"
+    assert s.enabled is True
+    assert s.accumulate is False
+    assert "data_base" in s.chaves_dedup
+    assert "codigo_instituicao" in s.chaves_dedup
+    assert "instituições financeiras" in s.tags
+    assert len(CABECALHO) == 20
+
+
+def test_bacen_cadastro_instituicoes_captura_mock(requests_mock):
+    """Testa captura e parsing da API Olinda IFData para o cadastro de IFs."""
+    from scrapers.bacen_cadastro_instituicoes import capturar_cadastro_trimestre
+
+    mock_odata = {
+        "value": [
+            {
+                "CodInst": "00000000",
+                "Data": "202606",
+                "NomeInstituicao": "BCO DO BRASIL S.A.",
+                "DataInicioAtividade": 180801,
+                "Tcb": "B1",
+                "Td": "C",
+                "Tc": 1,
+                "SegmentoTb": None,
+                "Atividade": "Banco Comercial",
+                "Uf": "DF",
+                "Municipio": "Brasília",
+                "Sr": "S1",
+                "CodConglomeradoFinanceiro": "C0000001",
+                "CodConglomeradoPrudencial": "C0000002",
+                "CnpjInstituicaoLider": "00000000",
+                "Situacao": "A",
+            },
+            {
+                "CodInst": "5464-72-59",
+                "Data": "202606",
+                "NomeInstituicao": "321 SOCIEDADE DE CRÉDITO DIRETO S.A.",
+                "DataInicioAtividade": 202407,
+                "Tcb": "N1",
+                "Td": "I",
+                "Tc": 2,
+                "SegmentoTb": None,
+                "Atividade": "Sociedade de Crédito Direto",
+                "Uf": "RS",
+                "Municipio": "Porto Alegre",
+                "Sr": "S4",
+                "CodConglomeradoFinanceiro": None,
+                "CodConglomeradoPrudencial": None,
+                "CnpjInstituicaoLider": "15581638",
+                "Situacao": "A",
+            },
+        ]
+    }
+
+    requests_mock.get(
+        re.compile(r"https://olinda\.bcb\.gov\.br/olinda/servico/IFDATA/versao/v1/odata/IfDataCadastro.*"),
+        json=mock_odata,
+        status_code=200,
+    )
+
+    registros = capturar_cadastro_trimestre("202606")
+    assert len(registros) == 2
+
+    bb = registros[0]
+    assert bb["codigo_instituicao"] == "00000000"
+    assert bb["nome_instituicao"] == "BCO DO BRASIL S.A."
+    assert bb["data_base"] == "2026-06-30"
+    assert bb["segmento_prudencial"] == "S1"
+    assert bb["tipo_consolidacao"] == "B1"
+    assert "Carteira Comercial" in bb["tipo_consolidacao_desc"]
+    assert bb["tipo_controle_desc"] == "Público"
+    assert bb["situacao_desc"] == "Ativa"
+    assert bb["cnpj_instituicao_lider"] == "00.000.000"
+    assert bb["ano_mes_inicio_atividade"] == "1808-01"
+
+    scd = registros[1]
+    assert scd["codigo_instituicao"] == "5464-72-59"
+    assert scd["segmento_prudencial"] == "S4"
+    assert scd["tipo_controle_desc"] == "Privado Nacional"
+    assert scd["cnpj_instituicao_lider"] == "15.581.638"
+    assert scd["ano_mes_inicio_atividade"] == "2024-07"
+

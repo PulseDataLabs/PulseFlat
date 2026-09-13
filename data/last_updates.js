@@ -374,5 +374,9 @@ window.PULSEFLAT_LAST_UPDATES = {
   "b3_opcoes_posicoes_aberto.csv.gz": {
     "min": "2026-09-13",
     "max": "2026-09-13"
+  },
+  "bacen_cadastro_instituicoes.csv": {
+    "min": "2026-09-13",
+    "max": "2026-09-13"
   }
 };

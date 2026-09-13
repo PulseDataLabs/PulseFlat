@@ -1135,6 +1135,29 @@
     "accumulate": false
   },
   {
+    "title": "BACEN — Cadastro de Instituições Financeiras (IF.data)",
+    "file": "bacen_cadastro_instituicoes.csv",
+    "description": "Cadastro completo de instituições financeiras e entidades autorizadas pelo Banco Central do Brasil no Sistema Financeiro Nacional (SFN / IF.data). Inclui classificação prudencial (S1-S5), tipo de consolidação, conglomerados, atividade regulatória, tipo de controle, localização e situação cadastral.",
+    "icon": "🏛️",
+    "iconClass": "icon-bcb",
+    "badge": "Trimestral",
+    "badgeClass": "badge-quarterly",
+    "tags": [
+      "bacen",
+      "bcb",
+      "instituições financeiras",
+      "bancos",
+      "cooperativas",
+      "ifdata",
+      "sfn",
+      "regulação",
+      "fintech"
+    ],
+    "source": "BACEN",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/bacen_cadastro_instituicoes.csv",
+    "accumulate": false
+  },
+  {
     "title": "BACEN — Conglomerados Financeiros e Prudenciais",
     "file": "bacen_conglomerados.csv",
     "description": "Quadro societário, composição patrimonial e demonstrações consolidadas dos Conglomerados Financeiros e Prudenciais regulados pelo Banco Central do Brasil.",
