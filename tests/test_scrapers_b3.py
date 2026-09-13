@@ -300,6 +300,7 @@ def test_b3_opcoes_posicoes_aberto_metadata():
 def test_b3_opcoes_posicoes_aberto_captura_mock(requests_mock):
     """Testa a captura de opções de empresas e índices e o cálculo do resumo com Put/Call Ratio."""
     import datetime
+
     from scrapers.b3_opcoes_posicoes_aberto import capturar_dia, gerar_resumo_por_ativo
 
     mock_emp = {

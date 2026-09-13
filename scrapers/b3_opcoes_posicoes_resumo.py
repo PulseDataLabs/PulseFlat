@@ -21,7 +21,6 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from scrapers.b3_opcoes_posicoes_aberto import (
     ARQUIVO_GRANULAR,
-    ARQUIVO_RESUMO,
     CABECALHO_RESUMO,
     capturar,
     gerar_resumo_por_ativo,
