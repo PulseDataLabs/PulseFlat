@@ -434,6 +434,7 @@ def test_b3_valor_mercado_empresas_metadata():
 def test_b3_valor_mercado_empresas_captura_mock(requests_mock):
     """Testa captura e parsing da API marketValueProxy da B3."""
     import re
+
     from scrapers.b3_valor_mercado_empresas import capturar_dados_mensais
 
     mock_json = {
