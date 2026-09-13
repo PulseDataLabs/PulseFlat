@@ -847,6 +847,28 @@
     "accumulate": false
   },
   {
+    "title": "B3 — Valor de Mercado das Empresas Listadas (Market Cap)",
+    "file": "b3_valor_mercado_empresas.csv",
+    "description": "Valor de mercado (Market Capitalization) em BRL e USD de todas as companhias abertas listadas na B3, com indicadores de participação no Ibovespa (IBOV) e IBrX-100 (IBRX100), variação mensal e totais de mercado.",
+    "icon": "🏢",
+    "iconClass": "icon-b3",
+    "badge": "Mensal",
+    "badgeClass": "badge-monthly",
+    "tags": [
+      "b3",
+      "market cap",
+      "valor de mercado",
+      "empresas listadas",
+      "ações",
+      "ibov",
+      "ibrx100",
+      "capitalização"
+    ],
+    "source": "B3",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/b3_valor_mercado_empresas.csv",
+    "accumulate": true
+  },
+  {
     "title": "B3 — ETFs Listados",
     "file": "b3_etfs.csv",
     "description": "Cadastro completo de Exchange Traded Funds (ETFs) de Renda Variável e Renda Fixa listados na B3, contendo razão social, código de negociação (ticker), administrador, gestor e índice de referência.",

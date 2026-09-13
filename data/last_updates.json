@@ -378,5 +378,13 @@
   "bacen_cadastro_instituicoes.csv": {
     "min": "2026-09-13",
     "max": "2026-09-13"
+  },
+  "b3_valor_mercado_totais.csv": {
+    "min": "2026-09-13",
+    "max": "2026-09-13"
+  },
+  "b3_valor_mercado_empresas.csv": {
+    "min": "2026-09-13",
+    "max": "2026-09-13"
   }
 }

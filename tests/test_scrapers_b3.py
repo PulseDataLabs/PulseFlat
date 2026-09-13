@@ -411,4 +411,114 @@ def test_b3_opcoes_posicoes_resumo_metadata():
     assert "put call ratio" in s.tags
 
 
+def test_b3_valor_mercado_empresas_metadata():
+    """Verifica metadados e configuração do scraper B3 Valor de Mercado."""
+    from scrapers.b3_valor_mercado_empresas import (
+        CABECALHO_EMPRESAS,
+        CABECALHO_TOTAIS,
+        B3ValorMercadoEmpresasScraper,
+    )
+
+    s = B3ValorMercadoEmpresasScraper()
+    assert s.name == "b3_valor_mercado_empresas"
+    assert s.group == "b3"
+    assert s.enabled is True
+    assert s.accumulate is True
+    assert "data_referencia" in s.chaves_dedup
+    assert "empresa" in s.chaves_dedup
+    assert "market cap" in s.tags
+    assert len(CABECALHO_EMPRESAS) == 11
+    assert len(CABECALHO_TOTAIS) == 10
+
+
+def test_b3_valor_mercado_empresas_captura_mock(requests_mock):
+    """Testa captura e parsing da API marketValueProxy da B3."""
+    import re
+    from scrapers.b3_valor_mercado_empresas import capturar_dados_mensais
+
+    mock_json = {
+        "Header": {
+            "TimeStamp": "2026-09-13T14:40:43-03:00",
+            "Date": "2026-09-03T00:00:00",
+            "Column000": "IBOV",
+            "Column001": "IBRX100",
+            "Column002": "Empresa",
+            "Column003": "Valor (R$) em 31/08/2026",
+            "Column004": "Valor (R$) em 31/07/2026",
+            "Column005": "Var (%)",
+            "Column006": "Valor (USD) em 31/08/2026",
+            "Column007": "Valor (USD) em 31/07/2026",
+            "Column008": "Var (%)",
+        },
+        "Body": [
+            {
+                "Column000": "*",
+                "Column001": "**",
+                "Column002": "PETROBRAS",
+                "Column003": "619.471.308.283,36",
+                "Column004": "601.454.116.849,46",
+                "Column005": "3,00",
+                "Column006": "119.552.128.354,82",
+                "Column007": "118.459.440.420,98",
+                "Column008": "0,92",
+            },
+            {
+                "Column000": "",
+                "Column001": "",
+                "Column002": "3TENTOS",
+                "Column003": "5.763.490.316,97",
+                "Column004": "5.908.704.234,60",
+                "Column005": "-2,46",
+                "Column006": "1.112.299.350,97",
+                "Column007": "1.163.749.283,00",
+                "Column008": "-4,42",
+            },
+        ],
+        "Footer": [
+            {
+                "Column002": "TOTAL GERAL (343)",
+                "Column003": "5.004.655.120.726,96",
+                "Column004": "5.075.923.305.834,75",
+                "Column005": "-1,40",
+                "Column006": "965.851.304.756,63",
+                "Column007": "999.728.853.098,05",
+                "Column008": "-3,39",
+            }
+        ],
+    }
+
+    requests_mock.get(
+        re.compile(r"https://sistemaswebb3-listados\.b3\.com\.br/marketValueProxy/marketValueCall/GetStockExchangeMonthly/.*"),
+        json=mock_json,
+        status_code=200,
+    )
+
+    empresas, totais, str_ref = capturar_dados_mensais()
+    assert str_ref == "2026-08-31"
+    assert len(empresas) == 2
+    assert len(totais) == 1
+
+    petr = empresas[0]
+    assert petr["empresa"] == "PETROBRAS"
+    assert petr["pertence_ibov"] == "SIM"
+    assert petr["pertence_ibrx100"] == "SIM"
+    assert petr["valor_mercado_brl"] == 619471308283.36
+    assert petr["variacao_brl_pct"] == 3.0
+    assert petr["valor_mercado_usd"] == 119552128354.82
+
+    ttentos = empresas[1]
+    assert ttentos["empresa"] == "3TENTOS"
+    assert ttentos["pertence_ibov"] == "NAO"
+    assert ttentos["pertence_ibrx100"] == "NAO"
+    assert ttentos["valor_mercado_brl"] == 5763490316.97
+    assert ttentos["variacao_brl_pct"] == -2.46
+
+    tot = totais[0]
+    assert tot["segmento"] == "TOTAL GERAL"
+    assert tot["quantidade_empresas"] == 343
+    assert tot["valor_mercado_brl"] == 5004655120726.96
+    assert tot["variacao_brl_pct"] == -1.40
+
+
+
 
