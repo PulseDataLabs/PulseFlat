@@ -1644,7 +1644,10 @@
         
         const parseBrFloat = (val) => {
           if (val === null || val === undefined || val === '') return null;
-          let s = String(val).replace('%', '').replace(/\./g, '').replace(',', '.').trim();
+          let s = String(val).replace('%', '').trim();
+          if (s.includes(',')) {
+            s = s.replace(/\./g, '').replace(',', '.');
+          }
           let f = parseFloat(s);
           return isNaN(f) ? null : f;
         };

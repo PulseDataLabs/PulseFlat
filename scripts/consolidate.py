@@ -87,19 +87,20 @@ def _parse_br_float(val: str) -> float | None:
         return None
 
 
-def _fmt_val(val: str) -> str:
+def _fmt_val(val: str, decimals: int | None = None) -> str:
     f = _parse_br_float(val)
     if f is None:
         return val
-    abs_f = abs(f)
-    if abs_f >= 1000:
-        decimals = 0
-    elif abs_f >= 1:
-        decimals = 2
-    elif abs_f >= 0.01:
-        decimals = 4
-    else:
-        decimals = 6
+    if decimals is None:
+        abs_f = abs(f)
+        if abs_f >= 1000:
+            decimals = 0
+        elif abs_f >= 1:
+            decimals = 2
+        elif abs_f >= 0.01:
+            decimals = 4
+        else:
+            decimals = 6
     return f"{f:,.{decimals}f}".replace(",", "X").replace(".", ",").replace("X", ".")
 
 
@@ -681,6 +682,7 @@ INDICATOR_DEFS = [
         "value_col": "cotacao_compra",
         "date_col": "data_referencia",
         "category": "Taxas de Câmbio",
+        "decimals": 4,
     },
     {
         "dataset": "bcb_ptax.csv",
@@ -689,6 +691,7 @@ INDICATOR_DEFS = [
         "value_col": "cotacao_venda",
         "date_col": "data_referencia",
         "category": "Taxas de Câmbio",
+        "decimals": 4,
     },
     # ── BCB SGS ────────────────────────────────────────────────────
     *[
@@ -901,15 +904,32 @@ def _build_base(idef: dict) -> dict:
     }
 
 
-def _fmt(idef: dict, raw_val: str) -> str:
+def _fmt(
+    idef: dict,
+    raw_val: str,
+    row: dict | None = None,
+    indicator_name: str = "",
+) -> str:
     fmt = idef.get("fmt", "")
     if fmt == "pct":
         return _fmt_pct(raw_val)
+
+    decimals = idef.get("decimals")
+    if decimals is None:
+        cat = idef.get("category", "")
+        if not cat and row and "category_col" in idef:
+            cat = _safe(row.get(idef["category_col"], ""))
+        ind = indicator_name or idef.get("label", "")
+        if cat in ("Taxas de Câmbio", "Câmbio", "Câmbio / Moedas") or any(
+            k in ind.lower() for k in ("dólar", "dolar", "ptax", "euro", "câmbio", "cambio")
+        ):
+            decimals = 4
+
     if fmt == "number":
-        return _fmt_val(raw_val)
+        return _fmt_val(raw_val, decimals=decimals)
     f = _parse_br_float(raw_val)
     if f is not None:
-        return _fmt_val(raw_val)
+        return _fmt_val(raw_val, decimals=decimals)
     return raw_val
 
 
@@ -932,7 +952,7 @@ def _extract_single_value(rows: list[dict], idef: dict) -> dict | None:
         return None
     out = _build_base(idef)
     out["indicador"] = idef.get("label", "")
-    out["valor"] = _fmt(idef, raw_val)
+    out["valor"] = _fmt(idef, raw_val, row=latest, indicator_name=idef.get("label", ""))
     out["unidade"] = idef.get("unit", "")
     out["data_referencia"] = _ref_date(idef, latest)
     out["captura_em"] = _safe(latest.get("data_captura", ""))[:10]
@@ -975,7 +995,7 @@ def _extract_grouped_value(rows: list[dict], idef: dict) -> list[dict]:
             continue
         out = _build_base(idef)
         out["indicador"] = indicator_name
-        out["valor"] = _fmt(idef, raw_val)
+        out["valor"] = _fmt(idef, raw_val, row=latest, indicator_name=indicator_name)
         out["unidade"] = _safe(latest.get(unit_col, "")) if unit_col else ""
         out["categoria"] = (
             (_safe(latest.get(category_col, "")) or idef.get("category", ""))
@@ -1020,7 +1040,7 @@ def _extract_multi_value(rows: list[dict], idef: dict) -> list[dict]:
                 continue
             out = _build_base(idef)
             out["indicador"] = label_base
-            out["valor"] = _fmt_pct(raw_val) if col_fmt == "pct" else _fmt_val(raw_val)
+            out["valor"] = _fmt_pct(raw_val) if col_fmt == "pct" else _fmt_val(raw_val, decimals=idef.get("decimals"))
             out["unidade"] = col_label
             out["data_referencia"] = _ref_date(idef, latest)
             out["captura_em"] = _safe(latest.get("data_captura", ""))[:10]
@@ -1055,7 +1075,7 @@ def _extract_dual_value(rows: list[dict], idef: dict) -> list[dict]:
             continue
         out = _build_base(idef)
         out["indicador"] = indicator_name
-        out["valor"] = _fmt(idef, raw_val)
+        out["valor"] = _fmt(idef, raw_val, row=latest, indicator_name=indicator_name)
         out["unidade"] = ""
         out["data_referencia"] = _ref_date(idef, latest)
         out["captura_em"] = _safe(latest.get("data_captura", ""))[:10]
