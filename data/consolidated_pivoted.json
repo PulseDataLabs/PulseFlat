@@ -225,14 +225,6 @@
   },
   {
     "data_referencia": "2026-08-01",
-    "indicador": "IPCA Projeção",
-    "fonte": "ANBIMA",
-    "dataset_label": "ANBIMA Indicadores",
-    "categoria": "Índice de Preços",
-    "Valor": "-0,2000"
-  },
-  {
-    "data_referencia": "2026-08-01",
     "indicador": "IPCA Var % mês",
     "fonte": "ANBIMA",
     "dataset_label": "ANBIMA Indicadores",
@@ -288,12 +280,12 @@
     "Valor": "0,7700"
   },
   {
-    "data_referencia": "2026-09-10",
-    "indicador": "CBOE VIX Volatility",
-    "fonte": "FRED",
-    "dataset_label": "FRED Liquidez e Spreads",
-    "categoria": "Liquidez & Crédito Global",
-    "Valor": "17,84"
+    "data_referencia": "2026-09-01",
+    "indicador": "IPCA Projeção",
+    "fonte": "ANBIMA",
+    "dataset_label": "ANBIMA Indicadores",
+    "categoria": "Índice de Preços",
+    "Valor": "0,5600"
   },
   {
     "data_referencia": "2026-09-10",
@@ -302,30 +294,6 @@
     "dataset_label": "ANBIMA Indicadores",
     "categoria": "FDS",
     "Valor": "0,0915"
-  },
-  {
-    "data_referencia": "2026-09-10",
-    "indicador": "Fed Funds Effective Rate",
-    "fonte": "FRED",
-    "dataset_label": "FRED Liquidez e Spreads",
-    "categoria": "Liquidez & Crédito Global",
-    "Valor": "3,63%"
-  },
-  {
-    "data_referencia": "2026-09-10",
-    "indicador": "SOFR Rate",
-    "fonte": "FRED",
-    "dataset_label": "FRED Liquidez e Spreads",
-    "categoria": "Liquidez & Crédito Global",
-    "Valor": "3,62%"
-  },
-  {
-    "data_referencia": "2026-09-10",
-    "indicador": "Spread High Yield Emergentes OAS",
-    "fonte": "FRED",
-    "dataset_label": "FRED Brasil Macro e Ciclos",
-    "categoria": "Macroeconomia Brasil",
-    "Valor": "2,79"
   },
   {
     "data_referencia": "2026-09-10",
@@ -342,22 +310,6 @@
     "dataset_label": "ANBIMA Indicadores",
     "categoria": "Taxa de Referência",
     "Valor": "0,1707"
-  },
-  {
-    "data_referencia": "2026-09-10",
-    "indicador": "US Corp IG Spread",
-    "fonte": "FRED",
-    "dataset_label": "FRED Liquidez e Spreads",
-    "categoria": "Liquidez & Crédito Global",
-    "Valor": "0,8000"
-  },
-  {
-    "data_referencia": "2026-09-10",
-    "indicador": "US High Yield Spread",
-    "fonte": "FRED",
-    "dataset_label": "FRED Liquidez e Spreads",
-    "categoria": "Liquidez & Crédito Global",
-    "Valor": "2,70"
   },
   {
     "data_referencia": "2026-09-11",
@@ -606,6 +558,14 @@
   },
   {
     "data_referencia": "2026-09-11",
+    "indicador": "CBOE VIX Volatility",
+    "fonte": "FRED",
+    "dataset_label": "FRED Liquidez e Spreads",
+    "categoria": "Liquidez & Crédito Global",
+    "Valor": "15,84"
+  },
+  {
+    "data_referencia": "2026-09-11",
     "indicador": "CC=F",
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Commodities",
@@ -691,14 +651,6 @@
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "Valor": "6,66"
-  },
-  {
-    "data_referencia": "2026-09-11",
-    "indicador": "CT=F",
-    "fonte": "Yahoo Finance",
-    "dataset_label": "Yahoo Commodities",
-    "categoria": "Commodities Globais",
-    "Valor": "82,38"
   },
   {
     "data_referencia": "2026-09-11",
@@ -862,14 +814,6 @@
   },
   {
     "data_referencia": "2026-09-11",
-    "indicador": "EURUSD=X",
-    "fonte": "Yahoo Finance",
-    "dataset_label": "Yahoo Câmbio e Moedas",
-    "categoria": "Câmbio / Moedas",
-    "Valor": "1,16"
-  },
-  {
-    "data_referencia": "2026-09-11",
     "indicador": "EWZ",
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo ETFs",
@@ -883,14 +827,6 @@
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "Valor": "13,09"
-  },
-  {
-    "data_referencia": "2026-09-11",
-    "indicador": "Estimativa SELIC",
-    "fonte": "ANBIMA",
-    "dataset_label": "ANBIMA Indicadores",
-    "categoria": "Taxa de Juros",
-    "Valor": "13,90"
   },
   {
     "data_referencia": "2026-09-11",
@@ -939,14 +875,6 @@
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "Valor": "21,06"
-  },
-  {
-    "data_referencia": "2026-09-11",
-    "indicador": "GBPBRL=X",
-    "fonte": "Yahoo Finance",
-    "dataset_label": "Yahoo Câmbio e Moedas",
-    "categoria": "Câmbio / Moedas",
-    "Valor": "6,89"
   },
   {
     "data_referencia": "2026-09-11",
@@ -1132,14 +1060,6 @@
     "dataset_label": "Yahoo Ações Internacionais",
     "categoria": "Ações Internacionais",
     "Valor": "356,23"
-  },
-  {
-    "data_referencia": "2026-09-11",
-    "indicador": "JPYBRL=X",
-    "fonte": "Yahoo Finance",
-    "dataset_label": "Yahoo Câmbio e Moedas",
-    "categoria": "Câmbio / Moedas",
-    "Valor": "0,0330"
   },
   {
     "data_referencia": "2026-09-11",
@@ -1583,6 +1503,14 @@
   },
   {
     "data_referencia": "2026-09-11",
+    "indicador": "SOFR Rate",
+    "fonte": "FRED",
+    "dataset_label": "FRED Liquidez e Spreads",
+    "categoria": "Liquidez & Crédito Global",
+    "Valor": "3,62%"
+  },
+  {
+    "data_referencia": "2026-09-11",
     "indicador": "SPY",
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo ETFs",
@@ -1596,6 +1524,14 @@
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "Valor": "47,81"
+  },
+  {
+    "data_referencia": "2026-09-11",
+    "indicador": "Spread High Yield Emergentes OAS",
+    "fonte": "FRED",
+    "dataset_label": "FRED Brasil Macro e Ciclos",
+    "categoria": "Macroeconomia Brasil",
+    "Valor": "2,76"
   },
   {
     "data_referencia": "2026-09-11",
@@ -1620,14 +1556,6 @@
     "dataset_label": "B3 Indicadores Financeiros",
     "categoria": "Indicadores B3",
     "Valor": "13,90"
-  },
-  {
-    "data_referencia": "2026-09-11",
-    "indicador": "TAXA SOFR",
-    "fonte": "B3",
-    "dataset_label": "B3 Indicadores Financeiros",
-    "categoria": "Indicadores B3",
-    "Valor": "3,62"
   },
   {
     "data_referencia": "2026-09-11",
@@ -1703,19 +1631,27 @@
   },
   {
     "data_referencia": "2026-09-11",
+    "indicador": "US Corp IG Spread",
+    "fonte": "FRED",
+    "dataset_label": "FRED Liquidez e Spreads",
+    "categoria": "Liquidez & Crédito Global",
+    "Valor": "0,8000"
+  },
+  {
+    "data_referencia": "2026-09-11",
+    "indicador": "US High Yield Spread",
+    "fonte": "FRED",
+    "dataset_label": "FRED Liquidez e Spreads",
+    "categoria": "Liquidez & Crédito Global",
+    "Valor": "2,65"
+  },
+  {
+    "data_referencia": "2026-09-11",
     "indicador": "US Yield Curve Spread 10Y-2Y",
     "fonte": "FRED",
     "dataset_label": "FRED US Treasuries",
     "categoria": "Curva Soberana EUA",
     "Valor": "0,33%"
-  },
-  {
-    "data_referencia": "2026-09-11",
-    "indicador": "USDJPY=X",
-    "fonte": "Yahoo Finance",
-    "dataset_label": "Yahoo Câmbio e Moedas",
-    "categoria": "Câmbio / Moedas",
-    "Valor": "154,48"
   },
   {
     "data_referencia": "2026-09-11",
@@ -1895,14 +1831,6 @@
   },
   {
     "data_referencia": "2026-09-11",
-    "indicador": "^AXJO",
-    "fonte": "Yahoo Finance",
-    "dataset_label": "Yahoo Índices Globais",
-    "categoria": "Índices de Ações Globais",
-    "Valor": "8.741"
-  },
-  {
-    "data_referencia": "2026-09-11",
     "indicador": "^BVSP",
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Índices Globais",
@@ -1959,14 +1887,6 @@
   },
   {
     "data_referencia": "2026-09-11",
-    "indicador": "^HSI",
-    "fonte": "Yahoo Finance",
-    "dataset_label": "Yahoo Índices Globais",
-    "categoria": "Índices de Ações Globais",
-    "Valor": "24.806"
-  },
-  {
-    "data_referencia": "2026-09-11",
     "indicador": "^IRX",
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Renda Fixa",
@@ -1980,30 +1900,6 @@
     "dataset_label": "Yahoo Índices Globais",
     "categoria": "Índices de Ações Globais",
     "Valor": "26.333"
-  },
-  {
-    "data_referencia": "2026-09-11",
-    "indicador": "^JKSE",
-    "fonte": "Yahoo Finance",
-    "dataset_label": "Yahoo Índices Globais",
-    "categoria": "Índices de Ações Globais",
-    "Valor": "6.541"
-  },
-  {
-    "data_referencia": "2026-09-11",
-    "indicador": "^KLSE",
-    "fonte": "Yahoo Finance",
-    "dataset_label": "Yahoo Índices Globais",
-    "categoria": "Índices de Ações Globais",
-    "Valor": "1.687"
-  },
-  {
-    "data_referencia": "2026-09-11",
-    "indicador": "^KS11",
-    "fonte": "Yahoo Finance",
-    "dataset_label": "Yahoo Índices Globais",
-    "categoria": "Índices de Ações Globais",
-    "Valor": "6.910"
   },
   {
     "data_referencia": "2026-09-11",
@@ -2023,35 +1919,11 @@
   },
   {
     "data_referencia": "2026-09-11",
-    "indicador": "^N225",
-    "fonte": "Yahoo Finance",
-    "dataset_label": "Yahoo Índices Globais",
-    "categoria": "Índices de Ações Globais",
-    "Valor": "64.011"
-  },
-  {
-    "data_referencia": "2026-09-11",
-    "indicador": "^STI",
-    "fonte": "Yahoo Finance",
-    "dataset_label": "Yahoo Índices Globais",
-    "categoria": "Índices de Ações Globais",
-    "Valor": "5.696"
-  },
-  {
-    "data_referencia": "2026-09-11",
     "indicador": "^TNX",
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Renda Fixa",
     "categoria": "Renda Fixa & Treasuries",
     "Valor": "4,97"
-  },
-  {
-    "data_referencia": "2026-09-11",
-    "indicador": "^TWII",
-    "fonte": "Yahoo Finance",
-    "dataset_label": "Yahoo Índices Globais",
-    "categoria": "Índices de Ações Globais",
-    "Valor": "46.185"
   },
   {
     "data_referencia": "2026-09-11",
@@ -2070,127 +1942,159 @@
     "Valor": "15,84"
   },
   {
-    "data_referencia": "2026-09-12",
-    "indicador": "CLPBRL=X",
+    "data_referencia": "2026-09-13",
+    "indicador": "CT=F",
     "fonte": "Yahoo Finance",
-    "dataset_label": "Yahoo Câmbio e Moedas",
-    "categoria": "Câmbio / Moedas",
-    "Valor": "0,005389"
+    "dataset_label": "Yahoo Commodities",
+    "categoria": "Commodities Globais",
+    "Valor": "82,38"
   },
   {
-    "data_referencia": "2026-09-13",
+    "data_referencia": "2026-09-14",
     "indicador": "ADA-USD",
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "0,2079"
+    "Valor": "0,2083"
   },
   {
-    "data_referencia": "2026-09-13",
+    "data_referencia": "2026-09-14",
     "indicador": "ARSBRL=X",
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "0,003150"
+    "Valor": "0,003160"
   },
   {
-    "data_referencia": "2026-09-13",
+    "data_referencia": "2026-09-14",
     "indicador": "AUDUSD=X",
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "0,7165"
+    "Valor": "0,7143"
   },
   {
-    "data_referencia": "2026-09-13",
+    "data_referencia": "2026-09-14",
     "indicador": "AVAX-USD",
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "7,43"
+    "Valor": "7,45"
   },
   {
-    "data_referencia": "2026-09-13",
+    "data_referencia": "2026-09-14",
     "indicador": "BNB-USD",
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "721,50"
+    "Valor": "721,42"
   },
   {
-    "data_referencia": "2026-09-13",
+    "data_referencia": "2026-09-14",
     "indicador": "BRL=X",
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "5,13"
+    "Valor": "5,15"
   },
   {
-    "data_referencia": "2026-09-13",
+    "data_referencia": "2026-09-14",
     "indicador": "BTC-USD",
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "77.276"
+    "Valor": "78.347"
   },
   {
-    "data_referencia": "2026-09-13",
+    "data_referencia": "2026-09-14",
     "indicador": "CHFBRL=X",
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "6,29"
+    "Valor": "6,30"
   },
   {
-    "data_referencia": "2026-09-13",
+    "data_referencia": "2026-09-14",
+    "indicador": "CLPBRL=X",
+    "fonte": "Yahoo Finance",
+    "dataset_label": "Yahoo Câmbio e Moedas",
+    "categoria": "Câmbio / Moedas",
+    "Valor": "0,005339"
+  },
+  {
+    "data_referencia": "2026-09-14",
     "indicador": "CNYBRL=X",
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "0,7640"
+    "Valor": "0,7666"
   },
   {
-    "data_referencia": "2026-09-13",
+    "data_referencia": "2026-09-14",
     "indicador": "COPBRL=X",
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "0,001664"
+    "Valor": "0,001655"
   },
   {
-    "data_referencia": "2026-09-13",
+    "data_referencia": "2026-09-14",
     "indicador": "DOGE-USD",
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "0,0842"
+    "Valor": "0,0839"
   },
   {
-    "data_referencia": "2026-09-13",
+    "data_referencia": "2026-09-14",
     "indicador": "DOT-USD",
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "1,02"
+    "Valor": "1,01"
   },
   {
-    "data_referencia": "2026-09-13",
+    "data_referencia": "2026-09-14",
     "indicador": "ETH-USD",
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "2.507"
+    "Valor": "2.504"
   },
   {
-    "data_referencia": "2026-09-13",
+    "data_referencia": "2026-09-14",
     "indicador": "EURBRL=X",
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "5,95"
+    "Valor": "5,94"
   },
   {
-    "data_referencia": "2026-09-13",
+    "data_referencia": "2026-09-14",
+    "indicador": "EURUSD=X",
+    "fonte": "Yahoo Finance",
+    "dataset_label": "Yahoo Câmbio e Moedas",
+    "categoria": "Câmbio / Moedas",
+    "Valor": "1,16"
+  },
+  {
+    "data_referencia": "2026-09-14",
+    "indicador": "Estimativa SELIC",
+    "fonte": "ANBIMA",
+    "dataset_label": "ANBIMA Indicadores",
+    "categoria": "Taxa de Juros",
+    "Valor": "13,90"
+  },
+  {
+    "data_referencia": "2026-09-14",
+    "indicador": "GBPBRL=X",
+    "fonte": "Yahoo Finance",
+    "dataset_label": "Yahoo Câmbio e Moedas",
+    "categoria": "Câmbio / Moedas",
+    "Valor": "6,94"
+  },
+  {
+    "data_referencia": "2026-09-14",
     "indicador": "GBPUSD=X",
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
@@ -2198,15 +2102,23 @@
     "Valor": "1,35"
   },
   {
-    "data_referencia": "2026-09-13",
+    "data_referencia": "2026-09-14",
     "indicador": "ICP-USD",
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "2,78"
+    "Valor": "2,73"
   },
   {
-    "data_referencia": "2026-09-13",
+    "data_referencia": "2026-09-14",
+    "indicador": "JPYBRL=X",
+    "fonte": "Yahoo Finance",
+    "dataset_label": "Yahoo Câmbio e Moedas",
+    "categoria": "Câmbio / Moedas",
+    "Valor": "0,0332"
+  },
+  {
+    "data_referencia": "2026-09-14",
     "indicador": "LINK-USD",
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
@@ -2214,39 +2126,39 @@
     "Valor": "11,43"
   },
   {
-    "data_referencia": "2026-09-13",
+    "data_referencia": "2026-09-14",
     "indicador": "LTC-USD",
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "54,87"
+    "Valor": "53,75"
   },
   {
-    "data_referencia": "2026-09-13",
+    "data_referencia": "2026-09-14",
     "indicador": "MXNBRL=X",
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "0,3023"
+    "Valor": "0,3006"
   },
   {
-    "data_referencia": "2026-09-13",
+    "data_referencia": "2026-09-14",
     "indicador": "NEAR-USD",
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "2,33"
+    "Valor": "2,40"
   },
   {
-    "data_referencia": "2026-09-13",
+    "data_referencia": "2026-09-14",
     "indicador": "OP-USD",
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "0,0975"
+    "Valor": "0,0984"
   },
   {
-    "data_referencia": "2026-09-13",
+    "data_referencia": "2026-09-14",
     "indicador": "SHIB-USD",
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
@@ -2254,23 +2166,31 @@
     "Valor": "0,000005"
   },
   {
-    "data_referencia": "2026-09-13",
+    "data_referencia": "2026-09-14",
     "indicador": "SOL-USD",
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "101,13"
+    "Valor": "101,84"
   },
   {
-    "data_referencia": "2026-09-13",
+    "data_referencia": "2026-09-14",
+    "indicador": "TAXA SOFR",
+    "fonte": "B3",
+    "dataset_label": "B3 Indicadores Financeiros",
+    "categoria": "Indicadores B3",
+    "Valor": "3,62"
+  },
+  {
+    "data_referencia": "2026-09-14",
     "indicador": "TRX-USD",
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "0,3413"
+    "Valor": "0,3407"
   },
   {
-    "data_referencia": "2026-09-13",
+    "data_referencia": "2026-09-14",
     "indicador": "USDCAD=X",
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
@@ -2278,23 +2198,23 @@
     "Valor": "1,39"
   },
   {
-    "data_referencia": "2026-09-13",
+    "data_referencia": "2026-09-14",
     "indicador": "USDCHF=X",
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "0,8156"
+    "Valor": "0,8173"
   },
   {
-    "data_referencia": "2026-09-13",
+    "data_referencia": "2026-09-14",
     "indicador": "USDCNY=X",
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "6,71"
+    "Valor": "6,70"
   },
   {
-    "data_referencia": "2026-09-13",
+    "data_referencia": "2026-09-14",
     "indicador": "USDINR=X",
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
@@ -2302,27 +2222,99 @@
     "Valor": "95,54"
   },
   {
-    "data_referencia": "2026-09-13",
+    "data_referencia": "2026-09-14",
+    "indicador": "USDJPY=X",
+    "fonte": "Yahoo Finance",
+    "dataset_label": "Yahoo Câmbio e Moedas",
+    "categoria": "Câmbio / Moedas",
+    "Valor": "154,42"
+  },
+  {
+    "data_referencia": "2026-09-14",
     "indicador": "USDMXN=X",
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "16,96"
+    "Valor": "17,11"
   },
   {
-    "data_referencia": "2026-09-13",
+    "data_referencia": "2026-09-14",
     "indicador": "XLM-USD",
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "0,1797"
+    "Valor": "0,1923"
   },
   {
-    "data_referencia": "2026-09-13",
+    "data_referencia": "2026-09-14",
     "indicador": "XRP-USD",
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "1,36"
+    "Valor": "1,40"
+  },
+  {
+    "data_referencia": "2026-09-14",
+    "indicador": "^AXJO",
+    "fonte": "Yahoo Finance",
+    "dataset_label": "Yahoo Índices Globais",
+    "categoria": "Índices de Ações Globais",
+    "Valor": "8.741"
+  },
+  {
+    "data_referencia": "2026-09-14",
+    "indicador": "^HSI",
+    "fonte": "Yahoo Finance",
+    "dataset_label": "Yahoo Índices Globais",
+    "categoria": "Índices de Ações Globais",
+    "Valor": "24.918"
+  },
+  {
+    "data_referencia": "2026-09-14",
+    "indicador": "^JKSE",
+    "fonte": "Yahoo Finance",
+    "dataset_label": "Yahoo Índices Globais",
+    "categoria": "Índices de Ações Globais",
+    "Valor": "6.535"
+  },
+  {
+    "data_referencia": "2026-09-14",
+    "indicador": "^KLSE",
+    "fonte": "Yahoo Finance",
+    "dataset_label": "Yahoo Índices Globais",
+    "categoria": "Índices de Ações Globais",
+    "Valor": "1.698"
+  },
+  {
+    "data_referencia": "2026-09-14",
+    "indicador": "^KS11",
+    "fonte": "Yahoo Finance",
+    "dataset_label": "Yahoo Índices Globais",
+    "categoria": "Índices de Ações Globais",
+    "Valor": "6.910"
+  },
+  {
+    "data_referencia": "2026-09-14",
+    "indicador": "^N225",
+    "fonte": "Yahoo Finance",
+    "dataset_label": "Yahoo Índices Globais",
+    "categoria": "Índices de Ações Globais",
+    "Valor": "64.011"
+  },
+  {
+    "data_referencia": "2026-09-14",
+    "indicador": "^STI",
+    "fonte": "Yahoo Finance",
+    "dataset_label": "Yahoo Índices Globais",
+    "categoria": "Índices de Ações Globais",
+    "Valor": "5.718"
+  },
+  {
+    "data_referencia": "2026-09-14",
+    "indicador": "^TWII",
+    "fonte": "Yahoo Finance",
+    "dataset_label": "Yahoo Índices Globais",
+    "categoria": "Índices de Ações Globais",
+    "Valor": "45.863"
   }
 ]
