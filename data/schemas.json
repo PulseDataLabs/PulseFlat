@@ -16,7 +16,7 @@
       },
       {
         "name": "vertice_du",
-        "type": "str",
+        "type": "int",
         "example": "1008"
       },
       {
@@ -68,7 +68,7 @@
       },
       {
         "name": "valor",
-        "type": "str",
+        "type": "float",
         "example": "14.40"
       },
       {
@@ -100,32 +100,32 @@
       },
       {
         "name": "numero_indice",
-        "type": "int",
+        "type": "float",
         "example": "11504.40986"
       },
       {
         "name": "variacao_diaria",
-        "type": "str",
+        "type": "float",
         "example": "-0.0693"
       },
       {
         "name": "variacao_mensal",
-        "type": "str",
+        "type": "float",
         "example": "0.312"
       },
       {
         "name": "variacao_anual",
-        "type": "str",
+        "type": "float",
         "example": "5.1767"
       },
       {
         "name": "variacao_ultimos_12_meses",
-        "type": "str",
+        "type": "float",
         "example": "10.8199"
       },
       {
         "name": "variacao_ultimos_24_meses",
-        "type": "str",
+        "type": "float",
         "example": "16.276"
       },
       {
@@ -135,37 +135,37 @@
       },
       {
         "name": "peso_geral",
-        "type": "str",
+        "type": "float",
         "example": "23.87"
       },
       {
         "name": "carteira_a_mercado_rs_mil",
-        "type": "str",
+        "type": "int",
         "example": "1940705683"
       },
       {
         "name": "numero_operacoes",
-        "type": "int",
+        "type": "float",
         "example": "2512.0"
       },
       {
         "name": "quant_negociada_1000_titulos",
-        "type": "str",
+        "type": "float",
         "example": "6137.88"
       },
       {
         "name": "valor_negociado_rs_mil",
-        "type": "str",
+        "type": "float",
         "example": "26806027.91"
       },
       {
         "name": "pmr",
-        "type": "str",
+        "type": "float",
         "example": "2943.068524684"
       },
       {
         "name": "convexidade",
-        "type": "str",
+        "type": "float",
         "example": "78.3488173998501"
       },
       {
@@ -176,7 +176,7 @@
       {
         "name": "redemption_yield",
         "type": "float",
-        "example": ""
+        "example": "7.60533922076321"
       }
     ]
   },
@@ -263,7 +263,7 @@
       {
         "name": "pct_reune",
         "type": "float",
-        "example": ""
+        "example": "5"
       },
       {
         "name": "ref_ntnb",
@@ -294,32 +294,32 @@
       },
       {
         "name": "numero_indice",
-        "type": "int",
+        "type": "float",
         "example": "2410.148638"
       },
       {
         "name": "variacao_diaria",
-        "type": "str",
+        "type": "float",
         "example": "0.016"
       },
       {
         "name": "variacao_mensal",
-        "type": "str",
+        "type": "float",
         "example": "0.016"
       },
       {
         "name": "variacao_anual",
-        "type": "str",
+        "type": "float",
         "example": "0.016"
       },
       {
         "name": "variacao_ult12m",
-        "type": "str",
+        "type": "float",
         "example": "5.5839"
       },
       {
         "name": "variacao_ult24m",
-        "type": "str",
+        "type": "float",
         "example": "13.3955"
       },
       {
@@ -329,12 +329,12 @@
       },
       {
         "name": "peso",
-        "type": "str",
+        "type": "float",
         "example": "61.02"
       },
       {
         "name": "valor_mercado",
-        "type": "str",
+        "type": "float",
         "example": "95525.55"
       }
     ]
@@ -396,7 +396,7 @@
       },
       {
         "name": "quantidade_indice",
-        "type": "int",
+        "type": "float",
         "example": "29140.881"
       },
       {
@@ -478,7 +478,7 @@
       },
       {
         "name": "peso",
-        "type": "str",
+        "type": "float",
         "example": "0.27"
       },
       {
@@ -510,32 +510,32 @@
       },
       {
         "name": "numero_indice",
-        "type": "int",
+        "type": "float",
         "example": "7631.309292"
       },
       {
         "name": "variacao_diaria",
-        "type": "str",
+        "type": "float",
         "example": "-0.0992"
       },
       {
         "name": "variacao_mensal",
-        "type": "str",
+        "type": "float",
         "example": "-0.0992"
       },
       {
         "name": "variacao_anual",
-        "type": "str",
+        "type": "float",
         "example": "-0.0992"
       },
       {
         "name": "variacao_ult12m",
-        "type": "str",
+        "type": "float",
         "example": "22.2961"
       },
       {
         "name": "variacao_ult24m",
-        "type": "str",
+        "type": "float",
         "example": "38.1592"
       },
       {
@@ -545,7 +545,7 @@
       },
       {
         "name": "pmr",
-        "type": "str",
+        "type": "float",
         "example": "3705.62"
       },
       {
@@ -560,17 +560,17 @@
       },
       {
         "name": "convexidade",
-        "type": "str",
+        "type": "float",
         "example": "155.7384"
       },
       {
         "name": "peso_indice",
-        "type": "str",
+        "type": "float",
         "example": "27.5102"
       },
       {
         "name": "valor_mercado",
-        "type": "str",
+        "type": "float",
         "example": "1182669110.93"
       }
     ]
@@ -622,7 +622,7 @@
       },
       {
         "name": "valor",
-        "type": "str",
+        "type": "float",
         "example": "0.0016"
       },
       {
@@ -669,7 +669,7 @@
       },
       {
         "name": "valor_pct",
-        "type": "str",
+        "type": "float",
         "example": "0.40"
       },
       {
@@ -726,7 +726,7 @@
       },
       {
         "name": "variacao_projetada",
-        "type": "str",
+        "type": "float",
         "example": "0.95"
       }
     ]
@@ -840,7 +840,7 @@
       },
       {
         "name": "ordem",
-        "type": "str",
+        "type": "int",
         "example": "1"
       },
       {
@@ -850,283 +850,283 @@
       },
       {
         "name": "total_global_ativos",
-        "type": "str",
+        "type": "float",
         "example": "1870538.713"
       },
       {
         "name": "clubes_carteiras_administradas_ativos",
-        "type": "str",
+        "type": "float",
         "example": "15719.603"
       },
       {
         "name": "clubes_carteiras_administradas_cotas_fundos_proprios",
-        "type": "str",
+        "type": "float",
         "example": "34214.036"
       },
       {
         "name": "clubes_carteiras_administradas_cotas_fundos_terceiros",
-        "type": "str",
+        "type": "float",
         "example": "205.953"
       },
       {
         "name": "fundos_em_cotas_ativos",
-        "type": "str",
+        "type": "float",
         "example": "760.206"
       },
       {
         "name": "fundos_em_cotas_cotas_fundos_proprios",
-        "type": "str",
+        "type": "float",
         "example": "1277321.479"
       },
       {
         "name": "fundos_em_cotas_cotas_fundos_terceiros",
-        "type": "str",
+        "type": "float",
         "example": "41231.283"
       },
       {
         "name": "fundos_investimento_ativos",
-        "type": "str",
+        "type": "float",
         "example": "1854058.904"
       },
       {
         "name": "fundos_investimento_cotas_fundos_proprios",
-        "type": "str",
+        "type": "float",
         "example": "25848.88"
       },
       {
         "name": "fundos_investimento_cotas_fundos_terceiros",
-        "type": "str",
+        "type": "float",
         "example": "10043.507"
       },
       {
         "name": "sub_total_k",
-        "type": "str",
+        "type": "float",
         "example": "3259403.851"
       },
       {
         "name": "dupla_contagem_l",
-        "type": "str",
+        "type": "float",
         "example": "1388865.138"
       },
       {
         "name": "origem_recursos_do_grupo",
-        "type": "str",
+        "type": "float",
         "example": "1.349"
       },
       {
         "name": "origem_recursos_clientes",
-        "type": "str",
+        "type": "float",
         "example": "1870537.364"
       },
       {
         "name": "total_global_ativos_nan",
-        "type": "str",
-        "example": ""
+        "type": "float",
+        "example": "1870538.713"
       },
       {
         "name": "investidor_efpc_emp_publicas",
-        "type": "str",
-        "example": ""
+        "type": "float",
+        "example": "226544.149"
       },
       {
         "name": "investidor_efpc_emp_privadas",
-        "type": "str",
-        "example": ""
+        "type": "float",
+        "example": "5417.38"
       },
       {
         "name": "investidor_seguradora",
-        "type": "str",
-        "example": ""
+        "type": "float",
+        "example": "8651.226"
       },
       {
         "name": "investidor_eapc",
-        "type": "str",
-        "example": ""
+        "type": "float",
+        "example": "466445.899"
       },
       {
         "name": "investidor_capitalizacao",
-        "type": "str",
-        "example": ""
+        "type": "float",
+        "example": "12335.933"
       },
       {
         "name": "investidor_corporate",
-        "type": "str",
-        "example": ""
+        "type": "float",
+        "example": "150365.08"
       },
       {
         "name": "investidor_middle_market",
-        "type": "str",
-        "example": ""
+        "type": "float",
+        "example": "30825.296"
       },
       {
         "name": "investidor_private",
-        "type": "str",
-        "example": ""
+        "type": "float",
+        "example": "64113.667"
       },
       {
         "name": "investidor_varejo_alta_renda",
-        "type": "str",
-        "example": ""
+        "type": "float",
+        "example": "143603.123"
       },
       {
         "name": "investidor_varejo",
-        "type": "str",
-        "example": ""
+        "type": "float",
+        "example": "103305.111"
       },
       {
         "name": "investidor_poder_publico",
-        "type": "str",
-        "example": ""
+        "type": "float",
+        "example": "551736.198"
       },
       {
         "name": "investidor_rpps",
-        "type": "str",
-        "example": ""
+        "type": "float",
+        "example": "103590.605"
       },
       {
         "name": "investidor_fundos_investimento",
-        "type": "str",
-        "example": ""
+        "type": "float",
+        "example": "3016.556"
       },
       {
         "name": "investidor_estrangeiros",
-        "type": "str",
-        "example": ""
+        "type": "float",
+        "example": "309.343"
       },
       {
         "name": "investidor_por_conta_ordem",
-        "type": "str",
-        "example": ""
+        "type": "float",
+        "example": "279.124"
       },
       {
         "name": "investidor_outros",
-        "type": "str",
-        "example": ""
+        "type": "float",
+        "example": "0.023"
       },
       {
         "name": "renda_fixa_oper_compromissada_tit_publicos_federais",
-        "type": "str",
-        "example": ""
+        "type": "float",
+        "example": "605985.471"
       },
       {
         "name": "renda_fixa_oper_compromissada_tit_estaduais_municipais_privados",
-        "type": "str",
-        "example": ""
+        "type": "float",
+        "example": "0.0"
       },
       {
         "name": "renda_fixa_tit_publicos_federais",
-        "type": "str",
-        "example": ""
+        "type": "float",
+        "example": "959885.377"
       },
       {
         "name": "renda_fixa_cdb_rdb",
-        "type": "str",
-        "example": ""
+        "type": "float",
+        "example": "22372.049"
       },
       {
         "name": "renda_fixa_notas_promissorias",
-        "type": "str",
-        "example": ""
+        "type": "float",
+        "example": "1140.52"
       },
       {
         "name": "renda_fixa_debentures",
-        "type": "str",
-        "example": ""
+        "type": "float",
+        "example": "74414.282"
       },
       {
         "name": "renda_fixa_direitos_creditorios",
-        "type": "str",
-        "example": ""
+        "type": "float",
+        "example": "60900.999"
       },
       {
         "name": "renda_fixa_dpge",
-        "type": "str",
-        "example": ""
+        "type": "float",
+        "example": "446.456"
       },
       {
         "name": "renda_fixa_ccb_cccb",
-        "type": "str",
-        "example": ""
+        "type": "float",
+        "example": "0.0"
       },
       {
         "name": "renda_fixa_titulos_imobiliarios",
-        "type": "str",
-        "example": ""
+        "type": "float",
+        "example": "1210.836"
       },
       {
         "name": "renda_fixa_letras_financeiras",
-        "type": "str",
-        "example": ""
+        "type": "float",
+        "example": "108144.485"
       },
       {
         "name": "renda_fixa_investimento_exterior",
-        "type": "str",
-        "example": ""
+        "type": "float",
+        "example": "11734.361"
       },
       {
         "name": "renda_fixa_outros",
-        "type": "str",
-        "example": ""
+        "type": "float",
+        "example": "1229.706"
       },
       {
         "name": "renda_fixa_sub_total",
-        "type": "str",
-        "example": ""
+        "type": "float",
+        "example": "1847464.542"
       },
       {
         "name": "renda_variavel_acoes",
-        "type": "str",
-        "example": ""
+        "type": "float",
+        "example": "20339.102"
       },
       {
         "name": "renda_variavel_opcoes",
-        "type": "str",
-        "example": ""
+        "type": "float",
+        "example": "-3.184"
       },
       {
         "name": "renda_variavel_outros",
-        "type": "str",
-        "example": ""
+        "type": "float",
+        "example": "2738.253"
       },
       {
         "name": "renda_variavel_sub_total",
-        "type": "str",
-        "example": ""
+        "type": "float",
+        "example": "23074.171"
       },
       {
         "name": "clientes_clubes_investimento",
-        "type": "str",
-        "example": ""
+        "type": "float",
+        "example": "2320.0"
       },
       {
         "name": "clientes_carteiras_administradas",
-        "type": "str",
-        "example": ""
+        "type": "float",
+        "example": "6.0"
       },
       {
         "name": "clientes_fundos_em_cotas",
-        "type": "str",
-        "example": ""
+        "type": "float",
+        "example": "2853179.0"
       },
       {
         "name": "clientes_fundos_investimento",
-        "type": "str",
-        "example": ""
+        "type": "float",
+        "example": "463694.0"
       },
       {
         "name": "clientes_sub_total",
-        "type": "str",
-        "example": ""
+        "type": "float",
+        "example": "3319199.0"
       },
       {
         "name": "clientes_dupla_contagem",
-        "type": "str",
-        "example": ""
+        "type": "float",
+        "example": "212679.0"
       },
       {
         "name": "clientes_total",
-        "type": "str",
-        "example": ""
+        "type": "float",
+        "example": "3106520.0"
       }
     ]
   },
@@ -1180,17 +1180,17 @@
       {
         "name": "derivativo",
         "type": "str",
-        "example": ""
+        "example": "ABEVO: CONTRATO FUTURO DE ABEV3"
       },
       {
         "name": "tipo_contrato",
         "type": "str",
-        "example": ""
+        "example": "FUTURO"
       },
       {
         "name": "ticker_simb",
         "type": "str",
-        "example": ""
+        "example": "ABEVO: CONTRATO FUTURO DE ABEV3 - FUTURO"
       },
       {
         "name": "quantidade_negocios",
@@ -1204,12 +1204,12 @@
       },
       {
         "name": "volume_financeiro_brl",
-        "type": "str",
+        "type": "int",
         "example": "1873116749"
       },
       {
         "name": "volume_financeiro_usd",
-        "type": "str",
+        "type": "int",
         "example": "361085380"
       }
     ]
@@ -1241,12 +1241,12 @@
       },
       {
         "name": "vna",
-        "type": "str",
+        "type": "float",
         "example": "10471.890903"
       },
       {
         "name": "index",
-        "type": "str",
+        "type": "float",
         "example": "4.4"
       },
       {
@@ -1278,22 +1278,22 @@
       },
       {
         "name": "number_of_operations",
-        "type": "str",
+        "type": "float",
         "example": "3"
       },
       {
         "name": "financial_volume",
-        "type": "str",
+        "type": "int",
         "example": "2646973"
       },
       {
         "name": "average",
-        "type": "str",
+        "type": "float",
         "example": "14.4"
       },
       {
         "name": "daily_factor",
-        "type": "str",
+        "type": "float",
         "example": "1.000534"
       },
       {
@@ -1356,12 +1356,12 @@
       {
         "name": "taxa_compra",
         "type": "float",
-        "example": ""
+        "example": "4.3533"
       },
       {
         "name": "taxa_venda",
         "type": "float",
-        "example": ""
+        "example": "4.3397"
       },
       {
         "name": "pu",
@@ -1437,7 +1437,7 @@
       },
       {
         "name": "participacao_pct",
-        "type": "str",
+        "type": "float",
         "example": "3.895"
       },
       {
@@ -1489,7 +1489,7 @@
       },
       {
         "name": "base",
-        "type": "str",
+        "type": "int",
         "example": "252"
       }
     ]
@@ -1536,7 +1536,7 @@
       },
       {
         "name": "participacao_pct",
-        "type": "str",
+        "type": "float",
         "example": "0.159"
       },
       {
@@ -1593,7 +1593,7 @@
       },
       {
         "name": "vertice_meses",
-        "type": "str",
+        "type": "int",
         "example": "1"
       },
       {
@@ -1655,7 +1655,7 @@
       },
       {
         "name": "participacao_pct",
-        "type": "str",
+        "type": "float",
         "example": "6.731"
       },
       {
@@ -1712,7 +1712,7 @@
       },
       {
         "name": "participacao_pct",
-        "type": "str",
+        "type": "float",
         "example": "0.547"
       },
       {
@@ -1769,7 +1769,7 @@
       },
       {
         "name": "participacao_pct",
-        "type": "str",
+        "type": "float",
         "example": "0.555"
       },
       {
@@ -1826,12 +1826,12 @@
       },
       {
         "name": "serie",
-        "type": "str",
+        "type": "int",
         "example": "135"
       },
       {
         "name": "emissao",
-        "type": "str",
+        "type": "int",
         "example": "1"
       },
       {
@@ -1857,12 +1857,12 @@
       {
         "name": "taxa_compra",
         "type": "float",
-        "example": ""
+        "example": "112.5333"
       },
       {
         "name": "taxa_venda",
         "type": "float",
-        "example": ""
+        "example": "106.2666"
       },
       {
         "name": "pu",
@@ -1923,12 +1923,12 @@
       },
       {
         "name": "quantidade_teorica",
-        "type": "int",
+        "type": "str",
         "example": "76369069"
       },
       {
         "name": "participacao_pct",
-        "type": "str",
+        "type": "float",
         "example": "0.426"
       },
       {
@@ -1985,7 +1985,7 @@
       },
       {
         "name": "participacao_pct",
-        "type": "str",
+        "type": "float",
         "example": "0.364"
       },
       {
@@ -2094,12 +2094,12 @@
       },
       {
         "name": "oferta_compra",
-        "type": "str",
+        "type": "float",
         "example": "103.23"
       },
       {
         "name": "oferta_venda",
-        "type": "str",
+        "type": "float",
         "example": "103.52"
       },
       {
@@ -2109,12 +2109,12 @@
       },
       {
         "name": "negocios",
-        "type": "str",
+        "type": "int",
         "example": "136"
       },
       {
         "name": "volume",
-        "type": "str",
+        "type": "float",
         "example": "191958.12"
       }
     ]
@@ -2161,7 +2161,7 @@
       },
       {
         "name": "participacao_pct",
-        "type": "str",
+        "type": "float",
         "example": "0.504"
       },
       {
@@ -2283,7 +2283,7 @@
       },
       {
         "name": "strike_price_adjustment_indicator",
-        "type": "str",
+        "type": "int",
         "example": "0"
       },
       {
@@ -2340,7 +2340,7 @@
       },
       {
         "name": "numero_indice",
-        "type": "int",
+        "type": "float",
         "example": "532.621995"
       },
       {
@@ -2365,7 +2365,7 @@
       },
       {
         "name": "variacao_diaria",
-        "type": "str",
+        "type": "float",
         "example": "0.0708"
       },
       {
@@ -2480,7 +2480,7 @@
       {
         "name": "security_identification_code",
         "type": "str",
-        "example": ""
+        "example": "10014464"
       },
       {
         "name": "description",
@@ -2490,12 +2490,12 @@
       {
         "name": "group_description",
         "type": "str",
-        "example": ""
+        "example": "TAXAS DE CÂMBIO"
       },
       {
         "name": "valor",
-        "type": "str",
-        "example": ""
+        "type": "float",
+        "example": "5.0152"
       },
       {
         "name": "taxa",
@@ -2505,7 +2505,7 @@
       {
         "name": "last_update",
         "type": "date",
-        "example": ""
+        "example": "2026-06-01"
       },
       {
         "name": "data_referencia",
@@ -2619,7 +2619,7 @@
       {
         "name": "isin",
         "type": "str",
-        "example": ""
+        "example": "BRSBSPDBS1J8"
       },
       {
         "name": "emissor",
@@ -2633,8 +2633,8 @@
       },
       {
         "name": "emissao",
-        "type": "str",
-        "example": ""
+        "type": "int",
+        "example": "26"
       },
       {
         "name": "data_emissao",
@@ -2663,7 +2663,7 @@
       },
       {
         "name": "qtd_negociada",
-        "type": "str",
+        "type": "int",
         "example": "29"
       },
       {
@@ -2720,7 +2720,7 @@
       },
       {
         "name": "limite_quantidade",
-        "type": "int",
+        "type": "float",
         "example": "12453000.0"
       }
     ]
@@ -2747,22 +2747,22 @@
       },
       {
         "name": "total_series",
-        "type": "str",
+        "type": "int",
         "example": "2671"
       },
       {
         "name": "posicao_aberta_call",
-        "type": "str",
+        "type": "int",
         "example": "518560200"
       },
       {
         "name": "posicao_aberta_put",
-        "type": "str",
+        "type": "float",
         "example": "538407900"
       },
       {
         "name": "posicao_aberta_total",
-        "type": "str",
+        "type": "int",
         "example": "1056968100"
       },
       {
@@ -2772,27 +2772,27 @@
       },
       {
         "name": "posicao_coberta",
-        "type": "str",
+        "type": "int",
         "example": "25887077"
       },
       {
         "name": "posicao_descoberta",
-        "type": "str",
+        "type": "int",
         "example": "652999939"
       },
       {
         "name": "posicao_trava",
-        "type": "str",
+        "type": "int",
         "example": "378081084"
       },
       {
         "name": "strike_max_oi_call",
-        "type": "str",
+        "type": "float",
         "example": "36.67"
       },
       {
         "name": "strike_max_oi_put",
-        "type": "str",
+        "type": "float",
         "example": "36.67"
       }
     ]
@@ -2991,7 +2991,7 @@
       },
       {
         "name": "participacao_pct",
-        "type": "str",
+        "type": "float",
         "example": "0.559"
       },
       {
@@ -3063,32 +3063,32 @@
       },
       {
         "name": "posicao_coberta",
-        "type": "str",
+        "type": "int",
         "example": "130"
       },
       {
         "name": "posicao_trava",
-        "type": "str",
+        "type": "int",
         "example": "0"
       },
       {
         "name": "posicao_descoberta",
-        "type": "str",
+        "type": "int",
         "example": "20"
       },
       {
         "name": "posicao_total",
-        "type": "str",
+        "type": "int",
         "example": "150"
       },
       {
         "name": "clientes_titulares",
-        "type": "str",
+        "type": "int",
         "example": "1"
       },
       {
         "name": "clientes_lancadores",
-        "type": "str",
+        "type": "int",
         "example": "1"
       }
     ]
@@ -3152,32 +3152,32 @@
       },
       {
         "name": "valor_mercado_brl",
-        "type": "str",
+        "type": "float",
         "example": "4629016412715.7"
       },
       {
         "name": "valor_mercado_brl_anterior",
-        "type": "str",
+        "type": "float",
         "example": "4695973448451.21"
       },
       {
         "name": "variacao_brl_pct",
-        "type": "str",
+        "type": "float",
         "example": "-1.43"
       },
       {
         "name": "valor_mercado_usd",
-        "type": "str",
+        "type": "float",
         "example": "893356571853.42"
       },
       {
         "name": "valor_mercado_usd_anterior",
-        "type": "str",
+        "type": "float",
         "example": "924895800612.77"
       },
       {
         "name": "variacao_usd_pct",
-        "type": "str",
+        "type": "float",
         "example": "-3.41"
       }
     ]
@@ -3214,32 +3214,32 @@
       },
       {
         "name": "valor_mercado_brl",
-        "type": "str",
+        "type": "float",
         "example": "619471308283.36"
       },
       {
         "name": "valor_mercado_brl_anterior",
-        "type": "str",
+        "type": "float",
         "example": "601454116849.46"
       },
       {
         "name": "variacao_brl_pct",
-        "type": "str",
+        "type": "float",
         "example": "3.0"
       },
       {
         "name": "valor_mercado_usd",
-        "type": "str",
+        "type": "float",
         "example": "119552128354.82"
       },
       {
         "name": "valor_mercado_usd_anterior",
-        "type": "str",
+        "type": "float",
         "example": "118459440420.98"
       },
       {
         "name": "variacao_usd_pct",
-        "type": "str",
+        "type": "float",
         "example": "0.92"
       }
     ]
@@ -3257,12 +3257,12 @@
       {
         "name": "cod_indicador",
         "type": "str",
-        "example": ""
+        "example": "\u0002"
       },
       {
         "name": "compl_transacao",
         "type": "str",
-        "example": ""
+        "example": "\u000f\u000f\u0010"
       },
       {
         "name": "data_geracao_arquivo",
@@ -3272,7 +3272,7 @@
       {
         "name": "grupo_indicador",
         "type": "str",
-        "example": ""
+        "example": "bV"
       },
       {
         "name": "id_transacao",
@@ -3282,22 +3282,22 @@
       {
         "name": "num_casas_decimais",
         "type": "str",
-        "example": ""
+        "example": "bW"
       },
       {
         "name": "reserva",
         "type": "str",
-        "example": ""
+        "example": "\u0010"
       },
       {
         "name": "tipo_registro",
         "type": "str",
-        "example": ""
+        "example": "\u0001"
       },
       {
         "name": "valor_indicador",
         "type": "str",
-        "example": ""
+        "example": "\u0014\u0014\u0014\u0014\u0014\u0014\u0014\u0014\u0014\u0014\u0015\u0015\u0015\u0015\u0015\u0015\u0015\u0015\u0015\u0015\u0015\u0015\u0015\u0015\u0015"
       }
     ]
   },
@@ -3318,7 +3318,7 @@
       },
       {
         "name": "total_empresas_termo",
-        "type": "str",
+        "type": "int",
         "example": "327"
       },
       {
@@ -3333,7 +3333,7 @@
       },
       {
         "name": "valor_contratos",
-        "type": "str",
+        "type": "float",
         "example": "4769007284.69"
       }
     ]
@@ -3365,7 +3365,7 @@
       },
       {
         "name": "CNPJ PARTICIPANTE",
-        "type": "str",
+        "type": "date",
         "example": "2431-31-02"
       },
       {
@@ -3432,7 +3432,7 @@
       },
       {
         "name": "valor_contratos",
-        "type": "str",
+        "type": "float",
         "example": "73508.6"
       },
       {
@@ -3459,12 +3459,12 @@
       },
       {
         "name": "documento",
-        "type": "str",
+        "type": "int",
         "example": "4010"
       },
       {
         "name": "cnpj",
-        "type": "str",
+        "type": "date",
         "example": "0000-00-00"
       },
       {
@@ -3573,12 +3573,12 @@
       },
       {
         "name": "cotacao_compra",
-        "type": "str",
+        "type": "float",
         "example": "4.0207"
       },
       {
         "name": "cotacao_venda",
-        "type": "str",
+        "type": "float",
         "example": "4.0213"
       }
     ]
@@ -3661,7 +3661,7 @@
       {
         "name": "ddd_fax_resp",
         "type": "str",
-        "example": ""
+        "example": "21"
       },
       {
         "name": "ddd_tel",
@@ -3736,7 +3736,7 @@
       {
         "name": "fax_resp",
         "type": "str",
-        "example": ""
+        "example": "2233-88-67"
       },
       {
         "name": "logradouro",
@@ -3751,7 +3751,7 @@
       {
         "name": "motivo_cancel",
         "type": "str",
-        "example": ""
+        "example": "CANCELAMENTO VOLUNTÁRIO"
       },
       {
         "name": "mun",
@@ -3811,7 +3811,7 @@
       {
         "name": "tp_merc",
         "type": "str",
-        "example": ""
+        "example": "BOLSA"
       },
       {
         "name": "tp_resp",
@@ -3857,22 +3857,22 @@
       },
       {
         "name": "emissao",
-        "type": "str",
+        "type": "date",
         "example": "2014-01-17"
       },
       {
         "name": "vencimento",
-        "type": "str",
+        "type": "date",
         "example": "2020-03-01"
       },
       {
         "name": "num_de_oper",
-        "type": "str",
+        "type": "int",
         "example": "7"
       },
       {
         "name": "quant_negociada",
-        "type": "str",
+        "type": "int",
         "example": "534"
       },
       {
@@ -3883,17 +3883,17 @@
       {
         "name": "pu_min",
         "type": "float",
-        "example": ""
+        "example": "10471.73351100"
       },
       {
         "name": "pu_med",
         "type": "float",
-        "example": ""
+        "example": "10471.81220700"
       },
       {
         "name": "pu_max",
         "type": "float",
-        "example": ""
+        "example": "10471.89090300"
       },
       {
         "name": "pu_lastro",
@@ -3902,32 +3902,32 @@
       },
       {
         "name": "valor_par",
-        "type": "str",
+        "type": "float",
         "example": "10471.89090300"
       },
       {
         "name": "taxa_min",
         "type": "float",
-        "example": ""
+        "example": "0.0000"
       },
       {
         "name": "taxa_med",
         "type": "float",
-        "example": ""
+        "example": "0.0012"
       },
       {
         "name": "taxa_max",
         "type": "float",
-        "example": ""
+        "example": "0.0024"
       },
       {
         "name": "num_oper_com_corretagem",
-        "type": "str",
+        "type": "int",
         "example": "7"
       },
       {
         "name": "quant_neg_com_corretagem",
-        "type": "str",
+        "type": "int",
         "example": "534"
       },
       {
@@ -4004,7 +4004,7 @@
       },
       {
         "name": "tipo_controle",
-        "type": "str",
+        "type": "int",
         "example": "2"
       },
       {
@@ -4015,7 +4015,7 @@
       {
         "name": "atividade",
         "type": "str",
-        "example": ""
+        "example": "Crédito Atacado"
       },
       {
         "name": "uf",
@@ -4071,7 +4071,7 @@
       },
       {
         "name": "valor",
-        "type": "str",
+        "type": "float",
         "example": "0.017089"
       }
     ]
@@ -4104,7 +4104,7 @@
       {
         "name": "ipo",
         "type": "str",
-        "example": "-"
+        "example": "Não"
       },
       {
         "name": "situacao",
@@ -4149,7 +4149,7 @@
       {
         "name": "motivo_de_saida",
         "type": "str",
-        "example": ""
+        "example": "15/10/2003 - VENCIMENTO ANTECIPADO"
       },
       {
         "name": "data_de_saida_novo_vencimento",
@@ -4184,7 +4184,7 @@
       {
         "name": "ato_societario_2",
         "type": "str",
-        "example": ""
+        "example": "RCA"
       },
       {
         "name": "data_do_ato_2",
@@ -4208,57 +4208,57 @@
       },
       {
         "name": "quantidade_emitida",
-        "type": "int",
+        "type": "str",
         "example": "100000"
       },
       {
         "name": "artigo_14",
-        "type": "str",
-        "example": ""
+        "type": "int",
+        "example": "0"
       },
       {
         "name": "artigo_24",
-        "type": "str",
-        "example": ""
+        "type": "int",
+        "example": "0"
       },
       {
         "name": "quantidade_em_mercado",
-        "type": "int",
+        "type": "str",
         "example": "000000100000"
       },
       {
         "name": "quantidade_em_tesouraria",
-        "type": "int",
+        "type": "str",
         "example": "000000000000"
       },
       {
         "name": "quantidade_resgatada",
-        "type": "int",
+        "type": "str",
         "example": "000000000000"
       },
       {
         "name": "quantidade_cancelada",
-        "type": "int",
-        "example": ""
+        "type": "str",
+        "example": "000000000000"
       },
       {
         "name": "quantidade_convertida_no_snd",
-        "type": "int",
-        "example": ""
+        "type": "str",
+        "example": "000000000000"
       },
       {
         "name": "quantidade_convertida_fora_do_snd",
-        "type": "int",
+        "type": "str",
         "example": "000000000000"
       },
       {
         "name": "quantidade_permutada_no_snd",
-        "type": "int",
-        "example": ""
+        "type": "str",
+        "example": "000000000000"
       },
       {
         "name": "quantidade_permutada_fora_do_snd",
-        "type": "int",
+        "type": "str",
         "example": "000000000000"
       },
       {
@@ -4273,7 +4273,7 @@
       },
       {
         "name": "valor_nominal_atual",
-        "type": "str",
+        "type": "float",
         "example": "800"
       },
       {
@@ -4289,7 +4289,7 @@
       {
         "name": "tipo",
         "type": "str",
-        "example": ""
+        "example": "Correção Monetária"
       },
       {
         "name": "criterio_de_calculo",
@@ -4298,13 +4298,13 @@
       },
       {
         "name": "dia_de_referencia_para_indice_de_precos",
-        "type": "float",
-        "example": ""
+        "type": "str",
+        "example": "00"
       },
       {
         "name": "criterio_para_indice",
         "type": "str",
-        "example": "-"
+        "example": "DC"
       },
       {
         "name": "corrige_a_cada",
@@ -4313,12 +4313,12 @@
       },
       {
         "name": "percentual_multiplicador_rentabilidade",
-        "type": "str",
+        "type": "float",
         "example": "100"
       },
       {
         "name": "limite_da_tjlp",
-        "type": "str",
+        "type": "int",
         "example": "0"
       },
       {
@@ -4329,7 +4329,7 @@
       {
         "name": "juros_criterio_antigo_do_snd",
         "type": "str",
-        "example": "-"
+        "example": "3.5% a.a 252 dias"
       },
       {
         "name": "premios_criterio_antigo_do_snd",
@@ -4339,7 +4339,7 @@
       {
         "name": "amortizacao_taxa",
         "type": "float",
-        "example": "-"
+        "example": "50"
       },
       {
         "name": "amortizacao_cada",
@@ -4353,7 +4353,7 @@
       },
       {
         "name": "amortizacao_carencia",
-        "type": "str",
+        "type": "date",
         "example": "2026-06-25"
       },
       {
@@ -4388,7 +4388,7 @@
       },
       {
         "name": "juros_criterio_novo_carencia",
-        "type": "str",
+        "type": "date",
         "example": "2026-06-25"
       },
       {
@@ -4404,12 +4404,12 @@
       {
         "name": "premio_criterio_novo_taxa",
         "type": "float",
-        "example": ""
+        "example": "0"
       },
       {
         "name": "premio_criterio_novo_prazo",
         "type": "str",
-        "example": "-"
+        "example": "000"
       },
       {
         "name": "premio_criterio_novo_cada",
@@ -4419,7 +4419,7 @@
       {
         "name": "premio_criterio_novo_unidade",
         "type": "str",
-        "example": ""
+        "example": "0 0"
       },
       {
         "name": "premio_criterio_novo_carencia",
@@ -4444,26 +4444,26 @@
       {
         "name": "participacao_cada",
         "type": "str",
-        "example": ""
+        "example": "0000"
       },
       {
         "name": "participacao_unidade",
         "type": "str",
-        "example": "-"
+        "example": "DIA"
       },
       {
         "name": "participacao_carencia",
-        "type": "str",
-        "example": ""
+        "type": "date",
+        "example": "2001-07-10"
       },
       {
         "name": "participacao_descricao",
         "type": "str",
-        "example": ""
+        "example": "0,006750% DA REC. LIQUIDA DA ANCAR EMPREEND. COM."
       },
       {
         "name": "banco_mandatario",
-        "type": "date",
+        "type": "str",
         "example": "BANCO BRADESCO S/A"
       },
       {
@@ -4494,7 +4494,7 @@
       {
         "name": "escritura_padronizada",
         "type": "str",
-        "example": ""
+        "example": "n"
       },
       {
         "name": "resgate_antecipado",
@@ -4520,17 +4520,17 @@
       },
       {
         "name": "TipoInstituicao",
-        "type": "str",
+        "type": "int",
         "example": "1"
       },
       {
         "name": "CodInst",
-        "type": "str",
+        "type": "int",
         "example": "31804966"
       },
       {
         "name": "AnoMes",
-        "type": "str",
+        "type": "int",
         "example": "202512"
       },
       {
@@ -4546,7 +4546,7 @@
       {
         "name": "Grupo",
         "type": "str",
-        "example": ""
+        "example": "Ativos Ponderados pelo Risco (RWA)"
       },
       {
         "name": "Conta",
@@ -4612,7 +4612,7 @@
       },
       {
         "name": "percentual_taxa",
-        "type": "float",
+        "type": "str",
         "example": "DI + 1,6000%"
       },
       {
@@ -4622,7 +4622,7 @@
       },
       {
         "name": "vna",
-        "type": "str",
+        "type": "float",
         "example": "1000"
       },
       {
@@ -4637,7 +4637,7 @@
       },
       {
         "name": "percent_pu_par",
-        "type": "str",
+        "type": "float",
         "example": "101.77"
       },
       {
@@ -4653,12 +4653,12 @@
       {
         "name": "spread_incentivado_sem_gross_up",
         "type": "float",
-        "example": ""
+        "example": "0.8601"
       },
       {
         "name": "referencia_ntnb",
-        "type": "str",
-        "example": ""
+        "type": "date",
+        "example": "2035-05-15"
       },
       {
         "name": "lei_12431",
@@ -4687,12 +4687,12 @@
       },
       {
         "name": "val_min_intervalo",
-        "type": "str",
+        "type": "float",
         "example": "0.65"
       },
       {
         "name": "val_max_intervalo",
-        "type": "str",
+        "type": "float",
         "example": "0.77"
       },
       {
@@ -4719,27 +4719,27 @@
       },
       {
         "name": "minerio_ferro_global_usd",
-        "type": "str",
+        "type": "float",
         "example": "95.22"
       },
       {
         "name": "soja_global_usd",
-        "type": "str",
+        "type": "float",
         "example": "337.08"
       },
       {
         "name": "petroleo_brent_global_usd",
-        "type": "str",
+        "type": "float",
         "example": "63.9"
       },
       {
         "name": "acucar_global_usd",
-        "type": "str",
+        "type": "float",
         "example": "25.8981"
       },
       {
         "name": "cafe_arabica_global_usd",
-        "type": "str",
+        "type": "float",
         "example": "142.9365"
       }
     ]
@@ -4761,32 +4761,32 @@
       },
       {
         "name": "cambio_brl_usd_fed",
-        "type": "str",
-        "example": ""
+        "type": "float",
+        "example": "4.0384"
       },
       {
         "name": "reer_bis_brasil",
-        "type": "str",
+        "type": "float",
         "example": "121.58"
       },
       {
         "name": "neer_bis_brasil",
-        "type": "str",
+        "type": "float",
         "example": "121.98"
       },
       {
         "name": "cli_ocde_brasil",
-        "type": "str",
+        "type": "float",
         "example": "102.8118"
       },
       {
         "name": "confianca_consumidor_ocde",
-        "type": "str",
+        "type": "float",
         "example": "100.427"
       },
       {
         "name": "confianca_empresarial_ocde",
-        "type": "str",
+        "type": "float",
         "example": "100.6321"
       },
       {
@@ -4803,12 +4803,12 @@
     "fields": [
       {
         "name": "id_registro_fundo",
-        "type": "int",
+        "type": "str",
         "example": "349"
       },
       {
         "name": "id_registro_classe",
-        "type": "int",
+        "type": "str",
         "example": "34539"
       },
       {
@@ -4904,12 +4904,12 @@
       {
         "name": "exclusivo",
         "type": "str",
-        "example": ""
+        "example": "S"
       },
       {
         "name": "publico_alvo",
         "type": "str",
-        "example": ""
+        "example": "Profissional"
       },
       {
         "name": "patrimonio_liquido",
@@ -4944,12 +4944,12 @@
       {
         "name": "cnpj_controlador",
         "type": "str",
-        "example": ""
+        "example": "59281253000123"
       },
       {
         "name": "controlador",
         "type": "str",
-        "example": ""
+        "example": "BTG PACTUAL SERVIÇOS FINANCEIROS S/A DTVM"
       },
       {
         "name": "data_captura",
@@ -5055,13 +5055,13 @@
       },
       {
         "name": "fed_funds_rate",
-        "type": "str",
+        "type": "float",
         "example": "1.55"
       },
       {
         "name": "sofr_rate",
-        "type": "str",
-        "example": ""
+        "type": "float",
+        "example": "1.54"
       },
       {
         "name": "credit_spread_corp_ig",
@@ -5080,13 +5080,13 @@
       },
       {
         "name": "vix",
-        "type": "str",
-        "example": ""
+        "type": "float",
+        "example": "12.47"
       },
       {
         "name": "dxy_broad",
-        "type": "str",
-        "example": ""
+        "type": "float",
+        "example": "114.9745"
       }
     ]
   },
@@ -5107,32 +5107,32 @@
       },
       {
         "name": "cpi_headline",
-        "type": "str",
+        "type": "float",
         "example": "259.127"
       },
       {
         "name": "cpi_core",
-        "type": "str",
+        "type": "float",
         "example": "266.716"
       },
       {
         "name": "pce_headline",
-        "type": "str",
+        "type": "float",
         "example": "104.49"
       },
       {
         "name": "pce_core",
-        "type": "str",
+        "type": "float",
         "example": "104.507"
       },
       {
         "name": "nonfarm_payroll",
-        "type": "str",
+        "type": "int",
         "example": "152031"
       },
       {
         "name": "unemployment_rate",
-        "type": "str",
+        "type": "float",
         "example": "3.6"
       }
     ]
@@ -5154,27 +5154,27 @@
       },
       {
         "name": "dgs3mo",
-        "type": "str",
+        "type": "float",
         "example": "1.54"
       },
       {
         "name": "dgs2",
-        "type": "str",
+        "type": "float",
         "example": "1.58"
       },
       {
         "name": "dgs5",
-        "type": "str",
+        "type": "float",
         "example": "1.67"
       },
       {
         "name": "dgs10",
-        "type": "str",
+        "type": "float",
         "example": "1.88"
       },
       {
         "name": "dgs30",
-        "type": "str",
+        "type": "float",
         "example": "2.33"
       },
       {
@@ -5184,12 +5184,12 @@
       },
       {
         "name": "t5y_breakeven",
-        "type": "str",
+        "type": "float",
         "example": "1.72"
       },
       {
         "name": "t10y_breakeven",
-        "type": "str",
+        "type": "float",
         "example": "1.8"
       }
     ]
@@ -5206,7 +5206,7 @@
       },
       {
         "name": "serie_id",
-        "type": "str",
+        "type": "int",
         "example": "1737"
       },
       {
@@ -5258,7 +5258,7 @@
       },
       {
         "name": "valor",
-        "type": "str",
+        "type": "float",
         "example": "21.0"
       }
     ]
@@ -5290,7 +5290,7 @@
       },
       {
         "name": "valor",
-        "type": "str",
+        "type": "float",
         "example": "51.48"
       }
     ]
@@ -5322,7 +5322,7 @@
       },
       {
         "name": "valor",
-        "type": "str",
+        "type": "float",
         "example": "1022.98292705136"
       }
     ]
@@ -5354,7 +5354,7 @@
       },
       {
         "name": "valor",
-        "type": "str",
+        "type": "float",
         "example": "83.144479850387"
       }
     ]
@@ -5386,7 +5386,7 @@
       },
       {
         "name": "valor",
-        "type": "str",
+        "type": "float",
         "example": "8.371376e-14"
       }
     ]
@@ -5418,7 +5418,7 @@
       },
       {
         "name": "valor",
-        "type": "str",
+        "type": "float",
         "example": "1220.1"
       }
     ]
@@ -5455,12 +5455,12 @@
       },
       {
         "name": "valor_total",
-        "type": "str",
+        "type": "float",
         "example": "1107741.39"
       },
       {
         "name": "valor_cota",
-        "type": "str",
+        "type": "float",
         "example": "44.636723400000"
       },
       {
@@ -5470,12 +5470,12 @@
       },
       {
         "name": "captc_dia",
-        "type": "str",
+        "type": "float",
         "example": "0.00"
       },
       {
         "name": "resg_dia",
-        "type": "str",
+        "type": "float",
         "example": "0.00"
       },
       {
@@ -5512,7 +5512,7 @@
       },
       {
         "name": "valor",
-        "type": "str",
+        "type": "float",
         "example": "9.073"
       }
     ]
@@ -5571,7 +5571,7 @@
       },
       {
         "name": "valor",
-        "type": "str",
+        "type": "float",
         "example": "68.13"
       }
     ]
@@ -5618,8 +5618,8 @@
       },
       {
         "name": "ano_emissao",
-        "type": "str",
-        "example": ""
+        "type": "int",
+        "example": "2023"
       },
       {
         "name": "data_emissao",
@@ -5628,8 +5628,8 @@
       },
       {
         "name": "ano_expiracao",
-        "type": "str",
-        "example": ""
+        "type": "int",
+        "example": "2027"
       },
       {
         "name": "data_expiracao",
@@ -5932,7 +5932,7 @@
       },
       {
         "name": "volume_total_rs",
-        "type": "str",
+        "type": "float",
         "example": "1230.04"
       },
       {
@@ -6201,7 +6201,7 @@
       },
       {
         "name": "joined_on",
-        "type": "str",
+        "type": "date",
         "example": "2026-09-14"
       },
       {
@@ -6345,47 +6345,47 @@
       {
         "name": "preco_abertura",
         "type": "float",
-        "example": ""
+        "example": "0.78"
       },
       {
         "name": "preco_minimo",
         "type": "float",
-        "example": ""
+        "example": "0.69"
       },
       {
         "name": "preco_maximo",
         "type": "float",
-        "example": ""
+        "example": "0.93"
       },
       {
         "name": "preco_medio",
         "type": "float",
-        "example": ""
+        "example": "0.84"
       },
       {
         "name": "preco_ultimo",
         "type": "float",
-        "example": ""
+        "example": "0.84"
       },
       {
         "name": "osc",
-        "type": "str",
-        "example": ""
+        "type": "float",
+        "example": "29.23"
       },
       {
         "name": "trad_qty",
-        "type": "str",
-        "example": ""
+        "type": "int",
+        "example": "211"
       },
       {
         "name": "fin_instrm_qty",
-        "type": "str",
-        "example": ""
+        "type": "int",
+        "example": "145768"
       },
       {
         "name": "ntl_fin_vol",
-        "type": "str",
-        "example": ""
+        "type": "float",
+        "example": "122788.91"
       }
     ]
   }

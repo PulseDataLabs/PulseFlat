@@ -121,13 +121,29 @@ def capturar(target_date: date | None = None) -> list[dict]:
         "criterio",
     ]
 
+    COLUNAS_NUMERICAS = {
+        "tx_compra",
+        "tx_venda",
+        "tx_indicativa",
+        "pu",
+        "desvio_padrao",
+        "interv_ind_inf_d0",
+        "interv_ind_sup_d0",
+        "interv_ind_inf_dma1",
+        "interv_ind_sup_dma1",
+    }
+
     for linha in dados_linhas:
         partes = linha.split("@")
         if len(partes) < len(COLUNAS):
             partes += [""] * (len(COLUNAS) - len(partes))
         registro = {"data_captura": data_captura}
         for col, val in zip(COLUNAS, partes):
-            registro[col] = limpar(val.replace(",", "."))
+            val_limpo = limpar(val.replace(",", "."))
+            if col in COLUNAS_NUMERICAS:
+                if val_limpo in ("--", "N/D", "ND", "-", "null", "none"):
+                    val_limpo = ""
+            registro[col] = val_limpo
         registros.append(registro)
 
     if not registros:
@@ -162,7 +178,22 @@ class AnbimaTitulosPublicosScraper(BaseScraper):
         df = pd.DataFrame(capturar(self.target_date))
         if not df.empty:
             colunas = [c for c in CABECALHO if c in df.columns]
-            return df[colunas]
+            df = df[colunas]
+            numeric_cols = [
+                "tx_compra",
+                "tx_venda",
+                "tx_indicativa",
+                "pu",
+                "desvio_padrao",
+                "interv_ind_inf_d0",
+                "interv_ind_sup_d0",
+                "interv_ind_inf_dma1",
+                "interv_ind_sup_dma1",
+            ]
+            for col in numeric_cols:
+                if col in df.columns:
+                    df[col] = pd.to_numeric(df[col], errors="coerce")
+            return df
         return df
 
 

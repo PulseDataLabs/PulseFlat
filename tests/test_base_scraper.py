@@ -210,3 +210,52 @@ AALR13@CENTRO DIAG@2027-10-04@DI + 2.75%@--@--@--@--@--@--@N/D@N/D@N/D@@
     assert pd.isna(df.loc[1, "pu"])
 
 
+def test_schema_generator_financial_type_inference(tmp_path):
+    """Garante que salvar_csv infere corretamente tipos numéricos de métricas financeiras (taxas, variacao, peso, pmr, numero_indice)."""
+    from utils.base import salvar_csv
+    import json
+
+    df = pd.DataFrame([
+        {
+            "data_referencia": "2026-06-01",
+            "numero_indice": 11504.40986,
+            "variacao_diaria": -0.0693,
+            "peso_geral": 23.87,
+            "pmr": 2943.0685,
+            "convexidade": 78.3488,
+            "tx_indicativa": 14.5669,
+            "pu": 985.5354,
+            "duration": 576.72,
+            "codigo": "PETR4",
+        }
+    ])
+
+    test_file = tmp_path / "test_metrics.csv"
+    salvar_csv(
+        test_file,
+        df,
+        cabecalho=list(df.columns),
+        chaves_dedup=["data_referencia", "codigo"],
+    )
+
+    schemas_file = tmp_path / "schemas.json"
+    assert schemas_file.exists()
+
+    with schemas_file.open("r", encoding="utf-8") as f:
+        schemas = json.load(f)
+
+    fields = {f["name"]: f["type"] for f in schemas[0]["fields"]}
+
+    assert fields["numero_indice"] == "float"
+    assert fields["variacao_diaria"] == "float"
+    assert fields["peso_geral"] == "float"
+    assert fields["pmr"] == "float"
+    assert fields["convexidade"] == "float"
+    assert fields["tx_indicativa"] == "float"
+    assert fields["pu"] == "float"
+    assert fields["duration"] == "float"
+    assert fields["codigo"] == "str"
+    assert fields["data_referencia"] == "date"
+
+
+

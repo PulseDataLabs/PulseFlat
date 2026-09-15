@@ -29,7 +29,7 @@ class DebenturesMercadoSecundarioPrecosNegociacaoScraper(GenericScraper):
             from utils.parsers import hash_row
 
             def clean_float(val):
-                if pd.isna(val) or val == "" or str(val).strip() in ("-", ""):
+                if pd.isna(val) or val == "" or str(val).strip() in ("-", "", "--", "ND", "N/D", "null", "none"):
                     return ""
                 val_str = str(val).strip()
                 if "," in val_str:
@@ -40,10 +40,10 @@ class DebenturesMercadoSecundarioPrecosNegociacaoScraper(GenericScraper):
                         return str(int(f))
                     return f"{f:.8f}".rstrip("0").rstrip(".")
                 except ValueError:
-                    return val_str
+                    return ""
 
             def clean_int(val):
-                if pd.isna(val) or val == "" or str(val).strip() in ("-", ""):
+                if pd.isna(val) or val == "" or str(val).strip() in ("-", "", "--", "ND", "N/D", "null", "none"):
                     return ""
                 val_str = str(val).strip()
                 if "," in val_str:
@@ -52,7 +52,7 @@ class DebenturesMercadoSecundarioPrecosNegociacaoScraper(GenericScraper):
                 try:
                     return str(int(val_str))
                 except ValueError:
-                    return val_str
+                    return ""
 
             float_cols = ["pu_minimo", "pu_medio", "pu_maximo", "pu_da_curva"]
             int_cols = ["quantidade", "numero_de_negocios"]

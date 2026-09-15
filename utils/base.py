@@ -423,7 +423,11 @@ def salvar_csv(
                 or "ratio" in col_name
                 or "spread" in col_name
                 or "yield" in col_name
-                or col_name in ("pu", "duration", "pct_reune", "desvio_padrao")
+                or "variacao" in col_name
+                or "peso" in col_name
+                or "pmr" in col_name
+                or "convexidade" in col_name
+                or col_name in ("pu", "duration", "pct_reune", "desvio_padrao", "numero_indice")
                 or col_name
                 in (
                     "ret_dia_perc",
@@ -441,7 +445,7 @@ def salvar_csv(
                 col_name.startswith("qt_")
                 or col_name.startswith("nr_")
                 or "quantidade" in col_name
-                or "numero" in col_name
+                or ("numero" in col_name and col_name != "numero_indice")
                 or col_name
                 in (
                     "id_registro_fundo",

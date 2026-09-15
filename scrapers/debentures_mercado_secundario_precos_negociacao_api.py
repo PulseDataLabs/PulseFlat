@@ -204,13 +204,23 @@ class DebenturesMercadoSecundarioPrecosNegociacaoApiScraper(BaseAnbimaDataScrape
                 neg_str = "0"
 
             perc_pu_curva = item.get("percent_pu_par")
-            perc_pu_str = str(perc_pu_curva).replace(",", ".") if perc_pu_curva is not None else ""
+            perc_pu_str = str(perc_pu_curva).replace(",", ".").strip() if perc_pu_curva is not None else ""
+            if perc_pu_str in ("ND", "N/D", "--", "-", "null", "none"):
+                perc_pu_str = ""
+
+            reune_isin = reune_info.get("isin") or ""
+            if reune_isin in ("ND", "N/D", "--", "-"):
+                reune_isin = ""
+
+            pct_reune_val = str(item.get("percent_reune", "") or "").strip()
+            if pct_reune_val in ("ND", "N/D", "--", "-", "null", "none"):
+                pct_reune_val = ""
 
             registro = {
                 "data_referencia": data_str,
                 "emissor": item.get("emissor", ""),
                 "codigo_ativo": ticker,
-                "isin": reune_info.get("isin") or "",
+                "isin": reune_isin,
                 "quantidade": qtd_str,
                 "numero_de_negocios": neg_str,
                 "pu_minimo": pu_min_str,
@@ -224,13 +234,22 @@ class DebenturesMercadoSecundarioPrecosNegociacaoApiScraper(BaseAnbimaDataScrape
                 "taxa_venda": str(item.get("taxa_venda", "") or ""),
                 "percentual_taxa": str(item.get("percentual_taxa", "") or ""),
                 "volume_total_rs": f"{vol_total:.2f}" if vol_total > 0 else "0.00",
-                "percent_reune": str(item.get("percent_reune", "") or ""),
+                "percent_reune": pct_reune_val,
                 "data_vencimento": str(item.get("data_vencimento", "") or ""),
             }
             registros.append(registro)
 
         df = pd.DataFrame(registros)
         if not df.empty:
+            # Converte colunas numéricas
+            num_cols = [
+                "pu_minimo", "pu_medio", "pu_maximo", "pu_da_curva",
+                "pu_indicativo", "taxa_indicativa", "taxa_compra", "taxa_venda",
+                "percentual_taxa", "volume_total_rs", "percent_reune"
+            ]
+            for c in num_cols:
+                if c in df.columns:
+                    df[c] = pd.to_numeric(df[c], errors="coerce")
             # Calcula registro_hash padrão PulseFlat para auditoria e integridade
             records_dict = df.to_dict(orient="records")
             df["registro_hash"] = [
