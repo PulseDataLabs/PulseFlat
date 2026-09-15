@@ -153,8 +153,9 @@ def test_large_datasets_compression_configured():
 
 def test_anbima_debentures_numeric_types_and_cleaning(monkeypatch):
     """Garante que campos numéricos de debêntures ANBIMA sejam convertidos para float e limpos de sentinelas como '--' e 'N/D'."""
-    from scrapers.anbima_debentures import AnbimaDebenturesScraper
     from datetime import date
+
+    from scrapers.anbima_debentures import AnbimaDebenturesScraper
 
     raw_anbima_data = """HEADER LINE 1
 HEADER LINE 2
