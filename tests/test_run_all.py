@@ -43,3 +43,46 @@ def test_discover_scrapers_phases():
     # Todos os scrapers remanescentes devem ser da Fase 1
     for name, info in scrapers.items():
         assert info["phase"] == 1
+
+
+def test_save_pipeline_status_prunes_obsolete(tmp_path, monkeypatch):
+    """Garante que save_pipeline_status remove scrapers excluídos/inativos e não infla o total/sucesso."""
+    import json
+    from unittest.mock import patch
+    from run_all import save_pipeline_status, discover_scrapers
+
+    status_dir = tmp_path / "data"
+    status_dir.mkdir(parents=True, exist_ok=True)
+    status_json = status_dir / "pipeline_status.json"
+    status_js = status_dir / "pipeline_status.js"
+
+    # Simula status anterior contendo um scraper obsoleto com status success
+    old_data = {
+        "scrapers": {
+            "scraper_obsoleto_inexistente": {
+                "status": "success",
+                "elapsed_seconds": 1.5,
+                "error": None,
+                "timestamp": "2025-01-01T10:00:00",
+            }
+        },
+        "drifts": {},
+    }
+    with status_json.open("w", encoding="utf-8") as f:
+        json.dump(old_data, f)
+
+    save_pipeline_status(
+        results={},
+        total_elapsed=10.0,
+        status_path=status_json,
+        status_js_path=status_js,
+    )
+
+    with status_json.open("r", encoding="utf-8") as f:
+        saved = json.load(f)
+
+    active = {k: v for k, v in discover_scrapers().items() if v["enabled"]}
+    assert "scraper_obsoleto_inexistente" not in saved["scrapers"]
+    assert saved["summary"]["total"] == len(active)
+    assert saved["summary"]["success"] <= saved["summary"]["total"]
+

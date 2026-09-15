@@ -2436,7 +2436,7 @@
   <div class="container">
     <div class="monitor-header reveal">
       <div class="section-label">Observabilidade & SLA</div>
-      <h2 class="section-title">Monitor de Capturas & Frescura</h2>
+      <h2 class="section-title">Monitor de Capturas & SLA</h2>
       <p class="section-desc">Status em tempo real da última data capturada para cada base do pipeline. Identifique visualmente a defasagem e a conformidade dos dados.</p>
     </div>
 
@@ -3528,11 +3528,12 @@
 
     const dateFormatted = timestamp ? new Date(timestamp).toLocaleString('pt-BR') : 'Desconhecido';
     
+    const totalScrapers = Math.max(summary.total || 0, (summary.success || 0) + (summary.failed || 0));
     if (healthDetails) {
       healthDetails.innerHTML = `
         <div class="status-item">
           <span>Total de Scrapers:</span>
-          <strong>${summary.total || 0}</strong>
+          <strong>${totalScrapers}</strong>
         </div>
         <div class="status-item" style="color: #00e5a0;">
           <span>Sucesso:</span>

@@ -4,7 +4,7 @@
   "status": "warning",
   "summary": {
     "total": 96,
-    "success": 97,
+    "success": 96,
     "failed": 0,
     "drifts": 2
   },
@@ -98,18 +98,6 @@
       "elapsed_seconds": 3.3645622730255127,
       "error": null,
       "timestamp": "2026-09-15T14:20:30.761420"
-    },
-    "b3_carteiras": {
-      "status": "unknown",
-      "elapsed_seconds": 0.0,
-      "error": null,
-      "timestamp": null
-    },
-    "b3_futuros_ajustes": {
-      "status": "unknown",
-      "elapsed_seconds": 0.0,
-      "error": null,
-      "timestamp": null
     },
     "b3_indicadores_financeiros": {
       "status": "success",
@@ -248,12 +236,6 @@
       "elapsed_seconds": 110.78372430801392,
       "error": null,
       "timestamp": "2026-09-15T14:20:30.761420"
-    },
-    "yahoo_finance_series": {
-      "status": "success",
-      "elapsed_seconds": 2.2871804237365723,
-      "error": null,
-      "timestamp": "2026-06-27T17:00:25.236835"
     },
     "b3_carteiras_teoricas": {
       "status": "success",

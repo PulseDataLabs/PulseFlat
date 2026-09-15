@@ -356,12 +356,16 @@ def run_subset(
 def save_pipeline_status(
     results: dict[str, tuple[bool, float, str | None]],
     total_elapsed: float,
+    status_path: Path | None = None,
+    status_js_path: Path | None = None,
 ) -> None:
     from utils.base import DRIFTS
 
     root_dir = Path(__file__).resolve().parent
-    status_path = root_dir / "data" / "pipeline_status.json"
-    status_js_path = root_dir / "data" / "pipeline_status.js"
+    if status_path is None:
+        status_path = root_dir / "data" / "pipeline_status.json"
+    if status_js_path is None:
+        status_js_path = root_dir / "data" / "pipeline_status.js"
     scrapers_registry = discover_scrapers()
     active_scrapers = {k: v for k, v in scrapers_registry.items() if v["enabled"]}
 
@@ -409,6 +413,11 @@ def save_pipeline_status(
             "removed": d["removed"],
             "timestamp": d["timestamp"],
         }
+
+    # Remove scrapers que foram excluídos ou desativados do registro ativo
+    status_data["scrapers"] = {
+        k: v for k, v in status_data["scrapers"].items() if k in active_scrapers
+    }
 
     # Preenche scrapers nunca executados
     for name in active_scrapers:
