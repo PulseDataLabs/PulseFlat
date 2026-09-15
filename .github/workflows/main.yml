@@ -2,19 +2,34 @@ name: Executar Automação de Dados Diária
 
 on:
   schedule:
-    # Horários convertidos para UTC (Horário de Brasília + 3 horas)
+    # Horários convertidos para UTC (Horário de Brasília: UTC-3)
     
-    # 06h03, 08h03 e 09h03 de Segunda a Sexta (UTC: 09h03, 11h03 e 12h03)
-    - cron: '3 9,11,12 * * 1-5'
+    # 06h03 BRT (UTC: 09h03) - Segunda a Sexta
+    - cron: '3 9 * * 1-5'
     
-    # 09h33, 10h33 e 11h33 de Segunda a Sexta (UTC: 12h33, 13h33 e 14h33)
-    - cron: '33 12,13,14 * * 1-5'
+    # 08h03 BRT (UTC: 11h03) - Segunda a Sexta
+    - cron: '3 11 * * 1-5'
     
-    # 18h03 de Segunda a Sexta (UTC: 21h03)
+    # 09h03 BRT (UTC: 12h03) - Segunda a Sexta
+    - cron: '3 12 * * 1-5'
+    
+    # 09h33 BRT (UTC: 12h33) - Segunda a Sexta
+    - cron: '33 12 * * 1-5'
+    
+    # 10h33 BRT (UTC: 13h33) - Segunda a Sexta
+    - cron: '33 13 * * 1-5'
+    
+    # 11h33 BRT (UTC: 14h33) - Segunda a Sexta
+    - cron: '33 14 * * 1-5'
+    
+    # 18h03 BRT (UTC: 21h03) - Segunda a Sexta
     - cron: '3 21 * * 1-5'
     
-    # 21h03 e 23h03 de Segunda a Sexta (No UTC vira 00h03 e 02h03 de Terça a Sábado)
-    - cron: '3 0,2 * * 2-6'
+    # 21h03 BRT (UTC: 00h03 do dia seguinte) - Segunda a Sexta em BRT (Terça a Sábado em UTC)
+    - cron: '3 0 * * 2-6'
+    
+    # 23h03 BRT (UTC: 02h03 do dia seguinte) - Segunda a Sexta em BRT (Terça a Sábado em UTC)
+    - cron: '3 2 * * 2-6'
   
   # Permite execução manual pelo painel do GitHub
   workflow_dispatch:
