@@ -5,9 +5,9 @@ Testes unitários para validar a sintaxe e integridade dos workflows e agendamen
 """
 
 from pathlib import Path
+
 import pytest
 import yaml
-
 
 WORKFLOWS_DIR = Path(".github/workflows")
 
@@ -59,7 +59,7 @@ class TestWorkflowsIntegrity:
             for item in schedule_list:
                 cron_expr = item.get("cron")
                 assert cron_expr is not None, f"Entrada em schedule de {wf_file.name} deve ter chave 'cron'"
-                
+
                 parts = cron_expr.strip().split()
                 assert len(parts) == 5, (
                     f"Cron '{cron_expr}' em {wf_file.name} deve possuir exatamente 5 campos, "

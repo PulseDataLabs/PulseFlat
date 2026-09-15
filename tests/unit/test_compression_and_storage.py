@@ -8,6 +8,7 @@ leitura de cabeçalhos e integridade do armazenamento em disco.
 import gzip
 import json
 from pathlib import Path
+
 import pandas as pd
 import pytest
 

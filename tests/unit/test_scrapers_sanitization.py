@@ -6,11 +6,12 @@ e a garantia de tipagem float em scrapers de títulos públicos e debêntures.
 """
 
 from datetime import date
+
 import pandas as pd
 import pytest
 
-from scrapers.anbima_titulos_publicos import AnbimaTitulosPublicosScraper
 from scrapers.anbima_debentures import AnbimaDebenturesScraper
+from scrapers.anbima_titulos_publicos import AnbimaTitulosPublicosScraper
 
 
 class TestAnbimaTitulosPublicosSanitization:

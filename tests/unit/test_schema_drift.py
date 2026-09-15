@@ -5,7 +5,7 @@ Testes unitários para o mecanismo de detecção e registro de Schema Drift em u
 """
 
 import json
-from pathlib import Path
+
 import pandas as pd
 import pytest
 

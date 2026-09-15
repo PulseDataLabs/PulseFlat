@@ -5,8 +5,7 @@ Testes unitários para validar a formatação de métricas e cotações de câmb
 com 4 casas decimais em scripts/consolidate.py.
 """
 
-import pytest
-from scripts.consolidate import _fmt_val, _fmt_pct, _parse_br_float, _fmt
+from scripts.consolidate import _fmt, _fmt_pct, _fmt_val, _parse_br_float
 
 
 class TestConsolidateFormatting:
