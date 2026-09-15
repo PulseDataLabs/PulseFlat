@@ -167,6 +167,105 @@ def read_existing_header(arquivo: Path) -> list[str]:
         return []
 
 
+def get_type_badge(col_name: str, series: Union[pd.Series, None] = None) -> str:
+    """
+    Infere a tipagem do campo para governança e exibição no catálogo (date, float, int, str).
+    Combina inspeção em tempo de execução dos dados/dtypes do pandas com padrões léxicos de mercado financeiro.
+    """
+    col_name = col_name.lower()
+    if (
+        col_name.startswith("dt_")
+        or col_name.endswith("_dt")
+        or col_name.endswith("_data")
+        or "data" in col_name
+        or "date" in col_name
+    ):
+        return "date"
+
+    if series is not None and not series.empty:
+        if pd.api.types.is_float_dtype(series):
+            return "float"
+        if pd.api.types.is_integer_dtype(series):
+            return "int"
+        if pd.api.types.is_datetime64_any_dtype(series):
+            return "date"
+        non_null = series.dropna()
+        sample = non_null.head(30).astype(str).str.strip()
+        sample = sample[~sample.isin(["", "nan", "None", "--", "N/D", "ND", "-", "null"])]
+        if not sample.empty:
+            if sample.str.match(r"^\d{4}-\d{2}-\d{2}").all():
+                return "date"
+            try:
+                num = pd.to_numeric(sample, errors="raise")
+                if (num % 1 == 0).all() and not sample.str.contains(r"\.").any():
+                    # Preserva códigos e identificadores com zeros à esquerda como texto
+                    if (sample.str.startswith("0") & (sample.str.len() > 1)).any():
+                        return "str"
+                    return "int"
+                return "float"
+            except Exception:
+                pass
+
+    if (
+        col_name.startswith("vr_")
+        or col_name.startswith("vl_")
+        or col_name.startswith("tx_")
+        or col_name.startswith("pct_")
+        or col_name.startswith("interv_")
+        or col_name.startswith("intervalo_")
+        or col_name.startswith("pu_")
+        or col_name.endswith("_val")
+        or col_name.endswith("_perc")
+        or col_name.endswith("_taxa")
+        or col_name.endswith("_pu")
+        or "preco" in col_name
+        or "taxa" in col_name
+        or "valor" in col_name
+        or "saldo" in col_name
+        or "patrimonio" in col_name
+        or "cota" in col_name
+        or "desvio" in col_name
+        or "duration" in col_name
+        or "ratio" in col_name
+        or "spread" in col_name
+        or "yield" in col_name
+        or "variacao" in col_name
+        or "peso" in col_name
+        or "pmr" in col_name
+        or "convexidade" in col_name
+        or col_name in ("pu", "duration", "pct_reune", "desvio_padrao", "numero_indice")
+        or col_name
+        in (
+            "ret_dia_perc",
+            "ret_mes_perc",
+            "ret_ano_perc",
+            "ret_12_meses_perc",
+            "vol_aa_perc",
+            "taxa_juros_aa_perc_compra_d1",
+            "taxa_juros_aa_perc_venda_d0",
+        )
+    ):
+        if col_name not in ("publico_alvo",):
+            return "float"
+    if (
+        col_name.startswith("qt_")
+        or col_name.startswith("nr_")
+        or "quantidade" in col_name
+        or ("numero" in col_name and col_name != "numero_indice")
+        or col_name
+        in (
+            "id_registro_fundo",
+            "id_registro_classe",
+            "prazo",
+            "prazo_dias",
+            "Ordem",
+            "page_number",
+        )
+    ):
+        return "int"
+    return "str"
+
+
 def _salvar_csv_logger():
     return ColorLogger("utils.salvar_csv")
 
@@ -372,92 +471,6 @@ def salvar_csv(
                     schemas = json.load(sf)
             except Exception:
                 pass
-
-        def get_type_badge(col_name, series=None):
-            col_name = col_name.lower()
-            if (
-                col_name.startswith("dt_")
-                or col_name.endswith("_dt")
-                or "data" in col_name
-                or "date" in col_name
-            ):
-                return "date"
-
-            if series is not None and not series.empty:
-                if pd.api.types.is_float_dtype(series):
-                    return "float"
-                if pd.api.types.is_integer_dtype(series):
-                    return "int"
-                if pd.api.types.is_datetime64_any_dtype(series):
-                    return "date"
-                non_null = series.dropna()
-                sample = non_null.head(30).astype(str).str.strip()
-                sample = sample[~sample.isin(["", "nan", "None", "--", "N/D", "ND", "-", "null"])]
-                if not sample.empty:
-                    try:
-                        num = pd.to_numeric(sample, errors="raise")
-                        if (num % 1 == 0).all() and not sample.str.contains(r"\.").any():
-                            return "int"
-                        return "float"
-                    except Exception:
-                        pass
-
-            if (
-                col_name.startswith("vr_")
-                or col_name.startswith("vl_")
-                or col_name.startswith("tx_")
-                or col_name.startswith("pct_")
-                or col_name.startswith("interv_")
-                or col_name.startswith("intervalo_")
-                or col_name.startswith("pu_")
-                or col_name.endswith("_val")
-                or col_name.endswith("_perc")
-                or col_name.endswith("_taxa")
-                or col_name.endswith("_pu")
-                or "preco" in col_name
-                or "taxa" in col_name
-                or "saldo" in col_name
-                or "patrimonio" in col_name
-                or "desvio" in col_name
-                or "duration" in col_name
-                or "ratio" in col_name
-                or "spread" in col_name
-                or "yield" in col_name
-                or "variacao" in col_name
-                or "peso" in col_name
-                or "pmr" in col_name
-                or "convexidade" in col_name
-                or col_name in ("pu", "duration", "pct_reune", "desvio_padrao", "numero_indice")
-                or col_name
-                in (
-                    "ret_dia_perc",
-                    "ret_mes_perc",
-                    "ret_ano_perc",
-                    "ret_12_meses_perc",
-                    "vol_aa_perc",
-                    "taxa_juros_aa_perc_compra_d1",
-                    "taxa_juros_aa_perc_venda_d0",
-                )
-            ):
-                if col_name not in ("publico_alvo",):
-                    return "float"
-            if (
-                col_name.startswith("qt_")
-                or col_name.startswith("nr_")
-                or "quantidade" in col_name
-                or ("numero" in col_name and col_name != "numero_indice")
-                or col_name
-                in (
-                    "id_registro_fundo",
-                    "id_registro_classe",
-                    "prazo",
-                    "prazo_dias",
-                    "Ordem",
-                    "page_number",
-                )
-            ):
-                return "int"
-            return "str"
 
         filtered_cols = [
             c

@@ -2350,7 +2350,7 @@
       },
       {
         "name": "pmr",
-        "type": "str",
+        "type": "float",
         "example": ""
       },
       {

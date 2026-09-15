@@ -3,6 +3,7 @@ from .base import (
     agora_brt,
     b64_encode_params,
     get_logger,
+    get_type_badge,
     limpar,
     nova_session,
     salvar_csv,
@@ -15,5 +16,6 @@ __all__ = [
     "b64_encode_params",
     "nova_session",
     "salvar_csv",
+    "get_type_badge",
     "FUSO",
 ]
