@@ -130,7 +130,7 @@
       },
       {
         "name": "duration_du",
-        "type": "str",
+        "type": "float",
         "example": "1563.0"
       },
       {
@@ -170,12 +170,12 @@
       },
       {
         "name": "yield_",
-        "type": "str",
+        "type": "float",
         "example": "7.98101627614393"
       },
       {
         "name": "redemption_yield",
-        "type": "str",
+        "type": "float",
         "example": ""
       }
     ]
@@ -217,52 +217,52 @@
       },
       {
         "name": "tx_compra",
-        "type": "str",
+        "type": "float",
         "example": "0.8503"
       },
       {
         "name": "tx_venda",
-        "type": "str",
+        "type": "float",
         "example": "0.5404"
       },
       {
         "name": "tx_indicativa",
-        "type": "str",
+        "type": "float",
         "example": "0.6834"
       },
       {
         "name": "desvio_padrao",
-        "type": "str",
+        "type": "float",
         "example": "0.0541"
       },
       {
         "name": "intervalo_indicativo_min",
-        "type": "str",
+        "type": "float",
         "example": "0.6293"
       },
       {
         "name": "intervalo_indicativo_max",
-        "type": "str",
+        "type": "float",
         "example": "0.7376"
       },
       {
         "name": "pu",
-        "type": "str",
+        "type": "float",
         "example": "1046.357089"
       },
       {
         "name": "ratio_pu_par_vne",
-        "type": "str",
+        "type": "float",
         "example": "102.0904"
       },
       {
         "name": "duration",
-        "type": "str",
+        "type": "float",
         "example": "576.72"
       },
       {
         "name": "pct_reune",
-        "type": "str",
+        "type": "float",
         "example": ""
       },
       {
@@ -324,7 +324,7 @@
       },
       {
         "name": "duration",
-        "type": "str",
+        "type": "float",
         "example": "670"
       },
       {
@@ -391,7 +391,7 @@
       },
       {
         "name": "pu",
-        "type": "str",
+        "type": "float",
         "example": "19783.038283"
       },
       {
@@ -406,7 +406,7 @@
       },
       {
         "name": "duration",
-        "type": "str",
+        "type": "float",
         "example": ""
       }
     ]
@@ -468,7 +468,7 @@
       },
       {
         "name": "pu",
-        "type": "str",
+        "type": "float",
         "example": "1082.783718"
       },
       {
@@ -483,7 +483,7 @@
       },
       {
         "name": "duration",
-        "type": "str",
+        "type": "float",
         "example": ""
       }
     ]
@@ -540,7 +540,7 @@
       },
       {
         "name": "duration",
-        "type": "str",
+        "type": "float",
         "example": "2208.54"
       },
       {
@@ -550,12 +550,12 @@
       },
       {
         "name": "yield",
-        "type": "str",
+        "type": "float",
         "example": "2.5218"
       },
       {
         "name": "redemption_yield",
-        "type": "str",
+        "type": "float",
         "example": "3.1936"
       },
       {
@@ -768,47 +768,47 @@
       },
       {
         "name": "tx_compra",
-        "type": "str",
+        "type": "float",
         "example": "14.575"
       },
       {
         "name": "tx_venda",
-        "type": "str",
+        "type": "float",
         "example": "14.5537"
       },
       {
         "name": "tx_indicativa",
-        "type": "str",
+        "type": "float",
         "example": "14.5669"
       },
       {
         "name": "pu",
-        "type": "str",
+        "type": "float",
         "example": "985.535409"
       },
       {
         "name": "desvio_padrao",
-        "type": "str",
+        "type": "float",
         "example": "0.00318369383421"
       },
       {
         "name": "interv_ind_inf_d0",
-        "type": "str",
+        "type": "float",
         "example": "14.5125"
       },
       {
         "name": "interv_ind_sup_d0",
-        "type": "str",
+        "type": "float",
         "example": "14.7984"
       },
       {
         "name": "interv_ind_inf_dma1",
-        "type": "str",
+        "type": "float",
         "example": "14.5047"
       },
       {
         "name": "interv_ind_sup_dma1",
-        "type": "str",
+        "type": "float",
         "example": "14.7973"
       },
       {
@@ -1365,32 +1365,32 @@
       },
       {
         "name": "pu",
-        "type": "str",
+        "type": "float",
         "example": "10471.849015"
       },
       {
         "name": "desvio_padrao",
-        "type": "str",
+        "type": "float",
         "example": ""
       },
       {
         "name": "intervalo_min_d0",
-        "type": "str",
+        "type": "float",
         "example": "0.0001"
       },
       {
         "name": "intervalo_max_d0",
-        "type": "str",
+        "type": "float",
         "example": "0.0051"
       },
       {
         "name": "intervalo_min_d1",
-        "type": "str",
+        "type": "float",
         "example": "0.0001"
       },
       {
         "name": "intervalo_max_d1",
-        "type": "str",
+        "type": "float",
         "example": "0.0051"
       }
     ]
@@ -1866,17 +1866,17 @@
       },
       {
         "name": "pu",
-        "type": "str",
+        "type": "float",
         "example": "1003.359276"
       },
       {
         "name": "duration",
-        "type": "str",
+        "type": "float",
         "example": "592.7"
       },
       {
         "name": "z_spread",
-        "type": "str",
+        "type": "float",
         "example": ""
       },
       {
@@ -2335,7 +2335,7 @@
       },
       {
         "name": "duration_du",
-        "type": "str",
+        "type": "float",
         "example": ""
       },
       {
@@ -2385,7 +2385,7 @@
       },
       {
         "name": "duration_d_u",
-        "type": "str",
+        "type": "float",
         "example": ""
       }
     ]
@@ -2767,7 +2767,7 @@
       },
       {
         "name": "put_call_ratio",
-        "type": "str",
+        "type": "float",
         "example": "1.0383"
       },
       {
@@ -3882,22 +3882,22 @@
       },
       {
         "name": "pu_min",
-        "type": "str",
+        "type": "float",
         "example": ""
       },
       {
         "name": "pu_med",
-        "type": "str",
+        "type": "float",
         "example": ""
       },
       {
         "name": "pu_max",
-        "type": "str",
+        "type": "float",
         "example": ""
       },
       {
         "name": "pu_lastro",
-        "type": "str",
+        "type": "float",
         "example": "10470.80412868"
       },
       {
@@ -4627,12 +4627,12 @@
       },
       {
         "name": "pu_par",
-        "type": "str",
+        "type": "float",
         "example": "1068.49007"
       },
       {
         "name": "pu_indicativo",
-        "type": "str",
+        "type": "float",
         "example": "1087.454609"
       },
       {
@@ -4642,17 +4642,17 @@
       },
       {
         "name": "duration",
-        "type": "str",
+        "type": "float",
         "example": "508"
       },
       {
         "name": "z_spread",
-        "type": "str",
+        "type": "float",
         "example": "0.7163"
       },
       {
         "name": "spread_incentivado_sem_gross_up",
-        "type": "str",
+        "type": "float",
         "example": ""
       },
       {
@@ -4682,7 +4682,7 @@
       },
       {
         "name": "desvio_padrao",
-        "type": "str",
+        "type": "float",
         "example": "0.05"
       },
       {
@@ -4791,7 +4791,7 @@
       },
       {
         "name": "spread_high_yield_emergentes_oas",
-        "type": "str",
+        "type": "float",
         "example": ""
       }
     ]
@@ -5065,17 +5065,17 @@
       },
       {
         "name": "credit_spread_corp_ig",
-        "type": "str",
+        "type": "float",
         "example": ""
       },
       {
         "name": "credit_spread_corp_hy",
-        "type": "str",
+        "type": "float",
         "example": ""
       },
       {
         "name": "credit_spread_em_hy",
-        "type": "str",
+        "type": "float",
         "example": ""
       },
       {
@@ -5179,7 +5179,7 @@
       },
       {
         "name": "t10y2y_spread",
-        "type": "str",
+        "type": "float",
         "example": "0.3"
       },
       {
@@ -5887,27 +5887,27 @@
       },
       {
         "name": "pu_minimo",
-        "type": "str",
+        "type": "float",
         "example": "1230.04"
       },
       {
         "name": "pu_medio",
-        "type": "str",
+        "type": "float",
         "example": "1230.04"
       },
       {
         "name": "pu_maximo",
-        "type": "str",
+        "type": "float",
         "example": "1230.04"
       },
       {
         "name": "pu_da_curva",
-        "type": "str",
+        "type": "float",
         "example": "101.66"
       },
       {
         "name": "pu_indicativo",
-        "type": "str",
+        "type": "float",
         "example": ""
       },
       {
@@ -6144,22 +6144,22 @@
       },
       {
         "name": "pu_minimo",
-        "type": "str",
+        "type": "float",
         "example": "10276.858668"
       },
       {
         "name": "pu_medio",
-        "type": "str",
+        "type": "float",
         "example": "10278.390536"
       },
       {
         "name": "pu_maximo",
-        "type": "str",
+        "type": "float",
         "example": "10279.922403"
       },
       {
         "name": "pu_da_curva",
-        "type": "str",
+        "type": "float",
         "example": "100.41"
       },
       {

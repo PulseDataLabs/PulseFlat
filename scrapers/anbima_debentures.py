@@ -117,13 +117,30 @@ def capturar(target_date: date | None = None) -> list[dict]:
         "ref_ntnb",
     ]
 
+    COLUNAS_NUMERICAS = {
+        "tx_compra",
+        "tx_venda",
+        "tx_indicativa",
+        "desvio_padrao",
+        "intervalo_indicativo_min",
+        "intervalo_indicativo_max",
+        "pu",
+        "ratio_pu_par_vne",
+        "duration",
+        "pct_reune",
+    }
+
     for linha in dados_linhas:
         partes = linha.split("@")
         if len(partes) < len(COLUNAS):
             partes += [""] * (len(COLUNAS) - len(partes))
         registro = {"data_referencia": data_referencia}
         for col, val in zip(COLUNAS, partes):
-            registro[col] = limpar(val.replace(",", "."))
+            val_limpo = limpar(val.replace(",", "."))
+            if col in COLUNAS_NUMERICAS:
+                if val_limpo in ("--", "N/D", "ND", "-", "null", "none"):
+                    val_limpo = ""
+            registro[col] = val_limpo
         registros.append(registro)
 
     if not registros:
@@ -159,7 +176,23 @@ class AnbimaDebenturesScraper(BaseScraper):
         df = pd.DataFrame(capturar(self.target_date))
         if not df.empty:
             colunas = [c for c in CABECALHO if c in df.columns]
-            return df[colunas]
+            df = df[colunas]
+            numeric_cols = [
+                "tx_compra",
+                "tx_venda",
+                "tx_indicativa",
+                "desvio_padrao",
+                "intervalo_indicativo_min",
+                "intervalo_indicativo_max",
+                "pu",
+                "ratio_pu_par_vne",
+                "duration",
+                "pct_reune",
+            ]
+            for col in numeric_cols:
+                if col in df.columns:
+                    df[col] = pd.to_numeric(df[col], errors="coerce")
+            return df
         return df
 
 

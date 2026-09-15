@@ -150,3 +150,62 @@ def test_large_datasets_compression_configured():
         assert s.output_file.name.endswith(".csv.gz"), f"{s.name} deve salvar em .csv.gz"
         assert s.output_file.exists(), f"Arquivo compactado {s.output_file} deve existir no disco"
 
+
+def test_anbima_debentures_numeric_types_and_cleaning(monkeypatch):
+    """Garante que campos numéricos de debêntures ANBIMA sejam convertidos para float e limpos de sentinelas como '--' e 'N/D'."""
+    from scrapers.anbima_debentures import AnbimaDebenturesScraper
+    from datetime import date
+
+    raw_anbima_data = """HEADER LINE 1
+HEADER LINE 2
+HEADER LINE 3
+AALM12@AURA ALMAS@2030-10-02@DI + 1.6%@0,8503@0,5404@0,6834@0,0541@0,6293@0,7376@1046,357089@102,0904@576,72@@
+AALR13@CENTRO DIAG@2027-10-04@DI + 2.75%@--@--@--@--@--@--@N/D@N/D@N/D@@
+"""
+
+    class DummyResp:
+        content = raw_anbima_data.encode("latin-1")
+        status_code = 200
+        def raise_for_status(self):
+            pass
+
+    class DummySession:
+        def get(self, *args, **kwargs):
+            return DummyResp()
+
+    monkeypatch.setattr("scrapers.anbima_debentures.nova_session", lambda: DummySession())
+
+    scraper = AnbimaDebenturesScraper()
+    scraper.target_date = date(2026, 6, 3)
+    df = scraper.fetch()
+
+    assert not df.empty
+    assert len(df) == 2
+
+    # Verifica se as colunas numéricas foram convertidas para float
+    numeric_cols = [
+        "tx_compra",
+        "tx_venda",
+        "tx_indicativa",
+        "desvio_padrao",
+        "intervalo_indicativo_min",
+        "intervalo_indicativo_max",
+        "pu",
+        "ratio_pu_par_vne",
+        "duration",
+    ]
+    for col in numeric_cols:
+        assert pd.api.types.is_float_dtype(df[col]), f"{col} deve ser float64"
+
+    # Linha 0 deve ter valores float válidos
+    assert df.loc[0, "tx_compra"] == 0.8503
+    assert df.loc[0, "tx_venda"] == 0.5404
+    assert df.loc[0, "tx_indicativa"] == 0.6834
+    assert df.loc[0, "pu"] == 1046.357089
+    assert df.loc[0, "ratio_pu_par_vne"] == 102.0904
+
+    # Linha 1 (com '--' e 'N/D') deve ter virado NaN e não string literal
+    assert pd.isna(df.loc[1, "tx_compra"])
+    assert pd.isna(df.loc[1, "pu"])
+
+

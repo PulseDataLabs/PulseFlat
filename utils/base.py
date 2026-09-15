@@ -373,7 +373,7 @@ def salvar_csv(
             except Exception:
                 pass
 
-        def get_type_badge(col_name):
+        def get_type_badge(col_name, series=None):
             col_name = col_name.lower()
             if (
                 col_name.startswith("dt_")
@@ -382,14 +382,48 @@ def salvar_csv(
                 or "date" in col_name
             ):
                 return "date"
+
+            if series is not None and not series.empty:
+                if pd.api.types.is_float_dtype(series):
+                    return "float"
+                if pd.api.types.is_integer_dtype(series):
+                    return "int"
+                if pd.api.types.is_datetime64_any_dtype(series):
+                    return "date"
+                non_null = series.dropna()
+                sample = non_null.head(30).astype(str).str.strip()
+                sample = sample[~sample.isin(["", "nan", "None", "--", "N/D", "ND", "-", "null"])]
+                if not sample.empty:
+                    try:
+                        num = pd.to_numeric(sample, errors="raise")
+                        if (num % 1 == 0).all() and not sample.str.contains(r"\.").any():
+                            return "int"
+                        return "float"
+                    except Exception:
+                        pass
+
             if (
                 col_name.startswith("vr_")
                 or col_name.startswith("vl_")
+                or col_name.startswith("tx_")
+                or col_name.startswith("pct_")
+                or col_name.startswith("interv_")
+                or col_name.startswith("intervalo_")
+                or col_name.startswith("pu_")
                 or col_name.endswith("_val")
+                or col_name.endswith("_perc")
+                or col_name.endswith("_taxa")
+                or col_name.endswith("_pu")
                 or "preco" in col_name
                 or "taxa" in col_name
                 or "saldo" in col_name
                 or "patrimonio" in col_name
+                or "desvio" in col_name
+                or "duration" in col_name
+                or "ratio" in col_name
+                or "spread" in col_name
+                or "yield" in col_name
+                or col_name in ("pu", "duration", "pct_reune", "desvio_padrao")
                 or col_name
                 in (
                     "ret_dia_perc",
@@ -401,7 +435,8 @@ def salvar_csv(
                     "taxa_juros_aa_perc_venda_d0",
                 )
             ):
-                return "float"
+                if col_name not in ("publico_alvo",):
+                    return "float"
             if (
                 col_name.startswith("qt_")
                 or col_name.startswith("nr_")
@@ -428,7 +463,7 @@ def salvar_csv(
         first_reg = df_final.iloc[0].to_dict() if not df_final.empty else {}
         fields = []
         for c in filtered_cols:
-            t_badge = get_type_badge(c)
+            t_badge = get_type_badge(c, df_final[c] if c in df_final.columns else None)
             ex_val = str(first_reg.get(c, ""))
             if ex_val == "nan" or ex_val == "None":
                 ex_val = ""
