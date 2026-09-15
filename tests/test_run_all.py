@@ -48,8 +48,8 @@ def test_discover_scrapers_phases():
 def test_save_pipeline_status_prunes_obsolete(tmp_path, monkeypatch):
     """Garante que save_pipeline_status remove scrapers excluídos/inativos e não infla o total/sucesso."""
     import json
-    from unittest.mock import patch
-    from run_all import save_pipeline_status, discover_scrapers
+
+    from run_all import discover_scrapers, save_pipeline_status
 
     status_dir = tmp_path / "data"
     status_dir.mkdir(parents=True, exist_ok=True)
