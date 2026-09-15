@@ -7,6 +7,7 @@ e a geração de governança de esquemas em schemas.json.
 
 import json
 from pathlib import Path
+
 import pandas as pd
 import pytest
 

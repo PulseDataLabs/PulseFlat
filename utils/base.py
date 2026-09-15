@@ -167,7 +167,7 @@ def read_existing_header(arquivo: Path) -> list[str]:
         return []
 
 
-def get_type_badge(col_name: str, series: Union[pd.Series, None] = None) -> str:
+def get_type_badge(col_name: str, series: pd.Series | None = None) -> str:
     """
     Infere a tipagem do campo para governança e exibição no catálogo (date, float, int, str).
     Combina inspeção em tempo de execução dos dados/dtypes do pandas com padrões léxicos de mercado financeiro.
