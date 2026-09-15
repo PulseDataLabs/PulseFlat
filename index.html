@@ -1679,6 +1679,11 @@
       background: rgba(255, 77, 109, 0.06);
       box-shadow: 0 0 20px rgba(255, 77, 109, 0.15);
     }
+    .monitor-kpi-card.kpi-drift.active {
+      border-color: #a855f7;
+      background: rgba(168, 85, 247, 0.08);
+      box-shadow: 0 0 20px rgba(168, 85, 247, 0.2);
+    }
 
     .monitor-kpi-card::before {
       content: '';
@@ -1691,6 +1696,7 @@
     .kpi-ok::before { background: var(--green); }
     .kpi-warning::before { background: var(--gold); }
     .kpi-error::before { background: var(--red); }
+    .kpi-drift::before { background: #a855f7; }
 
     .kpi-header {
       display: flex;
@@ -2042,6 +2048,82 @@
       border-color: var(--border2);
       border-left-color: var(--red);
       box-shadow: 0 10px 30px rgba(255, 77, 109, 0.15);
+    }
+
+    .monitor-drift-box {
+      margin-top: 0.75rem;
+      margin-bottom: 0.5rem;
+      background: rgba(168, 85, 247, 0.08);
+      border: 1px solid rgba(168, 85, 247, 0.25);
+      border-radius: 6px;
+      padding: 0.65rem 0.8rem;
+    }
+    .monitor-drift-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 0.4rem;
+    }
+    .monitor-drift-badge {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: #c084fc;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+    .monitor-drift-meta {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      color: var(--text3);
+    }
+    .monitor-drift-content {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      font-size: 0.72rem;
+    }
+    .monitor-drift-line {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.4rem;
+      flex-wrap: wrap;
+    }
+    .monitor-drift-line.removed .drift-prefix { color: var(--red); font-weight: 600; font-family: var(--font-mono); font-size: 0.68rem; }
+    .monitor-drift-line.added .drift-prefix { color: var(--green); font-weight: 600; font-family: var(--font-mono); font-size: 0.68rem; }
+    .monitor-drift-line code {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      padding: 0.1rem 0.35rem;
+      border-radius: 3px;
+    }
+    .monitor-drift-line.removed code {
+      background: rgba(255, 77, 109, 0.15);
+      color: #ff8599;
+      border: 1px solid rgba(255, 77, 109, 0.3);
+    }
+    .monitor-drift-line.added code {
+      background: rgba(0, 229, 160, 0.15);
+      color: #5cf4bd;
+      border: 1px solid rgba(0, 229, 160, 0.3);
+    }
+    .monitor-drift-pill {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      font-weight: 700;
+      color: #c084fc;
+      background: rgba(168, 85, 247, 0.15);
+      border: 1px solid rgba(168, 85, 247, 0.3);
+      border-radius: 4px;
+      padding: 0.15rem 0.45rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
     }
 
 
@@ -2478,6 +2560,14 @@
         <div class="kpi-sub">Requer verificação da fonte</div>
       </div>
 
+      <div class="monitor-kpi-card kpi-drift" data-status="drift" role="button" tabindex="0" title="Filtrar bases com Schema Drift (colunas alteradas na fonte)">
+        <div class="kpi-header">
+          <span class="kpi-label">Schema Drifts</span>
+          <span class="kpi-icon">⚡</span>
+        </div>
+        <div class="kpi-value" id="kpi-val-drift" style="color: #c084fc;">--</div>
+        <div class="kpi-sub">Variações de colunas na fonte</div>
+      </div>
 
     </div>
 
@@ -2530,7 +2620,7 @@
         <button class="status-filter-btn" data-status="ok">🟢 Em dia <span class="status-count-badge" id="badge-count-ok">0</span></button>
         <button class="status-filter-btn" data-status="warning">🟡 Atenção <span class="status-count-badge" id="badge-count-warning">0</span></button>
         <button class="status-filter-btn" data-status="error">🔴 Atrasados <span class="status-count-badge" id="badge-count-error">0</span></button>
-
+        <button class="status-filter-btn" data-status="drift">⚡ Schema Drifts <span class="status-count-badge" id="badge-count-drift">0</span></button>
       </div>
     </div>
 
@@ -3741,6 +3831,39 @@
         }
       }
 
+      let hasDrift = false;
+      let driftTime = '';
+      let driftAdded = [];
+      let driftRemoved = [];
+      if (pipelineStatus && pipelineStatus.drifts) {
+        const dInfo = pipelineStatus.drifts[file] ||
+                      pipelineStatus.drifts[`${scraperKey}.csv.gz`] ||
+                      pipelineStatus.drifts[`${scraperKey}.csv`] ||
+                      pipelineStatus.drifts[scraperKey];
+        if (dInfo) {
+          const added = Array.isArray(dInfo.added) ? dInfo.added : [];
+          const removed = Array.isArray(dInfo.removed) ? dInfo.removed : [];
+          if (added.length > 0 || removed.length > 0) {
+            hasDrift = true;
+            driftAdded = added;
+            driftRemoved = removed;
+            if (dInfo.timestamp) {
+              try {
+                const dt = new Date(dInfo.timestamp);
+                if (!isNaN(dt.getTime())) {
+                  const d = String(dt.getDate()).padStart(2, '0');
+                  const m = String(dt.getMonth() + 1).padStart(2, '0');
+                  const y = dt.getFullYear();
+                  const hh = String(dt.getHours()).padStart(2, '0');
+                  const mm = String(dt.getMinutes()).padStart(2, '0');
+                  driftTime = `${d}/${m}/${y} ${hh}:${mm}`;
+                }
+              } catch(e) {}
+            }
+          }
+        }
+      }
+
       const isPeriodic = isPeriodicDataset(dataset, file);
       const businessLag = maxDate ? getBusinessDaysDiff(maxDate, now) : 999;
 
@@ -3795,13 +3918,21 @@
         sourceName = 'B3';
         tagClass = 'tag-b3';
       } else if (lowerFile.startsWith('bcb_') || lowerFile.startsWith('bacen_')) {
-        sourceKey = 'bcb';
+        sourceKey = 'bacen';
         sourceName = 'BACEN';
-        tagClass = 'tag-bcb';
+        tagClass = 'tag-bacen';
       } else if (lowerFile.startsWith('cvm_') || lowerFile.startsWith('registro_')) {
         sourceKey = 'cvm';
         sourceName = 'CVM';
         tagClass = 'tag-cvm';
+      } else if (lowerFile.startsWith('tesouro_')) {
+        sourceKey = 'tesouro';
+        sourceName = 'Tesouro';
+        tagClass = 'tag-tesouro';
+      } else if (lowerFile.startsWith('stn_')) {
+        sourceKey = 'stn';
+        sourceName = 'STN';
+        tagClass = 'tag-stn';
       } else if (lowerFile.startsWith('ibge_')) {
         sourceKey = 'ibge';
         sourceName = 'IBGE';
@@ -3844,6 +3975,10 @@
         pipelineTime,
         pipelineElapsed,
         pipelineError,
+        hasDrift,
+        driftTime,
+        driftAdded,
+        driftRemoved,
         dataset
       });
     });
@@ -3859,26 +3994,31 @@
     const okCount = monitorData.filter(d => d.status === 'ok').length;
     const warningCount = monitorData.filter(d => d.status === 'warning').length;
     const errorCount = monitorData.filter(d => d.status === 'error').length;
+    const driftCount = monitorData.filter(d => d.hasDrift).length;
 
     const elTotal = document.getElementById('kpi-val-total');
     const elOk = document.getElementById('kpi-val-ok');
     const elWarning = document.getElementById('kpi-val-warning');
     const elError = document.getElementById('kpi-val-error');
+    const elDrift = document.getElementById('kpi-val-drift');
 
     if (elTotal) elTotal.textContent = total;
     if (elOk) elOk.textContent = okCount;
     if (elWarning) elWarning.textContent = warningCount;
     if (elError) elError.textContent = errorCount;
+    if (elDrift) elDrift.textContent = driftCount;
 
     const bAll = document.getElementById('badge-count-all');
     const bOk = document.getElementById('badge-count-ok');
     const bWarning = document.getElementById('badge-count-warning');
     const bError = document.getElementById('badge-count-error');
+    const bDrift = document.getElementById('badge-count-drift');
 
     if (bAll) bAll.textContent = total;
     if (bOk) bOk.textContent = okCount;
     if (bWarning) bWarning.textContent = warningCount;
     if (bError) bError.textContent = errorCount;
+    if (bDrift) bDrift.textContent = driftCount;
 
     const healthPercent = total > 0 ? Math.round(((okCount + (warningCount * 0.5)) / total) * 100) : 100;
     const elScore = document.getElementById('health-bar-score');
@@ -3902,7 +4042,9 @@
     if (!grid) return;
 
     let filtered = monitorData.filter(item => {
-      if (monitorActiveStatus !== 'all' && item.status !== monitorActiveStatus) {
+      if (monitorActiveStatus === 'drift') {
+        if (!item.hasDrift) return false;
+      } else if (monitorActiveStatus !== 'all' && item.status !== monitorActiveStatus) {
         return false;
       }
       if (monitorActiveSource !== 'all' && item.sourceKey !== monitorActiveSource) {
@@ -3970,10 +4112,13 @@
           <div>
             <div class="monitor-card-top">
               <span class="monitor-source-tag ${item.tagClass}">${item.sourceName}</span>
-              <span class="monitor-status-pill ${item.pillClass}">
-                <span class="pill-dot pulse-animation"></span>
-                ${item.statusLabel}
-              </span>
+              <div style="display: flex; align-items: center; gap: 0.35rem; flex-wrap: wrap;">
+                ${item.hasDrift ? `<span class="monitor-drift-pill">⚡ Drift</span>` : ''}
+                <span class="monitor-status-pill ${item.pillClass}">
+                  <span class="pill-dot pulse-animation"></span>
+                  ${item.statusLabel}
+                </span>
+              </div>
             </div>
 
             <div class="monitor-card-title">${item.title}</div>
@@ -3993,6 +4138,29 @@
                 <span class="monitor-lag-tag" style="color: ${item.status === 'ok' ? 'var(--green)' : item.status === 'warning' ? 'var(--gold)' : 'var(--red)'};">${item.lagDesc}</span>
               </div>
             </div>
+
+            ${item.hasDrift ? `
+              <div class="monitor-drift-box">
+                <div class="monitor-drift-header">
+                  <span class="monitor-drift-badge">⚡ Schema Drift</span>
+                  <span class="monitor-drift-meta">${item.driftTime || 'Detectado'}</span>
+                </div>
+                <div class="monitor-drift-content">
+                  ${item.driftAdded && item.driftAdded.length > 0 ? `
+                    <div class="monitor-drift-line added">
+                      <span class="drift-prefix">+ Adicionadas:</span>
+                      ${item.driftAdded.map(col => `<code>${escapeHtml(col)}</code>`).join('')}
+                    </div>
+                  ` : ''}
+                  ${item.driftRemoved && item.driftRemoved.length > 0 ? `
+                    <div class="monitor-drift-line removed">
+                      <span class="drift-prefix">− Removidas:</span>
+                      ${item.driftRemoved.map(col => `<code>${escapeHtml(col)}</code>`).join('')}
+                    </div>
+                  ` : ''}
+                </div>
+              </div>
+            ` : ''}
 
             ${(item.status === 'error' || item.pipelineError) ? `
               <div class="monitor-error-box">

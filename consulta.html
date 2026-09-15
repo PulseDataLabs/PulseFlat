@@ -13,7 +13,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@300;400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   
   <link rel="preload" href="./data/consolidated_pivoted.json" as="fetch" crossorigin />
+  <link rel="preload" href="./data/pipeline_status.json" as="fetch" crossorigin />
   <script src="./data/consolidated_pivoted.js" defer></script>
+  <script src="./data/pipeline_status.js" defer></script>
   
   <link rel="stylesheet" href="https://cdn.datatables.net/2.2.2/css/dataTables.dataTables.min.css" />
   <link rel="stylesheet" href="https://cdn.datatables.net/responsive/3.0.4/css/responsive.dataTables.min.css" />
@@ -824,17 +826,298 @@
     }
     .footer-links a:hover { color: var(--accent); }
 
+    /* ── Schema Drift & Data Governance Section ── */
+    .drift-section {
+      width: 100%;
+      max-width: 100%;
+      margin: 1.75rem auto 0;
+      padding: 0 2rem;
+      box-sizing: border-box;
+    }
+    .drift-card {
+      width: 100%;
+      box-sizing: border-box;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .drift-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #f59e0b, #ef4444, #a855f7);
+    }
+    .drift-header {
+      padding: 1.25rem 1.4rem;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+      border-bottom: 1px solid var(--border);
+    }
+    .drift-title-group h2 {
+      font-family: var(--font-head);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+      margin-top: 0.15rem;
+    }
+    .drift-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--gold);
+      margin-bottom: 0.25rem;
+    }
+    .drift-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--gold);
+      box-shadow: 0 0 8px var(--gold);
+      animation: pulse-dot 2s infinite ease-in-out;
+    }
+    .drift-pill {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 0.2rem 0.55rem;
+      border-radius: 20px;
+      background: var(--gold-dim);
+      color: var(--gold);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+    }
+    .drift-pill.zero {
+      background: var(--emerald-dim);
+      color: var(--emerald);
+      border-color: rgba(16, 185, 129, 0.3);
+    }
+    .drift-subtitle {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-top: 0.25rem;
+    }
+    .drift-btn-toggle {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      padding: 0.45rem 0.85rem;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      transition: all 0.2s;
+    }
+    .drift-btn-toggle:hover {
+      color: var(--text);
+      border-color: var(--border-glow);
+      background: var(--border);
+    }
+    .drift-content {
+      padding: 1.25rem 1.4rem;
+      transition: all 0.3s ease-in-out;
+    }
+    .drift-content.collapsed {
+      display: none;
+    }
+    .drift-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+      gap: 1.2rem;
+    }
+    .drift-item {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 1rem 1.15rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+    .drift-item:hover {
+      border-color: rgba(245, 158, 11, 0.4);
+      transform: translateY(-2px);
+    }
+    .drift-item-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+    .drift-item-file {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      color: var(--text);
+    }
+    .drift-source-tag {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      font-weight: 700;
+      padding: 0.15rem 0.45rem;
+      border-radius: 4px;
+      text-transform: uppercase;
+    }
+    .drift-source-tag.anbima { background: rgba(245, 158, 11, 0.15); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.3); }
+    .drift-source-tag.b3 { background: rgba(0, 212, 255, 0.15); color: #38bdf8; border: 1px solid rgba(0, 212, 255, 0.3); }
+    .drift-source-tag.bcb { background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3); }
+    .drift-source-tag.cvm { background: rgba(168, 85, 247, 0.15); color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.3); }
+    .drift-source-tag.other { background: rgba(255, 255, 255, 0.08); color: var(--text-muted); border: 1px solid var(--border); }
+    
+    .drift-item-date {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--text-dim);
+    }
+    .drift-changes {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 0.75rem;
+    }
+    .drift-change-row {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+    .drift-change-row .change-label {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .drift-change-row.removed .change-label { color: var(--rose); }
+    .drift-change-row.added .change-label { color: var(--emerald); }
+    
+    .column-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+    }
+    .col-tag {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+    .col-tag.removed {
+      background: var(--rose-dim);
+      color: #fb7185;
+      border: 1px solid rgba(244, 63, 94, 0.3);
+    }
+    .col-tag.added {
+      background: var(--emerald-dim);
+      color: #34d399;
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+    .col-tag.none {
+      color: var(--text-dim);
+      font-style: italic;
+      font-size: 0.72rem;
+    }
+    
+    .drift-item-footer {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      margin-top: 0.25rem;
+    }
+    .drift-filter-btn {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--accent);
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 500;
+      padding: 0.35rem 0.75rem;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      transition: all 0.2s;
+    }
+    .drift-filter-btn:hover {
+      background: var(--accent-dim);
+      border-color: var(--accent);
+      color: var(--accent-hover);
+    }
+    .drift-empty {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      padding: 1.25rem;
+      background: var(--bg-surface);
+      border: 1px solid rgba(16, 185, 129, 0.2);
+      border-radius: var(--radius-sm);
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+    .drift-empty-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--emerald-dim);
+      color: var(--emerald);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+      font-weight: 700;
+    }
+    .drift-empty strong {
+      color: var(--text);
+      display: block;
+      margin-bottom: 0.15rem;
+      font-size: 0.9rem;
+    }
+    .stat-box.drift:hover {
+      background: var(--bg-surface);
+      cursor: pointer;
+    }
+
     /* ── Responsive ── */
     @media (max-width: 960px) {
       .hero-inner { flex-direction: column; align-items: flex-start; }
       .stats-ribbon { width: 100%; }
       .stat-box { flex: 1; min-width: 30%; }
       .dashboard-grid { grid-template-columns: 1fr; }
+      .drift-grid { grid-template-columns: 1fr; }
     }
     @media (max-width: 640px) {
       .navbar { padding: 0 1rem; }
       .hero { padding: 1.75rem 1rem; }
-      .filter-wrapper, .table-wrap { padding: 0 1rem; }
+      .filter-wrapper, .table-wrap, .drift-section { padding: 0 1rem; }
       .stat-box { min-width: 45%; }
     }
   </style>
@@ -904,6 +1187,10 @@
           <div class="stat-val" id="stat-misc">—</div>
           <div class="stat-lbl">Yahoo / Outros</div>
         </div>
+        <div class="stat-box drift" id="stat-box-drift" role="button" tabindex="0" title="Ver alterações estruturais de schema (Governança)">
+          <div class="stat-val" id="stat-drifts" style="color: var(--gold);">—</div>
+          <div class="stat-lbl">Schema Drifts</div>
+        </div>
       </div>
     </div>
   </header>
@@ -965,6 +1252,36 @@
       <div id="selic-dashboard-chart" class="chart-container"></div>
     </div>
 
+  </section>
+
+  <!-- Schema Drift & Data Governance Section -->
+  <section class="drift-section" id="schema-drift-section" aria-label="Alterações Estruturais de Schema">
+    <div class="drift-card">
+      <div class="drift-header">
+        <div class="drift-title-group">
+          <div class="drift-badge">
+            <span class="drift-dot"></span>
+            Governança & Observabilidade
+          </div>
+          <h2>⚡ Alterações Estruturais de Schema (Drifts) <span class="drift-pill" id="drift-summary-pill">—</span></h2>
+          <p class="drift-subtitle">Histórico de colunas adicionadas ou descontinuadas automaticamente detectadas nas fontes de dados oficiais.</p>
+        </div>
+        <div class="drift-header-actions">
+          <button id="btn-toggle-drift" class="drift-btn-toggle" aria-expanded="true" title="Recolher / Expandir detalhes">
+            <span id="drift-toggle-text">Ocultar Detalhes</span>
+            <span id="drift-toggle-arrow">▲</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="drift-content" id="drift-content">
+        <div class="drift-grid" id="drift-cards-grid">
+          <div style="grid-column: 1 / -1; text-align: center; padding: 2rem; color: var(--text-dim); font-family: var(--font-mono); font-size: 0.85rem;">
+            Carregando governança de schema...
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- Filter & Category Section -->
@@ -2005,6 +2322,200 @@
         });
       } catch (e) { console.warn('SELIC chart load error:', e); }
     }
+
+    // ── Helper Escape HTML ──
+    function escapeHtml(str) {
+      if (!str) return '';
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+    }
+
+    // ── Seção de Governança & Schema Drift ──
+    async function initSchemaDriftSection() {
+      let pipelineStatus = window.PULSEFLAT_PIPELINE_STATUS;
+      if (!pipelineStatus) {
+        try {
+          const res = await fetch('./data/pipeline_status.json');
+          if (res.ok) pipelineStatus = await res.json();
+        } catch (e) {
+          console.warn('Erro ao carregar pipeline_status.json para schema drift:', e);
+        }
+      }
+
+      const drifts = pipelineStatus?.drifts || {};
+      const driftFiles = Object.keys(drifts);
+      const count = driftFiles.length;
+
+      const $statDrifts = $('#stat-drifts');
+      if ($statDrifts.length) {
+        $statDrifts.text(count.toLocaleString('pt-BR'));
+        $statDrifts.css('color', count > 0 ? 'var(--gold)' : 'var(--emerald)');
+      }
+
+      const $summaryPill = $('#drift-summary-pill');
+      if ($summaryPill.length) {
+        if (count > 0) {
+          $summaryPill.removeClass('zero').text(`${count} detectado${count > 1 ? 's' : ''}`);
+        } else {
+          $summaryPill.addClass('zero').text('Nenhuma alteração');
+        }
+      }
+
+      const $grid = $('#drift-cards-grid');
+      if (!$grid.length) return;
+
+      if (count === 0) {
+        $grid.html(`
+          <div class="drift-empty" style="grid-column: 1 / -1;">
+            <div class="drift-empty-icon">✓</div>
+            <div>
+              <strong>Todos os schemas de dados estão íntegros e em conformidade.</strong>
+              <p>Nenhuma adição ou descontinuação de colunas foi identificada nos provedores de dados recentemente.</p>
+            </div>
+          </div>
+        `);
+        return;
+      }
+
+      let cardsHtml = '';
+      driftFiles.forEach(file => {
+        const item = drifts[file] || {};
+        const added = Array.isArray(item.added) ? item.added : [];
+        const removed = Array.isArray(item.removed) ? item.removed : [];
+        
+        let dateStr = 'Data não informada';
+        if (item.timestamp) {
+          try {
+            const dt = new Date(item.timestamp);
+            if (!isNaN(dt.getTime())) {
+              dateStr = dt.toLocaleString('pt-BR');
+            }
+          } catch(e) {}
+        }
+
+        // Determina tag de provedor
+        let sourceTag = 'other';
+        let sourceName = 'Outros';
+        const fl = file.toLowerCase();
+        if (fl.startsWith('anbima')) { sourceTag = 'anbima'; sourceName = 'ANBIMA'; }
+        else if (fl.startsWith('b3')) { sourceTag = 'b3'; sourceName = 'B3'; }
+        else if (fl.startsWith('bcb') || fl.startsWith('bacen')) { sourceTag = 'bcb'; sourceName = 'BACEN'; }
+        else if (fl.startsWith('cvm')) { sourceTag = 'cvm'; sourceName = 'CVM'; }
+        else if (fl.startsWith('debentures')) { sourceTag = 'anbima'; sourceName = 'Debêntures'; }
+        else if (fl.startsWith('fred')) { sourceTag = 'b3'; sourceName = 'FRED'; }
+        else if (fl.startsWith('ipea')) { sourceTag = 'bcb'; sourceName = 'IPEA'; }
+        else if (fl.startsWith('ibge')) { sourceTag = 'other'; sourceName = 'IBGE'; }
+
+        // Colunas adicionadas
+        let addedHtml = '<span class="col-tag none">Nenhuma coluna nova</span>';
+        if (added.length > 0) {
+          addedHtml = added.map(c => `<span class="col-tag added" title="Nova coluna incluída na fonte">+ ${escapeHtml(c)}</span>`).join('');
+        }
+
+        // Colunas removidas
+        let removedHtml = '<span class="col-tag none">Nenhuma coluna descontinuada</span>';
+        if (removed.length > 0) {
+          removedHtml = removed.map(c => `<span class="col-tag removed" title="Coluna descontinuada ou ausente na fonte">− ${escapeHtml(c)}</span>`).join('');
+        }
+
+        const searchKeyword = file.replace(/\.csv(\.gz)?$/, '').replace(/\.zip$/, '');
+
+        cardsHtml += `
+          <div class="drift-item">
+            <div class="drift-item-header">
+              <div class="drift-item-file">
+                <span>📄</span>
+                <strong>${escapeHtml(file)}</strong>
+                <span class="drift-source-tag ${sourceTag}">${sourceName}</span>
+              </div>
+              <div class="drift-item-date">
+                🕒 ${dateStr}
+              </div>
+            </div>
+
+            <div class="drift-changes">
+              ${removed.length > 0 ? `
+              <div class="drift-change-row removed">
+                <span class="change-label">⚠️ Colunas Descontinuadas / Removidas (${removed.length})</span>
+                <div class="column-tags">
+                  ${removedHtml}
+                </div>
+              </div>` : ''}
+
+              ${added.length > 0 ? `
+              <div class="drift-change-row added">
+                <span class="change-label">✨ Colunas Novas Adicionadas (${added.length})</span>
+                <div class="column-tags">
+                  ${addedHtml}
+                </div>
+              </div>` : ''}
+
+              ${(added.length === 0 && removed.length === 0) ? `
+              <div class="drift-change-row">
+                <div class="column-tags">
+                  <span class="col-tag none">Alteração estrutural registrada</span>
+                </div>
+              </div>` : ''}
+            </div>
+
+            <div class="drift-item-footer">
+              <button class="drift-filter-btn" data-search="${escapeHtml(searchKeyword)}" title="Filtrar dados deste dataset na tabela abaixo">
+                🔍 Localizar no Painel
+              </button>
+            </div>
+          </div>
+        `;
+      });
+
+      $grid.html(cardsHtml);
+
+      // Botões para localizar o dataset na tabela
+      $grid.find('.drift-filter-btn').on('click', function() {
+        const term = $(this).data('search');
+        if (term && tableApi) {
+          $search.val(term);
+          $searchClear.show();
+          tableApi.search(term).draw();
+          const target = document.getElementById('table-section');
+          if (target) target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    }
+
+    // Toggle button collapse/expand
+    $('#btn-toggle-drift').on('click', function() {
+      const $content = $('#drift-content');
+      const isCollapsed = $content.hasClass('collapsed');
+      if (isCollapsed) {
+        $content.removeClass('collapsed');
+        $('#drift-toggle-text').text('Ocultar Detalhes');
+        $('#drift-toggle-arrow').text('▲');
+        $(this).attr('aria-expanded', 'true');
+      } else {
+        $content.addClass('collapsed');
+        $('#drift-toggle-text').text('Ver Detalhes');
+        $('#drift-toggle-arrow').text('▼');
+        $(this).attr('aria-expanded', 'false');
+      }
+    });
+
+    // Clique no card de stat da ribbon navega até a seção
+    $('#stat-box-drift').on('click', function() {
+      const target = document.getElementById('schema-drift-section');
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+        const $content = $('#drift-content');
+        if ($content.hasClass('collapsed')) {
+          $('#btn-toggle-drift').trigger('click');
+        }
+      }
+    });
+
+    initSchemaDriftSection();
 
   }
 
