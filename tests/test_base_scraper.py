@@ -212,8 +212,9 @@ AALR13@CENTRO DIAG@2027-10-04@DI + 2.75%@--@--@--@--@--@--@N/D@N/D@N/D@@
 
 def test_schema_generator_financial_type_inference(tmp_path):
     """Garante que salvar_csv infere corretamente tipos numéricos de métricas financeiras (taxas, variacao, peso, pmr, numero_indice)."""
-    from utils.base import salvar_csv
     import json
+
+    from utils.base import salvar_csv
 
     df = pd.DataFrame([
         {
