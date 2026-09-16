@@ -139,10 +139,6 @@ window.PULSEFLAT_LAST_UPDATES = {
     "min": "2026-09-16",
     "max": "2026-09-16"
   },
-  "b3_isin_emissores.csv": {
-    "min": "2026-09-16",
-    "max": "2026-09-16"
-  },
   "b3_termo_posicoes_aberto.csv": {
     "min": "2026-09-14",
     "max": "2026-09-16"
@@ -374,5 +370,33 @@ window.PULSEFLAT_LAST_UPDATES = {
   "b3_carteira_teorica_ifnc.csv": {
     "min": "2026-06-03",
     "max": "2026-09-16"
+  },
+  "b3_cotahist_anual.csv.gz": {
+    "min": "2026-09-16",
+    "max": "2026-09-16"
+  },
+  "b3_isin_emissores.csv.gz": {
+    "min": "2026-09-15",
+    "max": "2026-09-15"
+  },
+  "b3_titulos_negociaveis.csv": {
+    "min": "2026-06-06",
+    "max": "2026-06-06"
+  },
+  "bacen_cadastro_instituicoes.csv.gz": {
+    "min": "2026-09-13",
+    "max": "2026-09-15"
+  },
+  "bacen_parcelas_capital_basileia.csv.gz": {
+    "min": "2026-06-05",
+    "max": "2026-09-15"
+  },
+  "cvm_fundos_informe_diario.csv": {
+    "min": "2026-06-06",
+    "max": "2026-06-06"
+  },
+  "registro_fundo_classe.csv": {
+    "min": "2026-06-06",
+    "max": "2026-06-06"
   }
 };

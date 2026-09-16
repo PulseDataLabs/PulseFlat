@@ -155,12 +155,21 @@ def _mapear(item: dict, data_captura: str, tipo_label: str) -> dict:
 def _enriquecer(registros: list[dict]) -> list[dict]:
     root_dir = Path(__file__).resolve().parents[1]
 
-    titulos_path = root_dir / "data" / "b3_titulos_negociaveis.csv"
-    isin_path = root_dir / "data" / "b3_isin_ativos.csv"
-    emissores_path = root_dir / "data" / "b3_isin_emissores.csv"
-    cvm_path = root_dir / "data" / "registro_fundo_classe.csv"
+    def _resolve(stem: str) -> Path | None:
+        p_gz = root_dir / "data" / f"{stem}.csv.gz"
+        if p_gz.exists():
+            return p_gz
+        p_csv = root_dir / "data" / f"{stem}.csv"
+        if p_csv.exists():
+            return p_csv
+        return None
 
-    if not all(p.exists() for p in [titulos_path, isin_path, emissores_path, cvm_path]):
+    titulos_path = _resolve("b3_titulos_negociaveis")
+    isin_path = _resolve("b3_isin_ativos")
+    emissores_path = _resolve("b3_isin_emissores")
+    cvm_path = _resolve("registro_fundo_classe")
+
+    if not all([titulos_path, isin_path, emissores_path, cvm_path]):
         log.warning("Arquivos de enriquecimento ausentes — retornando dados básicos.")
         return registros
 

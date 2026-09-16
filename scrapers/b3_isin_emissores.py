@@ -21,6 +21,7 @@ class B3IsinEmissoresScraper(BaseScraper):
     enabled = True
     phase = 1
     accumulate = False  # Snapshot completo, não acumular
+    compress = True
     chaves_dedup = None
 
     # Metadados para o catálogo global

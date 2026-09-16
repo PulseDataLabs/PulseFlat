@@ -807,7 +807,7 @@
   },
   {
     "title": "B3 — Emissores de Código ISIN",
-    "file": "b3_isin_emissores.csv",
+    "file": "b3_isin_emissores.csv.gz",
     "description": "Relação cadastral e códigos de identificação de todos os emissores de instrumentos financeiros registrados no sistema de numeração ISIN da B3.",
     "icon": "🏢",
     "iconClass": "icon-b3",
@@ -819,7 +819,7 @@
       "cadastro"
     ],
     "source": "B3",
-    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/b3_isin_emissores.csv",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/b3_isin_emissores.csv.gz",
     "accumulate": false
   },
   {
