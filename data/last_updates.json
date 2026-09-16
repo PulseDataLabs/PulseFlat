@@ -374,5 +374,13 @@
   "yahoo_criptoativos.csv": {
     "min": "2026-06-28",
     "max": "2026-09-16"
+  },
+  "anbima_indices_carteira_teorica_ima.csv.gz": {
+    "min": "2026-09-16",
+    "max": "2026-09-16"
+  },
+  "anbima_cri_cra_mercado_secundario.csv.gz": {
+    "min": "2026-09-12",
+    "max": "2026-09-16"
   }
 }
