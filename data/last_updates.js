@@ -322,5 +322,65 @@ window.PULSEFLAT_LAST_UPDATES = {
   "b3_bdi_trades_acoes.csv.gz": {
     "min": "2026-06-03",
     "max": "2026-09-17"
+  },
+  "anbima_idka.csv": {
+    "min": "2026-06-03",
+    "max": "2026-09-17"
+  },
+  "anbima_550.csv": {
+    "min": "2026-06-01",
+    "max": "2026-09-17"
+  },
+  "anbima_fidc_mercado_secundario.csv.gz": {
+    "min": "2026-09-12",
+    "max": "2026-09-17"
+  },
+  "anbima_curvas_juros_parametros_svensson.csv.gz": {
+    "min": "2026-09-12",
+    "max": "2026-09-17"
+  },
+  "anbima_curvas_credito.csv.gz": {
+    "min": "2026-09-12",
+    "max": "2026-09-17"
+  },
+  "anbima_ima_completo.csv": {
+    "min": "2026-06-01",
+    "max": "2026-09-17"
+  },
+  "anbima_curvas_juros_ettj.csv.gz": {
+    "min": "2026-09-12",
+    "max": "2026-09-17"
+  },
+  "anbima_indicadores.csv": {
+    "min": "2026-06-01",
+    "max": "2026-09-17"
+  },
+  "anbima_indice_ida.csv.gz": {
+    "min": "2026-09-12",
+    "max": "2026-09-17"
+  },
+  "anbima_debentures.csv.gz": {
+    "min": "2026-06-05",
+    "max": "2026-09-17"
+  },
+  "anbima_indices_carteira_teorica_ima.csv.gz": {
+    "min": "2026-09-17",
+    "max": "2026-09-17"
+  },
+  "anbima_indices_idka_resultados.csv.gz": {
+    "min": "2026-09-12",
+    "max": "2026-09-17"
+  },
+  "anbima_projecoes.csv": {
+    "min": "2026-06-01",
+    "max": "2026-09-17"
+  },
+  "anbima_cri_cra_mercado_secundario.csv.gz": {
+    "min": "2026-09-12",
+    "max": "2026-09-17"
+  },
+  "b3_carteiras_teoricas.csv.gz": {
+    "min": "2026-06-01",
+    "max": "2026-09-17"
   }
 };
