@@ -5,6 +5,7 @@ from .base import (
     get_logger,
     get_type_badge,
     limpar,
+    normalizar_espacos,
     nova_session,
     salvar_csv,
 )
@@ -19,6 +20,7 @@ __all__ = [
     "get_logger",
     "agora_brt",
     "limpar",
+    "normalizar_espacos",
     "b64_encode_params",
     "nova_session",
     "salvar_csv",

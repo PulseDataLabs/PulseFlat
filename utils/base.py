@@ -136,6 +136,12 @@ def limpar(valor) -> str:
     return str(valor).strip()
 
 
+def normalizar_espacos(valor) -> str:
+    if valor is None or pd.isna(valor):
+        return ""
+    return " ".join(str(valor).split())
+
+
 def b64_encode_params(params: dict) -> str:
     """Codifica dict como JSON em Base64 — padrão da API interna da B3."""
     payload = json.dumps(params, separators=(",", ":"))

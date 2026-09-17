@@ -15,7 +15,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 import json
 from base64 import b64decode
 
-from utils import agora_brt, b64_encode_params, limpar, salvar_csv
+from utils import agora_brt, b64_encode_params, limpar, normalizar_espacos, salvar_csv
 
 
 def test_agora_brt_formato():
@@ -34,6 +34,13 @@ def test_limpar_none():
 
 def test_limpar_espacos():
     assert limpar("  PETR4  ") == "PETR4"
+
+
+def test_normalizar_espacos_multiplos_internos():
+    assert normalizar_espacos("ON      NM") == "ON NM"
+    assert normalizar_espacos("PN  EJ  N1") == "PN EJ N1"
+    assert normalizar_espacos("  UNT     N2  ") == "UNT N2"
+    assert normalizar_espacos(None) == ""
 
 
 def test_limpar_numero():

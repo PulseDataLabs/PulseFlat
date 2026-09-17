@@ -16,7 +16,7 @@ import yaml
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from scrapers.utils.base import BaseScraper
 from scripts.utils.ux import print_done, print_warn
-from utils.base import agora_brt, get_logger, nova_session
+from utils.base import agora_brt, get_logger, limpar, normalizar_espacos, nova_session
 from utils.parsers import (
     csv_rows,
     date_ref,
@@ -201,15 +201,15 @@ class GenericScraper(BaseScraper):
                         "data_captura": data_captura,
                         "indice": index_code,
                         "indice_nome": index_name,
-                        "codigo_ativo": parts[0],
-                        "nome_ativo": parts[1],
-                        "tipo_ativo": parts[2],
+                        "codigo_ativo": limpar(parts[0]),
+                        "nome_ativo": limpar(parts[1]),
+                        "tipo_ativo": normalizar_espacos(parts[2]),
                         "quantidade_teorica": _limpar_int(parts[3]),
                         "participacao_pct": _limpar_float(parts[4]),
                         "reducao_capital": (
                             _limpar_float(parts[5]) if len(parts) > 5 else ""
                         ),
-                        "segmento": parts[6] if len(parts) > 6 else "",
+                        "segmento": limpar(parts[6]) if len(parts) > 6 else "",
                     }
                 )
         else:

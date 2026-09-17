@@ -20,6 +20,7 @@ from utils import (
     b64_encode_params,
     get_logger,
     limpar,
+    normalizar_espacos,
     nova_session,
 )
 
@@ -129,7 +130,7 @@ def _mapear(item: dict, data_captura: str, index: str, label: str) -> dict:
         "nome_ativo": limpar(
             item.get("asset") or item.get("companyName") or item.get("name")
         ),
-        "tipo_ativo": limpar(item.get("type") or item.get("typeStock")),
+        "tipo_ativo": normalizar_espacos(item.get("type") or item.get("typeStock")),
         "quantidade_teorica": _limpar_int(
             limpar(
                 item.get("theoricalQty")
