@@ -14,6 +14,7 @@
   <link rel="preload" href="./data/pipeline_status.json" as="fetch" crossorigin />
   <link rel="preload" href="./data/last_updates.json" as="fetch" crossorigin />
   <link rel="preload" href="./data/market_latest.json" as="fetch" crossorigin />
+  <link rel="preload" href="./data/previews.json" as="fetch" crossorigin />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
 
   <style>
@@ -2837,6 +2838,7 @@
 <script src="./data/last_updates.js"></script>
 <script src="./data/pipeline_status.js"></script>
 <script src="./data/market_latest.js"></script>
+<script src="./data/previews.js"></script>
 <script>
   function escapeHtml(text) {
     if (typeof text !== 'string') return text;
@@ -3463,71 +3465,112 @@
         }
         
         let previewHtml = '';
-        try {
-          const resp = await fetch(`./data/${fileName}`);
-          if (!resp.ok) throw new Error(`Status ${resp.status}`);
-          
-          let bodyStream = resp.body;
-          if (fileName.endsWith('.gz') && bodyStream) {
-            const decompressionStream = new DecompressionStream('gzip');
-            bodyStream = bodyStream.pipeThrough(decompressionStream);
+        let previewData = window.PULSEFLAT_PREVIEWS && window.PULSEFLAT_PREVIEWS[fileName];
+        if (!previewData) {
+          try {
+            const pResp = await fetch('./data/previews.json');
+            if (pResp.ok) {
+              window.PULSEFLAT_PREVIEWS = await pResp.json();
+              previewData = window.PULSEFLAT_PREVIEWS[fileName];
+            }
+          } catch (e) {
+            console.warn('Erro ao buscar previews.json:', e);
           }
+        }
+
+        if (previewData && previewData.rows && previewData.rows.length > 0) {
+          const headers = previewData.headers || [];
+          const displayRows = previewData.rows.slice(0, 15);
           
-          // Stream parsing of only the first chunk of the CSV file
-          const reader = bodyStream.getReader();
-          const decoder = new TextDecoder('utf-8');
-          let textBuffer = '';
-          let readDone = false;
+          let tableHeader = headers.map(h => `<th>${escapeHtml(h)}</th>`).join('');
+          let tableRows = displayRows.map(r => {
+            let cells = headers.map((h, i) => `<td>${escapeHtml(r[i] !== undefined && r[i] !== null ? r[i] : '')}</td>`).join('');
+            return `<tr>${cells}</tr>`;
+          }).join('');
           
-          while (!readDone) {
-            const { value, done } = await reader.read();
-            if (done) {
-              readDone = true;
-            } else {
-              textBuffer += decoder.decode(value, { stream: true });
-              const lineCount = (textBuffer.match(/\n/g) || []).length;
-              if (lineCount >= 25) {
-                await reader.cancel();
+          previewHtml = `
+            <div>
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem; flex-wrap: wrap; gap: 0.5rem;">
+                <div class="preview-section-title" style="margin-bottom: 0;">Prévia dos Dados (Registros Mais Recentes)</div>
+                <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--green); background: rgba(0, 229, 160, 0.1); border: 1px solid rgba(0, 229, 160, 0.25); padding: 0.2rem 0.6rem; border-radius: 9999px;">
+                  ⚡ Mais recentes primeiro
+                </span>
+              </div>
+              <div class="preview-table-container">
+                <table class="preview-table">
+                  <thead><tr>${tableHeader}</tr></thead>
+                  <tbody>${tableRows}</tbody>
+                </table>
+              </div>
+            </div>
+          `;
+        } else {
+          try {
+            const resp = await fetch(`./data/${fileName}`);
+            if (!resp.ok) throw new Error(`Status ${resp.status}`);
+            
+            let bodyStream = resp.body;
+            if (fileName.endsWith('.gz') && bodyStream) {
+              const decompressionStream = new DecompressionStream('gzip');
+              bodyStream = bodyStream.pipeThrough(decompressionStream);
+            }
+            
+            // Fallback: parse first chunk if preview bundle is missing
+            const reader = bodyStream.getReader();
+            const decoder = new TextDecoder('utf-8');
+            let textBuffer = '';
+            let readDone = false;
+            
+            while (!readDone) {
+              const { value, done } = await reader.read();
+              if (done) {
                 readDone = true;
+              } else {
+                textBuffer += decoder.decode(value, { stream: true });
+                const lineCount = (textBuffer.match(/\n/g) || []).length;
+                if (lineCount >= 50) {
+                  await reader.cancel();
+                  readDone = true;
+                }
               }
             }
-          }
-          
-          const parsed = Papa.parse(textBuffer, { skipEmptyLines: true });
-          const rows = parsed.data;
-          
-          if (rows.length > 0) {
-            const headers = rows[0];
-            const displayRows = rows.slice(1, 16);
             
-            let tableHeader = headers.map(h => `<th>${escapeHtml(h)}</th>`).join('');
-            let tableRows = displayRows.map(r => {
-              let cells = headers.map((h, i) => `<td>${escapeHtml(r[i] !== undefined ? r[i] : '')}</td>`).join('');
-              return `<tr>${cells}</tr>`;
-            }).join('');
+            const parsed = Papa.parse(textBuffer, { skipEmptyLines: true });
+            const rows = parsed.data;
             
+            if (rows.length > 0) {
+              const headers = rows[0];
+              const displayRows = rows.slice(1, 16);
+              
+              let tableHeader = headers.map(h => `<th>${escapeHtml(h)}</th>`).join('');
+              let tableRows = displayRows.map(r => {
+                let cells = headers.map((h, i) => `<td>${escapeHtml(r[i] !== undefined ? r[i] : '')}</td>`).join('');
+                return `<tr>${cells}</tr>`;
+              }).join('');
+              
+              previewHtml = `
+                <div>
+                  <div class="preview-section-title">Prévia dos Dados</div>
+                  <div class="preview-table-container">
+                    <table class="preview-table">
+                      <thead><tr>${tableHeader}</tr></thead>
+                      <tbody>${tableRows}</tbody>
+                    </table>
+                  </div>
+                </div>
+              `;
+            }
+          } catch (err) {
+            console.warn('Erro ao carregar prévia do CSV:', err);
             previewHtml = `
               <div>
-                <div class="preview-section-title">Prévia dos Dados (Primeiras Linhas)</div>
-                <div class="preview-table-container">
-                  <table class="preview-table">
-                    <thead><tr>${tableHeader}</tr></thead>
-                    <tbody>${tableRows}</tbody>
-                  </table>
+                <div class="preview-section-title">Prévia dos Dados</div>
+                <div class="error-state" style="padding: 1.5rem; background: rgba(255, 77, 109, 0.02); border: 1px solid rgba(255, 77, 109, 0.1); border-radius: 6px;">
+                  <p class="error-desc" style="font-size: 0.8rem; color: var(--text3); text-align: center;">Não foi possível carregar a prévia do CSV local (arquivo muito grande ou formato de log).</p>
                 </div>
               </div>
             `;
           }
-        } catch (err) {
-          console.warn('Erro ao carregar prévia do CSV:', err);
-          previewHtml = `
-            <div>
-              <div class="preview-section-title">Prévia dos Dados</div>
-              <div class="error-state" style="padding: 1.5rem; background: rgba(255, 77, 109, 0.02); border: 1px solid rgba(255, 77, 109, 0.1); border-radius: 6px;">
-                <p class="error-desc" style="font-size: 0.8rem; color: var(--text3); text-align: center;">Não foi possível carregar a prévia do CSV local (arquivo muito grande ou formato de log).</p>
-              </div>
-            </div>
-          `;
         }
         
         modalBody.innerHTML = `

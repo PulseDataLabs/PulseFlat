@@ -492,3 +492,41 @@ def test_upload_dataframe_date_safety_and_varchar_conversion(monkeypatch):
     # Linha 2: data inválida "00000000" convertida para None (evitando ORA-01841)
     row2 = batch[1]
     assert row2[0] is None
+
+
+def test_salvar_csv_previews_geradas_com_mais_recentes(tmp_path):
+    import json
+    import pandas as pd
+    csv_file = tmp_path / "teste_preview.csv"
+    
+    # Criar dados com datas fora de ordem cronológica ou antigas e recentes
+    df = pd.DataFrame({
+        "data_referencia": ["2026-09-10", "2026-09-17", "2026-09-15"],
+        "valor": [10.0, 20.0, 15.0]
+    })
+    
+    salvar_csv(csv_file, df, ["data_referencia", "valor"])
+    
+    previews_json_path = tmp_path / "previews.json"
+    previews_js_path = tmp_path / "previews.js"
+    
+    assert previews_json_path.exists()
+    assert previews_js_path.exists()
+    
+    with previews_json_path.open("r", encoding="utf-8") as f:
+        previews = json.load(f)
+        
+    assert "teste_preview.csv" in previews
+    headers = previews["teste_preview.csv"]["headers"]
+    rows = previews["teste_preview.csv"]["rows"]
+    
+    assert headers == ["data_referencia", "valor"]
+    # A linha mais recente (2026-09-17) deve estar na primeira posição (ordem decrescente)
+    assert rows[0][0] == "2026-09-17"
+    assert rows[1][0] == "2026-09-15"
+    assert rows[2][0] == "2026-09-10"
+    
+    with previews_js_path.open("r", encoding="utf-8") as f:
+        js_content = f.read()
+    assert "window.PULSEFLAT_PREVIEWS =" in js_content
+    assert "2026-09-17" in js_content

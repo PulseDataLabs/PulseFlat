@@ -538,6 +538,47 @@ def salvar_csv(
         log.warning(f"Não foi possível atualizar last_updates.json/js: {e}")
 
     try:
+        previews_path = arquivo.parent / "previews.json"
+        previews = {}
+        if previews_path.exists():
+            try:
+                with previews_path.open("r", encoding="utf-8") as pf:
+                    previews = json.load(pf)
+            except Exception:
+                pass
+
+        if not df_final.empty:
+            tail_df = df_final.tail(30).copy()
+            sort_col = None
+            for candidate in ["data_referencia", "data_captura", "data", "dt_captura", "data_base", "dt_referencia"]:
+                if candidate in tail_df.columns:
+                    sort_col = candidate
+                    break
+
+            if sort_col:
+                tail_df = tail_df.sort_values(by=sort_col, ascending=False)
+            else:
+                tail_df = tail_df.iloc[::-1]
+
+            display_tail = tail_df.head(15)
+            clean_rows = display_tail[cabecalho].fillna("").astype(str).values.tolist()
+
+            previews[arquivo.name] = {
+                "headers": cabecalho,
+                "rows": clean_rows,
+            }
+
+            with previews_path.open("w", encoding="utf-8") as pf:
+                json.dump(previews, pf, indent=2, ensure_ascii=False)
+
+            previews_js_path = arquivo.parent / "previews.js"
+            with previews_js_path.open("w", encoding="utf-8") as pf:
+                json_str = json.dumps(previews, indent=2, ensure_ascii=False)
+                pf.write("window.PULSEFLAT_PREVIEWS = " + json_str + ";\n")
+    except Exception as e:
+        log.warning(f"Não foi possível atualizar previews.json/js: {e}")
+
+    try:
         import re
 
         schemas_path = arquivo.parent / "schemas.json"
