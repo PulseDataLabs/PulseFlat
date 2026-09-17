@@ -1124,8 +1124,8 @@
     "description": "Série histórica anual consolidada do arquivo COTAHIST da B3, com registro diário de todas as transações, preços (abertura, máxima, mínima, médio, fechamento), volume e negócios de ações, opções e fundos.",
     "icon": "📅",
     "iconClass": "icon-b3",
-    "badge": "Anual",
-    "badgeClass": "badge-monthly",
+    "badge": "Diário",
+    "badgeClass": "badge-daily",
     "tags": [
       "cotações anual",
       "histórico",
@@ -1308,7 +1308,7 @@
     "description": "Estrutura moderna de classes e subclasses de cotas sob a Resolução CVM 175.",
     "icon": "📊",
     "iconClass": "icon-cvm",
-    "badge": "Snapshot",
+    "badge": "Diário",
     "badgeClass": "badge-snapshot",
     "tags": [
       "cvm",
@@ -1430,8 +1430,8 @@
     "description": "Série mensal dos principais indicadores da economia americana apurados via FRED: CPI Headline e Core, PCE Headline e Core (medidor oficial da meta do Fed), Nonfarm Payroll (criação de vagas líquidas) e taxa de desemprego (Unemployment Rate).",
     "icon": "📊",
     "iconClass": "icon-fred",
-    "badge": "FRED · Mensal",
-    "badgeClass": "badge-monthly",
+    "badge": "FRED API",
+    "badgeClass": "badge-dynamic",
     "tags": [
       "fred",
       "macroeconomia",
@@ -1476,8 +1476,8 @@
     "description": "Preços globais mensais das 5 principais commodities que determinam a balança comercial brasileira e o fluxo cambial do Real: Minério de Ferro, Soja, Petróleo Brent, Açúcar e Café Arábica, apuradas pelo Fundo Monetário Internacional (FMI).",
     "icon": "🚢",
     "iconClass": "icon-fred",
-    "badge": "FMI · Mensal",
-    "badgeClass": "badge-monthly",
+    "badge": "FRED / IMF",
+    "badgeClass": "badge-dynamic",
     "tags": [
       "fred",
       "imf",
@@ -1833,8 +1833,8 @@
     "description": "Relação enciclopédica, composição e tickers dos principais índices de ações globais mundiais (S&P 500, Nasdaq 100, Dow Jones, FTSE 100, DAX, Nikkei 225, Hang Seng, Euro Stoxx 50).",
     "icon": "🌐",
     "iconClass": "icon-global",
-    "badge": "Snapshot",
-    "badgeClass": "badge-snapshot",
+    "badge": "Diário",
+    "badgeClass": "badge-daily",
     "tags": [
       "indices",
       "global",

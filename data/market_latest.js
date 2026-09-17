@@ -7,8 +7,8 @@ window.PULSEFLAT_MARKET_LATEST = [
   },
   {
     "label": "SELIC",
-    "value": "13,90%",
-    "reference_date": "2026-09-16",
+    "value": "13,65%",
+    "reference_date": "2026-09-17",
     "type": "neutral"
   },
   {
