@@ -563,11 +563,11 @@ def test_salvar_csv_prioriza_data_referencia_em_last_updates(tmp_path):
 
 def test_periodic_datasets_sla_frequency():
     import json
-    with open('data/datasets.json', 'r', encoding='utf-8') as f:
+    with open('data/datasets.json', encoding='utf-8') as f:
         datasets = json.load(f)
-        
+
     ds_map = {d.get('file'): d for d in datasets if d.get('file')}
-    
+
     # Verificar que datasets mensais/periódicos estão devidamente configurados
     assert 'Mensal' in ds_map['b3_valor_mercado_empresas.csv']['badge']
     assert 'Mensal' in ds_map['bacen_balancetes_bancos.csv.gz']['badge']
