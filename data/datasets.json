@@ -83,8 +83,8 @@
     "description": "Ranking global e setorial de administradores e gestores de recursos de terceiros da ANBIMA, com volume de ativos sob gestão (AUM), número de fundos geridos e participação de mercado.",
     "icon": "📊",
     "iconClass": "icon-anbima",
-    "badge": "Diário",
-    "badgeClass": "badge-daily",
+    "badge": "Mensal",
+    "badgeClass": "badge-monthly",
     "tags": [
       "anbima"
     ],
@@ -1124,8 +1124,8 @@
     "description": "Série histórica anual consolidada do arquivo COTAHIST da B3, com registro diário de todas as transações, preços (abertura, máxima, mínima, médio, fechamento), volume e negócios de ações, opções e fundos.",
     "icon": "📅",
     "iconClass": "icon-b3",
-    "badge": "Diário",
-    "badgeClass": "badge-daily",
+    "badge": "Anual",
+    "badgeClass": "badge-monthly",
     "tags": [
       "cotações anual",
       "histórico",
@@ -1202,8 +1202,8 @@
     "description": "Quadro societário, composição patrimonial e demonstrações consolidadas dos Conglomerados Financeiros e Prudenciais regulados pelo Banco Central do Brasil.",
     "icon": "📊",
     "iconClass": "icon-bcb",
-    "badge": "Diário",
-    "badgeClass": "badge-daily",
+    "badge": "Mensal",
+    "badgeClass": "badge-monthly",
     "tags": [
       "bcb"
     ],
@@ -1308,8 +1308,8 @@
     "description": "Estrutura moderna de classes e subclasses de cotas sob a Resolução CVM 175.",
     "icon": "📊",
     "iconClass": "icon-cvm",
-    "badge": "Diário",
-    "badgeClass": "badge-daily",
+    "badge": "Snapshot",
+    "badgeClass": "badge-snapshot",
     "tags": [
       "cvm",
       "fundos",
@@ -1430,8 +1430,8 @@
     "description": "Série mensal dos principais indicadores da economia americana apurados via FRED: CPI Headline e Core, PCE Headline e Core (medidor oficial da meta do Fed), Nonfarm Payroll (criação de vagas líquidas) e taxa de desemprego (Unemployment Rate).",
     "icon": "📊",
     "iconClass": "icon-fred",
-    "badge": "FRED API",
-    "badgeClass": "badge-dynamic",
+    "badge": "FRED · Mensal",
+    "badgeClass": "badge-monthly",
     "tags": [
       "fred",
       "macroeconomia",
@@ -1476,8 +1476,8 @@
     "description": "Preços globais mensais das 5 principais commodities que determinam a balança comercial brasileira e o fluxo cambial do Real: Minério de Ferro, Soja, Petróleo Brent, Açúcar e Café Arábica, apuradas pelo Fundo Monetário Internacional (FMI).",
     "icon": "🚢",
     "iconClass": "icon-fred",
-    "badge": "FRED / IMF",
-    "badgeClass": "badge-dynamic",
+    "badge": "FMI · Mensal",
+    "badgeClass": "badge-monthly",
     "tags": [
       "fred",
       "imf",
@@ -1683,8 +1683,8 @@
     "description": "Lista oficial de empresas, fundações e organizações brasileiras signatárias dos 10 Princípios do Pacto Global da ONU sobre Direitos Humanos, Trabalho, Meio Ambiente e Anticorrupção.",
     "icon": "📊",
     "iconClass": "icon-misc",
-    "badge": "Diário",
-    "badgeClass": "badge-daily",
+    "badge": "Snapshot",
+    "badgeClass": "badge-snapshot",
     "tags": [
       "misc"
     ],
@@ -1833,8 +1833,8 @@
     "description": "Relação enciclopédica, composição e tickers dos principais índices de ações globais mundiais (S&P 500, Nasdaq 100, Dow Jones, FTSE 100, DAX, Nikkei 225, Hang Seng, Euro Stoxx 50).",
     "icon": "🌐",
     "iconClass": "icon-global",
-    "badge": "Diário",
-    "badgeClass": "badge-daily",
+    "badge": "Snapshot",
+    "badgeClass": "badge-snapshot",
     "tags": [
       "indices",
       "global",

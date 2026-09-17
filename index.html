@@ -2554,7 +2554,7 @@
 
       <div class="monitor-kpi-card kpi-error" data-status="error" role="button" tabindex="0" title="Filtrar bases atrasadas ou com falha">
         <div class="kpi-header">
-          <span class="kpi-label">Atrasado (> D-3)</span>
+          <span class="kpi-label">Fora do SLA / Atrasados</span>
           <span class="kpi-icon">🔴</span>
         </div>
         <div class="kpi-value" id="kpi-val-error" style="color: var(--red);">--</div>
@@ -3767,17 +3767,59 @@
     return parts.length === 3 ? `${parts[2]}/${parts[1]}/${parts[0]}` : dStr;
   }
 
-  function isPeriodicDataset(dataset, filename) {
+  function getDatasetFrequency(dataset, filename) {
     const fn = (filename || '').toLowerCase();
     const badge = (dataset && dataset.badge ? dataset.badge : '').toLowerCase();
-    
-    if (badge.includes('mensal') || badge.includes('anual') || badge.includes('trimestral') || badge.includes('estático') || badge.includes('snapshot')) {
-      return true;
+    const desc = (dataset && dataset.description ? dataset.description : '').toLowerCase();
+
+    if (badge.includes('anual') || fn.includes('cotahist_anual')) {
+      return 'anual';
     }
-    if (fn.includes('classificacao_setorial') || fn.includes('balancetes') || fn.includes('cotahist_anual') || fn.includes('cad_fi') || fn.includes('capital_social') || fn.includes('registro_fundo')) {
-      return true;
+    if (badge.includes('quadrimestral') || fn.includes('carteira_teorica_')) {
+      return 'quadrimestral';
     }
-    return false;
+    if (badge.includes('trimestral') || fn.includes('cadastro_instituicoes')) {
+      return 'trimestral';
+    }
+    if (
+      badge.includes('semanal') ||
+      fn.includes('isin_ativos') ||
+      fn.includes('isin_emissores')
+    ) {
+      return 'semanal';
+    }
+    if (
+      badge.includes('mensal') ||
+      desc.includes('série mensal') ||
+      desc.includes('preços globais mensais') ||
+      fn.includes('balancetes') ||
+      fn.includes('conglomerados') ||
+      fn.includes('ranking_global') ||
+      fn.includes('valor_mercado') ||
+      fn.includes('limites_garantias') ||
+      fn.includes('matriz_probabilidade') ||
+      fn.startsWith('ipea_') ||
+      fn.startsWith('fred_')
+    ) {
+      if (fn.includes('mercados_diarios')) return 'diario';
+      return 'mensal';
+    }
+    if (
+      badge.includes('snapshot') ||
+      badge.includes('estático') ||
+      badge.includes('sob divulgação') ||
+      fn.includes('classificacao_setorial') ||
+      fn.includes('capital_social') ||
+      fn.includes('projecoes') ||
+      fn.includes('onu_pacto') ||
+      fn.includes('wikipedia_') ||
+      fn.includes('titulos_negociaveis') ||
+      fn.includes('registro_fundo')
+    ) {
+      return 'sob_demanda';
+    }
+
+    return 'diario';
   }
 
   async function loadAndRenderMonitor() {
@@ -3807,11 +3849,17 @@
     });
 
     const fileList = new Set([
-      ...Object.keys(updates || {}),
-      ...allDatasets.map(d => d.file)
+      ...allDatasets.map(d => d.file),
+      ...Object.keys(updates || {})
     ]);
     fileList.delete('consolidated.csv');
     fileList.delete('custom_tickers.csv');
+    // Descartar duplicatas não comprimidas quando o arquivo .gz estiver presente
+    fileList.forEach(f => {
+      if (f.endsWith('.csv') && fileList.has(f + '.gz')) {
+        fileList.delete(f);
+      }
+    });
 
     const items = [];
     const now = new Date();
@@ -3907,7 +3955,7 @@
         }
       }
 
-      const isPeriodic = isPeriodicDataset(dataset, file);
+      const freq = getDatasetFrequency(dataset, file);
       const businessLag = maxDate ? getBusinessDaysDiff(maxDate, now) : 999;
 
       let status = 'ok';
@@ -3925,26 +3973,105 @@
         statusLabel = 'Sem dados';
         pillClass = 'status-pill-warning';
         lagDesc = 'Nenhuma data registrada';
-      } else if (businessLag <= 0) {
-        status = 'ok';
-        statusLabel = 'D-0 • Hoje';
-        pillClass = 'status-pill-ok';
-        lagDesc = 'Atualizado hoje no intraday';
-      } else if (businessLag === 1) {
-        status = 'ok';
-        statusLabel = 'D-1 • Em dia';
-        pillClass = 'status-pill-ok';
-        lagDesc = 'Posição em D-1 (em dia)';
-      } else if (businessLag <= 3) {
-        status = 'warning';
-        statusLabel = `D-${businessLag} • Atenção`;
-        pillClass = 'status-pill-warning';
-        lagDesc = `Defasagem de ${businessLag} dias úteis (tolerância)`;
+      } else if (freq === 'diario') {
+        if (businessLag <= 0) {
+          status = 'ok';
+          statusLabel = 'D-0 • Hoje';
+          pillClass = 'status-pill-ok';
+          lagDesc = 'Atualizado hoje no intraday';
+        } else if (businessLag === 1) {
+          status = 'ok';
+          statusLabel = 'D-1 • Em dia';
+          pillClass = 'status-pill-ok';
+          lagDesc = 'Posição em D-1 (em dia)';
+        } else if (businessLag <= 3) {
+          status = 'warning';
+          statusLabel = `D-${businessLag} • Atenção`;
+          pillClass = 'status-pill-warning';
+          lagDesc = `Defasagem de ${businessLag} dias úteis (tolerância)`;
+        } else {
+          status = 'error';
+          statusLabel = `D-${businessLag} • Atrasado`;
+          pillClass = 'status-pill-error';
+          lagDesc = `Atrasado há ${businessLag} dias úteis`;
+        }
+      } else if (freq === 'semanal') {
+        if (businessLag <= 7) {
+          status = 'ok';
+          statusLabel = 'Semanal • Em dia';
+          pillClass = 'status-pill-ok';
+          lagDesc = 'Posição semanal atualizada';
+        } else if (businessLag <= 15) {
+          status = 'warning';
+          statusLabel = 'Semanal • Atenção';
+          pillClass = 'status-pill-warning';
+          lagDesc = `Aguardando publicação semanal (${businessLag} d.u.)`;
+        } else {
+          status = 'error';
+          statusLabel = 'Semanal • Atrasado';
+          pillClass = 'status-pill-error';
+          lagDesc = `Sem atualização semanal há ${businessLag} dias úteis`;
+        }
+      } else if (freq === 'mensal') {
+        // Fontes oficiais mensais possuem ciclo de publicação com defasagem de 1 a 3 meses
+        if (businessLag <= 120) {
+          status = 'ok';
+          statusLabel = 'Mensal • Em dia';
+          pillClass = 'status-pill-ok';
+          lagDesc = 'Última competência mensal divulgada pela autoridade';
+        } else if (businessLag <= 160) {
+          status = 'warning';
+          statusLabel = 'Mensal • Atenção';
+          pillClass = 'status-pill-warning';
+          lagDesc = `Competência com defasagem (${businessLag} d.u. - aguardando publicação)`;
+        } else {
+          status = 'error';
+          statusLabel = 'Mensal • Atrasado';
+          pillClass = 'status-pill-error';
+          lagDesc = `Defasagem mensal de ${businessLag} dias úteis`;
+        }
+      } else if (freq === 'trimestral') {
+        if (businessLag <= 90) {
+          status = 'ok';
+          statusLabel = 'Trimestral • Em dia';
+          pillClass = 'status-pill-ok';
+          lagDesc = 'Último trimestre divulgado pela autoridade';
+        } else {
+          status = 'warning';
+          statusLabel = 'Trimestral • Atenção';
+          pillClass = 'status-pill-warning';
+          lagDesc = `Aguardando novo trimestre (${businessLag} d.u.)`;
+        }
+      } else if (freq === 'quadrimestral') {
+        if (businessLag <= 100) {
+          status = 'ok';
+          statusLabel = 'Quadrimestral • Em dia';
+          pillClass = 'status-pill-ok';
+          lagDesc = 'Carteira quadrimestral vigente';
+        } else {
+          status = 'warning';
+          statusLabel = 'Quadrimestral • Atenção';
+          pillClass = 'status-pill-warning';
+          lagDesc = `Aguardando rebalanceamento (${businessLag} d.u.)`;
+        }
+      } else if (freq === 'anual') {
+        if (businessLag <= 260) {
+          status = 'ok';
+          statusLabel = 'Anual • Em dia';
+          pillClass = 'status-pill-ok';
+          lagDesc = 'Consolidado anual vigente';
+        } else {
+          status = 'warning';
+          statusLabel = 'Anual • Atenção';
+          pillClass = 'status-pill-warning';
+          lagDesc = 'Aguardando consolidação anual';
+        }
       } else {
-        status = 'error';
-        statusLabel = `D-${businessLag} • Atrasado`;
-        pillClass = 'status-pill-error';
-        lagDesc = `Atrasado há ${businessLag} dias úteis`;
+        // sob_demanda / snapshot / eventual
+        status = 'ok';
+        statusLabel = 'Em dia';
+        pillClass = 'status-pill-ok';
+        lagDesc = 'Atualizado conforme divulgação da fonte';
       }
 
       const lowerFile = file.toLowerCase();
@@ -4169,7 +4296,7 @@
 
             <div class="monitor-data-box">
               <div class="monitor-data-row">
-                <span class="monitor-data-label">Última Captura:</span>
+                <span class="monitor-data-label">Última Referência:</span>
                 <span class="monitor-data-value highlight-date">${maxFmt || 'Não disponível'}</span>
               </div>
               <div class="monitor-data-row">

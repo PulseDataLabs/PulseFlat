@@ -95,12 +95,15 @@ def main(dry_run: bool = False) -> None:
             print_warn(f"Erro ao ler last_updates.json: {e}. Criando novo.")
 
     EXCLUDE_FILES = {"consolidated.csv", "custom_tickers.csv"}
-    last_updates = {k: v for k, v in last_updates.items() if (data_dir / k).exists() and k not in EXCLUDE_FILES}
-
-    EXCLUDE_FILES = {"consolidated.csv", "custom_tickers.csv"}
+    all_disk_files = list(data_dir.glob("*.csv")) + list(data_dir.glob("*.csv.gz"))
+    gz_bases = {f.name[:-3] for f in all_disk_files if f.name.endswith(".gz")}
+    last_updates = {
+        k: v for k, v in last_updates.items()
+        if (data_dir / k).exists() and k not in EXCLUDE_FILES and k not in gz_bases
+    }
     csv_files = sorted([
-        f for f in (list(data_dir.glob("*.csv")) + list(data_dir.glob("*.csv.gz")))
-        if f.name not in EXCLUDE_FILES
+        f for f in all_disk_files
+        if f.name not in EXCLUDE_FILES and f.name not in gz_bases
     ])
     total_files = len(csv_files)
     total_ok = 0

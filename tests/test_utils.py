@@ -559,3 +559,20 @@ def test_salvar_csv_prioriza_data_referencia_em_last_updates(tmp_path):
     # Deve refletir o histórico de data_referencia (2023-10-09 a 2026-09-16), não data_captura
     assert entry["min"] == "2023-10-09"
     assert entry["max"] == "2026-09-16"
+
+
+def test_periodic_datasets_sla_frequency():
+    import json
+    with open('data/datasets.json', 'r', encoding='utf-8') as f:
+        datasets = json.load(f)
+        
+    ds_map = {d.get('file'): d for d in datasets if d.get('file')}
+    
+    # Verificar que datasets mensais/periódicos estão devidamente configurados
+    assert 'Mensal' in ds_map['b3_valor_mercado_empresas.csv']['badge']
+    assert 'Mensal' in ds_map['bacen_balancetes_bancos.csv.gz']['badge']
+    assert 'Trimestral' in ds_map['bacen_cadastro_instituicoes.csv.gz']['badge']
+    assert 'Quadrimestral' in ds_map['b3_carteira_teorica_ibov.csv']['badge']
+    assert 'Anual' in ds_map['b3_cotahist_anual.csv.gz']['badge']
+    assert 'Mensal' in ds_map['bacen_conglomerados.csv']['badge']
+    assert 'Mensal' in ds_map['anbima_ranking_global.csv']['badge']

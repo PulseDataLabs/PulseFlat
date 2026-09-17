@@ -187,10 +187,6 @@ window.PULSEFLAT_LAST_UPDATES = {
     "min": "2026-06-11",
     "max": "2026-09-17"
   },
-  "b3_isin_emissores.csv": {
-    "min": "2026-08-21",
-    "max": "2026-08-21"
-  },
   "b3_isin_emissores.csv.gz": {
     "min": "2026-09-17",
     "max": "2026-09-17"
