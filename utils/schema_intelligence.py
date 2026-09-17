@@ -9,7 +9,8 @@ from __future__ import annotations
 
 import re
 import unicodedata
-from typing import Sequence
+from collections.abc import Sequence
+
 import pandas as pd
 
 # Preposições e conectivos em português que costumam variar em nomes de colunas

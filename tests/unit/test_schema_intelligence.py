@@ -6,7 +6,6 @@ auto-healing de schema e supressão inteligente de falsos schema drifts.
 """
 
 import json
-from pathlib import Path
 
 import pandas as pd
 import pytest
