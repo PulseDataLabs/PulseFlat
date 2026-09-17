@@ -11,7 +11,7 @@
 <p align="center">
   <a href="https://github.com/PulseDataLabs/PulseFlat/actions/workflows/ci.yml"><img src="https://github.com/PulseDataLabs/PulseFlat/actions/workflows/ci.yml/badge.svg" alt="CI Status"></a>
   <a href="https://github.com/PulseDataLabs/PulseFlat/actions/workflows/main.yml"><img src="https://github.com/PulseDataLabs/PulseFlat/actions/workflows/main.yml/badge.svg" alt="Daily Automation"></a>
-  <img src="https://img.shields.io/badge/datasets-94%2B-brightgreen.svg" alt="Datasets">
+  <img src="https://img.shields.io/badge/datasets-100%2B-brightgreen.svg" alt="Datasets">
   <img src="https://img.shields.io/badge/fontes-10%2B-blue.svg" alt="Fontes">
   <img src="https://img.shields.io/badge/python-3.11%2B-blue.svg" alt="Python Versions">
   <img src="https://img.shields.io/badge/code%20style-ruff-000000.svg" alt="Ruff Code Style">
@@ -44,7 +44,8 @@ A **PulseDataLabs** nasceu da missão de democratizar o acesso a dados financeir
 
 ## 🚀 Recursos e Diferenciais
 
-*   **94+ Datasets Estruturados & 100+ Rotinas de Extração**: Cobertura massiva de renda fixa, renda variável, derivativos, câmbio, fundos e macroeconomia, sem paywalls nem limites artificiais.
+*   **100+ Datasets Estruturados & 100+ Rotinas de Extração**: Cobertura massiva de renda fixa, renda variável, derivativos, câmbio, fundos e macroeconomia, sem paywalls nem limites artificiais.
+*   **Governança & Auto-Healing de Schema Drift Inteligente**: Motor de inteligência semântica (`utils/schema_intelligence.py`) integrado nativamente ao `salvar_csv`, capaz de detectar equivalências entre variações sintáticas (ex: `duration_d_u` vs `duration_du`, preposições, abreviações e encodings) e unificar campos automaticamente de forma aditiva/coalescente, sem perda de dados históricos e com guard-rails rigorosos contra falsos positivos.
 *   **OOP & Abstração Sólida**: Scrapers estruturados sob a classe base `BaseScraper` com ciclo de vida unificado, logs padronizados, checagem defensiva de schemas e persistência incremental.
 *   **Ecossistema Completo ANBIMA Data (1ª e 2ª Onda)**: Cliente HTTP OAuth 2.0 (Client Credentials) com 17 feeds oficiais via API: Curvas ETTJ (Prefixados, IPCA, Selic), Parâmetros Svensson, Letras Financeiras, CRI/CRA, FIDC, IMA/IDkA (resultados e carteiras teóricas), Selic Estimativa, VNA e REUNE Negociações.
 *   **Suite Macroeconômica Global FRED (Federal Reserve)**: Integração consolidada com o Federal Reserve Bank of St. Louis em 5 grandes datasets (Curva Soberana dos US Treasuries 1M-30Y, Indicadores Macro dos EUA, Liquidez Global & Spreads de Crédito, Macro/Câmbio Brasil e Commodities Globais de Exportação).

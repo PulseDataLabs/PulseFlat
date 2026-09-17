@@ -284,13 +284,67 @@ def salvar_csv(
         log.warning("Nenhum registro para salvar — abortando.")
         sys.exit(1)
 
-    # --- Detecção de Schema Drift ---
-    try:
-        schemas_path = arquivo.parent / "schemas.json"
-        if schemas_path.exists():
+    # --- Preparação de df_novos ---
+    arquivo.parent.mkdir(parents=True, exist_ok=True)
+
+    if isinstance(registros, pd.DataFrame):
+        df_novos = registros.copy()
+    else:
+        df_novos = pd.DataFrame(registros, columns=cabecalho)
+
+    # --- Reconciliação Inteligente de Schema e Unificação de Colunas ---
+    from utils.schema_intelligence import (
+        are_columns_equivalent,
+        find_internal_duplicate_aliases,
+        reconcile_columns,
+        unify_dataframe_columns,
+    )
+
+    schemas_path = arquivo.parent / "schemas.json"
+    schemas = []
+    ref_cols: list[str] = []
+    if schemas_path.exists():
+        try:
             with schemas_path.open("r", encoding="utf-8") as sf:
                 schemas = json.load(sf)
+            import re
+            for s in schemas:
+                files_declared = [f.strip() for f in re.split(r"·| e ", s.get("files", ""))]
+                if arquivo.name in files_declared:
+                    ref_cols = [f["name"] for f in s.get("fields", [])]
+                    break
+        except Exception as e:
+            log.warning(f"Erro ao ler schemas.json para {arquivo.name}: {e}")
 
+    header_existente = read_existing_header(arquivo) if arquivo.exists() else []
+    if not ref_cols and header_existente:
+        ref_cols = header_existente
+
+    # 1. Unificação interna em df_novos se houver colunas duplicadas
+    internal_map = find_internal_duplicate_aliases(df_novos.columns)
+    if internal_map:
+        for var, can in internal_map.items():
+            log.info(
+                f"SCHEMA AUTO-HEAL em {arquivo.name}: Coluna '{var}' unificada para '{can}' nos novos registros."
+            )
+        df_novos = unify_dataframe_columns(df_novos, internal_map)
+        cabecalho = [c for c in cabecalho if c not in internal_map]
+
+    # 2. Reconciliação inteligente com schema/arquivo existente
+    if ref_cols:
+        reconcile_map = reconcile_columns(df_novos.columns, ref_cols)
+        if reconcile_map:
+            for var, can in reconcile_map.items():
+                log.info(
+                    f"SCHEMA AUTO-HEAL em {arquivo.name}: Coluna '{var}' unificada para o padrão canônico '{can}'."
+                )
+            df_novos = unify_dataframe_columns(df_novos, reconcile_map)
+            cabecalho = [reconcile_map.get(c, c) for c in cabecalho]
+            cabecalho = list(dict.fromkeys(cabecalho))
+
+    # --- Detecção e Auto-Resolução de Schema Drift ---
+    try:
+        if schemas:
             filtered_cols = [
                 c
                 for c in cabecalho
@@ -306,10 +360,20 @@ def salvar_csv(
                 ]
                 if arquivo.name in files_declared:
                     existing_cols = [f["name"] for f in s.get("fields", [])]
-                    added = [c for c in filtered_cols if c not in existing_cols]
-                    removed = []
+                    raw_added = [c for c in filtered_cols if c not in existing_cols]
+                    raw_removed = []
                     if len(files_declared) == 1:
-                        removed = [c for c in existing_cols if c not in filtered_cols]
+                        raw_removed = [c for c in existing_cols if c not in filtered_cols]
+
+                    # Auto-resolução de drifts: se colunas equivalentes existem, não gera drift
+                    added = [
+                        a for a in raw_added
+                        if not any(are_columns_equivalent(a, e) for e in existing_cols)
+                    ]
+                    removed = [
+                        r for r in raw_removed
+                        if not any(are_columns_equivalent(r, f) for f in filtered_cols)
+                    ]
 
                     if added or removed:
                         drift_info = {
@@ -326,17 +390,32 @@ def salvar_csv(
     except Exception as e:
         log.warning(f"Erro ao detectar schema drift para {arquivo.name}: {e}")
 
-    arquivo.parent.mkdir(parents=True, exist_ok=True)
-
-    if isinstance(registros, pd.DataFrame):
-        df_novos = registros.copy()
-    else:
-        df_novos = pd.DataFrame(registros, columns=cabecalho)
-
     substituidas = 0
 
     if acumular and arquivo.exists():
-        header_existente = read_existing_header(arquivo)
+        df_antigo = pd.DataFrame()
+        try:
+            df_antigo = pd.read_csv(arquivo, dtype=str, keep_default_na=False)
+            antigo_internal_map = find_internal_duplicate_aliases(df_antigo.columns)
+            if antigo_internal_map:
+                for var, can in antigo_internal_map.items():
+                    log.info(
+                        f"SCHEMA AUTO-HEAL em {arquivo.name}: Unificando coluna legada '{var}' para '{can}' nos dados históricos."
+                    )
+                df_antigo = unify_dataframe_columns(df_antigo, antigo_internal_map)
+
+            if ref_cols:
+                antigo_reconcile = reconcile_columns(df_antigo.columns, ref_cols)
+                if antigo_reconcile:
+                    df_antigo = unify_dataframe_columns(df_antigo, antigo_reconcile)
+
+            header_existente = list(df_antigo.columns)
+        except Exception as e:
+            log.warning(
+                f"Erro ao ler arquivo existente para acumular: {e}"
+            )
+            header_existente = read_existing_header(arquivo)
+
         merged = []
         for col in header_existente + cabecalho:
             if col and col not in merged:
@@ -344,8 +423,6 @@ def salvar_csv(
         cabecalho = merged
 
         try:
-            df_antigo = pd.read_csv(arquivo, dtype=str, keep_default_na=False)
-
             for c in cabecalho:
                 if c not in df_novos.columns:
                     df_novos[c] = ""
@@ -377,7 +454,7 @@ def salvar_csv(
                 )
         except Exception as e:
             log.warning(
-                f"Erro ao ler arquivo existente para acumular, reescrevendo: {e}"
+                f"Erro ao mesclar registros com arquivo existente, reescrevendo: {e}"
             )
             df_final = df_novos[cabecalho]
     else:

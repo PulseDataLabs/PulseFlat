@@ -1264,7 +1264,7 @@
             Governança & Observabilidade
           </div>
           <h2>⚡ Alterações Estruturais de Schema (Drifts) <span class="drift-pill" id="drift-summary-pill">—</span></h2>
-          <p class="drift-subtitle">Histórico de colunas adicionadas ou descontinuadas automaticamente detectadas nas fontes de dados oficiais.</p>
+          <p class="drift-subtitle">Histórico de colunas adicionadas ou descontinuadas detectadas nas fontes de dados oficiais, com inteligência de auto-healing para reconciliação automática de variações de nomenclatura.</p>
         </div>
         <div class="drift-header-actions">
           <button id="btn-toggle-drift" class="drift-btn-toggle" aria-expanded="true" title="Recolher / Expandir detalhes">
@@ -1526,8 +1526,15 @@
       filterVal: (indicador) => indicador.split(' ')[0]
     },
     'anbima_indice_imab.csv': {
-      date: 'data_de_referencia',
-      values: ['numero_indice', 'variacao_diaria'],
+      date: 'data_referencia',
+      values: ['numero_indice', 'variacao_diaria', 'duration_du'],
+      filterKey: 'indice',
+      filterVal: (indicador) => indicador.toUpperCase(),
+      filterCompare: (rowVal, filterVal) => (rowVal || '').toUpperCase() === filterVal
+    },
+    'anbima_indice_imab.csv.gz': {
+      date: 'data_referencia',
+      values: ['numero_indice', 'variacao_diaria', 'duration_du'],
       filterKey: 'indice',
       filterVal: (indicador) => indicador.toUpperCase(),
       filterCompare: (rowVal, filterVal) => (rowVal || '').toUpperCase() === filterVal

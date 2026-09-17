@@ -25,8 +25,21 @@ DATA = ROOT_DIR / "data"
 
 # ── Mapa de renomeação de colunas corrompidas ──────────────────────────
 RENAMES: dict[str, dict[str, str]] = {
+    "anbima_indice_imab.csv.gz": {
+        "data_de_refer_ncia": "data_de_referencia",
+        "data_de_referencia": "data_referencia",
+        "duration_d_u": "duration_du",
+        "n_mero_ndice": "numero_indice",
+        "ndice": "indice",
+        "varia_o_12_meses": "variacao_12_meses",
+        "varia_o_24_meses": "variacao_24_meses",
+        "varia_o_di_ria": "variacao_diaria",
+        "varia_o_no_ano": "variacao_no_ano",
+        "varia_o_no_m_s": "variacao_no_mes",
+    },
     "anbima_indice_imab.csv": {
         "data_de_refer_ncia": "data_de_referencia",
+        "data_de_referencia": "data_referencia",
         "duration_d_u": "duration_du",
         "n_mero_ndice": "numero_indice",
         "ndice": "indice",

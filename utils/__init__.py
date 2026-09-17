@@ -8,6 +8,12 @@ from .base import (
     nova_session,
     salvar_csv,
 )
+from .schema_intelligence import (
+    are_columns_equivalent,
+    find_internal_duplicate_aliases,
+    reconcile_columns,
+    unify_dataframe_columns,
+)
 
 __all__ = [
     "get_logger",
@@ -18,4 +24,8 @@ __all__ = [
     "salvar_csv",
     "get_type_badge",
     "FUSO",
+    "are_columns_equivalent",
+    "find_internal_duplicate_aliases",
+    "reconcile_columns",
+    "unify_dataframe_columns",
 ]

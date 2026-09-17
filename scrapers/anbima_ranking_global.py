@@ -123,7 +123,7 @@ def _read_sheet(
         for h_row in header_rows:
             if col_idx < len(h_row):
                 val = clean_header_name(h_row[col_idx])
-                if val and val not in parts:
+                if val and str(val).strip().lower() != "nan" and val not in parts:
                     parts.append(val)
         col_name = " - ".join(parts) if parts else f"col_{col_idx}"
         col_names.append(col_name)

@@ -67,9 +67,16 @@ class AnbimaIndiceImabScraper(BaseScraper):
                 df['data_referencia'] = df['data_de_referencia']
             elif 'data_de_referencia' in df.columns:
                 df['data_referencia'] = df['data_referencia'].fillna(df['data_de_referencia'])
+            if 'duration_du' not in df.columns and 'duration_d_u' in df.columns:
+                df['duration_du'] = df['duration_d_u']
+            elif 'duration_d_u' in df.columns:
+                df['duration_du'] = df['duration_du'].fillna(df['duration_d_u'])
             if 'indice' in df.columns:
                 df['indice'] = df['indice'].replace({'IMA - Geral': 'IMA-GERAL'})
-            colunas = [c for c in header if c in df.columns]
+            for obsolete in ('duration_d_u', 'data_de_referencia'):
+                if obsolete in df.columns:
+                    df = df.drop(columns=[obsolete])
+            colunas = [c for c in header if c in df.columns and c not in ('duration_d_u', 'data_de_referencia')]
             return df[colunas]
         return df
 

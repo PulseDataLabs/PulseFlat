@@ -747,7 +747,7 @@ INDICATOR_DEFS = [
             ("variacao_diaria", "Variação diária", "pct"),
             ("duration_du", "Duration (d.u.)", "number"),
         ],
-        "date_col": "data_de_referencia",
+        "date_col": "data_referencia",
         "category": "IMA-B",
     },
     # ── ANBIMA Estimativa Selic ────────────────────────────────────

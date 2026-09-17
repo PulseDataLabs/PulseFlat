@@ -403,7 +403,7 @@ def save_pipeline_status(
         }
 
     # Drifts: limpa os de scrapers que rodaram agora e adiciona os novos
-    processed_files = {f"{n}.csv" for n in results}
+    processed_files = {f"{n}.csv" for n in results} | {f"{n}.csv.gz" for n in results}
     for filename in list(status_data["drifts"].keys()):
         if filename in processed_files:
             del status_data["drifts"][filename]

@@ -587,13 +587,6 @@
     }
   },
   "drifts": {
-    "anbima_indice_imab.csv.gz": {
-      "added": [],
-      "removed": [
-        "duration_du"
-      ],
-      "timestamp": "2026-09-17T12:32:01.167930"
-    },
     "b3_bdi_etfrf.csv.gz": {
       "added": [],
       "removed": [
