@@ -995,7 +995,8 @@
     "dataset_label": "ANBIMA IMA-B",
     "categoria": "IMA-B",
     "Número-índice": "10.483",
-    "Variação diária": "0,12%"
+    "Variação diária": "0,12%",
+    "Duration (d.u.)": "498,00"
   },
   {
     "data_referencia": "2026-09-16",
@@ -1931,7 +1932,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "0,2015"
+    "Valor": "0,2026"
   },
   {
     "data_referencia": "2026-09-17",
@@ -1955,7 +1956,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "7,59"
+    "Valor": "7,62"
   },
   {
     "data_referencia": "2026-09-17",
@@ -1963,7 +1964,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "726,46"
+    "Valor": "728,83"
   },
   {
     "data_referencia": "2026-09-17",
@@ -1979,7 +1980,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "76.569"
+    "Valor": "76.782"
   },
   {
     "data_referencia": "2026-09-17",
@@ -2003,7 +2004,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "0,7682"
+    "Valor": "0,7681"
   },
   {
     "data_referencia": "2026-09-17",
@@ -2019,7 +2020,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "0,0816"
+    "Valor": "0,0820"
   },
   {
     "data_referencia": "2026-09-17",
@@ -2027,7 +2028,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "1,06"
+    "Valor": "1,07"
   },
   {
     "data_referencia": "2026-09-17",
@@ -2035,7 +2036,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "2.462"
+    "Valor": "2.468"
   },
   {
     "data_referencia": "2026-09-17",
@@ -2083,7 +2084,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "2,59"
+    "Valor": "2,61"
   },
   {
     "data_referencia": "2026-09-17",
@@ -2107,7 +2108,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "11,33"
+    "Valor": "11,38"
   },
   {
     "data_referencia": "2026-09-17",
@@ -2115,7 +2116,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "53,49"
+    "Valor": "53,84"
   },
   {
     "data_referencia": "2026-09-17",
@@ -2131,7 +2132,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "2,94"
+    "Valor": "3,01"
   },
   {
     "data_referencia": "2026-09-17",
@@ -2139,7 +2140,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "0,0997"
+    "Valor": "0,1007"
   },
   {
     "data_referencia": "2026-09-17",
@@ -2171,7 +2172,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "100,98"
+    "Valor": "101,30"
   },
   {
     "data_referencia": "2026-09-17",
@@ -2187,7 +2188,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "0,3339"
+    "Valor": "0,3337"
   },
   {
     "data_referencia": "2026-09-17",
@@ -2243,7 +2244,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "0,1860"
+    "Valor": "0,1870"
   },
   {
     "data_referencia": "2026-09-17",
@@ -2275,7 +2276,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Índices Globais",
     "categoria": "Índices de Ações Globais",
-    "Valor": "6.462"
+    "Valor": "6.437"
   },
   {
     "data_referencia": "2026-09-17",
