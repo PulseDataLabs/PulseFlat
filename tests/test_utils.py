@@ -531,3 +531,30 @@ def test_salvar_csv_previews_geradas_com_mais_recentes(tmp_path):
         js_content = f.read()
     assert "window.PULSEFLAT_PREVIEWS =" in js_content
     assert "2026-09-17" in js_content
+
+
+def test_salvar_csv_prioriza_data_referencia_em_last_updates(tmp_path):
+    import json
+    import pandas as pd
+    csv_file = tmp_path / "teste_historico.csv"
+    
+    # Dataset com data_captura recente (ex: hoje) e data_referencia cobrindo anos de histórico
+    df = pd.DataFrame({
+        "data_captura": ["2026-09-17", "2026-09-17", "2026-09-17"],
+        "data_referencia": ["2023-10-09", "2025-01-01", "2026-09-16"],
+        "valor": [100.0, 105.0, 110.0]
+    })
+    
+    salvar_csv(csv_file, df, ["data_captura", "data_referencia", "valor"])
+    
+    last_updates_json_path = tmp_path / "last_updates.json"
+    assert last_updates_json_path.exists()
+    
+    with last_updates_json_path.open("r", encoding="utf-8") as f:
+        updates = json.load(f)
+        
+    assert "teste_historico.csv" in updates
+    entry = updates["teste_historico.csv"]
+    # Deve refletir o histórico de data_referencia (2023-10-09 a 2026-09-16), não data_captura
+    assert entry["min"] == "2023-10-09"
+    assert entry["max"] == "2026-09-16"

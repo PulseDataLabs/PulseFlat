@@ -270,6 +270,21 @@ def _salvar_csv_logger():
     return ColorLogger("utils.salvar_csv")
 
 
+def _normalize_date_str(val: str) -> str | None:
+    if not val:
+        return None
+    val = str(val).split()[0].replace("T", " ").split()[0].strip()
+    if len(val) >= 10 and val[4] == "-" and val[7] == "-":
+        return val[:10]
+    if len(val) >= 10 and val[2] == "/" and val[5] == "/":
+        parts = val[:10].split("/")
+        return f"{parts[2]}-{parts[1]}-{parts[0]}"
+    if len(val) == 6 and val.isdigit():
+        return f"{val[:4]}-{val[4:6]}-01"
+    if len(val) == 8 and val.isdigit():
+        return f"{val[:4]}-{val[4:6]}-{val[6:8]}"
+    return None
+
 def salvar_csv(
     arquivo: Path,
     registros: Union[list, "pd.DataFrame"],
@@ -516,14 +531,33 @@ def salvar_csv(
 
         if not df_final.empty:
             date_col = None
-            for candidate in ["data_captura", "data_referencia", "data", "rpt_dt"]:
+            for candidate in [
+                "data_referencia",
+                "refdate",
+                "data_base",
+                "data_pregao",
+                "dt_pregao",
+                "data_mov",
+                "data_operacao",
+                "data",
+                "rpt_dt",
+                "data_atualizacao",
+                "data_geracao",
+                "data_captura",
+                "data_coleta",
+                "dt_captura",
+            ]:
                 if candidate in cabecalho:
                     date_col = candidate
                     break
 
             if date_col and date_col in df_final.columns:
-                datas = df_final[date_col].dropna().unique()
-                datas = [str(d) for d in datas if str(d).strip()]
+                raw_datas = df_final[date_col].dropna().unique()
+                datas = []
+                for rd in raw_datas:
+                    nd = _normalize_date_str(str(rd))
+                    if nd:
+                        datas.append(nd)
                 if datas:
                     last_updates[arquivo.name] = {"min": min(datas), "max": max(datas)}
                     with last_updates_path.open("w", encoding="utf-8") as lf:
@@ -531,9 +565,8 @@ def salvar_csv(
 
                     last_updates_js_path = arquivo.parent / "last_updates.js"
                     with last_updates_js_path.open("w", encoding="utf-8") as lf:
-                        lf.write(
-                            f"window.PULSEFLAT_LAST_UPDATES = {json.dumps(last_updates, indent=2, ensure_ascii=False)};\n"
-                        )
+                        json_str = json.dumps(last_updates, indent=2, ensure_ascii=False)
+                        lf.write("window.PULSEFLAT_LAST_UPDATES = " + json_str + ";\n")
     except Exception as e:
         log.warning(f"Não foi possível atualizar last_updates.json/js: {e}")
 
@@ -550,7 +583,22 @@ def salvar_csv(
         if not df_final.empty:
             tail_df = df_final.tail(30).copy()
             sort_col = None
-            for candidate in ["data_referencia", "data_captura", "data", "dt_captura", "data_base", "dt_referencia"]:
+            for candidate in [
+                "data_referencia",
+                "refdate",
+                "data_base",
+                "data_pregao",
+                "dt_pregao",
+                "data_mov",
+                "data_operacao",
+                "data",
+                "rpt_dt",
+                "data_atualizacao",
+                "data_geracao",
+                "data_captura",
+                "data_coleta",
+                "dt_captura",
+            ]:
                 if candidate in tail_df.columns:
                     sort_col = candidate
                     break

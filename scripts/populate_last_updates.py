@@ -38,6 +38,39 @@ from scripts.utils.ux import (
 log = ColorLogger("populate_last_updates")
 
 
+def normalize_date_str(val: str) -> str | None:
+    if not val:
+        return None
+    val = str(val).split()[0].replace("T", " ").split()[0].strip()
+    if len(val) >= 10 and val[4] == "-" and val[7] == "-":
+        return val[:10]
+    if len(val) >= 10 and val[2] == "/" and val[5] == "/":
+        parts = val[:10].split("/")
+        return f"{parts[2]}-{parts[1]}-{parts[0]}"
+    if len(val) == 6 and val.isdigit():
+        return f"{val[:4]}-{val[4:6]}-01"
+    if len(val) == 8 and val.isdigit():
+        return f"{val[:4]}-{val[4:6]}-{val[6:8]}"
+    return None
+
+
+DATE_CANDIDATES = [
+    "data_referencia",
+    "refdate",
+    "data_base",
+    "data_pregao",
+    "dt_pregao",
+    "data_mov",
+    "data_operacao",
+    "data",
+    "rpt_dt",
+    "data_atualizacao",
+    "data_geracao",
+    "data_captura",
+    "data_coleta",
+    "dt_captura",
+]
+
 def main(dry_run: bool = False) -> None:
     t0 = time.time()
     banner("Atualizar Últimas Datas", "Varre CSVs → last_updates.json")
@@ -89,7 +122,7 @@ def main(dry_run: bool = False) -> None:
                     continue
 
                 date_col = None
-                for candidate in ["data_captura", "data_referencia", "data", "rpt_dt"]:
+                for candidate in DATE_CANDIDATES:
                     for col in reader.fieldnames:
                         if col.lower() == candidate:
                             date_col = col
@@ -107,12 +140,12 @@ def main(dry_run: bool = False) -> None:
                 for row in reader:
                     val = row.get(date_col)
                     if val:
-                        val = val.strip()
-                        if val:
-                            if min_date is None or val < min_date:
-                                min_date = val
-                            if max_date is None or val > max_date:
-                                max_date = val
+                        n_val = normalize_date_str(val)
+                        if n_val:
+                            if min_date is None or n_val < min_date:
+                                min_date = n_val
+                            if max_date is None or n_val > max_date:
+                                max_date = n_val
 
                 if min_date and max_date:
                     last_updates[nome] = {"min": min_date, "max": max_date}
