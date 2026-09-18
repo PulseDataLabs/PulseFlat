@@ -237,7 +237,7 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "cvm_fundos_informe_diario.csv.gz": {
     "min": "2026-09-01",
-    "max": "2026-09-16"
+    "max": "2026-09-17"
   },
   "yahoo_criptoativos.csv": {
     "min": "2015-01-01",
@@ -277,7 +277,7 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "b3_bdi_trades_acoes.csv.gz": {
     "min": "2026-06-02",
-    "max": "2026-09-16"
+    "max": "2026-09-17"
   },
   "anbima_550.csv": {
     "min": "2026-06-01",
@@ -362,5 +362,13 @@ window.PULSEFLAT_LAST_UPDATES = {
   "bacen_parcelas_capital_basileia.csv.gz": {
     "min": "2026-06-05",
     "max": "2026-09-18"
+  },
+  "anbima_indices_carteira_teorica_ima.csv.gz": {
+    "min": "2026-09-17",
+    "max": "2026-09-17"
+  },
+  "b3_bdi_di_over.csv": {
+    "min": "2026-05-29",
+    "max": "2026-09-17"
   }
 };
