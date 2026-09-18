@@ -666,8 +666,8 @@ data_captura,codigo_ativo,nome_ativo,indice_origem
 2026-09-18,DCC.L,DCC Energy,FTSE 100
 2026-09-18,DGE.L,Diageo,FTSE 100
 2026-09-18,DPLM.L,Diploma,FTSE 100
+2026-09-18,EZJ.L,EasyJet,FTSE 100
 2026-09-18,EDV.L,Endeavour Mining,FTSE 100
-2026-09-18,ENT.L,Entain,FTSE 100
 2026-09-18,EXPN.L,Experian,FTSE 100
 2026-09-18,FCIT.L,F & C Investment Trust,FTSE 100
 2026-09-18,FRES.L,Fresnillo plc,FTSE 100
@@ -688,6 +688,7 @@ data_captura,codigo_ativo,nome_ativo,indice_origem
 2026-09-18,IAG.L,International Airlines Group,FTSE 100
 2026-09-18,ITRK.L,Intertek,FTSE 100
 2026-09-18,INVP.L,Investec,FTSE 100
+2026-09-18,ITH.L,Ithaca Energy,FTSE 100
 2026-09-18,JD.L,JD Sports,FTSE 100
 2026-09-18,BGEO.L,Lion Finance Group,FTSE 100
 2026-09-18,KGF.L,Kingfisher plc,FTSE 100
@@ -705,7 +706,6 @@ data_captura,codigo_ativo,nome_ativo,indice_origem
 2026-09-18,NXT.L,Next plc,FTSE 100
 2026-09-18,PSON.L,Pearson plc,FTSE 100
 2026-09-18,PSH.L,Pershing Square Holdings,FTSE 100
-2026-09-18,PSN.L,Persimmon,FTSE 100
 2026-09-18,PCT.L,Polar Capital Technology Trust,FTSE 100
 2026-09-18,PRU.L,Prudential plc,FTSE 100
 2026-09-18,RKT.L,Reckitt,FTSE 100
