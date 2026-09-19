@@ -234,5 +234,137 @@ window.PULSEFLAT_LAST_UPDATES = {
   "b3_bdi_trades_acoes.csv.gz": {
     "min": "2026-06-02",
     "max": "2026-09-18"
+  },
+  "anbima_550.csv": {
+    "min": "2026-06-01",
+    "max": "2026-09-19"
+  },
+  "anbima_curvas_credito.csv.gz": {
+    "min": "2020-01-02",
+    "max": "2026-09-17"
+  },
+  "anbima_curvas_juros_ettj.csv.gz": {
+    "min": "2020-01-02",
+    "max": "2026-09-18"
+  },
+  "anbima_curvas_juros_parametros_svensson.csv.gz": {
+    "min": "2020-01-02",
+    "max": "2026-09-18"
+  },
+  "anbima_fidc_mercado_secundario.csv.gz": {
+    "min": "2021-10-18",
+    "max": "2026-09-18"
+  },
+  "anbima_ima_completo.csv": {
+    "min": "2026-05-29",
+    "max": "2026-09-18"
+  },
+  "anbima_indicadores.csv": {
+    "min": "2026-04-01",
+    "max": "2026-09-18"
+  },
+  "anbima_debentures.csv.gz": {
+    "min": "2026-06-03",
+    "max": "2026-09-18"
+  },
+  "anbima_indice_ida.csv.gz": {
+    "min": "2020-01-02",
+    "max": "2026-09-17"
+  },
+  "anbima_indices_carteira_teorica_ima.csv.gz": {
+    "min": "2026-09-18",
+    "max": "2026-09-18"
+  },
+  "anbima_indices_idka_resultados.csv.gz": {
+    "min": "2020-01-02",
+    "max": "2026-09-18"
+  },
+  "anbima_indices_ima_resultados.csv.gz": {
+    "min": "2020-01-02",
+    "max": "2026-09-18"
+  },
+  "anbima_indices_carteira_teorica_ida.csv.gz": {
+    "min": "2026-09-18",
+    "max": "2026-09-18"
+  },
+  "anbima_projecoes_inflacao.csv.gz": {
+    "min": "2026-09-19",
+    "max": "2026-09-19"
+  },
+  "anbima_projecoes.csv": {
+    "min": "2026-05-01",
+    "max": "2026-09-01"
+  },
+  "anbima_matriz_probabilidade_resgate.csv": {
+    "min": "2026-04-30",
+    "max": "2026-07-31"
+  },
+  "anbima_titulos_publicos.csv": {
+    "min": "2026-02-23",
+    "max": "2026-09-18"
+  },
+  "anbima_titulos_publicos_estimativa_selic.csv.gz": {
+    "min": "2020-01-02",
+    "max": "2026-09-18"
+  },
+  "anbima_cri_cra_mercado_secundario.csv.gz": {
+    "min": "2020-01-02",
+    "max": "2026-09-18"
+  },
+  "anbima_titulos_publicos_vna.csv.gz": {
+    "min": "2020-01-02",
+    "max": "2026-09-18"
+  },
+  "b3_bdi_derivativos_resumo.csv": {
+    "min": "2026-08-13",
+    "max": "2026-09-18"
+  },
+  "anbima_titulos_publicos_mercado_secundario.csv.gz": {
+    "min": "2020-01-02",
+    "max": "2026-09-18"
+  },
+  "anbima_letras_financeiras.csv.gz": {
+    "min": "2023-10-09",
+    "max": "2026-09-18"
+  },
+  "b3_bdi_di_over.csv": {
+    "min": "2026-05-29",
+    "max": "2026-09-18"
+  },
+  "anbima_ranking_global.csv": {
+    "min": "2026-04-01",
+    "max": "2026-07-01"
+  },
+  "b3_carteira_teorica_agfs_iagro.csv": {
+    "min": "2026-06-03",
+    "max": "2026-09-19"
+  },
+  "b3_carteira_teorica_bdrx.csv": {
+    "min": "2026-06-03",
+    "max": "2026-09-19"
+  },
+  "b3_bmf_taxas_juros.csv": {
+    "min": "2026-06-03",
+    "max": "2026-09-18"
+  },
+  "b3_carteira_teorica_ibov.csv": {
+    "min": "2026-06-03",
+    "max": "2026-09-19"
+  },
+  "b3_carteira_teorica_ibsd.csv": {
+    "min": "2026-06-03",
+    "max": "2026-09-19"
+  },
+  "b3_carteira_teorica_ibxl.csv": {
+    "min": "2026-06-03",
+    "max": "2026-09-19"
+  },
+  "b3_carteira_teorica_ifnc.csv": {
+    "min": "2026-06-03",
+    "max": "2026-09-19"
+  },
+  "b3_carteira_teorica_isee.csv": {
+    "min": "2026-06-03",
+    "max": "2026-09-19"
   }
 };
