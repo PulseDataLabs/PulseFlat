@@ -66,6 +66,7 @@ data_captura,codigo_ativo,nome_ativo,indice_origem
 2026-09-20,BLK,BlackRock,S&P 500
 2026-09-20,BX,Blackstone Inc.,S&P 500
 2026-09-20,XYZ,"Block, Inc.",S&P 500
+2026-09-20,BE,Bloom Energy,S&P 500
 2026-09-20,BNY,BNY Mellon,S&P 500
 2026-09-20,BA,Boeing,S&P 500
 2026-09-20,BKNG,Booking Holdings,S&P 500
@@ -75,7 +76,6 @@ data_captura,codigo_ativo,nome_ativo,indice_origem
 2026-09-20,BR,Broadridge Financial Solutions,S&P 500
 2026-09-20,BRO,Brown & Brown,S&P 500
 2026-09-20,BF-B,Brown–Forman,S&P 500
-2026-09-20,BLDR,Builders FirstSource,S&P 500
 2026-09-20,BG,Bunge Global,S&P 500
 2026-09-20,BXP,"BXP, Inc.",S&P 500
 2026-09-20,CHRW,C.H. Robinson,S&P 500
@@ -178,6 +178,7 @@ data_captura,codigo_ativo,nome_ativo,indice_origem
 2026-09-20,EL,Estée Lauder Companies (The),S&P 500
 2026-09-20,EG,Everest Group,S&P 500
 2026-09-20,EVRG,Evergy,S&P 500
+2026-09-20,P,Everpure,S&P 500
 2026-09-20,ES,Eversource Energy,S&P 500
 2026-09-20,EXC,Exelon,S&P 500
 2026-09-20,EXE,Expand Energy,S&P 500
@@ -246,6 +247,7 @@ data_captura,codigo_ativo,nome_ativo,indice_origem
 2026-09-20,IEX,IDEX Corporation,S&P 500
 2026-09-20,IDXX,Idexx Laboratories,S&P 500
 2026-09-20,ITW,Illinois Tool Works,S&P 500
+2026-09-20,ILMN,"Illumina, Inc.",S&P 500
 2026-09-20,INCY,Incyte,S&P 500
 2026-09-20,IR,Ingersoll Rand,S&P 500
 2026-09-20,PODD,Insulet Corporation,S&P 500
@@ -316,7 +318,6 @@ data_captura,codigo_ativo,nome_ativo,indice_origem
 2026-09-20,MSFT,Microsoft,S&P 500
 2026-09-20,MAA,Mid-America Apartment Communities,S&P 500
 2026-09-20,MRNA,Moderna,S&P 500
-2026-09-20,TAP,Molson Coors Beverage Company,S&P 500
 2026-09-20,MDLZ,Mondelez International,S&P 500
 2026-09-20,MPWR,Monolithic Power Systems,S&P 500
 2026-09-20,MNST,Monster Beverage,S&P 500
@@ -443,7 +444,6 @@ data_captura,codigo_ativo,nome_ativo,indice_origem
 2026-09-20,TMO,Thermo Fisher Scientific,S&P 500
 2026-09-20,TJX,TJX Companies,S&P 500
 2026-09-20,TKO,TKO Group Holdings,S&P 500
-2026-09-20,TTD,Trade Desk (The),S&P 500
 2026-09-20,TSCO,Tractor Supply,S&P 500
 2026-09-20,TT,Trane Technologies,S&P 500
 2026-09-20,TDG,TransDigm Group,S&P 500

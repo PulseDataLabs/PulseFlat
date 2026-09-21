@@ -193,7 +193,7 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "yahoo_acoes_brasileiras.csv.gz": {
     "min": "2020-01-02",
-    "max": "2026-09-18"
+    "max": "2026-09-20"
   },
   "yahoo_criptoativos.csv": {
     "min": "2015-01-01",
@@ -225,11 +225,11 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "yahoo_fiis_fiagros.csv.gz": {
     "min": "2020-01-02",
-    "max": "2026-09-18"
+    "max": "2026-09-20"
   },
   "debentures_mercado_secundario_precos_negociacao.csv.gz": {
     "min": "2020-01-02",
-    "max": "2026-09-17"
+    "max": "2026-09-18"
   },
   "b3_bdi_trades_acoes.csv.gz": {
     "min": "2026-06-02",
