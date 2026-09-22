@@ -241,7 +241,7 @@
   },
   "ipea_mercados_diarios.csv": {
     "min": "1900-01-02",
-    "max": "2026-09-18"
+    "max": "2026-09-21"
   },
   "ipea_taxas_juros.csv": {
     "min": "1966-12-01",
@@ -277,7 +277,7 @@
   },
   "debentures_mercado_secundario_precos_negociacao.csv.gz": {
     "min": "2020-01-02",
-    "max": "2026-09-18"
+    "max": "2026-09-21"
   },
   "yahoo_renda_fixa.csv": {
     "min": "2026-05-29",
@@ -362,5 +362,13 @@
   "onu_pacto_global.csv": {
     "min": "2026-09-22",
     "max": "2026-09-22"
+  },
+  "anbima_cri_cra_mercado_secundario.csv.gz": {
+    "min": "2020-01-02",
+    "max": "2026-09-21"
+  },
+  "bacen_cadastro_instituicoes.csv.gz": {
+    "min": "2020-03-31",
+    "max": "2026-06-30"
   }
 }
