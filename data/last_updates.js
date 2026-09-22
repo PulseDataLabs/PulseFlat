@@ -65,7 +65,7 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "fred_brazil_macro_fx_and_cycles.csv.gz": {
     "min": "2020-01-01",
-    "max": "2026-09-18"
+    "max": "2026-09-21"
   },
   "fred_global_liquidity_credit_spreads.csv.gz": {
     "min": "2020-01-01",
@@ -81,7 +81,7 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "fred_us_treasuries_yield_curve.csv.gz": {
     "min": "2020-01-02",
-    "max": "2026-09-21"
+    "max": "2026-09-22"
   },
   "ipea_calendario.csv": {
     "min": "1970-01-01",
@@ -313,7 +313,7 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "anbima_indice_imab.csv.gz": {
     "min": "2001-12-04",
-    "max": "2026-09-21"
+    "max": "2026-09-22"
   },
   "b3_etfs.csv": {
     "min": "2026-09-22",
@@ -369,6 +369,10 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "b3_bdi_di_over.csv": {
     "min": "2026-05-29",
+    "max": "2026-09-21"
+  },
+  "b3_bdi_etfrf.csv.gz": {
+    "min": "2026-01-02",
     "max": "2026-09-21"
   }
 };
