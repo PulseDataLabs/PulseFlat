@@ -358,5 +358,17 @@ window.PULSEFLAT_LAST_UPDATES = {
   "b3_valor_mercado_empresas.csv": {
     "min": "2026-08-31",
     "max": "2026-08-31"
+  },
+  "anbima_ima_completo.csv": {
+    "min": "2026-05-29",
+    "max": "2026-09-21"
+  },
+  "anbima_indices_carteira_teorica_ima.csv.gz": {
+    "min": "2026-09-21",
+    "max": "2026-09-21"
+  },
+  "b3_bdi_di_over.csv": {
+    "min": "2026-05-29",
+    "max": "2026-09-21"
   }
 };
