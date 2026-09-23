@@ -1,149 +1,117 @@
 window.PULSEFLAT_PREVIEWS = {
-  "onu_pacto_global.csv": {
+  "yahoo_etfs.csv.gz": {
     "headers": [
       "data_captura",
-      "name",
-      "type",
-      "sector",
-      "country",
-      "joined_on",
-      "link"
+      "data_referencia",
+      "codigo_ativo",
+      "label",
+      "preco_fechamento"
     ],
     "rows": [
       [
         "2026-09-23",
-        "Eletropaulo Metropolitana Eletricidade de Sao Paulo S/A",
-        "Company",
-        "Conventional Electricity",
-        "Brazil",
-        "2005-06-28",
-        "https://unglobalcompact.org/what-is-gc/participants/3230-Eletropaulo-Metropolitana-Eletricidade-de-Sao-Paulo-S-A"
+        "2026-09-02",
+        "LTBX11.SA",
+        "LTBX11",
+        "26.479999542236328"
       ],
       [
         "2026-09-23",
-        "Ordem Dos Advogados do Brasil 57a Subseccao de Guarulhos",
-        "Business Association",
-        "",
-        "Brazil",
-        "2004-11-05",
-        "https://unglobalcompact.org/what-is-gc/participants/7151-Ordem-Dos-Advogados-do-Brasil-57a-Subseccao-de-Guarulhos"
+        "2026-09-01",
+        "LTBX11.SA",
+        "LTBX11",
+        "26.459999084472656"
       ],
       [
         "2026-09-23",
-        "COPEL- Companhia Paranaense de Energia",
-        "Company",
-        "Conventional Electricity",
-        "Brazil",
-        "2001-07-26",
-        "https://unglobalcompact.org/what-is-gc/participants/2549-COPEL-Companhia-Paranaense-de-Energia"
+        "2026-08-31",
+        "LTBX11.SA",
+        "LTBX11",
+        "26.440000534057617"
       ],
       [
         "2026-09-23",
-        "Samarco Mineracao S.A.",
-        "Company",
-        "Iron and Steel",
-        "Brazil",
-        "2002-08-31",
-        "https://unglobalcompact.org/what-is-gc/participants/8168-Samarco-Mineracao-S-A-"
+        "2026-08-28",
+        "LTBX11.SA",
+        "LTBX11",
+        "26.43000030517578"
       ],
       [
         "2026-09-23",
-        "Suzano S/A",
-        "Company",
-        "Paper",
-        "Brazil",
-        "2003-01-07",
-        "https://unglobalcompact.org/what-is-gc/participants/8921-Suzano-S-A"
+        "2026-08-27",
+        "LTBX11.SA",
+        "LTBX11",
+        "26.440000534057617"
       ],
       [
         "2026-09-23",
-        "FIEP - Federação das Indústrias do Estado do Paraná",
-        "Business Association",
-        "",
-        "Brazil",
-        "2003-05-21",
-        "https://unglobalcompact.org/what-is-gc/participants/8364-FIEP-Federa-o-das-Ind-strias-do-Estado-do-Paran-"
+        "2026-08-26",
+        "LTBX11.SA",
+        "LTBX11",
+        "26.420000076293945"
       ],
       [
         "2026-09-23",
-        "Instituto Ethos de Empresas e Responsibilidade Social",
-        "Business Association",
-        "",
-        "Brazil",
-        "2003-05-21",
-        "https://unglobalcompact.org/what-is-gc/participants/5314-Instituto-Ethos-de-Empresas-e-Responsibilidade-Social"
+        "2026-08-25",
+        "LTBX11.SA",
+        "LTBX11",
+        "26.40999984741211"
       ],
       [
         "2026-09-23",
-        "Fundacao Dom Cabral",
-        "Civil Society Organization & Other",
-        "",
-        "Brazil",
-        "2003-05-21",
-        "https://unglobalcompact.org/what-is-gc/participants/3921-Fundacao-Dom-Cabral"
+        "2026-08-24",
+        "LTBX11.SA",
+        "LTBX11",
+        "26.3799991607666"
       ],
       [
         "2026-09-23",
-        "FIESP- Federacao das Industrias do Estado de Sao Paulo",
-        "Business Association",
-        "",
-        "Brazil",
-        "2003-06-25",
-        "https://unglobalcompact.org/what-is-gc/participants/3733-FIESP-Federacao-das-Industrias-do-Estado-de-Sao-Paulo"
+        "2026-08-21",
+        "LTBX11.SA",
+        "LTBX11",
+        "26.360000610351562"
       ],
       [
         "2026-09-23",
-        "GS1 Brasil - Associacao Brasileira de Automocao",
-        "Business Association",
-        "",
-        "Brazil",
-        "2003-06-25",
-        "https://unglobalcompact.org/what-is-gc/participants/3059-GS1-Brasil-Associacao-Brasileira-de-Automocao"
+        "2026-08-20",
+        "LTBX11.SA",
+        "LTBX11",
+        "26.34000015258789"
       ],
       [
         "2026-09-23",
-        "Klabin S.A.",
-        "Company",
-        "Paper",
-        "Brazil",
-        "2003-06-27",
-        "https://unglobalcompact.org/what-is-gc/participants/5833-Klabin-S-A-"
+        "2026-08-19",
+        "LTBX11.SA",
+        "LTBX11",
+        "26.329999923706055"
       ],
       [
         "2026-09-23",
-        "Grupo Pao de Acucar - Companhia Brasileira de Distribuicao",
-        "Company",
-        "Diversified Retailers",
-        "Brazil",
-        "2003-06-27",
-        "https://unglobalcompact.org/what-is-gc/participants/4651-Grupo-Pao-de-Acucar-Companhia-Brasileira-de-Distribuicao"
+        "2026-08-18",
+        "LTBX11.SA",
+        "LTBX11",
+        "26.299999237060547"
       ],
       [
         "2026-09-23",
-        "Copa Energia",
-        "Company",
-        "Gas Distribution",
-        "Brazil",
-        "2003-06-27",
-        "https://unglobalcompact.org/what-is-gc/participants/2543-Copa-Energia"
+        "2026-08-17",
+        "LTBX11.SA",
+        "LTBX11",
+        "26.309999465942383"
       ],
       [
         "2026-09-23",
-        "Colegio Lacordaire Sant-Anna SC Ltda",
-        "Civil Society Organization & Other",
-        "",
-        "Brazil",
-        "2003-06-27",
-        "https://unglobalcompact.org/what-is-gc/participants/2291-Colegio-Lacordaire-Sant-Anna-SC-Ltda"
+        "2026-08-14",
+        "LTBX11.SA",
+        "LTBX11",
+        "26.270000457763672"
       ],
       [
         "2026-09-23",
-        "Itau Unibanco SA",
-        "Company",
-        "Banks",
-        "Brazil",
-        "2003-06-27",
-        "https://unglobalcompact.org/what-is-gc/participants/1132-Itau-Unibanco-SA"
+        "2026-08-13",
+        "LTBX11.SA",
+        "LTBX11",
+        "26.239999771118164"
       ]
     ]
   },
@@ -401,25 +369,8 @@ window.PULSEFLAT_PREVIEWS = {
       [
         "2026-09-23",
         "2026-09-22",
-        "BRAVW248",
-        "BRBRAV3W0CJ8",
-        "EQUITY PUT",
-        "EQUITY-DERIVATE",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        ""
-      ],
-      [
-        "2026-09-23",
-        "2026-09-22",
-        "COGNH18",
-        "BRCOGN3H0PF6",
+        "PRIOE660",
+        "BRPRIO3E0N14",
         "EQUITY CALL",
         "EQUITY-DERIVATE",
         "",
@@ -435,8 +386,8 @@ window.PULSEFLAT_PREVIEWS = {
       [
         "2026-09-23",
         "2026-09-22",
-        "VISAV937",
-        "BRVISA9V0142",
+        "PRIOQ660",
+        "BRPRIO3Q0N59",
         "EQUITY PUT",
         "EQUITY-DERIVATE",
         "",
@@ -452,8 +403,76 @@ window.PULSEFLAT_PREVIEWS = {
       [
         "2026-09-23",
         "2026-09-22",
-        "VISAJ937",
-        "BRVISA9J0148",
+        "CVCBX45",
+        "BRCVCB3X0D40",
+        "EQUITY PUT",
+        "EQUITY-DERIVATE",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "2026-09-23",
+        "2026-09-22",
+        "CVCBX449",
+        "BRCVCB3X0D32",
+        "EQUITY PUT",
+        "EQUITY-DERIVATE",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "2026-09-23",
+        "2026-09-22",
+        "CVCBX35",
+        "BRCVCB3X0D57",
+        "EQUITY PUT",
+        "EQUITY-DERIVATE",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "2026-09-23",
+        "2026-09-22",
+        "CVCBX349",
+        "BRCVCB3X0D73",
+        "EQUITY PUT",
+        "EQUITY-DERIVATE",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "2026-09-23",
+        "2026-09-22",
+        "CVCBL550",
+        "BRCVCB3L0D45",
         "EQUITY CALL",
         "EQUITY-DERIVATE",
         "",
@@ -469,8 +488,8 @@ window.PULSEFLAT_PREVIEWS = {
       [
         "2026-09-23",
         "2026-09-22",
-        "VERZJ424",
-        "BRVERZ9J00P9",
+        "CVCBL45",
+        "BRCVCB3L0D52",
         "EQUITY CALL",
         "EQUITY-DERIVATE",
         "",
@@ -486,93 +505,8 @@ window.PULSEFLAT_PREVIEWS = {
       [
         "2026-09-23",
         "2026-09-22",
-        "VBBRX325",
-        "BRVBBR3X0A96",
-        "EQUITY PUT",
-        "EQUITY-DERIVATE",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        ""
-      ],
-      [
-        "2026-09-23",
-        "2026-09-22",
-        "VBBRQ138",
-        "BRVBBR3Q0769",
-        "EQUITY PUT",
-        "EQUITY-DERIVATE",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        ""
-      ],
-      [
-        "2026-09-23",
-        "2026-09-22",
-        "TTENV913",
-        "BRTTEN3V01A3",
-        "EQUITY PUT",
-        "EQUITY-DERIVATE",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        ""
-      ],
-      [
-        "2026-09-23",
-        "2026-09-22",
-        "TRISV530",
-        "BRTRIS3V01U4",
-        "EQUITY PUT",
-        "EQUITY-DERIVATE",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        ""
-      ],
-      [
-        "2026-09-23",
-        "2026-09-22",
-        "TRISJ530",
-        "BRTRIS3J01U9",
-        "EQUITY CALL",
-        "EQUITY-DERIVATE",
-        "0.13",
-        "0.13",
-        "0.16",
-        "0.14",
-        "0.14",
-        "7.69",
-        "5",
-        "900",
-        "133"
-      ],
-      [
-        "2026-09-23",
-        "2026-09-22",
-        "SPCXJ505",
-        "BRSPCX9J0178",
+        "CVCBL449",
+        "BRCVCB3L0D78",
         "EQUITY CALL",
         "EQUITY-DERIVATE",
         "",
@@ -588,8 +522,8 @@ window.PULSEFLAT_PREVIEWS = {
       [
         "2026-09-23",
         "2026-09-22",
-        "SOJAH450",
-        "BRSOJA3H00R4",
+        "CVCBL35",
+        "BRCVCB3L0D37",
         "EQUITY CALL",
         "EQUITY-DERIVATE",
         "",
@@ -605,8 +539,25 @@ window.PULSEFLAT_PREVIEWS = {
       [
         "2026-09-23",
         "2026-09-22",
-        "SIMHT55",
-        "BRSIMH3T09S4",
+        "CVCBL349",
+        "BRCVCB3L0D60",
+        "EQUITY CALL",
+        "EQUITY-DERIVATE",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "2026-09-23",
+        "2026-09-22",
+        "CSNAX14",
+        "BRCSNA3X0RI0",
         "EQUITY PUT",
         "EQUITY-DERIVATE",
         "",
@@ -622,26 +573,43 @@ window.PULSEFLAT_PREVIEWS = {
       [
         "2026-09-23",
         "2026-09-22",
-        "SBSPV236",
-        "BRSBSP3V0H00",
+        "CSNAX13",
+        "BRCSNA3X0RH2",
         "EQUITY PUT",
         "EQUITY-DERIVATE",
-        "0.11",
-        "0.1",
-        "0.11",
-        "0.1",
-        "0.1",
-        "0",
-        "2",
-        "200",
-        "21"
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
       ],
       [
         "2026-09-23",
         "2026-09-22",
-        "SBSPK226",
-        "BRSBSP3K0GC0",
-        "EQUITY CALL",
+        "CSNAX12",
+        "BRCSNA3X0RF6",
+        "EQUITY PUT",
+        "EQUITY-DERIVATE",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "2026-09-23",
+        "2026-09-22",
+        "CSNAX11",
+        "BRCSNA3X0RG4",
+        "EQUITY PUT",
         "EQUITY-DERIVATE",
         "",
         "",
@@ -884,122 +852,6 @@ window.PULSEFLAT_PREVIEWS = {
         "USDINR=X",
         "USD_INR",
         "95.45030212402344"
-      ]
-    ]
-  },
-  "yahoo_etfs.csv.gz": {
-    "headers": [
-      "data_captura",
-      "data_referencia",
-      "codigo_ativo",
-      "label",
-      "preco_fechamento"
-    ],
-    "rows": [
-      [
-        "2026-09-23",
-        "2026-09-02",
-        "LTBX11.SA",
-        "LTBX11",
-        "26.479999542236328"
-      ],
-      [
-        "2026-09-23",
-        "2026-09-01",
-        "LTBX11.SA",
-        "LTBX11",
-        "26.459999084472656"
-      ],
-      [
-        "2026-09-23",
-        "2026-08-31",
-        "LTBX11.SA",
-        "LTBX11",
-        "26.440000534057617"
-      ],
-      [
-        "2026-09-23",
-        "2026-08-28",
-        "LTBX11.SA",
-        "LTBX11",
-        "26.43000030517578"
-      ],
-      [
-        "2026-09-23",
-        "2026-08-27",
-        "LTBX11.SA",
-        "LTBX11",
-        "26.440000534057617"
-      ],
-      [
-        "2026-09-23",
-        "2026-08-26",
-        "LTBX11.SA",
-        "LTBX11",
-        "26.420000076293945"
-      ],
-      [
-        "2026-09-23",
-        "2026-08-25",
-        "LTBX11.SA",
-        "LTBX11",
-        "26.40999984741211"
-      ],
-      [
-        "2026-09-23",
-        "2026-08-24",
-        "LTBX11.SA",
-        "LTBX11",
-        "26.3799991607666"
-      ],
-      [
-        "2026-09-23",
-        "2026-08-21",
-        "LTBX11.SA",
-        "LTBX11",
-        "26.360000610351562"
-      ],
-      [
-        "2026-09-23",
-        "2026-08-20",
-        "LTBX11.SA",
-        "LTBX11",
-        "26.34000015258789"
-      ],
-      [
-        "2026-09-23",
-        "2026-08-19",
-        "LTBX11.SA",
-        "LTBX11",
-        "26.329999923706055"
-      ],
-      [
-        "2026-09-23",
-        "2026-08-18",
-        "LTBX11.SA",
-        "LTBX11",
-        "26.299999237060547"
-      ],
-      [
-        "2026-09-23",
-        "2026-08-17",
-        "LTBX11.SA",
-        "LTBX11",
-        "26.309999465942383"
-      ],
-      [
-        "2026-09-23",
-        "2026-08-14",
-        "LTBX11.SA",
-        "LTBX11",
-        "26.270000457763672"
-      ],
-      [
-        "2026-09-23",
-        "2026-08-13",
-        "LTBX11.SA",
-        "LTBX11",
-        "26.239999771118164"
       ]
     ]
   },

@@ -221,7 +221,7 @@
   },
   "bcb_ptax.csv": {
     "min": "2020-01-02",
-    "max": "2026-09-22"
+    "max": "2026-09-23"
   },
   "bacen_cadastro_instituicoes.csv.gz": {
     "min": "2020-03-31",
@@ -354,5 +354,25 @@
   "b3_bdi_trades_acoes.csv.gz": {
     "min": "2026-06-02",
     "max": "2026-09-22"
+  },
+  "anbima_curvas_credito.csv.gz": {
+    "min": "2020-01-02",
+    "max": "2026-09-22"
+  },
+  "anbima_indices_carteira_teorica_ima.csv.gz": {
+    "min": "2026-09-22",
+    "max": "2026-09-22"
+  },
+  "anbima_indices_carteira_teorica_ida.csv.gz": {
+    "min": "2026-09-22",
+    "max": "2026-09-22"
+  },
+  "b3_carteira_teorica_ifnc.csv": {
+    "min": "2026-06-03",
+    "max": "2026-09-23"
+  },
+  "yahoo_acoes_brasileiras.csv.gz": {
+    "min": "2020-01-02",
+    "max": "2026-09-23"
   }
 }
