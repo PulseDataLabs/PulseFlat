@@ -358,5 +358,17 @@ window.PULSEFLAT_LAST_UPDATES = {
   "b3_bdi_trades_acoes.csv.gz": {
     "min": "2026-06-02",
     "max": "2026-09-23"
+  },
+  "anbima_fidc_mercado_secundario.csv.gz": {
+    "min": "2021-10-18",
+    "max": "2026-09-23"
+  },
+  "anbima_curvas_juros_parametros_svensson.csv.gz": {
+    "min": "2020-01-02",
+    "max": "2026-09-23"
+  },
+  "anbima_550.csv": {
+    "min": "2026-06-01",
+    "max": "2026-09-24"
   }
 };
