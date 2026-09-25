@@ -149,7 +149,7 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "anbima_indice_imab.csv.gz": {
     "min": "2001-12-04",
-    "max": "2026-09-23"
+    "max": "2026-09-24"
   },
   "b3_fundos_listados.csv": {
     "min": "2026-09-24",
@@ -261,7 +261,7 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "fred_us_treasuries_yield_curve.csv.gz": {
     "min": "2020-01-02",
-    "max": "2026-09-23"
+    "max": "2026-09-24"
   },
   "ipea_calendario.csv": {
     "min": "1970-01-01",
