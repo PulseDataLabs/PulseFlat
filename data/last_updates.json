@@ -197,7 +197,7 @@
   },
   "ipea_mercados_diarios.csv": {
     "min": "1900-01-02",
-    "max": "2026-09-24"
+    "max": "2026-09-25"
   },
   "debentures_mercado_secundario_precos_negociacao_api.csv.gz": {
     "min": "2020-01-02",
@@ -369,6 +369,10 @@
   },
   "anbima_indice_imab.csv.gz": {
     "min": "2001-12-04",
+    "max": "2026-09-25"
+  },
+  "anbima_indices_carteira_teorica_ida.csv.gz": {
+    "min": "2026-09-25",
     "max": "2026-09-25"
   }
 }
