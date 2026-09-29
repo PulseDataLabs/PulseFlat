@@ -370,5 +370,9 @@
   "onu_pacto_global.csv": {
     "min": "2026-09-29",
     "max": "2026-09-29"
+  },
+  "anbima_ima_completo.csv": {
+    "min": "2026-05-29",
+    "max": "2026-09-28"
   }
 }
