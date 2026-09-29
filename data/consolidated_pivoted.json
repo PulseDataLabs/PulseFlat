@@ -726,43 +726,11 @@
   },
   {
     "data_referencia": "2026-09-28",
-    "indicador": "DIF OPER CASADA - COMPRA",
-    "fonte": "B3",
-    "dataset_label": "B3 Indicadores Financeiros",
-    "categoria": "Indicadores B3",
-    "Valor": "2,01"
-  },
-  {
-    "data_referencia": "2026-09-28",
     "indicador": "DIS",
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Internacionais",
     "categoria": "Ações Internacionais",
     "Valor": "105,59"
-  },
-  {
-    "data_referencia": "2026-09-28",
-    "indicador": "DOLAR SPOT BMF PARA 1 DIA",
-    "fonte": "B3",
-    "dataset_label": "B3 Indicadores Financeiros",
-    "categoria": "Indicadores B3",
-    "Valor": "5,2158"
-  },
-  {
-    "data_referencia": "2026-09-28",
-    "indicador": "DÓLAR BMF SPOT - 2 DIAS",
-    "fonte": "B3",
-    "dataset_label": "B3 Indicadores Financeiros",
-    "categoria": "Indicadores B3",
-    "Valor": "5,2179"
-  },
-  {
-    "data_referencia": "2026-09-28",
-    "indicador": "DÓLAR CUPOM LIMPO",
-    "fonte": "B3",
-    "dataset_label": "B3 Indicadores Financeiros",
-    "categoria": "Indicadores B3",
-    "Valor": "5,2173"
   },
   {
     "data_referencia": "2026-09-28",
@@ -1932,7 +1900,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "0,2447"
+    "Valor": "0,2452"
   },
   {
     "data_referencia": "2026-09-29",
@@ -1956,7 +1924,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "11,30"
+    "Valor": "11,38"
   },
   {
     "data_referencia": "2026-09-29",
@@ -1964,7 +1932,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "755,62"
+    "Valor": "754,88"
   },
   {
     "data_referencia": "2026-09-29",
@@ -1980,7 +1948,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "83.597"
+    "Valor": "83.485"
   },
   {
     "data_referencia": "2026-09-29",
@@ -2004,7 +1972,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "0,7767"
+    "Valor": "0,7778"
   },
   {
     "data_referencia": "2026-09-29",
@@ -2016,6 +1984,14 @@
   },
   {
     "data_referencia": "2026-09-29",
+    "indicador": "DIF OPER CASADA - COMPRA",
+    "fonte": "B3",
+    "dataset_label": "B3 Indicadores Financeiros",
+    "categoria": "Indicadores B3",
+    "Valor": "0,7100"
+  },
+  {
+    "data_referencia": "2026-09-29",
     "indicador": "DOGE-USD",
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
@@ -2024,11 +2000,35 @@
   },
   {
     "data_referencia": "2026-09-29",
+    "indicador": "DOLAR SPOT BMF PARA 1 DIA",
+    "fonte": "B3",
+    "dataset_label": "B3 Indicadores Financeiros",
+    "categoria": "Indicadores B3",
+    "Valor": "5,2105"
+  },
+  {
+    "data_referencia": "2026-09-29",
     "indicador": "DOT-USD",
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "1,19"
+    "Valor": "1,20"
+  },
+  {
+    "data_referencia": "2026-09-29",
+    "indicador": "DÓLAR BMF SPOT - 2 DIAS",
+    "fonte": "B3",
+    "dataset_label": "B3 Indicadores Financeiros",
+    "categoria": "Indicadores B3",
+    "Valor": "5,2126"
+  },
+  {
+    "data_referencia": "2026-09-29",
+    "indicador": "DÓLAR CUPOM LIMPO",
+    "fonte": "B3",
+    "dataset_label": "B3 Indicadores Financeiros",
+    "categoria": "Indicadores B3",
+    "Valor": "5,2145"
   },
   {
     "data_referencia": "2026-09-29",
@@ -2084,7 +2084,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "3,38"
+    "Valor": "3,41"
   },
   {
     "data_referencia": "2026-09-29",
@@ -2108,7 +2108,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "14,58"
+    "Valor": "14,66"
   },
   {
     "data_referencia": "2026-09-29",
@@ -2116,7 +2116,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "67,56"
+    "Valor": "67,70"
   },
   {
     "data_referencia": "2026-09-29",
@@ -2140,7 +2140,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "0,1311"
+    "Valor": "0,1314"
   },
   {
     "data_referencia": "2026-09-29",
@@ -2172,7 +2172,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "119,10"
+    "Valor": "119,15"
   },
   {
     "data_referencia": "2026-09-29",
@@ -2244,7 +2244,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "0,2227"
+    "Valor": "0,2233"
   },
   {
     "data_referencia": "2026-09-29",
