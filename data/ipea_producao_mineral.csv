@@ -1676,3 +1676,6 @@ data_captura,data_referencia,codigo_ativo,label,valor
 2026-09-30,2026-07-01,IBSIE12_QSCAB12,Produção de Aço Bruto,2804.412
 2026-09-30,2026-07-01,IBSIE12_QSCFG12,Produção de Ferro-Gusa,2205.008
 2026-09-30,2026-07-01,IBSIE12_QSCL12,Produção de Laminados,2051.884
+2026-09-30,2026-08-01,IBSIE12_QSCAB12,Produção de Aço Bruto,2692.865
+2026-09-30,2026-08-01,IBSIE12_QSCFG12,Produção de Ferro-Gusa,2097.061
+2026-09-30,2026-08-01,IBSIE12_QSCL12,Produção de Laminados,2001.578
