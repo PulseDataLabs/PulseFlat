@@ -266,10 +266,10 @@
     "categoria": "Títulos Públicos",
     "tipo": "indicador",
     "indicador": "100000 (LTN)",
-    "valor": "13,72%",
+    "valor": "13,73%",
     "unidade": "Taxa indicativa",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "tx_indicativa"
   },
   {
@@ -279,10 +279,10 @@
     "categoria": "Títulos Públicos",
     "tipo": "indicador",
     "indicador": "100000 (LTN)",
-    "valor": "998,47",
+    "valor": "998,98",
     "unidade": "PU",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "pu"
   },
   {
@@ -294,8 +294,8 @@
     "indicador": "210100 (LFT)",
     "valor": "0,01%",
     "unidade": "Taxa indicativa",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "tx_indicativa"
   },
   {
@@ -305,10 +305,10 @@
     "categoria": "Títulos Públicos",
     "tipo": "indicador",
     "indicador": "210100 (LFT)",
-    "valor": "19.966",
+    "valor": "19.976",
     "unidade": "PU",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "pu"
   },
   {
@@ -318,10 +318,10 @@
     "categoria": "Títulos Públicos",
     "tipo": "indicador",
     "indicador": "760199 (NTN-B)",
-    "valor": "5,54%",
+    "valor": "5,58%",
     "unidade": "Taxa indicativa",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "tx_indicativa"
   },
   {
@@ -331,10 +331,10 @@
     "categoria": "Títulos Públicos",
     "tipo": "indicador",
     "indicador": "760199 (NTN-B)",
-    "valor": "4.861",
+    "valor": "4.863",
     "unidade": "PU",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "pu"
   },
   {
@@ -344,10 +344,10 @@
     "categoria": "Títulos Públicos",
     "tipo": "indicador",
     "indicador": "770100 (NTN-C)",
-    "valor": "7,91%",
+    "valor": "7,89%",
     "unidade": "Taxa indicativa",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "tx_indicativa"
   },
   {
@@ -357,10 +357,10 @@
     "categoria": "Títulos Públicos",
     "tipo": "indicador",
     "indicador": "770100 (NTN-C)",
-    "valor": "7.785",
+    "valor": "7.799",
     "unidade": "PU",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "pu"
   },
   {
@@ -370,10 +370,10 @@
     "categoria": "Títulos Públicos",
     "tipo": "indicador",
     "indicador": "950199 (NTN-F)",
-    "valor": "13,31%",
+    "valor": "13,29%",
     "unidade": "Taxa indicativa",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "tx_indicativa"
   },
   {
@@ -385,8 +385,8 @@
     "indicador": "950199 (NTN-F)",
     "valor": "1.016",
     "unidade": "PU",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "pu"
   },
   {
@@ -398,8 +398,8 @@
     "indicador": "Estimativa Taxa Selic",
     "valor": "13,65%",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "estimativa_taxa_selic"
   },
   {
@@ -411,8 +411,8 @@
     "indicador": "DI Over (SELIC equivalente)",
     "valor": "13,65%",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "average"
   },
   {
@@ -422,10 +422,10 @@
     "categoria": "",
     "tipo": "indicador",
     "indicador": "DI Over — Volume financeiro",
-    "valor": "2.277.687",
+    "valor": "2.330.098",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "financial_volume"
   },
   {
@@ -437,8 +437,8 @@
     "indicador": "DI1",
     "valor": "13,65%",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "taxa"
   },
   {
@@ -542,7 +542,7 @@
     "valor": "5,2198",
     "unidade": "",
     "data_referencia": "2026-09-29",
-    "captura_em": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "cotacao_compra"
   },
   {
@@ -555,7 +555,7 @@
     "valor": "5,2204",
     "unidade": "",
     "data_referencia": "2026-09-29",
-    "captura_em": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "cotacao_venda"
   },
   {
@@ -568,7 +568,7 @@
     "valor": "5,22%",
     "unidade": "",
     "data_referencia": "2026-09-29",
-    "captura_em": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "1"
   },
   {
@@ -581,7 +581,7 @@
     "valor": "1,57%",
     "unidade": "",
     "data_referencia": "2026-09-01",
-    "captura_em": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "189"
   },
   {
@@ -594,7 +594,7 @@
     "valor": "0,06%",
     "unidade": "",
     "data_referencia": "2026-08-01",
-    "captura_em": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "190"
   },
   {
@@ -607,7 +607,7 @@
     "valor": "-0,32%",
     "unidade": "",
     "data_referencia": "2026-08-01",
-    "captura_em": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "433"
   },
   {
@@ -620,7 +620,7 @@
     "valor": "0,05%",
     "unidade": "",
     "data_referencia": "2026-09-29",
-    "captura_em": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "11"
   },
   {
@@ -633,7 +633,7 @@
     "valor": "36,06",
     "unidade": "",
     "data_referencia": "2026-07-01",
-    "captura_em": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "acucar_global_usd"
   },
   {
@@ -646,7 +646,7 @@
     "valor": "359,16",
     "unidade": "",
     "data_referencia": "2026-07-01",
-    "captura_em": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "cafe_arabica_global_usd"
   },
   {
@@ -659,7 +659,7 @@
     "valor": "101,60",
     "unidade": "",
     "data_referencia": "2026-07-01",
-    "captura_em": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "minerio_ferro_global_usd"
   },
   {
@@ -672,7 +672,7 @@
     "valor": "83,73",
     "unidade": "",
     "data_referencia": "2026-07-01",
-    "captura_em": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "petroleo_brent_global_usd"
   },
   {
@@ -685,7 +685,7 @@
     "valor": "442,45",
     "unidade": "",
     "data_referencia": "2026-07-01",
-    "captura_em": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "soja_global_usd"
   },
   {
@@ -698,7 +698,7 @@
     "valor": "3,04",
     "unidade": "",
     "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "spread_high_yield_emergentes_oas"
   },
   {
@@ -711,7 +711,7 @@
     "valor": "16,07",
     "unidade": "",
     "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "vix"
   },
   {
@@ -724,7 +724,7 @@
     "valor": "3,88%",
     "unidade": "",
     "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "fed_funds_rate"
   },
   {
@@ -737,7 +737,7 @@
     "valor": "3,90%",
     "unidade": "",
     "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "sofr_rate"
   },
   {
@@ -750,7 +750,7 @@
     "valor": "0,8300",
     "unidade": "",
     "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "credit_spread_corp_ig"
   },
   {
@@ -763,7 +763,7 @@
     "valor": "3,02",
     "unidade": "",
     "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "credit_spread_corp_hy"
   },
   {
@@ -776,7 +776,7 @@
     "valor": "337,76",
     "unidade": "",
     "data_referencia": "2026-08-01",
-    "captura_em": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "cpi_core"
   },
   {
@@ -789,7 +789,7 @@
     "valor": "334,13",
     "unidade": "",
     "data_referencia": "2026-08-01",
-    "captura_em": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "cpi_headline"
   },
   {
@@ -802,7 +802,7 @@
     "valor": "159.075",
     "unidade": "",
     "data_referencia": "2026-08-01",
-    "captura_em": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "nonfarm_payroll"
   },
   {
@@ -815,7 +815,7 @@
     "valor": "4,10%",
     "unidade": "",
     "data_referencia": "2026-08-01",
-    "captura_em": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "unemployment_rate"
   },
   {
@@ -828,7 +828,7 @@
     "valor": "2,35%",
     "unidade": "",
     "data_referencia": "2026-09-29",
-    "captura_em": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "t10y_breakeven"
   },
   {
@@ -841,7 +841,7 @@
     "valor": "2,34%",
     "unidade": "",
     "data_referencia": "2026-09-29",
-    "captura_em": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "t5y_breakeven"
   },
   {
@@ -854,7 +854,7 @@
     "valor": "0,37%",
     "unidade": "",
     "data_referencia": "2026-09-29",
-    "captura_em": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "t10y2y_spread"
   },
   {
@@ -866,8 +866,8 @@
     "indicador": "ABEV3.SA",
     "valor": "15,20",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "ABEV3.SA"
   },
   {
@@ -879,8 +879,8 @@
     "indicador": "ALOS3.SA",
     "valor": "28,57",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "ALOS3.SA"
   },
   {
@@ -892,8 +892,8 @@
     "indicador": "ASAI3.SA",
     "valor": "10,20",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "ASAI3.SA"
   },
   {
@@ -905,8 +905,8 @@
     "indicador": "B3SA3.SA",
     "valor": "17,66",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "B3SA3.SA"
   },
   {
@@ -918,8 +918,8 @@
     "indicador": "BBAS3.SA",
     "valor": "21,49",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "BBAS3.SA"
   },
   {
@@ -931,8 +931,8 @@
     "indicador": "BBDC3.SA",
     "valor": "15,61",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "BBDC3.SA"
   },
   {
@@ -944,8 +944,8 @@
     "indicador": "BBDC4.SA",
     "valor": "17,66",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "BBDC4.SA"
   },
   {
@@ -957,8 +957,8 @@
     "indicador": "BEEF3.SA",
     "valor": "4,01",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "BEEF3.SA"
   },
   {
@@ -970,8 +970,8 @@
     "indicador": "BPAC11.SA",
     "valor": "62,25",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "BPAC11.SA"
   },
   {
@@ -983,8 +983,8 @@
     "indicador": "BRAP4.SA",
     "valor": "20,59",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "BRAP4.SA"
   },
   {
@@ -996,8 +996,8 @@
     "indicador": "BRKM5.SA",
     "valor": "3,90",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "BRKM5.SA"
   },
   {
@@ -1009,8 +1009,8 @@
     "indicador": "CMIG4.SA",
     "valor": "10,84",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "CMIG4.SA"
   },
   {
@@ -1022,8 +1022,8 @@
     "indicador": "CMIN3.SA",
     "valor": "5,05",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "CMIN3.SA"
   },
   {
@@ -1035,8 +1035,8 @@
     "indicador": "COGN3.SA",
     "valor": "2,11",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "COGN3.SA"
   },
   {
@@ -1048,8 +1048,8 @@
     "indicador": "CPFE3.SA",
     "valor": "43,90",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "CPFE3.SA"
   },
   {
@@ -1061,8 +1061,8 @@
     "indicador": "CSAN3.SA",
     "valor": "3,74",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "CSAN3.SA"
   },
   {
@@ -1074,8 +1074,8 @@
     "indicador": "CSNA3.SA",
     "valor": "5,99",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "CSNA3.SA"
   },
   {
@@ -1087,8 +1087,8 @@
     "indicador": "CVCB3.SA",
     "valor": "1,47",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "CVCB3.SA"
   },
   {
@@ -1100,8 +1100,8 @@
     "indicador": "CYRE3.SA",
     "valor": "26,53",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "CYRE3.SA"
   },
   {
@@ -1113,8 +1113,8 @@
     "indicador": "EGIE3.SA",
     "valor": "28,87",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "EGIE3.SA"
   },
   {
@@ -1126,8 +1126,8 @@
     "indicador": "ENEV3.SA",
     "valor": "26,75",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "ENEV3.SA"
   },
   {
@@ -1139,8 +1139,8 @@
     "indicador": "ENGI11.SA",
     "valor": "50,90",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "ENGI11.SA"
   },
   {
@@ -1152,8 +1152,8 @@
     "indicador": "EQTL3.SA",
     "valor": "39,12",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "EQTL3.SA"
   },
   {
@@ -1165,8 +1165,8 @@
     "indicador": "EZTC3.SA",
     "valor": "13,38",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "EZTC3.SA"
   },
   {
@@ -1178,8 +1178,8 @@
     "indicador": "FLRY3.SA",
     "valor": "21,44",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "FLRY3.SA"
   },
   {
@@ -1191,8 +1191,8 @@
     "indicador": "GGBR4.SA",
     "valor": "25,09",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "GGBR4.SA"
   },
   {
@@ -1204,8 +1204,8 @@
     "indicador": "HAPV3.SA",
     "valor": "6,23",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "HAPV3.SA"
   },
   {
@@ -1217,8 +1217,8 @@
     "indicador": "HYPE3.SA",
     "valor": "24,63",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "HYPE3.SA"
   },
   {
@@ -1230,8 +1230,8 @@
     "indicador": "IGTI11.SA",
     "valor": "25,94",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "IGTI11.SA"
   },
   {
@@ -1243,8 +1243,8 @@
     "indicador": "IRBR3.SA",
     "valor": "60,98",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "IRBR3.SA"
   },
   {
@@ -1256,8 +1256,8 @@
     "indicador": "ITSA4.SA",
     "valor": "13,95",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "ITSA4.SA"
   },
   {
@@ -1269,8 +1269,8 @@
     "indicador": "ITUB4.SA",
     "valor": "41,71",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "ITUB4.SA"
   },
   {
@@ -1282,8 +1282,8 @@
     "indicador": "JHSF3.SA",
     "valor": "11,36",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "JHSF3.SA"
   },
   {
@@ -1295,8 +1295,8 @@
     "indicador": "KLBN11.SA",
     "valor": "18,31",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "KLBN11.SA"
   },
   {
@@ -1308,8 +1308,8 @@
     "indicador": "LOGN3.SA",
     "valor": "27,99",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "LOGN3.SA"
   },
   {
@@ -1321,8 +1321,8 @@
     "indicador": "LREN3.SA",
     "valor": "11,16",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "LREN3.SA"
   },
   {
@@ -1334,8 +1334,8 @@
     "indicador": "MDIA3.SA",
     "valor": "16,34",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "MDIA3.SA"
   },
   {
@@ -1347,8 +1347,8 @@
     "indicador": "MGLU3.SA",
     "valor": "6,60",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "MGLU3.SA"
   },
   {
@@ -1360,8 +1360,8 @@
     "indicador": "MRVE3.SA",
     "valor": "5,21",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "MRVE3.SA"
   },
   {
@@ -1373,8 +1373,8 @@
     "indicador": "MULT3.SA",
     "valor": "30,27",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "MULT3.SA"
   },
   {
@@ -1399,8 +1399,8 @@
     "indicador": "PCAR3.SA",
     "valor": "2,91",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "PCAR3.SA"
   },
   {
@@ -1412,8 +1412,8 @@
     "indicador": "PETR3.SA",
     "valor": "54,01",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "PETR3.SA"
   },
   {
@@ -1425,8 +1425,8 @@
     "indicador": "PETR4.SA",
     "valor": "48,72",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "PETR4.SA"
   },
   {
@@ -1438,8 +1438,8 @@
     "indicador": "PRIO3.SA",
     "valor": "61,63",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "PRIO3.SA"
   },
   {
@@ -1451,8 +1451,8 @@
     "indicador": "QUAL3.SA",
     "valor": "1,58",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "QUAL3.SA"
   },
   {
@@ -1464,8 +1464,8 @@
     "indicador": "RADL3.SA",
     "valor": "17,67",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "RADL3.SA"
   },
   {
@@ -1477,8 +1477,8 @@
     "indicador": "RECV3.SA",
     "valor": "10,89",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "RECV3.SA"
   },
   {
@@ -1490,8 +1490,8 @@
     "indicador": "RENT3.SA",
     "valor": "38,03",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "RENT3.SA"
   },
   {
@@ -1503,8 +1503,8 @@
     "indicador": "SANB11.SA",
     "valor": "29,69",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "SANB11.SA"
   },
   {
@@ -1516,8 +1516,8 @@
     "indicador": "SBSP3.SA",
     "valor": "26,75",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "SBSP3.SA"
   },
   {
@@ -1529,8 +1529,8 @@
     "indicador": "SLCE3.SA",
     "valor": "16,86",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "SLCE3.SA"
   },
   {
@@ -1542,8 +1542,8 @@
     "indicador": "SMTO3.SA",
     "valor": "17,42",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "SMTO3.SA"
   },
   {
@@ -1555,8 +1555,8 @@
     "indicador": "SUZB3.SA",
     "valor": "44,69",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "SUZB3.SA"
   },
   {
@@ -1568,8 +1568,8 @@
     "indicador": "TAEE11.SA",
     "valor": "40,22",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "TAEE11.SA"
   },
   {
@@ -1581,8 +1581,8 @@
     "indicador": "TEND3.SA",
     "valor": "28,52",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "TEND3.SA"
   },
   {
@@ -1594,8 +1594,8 @@
     "indicador": "TIMS3.SA",
     "valor": "18,48",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "TIMS3.SA"
   },
   {
@@ -1607,8 +1607,8 @@
     "indicador": "UGPA3.SA",
     "valor": "37,34",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "UGPA3.SA"
   },
   {
@@ -1620,8 +1620,8 @@
     "indicador": "USIM5.SA",
     "valor": "7,00",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "USIM5.SA"
   },
   {
@@ -1633,8 +1633,8 @@
     "indicador": "VALE3.SA",
     "valor": "71,16",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "VALE3.SA"
   },
   {
@@ -1646,8 +1646,8 @@
     "indicador": "VBBR3.SA",
     "valor": "38,06",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "VBBR3.SA"
   },
   {
@@ -1659,8 +1659,8 @@
     "indicador": "VIVT3.SA",
     "valor": "29,51",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "VIVT3.SA"
   },
   {
@@ -1672,8 +1672,8 @@
     "indicador": "WEGE3.SA",
     "valor": "50,12",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "WEGE3.SA"
   },
   {
@@ -1685,8 +1685,8 @@
     "indicador": "YDUQ3.SA",
     "valor": "10,86",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "YDUQ3.SA"
   },
   {
@@ -1696,10 +1696,10 @@
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "AAPL",
-    "valor": "338,40",
+    "valor": "329,40",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "AAPL"
   },
   {
@@ -1709,10 +1709,10 @@
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "ABBV",
-    "valor": "266,28",
+    "valor": "263,29",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "ABBV"
   },
   {
@@ -1722,10 +1722,10 @@
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "ADBE",
-    "valor": "231,01",
+    "valor": "233,17",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "ADBE"
   },
   {
@@ -1735,10 +1735,10 @@
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "AMD",
-    "valor": "607,87",
+    "valor": "607,57",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "AMD"
   },
   {
@@ -1748,10 +1748,10 @@
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "AMZN",
-    "valor": "246,15",
+    "valor": "246,67",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "AMZN"
   },
   {
@@ -1761,10 +1761,10 @@
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "ASML",
-    "valor": "1.771",
+    "valor": "1.834",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "ASML"
   },
   {
@@ -1774,10 +1774,10 @@
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "BABA",
-    "valor": "108,76",
+    "valor": "107,74",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "BABA"
   },
   {
@@ -1787,10 +1787,10 @@
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "BAC",
-    "valor": "55,47",
+    "valor": "54,96",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "BAC"
   },
   {
@@ -1800,10 +1800,10 @@
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "COST",
-    "valor": "922,92",
+    "valor": "924,59",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "COST"
   },
   {
@@ -1813,10 +1813,10 @@
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "CRM",
-    "valor": "227,27",
+    "valor": "225,31",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "CRM"
   },
   {
@@ -1826,10 +1826,10 @@
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "CVX",
-    "valor": "206,37",
+    "valor": "204,38",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "CVX"
   },
   {
@@ -1839,10 +1839,10 @@
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "DIS",
-    "valor": "105,59",
+    "valor": "105,41",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "DIS"
   },
   {
@@ -1852,10 +1852,10 @@
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "GOOGL",
-    "valor": "342,75",
+    "valor": "340,92",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "GOOGL"
   },
   {
@@ -1865,10 +1865,10 @@
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "HD",
-    "valor": "289,89",
+    "valor": "288,04",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "HD"
   },
   {
@@ -1878,10 +1878,10 @@
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "INTC",
-    "valor": "116,03",
+    "valor": "115,93",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "INTC"
   },
   {
@@ -1891,10 +1891,10 @@
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "JNJ",
-    "valor": "271,95",
+    "valor": "267,57",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "JNJ"
   },
   {
@@ -1904,10 +1904,10 @@
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "JPM",
-    "valor": "336,59",
+    "valor": "334,98",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "JPM"
   },
   {
@@ -1917,10 +1917,10 @@
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "KO",
-    "valor": "87,18",
+    "valor": "86,84",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "KO"
   },
   {
@@ -1932,8 +1932,8 @@
     "indicador": "LLY",
     "valor": "1.185",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "LLY"
   },
   {
@@ -1943,10 +1943,10 @@
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "MA",
-    "valor": "568,26",
+    "valor": "563,58",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "MA"
   },
   {
@@ -1956,10 +1956,10 @@
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "MCD",
-    "valor": "233,60",
+    "valor": "233,98",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "MCD"
   },
   {
@@ -1969,10 +1969,10 @@
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "META",
-    "valor": "715,62",
+    "valor": "738,79",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "META"
   },
   {
@@ -1982,10 +1982,10 @@
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "MRK",
-    "valor": "148,69",
+    "valor": "149,28",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "MRK"
   },
   {
@@ -1995,10 +1995,10 @@
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "MSFT",
-    "valor": "509,22",
+    "valor": "508,96",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "MSFT"
   },
   {
@@ -2008,10 +2008,10 @@
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "NFLX",
-    "valor": "69,23",
+    "valor": "70,30",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "NFLX"
   },
   {
@@ -2021,10 +2021,10 @@
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "NKE",
-    "valor": "36,39",
+    "valor": "35,84",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "NKE"
   },
   {
@@ -2034,10 +2034,10 @@
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "NVDA",
-    "valor": "228,86",
+    "valor": "227,21",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "NVDA"
   },
   {
@@ -2047,10 +2047,10 @@
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "NVO",
-    "valor": "38,71",
+    "valor": "38,31",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "NVO"
   },
   {
@@ -2060,10 +2060,10 @@
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "ORCL",
-    "valor": "132,60",
+    "valor": "137,79",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "ORCL"
   },
   {
@@ -2073,10 +2073,10 @@
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "PEP",
-    "valor": "128,50",
+    "valor": "128,69",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "PEP"
   },
   {
@@ -2088,8 +2088,8 @@
     "indicador": "PFE",
     "valor": "28,72",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "PFE"
   },
   {
@@ -2099,10 +2099,10 @@
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "PG",
-    "valor": "149,03",
+    "valor": "148,32",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "PG"
   },
   {
@@ -2112,10 +2112,10 @@
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "QCOM",
-    "valor": "187,48",
+    "valor": "184,10",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "QCOM"
   },
   {
@@ -2125,10 +2125,10 @@
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "SBUX",
-    "valor": "95,27",
+    "valor": "95,43",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "SBUX"
   },
   {
@@ -2138,10 +2138,10 @@
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "TSLA",
-    "valor": "357,45",
+    "valor": "352,84",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "TSLA"
   },
   {
@@ -2151,10 +2151,10 @@
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "TSM",
-    "valor": "452,88",
+    "valor": "456,94",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "TSM"
   },
   {
@@ -2164,10 +2164,10 @@
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "UNH",
-    "valor": "377,83",
+    "valor": "374,94",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "UNH"
   },
   {
@@ -2177,10 +2177,10 @@
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "V",
-    "valor": "367,74",
+    "valor": "365,88",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "V"
   },
   {
@@ -2190,10 +2190,10 @@
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "WMT",
-    "valor": "108,73",
+    "valor": "106,80",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "WMT"
   },
   {
@@ -2203,10 +2203,10 @@
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "XOM",
-    "valor": "162,52",
+    "valor": "161,35",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "XOM"
   },
   {
@@ -2218,8 +2218,8 @@
     "indicador": "ARSBRL=X",
     "valor": "0,0034",
     "unidade": "",
-    "data_referencia": "2026-09-29",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-30",
+    "captura_em": "2026-09-30",
     "metrica": "ARSBRL=X"
   },
   {
@@ -2231,8 +2231,8 @@
     "indicador": "AUDUSD=X",
     "valor": "0,7016",
     "unidade": "",
-    "data_referencia": "2026-09-29",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-30",
+    "captura_em": "2026-09-30",
     "metrica": "AUDUSD=X"
   },
   {
@@ -2244,8 +2244,8 @@
     "indicador": "BRL=X",
     "valor": "5,2229",
     "unidade": "",
-    "data_referencia": "2026-09-29",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-30",
+    "captura_em": "2026-09-30",
     "metrica": "BRL=X"
   },
   {
@@ -2257,8 +2257,8 @@
     "indicador": "CHFBRL=X",
     "valor": "6,2740",
     "unidade": "",
-    "data_referencia": "2026-09-29",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-30",
+    "captura_em": "2026-09-30",
     "metrica": "CHFBRL=X"
   },
   {
@@ -2270,8 +2270,8 @@
     "indicador": "CLPBRL=X",
     "valor": "0,0053",
     "unidade": "",
-    "data_referencia": "2026-09-29",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-30",
+    "captura_em": "2026-09-30",
     "metrica": "CLPBRL=X"
   },
   {
@@ -2281,10 +2281,10 @@
     "categoria": "Câmbio / Moedas",
     "tipo": "indicador",
     "indicador": "CNYBRL=X",
-    "valor": "0,7778",
+    "valor": "0,7760",
     "unidade": "",
-    "data_referencia": "2026-09-29",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-30",
+    "captura_em": "2026-09-30",
     "metrica": "CNYBRL=X"
   },
   {
@@ -2296,8 +2296,8 @@
     "indicador": "COPBRL=X",
     "valor": "0,0016",
     "unidade": "",
-    "data_referencia": "2026-09-29",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-30",
+    "captura_em": "2026-09-30",
     "metrica": "COPBRL=X"
   },
   {
@@ -2322,8 +2322,8 @@
     "indicador": "EURBRL=X",
     "valor": "5,9347",
     "unidade": "",
-    "data_referencia": "2026-09-29",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-30",
+    "captura_em": "2026-09-30",
     "metrica": "EURBRL=X"
   },
   {
@@ -2335,8 +2335,8 @@
     "indicador": "EURUSD=X",
     "valor": "1,1373",
     "unidade": "",
-    "data_referencia": "2026-09-29",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-30",
+    "captura_em": "2026-09-30",
     "metrica": "EURUSD=X"
   },
   {
@@ -2348,8 +2348,8 @@
     "indicador": "GBPBRL=X",
     "valor": "6,9224",
     "unidade": "",
-    "data_referencia": "2026-09-29",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-30",
+    "captura_em": "2026-09-30",
     "metrica": "GBPBRL=X"
   },
   {
@@ -2361,8 +2361,8 @@
     "indicador": "GBPUSD=X",
     "valor": "1,3254",
     "unidade": "",
-    "data_referencia": "2026-09-29",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-30",
+    "captura_em": "2026-09-30",
     "metrica": "GBPUSD=X"
   },
   {
@@ -2374,8 +2374,8 @@
     "indicador": "JPYBRL=X",
     "valor": "0,0332",
     "unidade": "",
-    "data_referencia": "2026-09-29",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-30",
+    "captura_em": "2026-09-30",
     "metrica": "JPYBRL=X"
   },
   {
@@ -2387,8 +2387,8 @@
     "indicador": "MXNBRL=X",
     "valor": "0,2904",
     "unidade": "",
-    "data_referencia": "2026-09-29",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-30",
+    "captura_em": "2026-09-30",
     "metrica": "MXNBRL=X"
   },
   {
@@ -2400,8 +2400,8 @@
     "indicador": "USDCAD=X",
     "valor": "1,4177",
     "unidade": "",
-    "data_referencia": "2026-09-29",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-30",
+    "captura_em": "2026-09-30",
     "metrica": "USDCAD=X"
   },
   {
@@ -2413,8 +2413,8 @@
     "indicador": "USDCHF=X",
     "valor": "0,8317",
     "unidade": "",
-    "data_referencia": "2026-09-29",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-30",
+    "captura_em": "2026-09-30",
     "metrica": "USDCHF=X"
   },
   {
@@ -2426,8 +2426,8 @@
     "indicador": "USDCNY=X",
     "valor": "6,7103",
     "unidade": "",
-    "data_referencia": "2026-09-29",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-30",
+    "captura_em": "2026-09-30",
     "metrica": "USDCNY=X"
   },
   {
@@ -2439,8 +2439,8 @@
     "indicador": "USDINR=X",
     "valor": "95,9816",
     "unidade": "",
-    "data_referencia": "2026-09-29",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-30",
+    "captura_em": "2026-09-30",
     "metrica": "USDINR=X"
   },
   {
@@ -2452,8 +2452,8 @@
     "indicador": "USDJPY=X",
     "valor": "157,3610",
     "unidade": "",
-    "data_referencia": "2026-09-29",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-30",
+    "captura_em": "2026-09-30",
     "metrica": "USDJPY=X"
   },
   {
@@ -2465,8 +2465,8 @@
     "indicador": "USDMXN=X",
     "valor": "17,9720",
     "unidade": "",
-    "data_referencia": "2026-09-29",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-30",
+    "captura_em": "2026-09-30",
     "metrica": "USDMXN=X"
   },
   {
@@ -2502,10 +2502,10 @@
     "categoria": "Commodities Globais",
     "tipo": "indicador",
     "indicador": "BZ=F",
-    "valor": "105,28",
+    "valor": "102,59",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "BZ=F"
   },
   {
@@ -2515,10 +2515,10 @@
     "categoria": "Commodities Globais",
     "tipo": "indicador",
     "indicador": "CC=F",
-    "valor": "5.589",
+    "valor": "5.408",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "CC=F"
   },
   {
@@ -2528,10 +2528,10 @@
     "categoria": "Commodities Globais",
     "tipo": "indicador",
     "indicador": "CL=F",
-    "valor": "92,60",
+    "valor": "89,38",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "CL=F"
   },
   {
@@ -2541,10 +2541,10 @@
     "categoria": "Commodities Globais",
     "tipo": "indicador",
     "indicador": "CT=F",
-    "valor": "79,06",
+    "valor": "75,13",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "CT=F"
   },
   {
@@ -2554,10 +2554,10 @@
     "categoria": "Commodities Globais",
     "tipo": "indicador",
     "indicador": "GC=F",
-    "valor": "4.168",
+    "valor": "4.180",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "GC=F"
   },
   {
@@ -2567,10 +2567,10 @@
     "categoria": "Commodities Globais",
     "tipo": "indicador",
     "indicador": "HG=F",
-    "valor": "6,57",
+    "valor": "6,54",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "HG=F"
   },
   {
@@ -2580,10 +2580,10 @@
     "categoria": "Commodities Globais",
     "tipo": "indicador",
     "indicador": "KC=F",
-    "valor": "288,75",
+    "valor": "289,45",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "KC=F"
   },
   {
@@ -2593,10 +2593,10 @@
     "categoria": "Commodities Globais",
     "tipo": "indicador",
     "indicador": "NG=F",
-    "valor": "3,00",
+    "valor": "3,01",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "NG=F"
   },
   {
@@ -2606,10 +2606,10 @@
     "categoria": "Commodities Globais",
     "tipo": "indicador",
     "indicador": "PA=F",
-    "valor": "1.210",
+    "valor": "1.202",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "PA=F"
   },
   {
@@ -2619,10 +2619,10 @@
     "categoria": "Commodities Globais",
     "tipo": "indicador",
     "indicador": "PL=F",
-    "valor": "1.721",
+    "valor": "1.680",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "PL=F"
   },
   {
@@ -2632,10 +2632,10 @@
     "categoria": "Commodities Globais",
     "tipo": "indicador",
     "indicador": "SB=F",
-    "valor": "17,46",
+    "valor": "17,82",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "SB=F"
   },
   {
@@ -2645,10 +2645,10 @@
     "categoria": "Commodities Globais",
     "tipo": "indicador",
     "indicador": "SI=F",
-    "valor": "61,22",
+    "valor": "60,67",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "SI=F"
   },
   {
@@ -2671,10 +2671,10 @@
     "categoria": "Commodities Globais",
     "tipo": "indicador",
     "indicador": "ZC=F",
-    "valor": "523,00",
+    "valor": "522,00",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "ZC=F"
   },
   {
@@ -2684,10 +2684,10 @@
     "categoria": "Commodities Globais",
     "tipo": "indicador",
     "indicador": "ZO=F",
-    "valor": "421,00",
+    "valor": "422,50",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "ZO=F"
   },
   {
@@ -2697,10 +2697,10 @@
     "categoria": "Commodities Globais",
     "tipo": "indicador",
     "indicador": "ZR=F",
-    "valor": "16,48",
+    "valor": "16,42",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "ZR=F"
   },
   {
@@ -2710,10 +2710,10 @@
     "categoria": "Commodities Globais",
     "tipo": "indicador",
     "indicador": "ZS=F",
-    "valor": "1.288",
+    "valor": "1.298",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "ZS=F"
   },
   {
@@ -2723,10 +2723,10 @@
     "categoria": "Commodities Globais",
     "tipo": "indicador",
     "indicador": "ZW=F",
-    "valor": "688,75",
+    "valor": "692,75",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "ZW=F"
   },
   {
@@ -2736,10 +2736,10 @@
     "categoria": "Criptoativos",
     "tipo": "indicador",
     "indicador": "ADA-USD",
-    "valor": "0,2471",
+    "valor": "0,2448",
     "unidade": "",
-    "data_referencia": "2026-09-29",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-30",
+    "captura_em": "2026-09-30",
     "metrica": "ADA-USD"
   },
   {
@@ -2775,10 +2775,10 @@
     "categoria": "Criptoativos",
     "tipo": "indicador",
     "indicador": "AVAX-USD",
-    "valor": "10,59",
+    "valor": "11,32",
     "unidade": "",
-    "data_referencia": "2026-09-29",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-30",
+    "captura_em": "2026-09-30",
     "metrica": "AVAX-USD"
   },
   {
@@ -2788,10 +2788,10 @@
     "categoria": "Criptoativos",
     "tipo": "indicador",
     "indicador": "BNB-USD",
-    "valor": "763,80",
+    "valor": "762,85",
     "unidade": "",
-    "data_referencia": "2026-09-29",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-30",
+    "captura_em": "2026-09-30",
     "metrica": "BNB-USD"
   },
   {
@@ -2801,10 +2801,10 @@
     "categoria": "Criptoativos",
     "tipo": "indicador",
     "indicador": "BTC-USD",
-    "valor": "83.503",
+    "valor": "83.276",
     "unidade": "",
-    "data_referencia": "2026-09-29",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-30",
+    "captura_em": "2026-09-30",
     "metrica": "BTC-USD"
   },
   {
@@ -2814,10 +2814,10 @@
     "categoria": "Criptoativos",
     "tipo": "indicador",
     "indicador": "DOGE-USD",
-    "valor": "0,0939",
+    "valor": "0,0935",
     "unidade": "",
-    "data_referencia": "2026-09-29",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-30",
+    "captura_em": "2026-09-30",
     "metrica": "DOGE-USD"
   },
   {
@@ -2827,10 +2827,10 @@
     "categoria": "Criptoativos",
     "tipo": "indicador",
     "indicador": "DOT-USD",
-    "valor": "1,18",
+    "valor": "1,21",
     "unidade": "",
-    "data_referencia": "2026-09-29",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-30",
+    "captura_em": "2026-09-30",
     "metrica": "DOT-USD"
   },
   {
@@ -2853,10 +2853,10 @@
     "categoria": "Criptoativos",
     "tipo": "indicador",
     "indicador": "ETH-USD",
-    "valor": "2.689",
+    "valor": "2.670",
     "unidade": "",
-    "data_referencia": "2026-09-29",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-30",
+    "captura_em": "2026-09-30",
     "metrica": "ETH-USD"
   },
   {
@@ -2892,10 +2892,10 @@
     "categoria": "Criptoativos",
     "tipo": "indicador",
     "indicador": "ICP-USD",
-    "valor": "3,14",
+    "valor": "3,41",
     "unidade": "",
-    "data_referencia": "2026-09-29",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-30",
+    "captura_em": "2026-09-30",
     "metrica": "ICP-USD"
   },
   {
@@ -2918,10 +2918,10 @@
     "categoria": "Criptoativos",
     "tipo": "indicador",
     "indicador": "LINK-USD",
-    "valor": "15,44",
+    "valor": "14,40",
     "unidade": "",
-    "data_referencia": "2026-09-29",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-30",
+    "captura_em": "2026-09-30",
     "metrica": "LINK-USD"
   },
   {
@@ -2931,10 +2931,10 @@
     "categoria": "Criptoativos",
     "tipo": "indicador",
     "indicador": "LTC-USD",
-    "valor": "69,22",
+    "valor": "67,12",
     "unidade": "",
-    "data_referencia": "2026-09-29",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-30",
+    "captura_em": "2026-09-30",
     "metrica": "LTC-USD"
   },
   {
@@ -2944,10 +2944,10 @@
     "categoria": "Criptoativos",
     "tipo": "indicador",
     "indicador": "NEAR-USD",
-    "valor": "4,82",
+    "valor": "4,97",
     "unidade": "",
-    "data_referencia": "2026-09-29",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-30",
+    "captura_em": "2026-09-30",
     "metrica": "NEAR-USD"
   },
   {
@@ -2957,10 +2957,10 @@
     "categoria": "Criptoativos",
     "tipo": "indicador",
     "indicador": "OP-USD",
-    "valor": "0,1341",
+    "valor": "0,1303",
     "unidade": "",
-    "data_referencia": "2026-09-29",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-30",
+    "captura_em": "2026-09-30",
     "metrica": "OP-USD"
   },
   {
@@ -2972,8 +2972,8 @@
     "indicador": "SHIB-USD",
     "valor": "0,000006",
     "unidade": "",
-    "data_referencia": "2026-09-29",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-30",
+    "captura_em": "2026-09-30",
     "metrica": "SHIB-USD"
   },
   {
@@ -2983,10 +2983,10 @@
     "categoria": "Criptoativos",
     "tipo": "indicador",
     "indicador": "SOL-USD",
-    "valor": "118,84",
+    "valor": "119,17",
     "unidade": "",
-    "data_referencia": "2026-09-29",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-30",
+    "captura_em": "2026-09-30",
     "metrica": "SOL-USD"
   },
   {
@@ -2996,10 +2996,10 @@
     "categoria": "Criptoativos",
     "tipo": "indicador",
     "indicador": "TRX-USD",
-    "valor": "0,3354",
+    "valor": "0,3362",
     "unidade": "",
-    "data_referencia": "2026-09-29",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-30",
+    "captura_em": "2026-09-30",
     "metrica": "TRX-USD"
   },
   {
@@ -3022,10 +3022,10 @@
     "categoria": "Criptoativos",
     "tipo": "indicador",
     "indicador": "XLM-USD",
-    "valor": "0,2324",
+    "valor": "0,2220",
     "unidade": "",
-    "data_referencia": "2026-09-29",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-30",
+    "captura_em": "2026-09-30",
     "metrica": "XLM-USD"
   },
   {
@@ -3037,8 +3037,8 @@
     "indicador": "XRP-USD",
     "valor": "1,50",
     "unidade": "",
-    "data_referencia": "2026-09-29",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-30",
+    "captura_em": "2026-09-30",
     "metrica": "XRP-USD"
   },
   {
@@ -3048,10 +3048,10 @@
     "categoria": "ETFs & Setoriais",
     "tipo": "indicador",
     "indicador": "BND",
-    "valor": "70,28",
+    "valor": "70,23",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "BND"
   },
   {
@@ -3063,8 +3063,8 @@
     "indicador": "BOVA11.SA",
     "valor": "180,18",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "BOVA11.SA"
   },
   {
@@ -3074,10 +3074,10 @@
     "categoria": "ETFs & Setoriais",
     "tipo": "indicador",
     "indicador": "DIA",
-    "valor": "514,02",
+    "valor": "512,88",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "DIA"
   },
   {
@@ -3087,10 +3087,10 @@
     "categoria": "ETFs & Setoriais",
     "tipo": "indicador",
     "indicador": "EEM",
-    "valor": "67,20",
+    "valor": "67,40",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "EEM"
   },
   {
@@ -3100,10 +3100,10 @@
     "categoria": "ETFs & Setoriais",
     "tipo": "indicador",
     "indicador": "EWZ",
-    "valor": "36,21",
+    "valor": "36,47",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "EWZ"
   },
   {
@@ -3113,10 +3113,10 @@
     "categoria": "ETFs & Setoriais",
     "tipo": "indicador",
     "indicador": "HYG",
-    "valor": "77,54",
+    "valor": "77,36",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "HYG"
   },
   {
@@ -3128,8 +3128,8 @@
     "indicador": "IVVB11.SA",
     "valor": "453,00",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "IVVB11.SA"
   },
   {
@@ -3139,10 +3139,10 @@
     "categoria": "ETFs & Setoriais",
     "tipo": "indicador",
     "indicador": "IWM",
-    "valor": "280,02",
+    "valor": "279,01",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "IWM"
   },
   {
@@ -3152,10 +3152,10 @@
     "categoria": "ETFs & Setoriais",
     "tipo": "indicador",
     "indicador": "LQD",
-    "valor": "102,47",
+    "valor": "102,41",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "LQD"
   },
   {
@@ -3165,10 +3165,10 @@
     "categoria": "ETFs & Setoriais",
     "tipo": "indicador",
     "indicador": "QQQ",
-    "valor": "736,53",
+    "valor": "737,93",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "QQQ"
   },
   {
@@ -3180,8 +3180,8 @@
     "indicador": "SMAL11.SA",
     "valor": "109,00",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "SMAL11.SA"
   },
   {
@@ -3191,10 +3191,10 @@
     "categoria": "ETFs & Setoriais",
     "tipo": "indicador",
     "indicador": "SMLL.SA",
-    "valor": "2.209",
+    "valor": "2.226",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "SMLL.SA"
   },
   {
@@ -3204,10 +3204,10 @@
     "categoria": "ETFs & Setoriais",
     "tipo": "indicador",
     "indicador": "SPY",
-    "valor": "765,61",
+    "valor": "764,20",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "SPY"
   },
   {
@@ -3217,10 +3217,10 @@
     "categoria": "ETFs & Setoriais",
     "tipo": "indicador",
     "indicador": "VGK",
-    "valor": "88,38",
+    "valor": "87,85",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "VGK"
   },
   {
@@ -3230,10 +3230,10 @@
     "categoria": "ETFs & Setoriais",
     "tipo": "indicador",
     "indicador": "VWO",
-    "valor": "59,69",
+    "valor": "59,62",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "VWO"
   },
   {
@@ -3243,10 +3243,10 @@
     "categoria": "ETFs & Setoriais",
     "tipo": "indicador",
     "indicador": "XLE",
-    "valor": "62,10",
+    "valor": "61,54",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "XLE"
   },
   {
@@ -3256,10 +3256,10 @@
     "categoria": "ETFs & Setoriais",
     "tipo": "indicador",
     "indicador": "XLF",
-    "valor": "54,19",
+    "valor": "54,01",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "XLF"
   },
   {
@@ -3269,10 +3269,10 @@
     "categoria": "ETFs & Setoriais",
     "tipo": "indicador",
     "indicador": "XLK",
-    "valor": "194,53",
+    "valor": "194,50",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "XLK"
   },
   {
@@ -3284,8 +3284,8 @@
     "indicador": "ALZR11.SA",
     "valor": "9,89",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "ALZR11.SA"
   },
   {
@@ -3297,8 +3297,8 @@
     "indicador": "BRCO11.SA",
     "valor": "110,40",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "BRCO11.SA"
   },
   {
@@ -3310,8 +3310,8 @@
     "indicador": "BTLG11.SA",
     "valor": "99,72",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "BTLG11.SA"
   },
   {
@@ -3321,10 +3321,10 @@
     "categoria": "FIIs e Fiagros",
     "tipo": "indicador",
     "indicador": "CPTR11.SA",
-    "valor": "7,34",
+    "valor": "7,35",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "CPTR11.SA"
   },
   {
@@ -3334,10 +3334,10 @@
     "categoria": "FIIs e Fiagros",
     "tipo": "indicador",
     "indicador": "FGAA11.SA",
-    "valor": "8,07",
+    "valor": "8,10",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "FGAA11.SA"
   },
   {
@@ -3349,8 +3349,8 @@
     "indicador": "HGLG11.SA",
     "valor": "147,58",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "HGLG11.SA"
   },
   {
@@ -3362,8 +3362,8 @@
     "indicador": "HGRU11.SA",
     "valor": "114,36",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "HGRU11.SA"
   },
   {
@@ -3373,10 +3373,10 @@
     "categoria": "FIIs e Fiagros",
     "tipo": "indicador",
     "indicador": "IFIX.SA",
-    "valor": "3.737",
+    "valor": "3.741",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "IFIX.SA"
   },
   {
@@ -3386,10 +3386,10 @@
     "categoria": "FIIs e Fiagros",
     "tipo": "indicador",
     "indicador": "KNCA11.SA",
-    "valor": "86,00",
+    "valor": "85,30",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "KNCA11.SA"
   },
   {
@@ -3401,8 +3401,8 @@
     "indicador": "KNCR11.SA",
     "valor": "106,22",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "KNCR11.SA"
   },
   {
@@ -3414,8 +3414,8 @@
     "indicador": "KNIP11.SA",
     "valor": "88,65",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "KNIP11.SA"
   },
   {
@@ -3427,8 +3427,8 @@
     "indicador": "MXRF11.SA",
     "valor": "9,08",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "MXRF11.SA"
   },
   {
@@ -3440,8 +3440,8 @@
     "indicador": "PVBI11.SA",
     "valor": "65,11",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "PVBI11.SA"
   },
   {
@@ -3451,10 +3451,10 @@
     "categoria": "FIIs e Fiagros",
     "tipo": "indicador",
     "indicador": "RURA11.SA",
-    "valor": "8,06",
+    "valor": "8,05",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "RURA11.SA"
   },
   {
@@ -3464,10 +3464,10 @@
     "categoria": "FIIs e Fiagros",
     "tipo": "indicador",
     "indicador": "VGIA11.SA",
-    "valor": "8,73",
+    "valor": "8,71",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "VGIA11.SA"
   },
   {
@@ -3479,8 +3479,8 @@
     "indicador": "VISC11.SA",
     "valor": "102,89",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "VISC11.SA"
   },
   {
@@ -3492,8 +3492,8 @@
     "indicador": "XPML11.SA",
     "valor": "99,17",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "XPML11.SA"
   },
   {
@@ -3516,10 +3516,10 @@
     "categoria": "Índices de Ações Globais",
     "tipo": "indicador",
     "indicador": "^AXJO",
-    "valor": "8.680",
+    "valor": "8.797",
     "unidade": "",
-    "data_referencia": "2026-09-29",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-30",
+    "captura_em": "2026-09-30",
     "metrica": "^AXJO"
   },
   {
@@ -3542,10 +3542,10 @@
     "categoria": "Índices de Ações Globais",
     "tipo": "indicador",
     "indicador": "^BVSP",
-    "valor": "182.991",
+    "valor": "183.828",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "^BVSP"
   },
   {
@@ -3555,10 +3555,10 @@
     "categoria": "Índices de Ações Globais",
     "tipo": "indicador",
     "indicador": "^DJI",
-    "valor": "51.482",
+    "valor": "51.350",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "^DJI"
   },
   {
@@ -3568,10 +3568,10 @@
     "categoria": "Índices de Ações Globais",
     "tipo": "indicador",
     "indicador": "^FCHI",
-    "valor": "8.078",
+    "valor": "8.036",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "^FCHI"
   },
   {
@@ -3581,10 +3581,10 @@
     "categoria": "Índices de Ações Globais",
     "tipo": "indicador",
     "indicador": "^FTSE",
-    "valor": "10.685",
+    "valor": "10.637",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "^FTSE"
   },
   {
@@ -3594,10 +3594,10 @@
     "categoria": "Índices de Ações Globais",
     "tipo": "indicador",
     "indicador": "^GDAXI",
-    "valor": "25.374",
+    "valor": "25.399",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "^GDAXI"
   },
   {
@@ -3607,10 +3607,10 @@
     "categoria": "Índices de Ações Globais",
     "tipo": "indicador",
     "indicador": "^GSPC",
-    "valor": "7.684",
+    "valor": "7.671",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "^GSPC"
   },
   {
@@ -3620,10 +3620,10 @@
     "categoria": "Índices de Ações Globais",
     "tipo": "indicador",
     "indicador": "^HSI",
-    "valor": "24.643",
+    "valor": "24.513",
     "unidade": "",
-    "data_referencia": "2026-09-29",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-30",
+    "captura_em": "2026-09-30",
     "metrica": "^HSI"
   },
   {
@@ -3646,10 +3646,10 @@
     "categoria": "Índices de Ações Globais",
     "tipo": "indicador",
     "indicador": "^IXIC",
-    "valor": "26.820",
+    "valor": "26.798",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "^IXIC"
   },
   {
@@ -3659,10 +3659,10 @@
     "categoria": "Índices de Ações Globais",
     "tipo": "indicador",
     "indicador": "^JKSE",
-    "valor": "6.148",
+    "valor": "6.134",
     "unidade": "",
-    "data_referencia": "2026-09-29",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-30",
+    "captura_em": "2026-09-30",
     "metrica": "^JKSE"
   },
   {
@@ -3672,10 +3672,10 @@
     "categoria": "Índices de Ações Globais",
     "tipo": "indicador",
     "indicador": "^KLSE",
-    "valor": "1.670",
+    "valor": "1.654",
     "unidade": "",
-    "data_referencia": "2026-09-29",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-30",
+    "captura_em": "2026-09-30",
     "metrica": "^KLSE"
   },
   {
@@ -3685,10 +3685,10 @@
     "categoria": "Índices de Ações Globais",
     "tipo": "indicador",
     "indicador": "^KS11",
-    "valor": "6.890",
+    "valor": "6.864",
     "unidade": "",
-    "data_referencia": "2026-09-29",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-30",
+    "captura_em": "2026-09-30",
     "metrica": "^KS11"
   },
   {
@@ -3698,10 +3698,10 @@
     "categoria": "Índices de Ações Globais",
     "tipo": "indicador",
     "indicador": "^MERV",
-    "valor": "2.798.925",
+    "valor": "2.782.561",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "^MERV"
   },
   {
@@ -3711,10 +3711,10 @@
     "categoria": "Índices de Ações Globais",
     "tipo": "indicador",
     "indicador": "^MXX",
-    "valor": "64.944",
+    "valor": "65.111",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "^MXX"
   },
   {
@@ -3724,10 +3724,10 @@
     "categoria": "Índices de Ações Globais",
     "tipo": "indicador",
     "indicador": "^N225",
-    "valor": "65.878",
+    "valor": "66.725",
     "unidade": "",
-    "data_referencia": "2026-09-29",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-30",
+    "captura_em": "2026-09-30",
     "metrica": "^N225"
   },
   {
@@ -3763,10 +3763,10 @@
     "categoria": "Índices de Ações Globais",
     "tipo": "indicador",
     "indicador": "^STI",
-    "valor": "5.729",
+    "valor": "5.709",
     "unidade": "",
-    "data_referencia": "2026-09-29",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-30",
+    "captura_em": "2026-09-30",
     "metrica": "^STI"
   },
   {
@@ -3789,10 +3789,10 @@
     "categoria": "Índices de Ações Globais",
     "tipo": "indicador",
     "indicador": "^TWII",
-    "valor": "48.025",
+    "valor": "48.250",
     "unidade": "",
-    "data_referencia": "2026-09-29",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-30",
+    "captura_em": "2026-09-30",
     "metrica": "^TWII"
   },
   {
@@ -3802,10 +3802,10 @@
     "categoria": "Índices de Ações Globais",
     "tipo": "indicador",
     "indicador": "^VIX",
-    "valor": "16,07",
+    "valor": "16,04",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "^VIX"
   },
   {
@@ -3815,10 +3815,10 @@
     "categoria": "Renda Fixa & Treasuries",
     "tipo": "indicador",
     "indicador": "^FVX",
-    "valor": "5,07",
+    "valor": "5,06",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "^FVX"
   },
   {
@@ -3828,10 +3828,10 @@
     "categoria": "Renda Fixa & Treasuries",
     "tipo": "indicador",
     "indicador": "^IRX",
-    "valor": "4,06",
+    "valor": "4,07",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "^IRX"
   },
   {
@@ -3841,10 +3841,10 @@
     "categoria": "Renda Fixa & Treasuries",
     "tipo": "indicador",
     "indicador": "^TNX",
-    "valor": "5,24",
+    "valor": "5,26",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "^TNX"
   },
   {
@@ -3854,10 +3854,10 @@
     "categoria": "Renda Fixa & Treasuries",
     "tipo": "indicador",
     "indicador": "^TYX",
-    "valor": "5,56",
+    "valor": "5,59",
     "unidade": "",
-    "data_referencia": "2026-09-28",
-    "captura_em": "2026-09-29",
+    "data_referencia": "2026-09-29",
+    "captura_em": "2026-09-30",
     "metrica": "^TYX"
   }
 ]
