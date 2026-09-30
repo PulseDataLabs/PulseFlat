@@ -646,6 +646,7 @@ data_captura,codigo_ativo,nome_ativo,indice_origem
 2026-09-30,AV.L,Aviva,FTSE 100
 2026-09-30,BAB.L,Babcock International,FTSE 100
 2026-09-30,BA.L,BAE Systems,FTSE 100
+2026-09-30,BBY.L,Balfour Beatty,FTSE 100
 2026-09-30,BARC.L,Barclays,FTSE 100
 2026-09-30,BTRW.L,Barratt Redrow,FTSE 100
 2026-09-30,BEZ.L,Beazley,FTSE 100
@@ -714,7 +715,6 @@ data_captura,codigo_ativo,nome_ativo,indice_origem
 2026-09-30,RR.L,Rolls-Royce Holdings,FTSE 100
 2026-09-30,SGE.L,Sage Group,FTSE 100
 2026-09-30,SBRY.L,Sainsbury's,FTSE 100
-2026-09-30,SDR.L,Schroders,FTSE 100
 2026-09-30,SMT.L,Scottish Mortgage Investment Trust,FTSE 100
 2026-09-30,SGRO.L,Segro,FTSE 100
 2026-09-30,SVT.L,Severn Trent,FTSE 100
