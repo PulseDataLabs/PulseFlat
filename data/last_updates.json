@@ -65,7 +65,7 @@
   },
   "anbima_indice_imab.csv.gz": {
     "min": "2001-12-04",
-    "max": "2026-09-29"
+    "max": "2026-09-30"
   },
   "b3_limites_garantias.csv": {
     "min": "2025-06-01",
@@ -165,7 +165,7 @@
   },
   "fred_us_treasuries_yield_curve.csv.gz": {
     "min": "2020-01-02",
-    "max": "2026-09-29"
+    "max": "2026-09-30"
   },
   "ibge_sidra.csv": {
     "min": "2026-09-30",

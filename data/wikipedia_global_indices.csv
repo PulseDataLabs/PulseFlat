@@ -649,7 +649,6 @@ data_captura,codigo_ativo,nome_ativo,indice_origem
 2026-09-30,BBY.L,Balfour Beatty,FTSE 100
 2026-09-30,BARC.L,Barclays,FTSE 100
 2026-09-30,BTRW.L,Barratt Redrow,FTSE 100
-2026-09-30,BEZ.L,Beazley,FTSE 100
 2026-09-30,BP.L,BP,FTSE 100
 2026-09-30,BATS.L,British American Tobacco,FTSE 100
 2026-09-30,BLND.L,British Land,FTSE 100
@@ -733,6 +732,7 @@ data_captura,codigo_ativo,nome_ativo,indice_origem
 2026-09-30,VOD.L,Vodafone Group,FTSE 100
 2026-09-30,WEIR.L,Weir,FTSE 100
 2026-09-30,WTB.L,Whitbread,FTSE 100
+2026-09-30,WPP.L,WPP,FTSE 100
 2026-09-30,ADS.DE,Adidas,DAX 40
 2026-09-30,AIR.PA,Airbus,DAX 40
 2026-09-30,ALV.DE,Allianz,DAX 40
