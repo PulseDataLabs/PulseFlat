@@ -169,11 +169,11 @@
   },
   "ipea_taxas_juros.csv": {
     "min": "1966-12-01",
-    "max": "2026-09-01"
+    "max": "2026-10-01"
   },
   "ipea_mercados_diarios.csv": {
     "min": "1900-01-02",
-    "max": "2026-09-29"
+    "max": "2026-09-30"
   },
   "wikipedia_global_indices.csv": {
     "min": "2026-10-01",
@@ -361,6 +361,14 @@
   },
   "b3_carteira_teorica_ifnc.csv": {
     "min": "2026-06-03",
+    "max": "2026-10-01"
+  },
+  "bacen_cadastro_instituicoes.csv.gz": {
+    "min": "2020-03-31",
+    "max": "2026-06-30"
+  },
+  "bacen_parcelas_capital_basileia.csv.gz": {
+    "min": "2026-06-05",
     "max": "2026-10-01"
   }
 }
