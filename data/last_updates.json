@@ -366,5 +366,9 @@
   "bacen_negociacao_tpf_extragrupo.csv.gz": {
     "min": "2020-01-02",
     "max": "2026-09-30"
+  },
+  "b3_carteira_teorica_bdrx.csv": {
+    "min": "2026-06-03",
+    "max": "2026-10-01"
   }
 }
