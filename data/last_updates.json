@@ -37,7 +37,7 @@
   },
   "b3_limites_garantias.csv": {
     "min": "2025-06-01",
-    "max": "2026-09-01"
+    "max": "2026-10-01"
   },
   "b3_fundos_listados.csv": {
     "min": "2026-10-01",
@@ -125,7 +125,7 @@
   },
   "fred_us_treasuries_yield_curve.csv.gz": {
     "min": "2020-01-02",
-    "max": "2026-09-30"
+    "max": "2026-10-01"
   },
   "ibge_sidra.csv": {
     "min": "2026-10-01",
@@ -357,7 +357,7 @@
   },
   "anbima_indice_imab.csv.gz": {
     "min": "2001-12-04",
-    "max": "2026-09-30"
+    "max": "2026-10-01"
   },
   "b3_opcoes_posicoes_aberto.csv.gz": {
     "min": "2026-09-30",
