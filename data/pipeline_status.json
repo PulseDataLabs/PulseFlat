@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-10-02T15:08:26.014541",
-  "elapsed_seconds": 552.3962652683258,
+  "timestamp": "2026-10-02T15:48:52.528351",
+  "elapsed_seconds": 538.9260313510895,
   "status": "error",
   "summary": {
     "total": 96,
@@ -11,579 +11,579 @@
   "scrapers": {
     "onu_pacto_global": {
       "status": "success",
-      "elapsed_seconds": 77.19962525367737,
+      "elapsed_seconds": 66.10534429550171,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "anbima_indicadores": {
       "status": "success",
-      "elapsed_seconds": 2.7744662761688232,
+      "elapsed_seconds": 3.6806976795196533,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "anbima_projecoes": {
       "status": "success",
-      "elapsed_seconds": 2.872365713119507,
+      "elapsed_seconds": 3.1642532348632812,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "anbima_titulos_publicos": {
       "status": "success",
-      "elapsed_seconds": 3.1610352993011475,
+      "elapsed_seconds": 4.144108772277832,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "anbima_debentures": {
       "status": "success",
-      "elapsed_seconds": 11.613646030426025,
+      "elapsed_seconds": 11.173314809799194,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "anbima_ima_completo": {
       "status": "success",
-      "elapsed_seconds": 2.952965259552002,
+      "elapsed_seconds": 4.665380477905273,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "anbima_550": {
       "status": "success",
-      "elapsed_seconds": 10.087379455566406,
+      "elapsed_seconds": 9.84617567062378,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "anbima_idka": {
       "status": "success",
-      "elapsed_seconds": 8.189515829086304,
+      "elapsed_seconds": 8.761345624923706,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "anbima_ranking_global": {
       "status": "success",
-      "elapsed_seconds": 15.296140432357788,
+      "elapsed_seconds": 15.373812437057495,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "anbima_matriz_probabilidade_resgate": {
       "status": "success",
-      "elapsed_seconds": 3.795579433441162,
+      "elapsed_seconds": 3.7431366443634033,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "anbima_indice_imab": {
       "status": "success",
-      "elapsed_seconds": 65.61684966087341,
+      "elapsed_seconds": 64.4124391078949,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "debentures_emissoes_caracteristicas": {
       "status": "success",
-      "elapsed_seconds": 53.732009172439575,
+      "elapsed_seconds": 77.61431694030762,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "debentures_mercado_secundario_precos_negociacao": {
       "status": "success",
-      "elapsed_seconds": 275.4410603046417,
+      "elapsed_seconds": 227.04756331443787,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "b3_fiis": {
       "status": "success",
-      "elapsed_seconds": 7.429581165313721,
+      "elapsed_seconds": 7.69851541519165,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "b3_etfs": {
       "status": "success",
-      "elapsed_seconds": 5.256084442138672,
+      "elapsed_seconds": 5.133876085281372,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "b3_indicadores_financeiros": {
       "status": "success",
-      "elapsed_seconds": 2.500427484512329,
+      "elapsed_seconds": 2.104745626449585,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "b3_bdi_di_over": {
       "status": "success",
-      "elapsed_seconds": 3.22890043258667,
+      "elapsed_seconds": 2.9800972938537598,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "b3_bdi_trades_acoes": {
       "status": "success",
-      "elapsed_seconds": 529.0058488845825,
+      "elapsed_seconds": 514.7864701747894,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "b3_bmf_taxas_juros": {
       "status": "success",
-      "elapsed_seconds": 8.578789949417114,
+      "elapsed_seconds": 8.032281875610352,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "b3_series_historicas": {
       "status": "success",
-      "elapsed_seconds": 2.428043842315674,
+      "elapsed_seconds": 2.4349215030670166,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "b3_carteira_teorica_ibov": {
       "status": "success",
-      "elapsed_seconds": 4.640909910202026,
+      "elapsed_seconds": 4.488276958465576,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "b3_carteira_teorica_smll": {
       "status": "success",
-      "elapsed_seconds": 5.064518451690674,
+      "elapsed_seconds": 4.509403705596924,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "b3_carteira_teorica_bdrx": {
       "status": "success",
-      "elapsed_seconds": 5.521044492721558,
+      "elapsed_seconds": 4.8865275382995605,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "b3_carteira_teorica_isee": {
       "status": "success",
-      "elapsed_seconds": 4.347608327865601,
+      "elapsed_seconds": 3.6203033924102783,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "b3_carteira_teorica_ibxl": {
       "status": "success",
-      "elapsed_seconds": 3.7645256519317627,
+      "elapsed_seconds": 4.075509786605835,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "b3_carteira_teorica_ifnc": {
       "status": "success",
-      "elapsed_seconds": 3.163956642150879,
+      "elapsed_seconds": 3.1377339363098145,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "b3_carteira_teorica_agfs_iagro": {
       "status": "success",
-      "elapsed_seconds": 4.052589416503906,
+      "elapsed_seconds": 3.3727264404296875,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "b3_carteira_teorica_ibsd": {
       "status": "success",
-      "elapsed_seconds": 3.5413529872894287,
+      "elapsed_seconds": 3.8326854705810547,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "b3_titulos_negociaveis": {
       "status": "success",
-      "elapsed_seconds": 19.4248263835907,
+      "elapsed_seconds": 7.570791482925415,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "bcb_ptax": {
       "status": "success",
-      "elapsed_seconds": 2.272207260131836,
+      "elapsed_seconds": 2.479842185974121,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "bcb_sgs": {
       "status": "success",
-      "elapsed_seconds": 58.423452854156494,
+      "elapsed_seconds": 13.118140459060669,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "bacen_balancetes_bancos": {
       "status": "success",
-      "elapsed_seconds": 27.12033462524414,
+      "elapsed_seconds": 19.296169996261597,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "bacen_conglomerados": {
       "status": "error",
-      "elapsed_seconds": 0.7831506729125977,
+      "elapsed_seconds": 0.693403959274292,
       "error": "Traceback (most recent call last):\n  File \"/home/runner/work/PulseFlat/PulseFlat/run_all.py\", line 237, in run_scraper\n    getattr(mod, class_name)().run()\n    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\n  File \"/home/runner/work/PulseFlat/PulseFlat/scrapers/utils/base.py\", line 206, in run\n    raise e\n  File \"/home/runner/work/PulseFlat/PulseFlat/scrapers/utils/base.py\", line 109, in run\n    df = self.fetch()\n  File \"/home/runner/work/PulseFlat/PulseFlat/scrapers/bacen_conglomerados.py\", line 75, in fetch\n    print_warn(\n    ~~~~~~~~~~^\n        f\"{yyyymm}CONGLOMERADO.zip não disponível\", elapsed=time.time() - t0\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\nTypeError: print_warn() got an unexpected keyword argument 'elapsed'\n",
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "bacen_parcelas_capital_basileia": {
       "status": "success",
-      "elapsed_seconds": 153.78846979141235,
+      "elapsed_seconds": 202.0124704837799,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "bacen_negociacao_tpf": {
       "status": "success",
-      "elapsed_seconds": 28.867546319961548,
+      "elapsed_seconds": 124.67991471290588,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "ibge_sidra": {
       "status": "success",
-      "elapsed_seconds": 7.264857530593872,
+      "elapsed_seconds": 9.821876287460327,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "cvm_fundos_informe_diario": {
       "status": "success",
-      "elapsed_seconds": 374.1437554359436,
+      "elapsed_seconds": 374.73460626602173,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "cvm_fundos_classe": {
       "status": "success",
-      "elapsed_seconds": 106.54133415222168,
+      "elapsed_seconds": 180.3523280620575,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "b3_carteiras_teoricas": {
       "status": "success",
-      "elapsed_seconds": 35.5539345741272,
+      "elapsed_seconds": 33.734930753707886,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "b3_isin_emissores": {
       "status": "success",
-      "elapsed_seconds": 39.833173751831055,
+      "elapsed_seconds": 11.944273233413696,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "b3_isin_ativos": {
       "status": "success",
-      "elapsed_seconds": 55.28388285636902,
+      "elapsed_seconds": 166.968026638031,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "b3_classificacao_setorial": {
       "status": "success",
-      "elapsed_seconds": 5.240821361541748,
+      "elapsed_seconds": 4.672213554382324,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "cvm_cadastro_companhias_abertas": {
       "status": "success",
-      "elapsed_seconds": 8.908262252807617,
+      "elapsed_seconds": 11.429680347442627,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "b3_limites_garantias": {
       "status": "success",
-      "elapsed_seconds": 3.5323596000671387,
+      "elapsed_seconds": 3.682847738265991,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "b3_indicadores_economicos_fwf": {
       "status": "error",
-      "elapsed_seconds": 21.49816346168518,
+      "elapsed_seconds": 21.983662128448486,
       "error": "Traceback (most recent call last):\n  File \"/home/runner/work/PulseFlat/PulseFlat/run_all.py\", line 237, in run_scraper\n    getattr(mod, class_name)().run()\n    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\n  File \"/home/runner/work/PulseFlat/PulseFlat/scrapers/utils/base.py\", line 206, in run\n    raise e\n  File \"/home/runner/work/PulseFlat/PulseFlat/scrapers/utils/base.py\", line 109, in run\n    df = self.fetch()\n  File \"/home/runner/work/PulseFlat/PulseFlat/scrapers/b3_indicadores_economicos_fwf.py\", line 98, in fetch\n    rows, header = capturar(self.target_date)\n                   ~~~~~~~~^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/PulseFlat/PulseFlat/scrapers/b3_indicadores_economicos_fwf.py\", line 64, in capturar\n    parsed = fwf_rows(text, INDICADORES_FIELDS, INDICADORES_WIDTHS)\n  File \"/home/runner/work/PulseFlat/PulseFlat/utils/parsers.py\", line 253, in fwf_rows\n    casas = int(row[\"num_casas_decimais\"])\nValueError: invalid literal for int() with base 10: '8³'\n",
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "b3_fundos_listados": {
       "status": "success",
-      "elapsed_seconds": 21.62812352180481,
+      "elapsed_seconds": 19.893181800842285,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "ipea_calendario": {
       "status": "success",
-      "elapsed_seconds": 4.834616661071777,
+      "elapsed_seconds": 14.734556674957275,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "ipea_comercio_exterior": {
       "status": "success",
-      "elapsed_seconds": 15.629461288452148,
+      "elapsed_seconds": 14.54798936843872,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "ipea_fbcf": {
       "status": "success",
-      "elapsed_seconds": 7.334445476531982,
+      "elapsed_seconds": 15.856614828109741,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "ipea_macroeconomia": {
       "status": "success",
-      "elapsed_seconds": 21.58812141418457,
+      "elapsed_seconds": 6.156935930252075,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "ipea_mercados_diarios": {
       "status": "success",
-      "elapsed_seconds": 54.894747734069824,
+      "elapsed_seconds": 46.4003791809082,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "ipea_precos_inflacao": {
       "status": "success",
-      "elapsed_seconds": 7.355977773666382,
+      "elapsed_seconds": 5.851773262023926,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "ipea_producao_mineral": {
       "status": "success",
-      "elapsed_seconds": 17.31995129585266,
+      "elapsed_seconds": 5.3801398277282715,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "ipea_taxas_juros": {
       "status": "success",
-      "elapsed_seconds": 22.042837142944336,
+      "elapsed_seconds": 11.027925491333008,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "yahoo_acoes_brasileiras": {
       "status": "success",
-      "elapsed_seconds": 112.36163926124573,
+      "elapsed_seconds": 69.59593772888184,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "yahoo_acoes_internacionais": {
       "status": "success",
-      "elapsed_seconds": 135.01134419441223,
+      "elapsed_seconds": 113.77740240097046,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "yahoo_cambio_moedas": {
       "status": "success",
-      "elapsed_seconds": 8.548322916030884,
+      "elapsed_seconds": 8.880260229110718,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "yahoo_commodities": {
       "status": "success",
-      "elapsed_seconds": 14.307764530181885,
+      "elapsed_seconds": 3.6469531059265137,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "yahoo_criptoativos": {
       "status": "success",
-      "elapsed_seconds": 17.173335790634155,
+      "elapsed_seconds": 5.2525880336761475,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "yahoo_etfs": {
       "status": "success",
-      "elapsed_seconds": 31.652462482452393,
+      "elapsed_seconds": 39.98946738243103,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "yahoo_fiis_fiagros": {
       "status": "success",
-      "elapsed_seconds": 89.11031222343445,
+      "elapsed_seconds": 92.09861588478088,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "yahoo_indices_globais": {
       "status": "success",
-      "elapsed_seconds": 3.329822063446045,
+      "elapsed_seconds": 4.15805196762085,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "yahoo_renda_fixa": {
       "status": "success",
-      "elapsed_seconds": 2.5180859565734863,
+      "elapsed_seconds": 3.070128917694092,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "wikipedia_global_indices": {
       "status": "success",
-      "elapsed_seconds": 9.9142484664917,
+      "elapsed_seconds": 5.7683799266815186,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "b3_bdi_etfrf": {
       "status": "success",
-      "elapsed_seconds": 47.140944957733154,
+      "elapsed_seconds": 46.381579875946045,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "b3_cotahist_diario": {
       "status": "success",
-      "elapsed_seconds": 34.539589405059814,
+      "elapsed_seconds": 34.25054216384888,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "b3_cotahist_anual": {
       "status": "success",
-      "elapsed_seconds": 481.4658305644989,
+      "elapsed_seconds": 453.7352879047394,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "debentures_mercado_secundario_precos_negociacao_api": {
       "status": "success",
-      "elapsed_seconds": 224.9468538761139,
+      "elapsed_seconds": 162.33046531677246,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "debentures_emissoes_caracteristicas_api": {
       "status": "success",
-      "elapsed_seconds": 53.327041149139404,
+      "elapsed_seconds": 38.510122776031494,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "anbima_cri_cra_mercado_secundario": {
       "status": "success",
-      "elapsed_seconds": 16.780032634735107,
+      "elapsed_seconds": 19.027480125427246,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "anbima_letras_financeiras": {
       "status": "success",
-      "elapsed_seconds": 16.81293249130249,
+      "elapsed_seconds": 18.233604431152344,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "anbima_fidc_mercado_secundario": {
       "status": "success",
-      "elapsed_seconds": 10.288504123687744,
+      "elapsed_seconds": 9.98659086227417,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "anbima_curvas_credito": {
       "status": "success",
-      "elapsed_seconds": 10.417054176330566,
+      "elapsed_seconds": 10.090048789978027,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "anbima_curvas_juros_ettj": {
       "status": "success",
-      "elapsed_seconds": 11.299256801605225,
+      "elapsed_seconds": 11.025169849395752,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "anbima_indice_ida": {
       "status": "success",
-      "elapsed_seconds": 3.052020788192749,
+      "elapsed_seconds": 2.94385027885437,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "anbima_indices_ima_resultados": {
       "status": "success",
-      "elapsed_seconds": 4.760810375213623,
+      "elapsed_seconds": 4.682919025421143,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "anbima_titulos_publicos_mercado_secundario": {
       "status": "success",
-      "elapsed_seconds": 8.541792631149292,
+      "elapsed_seconds": 7.905137300491333,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "anbima_titulos_publicos_vna": {
       "status": "success",
-      "elapsed_seconds": 4.0703747272491455,
+      "elapsed_seconds": 3.3947956562042236,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "anbima_indices_idka_resultados": {
       "status": "success",
-      "elapsed_seconds": 4.499112367630005,
+      "elapsed_seconds": 3.8678932189941406,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "anbima_projecoes_inflacao": {
       "status": "success",
-      "elapsed_seconds": 3.0741126537323,
+      "elapsed_seconds": 2.9730706214904785,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "anbima_indices_carteira_teorica_ima": {
       "status": "success",
-      "elapsed_seconds": 5.069628715515137,
+      "elapsed_seconds": 4.5586631298065186,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "anbima_indices_carteira_teorica_ida": {
       "status": "success",
-      "elapsed_seconds": 5.9766786098480225,
+      "elapsed_seconds": 5.539653301239014,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "anbima_curvas_juros_parametros_svensson": {
       "status": "success",
-      "elapsed_seconds": 9.089077949523926,
+      "elapsed_seconds": 7.825197458267212,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "anbima_titulos_publicos_estimativa_selic": {
       "status": "success",
-      "elapsed_seconds": 3.7036633491516113,
+      "elapsed_seconds": 3.1906251907348633,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "anbima_reune_negociacoes": {
       "status": "success",
-      "elapsed_seconds": 67.36955523490906,
+      "elapsed_seconds": 65.7946240901947,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "fred_us_treasuries_yield_curve": {
       "status": "success",
-      "elapsed_seconds": 6.380070209503174,
+      "elapsed_seconds": 7.478260040283203,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "fred_global_liquidity_credit_spreads": {
       "status": "success",
-      "elapsed_seconds": 4.201210021972656,
+      "elapsed_seconds": 6.723820447921753,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "fred_us_macro_indicators": {
       "status": "success",
-      "elapsed_seconds": 4.425699710845947,
+      "elapsed_seconds": 9.210259199142456,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "b3_bdi_derivativos_resumo": {
       "status": "success",
-      "elapsed_seconds": 3.2217764854431152,
+      "elapsed_seconds": 2.6918046474456787,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "b3_opcoes_posicoes_resumo": {
       "status": "success",
-      "elapsed_seconds": 2.6405446529388428,
+      "elapsed_seconds": 2.4184658527374268,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "b3_opcoes_posicoes_aberto": {
       "status": "success",
-      "elapsed_seconds": 9.113593101501465,
+      "elapsed_seconds": 8.73122239112854,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "b3_valor_mercado_empresas": {
       "status": "success",
-      "elapsed_seconds": 6.449009418487549,
+      "elapsed_seconds": 3.474665641784668,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "bacen_cadastro_instituicoes": {
       "status": "success",
-      "elapsed_seconds": 39.802998065948486,
+      "elapsed_seconds": 38.04838848114014,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "b3_termo_posicoes_aberto": {
       "status": "success",
-      "elapsed_seconds": 31.097553253173828,
+      "elapsed_seconds": 19.7927827835083,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "fred_brazil_export_commodities": {
       "status": "success",
-      "elapsed_seconds": 4.86418342590332,
+      "elapsed_seconds": 4.147270441055298,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     },
     "fred_brazil_macro_fx_and_cycles": {
       "status": "success",
-      "elapsed_seconds": 4.802200794219971,
+      "elapsed_seconds": 8.12253451347351,
       "error": null,
-      "timestamp": "2026-10-02T15:08:26.015235"
+      "timestamp": "2026-10-02T15:48:52.528652"
     }
   },
   "drifts": {}
