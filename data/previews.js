@@ -1,4 +1,932 @@
 window.PULSEFLAT_PREVIEWS = {
+  "ipea_calendario.csv": {
+    "headers": [
+      "data_captura",
+      "data_referencia",
+      "codigo_ativo",
+      "label",
+      "valor"
+    ],
+    "rows": [
+      [
+        "2026-10-02",
+        "2030-12-01",
+        "SGS12_NDIASUTEISFUT12",
+        "Dias Úteis Futuros",
+        "21.0"
+      ],
+      [
+        "2026-10-02",
+        "2030-11-01",
+        "SGS12_NDIASUTEISFUT12",
+        "Dias Úteis Futuros",
+        "20.0"
+      ],
+      [
+        "2026-10-02",
+        "2030-10-01",
+        "SGS12_NDIASUTEISFUT12",
+        "Dias Úteis Futuros",
+        "23.0"
+      ],
+      [
+        "2026-10-02",
+        "2030-09-01",
+        "SGS12_NDIASUTEISFUT12",
+        "Dias Úteis Futuros",
+        "21.0"
+      ],
+      [
+        "2026-10-02",
+        "2030-08-01",
+        "SGS12_NDIASUTEISFUT12",
+        "Dias Úteis Futuros",
+        "22.0"
+      ],
+      [
+        "2026-10-02",
+        "2030-07-01",
+        "SGS12_NDIASUTEISFUT12",
+        "Dias Úteis Futuros",
+        "23.0"
+      ],
+      [
+        "2026-10-02",
+        "2030-06-01",
+        "SGS12_NDIASUTEISFUT12",
+        "Dias Úteis Futuros",
+        "19.0"
+      ],
+      [
+        "2026-10-02",
+        "2030-05-01",
+        "SGS12_NDIASUTEISFUT12",
+        "Dias Úteis Futuros",
+        "22.0"
+      ],
+      [
+        "2026-10-02",
+        "2030-04-01",
+        "SGS12_NDIASUTEISFUT12",
+        "Dias Úteis Futuros",
+        "21.0"
+      ],
+      [
+        "2026-10-02",
+        "2030-03-01",
+        "SGS12_NDIASUTEISFUT12",
+        "Dias Úteis Futuros",
+        "20.0"
+      ],
+      [
+        "2026-10-02",
+        "2030-02-01",
+        "SGS12_NDIASUTEISFUT12",
+        "Dias Úteis Futuros",
+        "20.0"
+      ],
+      [
+        "2026-10-02",
+        "2030-01-01",
+        "SGS12_NDIASUTEISFUT12",
+        "Dias Úteis Futuros",
+        "22.0"
+      ],
+      [
+        "2026-10-02",
+        "2029-12-01",
+        "SGS12_NDIASUTEISFUT12",
+        "Dias Úteis Futuros",
+        "20.0"
+      ],
+      [
+        "2026-10-02",
+        "2029-11-01",
+        "SGS12_NDIASUTEISFUT12",
+        "Dias Úteis Futuros",
+        "20.0"
+      ],
+      [
+        "2026-10-02",
+        "2029-10-01",
+        "SGS12_NDIASUTEISFUT12",
+        "Dias Úteis Futuros",
+        "22.0"
+      ]
+    ]
+  },
+  "ipea_macroeconomia.csv": {
+    "headers": [
+      "data_captura",
+      "data_referencia",
+      "codigo_ativo",
+      "label",
+      "valor"
+    ],
+    "rows": [
+      [
+        "2026-10-02",
+        "2026-12-01",
+        "MTE12_SALMIN12",
+        "Salário Mínimo Vigente",
+        "1621.0"
+      ],
+      [
+        "2026-10-02",
+        "2026-11-01",
+        "MTE12_SALMIN12",
+        "Salário Mínimo Vigente",
+        "1621.0"
+      ],
+      [
+        "2026-10-02",
+        "2026-10-01",
+        "MTE12_SALMIN12",
+        "Salário Mínimo Vigente",
+        "1621.0"
+      ],
+      [
+        "2026-10-02",
+        "2026-09-01",
+        "MTE12_SALMIN12",
+        "Salário Mínimo Vigente",
+        "1621.0"
+      ],
+      [
+        "2026-10-02",
+        "2026-08-01",
+        "SGS12_7836",
+        "Saldo da Poupança",
+        "1015786.0"
+      ],
+      [
+        "2026-10-02",
+        "2026-08-01",
+        "PNADC12_TDESOC12",
+        "Taxa de Desocupação",
+        "5.3"
+      ],
+      [
+        "2026-10-02",
+        "2026-08-01",
+        "MTE12_SALMIN12",
+        "Salário Mínimo Vigente",
+        "1621.0"
+      ],
+      [
+        "2026-10-02",
+        "2026-08-01",
+        "GAC12_SALMINRE12",
+        "Salário Mínimo Real",
+        "1621.0"
+      ],
+      [
+        "2026-10-02",
+        "2026-08-01",
+        "BM12_PIBAC12",
+        "PIB Acumulado 12m",
+        "13342452.6"
+      ],
+      [
+        "2026-10-02",
+        "2026-07-01",
+        "BM12_PIBAC12",
+        "PIB Acumulado 12m",
+        "13258459.8"
+      ],
+      [
+        "2026-10-02",
+        "2026-07-01",
+        "SGS12_7836",
+        "Saldo da Poupança",
+        "1019852.0"
+      ],
+      [
+        "2026-10-02",
+        "2026-07-01",
+        "PNADC12_TDESOC12",
+        "Taxa de Desocupação",
+        "5.3"
+      ],
+      [
+        "2026-10-02",
+        "2026-07-01",
+        "MTE12_SALMIN12",
+        "Salário Mínimo Vigente",
+        "1621.0"
+      ],
+      [
+        "2026-10-02",
+        "2026-07-01",
+        "GAC12_SALMINRE12",
+        "Salário Mínimo Real",
+        "1615.81331970247"
+      ],
+      [
+        "2026-10-02",
+        "2026-06-01",
+        "SGS12_7836",
+        "Saldo da Poupança",
+        "1020540.0"
+      ]
+    ]
+  },
+  "ipea_comercio_exterior.csv": {
+    "headers": [
+      "data_captura",
+      "data_referencia",
+      "codigo_ativo",
+      "label",
+      "valor"
+    ],
+    "rows": [
+      [
+        "2026-10-02",
+        "2026-07-01",
+        "FUNCEX12_XPT12",
+        "Exportações Preços Índice",
+        "128.37"
+      ],
+      [
+        "2026-10-02",
+        "2026-07-01",
+        "FUNCEX12_MDPT12",
+        "Importações Preços Índice",
+        "115.29"
+      ],
+      [
+        "2026-10-02",
+        "2026-06-01",
+        "FUNCEX12_XPT12",
+        "Exportações Preços Índice",
+        "131.12"
+      ],
+      [
+        "2026-10-02",
+        "2026-06-01",
+        "FUNCEX12_MDPT12",
+        "Importações Preços Índice",
+        "115.59"
+      ],
+      [
+        "2026-10-02",
+        "2026-05-01",
+        "FUNCEX12_XPT12",
+        "Exportações Preços Índice",
+        "129.04"
+      ],
+      [
+        "2026-10-02",
+        "2026-05-01",
+        "FUNCEX12_MDPT12",
+        "Importações Preços Índice",
+        "115.28"
+      ],
+      [
+        "2026-10-02",
+        "2026-04-01",
+        "FUNCEX12_XPT12",
+        "Exportações Preços Índice",
+        "126.94"
+      ],
+      [
+        "2026-10-02",
+        "2026-04-01",
+        "FUNCEX12_MDPT12",
+        "Importações Preços Índice",
+        "110.91"
+      ],
+      [
+        "2026-10-02",
+        "2026-03-01",
+        "FUNCEX12_XPT12",
+        "Exportações Preços Índice",
+        "120.78"
+      ],
+      [
+        "2026-10-02",
+        "2026-03-01",
+        "FUNCEX12_MDPT12",
+        "Importações Preços Índice",
+        "109.2"
+      ],
+      [
+        "2026-10-02",
+        "2026-02-01",
+        "FUNCEX12_XPT12",
+        "Exportações Preços Índice",
+        "119.01"
+      ],
+      [
+        "2026-10-02",
+        "2026-02-01",
+        "FUNCEX12_MDPT12",
+        "Importações Preços Índice",
+        "106.45"
+      ],
+      [
+        "2026-10-02",
+        "2026-01-01",
+        "FUNCEX12_MDPT12",
+        "Importações Preços Índice",
+        "103.39"
+      ],
+      [
+        "2026-10-02",
+        "2026-01-01",
+        "FUNCEX12_XPT12",
+        "Exportações Preços Índice",
+        "118.02"
+      ],
+      [
+        "2026-10-02",
+        "2025-12-01",
+        "FUNCEX12_XPT12",
+        "Exportações Preços Índice",
+        "117.91"
+      ]
+    ]
+  },
+  "ipea_fbcf.csv": {
+    "headers": [
+      "data_captura",
+      "data_referencia",
+      "codigo_ativo",
+      "label",
+      "valor"
+    ],
+    "rows": [
+      [
+        "2026-10-02",
+        "2026-05-01",
+        "GAC12_INDFBCFDESSAZ12",
+        "FBCF Geral Dessazonalizado",
+        "176.588296102989"
+      ],
+      [
+        "2026-10-02",
+        "2026-05-01",
+        "GAC12_INDFBCFCCDESSAZ12",
+        "FBCF Construção Civil Dessazonalizado",
+        "161.593207014504"
+      ],
+      [
+        "2026-10-02",
+        "2026-05-01",
+        "GAC12_INDFBCFCC12",
+        "FBCF Construção Civil",
+        "159.776952273256"
+      ],
+      [
+        "2026-10-02",
+        "2026-05-01",
+        "GAC12_INDFBCF12",
+        "FBCF Índice Geral",
+        "177.890155195627"
+      ],
+      [
+        "2026-10-02",
+        "2026-04-01",
+        "GAC12_INDFBCFDESSAZ12",
+        "FBCF Geral Dessazonalizado",
+        "179.029690905513"
+      ],
+      [
+        "2026-10-02",
+        "2026-04-01",
+        "GAC12_INDFBCFCCDESSAZ12",
+        "FBCF Construção Civil Dessazonalizado",
+        "161.655918545405"
+      ],
+      [
+        "2026-10-02",
+        "2026-04-01",
+        "GAC12_INDFBCFCC12",
+        "FBCF Construção Civil",
+        "158.743935832498"
+      ],
+      [
+        "2026-10-02",
+        "2026-04-01",
+        "GAC12_INDFBCF12",
+        "FBCF Índice Geral",
+        "175.776874526064"
+      ],
+      [
+        "2026-10-02",
+        "2026-03-01",
+        "GAC12_INDFBCFDESSAZ12",
+        "FBCF Geral Dessazonalizado",
+        "175.950882041891"
+      ],
+      [
+        "2026-10-02",
+        "2026-03-01",
+        "GAC12_INDFBCFCCDESSAZ12",
+        "FBCF Construção Civil Dessazonalizado",
+        "161.414637192552"
+      ],
+      [
+        "2026-10-02",
+        "2026-03-01",
+        "GAC12_INDFBCFCC12",
+        "FBCF Construção Civil",
+        "163.202868679309"
+      ],
+      [
+        "2026-10-02",
+        "2026-03-01",
+        "GAC12_INDFBCF12",
+        "FBCF Índice Geral",
+        "185.73679827153"
+      ],
+      [
+        "2026-10-02",
+        "2026-02-01",
+        "GAC12_INDFBCFCCDESSAZ12",
+        "FBCF Construção Civil Dessazonalizado",
+        "163.669466767525"
+      ],
+      [
+        "2026-10-02",
+        "2026-02-01",
+        "GAC12_INDFBCFDESSAZ12",
+        "FBCF Geral Dessazonalizado",
+        "193.150425414554"
+      ],
+      [
+        "2026-10-02",
+        "2026-02-01",
+        "GAC12_INDFBCFCC12",
+        "FBCF Construção Civil",
+        "153.542814813472"
+      ]
+    ]
+  },
+  "ipea_precos_inflacao.csv": {
+    "headers": [
+      "data_captura",
+      "data_referencia",
+      "codigo_ativo",
+      "label",
+      "valor"
+    ],
+    "rows": [
+      [
+        "2026-10-02",
+        "2026-08-01",
+        "PRECOS12_INPCBR12",
+        "INPC Taxa de Variação",
+        "-0.32"
+      ],
+      [
+        "2026-10-02",
+        "2026-08-01",
+        "PRECOS12_INPC12",
+        "INPC Índice Geral",
+        "7810.09"
+      ],
+      [
+        "2026-10-02",
+        "2026-08-01",
+        "IGP12_INCC12",
+        "INCC-DI Índice Geral",
+        "1296.889"
+      ],
+      [
+        "2026-10-02",
+        "2026-08-01",
+        "IGP12_IGPDI12",
+        "IGP-DI Índice Geral",
+        "1192.769"
+      ],
+      [
+        "2026-10-02",
+        "2026-07-01",
+        "PRECOS12_INPCBR12",
+        "INPC Taxa de Variação",
+        "-0.01"
+      ],
+      [
+        "2026-10-02",
+        "2026-07-01",
+        "PRECOS12_INPC12",
+        "INPC Índice Geral",
+        "7835.16"
+      ],
+      [
+        "2026-10-02",
+        "2026-07-01",
+        "IGP12_INCC12",
+        "INCC-DI Índice Geral",
+        "1288.431"
+      ],
+      [
+        "2026-10-02",
+        "2026-07-01",
+        "IGP12_IGPDI12",
+        "IGP-DI Índice Geral",
+        "1192.015"
+      ],
+      [
+        "2026-10-02",
+        "2026-06-01",
+        "PRECOS12_INPCBR12",
+        "INPC Taxa de Variação",
+        "0.14"
+      ],
+      [
+        "2026-10-02",
+        "2026-06-01",
+        "PRECOS12_INPC12",
+        "INPC Índice Geral",
+        "7835.94"
+      ],
+      [
+        "2026-10-02",
+        "2026-06-01",
+        "IGP12_INCC12",
+        "INCC-DI Índice Geral",
+        "1280.641"
+      ],
+      [
+        "2026-10-02",
+        "2026-06-01",
+        "IGP12_IGPDI12",
+        "IGP-DI Índice Geral",
+        "1202.299"
+      ],
+      [
+        "2026-10-02",
+        "2026-05-01",
+        "PRECOS12_INPC12",
+        "INPC Índice Geral",
+        "7824.99"
+      ],
+      [
+        "2026-10-02",
+        "2026-05-01",
+        "PRECOS12_INPCBR12",
+        "INPC Taxa de Variação",
+        "0.65"
+      ],
+      [
+        "2026-10-02",
+        "2026-05-01",
+        "IGP12_INCC12",
+        "INCC-DI Índice Geral",
+        "1270.695"
+      ]
+    ]
+  },
+  "ipea_producao_mineral.csv": {
+    "headers": [
+      "data_captura",
+      "data_referencia",
+      "codigo_ativo",
+      "label",
+      "valor"
+    ],
+    "rows": [
+      [
+        "2026-10-02",
+        "2026-08-01",
+        "IBSIE12_QSCL12",
+        "Produção de Laminados",
+        "2001.578"
+      ],
+      [
+        "2026-10-02",
+        "2026-08-01",
+        "IBSIE12_QSCFG12",
+        "Produção de Ferro-Gusa",
+        "2097.061"
+      ],
+      [
+        "2026-10-02",
+        "2026-08-01",
+        "IBSIE12_QSCAB12",
+        "Produção de Aço Bruto",
+        "2692.865"
+      ],
+      [
+        "2026-10-02",
+        "2026-07-01",
+        "IBSIE12_QSCL12",
+        "Produção de Laminados",
+        "2051.884"
+      ],
+      [
+        "2026-10-02",
+        "2026-07-01",
+        "IBSIE12_QSCFG12",
+        "Produção de Ferro-Gusa",
+        "2205.008"
+      ],
+      [
+        "2026-10-02",
+        "2026-07-01",
+        "IBSIE12_QSCAB12",
+        "Produção de Aço Bruto",
+        "2804.412"
+      ],
+      [
+        "2026-10-02",
+        "2026-06-01",
+        "IBSIE12_QSCL12",
+        "Produção de Laminados",
+        "1843.093"
+      ],
+      [
+        "2026-10-02",
+        "2026-06-01",
+        "IBSIE12_QSCFG12",
+        "Produção de Ferro-Gusa",
+        "2220.306"
+      ],
+      [
+        "2026-10-02",
+        "2026-06-01",
+        "IBSIE12_QSCAB12",
+        "Produção de Aço Bruto",
+        "2840.114"
+      ],
+      [
+        "2026-10-02",
+        "2026-05-01",
+        "IBSIE12_QSCL12",
+        "Produção de Laminados",
+        "2043.822"
+      ],
+      [
+        "2026-10-02",
+        "2026-05-01",
+        "IBSIE12_QSCFG12",
+        "Produção de Ferro-Gusa",
+        "2238.844"
+      ],
+      [
+        "2026-10-02",
+        "2026-05-01",
+        "IBSIE12_QSCAB12",
+        "Produção de Aço Bruto",
+        "2775.268"
+      ],
+      [
+        "2026-10-02",
+        "2026-04-01",
+        "IBSIE12_QSCFG12",
+        "Produção de Ferro-Gusa",
+        "2086.752"
+      ],
+      [
+        "2026-10-02",
+        "2026-04-01",
+        "IBSIE12_QSCL12",
+        "Produção de Laminados",
+        "1885.867"
+      ],
+      [
+        "2026-10-02",
+        "2026-04-01",
+        "IBSIE12_QSCAB12",
+        "Produção de Aço Bruto",
+        "2683.235"
+      ]
+    ]
+  },
+  "ipea_taxas_juros.csv": {
+    "headers": [
+      "data_captura",
+      "data_referencia",
+      "codigo_ativo",
+      "label",
+      "valor"
+    ],
+    "rows": [
+      [
+        "2026-10-02",
+        "2026-10-01",
+        "BM12_TJTR12",
+        "Taxa TR",
+        "0.1616"
+      ],
+      [
+        "2026-10-02",
+        "2026-10-01",
+        "BM12_TJTBF12",
+        "Taxa TBF",
+        "0.9749"
+      ],
+      [
+        "2026-10-02",
+        "2026-10-01",
+        "BM12_TJOVER12",
+        "Taxa Selic Mensal",
+        "0.05"
+      ],
+      [
+        "2026-10-02",
+        "2026-10-01",
+        "BM12_TJLP12",
+        "Taxa TJLP",
+        "0.74"
+      ],
+      [
+        "2026-10-02",
+        "2026-10-01",
+        "BM12_TJCDI12",
+        "Taxa CDI Mensal",
+        "0.05"
+      ],
+      [
+        "2026-10-02",
+        "2026-10-01",
+        "BM12_RNDPO12",
+        "Poupança Rentabilidade Nova",
+        "0.6624"
+      ],
+      [
+        "2026-10-02",
+        "2026-10-01",
+        "ANBIMA12_TJPOUP12",
+        "Poupança Rentabilidade Antiga",
+        "0.6624"
+      ],
+      [
+        "2026-10-02",
+        "2026-09-01",
+        "ANBIMA12_TJTLN612",
+        "Taxa LTN 6m",
+        "13.3448333333333"
+      ],
+      [
+        "2026-10-02",
+        "2026-09-01",
+        "BM12_TJTR12",
+        "Taxa TR",
+        "0.169"
+      ],
+      [
+        "2026-10-02",
+        "2026-09-01",
+        "BM12_TJTBF12",
+        "Taxa TBF",
+        "0.9971"
+      ],
+      [
+        "2026-10-02",
+        "2026-09-01",
+        "BM12_TJOVER12",
+        "Taxa Selic Mensal",
+        "1.08"
+      ],
+      [
+        "2026-10-02",
+        "2026-09-01",
+        "BM12_TJLP12",
+        "Taxa TJLP",
+        "0.73"
+      ],
+      [
+        "2026-10-02",
+        "2026-09-01",
+        "BM12_TJCDI12",
+        "Taxa CDI Mensal",
+        "1.08"
+      ],
+      [
+        "2026-10-02",
+        "2026-09-01",
+        "BM12_RNDPO12",
+        "Poupança Rentabilidade Nova",
+        "0.6698"
+      ],
+      [
+        "2026-10-02",
+        "2026-09-01",
+        "ANBIMA12_TJTLN312",
+        "Taxa LTN 3m",
+        "13.3926047619048"
+      ]
+    ]
+  },
+  "ipea_mercados_diarios.csv": {
+    "headers": [
+      "data_captura",
+      "data_referencia",
+      "codigo_ativo",
+      "label",
+      "valor"
+    ],
+    "rows": [
+      [
+        "2025-11-11",
+        "2025-11-11",
+        "SGS366_NASDAQ366",
+        "Índice NASDAQ",
+        "23468.30078125"
+      ],
+      [
+        "2025-11-11",
+        "2025-11-11",
+        "GM366_DOW366",
+        "Índice Dow Jones",
+        "47927.9609375"
+      ],
+      [
+        "2025-11-11",
+        "2025-11-11",
+        "EIA366_PBRENT366",
+        "Petróleo Brent",
+        "63.86"
+      ],
+      [
+        "2025-03-28",
+        "2025-03-28",
+        "SGS366_NASDAQ366",
+        "Índice NASDAQ",
+        "17322.990234375"
+      ],
+      [
+        "2025-03-28",
+        "2025-03-28",
+        "GM366_DOW366",
+        "Índice Dow Jones",
+        "41583.8984375"
+      ],
+      [
+        "2025-03-28",
+        "2025-03-28",
+        "EIA366_PBRENT366",
+        "Petróleo Brent",
+        "74.69"
+      ],
+      [
+        "2025-03-27",
+        "2025-03-27",
+        "SGS366_NASDAQ366",
+        "Índice NASDAQ",
+        "17804.029296875"
+      ],
+      [
+        "2025-03-27",
+        "2025-03-27",
+        "GM366_DOW366",
+        "Índice Dow Jones",
+        "42299.69921875"
+      ],
+      [
+        "2025-03-27",
+        "2025-03-27",
+        "EIA366_PBRENT366",
+        "Petróleo Brent",
+        "74.72"
+      ],
+      [
+        "2025-03-26",
+        "2025-03-26",
+        "SGS366_NASDAQ366",
+        "Índice NASDAQ",
+        "17899.01953125"
+      ],
+      [
+        "2025-03-26",
+        "2025-03-26",
+        "GM366_DOW366",
+        "Índice Dow Jones",
+        "42454.7890625"
+      ],
+      [
+        "2025-03-26",
+        "2025-03-26",
+        "EIA366_PBRENT366",
+        "Petróleo Brent",
+        "74.6"
+      ],
+      [
+        "2025-03-25",
+        "2025-03-25",
+        "GM366_DOW366",
+        "Índice Dow Jones",
+        "42587.5"
+      ],
+      [
+        "2025-03-25",
+        "2025-03-25",
+        "SGS366_NASDAQ366",
+        "Índice NASDAQ",
+        "18271.859375"
+      ],
+      [
+        "2025-03-25",
+        "2025-03-25",
+        "EIA366_PBRENT366",
+        "Petróleo Brent",
+        "73.78"
+      ]
+    ]
+  },
   "wikipedia_global_indices.csv": {
     "headers": [
       "data_captura",
@@ -96,6 +1024,270 @@ window.PULSEFLAT_PREVIEWS = {
         "PRX.AS",
         "Prosus",
         "Euro Stoxx 50"
+      ]
+    ]
+  },
+  "onu_pacto_global.csv": {
+    "headers": [
+      "data_captura",
+      "name",
+      "type",
+      "sector",
+      "country",
+      "joined_on",
+      "link"
+    ],
+    "rows": [
+      [
+        "2026-10-02",
+        "Eletropaulo Metropolitana Eletricidade de Sao Paulo S/A",
+        "Company",
+        "Conventional Electricity",
+        "Brazil",
+        "2005-06-28",
+        "https://unglobalcompact.org/what-is-gc/participants/3230-Eletropaulo-Metropolitana-Eletricidade-de-Sao-Paulo-S-A"
+      ],
+      [
+        "2026-10-02",
+        "Ordem Dos Advogados do Brasil 57a Subseccao de Guarulhos",
+        "Business Association",
+        "",
+        "Brazil",
+        "2004-11-05",
+        "https://unglobalcompact.org/what-is-gc/participants/7151-Ordem-Dos-Advogados-do-Brasil-57a-Subseccao-de-Guarulhos"
+      ],
+      [
+        "2026-10-02",
+        "COPEL- Companhia Paranaense de Energia",
+        "Company",
+        "Conventional Electricity",
+        "Brazil",
+        "2001-07-26",
+        "https://unglobalcompact.org/what-is-gc/participants/2549-COPEL-Companhia-Paranaense-de-Energia"
+      ],
+      [
+        "2026-10-02",
+        "Samarco Mineracao S.A.",
+        "Company",
+        "Iron and Steel",
+        "Brazil",
+        "2002-08-31",
+        "https://unglobalcompact.org/what-is-gc/participants/8168-Samarco-Mineracao-S-A-"
+      ],
+      [
+        "2026-10-02",
+        "Suzano S/A",
+        "Company",
+        "Paper",
+        "Brazil",
+        "2003-01-07",
+        "https://unglobalcompact.org/what-is-gc/participants/8921-Suzano-S-A"
+      ],
+      [
+        "2026-10-02",
+        "FIEP - Federação das Indústrias do Estado do Paraná",
+        "Business Association",
+        "",
+        "Brazil",
+        "2003-05-21",
+        "https://unglobalcompact.org/what-is-gc/participants/8364-FIEP-Federa-o-das-Ind-strias-do-Estado-do-Paran-"
+      ],
+      [
+        "2026-10-02",
+        "Instituto Ethos de Empresas e Responsibilidade Social",
+        "Business Association",
+        "",
+        "Brazil",
+        "2003-05-21",
+        "https://unglobalcompact.org/what-is-gc/participants/5314-Instituto-Ethos-de-Empresas-e-Responsibilidade-Social"
+      ],
+      [
+        "2026-10-02",
+        "Fundacao Dom Cabral",
+        "Civil Society Organization & Other",
+        "",
+        "Brazil",
+        "2003-05-21",
+        "https://unglobalcompact.org/what-is-gc/participants/3921-Fundacao-Dom-Cabral"
+      ],
+      [
+        "2026-10-02",
+        "FIESP- Federacao das Industrias do Estado de Sao Paulo",
+        "Business Association",
+        "",
+        "Brazil",
+        "2003-06-25",
+        "https://unglobalcompact.org/what-is-gc/participants/3733-FIESP-Federacao-das-Industrias-do-Estado-de-Sao-Paulo"
+      ],
+      [
+        "2026-10-02",
+        "GS1 Brasil - Associacao Brasileira de Automocao",
+        "Business Association",
+        "",
+        "Brazil",
+        "2003-06-25",
+        "https://unglobalcompact.org/what-is-gc/participants/3059-GS1-Brasil-Associacao-Brasileira-de-Automocao"
+      ],
+      [
+        "2026-10-02",
+        "Klabin S.A.",
+        "Company",
+        "Paper",
+        "Brazil",
+        "2003-06-27",
+        "https://unglobalcompact.org/what-is-gc/participants/5833-Klabin-S-A-"
+      ],
+      [
+        "2026-10-02",
+        "Grupo Pao de Acucar - Companhia Brasileira de Distribuicao",
+        "Company",
+        "Diversified Retailers",
+        "Brazil",
+        "2003-06-27",
+        "https://unglobalcompact.org/what-is-gc/participants/4651-Grupo-Pao-de-Acucar-Companhia-Brasileira-de-Distribuicao"
+      ],
+      [
+        "2026-10-02",
+        "Copa Energia",
+        "Company",
+        "Gas Distribution",
+        "Brazil",
+        "2003-06-27",
+        "https://unglobalcompact.org/what-is-gc/participants/2543-Copa-Energia"
+      ],
+      [
+        "2026-10-02",
+        "Colegio Lacordaire Sant-Anna SC Ltda",
+        "Civil Society Organization & Other",
+        "",
+        "Brazil",
+        "2003-06-27",
+        "https://unglobalcompact.org/what-is-gc/participants/2291-Colegio-Lacordaire-Sant-Anna-SC-Ltda"
+      ],
+      [
+        "2026-10-02",
+        "Itau Unibanco SA",
+        "Company",
+        "Banks",
+        "Brazil",
+        "2003-06-27",
+        "https://unglobalcompact.org/what-is-gc/participants/1132-Itau-Unibanco-SA"
+      ]
+    ]
+  },
+  "yahoo_cambio_moedas.csv": {
+    "headers": [
+      "data_captura",
+      "data_referencia",
+      "codigo_ativo",
+      "label",
+      "preco_fechamento"
+    ],
+    "rows": [
+      [
+        "2026-10-02",
+        "2026-09-04",
+        "USDINR=X",
+        "USD_INR",
+        "94.49490356445312"
+      ],
+      [
+        "2026-10-02",
+        "2026-09-03",
+        "USDINR=X",
+        "USD_INR",
+        "94.48770141601562"
+      ],
+      [
+        "2026-10-02",
+        "2026-09-02",
+        "USDINR=X",
+        "USD_INR",
+        "94.9552001953125"
+      ],
+      [
+        "2026-10-02",
+        "2026-09-01",
+        "USDINR=X",
+        "USD_INR",
+        "95.1144027709961"
+      ],
+      [
+        "2026-10-02",
+        "2026-08-31",
+        "USDINR=X",
+        "USD_INR",
+        "95.38030242919922"
+      ],
+      [
+        "2026-10-02",
+        "2026-08-28",
+        "USDINR=X",
+        "USD_INR",
+        "95.47039794921875"
+      ],
+      [
+        "2026-10-02",
+        "2026-08-27",
+        "USDINR=X",
+        "USD_INR",
+        "95.4302978515625"
+      ],
+      [
+        "2026-10-02",
+        "2026-08-26",
+        "USDINR=X",
+        "USD_INR",
+        "93.54609680175781"
+      ],
+      [
+        "2026-10-02",
+        "2026-08-25",
+        "USDINR=X",
+        "USD_INR",
+        "95.72309875488281"
+      ],
+      [
+        "2026-10-02",
+        "2026-08-24",
+        "USDINR=X",
+        "USD_INR",
+        "95.70030212402344"
+      ],
+      [
+        "2026-10-02",
+        "2026-08-21",
+        "USDINR=X",
+        "USD_INR",
+        "95.77220153808594"
+      ],
+      [
+        "2026-10-02",
+        "2026-08-20",
+        "USDINR=X",
+        "USD_INR",
+        "95.49600219726562"
+      ],
+      [
+        "2026-10-02",
+        "2026-08-19",
+        "USDINR=X",
+        "USD_INR",
+        "95.81639862060547"
+      ],
+      [
+        "2026-10-02",
+        "2026-08-18",
+        "USDINR=X",
+        "USD_INR",
+        "95.69409942626953"
+      ],
+      [
+        "2026-10-02",
+        "2026-08-17",
+        "USDINR=X",
+        "USD_INR",
+        "95.45030212402344"
       ]
     ]
   },
@@ -455,122 +1647,6 @@ window.PULSEFLAT_PREVIEWS = {
       ]
     ]
   },
-  "yahoo_cambio_moedas.csv": {
-    "headers": [
-      "data_captura",
-      "data_referencia",
-      "codigo_ativo",
-      "label",
-      "preco_fechamento"
-    ],
-    "rows": [
-      [
-        "2026-10-02",
-        "2026-09-04",
-        "USDINR=X",
-        "USD_INR",
-        "94.49490356445312"
-      ],
-      [
-        "2026-10-02",
-        "2026-09-03",
-        "USDINR=X",
-        "USD_INR",
-        "94.48770141601562"
-      ],
-      [
-        "2026-10-02",
-        "2026-09-02",
-        "USDINR=X",
-        "USD_INR",
-        "94.9552001953125"
-      ],
-      [
-        "2026-10-02",
-        "2026-09-01",
-        "USDINR=X",
-        "USD_INR",
-        "95.1144027709961"
-      ],
-      [
-        "2026-10-02",
-        "2026-08-31",
-        "USDINR=X",
-        "USD_INR",
-        "95.38030242919922"
-      ],
-      [
-        "2026-10-02",
-        "2026-08-28",
-        "USDINR=X",
-        "USD_INR",
-        "95.47039794921875"
-      ],
-      [
-        "2026-10-02",
-        "2026-08-27",
-        "USDINR=X",
-        "USD_INR",
-        "95.4302978515625"
-      ],
-      [
-        "2026-10-02",
-        "2026-08-26",
-        "USDINR=X",
-        "USD_INR",
-        "93.54609680175781"
-      ],
-      [
-        "2026-10-02",
-        "2026-08-25",
-        "USDINR=X",
-        "USD_INR",
-        "95.72309875488281"
-      ],
-      [
-        "2026-10-02",
-        "2026-08-24",
-        "USDINR=X",
-        "USD_INR",
-        "95.70030212402344"
-      ],
-      [
-        "2026-10-02",
-        "2026-08-21",
-        "USDINR=X",
-        "USD_INR",
-        "95.77220153808594"
-      ],
-      [
-        "2026-10-02",
-        "2026-08-20",
-        "USDINR=X",
-        "USD_INR",
-        "95.49600219726562"
-      ],
-      [
-        "2026-10-02",
-        "2026-08-19",
-        "USDINR=X",
-        "USD_INR",
-        "95.81639862060547"
-      ],
-      [
-        "2026-10-02",
-        "2026-08-18",
-        "USDINR=X",
-        "USD_INR",
-        "95.69409942626953"
-      ],
-      [
-        "2026-10-02",
-        "2026-08-17",
-        "USDINR=X",
-        "USD_INR",
-        "95.45030212402344"
-      ]
-    ]
-  },
   "yahoo_commodities.csv": {
     "headers": [
       "data_captura",
@@ -817,7 +1893,7 @@ window.PULSEFLAT_PREVIEWS = {
         "2026-10-02",
         "ARB-USD",
         "ARB",
-        "0.0006290287710726261"
+        "0.0006290000164881349"
       ],
       [
         "2026-10-02",
@@ -916,6 +1992,470 @@ window.PULSEFLAT_PREVIEWS = {
         "ARB-USD",
         "ARB",
         "0.0006290000164881349"
+      ]
+    ]
+  },
+  "yahoo_indices_globais.csv": {
+    "headers": [
+      "data_captura",
+      "data_referencia",
+      "codigo_ativo",
+      "label",
+      "preco_fechamento"
+    ],
+    "rows": [
+      [
+        "2026-10-02",
+        "2026-09-30",
+        "FTSEMIB.MI",
+        "FTSE_MIB_INDEX",
+        "51372.0"
+      ],
+      [
+        "2026-10-02",
+        "2026-09-29",
+        "FTSEMIB.MI",
+        "FTSE_MIB_INDEX",
+        "51805.0"
+      ],
+      [
+        "2026-10-02",
+        "2026-09-28",
+        "FTSEMIB.MI",
+        "FTSE_MIB_INDEX",
+        "51760.0"
+      ],
+      [
+        "2026-10-02",
+        "2026-09-25",
+        "FTSEMIB.MI",
+        "FTSE_MIB_INDEX",
+        "51867.0"
+      ],
+      [
+        "2026-10-02",
+        "2026-09-24",
+        "FTSEMIB.MI",
+        "FTSE_MIB_INDEX",
+        "51543.0"
+      ],
+      [
+        "2026-10-02",
+        "2026-09-23",
+        "FTSEMIB.MI",
+        "FTSE_MIB_INDEX",
+        "51987.0"
+      ],
+      [
+        "2026-10-02",
+        "2026-09-22",
+        "FTSEMIB.MI",
+        "FTSE_MIB_INDEX",
+        "52096.0"
+      ],
+      [
+        "2026-10-02",
+        "2026-09-21",
+        "FTSEMIB.MI",
+        "FTSE_MIB_INDEX",
+        "52372.0"
+      ],
+      [
+        "2026-10-02",
+        "2026-09-18",
+        "FTSEMIB.MI",
+        "FTSE_MIB_INDEX",
+        "51545.0"
+      ],
+      [
+        "2026-10-02",
+        "2026-09-17",
+        "FTSEMIB.MI",
+        "FTSE_MIB_INDEX",
+        "52386.0"
+      ],
+      [
+        "2026-10-02",
+        "2026-09-16",
+        "FTSEMIB.MI",
+        "FTSE_MIB_INDEX",
+        "51969.0"
+      ],
+      [
+        "2026-10-02",
+        "2026-09-15",
+        "FTSEMIB.MI",
+        "FTSE_MIB_INDEX",
+        "51555.0"
+      ],
+      [
+        "2026-10-02",
+        "2026-09-14",
+        "FTSEMIB.MI",
+        "FTSE_MIB_INDEX",
+        "51629.0"
+      ],
+      [
+        "2026-10-02",
+        "2026-09-11",
+        "FTSEMIB.MI",
+        "FTSE_MIB_INDEX",
+        "52512.0"
+      ],
+      [
+        "2026-10-02",
+        "2026-09-10",
+        "FTSEMIB.MI",
+        "FTSE_MIB_INDEX",
+        "51807.0"
+      ]
+    ]
+  },
+  "yahoo_renda_fixa.csv": {
+    "headers": [
+      "data_captura",
+      "data_referencia",
+      "codigo_ativo",
+      "label",
+      "preco_fechamento"
+    ],
+    "rows": [
+      [
+        "2026-10-02",
+        "2026-10-01",
+        "^TYX",
+        "TREASURY_30Y",
+        "5.603000164031982"
+      ],
+      [
+        "2026-10-02",
+        "2026-10-01",
+        "^TNX",
+        "TREASURY_10Y",
+        "5.236999988555908"
+      ],
+      [
+        "2026-10-02",
+        "2026-09-30",
+        "^TNX",
+        "TREASURY_10Y",
+        "5.293000221252441"
+      ],
+      [
+        "2026-10-02",
+        "2026-09-30",
+        "^TYX",
+        "TREASURY_30Y",
+        "5.638000011444092"
+      ],
+      [
+        "2026-10-02",
+        "2026-09-29",
+        "^TNX",
+        "TREASURY_10Y",
+        "5.255000114440918"
+      ],
+      [
+        "2026-10-02",
+        "2026-09-29",
+        "^TYX",
+        "TREASURY_30Y",
+        "5.593999862670898"
+      ],
+      [
+        "2026-10-02",
+        "2026-09-28",
+        "^TNX",
+        "TREASURY_10Y",
+        "5.239999771118164"
+      ],
+      [
+        "2026-10-02",
+        "2026-09-28",
+        "^TYX",
+        "TREASURY_30Y",
+        "5.560999870300293"
+      ],
+      [
+        "2026-10-02",
+        "2026-09-25",
+        "^TNX",
+        "TREASURY_10Y",
+        "5.184000015258789"
+      ],
+      [
+        "2026-10-02",
+        "2026-09-25",
+        "^TYX",
+        "TREASURY_30Y",
+        "5.504000186920166"
+      ],
+      [
+        "2026-10-02",
+        "2026-09-24",
+        "^TNX",
+        "TREASURY_10Y",
+        "5.1620001792907715"
+      ],
+      [
+        "2026-10-02",
+        "2026-09-24",
+        "^TYX",
+        "TREASURY_30Y",
+        "5.460999965667725"
+      ],
+      [
+        "2026-10-02",
+        "2026-09-23",
+        "^TNX",
+        "TREASURY_10Y",
+        "5.113999843597412"
+      ],
+      [
+        "2026-10-02",
+        "2026-09-23",
+        "^TYX",
+        "TREASURY_30Y",
+        "5.401000022888184"
+      ],
+      [
+        "2026-10-02",
+        "2026-09-22",
+        "^TNX",
+        "TREASURY_10Y",
+        "4.9679999351501465"
+      ]
+    ]
+  },
+  "yahoo_acoes_internacionais.csv": {
+    "headers": [
+      "data_captura",
+      "data_referencia",
+      "codigo_ativo",
+      "label",
+      "preco_fechamento"
+    ],
+    "rows": [
+      [
+        "2026-10-02",
+        "2026-10-01",
+        "WKL.AS",
+        "WKL.AS",
+        "68.63999938964844"
+      ],
+      [
+        "2026-10-02",
+        "2026-10-01",
+        "VOW.DE",
+        "VOW.DE",
+        "68.25"
+      ],
+      [
+        "2026-10-02",
+        "2026-09-30",
+        "VOW.DE",
+        "VOW.DE",
+        "70.5999984741211"
+      ],
+      [
+        "2026-10-02",
+        "2026-09-30",
+        "WKL.AS",
+        "WKL.AS",
+        "67.72000122070312"
+      ],
+      [
+        "2026-10-02",
+        "2026-09-29",
+        "VOW.DE",
+        "VOW.DE",
+        "71.25"
+      ],
+      [
+        "2026-10-02",
+        "2026-09-29",
+        "WKL.AS",
+        "WKL.AS",
+        "68.0"
+      ],
+      [
+        "2026-10-02",
+        "2026-09-28",
+        "VOW.DE",
+        "VOW.DE",
+        "71.0999984741211"
+      ],
+      [
+        "2026-10-02",
+        "2026-09-28",
+        "WKL.AS",
+        "WKL.AS",
+        "67.4800033569336"
+      ],
+      [
+        "2026-10-02",
+        "2026-09-25",
+        "VOW.DE",
+        "VOW.DE",
+        "71.75"
+      ],
+      [
+        "2026-10-02",
+        "2026-09-25",
+        "WKL.AS",
+        "WKL.AS",
+        "68.66000366210938"
+      ],
+      [
+        "2026-10-02",
+        "2026-09-24",
+        "VOW.DE",
+        "VOW.DE",
+        "70.80000305175781"
+      ],
+      [
+        "2026-10-02",
+        "2026-09-24",
+        "WKL.AS",
+        "WKL.AS",
+        "68.81999969482422"
+      ],
+      [
+        "2026-10-02",
+        "2026-09-23",
+        "VOW.DE",
+        "VOW.DE",
+        "73.1500015258789"
+      ],
+      [
+        "2026-10-02",
+        "2026-09-23",
+        "WKL.AS",
+        "WKL.AS",
+        "67.5"
+      ],
+      [
+        "2026-10-02",
+        "2026-09-22",
+        "WKL.AS",
+        "WKL.AS",
+        "66.81999969482422"
+      ]
+    ]
+  },
+  "yahoo_etfs.csv.gz": {
+    "headers": [
+      "data_captura",
+      "data_referencia",
+      "codigo_ativo",
+      "label",
+      "preco_fechamento"
+    ],
+    "rows": [
+      [
+        "2026-10-02",
+        "2026-09-02",
+        "LTBX11.SA",
+        "LTBX11",
+        "26.479999542236328"
+      ],
+      [
+        "2026-10-02",
+        "2026-09-01",
+        "LTBX11.SA",
+        "LTBX11",
+        "26.459999084472656"
+      ],
+      [
+        "2026-10-02",
+        "2026-08-31",
+        "LTBX11.SA",
+        "LTBX11",
+        "26.440000534057617"
+      ],
+      [
+        "2026-10-02",
+        "2026-08-28",
+        "LTBX11.SA",
+        "LTBX11",
+        "26.43000030517578"
+      ],
+      [
+        "2026-10-02",
+        "2026-08-27",
+        "LTBX11.SA",
+        "LTBX11",
+        "26.440000534057617"
+      ],
+      [
+        "2026-10-02",
+        "2026-08-26",
+        "LTBX11.SA",
+        "LTBX11",
+        "26.420000076293945"
+      ],
+      [
+        "2026-10-02",
+        "2026-08-25",
+        "LTBX11.SA",
+        "LTBX11",
+        "26.40999984741211"
+      ],
+      [
+        "2026-10-02",
+        "2026-08-24",
+        "LTBX11.SA",
+        "LTBX11",
+        "26.3799991607666"
+      ],
+      [
+        "2026-10-02",
+        "2026-08-21",
+        "LTBX11.SA",
+        "LTBX11",
+        "26.360000610351562"
+      ],
+      [
+        "2026-10-02",
+        "2026-08-20",
+        "LTBX11.SA",
+        "LTBX11",
+        "26.34000015258789"
+      ],
+      [
+        "2026-10-02",
+        "2026-08-19",
+        "LTBX11.SA",
+        "LTBX11",
+        "26.329999923706055"
+      ],
+      [
+        "2026-10-02",
+        "2026-08-18",
+        "LTBX11.SA",
+        "LTBX11",
+        "26.299999237060547"
+      ],
+      [
+        "2026-10-02",
+        "2026-08-17",
+        "LTBX11.SA",
+        "LTBX11",
+        "26.309999465942383"
+      ],
+      [
+        "2026-10-02",
+        "2026-08-14",
+        "LTBX11.SA",
+        "LTBX11",
+        "26.270000457763672"
+      ],
+      [
+        "2026-10-02",
+        "2026-08-13",
+        "LTBX11.SA",
+        "LTBX11",
+        "26.239999771118164"
       ]
     ]
   },
@@ -1176,618 +2716,6 @@ window.PULSEFLAT_PREVIEWS = {
         "debêntures___preços_de_negociação",
         "",
         "add6b95b27003ee83da6b98b"
-      ]
-    ]
-  },
-  "yahoo_indices_globais.csv": {
-    "headers": [
-      "data_captura",
-      "data_referencia",
-      "codigo_ativo",
-      "label",
-      "preco_fechamento"
-    ],
-    "rows": [
-      [
-        "2026-10-02",
-        "2026-09-30",
-        "FTSEMIB.MI",
-        "FTSE_MIB_INDEX",
-        "51372.0"
-      ],
-      [
-        "2026-10-02",
-        "2026-09-29",
-        "FTSEMIB.MI",
-        "FTSE_MIB_INDEX",
-        "51805.0"
-      ],
-      [
-        "2026-10-02",
-        "2026-09-28",
-        "FTSEMIB.MI",
-        "FTSE_MIB_INDEX",
-        "51760.0"
-      ],
-      [
-        "2026-10-02",
-        "2026-09-25",
-        "FTSEMIB.MI",
-        "FTSE_MIB_INDEX",
-        "51867.0"
-      ],
-      [
-        "2026-10-02",
-        "2026-09-24",
-        "FTSEMIB.MI",
-        "FTSE_MIB_INDEX",
-        "51543.0"
-      ],
-      [
-        "2026-10-02",
-        "2026-09-23",
-        "FTSEMIB.MI",
-        "FTSE_MIB_INDEX",
-        "51987.0"
-      ],
-      [
-        "2026-10-02",
-        "2026-09-22",
-        "FTSEMIB.MI",
-        "FTSE_MIB_INDEX",
-        "52096.0"
-      ],
-      [
-        "2026-10-02",
-        "2026-09-21",
-        "FTSEMIB.MI",
-        "FTSE_MIB_INDEX",
-        "52372.0"
-      ],
-      [
-        "2026-10-02",
-        "2026-09-18",
-        "FTSEMIB.MI",
-        "FTSE_MIB_INDEX",
-        "51545.0"
-      ],
-      [
-        "2026-10-02",
-        "2026-09-17",
-        "FTSEMIB.MI",
-        "FTSE_MIB_INDEX",
-        "52386.0"
-      ],
-      [
-        "2026-10-02",
-        "2026-09-16",
-        "FTSEMIB.MI",
-        "FTSE_MIB_INDEX",
-        "51969.0"
-      ],
-      [
-        "2026-10-02",
-        "2026-09-15",
-        "FTSEMIB.MI",
-        "FTSE_MIB_INDEX",
-        "51555.0"
-      ],
-      [
-        "2026-10-02",
-        "2026-09-14",
-        "FTSEMIB.MI",
-        "FTSE_MIB_INDEX",
-        "51629.0"
-      ],
-      [
-        "2026-10-02",
-        "2026-09-11",
-        "FTSEMIB.MI",
-        "FTSE_MIB_INDEX",
-        "52512.0"
-      ],
-      [
-        "2026-10-02",
-        "2026-09-10",
-        "FTSEMIB.MI",
-        "FTSE_MIB_INDEX",
-        "51807.0"
-      ]
-    ]
-  },
-  "yahoo_renda_fixa.csv": {
-    "headers": [
-      "data_captura",
-      "data_referencia",
-      "codigo_ativo",
-      "label",
-      "preco_fechamento"
-    ],
-    "rows": [
-      [
-        "2026-10-02",
-        "2026-10-01",
-        "^TYX",
-        "TREASURY_30Y",
-        "5.603000164031982"
-      ],
-      [
-        "2026-10-02",
-        "2026-10-01",
-        "^TNX",
-        "TREASURY_10Y",
-        "5.236999988555908"
-      ],
-      [
-        "2026-10-02",
-        "2026-09-30",
-        "^TNX",
-        "TREASURY_10Y",
-        "5.293000221252441"
-      ],
-      [
-        "2026-10-02",
-        "2026-09-30",
-        "^TYX",
-        "TREASURY_30Y",
-        "5.638000011444092"
-      ],
-      [
-        "2026-10-02",
-        "2026-09-29",
-        "^TNX",
-        "TREASURY_10Y",
-        "5.255000114440918"
-      ],
-      [
-        "2026-10-02",
-        "2026-09-29",
-        "^TYX",
-        "TREASURY_30Y",
-        "5.593999862670898"
-      ],
-      [
-        "2026-10-02",
-        "2026-09-28",
-        "^TNX",
-        "TREASURY_10Y",
-        "5.239999771118164"
-      ],
-      [
-        "2026-10-02",
-        "2026-09-28",
-        "^TYX",
-        "TREASURY_30Y",
-        "5.560999870300293"
-      ],
-      [
-        "2026-10-02",
-        "2026-09-25",
-        "^TNX",
-        "TREASURY_10Y",
-        "5.184000015258789"
-      ],
-      [
-        "2026-10-02",
-        "2026-09-25",
-        "^TYX",
-        "TREASURY_30Y",
-        "5.504000186920166"
-      ],
-      [
-        "2026-10-02",
-        "2026-09-24",
-        "^TNX",
-        "TREASURY_10Y",
-        "5.1620001792907715"
-      ],
-      [
-        "2026-10-02",
-        "2026-09-24",
-        "^TYX",
-        "TREASURY_30Y",
-        "5.460999965667725"
-      ],
-      [
-        "2026-10-02",
-        "2026-09-23",
-        "^TNX",
-        "TREASURY_10Y",
-        "5.113999843597412"
-      ],
-      [
-        "2026-10-02",
-        "2026-09-23",
-        "^TYX",
-        "TREASURY_30Y",
-        "5.401000022888184"
-      ],
-      [
-        "2026-10-02",
-        "2026-09-22",
-        "^TNX",
-        "TREASURY_10Y",
-        "4.9679999351501465"
-      ]
-    ]
-  },
-  "onu_pacto_global.csv": {
-    "headers": [
-      "data_captura",
-      "name",
-      "type",
-      "sector",
-      "country",
-      "joined_on",
-      "link"
-    ],
-    "rows": [
-      [
-        "2026-10-02",
-        "Eletropaulo Metropolitana Eletricidade de Sao Paulo S/A",
-        "Company",
-        "Conventional Electricity",
-        "Brazil",
-        "2005-06-28",
-        "https://unglobalcompact.org/what-is-gc/participants/3230-Eletropaulo-Metropolitana-Eletricidade-de-Sao-Paulo-S-A"
-      ],
-      [
-        "2026-10-02",
-        "Ordem Dos Advogados do Brasil 57a Subseccao de Guarulhos",
-        "Business Association",
-        "",
-        "Brazil",
-        "2004-11-05",
-        "https://unglobalcompact.org/what-is-gc/participants/7151-Ordem-Dos-Advogados-do-Brasil-57a-Subseccao-de-Guarulhos"
-      ],
-      [
-        "2026-10-02",
-        "COPEL- Companhia Paranaense de Energia",
-        "Company",
-        "Conventional Electricity",
-        "Brazil",
-        "2001-07-26",
-        "https://unglobalcompact.org/what-is-gc/participants/2549-COPEL-Companhia-Paranaense-de-Energia"
-      ],
-      [
-        "2026-10-02",
-        "Samarco Mineracao S.A.",
-        "Company",
-        "Iron and Steel",
-        "Brazil",
-        "2002-08-31",
-        "https://unglobalcompact.org/what-is-gc/participants/8168-Samarco-Mineracao-S-A-"
-      ],
-      [
-        "2026-10-02",
-        "Suzano S/A",
-        "Company",
-        "Paper",
-        "Brazil",
-        "2003-01-07",
-        "https://unglobalcompact.org/what-is-gc/participants/8921-Suzano-S-A"
-      ],
-      [
-        "2026-10-02",
-        "FIEP - Federação das Indústrias do Estado do Paraná",
-        "Business Association",
-        "",
-        "Brazil",
-        "2003-05-21",
-        "https://unglobalcompact.org/what-is-gc/participants/8364-FIEP-Federa-o-das-Ind-strias-do-Estado-do-Paran-"
-      ],
-      [
-        "2026-10-02",
-        "Instituto Ethos de Empresas e Responsibilidade Social",
-        "Business Association",
-        "",
-        "Brazil",
-        "2003-05-21",
-        "https://unglobalcompact.org/what-is-gc/participants/5314-Instituto-Ethos-de-Empresas-e-Responsibilidade-Social"
-      ],
-      [
-        "2026-10-02",
-        "Fundacao Dom Cabral",
-        "Civil Society Organization & Other",
-        "",
-        "Brazil",
-        "2003-05-21",
-        "https://unglobalcompact.org/what-is-gc/participants/3921-Fundacao-Dom-Cabral"
-      ],
-      [
-        "2026-10-02",
-        "FIESP- Federacao das Industrias do Estado de Sao Paulo",
-        "Business Association",
-        "",
-        "Brazil",
-        "2003-06-25",
-        "https://unglobalcompact.org/what-is-gc/participants/3733-FIESP-Federacao-das-Industrias-do-Estado-de-Sao-Paulo"
-      ],
-      [
-        "2026-10-02",
-        "GS1 Brasil - Associacao Brasileira de Automocao",
-        "Business Association",
-        "",
-        "Brazil",
-        "2003-06-25",
-        "https://unglobalcompact.org/what-is-gc/participants/3059-GS1-Brasil-Associacao-Brasileira-de-Automocao"
-      ],
-      [
-        "2026-10-02",
-        "Klabin S.A.",
-        "Company",
-        "Paper",
-        "Brazil",
-        "2003-06-27",
-        "https://unglobalcompact.org/what-is-gc/participants/5833-Klabin-S-A-"
-      ],
-      [
-        "2026-10-02",
-        "Grupo Pao de Acucar - Companhia Brasileira de Distribuicao",
-        "Company",
-        "Diversified Retailers",
-        "Brazil",
-        "2003-06-27",
-        "https://unglobalcompact.org/what-is-gc/participants/4651-Grupo-Pao-de-Acucar-Companhia-Brasileira-de-Distribuicao"
-      ],
-      [
-        "2026-10-02",
-        "Copa Energia",
-        "Company",
-        "Gas Distribution",
-        "Brazil",
-        "2003-06-27",
-        "https://unglobalcompact.org/what-is-gc/participants/2543-Copa-Energia"
-      ],
-      [
-        "2026-10-02",
-        "Colegio Lacordaire Sant-Anna SC Ltda",
-        "Civil Society Organization & Other",
-        "",
-        "Brazil",
-        "2003-06-27",
-        "https://unglobalcompact.org/what-is-gc/participants/2291-Colegio-Lacordaire-Sant-Anna-SC-Ltda"
-      ],
-      [
-        "2026-10-02",
-        "Itau Unibanco SA",
-        "Company",
-        "Banks",
-        "Brazil",
-        "2003-06-27",
-        "https://unglobalcompact.org/what-is-gc/participants/1132-Itau-Unibanco-SA"
-      ]
-    ]
-  },
-  "yahoo_etfs.csv.gz": {
-    "headers": [
-      "data_captura",
-      "data_referencia",
-      "codigo_ativo",
-      "label",
-      "preco_fechamento"
-    ],
-    "rows": [
-      [
-        "2026-10-02",
-        "2026-09-02",
-        "LTBX11.SA",
-        "LTBX11",
-        "26.479999542236328"
-      ],
-      [
-        "2026-10-02",
-        "2026-09-01",
-        "LTBX11.SA",
-        "LTBX11",
-        "26.459999084472656"
-      ],
-      [
-        "2026-10-02",
-        "2026-08-31",
-        "LTBX11.SA",
-        "LTBX11",
-        "26.440000534057617"
-      ],
-      [
-        "2026-10-02",
-        "2026-08-28",
-        "LTBX11.SA",
-        "LTBX11",
-        "26.43000030517578"
-      ],
-      [
-        "2026-10-02",
-        "2026-08-27",
-        "LTBX11.SA",
-        "LTBX11",
-        "26.440000534057617"
-      ],
-      [
-        "2026-10-02",
-        "2026-08-26",
-        "LTBX11.SA",
-        "LTBX11",
-        "26.420000076293945"
-      ],
-      [
-        "2026-10-02",
-        "2026-08-25",
-        "LTBX11.SA",
-        "LTBX11",
-        "26.40999984741211"
-      ],
-      [
-        "2026-10-02",
-        "2026-08-24",
-        "LTBX11.SA",
-        "LTBX11",
-        "26.3799991607666"
-      ],
-      [
-        "2026-10-02",
-        "2026-08-21",
-        "LTBX11.SA",
-        "LTBX11",
-        "26.360000610351562"
-      ],
-      [
-        "2026-10-02",
-        "2026-08-20",
-        "LTBX11.SA",
-        "LTBX11",
-        "26.34000015258789"
-      ],
-      [
-        "2026-10-02",
-        "2026-08-19",
-        "LTBX11.SA",
-        "LTBX11",
-        "26.329999923706055"
-      ],
-      [
-        "2026-10-02",
-        "2026-08-18",
-        "LTBX11.SA",
-        "LTBX11",
-        "26.299999237060547"
-      ],
-      [
-        "2026-10-02",
-        "2026-08-17",
-        "LTBX11.SA",
-        "LTBX11",
-        "26.309999465942383"
-      ],
-      [
-        "2026-10-02",
-        "2026-08-14",
-        "LTBX11.SA",
-        "LTBX11",
-        "26.270000457763672"
-      ],
-      [
-        "2026-10-02",
-        "2026-08-13",
-        "LTBX11.SA",
-        "LTBX11",
-        "26.239999771118164"
-      ]
-    ]
-  },
-  "yahoo_acoes_internacionais.csv": {
-    "headers": [
-      "data_captura",
-      "data_referencia",
-      "codigo_ativo",
-      "label",
-      "preco_fechamento"
-    ],
-    "rows": [
-      [
-        "2026-10-02",
-        "2026-10-01",
-        "WKL.AS",
-        "WKL.AS",
-        "68.63999938964844"
-      ],
-      [
-        "2026-10-02",
-        "2026-10-01",
-        "VOW.DE",
-        "VOW.DE",
-        "68.25"
-      ],
-      [
-        "2026-10-02",
-        "2026-09-30",
-        "VOW.DE",
-        "VOW.DE",
-        "70.5999984741211"
-      ],
-      [
-        "2026-10-02",
-        "2026-09-30",
-        "WKL.AS",
-        "WKL.AS",
-        "67.72000122070312"
-      ],
-      [
-        "2026-10-02",
-        "2026-09-29",
-        "VOW.DE",
-        "VOW.DE",
-        "71.25"
-      ],
-      [
-        "2026-10-02",
-        "2026-09-29",
-        "WKL.AS",
-        "WKL.AS",
-        "68.0"
-      ],
-      [
-        "2026-10-02",
-        "2026-09-28",
-        "VOW.DE",
-        "VOW.DE",
-        "71.0999984741211"
-      ],
-      [
-        "2026-10-02",
-        "2026-09-28",
-        "WKL.AS",
-        "WKL.AS",
-        "67.4800033569336"
-      ],
-      [
-        "2026-10-02",
-        "2026-09-25",
-        "VOW.DE",
-        "VOW.DE",
-        "71.75"
-      ],
-      [
-        "2026-10-02",
-        "2026-09-25",
-        "WKL.AS",
-        "WKL.AS",
-        "68.66000366210938"
-      ],
-      [
-        "2026-10-02",
-        "2026-09-24",
-        "VOW.DE",
-        "VOW.DE",
-        "70.80000305175781"
-      ],
-      [
-        "2026-10-02",
-        "2026-09-24",
-        "WKL.AS",
-        "WKL.AS",
-        "68.81999969482422"
-      ],
-      [
-        "2026-10-02",
-        "2026-09-23",
-        "VOW.DE",
-        "VOW.DE",
-        "73.1500015258789"
-      ],
-      [
-        "2026-10-02",
-        "2026-09-23",
-        "WKL.AS",
-        "WKL.AS",
-        "67.5"
-      ],
-      [
-        "2026-10-02",
-        "2026-09-22",
-        "WKL.AS",
-        "WKL.AS",
-        "66.81999969482422"
       ]
     ]
   },
@@ -2141,8 +3069,8 @@ window.PULSEFLAT_PREVIEWS = {
       [
         "2026-10-02",
         "2026-10-01",
-        "WEGEV434",
-        "BRWEGE3V0MS6",
+        "BRAVV198W5",
+        "BRBRAV3V0IW9",
         "EQUITY PUT",
         "EQUITY-DERIVATE",
         "",
@@ -2158,25 +3086,8 @@ window.PULSEFLAT_PREVIEWS = {
       [
         "2026-10-02",
         "2026-10-01",
-        "BBDCK224",
-        "BRBBDC4K1HK4",
-        "EQUITY CALL",
-        "EQUITY-DERIVATE",
-        "0.26",
-        "0.23",
-        "0.26",
-        "0.23",
-        "0.24",
-        "-4",
-        "4",
-        "13100",
-        "3116"
-      ],
-      [
-        "2026-10-02",
-        "2026-10-01",
-        "WEGEV458W4",
-        "BRWEGE3V0TN2",
+        "MGLUV369",
+        "BRMGLU3V0T98",
         "EQUITY PUT",
         "EQUITY-DERIVATE",
         "",
@@ -2192,8 +3103,8 @@ window.PULSEFLAT_PREVIEWS = {
       [
         "2026-10-02",
         "2026-10-01",
-        "PETRP19",
-        "BRPETR4P1SB3",
+        "BRAVV233W5",
+        "BRBRAV3V0IV1",
         "EQUITY PUT",
         "EQUITY-DERIVATE",
         "",
@@ -2209,9 +3120,9 @@ window.PULSEFLAT_PREVIEWS = {
       [
         "2026-10-02",
         "2026-10-01",
-        "WEGED481",
-        "BRWEGE3D0NI7",
-        "EQUITY CALL",
+        "QUALW788",
+        "BRQUAL3W0IZ4",
+        "EQUITY PUT",
         "EQUITY-DERIVATE",
         "",
         "",
@@ -2226,8 +3137,8 @@ window.PULSEFLAT_PREVIEWS = {
       [
         "2026-10-02",
         "2026-10-01",
-        "BBDCK254",
-        "BRBBDC4K1H19",
+        "LWSAL850",
+        "BRLWSA3L05S9",
         "EQUITY CALL",
         "EQUITY-DERIVATE",
         "",
@@ -2243,8 +3154,25 @@ window.PULSEFLAT_PREVIEWS = {
       [
         "2026-10-02",
         "2026-10-01",
-        "WEGEV456W4",
-        "BRWEGE3V0U01",
+        "BBDCV5",
+        "BRBBDC3V0FQ5",
+        "EQUITY PUT",
+        "EQUITY-DERIVATE",
+        "0.68",
+        "0.68",
+        "0.68",
+        "0.68",
+        "0.68",
+        "-11.68",
+        "1",
+        "500",
+        "340"
+      ],
+      [
+        "2026-10-02",
+        "2026-10-01",
+        "BRAVV228W5",
+        "BRBRAV3V0IP3",
         "EQUITY PUT",
         "EQUITY-DERIVATE",
         "",
@@ -2260,8 +3188,42 @@ window.PULSEFLAT_PREVIEWS = {
       [
         "2026-10-02",
         "2026-10-01",
-        "VALEJ279",
-        "BRVALE3J1401",
+        "ITUBN249",
+        "BRITUB4N1978",
+        "EQUITY PUT",
+        "EQUITY-DERIVATE",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "2026-10-02",
+        "2026-10-01",
+        "EGIEX345",
+        "BREGIE3X0B16",
+        "EQUITY PUT",
+        "EQUITY-DERIVATE",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "2026-10-02",
+        "2026-10-01",
+        "DIRRJ132",
+        "BRDIRR3J0320",
         "EQUITY CALL",
         "EQUITY-DERIVATE",
         "",
@@ -2277,8 +3239,25 @@ window.PULSEFLAT_PREVIEWS = {
       [
         "2026-10-02",
         "2026-10-01",
-        "WEGED470",
-        "BRWEGE3D0NV0",
+        "BRAVV223W5",
+        "BRBRAV3V0IR9",
+        "EQUITY PUT",
+        "EQUITY-DERIVATE",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "2026-10-02",
+        "2026-10-01",
+        "QUALK908",
+        "BRQUAL3K0J04",
         "EQUITY CALL",
         "EQUITY-DERIVATE",
         "",
@@ -2294,8 +3273,8 @@ window.PULSEFLAT_PREVIEWS = {
       [
         "2026-10-02",
         "2026-10-01",
-        "PETRX701",
-        "BRPETR4X1OU2",
+        "EGIEW414",
+        "BREGIE3W08E7",
         "EQUITY PUT",
         "EQUITY-DERIVATE",
         "",
@@ -2311,76 +3290,25 @@ window.PULSEFLAT_PREVIEWS = {
       [
         "2026-10-02",
         "2026-10-01",
-        "WEGEV448W5",
-        "BRWEGE3V0UT7",
-        "EQUITY PUT",
-        "EQUITY-DERIVATE",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        ""
-      ],
-      [
-        "2026-10-02",
-        "2026-10-01",
-        "PETRP18",
-        "BRPETR4P1RF6",
-        "EQUITY PUT",
-        "EQUITY-DERIVATE",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        ""
-      ],
-      [
-        "2026-10-02",
-        "2026-10-01",
-        "WEGED468",
-        "BRWEGE3D0NU2",
+        "BBDCK155",
+        "BRBBDC3K0CC5",
         "EQUITY CALL",
         "EQUITY-DERIVATE",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        ""
+        "1.5",
+        "1.33",
+        "1.57",
+        "1.47",
+        "1.52",
+        "-2.56",
+        "11",
+        "48600",
+        "71442"
       ],
       [
         "2026-10-02",
         "2026-10-01",
-        "BBDCK247W1",
-        "BRBBDC4K1K30",
-        "EQUITY CALL",
-        "EQUITY-DERIVATE",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        ""
-      ],
-      [
-        "2026-10-02",
-        "2026-10-01",
-        "WEGEV446W5",
-        "BRWEGE3V0UO8",
+        "BRAVV218W5",
+        "BRBRAV3V0IK4",
         "EQUITY PUT",
         "EQUITY-DERIVATE",
         "",
@@ -2392,122 +3320,6 @@ window.PULSEFLAT_PREVIEWS = {
         "",
         "",
         ""
-      ]
-    ]
-  },
-  "ipea_mercados_diarios.csv": {
-    "headers": [
-      "data_captura",
-      "data_referencia",
-      "codigo_ativo",
-      "label",
-      "valor"
-    ],
-    "rows": [
-      [
-        "2025-11-11",
-        "2025-11-11",
-        "SGS366_NASDAQ366",
-        "Índice NASDAQ",
-        "23468.30078125"
-      ],
-      [
-        "2025-11-11",
-        "2025-11-11",
-        "GM366_DOW366",
-        "Índice Dow Jones",
-        "47927.9609375"
-      ],
-      [
-        "2025-11-11",
-        "2025-11-11",
-        "EIA366_PBRENT366",
-        "Petróleo Brent",
-        "63.86"
-      ],
-      [
-        "2025-03-28",
-        "2025-03-28",
-        "SGS366_NASDAQ366",
-        "Índice NASDAQ",
-        "17322.990234375"
-      ],
-      [
-        "2025-03-28",
-        "2025-03-28",
-        "GM366_DOW366",
-        "Índice Dow Jones",
-        "41583.8984375"
-      ],
-      [
-        "2025-03-28",
-        "2025-03-28",
-        "EIA366_PBRENT366",
-        "Petróleo Brent",
-        "74.69"
-      ],
-      [
-        "2025-03-27",
-        "2025-03-27",
-        "SGS366_NASDAQ366",
-        "Índice NASDAQ",
-        "17804.029296875"
-      ],
-      [
-        "2025-03-27",
-        "2025-03-27",
-        "GM366_DOW366",
-        "Índice Dow Jones",
-        "42299.69921875"
-      ],
-      [
-        "2025-03-27",
-        "2025-03-27",
-        "EIA366_PBRENT366",
-        "Petróleo Brent",
-        "74.72"
-      ],
-      [
-        "2025-03-26",
-        "2025-03-26",
-        "SGS366_NASDAQ366",
-        "Índice NASDAQ",
-        "17899.01953125"
-      ],
-      [
-        "2025-03-26",
-        "2025-03-26",
-        "GM366_DOW366",
-        "Índice Dow Jones",
-        "42454.7890625"
-      ],
-      [
-        "2025-03-26",
-        "2025-03-26",
-        "EIA366_PBRENT366",
-        "Petróleo Brent",
-        "74.6"
-      ],
-      [
-        "2025-03-25",
-        "2025-03-25",
-        "GM366_DOW366",
-        "Índice Dow Jones",
-        "42587.5"
-      ],
-      [
-        "2025-03-25",
-        "2025-03-25",
-        "SGS366_NASDAQ366",
-        "Índice NASDAQ",
-        "18271.859375"
-      ],
-      [
-        "2025-03-25",
-        "2025-03-25",
-        "EIA366_PBRENT366",
-        "Petróleo Brent",
-        "73.78"
       ]
     ]
   }

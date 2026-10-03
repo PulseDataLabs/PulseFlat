@@ -121,7 +121,7 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "anbima_indice_imab.csv.gz": {
     "min": "2001-12-04",
-    "max": "2026-10-01"
+    "max": "2026-10-02"
   },
   "b3_fundos_listados.csv": {
     "min": "2026-10-02",
@@ -217,7 +217,7 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "fred_us_treasuries_yield_curve.csv.gz": {
     "min": "2020-01-02",
-    "max": "2026-10-01"
+    "max": "2026-10-02"
   },
   "ibge_sidra.csv": {
     "min": "2026-10-02",
@@ -273,7 +273,7 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "yahoo_cambio_moedas.csv": {
     "min": "2026-05-01",
-    "max": "2026-10-02"
+    "max": "2026-10-03"
   },
   "yahoo_commodities.csv": {
     "min": "2026-05-28",
