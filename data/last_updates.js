@@ -5,7 +5,7 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "anbima_indicadores.csv": {
     "min": "2026-04-01",
-    "max": "2026-10-06"
+    "max": "2026-10-07"
   },
   "anbima_ima_completo.csv": {
     "min": "2026-05-29",
@@ -141,7 +141,7 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "b3_indicadores_financeiros.csv": {
     "min": "2026-06-11",
-    "max": "2026-10-06"
+    "max": "2026-10-07"
   },
   "anbima_reune_negociacoes.csv.gz": {
     "min": "2026-09-11",
@@ -241,7 +241,7 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "fred_global_liquidity_credit_spreads.csv.gz": {
     "min": "2020-01-01",
-    "max": "2026-10-05"
+    "max": "2026-10-06"
   },
   "fred_us_macro_indicators.csv.gz": {
     "min": "2020-01-01",
@@ -333,7 +333,7 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "debentures_mercado_secundario_precos_negociacao.csv.gz": {
     "min": "2020-01-02",
-    "max": "2026-10-05"
+    "max": "2026-10-06"
   },
   "yahoo_acoes_internacionais.csv": {
     "min": "2026-05-29",
@@ -357,7 +357,7 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "anbima_curvas_credito.csv.gz": {
     "min": "2020-01-02",
-    "max": "2026-10-05"
+    "max": "2026-10-06"
   },
   "anbima_letras_financeiras.csv.gz": {
     "min": "2023-10-09",
