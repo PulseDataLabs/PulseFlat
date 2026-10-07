@@ -201,7 +201,7 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "bcb_ptax.csv": {
     "min": "2020-01-02",
-    "max": "2026-10-06"
+    "max": "2026-10-07"
   },
   "cvm_cadastro_companhias_abertas.csv": {
     "min": "2026-10-07",
@@ -237,7 +237,7 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "fred_brazil_macro_fx_and_cycles.csv.gz": {
     "min": "2020-01-01",
-    "max": "2026-10-05"
+    "max": "2026-10-06"
   },
   "fred_global_liquidity_credit_spreads.csv.gz": {
     "min": "2020-01-01",
