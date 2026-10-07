@@ -129,7 +129,7 @@
   },
   "anbima_indice_imab.csv.gz": {
     "min": "2001-12-04",
-    "max": "2026-10-05"
+    "max": "2026-10-06"
   },
   "b3_cotahist_diario.csv.gz": {
     "min": "2026-07-31",
@@ -249,7 +249,7 @@
   },
   "fred_us_treasuries_yield_curve.csv.gz": {
     "min": "2020-01-02",
-    "max": "2026-10-05"
+    "max": "2026-10-06"
   },
   "ipea_calendario.csv": {
     "min": "1970-01-01",
@@ -346,5 +346,25 @@
   "b3_bdi_trades_acoes.csv.gz": {
     "min": "2026-06-02",
     "max": "2026-10-05"
+  },
+  "anbima_curvas_juros_ettj.csv.gz": {
+    "min": "2020-01-02",
+    "max": "2026-10-05"
+  },
+  "anbima_fidc_mercado_secundario.csv.gz": {
+    "min": "2021-10-18",
+    "max": "2026-10-05"
+  },
+  "anbima_curvas_credito.csv.gz": {
+    "min": "2020-01-02",
+    "max": "2026-10-05"
+  },
+  "anbima_letras_financeiras.csv.gz": {
+    "min": "2023-10-09",
+    "max": "2026-10-05"
+  },
+  "ibge_sidra.csv": {
+    "min": "2026-10-06",
+    "max": "2026-10-06"
   }
 }

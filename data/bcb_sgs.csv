@@ -6178,10 +6178,11 @@ data_captura,codigo_serie,nome_serie,data_referencia,valor
 2026-10-06,11,Taxa SELIC diária (% a.d.),2026-10-01,0.050788
 2026-10-06,11,Taxa SELIC diária (% a.d.),2026-10-02,0.050788
 2026-10-06,11,Taxa SELIC diária (% a.d.),2026-10-05,0.050788
+2026-10-06,11,Taxa SELIC diária (% a.d.),2026-10-06,0.050788
 2026-10-06,4390,SELIC acumulada no mês (% a.m.),2026-07-01,1.22
 2026-10-06,4390,SELIC acumulada no mês (% a.m.),2026-08-01,1.09
 2026-10-06,4390,SELIC acumulada no mês (% a.m.),2026-09-01,1.08
-2026-10-06,4390,SELIC acumulada no mês (% a.m.),2026-10-01,0.15
+2026-10-06,4390,SELIC acumulada no mês (% a.m.),2026-10-01,0.20
 2026-10-06,432,CDI diário (% a.d.),2026-07-08,14.25
 2026-10-06,432,CDI diário (% a.d.),2026-07-09,14.25
 2026-10-06,432,CDI diário (% a.d.),2026-07-10,14.25
