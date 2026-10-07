@@ -366,5 +366,9 @@
   "b3_carteira_teorica_ibov.csv": {
     "min": "2026-06-03",
     "max": "2026-10-07"
+  },
+  "anbima_fidc_mercado_secundario.csv.gz": {
+    "min": "2021-10-18",
+    "max": "2026-10-06"
   }
 }
