@@ -346,5 +346,25 @@
   "b3_bdi_trades_acoes.csv.gz": {
     "min": "2026-06-02",
     "max": "2026-10-06"
+  },
+  "anbima_550.csv": {
+    "min": "2026-06-01",
+    "max": "2026-10-07"
+  },
+  "anbima_curvas_juros_ettj.csv.gz": {
+    "min": "2020-01-02",
+    "max": "2026-10-06"
+  },
+  "anbima_curvas_juros_parametros_svensson.csv.gz": {
+    "min": "2020-01-02",
+    "max": "2026-10-06"
+  },
+  "anbima_indices_ima_resultados.csv.gz": {
+    "min": "2020-01-02",
+    "max": "2026-10-06"
+  },
+  "b3_carteira_teorica_ibov.csv": {
+    "min": "2026-06-03",
+    "max": "2026-10-07"
   }
 }
