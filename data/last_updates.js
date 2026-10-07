@@ -17,7 +17,7 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "anbima_indice_ida.csv.gz": {
     "min": "2020-01-02",
-    "max": "2026-10-05"
+    "max": "2026-10-06"
   },
   "anbima_indices_carteira_teorica_ima.csv.gz": {
     "min": "2026-09-30",
@@ -189,11 +189,11 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "b3_termo_posicoes_resumo.csv": {
     "min": "2026-09-04",
-    "max": "2026-10-05"
+    "max": "2026-10-06"
   },
   "b3_termo_posicoes_aberto.csv": {
     "min": "2026-09-04",
-    "max": "2026-10-05"
+    "max": "2026-10-06"
   },
   "bacen_balancetes_bancos.csv.gz": {
     "min": "2026-06-01",
@@ -277,7 +277,7 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "bacen_parcelas_capital_basileia.csv.gz": {
     "min": "2026-06-05",
-    "max": "2026-10-06"
+    "max": "2026-10-07"
   },
   "ipea_taxas_juros.csv": {
     "min": "1966-12-01",
@@ -293,7 +293,7 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "ipea_mercados_diarios.csv": {
     "min": "1900-01-02",
-    "max": "2026-10-05"
+    "max": "2026-10-06"
   },
   "yahoo_cambio_moedas.csv": {
     "min": "2026-05-01",
