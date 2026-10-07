@@ -65,7 +65,7 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "b3_bdi_di_over.csv": {
     "min": "2026-05-29",
-    "max": "2026-10-05"
+    "max": "2026-10-06"
   },
   "anbima_titulos_publicos_mercado_secundario.csv.gz": {
     "min": "2020-01-02",
@@ -121,7 +121,7 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "b3_carteiras_teoricas.csv.gz": {
     "min": "2026-06-01",
-    "max": "2026-10-06"
+    "max": "2026-10-07"
   },
   "b3_etfs.csv": {
     "min": "2026-10-07",
@@ -221,7 +221,7 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "cvm_fundos_informe_diario.csv.gz": {
     "min": "2026-10-01",
-    "max": "2026-10-05"
+    "max": "2026-10-06"
   },
   "debentures_emissoes_caracteristicas.csv.gz": {
     "min": "2026-10-07",
