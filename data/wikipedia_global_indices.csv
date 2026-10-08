@@ -785,10 +785,11 @@ data_captura,codigo_ativo,nome_ativo,indice_origem
 2026-10-08,ACA.PA,Crédit Agricole,CAC 40
 2026-10-08,BN.PA,Danone,CAC 40
 2026-10-08,DSY.PA,Dassault Systèmes,CAC 40
-2026-10-08,EDEN.PA,Edenred,CAC 40
+2026-10-08,FGR.PA,Eiffage,CAC 40
 2026-10-08,ENGI.PA,Engie,CAC 40
 2026-10-08,EL.PA,EssilorLuxottica,CAC 40
 2026-10-08,ERF.PA,Eurofins Scientific,CAC 40
+2026-10-08,ENX.PA,Euronext,CAC 40
 2026-10-08,RMS.PA,Hermès,CAC 40
 2026-10-08,KER.PA,Kering,CAC 40
 2026-10-08,OR.PA,L'Oréal,CAC 40
@@ -806,7 +807,6 @@ data_captura,codigo_ativo,nome_ativo,indice_origem
 2026-10-08,GLE.PA,Société Générale,CAC 40
 2026-10-08,STLAP.PA,Stellantis,CAC 40
 2026-10-08,STMPA.PA,STMicroelectronics,CAC 40
-2026-10-08,TEP.PA,Teleperformance,CAC 40
 2026-10-08,HO.PA,Thales,CAC 40
 2026-10-08,TTE.PA,TotalEnergies,CAC 40
 2026-10-08,URW.PA,Unibail-Rodamco-Westfield,CAC 40
