@@ -6121,6 +6121,9 @@ data_captura,codigo_serie,nome_serie,data_referencia,valor
 2026-10-07,11,Taxa SELIC diária (% a.d.),2026-07-09,0.052531
 2026-10-07,432,CDI diário (% a.d.),2026-07-09,14.25
 2026-10-07,1,Dólar americano - venda (R$/US$),2026-07-09,5.1329
+2026-10-08,3695,IPCA - variação mensal (% a.m.),2026-07-01,5.0767
+2026-10-08,3695,IPCA - variação mensal (% a.m.),2026-08-01,5.1810
+2026-10-08,3695,IPCA - variação mensal (% a.m.),2026-09-01,5.1803
 2026-10-08,11,Taxa SELIC diária (% a.d.),2026-07-10,0.052531
 2026-10-08,11,Taxa SELIC diária (% a.d.),2026-07-13,0.052531
 2026-10-08,11,Taxa SELIC diária (% a.d.),2026-07-14,0.052531
@@ -6283,9 +6286,6 @@ data_captura,codigo_serie,nome_serie,data_referencia,valor
 2026-10-08,4391,CDI acumulado no mês (% a.m.),2026-08-01,1.09
 2026-10-08,4391,CDI acumulado no mês (% a.m.),2026-09-01,1.08
 2026-10-08,4391,CDI acumulado no mês (% a.m.),2026-10-01,0.20
-2026-10-08,3695,IPCA - variação mensal (% a.m.),2026-07-01,5.0767
-2026-10-08,3695,IPCA - variação mensal (% a.m.),2026-08-01,5.1810
-2026-10-08,3695,IPCA - variação mensal (% a.m.),2026-09-01,5.1803
 2026-10-08,433,IPCA - acumulado 12 meses (% a.a.),2026-07-01,0.07
 2026-10-08,433,IPCA - acumulado 12 meses (% a.a.),2026-08-01,-0.32
 2026-10-08,189,IGP-M - variação mensal (% a.m.),2026-07-01,-1.16
