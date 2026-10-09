@@ -4,12 +4,12 @@ window.PULSEFLAT_LAST_UPDATES = {
     "max": "2026-10-09"
   },
   "b3_opcoes_posicoes_aberto.csv.gz": {
-    "min": "2026-10-07",
-    "max": "2026-10-07"
+    "min": "2026-10-08",
+    "max": "2026-10-08"
   },
   "b3_opcoes_posicoes_resumo.csv.gz": {
     "min": "2026-09-30",
-    "max": "2026-10-07"
+    "max": "2026-10-08"
   },
   "b3_indicadores_economicos_fwf.csv": {
     "min": "2026-06-16",
@@ -37,11 +37,11 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "b3_termo_posicoes_resumo.csv": {
     "min": "2026-09-04",
-    "max": "2026-10-07"
+    "max": "2026-10-08"
   },
   "b3_termo_posicoes_aberto.csv": {
     "min": "2026-09-04",
-    "max": "2026-10-07"
+    "max": "2026-10-08"
   },
   "bacen_balancetes_bancos.csv.gz": {
     "min": "2026-06-01",
@@ -69,7 +69,7 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "cvm_fundos_informe_diario.csv.gz": {
     "min": "2026-10-01",
-    "max": "2026-10-07"
+    "max": "2026-10-08"
   },
   "debentures_emissoes_caracteristicas_api.csv": {
     "min": "2026-10-08",
@@ -329,6 +329,14 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "b3_carteiras_teoricas.csv.gz": {
     "min": "2026-06-01",
+    "max": "2026-10-09"
+  },
+  "anbima_550.csv": {
+    "min": "2026-06-01",
+    "max": "2026-10-09"
+  },
+  "b3_carteira_teorica_ibov.csv": {
+    "min": "2026-06-03",
     "max": "2026-10-09"
   }
 };
