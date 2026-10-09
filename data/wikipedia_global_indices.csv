@@ -356,7 +356,6 @@ data_captura,codigo_ativo,nome_ativo,indice_origem
 2026-10-08,PKG,Packaging Corporation of America,S&P 500
 2026-10-08,PLTR,Palantir Technologies,S&P 500
 2026-10-08,PANW,Palo Alto Networks,S&P 500
-2026-10-08,SKYD,Paramount Skydance Corporation,S&P 500
 2026-10-08,PH,Parker Hannifin,S&P 500
 2026-10-08,PAYX,Paychex,S&P 500
 2026-10-08,PYPL,PayPal,S&P 500
@@ -410,6 +409,7 @@ data_captura,codigo_ativo,nome_ativo,indice_origem
 2026-10-08,NOW,ServiceNow,S&P 500
 2026-10-08,SHW,Sherwin-Williams,S&P 500
 2026-10-08,SPG,Simon Property Group,S&P 500
+2026-10-08,SKYD,Skydance Corporation,S&P 500
 2026-10-08,SWKS,Skyworks Solutions,S&P 500
 2026-10-08,SJM,J.M. Smucker Company (The),S&P 500
 2026-10-08,SW,Smurfit Westrock,S&P 500
