@@ -8,7 +8,7 @@
   {
     "label": "SELIC",
     "value": "13,65%",
-    "reference_date": "2026-10-08",
+    "reference_date": "2026-10-09",
     "type": "neutral"
   },
   {
@@ -25,17 +25,17 @@
   },
   {
     "label": "PTAX USD Venda",
-    "value": "5,0119",
-    "reference_date": "2026-10-08",
-    "type": "up",
-    "change": "+0,37%"
+    "value": "4,9892",
+    "reference_date": "2026-10-09",
+    "type": "down",
+    "change": "-0,45%"
   },
   {
     "label": "PTAX USD Compra",
-    "value": "5,0113",
-    "reference_date": "2026-10-08",
-    "type": "up",
-    "change": "+0,37%"
+    "value": "4,9886",
+    "reference_date": "2026-10-09",
+    "type": "down",
+    "change": "-0,45%"
   },
   {
     "label": "IBOVESPA",
