@@ -61,15 +61,15 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "b3_opcoes_posicoes_resumo.csv.gz": {
     "min": "2026-09-30",
-    "max": "2026-10-08"
+    "max": "2026-10-09"
   },
   "b3_fundos_listados.csv": {
     "min": "2026-10-10",
     "max": "2026-10-10"
   },
   "b3_opcoes_posicoes_aberto.csv.gz": {
-    "min": "2026-10-08",
-    "max": "2026-10-08"
+    "min": "2026-10-09",
+    "max": "2026-10-09"
   },
   "b3_valor_mercado_totais.csv": {
     "min": "2026-08-31",
@@ -117,11 +117,11 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "b3_termo_posicoes_resumo.csv": {
     "min": "2026-09-04",
-    "max": "2026-10-08"
+    "max": "2026-10-09"
   },
   "b3_termo_posicoes_aberto.csv": {
     "min": "2026-09-04",
-    "max": "2026-10-08"
+    "max": "2026-10-09"
   },
   "debentures_emissoes_caracteristicas.csv.gz": {
     "min": "2026-10-10",
@@ -141,7 +141,7 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "cvm_fundos_informe_diario.csv.gz": {
     "min": "2026-10-01",
-    "max": "2026-10-08"
+    "max": "2026-10-09"
   },
   "fred_global_liquidity_credit_spreads.csv.gz": {
     "min": "2020-01-01",
@@ -250,5 +250,125 @@ window.PULSEFLAT_LAST_UPDATES = {
   "b3_bdi_trades_acoes.csv.gz": {
     "min": "2026-06-02",
     "max": "2026-10-09"
+  },
+  "anbima_550.csv": {
+    "min": "2026-06-01",
+    "max": "2026-10-10"
+  },
+  "anbima_fidc_mercado_secundario.csv.gz": {
+    "min": "2021-10-18",
+    "max": "2026-10-09"
+  },
+  "anbima_curvas_credito.csv.gz": {
+    "min": "2020-01-02",
+    "max": "2026-10-08"
+  },
+  "anbima_curvas_juros_parametros_svensson.csv.gz": {
+    "min": "2020-01-02",
+    "max": "2026-10-09"
+  },
+  "anbima_curvas_juros_ettj.csv.gz": {
+    "min": "2020-01-02",
+    "max": "2026-10-09"
+  },
+  "anbima_ima_completo.csv": {
+    "min": "2026-05-29",
+    "max": "2026-10-09"
+  },
+  "anbima_debentures.csv.gz": {
+    "min": "2026-06-03",
+    "max": "2026-10-09"
+  },
+  "anbima_indicadores.csv": {
+    "min": "2026-04-01",
+    "max": "2026-10-09"
+  },
+  "anbima_cri_cra_mercado_secundario.csv.gz": {
+    "min": "2020-01-02",
+    "max": "2026-10-09"
+  },
+  "anbima_indice_ida.csv.gz": {
+    "min": "2020-01-02",
+    "max": "2026-10-08"
+  },
+  "anbima_indices_idka_resultados.csv.gz": {
+    "min": "2020-01-02",
+    "max": "2026-10-09"
+  },
+  "anbima_indices_carteira_teorica_ima.csv.gz": {
+    "min": "2026-09-30",
+    "max": "2026-10-09"
+  },
+  "anbima_indices_ima_resultados.csv.gz": {
+    "min": "2020-01-02",
+    "max": "2026-10-09"
+  },
+  "anbima_indices_carteira_teorica_ida.csv.gz": {
+    "min": "2026-10-01",
+    "max": "2026-10-09"
+  },
+  "anbima_projecoes.csv": {
+    "min": "2026-05-01",
+    "max": "2026-10-01"
+  },
+  "anbima_matriz_probabilidade_resgate.csv": {
+    "min": "2026-04-30",
+    "max": "2026-08-31"
+  },
+  "anbima_projecoes_inflacao.csv.gz": {
+    "min": "2026-10-09",
+    "max": "2026-10-10"
+  },
+  "anbima_titulos_publicos.csv": {
+    "min": "2026-02-23",
+    "max": "2026-10-09"
+  },
+  "anbima_titulos_publicos_estimativa_selic.csv.gz": {
+    "min": "2020-01-02",
+    "max": "2026-10-09"
+  },
+  "anbima_titulos_publicos_vna.csv.gz": {
+    "min": "2020-01-02",
+    "max": "2026-10-09"
+  },
+  "b3_bdi_derivativos_resumo.csv": {
+    "min": "2026-08-13",
+    "max": "2026-10-09"
+  },
+  "anbima_titulos_publicos_mercado_secundario.csv.gz": {
+    "min": "2020-01-02",
+    "max": "2026-10-09"
+  },
+  "anbima_letras_financeiras.csv.gz": {
+    "min": "2023-10-09",
+    "max": "2026-10-09"
+  },
+  "b3_carteira_teorica_agfs_iagro.csv": {
+    "min": "2026-06-03",
+    "max": "2026-10-10"
+  },
+  "b3_bdi_di_over.csv": {
+    "min": "2026-05-29",
+    "max": "2026-10-09"
+  },
+  "anbima_ranking_global.csv": {
+    "min": "2026-04-01",
+    "max": "2026-08-01"
+  },
+  "b3_bmf_taxas_juros.csv": {
+    "min": "2026-06-03",
+    "max": "2026-10-09"
+  },
+  "b3_carteira_teorica_ibov.csv": {
+    "min": "2026-06-03",
+    "max": "2026-10-10"
+  },
+  "b3_carteira_teorica_bdrx.csv": {
+    "min": "2026-06-03",
+    "max": "2026-10-10"
+  },
+  "bacen_parcelas_capital_basileia.csv.gz": {
+    "min": "2026-06-05",
+    "max": "2026-10-10"
   }
 };
