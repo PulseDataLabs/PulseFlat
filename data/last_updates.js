@@ -370,5 +370,9 @@ window.PULSEFLAT_LAST_UPDATES = {
   "fred_brazil_macro_fx_and_cycles.csv.gz": {
     "min": "2020-01-01",
     "max": "2026-10-08"
+  },
+  "anbima_debentures.csv.gz": {
+    "min": "2026-06-03",
+    "max": "2026-10-09"
   }
 };
