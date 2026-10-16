@@ -942,14 +942,6 @@ window.PULSEFLAT_PIVOTED = [
   },
   {
     "data_referencia": "2026-10-15",
-    "indicador": "IGP-M",
-    "fonte": "BCB",
-    "dataset_label": "BCB SGS",
-    "categoria": "Séries SGS",
-    "Valor": "5,05%"
-  },
-  {
-    "data_referencia": "2026-10-15",
     "indicador": "IGTI11.SA",
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
@@ -1293,22 +1285,6 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "Valor": "68,35"
-  },
-  {
-    "data_referencia": "2026-10-15",
-    "indicador": "PTAX USD — Compra",
-    "fonte": "BCB",
-    "dataset_label": "BCB PTAX",
-    "categoria": "Taxas de Câmbio",
-    "Valor": "5,0515"
-  },
-  {
-    "data_referencia": "2026-10-15",
-    "indicador": "PTAX USD — Venda",
-    "fonte": "BCB",
-    "dataset_label": "BCB PTAX",
-    "categoria": "Taxas de Câmbio",
-    "Valor": "5,0521"
   },
   {
     "data_referencia": "2026-10-15",
@@ -1844,7 +1820,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "0,2249"
+    "Valor": "0,2254"
   },
   {
     "data_referencia": "2026-10-16",
@@ -1868,7 +1844,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "10,18"
+    "Valor": "10,11"
   },
   {
     "data_referencia": "2026-10-16",
@@ -1876,7 +1852,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "724,79"
+    "Valor": "724,50"
   },
   {
     "data_referencia": "2026-10-16",
@@ -1892,7 +1868,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "81.560"
+    "Valor": "81.509"
   },
   {
     "data_referencia": "2026-10-16",
@@ -1932,7 +1908,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "0,7604"
+    "Valor": "0,7593"
   },
   {
     "data_referencia": "2026-10-16",
@@ -1964,7 +1940,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "2.440"
+    "Valor": "2.439"
   },
   {
     "data_referencia": "2026-10-16",
@@ -2028,7 +2004,15 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "3,05"
+    "Valor": "3,04"
+  },
+  {
+    "data_referencia": "2026-10-16",
+    "indicador": "IGP-M",
+    "fonte": "BCB",
+    "dataset_label": "BCB SGS",
+    "categoria": "Séries SGS",
+    "Valor": "5,08%"
   },
   {
     "data_referencia": "2026-10-16",
@@ -2052,7 +2036,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "60,06"
+    "Valor": "60,00"
   },
   {
     "data_referencia": "2026-10-16",
@@ -2068,7 +2052,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "5,12"
+    "Valor": "5,09"
   },
   {
     "data_referencia": "2026-10-16",
@@ -2084,7 +2068,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "0,1398"
+    "Valor": "0,1395"
   },
   {
     "data_referencia": "2026-10-16",
@@ -2101,6 +2085,22 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Commodities",
     "categoria": "Commodities Globais",
     "Valor": "1.642"
+  },
+  {
+    "data_referencia": "2026-10-16",
+    "indicador": "PTAX USD — Compra",
+    "fonte": "BCB",
+    "dataset_label": "BCB PTAX",
+    "categoria": "Taxas de Câmbio",
+    "Valor": "5,0820"
+  },
+  {
+    "data_referencia": "2026-10-16",
+    "indicador": "PTAX USD — Venda",
+    "fonte": "BCB",
+    "dataset_label": "BCB PTAX",
+    "categoria": "Taxas de Câmbio",
+    "Valor": "5,0826"
   },
   {
     "data_referencia": "2026-10-16",
@@ -2124,7 +2124,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "104,49"
+    "Valor": "104,24"
   },
   {
     "data_referencia": "2026-10-16",
@@ -2140,7 +2140,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "0,3349"
+    "Valor": "0,3345"
   },
   {
     "data_referencia": "2026-10-16",
@@ -2196,7 +2196,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "0,1815"
+    "Valor": "0,1812"
   },
   {
     "data_referencia": "2026-10-16",
@@ -2260,7 +2260,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Índices Globais",
     "categoria": "Índices de Ações Globais",
-    "Valor": "24.187"
+    "Valor": "24.063"
   },
   {
     "data_referencia": "2026-10-16",
@@ -2276,7 +2276,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Índices Globais",
     "categoria": "Índices de Ações Globais",
-    "Valor": "1.608"
+    "Valor": "1.624"
   },
   {
     "data_referencia": "2026-10-16",
@@ -2308,7 +2308,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Índices Globais",
     "categoria": "Índices de Ações Globais",
-    "Valor": "5.416"
+    "Valor": "5.404"
   },
   {
     "data_referencia": "2026-10-16",
@@ -2316,6 +2316,6 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Índices Globais",
     "categoria": "Índices de Ações Globais",
-    "Valor": "47.111"
+    "Valor": "46.970"
   }
 ];
