@@ -370,5 +370,9 @@
   "anbima_debentures.csv.gz": {
     "min": "2026-06-03",
     "max": "2026-10-16"
+  },
+  "b3_indicadores_financeiros.csv": {
+    "min": "2026-06-11",
+    "max": "2026-10-19"
   }
 }
