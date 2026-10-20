@@ -9,7 +9,7 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "debentures_mercado_secundario_precos_negociacao.csv.gz": {
     "min": "2020-01-02",
-    "max": "2026-10-16"
+    "max": "2026-10-19"
   },
   "yahoo_fiis_fiagros.csv.gz": {
     "min": "2020-01-02",
@@ -53,7 +53,7 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "anbima_indicadores.csv": {
     "min": "2026-04-01",
-    "max": "2026-10-19"
+    "max": "2026-10-20"
   },
   "anbima_ima_completo.csv": {
     "min": "2026-05-29",
@@ -61,7 +61,7 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "anbima_indice_ida.csv.gz": {
     "min": "2020-01-02",
-    "max": "2026-10-16"
+    "max": "2026-10-19"
   },
   "anbima_debentures.csv.gz": {
     "min": "2026-06-03",
@@ -281,7 +281,7 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "fred_global_liquidity_credit_spreads.csv.gz": {
     "min": "2020-01-01",
-    "max": "2026-10-16"
+    "max": "2026-10-19"
   },
   "fred_us_macro_indicators.csv.gz": {
     "min": "2020-01-01",
@@ -358,5 +358,21 @@ window.PULSEFLAT_LAST_UPDATES = {
   "debentures_mercado_secundario_precos_negociacao_api.csv.gz": {
     "min": "2020-01-02",
     "max": "2026-10-19"
+  },
+  "b3_carteira_teorica_ibsd.csv": {
+    "min": "2026-06-03",
+    "max": "2026-10-20"
+  },
+  "b3_indicadores_financeiros.csv": {
+    "min": "2026-06-11",
+    "max": "2026-10-20"
+  },
+  "bacen_cadastro_instituicoes.csv.gz": {
+    "min": "2020-03-31",
+    "max": "2026-06-30"
+  },
+  "bacen_parcelas_capital_basileia.csv.gz": {
+    "min": "2026-06-05",
+    "max": "2026-10-20"
   }
 };
