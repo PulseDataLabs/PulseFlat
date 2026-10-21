@@ -113,7 +113,7 @@
   },
   "anbima_indice_ida.csv.gz": {
     "min": "2020-01-02",
-    "max": "2026-10-19"
+    "max": "2026-10-20"
   },
   "anbima_cri_cra_mercado_secundario.csv.gz": {
     "min": "2020-01-02",
@@ -366,5 +366,13 @@
   "ipea_fbcf.csv": {
     "min": "1996-01-01",
     "max": "2026-07-01"
+  },
+  "bacen_cadastro_instituicoes.csv.gz": {
+    "min": "2020-03-31",
+    "max": "2026-06-30"
+  },
+  "bacen_parcelas_capital_basileia.csv.gz": {
+    "min": "2026-06-05",
+    "max": "2026-10-21"
   }
 }
