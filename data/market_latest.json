@@ -39,15 +39,15 @@
   },
   {
     "label": "IBOVESPA",
-    "value": "208.296",
-    "reference_date": "2026-10-20",
-    "type": "up",
-    "change": "+1,57%"
+    "value": "206.495",
+    "reference_date": "2026-10-21",
+    "type": "down",
+    "change": "-0,86%"
   },
   {
     "label": "IMA-GERAL",
-    "value": "10.772,15",
-    "reference_date": "2026-10-20",
+    "value": "10.789,40",
+    "reference_date": "2026-10-21",
     "type": "neutral"
   }
 ]
