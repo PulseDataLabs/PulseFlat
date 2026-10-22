@@ -1,120 +1,4 @@
 window.PULSEFLAT_PREVIEWS = {
-  "yahoo_indices_globais.csv": {
-    "headers": [
-      "data_captura",
-      "data_referencia",
-      "codigo_ativo",
-      "label",
-      "preco_fechamento"
-    ],
-    "rows": [
-      [
-        "2026-10-22",
-        "2026-10-16",
-        "FTSEMIB.MI",
-        "FTSE_MIB_INDEX",
-        "49857.0"
-      ],
-      [
-        "2026-10-22",
-        "2026-10-15",
-        "FTSEMIB.MI",
-        "FTSE_MIB_INDEX",
-        "49398.0"
-      ],
-      [
-        "2026-10-22",
-        "2026-10-14",
-        "FTSEMIB.MI",
-        "FTSE_MIB_INDEX",
-        "49754.0"
-      ],
-      [
-        "2026-10-22",
-        "2026-10-13",
-        "FTSEMIB.MI",
-        "FTSE_MIB_INDEX",
-        "50057.0"
-      ],
-      [
-        "2026-10-22",
-        "2026-10-12",
-        "FTSEMIB.MI",
-        "FTSE_MIB_INDEX",
-        "50035.0"
-      ],
-      [
-        "2026-10-22",
-        "2026-10-09",
-        "FTSEMIB.MI",
-        "FTSE_MIB_INDEX",
-        "49746.0"
-      ],
-      [
-        "2026-10-22",
-        "2026-10-08",
-        "FTSEMIB.MI",
-        "FTSE_MIB_INDEX",
-        "49298.0"
-      ],
-      [
-        "2026-10-22",
-        "2026-10-07",
-        "FTSEMIB.MI",
-        "FTSE_MIB_INDEX",
-        "49972.0"
-      ],
-      [
-        "2026-10-22",
-        "2026-10-06",
-        "FTSEMIB.MI",
-        "FTSE_MIB_INDEX",
-        "51261.0"
-      ],
-      [
-        "2026-10-22",
-        "2026-10-05",
-        "FTSEMIB.MI",
-        "FTSE_MIB_INDEX",
-        "50818.0"
-      ],
-      [
-        "2026-10-22",
-        "2026-10-02",
-        "FTSEMIB.MI",
-        "FTSE_MIB_INDEX",
-        "50483.0"
-      ],
-      [
-        "2026-10-22",
-        "2026-10-01",
-        "FTSEMIB.MI",
-        "FTSE_MIB_INDEX",
-        "50238.0"
-      ],
-      [
-        "2026-10-22",
-        "2026-09-30",
-        "FTSEMIB.MI",
-        "FTSE_MIB_INDEX",
-        "51372.0"
-      ],
-      [
-        "2026-10-22",
-        "2026-09-29",
-        "FTSEMIB.MI",
-        "FTSE_MIB_INDEX",
-        "51805.0"
-      ],
-      [
-        "2026-10-22",
-        "2026-09-28",
-        "FTSEMIB.MI",
-        "FTSE_MIB_INDEX",
-        "51760.0"
-      ]
-    ]
-  },
   "yahoo_etfs.csv.gz": {
     "headers": [
       "data_captura",
@@ -231,270 +115,6 @@ window.PULSEFLAT_PREVIEWS = {
       ]
     ]
   },
-  "yahoo_renda_fixa.csv": {
-    "headers": [
-      "data_captura",
-      "data_referencia",
-      "codigo_ativo",
-      "label",
-      "preco_fechamento"
-    ],
-    "rows": [
-      [
-        "2026-10-22",
-        "2026-10-21",
-        "^TYX",
-        "TREASURY_30Y",
-        "5.439000129699707"
-      ],
-      [
-        "2026-10-22",
-        "2026-10-21",
-        "^TNX",
-        "TREASURY_10Y",
-        "5.145999908447266"
-      ],
-      [
-        "2026-10-22",
-        "2026-10-20",
-        "^TNX",
-        "TREASURY_10Y",
-        "5.117000102996826"
-      ],
-      [
-        "2026-10-22",
-        "2026-10-20",
-        "^TYX",
-        "TREASURY_30Y",
-        "5.425000190734863"
-      ],
-      [
-        "2026-10-22",
-        "2026-10-19",
-        "^TNX",
-        "TREASURY_10Y",
-        "5.136000156402588"
-      ],
-      [
-        "2026-10-22",
-        "2026-10-19",
-        "^TYX",
-        "TREASURY_30Y",
-        "5.4720001220703125"
-      ],
-      [
-        "2026-10-22",
-        "2026-10-16",
-        "^TNX",
-        "TREASURY_10Y",
-        "5.0980000495910645"
-      ],
-      [
-        "2026-10-22",
-        "2026-10-16",
-        "^TYX",
-        "TREASURY_30Y",
-        "5.435999870300293"
-      ],
-      [
-        "2026-10-22",
-        "2026-10-15",
-        "^TNX",
-        "TREASURY_10Y",
-        "5.089000225067139"
-      ],
-      [
-        "2026-10-22",
-        "2026-10-15",
-        "^TYX",
-        "TREASURY_30Y",
-        "5.428999900817871"
-      ],
-      [
-        "2026-10-22",
-        "2026-10-14",
-        "^TNX",
-        "TREASURY_10Y",
-        "5.190000057220459"
-      ],
-      [
-        "2026-10-22",
-        "2026-10-14",
-        "^TYX",
-        "TREASURY_30Y",
-        "5.525000095367432"
-      ],
-      [
-        "2026-10-22",
-        "2026-10-13",
-        "^TNX",
-        "TREASURY_10Y",
-        "5.2170000076293945"
-      ],
-      [
-        "2026-10-22",
-        "2026-10-13",
-        "^TYX",
-        "TREASURY_30Y",
-        "5.563000202178955"
-      ],
-      [
-        "2026-10-22",
-        "2026-10-12",
-        "^TYX",
-        "TREASURY_30Y",
-        "5.5980000495910645"
-      ]
-    ]
-  },
-  "onu_pacto_global.csv": {
-    "headers": [
-      "data_captura",
-      "name",
-      "type",
-      "sector",
-      "country",
-      "joined_on",
-      "link"
-    ],
-    "rows": [
-      [
-        "2026-10-22",
-        "Enel Cien",
-        "Small or Medium-sized Enterprise",
-        "Conventional Electricity",
-        "Brazil",
-        "2005-08-23",
-        "https://unglobalcompact.org/what-is-gc/participants/2359-Enel-Cien"
-      ],
-      [
-        "2026-10-22",
-        "Eletropaulo Metropolitana Eletricidade de Sao Paulo S/A",
-        "Company",
-        "Conventional Electricity",
-        "Brazil",
-        "2005-06-28",
-        "https://unglobalcompact.org/what-is-gc/participants/3230-Eletropaulo-Metropolitana-Eletricidade-de-Sao-Paulo-S-A"
-      ],
-      [
-        "2026-10-22",
-        "COPEL- Companhia Paranaense de Energia",
-        "Company",
-        "Conventional Electricity",
-        "Brazil",
-        "2001-07-26",
-        "https://unglobalcompact.org/what-is-gc/participants/2549-COPEL-Companhia-Paranaense-de-Energia"
-      ],
-      [
-        "2026-10-22",
-        "Samarco Mineracao S.A.",
-        "Company",
-        "Iron and Steel",
-        "Brazil",
-        "2002-08-31",
-        "https://unglobalcompact.org/what-is-gc/participants/8168-Samarco-Mineracao-S-A-"
-      ],
-      [
-        "2026-10-22",
-        "Suzano S/A",
-        "Company",
-        "Paper",
-        "Brazil",
-        "2003-01-07",
-        "https://unglobalcompact.org/what-is-gc/participants/8921-Suzano-S-A"
-      ],
-      [
-        "2026-10-22",
-        "FIEP - Federação das Indústrias do Estado do Paraná",
-        "Business Association",
-        "",
-        "Brazil",
-        "2003-05-21",
-        "https://unglobalcompact.org/what-is-gc/participants/8364-FIEP-Federa-o-das-Ind-strias-do-Estado-do-Paran-"
-      ],
-      [
-        "2026-10-22",
-        "Instituto Ethos de Empresas e Responsibilidade Social",
-        "Business Association",
-        "",
-        "Brazil",
-        "2003-05-21",
-        "https://unglobalcompact.org/what-is-gc/participants/5314-Instituto-Ethos-de-Empresas-e-Responsibilidade-Social"
-      ],
-      [
-        "2026-10-22",
-        "Fundacao Dom Cabral",
-        "Civil Society Organization & Other",
-        "",
-        "Brazil",
-        "2003-05-21",
-        "https://unglobalcompact.org/what-is-gc/participants/3921-Fundacao-Dom-Cabral"
-      ],
-      [
-        "2026-10-22",
-        "FIESP- Federacao das Industrias do Estado de Sao Paulo",
-        "Business Association",
-        "",
-        "Brazil",
-        "2003-06-25",
-        "https://unglobalcompact.org/what-is-gc/participants/3733-FIESP-Federacao-das-Industrias-do-Estado-de-Sao-Paulo"
-      ],
-      [
-        "2026-10-22",
-        "GS1 Brasil - Associacao Brasileira de Automocao",
-        "Business Association",
-        "",
-        "Brazil",
-        "2003-06-25",
-        "https://unglobalcompact.org/what-is-gc/participants/3059-GS1-Brasil-Associacao-Brasileira-de-Automocao"
-      ],
-      [
-        "2026-10-22",
-        "Klabin S.A.",
-        "Company",
-        "Paper",
-        "Brazil",
-        "2003-06-27",
-        "https://unglobalcompact.org/what-is-gc/participants/5833-Klabin-S-A-"
-      ],
-      [
-        "2026-10-22",
-        "Grupo Pao de Acucar - Companhia Brasileira de Distribuicao",
-        "Company",
-        "Diversified Retailers",
-        "Brazil",
-        "2003-06-27",
-        "https://unglobalcompact.org/what-is-gc/participants/4651-Grupo-Pao-de-Acucar-Companhia-Brasileira-de-Distribuicao"
-      ],
-      [
-        "2026-10-22",
-        "Copa Energia",
-        "Company",
-        "Gas Distribution",
-        "Brazil",
-        "2003-06-27",
-        "https://unglobalcompact.org/what-is-gc/participants/2543-Copa-Energia"
-      ],
-      [
-        "2026-10-22",
-        "Colegio Lacordaire Sant-Anna SC Ltda",
-        "Civil Society Organization & Other",
-        "",
-        "Brazil",
-        "2003-06-27",
-        "https://unglobalcompact.org/what-is-gc/participants/2291-Colegio-Lacordaire-Sant-Anna-SC-Ltda"
-      ],
-      [
-        "2026-10-22",
-        "Itau Unibanco SA",
-        "Company",
-        "Banks",
-        "Brazil",
-        "2003-06-27",
-        "https://unglobalcompact.org/what-is-gc/participants/1132-Itau-Unibanco-SA"
-      ]
-    ]
-  },
   "yahoo_acoes_internacionais.csv": {
     "headers": [
       "data_captura",
@@ -608,266 +228,6 @@ window.PULSEFLAT_PREVIEWS = {
         "WKL.AS",
         "WKL.AS",
         "77.16000366210938"
-      ]
-    ]
-  },
-  "debentures_mercado_secundario_precos_negociacao.csv.gz": {
-    "headers": [
-      "data_referencia",
-      "emissor",
-      "codigo_ativo",
-      "isin",
-      "quantidade",
-      "numero_de_negocios",
-      "pu_minimo",
-      "pu_medio",
-      "pu_maximo",
-      "pu_da_curva",
-      "data_captura",
-      "conjunto",
-      "arquivo_origem",
-      "registro_hash"
-    ],
-    "rows": [
-      [
-        "2025-01-02",
-        "USINA CAETE   S.A.",
-        "USCA22",
-        "BRUSCADBS037",
-        "230",
-        "11",
-        "878.765554",
-        "907.052627",
-        "912.677127",
-        "90.19",
-        "2026-10-22",
-        "debêntures___preços_de_negociação",
-        "",
-        "3dbc7d00a1840804a78771aa"
-      ],
-      [
-        "2025-01-02",
-        "USINA TERMELETRICA PAMPA SUL S.A.",
-        "UTPS12",
-        "BRUTPSDBS021",
-        "219",
-        "4",
-        "833.935238",
-        "835.059565",
-        "854.45421",
-        "92.76",
-        "2026-10-22",
-        "debêntures___preços_de_negociação",
-        "",
-        "7a068838e42ee7a39fc891f9"
-      ],
-      [
-        "2025-01-02",
-        "XINGU RIO TRANSMISSORA DE ENERGIA S.A.",
-        "XNGU17",
-        "BRXNGUDBS049",
-        "12",
-        "3",
-        "999.854378",
-        "1018.473651",
-        "1027.783288",
-        "87.87",
-        "2026-10-22",
-        "debêntures___preços_de_negociação",
-        "",
-        "032162105a033d6ec3d8d6ed"
-      ],
-      [
-        "2025-01-02",
-        "VENTOS DE SAO JORGE HOLDING S.A.",
-        "VSJH11",
-        "BRVSJHDBS001",
-        "22",
-        "3",
-        "1340.904208",
-        "1343.905734",
-        "1346.90726",
-        "100.81",
-        "2026-10-22",
-        "debêntures___preços_de_negociação",
-        "",
-        "f57257ec562f92bcba63be47"
-      ],
-      [
-        "2025-01-02",
-        "VIARONDON CONCESSIONARIA DE RODOVIA S/A",
-        "VRDN12",
-        "BRVRDNDBS012",
-        "46",
-        "2",
-        "1060.457258",
-        "1061.460026",
-        "1106.584568",
-        "83.8",
-        "2026-10-22",
-        "debêntures___preços_de_negociação",
-        "",
-        "66897f95bb679537c1040fcd"
-      ],
-      [
-        "2025-01-02",
-        "VIAPAULISTA  S/A",
-        "VPLT12",
-        "BRVPLTDBS024",
-        "48",
-        "4",
-        "446.31276",
-        "452.882636",
-        "454.586189",
-        "128.79",
-        "2026-10-22",
-        "debêntures___preços_de_negociação",
-        "",
-        "794522d8feaa031890d82eb6"
-      ],
-      [
-        "2025-01-02",
-        "VLI MULTIMODAL S.A.",
-        "VLIM15",
-        "BRVLIMDBS040",
-        "88",
-        "2",
-        "960.394143",
-        "960.394143",
-        "960.394143",
-        "92.03",
-        "2026-10-22",
-        "debêntures___preços_de_negociação",
-        "",
-        "abcf6093bef51c27993a759c"
-      ],
-      [
-        "2025-01-02",
-        "VLI MULTIMODAL S.A.",
-        "VLIM13",
-        "BRVLIMDBS024",
-        "222",
-        "4",
-        "1088.072121",
-        "1091.671061",
-        "1095.27",
-        "93.54",
-        "2026-10-22",
-        "debêntures___preços_de_negociação",
-        "",
-        "cc3bd3c013f3b3820aac88c5"
-      ],
-      [
-        "2025-01-02",
-        "VIA BRASIL MT 320 CONCESSIONARIA DE RODOVIAS S/A",
-        "VIMT13",
-        "BRVIMTDBS019",
-        "300",
-        "2",
-        "893.103516",
-        "893.103516",
-        "893.103516",
-        "",
-        "2026-10-22",
-        "debêntures___preços_de_negociação",
-        "",
-        "86a812b1c2737719c55584e7"
-      ],
-      [
-        "2025-01-02",
-        "VERO S.A.",
-        "VERO34",
-        "BRVERODBS067",
-        "204",
-        "2",
-        "915.008717",
-        "915.988624",
-        "964.983963",
-        "89",
-        "2026-10-22",
-        "debêntures___preços_de_negociação",
-        "",
-        "3bd655782adb0cff29dfbe0b"
-      ],
-      [
-        "2025-01-02",
-        "VERO S.A.",
-        "VERO24",
-        "BRVERODBS059",
-        "25",
-        "1",
-        "1011.145296",
-        "1011.145296",
-        "1011.145296",
-        "",
-        "2026-10-22",
-        "debêntures___preços_de_negociação",
-        "",
-        "664beb6f618bb58b28fe1e21"
-      ],
-      [
-        "2025-01-02",
-        "VERO S.A.",
-        "VERO23",
-        "BRVERODBS034",
-        "5",
-        "1",
-        "884.101163",
-        "884.101163",
-        "884.101163",
-        "85.34",
-        "2026-10-22",
-        "debêntures___preços_de_negociação",
-        "",
-        "5e757e9a61ac7af7b1755655"
-      ],
-      [
-        "2025-01-02",
-        "VERO S.A.",
-        "VERO13",
-        "BRVERODBS026",
-        "7",
-        "2",
-        "1027.636951",
-        "1027.636951",
-        "1027.636951",
-        "97.19",
-        "2026-10-22",
-        "debêntures___preços_de_negociação",
-        "",
-        "6a1d28b159f094ca4a235a91"
-      ],
-      [
-        "2025-01-02",
-        "VERO S.A.",
-        "VERO12",
-        "BRVERODBS018",
-        "96",
-        "5",
-        "1045.105494",
-        "1068.368378",
-        "1118.954706",
-        "97.09",
-        "2026-10-22",
-        "debêntures___preços_de_negociação",
-        "",
-        "5591fae8c8a0fd2fbbf72f59"
-      ],
-      [
-        "2025-01-02",
-        "V2I ENERGIA S.A.",
-        "VDIE22",
-        "BRVDIEDBS028",
-        "1204",
-        "6",
-        "1105.070519",
-        "1105.092621",
-        "1105.114723",
-        "99.95",
-        "2026-10-22",
-        "debêntures___preços_de_negociação",
-        "",
-        "add6b95b27003ee83da6b98b"
       ]
     ]
   },
@@ -1009,42 +369,8 @@ window.PULSEFLAT_PREVIEWS = {
       [
         "2026-10-22",
         "2026-10-21",
-        "ITUBW377W1",
-        "BRITUB4W1GK5",
-        "EQUITY PUT",
-        "EQUITY-DERIVATE",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        ""
-      ],
-      [
-        "2026-10-22",
-        "2026-10-21",
-        "ITUBW379W1",
-        "BRITUB4W1GO7",
-        "EQUITY PUT",
-        "EQUITY-DERIVATE",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        ""
-      ],
-      [
-        "2026-10-22",
-        "2026-10-21",
-        "PETRJ373W5",
-        "BRPETR4J1W00",
+        "USIMB675",
+        "BRUSIM5B0PS4",
         "EQUITY CALL",
         "EQUITY-DERIVATE",
         "",
@@ -1060,9 +386,9 @@ window.PULSEFLAT_PREVIEWS = {
       [
         "2026-10-22",
         "2026-10-21",
-        "ITUBW449W1",
-        "BRITUB4W1H41",
-        "EQUITY PUT",
+        "USIMC105",
+        "BRUSIM5C0OE6",
+        "EQUITY CALL",
         "EQUITY-DERIVATE",
         "",
         "",
@@ -1077,9 +403,9 @@ window.PULSEFLAT_PREVIEWS = {
       [
         "2026-10-22",
         "2026-10-21",
-        "ITUBW447W1",
-        "BRITUB4W1GR0",
-        "EQUITY PUT",
+        "USIML820",
+        "BRUSIM5L0PM5",
+        "EQUITY CALL",
         "EQUITY-DERIVATE",
         "",
         "",
@@ -1094,162 +420,196 @@ window.PULSEFLAT_PREVIEWS = {
       [
         "2026-10-22",
         "2026-10-21",
-        "ITUBW444W1",
-        "BRITUB4W1GW0",
-        "EQUITY PUT",
+        "USIML810",
+        "BRUSIM5L0PN3",
+        "EQUITY CALL",
         "EQUITY-DERIVATE",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        ""
-      ],
-      [
-        "2026-10-22",
-        "2026-10-21",
-        "ITUBW442W1",
-        "BRITUB4W1H17",
-        "EQUITY PUT",
-        "EQUITY-DERIVATE",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        ""
-      ],
-      [
-        "2026-10-22",
-        "2026-10-21",
-        "ITUBW439W1",
-        "BRITUB4W1H90",
-        "EQUITY PUT",
-        "EQUITY-DERIVATE",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        ""
-      ],
-      [
-        "2026-10-22",
-        "2026-10-21",
-        "ITUBW437W1",
-        "BRITUB4W1HB2",
-        "EQUITY PUT",
-        "EQUITY-DERIVATE",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        ""
-      ],
-      [
-        "2026-10-22",
-        "2026-10-21",
-        "ITUBW434W1",
-        "BRITUB4W1H82",
-        "EQUITY PUT",
-        "EQUITY-DERIVATE",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        ""
-      ],
-      [
-        "2026-10-22",
-        "2026-10-21",
-        "ITUBW432W1",
-        "BRITUB4W1GJ7",
-        "EQUITY PUT",
-        "EQUITY-DERIVATE",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        ""
-      ],
-      [
-        "2026-10-22",
-        "2026-10-21",
-        "ITUBW429W1",
-        "BRITUB4W1GM1",
-        "EQUITY PUT",
-        "EQUITY-DERIVATE",
-        "0.79",
-        "0.79",
-        "0.82",
-        "0.8",
-        "0.82",
-        "7.89",
-        "2",
-        "400",
-        "322"
-      ],
-      [
-        "2026-10-22",
-        "2026-10-21",
-        "ITUBW427W1",
-        "BRITUB4W1H33",
-        "EQUITY PUT",
-        "EQUITY-DERIVATE",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        ""
-      ],
-      [
-        "2026-10-22",
-        "2026-10-21",
-        "ITUBW424W1",
-        "BRITUB4W1GZ3",
-        "EQUITY PUT",
-        "EQUITY-DERIVATE",
-        "0.68",
-        "0.68",
-        "0.72",
-        "0.68",
-        "0.72",
-        "2.85",
+        "0.2",
+        "0.2",
+        "0.2",
+        "0.2",
+        "0.2",
+        "0",
         "5",
-        "4700",
-        "3202"
+        "500",
+        "100"
       ],
       [
         "2026-10-22",
         "2026-10-21",
-        "ITUBW422W1",
-        "BRITUB4W1H25",
-        "EQUITY PUT",
+        "USIML800",
+        "BRUSIM5L0NV1",
+        "EQUITY CALL",
+        "EQUITY-DERIVATE",
+        "0.18",
+        "0.18",
+        "0.21",
+        "0.19",
+        "0.2",
+        "-16.66",
+        "5",
+        "8300",
+        "1601"
+      ],
+      [
+        "2026-10-22",
+        "2026-10-21",
+        "USIML10",
+        "BRUSIM5L0NW9",
+        "EQUITY CALL",
+        "EQUITY-DERIVATE",
+        "0.04",
+        "0.04",
+        "0.04",
+        "0.04",
+        "0.04",
+        "0",
+        "1",
+        "20000",
+        "800"
+      ],
+      [
+        "2026-10-22",
+        "2026-10-21",
+        "USIMK899",
+        "BRUSIM5K0NC2",
+        "EQUITY CALL",
+        "EQUITY-DERIVATE",
+        "0.03",
+        "0.03",
+        "0.03",
+        "0.03",
+        "0.03",
+        "-25",
+        "3",
+        "3000",
+        "90"
+      ],
+      [
+        "2026-10-22",
+        "2026-10-21",
+        "USIMK799",
+        "BRUSIM5K0NA6",
+        "EQUITY CALL",
+        "EQUITY-DERIVATE",
+        "0.12",
+        "0.09",
+        "0.12",
+        "0.09",
+        "0.09",
+        "-25",
+        "18",
+        "207500",
+        "18745"
+      ],
+      [
+        "2026-10-22",
+        "2026-10-21",
+        "USIMK500",
+        "BRUSIM5K0SH0",
+        "EQUITY CALL",
+        "EQUITY-DERIVATE",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "2026-10-22",
+        "2026-10-21",
+        "USIMK1",
+        "BRUSIM5K0NB4",
+        "EQUITY CALL",
+        "EQUITY-DERIVATE",
+        "0.01",
+        "0.01",
+        "0.01",
+        "0.01",
+        "0.01",
+        "-50",
+        "2",
+        "200",
+        "2"
+      ],
+      [
+        "2026-10-22",
+        "2026-10-21",
+        "USIMH90",
+        "BRUSIM5H0ST0",
+        "EQUITY CALL",
+        "EQUITY-DERIVATE",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "2026-10-22",
+        "2026-10-21",
+        "USIMH80",
+        "BRUSIM5H0Y70",
+        "EQUITY CALL",
+        "EQUITY-DERIVATE",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "2026-10-22",
+        "2026-10-21",
+        "USIMG900",
+        "BRUSIM5G0QU3",
+        "EQUITY CALL",
+        "EQUITY-DERIVATE",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "2026-10-22",
+        "2026-10-21",
+        "USIMG680",
+        "BRUSIM5G0X16",
+        "EQUITY CALL",
+        "EQUITY-DERIVATE",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "2026-10-22",
+        "2026-10-21",
+        "USIMG107",
+        "BRUSIM5G0UT7",
+        "EQUITY CALL",
         "EQUITY-DERIVATE",
         "",
         "",
@@ -1492,6 +852,122 @@ window.PULSEFLAT_PREVIEWS = {
         "USDINR=X",
         "USD_INR",
         "95.45030212402344"
+      ]
+    ]
+  },
+  "yahoo_indices_globais.csv": {
+    "headers": [
+      "data_captura",
+      "data_referencia",
+      "codigo_ativo",
+      "label",
+      "preco_fechamento"
+    ],
+    "rows": [
+      [
+        "2026-10-22",
+        "2026-10-16",
+        "FTSEMIB.MI",
+        "FTSE_MIB_INDEX",
+        "49857.0"
+      ],
+      [
+        "2026-10-22",
+        "2026-10-15",
+        "FTSEMIB.MI",
+        "FTSE_MIB_INDEX",
+        "49398.0"
+      ],
+      [
+        "2026-10-22",
+        "2026-10-14",
+        "FTSEMIB.MI",
+        "FTSE_MIB_INDEX",
+        "49754.0"
+      ],
+      [
+        "2026-10-22",
+        "2026-10-13",
+        "FTSEMIB.MI",
+        "FTSE_MIB_INDEX",
+        "50057.0"
+      ],
+      [
+        "2026-10-22",
+        "2026-10-12",
+        "FTSEMIB.MI",
+        "FTSE_MIB_INDEX",
+        "50035.0"
+      ],
+      [
+        "2026-10-22",
+        "2026-10-09",
+        "FTSEMIB.MI",
+        "FTSE_MIB_INDEX",
+        "49746.0"
+      ],
+      [
+        "2026-10-22",
+        "2026-10-08",
+        "FTSEMIB.MI",
+        "FTSE_MIB_INDEX",
+        "49298.0"
+      ],
+      [
+        "2026-10-22",
+        "2026-10-07",
+        "FTSEMIB.MI",
+        "FTSE_MIB_INDEX",
+        "49972.0"
+      ],
+      [
+        "2026-10-22",
+        "2026-10-06",
+        "FTSEMIB.MI",
+        "FTSE_MIB_INDEX",
+        "51261.0"
+      ],
+      [
+        "2026-10-22",
+        "2026-10-05",
+        "FTSEMIB.MI",
+        "FTSE_MIB_INDEX",
+        "50818.0"
+      ],
+      [
+        "2026-10-22",
+        "2026-10-02",
+        "FTSEMIB.MI",
+        "FTSE_MIB_INDEX",
+        "50483.0"
+      ],
+      [
+        "2026-10-22",
+        "2026-10-01",
+        "FTSEMIB.MI",
+        "FTSE_MIB_INDEX",
+        "50238.0"
+      ],
+      [
+        "2026-10-22",
+        "2026-09-30",
+        "FTSEMIB.MI",
+        "FTSE_MIB_INDEX",
+        "51372.0"
+      ],
+      [
+        "2026-10-22",
+        "2026-09-29",
+        "FTSEMIB.MI",
+        "FTSE_MIB_INDEX",
+        "51805.0"
+      ],
+      [
+        "2026-10-22",
+        "2026-09-28",
+        "FTSEMIB.MI",
+        "FTSE_MIB_INDEX",
+        "51760.0"
       ]
     ]
   }
