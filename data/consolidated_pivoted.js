@@ -289,59 +289,11 @@ window.PULSEFLAT_PIVOTED = [
   },
   {
     "data_referencia": "2026-10-20",
-    "indicador": "DIF OPER CASADA - COMPRA",
-    "fonte": "B3",
-    "dataset_label": "B3 Indicadores Financeiros",
-    "categoria": "Indicadores B3",
-    "Valor": "11,26"
-  },
-  {
-    "data_referencia": "2026-10-20",
-    "indicador": "DOLAR SPOT BMF PARA 1 DIA",
-    "fonte": "B3",
-    "dataset_label": "B3 Indicadores Financeiros",
-    "categoria": "Indicadores B3",
-    "Valor": "5,0109"
-  },
-  {
-    "data_referencia": "2026-10-20",
-    "indicador": "DÓLAR BMF SPOT - 2 DIAS",
-    "fonte": "B3",
-    "dataset_label": "B3 Indicadores Financeiros",
-    "categoria": "Indicadores B3",
-    "Valor": "5,0129"
-  },
-  {
-    "data_referencia": "2026-10-20",
-    "indicador": "DÓLAR CUPOM LIMPO",
-    "fonte": "B3",
-    "dataset_label": "B3 Indicadores Financeiros",
-    "categoria": "Indicadores B3",
-    "Valor": "5,0151"
-  },
-  {
-    "data_referencia": "2026-10-20",
     "indicador": "FDS (registro 2)",
     "fonte": "ANBIMA",
     "dataset_label": "ANBIMA Indicadores",
     "categoria": "FDS",
     "Valor": "0,0926"
-  },
-  {
-    "data_referencia": "2026-10-20",
-    "indicador": "TAXA CDI CETIP",
-    "fonte": "B3",
-    "dataset_label": "B3 Indicadores Financeiros",
-    "categoria": "Indicadores B3",
-    "Valor": "13,65"
-  },
-  {
-    "data_referencia": "2026-10-20",
-    "indicador": "TAXA SELIC",
-    "fonte": "B3",
-    "dataset_label": "B3 Indicadores Financeiros",
-    "categoria": "Indicadores B3",
-    "Valor": "13,65"
   },
   {
     "data_referencia": "2026-10-20",
@@ -758,11 +710,43 @@ window.PULSEFLAT_PIVOTED = [
   },
   {
     "data_referencia": "2026-10-21",
+    "indicador": "DIF OPER CASADA - COMPRA",
+    "fonte": "B3",
+    "dataset_label": "B3 Indicadores Financeiros",
+    "categoria": "Indicadores B3",
+    "Valor": "9,25"
+  },
+  {
+    "data_referencia": "2026-10-21",
     "indicador": "DIS",
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Internacionais",
     "categoria": "Ações Internacionais",
     "Valor": "111,83"
+  },
+  {
+    "data_referencia": "2026-10-21",
+    "indicador": "DOLAR SPOT BMF PARA 1 DIA",
+    "fonte": "B3",
+    "dataset_label": "B3 Indicadores Financeiros",
+    "categoria": "Indicadores B3",
+    "Valor": "5,0307"
+  },
+  {
+    "data_referencia": "2026-10-21",
+    "indicador": "DÓLAR BMF SPOT - 2 DIAS",
+    "fonte": "B3",
+    "dataset_label": "B3 Indicadores Financeiros",
+    "categoria": "Indicadores B3",
+    "Valor": "5,0327"
+  },
+  {
+    "data_referencia": "2026-10-21",
+    "indicador": "DÓLAR CUPOM LIMPO",
+    "fonte": "B3",
+    "dataset_label": "B3 Indicadores Financeiros",
+    "categoria": "Indicadores B3",
+    "Valor": "5,0350"
   },
   {
     "data_referencia": "2026-10-21",
@@ -1480,11 +1464,19 @@ window.PULSEFLAT_PIVOTED = [
   },
   {
     "data_referencia": "2026-10-21",
-    "indicador": "TAXA SOFR",
+    "indicador": "TAXA CDI CETIP",
     "fonte": "B3",
     "dataset_label": "B3 Indicadores Financeiros",
     "categoria": "Indicadores B3",
-    "Valor": "3,88"
+    "Valor": "13,65"
+  },
+  {
+    "data_referencia": "2026-10-21",
+    "indicador": "TAXA SELIC",
+    "fonte": "B3",
+    "dataset_label": "B3 Indicadores Financeiros",
+    "categoria": "Indicadores B3",
+    "Valor": "13,65"
   },
   {
     "data_referencia": "2026-10-21",
@@ -1836,7 +1828,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "0,2121"
+    "Valor": "0,2123"
   },
   {
     "data_referencia": "2026-10-22",
@@ -1868,7 +1860,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "728,09"
+    "Valor": "728,01"
   },
   {
     "data_referencia": "2026-10-22",
@@ -1884,7 +1876,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "81.177"
+    "Valor": "81.216"
   },
   {
     "data_referencia": "2026-10-22",
@@ -1924,7 +1916,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "0,7548"
+    "Valor": "0,7552"
   },
   {
     "data_referencia": "2026-10-22",
@@ -1956,7 +1948,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "2.376"
+    "Valor": "2.379"
   },
   {
     "data_referencia": "2026-10-22",
@@ -2020,7 +2012,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "2,74"
+    "Valor": "2,73"
   },
   {
     "data_referencia": "2026-10-22",
@@ -2044,7 +2036,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "11,87"
+    "Valor": "11,91"
   },
   {
     "data_referencia": "2026-10-22",
@@ -2052,7 +2044,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "58,54"
+    "Valor": "58,45"
   },
   {
     "data_referencia": "2026-10-22",
@@ -2068,7 +2060,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "4,91"
+    "Valor": "4,92"
   },
   {
     "data_referencia": "2026-10-22",
@@ -2084,7 +2076,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "0,1189"
+    "Valor": "0,1191"
   },
   {
     "data_referencia": "2026-10-22",
@@ -2140,7 +2132,15 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "103,71"
+    "Valor": "103,79"
+  },
+  {
+    "data_referencia": "2026-10-22",
+    "indicador": "TAXA SOFR",
+    "fonte": "B3",
+    "dataset_label": "B3 Indicadores Financeiros",
+    "categoria": "Indicadores B3",
+    "Valor": "3,88"
   },
   {
     "data_referencia": "2026-10-22",
@@ -2148,7 +2148,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "0,3299"
+    "Valor": "0,3280"
   },
   {
     "data_referencia": "2026-10-22",
@@ -2204,7 +2204,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "0,1754"
+    "Valor": "0,1759"
   },
   {
     "data_referencia": "2026-10-22",
@@ -2212,7 +2212,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "1,32"
+    "Valor": "1,31"
   },
   {
     "data_referencia": "2026-10-22",
@@ -2276,7 +2276,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Índices Globais",
     "categoria": "Índices de Ações Globais",
-    "Valor": "5.388"
+    "Valor": "5.328"
   },
   {
     "data_referencia": "2026-10-22",
