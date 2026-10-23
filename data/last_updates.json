@@ -73,11 +73,11 @@
   },
   "fred_global_liquidity_credit_spreads.csv.gz": {
     "min": "2020-01-01",
-    "max": "2026-10-21"
+    "max": "2026-10-22"
   },
   "fred_brazil_macro_fx_and_cycles.csv.gz": {
     "min": "2020-01-01",
-    "max": "2026-10-21"
+    "max": "2026-10-22"
   },
   "fred_us_macro_indicators.csv.gz": {
     "min": "2020-01-01",
@@ -197,7 +197,7 @@
   },
   "anbima_curvas_credito.csv.gz": {
     "min": "2020-01-02",
-    "max": "2026-10-21"
+    "max": "2026-10-22"
   },
   "anbima_debentures.csv.gz": {
     "min": "2026-06-03",
@@ -209,7 +209,7 @@
   },
   "anbima_indicadores.csv": {
     "min": "2026-04-01",
-    "max": "2026-10-22"
+    "max": "2026-10-23"
   },
   "anbima_indice_ida.csv.gz": {
     "min": "2020-01-02",
@@ -357,6 +357,14 @@
   },
   "b3_indicadores_economicos_fwf.csv": {
     "min": "2026-06-16",
+    "max": "2026-10-23"
+  },
+  "bacen_cadastro_instituicoes.csv.gz": {
+    "min": "2020-03-31",
+    "max": "2026-06-30"
+  },
+  "bacen_parcelas_capital_basileia.csv.gz": {
+    "min": "2026-06-05",
     "max": "2026-10-23"
   }
 }
