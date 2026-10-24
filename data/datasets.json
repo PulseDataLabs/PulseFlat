@@ -1124,8 +1124,8 @@
     "description": "Série histórica anual consolidada do arquivo COTAHIST da B3, com registro diário de todas as transações, preços (abertura, máxima, mínima, médio, fechamento), volume e negócios de ações, opções e fundos.",
     "icon": "📅",
     "iconClass": "icon-b3",
-    "badge": "Diário",
-    "badgeClass": "badge-daily",
+    "badge": "Anual",
+    "badgeClass": "badge-monthly",
     "tags": [
       "cotações anual",
       "histórico",

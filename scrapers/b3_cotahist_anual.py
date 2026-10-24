@@ -138,8 +138,8 @@ class B3CotahistAnualScraper(BaseScraper):
     description = "Série histórica anual consolidada do arquivo COTAHIST da B3, com registro diário de todas as transações, preços (abertura, máxima, mínima, médio, fechamento), volume e negócios de ações, opções e fundos."
     icon = "📅"
     icon_class = "icon-b3"
-    badge = "Diário"
-    badge_class = "badge-daily"
+    badge = "Anual"
+    badge_class = "badge-monthly"
     tags = ["cotações anual", "histórico", "fwf", "b3"]
     source = "B3 · COTAHIST"
 
