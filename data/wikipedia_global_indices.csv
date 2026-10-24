@@ -835,6 +835,7 @@ data_captura,codigo_ativo,nome_ativo,indice_origem
 2026-10-24,DHL.DE,Deutsche Post,Euro Stoxx 50
 2026-10-24,DTE.DE,Deutsche Telekom,Euro Stoxx 50
 2026-10-24,ENEL.MI,Enel,Euro Stoxx 50
+2026-10-24,ENGI.PA,Engie,Euro Stoxx 50
 2026-10-24,ENI.MI,Eni,Euro Stoxx 50
 2026-10-24,EL.PA,EssilorLuxottica,Euro Stoxx 50
 2026-10-24,RACE.MI,Ferrari,Euro Stoxx 50
@@ -848,6 +849,7 @@ data_captura,codigo_ativo,nome_ativo,indice_origem
 2026-10-24,MC.PA,LVMH Moët Hennessy Louis Vuitton,Euro Stoxx 50
 2026-10-24,MBG.DE,Mercedes-Benz Group,Euro Stoxx 50
 2026-10-24,MUV2.DE,Munich Re,Euro Stoxx 50
+2026-10-24,NOKIA.HE,Nokia,Euro Stoxx 50
 2026-10-24,NDA-FI.HE,Nordea,Euro Stoxx 50
 2026-10-24,PRX.AS,Prosus,Euro Stoxx 50
 2026-10-24,RHM.DE,Rheinmetall,Euro Stoxx 50
@@ -861,5 +863,3 @@ data_captura,codigo_ativo,nome_ativo,indice_origem
 2026-10-24,TTE.PA,TotalEnergies,Euro Stoxx 50
 2026-10-24,DG.PA,Vinci SA,Euro Stoxx 50
 2026-10-24,UCG.MI,UniCredit,Euro Stoxx 50
-2026-10-24,VOW.DE,Volkswagen Group,Euro Stoxx 50
-2026-10-24,WKL.AS,Wolters Kluwer,Euro Stoxx 50
