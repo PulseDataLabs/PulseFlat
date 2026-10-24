@@ -61,7 +61,7 @@
   },
   "anbima_indice_imab.csv.gz": {
     "min": "2001-12-04",
-    "max": "2026-10-22"
+    "max": "2026-10-23"
   },
   "b3_fiis.csv": {
     "min": "2026-10-23",
@@ -185,7 +185,7 @@
   },
   "fred_us_treasuries_yield_curve.csv.gz": {
     "min": "2020-01-02",
-    "max": "2026-10-22"
+    "max": "2026-10-23"
   },
   "cvm_fundos_informe_diario.csv.gz": {
     "min": "2026-10-01",
