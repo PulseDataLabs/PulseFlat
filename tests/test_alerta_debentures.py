@@ -294,7 +294,7 @@ def test_main_success(
 
     # Verifica se notificações foram enviadas
     mock_tg.assert_called_once()
-    mock_pa.assert_called_once()
+    mock_pa.assert_not_called()  # Power Automate desativado
     mock_email.assert_called_once()
 
     # Verifica se o estado de notificações foi gravado indicando o dia de hoje

@@ -60,7 +60,7 @@ jobs:
         SMTP_FROM: ${{ secrets.SMTP_FROM }}
         SMTP_TO: ${{ secrets.SMTP_TO }}
         SMTP_SUBJECT: ${{ secrets.SMTP_SUBJECT }}
-        POWER_AUTOMATE_WEBHOOK_URL: ${{ secrets.POWER_AUTOMATE_WEBHOOK_URL }}
+        # POWER_AUTOMATE_WEBHOOK_URL: ${{ secrets.POWER_AUTOMATE_WEBHOOK_URL }}
       run: |
         if [ -n "$ORACLE_DB_WALLET_BASE64" ]; then
           echo "Processando carteira mTLS..."

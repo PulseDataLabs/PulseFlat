@@ -334,13 +334,14 @@ def main():
         tg_text = f"<b>Debêntures - Disponível</b>\nArquivo de Negociação Disponível - Data de referência: {ref_date_str}"
         send_telegram(telegram_token, telegram_chat, tg_text)
 
-    power_automate_url = os.getenv("POWER_AUTOMATE_WEBHOOK_URL")
-    if power_automate_url:
-        send_power_automate(
-            url=power_automate_url,
-            title="Debêntures.com.br - Preços de negociação",
-            message=f"Dados disponíveis para captura. Data de referência: {ref_date_str}",
-        )
+    # Envio de webhook via Power Automate desativado a pedido do usuário
+    # power_automate_url = os.getenv("POWER_AUTOMATE_WEBHOOK_URL")
+    # if power_automate_url:
+    #     send_power_automate(
+    #         url=power_automate_url,
+    #         title="Debêntures.com.br - Preços de negociação",
+    #         message=f"Dados disponíveis para captura. Data de referência: {ref_date_str}",
+    #     )
 
     smtp_server = os.getenv("SMTP_SERVER")
     smtp_port = os.getenv("SMTP_PORT", "587")
