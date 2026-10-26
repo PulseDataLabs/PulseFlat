@@ -366,5 +366,9 @@ window.PULSEFLAT_LAST_UPDATES = {
   "cvm_cadastro_companhias_abertas.csv": {
     "min": "2026-10-26",
     "max": "2026-10-26"
+  },
+  "anbima_curvas_credito.csv.gz": {
+    "min": "2020-01-02",
+    "max": "2026-10-23"
   }
 };
