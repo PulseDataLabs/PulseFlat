@@ -493,3 +493,7 @@ data_captura,data_referencia,estrategia_coleta,indice,mes_referencia,tipo_projec
 2026-10-26,2026-10-01,scraping_indicadores,IGP-M,out/26,corrente,1.53,Projeção ANBIMA corrente,,
 2026-10-26,2026-10-01,scraping_indicadores,IPCA,out/26,fechado,0.21,Var % mês fechado,,
 2026-10-26,2026-10-01,scraping_indicadores,IPCA,out/26,corrente,0.21,Projeção ANBIMA corrente,,
+2026-10-27,2026-10-01,scraping_indicadores,IGP-M,out/26,fechado,1.53,Var % mês fechado,,
+2026-10-27,2026-10-01,scraping_indicadores,IGP-M,out/26,corrente,1.53,Projeção ANBIMA corrente,,
+2026-10-27,2026-10-01,scraping_indicadores,IPCA,out/26,fechado,0.21,Var % mês fechado,,
+2026-10-27,2026-10-01,scraping_indicadores,IPCA,out/26,corrente,0.21,Projeção ANBIMA corrente,,
