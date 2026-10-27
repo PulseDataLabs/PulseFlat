@@ -33,7 +33,7 @@
   },
   "cvm_fundos_informe_diario.csv.gz": {
     "min": "2026-10-01",
-    "max": "2026-10-23"
+    "max": "2026-10-26"
   },
   "wikipedia_global_indices.csv": {
     "min": "2026-10-27",
@@ -350,5 +350,21 @@
   "b3_bdi_trades_acoes.csv.gz": {
     "min": "2026-06-02",
     "max": "2026-10-26"
+  },
+  "anbima_fidc_mercado_secundario.csv.gz": {
+    "min": "2021-10-18",
+    "max": "2026-10-26"
+  },
+  "anbima_indices_idka_resultados.csv.gz": {
+    "min": "2020-01-02",
+    "max": "2026-10-26"
+  },
+  "anbima_ranking_global.csv": {
+    "min": "2026-04-01",
+    "max": "2026-09-01"
+  },
+  "bacen_conglomerados.csv": {
+    "min": "2026-08-01",
+    "max": "2026-09-01"
   }
 }
