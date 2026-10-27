@@ -434,7 +434,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "16,68"
+    "Valor": "15,37"
   },
   {
     "data_referencia": "2026-10-26",
@@ -450,7 +450,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "35,14"
+    "Valor": "26,19"
   },
   {
     "data_referencia": "2026-10-26",
@@ -482,7 +482,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "13,80"
+    "Valor": "7,87"
   },
   {
     "data_referencia": "2026-10-26",
@@ -522,7 +522,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "24,72"
+    "Valor": "17,47"
   },
   {
     "data_referencia": "2026-10-26",
@@ -530,7 +530,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "18,06"
+    "Valor": "14,33"
   },
   {
     "data_referencia": "2026-10-26",
@@ -538,7 +538,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "20,37"
+    "Valor": "15,95"
   },
   {
     "data_referencia": "2026-10-26",
@@ -562,7 +562,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo ETFs",
     "categoria": "ETFs & Setoriais",
-    "Valor": "201,69"
+    "Valor": "172,42"
   },
   {
     "data_referencia": "2026-10-26",
@@ -570,7 +570,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "79,82"
+    "Valor": "60,00"
   },
   {
     "data_referencia": "2026-10-26",
@@ -578,7 +578,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "19,01"
+    "Valor": "19,26"
   },
   {
     "data_referencia": "2026-10-26",
@@ -586,7 +586,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo FIIs e Fiagros",
     "categoria": "FIIs e Fiagros",
-    "Valor": "114,00"
+    "Valor": "106,99"
   },
   {
     "data_referencia": "2026-10-26",
@@ -594,7 +594,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "4,16"
+    "Valor": "3,18"
   },
   {
     "data_referencia": "2026-10-26",
@@ -630,19 +630,11 @@
   },
   {
     "data_referencia": "2026-10-26",
-    "indicador": "CLPBRL=X",
-    "fonte": "Yahoo Finance",
-    "dataset_label": "Yahoo Câmbio e Moedas",
-    "categoria": "Câmbio / Moedas",
-    "Valor": "0,0054"
-  },
-  {
-    "data_referencia": "2026-10-26",
     "indicador": "CMIG4.SA",
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "11,67"
+    "Valor": "10,34"
   },
   {
     "data_referencia": "2026-10-26",
@@ -650,7 +642,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "4,99"
+    "Valor": "4,68"
   },
   {
     "data_referencia": "2026-10-26",
@@ -674,7 +666,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "49,79"
+    "Valor": "42,70"
   },
   {
     "data_referencia": "2026-10-26",
@@ -698,7 +690,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "5,20"
+    "Valor": "2,77"
   },
   {
     "data_referencia": "2026-10-26",
@@ -706,7 +698,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "6,07"
+    "Valor": "5,01"
   },
   {
     "data_referencia": "2026-10-26",
@@ -866,7 +858,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "66,47"
+    "Valor": "47,29"
   },
   {
     "data_referencia": "2026-10-26",
@@ -890,7 +882,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "19,45"
+    "Valor": "11,20"
   },
   {
     "data_referencia": "2026-10-26",
@@ -962,7 +954,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "25,22"
+    "Valor": "25,45"
   },
   {
     "data_referencia": "2026-10-26",
@@ -1010,7 +1002,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo FIIs e Fiagros",
     "categoria": "FIIs e Fiagros",
-    "Valor": "125,47"
+    "Valor": "117,35"
   },
   {
     "data_referencia": "2026-10-26",
@@ -1050,7 +1042,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "32,20"
+    "Valor": "24,83"
   },
   {
     "data_referencia": "2026-10-26",
@@ -1076,7 +1068,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "67,67"
+    "Valor": "61,71"
   },
   {
     "data_referencia": "2026-10-26",
@@ -1092,7 +1084,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "48,30"
+    "Valor": "41,70"
   },
   {
     "data_referencia": "2026-10-26",
@@ -1100,7 +1092,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo ETFs",
     "categoria": "ETFs & Setoriais",
-    "Valor": "430,00"
+    "Valor": "468,54"
   },
   {
     "data_referencia": "2026-10-26",
@@ -1116,7 +1108,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "13,89"
+    "Valor": "10,69"
   },
   {
     "data_referencia": "2026-10-26",
@@ -1148,7 +1140,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "18,22"
+    "Valor": "18,81"
   },
   {
     "data_referencia": "2026-10-26",
@@ -1172,7 +1164,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo FIIs e Fiagros",
     "categoria": "FIIs e Fiagros",
-    "Valor": "93,20"
+    "Valor": "87,54"
   },
   {
     "data_referencia": "2026-10-26",
@@ -1196,7 +1188,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "31,14"
+    "Valor": "25,50"
   },
   {
     "data_referencia": "2026-10-26",
@@ -1292,7 +1284,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo FIIs e Fiagros",
     "categoria": "FIIs e Fiagros",
-    "Valor": "9,44"
+    "Valor": "9,11"
   },
   {
     "data_referencia": "2026-10-26",
@@ -1356,7 +1348,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "3,03"
+    "Valor": "2,30"
   },
   {
     "data_referencia": "2026-10-26",
@@ -1372,7 +1364,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "65,24"
+    "Valor": "60,80"
   },
   {
     "data_referencia": "2026-10-26",
@@ -1468,7 +1460,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "20,28"
+    "Valor": "15,71"
   },
   {
     "data_referencia": "2026-10-26",
@@ -1476,7 +1468,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "12,80"
+    "Valor": "11,14"
   },
   {
     "data_referencia": "2026-10-26",
@@ -1500,7 +1492,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "27,53"
+    "Valor": "26,30"
   },
   {
     "data_referencia": "2026-10-26",
@@ -1516,7 +1508,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "31,98"
+    "Valor": "25,27"
   },
   {
     "data_referencia": "2026-10-26",
@@ -1548,7 +1540,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "17,49"
+    "Valor": "17,45"
   },
   {
     "data_referencia": "2026-10-26",
@@ -1556,7 +1548,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo ETFs",
     "categoria": "ETFs & Setoriais",
-    "Valor": "137,16"
+    "Valor": "98,81"
   },
   {
     "data_referencia": "2026-10-26",
@@ -1572,7 +1564,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "21,05"
+    "Valor": "20,07"
   },
   {
     "data_referencia": "2026-10-26",
@@ -1588,7 +1580,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "43,06"
+    "Valor": "47,40"
   },
   {
     "data_referencia": "2026-10-26",
@@ -1596,7 +1588,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "44,75"
+    "Valor": "40,50"
   },
   {
     "data_referencia": "2026-10-26",
@@ -1636,7 +1628,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "19,09"
+    "Valor": "18,10"
   },
   {
     "data_referencia": "2026-10-26",
@@ -1668,7 +1660,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "38,55"
+    "Valor": "35,24"
   },
   {
     "data_referencia": "2026-10-26",
@@ -1708,7 +1700,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "6,63"
+    "Valor": "5,92"
   },
   {
     "data_referencia": "2026-10-26",
@@ -1724,7 +1716,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "61,90"
+    "Valor": "64,38"
   },
   {
     "data_referencia": "2026-10-26",
@@ -1756,7 +1748,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo FIIs e Fiagros",
     "categoria": "FIIs e Fiagros",
-    "Valor": "114,20"
+    "Valor": "104,62"
   },
   {
     "data_referencia": "2026-10-26",
@@ -1764,7 +1756,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "32,43"
+    "Valor": "30,69"
   },
   {
     "data_referencia": "2026-10-26",
@@ -1828,7 +1820,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo FIIs e Fiagros",
     "categoria": "FIIs e Fiagros",
-    "Valor": "104,61"
+    "Valor": "100,20"
   },
   {
     "data_referencia": "2026-10-26",
@@ -1996,7 +1988,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "0,2037"
+    "Valor": "0,2034"
   },
   {
     "data_referencia": "2026-10-27",
@@ -2012,7 +2004,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "0,7018"
+    "Valor": "0,7035"
   },
   {
     "data_referencia": "2026-10-27",
@@ -2028,7 +2020,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "735,28"
+    "Valor": "738,61"
   },
   {
     "data_referencia": "2026-10-27",
@@ -2036,7 +2028,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "5,3716"
+    "Valor": "5,4088"
   },
   {
     "data_referencia": "2026-10-27",
@@ -2044,7 +2036,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "79.592"
+    "Valor": "79.777"
   },
   {
     "data_referencia": "2026-10-27",
@@ -2052,7 +2044,15 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "6,4898"
+    "Valor": "6,5364"
+  },
+  {
+    "data_referencia": "2026-10-27",
+    "indicador": "CLPBRL=X",
+    "fonte": "Yahoo Finance",
+    "dataset_label": "Yahoo Câmbio e Moedas",
+    "categoria": "Câmbio / Moedas",
+    "Valor": "0,0054"
   },
   {
     "data_referencia": "2026-10-27",
@@ -2060,7 +2060,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "0,8054"
+    "Valor": "0,8118"
   },
   {
     "data_referencia": "2026-10-27",
@@ -2076,7 +2076,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "0,0773"
+    "Valor": "0,0771"
   },
   {
     "data_referencia": "2026-10-27",
@@ -2084,7 +2084,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "0,9915"
+    "Valor": "0,9854"
   },
   {
     "data_referencia": "2026-10-27",
@@ -2092,7 +2092,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "2.305"
+    "Valor": "2.311"
   },
   {
     "data_referencia": "2026-10-27",
@@ -2100,7 +2100,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "5,9997"
+    "Valor": "6,0363"
   },
   {
     "data_referencia": "2026-10-27",
@@ -2108,7 +2108,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "1,1166"
+    "Valor": "1,1152"
   },
   {
     "data_referencia": "2026-10-27",
@@ -2116,7 +2116,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "7,1649"
+    "Valor": "7,2150"
   },
   {
     "data_referencia": "2026-10-27",
@@ -2124,7 +2124,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "1,3327"
+    "Valor": "1,3325"
   },
   {
     "data_referencia": "2026-10-27",
@@ -2132,7 +2132,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "2,59"
+    "Valor": "2,57"
   },
   {
     "data_referencia": "2026-10-27",
@@ -2140,7 +2140,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "0,0339"
+    "Valor": "0,0342"
   },
   {
     "data_referencia": "2026-10-27",
@@ -2156,7 +2156,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "56,37"
+    "Valor": "56,20"
   },
   {
     "data_referencia": "2026-10-27",
@@ -2164,7 +2164,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "0,2891"
+    "Valor": "0,2904"
   },
   {
     "data_referencia": "2026-10-27",
@@ -2172,7 +2172,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "4,42"
+    "Valor": "4,48"
   },
   {
     "data_referencia": "2026-10-27",
@@ -2180,7 +2180,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "0,1105"
+    "Valor": "0,1102"
   },
   {
     "data_referencia": "2026-10-27",
@@ -2196,7 +2196,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "99,68"
+    "Valor": "99,93"
   },
   {
     "data_referencia": "2026-10-27",
@@ -2204,7 +2204,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "0,3278"
+    "Valor": "0,3275"
   },
   {
     "data_referencia": "2026-10-27",
@@ -2212,7 +2212,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "1,4024"
+    "Valor": "1,4016"
   },
   {
     "data_referencia": "2026-10-27",
@@ -2220,7 +2220,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "0,8280"
+    "Valor": "0,8285"
   },
   {
     "data_referencia": "2026-10-27",
@@ -2228,7 +2228,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "6,6677"
+    "Valor": "6,6559"
   },
   {
     "data_referencia": "2026-10-27",
@@ -2236,7 +2236,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "95,1825"
+    "Valor": "95,1200"
   },
   {
     "data_referencia": "2026-10-27",
@@ -2244,7 +2244,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "157,7510"
+    "Valor": "157,6490"
   },
   {
     "data_referencia": "2026-10-27",
@@ -2252,7 +2252,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "18,5690"
+    "Valor": "18,6245"
   },
   {
     "data_referencia": "2026-10-27",
@@ -2260,7 +2260,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "0,1675"
+    "Valor": "0,1679"
   },
   {
     "data_referencia": "2026-10-27",
@@ -2284,7 +2284,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Índices Globais",
     "categoria": "Índices de Ações Globais",
-    "Valor": "23.028"
+    "Valor": "23.041"
   },
   {
     "data_referencia": "2026-10-27",
@@ -2292,7 +2292,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Índices Globais",
     "categoria": "Índices de Ações Globais",
-    "Valor": "5.275"
+    "Valor": "5.266"
   },
   {
     "data_referencia": "2026-10-27",
@@ -2300,7 +2300,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Índices Globais",
     "categoria": "Índices de Ações Globais",
-    "Valor": "1.609"
+    "Valor": "1.612"
   },
   {
     "data_referencia": "2026-10-27",
@@ -2324,7 +2324,7 @@
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Índices Globais",
     "categoria": "Índices de Ações Globais",
-    "Valor": "5.404"
+    "Valor": "5.397"
   },
   {
     "data_referencia": "2026-10-27",
