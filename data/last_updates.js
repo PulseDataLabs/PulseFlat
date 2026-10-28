@@ -101,7 +101,7 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "bcb_ptax.csv": {
     "min": "2020-01-02",
-    "max": "2026-10-27"
+    "max": "2026-10-28"
   },
   "bacen_negociacao_tpf_extragrupo.csv.gz": {
     "min": "2020-01-02",
