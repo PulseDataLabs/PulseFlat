@@ -25,17 +25,17 @@ window.PULSEFLAT_MARKET_LATEST = [
   },
   {
     "label": "PTAX USD Venda",
-    "value": "5,3420",
-    "reference_date": "2026-10-28",
+    "value": "5,3744",
+    "reference_date": "2026-10-29",
     "type": "up",
-    "change": "+0,14%"
+    "change": "+0,61%"
   },
   {
     "label": "PTAX USD Compra",
-    "value": "5,3414",
-    "reference_date": "2026-10-28",
+    "value": "5,3738",
+    "reference_date": "2026-10-29",
     "type": "up",
-    "change": "+0,14%"
+    "change": "+0,61%"
   },
   {
     "label": "IBOVESPA",
