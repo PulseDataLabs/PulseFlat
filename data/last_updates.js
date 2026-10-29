@@ -322,5 +322,41 @@ window.PULSEFLAT_LAST_UPDATES = {
   "b3_bdi_trades_acoes.csv.gz": {
     "min": "2026-06-02",
     "max": "2026-10-28"
+  },
+  "anbima_550.csv": {
+    "min": "2026-06-01",
+    "max": "2026-10-29"
+  },
+  "anbima_curvas_juros_parametros_svensson.csv.gz": {
+    "min": "2020-01-02",
+    "max": "2026-10-28"
+  },
+  "anbima_ima_completo.csv": {
+    "min": "2026-05-29",
+    "max": "2026-10-28"
+  },
+  "anbima_fidc_mercado_secundario.csv.gz": {
+    "min": "2021-10-18",
+    "max": "2026-10-28"
+  },
+  "anbima_curvas_credito.csv.gz": {
+    "min": "2020-01-02",
+    "max": "2026-10-28"
+  },
+  "anbima_debentures.csv.gz": {
+    "min": "2026-06-03",
+    "max": "2026-10-28"
+  },
+  "anbima_indicadores.csv": {
+    "min": "2026-04-01",
+    "max": "2026-10-29"
+  },
+  "b3_bdi_di_over.csv": {
+    "min": "2026-05-29",
+    "max": "2026-10-28"
+  },
+  "b3_indicadores_economicos_fwf.csv": {
+    "min": "2026-06-16",
+    "max": "2026-10-29"
   }
 };
