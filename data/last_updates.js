@@ -362,5 +362,9 @@ window.PULSEFLAT_LAST_UPDATES = {
   "b3_carteira_teorica_bdrx.csv": {
     "min": "2026-06-03",
     "max": "2026-10-30"
+  },
+  "anbima_curvas_credito.csv.gz": {
+    "min": "2020-01-02",
+    "max": "2026-10-29"
   }
 };
