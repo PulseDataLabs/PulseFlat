@@ -233,7 +233,7 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "ipea_mercados_diarios.csv": {
     "min": "1900-01-02",
-    "max": "2026-10-28"
+    "max": "2026-10-29"
   },
   "ipea_taxas_juros.csv": {
     "min": "1966-12-01",
@@ -349,6 +349,10 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "anbima_cri_cra_mercado_secundario.csv.gz": {
     "min": "2020-01-02",
+    "max": "2026-10-29"
+  },
+  "anbima_ima_completo.csv": {
+    "min": "2026-05-29",
     "max": "2026-10-29"
   }
 };
