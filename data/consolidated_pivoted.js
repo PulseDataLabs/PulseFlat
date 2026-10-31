@@ -426,7 +426,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "14,55"
+    "Valor": "14,60"
   },
   {
     "data_referencia": "2026-10-30",
@@ -442,7 +442,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "23,55"
+    "Valor": "23,50"
   },
   {
     "data_referencia": "2026-10-30",
@@ -450,7 +450,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo FIIs e Fiagros",
     "categoria": "FIIs e Fiagros",
-    "Valor": "9,54"
+    "Valor": "9,70"
   },
   {
     "data_referencia": "2026-10-30",
@@ -482,7 +482,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "7,81"
+    "Valor": "7,88"
   },
   {
     "data_referencia": "2026-10-30",
@@ -498,7 +498,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "14,20"
+    "Valor": "13,43"
   },
   {
     "data_referencia": "2026-10-30",
@@ -522,7 +522,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "16,46"
+    "Valor": "16,47"
   },
   {
     "data_referencia": "2026-10-30",
@@ -530,7 +530,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "12,95"
+    "Valor": "12,71"
   },
   {
     "data_referencia": "2026-10-30",
@@ -538,7 +538,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "14,16"
+    "Valor": "13,86"
   },
   {
     "data_referencia": "2026-10-30",
@@ -546,7 +546,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "2,69"
+    "Valor": "2,55"
   },
   {
     "data_referencia": "2026-10-30",
@@ -562,7 +562,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo ETFs",
     "categoria": "ETFs & Setoriais",
-    "Valor": "166,51"
+    "Valor": "165,40"
   },
   {
     "data_referencia": "2026-10-30",
@@ -570,7 +570,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "54,04"
+    "Valor": "51,52"
   },
   {
     "data_referencia": "2026-10-30",
@@ -578,7 +578,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "17,78"
+    "Valor": "18,27"
   },
   {
     "data_referencia": "2026-10-30",
@@ -586,7 +586,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo FIIs e Fiagros",
     "categoria": "FIIs e Fiagros",
-    "Valor": "103,61"
+    "Valor": "105,38"
   },
   {
     "data_referencia": "2026-10-30",
@@ -594,7 +594,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "3,02"
+    "Valor": "2,99"
   },
   {
     "data_referencia": "2026-10-30",
@@ -610,7 +610,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo FIIs e Fiagros",
     "categoria": "FIIs e Fiagros",
-    "Valor": "97,05"
+    "Valor": "97,92"
   },
   {
     "data_referencia": "2026-10-30",
@@ -658,7 +658,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "4,50"
+    "Valor": "4,86"
   },
   {
     "data_referencia": "2026-10-30",
@@ -666,7 +666,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "1,61"
+    "Valor": "1,58"
   },
   {
     "data_referencia": "2026-10-30",
@@ -682,7 +682,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "42,51"
+    "Valor": "41,90"
   },
   {
     "data_referencia": "2026-10-30",
@@ -706,7 +706,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "2,25"
+    "Valor": "2,33"
   },
   {
     "data_referencia": "2026-10-30",
@@ -714,7 +714,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "4,24"
+    "Valor": "3,88"
   },
   {
     "data_referencia": "2026-10-30",
@@ -746,7 +746,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "17,37"
+    "Valor": "17,09"
   },
   {
     "data_referencia": "2026-10-30",
@@ -858,7 +858,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "26,46"
+    "Valor": "26,26"
   },
   {
     "data_referencia": "2026-10-30",
@@ -866,7 +866,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "25,83"
+    "Valor": "25,70"
   },
   {
     "data_referencia": "2026-10-30",
@@ -874,7 +874,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "44,50"
+    "Valor": "44,29"
   },
   {
     "data_referencia": "2026-10-30",
@@ -882,7 +882,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "32,90"
+    "Valor": "32,60"
   },
   {
     "data_referencia": "2026-10-30",
@@ -914,7 +914,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "9,13"
+    "Valor": "8,96"
   },
   {
     "data_referencia": "2026-10-30",
@@ -970,7 +970,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "20,74"
+    "Valor": "20,47"
   },
   {
     "data_referencia": "2026-10-30",
@@ -1002,7 +1002,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "25,46"
+    "Valor": "25,13"
   },
   {
     "data_referencia": "2026-10-30",
@@ -1018,7 +1018,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "4,23"
+    "Valor": "4,20"
   },
   {
     "data_referencia": "2026-10-30",
@@ -1042,7 +1042,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo FIIs e Fiagros",
     "categoria": "FIIs e Fiagros",
-    "Valor": "147,00"
+    "Valor": "149,50"
   },
   {
     "data_referencia": "2026-10-30",
@@ -1050,7 +1050,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo FIIs e Fiagros",
     "categoria": "FIIs e Fiagros",
-    "Valor": "112,80"
+    "Valor": "114,00"
   },
   {
     "data_referencia": "2026-10-30",
@@ -1066,7 +1066,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "21,52"
+    "Valor": "21,27"
   },
   {
     "data_referencia": "2026-10-30",
@@ -1090,7 +1090,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "22,20"
+    "Valor": "21,79"
   },
   {
     "data_referencia": "2026-10-30",
@@ -1116,7 +1116,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "55,50"
+    "Valor": "55,68"
   },
   {
     "data_referencia": "2026-10-30",
@@ -1124,7 +1124,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "12,85"
+    "Valor": "12,45"
   },
   {
     "data_referencia": "2026-10-30",
@@ -1132,7 +1132,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "39,54"
+    "Valor": "38,69"
   },
   {
     "data_referencia": "2026-10-30",
@@ -1140,7 +1140,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo ETFs",
     "categoria": "ETFs & Setoriais",
-    "Valor": "468,00"
+    "Valor": "466,50"
   },
   {
     "data_referencia": "2026-10-30",
@@ -1156,7 +1156,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "8,70"
+    "Valor": "8,97"
   },
   {
     "data_referencia": "2026-10-30",
@@ -1196,7 +1196,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "17,37"
+    "Valor": "17,20"
   },
   {
     "data_referencia": "2026-10-30",
@@ -1212,7 +1212,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo FIIs e Fiagros",
     "categoria": "FIIs e Fiagros",
-    "Valor": "104,30"
+    "Valor": "104,98"
   },
   {
     "data_referencia": "2026-10-30",
@@ -1220,7 +1220,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo FIIs e Fiagros",
     "categoria": "FIIs e Fiagros",
-    "Valor": "85,43"
+    "Valor": "85,51"
   },
   {
     "data_referencia": "2026-10-30",
@@ -1244,7 +1244,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "24,09"
+    "Valor": "23,40"
   },
   {
     "data_referencia": "2026-10-30",
@@ -1260,7 +1260,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "9,38"
+    "Valor": "8,98"
   },
   {
     "data_referencia": "2026-10-30",
@@ -1284,7 +1284,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "15,66"
+    "Valor": "15,35"
   },
   {
     "data_referencia": "2026-10-30",
@@ -1300,7 +1300,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "5,13"
+    "Valor": "5,35"
   },
   {
     "data_referencia": "2026-10-30",
@@ -1316,7 +1316,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "4,04"
+    "Valor": "4,05"
   },
   {
     "data_referencia": "2026-10-30",
@@ -1332,7 +1332,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "25,27"
+    "Valor": "25,19"
   },
   {
     "data_referencia": "2026-10-30",
@@ -1348,7 +1348,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo FIIs e Fiagros",
     "categoria": "FIIs e Fiagros",
-    "Valor": "8,94"
+    "Valor": "8,88"
   },
   {
     "data_referencia": "2026-10-30",
@@ -1412,7 +1412,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "2,03"
+    "Valor": "2,08"
   },
   {
     "data_referencia": "2026-10-30",
@@ -1428,7 +1428,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "59,06"
+    "Valor": "60,01"
   },
   {
     "data_referencia": "2026-10-30",
@@ -1436,7 +1436,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "52,20"
+    "Valor": "52,71"
   },
   {
     "data_referencia": "2026-10-30",
@@ -1468,7 +1468,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "70,47"
+    "Valor": "71,49"
   },
   {
     "data_referencia": "2026-10-30",
@@ -1492,7 +1492,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo FIIs e Fiagros",
     "categoria": "FIIs e Fiagros",
-    "Valor": "60,00"
+    "Valor": "61,00"
   },
   {
     "data_referencia": "2026-10-30",
@@ -1516,7 +1516,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "1,30"
+    "Valor": "1,32"
   },
   {
     "data_referencia": "2026-10-30",
@@ -1524,7 +1524,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "15,50"
+    "Valor": "15,22"
   },
   {
     "data_referencia": "2026-10-30",
@@ -1532,7 +1532,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "10,75"
+    "Valor": "11,03"
   },
   {
     "data_referencia": "2026-10-30",
@@ -1540,7 +1540,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "29,03"
+    "Valor": "27,85"
   },
   {
     "data_referencia": "2026-10-30",
@@ -1556,7 +1556,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "24,64"
+    "Valor": "23,94"
   },
   {
     "data_referencia": "2026-10-30",
@@ -1572,7 +1572,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "25,14"
+    "Valor": "24,70"
   },
   {
     "data_referencia": "2026-10-30",
@@ -1604,7 +1604,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "17,01"
+    "Valor": "17,02"
   },
   {
     "data_referencia": "2026-10-30",
@@ -1612,7 +1612,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo ETFs",
     "categoria": "ETFs & Setoriais",
-    "Valor": "92,50"
+    "Valor": "92,15"
   },
   {
     "data_referencia": "2026-10-30",
@@ -1628,7 +1628,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "19,55"
+    "Valor": "21,09"
   },
   {
     "data_referencia": "2026-10-30",
@@ -1644,7 +1644,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "49,72"
+    "Valor": "50,14"
   },
   {
     "data_referencia": "2026-10-30",
@@ -1652,7 +1652,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "39,20"
+    "Valor": "39,59"
   },
   {
     "data_referencia": "2026-10-30",
@@ -1684,7 +1684,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "20,34"
+    "Valor": "20,01"
   },
   {
     "data_referencia": "2026-10-30",
@@ -1692,7 +1692,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "19,43"
+    "Valor": "19,17"
   },
   {
     "data_referencia": "2026-10-30",
@@ -1724,7 +1724,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "32,01"
+    "Valor": "31,76"
   },
   {
     "data_referencia": "2026-10-30",
@@ -1780,7 +1780,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "5,47"
+    "Valor": "5,00"
   },
   {
     "data_referencia": "2026-10-30",
@@ -1796,7 +1796,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "60,05"
+    "Valor": "62,02"
   },
   {
     "data_referencia": "2026-10-30",
@@ -1804,7 +1804,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "30,46"
+    "Valor": "29,60"
   },
   {
     "data_referencia": "2026-10-30",
@@ -1828,7 +1828,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo FIIs e Fiagros",
     "categoria": "FIIs e Fiagros",
-    "Valor": "98,37"
+    "Valor": "99,20"
   },
   {
     "data_referencia": "2026-10-30",
@@ -1836,7 +1836,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "30,75"
+    "Valor": "30,70"
   },
   {
     "data_referencia": "2026-10-30",
@@ -1852,7 +1852,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "49,28"
+    "Valor": "48,36"
   },
   {
     "data_referencia": "2026-10-30",
@@ -1900,7 +1900,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo FIIs e Fiagros",
     "categoria": "FIIs e Fiagros",
-    "Valor": "97,20"
+    "Valor": "96,80"
   },
   {
     "data_referencia": "2026-10-30",
@@ -1908,7 +1908,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
-    "Valor": "8,96"
+    "Valor": "8,91"
   },
   {
     "data_referencia": "2026-10-30",
@@ -2132,7 +2132,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "0,1931"
+    "Valor": "0,1924"
   },
   {
     "data_referencia": "2026-10-31",
@@ -2148,7 +2148,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "8,44"
+    "Valor": "8,42"
   },
   {
     "data_referencia": "2026-10-31",
@@ -2156,7 +2156,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "698,52"
+    "Valor": "703,72"
   },
   {
     "data_referencia": "2026-10-31",
@@ -2164,7 +2164,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "77.179"
+    "Valor": "77.318"
   },
   {
     "data_referencia": "2026-10-31",
@@ -2204,7 +2204,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "0,9532"
+    "Valor": "0,9536"
   },
   {
     "data_referencia": "2026-10-31",
@@ -2212,7 +2212,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "2.240"
+    "Valor": "2.243"
   },
   {
     "data_referencia": "2026-10-31",
@@ -2220,7 +2220,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "2,50"
+    "Valor": "2,48"
   },
   {
     "data_referencia": "2026-10-31",
@@ -2228,7 +2228,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "11,34"
+    "Valor": "11,52"
   },
   {
     "data_referencia": "2026-10-31",
@@ -2236,7 +2236,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "54,69"
+    "Valor": "54,90"
   },
   {
     "data_referencia": "2026-10-31",
@@ -2252,7 +2252,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "0,1142"
+    "Valor": "0,1125"
   },
   {
     "data_referencia": "2026-10-31",
@@ -2268,7 +2268,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "95,49"
+    "Valor": "95,55"
   },
   {
     "data_referencia": "2026-10-31",
@@ -2276,7 +2276,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "0,3206"
+    "Valor": "0,3194"
   },
   {
     "data_referencia": "2026-10-31",
@@ -2316,7 +2316,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "0,1686"
+    "Valor": "0,1685"
   },
   {
     "data_referencia": "2026-10-31",
@@ -2324,7 +2324,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "1,24"
+    "Valor": "1,25"
   },
   {
     "data_referencia": "2026-11-01",
