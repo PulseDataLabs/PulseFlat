@@ -982,14 +982,6 @@ window.PULSEFLAT_PIVOTED = [
   },
   {
     "data_referencia": "2026-10-30",
-    "indicador": "GBPUSD=X",
-    "fonte": "Yahoo Finance",
-    "dataset_label": "Yahoo Câmbio e Moedas",
-    "categoria": "Câmbio / Moedas",
-    "Valor": "1,3379"
-  },
-  {
-    "data_referencia": "2026-10-30",
     "indicador": "GC=F",
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Commodities",
@@ -2128,46 +2120,6 @@ window.PULSEFLAT_PIVOTED = [
   },
   {
     "data_referencia": "2026-10-31",
-    "indicador": "ADA-USD",
-    "fonte": "Yahoo Finance",
-    "dataset_label": "Yahoo Criptoativos",
-    "categoria": "Criptoativos",
-    "Valor": "0,1924"
-  },
-  {
-    "data_referencia": "2026-10-31",
-    "indicador": "AUDUSD=X",
-    "fonte": "Yahoo Finance",
-    "dataset_label": "Yahoo Câmbio e Moedas",
-    "categoria": "Câmbio / Moedas",
-    "Valor": "0,7035"
-  },
-  {
-    "data_referencia": "2026-10-31",
-    "indicador": "AVAX-USD",
-    "fonte": "Yahoo Finance",
-    "dataset_label": "Yahoo Criptoativos",
-    "categoria": "Criptoativos",
-    "Valor": "8,42"
-  },
-  {
-    "data_referencia": "2026-10-31",
-    "indicador": "BNB-USD",
-    "fonte": "Yahoo Finance",
-    "dataset_label": "Yahoo Criptoativos",
-    "categoria": "Criptoativos",
-    "Valor": "703,72"
-  },
-  {
-    "data_referencia": "2026-10-31",
-    "indicador": "BTC-USD",
-    "fonte": "Yahoo Finance",
-    "dataset_label": "Yahoo Criptoativos",
-    "categoria": "Criptoativos",
-    "Valor": "77.318"
-  },
-  {
-    "data_referencia": "2026-10-31",
     "indicador": "CLPBRL=X",
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
@@ -2191,140 +2143,84 @@ window.PULSEFLAT_PIVOTED = [
     "Valor": "0,0017"
   },
   {
-    "data_referencia": "2026-10-31",
+    "data_referencia": "2026-11-01",
+    "indicador": "ADA-USD",
+    "fonte": "Yahoo Finance",
+    "dataset_label": "Yahoo Criptoativos",
+    "categoria": "Criptoativos",
+    "Valor": "0,1932"
+  },
+  {
+    "data_referencia": "2026-11-01",
+    "indicador": "AUDUSD=X",
+    "fonte": "Yahoo Finance",
+    "dataset_label": "Yahoo Câmbio e Moedas",
+    "categoria": "Câmbio / Moedas",
+    "Valor": "0,7035"
+  },
+  {
+    "data_referencia": "2026-11-01",
+    "indicador": "AVAX-USD",
+    "fonte": "Yahoo Finance",
+    "dataset_label": "Yahoo Criptoativos",
+    "categoria": "Criptoativos",
+    "Valor": "8,76"
+  },
+  {
+    "data_referencia": "2026-11-01",
+    "indicador": "BNB-USD",
+    "fonte": "Yahoo Finance",
+    "dataset_label": "Yahoo Criptoativos",
+    "categoria": "Criptoativos",
+    "Valor": "712,86"
+  },
+  {
+    "data_referencia": "2026-11-01",
+    "indicador": "BTC-USD",
+    "fonte": "Yahoo Finance",
+    "dataset_label": "Yahoo Criptoativos",
+    "categoria": "Criptoativos",
+    "Valor": "77.807"
+  },
+  {
+    "data_referencia": "2026-11-01",
     "indicador": "DOGE-USD",
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "0,0751"
+    "Valor": "0,0757"
   },
   {
-    "data_referencia": "2026-10-31",
+    "data_referencia": "2026-11-01",
     "indicador": "DOT-USD",
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "0,9536"
+    "Valor": "0,9490"
   },
   {
-    "data_referencia": "2026-10-31",
+    "data_referencia": "2026-11-01",
     "indicador": "ETH-USD",
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "2.243"
+    "Valor": "2.265"
   },
   {
-    "data_referencia": "2026-10-31",
+    "data_referencia": "2026-11-01",
+    "indicador": "GBPUSD=X",
+    "fonte": "Yahoo Finance",
+    "dataset_label": "Yahoo Câmbio e Moedas",
+    "categoria": "Câmbio / Moedas",
+    "Valor": "1,3393"
+  },
+  {
+    "data_referencia": "2026-11-01",
     "indicador": "ICP-USD",
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "2,48"
-  },
-  {
-    "data_referencia": "2026-10-31",
-    "indicador": "LINK-USD",
-    "fonte": "Yahoo Finance",
-    "dataset_label": "Yahoo Criptoativos",
-    "categoria": "Criptoativos",
-    "Valor": "11,52"
-  },
-  {
-    "data_referencia": "2026-10-31",
-    "indicador": "LTC-USD",
-    "fonte": "Yahoo Finance",
-    "dataset_label": "Yahoo Criptoativos",
-    "categoria": "Criptoativos",
-    "Valor": "54,90"
-  },
-  {
-    "data_referencia": "2026-10-31",
-    "indicador": "NEAR-USD",
-    "fonte": "Yahoo Finance",
-    "dataset_label": "Yahoo Criptoativos",
-    "categoria": "Criptoativos",
-    "Valor": "4,31"
-  },
-  {
-    "data_referencia": "2026-10-31",
-    "indicador": "OP-USD",
-    "fonte": "Yahoo Finance",
-    "dataset_label": "Yahoo Criptoativos",
-    "categoria": "Criptoativos",
-    "Valor": "0,1125"
-  },
-  {
-    "data_referencia": "2026-10-31",
-    "indicador": "SHIB-USD",
-    "fonte": "Yahoo Finance",
-    "dataset_label": "Yahoo Criptoativos",
-    "categoria": "Criptoativos",
-    "Valor": "0,000005"
-  },
-  {
-    "data_referencia": "2026-10-31",
-    "indicador": "SOL-USD",
-    "fonte": "Yahoo Finance",
-    "dataset_label": "Yahoo Criptoativos",
-    "categoria": "Criptoativos",
-    "Valor": "95,55"
-  },
-  {
-    "data_referencia": "2026-10-31",
-    "indicador": "TRX-USD",
-    "fonte": "Yahoo Finance",
-    "dataset_label": "Yahoo Criptoativos",
-    "categoria": "Criptoativos",
-    "Valor": "0,3194"
-  },
-  {
-    "data_referencia": "2026-10-31",
-    "indicador": "USDCAD=X",
-    "fonte": "Yahoo Finance",
-    "dataset_label": "Yahoo Câmbio e Moedas",
-    "categoria": "Câmbio / Moedas",
-    "Valor": "1,3973"
-  },
-  {
-    "data_referencia": "2026-10-31",
-    "indicador": "USDCHF=X",
-    "fonte": "Yahoo Finance",
-    "dataset_label": "Yahoo Câmbio e Moedas",
-    "categoria": "Câmbio / Moedas",
-    "Valor": "0,8249"
-  },
-  {
-    "data_referencia": "2026-10-31",
-    "indicador": "USDCNY=X",
-    "fonte": "Yahoo Finance",
-    "dataset_label": "Yahoo Câmbio e Moedas",
-    "categoria": "Câmbio / Moedas",
-    "Valor": "6,6540"
-  },
-  {
-    "data_referencia": "2026-10-31",
-    "indicador": "USDINR=X",
-    "fonte": "Yahoo Finance",
-    "dataset_label": "Yahoo Câmbio e Moedas",
-    "categoria": "Câmbio / Moedas",
-    "Valor": "94,9500"
-  },
-  {
-    "data_referencia": "2026-10-31",
-    "indicador": "XLM-USD",
-    "fonte": "Yahoo Finance",
-    "dataset_label": "Yahoo Criptoativos",
-    "categoria": "Criptoativos",
-    "Valor": "0,1685"
-  },
-  {
-    "data_referencia": "2026-10-31",
-    "indicador": "XRP-USD",
-    "fonte": "Yahoo Finance",
-    "dataset_label": "Yahoo Criptoativos",
-    "categoria": "Criptoativos",
-    "Valor": "1,25"
+    "Valor": "2,50"
   },
   {
     "data_referencia": "2026-11-01",
@@ -2333,5 +2229,109 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "ANBIMA Indicadores",
     "categoria": "Índice de Preços",
     "Valor": "0,8700"
+  },
+  {
+    "data_referencia": "2026-11-01",
+    "indicador": "LINK-USD",
+    "fonte": "Yahoo Finance",
+    "dataset_label": "Yahoo Criptoativos",
+    "categoria": "Criptoativos",
+    "Valor": "11,76"
+  },
+  {
+    "data_referencia": "2026-11-01",
+    "indicador": "LTC-USD",
+    "fonte": "Yahoo Finance",
+    "dataset_label": "Yahoo Criptoativos",
+    "categoria": "Criptoativos",
+    "Valor": "55,95"
+  },
+  {
+    "data_referencia": "2026-11-01",
+    "indicador": "NEAR-USD",
+    "fonte": "Yahoo Finance",
+    "dataset_label": "Yahoo Criptoativos",
+    "categoria": "Criptoativos",
+    "Valor": "4,39"
+  },
+  {
+    "data_referencia": "2026-11-01",
+    "indicador": "OP-USD",
+    "fonte": "Yahoo Finance",
+    "dataset_label": "Yahoo Criptoativos",
+    "categoria": "Criptoativos",
+    "Valor": "0,1146"
+  },
+  {
+    "data_referencia": "2026-11-01",
+    "indicador": "SHIB-USD",
+    "fonte": "Yahoo Finance",
+    "dataset_label": "Yahoo Criptoativos",
+    "categoria": "Criptoativos",
+    "Valor": "0,000005"
+  },
+  {
+    "data_referencia": "2026-11-01",
+    "indicador": "SOL-USD",
+    "fonte": "Yahoo Finance",
+    "dataset_label": "Yahoo Criptoativos",
+    "categoria": "Criptoativos",
+    "Valor": "95,13"
+  },
+  {
+    "data_referencia": "2026-11-01",
+    "indicador": "TRX-USD",
+    "fonte": "Yahoo Finance",
+    "dataset_label": "Yahoo Criptoativos",
+    "categoria": "Criptoativos",
+    "Valor": "0,3098"
+  },
+  {
+    "data_referencia": "2026-11-01",
+    "indicador": "USDCAD=X",
+    "fonte": "Yahoo Finance",
+    "dataset_label": "Yahoo Câmbio e Moedas",
+    "categoria": "Câmbio / Moedas",
+    "Valor": "1,3973"
+  },
+  {
+    "data_referencia": "2026-11-01",
+    "indicador": "USDCHF=X",
+    "fonte": "Yahoo Finance",
+    "dataset_label": "Yahoo Câmbio e Moedas",
+    "categoria": "Câmbio / Moedas",
+    "Valor": "0,8249"
+  },
+  {
+    "data_referencia": "2026-11-01",
+    "indicador": "USDCNY=X",
+    "fonte": "Yahoo Finance",
+    "dataset_label": "Yahoo Câmbio e Moedas",
+    "categoria": "Câmbio / Moedas",
+    "Valor": "6,6540"
+  },
+  {
+    "data_referencia": "2026-11-01",
+    "indicador": "USDINR=X",
+    "fonte": "Yahoo Finance",
+    "dataset_label": "Yahoo Câmbio e Moedas",
+    "categoria": "Câmbio / Moedas",
+    "Valor": "94,9500"
+  },
+  {
+    "data_referencia": "2026-11-01",
+    "indicador": "XLM-USD",
+    "fonte": "Yahoo Finance",
+    "dataset_label": "Yahoo Criptoativos",
+    "categoria": "Criptoativos",
+    "Valor": "0,1685"
+  },
+  {
+    "data_referencia": "2026-11-01",
+    "indicador": "XRP-USD",
+    "fonte": "Yahoo Finance",
+    "dataset_label": "Yahoo Criptoativos",
+    "categoria": "Criptoativos",
+    "Valor": "1,25"
   }
 ];
