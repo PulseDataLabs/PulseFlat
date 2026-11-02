@@ -121,7 +121,7 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "fred_us_treasuries_yield_curve.csv.gz": {
     "min": "2020-01-02",
-    "max": "2026-10-30"
+    "max": "2026-11-02"
   },
   "debentures_mercado_secundario_precos_negociacao_api.csv.gz": {
     "min": "2020-01-02",
@@ -173,7 +173,7 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "yahoo_cambio_moedas.csv": {
     "min": "2026-05-01",
-    "max": "2026-11-02"
+    "max": "2026-11-03"
   },
   "yahoo_commodities.csv": {
     "min": "2026-05-28",
@@ -362,5 +362,9 @@ window.PULSEFLAT_LAST_UPDATES = {
   "b3_etfs.csv": {
     "min": "2026-11-02",
     "max": "2026-11-02"
+  },
+  "b3_bmf_taxas_juros.csv": {
+    "min": "2026-06-03",
+    "max": "2026-10-30"
   }
 };
