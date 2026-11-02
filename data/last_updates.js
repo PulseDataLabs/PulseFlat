@@ -213,7 +213,7 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "yahoo_acoes_internacionais.csv": {
     "min": "2026-05-29",
-    "max": "2026-10-30"
+    "max": "2026-11-02"
   },
   "b3_bdi_trades_acoes.csv.gz": {
     "min": "2026-06-02",
