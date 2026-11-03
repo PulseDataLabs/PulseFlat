@@ -129,7 +129,7 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "b3_indicadores_financeiros.csv": {
     "min": "2026-06-11",
-    "max": "2026-10-30"
+    "max": "2026-11-03"
   },
   "anbima_indice_imab.csv.gz": {
     "min": "2001-12-04",
@@ -145,7 +145,7 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "b3_opcoes_posicoes_resumo.csv.gz": {
     "min": "2026-10-29",
-    "max": "2026-10-29"
+    "max": "2026-10-30"
   },
   "anbima_reune_negociacoes.csv.gz": {
     "min": "2026-09-11",
@@ -153,7 +153,7 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "b3_termo_posicoes_resumo.csv": {
     "min": "2026-09-04",
-    "max": "2026-10-29"
+    "max": "2026-10-30"
   },
   "b3_titulos_negociaveis.csv.gz": {
     "min": "2026-11-03",
@@ -161,7 +161,7 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "b3_termo_posicoes_aberto.csv": {
     "min": "2026-09-04",
-    "max": "2026-10-29"
+    "max": "2026-10-30"
   },
   "b3_valor_mercado_totais.csv": {
     "min": "2026-08-31",
@@ -181,11 +181,11 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "bcb_ptax.csv": {
     "min": "2020-01-02",
-    "max": "2026-10-30"
+    "max": "2026-11-03"
   },
   "b3_opcoes_posicoes_aberto.csv.gz": {
-    "min": "2026-10-29",
-    "max": "2026-10-29"
+    "min": "2026-10-30",
+    "max": "2026-10-30"
   },
   "bacen_balancetes_bancos.csv.gz": {
     "min": "2026-06-01",
@@ -217,11 +217,11 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "fred_brazil_macro_fx_and_cycles.csv.gz": {
     "min": "2020-01-01",
-    "max": "2026-10-30"
+    "max": "2026-11-02"
   },
   "fred_global_liquidity_credit_spreads.csv.gz": {
     "min": "2020-01-01",
-    "max": "2026-10-30"
+    "max": "2026-11-02"
   },
   "fred_us_macro_indicators.csv.gz": {
     "min": "2020-01-01",
@@ -345,7 +345,7 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "anbima_curvas_credito.csv.gz": {
     "min": "2020-01-02",
-    "max": "2026-10-29"
+    "max": "2026-10-30"
   },
   "anbima_curvas_juros_parametros_svensson.csv.gz": {
     "min": "2020-01-02",
@@ -357,7 +357,7 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "anbima_indicadores.csv": {
     "min": "2026-04-01",
-    "max": "2026-11-01"
+    "max": "2026-11-03"
   },
   "b3_fundos_listados.csv": {
     "min": "2026-11-03",
