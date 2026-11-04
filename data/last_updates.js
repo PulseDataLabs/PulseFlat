@@ -298,5 +298,73 @@ window.PULSEFLAT_LAST_UPDATES = {
   "yahoo_fiis_fiagros.csv.gz": {
     "min": "2020-01-02",
     "max": "2026-11-04"
+  },
+  "anbima_550.csv": {
+    "min": "2026-06-01",
+    "max": "2026-11-04"
+  },
+  "anbima_fidc_mercado_secundario.csv.gz": {
+    "min": "2021-10-18",
+    "max": "2026-11-03"
+  },
+  "anbima_ima_completo.csv": {
+    "min": "2026-05-29",
+    "max": "2026-11-03"
+  },
+  "anbima_curvas_credito.csv.gz": {
+    "min": "2020-01-02",
+    "max": "2026-11-03"
+  },
+  "anbima_curvas_juros_ettj.csv.gz": {
+    "min": "2020-01-02",
+    "max": "2026-11-03"
+  },
+  "anbima_debentures.csv.gz": {
+    "min": "2026-06-03",
+    "max": "2026-11-03"
+  },
+  "anbima_curvas_juros_parametros_svensson.csv.gz": {
+    "min": "2020-01-02",
+    "max": "2026-11-03"
+  },
+  "anbima_titulos_publicos_estimativa_selic.csv.gz": {
+    "min": "2020-01-02",
+    "max": "2026-11-03"
+  },
+  "b3_carteira_teorica_ibov.csv": {
+    "min": "2026-06-03",
+    "max": "2026-11-04"
+  },
+  "ipea_calendario.csv": {
+    "min": "1970-01-01",
+    "max": "2030-12-01"
+  },
+  "ipea_comercio_exterior.csv": {
+    "min": "1977-01-01",
+    "max": "2026-08-01"
+  },
+  "ipea_fbcf.csv": {
+    "min": "1996-01-01",
+    "max": "2026-07-01"
+  },
+  "ipea_macroeconomia.csv": {
+    "min": "1940-07-01",
+    "max": "2026-12-01"
+  },
+  "ipea_precos_inflacao.csv": {
+    "min": "1944-01-01",
+    "max": "2026-09-01"
+  },
+  "ipea_producao_mineral.csv": {
+    "min": "1980-01-01",
+    "max": "2026-09-01"
+  },
+  "ipea_taxas_juros.csv": {
+    "min": "1966-12-01",
+    "max": "2026-11-01"
+  },
+  "ipea_mercados_diarios.csv": {
+    "min": "1900-01-02",
+    "max": "2026-11-03"
   }
 };
