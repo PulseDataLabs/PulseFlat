@@ -268,7 +268,6 @@ data_captura,codigo_ativo,nome_ativo,indice_origem
 2026-11-04,JNJ,Johnson & Johnson,S&P 500
 2026-11-04,JCI,Johnson Controls,S&P 500
 2026-11-04,JPM,JPMorgan Chase,S&P 500
-2026-11-04,KVUE,Kenvue,S&P 500
 2026-11-04,KDP,Keurig Dr Pepper,S&P 500
 2026-11-04,KEY,KeyCorp,S&P 500
 2026-11-04,KEYS,Keysight Technologies,S&P 500
@@ -346,6 +345,7 @@ data_captura,codigo_ativo,nome_ativo,indice_origem
 2026-11-04,NXPI,NXP Semiconductors,S&P 500
 2026-11-04,ORLY,O'Reilly Automotive,S&P 500
 2026-11-04,OXY,Occidental Petroleum,S&P 500
+2026-11-04,OKTA,"Okta, Inc.",S&P 500
 2026-11-04,ODFL,Old Dominion,S&P 500
 2026-11-04,OMC,Omnicom Group,S&P 500
 2026-11-04,ON,ON Semiconductor,S&P 500
