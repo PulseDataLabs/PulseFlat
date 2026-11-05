@@ -25,15 +25,15 @@ window.PULSEFLAT_MARKET_LATEST = [
   },
   {
     "label": "PTAX USD Venda",
-    "value": "5,4778",
-    "reference_date": "2026-11-04",
+    "value": "5,4621",
+    "reference_date": "2026-11-05",
     "type": "down",
     "change": "-0,29%"
   },
   {
     "label": "PTAX USD Compra",
-    "value": "5,4772",
-    "reference_date": "2026-11-04",
+    "value": "5,4615",
+    "reference_date": "2026-11-05",
     "type": "down",
     "change": "-0,29%"
   },
