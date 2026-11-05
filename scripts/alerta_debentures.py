@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 """
 PulseFlat – Script de monitoramento e alertas para debêntures do mercado secundário.
-Busca dados de preços de negociação e notifica via E-mail, Telegram e Power Automate.
+Busca dados de preços de negociação e notifica via E-mail e Telegram.
 Usa um arquivo JSON de estado local para rastrear as notificações enviadas diariamente.
 """
 
@@ -79,39 +79,6 @@ def send_email(
         log.info("E-mail enviado com sucesso.")
     except Exception as e:
         log.error(f"Erro ao enviar e-mail via SMTP: {e}")
-
-
-def send_power_automate(url: str, title: str, message: str):
-    """Envia card adaptativo para o Power Automate."""
-    log.info("Disparando card adaptativo para o Power Automate...")
-    adaptive_card = {
-        "type": "message",
-        "attachments": [
-            {
-                "contentType": "application/vnd.microsoft.card.adaptive",
-                "content": {
-                    "type": "AdaptiveCard",
-                    "version": "1.4",
-                    "body": [
-                        {
-                            "type": "TextBlock",
-                            "text": title,
-                            "weight": "Bolder",
-                            "size": "Medium",
-                        },
-                        {"type": "TextBlock", "text": message, "wrap": True},
-                    ],
-                    "schema": "http://adaptivecards.io/schemas/adaptive-card.json",
-                },
-            }
-        ],
-    }
-    try:
-        r = requests.post(url, json=adaptive_card, timeout=15)
-        r.raise_for_status()
-        log.info("Power Automate notificado com sucesso.")
-    except Exception as e:
-        log.error(f"Erro ao enviar webhook para o Power Automate: {e}")
 
 
 def verificar_dados(html: str) -> bool:
@@ -333,15 +300,6 @@ def main():
     if telegram_token and telegram_chat:
         tg_text = f"<b>Debêntures - Disponível</b>\nArquivo de Negociação Disponível - Data de referência: {ref_date_str}"
         send_telegram(telegram_token, telegram_chat, tg_text)
-
-    # Envio de webhook via Power Automate desativado a pedido do usuário
-    # power_automate_url = os.getenv("POWER_AUTOMATE_WEBHOOK_URL")
-    # if power_automate_url:
-    #     send_power_automate(
-    #         url=power_automate_url,
-    #         title="Debêntures.com.br - Preços de negociação",
-    #         message=f"Dados disponíveis para captura. Data de referência: {ref_date_str}",
-    #     )
 
     smtp_server = os.getenv("SMTP_SERVER")
     smtp_port = os.getenv("SMTP_PORT", "587")

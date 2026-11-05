@@ -167,9 +167,8 @@ def test_main_already_notified(tmp_path, monkeypatch):
 
 @patch("scripts.alerta_debentures.send_telegram")
 @patch("scripts.alerta_debentures.send_email")
-@patch("scripts.alerta_debentures.send_power_automate")
 def test_main_not_available_before_8am(
-    mock_pa, mock_email, mock_tg, tmp_path, monkeypatch, requests_mock
+    mock_email, mock_tg, tmp_path, monkeypatch, requests_mock
 ):
     """Antes das 08h00, se dados estiverem indisponíveis, encerra silenciosamente sem enviar e-mail e sem salvar estado."""
     temp_state = tmp_path / "debentures_alert_state.json"
@@ -198,15 +197,13 @@ def test_main_not_available_before_8am(
     # Garante que nenhuma notificação foi disparada antes das 08h00
     mock_tg.assert_not_called()
     mock_email.assert_not_called()
-    mock_pa.assert_not_called()
     assert not temp_state.exists()
 
 
 @patch("scripts.alerta_debentures.send_telegram")
 @patch("scripts.alerta_debentures.send_email")
-@patch("scripts.alerta_debentures.send_power_automate")
 def test_main_not_available_after_8am(
-    mock_pa, mock_email, mock_tg, tmp_path, monkeypatch, requests_mock
+    mock_email, mock_tg, tmp_path, monkeypatch, requests_mock
 ):
     """A partir das 08h37, se dados estiverem indisponíveis, envia e-mail de aviso de indisponibilidade uma única vez ao dia."""
     temp_state = tmp_path / "debentures_alert_state.json"
@@ -232,9 +229,8 @@ def test_main_not_available_after_8am(
 
     assert exc_info.value.code == 0
 
-    # Envia e-mail de indisponibilidade, mas não Telegram nem Power Automate
+    # Envia e-mail de indisponibilidade, mas não Telegram
     mock_tg.assert_not_called()
-    mock_pa.assert_not_called()
     mock_email.assert_called_once()
     args, kwargs = mock_email.call_args
     # args: server, port, user, password, from_email, to_email, subject, html_content
@@ -259,9 +255,8 @@ def test_main_not_available_after_8am(
 
 @patch("scripts.alerta_debentures.send_telegram")
 @patch("scripts.alerta_debentures.send_email")
-@patch("scripts.alerta_debentures.send_power_automate")
 def test_main_success(
-    mock_pa, mock_email, mock_tg, tmp_path, monkeypatch, requests_mock
+    mock_email, mock_tg, tmp_path, monkeypatch, requests_mock
 ):
     """Se dados estiverem disponíveis, envia notificações e atualiza arquivo de estado."""
     temp_state = tmp_path / "debentures_alert_state.json"
@@ -271,7 +266,6 @@ def test_main_success(
     # Define as variáveis de ambiente necessárias para habilitar o envio
     monkeypatch.setenv("TELEGRAM_BOT_TOKEN", "fake-tg-token")
     monkeypatch.setenv("TELEGRAM_CHAT_ID", "fake-tg-chat")
-    monkeypatch.setenv("POWER_AUTOMATE_WEBHOOK_URL", "https://fake-pa-webhook")
     monkeypatch.setenv("SMTP_SERVER", "smtp.fake.com")
     monkeypatch.setenv("SMTP_USER", "user@fake.com")
     monkeypatch.setenv("SMTP_PASSWORD", "password123")
@@ -294,7 +288,6 @@ def test_main_success(
 
     # Verifica se notificações foram enviadas
     mock_tg.assert_called_once()
-    mock_pa.assert_not_called()  # Power Automate desativado
     mock_email.assert_called_once()
 
     # Verifica se o estado de notificações foi gravado indicando o dia de hoje
@@ -367,9 +360,8 @@ def test_verificar_dados_real_queries():
 
 @patch("scripts.alerta_debentures.send_telegram")
 @patch("scripts.alerta_debentures.send_email")
-@patch("scripts.alerta_debentures.send_power_automate")
 def test_main_not_available_between_8am_and_837am(
-    mock_pa, mock_email, mock_tg, tmp_path, monkeypatch, requests_mock
+    mock_email, mock_tg, tmp_path, monkeypatch, requests_mock
 ):
     """Às 08h22 (antes das 08h37), se dados estiverem indisponíveis, não deve enviar e-mail."""
     temp_state = tmp_path / "debentures_alert_state.json"
@@ -396,5 +388,4 @@ def test_main_not_available_between_8am_and_837am(
     assert exc_info.value.code == 0
     mock_tg.assert_not_called()
     mock_email.assert_not_called()
-    mock_pa.assert_not_called()
     assert not temp_state.exists()
