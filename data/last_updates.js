@@ -17,7 +17,7 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "anbima_indices_ima_resultados.csv.gz": {
     "min": "2020-01-02",
-    "max": "2026-11-03"
+    "max": "2026-11-04"
   },
   "anbima_indices_carteira_teorica_ima.csv.gz": {
     "min": "2026-09-30",
@@ -100,8 +100,8 @@ window.PULSEFLAT_LAST_UPDATES = {
     "max": "2026-11-05"
   },
   "b3_classificacao_setorial.csv": {
-    "min": "2026-11-04",
-    "max": "2026-11-04"
+    "min": "2026-11-05",
+    "max": "2026-11-05"
   },
   "b3_etfs.csv": {
     "min": "2026-11-05",
@@ -237,7 +237,7 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "cvm_fundos_informe_diario.csv.gz": {
     "min": "2026-11-03",
-    "max": "2026-11-03"
+    "max": "2026-11-04"
   },
   "bacen_parcelas_capital_basileia.csv.gz": {
     "min": "2026-06-05",
@@ -333,7 +333,7 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "b3_carteira_teorica_ibov.csv": {
     "min": "2026-06-03",
-    "max": "2026-11-04"
+    "max": "2026-11-05"
   },
   "ipea_calendario.csv": {
     "min": "1970-01-01",
