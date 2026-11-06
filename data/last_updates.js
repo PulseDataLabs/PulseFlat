@@ -101,7 +101,7 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "b3_carteira_teorica_isee.csv": {
     "min": "2026-06-03",
-    "max": "2026-11-05"
+    "max": "2026-11-06"
   },
   "b3_carteira_teorica_smll.csv": {
     "min": "2026-06-03",
@@ -213,7 +213,7 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "cvm_fundos_informe_diario.csv.gz": {
     "min": "2026-11-03",
-    "max": "2026-11-04"
+    "max": "2026-11-05"
   },
   "debentures_emissoes_caracteristicas.csv.gz": {
     "min": "2026-11-06",
