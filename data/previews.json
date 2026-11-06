@@ -2555,350 +2555,6 @@
       ]
     ]
   },
-  "b3_bmf_taxas_juros.csv": {
-    "headers": [
-      "data_captura",
-      "tabela_origem",
-      "data_referencia",
-      "curva",
-      "prazo_dias",
-      "taxa",
-      "base"
-    ],
-    "rows": [
-      [
-        "2026-11-06",
-        "DerivativesMarketSwapRates",
-        "2026-11-05",
-        "DI1",
-        "360",
-        "13.12",
-        "252"
-      ],
-      [
-        "2026-11-06",
-        "DerivativesMarketSwapRates",
-        "2026-11-05",
-        "DI1",
-        "30",
-        "13.65",
-        "252"
-      ],
-      [
-        "2026-11-05",
-        "DerivativesMarketSwapRates",
-        "2026-11-04",
-        "DI1",
-        "360",
-        "13.12",
-        "252"
-      ],
-      [
-        "2026-11-05",
-        "DerivativesMarketSwapRates",
-        "2026-11-04",
-        "DI1",
-        "30",
-        "13.65",
-        "252"
-      ],
-      [
-        "2026-11-04",
-        "DerivativesMarketSwapRates",
-        "2026-11-03",
-        "DI1",
-        "360",
-        "13.12",
-        "252"
-      ],
-      [
-        "2026-11-04",
-        "DerivativesMarketSwapRates",
-        "2026-11-03",
-        "DI1",
-        "30",
-        "13.65",
-        "252"
-      ],
-      [
-        "2026-11-03",
-        "DerivativesMarketSwapRates",
-        "2026-11-02",
-        "DI1",
-        "360",
-        "13.12",
-        "252"
-      ],
-      [
-        "2026-11-03",
-        "DerivativesMarketSwapRates",
-        "2026-11-02",
-        "DI1",
-        "30",
-        "13.65",
-        "252"
-      ],
-      [
-        "2026-10-31",
-        "DerivativesMarketSwapRates",
-        "2026-10-30",
-        "DI1",
-        "30",
-        "13.65",
-        "252"
-      ],
-      [
-        "2026-11-02",
-        "DerivativesMarketSwapRates",
-        "2026-10-30",
-        "DI1",
-        "360",
-        "13.12",
-        "252"
-      ],
-      [
-        "2026-11-02",
-        "DerivativesMarketSwapRates",
-        "2026-10-30",
-        "DI1",
-        "30",
-        "13.65",
-        "252"
-      ],
-      [
-        "2026-11-01",
-        "DerivativesMarketSwapRates",
-        "2026-10-30",
-        "DI1",
-        "360",
-        "13.12",
-        "252"
-      ],
-      [
-        "2026-11-01",
-        "DerivativesMarketSwapRates",
-        "2026-10-30",
-        "DI1",
-        "30",
-        "13.65",
-        "252"
-      ],
-      [
-        "2026-10-31",
-        "DerivativesMarketSwapRates",
-        "2026-10-30",
-        "DI1",
-        "360",
-        "13.12",
-        "252"
-      ],
-      [
-        "2026-10-30",
-        "DerivativesMarketSwapRates",
-        "2026-10-29",
-        "DI1",
-        "360",
-        "13.12",
-        "252"
-      ]
-    ]
-  },
-  "b3_carteira_teorica_agfs_iagro.csv": {
-    "headers": [
-      "data_captura",
-      "indice",
-      "indice_nome",
-      "codigo_ativo",
-      "nome_ativo",
-      "tipo_ativo",
-      "quantidade_teorica",
-      "participacao_pct",
-      "reducao_capital",
-      "segmento"
-    ],
-    "rows": [
-      [
-        "2026-11-06",
-        "AGFS",
-        "AGFS",
-        "HBSA3",
-        "HIDROVIAS",
-        "ON NM",
-        "496680236",
-        "1.828",
-        "",
-        ""
-      ],
-      [
-        "2026-11-06",
-        "AGFS",
-        "AGFS",
-        "RANI3",
-        "IRANI",
-        "ON NM",
-        "453817183",
-        "4.790",
-        "",
-        ""
-      ],
-      [
-        "2026-11-06",
-        "AGFS",
-        "AGFS",
-        "TUPY3",
-        "TUPY",
-        "ON NM",
-        "116073448",
-        "2.238",
-        "",
-        ""
-      ],
-      [
-        "2026-11-06",
-        "AGFS",
-        "AGFS",
-        "SUZB3",
-        "SUZANO S.A.",
-        "ON NM",
-        "159802146",
-        "10.426",
-        "",
-        ""
-      ],
-      [
-        "2026-11-06",
-        "AGFS",
-        "AGFS",
-        "SLCE3",
-        "SLC AGRICOLA",
-        "ON NM",
-        "305002089",
-        "6.222",
-        "",
-        ""
-      ],
-      [
-        "2026-11-06",
-        "AGFS",
-        "AGFS",
-        "SMTO3",
-        "SAO MARTINHO",
-        "ON NM",
-        "227241071",
-        "5.790",
-        "",
-        ""
-      ],
-      [
-        "2026-11-06",
-        "AGFS",
-        "AGFS",
-        "RAIL3",
-        "RUMO S.A.",
-        "ON NM",
-        "342558920",
-        "6.065",
-        "",
-        ""
-      ],
-      [
-        "2026-11-06",
-        "AGFS",
-        "AGFS",
-        "RAPT4",
-        "RANDON PART",
-        "PN N1",
-        "250237349",
-        "1.118",
-        "",
-        ""
-      ],
-      [
-        "2026-11-06",
-        "AGFS",
-        "AGFS",
-        "BEEF3",
-        "MINERVA",
-        "ON NM",
-        "615470035",
-        "1.950",
-        "",
-        ""
-      ],
-      [
-        "2026-11-06",
-        "AGFS",
-        "AGFS",
-        "MILS3",
-        "MILLS",
-        "ON NM",
-        "104122295",
-        "2.097",
-        "",
-        ""
-      ],
-      [
-        "2026-11-06",
-        "AGFS",
-        "AGFS",
-        "MBRF3",
-        "MARFRIG",
-        "ON NM",
-        "312036510",
-        "6.085",
-        "",
-        ""
-      ],
-      [
-        "2026-11-06",
-        "AGFS",
-        "AGFS",
-        "KLBN11",
-        "KLABIN S/A",
-        "UNT N2",
-        "394615198",
-        "8.720",
-        "",
-        ""
-      ],
-      [
-        "2026-11-06",
-        "AGFS",
-        "AGFS",
-        "KEPL3",
-        "KEPLER WEBER",
-        "ON NM",
-        "205277928",
-        "1.714",
-        "",
-        ""
-      ],
-      [
-        "2026-11-06",
-        "AGFS",
-        "AGFS",
-        "JSLG3",
-        "JSL",
-        "ON NM",
-        "187412567",
-        "1.284",
-        "",
-        ""
-      ],
-      [
-        "2026-11-06",
-        "AGFS",
-        "AGFS",
-        "VAMO3",
-        "VAMOS",
-        "ON NM",
-        "521104147",
-        "1.683",
-        "",
-        ""
-      ]
-    ]
-  },
   "anbima_letras_financeiras.csv.gz": {
     "headers": [
       "data_captura",
@@ -3124,6 +2780,398 @@
         "",
         "",
         "2e978a2040e1498b5ada4b59"
+      ]
+    ]
+  },
+  "b3_carteira_teorica_agfs_iagro.csv": {
+    "headers": [
+      "data_captura",
+      "indice",
+      "indice_nome",
+      "codigo_ativo",
+      "nome_ativo",
+      "tipo_ativo",
+      "quantidade_teorica",
+      "participacao_pct",
+      "reducao_capital",
+      "segmento"
+    ],
+    "rows": [
+      [
+        "2026-11-06",
+        "AGFS",
+        "AGFS",
+        "HBSA3",
+        "HIDROVIAS",
+        "ON NM",
+        "496680236",
+        "1.828",
+        "",
+        ""
+      ],
+      [
+        "2026-11-06",
+        "AGFS",
+        "AGFS",
+        "RANI3",
+        "IRANI",
+        "ON NM",
+        "453817183",
+        "4.790",
+        "",
+        ""
+      ],
+      [
+        "2026-11-06",
+        "AGFS",
+        "AGFS",
+        "TUPY3",
+        "TUPY",
+        "ON NM",
+        "116073448",
+        "2.238",
+        "",
+        ""
+      ],
+      [
+        "2026-11-06",
+        "AGFS",
+        "AGFS",
+        "SUZB3",
+        "SUZANO S.A.",
+        "ON NM",
+        "159802146",
+        "10.426",
+        "",
+        ""
+      ],
+      [
+        "2026-11-06",
+        "AGFS",
+        "AGFS",
+        "SLCE3",
+        "SLC AGRICOLA",
+        "ON NM",
+        "305002089",
+        "6.222",
+        "",
+        ""
+      ],
+      [
+        "2026-11-06",
+        "AGFS",
+        "AGFS",
+        "SMTO3",
+        "SAO MARTINHO",
+        "ON NM",
+        "227241071",
+        "5.790",
+        "",
+        ""
+      ],
+      [
+        "2026-11-06",
+        "AGFS",
+        "AGFS",
+        "RAIL3",
+        "RUMO S.A.",
+        "ON NM",
+        "342558920",
+        "6.065",
+        "",
+        ""
+      ],
+      [
+        "2026-11-06",
+        "AGFS",
+        "AGFS",
+        "RAPT4",
+        "RANDON PART",
+        "PN N1",
+        "250237349",
+        "1.118",
+        "",
+        ""
+      ],
+      [
+        "2026-11-06",
+        "AGFS",
+        "AGFS",
+        "BEEF3",
+        "MINERVA",
+        "ON NM",
+        "615470035",
+        "1.950",
+        "",
+        ""
+      ],
+      [
+        "2026-11-06",
+        "AGFS",
+        "AGFS",
+        "MILS3",
+        "MILLS",
+        "ON NM",
+        "104122295",
+        "2.097",
+        "",
+        ""
+      ],
+      [
+        "2026-11-06",
+        "AGFS",
+        "AGFS",
+        "MBRF3",
+        "MARFRIG",
+        "ON NM",
+        "312036510",
+        "6.085",
+        "",
+        ""
+      ],
+      [
+        "2026-11-06",
+        "AGFS",
+        "AGFS",
+        "KLBN11",
+        "KLABIN S/A",
+        "UNT N2",
+        "394615198",
+        "8.720",
+        "",
+        ""
+      ],
+      [
+        "2026-11-06",
+        "AGFS",
+        "AGFS",
+        "KEPL3",
+        "KEPLER WEBER",
+        "ON NM",
+        "205277928",
+        "1.714",
+        "",
+        ""
+      ],
+      [
+        "2026-11-06",
+        "AGFS",
+        "AGFS",
+        "JSLG3",
+        "JSL",
+        "ON NM",
+        "187412567",
+        "1.284",
+        "",
+        ""
+      ],
+      [
+        "2026-11-06",
+        "AGFS",
+        "AGFS",
+        "VAMO3",
+        "VAMOS",
+        "ON NM",
+        "521104147",
+        "1.683",
+        "",
+        ""
+      ]
+    ]
+  },
+  "b3_carteira_teorica_bdrx.csv": {
+    "headers": [
+      "data_captura",
+      "indice",
+      "indice_nome",
+      "codigo_ativo",
+      "nome_ativo",
+      "tipo_ativo",
+      "quantidade_teorica",
+      "participacao_pct",
+      "reducao_capital",
+      "segmento"
+    ],
+    "rows": [
+      [
+        "2026-11-06",
+        "BDRX",
+        "BDRX",
+        "BCSA34",
+        "SANTANDER",
+        "DRN ED",
+        "146893200",
+        "0.380",
+        "",
+        ""
+      ],
+      [
+        "2026-11-06",
+        "BDRX",
+        "BDRX",
+        "S2EA34",
+        "SEA LTD",
+        "DRN",
+        "141739175",
+        "0.095",
+        "",
+        ""
+      ],
+      [
+        "2026-11-06",
+        "BDRX",
+        "BDRX",
+        "DISB34",
+        "WALT DISNEY",
+        "DRN",
+        "1752-00-00",
+        "0.029",
+        "",
+        ""
+      ],
+      [
+        "2026-11-06",
+        "BDRX",
+        "BDRX",
+        "WALM34",
+        "WAL MART",
+        "DRN",
+        "1273292640",
+        "2.212",
+        "",
+        ""
+      ],
+      [
+        "2026-11-06",
+        "BDRX",
+        "BDRX",
+        "V1OD34",
+        "VODAFONE GRO",
+        "DRN",
+        "4622-00-60",
+        "0.080",
+        "",
+        ""
+      ],
+      [
+        "2026-11-06",
+        "BDRX",
+        "BDRX",
+        "VISA34",
+        "VISA INC",
+        "DRN",
+        "2006-00-00",
+        "0.092",
+        "",
+        ""
+      ],
+      [
+        "2026-11-06",
+        "BDRX",
+        "BDRX",
+        "VERZ34",
+        "VERIZON",
+        "DRN",
+        "249286500",
+        "0.414",
+        "",
+        ""
+      ],
+      [
+        "2026-11-06",
+        "BDRX",
+        "BDRX",
+        "U2PS34",
+        "UPSTART HOLD",
+        "DRN",
+        "1946-26-10",
+        "0.005",
+        "",
+        ""
+      ],
+      [
+        "2026-11-06",
+        "BDRX",
+        "BDRX",
+        "U2ST34",
+        "UNITY SOFTWR",
+        "DRN",
+        "8801-77-80",
+        "0.042",
+        "",
+        ""
+      ],
+      [
+        "2026-11-06",
+        "BDRX",
+        "BDRX",
+        "UNHH34",
+        "UNITEDHEALTH",
+        "DRN",
+        "628316360",
+        "0.765",
+        "",
+        ""
+      ],
+      [
+        "2026-11-06",
+        "BDRX",
+        "BDRX",
+        "U1BE34",
+        "UBER TECH IN",
+        "DRN",
+        "8170-24-00",
+        "0.299",
+        "",
+        ""
+      ],
+      [
+        "2026-11-06",
+        "BDRX",
+        "BDRX",
+        "RIGG34",
+        "TRANSOCEAN",
+        "DRN",
+        "1116-88-00",
+        "0.012",
+        "",
+        ""
+      ],
+      [
+        "2026-11-06",
+        "BDRX",
+        "BDRX",
+        "T2TD34",
+        "TRADE DESK",
+        "DRN",
+        "4267716",
+        "0.012",
+        "",
+        ""
+      ],
+      [
+        "2026-11-06",
+        "BDRX",
+        "BDRX",
+        "TMCO34",
+        "TOYOTAMO",
+        "DRN",
+        "233519840",
+        "0.652",
+        "",
+        ""
+      ],
+      [
+        "2026-11-06",
+        "BDRX",
+        "BDRX",
+        "TSLA34",
+        "TESLA INC",
+        "DRN",
+        "1263855040",
+        "2.943",
+        "",
+        ""
       ]
     ]
   },
@@ -3519,7 +3567,155 @@
       ]
     ]
   },
-  "b3_carteira_teorica_bdrx.csv": {
+  "b3_bmf_taxas_juros.csv": {
+    "headers": [
+      "data_captura",
+      "tabela_origem",
+      "data_referencia",
+      "curva",
+      "prazo_dias",
+      "taxa",
+      "base"
+    ],
+    "rows": [
+      [
+        "2026-11-06",
+        "DerivativesMarketSwapRates",
+        "2026-11-05",
+        "DI1",
+        "360",
+        "13.12",
+        "252"
+      ],
+      [
+        "2026-11-06",
+        "DerivativesMarketSwapRates",
+        "2026-11-05",
+        "DI1",
+        "30",
+        "13.65",
+        "252"
+      ],
+      [
+        "2026-11-05",
+        "DerivativesMarketSwapRates",
+        "2026-11-04",
+        "DI1",
+        "360",
+        "13.12",
+        "252"
+      ],
+      [
+        "2026-11-05",
+        "DerivativesMarketSwapRates",
+        "2026-11-04",
+        "DI1",
+        "30",
+        "13.65",
+        "252"
+      ],
+      [
+        "2026-11-04",
+        "DerivativesMarketSwapRates",
+        "2026-11-03",
+        "DI1",
+        "360",
+        "13.12",
+        "252"
+      ],
+      [
+        "2026-11-04",
+        "DerivativesMarketSwapRates",
+        "2026-11-03",
+        "DI1",
+        "30",
+        "13.65",
+        "252"
+      ],
+      [
+        "2026-11-03",
+        "DerivativesMarketSwapRates",
+        "2026-11-02",
+        "DI1",
+        "360",
+        "13.12",
+        "252"
+      ],
+      [
+        "2026-11-03",
+        "DerivativesMarketSwapRates",
+        "2026-11-02",
+        "DI1",
+        "30",
+        "13.65",
+        "252"
+      ],
+      [
+        "2026-10-31",
+        "DerivativesMarketSwapRates",
+        "2026-10-30",
+        "DI1",
+        "30",
+        "13.65",
+        "252"
+      ],
+      [
+        "2026-11-02",
+        "DerivativesMarketSwapRates",
+        "2026-10-30",
+        "DI1",
+        "360",
+        "13.12",
+        "252"
+      ],
+      [
+        "2026-11-02",
+        "DerivativesMarketSwapRates",
+        "2026-10-30",
+        "DI1",
+        "30",
+        "13.65",
+        "252"
+      ],
+      [
+        "2026-11-01",
+        "DerivativesMarketSwapRates",
+        "2026-10-30",
+        "DI1",
+        "360",
+        "13.12",
+        "252"
+      ],
+      [
+        "2026-11-01",
+        "DerivativesMarketSwapRates",
+        "2026-10-30",
+        "DI1",
+        "30",
+        "13.65",
+        "252"
+      ],
+      [
+        "2026-10-31",
+        "DerivativesMarketSwapRates",
+        "2026-10-30",
+        "DI1",
+        "360",
+        "13.12",
+        "252"
+      ],
+      [
+        "2026-10-30",
+        "DerivativesMarketSwapRates",
+        "2026-10-29",
+        "DI1",
+        "360",
+        "13.12",
+        "252"
+      ]
+    ]
+  },
+  "b3_carteira_teorica_ibxl.csv": {
     "headers": [
       "data_captura",
       "indice",
@@ -3535,181 +3731,181 @@
     "rows": [
       [
         "2026-11-06",
-        "BDRX",
-        "BDRX",
-        "BCSA34",
-        "SANTANDER",
-        "DRN ED",
-        "146893200",
-        "0.380",
+        "IBXL",
+        "IBrX 50",
+        "ENGI11",
+        "ENERGISA",
+        "UNT N2",
+        "358085210",
+        "0.714",
         "",
         ""
       ],
       [
         "2026-11-06",
-        "BDRX",
-        "BDRX",
-        "S2EA34",
-        "SEA LTD",
-        "DRN",
-        "141739175",
-        "0.095",
+        "IBXL",
+        "IBrX 50",
+        "ENEV3",
+        "ENEVA",
+        "ON NM",
+        "1916508073",
+        "2.246",
         "",
         ""
       ],
       [
         "2026-11-06",
-        "BDRX",
-        "BDRX",
-        "DISB34",
-        "WALT DISNEY",
-        "DRN",
-        "1752-00-00",
-        "0.029",
+        "IBXL",
+        "IBrX 50",
+        "VBBR3",
+        "VIBRA",
+        "ON NM",
+        "1194079963",
+        "1.521",
         "",
         ""
       ],
       [
         "2026-11-06",
-        "BDRX",
-        "BDRX",
-        "WALM34",
-        "WAL MART",
-        "DRN",
-        "1273292640",
-        "2.212",
+        "IBXL",
+        "IBrX 50",
+        "VALE3",
+        "VALE",
+        "ON NM",
+        "4262140818",
+        "11.893",
         "",
         ""
       ],
       [
         "2026-11-06",
-        "BDRX",
-        "BDRX",
-        "V1OD34",
-        "VODAFONE GRO",
-        "DRN",
-        "4622-00-60",
-        "0.080",
+        "IBXL",
+        "IBrX 50",
+        "USIM5",
+        "USIMINAS",
+        "PNA N1",
+        "518248757",
+        "0.111",
         "",
         ""
       ],
       [
         "2026-11-06",
-        "BDRX",
-        "BDRX",
-        "VISA34",
-        "VISA INC",
-        "DRN",
-        "2006-00-00",
-        "0.092",
+        "IBXL",
+        "IBrX 50",
+        "UGPA3",
+        "ULTRAPAR",
+        "ON NM",
+        "1067930953",
+        "1.455",
         "",
         ""
       ],
       [
         "2026-11-06",
-        "BDRX",
-        "BDRX",
-        "VERZ34",
-        "VERIZON",
-        "DRN",
-        "249286500",
-        "0.414",
+        "IBXL",
+        "IBrX 50",
+        "TOTS3",
+        "TOTVS",
+        "ON NM",
+        "515889217",
+        "0.750",
         "",
         ""
       ],
       [
         "2026-11-06",
-        "BDRX",
-        "BDRX",
-        "U2PS34",
-        "UPSTART HOLD",
-        "DRN",
-        "1946-26-10",
-        "0.005",
+        "IBXL",
+        "IBrX 50",
+        "TIMS3",
+        "TIM",
+        "ON NM",
+        "776308601",
+        "0.690",
         "",
         ""
       ],
       [
         "2026-11-06",
-        "BDRX",
-        "BDRX",
-        "U2ST34",
-        "UNITY SOFTWR",
-        "DRN",
-        "8801-77-80",
-        "0.042",
+        "IBXL",
+        "IBrX 50",
+        "VIVT3",
+        "TELEF BRASIL",
+        "ON EJ",
+        "707098992",
+        "0.980",
         "",
         ""
       ],
       [
         "2026-11-06",
-        "BDRX",
-        "BDRX",
-        "UNHH34",
-        "UNITEDHEALTH",
-        "DRN",
-        "628316360",
-        "0.765",
+        "IBXL",
+        "IBrX 50",
+        "SUZB3",
+        "SUZANO S.A.",
+        "ON NM",
+        "608216821",
+        "1.416",
         "",
         ""
       ],
       [
         "2026-11-06",
-        "BDRX",
-        "BDRX",
-        "U1BE34",
-        "UBER TECH IN",
-        "DRN",
-        "8170-24-00",
-        "0.299",
+        "IBXL",
+        "IBrX 50",
+        "SMFT3",
+        "SMART FIT",
+        "ON NM",
+        "555416717",
+        "0.438",
         "",
         ""
       ],
       [
         "2026-11-06",
-        "BDRX",
-        "BDRX",
-        "RIGG34",
-        "TRANSOCEAN",
-        "DRN",
-        "1116-88-00",
-        "0.012",
+        "IBXL",
+        "IBrX 50",
+        "SBSP3",
+        "SABESP",
+        "ON NM",
+        "3524534025",
+        "3.928",
         "",
         ""
       ],
       [
         "2026-11-06",
-        "BDRX",
-        "BDRX",
-        "T2TD34",
-        "TRADE DESK",
-        "DRN",
-        "4267716",
-        "0.012",
+        "IBXL",
+        "IBrX 50",
+        "RAIL3",
+        "RUMO S.A.",
+        "ON NM",
+        "1406822230",
+        "0.889",
         "",
         ""
       ],
       [
         "2026-11-06",
-        "BDRX",
-        "BDRX",
-        "TMCO34",
-        "TOYOTAMO",
-        "DRN",
-        "233519840",
-        "0.652",
+        "IBXL",
+        "IBrX 50",
+        "RDOR3",
+        "REDE D OR",
+        "ON NM",
+        "1030028001",
+        "1.498",
         "",
         ""
       ],
       [
         "2026-11-06",
-        "BDRX",
-        "BDRX",
-        "TSLA34",
-        "TESLA INC",
-        "DRN",
-        "1263855040",
-        "2.943",
+        "IBXL",
+        "IBrX 50",
+        "RADL3",
+        "RAIADROGASIL",
+        "ON NM",
+        "1312816783",
+        "0.859",
         "",
         ""
       ]
@@ -3906,202 +4102,6 @@
         "UNT",
         "356245448",
         "2.254",
-        "",
-        ""
-      ]
-    ]
-  },
-  "b3_carteira_teorica_ibxl.csv": {
-    "headers": [
-      "data_captura",
-      "indice",
-      "indice_nome",
-      "codigo_ativo",
-      "nome_ativo",
-      "tipo_ativo",
-      "quantidade_teorica",
-      "participacao_pct",
-      "reducao_capital",
-      "segmento"
-    ],
-    "rows": [
-      [
-        "2026-11-06",
-        "IBXL",
-        "IBrX 50",
-        "ENGI11",
-        "ENERGISA",
-        "UNT N2",
-        "358085210",
-        "0.714",
-        "",
-        ""
-      ],
-      [
-        "2026-11-06",
-        "IBXL",
-        "IBrX 50",
-        "ENEV3",
-        "ENEVA",
-        "ON NM",
-        "1916508073",
-        "2.246",
-        "",
-        ""
-      ],
-      [
-        "2026-11-06",
-        "IBXL",
-        "IBrX 50",
-        "VBBR3",
-        "VIBRA",
-        "ON NM",
-        "1194079963",
-        "1.521",
-        "",
-        ""
-      ],
-      [
-        "2026-11-06",
-        "IBXL",
-        "IBrX 50",
-        "VALE3",
-        "VALE",
-        "ON NM",
-        "4262140818",
-        "11.893",
-        "",
-        ""
-      ],
-      [
-        "2026-11-06",
-        "IBXL",
-        "IBrX 50",
-        "USIM5",
-        "USIMINAS",
-        "PNA N1",
-        "518248757",
-        "0.111",
-        "",
-        ""
-      ],
-      [
-        "2026-11-06",
-        "IBXL",
-        "IBrX 50",
-        "UGPA3",
-        "ULTRAPAR",
-        "ON NM",
-        "1067930953",
-        "1.455",
-        "",
-        ""
-      ],
-      [
-        "2026-11-06",
-        "IBXL",
-        "IBrX 50",
-        "TOTS3",
-        "TOTVS",
-        "ON NM",
-        "515889217",
-        "0.750",
-        "",
-        ""
-      ],
-      [
-        "2026-11-06",
-        "IBXL",
-        "IBrX 50",
-        "TIMS3",
-        "TIM",
-        "ON NM",
-        "776308601",
-        "0.690",
-        "",
-        ""
-      ],
-      [
-        "2026-11-06",
-        "IBXL",
-        "IBrX 50",
-        "VIVT3",
-        "TELEF BRASIL",
-        "ON EJ",
-        "707098992",
-        "0.980",
-        "",
-        ""
-      ],
-      [
-        "2026-11-06",
-        "IBXL",
-        "IBrX 50",
-        "SUZB3",
-        "SUZANO S.A.",
-        "ON NM",
-        "608216821",
-        "1.416",
-        "",
-        ""
-      ],
-      [
-        "2026-11-06",
-        "IBXL",
-        "IBrX 50",
-        "SMFT3",
-        "SMART FIT",
-        "ON NM",
-        "555416717",
-        "0.438",
-        "",
-        ""
-      ],
-      [
-        "2026-11-06",
-        "IBXL",
-        "IBrX 50",
-        "SBSP3",
-        "SABESP",
-        "ON NM",
-        "3524534025",
-        "3.928",
-        "",
-        ""
-      ],
-      [
-        "2026-11-06",
-        "IBXL",
-        "IBrX 50",
-        "RAIL3",
-        "RUMO S.A.",
-        "ON NM",
-        "1406822230",
-        "0.889",
-        "",
-        ""
-      ],
-      [
-        "2026-11-06",
-        "IBXL",
-        "IBrX 50",
-        "RDOR3",
-        "REDE D OR",
-        "ON NM",
-        "1030028001",
-        "1.498",
-        "",
-        ""
-      ],
-      [
-        "2026-11-06",
-        "IBXL",
-        "IBrX 50",
-        "RADL3",
-        "RAIADROGASIL",
-        "ON NM",
-        "1312816783",
-        "0.859",
         "",
         ""
       ]
@@ -5647,6 +5647,46 @@
       ],
       [
         "2026-11-06",
+        "9800508",
+        "DOLAR SPOT BMF PARA 1 DIA",
+        "TAXAS DE CÂMBIO",
+        "5.4998",
+        "",
+        "",
+        "2026-11-06"
+      ],
+      [
+        "2026-11-06",
+        "1000-95-06",
+        "DÓLAR BMF SPOT - 2 DIAS",
+        "TAXAS DE CÂMBIO",
+        "5.5008",
+        "",
+        "",
+        "2026-11-06"
+      ],
+      [
+        "2026-11-06",
+        "1000-89-89",
+        "DÓLAR CUPOM LIMPO",
+        "TAXAS DE CÂMBIO",
+        "5.4995",
+        "",
+        "",
+        "2026-11-06"
+      ],
+      [
+        "2026-11-06",
+        "1001-44-64",
+        "DIF OPER CASADA - COMPRA",
+        "TAXAS DE CÂMBIO",
+        "",
+        "24.44",
+        "",
+        "2026-11-06"
+      ],
+      [
+        "2026-11-06",
         "9800334",
         "TAXA CDI CETIP",
         "TAXAS DE JUROS NACIONAL",
@@ -5672,46 +5712,6 @@
         "TAXAS DE JUROS NACIONAL",
         "",
         "13.65",
-        "",
-        "2026-11-05"
-      ],
-      [
-        "2026-11-06",
-        "9800508",
-        "DOLAR SPOT BMF PARA 1 DIA",
-        "TAXAS DE CÂMBIO",
-        "5.4851",
-        "",
-        "",
-        "2026-11-05"
-      ],
-      [
-        "2026-11-06",
-        "1000-95-06",
-        "DÓLAR BMF SPOT - 2 DIAS",
-        "TAXAS DE CÂMBIO",
-        "5.4873",
-        "",
-        "",
-        "2026-11-05"
-      ],
-      [
-        "2026-11-06",
-        "1000-89-89",
-        "DÓLAR CUPOM LIMPO",
-        "TAXAS DE CÂMBIO",
-        "5.4928",
-        "",
-        "",
-        "2026-11-05"
-      ],
-      [
-        "2026-11-06",
-        "1001-44-64",
-        "DIF OPER CASADA - COMPRA",
-        "TAXAS DE CÂMBIO",
-        "",
-        "26.45",
         "",
         "2026-11-05"
       ],
@@ -7195,6 +7195,122 @@
       ]
     ]
   },
+  "b3_isin_emissores.csv.gz": {
+    "headers": [
+      "data_captura",
+      "codigo_emissor",
+      "nome_emissor",
+      "cnpj_emissor",
+      "data_criacao_emissor"
+    ],
+    "rows": [
+      [
+        "2026-11-06",
+        "ZYBZ",
+        "BCO MEDEFIN SA",
+        "",
+        "2018-06-28"
+      ],
+      [
+        "2026-11-06",
+        "ZYCZ",
+        "BCO MAPPIN SA",
+        "",
+        "2018-06-28"
+      ],
+      [
+        "2026-11-06",
+        "ZZXA",
+        "BCO CIDADE SA",
+        "61377677000138",
+        "2018-06-28"
+      ],
+      [
+        "2026-11-06",
+        "ZZWR",
+        "BCO INTER ATLANTICO SA",
+        "",
+        "2018-06-28"
+      ],
+      [
+        "2026-11-06",
+        "ZZVH",
+        "ALCOA ALUMINIO SA",
+        "23637697000101",
+        "2018-06-28"
+      ],
+      [
+        "2026-11-06",
+        "ZZUM",
+        "BASF BRASILEIRA SA INDS QUIMICAS",
+        "",
+        "2018-06-28"
+      ],
+      [
+        "2026-11-06",
+        "ZZOO",
+        "CIA BRAS PROJETOS OBRAS",
+        "",
+        "2018-06-28"
+      ],
+      [
+        "2026-11-06",
+        "ZZNA",
+        "FRANLEASE ARREND MERCANTIL SA",
+        "",
+        "2018-06-28"
+      ],
+      [
+        "2026-11-06",
+        "ZZMQ",
+        "BCO EUROPEU AMERICA LATINA SA",
+        "",
+        "2018-06-28"
+      ],
+      [
+        "2026-11-06",
+        "ZZGR",
+        "SANTANDER PB ZARAGOZA MULTIMERCADO CRÃDITO PRIVADO - FIF RESP LIMITADA",
+        "24290332000116",
+        "2018-06-28"
+      ],
+      [
+        "2026-11-06",
+        "ZZF1",
+        "JBZ FUNDO INVESTIMENTO COTAS FUNDOS INVESTIMENTO RENDA FIXA CREDITO PRIVADO",
+        "26470438000127",
+        "2018-06-28"
+      ],
+      [
+        "2026-11-06",
+        "ZZDT",
+        "Z.A DIGITAL DE SÃO PAULO SISTEMA DE ESTACIONAMENTO ROTATIVO S.A",
+        "35993098000100",
+        "2020-08-17"
+      ],
+      [
+        "2026-11-06",
+        "ZZAK",
+        "ITAITUBA IND CIMENTOS PARA SA",
+        "04953915000172",
+        "2018-06-28"
+      ],
+      [
+        "2026-11-06",
+        "ZZ1R",
+        "SERRANA MINERACAO LTDA",
+        "",
+        "2018-06-28"
+      ],
+      [
+        "2026-11-06",
+        "ZZ01",
+        "FUNDO INVEST RENDA FIXA MAPFRE MARES",
+        "07725150000101",
+        "2018-06-28"
+      ]
+    ]
+  },
   "b3_indicadores_economicos_fwf.csv": {
     "headers": [
       "data_captura",
@@ -7436,122 +7552,6 @@
         "î&È·p¨ß[qèó*níÂmÂÿL¿Ta8úfnSewWâ[",
         "Hâ",
         "ÜZ£­T¸ÍMo´E´¸µ\u0014Ç>¯âÖ"
-      ]
-    ]
-  },
-  "b3_isin_emissores.csv.gz": {
-    "headers": [
-      "data_captura",
-      "codigo_emissor",
-      "nome_emissor",
-      "cnpj_emissor",
-      "data_criacao_emissor"
-    ],
-    "rows": [
-      [
-        "2026-11-06",
-        "ZYBZ",
-        "BCO MEDEFIN SA",
-        "",
-        "2018-06-28"
-      ],
-      [
-        "2026-11-06",
-        "ZYCZ",
-        "BCO MAPPIN SA",
-        "",
-        "2018-06-28"
-      ],
-      [
-        "2026-11-06",
-        "ZZXA",
-        "BCO CIDADE SA",
-        "61377677000138",
-        "2018-06-28"
-      ],
-      [
-        "2026-11-06",
-        "ZZWR",
-        "BCO INTER ATLANTICO SA",
-        "",
-        "2018-06-28"
-      ],
-      [
-        "2026-11-06",
-        "ZZVH",
-        "ALCOA ALUMINIO SA",
-        "23637697000101",
-        "2018-06-28"
-      ],
-      [
-        "2026-11-06",
-        "ZZUM",
-        "BASF BRASILEIRA SA INDS QUIMICAS",
-        "",
-        "2018-06-28"
-      ],
-      [
-        "2026-11-06",
-        "ZZOO",
-        "CIA BRAS PROJETOS OBRAS",
-        "",
-        "2018-06-28"
-      ],
-      [
-        "2026-11-06",
-        "ZZNA",
-        "FRANLEASE ARREND MERCANTIL SA",
-        "",
-        "2018-06-28"
-      ],
-      [
-        "2026-11-06",
-        "ZZMQ",
-        "BCO EUROPEU AMERICA LATINA SA",
-        "",
-        "2018-06-28"
-      ],
-      [
-        "2026-11-06",
-        "ZZGR",
-        "SANTANDER PB ZARAGOZA MULTIMERCADO CRÃDITO PRIVADO - FIF RESP LIMITADA",
-        "24290332000116",
-        "2018-06-28"
-      ],
-      [
-        "2026-11-06",
-        "ZZF1",
-        "JBZ FUNDO INVESTIMENTO COTAS FUNDOS INVESTIMENTO RENDA FIXA CREDITO PRIVADO",
-        "26470438000127",
-        "2018-06-28"
-      ],
-      [
-        "2026-11-06",
-        "ZZDT",
-        "Z.A DIGITAL DE SÃO PAULO SISTEMA DE ESTACIONAMENTO ROTATIVO S.A",
-        "35993098000100",
-        "2020-08-17"
-      ],
-      [
-        "2026-11-06",
-        "ZZAK",
-        "ITAITUBA IND CIMENTOS PARA SA",
-        "04953915000172",
-        "2018-06-28"
-      ],
-      [
-        "2026-11-06",
-        "ZZ1R",
-        "SERRANA MINERACAO LTDA",
-        "",
-        "2018-06-28"
-      ],
-      [
-        "2026-11-06",
-        "ZZ01",
-        "FUNDO INVEST RENDA FIXA MAPFRE MARES",
-        "07725150000101",
-        "2018-06-28"
       ]
     ]
   },
@@ -8703,186 +8703,6 @@
       ]
     ]
   },
-  "b3_termo_posicoes_aberto.csv": {
-    "headers": [
-      "data_captura",
-      "data_referencia",
-      "codigo",
-      "empresa",
-      "tipo",
-      "quantidade_contratos",
-      "quantidade_ativos",
-      "valor_contratos",
-      "preco_medio_termo"
-    ],
-    "rows": [
-      [
-        "2026-11-06",
-        "2026-10-29",
-        "TUPY3T",
-        "TUPY S.A.",
-        "ON NM",
-        "36",
-        "44600",
-        "797448.55",
-        "17.88"
-      ],
-      [
-        "2026-11-06",
-        "2026-10-29",
-        "UGPA3T",
-        "ULTRAPAR PARTICIPACOES S.A.",
-        "ON NM",
-        "19",
-        "21600",
-        "819758.65",
-        "37.95"
-      ],
-      [
-        "2026-11-06",
-        "2026-10-29",
-        "YDUQ3T",
-        "YDUQS PARTICIPACOES S.A.",
-        "ON NM",
-        "32",
-        "274600",
-        "2848571.59",
-        "10.37"
-      ],
-      [
-        "2026-11-06",
-        "2026-10-29",
-        "XPSF11T",
-        "XP SELECTION FDO DE FII RESP LIM",
-        "CI",
-        "2",
-        "245812",
-        "1655234.1",
-        "6.73"
-      ],
-      [
-        "2026-11-06",
-        "2026-10-29",
-        "XPML11T",
-        "XP MALLS FDO INV IMOB FII RESP LIM",
-        "CI",
-        "20",
-        "61855",
-        "6761015.91",
-        "109.3"
-      ],
-      [
-        "2026-11-06",
-        "2026-10-29",
-        "XPLG11T",
-        "XP LOG FDO INV IMOB - FII",
-        "CI",
-        "11",
-        "23552",
-        "2242658.54",
-        "95.22"
-      ],
-      [
-        "2026-11-06",
-        "2026-10-29",
-        "XPBR31T",
-        "XP INC.",
-        "DR1",
-        "105",
-        "86761",
-        "9768155.49",
-        "112.59"
-      ],
-      [
-        "2026-11-06",
-        "2026-10-29",
-        "WIZC3T",
-        "WIZ CO PARTICIPAÇÕES E CORRETAGEM DE SEGUROS S.A.",
-        "ON NM",
-        "22",
-        "30200",
-        "238515.01",
-        "7.9"
-      ],
-      [
-        "2026-11-06",
-        "2026-10-29",
-        "WHRL4T",
-        "WHIRLPOOL S.A.",
-        "PN",
-        "8",
-        "13000",
-        "56011.96",
-        "4.31"
-      ],
-      [
-        "2026-11-06",
-        "2026-10-29",
-        "WEST3T",
-        "WESTWING COMERCIO VAREJISTA S.A.",
-        "ON NM",
-        "8",
-        "100000",
-        "389100.25",
-        "3.89"
-      ],
-      [
-        "2026-11-06",
-        "2026-10-29",
-        "WEGE3T",
-        "WEG S.A.",
-        "ON NM",
-        "136",
-        "3156628",
-        "141746867.82",
-        "44.9"
-      ],
-      [
-        "2026-11-06",
-        "2026-10-29",
-        "WALM34T",
-        "WALMART INC.",
-        "DRN",
-        "2",
-        "10000",
-        "362290.27",
-        "36.23"
-      ],
-      [
-        "2026-11-06",
-        "2026-10-29",
-        "VULC3T",
-        "VULCABRAS S.A.",
-        "ON NM",
-        "96",
-        "183199",
-        "2764647.44",
-        "15.09"
-      ],
-      [
-        "2026-11-06",
-        "2026-10-29",
-        "VIVA3T",
-        "VIVARA PARTICIPAÇOES S.A",
-        "ON NM",
-        "125",
-        "195500",
-        "4449065.48",
-        "22.76"
-      ],
-      [
-        "2026-11-06",
-        "2026-10-29",
-        "VITT3T",
-        "VITTIA S.A.",
-        "ON NM",
-        "2",
-        "15000",
-        "51351.98",
-        "3.42"
-      ]
-    ]
-  },
   "bacen_balancetes_bancos.csv.gz": {
     "headers": [
       "data_captura",
@@ -9108,106 +8928,6 @@
         "9320000004",
         "Ativos Financeiros - Classificação por Carteiras de Provisão",
         "27730674559.24"
-      ]
-    ]
-  },
-  "bcb_ptax.csv": {
-    "headers": [
-      "data_captura",
-      "data_referencia",
-      "cotacao_compra",
-      "cotacao_venda"
-    ],
-    "rows": [
-      [
-        "2026-11-06",
-        "2026-11-06",
-        "5.5007",
-        "5.5013"
-      ],
-      [
-        "2026-11-06",
-        "2026-11-05",
-        "5.4615",
-        "5.4621"
-      ],
-      [
-        "2026-11-06",
-        "2026-11-04",
-        "5.4772",
-        "5.4778"
-      ],
-      [
-        "2026-11-06",
-        "2026-11-03",
-        "5.4929",
-        "5.4935"
-      ],
-      [
-        "2026-11-06",
-        "2026-10-30",
-        "5.4206",
-        "5.4212"
-      ],
-      [
-        "2026-11-06",
-        "2026-10-29",
-        "5.3738",
-        "5.3744"
-      ],
-      [
-        "2026-11-06",
-        "2026-10-28",
-        "5.3414",
-        "5.342"
-      ],
-      [
-        "2026-11-06",
-        "2026-10-27",
-        "5.334",
-        "5.3346"
-      ],
-      [
-        "2026-11-06",
-        "2026-10-26",
-        "5.4998",
-        "5.5007"
-      ],
-      [
-        "2026-11-06",
-        "2026-10-23",
-        "5.0371",
-        "5.0377"
-      ],
-      [
-        "2026-11-06",
-        "2026-10-22",
-        "5.0377",
-        "5.0383"
-      ],
-      [
-        "2026-11-06",
-        "2026-10-21",
-        "5.027",
-        "5.0277"
-      ],
-      [
-        "2026-11-06",
-        "2026-10-20",
-        "5.0134",
-        "5.014"
-      ],
-      [
-        "2026-11-06",
-        "2026-10-19",
-        "5.0558",
-        "5.0564"
-      ],
-      [
-        "2026-11-06",
-        "2026-10-16",
-        "5.082",
-        "5.0826"
       ]
     ]
   },
@@ -9564,6 +9284,286 @@
         "1800-01",
         "",
         ""
+      ]
+    ]
+  },
+  "b3_termo_posicoes_aberto.csv": {
+    "headers": [
+      "data_captura",
+      "data_referencia",
+      "codigo",
+      "empresa",
+      "tipo",
+      "quantidade_contratos",
+      "quantidade_ativos",
+      "valor_contratos",
+      "preco_medio_termo"
+    ],
+    "rows": [
+      [
+        "2026-11-06",
+        "2026-10-29",
+        "TUPY3T",
+        "TUPY S.A.",
+        "ON NM",
+        "36",
+        "44600",
+        "797448.55",
+        "17.88"
+      ],
+      [
+        "2026-11-06",
+        "2026-10-29",
+        "UGPA3T",
+        "ULTRAPAR PARTICIPACOES S.A.",
+        "ON NM",
+        "19",
+        "21600",
+        "819758.65",
+        "37.95"
+      ],
+      [
+        "2026-11-06",
+        "2026-10-29",
+        "YDUQ3T",
+        "YDUQS PARTICIPACOES S.A.",
+        "ON NM",
+        "32",
+        "274600",
+        "2848571.59",
+        "10.37"
+      ],
+      [
+        "2026-11-06",
+        "2026-10-29",
+        "XPSF11T",
+        "XP SELECTION FDO DE FII RESP LIM",
+        "CI",
+        "2",
+        "245812",
+        "1655234.1",
+        "6.73"
+      ],
+      [
+        "2026-11-06",
+        "2026-10-29",
+        "XPML11T",
+        "XP MALLS FDO INV IMOB FII RESP LIM",
+        "CI",
+        "20",
+        "61855",
+        "6761015.91",
+        "109.3"
+      ],
+      [
+        "2026-11-06",
+        "2026-10-29",
+        "XPLG11T",
+        "XP LOG FDO INV IMOB - FII",
+        "CI",
+        "11",
+        "23552",
+        "2242658.54",
+        "95.22"
+      ],
+      [
+        "2026-11-06",
+        "2026-10-29",
+        "XPBR31T",
+        "XP INC.",
+        "DR1",
+        "105",
+        "86761",
+        "9768155.49",
+        "112.59"
+      ],
+      [
+        "2026-11-06",
+        "2026-10-29",
+        "WIZC3T",
+        "WIZ CO PARTICIPAÇÕES E CORRETAGEM DE SEGUROS S.A.",
+        "ON NM",
+        "22",
+        "30200",
+        "238515.01",
+        "7.9"
+      ],
+      [
+        "2026-11-06",
+        "2026-10-29",
+        "WHRL4T",
+        "WHIRLPOOL S.A.",
+        "PN",
+        "8",
+        "13000",
+        "56011.96",
+        "4.31"
+      ],
+      [
+        "2026-11-06",
+        "2026-10-29",
+        "WEST3T",
+        "WESTWING COMERCIO VAREJISTA S.A.",
+        "ON NM",
+        "8",
+        "100000",
+        "389100.25",
+        "3.89"
+      ],
+      [
+        "2026-11-06",
+        "2026-10-29",
+        "WEGE3T",
+        "WEG S.A.",
+        "ON NM",
+        "136",
+        "3156628",
+        "141746867.82",
+        "44.9"
+      ],
+      [
+        "2026-11-06",
+        "2026-10-29",
+        "WALM34T",
+        "WALMART INC.",
+        "DRN",
+        "2",
+        "10000",
+        "362290.27",
+        "36.23"
+      ],
+      [
+        "2026-11-06",
+        "2026-10-29",
+        "VULC3T",
+        "VULCABRAS S.A.",
+        "ON NM",
+        "96",
+        "183199",
+        "2764647.44",
+        "15.09"
+      ],
+      [
+        "2026-11-06",
+        "2026-10-29",
+        "VIVA3T",
+        "VIVARA PARTICIPAÇOES S.A",
+        "ON NM",
+        "125",
+        "195500",
+        "4449065.48",
+        "22.76"
+      ],
+      [
+        "2026-11-06",
+        "2026-10-29",
+        "VITT3T",
+        "VITTIA S.A.",
+        "ON NM",
+        "2",
+        "15000",
+        "51351.98",
+        "3.42"
+      ]
+    ]
+  },
+  "bcb_ptax.csv": {
+    "headers": [
+      "data_captura",
+      "data_referencia",
+      "cotacao_compra",
+      "cotacao_venda"
+    ],
+    "rows": [
+      [
+        "2026-11-06",
+        "2026-11-06",
+        "5.5007",
+        "5.5013"
+      ],
+      [
+        "2026-11-06",
+        "2026-11-05",
+        "5.4615",
+        "5.4621"
+      ],
+      [
+        "2026-11-06",
+        "2026-11-04",
+        "5.4772",
+        "5.4778"
+      ],
+      [
+        "2026-11-06",
+        "2026-11-03",
+        "5.4929",
+        "5.4935"
+      ],
+      [
+        "2026-11-06",
+        "2026-10-30",
+        "5.4206",
+        "5.4212"
+      ],
+      [
+        "2026-11-06",
+        "2026-10-29",
+        "5.3738",
+        "5.3744"
+      ],
+      [
+        "2026-11-06",
+        "2026-10-28",
+        "5.3414",
+        "5.342"
+      ],
+      [
+        "2026-11-06",
+        "2026-10-27",
+        "5.334",
+        "5.3346"
+      ],
+      [
+        "2026-11-06",
+        "2026-10-26",
+        "5.4998",
+        "5.5007"
+      ],
+      [
+        "2026-11-06",
+        "2026-10-23",
+        "5.0371",
+        "5.0377"
+      ],
+      [
+        "2026-11-06",
+        "2026-10-22",
+        "5.0377",
+        "5.0383"
+      ],
+      [
+        "2026-11-06",
+        "2026-10-21",
+        "5.027",
+        "5.0277"
+      ],
+      [
+        "2026-11-06",
+        "2026-10-20",
+        "5.0134",
+        "5.014"
+      ],
+      [
+        "2026-11-06",
+        "2026-10-19",
+        "5.0558",
+        "5.0564"
+      ],
+      [
+        "2026-11-06",
+        "2026-10-16",
+        "5.082",
+        "5.0826"
       ]
     ]
   },
@@ -16755,106 +16755,6 @@
       ]
     ]
   },
-  "wikipedia_global_indices.csv": {
-    "headers": [
-      "data_captura",
-      "codigo_ativo",
-      "nome_ativo",
-      "indice_origem"
-    ],
-    "rows": [
-      [
-        "2026-11-06",
-        "DTE.DE",
-        "Deutsche Telekom",
-        "Euro Stoxx 50"
-      ],
-      [
-        "2026-11-06",
-        "ENEL.MI",
-        "Enel",
-        "Euro Stoxx 50"
-      ],
-      [
-        "2026-11-06",
-        "DG.PA",
-        "Vinci SA",
-        "Euro Stoxx 50"
-      ],
-      [
-        "2026-11-06",
-        "TTE.PA",
-        "TotalEnergies",
-        "Euro Stoxx 50"
-      ],
-      [
-        "2026-11-06",
-        "ENR.DE",
-        "Siemens Energy",
-        "Euro Stoxx 50"
-      ],
-      [
-        "2026-11-06",
-        "SIE.DE",
-        "Siemens",
-        "Euro Stoxx 50"
-      ],
-      [
-        "2026-11-06",
-        "SU.PA",
-        "Schneider Electric",
-        "Euro Stoxx 50"
-      ],
-      [
-        "2026-11-06",
-        "SAP.DE",
-        "SAP",
-        "Euro Stoxx 50"
-      ],
-      [
-        "2026-11-06",
-        "SAN.PA",
-        "Sanofi",
-        "Euro Stoxx 50"
-      ],
-      [
-        "2026-11-06",
-        "SGO.PA",
-        "Saint-Gobain",
-        "Euro Stoxx 50"
-      ],
-      [
-        "2026-11-06",
-        "SAF.PA",
-        "Safran",
-        "Euro Stoxx 50"
-      ],
-      [
-        "2026-11-06",
-        "RHM.DE",
-        "Rheinmetall",
-        "Euro Stoxx 50"
-      ],
-      [
-        "2026-11-06",
-        "PRX.AS",
-        "Prosus",
-        "Euro Stoxx 50"
-      ],
-      [
-        "2026-11-06",
-        "NDA-FI.HE",
-        "Nordea",
-        "Euro Stoxx 50"
-      ],
-      [
-        "2026-11-06",
-        "NOKIA.HE",
-        "Nokia",
-        "Euro Stoxx 50"
-      ]
-    ]
-  },
   "ipea_mercados_diarios.csv": {
     "headers": [
       "data_captura",
@@ -16971,579 +16871,103 @@
       ]
     ]
   },
-  "bacen_parcelas_capital_basileia.csv.gz": {
+  "wikipedia_global_indices.csv": {
     "headers": [
       "data_captura",
-      "TipoInstituicao",
-      "CodInst",
-      "AnoMes",
-      "NomeRelatorio",
-      "NumeroRelatorio",
-      "Grupo",
-      "Conta",
-      "NomeColuna",
-      "DescricaoColuna",
-      "Saldo",
-      "tipo_instituicao_label"
-    ],
-    "rows": [
-      [
-        "2026-11-06",
-        "1",
-        "C0088912",
-        "202606",
-        "Informações de Capital",
-        "5",
-        "Ativos Ponderados pelo Risco (RWA) - RWA para Risco de Mercado",
-        "79655",
-        "RWAacs \n(g4)",
-        "Parcela do RWA referente ao risco das operações sujeitas à variação do preço de ações",
-        "",
-        "conglomerados_prudenciais"
-      ],
-      [
-        "2026-11-06",
-        "1",
-        "C0088912",
-        "202606",
-        "Informações de Capital",
-        "5",
-        "Patrimônio de Referência para Comparação com o RWA",
-        "79648",
-        "Capital Nível II \n(d)",
-        "Parcela do capital composta por instrumentos subordinados, elegíveis como patrimônio regulatório, aptos a absorver perdas durante o funcionamento da instituição",
-        "",
-        "conglomerados_prudenciais"
-      ],
-      [
-        "2026-11-06",
-        "1",
-        "C0088936",
-        "202606",
-        "Informações de Capital",
-        "5",
-        "Patrimônio de Referência para Comparação com o RWA - Patrimônio de Referência Nível I para Comparação com RWA",
-        "79646",
-        "Capital Complementar \n(b)",
-        "Instrumentos de capital e dívida perpétuos, elegíveis como patrimônio regulatório",
-        "",
-        "conglomerados_prudenciais"
-      ],
-      [
-        "2026-11-06",
-        "1",
-        "C0088936",
-        "202606",
-        "Informações de Capital",
-        "5",
-        "Patrimônio de Referência para Comparação com o RWA - Patrimônio de Referência Nível I para Comparação com RWA",
-        "79645",
-        "Capital Principal para Comparação com RWA \n(a)",
-        "Parcela do capital de melhor qualidade e imediatamente disponível para absorver perdas",
-        "",
-        "conglomerados_prudenciais"
-      ],
-      [
-        "2026-11-06",
-        "1",
-        "C0088936",
-        "202606",
-        "Informações de Capital",
-        "5",
-        "Patrimônio de Referência para Comparação com o RWA",
-        "79649",
-        "Patrimônio de Referência para Comparação com o RWA \n(e)",
-        "Montante de capital regulatório formado pela soma das parcelas de Capital Nível I e Capital Nível II",
-        "10757950.09",
-        "conglomerados_prudenciais"
-      ],
-      [
-        "2026-11-06",
-        "1",
-        "C0088936",
-        "202606",
-        "Informações de Capital",
-        "5",
-        "Patrimônio de Referência para Comparação com o RWA",
-        "79648",
-        "Capital Nível II \n(d)",
-        "Parcela do capital composta por instrumentos subordinados, elegíveis como patrimônio regulatório, aptos a absorver perdas durante o funcionamento da instituição",
-        "",
-        "conglomerados_prudenciais"
-      ],
-      [
-        "2026-11-06",
-        "1",
-        "C0088936",
-        "202606",
-        "Informações de Capital",
-        "5",
-        "Ativos Ponderados pelo Risco (RWA) - RWA para Risco de Mercado",
-        "79655",
-        "RWAacs \n(g4)",
-        "Parcela do RWA referente ao risco das operações sujeitas à variação do preço de ações",
-        "",
-        "conglomerados_prudenciais"
-      ],
-      [
-        "2026-11-06",
-        "1",
-        "C0088936",
-        "202606",
-        "Informações de Capital",
-        "5",
-        "Ativos Ponderados pelo Risco (RWA) - RWA para Risco de Mercado",
-        "79654",
-        "RWAjur \n(g3)",
-        "Parcela do RWA referente às exposições sujeitas à variação de taxas de juros e cupons",
-        "",
-        "conglomerados_prudenciais"
-      ],
-      [
-        "2026-11-06",
-        "1",
-        "C0088936",
-        "202606",
-        "Informações de Capital",
-        "5",
-        "Ativos Ponderados pelo Risco (RWA) - RWA para Risco de Mercado",
-        "79653",
-        "RWAcom \n(g2)",
-        "Parcela do RWA referente ao risco das operações sujeitas à variação do preço de mercadorias (commodities)",
-        "",
-        "conglomerados_prudenciais"
-      ],
-      [
-        "2026-11-06",
-        "1",
-        "C0088936",
-        "202606",
-        "Informações de Capital",
-        "5",
-        "Ativos Ponderados pelo Risco (RWA) - RWA para Risco de Mercado",
-        "79652",
-        "RWAcam \n(g1)",
-        "Parcela do RWA referente às exposições em ouro, em moeda estrangeira e em ativos sujeitos à variação cambial",
-        "0",
-        "conglomerados_prudenciais"
-      ],
-      [
-        "2026-11-06",
-        "1",
-        "C0088936",
-        "202606",
-        "Informações de Capital",
-        "5",
-        "Ativos Ponderados pelo Risco (RWA) - RWA para Risco de Mercado",
-        "79651",
-        "RWA para Risco de Mercado \n(g) = (g1) + (g2) + (g3) + (g4) + (g5) + (g6)",
-        "Parcela do RWA referente à exposição ao risco de mercado",
-        "0",
-        "conglomerados_prudenciais"
-      ],
-      [
-        "2026-11-06",
-        "1",
-        "C0088936",
-        "202606",
-        "Informações de Capital",
-        "5",
-        "Ativos Ponderados pelo Risco (RWA) - RWA para Risco de Mercado",
-        "142840",
-        "RWAdrc \n(g6)",
-        "Parcela do RWA relativa às exposições ao risco de crédito dos instrumentos financeiros classificados na carteira de negociação.",
-        "0",
-        "conglomerados_prudenciais"
-      ],
-      [
-        "2026-11-06",
-        "1",
-        "C0088936",
-        "202606",
-        "Informações de Capital",
-        "5",
-        "Ativos Ponderados pelo Risco (RWA) - RWA para Risco de Mercado",
-        "134460",
-        "RWAcva \n(g5)",
-        "CVA - Ajuste para derivativos decorrente de variação da qualidade creditícia da contraparte",
-        "0",
-        "conglomerados_prudenciais"
-      ],
-      [
-        "2026-11-06",
-        "1",
-        "C0088936",
-        "202606",
-        "Informações de Capital",
-        "5",
-        "Ativos Ponderados pelo Risco (RWA)",
-        "79665",
-        "Ativos Ponderados pelo Risco (RWA) \n(j) = (f) + (g) + (h) + (i)",
-        "Corresponde à soma das parcelas referentes à exposição aos riscos de Crédito, de Mercado e Operacional",
-        "31966718.68",
-        "conglomerados_prudenciais"
-      ],
-      [
-        "2026-11-06",
-        "1",
-        "C0088936",
-        "202606",
-        "Informações de Capital",
-        "5",
-        "Ativos Ponderados pelo Risco (RWA)",
-        "79656",
-        "RWA para Risco Operacional \n(h)",
-        "Parcela do RWA referente à exposição ao risco operacional",
-        "0",
-        "conglomerados_prudenciais"
-      ]
-    ]
-  },
-  "yahoo_cambio_moedas.csv": {
-    "headers": [
-      "data_captura",
-      "data_referencia",
       "codigo_ativo",
-      "label",
-      "preco_fechamento"
+      "nome_ativo",
+      "indice_origem"
     ],
     "rows": [
       [
         "2026-11-06",
-        "2026-11-06",
-        "USDINR=X",
-        "USD_INR",
-        "93.8949966430664"
+        "DTE.DE",
+        "Deutsche Telekom",
+        "Euro Stoxx 50"
       ],
       [
         "2026-11-06",
-        "2026-11-06",
-        "USDKRW=X",
-        "USD_KRW",
-        "1361.9000244140625"
+        "ENEL.MI",
+        "Enel",
+        "Euro Stoxx 50"
       ],
       [
         "2026-11-06",
-        "2026-11-05",
-        "USDKRW=X",
-        "USD_KRW",
-        "1340.0699462890625"
+        "DG.PA",
+        "Vinci SA",
+        "Euro Stoxx 50"
       ],
       [
         "2026-11-06",
-        "2026-11-05",
-        "USDINR=X",
-        "USD_INR",
-        "94.5154037475586"
+        "TTE.PA",
+        "TotalEnergies",
+        "Euro Stoxx 50"
       ],
       [
         "2026-11-06",
-        "2026-11-04",
-        "USDKRW=X",
-        "USD_KRW",
-        "1342.9000244140625"
+        "ENR.DE",
+        "Siemens Energy",
+        "Euro Stoxx 50"
       ],
       [
         "2026-11-06",
-        "2026-11-04",
-        "USDINR=X",
-        "USD_INR",
-        "94.74839782714844"
+        "SIE.DE",
+        "Siemens",
+        "Euro Stoxx 50"
       ],
       [
         "2026-11-06",
-        "2026-11-03",
-        "USDKRW=X",
-        "USD_KRW",
-        "1344.81005859375"
+        "SU.PA",
+        "Schneider Electric",
+        "Euro Stoxx 50"
       ],
       [
         "2026-11-06",
-        "2026-11-03",
-        "USDINR=X",
-        "USD_INR",
-        "94.72540283203125"
+        "SAP.DE",
+        "SAP",
+        "Euro Stoxx 50"
       ],
       [
         "2026-11-06",
-        "2026-11-02",
-        "USDKRW=X",
-        "USD_KRW",
-        "1325.52001953125"
+        "SAN.PA",
+        "Sanofi",
+        "Euro Stoxx 50"
       ],
       [
         "2026-11-06",
-        "2026-11-02",
-        "USDINR=X",
-        "USD_INR",
-        "94.90499877929688"
+        "SGO.PA",
+        "Saint-Gobain",
+        "Euro Stoxx 50"
       ],
       [
         "2026-11-06",
-        "2026-10-30",
-        "USDKRW=X",
-        "USD_KRW",
-        "1337.97998046875"
+        "SAF.PA",
+        "Safran",
+        "Euro Stoxx 50"
       ],
       [
         "2026-11-06",
-        "2026-10-30",
-        "USDINR=X",
-        "USD_INR",
-        "95.15239715576172"
+        "RHM.DE",
+        "Rheinmetall",
+        "Euro Stoxx 50"
       ],
       [
         "2026-11-06",
-        "2026-10-29",
-        "USDINR=X",
-        "USD_INR",
-        "95.20950317382812"
+        "PRX.AS",
+        "Prosus",
+        "Euro Stoxx 50"
       ],
       [
         "2026-11-06",
-        "2026-10-29",
-        "USDKRW=X",
-        "USD_KRW",
-        "1340.3399658203125"
+        "NDA-FI.HE",
+        "Nordea",
+        "Euro Stoxx 50"
       ],
       [
         "2026-11-06",
-        "2026-10-28",
-        "USDINR=X",
-        "USD_INR",
-        "95.17780303955078"
-      ]
-    ]
-  },
-  "yahoo_commodities.csv": {
-    "headers": [
-      "data_captura",
-      "data_referencia",
-      "codigo_ativo",
-      "label",
-      "preco_fechamento"
-    ],
-    "rows": [
-      [
-        "2026-11-06",
-        "2026-11-05",
-        "HE=F",
-        "LEAN_HOGS",
-        "55.099998474121094"
-      ],
-      [
-        "2026-11-06",
-        "2026-11-05",
-        "GF=F",
-        "FEEDER_CATTLE",
-        "325.04998779296875"
-      ],
-      [
-        "2026-11-06",
-        "2026-11-04",
-        "GF=F",
-        "FEEDER_CATTLE",
-        "332.0249938964844"
-      ],
-      [
-        "2026-11-06",
-        "2026-11-04",
-        "HE=F",
-        "LEAN_HOGS",
-        "57.54999923706055"
-      ],
-      [
-        "2026-11-06",
-        "2026-11-03",
-        "GF=F",
-        "FEEDER_CATTLE",
-        "334.5249938964844"
-      ],
-      [
-        "2026-11-06",
-        "2026-11-03",
-        "HE=F",
-        "LEAN_HOGS",
-        "58.599998474121094"
-      ],
-      [
-        "2026-11-06",
-        "2026-11-02",
-        "GF=F",
-        "FEEDER_CATTLE",
-        "338.42498779296875"
-      ],
-      [
-        "2026-11-06",
-        "2026-11-02",
-        "HE=F",
-        "LEAN_HOGS",
-        "58.17499923706055"
-      ],
-      [
-        "2026-11-06",
-        "2026-10-30",
-        "GF=F",
-        "FEEDER_CATTLE",
-        "337.7749938964844"
-      ],
-      [
-        "2026-11-06",
-        "2026-10-30",
-        "HE=F",
-        "LEAN_HOGS",
-        "58.875"
-      ],
-      [
-        "2026-11-06",
-        "2026-10-29",
-        "GF=F",
-        "FEEDER_CATTLE",
-        "351.1000061035156"
-      ],
-      [
-        "2026-11-06",
-        "2026-10-29",
-        "HE=F",
-        "LEAN_HOGS",
-        "59.82500076293945"
-      ],
-      [
-        "2026-11-06",
-        "2026-10-28",
-        "GF=F",
-        "FEEDER_CATTLE",
-        "351.42498779296875"
-      ],
-      [
-        "2026-11-06",
-        "2026-10-28",
-        "HE=F",
-        "LEAN_HOGS",
-        "58.599998474121094"
-      ],
-      [
-        "2026-11-06",
-        "2026-10-27",
-        "HE=F",
-        "LEAN_HOGS",
-        "62.025001525878906"
-      ]
-    ]
-  },
-  "yahoo_criptoativos.csv": {
-    "headers": [
-      "data_captura",
-      "data_referencia",
-      "codigo_ativo",
-      "label",
-      "preco_fechamento"
-    ],
-    "rows": [
-      [
-        "2026-11-06",
-        "2026-11-06",
-        "ARB-USD",
-        "ARB",
-        "0.0006290287710726261"
-      ],
-      [
-        "2026-11-06",
-        "2026-11-05",
-        "ARB-USD",
-        "ARB",
-        "0.0006290000164881349"
-      ],
-      [
-        "2026-11-06",
-        "2026-11-04",
-        "ARB-USD",
-        "ARB",
-        "0.0006290000164881349"
-      ],
-      [
-        "2026-11-06",
-        "2026-11-03",
-        "ARB-USD",
-        "ARB",
-        "0.0006290000164881349"
-      ],
-      [
-        "2026-11-06",
-        "2026-11-02",
-        "ARB-USD",
-        "ARB",
-        "0.0006290000164881349"
-      ],
-      [
-        "2026-11-06",
-        "2026-11-01",
-        "ARB-USD",
-        "ARB",
-        "0.0006290000164881349"
-      ],
-      [
-        "2026-11-06",
-        "2026-10-31",
-        "ARB-USD",
-        "ARB",
-        "0.0006290000164881349"
-      ],
-      [
-        "2026-11-06",
-        "2026-10-30",
-        "ARB-USD",
-        "ARB",
-        "0.0006290000164881349"
-      ],
-      [
-        "2026-11-06",
-        "2026-10-29",
-        "ARB-USD",
-        "ARB",
-        "0.0006290000164881349"
-      ],
-      [
-        "2026-11-06",
-        "2026-10-28",
-        "ARB-USD",
-        "ARB",
-        "0.0006290000164881349"
-      ],
-      [
-        "2026-11-06",
-        "2026-10-27",
-        "ARB-USD",
-        "ARB",
-        "0.0006290000164881349"
-      ],
-      [
-        "2026-11-06",
-        "2026-10-26",
-        "ARB-USD",
-        "ARB",
-        "0.0006290000164881349"
-      ],
-      [
-        "2026-11-06",
-        "2026-10-25",
-        "ARB-USD",
-        "ARB",
-        "0.0006290000164881349"
-      ],
-      [
-        "2026-11-06",
-        "2026-10-24",
-        "ARB-USD",
-        "ARB",
-        "0.0006290000164881349"
-      ],
-      [
-        "2026-11-06",
-        "2026-10-23",
-        "ARB-USD",
-        "ARB",
-        "0.0006290000164881349"
+        "NOKIA.HE",
+        "Nokia",
+        "Euro Stoxx 50"
       ]
     ]
   },
@@ -17903,6 +17327,466 @@
       ]
     ]
   },
+  "yahoo_cambio_moedas.csv": {
+    "headers": [
+      "data_captura",
+      "data_referencia",
+      "codigo_ativo",
+      "label",
+      "preco_fechamento"
+    ],
+    "rows": [
+      [
+        "2026-11-06",
+        "2026-11-06",
+        "USDINR=X",
+        "USD_INR",
+        "93.8949966430664"
+      ],
+      [
+        "2026-11-06",
+        "2026-11-06",
+        "USDKRW=X",
+        "USD_KRW",
+        "1362.3800048828125"
+      ],
+      [
+        "2026-11-06",
+        "2026-11-05",
+        "USDKRW=X",
+        "USD_KRW",
+        "1340.0699462890625"
+      ],
+      [
+        "2026-11-06",
+        "2026-11-05",
+        "USDINR=X",
+        "USD_INR",
+        "94.5154037475586"
+      ],
+      [
+        "2026-11-06",
+        "2026-11-04",
+        "USDKRW=X",
+        "USD_KRW",
+        "1342.9000244140625"
+      ],
+      [
+        "2026-11-06",
+        "2026-11-04",
+        "USDINR=X",
+        "USD_INR",
+        "94.74839782714844"
+      ],
+      [
+        "2026-11-06",
+        "2026-11-03",
+        "USDKRW=X",
+        "USD_KRW",
+        "1344.81005859375"
+      ],
+      [
+        "2026-11-06",
+        "2026-11-03",
+        "USDINR=X",
+        "USD_INR",
+        "94.72540283203125"
+      ],
+      [
+        "2026-11-06",
+        "2026-11-02",
+        "USDKRW=X",
+        "USD_KRW",
+        "1325.52001953125"
+      ],
+      [
+        "2026-11-06",
+        "2026-11-02",
+        "USDINR=X",
+        "USD_INR",
+        "94.90499877929688"
+      ],
+      [
+        "2026-11-06",
+        "2026-10-30",
+        "USDKRW=X",
+        "USD_KRW",
+        "1337.97998046875"
+      ],
+      [
+        "2026-11-06",
+        "2026-10-30",
+        "USDINR=X",
+        "USD_INR",
+        "95.15239715576172"
+      ],
+      [
+        "2026-11-06",
+        "2026-10-29",
+        "USDINR=X",
+        "USD_INR",
+        "95.20950317382812"
+      ],
+      [
+        "2026-11-06",
+        "2026-10-29",
+        "USDKRW=X",
+        "USD_KRW",
+        "1340.3399658203125"
+      ],
+      [
+        "2026-11-06",
+        "2026-10-28",
+        "USDINR=X",
+        "USD_INR",
+        "95.17780303955078"
+      ]
+    ]
+  },
+  "yahoo_commodities.csv": {
+    "headers": [
+      "data_captura",
+      "data_referencia",
+      "codigo_ativo",
+      "label",
+      "preco_fechamento"
+    ],
+    "rows": [
+      [
+        "2026-11-06",
+        "2026-11-05",
+        "HE=F",
+        "LEAN_HOGS",
+        "55.099998474121094"
+      ],
+      [
+        "2026-11-06",
+        "2026-11-05",
+        "GF=F",
+        "FEEDER_CATTLE",
+        "325.04998779296875"
+      ],
+      [
+        "2026-11-06",
+        "2026-11-04",
+        "GF=F",
+        "FEEDER_CATTLE",
+        "332.0249938964844"
+      ],
+      [
+        "2026-11-06",
+        "2026-11-04",
+        "HE=F",
+        "LEAN_HOGS",
+        "57.54999923706055"
+      ],
+      [
+        "2026-11-06",
+        "2026-11-03",
+        "GF=F",
+        "FEEDER_CATTLE",
+        "334.5249938964844"
+      ],
+      [
+        "2026-11-06",
+        "2026-11-03",
+        "HE=F",
+        "LEAN_HOGS",
+        "58.599998474121094"
+      ],
+      [
+        "2026-11-06",
+        "2026-11-02",
+        "GF=F",
+        "FEEDER_CATTLE",
+        "338.42498779296875"
+      ],
+      [
+        "2026-11-06",
+        "2026-11-02",
+        "HE=F",
+        "LEAN_HOGS",
+        "58.17499923706055"
+      ],
+      [
+        "2026-11-06",
+        "2026-10-30",
+        "GF=F",
+        "FEEDER_CATTLE",
+        "337.7749938964844"
+      ],
+      [
+        "2026-11-06",
+        "2026-10-30",
+        "HE=F",
+        "LEAN_HOGS",
+        "58.875"
+      ],
+      [
+        "2026-11-06",
+        "2026-10-29",
+        "GF=F",
+        "FEEDER_CATTLE",
+        "351.1000061035156"
+      ],
+      [
+        "2026-11-06",
+        "2026-10-29",
+        "HE=F",
+        "LEAN_HOGS",
+        "59.82500076293945"
+      ],
+      [
+        "2026-11-06",
+        "2026-10-28",
+        "GF=F",
+        "FEEDER_CATTLE",
+        "351.42498779296875"
+      ],
+      [
+        "2026-11-06",
+        "2026-10-28",
+        "HE=F",
+        "LEAN_HOGS",
+        "58.599998474121094"
+      ],
+      [
+        "2026-11-06",
+        "2026-10-27",
+        "HE=F",
+        "LEAN_HOGS",
+        "62.025001525878906"
+      ]
+    ]
+  },
+  "bacen_parcelas_capital_basileia.csv.gz": {
+    "headers": [
+      "data_captura",
+      "TipoInstituicao",
+      "CodInst",
+      "AnoMes",
+      "NomeRelatorio",
+      "NumeroRelatorio",
+      "Grupo",
+      "Conta",
+      "NomeColuna",
+      "DescricaoColuna",
+      "Saldo",
+      "tipo_instituicao_label"
+    ],
+    "rows": [
+      [
+        "2026-11-06",
+        "1",
+        "C0088912",
+        "202606",
+        "Informações de Capital",
+        "5",
+        "Ativos Ponderados pelo Risco (RWA) - RWA para Risco de Mercado",
+        "79655",
+        "RWAacs \n(g4)",
+        "Parcela do RWA referente ao risco das operações sujeitas à variação do preço de ações",
+        "",
+        "conglomerados_prudenciais"
+      ],
+      [
+        "2026-11-06",
+        "1",
+        "C0088912",
+        "202606",
+        "Informações de Capital",
+        "5",
+        "Patrimônio de Referência para Comparação com o RWA",
+        "79648",
+        "Capital Nível II \n(d)",
+        "Parcela do capital composta por instrumentos subordinados, elegíveis como patrimônio regulatório, aptos a absorver perdas durante o funcionamento da instituição",
+        "",
+        "conglomerados_prudenciais"
+      ],
+      [
+        "2026-11-06",
+        "1",
+        "C0088936",
+        "202606",
+        "Informações de Capital",
+        "5",
+        "Patrimônio de Referência para Comparação com o RWA - Patrimônio de Referência Nível I para Comparação com RWA",
+        "79646",
+        "Capital Complementar \n(b)",
+        "Instrumentos de capital e dívida perpétuos, elegíveis como patrimônio regulatório",
+        "",
+        "conglomerados_prudenciais"
+      ],
+      [
+        "2026-11-06",
+        "1",
+        "C0088936",
+        "202606",
+        "Informações de Capital",
+        "5",
+        "Patrimônio de Referência para Comparação com o RWA - Patrimônio de Referência Nível I para Comparação com RWA",
+        "79645",
+        "Capital Principal para Comparação com RWA \n(a)",
+        "Parcela do capital de melhor qualidade e imediatamente disponível para absorver perdas",
+        "",
+        "conglomerados_prudenciais"
+      ],
+      [
+        "2026-11-06",
+        "1",
+        "C0088936",
+        "202606",
+        "Informações de Capital",
+        "5",
+        "Patrimônio de Referência para Comparação com o RWA",
+        "79649",
+        "Patrimônio de Referência para Comparação com o RWA \n(e)",
+        "Montante de capital regulatório formado pela soma das parcelas de Capital Nível I e Capital Nível II",
+        "10757950.09",
+        "conglomerados_prudenciais"
+      ],
+      [
+        "2026-11-06",
+        "1",
+        "C0088936",
+        "202606",
+        "Informações de Capital",
+        "5",
+        "Patrimônio de Referência para Comparação com o RWA",
+        "79648",
+        "Capital Nível II \n(d)",
+        "Parcela do capital composta por instrumentos subordinados, elegíveis como patrimônio regulatório, aptos a absorver perdas durante o funcionamento da instituição",
+        "",
+        "conglomerados_prudenciais"
+      ],
+      [
+        "2026-11-06",
+        "1",
+        "C0088936",
+        "202606",
+        "Informações de Capital",
+        "5",
+        "Ativos Ponderados pelo Risco (RWA) - RWA para Risco de Mercado",
+        "79655",
+        "RWAacs \n(g4)",
+        "Parcela do RWA referente ao risco das operações sujeitas à variação do preço de ações",
+        "",
+        "conglomerados_prudenciais"
+      ],
+      [
+        "2026-11-06",
+        "1",
+        "C0088936",
+        "202606",
+        "Informações de Capital",
+        "5",
+        "Ativos Ponderados pelo Risco (RWA) - RWA para Risco de Mercado",
+        "79654",
+        "RWAjur \n(g3)",
+        "Parcela do RWA referente às exposições sujeitas à variação de taxas de juros e cupons",
+        "",
+        "conglomerados_prudenciais"
+      ],
+      [
+        "2026-11-06",
+        "1",
+        "C0088936",
+        "202606",
+        "Informações de Capital",
+        "5",
+        "Ativos Ponderados pelo Risco (RWA) - RWA para Risco de Mercado",
+        "79653",
+        "RWAcom \n(g2)",
+        "Parcela do RWA referente ao risco das operações sujeitas à variação do preço de mercadorias (commodities)",
+        "",
+        "conglomerados_prudenciais"
+      ],
+      [
+        "2026-11-06",
+        "1",
+        "C0088936",
+        "202606",
+        "Informações de Capital",
+        "5",
+        "Ativos Ponderados pelo Risco (RWA) - RWA para Risco de Mercado",
+        "79652",
+        "RWAcam \n(g1)",
+        "Parcela do RWA referente às exposições em ouro, em moeda estrangeira e em ativos sujeitos à variação cambial",
+        "0",
+        "conglomerados_prudenciais"
+      ],
+      [
+        "2026-11-06",
+        "1",
+        "C0088936",
+        "202606",
+        "Informações de Capital",
+        "5",
+        "Ativos Ponderados pelo Risco (RWA) - RWA para Risco de Mercado",
+        "79651",
+        "RWA para Risco de Mercado \n(g) = (g1) + (g2) + (g3) + (g4) + (g5) + (g6)",
+        "Parcela do RWA referente à exposição ao risco de mercado",
+        "0",
+        "conglomerados_prudenciais"
+      ],
+      [
+        "2026-11-06",
+        "1",
+        "C0088936",
+        "202606",
+        "Informações de Capital",
+        "5",
+        "Ativos Ponderados pelo Risco (RWA) - RWA para Risco de Mercado",
+        "142840",
+        "RWAdrc \n(g6)",
+        "Parcela do RWA relativa às exposições ao risco de crédito dos instrumentos financeiros classificados na carteira de negociação.",
+        "0",
+        "conglomerados_prudenciais"
+      ],
+      [
+        "2026-11-06",
+        "1",
+        "C0088936",
+        "202606",
+        "Informações de Capital",
+        "5",
+        "Ativos Ponderados pelo Risco (RWA) - RWA para Risco de Mercado",
+        "134460",
+        "RWAcva \n(g5)",
+        "CVA - Ajuste para derivativos decorrente de variação da qualidade creditícia da contraparte",
+        "0",
+        "conglomerados_prudenciais"
+      ],
+      [
+        "2026-11-06",
+        "1",
+        "C0088936",
+        "202606",
+        "Informações de Capital",
+        "5",
+        "Ativos Ponderados pelo Risco (RWA)",
+        "79665",
+        "Ativos Ponderados pelo Risco (RWA) \n(j) = (f) + (g) + (h) + (i)",
+        "Corresponde à soma das parcelas referentes à exposição aos riscos de Crédito, de Mercado e Operacional",
+        "31966718.68",
+        "conglomerados_prudenciais"
+      ],
+      [
+        "2026-11-06",
+        "1",
+        "C0088936",
+        "202606",
+        "Informações de Capital",
+        "5",
+        "Ativos Ponderados pelo Risco (RWA)",
+        "79656",
+        "RWA para Risco Operacional \n(h)",
+        "Parcela do RWA referente à exposição ao risco operacional",
+        "0",
+        "conglomerados_prudenciais"
+      ]
+    ]
+  },
   "onu_pacto_global.csv": {
     "headers": [
       "data_captura",
@@ -18048,6 +17932,122 @@
         "Brazil",
         "2003-06-27",
         "https://unglobalcompact.org/what-is-gc/participants/1132-Itau-Unibanco-SA"
+      ]
+    ]
+  },
+  "yahoo_criptoativos.csv": {
+    "headers": [
+      "data_captura",
+      "data_referencia",
+      "codigo_ativo",
+      "label",
+      "preco_fechamento"
+    ],
+    "rows": [
+      [
+        "2026-11-06",
+        "2026-11-06",
+        "ARB-USD",
+        "ARB",
+        "0.0006290287710726261"
+      ],
+      [
+        "2026-11-06",
+        "2026-11-05",
+        "ARB-USD",
+        "ARB",
+        "0.0006290000164881349"
+      ],
+      [
+        "2026-11-06",
+        "2026-11-04",
+        "ARB-USD",
+        "ARB",
+        "0.0006290000164881349"
+      ],
+      [
+        "2026-11-06",
+        "2026-11-03",
+        "ARB-USD",
+        "ARB",
+        "0.0006290000164881349"
+      ],
+      [
+        "2026-11-06",
+        "2026-11-02",
+        "ARB-USD",
+        "ARB",
+        "0.0006290000164881349"
+      ],
+      [
+        "2026-11-06",
+        "2026-11-01",
+        "ARB-USD",
+        "ARB",
+        "0.0006290000164881349"
+      ],
+      [
+        "2026-11-06",
+        "2026-10-31",
+        "ARB-USD",
+        "ARB",
+        "0.0006290000164881349"
+      ],
+      [
+        "2026-11-06",
+        "2026-10-30",
+        "ARB-USD",
+        "ARB",
+        "0.0006290000164881349"
+      ],
+      [
+        "2026-11-06",
+        "2026-10-29",
+        "ARB-USD",
+        "ARB",
+        "0.0006290000164881349"
+      ],
+      [
+        "2026-11-06",
+        "2026-10-28",
+        "ARB-USD",
+        "ARB",
+        "0.0006290000164881349"
+      ],
+      [
+        "2026-11-06",
+        "2026-10-27",
+        "ARB-USD",
+        "ARB",
+        "0.0006290000164881349"
+      ],
+      [
+        "2026-11-06",
+        "2026-10-26",
+        "ARB-USD",
+        "ARB",
+        "0.0006290000164881349"
+      ],
+      [
+        "2026-11-06",
+        "2026-10-25",
+        "ARB-USD",
+        "ARB",
+        "0.0006290000164881349"
+      ],
+      [
+        "2026-11-06",
+        "2026-10-24",
+        "ARB-USD",
+        "ARB",
+        "0.0006290000164881349"
+      ],
+      [
+        "2026-11-06",
+        "2026-10-23",
+        "ARB-USD",
+        "ARB",
+        "0.0006290000164881349"
       ]
     ]
   },
@@ -18280,122 +18280,6 @@
         "^TYX",
         "TREASURY_30Y",
         "5.304999828338623"
-      ]
-    ]
-  },
-  "yahoo_etfs.csv.gz": {
-    "headers": [
-      "data_captura",
-      "data_referencia",
-      "codigo_ativo",
-      "label",
-      "preco_fechamento"
-    ],
-    "rows": [
-      [
-        "2026-11-06",
-        "2026-11-05",
-        "LTBX11.SA",
-        "LTBX11",
-        "26.969999313354492"
-      ],
-      [
-        "2026-11-06",
-        "2026-11-05",
-        "PREX11.SA",
-        "PREX11",
-        "52.20000076293945"
-      ],
-      [
-        "2026-11-06",
-        "2026-11-04",
-        "LTBX11.SA",
-        "LTBX11",
-        "26.969999313354492"
-      ],
-      [
-        "2026-11-06",
-        "2026-11-04",
-        "PREX11.SA",
-        "PREX11",
-        "52.20000076293945"
-      ],
-      [
-        "2026-11-06",
-        "2026-11-03",
-        "PREX11.SA",
-        "PREX11",
-        "51.619998931884766"
-      ],
-      [
-        "2026-11-06",
-        "2026-11-03",
-        "LTBX11.SA",
-        "LTBX11",
-        "26.920000076293945"
-      ],
-      [
-        "2026-11-06",
-        "2026-10-30",
-        "PREX11.SA",
-        "PREX11",
-        "51.880001068115234"
-      ],
-      [
-        "2026-11-06",
-        "2026-10-30",
-        "LTBX11.SA",
-        "LTBX11",
-        "26.940000534057617"
-      ],
-      [
-        "2026-11-06",
-        "2026-10-29",
-        "PREX11.SA",
-        "PREX11",
-        "52.0"
-      ],
-      [
-        "2026-11-06",
-        "2026-10-29",
-        "LTBX11.SA",
-        "LTBX11",
-        "26.969999313354492"
-      ],
-      [
-        "2026-11-06",
-        "2026-10-28",
-        "PREX11.SA",
-        "PREX11",
-        "52.11000061035156"
-      ],
-      [
-        "2026-11-06",
-        "2026-10-28",
-        "LTBX11.SA",
-        "LTBX11",
-        "26.959999084472656"
-      ],
-      [
-        "2026-11-06",
-        "2026-10-27",
-        "LTBX11.SA",
-        "LTBX11",
-        "27.010000228881836"
-      ],
-      [
-        "2026-11-06",
-        "2026-10-27",
-        "PREX11.SA",
-        "PREX11",
-        "52.18000030517578"
-      ],
-      [
-        "2026-11-06",
-        "2026-10-26",
-        "LTBX11.SA",
-        "LTBX11",
-        "26.81999969482422"
       ]
     ]
   },
@@ -18772,6 +18656,122 @@
         "debêntures___preços_de_negociação",
         "",
         "add6b95b27003ee83da6b98b"
+      ]
+    ]
+  },
+  "yahoo_etfs.csv.gz": {
+    "headers": [
+      "data_captura",
+      "data_referencia",
+      "codigo_ativo",
+      "label",
+      "preco_fechamento"
+    ],
+    "rows": [
+      [
+        "2026-11-06",
+        "2026-11-05",
+        "LTBX11.SA",
+        "LTBX11",
+        "26.969999313354492"
+      ],
+      [
+        "2026-11-06",
+        "2026-11-05",
+        "PREX11.SA",
+        "PREX11",
+        "52.20000076293945"
+      ],
+      [
+        "2026-11-06",
+        "2026-11-04",
+        "LTBX11.SA",
+        "LTBX11",
+        "26.969999313354492"
+      ],
+      [
+        "2026-11-06",
+        "2026-11-04",
+        "PREX11.SA",
+        "PREX11",
+        "52.20000076293945"
+      ],
+      [
+        "2026-11-06",
+        "2026-11-03",
+        "PREX11.SA",
+        "PREX11",
+        "51.619998931884766"
+      ],
+      [
+        "2026-11-06",
+        "2026-11-03",
+        "LTBX11.SA",
+        "LTBX11",
+        "26.920000076293945"
+      ],
+      [
+        "2026-11-06",
+        "2026-10-30",
+        "PREX11.SA",
+        "PREX11",
+        "51.880001068115234"
+      ],
+      [
+        "2026-11-06",
+        "2026-10-30",
+        "LTBX11.SA",
+        "LTBX11",
+        "26.940000534057617"
+      ],
+      [
+        "2026-11-06",
+        "2026-10-29",
+        "PREX11.SA",
+        "PREX11",
+        "52.0"
+      ],
+      [
+        "2026-11-06",
+        "2026-10-29",
+        "LTBX11.SA",
+        "LTBX11",
+        "26.969999313354492"
+      ],
+      [
+        "2026-11-06",
+        "2026-10-28",
+        "PREX11.SA",
+        "PREX11",
+        "52.11000061035156"
+      ],
+      [
+        "2026-11-06",
+        "2026-10-28",
+        "LTBX11.SA",
+        "LTBX11",
+        "26.959999084472656"
+      ],
+      [
+        "2026-11-06",
+        "2026-10-27",
+        "LTBX11.SA",
+        "LTBX11",
+        "27.010000228881836"
+      ],
+      [
+        "2026-11-06",
+        "2026-10-27",
+        "PREX11.SA",
+        "PREX11",
+        "52.18000030517578"
+      ],
+      [
+        "2026-11-06",
+        "2026-10-26",
+        "LTBX11.SA",
+        "LTBX11",
+        "26.81999969482422"
       ]
     ]
   },
