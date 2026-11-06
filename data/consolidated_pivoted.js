@@ -216,46 +216,6 @@ window.PULSEFLAT_PIVOTED = [
     "Valor": "481,72"
   },
   {
-    "data_referencia": "2026-09-01",
-    "indicador": "US CPI Core",
-    "fonte": "FRED",
-    "dataset_label": "FRED US Macro",
-    "categoria": "Macroeconomia EUA",
-    "Valor": "338,90"
-  },
-  {
-    "data_referencia": "2026-09-01",
-    "indicador": "US CPI Headline",
-    "fonte": "FRED",
-    "dataset_label": "FRED US Macro",
-    "categoria": "Macroeconomia EUA",
-    "Valor": "336,30"
-  },
-  {
-    "data_referencia": "2026-09-01",
-    "indicador": "US Nonfarm Payrolls (k)",
-    "fonte": "FRED",
-    "dataset_label": "FRED US Macro",
-    "categoria": "Macroeconomia EUA",
-    "Valor": "159.044"
-  },
-  {
-    "data_referencia": "2026-09-01",
-    "indicador": "US PCE Core",
-    "fonte": "FRED",
-    "dataset_label": "FRED US Macro",
-    "categoria": "Macroeconomia EUA",
-    "Valor": "130,90"
-  },
-  {
-    "data_referencia": "2026-09-01",
-    "indicador": "US Unemployment Rate",
-    "fonte": "FRED",
-    "dataset_label": "FRED US Macro",
-    "categoria": "Macroeconomia EUA",
-    "Valor": "4,20%"
-  },
-  {
     "data_referencia": "2026-10-01",
     "indicador": "IGP-M (índice)",
     "fonte": "BCB",
@@ -288,6 +248,22 @@ window.PULSEFLAT_PIVOTED = [
     "Valor": "0,2700"
   },
   {
+    "data_referencia": "2026-10-01",
+    "indicador": "US Nonfarm Payrolls (k)",
+    "fonte": "FRED",
+    "dataset_label": "FRED US Macro",
+    "categoria": "Macroeconomia EUA",
+    "Valor": "159.293"
+  },
+  {
+    "data_referencia": "2026-10-01",
+    "indicador": "US Unemployment Rate",
+    "fonte": "FRED",
+    "dataset_label": "FRED US Macro",
+    "categoria": "Macroeconomia EUA",
+    "Valor": "4,10%"
+  },
+  {
     "data_referencia": "2026-11-01",
     "indicador": "IGP-M Projeção",
     "fonte": "ANBIMA",
@@ -297,43 +273,11 @@ window.PULSEFLAT_PIVOTED = [
   },
   {
     "data_referencia": "2026-11-04",
-    "indicador": "CBOE VIX Volatility",
-    "fonte": "FRED",
-    "dataset_label": "FRED Liquidez e Spreads",
-    "categoria": "Liquidez & Crédito Global",
-    "Valor": "16,61"
-  },
-  {
-    "data_referencia": "2026-11-04",
     "indicador": "FDS (registro 2)",
     "fonte": "ANBIMA",
     "dataset_label": "ANBIMA Indicadores",
     "categoria": "FDS",
     "Valor": "0,0930"
-  },
-  {
-    "data_referencia": "2026-11-04",
-    "indicador": "Fed Funds Effective Rate",
-    "fonte": "FRED",
-    "dataset_label": "FRED Liquidez e Spreads",
-    "categoria": "Liquidez & Crédito Global",
-    "Valor": "3,88%"
-  },
-  {
-    "data_referencia": "2026-11-04",
-    "indicador": "SOFR Rate",
-    "fonte": "FRED",
-    "dataset_label": "FRED Liquidez e Spreads",
-    "categoria": "Liquidez & Crédito Global",
-    "Valor": "3,94%"
-  },
-  {
-    "data_referencia": "2026-11-04",
-    "indicador": "Spread High Yield Emergentes OAS",
-    "fonte": "FRED",
-    "dataset_label": "FRED Brasil Macro e Ciclos",
-    "categoria": "Macroeconomia Brasil",
-    "Valor": "3,91"
   },
   {
     "data_referencia": "2026-11-04",
@@ -350,22 +294,6 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "ANBIMA Indicadores",
     "categoria": "Taxa de Referência",
     "Valor": "0,1696"
-  },
-  {
-    "data_referencia": "2026-11-04",
-    "indicador": "US Corp IG Spread",
-    "fonte": "FRED",
-    "dataset_label": "FRED Liquidez e Spreads",
-    "categoria": "Liquidez & Crédito Global",
-    "Valor": "0,9100"
-  },
-  {
-    "data_referencia": "2026-11-04",
-    "indicador": "US High Yield Spread",
-    "fonte": "FRED",
-    "dataset_label": "FRED Liquidez e Spreads",
-    "categoria": "Liquidez & Crédito Global",
-    "Valor": "3,32"
   },
   {
     "data_referencia": "2026-11-05",
@@ -611,6 +539,14 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Commodities",
     "categoria": "Commodities Globais",
     "Valor": "98,29"
+  },
+  {
+    "data_referencia": "2026-11-05",
+    "indicador": "CBOE VIX Volatility",
+    "fonte": "FRED",
+    "dataset_label": "FRED Liquidez e Spreads",
+    "categoria": "Liquidez & Crédito Global",
+    "Valor": "28,18"
   },
   {
     "data_referencia": "2026-11-05",
@@ -886,14 +822,6 @@ window.PULSEFLAT_PIVOTED = [
   },
   {
     "data_referencia": "2026-11-05",
-    "indicador": "Estimativa SELIC",
-    "fonte": "ANBIMA",
-    "dataset_label": "ANBIMA Indicadores",
-    "categoria": "Taxa de Juros",
-    "Valor": "13,65"
-  },
-  {
-    "data_referencia": "2026-11-05",
     "indicador": "Estimativa Taxa Selic",
     "fonte": "ANBIMA",
     "dataset_label": "ANBIMA Estimativa Selic",
@@ -1027,14 +955,6 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo FIIs e Fiagros",
     "categoria": "FIIs e Fiagros",
     "Valor": "3.602"
-  },
-  {
-    "data_referencia": "2026-11-05",
-    "indicador": "IGP-M",
-    "fonte": "BCB",
-    "dataset_label": "BCB SGS",
-    "categoria": "Séries SGS",
-    "Valor": "5,46%"
   },
   {
     "data_referencia": "2026-11-05",
@@ -1408,22 +1328,6 @@ window.PULSEFLAT_PIVOTED = [
   },
   {
     "data_referencia": "2026-11-05",
-    "indicador": "PTAX USD — Compra",
-    "fonte": "BCB",
-    "dataset_label": "BCB PTAX",
-    "categoria": "Taxas de Câmbio",
-    "Valor": "5,4615"
-  },
-  {
-    "data_referencia": "2026-11-05",
-    "indicador": "PTAX USD — Venda",
-    "fonte": "BCB",
-    "dataset_label": "BCB PTAX",
-    "categoria": "Taxas de Câmbio",
-    "Valor": "5,4621"
-  },
-  {
-    "data_referencia": "2026-11-05",
     "indicador": "PVBI11.SA",
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo FIIs e Fiagros",
@@ -1568,6 +1472,14 @@ window.PULSEFLAT_PIVOTED = [
   },
   {
     "data_referencia": "2026-11-05",
+    "indicador": "SOFR Rate",
+    "fonte": "FRED",
+    "dataset_label": "FRED Liquidez e Spreads",
+    "categoria": "Liquidez & Crédito Global",
+    "Valor": "3,92%"
+  },
+  {
+    "data_referencia": "2026-11-05",
     "indicador": "SPY",
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo ETFs",
@@ -1581,6 +1493,14 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "Valor": "52,29"
+  },
+  {
+    "data_referencia": "2026-11-05",
+    "indicador": "Spread High Yield Emergentes OAS",
+    "fonte": "FRED",
+    "dataset_label": "FRED Brasil Macro e Ciclos",
+    "categoria": "Macroeconomia Brasil",
+    "Valor": "3,99"
   },
   {
     "data_referencia": "2026-11-05",
@@ -1605,14 +1525,6 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "B3 Indicadores Financeiros",
     "categoria": "Indicadores B3",
     "Valor": "13,65"
-  },
-  {
-    "data_referencia": "2026-11-05",
-    "indicador": "TAXA SOFR",
-    "fonte": "B3",
-    "dataset_label": "B3 Indicadores Financeiros",
-    "categoria": "Indicadores B3",
-    "Valor": "3,94"
   },
   {
     "data_referencia": "2026-11-05",
@@ -1685,6 +1597,22 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "FRED US Treasuries",
     "categoria": "Curva Soberana EUA",
     "Valor": "2,26%"
+  },
+  {
+    "data_referencia": "2026-11-05",
+    "indicador": "US Corp IG Spread",
+    "fonte": "FRED",
+    "dataset_label": "FRED Liquidez e Spreads",
+    "categoria": "Liquidez & Crédito Global",
+    "Valor": "0,9300"
+  },
+  {
+    "data_referencia": "2026-11-05",
+    "indicador": "US High Yield Spread",
+    "fonte": "FRED",
+    "dataset_label": "FRED Liquidez e Spreads",
+    "categoria": "Liquidez & Crédito Global",
+    "Valor": "3,48"
   },
   {
     "data_referencia": "2026-11-05",
@@ -1988,7 +1916,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "0,1857"
+    "Valor": "0,1873"
   },
   {
     "data_referencia": "2026-11-06",
@@ -2020,7 +1948,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "694,44"
+    "Valor": "694,81"
   },
   {
     "data_referencia": "2026-11-06",
@@ -2028,7 +1956,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "5,4870"
+    "Valor": "5,4930"
   },
   {
     "data_referencia": "2026-11-06",
@@ -2036,7 +1964,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "75.992"
+    "Valor": "75.638"
   },
   {
     "data_referencia": "2026-11-06",
@@ -2044,7 +1972,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "6,7119"
+    "Valor": "6,7049"
   },
   {
     "data_referencia": "2026-11-06",
@@ -2060,7 +1988,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "0,8230"
+    "Valor": "0,8225"
   },
   {
     "data_referencia": "2026-11-06",
@@ -2076,7 +2004,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "0,0724"
+    "Valor": "0,0728"
   },
   {
     "data_referencia": "2026-11-06",
@@ -2084,7 +2012,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "0,9294"
+    "Valor": "0,9312"
   },
   {
     "data_referencia": "2026-11-06",
@@ -2092,7 +2020,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "2.237"
+    "Valor": "2.227"
   },
   {
     "data_referencia": "2026-11-06",
@@ -2100,7 +2028,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "6,1405"
+    "Valor": "6,1254"
   },
   {
     "data_referencia": "2026-11-06",
@@ -2108,7 +2036,15 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "1,1181"
+    "Valor": "1,1156"
+  },
+  {
+    "data_referencia": "2026-11-06",
+    "indicador": "Estimativa SELIC",
+    "fonte": "ANBIMA",
+    "dataset_label": "ANBIMA Indicadores",
+    "categoria": "Taxa de Juros",
+    "Valor": "13,65"
   },
   {
     "data_referencia": "2026-11-06",
@@ -2116,7 +2052,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "7,3616"
+    "Valor": "7,3422"
   },
   {
     "data_referencia": "2026-11-06",
@@ -2124,7 +2060,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "1,3401"
+    "Valor": "1,3367"
   },
   {
     "data_referencia": "2026-11-06",
@@ -2132,7 +2068,15 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "2,46"
+    "Valor": "2,48"
+  },
+  {
+    "data_referencia": "2026-11-06",
+    "indicador": "IGP-M",
+    "fonte": "BCB",
+    "dataset_label": "BCB SGS",
+    "categoria": "Séries SGS",
+    "Valor": "5,50%"
   },
   {
     "data_referencia": "2026-11-06",
@@ -2148,7 +2092,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "10,86"
+    "Valor": "10,87"
   },
   {
     "data_referencia": "2026-11-06",
@@ -2156,7 +2100,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "52,78"
+    "Valor": "53,02"
   },
   {
     "data_referencia": "2026-11-06",
@@ -2164,7 +2108,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "0,2936"
+    "Valor": "0,2948"
   },
   {
     "data_referencia": "2026-11-06",
@@ -2172,7 +2116,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "3,73"
+    "Valor": "3,74"
   },
   {
     "data_referencia": "2026-11-06",
@@ -2180,7 +2124,23 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "0,1063"
+    "Valor": "0,1065"
+  },
+  {
+    "data_referencia": "2026-11-06",
+    "indicador": "PTAX USD — Compra",
+    "fonte": "BCB",
+    "dataset_label": "BCB PTAX",
+    "categoria": "Taxas de Câmbio",
+    "Valor": "5,5007"
+  },
+  {
+    "data_referencia": "2026-11-06",
+    "indicador": "PTAX USD — Venda",
+    "fonte": "BCB",
+    "dataset_label": "BCB PTAX",
+    "categoria": "Taxas de Câmbio",
+    "Valor": "5,5013"
   },
   {
     "data_referencia": "2026-11-06",
@@ -2196,7 +2156,15 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "90,21"
+    "Valor": "90,23"
+  },
+  {
+    "data_referencia": "2026-11-06",
+    "indicador": "TAXA SOFR",
+    "fonte": "B3",
+    "dataset_label": "B3 Indicadores Financeiros",
+    "categoria": "Indicadores B3",
+    "Valor": "3,92"
   },
   {
     "data_referencia": "2026-11-06",
@@ -2204,7 +2172,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "0,3180"
+    "Valor": "0,3186"
   },
   {
     "data_referencia": "2026-11-06",
@@ -2212,7 +2180,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "1,4061"
+    "Valor": "1,4104"
   },
   {
     "data_referencia": "2026-11-06",
@@ -2220,7 +2188,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "0,8185"
+    "Valor": "0,8191"
   },
   {
     "data_referencia": "2026-11-06",
@@ -2228,7 +2196,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "6,6602"
+    "Valor": "6,6641"
   },
   {
     "data_referencia": "2026-11-06",
@@ -2236,7 +2204,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "93,9000"
+    "Valor": "93,8950"
   },
   {
     "data_referencia": "2026-11-06",
@@ -2244,7 +2212,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "158,2870"
+    "Valor": "158,2290"
   },
   {
     "data_referencia": "2026-11-06",
@@ -2252,7 +2220,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
-    "Valor": "18,6966"
+    "Valor": "18,6130"
   },
   {
     "data_referencia": "2026-11-06",
@@ -2260,7 +2228,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
-    "Valor": "0,1544"
+    "Valor": "0,1556"
   },
   {
     "data_referencia": "2026-11-06",
@@ -2284,7 +2252,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Índices Globais",
     "categoria": "Índices de Ações Globais",
-    "Valor": "24.482"
+    "Valor": "24.797"
   },
   {
     "data_referencia": "2026-11-06",
@@ -2300,7 +2268,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Índices Globais",
     "categoria": "Índices de Ações Globais",
-    "Valor": "1.617"
+    "Valor": "1.636"
   },
   {
     "data_referencia": "2026-11-06",
@@ -2308,7 +2276,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Índices Globais",
     "categoria": "Índices de Ações Globais",
-    "Valor": "5.060"
+    "Valor": "5.384"
   },
   {
     "data_referencia": "2026-11-06",
@@ -2316,7 +2284,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Índices Globais",
     "categoria": "Índices de Ações Globais",
-    "Valor": "57.435"
+    "Valor": "61.078"
   },
   {
     "data_referencia": "2026-11-06",
@@ -2324,7 +2292,7 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Índices Globais",
     "categoria": "Índices de Ações Globais",
-    "Valor": "5.179"
+    "Valor": "5.296"
   },
   {
     "data_referencia": "2026-11-06",
@@ -2332,6 +2300,6 @@ window.PULSEFLAT_PIVOTED = [
     "fonte": "Yahoo Finance",
     "dataset_label": "Yahoo Índices Globais",
     "categoria": "Índices de Ações Globais",
-    "Valor": "39.702"
+    "Valor": "41.575"
   }
 ];

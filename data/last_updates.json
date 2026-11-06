@@ -5,7 +5,7 @@
   },
   "anbima_indice_ida.csv.gz": {
     "min": "2020-01-02",
-    "max": "2026-11-04"
+    "max": "2026-11-05"
   },
   "anbima_cri_cra_mercado_secundario.csv.gz": {
     "min": "2020-01-02",
@@ -129,7 +129,7 @@
   },
   "b3_indicadores_financeiros.csv": {
     "min": "2026-06-11",
-    "max": "2026-11-05"
+    "max": "2026-11-06"
   },
   "b3_fundos_listados.csv": {
     "min": "2026-11-06",
@@ -189,7 +189,7 @@
   },
   "bcb_ptax.csv": {
     "min": "2020-01-02",
-    "max": "2026-11-05"
+    "max": "2026-11-06"
   },
   "bacen_cadastro_instituicoes.csv.gz": {
     "min": "2020-03-31",
@@ -233,11 +233,11 @@
   },
   "fred_global_liquidity_credit_spreads.csv.gz": {
     "min": "2020-01-01",
-    "max": "2026-11-04"
+    "max": "2026-11-05"
   },
   "fred_us_macro_indicators.csv.gz": {
     "min": "2020-01-01",
-    "max": "2026-09-01"
+    "max": "2026-10-01"
   },
   "fred_us_treasuries_yield_curve.csv.gz": {
     "min": "2020-01-02",
@@ -281,11 +281,11 @@
   },
   "ipea_mercados_diarios.csv": {
     "min": "1900-01-02",
-    "max": "2026-11-04"
+    "max": "2026-11-05"
   },
   "bacen_parcelas_capital_basileia.csv.gz": {
     "min": "2026-06-05",
-    "max": "2026-11-05"
+    "max": "2026-11-06"
   },
   "yahoo_cambio_moedas.csv": {
     "min": "2026-05-01",
@@ -321,7 +321,7 @@
   },
   "debentures_mercado_secundario_precos_negociacao.csv.gz": {
     "min": "2020-01-02",
-    "max": "2026-11-04"
+    "max": "2026-11-05"
   },
   "yahoo_fiis_fiagros.csv.gz": {
     "min": "2020-01-02",
@@ -353,7 +353,7 @@
   },
   "anbima_curvas_credito.csv.gz": {
     "min": "2020-01-02",
-    "max": "2026-11-04"
+    "max": "2026-11-05"
   },
   "anbima_debentures.csv.gz": {
     "min": "2026-06-03",
@@ -361,7 +361,7 @@
   },
   "anbima_indicadores.csv": {
     "min": "2026-04-01",
-    "max": "2026-11-05"
+    "max": "2026-11-06"
   },
   "yahoo_commodities.csv": {
     "min": "2026-05-28",
