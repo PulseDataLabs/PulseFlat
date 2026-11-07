@@ -8,7 +8,7 @@ window.PULSEFLAT_MARKET_LATEST = [
   {
     "label": "SELIC",
     "value": "13,65%",
-    "reference_date": "2026-11-05",
+    "reference_date": "2026-11-06",
     "type": "neutral"
   },
   {
@@ -39,15 +39,15 @@ window.PULSEFLAT_MARKET_LATEST = [
   },
   {
     "label": "IBOVESPA",
-    "value": "166.192",
-    "reference_date": "2026-11-05",
-    "type": "down",
-    "change": "-0,82%"
+    "value": "168.499",
+    "reference_date": "2026-11-06",
+    "type": "up",
+    "change": "+1,39%"
   },
   {
     "label": "IMA-GERAL",
-    "value": "10.601,55",
-    "reference_date": "2026-11-05",
+    "value": "10.618,12",
+    "reference_date": "2026-11-06",
     "type": "neutral"
   }
 ];
