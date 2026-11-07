@@ -362,5 +362,69 @@
   "anbima_matriz_probabilidade_resgate.csv": {
     "min": "2026-04-30",
     "max": "2026-09-30"
+  },
+  "bacen_lf_emissoes.csv.gz": {
+    "min": "2010-03-01",
+    "max": "2025-12-01"
+  },
+  "bacen_lf_estoque.csv.gz": {
+    "min": "2010-03-01",
+    "max": "2025-12-01"
+  },
+  "bacen_lf_estoque_natureza_detentor.csv.gz": {
+    "min": "2010-12-31",
+    "max": "2025-12-31"
+  },
+  "bacen_lf_estoque_emissor.csv.gz": {
+    "min": "2010-12-31",
+    "max": "2025-12-31"
+  },
+  "bacen_lf_estoque_indexador.csv.gz": {
+    "min": "2010-12-31",
+    "max": "2025-12-31"
+  },
+  "bacen_lf_estoque_segmento.csv.gz": {
+    "min": "2010-04-01",
+    "max": "2025-12-01"
+  },
+  "bacen_lf_prazo_vencimento_segmento.csv.gz": {
+    "min": "2010-04-01",
+    "max": "2025-12-01"
+  },
+  "bacen_lfs_estoque_segmento.csv.gz": {
+    "min": "2010-03-01",
+    "max": "2025-12-01"
+  },
+  "bacen_lfs_prazo_vencimento_segmento.csv.gz": {
+    "min": "2010-03-01",
+    "max": "2025-12-01"
+  },
+  "bacen_lf_mercado_secundario.csv.gz": {
+    "min": "2010-05-01",
+    "max": "2025-12-01"
+  },
+  "bacen_lf_prazo_emissoes.csv.gz": {
+    "min": "2010-03-01",
+    "max": "2025-12-01"
+  },
+  "bacen_lf_prazo_vencimento.csv.gz": {
+    "min": "2010-03-01",
+    "max": "2025-12-01"
+  },
+  "b3_cotahist_anual.csv.gz": {
+    "min": "2025-01-02",
+    "max": "2026-11-06"
+  },
+  "bacen_cadastro_instituicoes.csv.gz": {
+    "min": "2020-03-31",
+    "max": "2026-06-30"
+  },
+  "bacen_conglomerados.csv": {
+    "min": "2026-08-01",
+    "max": "2026-09-01"
+  },
+  "ibge_sidra.csv": {
+    "min": "2026-10-22",
+    "max": "2026-10-22"
   }
 }

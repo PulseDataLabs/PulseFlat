@@ -2339,7 +2339,7 @@
 <!-- STATS STRIP -->
 <div class="hero-stats reveal">
   <div class="stat-item">
-    <span class="stat-value">94+</span>
+    <span class="stat-value">107+</span>
     <span class="stat-label">Datasets</span>
   </div>
   <div class="stat-item">
@@ -3772,7 +3772,13 @@
     const badge = (dataset && dataset.badge ? dataset.badge : '').toLowerCase();
     const desc = (dataset && dataset.description ? dataset.description : '').toLowerCase();
 
-    if (badge.includes('anual') || fn.includes('cotahist_anual')) {
+    if (
+      badge.includes('anual') ||
+      fn.includes('cotahist_anual') ||
+      fn.includes('bacen_lf_estoque_emissor') ||
+      fn.includes('bacen_lf_estoque_indexador') ||
+      fn.includes('bacen_lf_estoque_natureza_detentor')
+    ) {
       return 'anual';
     }
     if (badge.includes('quadrimestral') || fn.includes('carteira_teorica_')) {
@@ -3798,6 +3804,8 @@
       fn.includes('valor_mercado') ||
       fn.includes('limites_garantias') ||
       fn.includes('matriz_probabilidade') ||
+      fn.startsWith('bacen_lf_') ||
+      fn.startsWith('bacen_lfs_') ||
       fn.startsWith('ipea_') ||
       fn.startsWith('fred_')
     ) {

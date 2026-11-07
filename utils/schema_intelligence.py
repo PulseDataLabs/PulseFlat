@@ -50,6 +50,8 @@ EXCLUSIVE_MODIFIERS = frozenset({
     "ativo", "passivo", "credito", "debito", "ig", "hy",
     "sub", "sub_total", "subtotal", "total", "reer", "neer", "taxa", "cada",
     "prazo", "tipo", "criterio", "unidade", "carencia", "snd", "fora",
+    "lf", "lfs", "subordinada", "subordinadas",
+    "comerciais", "investimento", "multiplos", "scfi", "desenvolvimento", "hipotecarias", "cooperativas",
 })
 
 

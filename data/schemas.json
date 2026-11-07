@@ -4399,5 +4399,464 @@
         "example": ""
       }
     ]
+  },
+  {
+    "title": "Bacen Lf Emissoes.Gz",
+    "files": "bacen_lf_emissoes.csv.gz",
+    "source": "bcb",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-11-07"
+      },
+      {
+        "name": "data_referencia",
+        "type": "date",
+        "example": "2010-03-01"
+      },
+      {
+        "name": "emissoes_lf",
+        "type": "float",
+        "example": ""
+      },
+      {
+        "name": "emissoes_lfs",
+        "type": "float",
+        "example": "1000000000.0"
+      }
+    ]
+  },
+  {
+    "title": "Bacen Lf Estoque.Gz",
+    "files": "bacen_lf_estoque.csv.gz",
+    "source": "bcb",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-11-07"
+      },
+      {
+        "name": "data_referencia",
+        "type": "date",
+        "example": "2010-03-01"
+      },
+      {
+        "name": "estoque_lf",
+        "type": "float",
+        "example": ""
+      },
+      {
+        "name": "estoque_lfs",
+        "type": "float",
+        "example": "1000354870.0"
+      }
+    ]
+  },
+  {
+    "title": "Bacen Lf Estoque Natureza Detentor.Gz",
+    "files": "bacen_lf_estoque_natureza_detentor.csv.gz",
+    "source": "bcb",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-11-07"
+      },
+      {
+        "name": "data_referencia",
+        "type": "date",
+        "example": "2010-12-31"
+      },
+      {
+        "name": "natureza_detentor",
+        "type": "str",
+        "example": "Bancos"
+      },
+      {
+        "name": "estoque_lf",
+        "type": "float",
+        "example": "0.0"
+      },
+      {
+        "name": "estoque_lfs",
+        "type": "float",
+        "example": "37411446.799"
+      },
+      {
+        "name": "estoque_total",
+        "type": "float",
+        "example": "37411446.799"
+      },
+      {
+        "name": "participacao_perc",
+        "type": "float",
+        "example": "0.1207"
+      }
+    ]
+  },
+  {
+    "title": "Bacen Lf Estoque Emissor.Gz",
+    "files": "bacen_lf_estoque_emissor.csv.gz",
+    "source": "bcb",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-11-07"
+      },
+      {
+        "name": "data_referencia",
+        "type": "date",
+        "example": "2010-12-31"
+      },
+      {
+        "name": "cnpj",
+        "type": "str",
+        "example": "28195667000106"
+      },
+      {
+        "name": "instituicao_conglomerado",
+        "type": "str",
+        "example": "ABC-BRASIL"
+      },
+      {
+        "name": "estoque_lf",
+        "type": "float",
+        "example": "7039177.39"
+      },
+      {
+        "name": "estoque_lfs",
+        "type": "float",
+        "example": "0.0"
+      },
+      {
+        "name": "estoque_total",
+        "type": "float",
+        "example": "7039177.39"
+      }
+    ]
+  },
+  {
+    "title": "Bacen Lf Estoque Indexador.Gz",
+    "files": "bacen_lf_estoque_indexador.csv.gz",
+    "source": "bcb",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-11-07"
+      },
+      {
+        "name": "data_referencia",
+        "type": "date",
+        "example": "2010-12-31"
+      },
+      {
+        "name": "indexador",
+        "type": "str",
+        "example": "DI"
+      },
+      {
+        "name": "valor",
+        "type": "float",
+        "example": "30056559018.5223"
+      },
+      {
+        "name": "participacao_perc",
+        "type": "float",
+        "example": "97.0047"
+      }
+    ]
+  },
+  {
+    "title": "Bacen Lf Estoque Segmento.Gz",
+    "files": "bacen_lf_estoque_segmento.csv.gz",
+    "source": "bcb",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-11-07"
+      },
+      {
+        "name": "data_referencia",
+        "type": "date",
+        "example": "2010-04-01"
+      },
+      {
+        "name": "bancos_comerciais",
+        "type": "float",
+        "example": "0.0"
+      },
+      {
+        "name": "bancos_investimento",
+        "type": "float",
+        "example": "38142364.0939"
+      },
+      {
+        "name": "bancos_multiplos",
+        "type": "float",
+        "example": "1214377265.2883"
+      },
+      {
+        "name": "scfi",
+        "type": "float",
+        "example": "0.0"
+      },
+      {
+        "name": "bancos_desenvolvimento",
+        "type": "float",
+        "example": ""
+      },
+      {
+        "name": "companhias_hipotecarias",
+        "type": "float",
+        "example": ""
+      },
+      {
+        "name": "cooperativas_credito",
+        "type": "float",
+        "example": ""
+      },
+      {
+        "name": "total",
+        "type": "float",
+        "example": "1252519629.3822"
+      }
+    ]
+  },
+  {
+    "title": "Bacen Lf Prazo Vencimento Segmento.Gz",
+    "files": "bacen_lf_prazo_vencimento_segmento.csv.gz",
+    "source": "bcb",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-11-07"
+      },
+      {
+        "name": "data_referencia",
+        "type": "date",
+        "example": "2010-04-01"
+      },
+      {
+        "name": "bancos_comerciais",
+        "type": "float",
+        "example": "0.0"
+      },
+      {
+        "name": "bancos_investimento",
+        "type": "float",
+        "example": "23.885"
+      },
+      {
+        "name": "bancos_multiplos",
+        "type": "float",
+        "example": "24.5261"
+      },
+      {
+        "name": "scfi",
+        "type": "float",
+        "example": "0.0"
+      },
+      {
+        "name": "bancos_desenvolvimento",
+        "type": "float",
+        "example": ""
+      },
+      {
+        "name": "companhias_hipotecarias",
+        "type": "float",
+        "example": ""
+      },
+      {
+        "name": "cooperativas_credito",
+        "type": "float",
+        "example": ""
+      }
+    ]
+  },
+  {
+    "title": "Bacen Lfs Estoque Segmento.Gz",
+    "files": "bacen_lfs_estoque_segmento.csv.gz",
+    "source": "bcb",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-11-07"
+      },
+      {
+        "name": "data_referencia",
+        "type": "date",
+        "example": "2010-03-01"
+      },
+      {
+        "name": "bancos_comerciais",
+        "type": "float",
+        "example": "0.0"
+      },
+      {
+        "name": "bancos_investimento",
+        "type": "float",
+        "example": ""
+      },
+      {
+        "name": "bancos_multiplos",
+        "type": "float",
+        "example": "1000354870.0"
+      },
+      {
+        "name": "scfi",
+        "type": "float",
+        "example": ""
+      },
+      {
+        "name": "companhias_hipotecarias",
+        "type": "float",
+        "example": ""
+      },
+      {
+        "name": "cooperativas_credito",
+        "type": "float",
+        "example": ""
+      },
+      {
+        "name": "total",
+        "type": "float",
+        "example": "1000354870.0"
+      }
+    ]
+  },
+  {
+    "title": "Bacen Lfs Prazo Vencimento Segmento.Gz",
+    "files": "bacen_lfs_prazo_vencimento_segmento.csv.gz",
+    "source": "bcb",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-11-07"
+      },
+      {
+        "name": "data_referencia",
+        "type": "date",
+        "example": "2010-03-01"
+      },
+      {
+        "name": "bancos_comerciais",
+        "type": "float",
+        "example": "0.0"
+      },
+      {
+        "name": "bancos_investimento",
+        "type": "float",
+        "example": ""
+      },
+      {
+        "name": "bancos_multiplos",
+        "type": "float",
+        "example": "71.9836"
+      },
+      {
+        "name": "scfi",
+        "type": "float",
+        "example": ""
+      },
+      {
+        "name": "companhias_hipotecarias",
+        "type": "float",
+        "example": ""
+      },
+      {
+        "name": "cooperativas_credito",
+        "type": "float",
+        "example": ""
+      }
+    ]
+  },
+  {
+    "title": "Bacen Lf Mercado Secundario.Gz",
+    "files": "bacen_lf_mercado_secundario.csv.gz",
+    "source": "bcb",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-11-07"
+      },
+      {
+        "name": "data_referencia",
+        "type": "date",
+        "example": "2010-05-01"
+      },
+      {
+        "name": "numero_negocios",
+        "type": "int",
+        "example": "8"
+      },
+      {
+        "name": "valor",
+        "type": "float",
+        "example": "7847733.66"
+      }
+    ]
+  },
+  {
+    "title": "Bacen Lf Prazo Emissoes.Gz",
+    "files": "bacen_lf_prazo_emissoes.csv.gz",
+    "source": "bcb",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-11-07"
+      },
+      {
+        "name": "data_referencia",
+        "type": "date",
+        "example": "2010-03-01"
+      },
+      {
+        "name": "prazo_medio_emissao_lf_meses",
+        "type": "float",
+        "example": ""
+      },
+      {
+        "name": "prazo_medio_emissao_lfs_meses",
+        "type": "float",
+        "example": "72.0"
+      }
+    ]
+  },
+  {
+    "title": "Bacen Lf Prazo Vencimento.Gz",
+    "files": "bacen_lf_prazo_vencimento.csv.gz",
+    "source": "bcb",
+    "fields": [
+      {
+        "name": "data_captura",
+        "type": "date",
+        "example": "2026-11-07"
+      },
+      {
+        "name": "data_referencia",
+        "type": "date",
+        "example": "2010-03-01"
+      },
+      {
+        "name": "prazo_medio_vencimento_lf_meses",
+        "type": "float",
+        "example": ""
+      },
+      {
+        "name": "prazo_medio_vencimento_lfs_meses",
+        "type": "float",
+        "example": "71.9836"
+      }
+    ]
   }
 ]

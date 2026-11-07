@@ -11,7 +11,7 @@
 <p align="center">
   <a href="https://github.com/PulseDataLabs/PulseFlat/actions/workflows/ci.yml"><img src="https://github.com/PulseDataLabs/PulseFlat/actions/workflows/ci.yml/badge.svg" alt="CI Status"></a>
   <a href="https://github.com/PulseDataLabs/PulseFlat/actions/workflows/main.yml"><img src="https://github.com/PulseDataLabs/PulseFlat/actions/workflows/main.yml/badge.svg" alt="Daily Automation"></a>
-  <img src="https://img.shields.io/badge/datasets-100%2B-brightgreen.svg" alt="Datasets">
+  <img src="https://img.shields.io/badge/datasets-107%2B-brightgreen.svg" alt="Datasets">
   <img src="https://img.shields.io/badge/fontes-10%2B-blue.svg" alt="Fontes">
   <img src="https://img.shields.io/badge/python-3.11%2B-blue.svg" alt="Python Versions">
   <img src="https://img.shields.io/badge/code%20style-ruff-000000.svg" alt="Ruff Code Style">
@@ -44,7 +44,7 @@ A **PulseDataLabs** nasceu da missão de democratizar o acesso a dados financeir
 
 ## 🚀 Recursos e Diferenciais
 
-*   **100+ Datasets Estruturados & 100+ Rotinas de Extração**: Cobertura massiva de renda fixa, renda variável, derivativos, câmbio, fundos e macroeconomia, sem paywalls nem limites artificiais.
+*   **107+ Datasets Estruturados & 120+ Rotinas de Extração**: Cobertura massiva de renda fixa, renda variável, derivativos, câmbio, fundos e macroeconomia, sem paywalls nem limites artificiais.
 *   **Governança & Auto-Healing de Schema Drift Inteligente**: Motor de inteligência semântica (`utils/schema_intelligence.py`) integrado nativamente ao `salvar_csv`, capaz de detectar equivalências entre variações sintáticas (ex: `duration_d_u` vs `duration_du`, preposições, abreviações e encodings) e unificar campos automaticamente de forma aditiva/coalescente, sem perda de dados históricos e com guard-rails rigorosos contra falsos positivos.
 *   **OOP & Abstração Sólida**: Scrapers estruturados sob a classe base `BaseScraper` com ciclo de vida unificado, logs padronizados, checagem defensiva de schemas e persistência incremental.
 *   **Ecossistema Completo ANBIMA Data (1ª e 2ª Onda)**: Cliente HTTP OAuth 2.0 (Client Credentials) com 17 feeds oficiais via API: Curvas ETTJ (Prefixados, IPCA, Selic), Parâmetros Svensson, Letras Financeiras, CRI/CRA, FIDC, IMA/IDkA (resultados e carteiras teóricas), Selic Estimativa, VNA e REUNE Negociações.
@@ -767,7 +767,7 @@ Séries macroeconômicas globais do Banco Central dos Estados Unidos (St. Louis 
 
 ---
 
-### ◆ Banco Central do Brasil (7 Datasets) & ⬢ CVM (3 Datasets)
+### ◆ Banco Central do Brasil (19 Datasets) & ⬢ CVM (3 Datasets)
 
 * **BCB Cadastro de Instituições** (`bacen_cadastro_instituicoes.csv.gz`): Histórico trimestral completo desde 2020 (26 trimestres, +143.000 registros) de todas as instituições financeiras e entidades autorizadas pelo BACEN (IF.data / SFN) com classificação prudencial (S1-S5), tipo de controle, consolidação, atividade e situação cadastral.
 * **BCB PTAX** (`bcb_ptax.csv`): Cotações diárias oficiais de compra e venda de moedas estrangeiras.
@@ -776,6 +776,18 @@ Séries macroeconômicas globais do Banco Central dos Estados Unidos (St. Louis 
 * **BCB Balancetes Cosif** (`bacen_balancetes_bancos.csv.gz`): Balancetes patrimoniais contábeis das instituições financeiras autorizadas.
 * **BCB Conglomerados** (`bacen_conglomerados.csv`): Estrutura de conglomerados financeiros e prudenciais.
 * **BCB Basileia** (`bacen_parcelas_capital_basileia.csv.gz`): Requerimentos de capital e patrimônio de referência.
+* **BCB Letras Financeiras — Emissões** (`bacen_lf_emissoes.csv.gz`): Série mensal do volume financeiro emitido de Letras Financeiras (LF) e Letras Financeiras Subordinadas (LFS) em R$.
+* **BCB Letras Financeiras — Estoque** (`bacen_lf_estoque.csv.gz`): Série mensal do estoque total de Letras Financeiras (LF) e Letras Financeiras Subordinadas (LFS) em R$.
+* **BCB Letras Financeiras — Estoque por Emissor (com CNPJ 14 dígitos)** (`bacen_lf_estoque_emissor.csv.gz`): Posição anual do estoque de LF, LFS e total aberto por instituição financeira, cooperativa ou conglomerado emissor no SFN (2010–2025), enriquecida com o CNPJ matriz de 14 posições (`cnpj`) de cada entidade/líder do conglomerado.
+* **BCB Letras Financeiras — Estoque por Indexador** (`bacen_lf_estoque_indexador.csv.gz`): Posição anual do estoque de Letras Financeiras aberto por indexador de remuneração (DI, IPCA, Prefixado, IGP-M, etc.) em R$ e participação percentual.
+* **BCB Letras Financeiras — Estoque por Natureza do Detentor** (`bacen_lf_estoque_natureza_detentor.csv.gz`): Posição anual do estoque de LF e LFS aberto por categoria de investidor detentor (Fundos de Investimento, Entidades de Previdência, Pessoas Físicas/Jurídicas, etc.).
+* **BCB Letras Financeiras — Estoque de LF por Segmento** (`bacen_lf_estoque_segmento.csv.gz`): Série mensal do estoque de LF aberto por segmento prudencial/operacional do emissor (Bancos Múltiplos, Comerciais, de Investimento, de Desenvolvimento, Caixas Econômicas, CFI e Cooperativas).
+* **BCB Letras Financeiras — Prazo Médio de Vencimento de LF por Segmento** (`bacen_lf_prazo_vencimento_segmento.csv.gz`): Série mensal do prazo médio a decorrer do estoque de LF (em meses) por segmento do emissor.
+* **BCB Letras Financeiras — Estoque de LFS Subordinadas por Segmento** (`bacen_lfs_estoque_segmento.csv.gz`): Série mensal do estoque de Letras Financeiras Subordinadas (LFS) aberto por segmento do emissor.
+* **BCB Letras Financeiras — Prazo Médio de Vencimento de LFS por Segmento** (`bacen_lfs_prazo_vencimento_segmento.csv.gz`): Série mensal do prazo médio a decorrer do estoque de LFS (em meses) por segmento do emissor.
+* **BCB Letras Financeiras — Mercado Secundário** (`bacen_lf_mercado_secundario.csv.gz`): Série mensal da quantidade de negócios e volume financeiro negociado de Letras Financeiras no mercado secundário.
+* **BCB Letras Financeiras — Prazo Médio de Emissões** (`bacen_lf_prazo_emissoes.csv.gz`): Série mensal do prazo médio contratado nas emissões primárias de LF e LFS (em meses).
+* **BCB Letras Financeiras — Prazo Médio de Vencimento do Estoque** (`bacen_lf_prazo_vencimento.csv.gz`): Série mensal do prazo médio a decorrer até o vencimento do estoque de LF e LFS (em meses).
 * **CVM Informe Diário** (`cvm_fundos_informe_diario.csv.gz`): Cota diária, patrimônio líquido e número de cotistas de todos os fundos de investimento abertos no Brasil.
 * **CVM RCVM 175** (`registro_fundo_classe.csv.gz`): Cadastro unificado de classes e subclasses de fundos de investimento sob a nova regulação 175.
 * **CVM Companhias Abertas** (`cvm_cadastro_companhias_abertas.csv`): Cadastro oficial de emissores de ações e debêntures.

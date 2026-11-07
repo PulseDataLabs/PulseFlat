@@ -1425,6 +1425,18 @@
     "B3 Indicadores": "b3_indicadores_financeiros.csv",
     "BCB PTAX": "bcb_ptax.csv",
     "BCB SGS": "bcb_sgs.csv",
+    "BCB LF — Emissões": "bacen_lf_emissoes.csv.gz",
+    "BCB LF — Estoque": "bacen_lf_estoque.csv.gz",
+    "BCB LF — Mercado Secundário": "bacen_lf_mercado_secundario.csv.gz",
+    "BCB LF — Prazo Emissões": "bacen_lf_prazo_emissoes.csv.gz",
+    "BCB LF — Prazo Vencimento": "bacen_lf_prazo_vencimento.csv.gz",
+    "BCB LF — Estoque Segmento": "bacen_lf_estoque_segmento.csv.gz",
+    "BCB LF — Prazo Segmento": "bacen_lf_prazo_vencimento_segmento.csv.gz",
+    "BCB LFS — Estoque Segmento": "bacen_lfs_estoque_segmento.csv.gz",
+    "BCB LFS — Prazo Segmento": "bacen_lfs_prazo_vencimento_segmento.csv.gz",
+    "BCB LF — Estoque por Indexador": "bacen_lf_estoque_indexador.csv.gz",
+    "BCB LF — Estoque por Detentor": "bacen_lf_estoque_natureza_detentor.csv.gz",
+    "BCB LF — Estoque por Emissor": "bacen_lf_estoque_emissor.csv.gz",
     "FRED US Treasuries": "fred_us_treasuries_yield_curve.csv.gz",
     "FRED US Macro": "fred_us_macro_indicators.csv.gz",
     "FRED Liquidez e Spreads": "fred_global_liquidity_credit_spreads.csv.gz",
@@ -1538,6 +1550,58 @@
       filterKey: 'indice',
       filterVal: (indicador) => indicador.toUpperCase(),
       filterCompare: (rowVal, filterVal) => (rowVal || '').toUpperCase() === filterVal
+    },
+    'bacen_lf_emissoes.csv.gz': {
+      date: 'data_referencia',
+      values: ['emissoes_lf', 'emissoes_lfs']
+    },
+    'bacen_lf_estoque.csv.gz': {
+      date: 'data_referencia',
+      values: ['estoque_lf', 'estoque_lfs']
+    },
+    'bacen_lf_mercado_secundario.csv.gz': {
+      date: 'data_referencia',
+      values: ['valor', 'numero_negocios']
+    },
+    'bacen_lf_prazo_emissoes.csv.gz': {
+      date: 'data_referencia',
+      values: ['prazo_medio_emissao_lf_meses', 'prazo_medio_emissao_lfs_meses']
+    },
+    'bacen_lf_prazo_vencimento.csv.gz': {
+      date: 'data_referencia',
+      values: ['prazo_medio_vencimento_lf_meses', 'prazo_medio_vencimento_lfs_meses']
+    },
+    'bacen_lf_estoque_segmento.csv.gz': {
+      date: 'data_referencia',
+      values: ['bancos_multiplos', 'bancos_comerciais', 'bancos_investimento', 'caixas_economicas', 'cfi', 'cooperativas_credito', 'total']
+    },
+    'bacen_lf_prazo_vencimento_segmento.csv.gz': {
+      date: 'data_referencia',
+      values: ['bancos_multiplos', 'bancos_comerciais', 'bancos_investimento', 'caixas_economicas', 'cfi', 'cooperativas_credito', 'total']
+    },
+    'bacen_lfs_estoque_segmento.csv.gz': {
+      date: 'data_referencia',
+      values: ['bancos_multiplos', 'bancos_comerciais', 'bancos_investimento', 'caixas_economicas', 'cfi', 'cooperativas_credito', 'total']
+    },
+    'bacen_lfs_prazo_vencimento_segmento.csv.gz': {
+      date: 'data_referencia',
+      values: ['bancos_multiplos', 'bancos_comerciais', 'bancos_investimento', 'caixas_economicas', 'cfi', 'cooperativas_credito', 'total']
+    },
+    'bacen_lf_estoque_indexador.csv.gz': {
+      date: 'data_referencia',
+      values: ['valor', 'participacao_perc'],
+      filterKey: 'indexador'
+    },
+    'bacen_lf_estoque_natureza_detentor.csv.gz': {
+      date: 'data_referencia',
+      values: ['estoque_lf', 'estoque_lfs', 'estoque_total', 'participacao_perc'],
+      filterKey: 'natureza_detentor'
+    },
+    'bacen_lf_estoque_emissor.csv.gz': {
+      date: 'data_referencia',
+      values: ['estoque_lf', 'estoque_lfs', 'estoque_total'],
+      filterKey: 'instituicao_conglomerado',
+      filterVal: (indicador) => (indicador || '').replace(/\s*\(\d{14}\)\s*$/, '').trim()
     }
   };
 
@@ -1607,7 +1671,7 @@
       const ind = (r.indicador || '').toLowerCase();
       const cat = (r.categoria || '').toLowerCase();
       
-      if (ind.includes('selic') || ind.includes('cdi') || ind.includes('juro') || ind.includes('di over') || ind.includes('swap') || ind.includes('treasury') || ind.includes('fed funds') || ind.includes('sofr') || ind.includes('spread') || cat.includes('juros') || cat.includes('renda fixa') || cat.includes('títulos') || cat.includes('curva soberana')) {
+      if (ind.includes('selic') || ind.includes('cdi') || ind.includes('juro') || ind.includes('di over') || ind.includes('swap') || ind.includes('treasury') || ind.includes('fed funds') || ind.includes('sofr') || ind.includes('spread') || ind.includes('letras financeiras') || ind.startsWith('lf ') || ind.startsWith('lfs ') || cat.includes('juros') || cat.includes('renda fixa') || cat.includes('títulos') || cat.includes('curva soberana') || cat.includes('letras financeiras')) {
         return 'juros';
       }
       if (ind.includes('dólar') || ind.includes('dolar') || ind.includes('ptax') || ind.includes('euro') || ind.includes('câmbio') || ind.includes('cambio') || ind.includes('dxy') || ind.includes('reer') || ind.includes('neer') || cat.includes('câmbio') || cat.includes('moedas')) {

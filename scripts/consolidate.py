@@ -151,6 +151,18 @@ DATASET_LABEL = {
     "fred_global_liquidity_credit_spreads.csv.gz": "FRED Liquidez e Spreads",
     "fred_brazil_export_commodities.csv.gz": "FRED Commodities Exportação Brasil",
     "fred_brazil_macro_fx_and_cycles.csv.gz": "FRED Brasil Macro e Ciclos",
+    "bacen_lf_emissoes.csv.gz": "BCB LF — Emissões",
+    "bacen_lf_estoque.csv.gz": "BCB LF — Estoque",
+    "bacen_lf_mercado_secundario.csv.gz": "BCB LF — Mercado Secundário",
+    "bacen_lf_prazo_emissoes.csv.gz": "BCB LF — Prazo Emissões",
+    "bacen_lf_prazo_vencimento.csv.gz": "BCB LF — Prazo Vencimento",
+    "bacen_lf_estoque_segmento.csv.gz": "BCB LF — Estoque Segmento",
+    "bacen_lf_prazo_vencimento_segmento.csv.gz": "BCB LF — Prazo Segmento",
+    "bacen_lfs_estoque_segmento.csv.gz": "BCB LFS — Estoque Segmento",
+    "bacen_lfs_prazo_vencimento_segmento.csv.gz": "BCB LFS — Prazo Segmento",
+    "bacen_lf_estoque_indexador.csv.gz": "BCB LF — Estoque por Indexador",
+    "bacen_lf_estoque_natureza_detentor.csv.gz": "BCB LF — Estoque por Detentor",
+    "bacen_lf_estoque_emissor.csv.gz": "BCB LF — Estoque por Emissor",
 }
 
 
@@ -714,6 +726,126 @@ INDICATOR_DEFS = [
             ("433", "IPCA 12m"),
         ]
     ],
+    # ── BCB Estatísticas sobre Letras Financeiras (LF e LFS) ───────
+    {
+        "dataset": "bacen_lf_emissoes.csv.gz",
+        "source": "BCB",
+        "label": "Letras Financeiras — Emissões Mensais",
+        "value_cols": [
+            ("emissoes_lf", "LF (R$)", "number"),
+            ("emissoes_lfs", "LFS Subordinadas (R$)", "number"),
+        ],
+        "date_col": "data_referencia",
+        "category": "Letras Financeiras",
+    },
+    {
+        "dataset": "bacen_lf_estoque.csv.gz",
+        "source": "BCB",
+        "label": "Letras Financeiras — Estoque Mensal",
+        "value_cols": [
+            ("estoque_lf", "LF (R$)", "number"),
+            ("estoque_lfs", "LFS Subordinadas (R$)", "number"),
+        ],
+        "date_col": "data_referencia",
+        "category": "Letras Financeiras",
+    },
+    {
+        "dataset": "bacen_lf_mercado_secundario.csv.gz",
+        "source": "BCB",
+        "label": "Letras Financeiras — Mercado Secundário",
+        "value_cols": [
+            ("numero_negocios", "Nº Negócios", "number"),
+            ("valor", "Volume (R$)", "number"),
+        ],
+        "date_col": "data_referencia",
+        "category": "Letras Financeiras",
+    },
+    {
+        "dataset": "bacen_lf_prazo_emissoes.csv.gz",
+        "source": "BCB",
+        "label": "Letras Financeiras — Prazo Médio de Emissões",
+        "value_cols": [
+            ("prazo_medio_emissao_lf_meses", "LF (meses)", "number"),
+            ("prazo_medio_emissao_lfs_meses", "LFS Subordinadas (meses)", "number"),
+        ],
+        "date_col": "data_referencia",
+        "category": "Letras Financeiras",
+        "decimals": 2,
+    },
+    {
+        "dataset": "bacen_lf_prazo_vencimento.csv.gz",
+        "source": "BCB",
+        "label": "Letras Financeiras — Prazo Médio de Vencimento do Estoque",
+        "value_cols": [
+            ("prazo_medio_vencimento_lf_meses", "LF (meses)", "number"),
+            ("prazo_medio_vencimento_lfs_meses", "LFS Subordinadas (meses)", "number"),
+        ],
+        "date_col": "data_referencia",
+        "category": "Letras Financeiras",
+        "decimals": 2,
+    },
+    *[
+        {
+            "dataset": ds_file,
+            "source": "BCB",
+            "label": ds_label,
+            "value_cols": [
+                ("bancos_multiplos", "Bancos Múltiplos", "number"),
+                ("bancos_comerciais", "Bancos Comerciais", "number"),
+                ("bancos_investimento", "Bancos de Investimento", "number"),
+                ("bancos_desenvolvimento", "Bancos de Desenvolvimento", "number"),
+                ("caixas_economicas", "Caixas Econômicas", "number"),
+                ("cfi", "Financeiras (CFI)", "number"),
+                ("cooperativas_credito", "Cooperativas de Crédito", "number"),
+                ("total", "Total Geral", "number"),
+            ],
+            "date_col": "data_referencia",
+            "category": "Letras Financeiras",
+        }
+        for ds_file, ds_label in [
+            ("bacen_lf_estoque_segmento.csv.gz", "LF — Estoque por Segmento (R$)"),
+            ("bacen_lf_prazo_vencimento_segmento.csv.gz", "LF — Prazo Vencimento por Segmento (meses)"),
+            ("bacen_lfs_estoque_segmento.csv.gz", "LFS — Estoque por Segmento (R$)"),
+            ("bacen_lfs_prazo_vencimento_segmento.csv.gz", "LFS — Prazo Vencimento por Segmento (meses)"),
+        ]
+    ],
+    {
+        "dataset": "bacen_lf_estoque_indexador.csv.gz",
+        "source": "BCB",
+        "indicator_col": "indexador",
+        "value_cols": [
+            ("valor", "Estoque (R$)", "number"),
+            ("participacao_perc", "Participação", "pct"),
+        ],
+        "date_col": "data_referencia",
+        "category": "Letras Financeiras",
+    },
+    {
+        "dataset": "bacen_lf_estoque_natureza_detentor.csv.gz",
+        "source": "BCB",
+        "indicator_col": "natureza_detentor",
+        "value_cols": [
+            ("estoque_lf", "LF (R$)", "number"),
+            ("estoque_lfs", "LFS (R$)", "number"),
+            ("estoque_total", "Total (R$)", "number"),
+            ("participacao_perc", "Participação", "pct"),
+        ],
+        "date_col": "data_referencia",
+        "category": "Letras Financeiras",
+    },
+    {
+        "dataset": "bacen_lf_estoque_emissor.csv.gz",
+        "source": "BCB",
+        "indicator_col": "instituicao_conglomerado",
+        "note_col": "cnpj",
+        "value_cols": [
+            ("estoque_lf", "LF (R$)", "number"),
+            ("estoque_lfs", "LFS (R$)", "number"),
+            ("estoque_total", "Total (R$)", "number"),
+        ],
+        "date_col": "data_referencia",
+        "category": "Letras Financeiras",
+    },
     # ── ANBIMA Indicadores ─────────────────────────────────────────
     {
         "dataset": "anbima_indicadores.csv",
@@ -1235,8 +1367,10 @@ def generate_pivoted() -> None:
             "data_referencia",
             "indicador",
             "fonte",
+            "dataset",
             "dataset_label",
             "categoria",
+            "metrica",
         ):
             row[k] = recs[0].get(k, "")
 

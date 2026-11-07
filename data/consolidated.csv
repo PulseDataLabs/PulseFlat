@@ -40,6 +40,937 @@ b3_indicadores_financeiros.csv,B3 Indicadores Financeiros,B3,Indicadores B3,indi
 b3_indicadores_financeiros.csv,B3 Indicadores Financeiros,B3,Indicadores B3,indicador,TAXA CDI CETIP,"13,65",,2026-11-06,2026-11-07,taxa
 b3_indicadores_financeiros.csv,B3 Indicadores Financeiros,B3,Indicadores B3,indicador,TAXA SELIC,"13,65",,2026-11-06,2026-11-07,taxa
 b3_indicadores_financeiros.csv,B3 Indicadores Financeiros,B3,Indicadores B3,indicador,TAXA SOFR,"3,92",,2026-11-06,2026-11-06,valor
+bacen_lf_emissoes.csv.gz,BCB LF — Emissões,BCB,Letras Financeiras,indicador,Letras Financeiras — Emissões Mensais,18.660.946.194,LF (R$),2025-12-01,2026-11-07,emissoes_lf
+bacen_lf_emissoes.csv.gz,BCB LF — Emissões,BCB,Letras Financeiras,indicador,Letras Financeiras — Emissões Mensais,9.174.513.902,LFS Subordinadas (R$),2025-12-01,2026-11-07,emissoes_lfs
+bacen_lf_estoque.csv.gz,BCB LF — Estoque,BCB,Letras Financeiras,indicador,Letras Financeiras — Estoque Mensal,693.405.789.856,LF (R$),2025-12-01,2026-11-07,estoque_lf
+bacen_lf_estoque.csv.gz,BCB LF — Estoque,BCB,Letras Financeiras,indicador,Letras Financeiras — Estoque Mensal,275.712.328.188,LFS Subordinadas (R$),2025-12-01,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,ABC-BRASIL (28195667000106),16.528.929.039,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,ABC-BRASIL (28195667000106),2.643.523.610,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,ABC-BRASIL (28195667000106),19.172.452.650,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,AGIBANK (10664513000150),5.966.446.822,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,AGIBANK (10664513000150),760.042.753,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,AGIBANK (10664513000150),6.726.489.575,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,AL5 S.A. CFI (27214112000100),1.008.760,LFS (R$),2024-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,AL5 S.A. CFI (27214112000100),1.008.760,Total (R$),2024-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,AL5 S.A. SCFI (27214112000100),1.137.925,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,AL5 S.A. SCFI (27214112000100),1.137.925,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,ALFA (60770336000165),7.308.885.589,LF (R$),2022-12-30,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,ALFA (60770336000165),7.308.885.589,Total (R$),2022-12-30,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,ANDBANK (48795256000169),10.542.501,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,ANDBANK (48795256000169),5.993.225,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,ANDBANK (48795256000169),16.535.726,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,ASA SCFI S.A. (48703388000113),72.224.329,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,ASA SCFI S.A. (48703388000113),72.224.329,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,AVISTA S.A. CFI (23862762000100),13.369.485,LFS (R$),2019-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,AVISTA S.A. CFI (23862762000100),13.369.485,Total (R$),2019-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BANCO BONSUCESSO S.A. (71027866000134),567.760,LF (R$),2016-12-30,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BANCO BONSUCESSO S.A. (71027866000134),567.760,Total (R$),2016-12-30,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BANCO CNH INDUSTRIAL CAPITAL S.A (02992446000175),3.964.257.223,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BANCO CNH INDUSTRIAL CAPITAL S.A (02992446000175),940.919.556,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BANCO CNH INDUSTRIAL CAPITAL S.A (02992446000175),4.905.176.779,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BANCO DIGIO (27098060000145),161.168,LF (R$),2019-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BANCO DIGIO (27098060000145),161.168,Total (R$),2019-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BANCO FIDIS (62237425000176),653.671.369,LF (R$),2022-12-30,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BANCO FIDIS (62237425000176),653.671.369,Total (R$),2022-12-30,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BANCO INBURSA (04866275000163),32.900.000,LF (R$),2020-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BANCO INBURSA (04866275000163),32.900.000,Total (R$),2020-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BANCO JOHN DEERE S.A. (91884981000132),1.974.592.947,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BANCO JOHN DEERE S.A. (91884981000132),1.974.592.947,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BANCO ORIGINAL (92894922000108),265.590.678,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BANCO ORIGINAL (92894922000108),1.654.897.827,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BANCO ORIGINAL (92894922000108),1.920.488.505,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BANCO RANDON S.A. (11476673000139),352.663.984,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BANCO RANDON S.A. (11476673000139),352.663.984,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BANCO SEMEAR (00795423000145),6.283.296,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BANCO SEMEAR (00795423000145),6.283.296,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BANCO SICOOB (02038232000164),608.955.687,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BANCO SICOOB (02038232000164),608.955.687,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BANCO TRATON BRASIL S.A. (52067630000187),557.777.448,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BANCO TRATON BRASIL S.A. (52067630000187),557.777.448,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BANCOOB (02038232000164),10.000.000,LF (R$),2020-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BANCOOB (02038232000164),10.000.000,Total (R$),2020-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BANCOSEGURO S.A. (10264663000177),1.640.986.943,LF (R$),2022-12-30,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BANCOSEGURO S.A. (10264663000177),253.730.791,LFS (R$),2022-12-30,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BANCOSEGURO S.A. (10264663000177),1.894.717.734,Total (R$),2022-12-30,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BANESTES (28127603000178),226.736.705,LF (R$),2016-12-30,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BANESTES (28127603000178),226.736.705,Total (R$),2016-12-30,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BANIF (33884941000194),27.480.024,LFS (R$),2017-12-29,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BANIF (33884941000194),27.480.024,Total (R$),2017-12-29,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BANRISUL (92702067000196),5.775.940.361,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BANRISUL (92702067000196),2.414.563.065,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BANRISUL (92702067000196),8.190.503.426,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BARIGUI (00556603000174),34.322.742,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BARIGUI (00556603000174),7.206.712,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BARIGUI (00556603000174),41.529.454,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BB (00000000000191),28.782.933.366,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BB (00000000000191),30.034.918.904,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BB (00000000000191),58.817.852.269,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BBM (15114366000169),480.200.847,LF (R$),2016-12-30,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BBM (15114366000169),480.200.847,Total (R$),2016-12-30,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO ABN AMRO S.A. (03532415000102),11.485.464,LF (R$),2020-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO ABN AMRO S.A. (03532415000102),11.485.464,Total (R$),2020-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO AFINZ S.A. - BM (04814563000174),77.778.444,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO AFINZ S.A. - BM (04814563000174),77.778.444,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO BNP PARIBAS BRASIL S A (01522368000182),264.074.623,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO BNP PARIBAS BRASIL S A (01522368000182),264.074.623,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO BONSUCESSO S.A. (71027866000134),"0,000000",LF (R$),2015-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO BONSUCESSO S.A. (71027866000134),919.353,LFS (R$),2015-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO BONSUCESSO S.A. (71027866000134),919.353,Total (R$),2015-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO BRASILEIRO DE CRÉDITO S.A. (01852137000137),50.232,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO BRASILEIRO DE CRÉDITO S.A. (01852137000137),50.232,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO BS2 S.A. (71027866000134),209.457.978,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO BS2 S.A. (71027866000134),158.519.547,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO BS2 S.A. (71027866000134),367.977.525,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO BVA (32254138000103),256.789.634,LF (R$),2012-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO BVA (32254138000103),338.100.192,LFS (R$),2012-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO BVA (32254138000103),594.889.826,Total (R$),2012-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO BVA S.A. (32254138000103),"0,000000",LF (R$),2010-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO BVA S.A. (32254138000103),74.383.750,LFS (R$),2010-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO BVA S.A. (32254138000103),74.383.750,Total (R$),2010-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO CAIXA GERAL BRASIL (33466988000138),7.314.702,LF (R$),2011-12-30,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO CAIXA GERAL BRASIL (33466988000138),"0,000000",LFS (R$),2011-12-30,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO CAIXA GERAL BRASIL (33466988000138),7.314.702,Total (R$),2011-12-30,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO CATERPILLAR (02658435000153),234.104.877,LF (R$),2015-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO CATERPILLAR (02658435000153),"0,000000",LFS (R$),2015-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO CATERPILLAR (02658435000153),234.104.877,Total (R$),2015-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO CNH CAPITAL (02992446000175),637.529.524,LF (R$),2013-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO CNH CAPITAL (02992446000175),637.529.524,Total (R$),2013-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO CNH INDUSTRIAL CAPITAL S.A (02992446000175),683.070.238,LF (R$),2015-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO CNH INDUSTRIAL CAPITAL S.A (02992446000175),"0,000000",LFS (R$),2015-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO CNH INDUSTRIAL CAPITAL S.A (02992446000175),683.070.238,Total (R$),2015-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO COOPERATIVO SICREDI (01181521000155),210.941.073,LF (R$),2015-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO COOPERATIVO SICREDI (01181521000155),168.674.522,LFS (R$),2015-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO COOPERATIVO SICREDI (01181521000155),379.615.595,Total (R$),2015-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO COOPERATIVO SICREDI S.A. (01181521000155),7.374.047.029,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO COOPERATIVO SICREDI S.A. (01181521000155),4.014.578.614,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO COOPERATIVO SICREDI S.A. (01181521000155),11.388.625.643,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO CRUZEIRO DO SUL (62136254000199),57.833.277,LF (R$),2014-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO CRUZEIRO DO SUL (62136254000199),57.833.277,Total (R$),2014-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO CRÉDIT AGRICOLE BR S.A. (75647891000171),359.847.878,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO CRÉDIT AGRICOLE BR S.A. (75647891000171),359.847.878,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO CSF S.A. (08357240000150),1.439.805.907,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO CSF S.A. (08357240000150),1.439.805.907,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO DAYCOVAL (62232889000190),3.866.640.511,LF (R$),2014-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO DAYCOVAL (62232889000190),3.866.640.511,Total (R$),2014-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO DAYCOVAL S.A (62232889000190),3.205.897,LF (R$),2010-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO DAYCOVAL S.A (62232889000190),"0,000000",LFS (R$),2010-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO DAYCOVAL S.A (62232889000190),3.205.897,Total (R$),2010-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO DE LAGE LANDEN BRASIL S.A. (05040481000182),2.038.494.919,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO DE LAGE LANDEN BRASIL S.A. (05040481000182),2.038.494.919,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO DES. DE MG (38486817000194),680.150.842,LF (R$),2015-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO DES. DE MG (38486817000194),"0,000000",LFS (R$),2015-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO DES. DE MG (38486817000194),680.150.842,Total (R$),2015-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO DES. DE MG S.A. (38486817000194),412.989.494,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO DES. DE MG S.A. (38486817000194),412.989.494,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO DIGIMAIS S.A. (92874270000140),10.966.307,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO DIGIMAIS S.A. (92874270000140),539.810.341,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO DIGIMAIS S.A. (92874270000140),550.776.648,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO DO EST. DE SE (13009717000146),138.792.314,LF (R$),2015-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO DO EST. DE SE (13009717000146),172.846.555,LFS (R$),2015-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO DO EST. DE SE (13009717000146),311.638.869,Total (R$),2015-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO DO EST. DE SE S.A. (13009717000146),17.180.410,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO DO EST. DE SE S.A. (13009717000146),186.026.865,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO DO EST. DE SE S.A. (13009717000146),203.207.275,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO DO EST. DO PA (04913711000108),226.126.494,LF (R$),2015-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO DO EST. DO PA (04913711000108),"0,000000",LFS (R$),2015-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO DO EST. DO PA (04913711000108),226.126.494,Total (R$),2015-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO DO EST. DO PA S.A. (04913711000108),1.703.075.908,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO DO EST. DO PA S.A. (04913711000108),214.210.465,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO DO EST. DO PA S.A. (04913711000108),1.917.286.374,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO DO NORDESTE DO BRASIL S.A. (07237373000120),808.544.962,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO DO NORDESTE DO BRASIL S.A. (07237373000120),808.544.962,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO FIBRA (58616418000108),410.456.248,LF (R$),2015-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO FIBRA (58616418000108),"0,000000",LFS (R$),2015-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO FIBRA (58616418000108),410.456.248,Total (R$),2015-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO FIBRA S.A. (58616418000108),59.548.983,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO FIBRA S.A. (58616418000108),185.811.159,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO FIBRA S.A. (58616418000108),245.360.143,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO FICSA (61348538000186),"0,000000",LF (R$),2012-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO FICSA (61348538000186),7.055.029,LFS (R$),2012-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO FICSA (61348538000186),7.055.029,Total (R$),2012-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO FIDIS (62237425000176),736.500.567,LF (R$),2015-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO FIDIS (62237425000176),"0,000000",LFS (R$),2015-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO FIDIS (62237425000176),736.500.567,Total (R$),2015-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO FORD (90731688000172),902.528.399,LF (R$),2015-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO FORD (90731688000172),"0,000000",LFS (R$),2015-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO FORD (90731688000172),902.528.399,Total (R$),2015-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO FORD S.A. (90731688000172),237.204.512,LF (R$),2017-12-29,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO FORD S.A. (90731688000172),237.204.512,Total (R$),2017-12-29,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO GERADOR (10664513000150),17.449.052,LFS (R$),2013-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO GERADOR (10664513000150),17.449.052,Total (R$),2013-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO GM S.A. (59274605000113),6.437.611.114,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO GM S.A. (59274605000113),6.437.611.114,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO GMAC (59274605000113),2.182.634.476,LF (R$),2015-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO GMAC (59274605000113),"0,000000",LFS (R$),2015-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO GMAC (59274605000113),2.182.634.476,Total (R$),2015-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO GMAC S.A. (59274605000113),2.047.868.542,LF (R$),2019-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO GMAC S.A. (59274605000113),2.047.868.542,Total (R$),2019-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO GUANABARA (31880826000116),"0,000000",LF (R$),2015-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO GUANABARA (31880826000116),16.166.780,LFS (R$),2015-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO GUANABARA (31880826000116),16.166.780,Total (R$),2015-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO HSBC S.A. (53518684000184),1.811.819.884,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO HSBC S.A. (53518684000184),570.393.435,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO HSBC S.A. (53518684000184),2.382.213.319,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO INTERMEDIUM S/A (00416968000101),121.696.751,LF (R$),2012-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO INTERMEDIUM S/A (00416968000101),"0,000000",LFS (R$),2012-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO INTERMEDIUM S/A (00416968000101),121.696.751,Total (R$),2012-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO KOMATSU S.A. (23903068000186),33.735.527,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO KOMATSU S.A. (23903068000186),33.735.527,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO LUSO BRASILEIRO S.A. (59118133000100),223.940.384,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO LUSO BRASILEIRO S.A. (59118133000100),223.940.384,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO MIZUHO S.A. (61088183000133),42.491.887,LF (R$),2022-12-30,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO MIZUHO S.A. (61088183000133),42.491.887,Total (R$),2022-12-30,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO OURINVEST S.A. (78632767000120),12.377.839,LFS (R$),2021-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO OURINVEST S.A. (78632767000120),12.377.839,Total (R$),2021-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO PACCAR S.A. (28517628000188),617.034.762,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO PACCAR S.A. (28517628000188),617.034.762,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO PAULISTA S.A. (61820817000109),105.724.123,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO PAULISTA S.A. (61820817000109),105.724.123,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO RABOBANK INTL BRASIL S.A. (01023570000160),2.415.719.186,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO RABOBANK INTL BRASIL S.A. (01023570000160),2.415.719.186,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO RANDON S.A. (11476673000139),"0,000000",LF (R$),2015-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO RANDON S.A. (11476673000139),75.530.285,LFS (R$),2015-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO RANDON S.A. (11476673000139),75.530.285,Total (R$),2015-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO RIBEIRAO PRETO S.A. (00517645000104),117.198.293,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO RIBEIRAO PRETO S.A. (00517645000104),117.198.293,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO RODOBENS (33603457000140),408.507.323,LF (R$),2015-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO RODOBENS (33603457000140),"0,000000",LFS (R$),2015-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO RODOBENS (33603457000140),408.507.323,Total (R$),2015-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO RODOBENS S.A. (33603457000140),971.122.585,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO RODOBENS S.A. (33603457000140),971.122.585,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO RURAL (33124959000198),17.552.075,LF (R$),2014-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO RURAL (33124959000198),269.080.661,LFS (R$),2014-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO RURAL (33124959000198),286.632.736,Total (R$),2014-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO SENFF S.A. (11970623000103),1.632.926,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO SENFF S.A. (11970623000103),1.632.926,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO SOROCRED S.A. - BM (04814563000174),4.603.313,LFS (R$),2021-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO SOROCRED S.A. - BM (04814563000174),4.603.313,Total (R$),2021-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO STANDARD INV (04866275000163),1.059.165,LF (R$),2012-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO STANDARD INV (04866275000163),"0,000000",LFS (R$),2012-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO STANDARD INV (04866275000163),1.059.165,Total (R$),2012-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO SUMITOMO MITSUI BRASIL S.A. (60518222000122),588.400.490,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO SUMITOMO MITSUI BRASIL S.A. (60518222000122),588.400.490,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO TOKYO-MITSUBISHI UFJ (60498557000126),33.200.927,LF (R$),2015-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO TOKYO-MITSUBISHI UFJ (60498557000126),"0,000000",LFS (R$),2015-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO TOKYO-MITSUBISHI UFJ (60498557000126),33.200.927,Total (R$),2015-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO TOKYO-MITSUBISHI UFJ S.A. (60498557000126),38.123.126,LF (R$),2016-12-30,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO TOKYO-MITSUBISHI UFJ S.A. (60498557000126),38.123.126,Total (R$),2016-12-30,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO TOPÁZIO S.A. (07679404000100),121.639.004,LF (R$),2014-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO TOPÁZIO S.A. (07679404000100),121.639.004,Total (R$),2014-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO TOYOTA DO BRASIL (03215790000110),966.094.610,LF (R$),2015-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO TOYOTA DO BRASIL (03215790000110),60.579.196,LFS (R$),2015-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO TOYOTA DO BRASIL (03215790000110),1.026.673.806,Total (R$),2015-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO TOYOTA DO BRASIL S.A. (03215790000110),4.578.886.305,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO TOYOTA DO BRASIL S.A. (03215790000110),4.578.886.305,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO TRIANGULO (17351180000159),362.364.217,LF (R$),2015-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO TRIANGULO (17351180000159),"0,000000",LFS (R$),2015-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO TRIANGULO (17351180000159),362.364.217,Total (R$),2015-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO TRIANGULO S.A. (17351180000159),380.294.787,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO TRIANGULO S.A. (17351180000159),103.124.323,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO TRIANGULO S.A. (17351180000159),483.419.111,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO VOLKSWAGEN (59109165000149),2.798.040.883,LF (R$),2015-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO VOLKSWAGEN (59109165000149),1.991.633.164,LFS (R$),2015-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO VOLKSWAGEN (59109165000149),4.789.674.047,Total (R$),2015-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO VOLKSWAGEN S.A (59109165000149),14.645.583.194,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO VOLKSWAGEN S.A (59109165000149),1.975.169.039,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO VOLKSWAGEN S.A (59109165000149),16.620.752.233,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO VOLVO BRASIL (58017179000170),100.780.307,LF (R$),2013-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO VOLVO BRASIL (58017179000170),100.780.307,Total (R$),2013-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO VOLVO BRASIL S.A. (58017179000170),231.234.921,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO VOLVO BRASIL S.A. (58017179000170),231.234.921,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO YAMAHA MOTOR (10371492000185),81.441.680,LF (R$),2015-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO YAMAHA MOTOR (10371492000185),"0,000000",LFS (R$),2015-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO YAMAHA MOTOR (10371492000185),81.441.680,Total (R$),2015-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO YAMAHA MOTOR S.A. (10371492000185),1.696.078.799,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BCO YAMAHA MOTOR S.A. (10371492000185),1.696.078.799,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BD REGIONAL DO EXTREMO SUL (92816560000137),116.042.669,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BD REGIONAL DO EXTREMO SUL (92816560000137),116.042.669,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BES (34111187000112),224.955.729,LF (R$),2015-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BES (34111187000112),"0,000000",LFS (R$),2015-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BES (34111187000112),224.955.729,Total (R$),2015-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BIC (07450604000189),82.971.627,LF (R$),2015-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BIC (07450604000189),"0,000000",LFS (R$),2015-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BIC (07450604000189),82.971.627,Total (R$),2015-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BMG (61186680000174),3.483.039.029,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BMG (61186680000174),1.151.831.164,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BMG (61186680000174),4.634.870.193,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BNDES (33657248000189),1.053.681.761,LF (R$),2021-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BNDES (33657248000189),1.053.681.761,Total (R$),2021-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BNP PARIBAS (01522368000182),2.252.138.425,LF (R$),2022-12-30,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BNP PARIBAS (01522368000182),2.252.138.425,Total (R$),2022-12-30,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BOCOM (15114366000169),2.052.072.061,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BOCOM (15114366000169),1.002.034.244,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BOCOM (15114366000169),3.054.106.305,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BONSUCESSO (71027866000134),771.297,LFS (R$),2014-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BONSUCESSO (71027866000134),771.297,Total (R$),2014-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BR PARTNERS (13220493000117),1.061.516,LF (R$),2016-12-30,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BR PARTNERS (13220493000117),1.061.516,Total (R$),2016-12-30,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BR PARTNERS BI (13220493000117),2.994.909.574,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BR PARTNERS BI (13220493000117),711.068.768,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BR PARTNERS BI (13220493000117),3.705.978.342,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BRADESCO (60746948000112),154.937.461.287,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BRADESCO (60746948000112),54.620.586.499,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BRADESCO (60746948000112),209.558.047.786,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BRB (00000208000100),303.225.309,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BRB (00000208000100),3.729.203.632,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BRB (00000208000100),4.032.428.940,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BRICKELL CFI (12865507000197),"0,000000",LF (R$),2015-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BRICKELL CFI (12865507000197),15.830.036,LFS (R$),2015-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BRICKELL CFI (12865507000197),15.830.036,Total (R$),2015-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BRICKELL S.A. CFI (12865507000197),18.365.566,LFS (R$),2017-12-29,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BRICKELL S.A. CFI (12865507000197),18.365.566,Total (R$),2017-12-29,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BRK S.A. CFI (12865507000197),56.520.796,LFS (R$),2022-12-30,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BRK S.A. CFI (12865507000197),56.520.796,Total (R$),2022-12-30,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BTG PACTUAL (30306294000145),68.271.423.478,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BTG PACTUAL (30306294000145),24.024.407.396,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,BTG PACTUAL (30306294000145),92.295.830.874,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,C H B - CIA HIPOT. BRASILEIRA (10694628000198),5.417.658,LFS (R$),2018-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,C H B - CIA HIPOT. BRASILEIRA (10694628000198),5.417.658,Total (R$),2018-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,C6 BANK (31872495000172),4.720.347.555,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,C6 BANK (31872495000172),3.021.196.695,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,C6 BANK (31872495000172),7.741.544.250,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CAIXA ECONOMICA FEDERAL (00360305000104),1.437.476.192,LF (R$),2020-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CAIXA ECONOMICA FEDERAL (00360305000104),2.171.507.838,LFS (R$),2020-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CAIXA ECONOMICA FEDERAL (00360305000104),3.608.984.030,Total (R$),2020-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CAIXA ECONÔMICA FEDERAL (00360305000104),24.009.762.661,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CAIXA ECONÔMICA FEDERAL (00360305000104),7.540.286.552,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CAIXA ECONÔMICA FEDERAL (00360305000104),31.550.049.213,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CAIXA GERAL (33466988000138),90.014.570,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CAIXA GERAL (33466988000138),90.014.570,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CARUANA SCFI (09313766000109),474.590,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CARUANA SCFI (09313766000109),474.590,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CATERPILLAR (02658435000153),155.534.781,LF (R$),2012-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CATERPILLAR (02658435000153),"0,000000",LFS (R$),2012-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CATERPILLAR (02658435000153),155.534.781,Total (R$),2012-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CC ALTO VALE DO ITAJAÍ (80959612000145),4.634.872,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CC ALTO VALE DO ITAJAÍ (80959612000145),4.634.872,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CC CAP UNICIDADES (03047549000120),160.626,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CC CAP UNICIDADES (03047549000120),160.626,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CC CREDIARA LTDA. (66398496000101),178.857,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CC CREDIARA LTDA. (66398496000101),178.857,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CC CREDICERIPA (00966246000112),234.776,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CC CREDICERIPA (00966246000112),234.776,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CC CREDICOPE (38588174000190),111.990,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CC CREDICOPE (38588174000190),111.990,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CC CREDINOR (21866694000114),719.143,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CC CREDINOR (21866694000114),719.143,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CC CREDINTER (24048910000102),3.165.012,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CC CREDINTER (24048910000102),3.165.012,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,"CC MED, TEC E DEMAIS PROF SAUDE DO SUL DE MINAS (71418784000110)",302.545,LF (R$),2022-12-30,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,"CC MED, TEC E DEMAIS PROF SAUDE DO SUL DE MINAS (71418784000110)",302.545,Total (R$),2022-12-30,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CC POUP E INV DO PLANALTO CENTRAL - SICREDI PLANALTO CENTRAL (10736214000184),306.500,LFS (R$),2019-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CC POUP E INV DO PLANALTO CENTRAL - SICREDI PLANALTO CENTRAL (10736214000184),306.500,Total (R$),2019-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CC POUP E INV ENCOSTA SUPERIOR DO NORDESTE RS (95213211000119),5.026.040,LFS (R$),2020-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CC POUP E INV ENCOSTA SUPERIOR DO NORDESTE RS (95213211000119),5.026.040,Total (R$),2020-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CC POUP E INV SUL MINAS DO RS E MG - SICREDI SUL MINAS RS/MG (87784088000168),6.369.362,LFS (R$),2020-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CC POUP E INV SUL MINAS DO RS E MG - SICREDI SUL MINAS RS/MG (87784088000168),6.369.362,Total (R$),2020-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CC POUP E INV UNIAO DE EST DO RS SC E MG SICREDI UNIESTADOS (87780268000171),15.032.973,LFS (R$),2020-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CC POUP E INV UNIAO DE EST DO RS SC E MG SICREDI UNIESTADOS (87780268000171),15.032.973,Total (R$),2020-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CC POUP E INV VALE DO PIQUIRI ABCD (81099491000171),30.304.647,LFS (R$),2020-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CC POUP E INV VALE DO PIQUIRI ABCD (81099491000171),30.304.647,Total (R$),2020-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,"CC POUP INV DA REG DAS FLORES, DAS ÁGUAS E DOS VENTOS SP (57647653000184)",3.506.017,LFS (R$),2020-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,"CC POUP INV DA REG DAS FLORES, DAS ÁGUAS E DOS VENTOS SP (57647653000184)",3.506.017,Total (R$),2020-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CC POUP INV PARANAPANEMA PR/SP (79086997000102),5.024.332,LFS (R$),2020-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CC POUP INV PARANAPANEMA PR/SP (79086997000102),5.024.332,Total (R$),2020-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CC PROF SAÚDE E LA DO SUL DE MINAS LTDA. (71418784000110),609.781,LF (R$),2023-12-29,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CC PROF SAÚDE E LA DO SUL DE MINAS LTDA. (71418784000110),609.781,Total (R$),2023-12-29,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CC REGIÃO MERIDIONAL BRASIL (05392810000154),5.099.355,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CC REGIÃO MERIDIONAL BRASIL (05392810000154),5.099.355,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CC SICOOB ALIANÇA (06174009000103),2.916.750,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CC SICOOB ALIANÇA (06174009000103),2.916.750,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CC SICOOB CREDICAPITAL (04529074000170),55.363,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CC SICOOB CREDICAPITAL (04529074000170),55.363,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CC SICOOB EXTREMO SUL LTDA. (02447120000167),2.496.958,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CC SICOOB EXTREMO SUL LTDA. (02447120000167),2.496.958,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CC UNICRED CENTRO-SUL LTDA - UNICRED CENTRO-SUL (00075847000135),49.269.146,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CC UNICRED CENTRO-SUL LTDA - UNICRED CENTRO-SUL (00075847000135),49.269.146,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CC UNICRED DESBRAVADORA LTDA - UNICRED DESBRAVADORA (01039011000148),12.350.811,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CC UNICRED DESBRAVADORA LTDA - UNICRED DESBRAVADORA (01039011000148),12.350.811,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CC UNICRED EVOLUÇÃO LTDA. (01727929000180),23.926.770,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CC UNICRED EVOLUÇÃO LTDA. (01727929000180),23.926.770,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CC UNICRED UNIÃO LTDA - UNICRED UNIÃO (74114042000190),305.398.786,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CC UNICRED UNIÃO LTDA - UNICRED UNIÃO (74114042000190),305.398.786,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CC UNICRED VALOR CAPITAL LTDA - UNICRED VALOR CAPITAL (74064502000112),88.920.367,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CC UNICRED VALOR CAPITAL LTDA - UNICRED VALOR CAPITAL (74064502000112),88.920.367,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CC UNICRED VALOR CAPITAL LTDA – UNICRED VALOR CAPITAL (74064502000112),3.006.952,LF (R$),2020-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CC UNICRED VALOR CAPITAL LTDA – UNICRED VALOR CAPITAL (74064502000112),3.006.952,Total (R$),2020-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CC UNIPRIME SUL MS (37554441000145),1.121.580,LF (R$),2021-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CC UNIPRIME SUL MS (37554441000145),1.121.580,Total (R$),2021-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CCB (07450604000189),105.594.288,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CCB (07450604000189),105.594.288,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CCLA CENTRO BRASILEIRA LTDA. (37395399000167),109.331,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CCLA CENTRO BRASILEIRA LTDA. (37395399000167),109.331,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CCLA CENTRO NORTE MT/MS (03326437000108),2.872.337,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CCLA CENTRO NORTE MT/MS (03326437000108),2.872.337,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CCLA DO ESTADO DE SÃO PAULO - SICOOB PAULISTA (10262276000100),526.569,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CCLA DO ESTADO DE SÃO PAULO - SICOOB PAULISTA (10262276000100),526.569,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CCLA DO PLANALTO CENTRAL (10736214000184),316.566,LFS (R$),2016-12-30,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CCLA DO PLANALTO CENTRAL (10736214000184),316.566,Total (R$),2016-12-30,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CCLA DO VALE (86829827000128),9.491.058,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CCLA DO VALE (86829827000128),9.491.058,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CCLA ITAPIRANGA (78483310000100),113.874,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CCLA ITAPIRANGA (78483310000100),113.874,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CCLA LAGOA DA PRATA (01739375000130),5.003.012,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CCLA LAGOA DA PRATA (01739375000130),5.003.012,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CCLA NORTE E NORDESTE DE SC (02843443000170),6.036.351,LFS (R$),2017-12-29,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CCLA NORTE E NORDESTE DE SC (02843443000170),6.036.351,Total (R$),2017-12-29,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CCLA PEDRO LEOPOLDO (71441406000158),50.230,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CCLA PEDRO LEOPOLDO (71441406000158),50.230,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CCLA SICOOB CREDIMEPI (01644264000140),3.112.138,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CCLA SICOOB CREDIMEPI (01644264000140),3.112.138,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CCLA SICOOB CREDMISSÃO LTDA. (01667352000168),53.480,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CCLA SICOOB CREDMISSÃO LTDA. (01667352000168),53.480,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CCLA SUL CATARINENSE (81367880000130),399.250,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CCLA SUL CATARINENSE (81367880000130),399.250,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CCLA SUL MINAS-SICOOB CREDIVAS (01604998000104),10.404.309,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CCLA SUL MINAS-SICOOB CREDIVAS (01604998000104),10.404.309,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CCLA VALE DO PARANAÍBA (24799033000101),56.450,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CCLA VALE DO PARANAÍBA (24799033000101),56.450,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CCLAA ITAIPU SICOOB CREDITAIPU (81014060000165),395.387,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CCLAA ITAIPU SICOOB CREDITAIPU (81014060000165),395.387,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CCLAA SAO MIGUEL DO OESTE (81607046000175),9.728.617,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CCLAA SAO MIGUEL DO OESTE (81607046000175),9.728.617,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CCM DOS ADVOGADOS DE SC (05861932000142),446.498,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CCM DOS ADVOGADOS DE SC (05861932000142),446.498,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CCM MED EMP MT (36900256000100),82.668.919,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CCM MED EMP MT (36900256000100),82.668.919,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CCM PROF SAUDE E LIVRE ADMISSÃO TEOFILO OTONI LTDA (01709266000170),1.097.621,LF (R$),2024-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CCM PROF SAUDE E LIVRE ADMISSÃO TEOFILO OTONI LTDA (01709266000170),1.097.621,Total (R$),2024-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CCPI DO NORTE E NORDESTE DE SANTA CATARINA -SICREDI NORTE SC (02843443000170),6.011.038,LFS (R$),2020-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CCPI DO NORTE E NORDESTE DE SANTA CATARINA -SICREDI NORTE SC (02843443000170),6.011.038,Total (R$),2020-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CCPI SUL DO EST DE SC - SICREDI SUL SC (03793242000178),3.511.767,LFS (R$),2020-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CCPI SUL DO EST DE SC - SICREDI SUL SC (03793242000178),3.511.767,Total (R$),2020-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CCPI SUL RIOGRANDENSE (92796564000109),11.538.242,LFS (R$),2020-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CCPI SUL RIOGRANDENSE (92796564000109),11.538.242,Total (R$),2020-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CCPS E LA DO TRIANG MINEIRO E SUL DE MG LTDA (71432926000102),68.169,LF (R$),2022-12-30,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CCPS E LA DO TRIANG MINEIRO E SUL DE MG LTDA (71432926000102),68.169,Total (R$),2022-12-30,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CECM COOPERFORTE (01658426000108),168.771.061,LF (R$),2024-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CECM COOPERFORTE (01658426000108),168.771.061,Total (R$),2024-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CECM DO VALE DAS ANTAS (94243839000102),3.034.619,LF (R$),2021-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CECM DO VALE DAS ANTAS (94243839000102),3.034.619,Total (R$),2021-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CECM DOS MÉDICOS DOS V TAQUARI E RIO PARDO E REG PRO (01635462000148),27.951.891,LF (R$),2024-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CECM DOS MÉDICOS DOS V TAQUARI E RIO PARDO E REG PRO (01635462000148),27.951.891,Total (R$),2024-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CECM MED VALES TAQUARI RP E PR (01635462000148),425.219,LF (R$),2021-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CECM MED VALES TAQUARI RP E PR (01635462000148),425.219,Total (R$),2021-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CECM MEDICOS E PROFISSIONAIS AREA SAUDE DO BRASIL (42898825000115),297.605,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CECM MEDICOS E PROFISSIONAIS AREA SAUDE DO BRASIL (42898825000115),297.605,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CECM MÉD DE PORTO ALEGRE (94433109000166),84.852.731,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CECM MÉD DE PORTO ALEGRE (94433109000166),84.852.731,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CECM MÉD JUIZ DE FORA (71479653000143),1.249.050,LF (R$),2021-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CECM MÉD JUIZ DE FORA (71479653000143),1.249.050,Total (R$),2021-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CECM SICOOB COOPERAC (08071414000113),703.516,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CECM SICOOB COOPERAC (08071414000113),703.516,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CECM UNICRED INTEGRAÇÃO (73750424000147),485.546,LF (R$),2022-12-30,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CECM UNICRED INTEGRAÇÃO (73750424000147),485.546,Total (R$),2022-12-30,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CEF (00360305000104),40.815.775.834,LF (R$),2015-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CEF (00360305000104),290.611.720,LFS (R$),2015-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CEF (00360305000104),41.106.387.553,Total (R$),2015-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CITIBANK (33479023000180),7.117.285.891,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CITIBANK (33479023000180),7.117.285.891,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CONF NAC COOP CENTRAIS UNICRED (00315557000111),9.795.193,LFS (R$),2021-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CONF NAC COOP CENTRAIS UNICRED (00315557000111),9.795.193,Total (R$),2021-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP ARACOOP LTDA. - SICOOB ARACOOP (03320525000100),579.035,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP ARACOOP LTDA. - SICOOB ARACOOP (03320525000100),579.035,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP COOPERFORTE LTDA. (01658426000108),102.632.059,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP COOPERFORTE LTDA. (01658426000108),102.632.059,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP JUST GOIAS E CELG (09552111000185),321.241,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP JUST GOIAS E CELG (09552111000185),321.241,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP POL FED - SICREDI POL (03000142000147),2.172.928,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP POL FED - SICREDI POL (03000142000147),2.172.928,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICOOB BRMIL LTDA. (04649337000185),118.364,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICOOB BRMIL LTDA. (04649337000185),118.364,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICOOB BURITIS (05247312000118),1.337.685,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICOOB BURITIS (05247312000118),1.337.685,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICOOB MANTIQUEIRA (71698674000150),57.759,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICOOB MANTIQUEIRA (71698674000150),57.759,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICOOB PRIMAVERA (05241619000101),3.762.616,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICOOB PRIMAVERA (05241619000101),3.762.616,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICOOB PRO (44469161000102),2.283.485,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICOOB PRO (44469161000102),2.283.485,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICOOB UNI SUL MS (37554441000145),2.378.372,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICOOB UNI SUL MS (37554441000145),2.378.372,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI AGROEMPRESARIAL (79457883000113),101.246.316,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI AGROEMPRESARIAL (79457883000113),101.246.316,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI ALIANÇA (79052122000181),166.103.666,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI ALIANÇA (79052122000181),166.103.666,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI ALIANÇA RS/SC (87795639000199),90.529.240,LFS (R$),2024-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI ALIANÇA RS/SC (87795639000199),90.529.240,Total (R$),2024-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI ALT SERRA RS/SC (92555150000180),68.857.843,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI ALT SERRA RS/SC (92555150000180),68.857.843,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI ALTA NOROESTE SP (04484490000108),7.463.510,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI ALTA NOROESTE SP (04484490000108),7.463.510,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI ARAXINGU (33021064000128),105.595.835,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI ARAXINGU (33021064000128),105.595.835,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI BANDEIRANTES (04853988000192),2.992.017,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI BANDEIRANTES (04853988000192),2.992.017,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI BIOMAS (33022690000139),67.573.199,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI BIOMAS (33022690000139),67.573.199,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI BOTUCARAÍ RS/MG (87900601000139),23.435.204,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI BOTUCARAÍ RS/MG (87900601000139),23.435.204,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI CAMINHO DAS ÁGUAS RS (95213211000119),50.759.763,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI CAMINHO DAS ÁGUAS RS (95213211000119),50.759.763,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI CAMPO GRANDE (03042597000125),42.857.902,LFS (R$),2024-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI CAMPO GRANDE (03042597000125),42.857.902,Total (R$),2024-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI CAMPO GRANDE MS/GO (03042597000125),50.795.154,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI CAMPO GRANDE MS/GO (03042597000125),50.795.154,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI CAMPOS GERAIS E GRANDE CURITIBA PR/SP (81466286000105),41.229.342,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI CAMPOS GERAIS E GRANDE CURITIBA PR/SP (81466286000105),41.229.342,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI CEN OEST PAULISTA (04463602000136),15.401.402,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI CEN OEST PAULISTA (04463602000136),15.401.402,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI CENTRO LESTE RS (88471024000170),21.215.997,LFS (R$),2023-12-29,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI CENTRO LESTE RS (88471024000170),21.215.997,Total (R$),2023-12-29,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI CERRADO GO (06332931000173),91.066.827,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI CERRADO GO (06332931000173),91.066.827,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI CONFIANÇA (89049738000157),10.270.959,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI CONFIANÇA (89049738000157),10.270.959,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI CULTURAS RS/MG (90729369000122),15.406.438,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI CULTURAS RS/MG (90729369000122),15.406.438,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI DEXIS (79342069000153),109.022.231,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI DEXIS (79342069000153),109.022.231,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI EMPREENDEDORES (07070495000174),1.484.327,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI EMPREENDEDORES (07070495000174),1.484.327,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI ESSÊNCIA (87733077000159),10.270.959,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI ESSÊNCIA (87733077000159),10.270.959,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI FORÇA DOS VENTOS (57647653000184),7.720.509,LFS (R$),2024-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI FORÇA DOS VENTOS (57647653000184),7.720.509,Total (R$),2024-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI FRONTEIR PR/SC/SP (82527557000140),80.267.736,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI FRONTEIR PR/SC/SP (82527557000140),80.267.736,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI GERAÇÕES RS/MG (88471024000170),23.095.269,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI GERAÇÕES RS/MG (88471024000170),23.095.269,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI GRANDES LAGOS (81115149000118),4.446.635,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI GRANDES LAGOS (81115149000118),4.446.635,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI GRANDES RIOS (37442605000142),91.427.279,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI GRANDES RIOS (37442605000142),91.427.279,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI IGUAÇU PR/SC E REGIÃO METROP. DE CAMPINAS/SP (84974278000150),54.145.706,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI IGUAÇU PR/SC E REGIÃO METROP. DE CAMPINAS/SP (84974278000150),54.145.706,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI IGUAÇU PR/SC/SP (84974278000150),43.464.657,LFS (R$),2023-12-29,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI IGUAÇU PR/SC/SP (84974278000150),43.464.657,Total (R$),2023-12-29,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI INT ROTA DAS TERRAS (87510475000106),22.685.831,LFS (R$),2022-12-30,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI INT ROTA DAS TERRAS (87510475000106),22.685.831,Total (R$),2022-12-30,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI INTEGRAÇÃO RS/SC (87781530000100),33.202.971,LFS (R$),2022-12-30,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI INTEGRAÇÃO RS/SC (87781530000100),33.202.971,Total (R$),2022-12-30,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI MORADA DO SOL SP (73113243000100),10.267.601,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI MORADA DO SOL SP (73113243000100),10.267.601,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI NORTE (83315408000180),9.131.905,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI NORTE (83315408000180),9.131.905,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI NORTE SC (02843443000170),6.078.351,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI NORTE SC (02843443000170),6.078.351,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI NORTE SUL (79063574000169),40.921.729,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI NORTE SUL (79063574000169),40.921.729,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI NOSSA TERRA PR/SP (81192106000136),35.111.996,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI NOSSA TERRA PR/SP (81192106000136),35.111.996,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI NOVOS HORIZONTES (07206072000139),21.673.965,LFS (R$),2023-12-29,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI NOVOS HORIZONTES (07206072000139),21.673.965,Total (R$),2023-12-29,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI NOVOS HORIZONTES PR/SP/RJ (07206072000139),41.934.691,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI NOVOS HORIZONTES PR/SP/RJ (07206072000139),41.934.691,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI ORIGENS RS (92796564000109),71.710.119,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI ORIGENS RS (92796564000109),71.710.119,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI OURO VERDE MT (26529420000153),34.768.461,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI OURO VERDE MT (26529420000153),34.768.461,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI PARANAPANEMA PRSP (79086997000102),18.302.710,LFS (R$),2022-12-30,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI PARANAPANEMA PRSP (79086997000102),18.302.710,Total (R$),2022-12-30,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI PARANAPANEMA SERRANA PR/SP/RJ (79086997000102),39.446.674,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI PARANAPANEMA SERRANA PR/SP/RJ (79086997000102),39.446.674,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI PLAN CENTRAL (10736214000184),51.116.992,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI PLAN CENTRAL (10736214000184),51.116.992,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI PLANALT DAS ÁGUAS (77984870000177),38.428.578,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI PLANALT DAS ÁGUAS (77984870000177),38.428.578,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI PROGRESSO PR/SP (76059997000117),37.112.343,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI PROGRESSO PR/SP (76059997000117),37.112.343,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI REG PROD RS/SC/MG (89468565000101),81.417.165,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI REG PROD RS/SC/MG (89468565000101),81.417.165,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI ROTA DAS TERRAS (87510475000106),50.133.501,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI ROTA DAS TERRAS (87510475000106),50.133.501,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI ROTA DAS TERRAS RS/MG (87510475000106),23.312.972,LFS (R$),2024-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI ROTA DAS TERRAS RS/MG (87510475000106),23.312.972,Total (R$),2024-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI SERRANA RS (90608712000180),69.377.398,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI SERRANA RS (90608712000180),69.377.398,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI SUDOESTE MT/PA (32995755000160),28.450.080,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI SUDOESTE MT/PA (32995755000160),28.450.080,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI SUL MINAS RS/MG (87784088000168),50.801.723,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI SUL MINAS RS/MG (87784088000168),50.801.723,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI SUL SC (03793242000178),15.420.764,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI SUL SC (03793242000178),15.420.764,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI UNIESTADOS (87780268000171),84.291.006,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI UNIESTADOS (87780268000171),84.291.006,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI UNIVALES MT/RO (70431630000104),67.139.000,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI UNIVALES MT/RO (70431630000104),67.139.000,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI UNIÃO METROLITANA (92796564000109),24.229.209,LFS (R$),2022-12-30,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI UNIÃO METROLITANA (92796564000109),24.229.209,Total (R$),2022-12-30,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI UNIÃO METROPOLITANA (92796564000109),34.648.560,LFS (R$),2023-12-29,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI UNIÃO METROPOLITANA (92796564000109),34.648.560,Total (R$),2023-12-29,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI UNIÃO MS/TO (24654881000122),41.877.428,LFS (R$),2024-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI UNIÃO MS/TO (24654881000122),41.877.428,Total (R$),2024-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI UNIÃO MS/TO E OESTE DA BA (24654881000122),42.402.363,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI UNIÃO MS/TO E OESTE DA BA (24654881000122),42.402.363,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI VALE DO PIQUIRI (81099491000171),152.051.854,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI VALE DO PIQUIRI (81099491000171),152.051.854,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI VANGUARDA (78414067000160),118.138.238,LFS (R$),2022-12-30,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI VANGUARDA (78414067000160),118.138.238,Total (R$),2022-12-30,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI VANGUARDA PR/SP/RJ (78414067000160),157.965.925,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI VANGUARDA PR/SP/RJ (78414067000160),157.965.925,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI VL DO CERRADO (32983165000117),107.382.455,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI VL DO CERRADO (32983165000117),107.382.455,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI VLR SUSTENT PR/SP (81706616000184),19.107.203,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP SICREDI VLR SUSTENT PR/SP (81706616000184),19.107.203,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP UNICRED VALE LTDA. (73443863000107),2.063.983,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP UNICRED VALE LTDA. (73443863000107),2.063.983,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP UNIPRIME SUL (01572667000121),771.460,LF (R$),2024-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP UNIPRIME SUL (01572667000121),771.460,Total (R$),2024-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP UNIPRIME SUL LTDA. (01572667000121),8.981.590,LF (R$),2023-12-29,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP UNIPRIME SUL LTDA. (01572667000121),8.981.590,Total (R$),2023-12-29,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP UNIQUE BR LTDA. (73647935000138),312.547,LF (R$),2024-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP UNIQUE BR LTDA. (73647935000138),312.547,Total (R$),2024-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP VIACREDI (82639451000138),12.023.539,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOP VIACREDI (82639451000138),12.023.539,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOPERATIVA DE CRÉDITO CREDIJEQUITINHONHA LTDA. (71243034000155),443.733,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,COOPERATIVA DE CRÉDITO CREDIJEQUITINHONHA LTDA. (71243034000155),443.733,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,"COOPERATIVA DE CRÉDITO, POUPANÇA E INVESTIMENTO NOROESTE RS/ (89049738000157)",10.206.251,LFS (R$),2024-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,"COOPERATIVA DE CRÉDITO, POUPANÇA E INVESTIMENTO NOROESTE RS/ (89049738000157)",10.206.251,Total (R$),2024-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CREDIT AGRICOLE (75647891000171),3.520.601,LF (R$),2021-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CREDIT AGRICOLE (75647891000171),3.520.601,Total (R$),2021-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CREDIT SUISSE (33987793000133),131.695.331,LF (R$),2021-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CREDIT SUISSE (33987793000133),131.695.331,Total (R$),2021-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CRUZEIRO DO SUL (62136254000199),31.993.098,LF (R$),2011-12-30,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CRUZEIRO DO SUL (62136254000199),"0,000000",LFS (R$),2011-12-30,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,CRUZEIRO DO SUL (62136254000199),31.993.098,Total (R$),2011-12-30,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,DAYCOVAL (62232889000190),25.210.784.457,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,DAYCOVAL (62232889000190),2.769.232.101,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,DAYCOVAL (62232889000190),27.980.016.558,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,DEUTSCHE (62331228000111),225.329.156,LF (R$),2016-12-30,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,DEUTSCHE (62331228000111),225.329.156,Total (R$),2016-12-30,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,DEUTSCHE BANK S.A.BCO ALEMAO (62331228000111),556.169.099,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,DEUTSCHE BANK S.A.BCO ALEMAO (62331228000111),556.169.099,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,FACTA S.A. CFI (15581638000130),250.796.439,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,FACTA S.A. CFI (15581638000130),250.796.439,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,FIBRA (58616418000108),1.327.125.405,LF (R$),2013-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,FIBRA (58616418000108),1.327.125.405,Total (R$),2013-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,FINAXIS (11758741000152),21.485.597,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,FINAXIS (11758741000152),21.485.597,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,GENIAL (45246410000155),70.000.000,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,GENIAL (45246410000155),70.000.000,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,GRUPO BONSUCESSO - BS2 (71027866000134),219.052.423,LFS (R$),2022-12-30,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,GRUPO BONSUCESSO - BS2 (71027866000134),219.052.423,Total (R$),2022-12-30,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,HAITONG (34111187000112),743.599.513,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,HAITONG (34111187000112),743.599.513,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,HONDA (03634220000165),2.681.546.206,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,HONDA (03634220000165),2.681.546.206,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,HSBC (01701201000189),34.158.156.558,LF (R$),2015-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,HSBC (01701201000189),"0,000000",LFS (R$),2015-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,HSBC (01701201000189),34.158.156.558,Total (R$),2015-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,HSBC BANCO DE INVESTIMENTO (53518684000184),107.390.164,LF (R$),2019-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,HSBC BANCO DE INVESTIMENTO (53518684000184),107.390.164,Total (R$),2019-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,ICBC DO BRASIL BM S.A. (17453575000162),40.000.000,LF (R$),2020-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,ICBC DO BRASIL BM S.A. (17453575000162),40.000.000,Total (R$),2020-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,INDUSTRIAL DO BRASIL (31895683000116),1.626.723.954,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,INDUSTRIAL DO BRASIL (31895683000116),294.913.671,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,INDUSTRIAL DO BRASIL (31895683000116),1.921.637.625,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,INDUSVAL (61024352000171),18.900.002,LF (R$),2020-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,INDUSVAL (61024352000171),18.900.002,Total (R$),2020-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,INTER (00416968000101),237.422.643,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,INTER (00416968000101),1.058.797.546,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,INTER (00416968000101),1.296.220.189,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,INTERCAP (58497702000102),26.600.250,LF (R$),2012-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,INTERCAP (58497702000102),"0,000000",LFS (R$),2012-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,INTERCAP (58497702000102),26.600.250,Total (R$),2012-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,INTERMEDIUM (00416968000101),12.393.223,LF (R$),2018-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,INTERMEDIUM (00416968000101),12.393.223,Total (R$),2018-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,ITAU (60872504000123),61.299.388.904,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,ITAU (60872504000123),63.492.195.741,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,ITAU (60872504000123),124.791.584.645,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,J.MALUCELLI (14388334000199),1.558.996.168,LF (R$),2014-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,J.MALUCELLI (14388334000199),1.558.996.168,Total (R$),2014-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,JOHN DEERE (91884981000132),303.763.375,LF (R$),2019-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,JOHN DEERE (91884981000132),303.763.375,Total (R$),2019-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,MASTER (33923798000100),1.722.069.431,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,MASTER (33923798000100),23.743.258,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,MASTER (33923798000100),1.745.812.689,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,MERCADO CRÉDITO SCFI S.A. (37679449000138),4.534.709.475,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,MERCADO CRÉDITO SCFI S.A. (37679449000138),358.569.923,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,MERCADO CRÉDITO SCFI S.A. (37679449000138),4.893.279.397,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,MERCANTIL DO BRASIL (17184037000110),5.597.494.088,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,MERCANTIL DO BRASIL (17184037000110),954.407.805,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,MERCANTIL DO BRASIL (17184037000110),6.551.901.893,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,MERCEDES-BENZ (60814191000157),4.793.422.916,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,MERCEDES-BENZ (60814191000157),4.793.422.916,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,MIDWAY S.A. - SCFI (09464032000112),203.134.206,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,MIDWAY S.A. - SCFI (09464032000112),203.134.206,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,MIZUHO (61088183000133),3.674.283,LF (R$),2020-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,MIZUHO (61088183000133),3.674.283,Total (R$),2020-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,MODAL (30723886000162),449.476.802,LF (R$),2022-12-30,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,MODAL (30723886000162),449.476.802,Total (R$),2022-12-30,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,MORGAN STANLEY (02801938000136),1.081.461.849,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,MORGAN STANLEY (02801938000136),1.081.461.849,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,MÁXIMA (33923798000100),129.700.000,LF (R$),2020-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,MÁXIMA (33923798000100),52.658.856,LFS (R$),2020-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,MÁXIMA (33923798000100),182.358.856,Total (R$),2020-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,NOVO BCO CONTINENTAL S.A. - BM (74828799000145),641.528.643,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,NOVO BCO CONTINENTAL S.A. - BM (74828799000145),62.202.391,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,NOVO BCO CONTINENTAL S.A. - BM (74828799000145),703.731.034,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,NU FINANCEIRA S.A. CFI (30680829000143),312.594.203,LF (R$),2020-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,NU FINANCEIRA S.A. CFI (30680829000143),90.411.445,LFS (R$),2020-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,NU FINANCEIRA S.A. CFI (30680829000143),403.005.648,Total (R$),2020-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,NUBANK (18236120000158),13.912.755.682,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,NUBANK (18236120000158),6.781.941.324,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,NUBANK (18236120000158),20.694.697.006,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,OMNI (92228410000102),529.814.942,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,OMNI (92228410000102),168.536.899,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,OMNI (92228410000102),698.351.840,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,ORIGINAL (92894922000108),237.710.217,LF (R$),2023-12-29,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,ORIGINAL (92894922000108),940.914.924,LFS (R$),2023-12-29,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,ORIGINAL (92894922000108),1.178.625.141,Total (R$),2023-12-29,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,OURIBANK S.A. (78632767000120),17.043.990,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,OURIBANK S.A. (78632767000120),17.043.990,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,OURINVEST (78632767000120),12.307.149,LFS (R$),2019-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,OURINVEST (78632767000120),12.307.149,Total (R$),2019-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,PAGBANK-PAGSEGURO (08561701000101),7.398.987.371,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,PAGBANK-PAGSEGURO (08561701000101),390.908.925,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,PAGBANK-PAGSEGURO (08561701000101),7.789.896.295,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,PAN (59285411000113),5.002.128.457,LF (R$),2020-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,PAN (59285411000113),8.785.194,LFS (R$),2020-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,PAN (59285411000113),5.010.913.651,Total (R$),2020-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,PANAMERICANO (59285411000113),2.005.944.665,LF (R$),2014-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,PANAMERICANO (59285411000113),131.390.032,LFS (R$),2014-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,PANAMERICANO (59285411000113),2.137.334.697,Total (R$),2014-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,PARANÁ BANCO (14388334000199),5.388.854.100,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,PARANÁ BANCO (14388334000199),258.066.977,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,PARANÁ BANCO (14388334000199),5.646.921.077,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,PARANÁ BCO (14388334000199),1.561.120.727,LF (R$),2015-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,PARANÁ BCO (14388334000199),"0,000000",LFS (R$),2015-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,PARANÁ BCO (14388334000199),1.561.120.727,Total (R$),2015-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,PICPAY - FINANCEIRO (22896431000110),244.287.500,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,PICPAY - FINANCEIRO (22896431000110),511.750.893,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,PICPAY - FINANCEIRO (22896431000110),756.038.393,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,PINE (62144175000120),2.561.731.982,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,PINE (62144175000120),805.568.117,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,PINE (62144175000120),3.367.300.099,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,PLENO (61024352000171),787.392.983,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,PLENO (61024352000171),787.392.983,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,PORTO SEGURO (04862600000110),3.951.535.193,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,PORTO SEGURO (04862600000110),1.373.809.582,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,PORTO SEGURO (04862600000110),5.325.344.775,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,PORTOCRED - CFI (01800019000185),"0,000000",LF (R$),2015-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,PORTOCRED - CFI (01800019000185),9.766.503,LFS (R$),2015-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,PORTOCRED - CFI (01800019000185),9.766.503,Total (R$),2015-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,PORTOCRED S.A. - CFI (01800019000185),31.011.482,LFS (R$),2022-12-30,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,PORTOCRED S.A. - CFI (01800019000185),31.011.482,Total (R$),2022-12-30,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,PSA FINANCE (03502961000192),117.650.006,LF (R$),2015-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,PSA FINANCE (03502961000192),"0,000000",LFS (R$),2015-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,PSA FINANCE (03502961000192),117.650.006,Total (R$),2015-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,QISTA S.A. CFI (36583700000101),221.629.343,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,QISTA S.A. CFI (36583700000101),221.629.343,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,REALIZE CFI S.A. (27351731000138),329.756.440,LF (R$),2021-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,REALIZE CFI S.A. (27351731000138),329.756.440,Total (R$),2021-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,RENDIMENTO (68900810000138),1.220.342,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,RENDIMENTO (68900810000138),1.220.342,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,RODOBENS (33603457000140),425.608.336,LF (R$),2014-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,RODOBENS (33603457000140),425.608.336,Total (R$),2014-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,RURAL (33124959000198),12.377.558,LF (R$),2012-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,RURAL (33124959000198),214.847.974,LFS (R$),2012-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,RURAL (33124959000198),227.225.532,Total (R$),2012-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,SAFRA (58160789000128),47.909.034.343,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,SAFRA (58160789000128),11.841.059.622,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,SAFRA (58160789000128),59.750.093.966,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,SANTANDER (90400888000142),45.507.203.961,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,SANTANDER (90400888000142),28.341.598.451,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,SANTANDER (90400888000142),73.848.802.412,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,SAX S.A. CFI (07747410000140),28.757.630,LF (R$),2019-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,SAX S.A. CFI (07747410000140),28.757.630,Total (R$),2019-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,SCANIA BCO (11417016000110),"0,000000",LF (R$),2015-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,SCANIA BCO (11417016000110),81.346.137,LFS (R$),2015-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,SCANIA BCO (11417016000110),81.346.137,Total (R$),2015-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,SCANIA BCO S.A. (11417016000110),3.611.323.499,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,SCANIA BCO S.A. (11417016000110),3.611.323.499,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,SCOTIABANK (29030467000166),968.531.297,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,SCOTIABANK (29030467000166),968.531.297,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,SCOTIABANK BRASIL (29030467000166),926.767,LF (R$),2018-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,SCOTIABANK BRASIL (29030467000166),926.767,Total (R$),2018-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,SICOOB AMAZÔNIA (05203605000101),587.776,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,SICOOB AMAZÔNIA (05203605000101),587.776,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,SICOOB CONEXÃO (32430233000110),47.189.793,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,SICOOB CONEXÃO (32430233000110),47.189.793,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,SICOOB COOPERMAIS (31804966000105),14.703.391,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,SICOOB COOPERMAIS (31804966000105),14.703.391,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,SICOOB CREDIROCHAS (03358914000117),83.190.775,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,SICOOB CREDIROCHAS (03358914000117),83.190.775,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,SICOOB DFMIL (04649337000185),103.533,LF (R$),2024-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,SICOOB DFMIL (04649337000185),103.533,Total (R$),2024-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,SICOOB FLUMINENSE (02931668000188),107.764,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,SICOOB FLUMINENSE (02931668000188),107.764,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,SICOOB POTIGUAR (02382755000123),357.506,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,SICOOB POTIGUAR (02382755000123),357.506,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,SICOOB SUL (32467086000153),88.467.270,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,SICOOB SUL (32467086000153),88.467.270,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,SICOOB SUL-LITORÂNEO (32474884000102),12.735.132,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,SICOOB SUL-LITORÂNEO (32474884000102),12.735.132,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,SICOOB SUL-SERRANO (00815319000175),31.845.903,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,SICOOB SUL-SERRANO (00815319000175),31.845.903,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,SICOOB UFVCREDI (02794761000198),628.224,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,SICOOB UFVCREDI (02794761000198),628.224,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,SICOOB UNIMAIS CENTRO LESTE PAULISTA (01259518000107),5.250.874,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,SICOOB UNIMAIS CENTRO LESTE PAULISTA (01259518000107),5.250.874,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,SICREDI CAMPOS GERAIS E GRANDE CURITIBA PR/SP (81466286000105),33.251.310,LFS (R$),2024-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,SICREDI CAMPOS GERAIS E GRANDE CURITIBA PR/SP (81466286000105),33.251.310,Total (R$),2024-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,SICREDI INTEGRAÇÃO DE ESTADOS RS/SC/MG (87781530000100),33.587.672,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,SICREDI INTEGRAÇÃO DE ESTADOS RS/SC/MG (87781530000100),33.587.672,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,SIMPALA S.A. CFI (34991938000132),35.264.738,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,SIMPALA S.A. CFI (34991938000132),35.264.738,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,SINOSSERRA S/A - SCFI (22639377000128),8.854.976,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,SINOSSERRA S/A - SCFI (22639377000128),8.854.976,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,SISPRIME DO BRASIL - COOP (02398976000190),5.411.406,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,SISPRIME DO BRASIL - COOP (02398976000190),5.411.406,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,SOC CC SICOOB COOPERE (73398646000142),2.898.454,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,SOC CC SICOOB COOPERE (73398646000142),2.898.454,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,SOCIETE GENERALE (61533584000155),106.073.966,LF (R$),2013-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,SOCIETE GENERALE (61533584000155),106.073.966,Total (R$),2013-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,SOCOPA (61820817000109),1.077.387,LF (R$),2019-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,SOCOPA (61820817000109),31.068.916,LFS (R$),2019-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,SOCOPA (61820817000109),32.146.303,Total (R$),2019-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,SOFISA (60889128000180),569.756.144,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,SOFISA (60889128000180),347.078.340,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,SOFISA (60889128000180),916.834.484,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,SOROCRED CFI S.A. (04814563000174),4.363.542,LFS (R$),2020-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,SOROCRED CFI S.A. (04814563000174),4.363.542,Total (R$),2020-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,STELLANTIS (03502961000192),6.795.087.639,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,STELLANTIS (03502961000192),6.795.087.639,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,STONE CFI S.A. (53505601000112),5.424.229.823,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,STONE CFI S.A. (53505601000112),492.578.824,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,STONE CFI S.A. (53505601000112),5.916.808.648,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,TOYOTA (03215790000110),373.348.887,LF (R$),2012-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,TOYOTA (03215790000110),42.561.881,LFS (R$),2012-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,TOYOTA (03215790000110),415.910.768,Total (R$),2012-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,UNICRED (00315557000111),9.115.640,LFS (R$),2019-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,UNICRED (00315557000111),9.115.640,Total (R$),2019-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,UNICRED AMPLA (71163315000106),2.539.919,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,UNICRED AMPLA (71163315000106),2.539.919,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,UNICRED CAMINHO NOVO (71479653000143),5.686.383,LF (R$),2022-12-30,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,UNICRED CAMINHO NOVO (71479653000143),5.686.383,Total (R$),2022-12-30,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,UNICRED COALIZÃO (04445917000150),2.417.054,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,UNICRED COALIZÃO (04445917000150),2.417.054,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,UNICRED ELEVA (95163002000108),88.082.927,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,UNICRED ELEVA (95163002000108),88.082.927,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,UNICRED ERECHIM (01572667000121),21.756.981,LF (R$),2022-12-30,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,UNICRED ERECHIM (01572667000121),21.756.981,Total (R$),2022-12-30,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,UNICRED HORIZONTES (01526924000199),354.724,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,UNICRED HORIZONTES (01526924000199),354.724,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,UNICRED PIONEIRA (94243839000102),24.679.170,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,UNICRED PIONEIRA (94243839000102),24.679.170,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,UNICRED PONTO CAPITAL (02641032000100),68.547.555,LF (R$),2024-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,UNICRED PONTO CAPITAL (02641032000100),68.547.555,Total (R$),2024-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,UNICRED PREMIUM CAPITAL (01635462000148),108.175.057,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,UNICRED PREMIUM CAPITAL (01635462000148),108.175.057,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,UNICRED PROSPERAR (01705236000196),43.871.602,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,UNICRED PROSPERAR (01705236000196),43.871.602,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,UNICRED REGIÃO DOS VALES (01796302000180),33.140.245,LF (R$),2023-12-29,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,UNICRED REGIÃO DOS VALES (01796302000180),33.140.245,Total (R$),2023-12-29,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,UNICRED SERRA MAR LTDA. (86803939000100),4.322.168,LF (R$),2022-12-30,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,UNICRED SERRA MAR LTDA. (86803939000100),4.322.168,Total (R$),2022-12-30,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,UNICRED SUL DE MINAS (71418784000110),1.511.927,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,UNICRED SUL DE MINAS (71418784000110),1.511.927,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,UNIPRIME ALLIANCE - CECM (01736243000155),11.905.813,LF (R$),2020-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,UNIPRIME ALLIANCE - CECM (01736243000155),11.905.813,Total (R$),2020-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,UNIPRIME CENTRO-OESTE DO BRASIL CC (73647935000138),6.540.079,LF (R$),2021-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,UNIPRIME CENTRO-OESTE DO BRASIL CC (73647935000138),6.540.079,Total (R$),2021-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,UNIPRIME DO BRASIL - CC LTDA. (02398976000190),353.770,LF (R$),2021-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,UNIPRIME DO BRASIL - CC LTDA. (02398976000190),353.770,Total (R$),2021-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,UNIPRIME DO BRASIL - COOP (02398976000190),2.150.460,LF (R$),2022-12-30,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,UNIPRIME DO BRASIL - COOP (02398976000190),2.150.460,Total (R$),2022-12-30,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,UNIPRIME DO IGUAÇU - CC POUP INV (01848322000158),355.413,LF (R$),2023-12-29,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,UNIPRIME DO IGUAÇU - CC POUP INV (01848322000158),355.413,Total (R$),2023-12-29,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,UNIPRIME DO IGUAÇU CECM PROF SAÚDE CIÊNCIAS ARTES EMP (01848322000158),8.472.998,LF (R$),2020-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,UNIPRIME DO IGUAÇU CECM PROF SAÚDE CIÊNCIAS ARTES EMP (01848322000158),8.472.998,Total (R$),2020-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,UNIPRIME NORTE DO PARANÁ - CC (02398976000190),257.564,LF (R$),2020-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,UNIPRIME NORTE DO PARANÁ - CC (02398976000190),257.564,Total (R$),2020-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,UNIPRIME PIONEIRA CC (01286361000109),3.088.380,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,UNIPRIME PIONEIRA CC (01286361000109),3.088.380,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,VIA CERTA FINANCIADORA S.A. - CFI (05192316000146),16.363.058,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,VIA CERTA FINANCIADORA S.A. - CFI (05192316000146),16.363.058,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,VOTORANTIM (59588111000103),42.559.344.234,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,VOTORANTIM (59588111000103),4.233.514.853,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,VOTORANTIM (59588111000103),46.792.859.087,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,WILL FINANCEIRA S.A.CFI (23862762000100),18.510.454,LFS (R$),2023-12-29,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,WILL FINANCEIRA S.A.CFI (23862762000100),18.510.454,Total (R$),2023-12-29,2026-11-07,estoque_total
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,XP (33264668000103),12.247.589.004,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,XP (33264668000103),3.694.503.294,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_emissor.csv.gz,BCB LF — Estoque por Emissor,BCB,Letras Financeiras,indicador,XP (33264668000103),15.942.092.298,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_indexador.csv.gz,BCB LF — Estoque por Indexador,BCB,Letras Financeiras,indicador,DI,864.168.557.823,Estoque (R$),2025-12-31,2026-11-07,valor
+bacen_lf_estoque_indexador.csv.gz,BCB LF — Estoque por Indexador,BCB,Letras Financeiras,indicador,DI,"89,17%",Participação,2025-12-31,2026-11-07,participacao_perc
+bacen_lf_estoque_indexador.csv.gz,BCB LF — Estoque por Indexador,BCB,Letras Financeiras,indicador,IGP,443.581.513,Estoque (R$),2020-12-31,2026-11-07,valor
+bacen_lf_estoque_indexador.csv.gz,BCB LF — Estoque por Indexador,BCB,Letras Financeiras,indicador,IGP,"0,11%",Participação,2020-12-31,2026-11-07,participacao_perc
+bacen_lf_estoque_indexador.csv.gz,BCB LF — Estoque por Indexador,BCB,Letras Financeiras,indicador,IGP-M,712.040.058,Estoque (R$),2025-12-31,2026-11-07,valor
+bacen_lf_estoque_indexador.csv.gz,BCB LF — Estoque por Indexador,BCB,Letras Financeiras,indicador,IGP-M,"0,07%",Participação,2025-12-31,2026-11-07,participacao_perc
+bacen_lf_estoque_indexador.csv.gz,BCB LF — Estoque por Indexador,BCB,Letras Financeiras,indicador,INPC,168.754.880,Estoque (R$),2025-12-31,2026-11-07,valor
+bacen_lf_estoque_indexador.csv.gz,BCB LF — Estoque por Indexador,BCB,Letras Financeiras,indicador,INPC,"0,02%",Participação,2025-12-31,2026-11-07,participacao_perc
+bacen_lf_estoque_indexador.csv.gz,BCB LF — Estoque por Indexador,BCB,Letras Financeiras,indicador,IPC,22.136.781.246,Estoque (R$),2020-12-31,2026-11-07,valor
+bacen_lf_estoque_indexador.csv.gz,BCB LF — Estoque por Indexador,BCB,Letras Financeiras,indicador,IPC,"5,29%",Participação,2020-12-31,2026-11-07,participacao_perc
+bacen_lf_estoque_indexador.csv.gz,BCB LF — Estoque por Indexador,BCB,Letras Financeiras,indicador,IPCA,49.112.069.720,Estoque (R$),2025-12-31,2026-11-07,valor
+bacen_lf_estoque_indexador.csv.gz,BCB LF — Estoque por Indexador,BCB,Letras Financeiras,indicador,IPCA,"5,07%",Participação,2025-12-31,2026-11-07,participacao_perc
+bacen_lf_estoque_indexador.csv.gz,BCB LF — Estoque por Indexador,BCB,Letras Financeiras,indicador,PRE,45.290.380.062,Estoque (R$),2025-12-31,2026-11-07,valor
+bacen_lf_estoque_indexador.csv.gz,BCB LF — Estoque por Indexador,BCB,Letras Financeiras,indicador,PRE,"4,67%",Participação,2025-12-31,2026-11-07,participacao_perc
+bacen_lf_estoque_indexador.csv.gz,BCB LF — Estoque por Indexador,BCB,Letras Financeiras,indicador,SELIC,5.941.685.900,Estoque (R$),2025-12-31,2026-11-07,valor
+bacen_lf_estoque_indexador.csv.gz,BCB LF — Estoque por Indexador,BCB,Letras Financeiras,indicador,SELIC,"0,61%",Participação,2025-12-31,2026-11-07,participacao_perc
+bacen_lf_estoque_indexador.csv.gz,BCB LF — Estoque por Indexador,BCB,Letras Financeiras,indicador,VCP,3.724.629.600,Estoque (R$),2025-12-31,2026-11-07,valor
+bacen_lf_estoque_indexador.csv.gz,BCB LF — Estoque por Indexador,BCB,Letras Financeiras,indicador,VCP,"0,38%",Participação,2025-12-31,2026-11-07,participacao_perc
+bacen_lf_estoque_natureza_detentor.csv.gz,BCB LF — Estoque por Detentor,BCB,Letras Financeiras,indicador,Banco Central do Brasil,16.769.099.951,LF (R$),2021-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_natureza_detentor.csv.gz,BCB LF — Estoque por Detentor,BCB,Letras Financeiras,indicador,Banco Central do Brasil,16.769.099.951,Total (R$),2021-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_natureza_detentor.csv.gz,BCB LF — Estoque por Detentor,BCB,Letras Financeiras,indicador,Banco Central do Brasil,"3,93%",Participação,2021-12-31,2026-11-07,participacao_perc
+bacen_lf_estoque_natureza_detentor.csv.gz,BCB LF — Estoque por Detentor,BCB,Letras Financeiras,indicador,Bancos,17.106.508.969,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_natureza_detentor.csv.gz,BCB LF — Estoque por Detentor,BCB,Letras Financeiras,indicador,Bancos,28.404.136.941,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_natureza_detentor.csv.gz,BCB LF — Estoque por Detentor,BCB,Letras Financeiras,indicador,Bancos,45.510.645.910,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_natureza_detentor.csv.gz,BCB LF — Estoque por Detentor,BCB,Letras Financeiras,indicador,Bancos,"4,70%",Participação,2025-12-31,2026-11-07,participacao_perc
+bacen_lf_estoque_natureza_detentor.csv.gz,BCB LF — Estoque por Detentor,BCB,Letras Financeiras,indicador,Clientes (pessoas físicas e jurídicas),121.102.411.432,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_natureza_detentor.csv.gz,BCB LF — Estoque por Detentor,BCB,Letras Financeiras,indicador,Clientes (pessoas físicas e jurídicas),44.152.140.056,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_natureza_detentor.csv.gz,BCB LF — Estoque por Detentor,BCB,Letras Financeiras,indicador,Clientes (pessoas físicas e jurídicas),165.254.551.488,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_natureza_detentor.csv.gz,BCB LF — Estoque por Detentor,BCB,Letras Financeiras,indicador,Clientes (pessoas físicas e jurídicas),"17,05%",Participação,2025-12-31,2026-11-07,participacao_perc
+bacen_lf_estoque_natureza_detentor.csv.gz,BCB LF — Estoque por Detentor,BCB,Letras Financeiras,indicador,Fundo garantidor de créditos,5.741.294.032,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_natureza_detentor.csv.gz,BCB LF — Estoque por Detentor,BCB,Letras Financeiras,indicador,Fundo garantidor de créditos,5.741.294.032,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_natureza_detentor.csv.gz,BCB LF — Estoque por Detentor,BCB,Letras Financeiras,indicador,Fundo garantidor de créditos,"0,59%",Participação,2025-12-31,2026-11-07,participacao_perc
+bacen_lf_estoque_natureza_detentor.csv.gz,BCB LF — Estoque por Detentor,BCB,Letras Financeiras,indicador,Fundos de investimento,523.367.383.776,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_natureza_detentor.csv.gz,BCB LF — Estoque por Detentor,BCB,Letras Financeiras,indicador,Fundos de investimento,186.385.024.810,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_natureza_detentor.csv.gz,BCB LF — Estoque por Detentor,BCB,Letras Financeiras,indicador,Fundos de investimento,709.752.408.586,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_natureza_detentor.csv.gz,BCB LF — Estoque por Detentor,BCB,Letras Financeiras,indicador,Fundos de investimento,"73,24%",Participação,2025-12-31,2026-11-07,participacao_perc
+bacen_lf_estoque_natureza_detentor.csv.gz,BCB LF — Estoque por Detentor,BCB,Letras Financeiras,indicador,Inst. financeiras não bancárias,6.500.269.948,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_natureza_detentor.csv.gz,BCB LF — Estoque por Detentor,BCB,Letras Financeiras,indicador,Inst. financeiras não bancárias,3.531.724.718,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_natureza_detentor.csv.gz,BCB LF — Estoque por Detentor,BCB,Letras Financeiras,indicador,Inst. financeiras não bancárias,10.031.994.666,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_natureza_detentor.csv.gz,BCB LF — Estoque por Detentor,BCB,Letras Financeiras,indicador,Inst. financeiras não bancárias,"1,04%",Participação,2025-12-31,2026-11-07,participacao_perc
+bacen_lf_estoque_natureza_detentor.csv.gz,BCB LF — Estoque por Detentor,BCB,Letras Financeiras,indicador,Investidores não residentes,73.937.232,LF (R$),2015-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_natureza_detentor.csv.gz,BCB LF — Estoque por Detentor,BCB,Letras Financeiras,indicador,Investidores não residentes,"0,000000",LFS (R$),2015-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_natureza_detentor.csv.gz,BCB LF — Estoque por Detentor,BCB,Letras Financeiras,indicador,Investidores não residentes,73.937.232,Total (R$),2015-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_natureza_detentor.csv.gz,BCB LF — Estoque por Detentor,BCB,Letras Financeiras,indicador,Investidores não residentes,"0,02%",Participação,2015-12-31,2026-11-07,participacao_perc
+bacen_lf_estoque_natureza_detentor.csv.gz,BCB LF — Estoque por Detentor,BCB,Letras Financeiras,indicador,Outras pessoas jurídicas,4.117.795.142,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_natureza_detentor.csv.gz,BCB LF — Estoque por Detentor,BCB,Letras Financeiras,indicador,Outras pessoas jurídicas,65.759.307,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_natureza_detentor.csv.gz,BCB LF — Estoque por Detentor,BCB,Letras Financeiras,indicador,Outras pessoas jurídicas,4.183.554.449,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_natureza_detentor.csv.gz,BCB LF — Estoque por Detentor,BCB,Letras Financeiras,indicador,Outras pessoas jurídicas,"0,43%",Participação,2025-12-31,2026-11-07,participacao_perc
+bacen_lf_estoque_natureza_detentor.csv.gz,BCB LF — Estoque por Detentor,BCB,Letras Financeiras,indicador,Outros investidores institucionais,15.470.126.557,LF (R$),2025-12-31,2026-11-07,estoque_lf
+bacen_lf_estoque_natureza_detentor.csv.gz,BCB LF — Estoque por Detentor,BCB,Letras Financeiras,indicador,Outros investidores institucionais,13.173.542.355,LFS (R$),2025-12-31,2026-11-07,estoque_lfs
+bacen_lf_estoque_natureza_detentor.csv.gz,BCB LF — Estoque por Detentor,BCB,Letras Financeiras,indicador,Outros investidores institucionais,28.643.668.913,Total (R$),2025-12-31,2026-11-07,estoque_total
+bacen_lf_estoque_natureza_detentor.csv.gz,BCB LF — Estoque por Detentor,BCB,Letras Financeiras,indicador,Outros investidores institucionais,"2,96%",Participação,2025-12-31,2026-11-07,participacao_perc
+bacen_lf_estoque_segmento.csv.gz,BCB LF — Estoque Segmento,BCB,Letras Financeiras,indicador,LF — Estoque por Segmento (R$),647.199.715.576,Bancos Múltiplos,2025-12-01,2026-11-07,bancos_multiplos
+bacen_lf_estoque_segmento.csv.gz,BCB LF — Estoque Segmento,BCB,Letras Financeiras,indicador,LF — Estoque por Segmento (R$),6.019.158.017,Bancos Comerciais,2025-12-01,2026-11-07,bancos_comerciais
+bacen_lf_estoque_segmento.csv.gz,BCB LF — Estoque Segmento,BCB,Letras Financeiras,indicador,LF — Estoque por Segmento (R$),5.892.320.608,Bancos de Investimento,2025-12-01,2026-11-07,bancos_investimento
+bacen_lf_estoque_segmento.csv.gz,BCB LF — Estoque Segmento,BCB,Letras Financeiras,indicador,LF — Estoque por Segmento (R$),529.032.163,Bancos de Desenvolvimento,2025-12-01,2026-11-07,bancos_desenvolvimento
+bacen_lf_estoque_segmento.csv.gz,BCB LF — Estoque Segmento,BCB,Letras Financeiras,indicador,LF — Estoque por Segmento (R$),1.407.021.793,Cooperativas de Crédito,2025-12-01,2026-11-07,cooperativas_credito
+bacen_lf_estoque_segmento.csv.gz,BCB LF — Estoque Segmento,BCB,Letras Financeiras,indicador,LF — Estoque por Segmento (R$),693.405.789.856,Total Geral,2025-12-01,2026-11-07,total
+bacen_lf_mercado_secundario.csv.gz,BCB LF — Mercado Secundário,BCB,Letras Financeiras,indicador,Letras Financeiras — Mercado Secundário,12.156,Nº Negócios,2025-12-01,2026-11-07,numero_negocios
+bacen_lf_mercado_secundario.csv.gz,BCB LF — Mercado Secundário,BCB,Letras Financeiras,indicador,Letras Financeiras — Mercado Secundário,43.101.506.983,Volume (R$),2025-12-01,2026-11-07,valor
+bacen_lf_prazo_emissoes.csv.gz,BCB LF — Prazo Emissões,BCB,Letras Financeiras,indicador,Letras Financeiras — Prazo Médio de Emissões,"30,79",LF (meses),2025-12-01,2026-11-07,prazo_medio_emissao_lf_meses
+bacen_lf_prazo_emissoes.csv.gz,BCB LF — Prazo Emissões,BCB,Letras Financeiras,indicador,Letras Financeiras — Prazo Médio de Emissões,"120,20",LFS Subordinadas (meses),2025-12-01,2026-11-07,prazo_medio_emissao_lfs_meses
+bacen_lf_prazo_vencimento.csv.gz,BCB LF — Prazo Vencimento,BCB,Letras Financeiras,indicador,Letras Financeiras — Prazo Médio de Vencimento do Estoque,"18,62",LF (meses),2025-12-01,2026-11-07,prazo_medio_vencimento_lf_meses
+bacen_lf_prazo_vencimento.csv.gz,BCB LF — Prazo Vencimento,BCB,Letras Financeiras,indicador,Letras Financeiras — Prazo Médio de Vencimento do Estoque,"79,59",LFS Subordinadas (meses),2025-12-01,2026-11-07,prazo_medio_vencimento_lfs_meses
+bacen_lf_prazo_vencimento_segmento.csv.gz,BCB LF — Prazo Segmento,BCB,Letras Financeiras,indicador,LF — Prazo Vencimento por Segmento (meses),"18,68",Bancos Múltiplos,2025-12-01,2026-11-07,bancos_multiplos
+bacen_lf_prazo_vencimento_segmento.csv.gz,BCB LF — Prazo Segmento,BCB,Letras Financeiras,indicador,LF — Prazo Vencimento por Segmento (meses),"17,24",Bancos Comerciais,2025-12-01,2026-11-07,bancos_comerciais
+bacen_lf_prazo_vencimento_segmento.csv.gz,BCB LF — Prazo Segmento,BCB,Letras Financeiras,indicador,LF — Prazo Vencimento por Segmento (meses),"10,82",Bancos de Investimento,2025-12-01,2026-11-07,bancos_investimento
+bacen_lf_prazo_vencimento_segmento.csv.gz,BCB LF — Prazo Segmento,BCB,Letras Financeiras,indicador,LF — Prazo Vencimento por Segmento (meses),"18,10",Bancos de Desenvolvimento,2025-12-01,2026-11-07,bancos_desenvolvimento
+bacen_lf_prazo_vencimento_segmento.csv.gz,BCB LF — Prazo Segmento,BCB,Letras Financeiras,indicador,LF — Prazo Vencimento por Segmento (meses),"15,41",Cooperativas de Crédito,2025-12-01,2026-11-07,cooperativas_credito
+bacen_lfs_estoque_segmento.csv.gz,BCB LFS — Estoque Segmento,BCB,Letras Financeiras,indicador,LFS — Estoque por Segmento (R$),261.749.991.543,Bancos Múltiplos,2025-12-01,2026-11-07,bancos_multiplos
+bacen_lfs_estoque_segmento.csv.gz,BCB LFS — Estoque Segmento,BCB,Letras Financeiras,indicador,LFS — Estoque por Segmento (R$),781.528.350,Bancos Comerciais,2025-12-01,2026-11-07,bancos_comerciais
+bacen_lfs_estoque_segmento.csv.gz,BCB LFS — Estoque Segmento,BCB,Letras Financeiras,indicador,LFS — Estoque por Segmento (R$),711.068.768,Bancos de Investimento,2025-12-01,2026-11-07,bancos_investimento
+bacen_lfs_estoque_segmento.csv.gz,BCB LFS — Estoque Segmento,BCB,Letras Financeiras,indicador,LFS — Estoque por Segmento (R$),2.570.088.094,Cooperativas de Crédito,2025-12-01,2026-11-07,cooperativas_credito
+bacen_lfs_estoque_segmento.csv.gz,BCB LFS — Estoque Segmento,BCB,Letras Financeiras,indicador,LFS — Estoque por Segmento (R$),275.712.328.188,Total Geral,2025-12-01,2026-11-07,total
+bacen_lfs_prazo_vencimento_segmento.csv.gz,BCB LFS — Prazo Segmento,BCB,Letras Financeiras,indicador,LFS — Prazo Vencimento por Segmento (meses),"78,89",Bancos Múltiplos,2025-12-01,2026-11-07,bancos_multiplos
+bacen_lfs_prazo_vencimento_segmento.csv.gz,BCB LFS — Prazo Segmento,BCB,Letras Financeiras,indicador,LFS — Prazo Vencimento por Segmento (meses),"49,58",Bancos Comerciais,2025-12-01,2026-11-07,bancos_comerciais
+bacen_lfs_prazo_vencimento_segmento.csv.gz,BCB LFS — Prazo Segmento,BCB,Letras Financeiras,indicador,LFS — Prazo Vencimento por Segmento (meses),"97,55",Bancos de Investimento,2025-12-01,2026-11-07,bancos_investimento
+bacen_lfs_prazo_vencimento_segmento.csv.gz,BCB LFS — Prazo Segmento,BCB,Letras Financeiras,indicador,LFS — Prazo Vencimento por Segmento (meses),"79,74",Cooperativas de Crédito,2025-12-01,2026-11-07,cooperativas_credito
 bcb_ptax.csv,BCB PTAX,BCB,Taxas de Câmbio,indicador,PTAX USD — Compra,"5,5007",,2026-11-06,2026-11-07,cotacao_compra
 bcb_ptax.csv,BCB PTAX,BCB,Taxas de Câmbio,indicador,PTAX USD — Venda,"5,5013",,2026-11-06,2026-11-07,cotacao_venda
 bcb_sgs.csv,BCB SGS,BCB,Séries SGS,indicador,IGP-M,"5,50%",,2026-11-06,2026-11-07,1

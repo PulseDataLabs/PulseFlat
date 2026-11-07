@@ -187,6 +187,8 @@ def get_type_badge(col_name: str, series: pd.Series | None = None) -> str:
         or "date" in col_name
     ):
         return "date"
+    if "cnpj" in col_name or "cpf" in col_name:
+        return "str"
 
     if series is not None and not series.empty:
         if pd.api.types.is_float_dtype(series):
@@ -195,9 +197,10 @@ def get_type_badge(col_name: str, series: pd.Series | None = None) -> str:
             return "int"
         if pd.api.types.is_datetime64_any_dtype(series):
             return "date"
-        non_null = series.dropna()
-        sample = non_null.head(30).astype(str).str.strip()
-        sample = sample[~sample.isin(["", "nan", "None", "--", "N/D", "ND", "-", "null"])]
+        non_null = series.dropna().astype(str).str.strip()
+        sample = non_null[
+            ~non_null.isin(["", "nan", "None", "--", "N/D", "ND", "-", "null"])
+        ].head(30)
         if not sample.empty:
             if sample.str.match(r"^\d{4}-\d{2}-\d{2}").all():
                 return "date"
