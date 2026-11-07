@@ -358,5 +358,9 @@ window.PULSEFLAT_LAST_UPDATES = {
   "anbima_cri_cra_mercado_secundario.csv.gz": {
     "min": "2020-01-02",
     "max": "2026-11-06"
+  },
+  "anbima_matriz_probabilidade_resgate.csv": {
+    "min": "2026-04-30",
+    "max": "2026-09-30"
   }
 };
