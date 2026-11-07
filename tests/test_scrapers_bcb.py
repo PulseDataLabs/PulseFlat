@@ -300,7 +300,9 @@ def test_bacen_letras_financeiras_12_scrapers_metadata():
 def test_bacen_lf_helper_parsers_in_memory():
     """Testa os parsers de planilhas XLSX de Letras Financeiras do BACEN com workbooks em memória."""
     from io import BytesIO
+
     import openpyxl
+
     from scrapers.utils.bacen_lf_helper import (
         parse_annual_holder_nature,
         parse_annual_indexer,
