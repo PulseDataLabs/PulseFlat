@@ -28,7 +28,43 @@ warnings.filterwarnings("ignore", category=UserWarning, module="openpyxl")
 
 FIXOS = ["data_captura", "conjunto", "arquivo_origem", "registro_hash"]
 
-_CAL = Calendar(
+
+def _to_py_date(val) -> date:
+    """Converte retornos de data (incluindo numpy.datetime64 do bizdays >= 2.0) para datetime.date."""
+    if isinstance(val, datetime):
+        return val.date()
+    if isinstance(val, date):
+        return val
+    if hasattr(val, "item"):
+        item = val.item()
+        if isinstance(item, datetime):
+            return item.date()
+        if isinstance(item, date):
+            return item
+    return date.fromisoformat(str(val)[:10])
+
+
+class _CompatCalendar(Calendar):
+    """Subclasse de Calendar que garante retornos em tipos nativos (datetime.date/bool) em bizdays 1.x e 2.x."""
+
+    def offset(self, dt, n):
+        res = super().offset(dt, n)
+        if isinstance(res, (list, tuple)) or (hasattr(res, "ndim") and res.ndim > 0):
+            return [_to_py_date(x) for x in res]
+        return _to_py_date(res) if res is not None else None
+
+    def seq(self, dt1, dt2):
+        res = super().seq(dt1, dt2)
+        return [_to_py_date(x) for x in res]
+
+    def isbizday(self, dt):
+        res = super().isbizday(dt)
+        if isinstance(res, (list, tuple)) or (hasattr(res, "ndim") and res.ndim > 0):
+            return [bool(x) for x in res]
+        return bool(res)
+
+
+_CAL = _CompatCalendar(
     holidays=[
         # 2024
         "2024-01-01",

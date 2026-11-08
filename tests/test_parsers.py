@@ -139,3 +139,38 @@ def test_hash_row():
 
     row3 = {"codigo": "VALE3", "preco": "42.50"}
     assert h1 != parsers.hash_row(row3)
+
+
+def test_cal_returns_native_python_date_even_with_numpy_datetime64(monkeypatch):
+    """Garante que _CAL.offset e _CAL.seq retornem objetos datetime.date nativos (com .strftime),
+    mesmo quando bizdays >= 2.0 retorna numpy.datetime64 internamente."""
+    from datetime import date
+
+    import numpy as np
+
+    d = parsers._CAL.offset(date(2026, 11, 8), -1)
+    assert isinstance(d, date)
+    assert d.strftime("%d/%m/%Y") == "06/11/2026"
+
+    # Simula comportamento do bizdays 2.0.0 retornando numpy.datetime64
+    monkeypatch.setattr(
+        parsers.Calendar,
+        "offset",
+        lambda self, dt, n: np.datetime64("2026-11-06", "D"),
+    )
+    monkeypatch.setattr(
+        parsers.Calendar,
+        "seq",
+        lambda self, dt1, dt2: np.array(
+            ["2026-11-05", "2026-11-06"], dtype="datetime64[D]"
+        ),
+    )
+
+    d_np = parsers._CAL.offset(date(2026, 11, 8), -1)
+    assert isinstance(d_np, date)
+    assert d_np.strftime("%d/%m/%Y") == "06/11/2026"
+
+    seq_np = parsers._CAL.seq(date(2026, 11, 5), date(2026, 11, 6))
+    assert all(isinstance(x, date) for x in seq_np)
+    assert [x.strftime("%Y-%m-%d") for x in seq_np] == ["2026-11-05", "2026-11-06"]
+

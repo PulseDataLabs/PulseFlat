@@ -3,7 +3,7 @@ beautifulsoup4
 python-dotenv
 xlrd
 rich
-bizdays
+bizdays<2.0.0
 openpyxl
 PyYAML
 pytest
