@@ -245,3 +245,4 @@ data/debentures_emissoes_caracteristicas.csv
 data/parquet/
 *.parquet
 *.lock
+!uv.lock
