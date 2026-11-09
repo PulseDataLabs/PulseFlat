@@ -1,6 +1,6 @@
 window.PULSEFLAT_PIPELINE_STATUS = {
-  "timestamp": "2026-11-09T19:14:55.775668",
-  "elapsed_seconds": 601.4879148006439,
+  "timestamp": "2026-11-09T19:59:39.444470",
+  "elapsed_seconds": 2.311577558517456,
   "status": "error",
   "summary": {
     "total": 108,
@@ -203,9 +203,9 @@ window.PULSEFLAT_PIPELINE_STATUS = {
     },
     "bacen_conglomerados": {
       "status": "success",
-      "elapsed_seconds": 13.948764085769653,
+      "elapsed_seconds": 2.3093557357788086,
       "error": null,
-      "timestamp": "2026-11-09T19:14:55.777004"
+      "timestamp": "2026-11-09T19:59:39.444832"
     },
     "bacen_parcelas_capital_basileia": {
       "status": "success",

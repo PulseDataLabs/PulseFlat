@@ -38,13 +38,24 @@ HEADERS = {
 }
 
 
-def _try_download(session: requests.Session, yyyymm: str) -> bytes | None:
-    file_name = f"{yyyymm}CONGLOMERADO.zip"
-    url = BASE_URL + file_name
-    resp = session.get(url, headers=HEADERS, timeout=120)
-    if resp.status_code == 200:
-        return resp.content
-    return None
+def _try_download(session: requests.Session, ref: datetime.date) -> tuple[bytes | None, str | None]:
+    yyyymm = ref.strftime("%Y%m")
+    mmyyyy = ref.strftime("%m%Y")
+    candidates = [
+        f"{mmyyyy}CONGLOMERADO.zip",  # Padrão recente adotado pelo BACEN (MMYYYY)
+        f"{yyyymm}CONGLOMERADO.zip",  # Padrão histórico (YYYYMM)
+        f"{mmyyyy}conglomerado.zip",
+        f"{yyyymm}conglomerado.zip",
+    ]
+    for file_name in candidates:
+        url = BASE_URL + file_name
+        try:
+            resp = session.get(url, headers=HEADERS, timeout=60)
+            if resp.status_code == 200 and resp.content:
+                return resp.content, file_name
+        except Exception:
+            continue
+    return None, None
 
 
 class BacenConglomeradosScraper(BaseScraper):
@@ -52,6 +63,7 @@ class BacenConglomeradosScraper(BaseScraper):
     group = "bcb"
     enabled = True
     phase = 1
+    badge = "Mensal"
     title = "BACEN — Conglomerados Financeiros e Prudenciais"
     description = "Quadro societário, composição patrimonial e demonstrações consolidadas dos Conglomerados Financeiros e Prudenciais regulados pelo Banco Central do Brasil."
 
@@ -61,21 +73,22 @@ class BacenConglomeradosScraper(BaseScraper):
 
         hoje = datetime.date.today()
         content = None
+        target_ref = None
         for meses_atras in (1, 2, 3):
             ref = hoje - relativedelta(months=meses_atras)
-            yyyymm = ref.strftime("%Y%m")
             t0 = time.time()
-            c = _try_download(session, yyyymm)
+            c, fname = _try_download(session, ref)
             if c:
                 print_done(
-                    f"encontrado {yyyymm}CONGLOMERADO.zip", elapsed=time.time() - t0
+                    f"encontrado {fname}", elapsed=time.time() - t0
                 )
                 content = c
+                target_ref = ref
                 break
             print_warn(
-                f"{yyyymm}CONGLOMERADO.zip não disponível", elapsed=time.time() - t0
+                f"conglomerado para {ref.strftime('%m/%Y')} não disponível", elapsed=time.time() - t0
             )
-        if not content:
+        if not content or target_ref is None:
             raise RuntimeError(
                 "Nenhum arquivo de conglomerados disponível nos últimos 3 meses."
             )
@@ -113,7 +126,7 @@ class BacenConglomeradosScraper(BaseScraper):
         df = df.dropna(how="all", axis=1)
         df = df.dropna(how="all", axis=0)
         df.columns = [str(c).strip() for c in df.columns]
-        df.insert(0, "data_referencia", ref.replace(day=1))
+        df.insert(0, "data_referencia", target_ref.replace(day=1))
         return df
 
 

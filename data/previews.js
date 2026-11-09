@@ -6710,29 +6710,29 @@ window.PULSEFLAT_PREVIEWS = {
     "rows": [
       [
         "2026-11-09",
-        "2026-09-01",
+        "2026-10-01",
         "XP - PRUDENCIAL",
         "Privado Nacional com Participação Estrangeira",
-        "5963-30-97",
-        "GIANT ZARATHUSTRA CLASSIC FUNDO DE INVESTIMENTO EM COTAS MULTIMERCADO RESPONSABILIDADE LIMITADA",
+        "6391-83-41",
+        "KOPIS FUNDO DE INVESTIMENTO MULTIMERCADO CREDITO PRIVADO LONGO PRAZO",
         "PARTICIPANTE",
-        "2025-07-01 00:00:00",
+        "2026-02-01 00:00:00",
         "RJ"
       ],
       [
         "2026-11-09",
-        "2026-09-01",
+        "2026-10-01",
         "XP - PRUDENCIAL",
         "Privado Nacional com Participação Estrangeira",
-        "5963-35-51",
-        "GIANT ZARATHUSTRA IV FUNDO DE INVESTIMENTO EM COTAS MULTIMERCADO RESPONSABILIDADE LIMITADA",
+        "6815-10-28",
+        "LABRIS FUNDO DE INVESTIMENTO MULTIMERCADO CREDITO PRIVADO LONGO PRAZO",
         "PARTICIPANTE",
-        "2025-07-01 00:00:00",
+        "2026-08-01 00:00:00",
         "RJ"
       ],
       [
         "2026-11-09",
-        "2026-09-01",
+        "2026-10-01",
         "ZEMA CFI - PRUDENCIAL",
         "Privado Nacional",
         "2336-76-34",
@@ -6743,7 +6743,7 @@ window.PULSEFLAT_PREVIEWS = {
       ],
       [
         "2026-11-09",
-        "2026-09-01",
+        "2026-10-01",
         "ZEMA CFI - PRUDENCIAL",
         "Privado Nacional",
         "0535-18-87",
@@ -6754,7 +6754,7 @@ window.PULSEFLAT_PREVIEWS = {
       ],
       [
         "2026-11-09",
-        "2026-09-01",
+        "2026-10-01",
         "YAMAHA MOTOR - PRUDENCIAL",
         "Privado Nacional com Controle Estrangeiro",
         "4745-81-53",
@@ -6765,7 +6765,7 @@ window.PULSEFLAT_PREVIEWS = {
       ],
       [
         "2026-11-09",
-        "2026-09-01",
+        "2026-10-01",
         "YAMAHA MOTOR - PRUDENCIAL",
         "Privado Nacional com Controle Estrangeiro",
         "1037-14-92",
@@ -6776,7 +6776,7 @@ window.PULSEFLAT_PREVIEWS = {
       ],
       [
         "2026-11-09",
-        "2026-09-01",
+        "2026-10-01",
         "XP - PRUDENCIAL",
         "Privado Nacional com Participação Estrangeira",
         "",
@@ -6787,7 +6787,7 @@ window.PULSEFLAT_PREVIEWS = {
       ],
       [
         "2026-11-09",
-        "2026-09-01",
+        "2026-10-01",
         "XP - PRUDENCIAL",
         "Privado Nacional com Participação Estrangeira",
         "0538-91-74",
@@ -6798,7 +6798,7 @@ window.PULSEFLAT_PREVIEWS = {
       ],
       [
         "2026-11-09",
-        "2026-09-01",
+        "2026-10-01",
         "XP - PRUDENCIAL",
         "Privado Nacional com Participação Estrangeira",
         "5303-64-95",
@@ -6809,7 +6809,7 @@ window.PULSEFLAT_PREVIEWS = {
       ],
       [
         "2026-11-09",
-        "2026-09-01",
+        "2026-10-01",
         "XP - PRUDENCIAL",
         "Privado Nacional com Participação Estrangeira",
         "6034-99-42",
@@ -6820,7 +6820,7 @@ window.PULSEFLAT_PREVIEWS = {
       ],
       [
         "2026-11-09",
-        "2026-09-01",
+        "2026-10-01",
         "XP - PRUDENCIAL",
         "Privado Nacional com Participação Estrangeira",
         "",
@@ -6831,7 +6831,7 @@ window.PULSEFLAT_PREVIEWS = {
       ],
       [
         "2026-11-09",
-        "2026-09-01",
+        "2026-10-01",
         "XP - PRUDENCIAL",
         "Privado Nacional com Participação Estrangeira",
         "",
@@ -6842,7 +6842,7 @@ window.PULSEFLAT_PREVIEWS = {
       ],
       [
         "2026-11-09",
-        "2026-09-01",
+        "2026-10-01",
         "XP - PRUDENCIAL",
         "Privado Nacional com Participação Estrangeira",
         "0233-28-86",
@@ -6853,7 +6853,7 @@ window.PULSEFLAT_PREVIEWS = {
       ],
       [
         "2026-11-09",
-        "2026-09-01",
+        "2026-10-01",
         "XP - PRUDENCIAL",
         "Privado Nacional com Participação Estrangeira",
         "4447-52-45",
@@ -6864,13 +6864,13 @@ window.PULSEFLAT_PREVIEWS = {
       ],
       [
         "2026-11-09",
-        "2026-09-01",
+        "2026-10-01",
         "XP - PRUDENCIAL",
         "Privado Nacional com Participação Estrangeira",
-        "5735-75-81",
-        "XP CASH M2 FUNDO DE INVESTIMENTO EM RENDA FIXA SIMPLES RESPONSABILIDADE LIMITADA",
+        "6363-83-68",
+        "XP CDI II FUNDO DE INVESTIMENTO IMOBILIARIO",
         "PARTICIPANTE",
-        "2026-01-01 00:00:00",
+        "2026-09-01 00:00:00",
         "RJ"
       ]
     ]
