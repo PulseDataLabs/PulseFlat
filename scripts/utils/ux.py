@@ -212,9 +212,12 @@ def print_fail(msg: str, elapsed: float | None = None, icon: str = "fail") -> No
     print(f"  {red(ICON[icon])}  {msg}{time_str}")
 
 
-def print_warn(msg: str, icon: str = "warn") -> None:
+def print_warn(
+    msg: str, elapsed: float | None = None, icon: str = "warn"
+) -> None:
     """Indica aviso."""
-    print(f"  {yellow(ICON[icon])}  {msg}")
+    time_str = f"  {dim(f'{elapsed:.1f}s')}" if elapsed is not None else ""
+    print(f"  {yellow(ICON[icon])}  {msg}{time_str}")
 
 
 def print_skip(msg: str, icon: str = "skip") -> None:
