@@ -129,14 +129,23 @@ def main():
     hoje = datetime.now(FUSO).date()
     hoje_iso = hoje.strftime("%Y-%m-%d")
 
-    # 1. Determina a data de referência esperada (último dia útil)
+    force = "--force" in sys.argv
+
+    # 1. Verifica se hoje é dia útil segundo calendário B3/ANBIMA
+    if not force and not _CAL.isbizday(hoje):
+        log.info(
+            f"Hoje ({hoje.strftime('%d/%m/%Y')}) não é dia útil segundo o calendário da B3/ANBIMA. Encerrando."
+        )
+        sys.exit(0)
+
+    # 2. Determina a data de referência esperada (último dia útil)
     ref_date = _CAL.offset(hoje, -1)
     ref_date_str = ref_date.strftime("%d/%m/%Y")
     log.info(
         f"Hoje: {hoje.strftime('%d/%m/%Y')} (ISO: {hoje_iso}) | Data Ref Esperada: {ref_date_str}"
     )
 
-    # 2. Carrega o estado de notificações e verifica se já notificado hoje
+    # 3. Carrega o estado de notificações e verifica se já notificado hoje
     state_path = STATE_FILE_PATH
     state = {"ultima_notificacao": ""}
 
@@ -147,7 +156,7 @@ def main():
         except Exception as e:
             log.warning(f"Erro ao ler arquivo de estado: {e}. Criando novo estado.")
 
-    if state.get("ultima_notificacao", "").startswith(hoje_iso):
+    if not force and state.get("ultima_notificacao", "").startswith(hoje_iso):
         log.info(f"Notificação diária para {hoje_iso} já foi enviada hoje. Encerrando.")
         sys.exit(0)
 

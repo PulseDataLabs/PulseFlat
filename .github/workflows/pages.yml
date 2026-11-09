@@ -1,0 +1,49 @@
+name: Deploy GitHub Pages
+
+on:
+  # Permite deploy manual pelo painel de Actions
+  workflow_dispatch:
+
+  # Agendamento diário após a última rodada de consolidação do dia (23h45 BRT = 02h45 UTC Terça a Sábado)
+  schedule:
+    - cron: '45 2 * * 2-6'
+
+  # Deploy automático apenas quando os arquivos do frontend/site forem alterados
+  push:
+    branches: [ main ]
+    paths:
+      - 'index.html'
+      - 'consulta.html'
+      - 'assets/**'
+      - '.nojekyll'
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v6
+
+      - name: Configurar GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload de artefato do site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+
+      - name: Deploy no GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

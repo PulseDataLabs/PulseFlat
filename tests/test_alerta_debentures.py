@@ -125,6 +125,16 @@ class MockDatetimeBefore837:
         return dt
 
 
+class MockDatetimeWeekend:
+    @classmethod
+    def now(cls, tz=None):
+        # Congela em 19/07/2026 às 10:00:00 (Domingo)
+        dt = real_datetime(2026, 7, 19, 10, 0, 0)
+        if tz:
+            return tz.localize(dt) if hasattr(tz, "localize") else dt.replace(tzinfo=tz)
+        return dt
+
+
 # ── Testes Unitários de verificar_dados ──────────────────────────────────────
 
 
@@ -146,6 +156,14 @@ def test_verificar_dados_form_only():
 # ── Testes de Fluxo Principal (main) ─────────────────────────────────────────
 
 
+def test_main_non_bizday(monkeypatch):
+    """Em fins de semana ou feriados, encerra imediatamente sem consultar a web nem enviar alertas."""
+    monkeypatch.setattr(ad, "datetime", MockDatetimeWeekend)
+    with pytest.raises(SystemExit) as exc_info:
+        ad.main()
+    assert exc_info.value.code == 0
+
+
 def test_main_already_notified(tmp_path, monkeypatch):
     """Se a última notificação já foi enviada hoje, deve encerrar imediatamente sem chamadas HTTP."""
     # Redireciona o arquivo de estado para um arquivo temporário
@@ -159,6 +177,32 @@ def test_main_already_notified(tmp_path, monkeypatch):
     monkeypatch.setattr(ad, "datetime", MockDatetime)
 
     # Executa main e verifica que encerra com sys.exit(0) sem erros
+    with pytest.raises(SystemExit) as exc_info:
+        ad.main()
+
+    assert exc_info.value.code == 0
+
+
+def test_main_already_notified_force(tmp_path, monkeypatch, requests_mock):
+    """Com a flag --force, ignora a trava diária e prossegue mesmo se já notificado hoje."""
+    temp_state = tmp_path / "debentures_alert_state.json"
+    temp_state.write_text(
+        json.dumps({"ultima_notificacao": "2026-07-16 09:00:00"}), encoding="utf-8"
+    )
+    monkeypatch.setattr(ad, "STATE_FILE_PATH", temp_state)
+    monkeypatch.setattr(ad, "datetime", MockDatetimeEarly)
+    monkeypatch.setattr(sys, "argv", ["alerta_debentures.py", "--force"])
+
+    requests_mock.get(
+        "https://www.debentures.com.br/exploreosnd/consultaadados/mercadosecundario/precosdenegociacao_f.asp",
+        status_code=200,
+    )
+    requests_mock.post(
+        "https://www.debentures.com.br/exploreosnd/consultaadados/mercadosecundario/precosdenegociacao_r.asp",
+        text=MOCK_HTML_EMPTY,
+        status_code=200,
+    )
+
     with pytest.raises(SystemExit) as exc_info:
         ad.main()
 

@@ -2,17 +2,22 @@ name: Monitorar e Alertar Debêntures
 
 on:
   schedule:
-    # 08h00 às 20h00 Horário de Brasília (BRT = UTC-3) de segunda a sexta-feira.
-    # Em UTC, isso equivale a 11h00 às 23h00.
-    # Primeira checagem às 08h07 BRT (11h07 UTC) e aviso de indisponibilidade às 08h37 BRT (11h37 UTC).
-    # Roda a cada ~15 minutos em 4 agendamentos individuais com minutos deslocados (07, 22, 37, 52)
-    - cron: '7 11-23 * * 1-5'
-    - cron: '22 11-23 * * 1-5'
-    - cron: '37 11-23 * * 1-5'
-    - cron: '52 11-23 * * 1-5'
+    # 08h00 às 18h37 Horário de Brasília (BRT = UTC-3) de segunda a sexta-feira.
+    # Em UTC, isso equivale a 11h00 às 21h37.
+    # Janela crítica matinal (08h00 às 11h59 BRT = 11h00 às 14h59 UTC): checagem no minuto 07
+    # Primeira checagem às 08h07 BRT (11h07 UTC)
+    - cron: '7 11-14 * * 1-5'
+    # Aviso de indisponibilidade às 08h37 BRT (11h37 UTC) e checagens horárias até 18h37 BRT (21h37 UTC) no minuto 37
+    - cron: '37 11-21 * * 1-5'
   
-  # Permite execução manual pelo painel do GitHub
+  # Permite execução manual pelo painel do GitHub com opção de ignorar trava diária
   workflow_dispatch:
+    inputs:
+      force:
+        description: 'Forçar execução mesmo se notificação já enviada hoje'
+        required: false
+        default: false
+        type: boolean
 
 concurrency:
   group: pulseflat-debentures-alert
@@ -21,7 +26,7 @@ concurrency:
 jobs:
   check-and-alert:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 15
 
     permissions:
       contents: write
@@ -30,27 +35,53 @@ jobs:
     - name: Checkout do código
       uses: actions/checkout@v6
 
+    # Avaliação rápida: encerra o job em ~2 segundos se o alerta do dia já tiver sido enviado
+    - name: Verificar se alerta já foi enviado hoje ou se é fim de semana
+      id: check_status
+      run: |
+        if [ "${{ inputs.force }}" = "true" ]; then
+          echo "Execução forçada manualmente (force=true). Prosseguindo com a execução completa."
+          echo "skip=false" >> $GITHUB_OUTPUT
+          exit 0
+        fi
+
+        HOJE=$(date +'%Y-%m-%d')
+        DOW=$(date +'%u')
+        if [ "$DOW" -gt 5 ]; then
+          echo "Fim de semana (dia $DOW). Nenhuma negociação de debêntures hoje. Pulando execução."
+          echo "skip=true" >> $GITHUB_OUTPUT
+          exit 0
+        fi
+
+        LAST_NOTIF=$(python3 -c "import json, pathlib; p=pathlib.Path('data/debentures_alert_state.json'); print(json.load(open(p)).get('ultima_notificacao','')) if p.exists() else print('')" 2>/dev/null || echo "")
+        if [[ "$LAST_NOTIF" =~ ^$HOJE ]]; then
+          echo "Alerta diário já enviado hoje ($LAST_NOTIF). Pulando execução."
+          echo "skip=true" >> $GITHUB_OUTPUT
+        else
+          echo "Alerta ainda pendente para hoje ($HOJE). Prosseguindo com verificação."
+          echo "skip=false" >> $GITHUB_OUTPUT
+        fi
+
     - name: Configurar Fuso Horário Local
+      if: steps.check_status.outputs.skip != 'true'
       run: sudo timedatectl set-timezone America/Sao_Paulo
 
     - name: Configurar Python
+      if: steps.check_status.outputs.skip != 'true'
       uses: actions/setup-python@v6
       with:
         python-version: '3.13'
         cache: 'pip'
 
     - name: Instalar dependências
+      if: steps.check_status.outputs.skip != 'true'
       run: |
         python -m pip install --upgrade pip
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
-    - name: Executar verificação e ingestão
+    - name: Executar verificação e envio de alerta
+      if: steps.check_status.outputs.skip != 'true'
       env:
-        ORACLE_DB_DSN: ${{ secrets.ORACLE_DB_DSN || vars.ORACLE_DB_DSN }}
-        ORACLE_DB_USER: ${{ secrets.ORACLE_DB_USER || vars.ORACLE_DB_USER }}
-        ORACLE_DB_PASSWORD: ${{ secrets.ORACLE_DB_PASSWORD || vars.ORACLE_DB_PASSWORD }}
-        ORACLE_DB_WALLET_PASSWORD: ${{ secrets.ORACLE_DB_WALLET_PASSWORD || vars.ORACLE_DB_WALLET_PASSWORD }}
-        ORACLE_DB_WALLET_BASE64: ${{ secrets.ORACLE_DB_WALLET_BASE64 || vars.ORACLE_DB_WALLET_BASE64 }}
         TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
         TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         SMTP_SERVER: ${{ secrets.SMTP_SERVER }}
@@ -61,20 +92,15 @@ jobs:
         SMTP_TO: ${{ secrets.SMTP_TO }}
         SMTP_SUBJECT: ${{ secrets.SMTP_SUBJECT }}
       run: |
-        if [ -n "$ORACLE_DB_WALLET_BASE64" ]; then
-          echo "Processando carteira mTLS..."
-          mkdir -p /tmp/oracle_wallet
-          echo "$ORACLE_DB_WALLET_BASE64" | base64 -d > /tmp/oracle_wallet.zip
-          unzip -o /tmp/oracle_wallet.zip -d /tmp/oracle_wallet
-          export ORACLE_DB_WALLET_DIR=/tmp/oracle_wallet
-          echo "Wallet extraída com sucesso para $ORACLE_DB_WALLET_DIR"
-        else
-          echo "Aviso: ORACLE_DB_WALLET_BASE64 não está configurada."
+        FORCE_ARG=""
+        if [ "${{ inputs.force }}" = "true" ]; then
+          FORCE_ARG="--force"
         fi
-        python scripts/alerta_debentures.py
+        python scripts/alerta_debentures.py $FORCE_ARG
 
     # Identifica mudanças na pasta data/ e faz o push se houver novos dados coletados
     - name: Commitar e enviar novas alterações de dados
+      if: steps.check_status.outputs.skip != 'true'
       run: |
         git config --global user.name "github-actions[bot]"
         git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
