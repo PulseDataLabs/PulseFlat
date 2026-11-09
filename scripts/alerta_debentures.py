@@ -257,7 +257,7 @@ def main():
                                 <p style="margin: 4px 0 0 0; font-size: 13px; color: #666666;"><b>Horário da Checagem:</b> {hora_str} (Horário de Brasília)</p>
                             </div>
 
-                            <p style="font-size: 14px; color: #555555;">O monitoramento continuará ativo a cada 15 minutos. Um novo e-mail de confirmação será enviado automaticamente assim que o arquivo for liberado.</p>
+                            <p style="font-size: 14px; color: #555555;">O monitoramento continuará ativo com checagens até as 14h37. Um novo e-mail de confirmação será enviado automaticamente assim que o arquivo for liberado.</p>
 
                             <div style="margin: 24px 0; text-align: left;">
                                 <a href="{page_url}" style="background-color: #f3f2f1; color: #333333; text-decoration: none; padding: 10px 20px; border-radius: 4px; font-weight: 600; font-size: 13px; border: 1px solid #d1d1d1; display: inline-block;">

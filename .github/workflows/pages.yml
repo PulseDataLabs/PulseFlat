@@ -4,9 +4,9 @@ on:
   # Permite deploy manual pelo painel de Actions
   workflow_dispatch:
 
-  # Agendamento diário após a última rodada de consolidação do dia (23h45 BRT = 02h45 UTC Terça a Sábado)
+  # Agendamento diário após a última rodada de consolidação do dia (22h30 BRT = 01h30 UTC Terça a Sábado)
   schedule:
-    - cron: '45 2 * * 2-6'
+    - cron: '30 1 * * 2-6'
 
   # Deploy automático apenas quando os arquivos do frontend/site forem alterados
   push:

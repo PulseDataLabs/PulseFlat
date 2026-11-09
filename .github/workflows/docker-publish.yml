@@ -3,6 +3,14 @@ name: Build and Publish Docker Image
 on:
   push:
     branches: [main, master]
+    paths:
+      - 'Dockerfile'
+      - 'requirements.txt'
+      - 'pyproject.toml'
+      - 'run_all.py'
+      - 'scripts/**'
+      - 'utils/**'
+  workflow_dispatch:
 
 jobs:
   build-and-push:
@@ -40,4 +48,6 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: ${{ steps.prep.outputs.image }}:latest
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
 
