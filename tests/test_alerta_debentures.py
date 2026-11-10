@@ -433,3 +433,28 @@ def test_main_not_available_between_8am_and_837am(
     mock_tg.assert_not_called()
     mock_email.assert_not_called()
     assert not temp_state.exists()
+
+
+@patch("scripts.alerta_debentures.datetime", MockDatetime)
+@patch("scripts.alerta_debentures.time.sleep", return_value=None)
+def test_main_portal_timeout_retry_and_graceful_exit(
+    mock_sleep, tmp_path, monkeypatch, requests_mock
+):
+    """
+    Testa se o scraper tenta novamente em caso de Timeout e, se persistir,
+    encerra com sys.exit(0) sem falhar o job do GitHub Actions.
+    """
+    temp_state = tmp_path / "debentures_alert_state.json"
+    monkeypatch.setattr(ad, "STATE_FILE_PATH", temp_state)
+
+    import requests
+    requests_mock.get(
+        "https://www.debentures.com.br/exploreosnd/consultaadados/mercadosecundario/precosdenegociacao_f.asp",
+        exc=requests.exceptions.ConnectTimeout("Read timed out"),
+    )
+
+    with pytest.raises(SystemExit) as exc_info:
+        ad.main()
+
+    assert exc_info.value.code == 0
+    assert mock_sleep.call_count == 2

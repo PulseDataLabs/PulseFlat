@@ -10,6 +10,7 @@ import os
 import re
 import smtplib
 import sys
+import time
 import urllib.parse
 from datetime import datetime
 from email.mime.multipart import MIMEMultipart
@@ -173,13 +174,6 @@ def main():
     f_url = "https://www.debentures.com.br/exploreosnd/consultaadados/mercadosecundario/precosdenegociacao_f.asp"
     r_url = "https://www.debentures.com.br/exploreosnd/consultaadados/mercadosecundario/precosdenegociacao_r.asp"
 
-    try:
-        log.info("Estabelecendo sessão no portal debentures.com.br...")
-        session.get(f_url, timeout=30)
-    except Exception as e:
-        log.error(f"Erro ao obter sessão inicial: {e}")
-        sys.exit(1)
-
     post_data = {
         "op_exc": "False",
         "emissor": "",
@@ -193,15 +187,36 @@ def main():
 
     headers = {"Content-Type": "application/x-www-form-urlencoded", "Referer": f_url}
 
-    try:
-        log.info(f"Consultando dados de {ref_date_str} a {post_data['dt_fim']}...")
-        resp = session.post(r_url, data=post_data, headers=headers, timeout=30)
-        resp.raise_for_status()
-    except Exception as e:
-        log.error(f"Erro ao realizar consulta POST: {e}")
-        sys.exit(1)
+    html = None
+    max_tentativas = 3
+    for tentativa in range(1, max_tentativas + 1):
+        timeout_atual = 30 + (tentativa - 1) * 15  # 30s, 45s, 60s
+        try:
+            log.info(
+                f"Estabelecendo sessão no portal debentures.com.br (tentativa {tentativa}/{max_tentativas}, timeout={timeout_atual}s)..."
+            )
+            session.get(f_url, timeout=timeout_atual)
 
-    html = resp.text
+            log.info(
+                f"Consultando dados de {ref_date_str} a {post_data['dt_fim']} (timeout={timeout_atual}s)..."
+            )
+            resp = session.post(r_url, data=post_data, headers=headers, timeout=timeout_atual)
+            resp.raise_for_status()
+            html = resp.text
+            break
+        except Exception as e:
+            log.warning(
+                f"Tentativa {tentativa}/{max_tentativas} falhou ao conectar/consultar debentures.com.br: {e}"
+            )
+            if tentativa < max_tentativas:
+                time.sleep(3)
+
+    if html is None:
+        log.warning(
+            "Portal debentures.com.br temporariamente indisponível após 3 tentativas. "
+            "Encerrando execução sem falha (aguardando próxima janela de monitoramento)."
+        )
+        sys.exit(0)
 
     # 4. Avalia se existem dados disponíveis usando a heurística aprimorada
     tem_dados = verificar_dados(html)
