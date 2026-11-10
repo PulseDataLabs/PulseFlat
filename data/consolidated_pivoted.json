@@ -4878,6 +4878,16 @@
   },
   {
     "data_referencia": "2026-10-01",
+    "indicador": "US Nonfarm Payrolls (k)",
+    "fonte": "FRED",
+    "dataset": "fred_us_macro_indicators.csv.gz",
+    "dataset_label": "FRED US Macro",
+    "categoria": "Macroeconomia EUA",
+    "metrica": "nonfarm_payroll",
+    "Valor": "159.293"
+  },
+  {
+    "data_referencia": "2026-10-01",
     "indicador": "US Unemployment Rate",
     "fonte": "FRED",
     "dataset": "fred_us_macro_indicators.csv.gz",
@@ -5089,7 +5099,7 @@
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "ABEV3.SA",
-    "Valor": "15,48"
+    "Valor": "15,61"
   },
   {
     "data_referencia": "2026-11-09",
@@ -5109,7 +5119,7 @@
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "ALOS3.SA",
-    "Valor": "26,46"
+    "Valor": "27,23"
   },
   {
     "data_referencia": "2026-11-09",
@@ -5119,7 +5129,7 @@
     "dataset_label": "Yahoo FIIs e Fiagros",
     "categoria": "FIIs e Fiagros",
     "metrica": "ALZR11.SA",
-    "Valor": "9,72"
+    "Valor": "9,59"
   },
   {
     "data_referencia": "2026-11-09",
@@ -5149,7 +5159,7 @@
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "ASAI3.SA",
-    "Valor": "8,81"
+    "Valor": "8,98"
   },
   {
     "data_referencia": "2026-11-09",
@@ -5169,7 +5179,7 @@
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "B3SA3.SA",
-    "Valor": "14,39"
+    "Valor": "14,85"
   },
   {
     "data_referencia": "2026-11-09",
@@ -5199,7 +5209,7 @@
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "BBAS3.SA",
-    "Valor": "17,13"
+    "Valor": "17,02"
   },
   {
     "data_referencia": "2026-11-09",
@@ -5209,7 +5219,7 @@
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "BBDC3.SA",
-    "Valor": "13,03"
+    "Valor": "13,42"
   },
   {
     "data_referencia": "2026-11-09",
@@ -5219,7 +5229,7 @@
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "BBDC4.SA",
-    "Valor": "14,20"
+    "Valor": "14,68"
   },
   {
     "data_referencia": "2026-11-09",
@@ -5229,7 +5239,7 @@
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "BEEF3.SA",
-    "Valor": "2,61"
+    "Valor": "2,82"
   },
   {
     "data_referencia": "2026-11-09",
@@ -5249,7 +5259,7 @@
     "dataset_label": "Yahoo ETFs",
     "categoria": "ETFs & Setoriais",
     "metrica": "BOVA11.SA",
-    "Valor": "165,93"
+    "Valor": "169,67"
   },
   {
     "data_referencia": "2026-11-09",
@@ -5259,7 +5269,7 @@
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "BPAC11.SA",
-    "Valor": "55,52"
+    "Valor": "57,45"
   },
   {
     "data_referencia": "2026-11-09",
@@ -5269,7 +5279,7 @@
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "BRAP4.SA",
-    "Valor": "19,15"
+    "Valor": "19,71"
   },
   {
     "data_referencia": "2026-11-09",
@@ -5279,7 +5289,7 @@
     "dataset_label": "Yahoo FIIs e Fiagros",
     "categoria": "FIIs e Fiagros",
     "metrica": "BRCO11.SA",
-    "Valor": "107,80"
+    "Valor": "106,15"
   },
   {
     "data_referencia": "2026-11-09",
@@ -5289,7 +5299,7 @@
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "BRKM5.SA",
-    "Valor": "3,20"
+    "Valor": "3,02"
   },
   {
     "data_referencia": "2026-11-09",
@@ -5299,7 +5309,7 @@
     "dataset_label": "Yahoo FIIs e Fiagros",
     "categoria": "FIIs e Fiagros",
     "metrica": "BTLG11.SA",
-    "Valor": "98,24"
+    "Valor": "98,00"
   },
   {
     "data_referencia": "2026-11-09",
@@ -5319,7 +5329,7 @@
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "CMIG4.SA",
-    "Valor": "10,39"
+    "Valor": "10,69"
   },
   {
     "data_referencia": "2026-11-09",
@@ -5329,7 +5339,7 @@
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "CMIN3.SA",
-    "Valor": "5,03"
+    "Valor": "5,33"
   },
   {
     "data_referencia": "2026-11-09",
@@ -5339,7 +5349,7 @@
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "COGN3.SA",
-    "Valor": "1,46"
+    "Valor": "1,52"
   },
   {
     "data_referencia": "2026-11-09",
@@ -5359,7 +5369,7 @@
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "CPFE3.SA",
-    "Valor": "43,61"
+    "Valor": "44,70"
   },
   {
     "data_referencia": "2026-11-09",
@@ -5399,7 +5409,7 @@
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "CSNA3.SA",
-    "Valor": "4,41"
+    "Valor": "4,49"
   },
   {
     "data_referencia": "2026-11-09",
@@ -5419,7 +5429,7 @@
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "CVCB3.SA",
-    "Valor": "0,8400"
+    "Valor": "0,8700"
   },
   {
     "data_referencia": "2026-11-09",
@@ -5439,7 +5449,7 @@
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "CYRE3.SA",
-    "Valor": "19,30"
+    "Valor": "19,08"
   },
   {
     "data_referencia": "2026-11-09",
@@ -5579,7 +5589,7 @@
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "EGIE3.SA",
-    "Valor": "27,17"
+    "Valor": "27,71"
   },
   {
     "data_referencia": "2026-11-09",
@@ -5589,7 +5599,7 @@
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "ENEV3.SA",
-    "Valor": "26,84"
+    "Valor": "27,40"
   },
   {
     "data_referencia": "2026-11-09",
@@ -5599,7 +5609,7 @@
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "ENGI11.SA",
-    "Valor": "46,10"
+    "Valor": "47,36"
   },
   {
     "data_referencia": "2026-11-09",
@@ -5609,7 +5619,7 @@
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "EQTL3.SA",
-    "Valor": "34,07"
+    "Valor": "34,82"
   },
   {
     "data_referencia": "2026-11-09",
@@ -5629,7 +5639,7 @@
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "EZTC3.SA",
-    "Valor": "9,48"
+    "Valor": "9,82"
   },
   {
     "data_referencia": "2026-11-09",
@@ -5699,7 +5709,7 @@
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "FLRY3.SA",
-    "Valor": "20,06"
+    "Valor": "20,96"
   },
   {
     "data_referencia": "2026-11-09",
@@ -5709,7 +5719,7 @@
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "GGBR4.SA",
-    "Valor": "24,15"
+    "Valor": "25,26"
   },
   {
     "data_referencia": "2026-11-09",
@@ -5729,7 +5739,7 @@
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "HAPV3.SA",
-    "Valor": "4,45"
+    "Valor": "4,77"
   },
   {
     "data_referencia": "2026-11-09",
@@ -5749,7 +5759,7 @@
     "dataset_label": "Yahoo FIIs e Fiagros",
     "categoria": "FIIs e Fiagros",
     "metrica": "HGLG11.SA",
-    "Valor": "146,52"
+    "Valor": "145,10"
   },
   {
     "data_referencia": "2026-11-09",
@@ -5759,7 +5769,7 @@
     "dataset_label": "Yahoo FIIs e Fiagros",
     "categoria": "FIIs e Fiagros",
     "metrica": "HGRU11.SA",
-    "Valor": "115,61"
+    "Valor": "114,11"
   },
   {
     "data_referencia": "2026-11-09",
@@ -5779,7 +5789,7 @@
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "HYPE3.SA",
-    "Valor": "22,11"
+    "Valor": "22,48"
   },
   {
     "data_referencia": "2026-11-09",
@@ -5809,7 +5819,7 @@
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "IGTI11.SA",
-    "Valor": "23,35"
+    "Valor": "24,02"
   },
   {
     "data_referencia": "2026-11-09",
@@ -5841,7 +5851,7 @@
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "IRBR3.SA",
-    "Valor": "58,01"
+    "Valor": "58,49"
   },
   {
     "data_referencia": "2026-11-09",
@@ -5851,7 +5861,7 @@
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "ITSA4.SA",
-    "Valor": "12,95"
+    "Valor": "13,40"
   },
   {
     "data_referencia": "2026-11-09",
@@ -5861,7 +5871,7 @@
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "ITUB4.SA",
-    "Valor": "40,53"
+    "Valor": "41,72"
   },
   {
     "data_referencia": "2026-11-09",
@@ -5871,7 +5881,7 @@
     "dataset_label": "Yahoo ETFs",
     "categoria": "ETFs & Setoriais",
     "metrica": "IVVB11.SA",
-    "Valor": "459,00"
+    "Valor": "470,25"
   },
   {
     "data_referencia": "2026-11-09",
@@ -5891,7 +5901,7 @@
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "JHSF3.SA",
-    "Valor": "10,00"
+    "Valor": "9,89"
   },
   {
     "data_referencia": "2026-11-09",
@@ -5931,7 +5941,7 @@
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "KLBN11.SA",
-    "Valor": "17,60"
+    "Valor": "17,85"
   },
   {
     "data_referencia": "2026-11-09",
@@ -5951,7 +5961,7 @@
     "dataset_label": "Yahoo FIIs e Fiagros",
     "categoria": "FIIs e Fiagros",
     "metrica": "KNCR11.SA",
-    "Valor": "102,32"
+    "Valor": "102,48"
   },
   {
     "data_referencia": "2026-11-09",
@@ -5961,7 +5971,7 @@
     "dataset_label": "Yahoo FIIs e Fiagros",
     "categoria": "FIIs e Fiagros",
     "metrica": "KNIP11.SA",
-    "Valor": "86,07"
+    "Valor": "86,12"
   },
   {
     "data_referencia": "2026-11-09",
@@ -5991,7 +6001,7 @@
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "LOGN3.SA",
-    "Valor": "22,90"
+    "Valor": "23,00"
   },
   {
     "data_referencia": "2026-11-09",
@@ -6011,7 +6021,7 @@
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "LREN3.SA",
-    "Valor": "9,93"
+    "Valor": "10,14"
   },
   {
     "data_referencia": "2026-11-09",
@@ -6041,7 +6051,7 @@
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "MDIA3.SA",
-    "Valor": "17,02"
+    "Valor": "17,00"
   },
   {
     "data_referencia": "2026-11-09",
@@ -6061,7 +6071,7 @@
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "MGLU3.SA",
-    "Valor": "5,61"
+    "Valor": "5,84"
   },
   {
     "data_referencia": "2026-11-09",
@@ -6081,7 +6091,7 @@
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "MRVE3.SA",
-    "Valor": "4,45"
+    "Valor": "4,55"
   },
   {
     "data_referencia": "2026-11-09",
@@ -6101,7 +6111,7 @@
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "MULT3.SA",
-    "Valor": "27,21"
+    "Valor": "28,04"
   },
   {
     "data_referencia": "2026-11-09",
@@ -6111,7 +6121,7 @@
     "dataset_label": "Yahoo FIIs e Fiagros",
     "categoria": "FIIs e Fiagros",
     "metrica": "MXRF11.SA",
-    "Valor": "8,80"
+    "Valor": "8,92"
   },
   {
     "data_referencia": "2026-11-09",
@@ -6171,7 +6181,7 @@
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "PCAR3.SA",
-    "Valor": "2,40"
+    "Valor": "2,43"
   },
   {
     "data_referencia": "2026-11-09",
@@ -6191,7 +6201,7 @@
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "PETR3.SA",
-    "Valor": "51,21"
+    "Valor": "51,01"
   },
   {
     "data_referencia": "2026-11-09",
@@ -6201,7 +6211,7 @@
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "PETR4.SA",
-    "Valor": "45,30"
+    "Valor": "45,19"
   },
   {
     "data_referencia": "2026-11-09",
@@ -6231,7 +6241,7 @@
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "PRIO3.SA",
-    "Valor": "60,48"
+    "Valor": "59,39"
   },
   {
     "data_referencia": "2026-11-09",
@@ -6261,7 +6271,7 @@
     "dataset_label": "Yahoo FIIs e Fiagros",
     "categoria": "FIIs e Fiagros",
     "metrica": "PVBI11.SA",
-    "Valor": "63,03"
+    "Valor": "59,89"
   },
   {
     "data_referencia": "2026-11-09",
@@ -6291,7 +6301,7 @@
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "QUAL3.SA",
-    "Valor": "1,44"
+    "Valor": "1,48"
   },
   {
     "data_referencia": "2026-11-09",
@@ -6301,7 +6311,7 @@
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "RADL3.SA",
-    "Valor": "14,83"
+    "Valor": "14,82"
   },
   {
     "data_referencia": "2026-11-09",
@@ -6311,7 +6321,7 @@
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "RECV3.SA",
-    "Valor": "10,35"
+    "Valor": "10,20"
   },
   {
     "data_referencia": "2026-11-09",
@@ -6321,7 +6331,7 @@
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "RENT3.SA",
-    "Valor": "30,29"
+    "Valor": "30,83"
   },
   {
     "data_referencia": "2026-11-09",
@@ -6341,7 +6351,7 @@
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "SANB11.SA",
-    "Valor": "25,66"
+    "Valor": "27,00"
   },
   {
     "data_referencia": "2026-11-09",
@@ -6361,7 +6371,7 @@
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "SBSP3.SA",
-    "Valor": "26,78"
+    "Valor": "27,70"
   },
   {
     "data_referencia": "2026-11-09",
@@ -6391,7 +6401,7 @@
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "SLCE3.SA",
-    "Valor": "16,61"
+    "Valor": "17,30"
   },
   {
     "data_referencia": "2026-11-09",
@@ -6401,7 +6411,7 @@
     "dataset_label": "Yahoo ETFs",
     "categoria": "ETFs & Setoriais",
     "metrica": "SMAL11.SA",
-    "Valor": "97,01"
+    "Valor": "99,74"
   },
   {
     "data_referencia": "2026-11-09",
@@ -6421,7 +6431,7 @@
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "SMTO3.SA",
-    "Valor": "20,18"
+    "Valor": "20,20"
   },
   {
     "data_referencia": "2026-11-09",
@@ -6441,7 +6451,7 @@
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "SUZB3.SA",
-    "Valor": "53,40"
+    "Valor": "54,20"
   },
   {
     "data_referencia": "2026-11-09",
@@ -6451,7 +6461,7 @@
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "TAEE11.SA",
-    "Valor": "40,21"
+    "Valor": "41,08"
   },
   {
     "data_referencia": "2026-11-09",
@@ -6491,7 +6501,7 @@
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "TEND3.SA",
-    "Valor": "16,92"
+    "Valor": "16,85"
   },
   {
     "data_referencia": "2026-11-09",
@@ -6501,7 +6511,7 @@
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "TIMS3.SA",
-    "Valor": "19,88"
+    "Valor": "20,33"
   },
   {
     "data_referencia": "2026-11-09",
@@ -6541,7 +6551,7 @@
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "UGPA3.SA",
-    "Valor": "29,77"
+    "Valor": "30,25"
   },
   {
     "data_referencia": "2026-11-09",
@@ -6591,7 +6601,7 @@
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "USIM5.SA",
-    "Valor": "4,97"
+    "Valor": "5,00"
   },
   {
     "data_referencia": "2026-11-09",
@@ -6611,7 +6621,7 @@
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "VALE3.SA",
-    "Valor": "64,04"
+    "Valor": "66,11"
   },
   {
     "data_referencia": "2026-11-09",
@@ -6621,7 +6631,7 @@
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "VBBR3.SA",
-    "Valor": "28,59"
+    "Valor": "28,90"
   },
   {
     "data_referencia": "2026-11-09",
@@ -6661,7 +6671,7 @@
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "VIVT3.SA",
-    "Valor": "31,58"
+    "Valor": "32,15"
   },
   {
     "data_referencia": "2026-11-09",
@@ -6681,7 +6691,7 @@
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "WEGE3.SA",
-    "Valor": "48,19"
+    "Valor": "50,74"
   },
   {
     "data_referencia": "2026-11-09",
@@ -6751,7 +6761,7 @@
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "YDUQ3.SA",
-    "Valor": "9,30"
+    "Valor": "9,65"
   },
   {
     "data_referencia": "2026-11-09",
@@ -6891,7 +6901,7 @@
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
     "metrica": "ADA-USD",
-    "Valor": "0,1789"
+    "Valor": "0,1772"
   },
   {
     "data_referencia": "2026-11-10",
@@ -6911,7 +6921,7 @@
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
     "metrica": "AUDUSD=X",
-    "Valor": "0,6924"
+    "Valor": "0,6915"
   },
   {
     "data_referencia": "2026-11-10",
@@ -6921,7 +6931,7 @@
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
     "metrica": "AVAX-USD",
-    "Valor": "8,48"
+    "Valor": "8,27"
   },
   {
     "data_referencia": "2026-11-10",
@@ -6931,7 +6941,7 @@
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
     "metrica": "BNB-USD",
-    "Valor": "690,30"
+    "Valor": "687,44"
   },
   {
     "data_referencia": "2026-11-10",
@@ -6941,7 +6951,7 @@
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
     "metrica": "BRL=X",
-    "Valor": "5,5109"
+    "Valor": "5,5069"
   },
   {
     "data_referencia": "2026-11-10",
@@ -6951,7 +6961,7 @@
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
     "metrica": "BTC-USD",
-    "Valor": "74.718"
+    "Valor": "74.121"
   },
   {
     "data_referencia": "2026-11-10",
@@ -6971,7 +6981,7 @@
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
     "metrica": "CHFBRL=X",
-    "Valor": "6,7326"
+    "Valor": "6,7179"
   },
   {
     "data_referencia": "2026-11-10",
@@ -7021,7 +7031,7 @@
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
     "metrica": "DOGE-USD",
-    "Valor": "0,0699"
+    "Valor": "0,0692"
   },
   {
     "data_referencia": "2026-11-10",
@@ -7031,7 +7041,7 @@
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
     "metrica": "DOT-USD",
-    "Valor": "0,8572"
+    "Valor": "0,8484"
   },
   {
     "data_referencia": "2026-11-10",
@@ -7041,7 +7051,7 @@
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
     "metrica": "ETH-USD",
-    "Valor": "2.113"
+    "Valor": "2.091"
   },
   {
     "data_referencia": "2026-11-10",
@@ -7051,7 +7061,7 @@
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
     "metrica": "EURBRL=X",
-    "Valor": "6,1922"
+    "Valor": "6,1856"
   },
   {
     "data_referencia": "2026-11-10",
@@ -7061,7 +7071,7 @@
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
     "metrica": "EURUSD=X",
-    "Valor": "1,1241"
+    "Valor": "1,1225"
   },
   {
     "data_referencia": "2026-11-10",
@@ -7071,7 +7081,7 @@
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
     "metrica": "GBPBRL=X",
-    "Valor": "7,4114"
+    "Valor": "7,4025"
   },
   {
     "data_referencia": "2026-11-10",
@@ -7081,7 +7091,7 @@
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
     "metrica": "GBPUSD=X",
-    "Valor": "1,3452"
+    "Valor": "1,3430"
   },
   {
     "data_referencia": "2026-11-10",
@@ -7111,7 +7121,7 @@
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
     "metrica": "ICP-USD",
-    "Valor": "2,42"
+    "Valor": "2,40"
   },
   {
     "data_referencia": "2026-11-10",
@@ -7131,7 +7141,7 @@
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
     "metrica": "LINK-USD",
-    "Valor": "10,61"
+    "Valor": "10,43"
   },
   {
     "data_referencia": "2026-11-10",
@@ -7141,7 +7151,7 @@
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
     "metrica": "LTC-USD",
-    "Valor": "51,38"
+    "Valor": "50,99"
   },
   {
     "data_referencia": "2026-11-10",
@@ -7151,7 +7161,7 @@
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
     "metrica": "MXNBRL=X",
-    "Valor": "0,2975"
+    "Valor": "0,2980"
   },
   {
     "data_referencia": "2026-11-10",
@@ -7161,7 +7171,7 @@
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
     "metrica": "NEAR-USD",
-    "Valor": "3,62"
+    "Valor": "3,58"
   },
   {
     "data_referencia": "2026-11-10",
@@ -7181,7 +7191,7 @@
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
     "metrica": "OP-USD",
-    "Valor": "0,1001"
+    "Valor": "0,0990"
   },
   {
     "data_referencia": "2026-11-10",
@@ -7231,7 +7241,7 @@
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
     "metrica": "SOL-USD",
-    "Valor": "85,75"
+    "Valor": "84,32"
   },
   {
     "data_referencia": "2026-11-10",
@@ -7241,7 +7251,7 @@
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
     "metrica": "TRX-USD",
-    "Valor": "0,3188"
+    "Valor": "0,3194"
   },
   {
     "data_referencia": "2026-11-10",
@@ -7251,7 +7261,7 @@
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
     "metrica": "USDCAD=X",
-    "Valor": "1,4114"
+    "Valor": "1,4127"
   },
   {
     "data_referencia": "2026-11-10",
@@ -7261,7 +7271,7 @@
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
     "metrica": "USDCHF=X",
-    "Valor": "0,8182"
+    "Valor": "0,8207"
   },
   {
     "data_referencia": "2026-11-10",
@@ -7271,7 +7281,7 @@
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
     "metrica": "USDCNY=X",
-    "Valor": "6,6678"
+    "Valor": "6,6587"
   },
   {
     "data_referencia": "2026-11-10",
@@ -7291,7 +7301,7 @@
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
     "metrica": "USDJPY=X",
-    "Valor": "157,9960"
+    "Valor": "158,1500"
   },
   {
     "data_referencia": "2026-11-10",
@@ -7301,7 +7311,7 @@
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
     "metrica": "USDMXN=X",
-    "Valor": "18,4820"
+    "Valor": "18,4919"
   },
   {
     "data_referencia": "2026-11-10",
@@ -7311,7 +7321,7 @@
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
     "metrica": "XLM-USD",
-    "Valor": "0,1481"
+    "Valor": "0,1456"
   },
   {
     "data_referencia": "2026-11-10",
@@ -7321,7 +7331,7 @@
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
     "metrica": "XRP-USD",
-    "Valor": "1,09"
+    "Valor": "1,08"
   },
   {
     "data_referencia": "2026-11-10",
@@ -7391,7 +7401,7 @@
     "dataset_label": "Yahoo Índices Globais",
     "categoria": "Índices de Ações Globais",
     "metrica": "^HSI",
-    "Valor": "24.523"
+    "Valor": "24.557"
   },
   {
     "data_referencia": "2026-11-10",
@@ -7401,7 +7411,7 @@
     "dataset_label": "Yahoo Índices Globais",
     "categoria": "Índices de Ações Globais",
     "metrica": "^JKSE",
-    "Valor": "5.131"
+    "Valor": "5.126"
   },
   {
     "data_referencia": "2026-11-10",
@@ -7411,7 +7421,7 @@
     "dataset_label": "Yahoo Índices Globais",
     "categoria": "Índices de Ações Globais",
     "metrica": "^KLSE",
-    "Valor": "1.601"
+    "Valor": "1.604"
   },
   {
     "data_referencia": "2026-11-10",
@@ -7441,7 +7451,7 @@
     "dataset_label": "Yahoo Índices Globais",
     "categoria": "Índices de Ações Globais",
     "metrica": "^STI",
-    "Valor": "5.271"
+    "Valor": "5.259"
   },
   {
     "data_referencia": "2026-11-10",
