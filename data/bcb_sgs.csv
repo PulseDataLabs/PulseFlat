@@ -6368,7 +6368,7 @@ data_captura,codigo_serie,nome_serie,data_referencia,valor
 2026-11-11,4391,CDI acumulado no mês (% a.m.),2026-08-01,1.09
 2026-11-11,4391,CDI acumulado no mês (% a.m.),2026-09-01,1.08
 2026-11-11,4391,CDI acumulado no mês (% a.m.),2026-10-01,1.07
-2026-11-11,4391,CDI acumulado no mês (% a.m.),2026-11-01,0.25
+2026-11-11,4391,CDI acumulado no mês (% a.m.),2026-11-01,0.31
 2026-11-11,3695,IPCA - variação mensal (% a.m.),2026-08-01,5.1810
 2026-11-11,3695,IPCA - variação mensal (% a.m.),2026-09-01,5.1803
 2026-11-11,3695,IPCA - variação mensal (% a.m.),2026-10-01,5.4206
@@ -6441,3 +6441,4 @@ data_captura,codigo_serie,nome_serie,data_referencia,valor
 2026-11-11,1,Dólar americano - venda (R$/US$),2026-11-06,5.5013
 2026-11-11,1,Dólar americano - venda (R$/US$),2026-11-09,5.5146
 2026-11-11,1,Dólar americano - venda (R$/US$),2026-11-10,5.5840
+2026-11-11,1,Dólar americano - venda (R$/US$),2026-11-11,5.5606
