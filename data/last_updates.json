@@ -313,11 +313,11 @@
   },
   "b3_opcoes_posicoes_resumo.csv.gz": {
     "min": "2026-10-29",
-    "max": "2026-11-09"
+    "max": "2026-11-10"
   },
   "b3_opcoes_posicoes_aberto.csv.gz": {
-    "min": "2026-11-09",
-    "max": "2026-11-09"
+    "min": "2026-11-10",
+    "max": "2026-11-10"
   },
   "b3_indicadores_economicos_fwf.csv": {
     "min": "2026-06-16",
@@ -410,5 +410,13 @@
   "bacen_parcelas_capital_basileia.csv.gz": {
     "min": "2026-06-05",
     "max": "2026-11-11"
+  },
+  "anbima_indices_idka_resultados.csv.gz": {
+    "min": "2020-01-02",
+    "max": "2026-11-10"
+  },
+  "b3_bdi_etfrf.csv.gz": {
+    "min": "2026-01-02",
+    "max": "2026-11-10"
   }
 }
