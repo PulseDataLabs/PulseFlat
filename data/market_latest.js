@@ -13,8 +13,8 @@ window.PULSEFLAT_MARKET_LATEST = [
   },
   {
     "label": "IPCA 12m",
-    "value": "0,82%",
-    "reference_date": "2026-09-01",
+    "value": "0,14%",
+    "reference_date": "2026-10-01",
     "type": "neutral"
   },
   {
@@ -25,17 +25,17 @@ window.PULSEFLAT_MARKET_LATEST = [
   },
   {
     "label": "PTAX USD Venda",
-    "value": "5,5606",
-    "reference_date": "2026-11-11",
-    "type": "down",
-    "change": "-0,42%"
+    "value": "5,6143",
+    "reference_date": "2026-11-12",
+    "type": "up",
+    "change": "+0,97%"
   },
   {
     "label": "PTAX USD Compra",
-    "value": "5,5600",
-    "reference_date": "2026-11-11",
-    "type": "down",
-    "change": "-0,42%"
+    "value": "5,6137",
+    "reference_date": "2026-11-12",
+    "type": "up",
+    "change": "+0,97%"
   },
   {
     "label": "IBOVESPA",
