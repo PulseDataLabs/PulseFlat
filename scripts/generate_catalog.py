@@ -176,6 +176,33 @@ def generate(dry_run: bool = False) -> None:
         target_gz_path = datasets_json_path.parent / (filename if filename.endswith(".gz") else f"{filename}.gz")
 
         if not target_path.exists() and not target_gz_path.exists():
+            part_files = sorted(
+                list(datasets_json_path.parent.glob(f"{module_name}_[0-9][0-9][0-9][0-9]_[0-9][0-9].csv.gz"))
+                + list(datasets_json_path.parent.glob(f"{module_name}_[0-9][0-9][0-9][0-9]_[0-9][0-9].csv"))
+            )
+            if part_files:
+                for part_path in part_files:
+                    part_name = part_path.name
+                    ym_suffix = part_name.replace(f"{module_name}_", "").split(".")[0].replace("_", "-")
+                    part_url = f"https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/{part_name}"
+                    dataset_entry = {
+                        "title": f"{title} ({ym_suffix})",
+                        "file": part_name,
+                        "description": description,
+                        "icon": icon,
+                        "iconClass": icon_class,
+                        "badge": badge,
+                        "badgeClass": badge_class,
+                        "tags": tags,
+                        "source": source,
+                        "url": part_url,
+                        "accumulate": accumulate,
+                    }
+                    new_catalog.append(dataset_entry)
+                    processed_files.add(part_name)
+                    print_done(f"{module_name} → {part_name}")
+                continue
+
             print_warn(f"Ignorando scraper sem arquivo gerado no disco: {module_name} ({filename})")
             continue
 

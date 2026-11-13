@@ -29,6 +29,7 @@ class BaseScraper:
     enabled: bool = True
     phase: int = 1
     compress: bool = False
+    partition_column: str | None = None
 
     def __init__(self):
         if not self.name:
@@ -185,20 +186,51 @@ class BaseScraper:
             if "data_captura" not in cabecalho:
                 cabecalho.insert(0, "data_captura")
 
-            salvar_csv(
-                arquivo=self.output_file,
-                registros=df_cleaned,  # Passa o DataFrame diretamente
-                cabecalho=cabecalho,
-                chaves_dedup=self.chaves_dedup,
-                acumular=self.accumulate,
-            )
-
-            elapsed = time.time() - t0
-            if not is_pipeline:
-                print_done(
-                    f"{len(df_cleaned)} registros salvos em {self.output_file.name}",
-                    elapsed=elapsed,
+            ext = ".csv.gz" if getattr(self, "compress", False) else ".csv"
+            if self.partition_column and self.partition_column in df_cleaned.columns:
+                part_keys = (
+                    df_cleaned[self.partition_column]
+                    .astype(str)
+                    .str.strip()
+                    .str.slice(0, 7)
+                    .str.replace("-", "_", regex=False)
                 )
+                part_keys = part_keys.where(
+                    part_keys.str.match(r"^\d{4}_\d{2}$"), "sem_data"
+                )
+                saved_files = []
+                for ym, part_df in df_cleaned.groupby(part_keys, sort=True):
+                    part_file = self.output_file.parent / f"{self.name}_{ym}{ext}"
+                    salvar_csv(
+                        arquivo=part_file,
+                        registros=part_df,
+                        cabecalho=cabecalho,
+                        chaves_dedup=self.chaves_dedup,
+                        acumular=self.accumulate,
+                    )
+                    saved_files.append(part_file.name)
+
+                elapsed = time.time() - t0
+                if not is_pipeline:
+                    print_done(
+                        f"{len(df_cleaned)} registros salvos em {len(saved_files)} partição(ões): {', '.join(saved_files)}",
+                        elapsed=elapsed,
+                    )
+            else:
+                salvar_csv(
+                    arquivo=self.output_file,
+                    registros=df_cleaned,  # Passa o DataFrame diretamente
+                    cabecalho=cabecalho,
+                    chaves_dedup=self.chaves_dedup,
+                    acumular=self.accumulate,
+                )
+
+                elapsed = time.time() - t0
+                if not is_pipeline:
+                    print_done(
+                        f"{len(df_cleaned)} registros salvos em {self.output_file.name}",
+                        elapsed=elapsed,
+                    )
 
         except Exception as e:
             elapsed = time.time() - t0

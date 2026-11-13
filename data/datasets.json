@@ -1022,8 +1022,8 @@
     "accumulate": true
   },
   {
-    "title": "B3 BDI — Negócios de Ações",
-    "file": "b3_bdi_trades_acoes.csv.gz",
+    "title": "B3 BDI — Negócios de Ações (2026-06)",
+    "file": "b3_bdi_trades_acoes_2026_06.csv.gz",
     "description": "Boletim Diário de Informações (BDI) com o resumo consolidado de negociações no mercado à vista de ações da B3, incluindo número de negócios, volume financeiro total, títulos negociados e variação percentual diária.",
     "icon": "📈",
     "iconClass": "icon-b3",
@@ -1037,7 +1037,102 @@
       "negócios"
     ],
     "source": "B3 BDI",
-    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/b3_bdi_trades_acoes.csv.gz",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/b3_bdi_trades_acoes_2026_06.csv.gz",
+    "accumulate": true
+  },
+  {
+    "title": "B3 BDI — Negócios de Ações (2026-07)",
+    "file": "b3_bdi_trades_acoes_2026_07.csv.gz",
+    "description": "Boletim Diário de Informações (BDI) com o resumo consolidado de negociações no mercado à vista de ações da B3, incluindo número de negócios, volume financeiro total, títulos negociados e variação percentual diária.",
+    "icon": "📈",
+    "iconClass": "icon-b3",
+    "badge": "Diário",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "ações",
+      "volume",
+      "preço",
+      "bdi",
+      "negócios"
+    ],
+    "source": "B3 BDI",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/b3_bdi_trades_acoes_2026_07.csv.gz",
+    "accumulate": true
+  },
+  {
+    "title": "B3 BDI — Negócios de Ações (2026-08)",
+    "file": "b3_bdi_trades_acoes_2026_08.csv.gz",
+    "description": "Boletim Diário de Informações (BDI) com o resumo consolidado de negociações no mercado à vista de ações da B3, incluindo número de negócios, volume financeiro total, títulos negociados e variação percentual diária.",
+    "icon": "📈",
+    "iconClass": "icon-b3",
+    "badge": "Diário",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "ações",
+      "volume",
+      "preço",
+      "bdi",
+      "negócios"
+    ],
+    "source": "B3 BDI",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/b3_bdi_trades_acoes_2026_08.csv.gz",
+    "accumulate": true
+  },
+  {
+    "title": "B3 BDI — Negócios de Ações (2026-09)",
+    "file": "b3_bdi_trades_acoes_2026_09.csv.gz",
+    "description": "Boletim Diário de Informações (BDI) com o resumo consolidado de negociações no mercado à vista de ações da B3, incluindo número de negócios, volume financeiro total, títulos negociados e variação percentual diária.",
+    "icon": "📈",
+    "iconClass": "icon-b3",
+    "badge": "Diário",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "ações",
+      "volume",
+      "preço",
+      "bdi",
+      "negócios"
+    ],
+    "source": "B3 BDI",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/b3_bdi_trades_acoes_2026_09.csv.gz",
+    "accumulate": true
+  },
+  {
+    "title": "B3 BDI — Negócios de Ações (2026-10)",
+    "file": "b3_bdi_trades_acoes_2026_10.csv.gz",
+    "description": "Boletim Diário de Informações (BDI) com o resumo consolidado de negociações no mercado à vista de ações da B3, incluindo número de negócios, volume financeiro total, títulos negociados e variação percentual diária.",
+    "icon": "📈",
+    "iconClass": "icon-b3",
+    "badge": "Diário",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "ações",
+      "volume",
+      "preço",
+      "bdi",
+      "negócios"
+    ],
+    "source": "B3 BDI",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/b3_bdi_trades_acoes_2026_10.csv.gz",
+    "accumulate": true
+  },
+  {
+    "title": "B3 BDI — Negócios de Ações (2026-11)",
+    "file": "b3_bdi_trades_acoes_2026_11.csv.gz",
+    "description": "Boletim Diário de Informações (BDI) com o resumo consolidado de negociações no mercado à vista de ações da B3, incluindo número de negócios, volume financeiro total, títulos negociados e variação percentual diária.",
+    "icon": "📈",
+    "iconClass": "icon-b3",
+    "badge": "Diário",
+    "badgeClass": "badge-daily",
+    "tags": [
+      "ações",
+      "volume",
+      "preço",
+      "bdi",
+      "negócios"
+    ],
+    "source": "B3 BDI",
+    "url": "https://raw.githubusercontent.com/PulseDataLabs/PulseFlat/main/data/b3_bdi_trades_acoes_2026_11.csv.gz",
     "accumulate": true
   },
   {
