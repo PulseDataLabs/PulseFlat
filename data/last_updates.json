@@ -133,7 +133,7 @@
   },
   "anbima_indice_imab.csv.gz": {
     "min": "2001-12-04",
-    "max": "2026-11-12"
+    "max": "2026-11-13"
   },
   "b3_opcoes_posicoes_resumo.csv.gz": {
     "min": "2026-10-29",
@@ -273,7 +273,7 @@
   },
   "fred_us_treasuries_yield_curve.csv.gz": {
     "min": "2020-01-02",
-    "max": "2026-11-12"
+    "max": "2026-11-13"
   },
   "ipea_calendario.csv": {
     "min": "1970-01-01",
@@ -321,7 +321,7 @@
   },
   "yahoo_cambio_moedas.csv": {
     "min": "2026-05-01",
-    "max": "2026-11-13"
+    "max": "2026-11-14"
   },
   "yahoo_commodities.csv": {
     "min": "2026-05-28",
