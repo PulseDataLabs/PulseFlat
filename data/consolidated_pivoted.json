@@ -4928,311 +4928,6 @@
   },
   {
     "data_referencia": "2026-11-12",
-    "indicador": "100000 (LTN)",
-    "fonte": "ANBIMA",
-    "dataset": "anbima_titulos_publicos.csv",
-    "dataset_label": "ANBIMA Títulos Públicos",
-    "categoria": "Títulos Públicos",
-    "metrica": "tx_indicativa",
-    "Taxa indicativa": "13,68%",
-    "PU": "953,29"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "210100 (LFT)",
-    "fonte": "ANBIMA",
-    "dataset": "anbima_titulos_publicos.csv",
-    "dataset_label": "ANBIMA Títulos Públicos",
-    "categoria": "Títulos Públicos",
-    "metrica": "tx_indicativa",
-    "Taxa indicativa": "0,03%",
-    "PU": "20.282"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "760199 (NTN-B)",
-    "fonte": "ANBIMA",
-    "dataset": "anbima_titulos_publicos.csv",
-    "dataset_label": "ANBIMA Títulos Públicos",
-    "categoria": "Títulos Públicos",
-    "metrica": "tx_indicativa",
-    "Taxa indicativa": "3,95%",
-    "PU": "4.961"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "770100 (NTN-C)",
-    "fonte": "ANBIMA",
-    "dataset": "anbima_titulos_publicos.csv",
-    "dataset_label": "ANBIMA Títulos Públicos",
-    "categoria": "Títulos Públicos",
-    "metrica": "tx_indicativa",
-    "Taxa indicativa": "7,68%",
-    "PU": "8.072"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "950199 (NTN-F)",
-    "fonte": "ANBIMA",
-    "dataset": "anbima_titulos_publicos.csv",
-    "dataset_label": "ANBIMA Títulos Públicos",
-    "categoria": "Títulos Públicos",
-    "metrica": "tx_indicativa",
-    "Taxa indicativa": "13,64%",
-    "PU": "1.031"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "AAPL",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_internacionais.csv",
-    "dataset_label": "Yahoo Ações Internacionais",
-    "categoria": "Ações Internacionais",
-    "metrica": "AAPL",
-    "Valor": "354,88"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "ABBV",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_internacionais.csv",
-    "dataset_label": "Yahoo Ações Internacionais",
-    "categoria": "Ações Internacionais",
-    "metrica": "ABBV",
-    "Valor": "294,45"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "ABEV3.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_brasileiras.csv",
-    "dataset_label": "Yahoo Ações Brasileiras",
-    "categoria": "Ações Brasileiras (B3)",
-    "metrica": "ABEV3.SA",
-    "Valor": "15,75"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "ADBE",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_internacionais.csv",
-    "dataset_label": "Yahoo Ações Internacionais",
-    "categoria": "Ações Internacionais",
-    "metrica": "ADBE",
-    "Valor": "238,54"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "ALOS3.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_brasileiras.csv",
-    "dataset_label": "Yahoo Ações Brasileiras",
-    "categoria": "Ações Brasileiras (B3)",
-    "metrica": "ALOS3.SA",
-    "Valor": "26,70"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "ALZR11.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_fiis_fiagros.csv",
-    "dataset_label": "Yahoo FIIs e Fiagros",
-    "categoria": "FIIs e Fiagros",
-    "metrica": "ALZR11.SA",
-    "Valor": "9,60"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "AMD",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_internacionais.csv",
-    "dataset_label": "Yahoo Ações Internacionais",
-    "categoria": "Ações Internacionais",
-    "metrica": "AMD",
-    "Valor": "585,30"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "AMZN",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_internacionais.csv",
-    "dataset_label": "Yahoo Ações Internacionais",
-    "categoria": "Ações Internacionais",
-    "metrica": "AMZN",
-    "Valor": "267,44"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "ASAI3.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_brasileiras.csv",
-    "dataset_label": "Yahoo Ações Brasileiras",
-    "categoria": "Ações Brasileiras (B3)",
-    "metrica": "ASAI3.SA",
-    "Valor": "9,47"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "ASML",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_internacionais.csv",
-    "dataset_label": "Yahoo Ações Internacionais",
-    "categoria": "Ações Internacionais",
-    "metrica": "ASML",
-    "Valor": "1.497"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "B3SA3.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_brasileiras.csv",
-    "dataset_label": "Yahoo Ações Brasileiras",
-    "categoria": "Ações Brasileiras (B3)",
-    "metrica": "B3SA3.SA",
-    "Valor": "14,76"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "BABA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_internacionais.csv",
-    "dataset_label": "Yahoo Ações Internacionais",
-    "categoria": "Ações Internacionais",
-    "metrica": "BABA",
-    "Valor": "94,36"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "BAC",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_internacionais.csv",
-    "dataset_label": "Yahoo Ações Internacionais",
-    "categoria": "Ações Internacionais",
-    "metrica": "BAC",
-    "Valor": "50,51"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "BBAS3.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_brasileiras.csv",
-    "dataset_label": "Yahoo Ações Brasileiras",
-    "categoria": "Ações Brasileiras (B3)",
-    "metrica": "BBAS3.SA",
-    "Valor": "15,48"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "BBDC3.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_brasileiras.csv",
-    "dataset_label": "Yahoo Ações Brasileiras",
-    "categoria": "Ações Brasileiras (B3)",
-    "metrica": "BBDC3.SA",
-    "Valor": "13,29"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "BBDC4.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_brasileiras.csv",
-    "dataset_label": "Yahoo Ações Brasileiras",
-    "categoria": "Ações Brasileiras (B3)",
-    "metrica": "BBDC4.SA",
-    "Valor": "14,32"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "BEEF3.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_brasileiras.csv",
-    "dataset_label": "Yahoo Ações Brasileiras",
-    "categoria": "Ações Brasileiras (B3)",
-    "metrica": "BEEF3.SA",
-    "Valor": "3,18"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "BND",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_etfs.csv",
-    "dataset_label": "Yahoo ETFs",
-    "categoria": "ETFs & Setoriais",
-    "metrica": "BND",
-    "Valor": "70,65"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "BOVA11.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_etfs.csv",
-    "dataset_label": "Yahoo ETFs",
-    "categoria": "ETFs & Setoriais",
-    "metrica": "BOVA11.SA",
-    "Valor": "168,55"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "BPAC11.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_brasileiras.csv",
-    "dataset_label": "Yahoo Ações Brasileiras",
-    "categoria": "Ações Brasileiras (B3)",
-    "metrica": "BPAC11.SA",
-    "Valor": "54,14"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "BRAP4.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_brasileiras.csv",
-    "dataset_label": "Yahoo Ações Brasileiras",
-    "categoria": "Ações Brasileiras (B3)",
-    "metrica": "BRAP4.SA",
-    "Valor": "18,36"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "BRCO11.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_fiis_fiagros.csv",
-    "dataset_label": "Yahoo FIIs e Fiagros",
-    "categoria": "FIIs e Fiagros",
-    "metrica": "BRCO11.SA",
-    "Valor": "105,75"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "BRKM5.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_brasileiras.csv",
-    "dataset_label": "Yahoo Ações Brasileiras",
-    "categoria": "Ações Brasileiras (B3)",
-    "metrica": "BRKM5.SA",
-    "Valor": "3,07"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "BTLG11.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_fiis_fiagros.csv",
-    "dataset_label": "Yahoo FIIs e Fiagros",
-    "categoria": "FIIs e Fiagros",
-    "metrica": "BTLG11.SA",
-    "Valor": "97,90"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "BZ=F",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_commodities.csv",
-    "dataset_label": "Yahoo Commodities",
-    "categoria": "Commodities Globais",
-    "metrica": "BZ=F",
-    "Valor": "95,82"
-  },
-  {
-    "data_referencia": "2026-11-12",
     "indicador": "CBOE VIX Volatility",
     "fonte": "FRED",
     "dataset": "fred_global_liquidity_credit_spreads.csv.gz",
@@ -5240,286 +4935,6 @@
     "categoria": "Liquidez & Crédito Global",
     "metrica": "vix",
     "Valor": "18,70"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "CC=F",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_commodities.csv",
-    "dataset_label": "Yahoo Commodities",
-    "categoria": "Commodities Globais",
-    "metrica": "CC=F",
-    "Valor": "5.066"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "CL=F",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_commodities.csv",
-    "dataset_label": "Yahoo Commodities",
-    "categoria": "Commodities Globais",
-    "metrica": "CL=F",
-    "Valor": "88,74"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "CMIG4.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_brasileiras.csv",
-    "dataset_label": "Yahoo Ações Brasileiras",
-    "categoria": "Ações Brasileiras (B3)",
-    "metrica": "CMIG4.SA",
-    "Valor": "10,62"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "CMIN3.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_brasileiras.csv",
-    "dataset_label": "Yahoo Ações Brasileiras",
-    "categoria": "Ações Brasileiras (B3)",
-    "metrica": "CMIN3.SA",
-    "Valor": "4,82"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "COGN3.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_brasileiras.csv",
-    "dataset_label": "Yahoo Ações Brasileiras",
-    "categoria": "Ações Brasileiras (B3)",
-    "metrica": "COGN3.SA",
-    "Valor": "1,58"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "COST",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_internacionais.csv",
-    "dataset_label": "Yahoo Ações Internacionais",
-    "categoria": "Ações Internacionais",
-    "metrica": "COST",
-    "Valor": "1.092"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "CPFE3.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_brasileiras.csv",
-    "dataset_label": "Yahoo Ações Brasileiras",
-    "categoria": "Ações Brasileiras (B3)",
-    "metrica": "CPFE3.SA",
-    "Valor": "44,50"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "CPTR11.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_fiis_fiagros.csv",
-    "dataset_label": "Yahoo FIIs e Fiagros",
-    "categoria": "FIIs e Fiagros",
-    "metrica": "CPTR11.SA",
-    "Valor": "7,24"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "CRM",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_internacionais.csv",
-    "dataset_label": "Yahoo Ações Internacionais",
-    "categoria": "Ações Internacionais",
-    "metrica": "CRM",
-    "Valor": "217,57"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "CSAN3.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_brasileiras.csv",
-    "dataset_label": "Yahoo Ações Brasileiras",
-    "categoria": "Ações Brasileiras (B3)",
-    "metrica": "CSAN3.SA",
-    "Valor": "2,85"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "CSNA3.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_brasileiras.csv",
-    "dataset_label": "Yahoo Ações Brasileiras",
-    "categoria": "Ações Brasileiras (B3)",
-    "metrica": "CSNA3.SA",
-    "Valor": "4,23"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "CT=F",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_commodities.csv",
-    "dataset_label": "Yahoo Commodities",
-    "categoria": "Commodities Globais",
-    "metrica": "CT=F",
-    "Valor": "78,67"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "CVCB3.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_brasileiras.csv",
-    "dataset_label": "Yahoo Ações Brasileiras",
-    "categoria": "Ações Brasileiras (B3)",
-    "metrica": "CVCB3.SA",
-    "Valor": "0,8400"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "CVX",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_internacionais.csv",
-    "dataset_label": "Yahoo Ações Internacionais",
-    "categoria": "Ações Internacionais",
-    "metrica": "CVX",
-    "Valor": "216,35"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "CYRE3.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_brasileiras.csv",
-    "dataset_label": "Yahoo Ações Brasileiras",
-    "categoria": "Ações Brasileiras (B3)",
-    "metrica": "CYRE3.SA",
-    "Valor": "19,00"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "DI Over (SELIC equivalente)",
-    "fonte": "B3",
-    "dataset": "b3_bdi_di_over.csv",
-    "dataset_label": "B3 DI Over",
-    "categoria": "",
-    "metrica": "average",
-    "Valor": "13,65%"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "DI Over — Volume financeiro",
-    "fonte": "B3",
-    "dataset": "b3_bdi_di_over.csv",
-    "dataset_label": "B3 DI Over",
-    "categoria": "",
-    "metrica": "financial_volume",
-    "Valor": "2.759.720"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "DI1",
-    "fonte": "B3",
-    "dataset": "b3_bmf_taxas_juros.csv",
-    "dataset_label": "B3 BMF Taxas",
-    "categoria": "Taxas de Juros",
-    "metrica": "taxa",
-    "Valor": "13,65%"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "DIA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_etfs.csv",
-    "dataset_label": "Yahoo ETFs",
-    "categoria": "ETFs & Setoriais",
-    "metrica": "DIA",
-    "Valor": "522,47"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "DIS",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_internacionais.csv",
-    "dataset_label": "Yahoo Ações Internacionais",
-    "categoria": "Ações Internacionais",
-    "metrica": "DIS",
-    "Valor": "118,23"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "EEM",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_etfs.csv",
-    "dataset_label": "Yahoo ETFs",
-    "categoria": "ETFs & Setoriais",
-    "metrica": "EEM",
-    "Valor": "61,14"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "EGIE3.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_brasileiras.csv",
-    "dataset_label": "Yahoo Ações Brasileiras",
-    "categoria": "Ações Brasileiras (B3)",
-    "metrica": "EGIE3.SA",
-    "Valor": "26,35"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "ENEV3.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_brasileiras.csv",
-    "dataset_label": "Yahoo Ações Brasileiras",
-    "categoria": "Ações Brasileiras (B3)",
-    "metrica": "ENEV3.SA",
-    "Valor": "27,00"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "ENGI11.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_brasileiras.csv",
-    "dataset_label": "Yahoo Ações Brasileiras",
-    "categoria": "Ações Brasileiras (B3)",
-    "metrica": "ENGI11.SA",
-    "Valor": "47,39"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "EQTL3.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_brasileiras.csv",
-    "dataset_label": "Yahoo Ações Brasileiras",
-    "categoria": "Ações Brasileiras (B3)",
-    "metrica": "EQTL3.SA",
-    "Valor": "34,09"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "EWZ",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_etfs.csv",
-    "dataset_label": "Yahoo ETFs",
-    "categoria": "ETFs & Setoriais",
-    "metrica": "EWZ",
-    "Valor": "31,78"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "EZTC3.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_brasileiras.csv",
-    "dataset_label": "Yahoo Ações Brasileiras",
-    "categoria": "Ações Brasileiras (B3)",
-    "metrica": "EZTC3.SA",
-    "Valor": "9,62"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "Estimativa Taxa Selic",
-    "fonte": "ANBIMA",
-    "dataset": "anbima_titulos_publicos_estimativa_selic.csv.gz",
-    "dataset_label": "ANBIMA Estimativa Selic",
-    "categoria": "Taxas de Juros",
-    "metrica": "estimativa_taxa_selic",
-    "Valor": "13,65%"
   },
   {
     "data_referencia": "2026-11-12",
@@ -5533,26 +4948,6 @@
   },
   {
     "data_referencia": "2026-11-12",
-    "indicador": "FGAA11.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_fiis_fiagros.csv",
-    "dataset_label": "Yahoo FIIs e Fiagros",
-    "categoria": "FIIs e Fiagros",
-    "metrica": "FGAA11.SA",
-    "Valor": "7,67"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "FLRY3.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_brasileiras.csv",
-    "dataset_label": "Yahoo Ações Brasileiras",
-    "categoria": "Ações Brasileiras (B3)",
-    "metrica": "FLRY3.SA",
-    "Valor": "21,05"
-  },
-  {
-    "data_referencia": "2026-11-12",
     "indicador": "Fed Funds Effective Rate",
     "fonte": "FRED",
     "dataset": "fred_global_liquidity_credit_spreads.csv.gz",
@@ -5560,736 +4955,6 @@
     "categoria": "Liquidez & Crédito Global",
     "metrica": "fed_funds_rate",
     "Valor": "3,88%"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "GC=F",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_commodities.csv",
-    "dataset_label": "Yahoo Commodities",
-    "categoria": "Commodities Globais",
-    "metrica": "GC=F",
-    "Valor": "3.885"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "GGBR4.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_brasileiras.csv",
-    "dataset_label": "Yahoo Ações Brasileiras",
-    "categoria": "Ações Brasileiras (B3)",
-    "metrica": "GGBR4.SA",
-    "Valor": "24,97"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "GOOGL",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_internacionais.csv",
-    "dataset_label": "Yahoo Ações Internacionais",
-    "categoria": "Ações Internacionais",
-    "metrica": "GOOGL",
-    "Valor": "298,70"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "HAPV3.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_brasileiras.csv",
-    "dataset_label": "Yahoo Ações Brasileiras",
-    "categoria": "Ações Brasileiras (B3)",
-    "metrica": "HAPV3.SA",
-    "Valor": "5,32"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "HD",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_internacionais.csv",
-    "dataset_label": "Yahoo Ações Internacionais",
-    "categoria": "Ações Internacionais",
-    "metrica": "HD",
-    "Valor": "348,26"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "HG=F",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_commodities.csv",
-    "dataset_label": "Yahoo Commodities",
-    "categoria": "Commodities Globais",
-    "metrica": "HG=F",
-    "Valor": "6,18"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "HGLG11.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_fiis_fiagros.csv",
-    "dataset_label": "Yahoo FIIs e Fiagros",
-    "categoria": "FIIs e Fiagros",
-    "metrica": "HGLG11.SA",
-    "Valor": "145,69"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "HGRU11.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_fiis_fiagros.csv",
-    "dataset_label": "Yahoo FIIs e Fiagros",
-    "categoria": "FIIs e Fiagros",
-    "metrica": "HGRU11.SA",
-    "Valor": "114,74"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "HYG",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_etfs.csv",
-    "dataset_label": "Yahoo ETFs",
-    "categoria": "ETFs & Setoriais",
-    "metrica": "HYG",
-    "Valor": "76,98"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "HYPE3.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_brasileiras.csv",
-    "dataset_label": "Yahoo Ações Brasileiras",
-    "categoria": "Ações Brasileiras (B3)",
-    "metrica": "HYPE3.SA",
-    "Valor": "22,21"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "IFIX.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_fiis_fiagros.csv",
-    "dataset_label": "Yahoo FIIs e Fiagros",
-    "categoria": "FIIs e Fiagros",
-    "metrica": "IFIX.SA",
-    "Valor": "3.567"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "IGTI11.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_brasileiras.csv",
-    "dataset_label": "Yahoo Ações Brasileiras",
-    "categoria": "Ações Brasileiras (B3)",
-    "metrica": "IGTI11.SA",
-    "Valor": "22,50"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "INTC",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_internacionais.csv",
-    "dataset_label": "Yahoo Ações Internacionais",
-    "categoria": "Ações Internacionais",
-    "metrica": "INTC",
-    "Valor": "61,20"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "IRBR3.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_brasileiras.csv",
-    "dataset_label": "Yahoo Ações Brasileiras",
-    "categoria": "Ações Brasileiras (B3)",
-    "metrica": "IRBR3.SA",
-    "Valor": "57,53"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "ITSA4.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_brasileiras.csv",
-    "dataset_label": "Yahoo Ações Brasileiras",
-    "categoria": "Ações Brasileiras (B3)",
-    "metrica": "ITSA4.SA",
-    "Valor": "13,57"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "ITUB4.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_brasileiras.csv",
-    "dataset_label": "Yahoo Ações Brasileiras",
-    "categoria": "Ações Brasileiras (B3)",
-    "metrica": "ITUB4.SA",
-    "Valor": "41,68"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "IVVB11.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_etfs.csv",
-    "dataset_label": "Yahoo ETFs",
-    "categoria": "ETFs & Setoriais",
-    "metrica": "IVVB11.SA",
-    "Valor": "483,80"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "IWM",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_etfs.csv",
-    "dataset_label": "Yahoo ETFs",
-    "categoria": "ETFs & Setoriais",
-    "metrica": "IWM",
-    "Valor": "278,44"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "JHSF3.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_brasileiras.csv",
-    "dataset_label": "Yahoo Ações Brasileiras",
-    "categoria": "Ações Brasileiras (B3)",
-    "metrica": "JHSF3.SA",
-    "Valor": "9,87"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "JNJ",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_internacionais.csv",
-    "dataset_label": "Yahoo Ações Internacionais",
-    "categoria": "Ações Internacionais",
-    "metrica": "JNJ",
-    "Valor": "283,52"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "JPM",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_internacionais.csv",
-    "dataset_label": "Yahoo Ações Internacionais",
-    "categoria": "Ações Internacionais",
-    "metrica": "JPM",
-    "Valor": "342,82"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "KC=F",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_commodities.csv",
-    "dataset_label": "Yahoo Commodities",
-    "categoria": "Commodities Globais",
-    "metrica": "KC=F",
-    "Valor": "280,20"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "KLBN11.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_brasileiras.csv",
-    "dataset_label": "Yahoo Ações Brasileiras",
-    "categoria": "Ações Brasileiras (B3)",
-    "metrica": "KLBN11.SA",
-    "Valor": "17,64"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "KNCA11.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_fiis_fiagros.csv",
-    "dataset_label": "Yahoo FIIs e Fiagros",
-    "categoria": "FIIs e Fiagros",
-    "metrica": "KNCA11.SA",
-    "Valor": "86,80"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "KNCR11.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_fiis_fiagros.csv",
-    "dataset_label": "Yahoo FIIs e Fiagros",
-    "categoria": "FIIs e Fiagros",
-    "metrica": "KNCR11.SA",
-    "Valor": "103,45"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "KNIP11.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_fiis_fiagros.csv",
-    "dataset_label": "Yahoo FIIs e Fiagros",
-    "categoria": "FIIs e Fiagros",
-    "metrica": "KNIP11.SA",
-    "Valor": "87,30"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "KO",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_internacionais.csv",
-    "dataset_label": "Yahoo Ações Internacionais",
-    "categoria": "Ações Internacionais",
-    "metrica": "KO",
-    "Valor": "97,44"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "LLY",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_internacionais.csv",
-    "dataset_label": "Yahoo Ações Internacionais",
-    "categoria": "Ações Internacionais",
-    "metrica": "LLY",
-    "Valor": "1.427"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "LOGN3.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_brasileiras.csv",
-    "dataset_label": "Yahoo Ações Brasileiras",
-    "categoria": "Ações Brasileiras (B3)",
-    "metrica": "LOGN3.SA",
-    "Valor": "22,85"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "LQD",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_etfs.csv",
-    "dataset_label": "Yahoo ETFs",
-    "categoria": "ETFs & Setoriais",
-    "metrica": "LQD",
-    "Valor": "103,05"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "LREN3.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_brasileiras.csv",
-    "dataset_label": "Yahoo Ações Brasileiras",
-    "categoria": "Ações Brasileiras (B3)",
-    "metrica": "LREN3.SA",
-    "Valor": "9,40"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "MA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_internacionais.csv",
-    "dataset_label": "Yahoo Ações Internacionais",
-    "categoria": "Ações Internacionais",
-    "metrica": "MA",
-    "Valor": "652,60"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "MCD",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_internacionais.csv",
-    "dataset_label": "Yahoo Ações Internacionais",
-    "categoria": "Ações Internacionais",
-    "metrica": "MCD",
-    "Valor": "273,63"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "MDIA3.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_brasileiras.csv",
-    "dataset_label": "Yahoo Ações Brasileiras",
-    "categoria": "Ações Brasileiras (B3)",
-    "metrica": "MDIA3.SA",
-    "Valor": "17,36"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "META",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_internacionais.csv",
-    "dataset_label": "Yahoo Ações Internacionais",
-    "categoria": "Ações Internacionais",
-    "metrica": "META",
-    "Valor": "623,61"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "MGLU3.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_brasileiras.csv",
-    "dataset_label": "Yahoo Ações Brasileiras",
-    "categoria": "Ações Brasileiras (B3)",
-    "metrica": "MGLU3.SA",
-    "Valor": "7,07"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "MRK",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_internacionais.csv",
-    "dataset_label": "Yahoo Ações Internacionais",
-    "categoria": "Ações Internacionais",
-    "metrica": "MRK",
-    "Valor": "146,95"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "MRVE3.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_brasileiras.csv",
-    "dataset_label": "Yahoo Ações Brasileiras",
-    "categoria": "Ações Brasileiras (B3)",
-    "metrica": "MRVE3.SA",
-    "Valor": "4,77"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "MSFT",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_internacionais.csv",
-    "dataset_label": "Yahoo Ações Internacionais",
-    "categoria": "Ações Internacionais",
-    "metrica": "MSFT",
-    "Valor": "523,00"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "MULT3.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_brasileiras.csv",
-    "dataset_label": "Yahoo Ações Brasileiras",
-    "categoria": "Ações Brasileiras (B3)",
-    "metrica": "MULT3.SA",
-    "Valor": "27,32"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "MXRF11.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_fiis_fiagros.csv",
-    "dataset_label": "Yahoo FIIs e Fiagros",
-    "categoria": "FIIs e Fiagros",
-    "metrica": "MXRF11.SA",
-    "Valor": "8,70"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "NFLX",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_internacionais.csv",
-    "dataset_label": "Yahoo Ações Internacionais",
-    "categoria": "Ações Internacionais",
-    "metrica": "NFLX",
-    "Valor": "62,69"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "NG=F",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_commodities.csv",
-    "dataset_label": "Yahoo Commodities",
-    "categoria": "Commodities Globais",
-    "metrica": "NG=F",
-    "Valor": "3,34"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "NKE",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_internacionais.csv",
-    "dataset_label": "Yahoo Ações Internacionais",
-    "categoria": "Ações Internacionais",
-    "metrica": "NKE",
-    "Valor": "37,76"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "NVDA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_internacionais.csv",
-    "dataset_label": "Yahoo Ações Internacionais",
-    "categoria": "Ações Internacionais",
-    "metrica": "NVDA",
-    "Valor": "166,19"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "NVO",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_internacionais.csv",
-    "dataset_label": "Yahoo Ações Internacionais",
-    "categoria": "Ações Internacionais",
-    "metrica": "NVO",
-    "Valor": "40,65"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "ORCL",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_internacionais.csv",
-    "dataset_label": "Yahoo Ações Internacionais",
-    "categoria": "Ações Internacionais",
-    "metrica": "ORCL",
-    "Valor": "127,11"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "PA=F",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_commodities.csv",
-    "dataset_label": "Yahoo Commodities",
-    "categoria": "Commodities Globais",
-    "metrica": "PA=F",
-    "Valor": "989,70"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "PCAR3.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_brasileiras.csv",
-    "dataset_label": "Yahoo Ações Brasileiras",
-    "categoria": "Ações Brasileiras (B3)",
-    "metrica": "PCAR3.SA",
-    "Valor": "2,39"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "PEP",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_internacionais.csv",
-    "dataset_label": "Yahoo Ações Internacionais",
-    "categoria": "Ações Internacionais",
-    "metrica": "PEP",
-    "Valor": "142,26"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "PETR3.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_brasileiras.csv",
-    "dataset_label": "Yahoo Ações Brasileiras",
-    "categoria": "Ações Brasileiras (B3)",
-    "metrica": "PETR3.SA",
-    "Valor": "51,05"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "PETR4.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_brasileiras.csv",
-    "dataset_label": "Yahoo Ações Brasileiras",
-    "categoria": "Ações Brasileiras (B3)",
-    "metrica": "PETR4.SA",
-    "Valor": "44,70"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "PFE",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_internacionais.csv",
-    "dataset_label": "Yahoo Ações Internacionais",
-    "categoria": "Ações Internacionais",
-    "metrica": "PFE",
-    "Valor": "28,83"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "PG",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_internacionais.csv",
-    "dataset_label": "Yahoo Ações Internacionais",
-    "categoria": "Ações Internacionais",
-    "metrica": "PG",
-    "Valor": "168,03"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "PL=F",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_commodities.csv",
-    "dataset_label": "Yahoo Commodities",
-    "categoria": "Commodities Globais",
-    "metrica": "PL=F",
-    "Valor": "1.518"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "PRIO3.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_brasileiras.csv",
-    "dataset_label": "Yahoo Ações Brasileiras",
-    "categoria": "Ações Brasileiras (B3)",
-    "metrica": "PRIO3.SA",
-    "Valor": "63,30"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "PVBI11.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_fiis_fiagros.csv",
-    "dataset_label": "Yahoo FIIs e Fiagros",
-    "categoria": "FIIs e Fiagros",
-    "metrica": "PVBI11.SA",
-    "Valor": "61,85"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "QCOM",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_internacionais.csv",
-    "dataset_label": "Yahoo Ações Internacionais",
-    "categoria": "Ações Internacionais",
-    "metrica": "QCOM",
-    "Valor": "177,14"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "QQQ",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_etfs.csv",
-    "dataset_label": "Yahoo ETFs",
-    "categoria": "ETFs & Setoriais",
-    "metrica": "QQQ",
-    "Valor": "688,17"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "QUAL3.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_brasileiras.csv",
-    "dataset_label": "Yahoo Ações Brasileiras",
-    "categoria": "Ações Brasileiras (B3)",
-    "metrica": "QUAL3.SA",
-    "Valor": "1,57"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "RADL3.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_brasileiras.csv",
-    "dataset_label": "Yahoo Ações Brasileiras",
-    "categoria": "Ações Brasileiras (B3)",
-    "metrica": "RADL3.SA",
-    "Valor": "14,26"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "RECV3.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_brasileiras.csv",
-    "dataset_label": "Yahoo Ações Brasileiras",
-    "categoria": "Ações Brasileiras (B3)",
-    "metrica": "RECV3.SA",
-    "Valor": "10,55"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "RENT3.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_brasileiras.csv",
-    "dataset_label": "Yahoo Ações Brasileiras",
-    "categoria": "Ações Brasileiras (B3)",
-    "metrica": "RENT3.SA",
-    "Valor": "29,58"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "RURA11.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_fiis_fiagros.csv",
-    "dataset_label": "Yahoo FIIs e Fiagros",
-    "categoria": "FIIs e Fiagros",
-    "metrica": "RURA11.SA",
-    "Valor": "7,17"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "SANB11.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_brasileiras.csv",
-    "dataset_label": "Yahoo Ações Brasileiras",
-    "categoria": "Ações Brasileiras (B3)",
-    "metrica": "SANB11.SA",
-    "Valor": "28,39"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "SB=F",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_commodities.csv",
-    "dataset_label": "Yahoo Commodities",
-    "categoria": "Commodities Globais",
-    "metrica": "SB=F",
-    "Valor": "18,22"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "SBSP3.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_brasileiras.csv",
-    "dataset_label": "Yahoo Ações Brasileiras",
-    "categoria": "Ações Brasileiras (B3)",
-    "metrica": "SBSP3.SA",
-    "Valor": "26,93"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "SBUX",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_internacionais.csv",
-    "dataset_label": "Yahoo Ações Internacionais",
-    "categoria": "Ações Internacionais",
-    "metrica": "SBUX",
-    "Valor": "107,26"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "SI=F",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_commodities.csv",
-    "dataset_label": "Yahoo Commodities",
-    "categoria": "Commodities Globais",
-    "metrica": "SI=F",
-    "Valor": "49,97"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "SLCE3.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_brasileiras.csv",
-    "dataset_label": "Yahoo Ações Brasileiras",
-    "categoria": "Ações Brasileiras (B3)",
-    "metrica": "SLCE3.SA",
-    "Valor": "18,36"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "SMAL11.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_etfs.csv",
-    "dataset_label": "Yahoo ETFs",
-    "categoria": "ETFs & Setoriais",
-    "metrica": "SMAL11.SA",
-    "Valor": "99,05"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "SMLL.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_etfs.csv",
-    "dataset_label": "Yahoo ETFs",
-    "categoria": "ETFs & Setoriais",
-    "metrica": "SMLL.SA",
-    "Valor": "2.012"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "SMTO3.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_brasileiras.csv",
-    "dataset_label": "Yahoo Ações Brasileiras",
-    "categoria": "Ações Brasileiras (B3)",
-    "metrica": "SMTO3.SA",
-    "Valor": "18,43"
   },
   {
     "data_referencia": "2026-11-12",
@@ -6303,26 +4968,6 @@
   },
   {
     "data_referencia": "2026-11-12",
-    "indicador": "SPY",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_etfs.csv",
-    "dataset_label": "Yahoo ETFs",
-    "categoria": "ETFs & Setoriais",
-    "metrica": "SPY",
-    "Valor": "757,12"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "SUZB3.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_brasileiras.csv",
-    "dataset_label": "Yahoo Ações Brasileiras",
-    "categoria": "Ações Brasileiras (B3)",
-    "metrica": "SUZB3.SA",
-    "Valor": "56,04"
-  },
-  {
-    "data_referencia": "2026-11-12",
     "indicador": "Spread High Yield Emergentes OAS",
     "fonte": "FRED",
     "dataset": "fred_brazil_macro_fx_and_cycles.csv.gz",
@@ -6330,16 +4975,6 @@
     "categoria": "Macroeconomia Brasil",
     "metrica": "spread_high_yield_emergentes_oas",
     "Valor": "3,70"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "TAEE11.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_brasileiras.csv",
-    "dataset_label": "Yahoo Ações Brasileiras",
-    "categoria": "Ações Brasileiras (B3)",
-    "metrica": "TAEE11.SA",
-    "Valor": "41,57"
   },
   {
     "data_referencia": "2026-11-12",
@@ -6353,26 +4988,6 @@
   },
   {
     "data_referencia": "2026-11-12",
-    "indicador": "TEND3.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_brasileiras.csv",
-    "dataset_label": "Yahoo Ações Brasileiras",
-    "categoria": "Ações Brasileiras (B3)",
-    "metrica": "TEND3.SA",
-    "Valor": "17,00"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "TIMS3.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_brasileiras.csv",
-    "dataset_label": "Yahoo Ações Brasileiras",
-    "categoria": "Ações Brasileiras (B3)",
-    "metrica": "TIMS3.SA",
-    "Valor": "21,49"
-  },
-  {
-    "data_referencia": "2026-11-12",
     "indicador": "TR",
     "fonte": "ANBIMA",
     "dataset": "anbima_indicadores.csv",
@@ -6380,46 +4995,6 @@
     "categoria": "Taxa de Referência",
     "metrica": "valor",
     "Valor": "0,1691"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "TSLA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_internacionais.csv",
-    "dataset_label": "Yahoo Ações Internacionais",
-    "categoria": "Ações Internacionais",
-    "metrica": "TSLA",
-    "Valor": "397,45"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "TSM",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_internacionais.csv",
-    "dataset_label": "Yahoo Ações Internacionais",
-    "categoria": "Ações Internacionais",
-    "metrica": "TSM",
-    "Valor": "405,49"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "UGPA3.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_brasileiras.csv",
-    "dataset_label": "Yahoo Ações Brasileiras",
-    "categoria": "Ações Brasileiras (B3)",
-    "metrica": "UGPA3.SA",
-    "Valor": "31,72"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "UNH",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_internacionais.csv",
-    "dataset_label": "Yahoo Ações Internacionais",
-    "categoria": "Ações Internacionais",
-    "metrica": "UNH",
-    "Valor": "405,13"
   },
   {
     "data_referencia": "2026-11-12",
@@ -6442,374 +5017,139 @@
     "Valor": "3,20"
   },
   {
-    "data_referencia": "2026-11-12",
-    "indicador": "USIM5.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_brasileiras.csv",
-    "dataset_label": "Yahoo Ações Brasileiras",
-    "categoria": "Ações Brasileiras (B3)",
-    "metrica": "USIM5.SA",
-    "Valor": "4,75"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "V",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_internacionais.csv",
-    "dataset_label": "Yahoo Ações Internacionais",
-    "categoria": "Ações Internacionais",
-    "metrica": "V",
-    "Valor": "420,31"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "VALE3.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_brasileiras.csv",
-    "dataset_label": "Yahoo Ações Brasileiras",
-    "categoria": "Ações Brasileiras (B3)",
-    "metrica": "VALE3.SA",
-    "Valor": "63,95"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "VBBR3.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_brasileiras.csv",
-    "dataset_label": "Yahoo Ações Brasileiras",
-    "categoria": "Ações Brasileiras (B3)",
-    "metrica": "VBBR3.SA",
-    "Valor": "29,92"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "VGIA11.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_fiis_fiagros.csv",
-    "dataset_label": "Yahoo FIIs e Fiagros",
-    "categoria": "FIIs e Fiagros",
-    "metrica": "VGIA11.SA",
-    "Valor": "8,52"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "VGK",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_etfs.csv",
-    "dataset_label": "Yahoo ETFs",
-    "categoria": "ETFs & Setoriais",
-    "metrica": "VGK",
-    "Valor": "88,91"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "VISC11.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_fiis_fiagros.csv",
-    "dataset_label": "Yahoo FIIs e Fiagros",
-    "categoria": "FIIs e Fiagros",
-    "metrica": "VISC11.SA",
-    "Valor": "98,01"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "VIVT3.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_brasileiras.csv",
-    "dataset_label": "Yahoo Ações Brasileiras",
-    "categoria": "Ações Brasileiras (B3)",
-    "metrica": "VIVT3.SA",
-    "Valor": "33,62"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "VWO",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_etfs.csv",
-    "dataset_label": "Yahoo ETFs",
-    "categoria": "ETFs & Setoriais",
-    "metrica": "VWO",
-    "Valor": "56,43"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "WEGE3.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_brasileiras.csv",
-    "dataset_label": "Yahoo Ações Brasileiras",
-    "categoria": "Ações Brasileiras (B3)",
-    "metrica": "WEGE3.SA",
-    "Valor": "51,65"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "WMT",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_internacionais.csv",
-    "dataset_label": "Yahoo Ações Internacionais",
-    "categoria": "Ações Internacionais",
-    "metrica": "WMT",
-    "Valor": "126,19"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "XLE",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_etfs.csv",
-    "dataset_label": "Yahoo ETFs",
-    "categoria": "ETFs & Setoriais",
-    "metrica": "XLE",
-    "Valor": "64,33"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "XLF",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_etfs.csv",
-    "dataset_label": "Yahoo ETFs",
-    "categoria": "ETFs & Setoriais",
-    "metrica": "XLF",
-    "Valor": "58,21"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "XLK",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_etfs.csv",
-    "dataset_label": "Yahoo ETFs",
-    "categoria": "ETFs & Setoriais",
-    "metrica": "XLK",
-    "Valor": "173,77"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "XOM",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_internacionais.csv",
-    "dataset_label": "Yahoo Ações Internacionais",
-    "categoria": "Ações Internacionais",
-    "metrica": "XOM",
-    "Valor": "169,78"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "XPML11.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_fiis_fiagros.csv",
-    "dataset_label": "Yahoo FIIs e Fiagros",
-    "categoria": "FIIs e Fiagros",
-    "metrica": "XPML11.SA",
-    "Valor": "89,51"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "YDUQ3.SA",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_acoes_brasileiras.csv",
-    "dataset_label": "Yahoo Ações Brasileiras",
-    "categoria": "Ações Brasileiras (B3)",
-    "metrica": "YDUQ3.SA",
-    "Valor": "9,38"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "ZC=F",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_commodities.csv",
-    "dataset_label": "Yahoo Commodities",
-    "categoria": "Commodities Globais",
-    "metrica": "ZC=F",
-    "Valor": "442,50"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "ZO=F",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_commodities.csv",
-    "dataset_label": "Yahoo Commodities",
-    "categoria": "Commodities Globais",
-    "metrica": "ZO=F",
-    "Valor": "352,00"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "ZR=F",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_commodities.csv",
-    "dataset_label": "Yahoo Commodities",
-    "categoria": "Commodities Globais",
-    "metrica": "ZR=F",
-    "Valor": "18,29"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "ZS=F",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_commodities.csv",
-    "dataset_label": "Yahoo Commodities",
-    "categoria": "Commodities Globais",
-    "metrica": "ZS=F",
-    "Valor": "1.227"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "ZW=F",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_commodities.csv",
-    "dataset_label": "Yahoo Commodities",
-    "categoria": "Commodities Globais",
-    "metrica": "ZW=F",
-    "Valor": "584,25"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "^BVSP",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_indices_globais.csv",
-    "dataset_label": "Yahoo Índices Globais",
-    "categoria": "Índices de Ações Globais",
-    "metrica": "^BVSP",
-    "Valor": "171.324"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "^DJI",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_indices_globais.csv",
-    "dataset_label": "Yahoo Índices Globais",
-    "categoria": "Índices de Ações Globais",
-    "metrica": "^DJI",
-    "Valor": "52.297"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "^FCHI",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_indices_globais.csv",
-    "dataset_label": "Yahoo Índices Globais",
-    "categoria": "Índices de Ações Globais",
-    "metrica": "^FCHI",
-    "Valor": "8.361"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "^FTSE",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_indices_globais.csv",
-    "dataset_label": "Yahoo Índices Globais",
-    "categoria": "Índices de Ações Globais",
-    "metrica": "^FTSE",
-    "Valor": "10.863"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "^FVX",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_renda_fixa.csv",
-    "dataset_label": "Yahoo Renda Fixa",
-    "categoria": "Renda Fixa & Treasuries",
-    "metrica": "^FVX",
-    "Valor": "4,95"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "^GDAXI",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_indices_globais.csv",
-    "dataset_label": "Yahoo Índices Globais",
-    "categoria": "Índices de Ações Globais",
-    "metrica": "^GDAXI",
-    "Valor": "26.772"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "^GSPC",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_indices_globais.csv",
-    "dataset_label": "Yahoo Índices Globais",
-    "categoria": "Índices de Ações Globais",
-    "metrica": "^GSPC",
-    "Valor": "7.592"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "^IRX",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_renda_fixa.csv",
-    "dataset_label": "Yahoo Renda Fixa",
-    "categoria": "Renda Fixa & Treasuries",
-    "metrica": "^IRX",
-    "Valor": "4,13"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "^IXIC",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_indices_globais.csv",
-    "dataset_label": "Yahoo Índices Globais",
-    "categoria": "Índices de Ações Globais",
-    "metrica": "^IXIC",
-    "Valor": "25.366"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "^MERV",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_indices_globais.csv",
-    "dataset_label": "Yahoo Índices Globais",
-    "categoria": "Índices de Ações Globais",
-    "metrica": "^MERV",
-    "Valor": "2.848.945"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "^MXX",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_indices_globais.csv",
-    "dataset_label": "Yahoo Índices Globais",
-    "categoria": "Índices de Ações Globais",
-    "metrica": "^MXX",
-    "Valor": "71.811"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "^TNX",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_renda_fixa.csv",
-    "dataset_label": "Yahoo Renda Fixa",
-    "categoria": "Renda Fixa & Treasuries",
-    "metrica": "^TNX",
-    "Valor": "5,10"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "^TYX",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_renda_fixa.csv",
-    "dataset_label": "Yahoo Renda Fixa",
-    "categoria": "Renda Fixa & Treasuries",
-    "metrica": "^TYX",
-    "Valor": "5,43"
-  },
-  {
-    "data_referencia": "2026-11-12",
-    "indicador": "^VIX",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_indices_globais.csv",
-    "dataset_label": "Yahoo Índices Globais",
-    "categoria": "Índices de Ações Globais",
-    "metrica": "^VIX",
-    "Valor": "18,70"
+    "data_referencia": "2026-11-13",
+    "indicador": "100000 (LTN)",
+    "fonte": "ANBIMA",
+    "dataset": "anbima_titulos_publicos.csv",
+    "dataset_label": "ANBIMA Títulos Públicos",
+    "categoria": "Títulos Públicos",
+    "metrica": "tx_indicativa",
+    "Taxa indicativa": "13,70%",
+    "PU": "953,74"
   },
   {
     "data_referencia": "2026-11-13",
-    "indicador": "ADA-USD",
+    "indicador": "210100 (LFT)",
+    "fonte": "ANBIMA",
+    "dataset": "anbima_titulos_publicos.csv",
+    "dataset_label": "ANBIMA Títulos Públicos",
+    "categoria": "Títulos Públicos",
+    "metrica": "tx_indicativa",
+    "Taxa indicativa": "0,03%",
+    "PU": "20.292"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "760199 (NTN-B)",
+    "fonte": "ANBIMA",
+    "dataset": "anbima_titulos_publicos.csv",
+    "dataset_label": "ANBIMA Títulos Públicos",
+    "categoria": "Títulos Públicos",
+    "metrica": "tx_indicativa",
+    "Taxa indicativa": "3,93%",
+    "PU": "4.962"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "770100 (NTN-C)",
+    "fonte": "ANBIMA",
+    "dataset": "anbima_titulos_publicos.csv",
+    "dataset_label": "ANBIMA Títulos Públicos",
+    "categoria": "Títulos Públicos",
+    "metrica": "tx_indicativa",
+    "Taxa indicativa": "7,67%",
+    "PU": "8.079"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "950199 (NTN-F)",
+    "fonte": "ANBIMA",
+    "dataset": "anbima_titulos_publicos.csv",
+    "dataset_label": "ANBIMA Títulos Públicos",
+    "categoria": "Títulos Públicos",
+    "metrica": "tx_indicativa",
+    "Taxa indicativa": "13,64%",
+    "PU": "1.031"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "AAPL",
     "fonte": "Yahoo Finance",
-    "dataset": "yahoo_criptoativos.csv",
-    "dataset_label": "Yahoo Criptoativos",
-    "categoria": "Criptoativos",
-    "metrica": "ADA-USD",
-    "Valor": "0,1741"
+    "dataset": "yahoo_acoes_internacionais.csv",
+    "dataset_label": "Yahoo Ações Internacionais",
+    "categoria": "Ações Internacionais",
+    "metrica": "AAPL",
+    "Valor": "356,27"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "ABBV",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_internacionais.csv",
+    "dataset_label": "Yahoo Ações Internacionais",
+    "categoria": "Ações Internacionais",
+    "metrica": "ABBV",
+    "Valor": "295,03"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "ABEV3.SA",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_brasileiras.csv",
+    "dataset_label": "Yahoo Ações Brasileiras",
+    "categoria": "Ações Brasileiras (B3)",
+    "metrica": "ABEV3.SA",
+    "Valor": "15,75"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "ADBE",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_internacionais.csv",
+    "dataset_label": "Yahoo Ações Internacionais",
+    "categoria": "Ações Internacionais",
+    "metrica": "ADBE",
+    "Valor": "243,08"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "ALOS3.SA",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_brasileiras.csv",
+    "dataset_label": "Yahoo Ações Brasileiras",
+    "categoria": "Ações Brasileiras (B3)",
+    "metrica": "ALOS3.SA",
+    "Valor": "26,70"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "ALZR11.SA",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_fiis_fiagros.csv",
+    "dataset_label": "Yahoo FIIs e Fiagros",
+    "categoria": "FIIs e Fiagros",
+    "metrica": "ALZR11.SA",
+    "Valor": "9,60"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "AMD",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_internacionais.csv",
+    "dataset_label": "Yahoo Ações Internacionais",
+    "categoria": "Ações Internacionais",
+    "metrica": "AMD",
+    "Valor": "534,06"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "AMZN",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_internacionais.csv",
+    "dataset_label": "Yahoo Ações Internacionais",
+    "categoria": "Ações Internacionais",
+    "metrica": "AMZN",
+    "Valor": "266,66"
   },
   {
     "data_referencia": "2026-11-13",
@@ -6823,33 +5163,153 @@
   },
   {
     "data_referencia": "2026-11-13",
-    "indicador": "AUDUSD=X",
+    "indicador": "ASAI3.SA",
     "fonte": "Yahoo Finance",
-    "dataset": "yahoo_cambio_moedas.csv",
-    "dataset_label": "Yahoo Câmbio e Moedas",
-    "categoria": "Câmbio / Moedas",
-    "metrica": "AUDUSD=X",
-    "Valor": "0,6807"
+    "dataset": "yahoo_acoes_brasileiras.csv",
+    "dataset_label": "Yahoo Ações Brasileiras",
+    "categoria": "Ações Brasileiras (B3)",
+    "metrica": "ASAI3.SA",
+    "Valor": "9,47"
   },
   {
     "data_referencia": "2026-11-13",
-    "indicador": "AVAX-USD",
+    "indicador": "ASML",
     "fonte": "Yahoo Finance",
-    "dataset": "yahoo_criptoativos.csv",
-    "dataset_label": "Yahoo Criptoativos",
-    "categoria": "Criptoativos",
-    "metrica": "AVAX-USD",
-    "Valor": "8,34"
+    "dataset": "yahoo_acoes_internacionais.csv",
+    "dataset_label": "Yahoo Ações Internacionais",
+    "categoria": "Ações Internacionais",
+    "metrica": "ASML",
+    "Valor": "1.495"
   },
   {
     "data_referencia": "2026-11-13",
-    "indicador": "BNB-USD",
+    "indicador": "B3SA3.SA",
     "fonte": "Yahoo Finance",
-    "dataset": "yahoo_criptoativos.csv",
-    "dataset_label": "Yahoo Criptoativos",
-    "categoria": "Criptoativos",
-    "metrica": "BNB-USD",
-    "Valor": "656,05"
+    "dataset": "yahoo_acoes_brasileiras.csv",
+    "dataset_label": "Yahoo Ações Brasileiras",
+    "categoria": "Ações Brasileiras (B3)",
+    "metrica": "B3SA3.SA",
+    "Valor": "14,76"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "BABA",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_internacionais.csv",
+    "dataset_label": "Yahoo Ações Internacionais",
+    "categoria": "Ações Internacionais",
+    "metrica": "BABA",
+    "Valor": "94,38"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "BAC",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_internacionais.csv",
+    "dataset_label": "Yahoo Ações Internacionais",
+    "categoria": "Ações Internacionais",
+    "metrica": "BAC",
+    "Valor": "51,02"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "BBAS3.SA",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_brasileiras.csv",
+    "dataset_label": "Yahoo Ações Brasileiras",
+    "categoria": "Ações Brasileiras (B3)",
+    "metrica": "BBAS3.SA",
+    "Valor": "15,48"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "BBDC3.SA",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_brasileiras.csv",
+    "dataset_label": "Yahoo Ações Brasileiras",
+    "categoria": "Ações Brasileiras (B3)",
+    "metrica": "BBDC3.SA",
+    "Valor": "13,29"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "BBDC4.SA",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_brasileiras.csv",
+    "dataset_label": "Yahoo Ações Brasileiras",
+    "categoria": "Ações Brasileiras (B3)",
+    "metrica": "BBDC4.SA",
+    "Valor": "14,32"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "BEEF3.SA",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_brasileiras.csv",
+    "dataset_label": "Yahoo Ações Brasileiras",
+    "categoria": "Ações Brasileiras (B3)",
+    "metrica": "BEEF3.SA",
+    "Valor": "3,18"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "BND",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_etfs.csv",
+    "dataset_label": "Yahoo ETFs",
+    "categoria": "ETFs & Setoriais",
+    "metrica": "BND",
+    "Valor": "70,56"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "BOVA11.SA",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_etfs.csv",
+    "dataset_label": "Yahoo ETFs",
+    "categoria": "ETFs & Setoriais",
+    "metrica": "BOVA11.SA",
+    "Valor": "168,55"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "BPAC11.SA",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_brasileiras.csv",
+    "dataset_label": "Yahoo Ações Brasileiras",
+    "categoria": "Ações Brasileiras (B3)",
+    "metrica": "BPAC11.SA",
+    "Valor": "54,14"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "BRAP4.SA",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_brasileiras.csv",
+    "dataset_label": "Yahoo Ações Brasileiras",
+    "categoria": "Ações Brasileiras (B3)",
+    "metrica": "BRAP4.SA",
+    "Valor": "18,36"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "BRCO11.SA",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_fiis_fiagros.csv",
+    "dataset_label": "Yahoo FIIs e Fiagros",
+    "categoria": "FIIs e Fiagros",
+    "metrica": "BRCO11.SA",
+    "Valor": "105,75"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "BRKM5.SA",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_brasileiras.csv",
+    "dataset_label": "Yahoo Ações Brasileiras",
+    "categoria": "Ações Brasileiras (B3)",
+    "metrica": "BRKM5.SA",
+    "Valor": "3,07"
   },
   {
     "data_referencia": "2026-11-13",
@@ -6863,13 +5323,33 @@
   },
   {
     "data_referencia": "2026-11-13",
-    "indicador": "BTC-USD",
+    "indicador": "BTLG11.SA",
     "fonte": "Yahoo Finance",
-    "dataset": "yahoo_criptoativos.csv",
-    "dataset_label": "Yahoo Criptoativos",
-    "categoria": "Criptoativos",
-    "metrica": "BTC-USD",
-    "Valor": "71.343"
+    "dataset": "yahoo_fiis_fiagros.csv",
+    "dataset_label": "Yahoo FIIs e Fiagros",
+    "categoria": "FIIs e Fiagros",
+    "metrica": "BTLG11.SA",
+    "Valor": "97,90"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "BZ=F",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_commodities.csv",
+    "dataset_label": "Yahoo Commodities",
+    "categoria": "Commodities Globais",
+    "metrica": "BZ=F",
+    "Valor": "95,84"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "CC=F",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_commodities.csv",
+    "dataset_label": "Yahoo Commodities",
+    "categoria": "Commodities Globais",
+    "metrica": "CC=F",
+    "Valor": "5.119"
   },
   {
     "data_referencia": "2026-11-13",
@@ -6883,6 +5363,166 @@
   },
   {
     "data_referencia": "2026-11-13",
+    "indicador": "CL=F",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_commodities.csv",
+    "dataset_label": "Yahoo Commodities",
+    "categoria": "Commodities Globais",
+    "metrica": "CL=F",
+    "Valor": "88,56"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "CMIG4.SA",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_brasileiras.csv",
+    "dataset_label": "Yahoo Ações Brasileiras",
+    "categoria": "Ações Brasileiras (B3)",
+    "metrica": "CMIG4.SA",
+    "Valor": "10,62"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "CMIN3.SA",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_brasileiras.csv",
+    "dataset_label": "Yahoo Ações Brasileiras",
+    "categoria": "Ações Brasileiras (B3)",
+    "metrica": "CMIN3.SA",
+    "Valor": "4,82"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "COGN3.SA",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_brasileiras.csv",
+    "dataset_label": "Yahoo Ações Brasileiras",
+    "categoria": "Ações Brasileiras (B3)",
+    "metrica": "COGN3.SA",
+    "Valor": "1,58"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "COST",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_internacionais.csv",
+    "dataset_label": "Yahoo Ações Internacionais",
+    "categoria": "Ações Internacionais",
+    "metrica": "COST",
+    "Valor": "1.106"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "CPFE3.SA",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_brasileiras.csv",
+    "dataset_label": "Yahoo Ações Brasileiras",
+    "categoria": "Ações Brasileiras (B3)",
+    "metrica": "CPFE3.SA",
+    "Valor": "44,50"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "CPTR11.SA",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_fiis_fiagros.csv",
+    "dataset_label": "Yahoo FIIs e Fiagros",
+    "categoria": "FIIs e Fiagros",
+    "metrica": "CPTR11.SA",
+    "Valor": "7,05"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "CRM",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_internacionais.csv",
+    "dataset_label": "Yahoo Ações Internacionais",
+    "categoria": "Ações Internacionais",
+    "metrica": "CRM",
+    "Valor": "217,84"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "CSAN3.SA",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_brasileiras.csv",
+    "dataset_label": "Yahoo Ações Brasileiras",
+    "categoria": "Ações Brasileiras (B3)",
+    "metrica": "CSAN3.SA",
+    "Valor": "2,85"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "CSNA3.SA",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_brasileiras.csv",
+    "dataset_label": "Yahoo Ações Brasileiras",
+    "categoria": "Ações Brasileiras (B3)",
+    "metrica": "CSNA3.SA",
+    "Valor": "4,23"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "CT=F",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_commodities.csv",
+    "dataset_label": "Yahoo Commodities",
+    "categoria": "Commodities Globais",
+    "metrica": "CT=F",
+    "Valor": "78,78"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "CVCB3.SA",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_brasileiras.csv",
+    "dataset_label": "Yahoo Ações Brasileiras",
+    "categoria": "Ações Brasileiras (B3)",
+    "metrica": "CVCB3.SA",
+    "Valor": "0,8400"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "CVX",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_internacionais.csv",
+    "dataset_label": "Yahoo Ações Internacionais",
+    "categoria": "Ações Internacionais",
+    "metrica": "CVX",
+    "Valor": "219,89"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "CYRE3.SA",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_brasileiras.csv",
+    "dataset_label": "Yahoo Ações Brasileiras",
+    "categoria": "Ações Brasileiras (B3)",
+    "metrica": "CYRE3.SA",
+    "Valor": "19,00"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "DI Over (SELIC equivalente)",
+    "fonte": "B3",
+    "dataset": "b3_bdi_di_over.csv",
+    "dataset_label": "B3 DI Over",
+    "categoria": "",
+    "metrica": "average",
+    "Valor": "13,65%"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "DI Over — Volume financeiro",
+    "fonte": "B3",
+    "dataset": "b3_bdi_di_over.csv",
+    "dataset_label": "B3 DI Over",
+    "categoria": "",
+    "metrica": "financial_volume",
+    "Valor": "2.659.515"
+  },
+  {
+    "data_referencia": "2026-11-13",
     "indicador": "DI-B3",
     "fonte": "ANBIMA",
     "dataset": "anbima_indicadores.csv",
@@ -6890,6 +5530,26 @@
     "categoria": "Taxa de Juros",
     "metrica": "valor",
     "Valor": "13,65"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "DI1",
+    "fonte": "B3",
+    "dataset": "b3_bmf_taxas_juros.csv",
+    "dataset_label": "B3 BMF Taxas",
+    "categoria": "Taxas de Juros",
+    "metrica": "taxa",
+    "Valor": "13,65%"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "DIA",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_etfs.csv",
+    "dataset_label": "Yahoo ETFs",
+    "categoria": "ETFs & Setoriais",
+    "metrica": "DIA",
+    "Valor": "523,15"
   },
   {
     "data_referencia": "2026-11-13",
@@ -6903,13 +5563,13 @@
   },
   {
     "data_referencia": "2026-11-13",
-    "indicador": "DOGE-USD",
+    "indicador": "DIS",
     "fonte": "Yahoo Finance",
-    "dataset": "yahoo_criptoativos.csv",
-    "dataset_label": "Yahoo Criptoativos",
-    "categoria": "Criptoativos",
-    "metrica": "DOGE-USD",
-    "Valor": "0,0664"
+    "dataset": "yahoo_acoes_internacionais.csv",
+    "dataset_label": "Yahoo Ações Internacionais",
+    "categoria": "Ações Internacionais",
+    "metrica": "DIS",
+    "Valor": "118,97"
   },
   {
     "data_referencia": "2026-11-13",
@@ -6920,16 +5580,6 @@
     "categoria": "Indicadores B3",
     "metrica": "valor",
     "Valor": "5,6461"
-  },
-  {
-    "data_referencia": "2026-11-13",
-    "indicador": "DOT-USD",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_criptoativos.csv",
-    "dataset_label": "Yahoo Criptoativos",
-    "categoria": "Criptoativos",
-    "metrica": "DOT-USD",
-    "Valor": "0,8332"
   },
   {
     "data_referencia": "2026-11-13",
@@ -6973,13 +5623,53 @@
   },
   {
     "data_referencia": "2026-11-13",
-    "indicador": "ETH-USD",
+    "indicador": "EEM",
     "fonte": "Yahoo Finance",
-    "dataset": "yahoo_criptoativos.csv",
-    "dataset_label": "Yahoo Criptoativos",
-    "categoria": "Criptoativos",
-    "metrica": "ETH-USD",
-    "Valor": "2.017"
+    "dataset": "yahoo_etfs.csv",
+    "dataset_label": "Yahoo ETFs",
+    "categoria": "ETFs & Setoriais",
+    "metrica": "EEM",
+    "Valor": "60,92"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "EGIE3.SA",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_brasileiras.csv",
+    "dataset_label": "Yahoo Ações Brasileiras",
+    "categoria": "Ações Brasileiras (B3)",
+    "metrica": "EGIE3.SA",
+    "Valor": "26,35"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "ENEV3.SA",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_brasileiras.csv",
+    "dataset_label": "Yahoo Ações Brasileiras",
+    "categoria": "Ações Brasileiras (B3)",
+    "metrica": "ENEV3.SA",
+    "Valor": "27,00"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "ENGI11.SA",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_brasileiras.csv",
+    "dataset_label": "Yahoo Ações Brasileiras",
+    "categoria": "Ações Brasileiras (B3)",
+    "metrica": "ENGI11.SA",
+    "Valor": "47,39"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "EQTL3.SA",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_brasileiras.csv",
+    "dataset_label": "Yahoo Ações Brasileiras",
+    "categoria": "Ações Brasileiras (B3)",
+    "metrica": "EQTL3.SA",
+    "Valor": "34,09"
   },
   {
     "data_referencia": "2026-11-13",
@@ -7003,6 +5693,26 @@
   },
   {
     "data_referencia": "2026-11-13",
+    "indicador": "EWZ",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_etfs.csv",
+    "dataset_label": "Yahoo ETFs",
+    "categoria": "ETFs & Setoriais",
+    "metrica": "EWZ",
+    "Valor": "32,22"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "EZTC3.SA",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_brasileiras.csv",
+    "dataset_label": "Yahoo Ações Brasileiras",
+    "categoria": "Ações Brasileiras (B3)",
+    "metrica": "EZTC3.SA",
+    "Valor": "9,62"
+  },
+  {
+    "data_referencia": "2026-11-13",
     "indicador": "Estimativa SELIC",
     "fonte": "ANBIMA",
     "dataset": "anbima_indicadores.csv",
@@ -7010,6 +5720,16 @@
     "categoria": "Taxa de Juros",
     "metrica": "valor",
     "Valor": "13,65"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "Estimativa Taxa Selic",
+    "fonte": "ANBIMA",
+    "dataset": "anbima_titulos_publicos_estimativa_selic.csv.gz",
+    "dataset_label": "ANBIMA Estimativa Selic",
+    "categoria": "Taxas de Juros",
+    "metrica": "estimativa_taxa_selic",
+    "Valor": "13,65%"
   },
   {
     "data_referencia": "2026-11-13",
@@ -7043,6 +5763,26 @@
   },
   {
     "data_referencia": "2026-11-13",
+    "indicador": "FGAA11.SA",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_fiis_fiagros.csv",
+    "dataset_label": "Yahoo FIIs e Fiagros",
+    "categoria": "FIIs e Fiagros",
+    "metrica": "FGAA11.SA",
+    "Valor": "7,66"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "FLRY3.SA",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_brasileiras.csv",
+    "dataset_label": "Yahoo Ações Brasileiras",
+    "categoria": "Ações Brasileiras (B3)",
+    "metrica": "FLRY3.SA",
+    "Valor": "21,05"
+  },
+  {
+    "data_referencia": "2026-11-13",
     "indicador": "GBPBRL=X",
     "fonte": "Yahoo Finance",
     "dataset": "yahoo_cambio_moedas.csv",
@@ -7063,13 +5803,113 @@
   },
   {
     "data_referencia": "2026-11-13",
-    "indicador": "ICP-USD",
+    "indicador": "GC=F",
     "fonte": "Yahoo Finance",
-    "dataset": "yahoo_criptoativos.csv",
-    "dataset_label": "Yahoo Criptoativos",
-    "categoria": "Criptoativos",
-    "metrica": "ICP-USD",
-    "Valor": "2,57"
+    "dataset": "yahoo_commodities.csv",
+    "dataset_label": "Yahoo Commodities",
+    "categoria": "Commodities Globais",
+    "metrica": "GC=F",
+    "Valor": "3.886"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "GGBR4.SA",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_brasileiras.csv",
+    "dataset_label": "Yahoo Ações Brasileiras",
+    "categoria": "Ações Brasileiras (B3)",
+    "metrica": "GGBR4.SA",
+    "Valor": "24,97"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "GOOGL",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_internacionais.csv",
+    "dataset_label": "Yahoo Ações Internacionais",
+    "categoria": "Ações Internacionais",
+    "metrica": "GOOGL",
+    "Valor": "295,77"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "HAPV3.SA",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_brasileiras.csv",
+    "dataset_label": "Yahoo Ações Brasileiras",
+    "categoria": "Ações Brasileiras (B3)",
+    "metrica": "HAPV3.SA",
+    "Valor": "5,32"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "HD",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_internacionais.csv",
+    "dataset_label": "Yahoo Ações Internacionais",
+    "categoria": "Ações Internacionais",
+    "metrica": "HD",
+    "Valor": "348,69"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "HG=F",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_commodities.csv",
+    "dataset_label": "Yahoo Commodities",
+    "categoria": "Commodities Globais",
+    "metrica": "HG=F",
+    "Valor": "6,08"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "HGLG11.SA",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_fiis_fiagros.csv",
+    "dataset_label": "Yahoo FIIs e Fiagros",
+    "categoria": "FIIs e Fiagros",
+    "metrica": "HGLG11.SA",
+    "Valor": "145,69"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "HGRU11.SA",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_fiis_fiagros.csv",
+    "dataset_label": "Yahoo FIIs e Fiagros",
+    "categoria": "FIIs e Fiagros",
+    "metrica": "HGRU11.SA",
+    "Valor": "114,74"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "HYG",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_etfs.csv",
+    "dataset_label": "Yahoo ETFs",
+    "categoria": "ETFs & Setoriais",
+    "metrica": "HYG",
+    "Valor": "76,94"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "HYPE3.SA",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_brasileiras.csv",
+    "dataset_label": "Yahoo Ações Brasileiras",
+    "categoria": "Ações Brasileiras (B3)",
+    "metrica": "HYPE3.SA",
+    "Valor": "22,21"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "IFIX.SA",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_fiis_fiagros.csv",
+    "dataset_label": "Yahoo FIIs e Fiagros",
+    "categoria": "FIIs e Fiagros",
+    "metrica": "IFIX.SA",
+    "Valor": "3.615"
   },
   {
     "data_referencia": "2026-11-13",
@@ -7080,6 +5920,16 @@
     "categoria": "Séries SGS",
     "metrica": "1",
     "Valor": "5,65%"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "IGTI11.SA",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_brasileiras.csv",
+    "dataset_label": "Yahoo Ações Brasileiras",
+    "categoria": "Ações Brasileiras (B3)",
+    "metrica": "IGTI11.SA",
+    "Valor": "22,50"
   },
   {
     "data_referencia": "2026-11-13",
@@ -7095,6 +5945,96 @@
   },
   {
     "data_referencia": "2026-11-13",
+    "indicador": "INTC",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_internacionais.csv",
+    "dataset_label": "Yahoo Ações Internacionais",
+    "categoria": "Ações Internacionais",
+    "metrica": "INTC",
+    "Valor": "59,66"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "IRBR3.SA",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_brasileiras.csv",
+    "dataset_label": "Yahoo Ações Brasileiras",
+    "categoria": "Ações Brasileiras (B3)",
+    "metrica": "IRBR3.SA",
+    "Valor": "57,53"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "ITSA4.SA",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_brasileiras.csv",
+    "dataset_label": "Yahoo Ações Brasileiras",
+    "categoria": "Ações Brasileiras (B3)",
+    "metrica": "ITSA4.SA",
+    "Valor": "13,57"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "ITUB4.SA",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_brasileiras.csv",
+    "dataset_label": "Yahoo Ações Brasileiras",
+    "categoria": "Ações Brasileiras (B3)",
+    "metrica": "ITUB4.SA",
+    "Valor": "41,68"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "IVVB11.SA",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_etfs.csv",
+    "dataset_label": "Yahoo ETFs",
+    "categoria": "ETFs & Setoriais",
+    "metrica": "IVVB11.SA",
+    "Valor": "483,80"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "IWM",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_etfs.csv",
+    "dataset_label": "Yahoo ETFs",
+    "categoria": "ETFs & Setoriais",
+    "metrica": "IWM",
+    "Valor": "277,54"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "JHSF3.SA",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_brasileiras.csv",
+    "dataset_label": "Yahoo Ações Brasileiras",
+    "categoria": "Ações Brasileiras (B3)",
+    "metrica": "JHSF3.SA",
+    "Valor": "9,87"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "JNJ",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_internacionais.csv",
+    "dataset_label": "Yahoo Ações Internacionais",
+    "categoria": "Ações Internacionais",
+    "metrica": "JNJ",
+    "Valor": "285,75"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "JPM",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_internacionais.csv",
+    "dataset_label": "Yahoo Ações Internacionais",
+    "categoria": "Ações Internacionais",
+    "metrica": "JPM",
+    "Valor": "346,19"
+  },
+  {
+    "data_referencia": "2026-11-13",
     "indicador": "JPYBRL=X",
     "fonte": "Yahoo Finance",
     "dataset": "yahoo_cambio_moedas.csv",
@@ -7105,23 +6045,193 @@
   },
   {
     "data_referencia": "2026-11-13",
-    "indicador": "LINK-USD",
+    "indicador": "KC=F",
     "fonte": "Yahoo Finance",
-    "dataset": "yahoo_criptoativos.csv",
-    "dataset_label": "Yahoo Criptoativos",
-    "categoria": "Criptoativos",
-    "metrica": "LINK-USD",
-    "Valor": "10,13"
+    "dataset": "yahoo_commodities.csv",
+    "dataset_label": "Yahoo Commodities",
+    "categoria": "Commodities Globais",
+    "metrica": "KC=F",
+    "Valor": "278,65"
   },
   {
     "data_referencia": "2026-11-13",
-    "indicador": "LTC-USD",
+    "indicador": "KLBN11.SA",
     "fonte": "Yahoo Finance",
-    "dataset": "yahoo_criptoativos.csv",
-    "dataset_label": "Yahoo Criptoativos",
-    "categoria": "Criptoativos",
-    "metrica": "LTC-USD",
-    "Valor": "49,98"
+    "dataset": "yahoo_acoes_brasileiras.csv",
+    "dataset_label": "Yahoo Ações Brasileiras",
+    "categoria": "Ações Brasileiras (B3)",
+    "metrica": "KLBN11.SA",
+    "Valor": "17,64"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "KNCA11.SA",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_fiis_fiagros.csv",
+    "dataset_label": "Yahoo FIIs e Fiagros",
+    "categoria": "FIIs e Fiagros",
+    "metrica": "KNCA11.SA",
+    "Valor": "87,00"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "KNCR11.SA",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_fiis_fiagros.csv",
+    "dataset_label": "Yahoo FIIs e Fiagros",
+    "categoria": "FIIs e Fiagros",
+    "metrica": "KNCR11.SA",
+    "Valor": "103,45"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "KNIP11.SA",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_fiis_fiagros.csv",
+    "dataset_label": "Yahoo FIIs e Fiagros",
+    "categoria": "FIIs e Fiagros",
+    "metrica": "KNIP11.SA",
+    "Valor": "87,30"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "KO",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_internacionais.csv",
+    "dataset_label": "Yahoo Ações Internacionais",
+    "categoria": "Ações Internacionais",
+    "metrica": "KO",
+    "Valor": "99,25"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "LLY",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_internacionais.csv",
+    "dataset_label": "Yahoo Ações Internacionais",
+    "categoria": "Ações Internacionais",
+    "metrica": "LLY",
+    "Valor": "1.444"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "LOGN3.SA",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_brasileiras.csv",
+    "dataset_label": "Yahoo Ações Brasileiras",
+    "categoria": "Ações Brasileiras (B3)",
+    "metrica": "LOGN3.SA",
+    "Valor": "22,85"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "LQD",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_etfs.csv",
+    "dataset_label": "Yahoo ETFs",
+    "categoria": "ETFs & Setoriais",
+    "metrica": "LQD",
+    "Valor": "102,81"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "LREN3.SA",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_brasileiras.csv",
+    "dataset_label": "Yahoo Ações Brasileiras",
+    "categoria": "Ações Brasileiras (B3)",
+    "metrica": "LREN3.SA",
+    "Valor": "9,40"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "MA",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_internacionais.csv",
+    "dataset_label": "Yahoo Ações Internacionais",
+    "categoria": "Ações Internacionais",
+    "metrica": "MA",
+    "Valor": "661,19"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "MCD",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_internacionais.csv",
+    "dataset_label": "Yahoo Ações Internacionais",
+    "categoria": "Ações Internacionais",
+    "metrica": "MCD",
+    "Valor": "271,97"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "MDIA3.SA",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_brasileiras.csv",
+    "dataset_label": "Yahoo Ações Brasileiras",
+    "categoria": "Ações Brasileiras (B3)",
+    "metrica": "MDIA3.SA",
+    "Valor": "17,36"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "META",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_internacionais.csv",
+    "dataset_label": "Yahoo Ações Internacionais",
+    "categoria": "Ações Internacionais",
+    "metrica": "META",
+    "Valor": "641,69"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "MGLU3.SA",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_brasileiras.csv",
+    "dataset_label": "Yahoo Ações Brasileiras",
+    "categoria": "Ações Brasileiras (B3)",
+    "metrica": "MGLU3.SA",
+    "Valor": "7,07"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "MRK",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_internacionais.csv",
+    "dataset_label": "Yahoo Ações Internacionais",
+    "categoria": "Ações Internacionais",
+    "metrica": "MRK",
+    "Valor": "147,76"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "MRVE3.SA",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_brasileiras.csv",
+    "dataset_label": "Yahoo Ações Brasileiras",
+    "categoria": "Ações Brasileiras (B3)",
+    "metrica": "MRVE3.SA",
+    "Valor": "4,77"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "MSFT",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_internacionais.csv",
+    "dataset_label": "Yahoo Ações Internacionais",
+    "categoria": "Ações Internacionais",
+    "metrica": "MSFT",
+    "Valor": "523,88"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "MULT3.SA",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_brasileiras.csv",
+    "dataset_label": "Yahoo Ações Brasileiras",
+    "categoria": "Ações Brasileiras (B3)",
+    "metrica": "MULT3.SA",
+    "Valor": "27,32"
   },
   {
     "data_referencia": "2026-11-13",
@@ -7135,23 +6245,163 @@
   },
   {
     "data_referencia": "2026-11-13",
-    "indicador": "NEAR-USD",
+    "indicador": "MXRF11.SA",
     "fonte": "Yahoo Finance",
-    "dataset": "yahoo_criptoativos.csv",
-    "dataset_label": "Yahoo Criptoativos",
-    "categoria": "Criptoativos",
-    "metrica": "NEAR-USD",
-    "Valor": "3,42"
+    "dataset": "yahoo_fiis_fiagros.csv",
+    "dataset_label": "Yahoo FIIs e Fiagros",
+    "categoria": "FIIs e Fiagros",
+    "metrica": "MXRF11.SA",
+    "Valor": "8,70"
   },
   {
     "data_referencia": "2026-11-13",
-    "indicador": "OP-USD",
+    "indicador": "NFLX",
     "fonte": "Yahoo Finance",
-    "dataset": "yahoo_criptoativos.csv",
-    "dataset_label": "Yahoo Criptoativos",
-    "categoria": "Criptoativos",
-    "metrica": "OP-USD",
-    "Valor": "0,0968"
+    "dataset": "yahoo_acoes_internacionais.csv",
+    "dataset_label": "Yahoo Ações Internacionais",
+    "categoria": "Ações Internacionais",
+    "metrica": "NFLX",
+    "Valor": "62,15"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "NG=F",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_commodities.csv",
+    "dataset_label": "Yahoo Commodities",
+    "categoria": "Commodities Globais",
+    "metrica": "NG=F",
+    "Valor": "3,23"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "NKE",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_internacionais.csv",
+    "dataset_label": "Yahoo Ações Internacionais",
+    "categoria": "Ações Internacionais",
+    "metrica": "NKE",
+    "Valor": "37,99"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "NVDA",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_internacionais.csv",
+    "dataset_label": "Yahoo Ações Internacionais",
+    "categoria": "Ações Internacionais",
+    "metrica": "NVDA",
+    "Valor": "162,85"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "NVO",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_internacionais.csv",
+    "dataset_label": "Yahoo Ações Internacionais",
+    "categoria": "Ações Internacionais",
+    "metrica": "NVO",
+    "Valor": "41,63"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "ORCL",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_internacionais.csv",
+    "dataset_label": "Yahoo Ações Internacionais",
+    "categoria": "Ações Internacionais",
+    "metrica": "ORCL",
+    "Valor": "125,35"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "PA=F",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_commodities.csv",
+    "dataset_label": "Yahoo Commodities",
+    "categoria": "Commodities Globais",
+    "metrica": "PA=F",
+    "Valor": "1.006"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "PCAR3.SA",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_brasileiras.csv",
+    "dataset_label": "Yahoo Ações Brasileiras",
+    "categoria": "Ações Brasileiras (B3)",
+    "metrica": "PCAR3.SA",
+    "Valor": "2,39"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "PEP",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_internacionais.csv",
+    "dataset_label": "Yahoo Ações Internacionais",
+    "categoria": "Ações Internacionais",
+    "metrica": "PEP",
+    "Valor": "145,44"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "PETR3.SA",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_brasileiras.csv",
+    "dataset_label": "Yahoo Ações Brasileiras",
+    "categoria": "Ações Brasileiras (B3)",
+    "metrica": "PETR3.SA",
+    "Valor": "51,05"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "PETR4.SA",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_brasileiras.csv",
+    "dataset_label": "Yahoo Ações Brasileiras",
+    "categoria": "Ações Brasileiras (B3)",
+    "metrica": "PETR4.SA",
+    "Valor": "44,70"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "PFE",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_internacionais.csv",
+    "dataset_label": "Yahoo Ações Internacionais",
+    "categoria": "Ações Internacionais",
+    "metrica": "PFE",
+    "Valor": "28,89"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "PG",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_internacionais.csv",
+    "dataset_label": "Yahoo Ações Internacionais",
+    "categoria": "Ações Internacionais",
+    "metrica": "PG",
+    "Valor": "169,80"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "PL=F",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_commodities.csv",
+    "dataset_label": "Yahoo Commodities",
+    "categoria": "Commodities Globais",
+    "metrica": "PL=F",
+    "Valor": "1.488"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "PRIO3.SA",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_brasileiras.csv",
+    "dataset_label": "Yahoo Ações Brasileiras",
+    "categoria": "Ações Brasileiras (B3)",
+    "metrica": "PRIO3.SA",
+    "Valor": "63,30"
   },
   {
     "data_referencia": "2026-11-13",
@@ -7175,6 +6425,126 @@
   },
   {
     "data_referencia": "2026-11-13",
+    "indicador": "PVBI11.SA",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_fiis_fiagros.csv",
+    "dataset_label": "Yahoo FIIs e Fiagros",
+    "categoria": "FIIs e Fiagros",
+    "metrica": "PVBI11.SA",
+    "Valor": "61,85"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "QCOM",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_internacionais.csv",
+    "dataset_label": "Yahoo Ações Internacionais",
+    "categoria": "Ações Internacionais",
+    "metrica": "QCOM",
+    "Valor": "172,47"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "QQQ",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_etfs.csv",
+    "dataset_label": "Yahoo ETFs",
+    "categoria": "ETFs & Setoriais",
+    "metrica": "QQQ",
+    "Valor": "679,89"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "QUAL3.SA",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_brasileiras.csv",
+    "dataset_label": "Yahoo Ações Brasileiras",
+    "categoria": "Ações Brasileiras (B3)",
+    "metrica": "QUAL3.SA",
+    "Valor": "1,57"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "RADL3.SA",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_brasileiras.csv",
+    "dataset_label": "Yahoo Ações Brasileiras",
+    "categoria": "Ações Brasileiras (B3)",
+    "metrica": "RADL3.SA",
+    "Valor": "14,26"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "RECV3.SA",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_brasileiras.csv",
+    "dataset_label": "Yahoo Ações Brasileiras",
+    "categoria": "Ações Brasileiras (B3)",
+    "metrica": "RECV3.SA",
+    "Valor": "10,55"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "RENT3.SA",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_brasileiras.csv",
+    "dataset_label": "Yahoo Ações Brasileiras",
+    "categoria": "Ações Brasileiras (B3)",
+    "metrica": "RENT3.SA",
+    "Valor": "29,58"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "RURA11.SA",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_fiis_fiagros.csv",
+    "dataset_label": "Yahoo FIIs e Fiagros",
+    "categoria": "FIIs e Fiagros",
+    "metrica": "RURA11.SA",
+    "Valor": "7,24"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "SANB11.SA",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_brasileiras.csv",
+    "dataset_label": "Yahoo Ações Brasileiras",
+    "categoria": "Ações Brasileiras (B3)",
+    "metrica": "SANB11.SA",
+    "Valor": "28,39"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "SB=F",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_commodities.csv",
+    "dataset_label": "Yahoo Commodities",
+    "categoria": "Commodities Globais",
+    "metrica": "SB=F",
+    "Valor": "18,41"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "SBSP3.SA",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_brasileiras.csv",
+    "dataset_label": "Yahoo Ações Brasileiras",
+    "categoria": "Ações Brasileiras (B3)",
+    "metrica": "SBSP3.SA",
+    "Valor": "26,93"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "SBUX",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_internacionais.csv",
+    "dataset_label": "Yahoo Ações Internacionais",
+    "categoria": "Ações Internacionais",
+    "metrica": "SBUX",
+    "Valor": "106,44"
+  },
+  {
+    "data_referencia": "2026-11-13",
     "indicador": "SELIC (% a.d.)",
     "fonte": "BCB",
     "dataset": "bcb_sgs.csv",
@@ -7185,23 +6555,83 @@
   },
   {
     "data_referencia": "2026-11-13",
-    "indicador": "SHIB-USD",
+    "indicador": "SI=F",
     "fonte": "Yahoo Finance",
-    "dataset": "yahoo_criptoativos.csv",
-    "dataset_label": "Yahoo Criptoativos",
-    "categoria": "Criptoativos",
-    "metrica": "SHIB-USD",
-    "Valor": "0,000004"
+    "dataset": "yahoo_commodities.csv",
+    "dataset_label": "Yahoo Commodities",
+    "categoria": "Commodities Globais",
+    "metrica": "SI=F",
+    "Valor": "49,03"
   },
   {
     "data_referencia": "2026-11-13",
-    "indicador": "SOL-USD",
+    "indicador": "SLCE3.SA",
     "fonte": "Yahoo Finance",
-    "dataset": "yahoo_criptoativos.csv",
-    "dataset_label": "Yahoo Criptoativos",
-    "categoria": "Criptoativos",
-    "metrica": "SOL-USD",
-    "Valor": "81,66"
+    "dataset": "yahoo_acoes_brasileiras.csv",
+    "dataset_label": "Yahoo Ações Brasileiras",
+    "categoria": "Ações Brasileiras (B3)",
+    "metrica": "SLCE3.SA",
+    "Valor": "18,36"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "SMAL11.SA",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_etfs.csv",
+    "dataset_label": "Yahoo ETFs",
+    "categoria": "ETFs & Setoriais",
+    "metrica": "SMAL11.SA",
+    "Valor": "99,05"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "SMLL.SA",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_etfs.csv",
+    "dataset_label": "Yahoo ETFs",
+    "categoria": "ETFs & Setoriais",
+    "metrica": "SMLL.SA",
+    "Valor": "2.033"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "SMTO3.SA",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_brasileiras.csv",
+    "dataset_label": "Yahoo Ações Brasileiras",
+    "categoria": "Ações Brasileiras (B3)",
+    "metrica": "SMTO3.SA",
+    "Valor": "18,43"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "SPY",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_etfs.csv",
+    "dataset_label": "Yahoo ETFs",
+    "categoria": "ETFs & Setoriais",
+    "metrica": "SPY",
+    "Valor": "754,37"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "SUZB3.SA",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_brasileiras.csv",
+    "dataset_label": "Yahoo Ações Brasileiras",
+    "categoria": "Ações Brasileiras (B3)",
+    "metrica": "SUZB3.SA",
+    "Valor": "56,04"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "TAEE11.SA",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_brasileiras.csv",
+    "dataset_label": "Yahoo Ações Brasileiras",
+    "categoria": "Ações Brasileiras (B3)",
+    "metrica": "TAEE11.SA",
+    "Valor": "41,57"
   },
   {
     "data_referencia": "2026-11-13",
@@ -7235,13 +6665,43 @@
   },
   {
     "data_referencia": "2026-11-13",
-    "indicador": "TRX-USD",
+    "indicador": "TEND3.SA",
     "fonte": "Yahoo Finance",
-    "dataset": "yahoo_criptoativos.csv",
-    "dataset_label": "Yahoo Criptoativos",
-    "categoria": "Criptoativos",
-    "metrica": "TRX-USD",
-    "Valor": "0,3154"
+    "dataset": "yahoo_acoes_brasileiras.csv",
+    "dataset_label": "Yahoo Ações Brasileiras",
+    "categoria": "Ações Brasileiras (B3)",
+    "metrica": "TEND3.SA",
+    "Valor": "17,00"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "TIMS3.SA",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_brasileiras.csv",
+    "dataset_label": "Yahoo Ações Brasileiras",
+    "categoria": "Ações Brasileiras (B3)",
+    "metrica": "TIMS3.SA",
+    "Valor": "21,49"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "TSLA",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_internacionais.csv",
+    "dataset_label": "Yahoo Ações Internacionais",
+    "categoria": "Ações Internacionais",
+    "metrica": "TSLA",
+    "Valor": "390,22"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "TSM",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_internacionais.csv",
+    "dataset_label": "Yahoo Ações Internacionais",
+    "categoria": "Ações Internacionais",
+    "metrica": "TSM",
+    "Valor": "398,73"
   },
   {
     "data_referencia": "2026-11-13",
@@ -7252,6 +6712,26 @@
     "categoria": "Taxa de Juros",
     "metrica": "valor",
     "Valor": "13,65"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "UGPA3.SA",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_brasileiras.csv",
+    "dataset_label": "Yahoo Ações Brasileiras",
+    "categoria": "Ações Brasileiras (B3)",
+    "metrica": "UGPA3.SA",
+    "Valor": "31,72"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "UNH",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_internacionais.csv",
+    "dataset_label": "Yahoo Ações Internacionais",
+    "categoria": "Ações Internacionais",
+    "metrica": "UNH",
+    "Valor": "407,46"
   },
   {
     "data_referencia": "2026-11-13",
@@ -7285,46 +6765,6 @@
   },
   {
     "data_referencia": "2026-11-13",
-    "indicador": "USDCAD=X",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_cambio_moedas.csv",
-    "dataset_label": "Yahoo Câmbio e Moedas",
-    "categoria": "Câmbio / Moedas",
-    "metrica": "USDCAD=X",
-    "Valor": "1,4261"
-  },
-  {
-    "data_referencia": "2026-11-13",
-    "indicador": "USDCHF=X",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_cambio_moedas.csv",
-    "dataset_label": "Yahoo Câmbio e Moedas",
-    "categoria": "Câmbio / Moedas",
-    "metrica": "USDCHF=X",
-    "Valor": "0,8359"
-  },
-  {
-    "data_referencia": "2026-11-13",
-    "indicador": "USDCNY=X",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_cambio_moedas.csv",
-    "dataset_label": "Yahoo Câmbio e Moedas",
-    "categoria": "Câmbio / Moedas",
-    "metrica": "USDCNY=X",
-    "Valor": "6,6704"
-  },
-  {
-    "data_referencia": "2026-11-13",
-    "indicador": "USDINR=X",
-    "fonte": "Yahoo Finance",
-    "dataset": "yahoo_cambio_moedas.csv",
-    "dataset_label": "Yahoo Câmbio e Moedas",
-    "categoria": "Câmbio / Moedas",
-    "metrica": "USDINR=X",
-    "Valor": "94,0338"
-  },
-  {
-    "data_referencia": "2026-11-13",
     "indicador": "USDJPY=X",
     "fonte": "Yahoo Finance",
     "dataset": "yahoo_cambio_moedas.csv",
@@ -7345,23 +6785,223 @@
   },
   {
     "data_referencia": "2026-11-13",
-    "indicador": "XLM-USD",
+    "indicador": "USIM5.SA",
     "fonte": "Yahoo Finance",
-    "dataset": "yahoo_criptoativos.csv",
-    "dataset_label": "Yahoo Criptoativos",
-    "categoria": "Criptoativos",
-    "metrica": "XLM-USD",
-    "Valor": "0,1483"
+    "dataset": "yahoo_acoes_brasileiras.csv",
+    "dataset_label": "Yahoo Ações Brasileiras",
+    "categoria": "Ações Brasileiras (B3)",
+    "metrica": "USIM5.SA",
+    "Valor": "4,75"
   },
   {
     "data_referencia": "2026-11-13",
-    "indicador": "XRP-USD",
+    "indicador": "V",
     "fonte": "Yahoo Finance",
-    "dataset": "yahoo_criptoativos.csv",
-    "dataset_label": "Yahoo Criptoativos",
-    "categoria": "Criptoativos",
-    "metrica": "XRP-USD",
-    "Valor": "1,04"
+    "dataset": "yahoo_acoes_internacionais.csv",
+    "dataset_label": "Yahoo Ações Internacionais",
+    "categoria": "Ações Internacionais",
+    "metrica": "V",
+    "Valor": "425,76"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "VALE3.SA",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_brasileiras.csv",
+    "dataset_label": "Yahoo Ações Brasileiras",
+    "categoria": "Ações Brasileiras (B3)",
+    "metrica": "VALE3.SA",
+    "Valor": "63,95"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "VBBR3.SA",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_brasileiras.csv",
+    "dataset_label": "Yahoo Ações Brasileiras",
+    "categoria": "Ações Brasileiras (B3)",
+    "metrica": "VBBR3.SA",
+    "Valor": "29,92"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "VGIA11.SA",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_fiis_fiagros.csv",
+    "dataset_label": "Yahoo FIIs e Fiagros",
+    "categoria": "FIIs e Fiagros",
+    "metrica": "VGIA11.SA",
+    "Valor": "8,31"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "VGK",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_etfs.csv",
+    "dataset_label": "Yahoo ETFs",
+    "categoria": "ETFs & Setoriais",
+    "metrica": "VGK",
+    "Valor": "89,04"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "VISC11.SA",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_fiis_fiagros.csv",
+    "dataset_label": "Yahoo FIIs e Fiagros",
+    "categoria": "FIIs e Fiagros",
+    "metrica": "VISC11.SA",
+    "Valor": "98,01"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "VIVT3.SA",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_brasileiras.csv",
+    "dataset_label": "Yahoo Ações Brasileiras",
+    "categoria": "Ações Brasileiras (B3)",
+    "metrica": "VIVT3.SA",
+    "Valor": "33,62"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "VWO",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_etfs.csv",
+    "dataset_label": "Yahoo ETFs",
+    "categoria": "ETFs & Setoriais",
+    "metrica": "VWO",
+    "Valor": "56,38"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "WEGE3.SA",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_brasileiras.csv",
+    "dataset_label": "Yahoo Ações Brasileiras",
+    "categoria": "Ações Brasileiras (B3)",
+    "metrica": "WEGE3.SA",
+    "Valor": "51,65"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "WMT",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_internacionais.csv",
+    "dataset_label": "Yahoo Ações Internacionais",
+    "categoria": "Ações Internacionais",
+    "metrica": "WMT",
+    "Valor": "128,09"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "XLE",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_etfs.csv",
+    "dataset_label": "Yahoo ETFs",
+    "categoria": "ETFs & Setoriais",
+    "metrica": "XLE",
+    "Valor": "64,96"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "XLF",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_etfs.csv",
+    "dataset_label": "Yahoo ETFs",
+    "categoria": "ETFs & Setoriais",
+    "metrica": "XLF",
+    "Valor": "58,68"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "XLK",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_etfs.csv",
+    "dataset_label": "Yahoo ETFs",
+    "categoria": "ETFs & Setoriais",
+    "metrica": "XLK",
+    "Valor": "170,28"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "XOM",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_internacionais.csv",
+    "dataset_label": "Yahoo Ações Internacionais",
+    "categoria": "Ações Internacionais",
+    "metrica": "XOM",
+    "Valor": "170,59"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "XPML11.SA",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_fiis_fiagros.csv",
+    "dataset_label": "Yahoo FIIs e Fiagros",
+    "categoria": "FIIs e Fiagros",
+    "metrica": "XPML11.SA",
+    "Valor": "89,51"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "YDUQ3.SA",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_acoes_brasileiras.csv",
+    "dataset_label": "Yahoo Ações Brasileiras",
+    "categoria": "Ações Brasileiras (B3)",
+    "metrica": "YDUQ3.SA",
+    "Valor": "9,38"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "ZC=F",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_commodities.csv",
+    "dataset_label": "Yahoo Commodities",
+    "categoria": "Commodities Globais",
+    "metrica": "ZC=F",
+    "Valor": "445,50"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "ZO=F",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_commodities.csv",
+    "dataset_label": "Yahoo Commodities",
+    "categoria": "Commodities Globais",
+    "metrica": "ZO=F",
+    "Valor": "361,50"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "ZR=F",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_commodities.csv",
+    "dataset_label": "Yahoo Commodities",
+    "categoria": "Commodities Globais",
+    "metrica": "ZR=F",
+    "Valor": "18,02"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "ZS=F",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_commodities.csv",
+    "dataset_label": "Yahoo Commodities",
+    "categoria": "Commodities Globais",
+    "metrica": "ZS=F",
+    "Valor": "1.243"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "ZW=F",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_commodities.csv",
+    "dataset_label": "Yahoo Commodities",
+    "categoria": "Commodities Globais",
+    "metrica": "ZW=F",
+    "Valor": "593,25"
   },
   {
     "data_referencia": "2026-11-13",
@@ -7375,13 +7015,103 @@
   },
   {
     "data_referencia": "2026-11-13",
+    "indicador": "^BVSP",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_indices_globais.csv",
+    "dataset_label": "Yahoo Índices Globais",
+    "categoria": "Índices de Ações Globais",
+    "metrica": "^BVSP",
+    "Valor": "172.458"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "^DJI",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_indices_globais.csv",
+    "dataset_label": "Yahoo Índices Globais",
+    "categoria": "Índices de Ações Globais",
+    "metrica": "^DJI",
+    "Valor": "52.348"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "^FCHI",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_indices_globais.csv",
+    "dataset_label": "Yahoo Índices Globais",
+    "categoria": "Índices de Ações Globais",
+    "metrica": "^FCHI",
+    "Valor": "8.369"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "^FTSE",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_indices_globais.csv",
+    "dataset_label": "Yahoo Índices Globais",
+    "categoria": "Índices de Ações Globais",
+    "metrica": "^FTSE",
+    "Valor": "10.903"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "^FVX",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_renda_fixa.csv",
+    "dataset_label": "Yahoo Renda Fixa",
+    "categoria": "Renda Fixa & Treasuries",
+    "metrica": "^FVX",
+    "Valor": "4,98"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "^GDAXI",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_indices_globais.csv",
+    "dataset_label": "Yahoo Índices Globais",
+    "categoria": "Índices de Ações Globais",
+    "metrica": "^GDAXI",
+    "Valor": "26.750"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "^GSPC",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_indices_globais.csv",
+    "dataset_label": "Yahoo Índices Globais",
+    "categoria": "Índices de Ações Globais",
+    "metrica": "^GSPC",
+    "Valor": "7.562"
+  },
+  {
+    "data_referencia": "2026-11-13",
     "indicador": "^HSI",
     "fonte": "Yahoo Finance",
     "dataset": "yahoo_indices_globais.csv",
     "dataset_label": "Yahoo Índices Globais",
     "categoria": "Índices de Ações Globais",
     "metrica": "^HSI",
-    "Valor": "24.009"
+    "Valor": "23.638"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "^IRX",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_renda_fixa.csv",
+    "dataset_label": "Yahoo Renda Fixa",
+    "categoria": "Renda Fixa & Treasuries",
+    "metrica": "^IRX",
+    "Valor": "4,12"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "^IXIC",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_indices_globais.csv",
+    "dataset_label": "Yahoo Índices Globais",
+    "categoria": "Índices de Ações Globais",
+    "metrica": "^IXIC",
+    "Valor": "25.136"
   },
   {
     "data_referencia": "2026-11-13",
@@ -7391,7 +7121,7 @@
     "dataset_label": "Yahoo Índices Globais",
     "categoria": "Índices de Ações Globais",
     "metrica": "^JKSE",
-    "Valor": "5.251"
+    "Valor": "5.344"
   },
   {
     "data_referencia": "2026-11-13",
@@ -7401,7 +7131,7 @@
     "dataset_label": "Yahoo Índices Globais",
     "categoria": "Índices de Ações Globais",
     "metrica": "^KLSE",
-    "Valor": "1.586"
+    "Valor": "1.583"
   },
   {
     "data_referencia": "2026-11-13",
@@ -7411,7 +7141,27 @@
     "dataset_label": "Yahoo Índices Globais",
     "categoria": "Índices de Ações Globais",
     "metrica": "^KS11",
-    "Valor": "5.343"
+    "Valor": "5.291"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "^MERV",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_indices_globais.csv",
+    "dataset_label": "Yahoo Índices Globais",
+    "categoria": "Índices de Ações Globais",
+    "metrica": "^MERV",
+    "Valor": "2.848.945"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "^MXX",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_indices_globais.csv",
+    "dataset_label": "Yahoo Índices Globais",
+    "categoria": "Índices de Ações Globais",
+    "metrica": "^MXX",
+    "Valor": "71.205"
   },
   {
     "data_referencia": "2026-11-13",
@@ -7421,7 +7171,7 @@
     "dataset_label": "Yahoo Índices Globais",
     "categoria": "Índices de Ações Globais",
     "metrica": "^N225",
-    "Valor": "60.819"
+    "Valor": "61.142"
   },
   {
     "data_referencia": "2026-11-13",
@@ -7431,7 +7181,17 @@
     "dataset_label": "Yahoo Índices Globais",
     "categoria": "Índices de Ações Globais",
     "metrica": "^STI",
-    "Valor": "5.283"
+    "Valor": "5.232"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "^TNX",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_renda_fixa.csv",
+    "dataset_label": "Yahoo Renda Fixa",
+    "categoria": "Renda Fixa & Treasuries",
+    "metrica": "^TNX",
+    "Valor": "5,15"
   },
   {
     "data_referencia": "2026-11-13",
@@ -7441,7 +7201,77 @@
     "dataset_label": "Yahoo Índices Globais",
     "categoria": "Índices de Ações Globais",
     "metrica": "^TWII",
-    "Valor": "43.092"
+    "Valor": "43.675"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "^TYX",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_renda_fixa.csv",
+    "dataset_label": "Yahoo Renda Fixa",
+    "categoria": "Renda Fixa & Treasuries",
+    "metrica": "^TYX",
+    "Valor": "5,48"
+  },
+  {
+    "data_referencia": "2026-11-13",
+    "indicador": "^VIX",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_indices_globais.csv",
+    "dataset_label": "Yahoo Índices Globais",
+    "categoria": "Índices de Ações Globais",
+    "metrica": "^VIX",
+    "Valor": "19,30"
+  },
+  {
+    "data_referencia": "2026-11-14",
+    "indicador": "ADA-USD",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_criptoativos.csv",
+    "dataset_label": "Yahoo Criptoativos",
+    "categoria": "Criptoativos",
+    "metrica": "ADA-USD",
+    "Valor": "0,1628"
+  },
+  {
+    "data_referencia": "2026-11-14",
+    "indicador": "AUDUSD=X",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_cambio_moedas.csv",
+    "dataset_label": "Yahoo Câmbio e Moedas",
+    "categoria": "Câmbio / Moedas",
+    "metrica": "AUDUSD=X",
+    "Valor": "0,6774"
+  },
+  {
+    "data_referencia": "2026-11-14",
+    "indicador": "AVAX-USD",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_criptoativos.csv",
+    "dataset_label": "Yahoo Criptoativos",
+    "categoria": "Criptoativos",
+    "metrica": "AVAX-USD",
+    "Valor": "8,00"
+  },
+  {
+    "data_referencia": "2026-11-14",
+    "indicador": "BNB-USD",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_criptoativos.csv",
+    "dataset_label": "Yahoo Criptoativos",
+    "categoria": "Criptoativos",
+    "metrica": "BNB-USD",
+    "Valor": "615,24"
+  },
+  {
+    "data_referencia": "2026-11-14",
+    "indicador": "BTC-USD",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_criptoativos.csv",
+    "dataset_label": "Yahoo Criptoativos",
+    "categoria": "Criptoativos",
+    "metrica": "BTC-USD",
+    "Valor": "67.037"
   },
   {
     "data_referencia": "2026-11-14",
@@ -7472,5 +7302,175 @@
     "categoria": "Câmbio / Moedas",
     "metrica": "COPBRL=X",
     "Valor": "0,0017"
+  },
+  {
+    "data_referencia": "2026-11-14",
+    "indicador": "DOGE-USD",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_criptoativos.csv",
+    "dataset_label": "Yahoo Criptoativos",
+    "categoria": "Criptoativos",
+    "metrica": "DOGE-USD",
+    "Valor": "0,0626"
+  },
+  {
+    "data_referencia": "2026-11-14",
+    "indicador": "DOT-USD",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_criptoativos.csv",
+    "dataset_label": "Yahoo Criptoativos",
+    "categoria": "Criptoativos",
+    "metrica": "DOT-USD",
+    "Valor": "0,7830"
+  },
+  {
+    "data_referencia": "2026-11-14",
+    "indicador": "ETH-USD",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_criptoativos.csv",
+    "dataset_label": "Yahoo Criptoativos",
+    "categoria": "Criptoativos",
+    "metrica": "ETH-USD",
+    "Valor": "1.893"
+  },
+  {
+    "data_referencia": "2026-11-14",
+    "indicador": "ICP-USD",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_criptoativos.csv",
+    "dataset_label": "Yahoo Criptoativos",
+    "categoria": "Criptoativos",
+    "metrica": "ICP-USD",
+    "Valor": "2,40"
+  },
+  {
+    "data_referencia": "2026-11-14",
+    "indicador": "LINK-USD",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_criptoativos.csv",
+    "dataset_label": "Yahoo Criptoativos",
+    "categoria": "Criptoativos",
+    "metrica": "LINK-USD",
+    "Valor": "9,57"
+  },
+  {
+    "data_referencia": "2026-11-14",
+    "indicador": "LTC-USD",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_criptoativos.csv",
+    "dataset_label": "Yahoo Criptoativos",
+    "categoria": "Criptoativos",
+    "metrica": "LTC-USD",
+    "Valor": "48,18"
+  },
+  {
+    "data_referencia": "2026-11-14",
+    "indicador": "NEAR-USD",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_criptoativos.csv",
+    "dataset_label": "Yahoo Criptoativos",
+    "categoria": "Criptoativos",
+    "metrica": "NEAR-USD",
+    "Valor": "3,34"
+  },
+  {
+    "data_referencia": "2026-11-14",
+    "indicador": "OP-USD",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_criptoativos.csv",
+    "dataset_label": "Yahoo Criptoativos",
+    "categoria": "Criptoativos",
+    "metrica": "OP-USD",
+    "Valor": "0,0888"
+  },
+  {
+    "data_referencia": "2026-11-14",
+    "indicador": "SHIB-USD",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_criptoativos.csv",
+    "dataset_label": "Yahoo Criptoativos",
+    "categoria": "Criptoativos",
+    "metrica": "SHIB-USD",
+    "Valor": "0,000004"
+  },
+  {
+    "data_referencia": "2026-11-14",
+    "indicador": "SOL-USD",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_criptoativos.csv",
+    "dataset_label": "Yahoo Criptoativos",
+    "categoria": "Criptoativos",
+    "metrica": "SOL-USD",
+    "Valor": "75,15"
+  },
+  {
+    "data_referencia": "2026-11-14",
+    "indicador": "TRX-USD",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_criptoativos.csv",
+    "dataset_label": "Yahoo Criptoativos",
+    "categoria": "Criptoativos",
+    "metrica": "TRX-USD",
+    "Valor": "0,3124"
+  },
+  {
+    "data_referencia": "2026-11-14",
+    "indicador": "USDCAD=X",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_cambio_moedas.csv",
+    "dataset_label": "Yahoo Câmbio e Moedas",
+    "categoria": "Câmbio / Moedas",
+    "metrica": "USDCAD=X",
+    "Valor": "1,4269"
+  },
+  {
+    "data_referencia": "2026-11-14",
+    "indicador": "USDCHF=X",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_cambio_moedas.csv",
+    "dataset_label": "Yahoo Câmbio e Moedas",
+    "categoria": "Câmbio / Moedas",
+    "metrica": "USDCHF=X",
+    "Valor": "0,8382"
+  },
+  {
+    "data_referencia": "2026-11-14",
+    "indicador": "USDCNY=X",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_cambio_moedas.csv",
+    "dataset_label": "Yahoo Câmbio e Moedas",
+    "categoria": "Câmbio / Moedas",
+    "metrica": "USDCNY=X",
+    "Valor": "6,6712"
+  },
+  {
+    "data_referencia": "2026-11-14",
+    "indicador": "USDINR=X",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_cambio_moedas.csv",
+    "dataset_label": "Yahoo Câmbio e Moedas",
+    "categoria": "Câmbio / Moedas",
+    "metrica": "USDINR=X",
+    "Valor": "94,2400"
+  },
+  {
+    "data_referencia": "2026-11-14",
+    "indicador": "XLM-USD",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_criptoativos.csv",
+    "dataset_label": "Yahoo Criptoativos",
+    "categoria": "Criptoativos",
+    "metrica": "XLM-USD",
+    "Valor": "0,1426"
+  },
+  {
+    "data_referencia": "2026-11-14",
+    "indicador": "XRP-USD",
+    "fonte": "Yahoo Finance",
+    "dataset": "yahoo_criptoativos.csv",
+    "dataset_label": "Yahoo Criptoativos",
+    "categoria": "Criptoativos",
+    "metrica": "XRP-USD",
+    "Valor": "0,9827"
   }
 ]

@@ -266,10 +266,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Títulos Públicos",
     "tipo": "indicador",
     "indicador": "100000 (LTN)",
-    "valor": "13,68%",
+    "valor": "13,70%",
     "unidade": "Taxa indicativa",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "tx_indicativa"
   },
   {
@@ -279,10 +279,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Títulos Públicos",
     "tipo": "indicador",
     "indicador": "100000 (LTN)",
-    "valor": "953,29",
+    "valor": "953,74",
     "unidade": "PU",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "pu"
   },
   {
@@ -294,8 +294,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "210100 (LFT)",
     "valor": "0,03%",
     "unidade": "Taxa indicativa",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "tx_indicativa"
   },
   {
@@ -305,10 +305,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Títulos Públicos",
     "tipo": "indicador",
     "indicador": "210100 (LFT)",
-    "valor": "20.282",
+    "valor": "20.292",
     "unidade": "PU",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "pu"
   },
   {
@@ -318,10 +318,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Títulos Públicos",
     "tipo": "indicador",
     "indicador": "760199 (NTN-B)",
-    "valor": "3,95%",
+    "valor": "3,93%",
     "unidade": "Taxa indicativa",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "tx_indicativa"
   },
   {
@@ -331,10 +331,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Títulos Públicos",
     "tipo": "indicador",
     "indicador": "760199 (NTN-B)",
-    "valor": "4.961",
+    "valor": "4.962",
     "unidade": "PU",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "pu"
   },
   {
@@ -344,10 +344,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Títulos Públicos",
     "tipo": "indicador",
     "indicador": "770100 (NTN-C)",
-    "valor": "7,68%",
+    "valor": "7,67%",
     "unidade": "Taxa indicativa",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "tx_indicativa"
   },
   {
@@ -357,10 +357,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Títulos Públicos",
     "tipo": "indicador",
     "indicador": "770100 (NTN-C)",
-    "valor": "8.072",
+    "valor": "8.079",
     "unidade": "PU",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "pu"
   },
   {
@@ -372,8 +372,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "950199 (NTN-F)",
     "valor": "13,64%",
     "unidade": "Taxa indicativa",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "tx_indicativa"
   },
   {
@@ -385,8 +385,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "950199 (NTN-F)",
     "valor": "1.031",
     "unidade": "PU",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "pu"
   },
   {
@@ -398,8 +398,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "Estimativa Taxa Selic",
     "valor": "13,65%",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estimativa_taxa_selic"
   },
   {
@@ -411,8 +411,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "DI Over (SELIC equivalente)",
     "valor": "13,65%",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "average"
   },
   {
@@ -422,10 +422,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "",
     "tipo": "indicador",
     "indicador": "DI Over — Volume financeiro",
-    "valor": "2.759.720",
+    "valor": "2.659.515",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "financial_volume"
   },
   {
@@ -437,8 +437,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "DI1",
     "valor": "13,65%",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "taxa"
   },
   {
@@ -542,7 +542,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "18.660.946.194",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-01",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "emissoes_lf"
   },
   {
@@ -555,7 +555,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "9.174.513.902",
     "unidade": "LFS Subordinadas (R$)",
     "data_referencia": "2025-12-01",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "emissoes_lfs"
   },
   {
@@ -568,7 +568,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "693.405.789.856",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-01",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -581,7 +581,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "275.712.328.188",
     "unidade": "LFS Subordinadas (R$)",
     "data_referencia": "2025-12-01",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -594,7 +594,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "16.528.929.039",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -607,7 +607,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "2.643.523.610",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -620,7 +620,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "19.172.452.650",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -633,7 +633,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "5.966.446.822",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -646,7 +646,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "760.042.753",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -659,7 +659,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "6.726.489.575",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -672,7 +672,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "1.008.760",
     "unidade": "LFS (R$)",
     "data_referencia": "2024-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -685,7 +685,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "1.008.760",
     "unidade": "Total (R$)",
     "data_referencia": "2024-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -698,7 +698,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "1.137.925",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -711,7 +711,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "1.137.925",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -724,7 +724,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "7.308.885.589",
     "unidade": "LF (R$)",
     "data_referencia": "2022-12-30",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -737,7 +737,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "7.308.885.589",
     "unidade": "Total (R$)",
     "data_referencia": "2022-12-30",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -750,7 +750,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "10.542.501",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -763,7 +763,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "5.993.225",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -776,7 +776,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "16.535.726",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -789,7 +789,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "72.224.329",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -802,7 +802,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "72.224.329",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -815,7 +815,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "13.369.485",
     "unidade": "LFS (R$)",
     "data_referencia": "2019-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -828,7 +828,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "13.369.485",
     "unidade": "Total (R$)",
     "data_referencia": "2019-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -841,7 +841,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "567.760",
     "unidade": "LF (R$)",
     "data_referencia": "2016-12-30",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -854,7 +854,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "567.760",
     "unidade": "Total (R$)",
     "data_referencia": "2016-12-30",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -867,7 +867,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "3.964.257.223",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -880,7 +880,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "940.919.556",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -893,7 +893,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "4.905.176.779",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -906,7 +906,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "161.168",
     "unidade": "LF (R$)",
     "data_referencia": "2019-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -919,7 +919,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "161.168",
     "unidade": "Total (R$)",
     "data_referencia": "2019-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -932,7 +932,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "653.671.369",
     "unidade": "LF (R$)",
     "data_referencia": "2022-12-30",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -945,7 +945,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "653.671.369",
     "unidade": "Total (R$)",
     "data_referencia": "2022-12-30",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -958,7 +958,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "32.900.000",
     "unidade": "LF (R$)",
     "data_referencia": "2020-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -971,7 +971,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "32.900.000",
     "unidade": "Total (R$)",
     "data_referencia": "2020-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -984,7 +984,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "1.974.592.947",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -997,7 +997,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "1.974.592.947",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -1010,7 +1010,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "265.590.678",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -1023,7 +1023,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "1.654.897.827",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -1036,7 +1036,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "1.920.488.505",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -1049,7 +1049,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "352.663.984",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -1062,7 +1062,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "352.663.984",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -1075,7 +1075,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "6.283.296",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -1088,7 +1088,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "6.283.296",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -1101,7 +1101,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "608.955.687",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -1114,7 +1114,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "608.955.687",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -1127,7 +1127,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "557.777.448",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -1140,7 +1140,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "557.777.448",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -1153,7 +1153,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "10.000.000",
     "unidade": "LF (R$)",
     "data_referencia": "2020-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -1166,7 +1166,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "10.000.000",
     "unidade": "Total (R$)",
     "data_referencia": "2020-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -1179,7 +1179,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "1.640.986.943",
     "unidade": "LF (R$)",
     "data_referencia": "2022-12-30",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -1192,7 +1192,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "253.730.791",
     "unidade": "LFS (R$)",
     "data_referencia": "2022-12-30",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -1205,7 +1205,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "1.894.717.734",
     "unidade": "Total (R$)",
     "data_referencia": "2022-12-30",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -1218,7 +1218,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "226.736.705",
     "unidade": "LF (R$)",
     "data_referencia": "2016-12-30",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -1231,7 +1231,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "226.736.705",
     "unidade": "Total (R$)",
     "data_referencia": "2016-12-30",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -1244,7 +1244,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "27.480.024",
     "unidade": "LFS (R$)",
     "data_referencia": "2017-12-29",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -1257,7 +1257,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "27.480.024",
     "unidade": "Total (R$)",
     "data_referencia": "2017-12-29",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -1270,7 +1270,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "5.775.940.361",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -1283,7 +1283,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "2.414.563.065",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -1296,7 +1296,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "8.190.503.426",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -1309,7 +1309,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "34.322.742",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -1322,7 +1322,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "7.206.712",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -1335,7 +1335,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "41.529.454",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -1348,7 +1348,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "28.782.933.366",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -1361,7 +1361,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "30.034.918.904",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -1374,7 +1374,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "58.817.852.269",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -1387,7 +1387,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "480.200.847",
     "unidade": "LF (R$)",
     "data_referencia": "2016-12-30",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -1400,7 +1400,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "480.200.847",
     "unidade": "Total (R$)",
     "data_referencia": "2016-12-30",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -1413,7 +1413,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "11.485.464",
     "unidade": "LF (R$)",
     "data_referencia": "2020-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -1426,7 +1426,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "11.485.464",
     "unidade": "Total (R$)",
     "data_referencia": "2020-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -1439,7 +1439,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "77.778.444",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -1452,7 +1452,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "77.778.444",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -1465,7 +1465,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "264.074.623",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -1478,7 +1478,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "264.074.623",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -1491,7 +1491,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "0,000000",
     "unidade": "LF (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -1504,7 +1504,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "919.353",
     "unidade": "LFS (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -1517,7 +1517,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "919.353",
     "unidade": "Total (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -1530,7 +1530,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "50.232",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -1543,7 +1543,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "50.232",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -1556,7 +1556,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "209.457.978",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -1569,7 +1569,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "158.519.547",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -1582,7 +1582,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "367.977.525",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -1595,7 +1595,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "256.789.634",
     "unidade": "LF (R$)",
     "data_referencia": "2012-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -1608,7 +1608,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "338.100.192",
     "unidade": "LFS (R$)",
     "data_referencia": "2012-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -1621,7 +1621,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "594.889.826",
     "unidade": "Total (R$)",
     "data_referencia": "2012-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -1634,7 +1634,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "0,000000",
     "unidade": "LF (R$)",
     "data_referencia": "2010-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -1647,7 +1647,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "74.383.750",
     "unidade": "LFS (R$)",
     "data_referencia": "2010-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -1660,7 +1660,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "74.383.750",
     "unidade": "Total (R$)",
     "data_referencia": "2010-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -1673,7 +1673,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "7.314.702",
     "unidade": "LF (R$)",
     "data_referencia": "2011-12-30",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -1686,7 +1686,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "0,000000",
     "unidade": "LFS (R$)",
     "data_referencia": "2011-12-30",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -1699,7 +1699,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "7.314.702",
     "unidade": "Total (R$)",
     "data_referencia": "2011-12-30",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -1712,7 +1712,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "234.104.877",
     "unidade": "LF (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -1725,7 +1725,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "0,000000",
     "unidade": "LFS (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -1738,7 +1738,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "234.104.877",
     "unidade": "Total (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -1751,7 +1751,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "637.529.524",
     "unidade": "LF (R$)",
     "data_referencia": "2013-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -1764,7 +1764,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "637.529.524",
     "unidade": "Total (R$)",
     "data_referencia": "2013-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -1777,7 +1777,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "683.070.238",
     "unidade": "LF (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -1790,7 +1790,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "0,000000",
     "unidade": "LFS (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -1803,7 +1803,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "683.070.238",
     "unidade": "Total (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -1816,7 +1816,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "210.941.073",
     "unidade": "LF (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -1829,7 +1829,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "168.674.522",
     "unidade": "LFS (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -1842,7 +1842,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "379.615.595",
     "unidade": "Total (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -1855,7 +1855,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "7.374.047.029",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -1868,7 +1868,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "4.014.578.614",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -1881,7 +1881,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "11.388.625.643",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -1894,7 +1894,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "57.833.277",
     "unidade": "LF (R$)",
     "data_referencia": "2014-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -1907,7 +1907,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "57.833.277",
     "unidade": "Total (R$)",
     "data_referencia": "2014-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -1920,7 +1920,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "359.847.878",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -1933,7 +1933,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "359.847.878",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -1946,7 +1946,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "1.439.805.907",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -1959,7 +1959,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "1.439.805.907",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -1972,7 +1972,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "3.866.640.511",
     "unidade": "LF (R$)",
     "data_referencia": "2014-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -1985,7 +1985,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "3.866.640.511",
     "unidade": "Total (R$)",
     "data_referencia": "2014-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -1998,7 +1998,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "3.205.897",
     "unidade": "LF (R$)",
     "data_referencia": "2010-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -2011,7 +2011,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "0,000000",
     "unidade": "LFS (R$)",
     "data_referencia": "2010-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -2024,7 +2024,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "3.205.897",
     "unidade": "Total (R$)",
     "data_referencia": "2010-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -2037,7 +2037,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "2.038.494.919",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -2050,7 +2050,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "2.038.494.919",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -2063,7 +2063,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "680.150.842",
     "unidade": "LF (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -2076,7 +2076,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "0,000000",
     "unidade": "LFS (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -2089,7 +2089,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "680.150.842",
     "unidade": "Total (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -2102,7 +2102,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "412.989.494",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -2115,7 +2115,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "412.989.494",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -2128,7 +2128,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "10.966.307",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -2141,7 +2141,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "539.810.341",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -2154,7 +2154,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "550.776.648",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -2167,7 +2167,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "138.792.314",
     "unidade": "LF (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -2180,7 +2180,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "172.846.555",
     "unidade": "LFS (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -2193,7 +2193,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "311.638.869",
     "unidade": "Total (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -2206,7 +2206,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "17.180.410",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -2219,7 +2219,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "186.026.865",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -2232,7 +2232,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "203.207.275",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -2245,7 +2245,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "226.126.494",
     "unidade": "LF (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -2258,7 +2258,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "0,000000",
     "unidade": "LFS (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -2271,7 +2271,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "226.126.494",
     "unidade": "Total (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -2284,7 +2284,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "1.703.075.908",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -2297,7 +2297,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "214.210.465",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -2310,7 +2310,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "1.917.286.374",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -2323,7 +2323,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "808.544.962",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -2336,7 +2336,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "808.544.962",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -2349,7 +2349,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "410.456.248",
     "unidade": "LF (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -2362,7 +2362,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "0,000000",
     "unidade": "LFS (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -2375,7 +2375,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "410.456.248",
     "unidade": "Total (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -2388,7 +2388,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "59.548.983",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -2401,7 +2401,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "185.811.159",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -2414,7 +2414,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "245.360.143",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -2427,7 +2427,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "0,000000",
     "unidade": "LF (R$)",
     "data_referencia": "2012-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -2440,7 +2440,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "7.055.029",
     "unidade": "LFS (R$)",
     "data_referencia": "2012-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -2453,7 +2453,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "7.055.029",
     "unidade": "Total (R$)",
     "data_referencia": "2012-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -2466,7 +2466,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "736.500.567",
     "unidade": "LF (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -2479,7 +2479,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "0,000000",
     "unidade": "LFS (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -2492,7 +2492,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "736.500.567",
     "unidade": "Total (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -2505,7 +2505,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "902.528.399",
     "unidade": "LF (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -2518,7 +2518,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "0,000000",
     "unidade": "LFS (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -2531,7 +2531,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "902.528.399",
     "unidade": "Total (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -2544,7 +2544,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "237.204.512",
     "unidade": "LF (R$)",
     "data_referencia": "2017-12-29",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -2557,7 +2557,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "237.204.512",
     "unidade": "Total (R$)",
     "data_referencia": "2017-12-29",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -2570,7 +2570,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "17.449.052",
     "unidade": "LFS (R$)",
     "data_referencia": "2013-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -2583,7 +2583,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "17.449.052",
     "unidade": "Total (R$)",
     "data_referencia": "2013-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -2596,7 +2596,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "6.437.611.114",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -2609,7 +2609,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "6.437.611.114",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -2622,7 +2622,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "2.182.634.476",
     "unidade": "LF (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -2635,7 +2635,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "0,000000",
     "unidade": "LFS (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -2648,7 +2648,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "2.182.634.476",
     "unidade": "Total (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -2661,7 +2661,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "2.047.868.542",
     "unidade": "LF (R$)",
     "data_referencia": "2019-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -2674,7 +2674,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "2.047.868.542",
     "unidade": "Total (R$)",
     "data_referencia": "2019-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -2687,7 +2687,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "0,000000",
     "unidade": "LF (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -2700,7 +2700,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "16.166.780",
     "unidade": "LFS (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -2713,7 +2713,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "16.166.780",
     "unidade": "Total (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -2726,7 +2726,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "1.811.819.884",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -2739,7 +2739,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "570.393.435",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -2752,7 +2752,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "2.382.213.319",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -2765,7 +2765,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "121.696.751",
     "unidade": "LF (R$)",
     "data_referencia": "2012-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -2778,7 +2778,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "0,000000",
     "unidade": "LFS (R$)",
     "data_referencia": "2012-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -2791,7 +2791,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "121.696.751",
     "unidade": "Total (R$)",
     "data_referencia": "2012-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -2804,7 +2804,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "33.735.527",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -2817,7 +2817,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "33.735.527",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -2830,7 +2830,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "223.940.384",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -2843,7 +2843,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "223.940.384",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -2856,7 +2856,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "42.491.887",
     "unidade": "LF (R$)",
     "data_referencia": "2022-12-30",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -2869,7 +2869,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "42.491.887",
     "unidade": "Total (R$)",
     "data_referencia": "2022-12-30",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -2882,7 +2882,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "12.377.839",
     "unidade": "LFS (R$)",
     "data_referencia": "2021-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -2895,7 +2895,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "12.377.839",
     "unidade": "Total (R$)",
     "data_referencia": "2021-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -2908,7 +2908,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "617.034.762",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -2921,7 +2921,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "617.034.762",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -2934,7 +2934,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "105.724.123",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -2947,7 +2947,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "105.724.123",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -2960,7 +2960,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "2.415.719.186",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -2973,7 +2973,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "2.415.719.186",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -2986,7 +2986,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "0,000000",
     "unidade": "LF (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -2999,7 +2999,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "75.530.285",
     "unidade": "LFS (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -3012,7 +3012,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "75.530.285",
     "unidade": "Total (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -3025,7 +3025,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "117.198.293",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -3038,7 +3038,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "117.198.293",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -3051,7 +3051,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "408.507.323",
     "unidade": "LF (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -3064,7 +3064,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "0,000000",
     "unidade": "LFS (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -3077,7 +3077,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "408.507.323",
     "unidade": "Total (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -3090,7 +3090,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "971.122.585",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -3103,7 +3103,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "971.122.585",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -3116,7 +3116,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "17.552.075",
     "unidade": "LF (R$)",
     "data_referencia": "2014-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -3129,7 +3129,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "269.080.661",
     "unidade": "LFS (R$)",
     "data_referencia": "2014-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -3142,7 +3142,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "286.632.736",
     "unidade": "Total (R$)",
     "data_referencia": "2014-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -3155,7 +3155,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "1.632.926",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -3168,7 +3168,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "1.632.926",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -3181,7 +3181,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "4.603.313",
     "unidade": "LFS (R$)",
     "data_referencia": "2021-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -3194,7 +3194,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "4.603.313",
     "unidade": "Total (R$)",
     "data_referencia": "2021-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -3207,7 +3207,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "1.059.165",
     "unidade": "LF (R$)",
     "data_referencia": "2012-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -3220,7 +3220,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "0,000000",
     "unidade": "LFS (R$)",
     "data_referencia": "2012-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -3233,7 +3233,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "1.059.165",
     "unidade": "Total (R$)",
     "data_referencia": "2012-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -3246,7 +3246,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "588.400.490",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -3259,7 +3259,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "588.400.490",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -3272,7 +3272,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "33.200.927",
     "unidade": "LF (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -3285,7 +3285,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "0,000000",
     "unidade": "LFS (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -3298,7 +3298,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "33.200.927",
     "unidade": "Total (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -3311,7 +3311,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "38.123.126",
     "unidade": "LF (R$)",
     "data_referencia": "2016-12-30",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -3324,7 +3324,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "38.123.126",
     "unidade": "Total (R$)",
     "data_referencia": "2016-12-30",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -3337,7 +3337,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "121.639.004",
     "unidade": "LF (R$)",
     "data_referencia": "2014-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -3350,7 +3350,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "121.639.004",
     "unidade": "Total (R$)",
     "data_referencia": "2014-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -3363,7 +3363,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "966.094.610",
     "unidade": "LF (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -3376,7 +3376,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "60.579.196",
     "unidade": "LFS (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -3389,7 +3389,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "1.026.673.806",
     "unidade": "Total (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -3402,7 +3402,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "4.578.886.305",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -3415,7 +3415,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "4.578.886.305",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -3428,7 +3428,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "362.364.217",
     "unidade": "LF (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -3441,7 +3441,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "0,000000",
     "unidade": "LFS (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -3454,7 +3454,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "362.364.217",
     "unidade": "Total (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -3467,7 +3467,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "380.294.787",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -3480,7 +3480,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "103.124.323",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -3493,7 +3493,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "483.419.111",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -3506,7 +3506,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "2.798.040.883",
     "unidade": "LF (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -3519,7 +3519,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "1.991.633.164",
     "unidade": "LFS (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -3532,7 +3532,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "4.789.674.047",
     "unidade": "Total (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -3545,7 +3545,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "14.645.583.194",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -3558,7 +3558,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "1.975.169.039",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -3571,7 +3571,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "16.620.752.233",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -3584,7 +3584,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "100.780.307",
     "unidade": "LF (R$)",
     "data_referencia": "2013-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -3597,7 +3597,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "100.780.307",
     "unidade": "Total (R$)",
     "data_referencia": "2013-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -3610,7 +3610,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "231.234.921",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -3623,7 +3623,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "231.234.921",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -3636,7 +3636,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "81.441.680",
     "unidade": "LF (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -3649,7 +3649,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "0,000000",
     "unidade": "LFS (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -3662,7 +3662,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "81.441.680",
     "unidade": "Total (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -3675,7 +3675,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "1.696.078.799",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -3688,7 +3688,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "1.696.078.799",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -3701,7 +3701,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "116.042.669",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -3714,7 +3714,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "116.042.669",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -3727,7 +3727,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "224.955.729",
     "unidade": "LF (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -3740,7 +3740,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "0,000000",
     "unidade": "LFS (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -3753,7 +3753,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "224.955.729",
     "unidade": "Total (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -3766,7 +3766,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "82.971.627",
     "unidade": "LF (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -3779,7 +3779,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "0,000000",
     "unidade": "LFS (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -3792,7 +3792,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "82.971.627",
     "unidade": "Total (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -3805,7 +3805,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "3.483.039.029",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -3818,7 +3818,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "1.151.831.164",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -3831,7 +3831,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "4.634.870.193",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -3844,7 +3844,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "1.053.681.761",
     "unidade": "LF (R$)",
     "data_referencia": "2021-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -3857,7 +3857,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "1.053.681.761",
     "unidade": "Total (R$)",
     "data_referencia": "2021-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -3870,7 +3870,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "2.252.138.425",
     "unidade": "LF (R$)",
     "data_referencia": "2022-12-30",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -3883,7 +3883,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "2.252.138.425",
     "unidade": "Total (R$)",
     "data_referencia": "2022-12-30",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -3896,7 +3896,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "2.052.072.061",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -3909,7 +3909,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "1.002.034.244",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -3922,7 +3922,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "3.054.106.305",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -3935,7 +3935,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "771.297",
     "unidade": "LFS (R$)",
     "data_referencia": "2014-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -3948,7 +3948,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "771.297",
     "unidade": "Total (R$)",
     "data_referencia": "2014-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -3961,7 +3961,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "1.061.516",
     "unidade": "LF (R$)",
     "data_referencia": "2016-12-30",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -3974,7 +3974,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "1.061.516",
     "unidade": "Total (R$)",
     "data_referencia": "2016-12-30",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -3987,7 +3987,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "2.994.909.574",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -4000,7 +4000,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "711.068.768",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -4013,7 +4013,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "3.705.978.342",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -4026,7 +4026,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "154.937.461.287",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -4039,7 +4039,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "54.620.586.499",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -4052,7 +4052,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "209.558.047.786",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -4065,7 +4065,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "303.225.309",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -4078,7 +4078,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "3.729.203.632",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -4091,7 +4091,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "4.032.428.940",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -4104,7 +4104,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "0,000000",
     "unidade": "LF (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -4117,7 +4117,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "15.830.036",
     "unidade": "LFS (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -4130,7 +4130,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "15.830.036",
     "unidade": "Total (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -4143,7 +4143,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "18.365.566",
     "unidade": "LFS (R$)",
     "data_referencia": "2017-12-29",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -4156,7 +4156,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "18.365.566",
     "unidade": "Total (R$)",
     "data_referencia": "2017-12-29",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -4169,7 +4169,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "56.520.796",
     "unidade": "LFS (R$)",
     "data_referencia": "2022-12-30",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -4182,7 +4182,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "56.520.796",
     "unidade": "Total (R$)",
     "data_referencia": "2022-12-30",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -4195,7 +4195,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "68.271.423.478",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -4208,7 +4208,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "24.024.407.396",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -4221,7 +4221,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "92.295.830.874",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -4234,7 +4234,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "5.417.658",
     "unidade": "LFS (R$)",
     "data_referencia": "2018-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -4247,7 +4247,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "5.417.658",
     "unidade": "Total (R$)",
     "data_referencia": "2018-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -4260,7 +4260,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "4.720.347.555",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -4273,7 +4273,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "3.021.196.695",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -4286,7 +4286,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "7.741.544.250",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -4299,7 +4299,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "1.437.476.192",
     "unidade": "LF (R$)",
     "data_referencia": "2020-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -4312,7 +4312,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "2.171.507.838",
     "unidade": "LFS (R$)",
     "data_referencia": "2020-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -4325,7 +4325,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "3.608.984.030",
     "unidade": "Total (R$)",
     "data_referencia": "2020-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -4338,7 +4338,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "24.009.762.661",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -4351,7 +4351,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "7.540.286.552",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -4364,7 +4364,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "31.550.049.213",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -4377,7 +4377,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "90.014.570",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -4390,7 +4390,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "90.014.570",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -4403,7 +4403,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "474.590",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -4416,7 +4416,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "474.590",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -4429,7 +4429,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "155.534.781",
     "unidade": "LF (R$)",
     "data_referencia": "2012-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -4442,7 +4442,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "0,000000",
     "unidade": "LFS (R$)",
     "data_referencia": "2012-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -4455,7 +4455,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "155.534.781",
     "unidade": "Total (R$)",
     "data_referencia": "2012-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -4468,7 +4468,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "4.634.872",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -4481,7 +4481,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "4.634.872",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -4494,7 +4494,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "160.626",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -4507,7 +4507,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "160.626",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -4520,7 +4520,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "178.857",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -4533,7 +4533,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "178.857",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -4546,7 +4546,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "234.776",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -4559,7 +4559,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "234.776",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -4572,7 +4572,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "111.990",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -4585,7 +4585,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "111.990",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -4598,7 +4598,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "719.143",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -4611,7 +4611,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "719.143",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -4624,7 +4624,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "3.165.012",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -4637,7 +4637,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "3.165.012",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -4650,7 +4650,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "302.545",
     "unidade": "LF (R$)",
     "data_referencia": "2022-12-30",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -4663,7 +4663,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "302.545",
     "unidade": "Total (R$)",
     "data_referencia": "2022-12-30",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -4676,7 +4676,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "306.500",
     "unidade": "LFS (R$)",
     "data_referencia": "2019-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -4689,7 +4689,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "306.500",
     "unidade": "Total (R$)",
     "data_referencia": "2019-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -4702,7 +4702,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "5.026.040",
     "unidade": "LFS (R$)",
     "data_referencia": "2020-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -4715,7 +4715,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "5.026.040",
     "unidade": "Total (R$)",
     "data_referencia": "2020-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -4728,7 +4728,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "6.369.362",
     "unidade": "LFS (R$)",
     "data_referencia": "2020-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -4741,7 +4741,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "6.369.362",
     "unidade": "Total (R$)",
     "data_referencia": "2020-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -4754,7 +4754,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "15.032.973",
     "unidade": "LFS (R$)",
     "data_referencia": "2020-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -4767,7 +4767,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "15.032.973",
     "unidade": "Total (R$)",
     "data_referencia": "2020-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -4780,7 +4780,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "30.304.647",
     "unidade": "LFS (R$)",
     "data_referencia": "2020-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -4793,7 +4793,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "30.304.647",
     "unidade": "Total (R$)",
     "data_referencia": "2020-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -4806,7 +4806,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "3.506.017",
     "unidade": "LFS (R$)",
     "data_referencia": "2020-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -4819,7 +4819,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "3.506.017",
     "unidade": "Total (R$)",
     "data_referencia": "2020-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -4832,7 +4832,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "5.024.332",
     "unidade": "LFS (R$)",
     "data_referencia": "2020-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -4845,7 +4845,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "5.024.332",
     "unidade": "Total (R$)",
     "data_referencia": "2020-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -4858,7 +4858,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "609.781",
     "unidade": "LF (R$)",
     "data_referencia": "2023-12-29",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -4871,7 +4871,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "609.781",
     "unidade": "Total (R$)",
     "data_referencia": "2023-12-29",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -4884,7 +4884,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "5.099.355",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -4897,7 +4897,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "5.099.355",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -4910,7 +4910,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "2.916.750",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -4923,7 +4923,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "2.916.750",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -4936,7 +4936,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "55.363",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -4949,7 +4949,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "55.363",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -4962,7 +4962,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "2.496.958",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -4975,7 +4975,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "2.496.958",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -4988,7 +4988,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "49.269.146",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -5001,7 +5001,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "49.269.146",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -5014,7 +5014,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "12.350.811",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -5027,7 +5027,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "12.350.811",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -5040,7 +5040,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "23.926.770",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -5053,7 +5053,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "23.926.770",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -5066,7 +5066,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "305.398.786",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -5079,7 +5079,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "305.398.786",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -5092,7 +5092,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "88.920.367",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -5105,7 +5105,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "88.920.367",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -5118,7 +5118,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "3.006.952",
     "unidade": "LF (R$)",
     "data_referencia": "2020-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -5131,7 +5131,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "3.006.952",
     "unidade": "Total (R$)",
     "data_referencia": "2020-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -5144,7 +5144,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "1.121.580",
     "unidade": "LF (R$)",
     "data_referencia": "2021-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -5157,7 +5157,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "1.121.580",
     "unidade": "Total (R$)",
     "data_referencia": "2021-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -5170,7 +5170,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "105.594.288",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -5183,7 +5183,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "105.594.288",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -5196,7 +5196,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "109.331",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -5209,7 +5209,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "109.331",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -5222,7 +5222,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "2.872.337",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -5235,7 +5235,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "2.872.337",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -5248,7 +5248,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "526.569",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -5261,7 +5261,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "526.569",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -5274,7 +5274,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "316.566",
     "unidade": "LFS (R$)",
     "data_referencia": "2016-12-30",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -5287,7 +5287,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "316.566",
     "unidade": "Total (R$)",
     "data_referencia": "2016-12-30",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -5300,7 +5300,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "9.491.058",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -5313,7 +5313,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "9.491.058",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -5326,7 +5326,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "113.874",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -5339,7 +5339,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "113.874",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -5352,7 +5352,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "5.003.012",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -5365,7 +5365,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "5.003.012",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -5378,7 +5378,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "6.036.351",
     "unidade": "LFS (R$)",
     "data_referencia": "2017-12-29",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -5391,7 +5391,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "6.036.351",
     "unidade": "Total (R$)",
     "data_referencia": "2017-12-29",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -5404,7 +5404,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "50.230",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -5417,7 +5417,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "50.230",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -5430,7 +5430,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "3.112.138",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -5443,7 +5443,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "3.112.138",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -5456,7 +5456,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "53.480",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -5469,7 +5469,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "53.480",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -5482,7 +5482,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "399.250",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -5495,7 +5495,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "399.250",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -5508,7 +5508,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "10.404.309",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -5521,7 +5521,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "10.404.309",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -5534,7 +5534,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "56.450",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -5547,7 +5547,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "56.450",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -5560,7 +5560,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "395.387",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -5573,7 +5573,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "395.387",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -5586,7 +5586,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "9.728.617",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -5599,7 +5599,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "9.728.617",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -5612,7 +5612,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "446.498",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -5625,7 +5625,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "446.498",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -5638,7 +5638,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "82.668.919",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -5651,7 +5651,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "82.668.919",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -5664,7 +5664,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "1.097.621",
     "unidade": "LF (R$)",
     "data_referencia": "2024-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -5677,7 +5677,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "1.097.621",
     "unidade": "Total (R$)",
     "data_referencia": "2024-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -5690,7 +5690,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "6.011.038",
     "unidade": "LFS (R$)",
     "data_referencia": "2020-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -5703,7 +5703,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "6.011.038",
     "unidade": "Total (R$)",
     "data_referencia": "2020-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -5716,7 +5716,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "3.511.767",
     "unidade": "LFS (R$)",
     "data_referencia": "2020-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -5729,7 +5729,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "3.511.767",
     "unidade": "Total (R$)",
     "data_referencia": "2020-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -5742,7 +5742,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "11.538.242",
     "unidade": "LFS (R$)",
     "data_referencia": "2020-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -5755,7 +5755,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "11.538.242",
     "unidade": "Total (R$)",
     "data_referencia": "2020-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -5768,7 +5768,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "68.169",
     "unidade": "LF (R$)",
     "data_referencia": "2022-12-30",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -5781,7 +5781,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "68.169",
     "unidade": "Total (R$)",
     "data_referencia": "2022-12-30",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -5794,7 +5794,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "168.771.061",
     "unidade": "LF (R$)",
     "data_referencia": "2024-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -5807,7 +5807,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "168.771.061",
     "unidade": "Total (R$)",
     "data_referencia": "2024-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -5820,7 +5820,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "3.034.619",
     "unidade": "LF (R$)",
     "data_referencia": "2021-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -5833,7 +5833,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "3.034.619",
     "unidade": "Total (R$)",
     "data_referencia": "2021-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -5846,7 +5846,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "27.951.891",
     "unidade": "LF (R$)",
     "data_referencia": "2024-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -5859,7 +5859,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "27.951.891",
     "unidade": "Total (R$)",
     "data_referencia": "2024-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -5872,7 +5872,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "425.219",
     "unidade": "LF (R$)",
     "data_referencia": "2021-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -5885,7 +5885,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "425.219",
     "unidade": "Total (R$)",
     "data_referencia": "2021-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -5898,7 +5898,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "297.605",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -5911,7 +5911,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "297.605",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -5924,7 +5924,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "84.852.731",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -5937,7 +5937,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "84.852.731",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -5950,7 +5950,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "1.249.050",
     "unidade": "LF (R$)",
     "data_referencia": "2021-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -5963,7 +5963,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "1.249.050",
     "unidade": "Total (R$)",
     "data_referencia": "2021-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -5976,7 +5976,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "703.516",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -5989,7 +5989,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "703.516",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -6002,7 +6002,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "485.546",
     "unidade": "LF (R$)",
     "data_referencia": "2022-12-30",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -6015,7 +6015,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "485.546",
     "unidade": "Total (R$)",
     "data_referencia": "2022-12-30",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -6028,7 +6028,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "40.815.775.834",
     "unidade": "LF (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -6041,7 +6041,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "290.611.720",
     "unidade": "LFS (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -6054,7 +6054,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "41.106.387.553",
     "unidade": "Total (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -6067,7 +6067,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "7.117.285.891",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -6080,7 +6080,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "7.117.285.891",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -6093,7 +6093,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "9.795.193",
     "unidade": "LFS (R$)",
     "data_referencia": "2021-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -6106,7 +6106,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "9.795.193",
     "unidade": "Total (R$)",
     "data_referencia": "2021-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -6119,7 +6119,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "579.035",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -6132,7 +6132,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "579.035",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -6145,7 +6145,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "102.632.059",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -6158,7 +6158,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "102.632.059",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -6171,7 +6171,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "321.241",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -6184,7 +6184,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "321.241",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -6197,7 +6197,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "2.172.928",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -6210,7 +6210,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "2.172.928",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -6223,7 +6223,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "118.364",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -6236,7 +6236,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "118.364",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -6249,7 +6249,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "1.337.685",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -6262,7 +6262,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "1.337.685",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -6275,7 +6275,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "57.759",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -6288,7 +6288,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "57.759",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -6301,7 +6301,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "3.762.616",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -6314,7 +6314,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "3.762.616",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -6327,7 +6327,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "2.283.485",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -6340,7 +6340,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "2.283.485",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -6353,7 +6353,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "2.378.372",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -6366,7 +6366,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "2.378.372",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -6379,7 +6379,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "101.246.316",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -6392,7 +6392,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "101.246.316",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -6405,7 +6405,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "166.103.666",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -6418,7 +6418,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "166.103.666",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -6431,7 +6431,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "90.529.240",
     "unidade": "LFS (R$)",
     "data_referencia": "2024-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -6444,7 +6444,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "90.529.240",
     "unidade": "Total (R$)",
     "data_referencia": "2024-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -6457,7 +6457,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "68.857.843",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -6470,7 +6470,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "68.857.843",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -6483,7 +6483,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "7.463.510",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -6496,7 +6496,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "7.463.510",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -6509,7 +6509,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "105.595.835",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -6522,7 +6522,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "105.595.835",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -6535,7 +6535,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "2.992.017",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -6548,7 +6548,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "2.992.017",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -6561,7 +6561,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "67.573.199",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -6574,7 +6574,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "67.573.199",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -6587,7 +6587,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "23.435.204",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -6600,7 +6600,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "23.435.204",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -6613,7 +6613,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "50.759.763",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -6626,7 +6626,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "50.759.763",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -6639,7 +6639,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "42.857.902",
     "unidade": "LFS (R$)",
     "data_referencia": "2024-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -6652,7 +6652,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "42.857.902",
     "unidade": "Total (R$)",
     "data_referencia": "2024-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -6665,7 +6665,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "50.795.154",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -6678,7 +6678,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "50.795.154",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -6691,7 +6691,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "41.229.342",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -6704,7 +6704,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "41.229.342",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -6717,7 +6717,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "15.401.402",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -6730,7 +6730,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "15.401.402",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -6743,7 +6743,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "21.215.997",
     "unidade": "LFS (R$)",
     "data_referencia": "2023-12-29",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -6756,7 +6756,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "21.215.997",
     "unidade": "Total (R$)",
     "data_referencia": "2023-12-29",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -6769,7 +6769,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "91.066.827",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -6782,7 +6782,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "91.066.827",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -6795,7 +6795,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "10.270.959",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -6808,7 +6808,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "10.270.959",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -6821,7 +6821,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "15.406.438",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -6834,7 +6834,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "15.406.438",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -6847,7 +6847,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "109.022.231",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -6860,7 +6860,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "109.022.231",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -6873,7 +6873,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "1.484.327",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -6886,7 +6886,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "1.484.327",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -6899,7 +6899,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "10.270.959",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -6912,7 +6912,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "10.270.959",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -6925,7 +6925,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "7.720.509",
     "unidade": "LFS (R$)",
     "data_referencia": "2024-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -6938,7 +6938,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "7.720.509",
     "unidade": "Total (R$)",
     "data_referencia": "2024-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -6951,7 +6951,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "80.267.736",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -6964,7 +6964,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "80.267.736",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -6977,7 +6977,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "23.095.269",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -6990,7 +6990,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "23.095.269",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -7003,7 +7003,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "4.446.635",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -7016,7 +7016,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "4.446.635",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -7029,7 +7029,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "91.427.279",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -7042,7 +7042,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "91.427.279",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -7055,7 +7055,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "54.145.706",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -7068,7 +7068,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "54.145.706",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -7081,7 +7081,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "43.464.657",
     "unidade": "LFS (R$)",
     "data_referencia": "2023-12-29",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -7094,7 +7094,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "43.464.657",
     "unidade": "Total (R$)",
     "data_referencia": "2023-12-29",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -7107,7 +7107,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "22.685.831",
     "unidade": "LFS (R$)",
     "data_referencia": "2022-12-30",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -7120,7 +7120,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "22.685.831",
     "unidade": "Total (R$)",
     "data_referencia": "2022-12-30",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -7133,7 +7133,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "33.202.971",
     "unidade": "LFS (R$)",
     "data_referencia": "2022-12-30",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -7146,7 +7146,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "33.202.971",
     "unidade": "Total (R$)",
     "data_referencia": "2022-12-30",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -7159,7 +7159,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "10.267.601",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -7172,7 +7172,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "10.267.601",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -7185,7 +7185,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "9.131.905",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -7198,7 +7198,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "9.131.905",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -7211,7 +7211,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "6.078.351",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -7224,7 +7224,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "6.078.351",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -7237,7 +7237,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "40.921.729",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -7250,7 +7250,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "40.921.729",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -7263,7 +7263,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "35.111.996",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -7276,7 +7276,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "35.111.996",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -7289,7 +7289,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "21.673.965",
     "unidade": "LFS (R$)",
     "data_referencia": "2023-12-29",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -7302,7 +7302,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "21.673.965",
     "unidade": "Total (R$)",
     "data_referencia": "2023-12-29",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -7315,7 +7315,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "41.934.691",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -7328,7 +7328,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "41.934.691",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -7341,7 +7341,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "71.710.119",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -7354,7 +7354,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "71.710.119",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -7367,7 +7367,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "34.768.461",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -7380,7 +7380,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "34.768.461",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -7393,7 +7393,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "18.302.710",
     "unidade": "LFS (R$)",
     "data_referencia": "2022-12-30",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -7406,7 +7406,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "18.302.710",
     "unidade": "Total (R$)",
     "data_referencia": "2022-12-30",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -7419,7 +7419,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "39.446.674",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -7432,7 +7432,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "39.446.674",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -7445,7 +7445,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "51.116.992",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -7458,7 +7458,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "51.116.992",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -7471,7 +7471,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "38.428.578",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -7484,7 +7484,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "38.428.578",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -7497,7 +7497,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "37.112.343",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -7510,7 +7510,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "37.112.343",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -7523,7 +7523,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "81.417.165",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -7536,7 +7536,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "81.417.165",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -7549,7 +7549,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "50.133.501",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -7562,7 +7562,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "50.133.501",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -7575,7 +7575,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "23.312.972",
     "unidade": "LFS (R$)",
     "data_referencia": "2024-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -7588,7 +7588,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "23.312.972",
     "unidade": "Total (R$)",
     "data_referencia": "2024-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -7601,7 +7601,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "69.377.398",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -7614,7 +7614,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "69.377.398",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -7627,7 +7627,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "28.450.080",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -7640,7 +7640,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "28.450.080",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -7653,7 +7653,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "50.801.723",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -7666,7 +7666,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "50.801.723",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -7679,7 +7679,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "15.420.764",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -7692,7 +7692,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "15.420.764",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -7705,7 +7705,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "84.291.006",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -7718,7 +7718,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "84.291.006",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -7731,7 +7731,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "67.139.000",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -7744,7 +7744,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "67.139.000",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -7757,7 +7757,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "24.229.209",
     "unidade": "LFS (R$)",
     "data_referencia": "2022-12-30",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -7770,7 +7770,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "24.229.209",
     "unidade": "Total (R$)",
     "data_referencia": "2022-12-30",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -7783,7 +7783,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "34.648.560",
     "unidade": "LFS (R$)",
     "data_referencia": "2023-12-29",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -7796,7 +7796,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "34.648.560",
     "unidade": "Total (R$)",
     "data_referencia": "2023-12-29",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -7809,7 +7809,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "41.877.428",
     "unidade": "LFS (R$)",
     "data_referencia": "2024-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -7822,7 +7822,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "41.877.428",
     "unidade": "Total (R$)",
     "data_referencia": "2024-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -7835,7 +7835,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "42.402.363",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -7848,7 +7848,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "42.402.363",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -7861,7 +7861,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "152.051.854",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -7874,7 +7874,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "152.051.854",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -7887,7 +7887,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "118.138.238",
     "unidade": "LFS (R$)",
     "data_referencia": "2022-12-30",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -7900,7 +7900,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "118.138.238",
     "unidade": "Total (R$)",
     "data_referencia": "2022-12-30",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -7913,7 +7913,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "157.965.925",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -7926,7 +7926,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "157.965.925",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -7939,7 +7939,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "107.382.455",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -7952,7 +7952,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "107.382.455",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -7965,7 +7965,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "19.107.203",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -7978,7 +7978,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "19.107.203",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -7991,7 +7991,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "2.063.983",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -8004,7 +8004,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "2.063.983",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -8017,7 +8017,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "771.460",
     "unidade": "LF (R$)",
     "data_referencia": "2024-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -8030,7 +8030,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "771.460",
     "unidade": "Total (R$)",
     "data_referencia": "2024-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -8043,7 +8043,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "8.981.590",
     "unidade": "LF (R$)",
     "data_referencia": "2023-12-29",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -8056,7 +8056,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "8.981.590",
     "unidade": "Total (R$)",
     "data_referencia": "2023-12-29",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -8069,7 +8069,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "312.547",
     "unidade": "LF (R$)",
     "data_referencia": "2024-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -8082,7 +8082,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "312.547",
     "unidade": "Total (R$)",
     "data_referencia": "2024-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -8095,7 +8095,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "12.023.539",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -8108,7 +8108,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "12.023.539",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -8121,7 +8121,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "443.733",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -8134,7 +8134,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "443.733",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -8147,7 +8147,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "10.206.251",
     "unidade": "LFS (R$)",
     "data_referencia": "2024-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -8160,7 +8160,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "10.206.251",
     "unidade": "Total (R$)",
     "data_referencia": "2024-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -8173,7 +8173,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "3.520.601",
     "unidade": "LF (R$)",
     "data_referencia": "2021-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -8186,7 +8186,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "3.520.601",
     "unidade": "Total (R$)",
     "data_referencia": "2021-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -8199,7 +8199,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "131.695.331",
     "unidade": "LF (R$)",
     "data_referencia": "2021-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -8212,7 +8212,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "131.695.331",
     "unidade": "Total (R$)",
     "data_referencia": "2021-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -8225,7 +8225,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "31.993.098",
     "unidade": "LF (R$)",
     "data_referencia": "2011-12-30",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -8238,7 +8238,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "0,000000",
     "unidade": "LFS (R$)",
     "data_referencia": "2011-12-30",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -8251,7 +8251,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "31.993.098",
     "unidade": "Total (R$)",
     "data_referencia": "2011-12-30",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -8264,7 +8264,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "25.210.784.457",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -8277,7 +8277,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "2.769.232.101",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -8290,7 +8290,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "27.980.016.558",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -8303,7 +8303,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "225.329.156",
     "unidade": "LF (R$)",
     "data_referencia": "2016-12-30",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -8316,7 +8316,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "225.329.156",
     "unidade": "Total (R$)",
     "data_referencia": "2016-12-30",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -8329,7 +8329,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "556.169.099",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -8342,7 +8342,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "556.169.099",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -8355,7 +8355,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "250.796.439",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -8368,7 +8368,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "250.796.439",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -8381,7 +8381,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "1.327.125.405",
     "unidade": "LF (R$)",
     "data_referencia": "2013-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -8394,7 +8394,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "1.327.125.405",
     "unidade": "Total (R$)",
     "data_referencia": "2013-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -8407,7 +8407,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "21.485.597",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -8420,7 +8420,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "21.485.597",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -8433,7 +8433,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "70.000.000",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -8446,7 +8446,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "70.000.000",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -8459,7 +8459,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "219.052.423",
     "unidade": "LFS (R$)",
     "data_referencia": "2022-12-30",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -8472,7 +8472,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "219.052.423",
     "unidade": "Total (R$)",
     "data_referencia": "2022-12-30",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -8485,7 +8485,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "743.599.513",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -8498,7 +8498,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "743.599.513",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -8511,7 +8511,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "2.681.546.206",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -8524,7 +8524,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "2.681.546.206",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -8537,7 +8537,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "34.158.156.558",
     "unidade": "LF (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -8550,7 +8550,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "0,000000",
     "unidade": "LFS (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -8563,7 +8563,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "34.158.156.558",
     "unidade": "Total (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -8576,7 +8576,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "107.390.164",
     "unidade": "LF (R$)",
     "data_referencia": "2019-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -8589,7 +8589,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "107.390.164",
     "unidade": "Total (R$)",
     "data_referencia": "2019-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -8602,7 +8602,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "40.000.000",
     "unidade": "LF (R$)",
     "data_referencia": "2020-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -8615,7 +8615,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "40.000.000",
     "unidade": "Total (R$)",
     "data_referencia": "2020-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -8628,7 +8628,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "1.626.723.954",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -8641,7 +8641,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "294.913.671",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -8654,7 +8654,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "1.921.637.625",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -8667,7 +8667,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "18.900.002",
     "unidade": "LF (R$)",
     "data_referencia": "2020-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -8680,7 +8680,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "18.900.002",
     "unidade": "Total (R$)",
     "data_referencia": "2020-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -8693,7 +8693,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "237.422.643",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -8706,7 +8706,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "1.058.797.546",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -8719,7 +8719,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "1.296.220.189",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -8732,7 +8732,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "26.600.250",
     "unidade": "LF (R$)",
     "data_referencia": "2012-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -8745,7 +8745,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "0,000000",
     "unidade": "LFS (R$)",
     "data_referencia": "2012-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -8758,7 +8758,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "26.600.250",
     "unidade": "Total (R$)",
     "data_referencia": "2012-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -8771,7 +8771,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "12.393.223",
     "unidade": "LF (R$)",
     "data_referencia": "2018-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -8784,7 +8784,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "12.393.223",
     "unidade": "Total (R$)",
     "data_referencia": "2018-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -8797,7 +8797,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "61.299.388.904",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -8810,7 +8810,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "63.492.195.741",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -8823,7 +8823,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "124.791.584.645",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -8836,7 +8836,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "1.558.996.168",
     "unidade": "LF (R$)",
     "data_referencia": "2014-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -8849,7 +8849,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "1.558.996.168",
     "unidade": "Total (R$)",
     "data_referencia": "2014-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -8862,7 +8862,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "303.763.375",
     "unidade": "LF (R$)",
     "data_referencia": "2019-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -8875,7 +8875,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "303.763.375",
     "unidade": "Total (R$)",
     "data_referencia": "2019-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -8888,7 +8888,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "1.722.069.431",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -8901,7 +8901,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "23.743.258",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -8914,7 +8914,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "1.745.812.689",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -8927,7 +8927,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "4.534.709.475",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -8940,7 +8940,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "358.569.923",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -8953,7 +8953,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "4.893.279.397",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -8966,7 +8966,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "5.597.494.088",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -8979,7 +8979,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "954.407.805",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -8992,7 +8992,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "6.551.901.893",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -9005,7 +9005,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "4.793.422.916",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -9018,7 +9018,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "4.793.422.916",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -9031,7 +9031,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "203.134.206",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -9044,7 +9044,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "203.134.206",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -9057,7 +9057,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "3.674.283",
     "unidade": "LF (R$)",
     "data_referencia": "2020-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -9070,7 +9070,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "3.674.283",
     "unidade": "Total (R$)",
     "data_referencia": "2020-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -9083,7 +9083,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "449.476.802",
     "unidade": "LF (R$)",
     "data_referencia": "2022-12-30",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -9096,7 +9096,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "449.476.802",
     "unidade": "Total (R$)",
     "data_referencia": "2022-12-30",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -9109,7 +9109,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "1.081.461.849",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -9122,7 +9122,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "1.081.461.849",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -9135,7 +9135,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "129.700.000",
     "unidade": "LF (R$)",
     "data_referencia": "2020-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -9148,7 +9148,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "52.658.856",
     "unidade": "LFS (R$)",
     "data_referencia": "2020-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -9161,7 +9161,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "182.358.856",
     "unidade": "Total (R$)",
     "data_referencia": "2020-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -9174,7 +9174,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "641.528.643",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -9187,7 +9187,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "62.202.391",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -9200,7 +9200,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "703.731.034",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -9213,7 +9213,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "312.594.203",
     "unidade": "LF (R$)",
     "data_referencia": "2020-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -9226,7 +9226,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "90.411.445",
     "unidade": "LFS (R$)",
     "data_referencia": "2020-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -9239,7 +9239,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "403.005.648",
     "unidade": "Total (R$)",
     "data_referencia": "2020-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -9252,7 +9252,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "13.912.755.682",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -9265,7 +9265,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "6.781.941.324",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -9278,7 +9278,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "20.694.697.006",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -9291,7 +9291,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "529.814.942",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -9304,7 +9304,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "168.536.899",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -9317,7 +9317,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "698.351.840",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -9330,7 +9330,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "237.710.217",
     "unidade": "LF (R$)",
     "data_referencia": "2023-12-29",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -9343,7 +9343,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "940.914.924",
     "unidade": "LFS (R$)",
     "data_referencia": "2023-12-29",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -9356,7 +9356,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "1.178.625.141",
     "unidade": "Total (R$)",
     "data_referencia": "2023-12-29",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -9369,7 +9369,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "17.043.990",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -9382,7 +9382,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "17.043.990",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -9395,7 +9395,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "12.307.149",
     "unidade": "LFS (R$)",
     "data_referencia": "2019-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -9408,7 +9408,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "12.307.149",
     "unidade": "Total (R$)",
     "data_referencia": "2019-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -9421,7 +9421,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "7.398.987.371",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -9434,7 +9434,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "390.908.925",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -9447,7 +9447,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "7.789.896.295",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -9460,7 +9460,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "5.002.128.457",
     "unidade": "LF (R$)",
     "data_referencia": "2020-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -9473,7 +9473,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "8.785.194",
     "unidade": "LFS (R$)",
     "data_referencia": "2020-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -9486,7 +9486,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "5.010.913.651",
     "unidade": "Total (R$)",
     "data_referencia": "2020-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -9499,7 +9499,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "2.005.944.665",
     "unidade": "LF (R$)",
     "data_referencia": "2014-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -9512,7 +9512,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "131.390.032",
     "unidade": "LFS (R$)",
     "data_referencia": "2014-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -9525,7 +9525,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "2.137.334.697",
     "unidade": "Total (R$)",
     "data_referencia": "2014-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -9538,7 +9538,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "5.388.854.100",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -9551,7 +9551,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "258.066.977",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -9564,7 +9564,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "5.646.921.077",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -9577,7 +9577,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "1.561.120.727",
     "unidade": "LF (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -9590,7 +9590,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "0,000000",
     "unidade": "LFS (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -9603,7 +9603,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "1.561.120.727",
     "unidade": "Total (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -9616,7 +9616,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "244.287.500",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -9629,7 +9629,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "511.750.893",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -9642,7 +9642,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "756.038.393",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -9655,7 +9655,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "2.561.731.982",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -9668,7 +9668,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "805.568.117",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -9681,7 +9681,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "3.367.300.099",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -9694,7 +9694,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "787.392.983",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -9707,7 +9707,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "787.392.983",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -9720,7 +9720,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "3.951.535.193",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -9733,7 +9733,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "1.373.809.582",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -9746,7 +9746,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "5.325.344.775",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -9759,7 +9759,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "0,000000",
     "unidade": "LF (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -9772,7 +9772,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "9.766.503",
     "unidade": "LFS (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -9785,7 +9785,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "9.766.503",
     "unidade": "Total (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -9798,7 +9798,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "31.011.482",
     "unidade": "LFS (R$)",
     "data_referencia": "2022-12-30",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -9811,7 +9811,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "31.011.482",
     "unidade": "Total (R$)",
     "data_referencia": "2022-12-30",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -9824,7 +9824,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "117.650.006",
     "unidade": "LF (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -9837,7 +9837,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "0,000000",
     "unidade": "LFS (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -9850,7 +9850,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "117.650.006",
     "unidade": "Total (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -9863,7 +9863,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "221.629.343",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -9876,7 +9876,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "221.629.343",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -9889,7 +9889,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "329.756.440",
     "unidade": "LF (R$)",
     "data_referencia": "2021-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -9902,7 +9902,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "329.756.440",
     "unidade": "Total (R$)",
     "data_referencia": "2021-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -9915,7 +9915,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "1.220.342",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -9928,7 +9928,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "1.220.342",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -9941,7 +9941,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "425.608.336",
     "unidade": "LF (R$)",
     "data_referencia": "2014-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -9954,7 +9954,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "425.608.336",
     "unidade": "Total (R$)",
     "data_referencia": "2014-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -9967,7 +9967,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "12.377.558",
     "unidade": "LF (R$)",
     "data_referencia": "2012-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -9980,7 +9980,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "214.847.974",
     "unidade": "LFS (R$)",
     "data_referencia": "2012-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -9993,7 +9993,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "227.225.532",
     "unidade": "Total (R$)",
     "data_referencia": "2012-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -10006,7 +10006,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "47.909.034.343",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -10019,7 +10019,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "11.841.059.622",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -10032,7 +10032,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "59.750.093.966",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -10045,7 +10045,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "45.507.203.961",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -10058,7 +10058,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "28.341.598.451",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -10071,7 +10071,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "73.848.802.412",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -10084,7 +10084,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "28.757.630",
     "unidade": "LF (R$)",
     "data_referencia": "2019-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -10097,7 +10097,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "28.757.630",
     "unidade": "Total (R$)",
     "data_referencia": "2019-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -10110,7 +10110,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "0,000000",
     "unidade": "LF (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -10123,7 +10123,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "81.346.137",
     "unidade": "LFS (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -10136,7 +10136,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "81.346.137",
     "unidade": "Total (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -10149,7 +10149,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "3.611.323.499",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -10162,7 +10162,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "3.611.323.499",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -10175,7 +10175,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "968.531.297",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -10188,7 +10188,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "968.531.297",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -10201,7 +10201,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "926.767",
     "unidade": "LF (R$)",
     "data_referencia": "2018-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -10214,7 +10214,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "926.767",
     "unidade": "Total (R$)",
     "data_referencia": "2018-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -10227,7 +10227,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "587.776",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -10240,7 +10240,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "587.776",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -10253,7 +10253,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "47.189.793",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -10266,7 +10266,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "47.189.793",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -10279,7 +10279,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "14.703.391",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -10292,7 +10292,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "14.703.391",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -10305,7 +10305,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "83.190.775",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -10318,7 +10318,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "83.190.775",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -10331,7 +10331,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "103.533",
     "unidade": "LF (R$)",
     "data_referencia": "2024-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -10344,7 +10344,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "103.533",
     "unidade": "Total (R$)",
     "data_referencia": "2024-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -10357,7 +10357,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "107.764",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -10370,7 +10370,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "107.764",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -10383,7 +10383,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "357.506",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -10396,7 +10396,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "357.506",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -10409,7 +10409,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "88.467.270",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -10422,7 +10422,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "88.467.270",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -10435,7 +10435,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "12.735.132",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -10448,7 +10448,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "12.735.132",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -10461,7 +10461,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "31.845.903",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -10474,7 +10474,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "31.845.903",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -10487,7 +10487,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "628.224",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -10500,7 +10500,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "628.224",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -10513,7 +10513,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "5.250.874",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -10526,7 +10526,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "5.250.874",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -10539,7 +10539,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "33.251.310",
     "unidade": "LFS (R$)",
     "data_referencia": "2024-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -10552,7 +10552,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "33.251.310",
     "unidade": "Total (R$)",
     "data_referencia": "2024-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -10565,7 +10565,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "33.587.672",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -10578,7 +10578,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "33.587.672",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -10591,7 +10591,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "35.264.738",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -10604,7 +10604,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "35.264.738",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -10617,7 +10617,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "8.854.976",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -10630,7 +10630,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "8.854.976",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -10643,7 +10643,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "5.411.406",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -10656,7 +10656,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "5.411.406",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -10669,7 +10669,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "2.898.454",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -10682,7 +10682,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "2.898.454",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -10695,7 +10695,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "106.073.966",
     "unidade": "LF (R$)",
     "data_referencia": "2013-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -10708,7 +10708,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "106.073.966",
     "unidade": "Total (R$)",
     "data_referencia": "2013-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -10721,7 +10721,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "1.077.387",
     "unidade": "LF (R$)",
     "data_referencia": "2019-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -10734,7 +10734,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "31.068.916",
     "unidade": "LFS (R$)",
     "data_referencia": "2019-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -10747,7 +10747,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "32.146.303",
     "unidade": "Total (R$)",
     "data_referencia": "2019-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -10760,7 +10760,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "569.756.144",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -10773,7 +10773,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "347.078.340",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -10786,7 +10786,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "916.834.484",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -10799,7 +10799,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "4.363.542",
     "unidade": "LFS (R$)",
     "data_referencia": "2020-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -10812,7 +10812,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "4.363.542",
     "unidade": "Total (R$)",
     "data_referencia": "2020-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -10825,7 +10825,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "6.795.087.639",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -10838,7 +10838,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "6.795.087.639",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -10851,7 +10851,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "5.424.229.823",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -10864,7 +10864,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "492.578.824",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -10877,7 +10877,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "5.916.808.648",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -10890,7 +10890,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "373.348.887",
     "unidade": "LF (R$)",
     "data_referencia": "2012-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -10903,7 +10903,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "42.561.881",
     "unidade": "LFS (R$)",
     "data_referencia": "2012-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -10916,7 +10916,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "415.910.768",
     "unidade": "Total (R$)",
     "data_referencia": "2012-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -10929,7 +10929,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "9.115.640",
     "unidade": "LFS (R$)",
     "data_referencia": "2019-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -10942,7 +10942,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "9.115.640",
     "unidade": "Total (R$)",
     "data_referencia": "2019-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -10955,7 +10955,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "2.539.919",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -10968,7 +10968,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "2.539.919",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -10981,7 +10981,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "5.686.383",
     "unidade": "LF (R$)",
     "data_referencia": "2022-12-30",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -10994,7 +10994,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "5.686.383",
     "unidade": "Total (R$)",
     "data_referencia": "2022-12-30",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -11007,7 +11007,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "2.417.054",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -11020,7 +11020,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "2.417.054",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -11033,7 +11033,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "88.082.927",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -11046,7 +11046,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "88.082.927",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -11059,7 +11059,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "21.756.981",
     "unidade": "LF (R$)",
     "data_referencia": "2022-12-30",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -11072,7 +11072,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "21.756.981",
     "unidade": "Total (R$)",
     "data_referencia": "2022-12-30",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -11085,7 +11085,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "354.724",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -11098,7 +11098,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "354.724",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -11111,7 +11111,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "24.679.170",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -11124,7 +11124,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "24.679.170",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -11137,7 +11137,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "68.547.555",
     "unidade": "LF (R$)",
     "data_referencia": "2024-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -11150,7 +11150,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "68.547.555",
     "unidade": "Total (R$)",
     "data_referencia": "2024-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -11163,7 +11163,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "108.175.057",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -11176,7 +11176,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "108.175.057",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -11189,7 +11189,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "43.871.602",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -11202,7 +11202,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "43.871.602",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -11215,7 +11215,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "33.140.245",
     "unidade": "LF (R$)",
     "data_referencia": "2023-12-29",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -11228,7 +11228,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "33.140.245",
     "unidade": "Total (R$)",
     "data_referencia": "2023-12-29",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -11241,7 +11241,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "4.322.168",
     "unidade": "LF (R$)",
     "data_referencia": "2022-12-30",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -11254,7 +11254,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "4.322.168",
     "unidade": "Total (R$)",
     "data_referencia": "2022-12-30",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -11267,7 +11267,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "1.511.927",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -11280,7 +11280,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "1.511.927",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -11293,7 +11293,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "11.905.813",
     "unidade": "LF (R$)",
     "data_referencia": "2020-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -11306,7 +11306,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "11.905.813",
     "unidade": "Total (R$)",
     "data_referencia": "2020-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -11319,7 +11319,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "6.540.079",
     "unidade": "LF (R$)",
     "data_referencia": "2021-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -11332,7 +11332,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "6.540.079",
     "unidade": "Total (R$)",
     "data_referencia": "2021-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -11345,7 +11345,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "353.770",
     "unidade": "LF (R$)",
     "data_referencia": "2021-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -11358,7 +11358,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "353.770",
     "unidade": "Total (R$)",
     "data_referencia": "2021-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -11371,7 +11371,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "2.150.460",
     "unidade": "LF (R$)",
     "data_referencia": "2022-12-30",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -11384,7 +11384,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "2.150.460",
     "unidade": "Total (R$)",
     "data_referencia": "2022-12-30",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -11397,7 +11397,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "355.413",
     "unidade": "LF (R$)",
     "data_referencia": "2023-12-29",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -11410,7 +11410,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "355.413",
     "unidade": "Total (R$)",
     "data_referencia": "2023-12-29",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -11423,7 +11423,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "8.472.998",
     "unidade": "LF (R$)",
     "data_referencia": "2020-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -11436,7 +11436,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "8.472.998",
     "unidade": "Total (R$)",
     "data_referencia": "2020-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -11449,7 +11449,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "257.564",
     "unidade": "LF (R$)",
     "data_referencia": "2020-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -11462,7 +11462,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "257.564",
     "unidade": "Total (R$)",
     "data_referencia": "2020-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -11475,7 +11475,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "3.088.380",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -11488,7 +11488,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "3.088.380",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -11501,7 +11501,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "16.363.058",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -11514,7 +11514,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "16.363.058",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -11527,7 +11527,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "42.559.344.234",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -11540,7 +11540,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "4.233.514.853",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -11553,7 +11553,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "46.792.859.087",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -11566,7 +11566,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "18.510.454",
     "unidade": "LFS (R$)",
     "data_referencia": "2023-12-29",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -11579,7 +11579,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "18.510.454",
     "unidade": "Total (R$)",
     "data_referencia": "2023-12-29",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -11592,7 +11592,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "12.247.589.004",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -11605,7 +11605,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "3.694.503.294",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -11618,7 +11618,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "15.942.092.298",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -11631,7 +11631,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "864.168.557.823",
     "unidade": "Estoque (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "valor"
   },
   {
@@ -11644,7 +11644,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "89,17%",
     "unidade": "Participação",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "participacao_perc"
   },
   {
@@ -11657,7 +11657,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "443.581.513",
     "unidade": "Estoque (R$)",
     "data_referencia": "2020-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "valor"
   },
   {
@@ -11670,7 +11670,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "0,11%",
     "unidade": "Participação",
     "data_referencia": "2020-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "participacao_perc"
   },
   {
@@ -11683,7 +11683,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "712.040.058",
     "unidade": "Estoque (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "valor"
   },
   {
@@ -11696,7 +11696,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "0,07%",
     "unidade": "Participação",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "participacao_perc"
   },
   {
@@ -11709,7 +11709,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "168.754.880",
     "unidade": "Estoque (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "valor"
   },
   {
@@ -11722,7 +11722,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "0,02%",
     "unidade": "Participação",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "participacao_perc"
   },
   {
@@ -11735,7 +11735,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "22.136.781.246",
     "unidade": "Estoque (R$)",
     "data_referencia": "2020-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "valor"
   },
   {
@@ -11748,7 +11748,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "5,29%",
     "unidade": "Participação",
     "data_referencia": "2020-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "participacao_perc"
   },
   {
@@ -11761,7 +11761,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "49.112.069.720",
     "unidade": "Estoque (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "valor"
   },
   {
@@ -11774,7 +11774,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "5,07%",
     "unidade": "Participação",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "participacao_perc"
   },
   {
@@ -11787,7 +11787,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "45.290.380.062",
     "unidade": "Estoque (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "valor"
   },
   {
@@ -11800,7 +11800,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "4,67%",
     "unidade": "Participação",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "participacao_perc"
   },
   {
@@ -11813,7 +11813,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "5.941.685.900",
     "unidade": "Estoque (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "valor"
   },
   {
@@ -11826,7 +11826,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "0,61%",
     "unidade": "Participação",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "participacao_perc"
   },
   {
@@ -11839,7 +11839,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "3.724.629.600",
     "unidade": "Estoque (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "valor"
   },
   {
@@ -11852,7 +11852,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "0,38%",
     "unidade": "Participação",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "participacao_perc"
   },
   {
@@ -11865,7 +11865,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "16.769.099.951",
     "unidade": "LF (R$)",
     "data_referencia": "2021-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -11878,7 +11878,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "16.769.099.951",
     "unidade": "Total (R$)",
     "data_referencia": "2021-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -11891,7 +11891,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "3,93%",
     "unidade": "Participação",
     "data_referencia": "2021-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "participacao_perc"
   },
   {
@@ -11904,7 +11904,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "17.106.508.969",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -11917,7 +11917,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "28.404.136.941",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -11930,7 +11930,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "45.510.645.910",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -11943,7 +11943,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "4,70%",
     "unidade": "Participação",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "participacao_perc"
   },
   {
@@ -11956,7 +11956,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "121.102.411.432",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -11969,7 +11969,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "44.152.140.056",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -11982,7 +11982,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "165.254.551.488",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -11995,7 +11995,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "17,05%",
     "unidade": "Participação",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "participacao_perc"
   },
   {
@@ -12008,7 +12008,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "5.741.294.032",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -12021,7 +12021,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "5.741.294.032",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -12034,7 +12034,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "0,59%",
     "unidade": "Participação",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "participacao_perc"
   },
   {
@@ -12047,7 +12047,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "523.367.383.776",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -12060,7 +12060,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "186.385.024.810",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -12073,7 +12073,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "709.752.408.586",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -12086,7 +12086,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "73,24%",
     "unidade": "Participação",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "participacao_perc"
   },
   {
@@ -12099,7 +12099,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "6.500.269.948",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -12112,7 +12112,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "3.531.724.718",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -12125,7 +12125,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "10.031.994.666",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -12138,7 +12138,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "1,04%",
     "unidade": "Participação",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "participacao_perc"
   },
   {
@@ -12151,7 +12151,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "73.937.232",
     "unidade": "LF (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -12164,7 +12164,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "0,000000",
     "unidade": "LFS (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -12177,7 +12177,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "73.937.232",
     "unidade": "Total (R$)",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -12190,7 +12190,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "0,02%",
     "unidade": "Participação",
     "data_referencia": "2015-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "participacao_perc"
   },
   {
@@ -12203,7 +12203,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "4.117.795.142",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -12216,7 +12216,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "65.759.307",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -12229,7 +12229,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "4.183.554.449",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -12242,7 +12242,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "0,43%",
     "unidade": "Participação",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "participacao_perc"
   },
   {
@@ -12255,7 +12255,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "15.470.126.557",
     "unidade": "LF (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lf"
   },
   {
@@ -12268,7 +12268,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "13.173.542.355",
     "unidade": "LFS (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_lfs"
   },
   {
@@ -12281,7 +12281,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "28.643.668.913",
     "unidade": "Total (R$)",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "estoque_total"
   },
   {
@@ -12294,7 +12294,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "2,96%",
     "unidade": "Participação",
     "data_referencia": "2025-12-31",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "participacao_perc"
   },
   {
@@ -12307,7 +12307,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "647.199.715.576",
     "unidade": "Bancos Múltiplos",
     "data_referencia": "2025-12-01",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "bancos_multiplos"
   },
   {
@@ -12320,7 +12320,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "6.019.158.017",
     "unidade": "Bancos Comerciais",
     "data_referencia": "2025-12-01",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "bancos_comerciais"
   },
   {
@@ -12333,7 +12333,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "5.892.320.608",
     "unidade": "Bancos de Investimento",
     "data_referencia": "2025-12-01",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "bancos_investimento"
   },
   {
@@ -12346,7 +12346,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "529.032.163",
     "unidade": "Bancos de Desenvolvimento",
     "data_referencia": "2025-12-01",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "bancos_desenvolvimento"
   },
   {
@@ -12359,7 +12359,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "1.407.021.793",
     "unidade": "Cooperativas de Crédito",
     "data_referencia": "2025-12-01",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "cooperativas_credito"
   },
   {
@@ -12372,7 +12372,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "693.405.789.856",
     "unidade": "Total Geral",
     "data_referencia": "2025-12-01",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "total"
   },
   {
@@ -12385,7 +12385,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "12.156",
     "unidade": "Nº Negócios",
     "data_referencia": "2025-12-01",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "numero_negocios"
   },
   {
@@ -12398,7 +12398,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "43.101.506.983",
     "unidade": "Volume (R$)",
     "data_referencia": "2025-12-01",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "valor"
   },
   {
@@ -12411,7 +12411,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "30,79",
     "unidade": "LF (meses)",
     "data_referencia": "2025-12-01",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "prazo_medio_emissao_lf_meses"
   },
   {
@@ -12424,7 +12424,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "120,20",
     "unidade": "LFS Subordinadas (meses)",
     "data_referencia": "2025-12-01",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "prazo_medio_emissao_lfs_meses"
   },
   {
@@ -12437,7 +12437,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "18,62",
     "unidade": "LF (meses)",
     "data_referencia": "2025-12-01",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "prazo_medio_vencimento_lf_meses"
   },
   {
@@ -12450,7 +12450,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "79,59",
     "unidade": "LFS Subordinadas (meses)",
     "data_referencia": "2025-12-01",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "prazo_medio_vencimento_lfs_meses"
   },
   {
@@ -12463,7 +12463,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "18,68",
     "unidade": "Bancos Múltiplos",
     "data_referencia": "2025-12-01",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "bancos_multiplos"
   },
   {
@@ -12476,7 +12476,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "17,24",
     "unidade": "Bancos Comerciais",
     "data_referencia": "2025-12-01",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "bancos_comerciais"
   },
   {
@@ -12489,7 +12489,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "10,82",
     "unidade": "Bancos de Investimento",
     "data_referencia": "2025-12-01",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "bancos_investimento"
   },
   {
@@ -12502,7 +12502,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "18,10",
     "unidade": "Bancos de Desenvolvimento",
     "data_referencia": "2025-12-01",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "bancos_desenvolvimento"
   },
   {
@@ -12515,7 +12515,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "15,41",
     "unidade": "Cooperativas de Crédito",
     "data_referencia": "2025-12-01",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "cooperativas_credito"
   },
   {
@@ -12528,7 +12528,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "261.749.991.543",
     "unidade": "Bancos Múltiplos",
     "data_referencia": "2025-12-01",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "bancos_multiplos"
   },
   {
@@ -12541,7 +12541,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "781.528.350",
     "unidade": "Bancos Comerciais",
     "data_referencia": "2025-12-01",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "bancos_comerciais"
   },
   {
@@ -12554,7 +12554,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "711.068.768",
     "unidade": "Bancos de Investimento",
     "data_referencia": "2025-12-01",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "bancos_investimento"
   },
   {
@@ -12567,7 +12567,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "2.570.088.094",
     "unidade": "Cooperativas de Crédito",
     "data_referencia": "2025-12-01",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "cooperativas_credito"
   },
   {
@@ -12580,7 +12580,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "275.712.328.188",
     "unidade": "Total Geral",
     "data_referencia": "2025-12-01",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "total"
   },
   {
@@ -12593,7 +12593,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "78,89",
     "unidade": "Bancos Múltiplos",
     "data_referencia": "2025-12-01",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "bancos_multiplos"
   },
   {
@@ -12606,7 +12606,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "49,58",
     "unidade": "Bancos Comerciais",
     "data_referencia": "2025-12-01",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "bancos_comerciais"
   },
   {
@@ -12619,7 +12619,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "97,55",
     "unidade": "Bancos de Investimento",
     "data_referencia": "2025-12-01",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "bancos_investimento"
   },
   {
@@ -12632,7 +12632,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "79,74",
     "unidade": "Cooperativas de Crédito",
     "data_referencia": "2025-12-01",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "cooperativas_credito"
   },
   {
@@ -12645,7 +12645,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "5,6512",
     "unidade": "",
     "data_referencia": "2026-11-13",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "cotacao_compra"
   },
   {
@@ -12658,7 +12658,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "5,6518",
     "unidade": "",
     "data_referencia": "2026-11-13",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "cotacao_venda"
   },
   {
@@ -12671,7 +12671,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "5,65%",
     "unidade": "",
     "data_referencia": "2026-11-13",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "1"
   },
   {
@@ -12684,7 +12684,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "1,47%",
     "unidade": "",
     "data_referencia": "2026-10-01",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "189"
   },
   {
@@ -12697,7 +12697,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "1,15%",
     "unidade": "",
     "data_referencia": "2026-10-01",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "190"
   },
   {
@@ -12710,7 +12710,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "0,14%",
     "unidade": "",
     "data_referencia": "2026-10-01",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "433"
   },
   {
@@ -12723,7 +12723,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "0,05%",
     "unidade": "",
     "data_referencia": "2026-11-13",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "11"
   },
   {
@@ -12736,7 +12736,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "38,30",
     "unidade": "",
     "data_referencia": "2026-09-01",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "acucar_global_usd"
   },
   {
@@ -12749,7 +12749,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "330,12",
     "unidade": "",
     "data_referencia": "2026-09-01",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "cafe_arabica_global_usd"
   },
   {
@@ -12762,7 +12762,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "100,44",
     "unidade": "",
     "data_referencia": "2026-09-01",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "minerio_ferro_global_usd"
   },
   {
@@ -12775,7 +12775,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "102,02",
     "unidade": "",
     "data_referencia": "2026-09-01",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "petroleo_brent_global_usd"
   },
   {
@@ -12788,7 +12788,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "481,72",
     "unidade": "",
     "data_referencia": "2026-09-01",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "soja_global_usd"
   },
   {
@@ -12801,7 +12801,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "3,70",
     "unidade": "",
     "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "spread_high_yield_emergentes_oas"
   },
   {
@@ -12814,7 +12814,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "18,70",
     "unidade": "",
     "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "vix"
   },
   {
@@ -12827,7 +12827,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "3,88%",
     "unidade": "",
     "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "fed_funds_rate"
   },
   {
@@ -12840,7 +12840,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "3,90%",
     "unidade": "",
     "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "sofr_rate"
   },
   {
@@ -12853,7 +12853,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "0,8900",
     "unidade": "",
     "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "credit_spread_corp_ig"
   },
   {
@@ -12866,7 +12866,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "3,20",
     "unidade": "",
     "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "credit_spread_corp_hy"
   },
   {
@@ -12879,7 +12879,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "339,90",
     "unidade": "",
     "data_referencia": "2026-10-01",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "cpi_core"
   },
   {
@@ -12892,7 +12892,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "337,48",
     "unidade": "",
     "data_referencia": "2026-10-01",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "cpi_headline"
   },
   {
@@ -12905,7 +12905,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "159.293",
     "unidade": "",
     "data_referencia": "2026-10-01",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "nonfarm_payroll"
   },
   {
@@ -12918,7 +12918,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "4,10%",
     "unidade": "",
     "data_referencia": "2026-10-01",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "unemployment_rate"
   },
   {
@@ -12931,7 +12931,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "2,24%",
     "unidade": "",
     "data_referencia": "2026-11-13",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "t10y_breakeven"
   },
   {
@@ -12944,7 +12944,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "2,30%",
     "unidade": "",
     "data_referencia": "2026-11-13",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "t5y_breakeven"
   },
   {
@@ -12957,7 +12957,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "0,27%",
     "unidade": "",
     "data_referencia": "2026-11-13",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "t10y2y_spread"
   },
   {
@@ -12969,8 +12969,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "ABEV3.SA",
     "valor": "15,75",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "ABEV3.SA"
   },
   {
@@ -12982,8 +12982,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "ALOS3.SA",
     "valor": "26,70",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "ALOS3.SA"
   },
   {
@@ -12995,8 +12995,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "ASAI3.SA",
     "valor": "9,47",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "ASAI3.SA"
   },
   {
@@ -13008,8 +13008,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "B3SA3.SA",
     "valor": "14,76",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "B3SA3.SA"
   },
   {
@@ -13021,8 +13021,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "BBAS3.SA",
     "valor": "15,48",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "BBAS3.SA"
   },
   {
@@ -13034,8 +13034,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "BBDC3.SA",
     "valor": "13,29",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "BBDC3.SA"
   },
   {
@@ -13047,8 +13047,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "BBDC4.SA",
     "valor": "14,32",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "BBDC4.SA"
   },
   {
@@ -13060,8 +13060,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "BEEF3.SA",
     "valor": "3,18",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "BEEF3.SA"
   },
   {
@@ -13073,8 +13073,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "BPAC11.SA",
     "valor": "54,14",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "BPAC11.SA"
   },
   {
@@ -13086,8 +13086,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "BRAP4.SA",
     "valor": "18,36",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "BRAP4.SA"
   },
   {
@@ -13099,8 +13099,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "BRKM5.SA",
     "valor": "3,07",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "BRKM5.SA"
   },
   {
@@ -13112,8 +13112,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "CMIG4.SA",
     "valor": "10,62",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "CMIG4.SA"
   },
   {
@@ -13125,8 +13125,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "CMIN3.SA",
     "valor": "4,82",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "CMIN3.SA"
   },
   {
@@ -13138,8 +13138,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "COGN3.SA",
     "valor": "1,58",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "COGN3.SA"
   },
   {
@@ -13151,8 +13151,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "CPFE3.SA",
     "valor": "44,50",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "CPFE3.SA"
   },
   {
@@ -13164,8 +13164,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "CSAN3.SA",
     "valor": "2,85",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "CSAN3.SA"
   },
   {
@@ -13177,8 +13177,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "CSNA3.SA",
     "valor": "4,23",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "CSNA3.SA"
   },
   {
@@ -13190,8 +13190,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "CVCB3.SA",
     "valor": "0,8400",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "CVCB3.SA"
   },
   {
@@ -13203,8 +13203,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "CYRE3.SA",
     "valor": "19,00",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "CYRE3.SA"
   },
   {
@@ -13216,8 +13216,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "EGIE3.SA",
     "valor": "26,35",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "EGIE3.SA"
   },
   {
@@ -13229,8 +13229,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "ENEV3.SA",
     "valor": "27,00",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "ENEV3.SA"
   },
   {
@@ -13242,8 +13242,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "ENGI11.SA",
     "valor": "47,39",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "ENGI11.SA"
   },
   {
@@ -13255,8 +13255,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "EQTL3.SA",
     "valor": "34,09",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "EQTL3.SA"
   },
   {
@@ -13268,8 +13268,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "EZTC3.SA",
     "valor": "9,62",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "EZTC3.SA"
   },
   {
@@ -13281,8 +13281,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "FLRY3.SA",
     "valor": "21,05",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "FLRY3.SA"
   },
   {
@@ -13294,8 +13294,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "GGBR4.SA",
     "valor": "24,97",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "GGBR4.SA"
   },
   {
@@ -13307,8 +13307,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "HAPV3.SA",
     "valor": "5,32",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "HAPV3.SA"
   },
   {
@@ -13320,8 +13320,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "HYPE3.SA",
     "valor": "22,21",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "HYPE3.SA"
   },
   {
@@ -13333,8 +13333,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "IGTI11.SA",
     "valor": "22,50",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "IGTI11.SA"
   },
   {
@@ -13346,8 +13346,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "IRBR3.SA",
     "valor": "57,53",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "IRBR3.SA"
   },
   {
@@ -13359,8 +13359,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "ITSA4.SA",
     "valor": "13,57",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "ITSA4.SA"
   },
   {
@@ -13372,8 +13372,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "ITUB4.SA",
     "valor": "41,68",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "ITUB4.SA"
   },
   {
@@ -13385,8 +13385,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "JHSF3.SA",
     "valor": "9,87",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "JHSF3.SA"
   },
   {
@@ -13398,8 +13398,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "KLBN11.SA",
     "valor": "17,64",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "KLBN11.SA"
   },
   {
@@ -13411,8 +13411,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "LOGN3.SA",
     "valor": "22,85",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "LOGN3.SA"
   },
   {
@@ -13424,8 +13424,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "LREN3.SA",
     "valor": "9,40",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "LREN3.SA"
   },
   {
@@ -13437,8 +13437,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "MDIA3.SA",
     "valor": "17,36",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "MDIA3.SA"
   },
   {
@@ -13450,8 +13450,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "MGLU3.SA",
     "valor": "7,07",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "MGLU3.SA"
   },
   {
@@ -13463,8 +13463,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "MRVE3.SA",
     "valor": "4,77",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "MRVE3.SA"
   },
   {
@@ -13476,8 +13476,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "MULT3.SA",
     "valor": "27,32",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "MULT3.SA"
   },
   {
@@ -13502,8 +13502,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "PCAR3.SA",
     "valor": "2,39",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "PCAR3.SA"
   },
   {
@@ -13515,8 +13515,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "PETR3.SA",
     "valor": "51,05",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "PETR3.SA"
   },
   {
@@ -13528,8 +13528,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "PETR4.SA",
     "valor": "44,70",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "PETR4.SA"
   },
   {
@@ -13541,8 +13541,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "PRIO3.SA",
     "valor": "63,30",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "PRIO3.SA"
   },
   {
@@ -13554,8 +13554,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "QUAL3.SA",
     "valor": "1,57",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "QUAL3.SA"
   },
   {
@@ -13567,8 +13567,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "RADL3.SA",
     "valor": "14,26",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "RADL3.SA"
   },
   {
@@ -13580,8 +13580,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "RECV3.SA",
     "valor": "10,55",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "RECV3.SA"
   },
   {
@@ -13593,8 +13593,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "RENT3.SA",
     "valor": "29,58",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "RENT3.SA"
   },
   {
@@ -13606,8 +13606,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "SANB11.SA",
     "valor": "28,39",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "SANB11.SA"
   },
   {
@@ -13619,8 +13619,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "SBSP3.SA",
     "valor": "26,93",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "SBSP3.SA"
   },
   {
@@ -13632,8 +13632,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "SLCE3.SA",
     "valor": "18,36",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "SLCE3.SA"
   },
   {
@@ -13645,8 +13645,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "SMTO3.SA",
     "valor": "18,43",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "SMTO3.SA"
   },
   {
@@ -13658,8 +13658,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "SUZB3.SA",
     "valor": "56,04",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "SUZB3.SA"
   },
   {
@@ -13671,8 +13671,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "TAEE11.SA",
     "valor": "41,57",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "TAEE11.SA"
   },
   {
@@ -13684,8 +13684,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "TEND3.SA",
     "valor": "17,00",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "TEND3.SA"
   },
   {
@@ -13697,8 +13697,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "TIMS3.SA",
     "valor": "21,49",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "TIMS3.SA"
   },
   {
@@ -13710,8 +13710,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "UGPA3.SA",
     "valor": "31,72",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "UGPA3.SA"
   },
   {
@@ -13723,8 +13723,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "USIM5.SA",
     "valor": "4,75",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "USIM5.SA"
   },
   {
@@ -13736,8 +13736,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "VALE3.SA",
     "valor": "63,95",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "VALE3.SA"
   },
   {
@@ -13749,8 +13749,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "VBBR3.SA",
     "valor": "29,92",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "VBBR3.SA"
   },
   {
@@ -13762,8 +13762,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "VIVT3.SA",
     "valor": "33,62",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "VIVT3.SA"
   },
   {
@@ -13775,8 +13775,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "WEGE3.SA",
     "valor": "51,65",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "WEGE3.SA"
   },
   {
@@ -13788,8 +13788,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "YDUQ3.SA",
     "valor": "9,38",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "YDUQ3.SA"
   },
   {
@@ -13799,10 +13799,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "AAPL",
-    "valor": "354,88",
+    "valor": "356,27",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "AAPL"
   },
   {
@@ -13812,10 +13812,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "ABBV",
-    "valor": "294,45",
+    "valor": "295,03",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "ABBV"
   },
   {
@@ -13825,10 +13825,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "ADBE",
-    "valor": "238,54",
+    "valor": "243,08",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "ADBE"
   },
   {
@@ -13838,10 +13838,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "AMD",
-    "valor": "585,30",
+    "valor": "534,06",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "AMD"
   },
   {
@@ -13851,10 +13851,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "AMZN",
-    "valor": "267,44",
+    "valor": "266,66",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "AMZN"
   },
   {
@@ -13864,10 +13864,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "ASML",
-    "valor": "1.497",
+    "valor": "1.495",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "ASML"
   },
   {
@@ -13877,10 +13877,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "BABA",
-    "valor": "94,36",
+    "valor": "94,38",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "BABA"
   },
   {
@@ -13890,10 +13890,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "BAC",
-    "valor": "50,51",
+    "valor": "51,02",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "BAC"
   },
   {
@@ -13903,10 +13903,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "COST",
-    "valor": "1.092",
+    "valor": "1.106",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "COST"
   },
   {
@@ -13916,10 +13916,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "CRM",
-    "valor": "217,57",
+    "valor": "217,84",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "CRM"
   },
   {
@@ -13929,10 +13929,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "CVX",
-    "valor": "216,35",
+    "valor": "219,89",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "CVX"
   },
   {
@@ -13942,10 +13942,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "DIS",
-    "valor": "118,23",
+    "valor": "118,97",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "DIS"
   },
   {
@@ -13955,10 +13955,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "GOOGL",
-    "valor": "298,70",
+    "valor": "295,77",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "GOOGL"
   },
   {
@@ -13968,10 +13968,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "HD",
-    "valor": "348,26",
+    "valor": "348,69",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "HD"
   },
   {
@@ -13981,10 +13981,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "INTC",
-    "valor": "61,20",
+    "valor": "59,66",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "INTC"
   },
   {
@@ -13994,10 +13994,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "JNJ",
-    "valor": "283,52",
+    "valor": "285,75",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "JNJ"
   },
   {
@@ -14007,10 +14007,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "JPM",
-    "valor": "342,82",
+    "valor": "346,19",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "JPM"
   },
   {
@@ -14020,10 +14020,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "KO",
-    "valor": "97,44",
+    "valor": "99,25",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "KO"
   },
   {
@@ -14033,10 +14033,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "LLY",
-    "valor": "1.427",
+    "valor": "1.444",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "LLY"
   },
   {
@@ -14046,10 +14046,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "MA",
-    "valor": "652,60",
+    "valor": "661,19",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "MA"
   },
   {
@@ -14059,10 +14059,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "MCD",
-    "valor": "273,63",
+    "valor": "271,97",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "MCD"
   },
   {
@@ -14072,10 +14072,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "META",
-    "valor": "623,61",
+    "valor": "641,69",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "META"
   },
   {
@@ -14085,10 +14085,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "MRK",
-    "valor": "146,95",
+    "valor": "147,76",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "MRK"
   },
   {
@@ -14098,10 +14098,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "MSFT",
-    "valor": "523,00",
+    "valor": "523,88",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "MSFT"
   },
   {
@@ -14111,10 +14111,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "NFLX",
-    "valor": "62,69",
+    "valor": "62,15",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "NFLX"
   },
   {
@@ -14124,10 +14124,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "NKE",
-    "valor": "37,76",
+    "valor": "37,99",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "NKE"
   },
   {
@@ -14137,10 +14137,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "NVDA",
-    "valor": "166,19",
+    "valor": "162,85",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "NVDA"
   },
   {
@@ -14150,10 +14150,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "NVO",
-    "valor": "40,65",
+    "valor": "41,63",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "NVO"
   },
   {
@@ -14163,10 +14163,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "ORCL",
-    "valor": "127,11",
+    "valor": "125,35",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "ORCL"
   },
   {
@@ -14176,10 +14176,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "PEP",
-    "valor": "142,26",
+    "valor": "145,44",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "PEP"
   },
   {
@@ -14189,10 +14189,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "PFE",
-    "valor": "28,83",
+    "valor": "28,89",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "PFE"
   },
   {
@@ -14202,10 +14202,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "PG",
-    "valor": "168,03",
+    "valor": "169,80",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "PG"
   },
   {
@@ -14215,10 +14215,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "QCOM",
-    "valor": "177,14",
+    "valor": "172,47",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "QCOM"
   },
   {
@@ -14228,10 +14228,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "SBUX",
-    "valor": "107,26",
+    "valor": "106,44",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "SBUX"
   },
   {
@@ -14241,10 +14241,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "TSLA",
-    "valor": "397,45",
+    "valor": "390,22",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "TSLA"
   },
   {
@@ -14254,10 +14254,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "TSM",
-    "valor": "405,49",
+    "valor": "398,73",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "TSM"
   },
   {
@@ -14267,10 +14267,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "UNH",
-    "valor": "405,13",
+    "valor": "407,46",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "UNH"
   },
   {
@@ -14280,10 +14280,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "V",
-    "valor": "420,31",
+    "valor": "425,76",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "V"
   },
   {
@@ -14293,10 +14293,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "WMT",
-    "valor": "126,19",
+    "valor": "128,09",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "WMT"
   },
   {
@@ -14306,10 +14306,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Ações Internacionais",
     "tipo": "indicador",
     "indicador": "XOM",
-    "valor": "169,78",
+    "valor": "170,59",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "XOM"
   },
   {
@@ -14322,7 +14322,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "0,0037",
     "unidade": "",
     "data_referencia": "2026-11-13",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "ARSBRL=X"
   },
   {
@@ -14332,10 +14332,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Câmbio / Moedas",
     "tipo": "indicador",
     "indicador": "AUDUSD=X",
-    "valor": "0,6807",
+    "valor": "0,6774",
     "unidade": "",
-    "data_referencia": "2026-11-13",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-14",
+    "captura_em": "2026-11-14",
     "metrica": "AUDUSD=X"
   },
   {
@@ -14348,7 +14348,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "5,6407",
     "unidade": "",
     "data_referencia": "2026-11-13",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "BRL=X"
   },
   {
@@ -14361,7 +14361,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "6,7417",
     "unidade": "",
     "data_referencia": "2026-11-13",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "CHFBRL=X"
   },
   {
@@ -14374,7 +14374,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "0,0056",
     "unidade": "",
     "data_referencia": "2026-11-14",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "CLPBRL=X"
   },
   {
@@ -14387,7 +14387,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "0,8493",
     "unidade": "",
     "data_referencia": "2026-11-14",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "CNYBRL=X"
   },
   {
@@ -14400,7 +14400,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "0,0017",
     "unidade": "",
     "data_referencia": "2026-11-14",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "COPBRL=X"
   },
   {
@@ -14426,7 +14426,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "6,2267",
     "unidade": "",
     "data_referencia": "2026-11-13",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "EURBRL=X"
   },
   {
@@ -14439,7 +14439,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "1,1050",
     "unidade": "",
     "data_referencia": "2026-11-13",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "EURUSD=X"
   },
   {
@@ -14452,7 +14452,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "7,4516",
     "unidade": "",
     "data_referencia": "2026-11-13",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "GBPBRL=X"
   },
   {
@@ -14465,7 +14465,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "1,3231",
     "unidade": "",
     "data_referencia": "2026-11-13",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "GBPUSD=X"
   },
   {
@@ -14478,7 +14478,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "0,0353",
     "unidade": "",
     "data_referencia": "2026-11-13",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "JPYBRL=X"
   },
   {
@@ -14491,7 +14491,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "0,3030",
     "unidade": "",
     "data_referencia": "2026-11-13",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "MXNBRL=X"
   },
   {
@@ -14501,10 +14501,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Câmbio / Moedas",
     "tipo": "indicador",
     "indicador": "USDCAD=X",
-    "valor": "1,4261",
+    "valor": "1,4269",
     "unidade": "",
-    "data_referencia": "2026-11-13",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-14",
+    "captura_em": "2026-11-14",
     "metrica": "USDCAD=X"
   },
   {
@@ -14514,10 +14514,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Câmbio / Moedas",
     "tipo": "indicador",
     "indicador": "USDCHF=X",
-    "valor": "0,8359",
+    "valor": "0,8382",
     "unidade": "",
-    "data_referencia": "2026-11-13",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-14",
+    "captura_em": "2026-11-14",
     "metrica": "USDCHF=X"
   },
   {
@@ -14527,10 +14527,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Câmbio / Moedas",
     "tipo": "indicador",
     "indicador": "USDCNY=X",
-    "valor": "6,6704",
+    "valor": "6,6712",
     "unidade": "",
-    "data_referencia": "2026-11-13",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-14",
+    "captura_em": "2026-11-14",
     "metrica": "USDCNY=X"
   },
   {
@@ -14540,10 +14540,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Câmbio / Moedas",
     "tipo": "indicador",
     "indicador": "USDINR=X",
-    "valor": "94,0338",
+    "valor": "94,2400",
     "unidade": "",
-    "data_referencia": "2026-11-13",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-14",
+    "captura_em": "2026-11-14",
     "metrica": "USDINR=X"
   },
   {
@@ -14556,7 +14556,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "159,8750",
     "unidade": "",
     "data_referencia": "2026-11-13",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "USDJPY=X"
   },
   {
@@ -14569,7 +14569,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "18,5910",
     "unidade": "",
     "data_referencia": "2026-11-13",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "USDMXN=X"
   },
   {
@@ -14605,10 +14605,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Commodities Globais",
     "tipo": "indicador",
     "indicador": "BZ=F",
-    "valor": "95,82",
+    "valor": "95,84",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "BZ=F"
   },
   {
@@ -14618,10 +14618,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Commodities Globais",
     "tipo": "indicador",
     "indicador": "CC=F",
-    "valor": "5.066",
+    "valor": "5.119",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "CC=F"
   },
   {
@@ -14631,10 +14631,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Commodities Globais",
     "tipo": "indicador",
     "indicador": "CL=F",
-    "valor": "88,74",
+    "valor": "88,56",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "CL=F"
   },
   {
@@ -14644,10 +14644,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Commodities Globais",
     "tipo": "indicador",
     "indicador": "CT=F",
-    "valor": "78,67",
+    "valor": "78,78",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "CT=F"
   },
   {
@@ -14657,10 +14657,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Commodities Globais",
     "tipo": "indicador",
     "indicador": "GC=F",
-    "valor": "3.885",
+    "valor": "3.886",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "GC=F"
   },
   {
@@ -14670,10 +14670,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Commodities Globais",
     "tipo": "indicador",
     "indicador": "HG=F",
-    "valor": "6,18",
+    "valor": "6,08",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "HG=F"
   },
   {
@@ -14683,10 +14683,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Commodities Globais",
     "tipo": "indicador",
     "indicador": "KC=F",
-    "valor": "280,20",
+    "valor": "278,65",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "KC=F"
   },
   {
@@ -14696,10 +14696,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Commodities Globais",
     "tipo": "indicador",
     "indicador": "NG=F",
-    "valor": "3,34",
+    "valor": "3,23",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "NG=F"
   },
   {
@@ -14709,10 +14709,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Commodities Globais",
     "tipo": "indicador",
     "indicador": "PA=F",
-    "valor": "989,70",
+    "valor": "1.006",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "PA=F"
   },
   {
@@ -14722,10 +14722,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Commodities Globais",
     "tipo": "indicador",
     "indicador": "PL=F",
-    "valor": "1.518",
+    "valor": "1.488",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "PL=F"
   },
   {
@@ -14735,10 +14735,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Commodities Globais",
     "tipo": "indicador",
     "indicador": "SB=F",
-    "valor": "18,22",
+    "valor": "18,41",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "SB=F"
   },
   {
@@ -14748,10 +14748,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Commodities Globais",
     "tipo": "indicador",
     "indicador": "SI=F",
-    "valor": "49,97",
+    "valor": "49,03",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "SI=F"
   },
   {
@@ -14774,10 +14774,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Commodities Globais",
     "tipo": "indicador",
     "indicador": "ZC=F",
-    "valor": "442,50",
+    "valor": "445,50",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "ZC=F"
   },
   {
@@ -14787,10 +14787,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Commodities Globais",
     "tipo": "indicador",
     "indicador": "ZO=F",
-    "valor": "352,00",
+    "valor": "361,50",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "ZO=F"
   },
   {
@@ -14800,10 +14800,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Commodities Globais",
     "tipo": "indicador",
     "indicador": "ZR=F",
-    "valor": "18,29",
+    "valor": "18,02",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "ZR=F"
   },
   {
@@ -14813,10 +14813,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Commodities Globais",
     "tipo": "indicador",
     "indicador": "ZS=F",
-    "valor": "1.227",
+    "valor": "1.243",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "ZS=F"
   },
   {
@@ -14826,10 +14826,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Commodities Globais",
     "tipo": "indicador",
     "indicador": "ZW=F",
-    "valor": "584,25",
+    "valor": "593,25",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "ZW=F"
   },
   {
@@ -14839,10 +14839,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Criptoativos",
     "tipo": "indicador",
     "indicador": "ADA-USD",
-    "valor": "0,1741",
+    "valor": "0,1628",
     "unidade": "",
-    "data_referencia": "2026-11-13",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-14",
+    "captura_em": "2026-11-14",
     "metrica": "ADA-USD"
   },
   {
@@ -14878,10 +14878,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Criptoativos",
     "tipo": "indicador",
     "indicador": "AVAX-USD",
-    "valor": "8,34",
+    "valor": "8,00",
     "unidade": "",
-    "data_referencia": "2026-11-13",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-14",
+    "captura_em": "2026-11-14",
     "metrica": "AVAX-USD"
   },
   {
@@ -14891,10 +14891,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Criptoativos",
     "tipo": "indicador",
     "indicador": "BNB-USD",
-    "valor": "656,05",
+    "valor": "615,24",
     "unidade": "",
-    "data_referencia": "2026-11-13",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-14",
+    "captura_em": "2026-11-14",
     "metrica": "BNB-USD"
   },
   {
@@ -14904,10 +14904,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Criptoativos",
     "tipo": "indicador",
     "indicador": "BTC-USD",
-    "valor": "71.343",
+    "valor": "67.037",
     "unidade": "",
-    "data_referencia": "2026-11-13",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-14",
+    "captura_em": "2026-11-14",
     "metrica": "BTC-USD"
   },
   {
@@ -14917,10 +14917,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Criptoativos",
     "tipo": "indicador",
     "indicador": "DOGE-USD",
-    "valor": "0,0664",
+    "valor": "0,0626",
     "unidade": "",
-    "data_referencia": "2026-11-13",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-14",
+    "captura_em": "2026-11-14",
     "metrica": "DOGE-USD"
   },
   {
@@ -14930,10 +14930,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Criptoativos",
     "tipo": "indicador",
     "indicador": "DOT-USD",
-    "valor": "0,8332",
+    "valor": "0,7830",
     "unidade": "",
-    "data_referencia": "2026-11-13",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-14",
+    "captura_em": "2026-11-14",
     "metrica": "DOT-USD"
   },
   {
@@ -14956,10 +14956,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Criptoativos",
     "tipo": "indicador",
     "indicador": "ETH-USD",
-    "valor": "2.017",
+    "valor": "1.893",
     "unidade": "",
-    "data_referencia": "2026-11-13",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-14",
+    "captura_em": "2026-11-14",
     "metrica": "ETH-USD"
   },
   {
@@ -14995,10 +14995,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Criptoativos",
     "tipo": "indicador",
     "indicador": "ICP-USD",
-    "valor": "2,57",
+    "valor": "2,40",
     "unidade": "",
-    "data_referencia": "2026-11-13",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-14",
+    "captura_em": "2026-11-14",
     "metrica": "ICP-USD"
   },
   {
@@ -15021,10 +15021,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Criptoativos",
     "tipo": "indicador",
     "indicador": "LINK-USD",
-    "valor": "10,13",
+    "valor": "9,57",
     "unidade": "",
-    "data_referencia": "2026-11-13",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-14",
+    "captura_em": "2026-11-14",
     "metrica": "LINK-USD"
   },
   {
@@ -15034,10 +15034,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Criptoativos",
     "tipo": "indicador",
     "indicador": "LTC-USD",
-    "valor": "49,98",
+    "valor": "48,18",
     "unidade": "",
-    "data_referencia": "2026-11-13",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-14",
+    "captura_em": "2026-11-14",
     "metrica": "LTC-USD"
   },
   {
@@ -15047,10 +15047,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Criptoativos",
     "tipo": "indicador",
     "indicador": "NEAR-USD",
-    "valor": "3,42",
+    "valor": "3,34",
     "unidade": "",
-    "data_referencia": "2026-11-13",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-14",
+    "captura_em": "2026-11-14",
     "metrica": "NEAR-USD"
   },
   {
@@ -15060,10 +15060,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Criptoativos",
     "tipo": "indicador",
     "indicador": "OP-USD",
-    "valor": "0,0968",
+    "valor": "0,0888",
     "unidade": "",
-    "data_referencia": "2026-11-13",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-14",
+    "captura_em": "2026-11-14",
     "metrica": "OP-USD"
   },
   {
@@ -15075,8 +15075,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "SHIB-USD",
     "valor": "0,000004",
     "unidade": "",
-    "data_referencia": "2026-11-13",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-14",
+    "captura_em": "2026-11-14",
     "metrica": "SHIB-USD"
   },
   {
@@ -15086,10 +15086,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Criptoativos",
     "tipo": "indicador",
     "indicador": "SOL-USD",
-    "valor": "81,66",
+    "valor": "75,15",
     "unidade": "",
-    "data_referencia": "2026-11-13",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-14",
+    "captura_em": "2026-11-14",
     "metrica": "SOL-USD"
   },
   {
@@ -15099,10 +15099,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Criptoativos",
     "tipo": "indicador",
     "indicador": "TRX-USD",
-    "valor": "0,3154",
+    "valor": "0,3124",
     "unidade": "",
-    "data_referencia": "2026-11-13",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-14",
+    "captura_em": "2026-11-14",
     "metrica": "TRX-USD"
   },
   {
@@ -15125,10 +15125,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Criptoativos",
     "tipo": "indicador",
     "indicador": "XLM-USD",
-    "valor": "0,1483",
+    "valor": "0,1426",
     "unidade": "",
-    "data_referencia": "2026-11-13",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-14",
+    "captura_em": "2026-11-14",
     "metrica": "XLM-USD"
   },
   {
@@ -15138,10 +15138,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Criptoativos",
     "tipo": "indicador",
     "indicador": "XRP-USD",
-    "valor": "1,04",
+    "valor": "0,9827",
     "unidade": "",
-    "data_referencia": "2026-11-13",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-14",
+    "captura_em": "2026-11-14",
     "metrica": "XRP-USD"
   },
   {
@@ -15151,10 +15151,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "ETFs & Setoriais",
     "tipo": "indicador",
     "indicador": "BND",
-    "valor": "70,65",
+    "valor": "70,56",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "BND"
   },
   {
@@ -15166,8 +15166,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "BOVA11.SA",
     "valor": "168,55",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "BOVA11.SA"
   },
   {
@@ -15177,10 +15177,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "ETFs & Setoriais",
     "tipo": "indicador",
     "indicador": "DIA",
-    "valor": "522,47",
+    "valor": "523,15",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "DIA"
   },
   {
@@ -15190,10 +15190,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "ETFs & Setoriais",
     "tipo": "indicador",
     "indicador": "EEM",
-    "valor": "61,14",
+    "valor": "60,92",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "EEM"
   },
   {
@@ -15203,10 +15203,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "ETFs & Setoriais",
     "tipo": "indicador",
     "indicador": "EWZ",
-    "valor": "31,78",
+    "valor": "32,22",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "EWZ"
   },
   {
@@ -15216,10 +15216,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "ETFs & Setoriais",
     "tipo": "indicador",
     "indicador": "HYG",
-    "valor": "76,98",
+    "valor": "76,94",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "HYG"
   },
   {
@@ -15231,8 +15231,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "IVVB11.SA",
     "valor": "483,80",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "IVVB11.SA"
   },
   {
@@ -15242,10 +15242,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "ETFs & Setoriais",
     "tipo": "indicador",
     "indicador": "IWM",
-    "valor": "278,44",
+    "valor": "277,54",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "IWM"
   },
   {
@@ -15255,10 +15255,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "ETFs & Setoriais",
     "tipo": "indicador",
     "indicador": "LQD",
-    "valor": "103,05",
+    "valor": "102,81",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "LQD"
   },
   {
@@ -15268,10 +15268,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "ETFs & Setoriais",
     "tipo": "indicador",
     "indicador": "QQQ",
-    "valor": "688,17",
+    "valor": "679,89",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "QQQ"
   },
   {
@@ -15283,8 +15283,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "SMAL11.SA",
     "valor": "99,05",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "SMAL11.SA"
   },
   {
@@ -15294,10 +15294,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "ETFs & Setoriais",
     "tipo": "indicador",
     "indicador": "SMLL.SA",
-    "valor": "2.012",
+    "valor": "2.033",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "SMLL.SA"
   },
   {
@@ -15307,10 +15307,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "ETFs & Setoriais",
     "tipo": "indicador",
     "indicador": "SPY",
-    "valor": "757,12",
+    "valor": "754,37",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "SPY"
   },
   {
@@ -15320,10 +15320,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "ETFs & Setoriais",
     "tipo": "indicador",
     "indicador": "VGK",
-    "valor": "88,91",
+    "valor": "89,04",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "VGK"
   },
   {
@@ -15333,10 +15333,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "ETFs & Setoriais",
     "tipo": "indicador",
     "indicador": "VWO",
-    "valor": "56,43",
+    "valor": "56,38",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "VWO"
   },
   {
@@ -15346,10 +15346,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "ETFs & Setoriais",
     "tipo": "indicador",
     "indicador": "XLE",
-    "valor": "64,33",
+    "valor": "64,96",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "XLE"
   },
   {
@@ -15359,10 +15359,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "ETFs & Setoriais",
     "tipo": "indicador",
     "indicador": "XLF",
-    "valor": "58,21",
+    "valor": "58,68",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "XLF"
   },
   {
@@ -15372,10 +15372,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "ETFs & Setoriais",
     "tipo": "indicador",
     "indicador": "XLK",
-    "valor": "173,77",
+    "valor": "170,28",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "XLK"
   },
   {
@@ -15387,8 +15387,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "ALZR11.SA",
     "valor": "9,60",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "ALZR11.SA"
   },
   {
@@ -15400,8 +15400,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "BRCO11.SA",
     "valor": "105,75",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "BRCO11.SA"
   },
   {
@@ -15413,8 +15413,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "BTLG11.SA",
     "valor": "97,90",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "BTLG11.SA"
   },
   {
@@ -15424,10 +15424,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "FIIs e Fiagros",
     "tipo": "indicador",
     "indicador": "CPTR11.SA",
-    "valor": "7,24",
+    "valor": "7,05",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "CPTR11.SA"
   },
   {
@@ -15437,10 +15437,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "FIIs e Fiagros",
     "tipo": "indicador",
     "indicador": "FGAA11.SA",
-    "valor": "7,67",
+    "valor": "7,66",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "FGAA11.SA"
   },
   {
@@ -15452,8 +15452,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "HGLG11.SA",
     "valor": "145,69",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "HGLG11.SA"
   },
   {
@@ -15465,8 +15465,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "HGRU11.SA",
     "valor": "114,74",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "HGRU11.SA"
   },
   {
@@ -15476,10 +15476,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "FIIs e Fiagros",
     "tipo": "indicador",
     "indicador": "IFIX.SA",
-    "valor": "3.567",
+    "valor": "3.615",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "IFIX.SA"
   },
   {
@@ -15489,10 +15489,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "FIIs e Fiagros",
     "tipo": "indicador",
     "indicador": "KNCA11.SA",
-    "valor": "86,80",
+    "valor": "87,00",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "KNCA11.SA"
   },
   {
@@ -15504,8 +15504,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "KNCR11.SA",
     "valor": "103,45",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "KNCR11.SA"
   },
   {
@@ -15517,8 +15517,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "KNIP11.SA",
     "valor": "87,30",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "KNIP11.SA"
   },
   {
@@ -15530,8 +15530,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "MXRF11.SA",
     "valor": "8,70",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "MXRF11.SA"
   },
   {
@@ -15543,8 +15543,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "PVBI11.SA",
     "valor": "61,85",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "PVBI11.SA"
   },
   {
@@ -15554,10 +15554,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "FIIs e Fiagros",
     "tipo": "indicador",
     "indicador": "RURA11.SA",
-    "valor": "7,17",
+    "valor": "7,24",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "RURA11.SA"
   },
   {
@@ -15567,10 +15567,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "FIIs e Fiagros",
     "tipo": "indicador",
     "indicador": "VGIA11.SA",
-    "valor": "8,52",
+    "valor": "8,31",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "VGIA11.SA"
   },
   {
@@ -15582,8 +15582,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "VISC11.SA",
     "valor": "98,01",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "VISC11.SA"
   },
   {
@@ -15595,8 +15595,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "XPML11.SA",
     "valor": "89,51",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "XPML11.SA"
   },
   {
@@ -15622,7 +15622,7 @@ window.PULSEFLAT_CONSOLIDATED = [
     "valor": "9.082",
     "unidade": "",
     "data_referencia": "2026-11-13",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "^AXJO"
   },
   {
@@ -15645,10 +15645,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Índices de Ações Globais",
     "tipo": "indicador",
     "indicador": "^BVSP",
-    "valor": "171.324",
+    "valor": "172.458",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "^BVSP"
   },
   {
@@ -15658,10 +15658,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Índices de Ações Globais",
     "tipo": "indicador",
     "indicador": "^DJI",
-    "valor": "52.297",
+    "valor": "52.348",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "^DJI"
   },
   {
@@ -15671,10 +15671,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Índices de Ações Globais",
     "tipo": "indicador",
     "indicador": "^FCHI",
-    "valor": "8.361",
+    "valor": "8.369",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "^FCHI"
   },
   {
@@ -15684,10 +15684,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Índices de Ações Globais",
     "tipo": "indicador",
     "indicador": "^FTSE",
-    "valor": "10.863",
+    "valor": "10.903",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "^FTSE"
   },
   {
@@ -15697,10 +15697,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Índices de Ações Globais",
     "tipo": "indicador",
     "indicador": "^GDAXI",
-    "valor": "26.772",
+    "valor": "26.750",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "^GDAXI"
   },
   {
@@ -15710,10 +15710,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Índices de Ações Globais",
     "tipo": "indicador",
     "indicador": "^GSPC",
-    "valor": "7.592",
+    "valor": "7.562",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "^GSPC"
   },
   {
@@ -15723,10 +15723,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Índices de Ações Globais",
     "tipo": "indicador",
     "indicador": "^HSI",
-    "valor": "24.009",
+    "valor": "23.638",
     "unidade": "",
     "data_referencia": "2026-11-13",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "^HSI"
   },
   {
@@ -15749,10 +15749,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Índices de Ações Globais",
     "tipo": "indicador",
     "indicador": "^IXIC",
-    "valor": "25.366",
+    "valor": "25.136",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "^IXIC"
   },
   {
@@ -15762,10 +15762,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Índices de Ações Globais",
     "tipo": "indicador",
     "indicador": "^JKSE",
-    "valor": "5.251",
+    "valor": "5.344",
     "unidade": "",
     "data_referencia": "2026-11-13",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "^JKSE"
   },
   {
@@ -15775,10 +15775,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Índices de Ações Globais",
     "tipo": "indicador",
     "indicador": "^KLSE",
-    "valor": "1.586",
+    "valor": "1.583",
     "unidade": "",
     "data_referencia": "2026-11-13",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "^KLSE"
   },
   {
@@ -15788,10 +15788,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Índices de Ações Globais",
     "tipo": "indicador",
     "indicador": "^KS11",
-    "valor": "5.343",
+    "valor": "5.291",
     "unidade": "",
     "data_referencia": "2026-11-13",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "^KS11"
   },
   {
@@ -15803,8 +15803,8 @@ window.PULSEFLAT_CONSOLIDATED = [
     "indicador": "^MERV",
     "valor": "2.848.945",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "^MERV"
   },
   {
@@ -15814,10 +15814,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Índices de Ações Globais",
     "tipo": "indicador",
     "indicador": "^MXX",
-    "valor": "71.811",
+    "valor": "71.205",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "^MXX"
   },
   {
@@ -15827,10 +15827,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Índices de Ações Globais",
     "tipo": "indicador",
     "indicador": "^N225",
-    "valor": "60.819",
+    "valor": "61.142",
     "unidade": "",
     "data_referencia": "2026-11-13",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "^N225"
   },
   {
@@ -15866,10 +15866,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Índices de Ações Globais",
     "tipo": "indicador",
     "indicador": "^STI",
-    "valor": "5.283",
+    "valor": "5.232",
     "unidade": "",
     "data_referencia": "2026-11-13",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "^STI"
   },
   {
@@ -15892,10 +15892,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Índices de Ações Globais",
     "tipo": "indicador",
     "indicador": "^TWII",
-    "valor": "43.092",
+    "valor": "43.675",
     "unidade": "",
     "data_referencia": "2026-11-13",
-    "captura_em": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "^TWII"
   },
   {
@@ -15905,10 +15905,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Índices de Ações Globais",
     "tipo": "indicador",
     "indicador": "^VIX",
-    "valor": "18,70",
+    "valor": "19,30",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "^VIX"
   },
   {
@@ -15918,10 +15918,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Renda Fixa & Treasuries",
     "tipo": "indicador",
     "indicador": "^FVX",
-    "valor": "4,95",
+    "valor": "4,98",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "^FVX"
   },
   {
@@ -15931,10 +15931,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Renda Fixa & Treasuries",
     "tipo": "indicador",
     "indicador": "^IRX",
-    "valor": "4,13",
+    "valor": "4,12",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "^IRX"
   },
   {
@@ -15944,10 +15944,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Renda Fixa & Treasuries",
     "tipo": "indicador",
     "indicador": "^TNX",
-    "valor": "5,10",
+    "valor": "5,15",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "^TNX"
   },
   {
@@ -15957,10 +15957,10 @@ window.PULSEFLAT_CONSOLIDATED = [
     "categoria": "Renda Fixa & Treasuries",
     "tipo": "indicador",
     "indicador": "^TYX",
-    "valor": "5,43",
+    "valor": "5,48",
     "unidade": "",
-    "data_referencia": "2026-11-12",
-    "captura_em": "2026-11-13",
+    "data_referencia": "2026-11-13",
+    "captura_em": "2026-11-14",
     "metrica": "^TYX"
   }
 ];
