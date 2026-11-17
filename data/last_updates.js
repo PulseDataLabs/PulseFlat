@@ -390,5 +390,37 @@ window.PULSEFLAT_LAST_UPDATES = {
   "yahoo_acoes_internacionais.csv": {
     "min": "2026-05-29",
     "max": "2026-11-16"
+  },
+  "anbima_550.csv": {
+    "min": "2026-06-01",
+    "max": "2026-11-17"
+  },
+  "anbima_curvas_juros_parametros_svensson.csv.gz": {
+    "min": "2020-01-02",
+    "max": "2026-11-16"
+  },
+  "anbima_curvas_credito.csv.gz": {
+    "min": "2020-01-02",
+    "max": "2026-11-16"
+  },
+  "anbima_fidc_mercado_secundario.csv.gz": {
+    "min": "2021-10-18",
+    "max": "2026-11-16"
+  },
+  "anbima_curvas_juros_ettj.csv.gz": {
+    "min": "2020-01-02",
+    "max": "2026-11-16"
+  },
+  "anbima_ima_completo.csv": {
+    "min": "2026-05-29",
+    "max": "2026-11-16"
+  },
+  "anbima_debentures.csv.gz": {
+    "min": "2026-06-03",
+    "max": "2026-11-16"
+  },
+  "ipea_macroeconomia.csv": {
+    "min": "1940-07-01",
+    "max": "2026-12-01"
   }
 };
