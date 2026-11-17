@@ -4938,26 +4938,6 @@ window.PULSEFLAT_PIVOTED = [
   },
   {
     "data_referencia": "2026-11-13",
-    "indicador": "DI Over (SELIC equivalente)",
-    "fonte": "B3",
-    "dataset": "b3_bdi_di_over.csv",
-    "dataset_label": "B3 DI Over",
-    "categoria": "",
-    "metrica": "average",
-    "Valor": "13,65%"
-  },
-  {
-    "data_referencia": "2026-11-13",
-    "indicador": "DI Over — Volume financeiro",
-    "fonte": "B3",
-    "dataset": "b3_bdi_di_over.csv",
-    "dataset_label": "B3 DI Over",
-    "categoria": "",
-    "metrica": "financial_volume",
-    "Valor": "2.659.515"
-  },
-  {
-    "data_referencia": "2026-11-13",
     "indicador": "FDS (registro 2)",
     "fonte": "ANBIMA",
     "dataset": "anbima_indicadores.csv",
@@ -5149,7 +5129,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "ABEV3.SA",
-    "Valor": "15,79"
+    "Valor": "15,87"
   },
   {
     "data_referencia": "2026-11-16",
@@ -5169,7 +5149,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "ALOS3.SA",
-    "Valor": "27,05"
+    "Valor": "26,42"
   },
   {
     "data_referencia": "2026-11-16",
@@ -5179,7 +5159,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo FIIs e Fiagros",
     "categoria": "FIIs e Fiagros",
     "metrica": "ALZR11.SA",
-    "Valor": "9,71"
+    "Valor": "9,60"
   },
   {
     "data_referencia": "2026-11-16",
@@ -5209,7 +5189,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "ASAI3.SA",
-    "Valor": "9,68"
+    "Valor": "9,39"
   },
   {
     "data_referencia": "2026-11-16",
@@ -5229,7 +5209,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "B3SA3.SA",
-    "Valor": "14,89"
+    "Valor": "14,81"
   },
   {
     "data_referencia": "2026-11-16",
@@ -5259,7 +5239,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "BBAS3.SA",
-    "Valor": "15,10"
+    "Valor": "14,95"
   },
   {
     "data_referencia": "2026-11-16",
@@ -5269,7 +5249,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "BBDC3.SA",
-    "Valor": "13,44"
+    "Valor": "13,00"
   },
   {
     "data_referencia": "2026-11-16",
@@ -5279,7 +5259,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "BBDC4.SA",
-    "Valor": "14,52"
+    "Valor": "14,23"
   },
   {
     "data_referencia": "2026-11-16",
@@ -5289,7 +5269,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "BEEF3.SA",
-    "Valor": "3,41"
+    "Valor": "3,42"
   },
   {
     "data_referencia": "2026-11-16",
@@ -5319,7 +5299,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "BPAC11.SA",
-    "Valor": "54,00"
+    "Valor": "52,77"
   },
   {
     "data_referencia": "2026-11-16",
@@ -5329,7 +5309,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "BRAP4.SA",
-    "Valor": "18,19"
+    "Valor": "17,12"
   },
   {
     "data_referencia": "2026-11-16",
@@ -5339,7 +5319,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo FIIs e Fiagros",
     "categoria": "FIIs e Fiagros",
     "metrica": "BRCO11.SA",
-    "Valor": "107,35"
+    "Valor": "105,00"
   },
   {
     "data_referencia": "2026-11-16",
@@ -5349,7 +5329,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "BRKM5.SA",
-    "Valor": "3,02"
+    "Valor": "2,84"
   },
   {
     "data_referencia": "2026-11-16",
@@ -5359,7 +5339,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo FIIs e Fiagros",
     "categoria": "FIIs e Fiagros",
     "metrica": "BTLG11.SA",
-    "Valor": "98,75"
+    "Valor": "97,21"
   },
   {
     "data_referencia": "2026-11-16",
@@ -5369,7 +5349,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Commodities",
     "categoria": "Commodities Globais",
     "metrica": "CC=F",
-    "Valor": "5.200"
+    "Valor": "5.042"
   },
   {
     "data_referencia": "2026-11-16",
@@ -5379,7 +5359,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "CMIG4.SA",
-    "Valor": "11,03"
+    "Valor": "10,95"
   },
   {
     "data_referencia": "2026-11-16",
@@ -5389,7 +5369,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "CMIN3.SA",
-    "Valor": "4,64"
+    "Valor": "4,73"
   },
   {
     "data_referencia": "2026-11-16",
@@ -5399,7 +5379,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "COGN3.SA",
-    "Valor": "1,57"
+    "Valor": "1,58"
   },
   {
     "data_referencia": "2026-11-16",
@@ -5419,7 +5399,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "CPFE3.SA",
-    "Valor": "43,97"
+    "Valor": "44,65"
   },
   {
     "data_referencia": "2026-11-16",
@@ -5449,7 +5429,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "CSAN3.SA",
-    "Valor": "3,10"
+    "Valor": "3,09"
   },
   {
     "data_referencia": "2026-11-16",
@@ -5459,7 +5439,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "CSNA3.SA",
-    "Valor": "3,72"
+    "Valor": "3,68"
   },
   {
     "data_referencia": "2026-11-16",
@@ -5469,7 +5449,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Commodities",
     "categoria": "Commodities Globais",
     "metrica": "CT=F",
-    "Valor": "81,31"
+    "Valor": "77,00"
   },
   {
     "data_referencia": "2026-11-16",
@@ -5479,7 +5459,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "CVCB3.SA",
-    "Valor": "0,8300"
+    "Valor": "0,7900"
   },
   {
     "data_referencia": "2026-11-16",
@@ -5499,7 +5479,27 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "CYRE3.SA",
-    "Valor": "19,74"
+    "Valor": "19,50"
+  },
+  {
+    "data_referencia": "2026-11-16",
+    "indicador": "DI Over (SELIC equivalente)",
+    "fonte": "B3",
+    "dataset": "b3_bdi_di_over.csv",
+    "dataset_label": "B3 DI Over",
+    "categoria": "",
+    "metrica": "average",
+    "Valor": "13,65%"
+  },
+  {
+    "data_referencia": "2026-11-16",
+    "indicador": "DI Over — Volume financeiro",
+    "fonte": "B3",
+    "dataset": "b3_bdi_di_over.csv",
+    "dataset_label": "B3 DI Over",
+    "categoria": "",
+    "metrica": "financial_volume",
+    "Valor": "2.602.733"
   },
   {
     "data_referencia": "2026-11-16",
@@ -5619,7 +5619,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "EGIE3.SA",
-    "Valor": "26,25"
+    "Valor": "25,70"
   },
   {
     "data_referencia": "2026-11-16",
@@ -5629,7 +5629,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "ENEV3.SA",
-    "Valor": "26,81"
+    "Valor": "26,40"
   },
   {
     "data_referencia": "2026-11-16",
@@ -5639,7 +5639,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "ENGI11.SA",
-    "Valor": "48,35"
+    "Valor": "48,29"
   },
   {
     "data_referencia": "2026-11-16",
@@ -5649,7 +5649,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "EQTL3.SA",
-    "Valor": "34,34"
+    "Valor": "33,78"
   },
   {
     "data_referencia": "2026-11-16",
@@ -5669,7 +5669,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "EZTC3.SA",
-    "Valor": "9,87"
+    "Valor": "9,65"
   },
   {
     "data_referencia": "2026-11-16",
@@ -5739,7 +5739,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "FLRY3.SA",
-    "Valor": "21,20"
+    "Valor": "20,76"
   },
   {
     "data_referencia": "2026-11-16",
@@ -5749,7 +5749,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "GGBR4.SA",
-    "Valor": "24,73"
+    "Valor": "24,60"
   },
   {
     "data_referencia": "2026-11-16",
@@ -5769,7 +5769,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "HAPV3.SA",
-    "Valor": "5,68"
+    "Valor": "5,44"
   },
   {
     "data_referencia": "2026-11-16",
@@ -5789,7 +5789,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo FIIs e Fiagros",
     "categoria": "FIIs e Fiagros",
     "metrica": "HGLG11.SA",
-    "Valor": "146,02"
+    "Valor": "143,12"
   },
   {
     "data_referencia": "2026-11-16",
@@ -5799,7 +5799,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo FIIs e Fiagros",
     "categoria": "FIIs e Fiagros",
     "metrica": "HGRU11.SA",
-    "Valor": "115,47"
+    "Valor": "113,85"
   },
   {
     "data_referencia": "2026-11-16",
@@ -5819,7 +5819,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "HYPE3.SA",
-    "Valor": "22,47"
+    "Valor": "22,20"
   },
   {
     "data_referencia": "2026-11-16",
@@ -5849,7 +5849,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "IGTI11.SA",
-    "Valor": "22,52"
+    "Valor": "21,94"
   },
   {
     "data_referencia": "2026-11-16",
@@ -5881,7 +5881,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "IRBR3.SA",
-    "Valor": "60,33"
+    "Valor": "60,25"
   },
   {
     "data_referencia": "2026-11-16",
@@ -5891,7 +5891,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "ITSA4.SA",
-    "Valor": "13,65"
+    "Valor": "13,39"
   },
   {
     "data_referencia": "2026-11-16",
@@ -5901,7 +5901,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "ITUB4.SA",
-    "Valor": "42,27"
+    "Valor": "41,30"
   },
   {
     "data_referencia": "2026-11-16",
@@ -5931,7 +5931,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "JHSF3.SA",
-    "Valor": "9,78"
+    "Valor": "10,04"
   },
   {
     "data_referencia": "2026-11-16",
@@ -5961,7 +5961,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Commodities",
     "categoria": "Commodities Globais",
     "metrica": "KC=F",
-    "Valor": "274,40"
+    "Valor": "280,70"
   },
   {
     "data_referencia": "2026-11-16",
@@ -5971,7 +5971,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "KLBN11.SA",
-    "Valor": "17,39"
+    "Valor": "17,41"
   },
   {
     "data_referencia": "2026-11-16",
@@ -5991,7 +5991,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo FIIs e Fiagros",
     "categoria": "FIIs e Fiagros",
     "metrica": "KNCR11.SA",
-    "Valor": "104,86"
+    "Valor": "103,01"
   },
   {
     "data_referencia": "2026-11-16",
@@ -6001,7 +6001,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo FIIs e Fiagros",
     "categoria": "FIIs e Fiagros",
     "metrica": "KNIP11.SA",
-    "Valor": "87,65"
+    "Valor": "85,86"
   },
   {
     "data_referencia": "2026-11-16",
@@ -6031,7 +6031,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "LOGN3.SA",
-    "Valor": "22,79"
+    "Valor": "21,90"
   },
   {
     "data_referencia": "2026-11-16",
@@ -6051,7 +6051,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "LREN3.SA",
-    "Valor": "9,72"
+    "Valor": "9,58"
   },
   {
     "data_referencia": "2026-11-16",
@@ -6081,7 +6081,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "MDIA3.SA",
-    "Valor": "17,02"
+    "Valor": "16,88"
   },
   {
     "data_referencia": "2026-11-16",
@@ -6101,7 +6101,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "MGLU3.SA",
-    "Valor": "7,81"
+    "Valor": "7,49"
   },
   {
     "data_referencia": "2026-11-16",
@@ -6141,7 +6141,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "MULT3.SA",
-    "Valor": "27,34"
+    "Valor": "26,98"
   },
   {
     "data_referencia": "2026-11-16",
@@ -6151,7 +6151,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo FIIs e Fiagros",
     "categoria": "FIIs e Fiagros",
     "metrica": "MXRF11.SA",
-    "Valor": "8,75"
+    "Valor": "8,58"
   },
   {
     "data_referencia": "2026-11-16",
@@ -6211,7 +6211,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "PCAR3.SA",
-    "Valor": "2,56"
+    "Valor": "2,60"
   },
   {
     "data_referencia": "2026-11-16",
@@ -6231,7 +6231,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "PETR3.SA",
-    "Valor": "51,87"
+    "Valor": "50,19"
   },
   {
     "data_referencia": "2026-11-16",
@@ -6241,7 +6241,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "PETR4.SA",
-    "Valor": "45,30"
+    "Valor": "44,02"
   },
   {
     "data_referencia": "2026-11-16",
@@ -6271,7 +6271,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "PRIO3.SA",
-    "Valor": "63,30"
+    "Valor": "62,63"
   },
   {
     "data_referencia": "2026-11-16",
@@ -6301,7 +6301,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo FIIs e Fiagros",
     "categoria": "FIIs e Fiagros",
     "metrica": "PVBI11.SA",
-    "Valor": "62,92"
+    "Valor": "61,12"
   },
   {
     "data_referencia": "2026-11-16",
@@ -6331,7 +6331,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "QUAL3.SA",
-    "Valor": "1,62"
+    "Valor": "1,68"
   },
   {
     "data_referencia": "2026-11-16",
@@ -6341,7 +6341,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "RADL3.SA",
-    "Valor": "14,29"
+    "Valor": "14,08"
   },
   {
     "data_referencia": "2026-11-16",
@@ -6351,7 +6351,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "RECV3.SA",
-    "Valor": "10,74"
+    "Valor": "10,38"
   },
   {
     "data_referencia": "2026-11-16",
@@ -6361,7 +6361,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "RENT3.SA",
-    "Valor": "30,07"
+    "Valor": "29,31"
   },
   {
     "data_referencia": "2026-11-16",
@@ -6381,7 +6381,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "SANB11.SA",
-    "Valor": "28,40"
+    "Valor": "28,65"
   },
   {
     "data_referencia": "2026-11-16",
@@ -6401,7 +6401,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "SBSP3.SA",
-    "Valor": "27,22"
+    "Valor": "27,10"
   },
   {
     "data_referencia": "2026-11-16",
@@ -6431,7 +6431,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "SLCE3.SA",
-    "Valor": "18,28"
+    "Valor": "17,85"
   },
   {
     "data_referencia": "2026-11-16",
@@ -6461,7 +6461,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "SMTO3.SA",
-    "Valor": "18,41"
+    "Valor": "18,05"
   },
   {
     "data_referencia": "2026-11-16",
@@ -6481,7 +6481,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "SUZB3.SA",
-    "Valor": "54,77"
+    "Valor": "55,50"
   },
   {
     "data_referencia": "2026-11-16",
@@ -6491,7 +6491,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "TAEE11.SA",
-    "Valor": "42,09"
+    "Valor": "41,99"
   },
   {
     "data_referencia": "2026-11-16",
@@ -6531,7 +6531,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "TEND3.SA",
-    "Valor": "17,23"
+    "Valor": "16,33"
   },
   {
     "data_referencia": "2026-11-16",
@@ -6541,7 +6541,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "TIMS3.SA",
-    "Valor": "21,55"
+    "Valor": "21,87"
   },
   {
     "data_referencia": "2026-11-16",
@@ -6581,7 +6581,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "UGPA3.SA",
-    "Valor": "32,77"
+    "Valor": "32,28"
   },
   {
     "data_referencia": "2026-11-16",
@@ -6631,7 +6631,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "USIM5.SA",
-    "Valor": "4,78"
+    "Valor": "4,85"
   },
   {
     "data_referencia": "2026-11-16",
@@ -6651,7 +6651,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "VALE3.SA",
-    "Valor": "63,50"
+    "Valor": "60,70"
   },
   {
     "data_referencia": "2026-11-16",
@@ -6661,7 +6661,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "VBBR3.SA",
-    "Valor": "30,57"
+    "Valor": "30,70"
   },
   {
     "data_referencia": "2026-11-16",
@@ -6691,7 +6691,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo FIIs e Fiagros",
     "categoria": "FIIs e Fiagros",
     "metrica": "VISC11.SA",
-    "Valor": "98,60"
+    "Valor": "97,04"
   },
   {
     "data_referencia": "2026-11-16",
@@ -6701,7 +6701,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "VIVT3.SA",
-    "Valor": "34,04"
+    "Valor": "34,53"
   },
   {
     "data_referencia": "2026-11-16",
@@ -6721,7 +6721,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "WEGE3.SA",
-    "Valor": "51,31"
+    "Valor": "50,40"
   },
   {
     "data_referencia": "2026-11-16",
@@ -6781,7 +6781,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo FIIs e Fiagros",
     "categoria": "FIIs e Fiagros",
     "metrica": "XPML11.SA",
-    "Valor": "92,00"
+    "Valor": "89,70"
   },
   {
     "data_referencia": "2026-11-16",
@@ -6791,7 +6791,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Ações Brasileiras",
     "categoria": "Ações Brasileiras (B3)",
     "metrica": "YDUQ3.SA",
-    "Valor": "9,46"
+    "Valor": "9,70"
   },
   {
     "data_referencia": "2026-11-16",
@@ -6921,7 +6921,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
     "metrica": "ADA-USD",
-    "Valor": "0,1548"
+    "Valor": "0,1523"
   },
   {
     "data_referencia": "2026-11-17",
@@ -6941,7 +6941,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
     "metrica": "AUDUSD=X",
-    "Valor": "0,6752"
+    "Valor": "0,6737"
   },
   {
     "data_referencia": "2026-11-17",
@@ -6951,7 +6951,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
     "metrica": "AVAX-USD",
-    "Valor": "7,20"
+    "Valor": "7,16"
   },
   {
     "data_referencia": "2026-11-17",
@@ -6961,7 +6961,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
     "metrica": "BNB-USD",
-    "Valor": "594,52"
+    "Valor": "589,81"
   },
   {
     "data_referencia": "2026-11-17",
@@ -6971,7 +6971,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
     "metrica": "BRL=X",
-    "Valor": "5,7840"
+    "Valor": "5,7791"
   },
   {
     "data_referencia": "2026-11-17",
@@ -6981,7 +6981,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
     "metrica": "BTC-USD",
-    "Valor": "65.085"
+    "Valor": "64.211"
   },
   {
     "data_referencia": "2026-11-17",
@@ -7001,7 +7001,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
     "metrica": "CHFBRL=X",
-    "Valor": "6,8883"
+    "Valor": "6,8899"
   },
   {
     "data_referencia": "2026-11-17",
@@ -7031,7 +7031,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
     "metrica": "CNYBRL=X",
-    "Valor": "0,8676"
+    "Valor": "0,8671"
   },
   {
     "data_referencia": "2026-11-17",
@@ -7051,7 +7051,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
     "metrica": "DOGE-USD",
-    "Valor": "0,0594"
+    "Valor": "0,0586"
   },
   {
     "data_referencia": "2026-11-17",
@@ -7061,7 +7061,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
     "metrica": "DOT-USD",
-    "Valor": "0,7441"
+    "Valor": "0,7284"
   },
   {
     "data_referencia": "2026-11-17",
@@ -7071,7 +7071,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
     "metrica": "ETH-USD",
-    "Valor": "1.834"
+    "Valor": "1.813"
   },
   {
     "data_referencia": "2026-11-17",
@@ -7081,7 +7081,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
     "metrica": "EURBRL=X",
-    "Valor": "6,3651"
+    "Valor": "6,3585"
   },
   {
     "data_referencia": "2026-11-17",
@@ -7091,7 +7091,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
     "metrica": "EURUSD=X",
-    "Valor": "1,1010"
+    "Valor": "1,1002"
   },
   {
     "data_referencia": "2026-11-17",
@@ -7101,7 +7101,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
     "metrica": "GBPBRL=X",
-    "Valor": "7,6307"
+    "Valor": "7,6246"
   },
   {
     "data_referencia": "2026-11-17",
@@ -7111,7 +7111,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
     "metrica": "GBPUSD=X",
-    "Valor": "1,3196"
+    "Valor": "1,3190"
   },
   {
     "data_referencia": "2026-11-17",
@@ -7141,7 +7141,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
     "metrica": "ICP-USD",
-    "Valor": "2,48"
+    "Valor": "2,44"
   },
   {
     "data_referencia": "2026-11-17",
@@ -7161,7 +7161,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
     "metrica": "LINK-USD",
-    "Valor": "9,21"
+    "Valor": "9,12"
   },
   {
     "data_referencia": "2026-11-17",
@@ -7171,7 +7171,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
     "metrica": "LTC-USD",
-    "Valor": "45,06"
+    "Valor": "44,48"
   },
   {
     "data_referencia": "2026-11-17",
@@ -7191,7 +7191,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
     "metrica": "NEAR-USD",
-    "Valor": "3,25"
+    "Valor": "3,23"
   },
   {
     "data_referencia": "2026-11-17",
@@ -7211,7 +7211,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
     "metrica": "OP-USD",
-    "Valor": "0,0802"
+    "Valor": "0,0766"
   },
   {
     "data_referencia": "2026-11-17",
@@ -7261,7 +7261,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
     "metrica": "SOL-USD",
-    "Valor": "72,70"
+    "Valor": "72,18"
   },
   {
     "data_referencia": "2026-11-17",
@@ -7271,7 +7271,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
     "metrica": "TRX-USD",
-    "Valor": "0,3054"
+    "Valor": "0,3058"
   },
   {
     "data_referencia": "2026-11-17",
@@ -7281,7 +7281,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
     "metrica": "USDCAD=X",
-    "Valor": "1,4303"
+    "Valor": "1,4291"
   },
   {
     "data_referencia": "2026-11-17",
@@ -7291,7 +7291,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
     "metrica": "USDCHF=X",
-    "Valor": "0,8396"
+    "Valor": "0,8390"
   },
   {
     "data_referencia": "2026-11-17",
@@ -7311,7 +7311,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
     "metrica": "USDINR=X",
-    "Valor": "93,7000"
+    "Valor": "93,4475"
   },
   {
     "data_referencia": "2026-11-17",
@@ -7321,7 +7321,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
     "metrica": "USDJPY=X",
-    "Valor": "159,3890"
+    "Valor": "159,0150"
   },
   {
     "data_referencia": "2026-11-17",
@@ -7331,7 +7331,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Câmbio e Moedas",
     "categoria": "Câmbio / Moedas",
     "metrica": "USDMXN=X",
-    "Valor": "18,4960"
+    "Valor": "18,4930"
   },
   {
     "data_referencia": "2026-11-17",
@@ -7341,7 +7341,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
     "metrica": "XLM-USD",
-    "Valor": "0,1396"
+    "Valor": "0,1368"
   },
   {
     "data_referencia": "2026-11-17",
@@ -7351,7 +7351,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Criptoativos",
     "categoria": "Criptoativos",
     "metrica": "XRP-USD",
-    "Valor": "0,9673"
+    "Valor": "0,9565"
   },
   {
     "data_referencia": "2026-11-17",
@@ -7411,7 +7411,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Índices Globais",
     "categoria": "Índices de Ações Globais",
     "metrica": "^AXJO",
-    "Valor": "8.892"
+    "Valor": "8.883"
   },
   {
     "data_referencia": "2026-11-17",
@@ -7421,7 +7421,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Índices Globais",
     "categoria": "Índices de Ações Globais",
     "metrica": "^HSI",
-    "Valor": "23.573"
+    "Valor": "23.508"
   },
   {
     "data_referencia": "2026-11-17",
@@ -7431,7 +7431,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Índices Globais",
     "categoria": "Índices de Ações Globais",
     "metrica": "^JKSE",
-    "Valor": "5.352"
+    "Valor": "5.305"
   },
   {
     "data_referencia": "2026-11-17",
@@ -7441,7 +7441,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Índices Globais",
     "categoria": "Índices de Ações Globais",
     "metrica": "^KLSE",
-    "Valor": "1.577"
+    "Valor": "1.575"
   },
   {
     "data_referencia": "2026-11-17",
@@ -7451,7 +7451,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Índices Globais",
     "categoria": "Índices de Ações Globais",
     "metrica": "^KS11",
-    "Valor": "5.064"
+    "Valor": "4.968"
   },
   {
     "data_referencia": "2026-11-17",
@@ -7461,7 +7461,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Índices Globais",
     "categoria": "Índices de Ações Globais",
     "metrica": "^N225",
-    "Valor": "58.957"
+    "Valor": "58.860"
   },
   {
     "data_referencia": "2026-11-17",
@@ -7471,7 +7471,7 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Índices Globais",
     "categoria": "Índices de Ações Globais",
     "metrica": "^STI",
-    "Valor": "5.137"
+    "Valor": "5.108"
   },
   {
     "data_referencia": "2026-11-17",
@@ -7481,6 +7481,6 @@ window.PULSEFLAT_PIVOTED = [
     "dataset_label": "Yahoo Índices Globais",
     "categoria": "Índices de Ações Globais",
     "metrica": "^TWII",
-    "Valor": "40.654"
+    "Valor": "40.092"
   }
 ];
