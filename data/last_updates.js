@@ -1,7 +1,11 @@
 window.PULSEFLAT_LAST_UPDATES = {
+  "bacen_lfs_estoque_segmento.csv.gz": {
+    "min": "2010-03-01",
+    "max": "2025-12-01"
+  },
   "bcb_ptax.csv": {
     "min": "2020-01-02",
-    "max": "2026-11-17"
+    "max": "2026-11-18"
   },
   "cvm_cadastro_companhias_abertas.csv": {
     "min": "2026-11-18",
@@ -11,16 +15,16 @@ window.PULSEFLAT_LAST_UPDATES = {
     "min": "2020-01-01",
     "max": "2026-11-18"
   },
-  "bacen_negociacao_tpf_extragrupo.csv.gz": {
-    "min": "2020-01-02",
-    "max": "2026-11-17"
-  },
   "debentures_emissoes_caracteristicas.csv.gz": {
     "min": "2026-11-18",
     "max": "2026-11-18"
   },
   "debentures_emissoes_caracteristicas_api.csv": {
     "min": "2026-11-17",
+    "max": "2026-11-17"
+  },
+  "bacen_negociacao_tpf_extragrupo.csv.gz": {
+    "min": "2020-01-02",
     "max": "2026-11-17"
   },
   "registro_fundo_classe.csv.gz": {
@@ -33,11 +37,19 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "fred_brazil_macro_fx_and_cycles.csv.gz": {
     "min": "2020-01-01",
-    "max": "2026-11-16"
+    "max": "2026-11-17"
+  },
+  "cvm_fundos_informe_diario.csv.gz": {
+    "min": "2026-11-02",
+    "max": "2026-11-17"
   },
   "fred_global_liquidity_credit_spreads.csv.gz": {
     "min": "2020-01-01",
-    "max": "2026-11-16"
+    "max": "2026-11-17"
+  },
+  "ibge_sidra.csv": {
+    "min": "2026-11-18",
+    "max": "2026-11-18"
   },
   "fred_us_macro_indicators.csv.gz": {
     "min": "2020-01-01",
@@ -47,13 +59,13 @@ window.PULSEFLAT_LAST_UPDATES = {
     "min": "2020-01-02",
     "max": "2026-11-17"
   },
-  "ibge_sidra.csv": {
-    "min": "2026-11-18",
-    "max": "2026-11-18"
+  "b3_bdi_trades_acoes_2026_11.csv.gz": {
+    "min": "2026-11-03",
+    "max": "2026-11-17"
   },
-  "ipea_calendario.csv": {
-    "min": "1970-01-01",
-    "max": "2030-12-01"
+  "debentures_mercado_secundario_precos_negociacao_api.csv.gz": {
+    "min": "2020-01-02",
+    "max": "2026-11-17"
   },
   "ipea_comercio_exterior.csv": {
     "min": "1977-01-01",
@@ -63,6 +75,10 @@ window.PULSEFLAT_LAST_UPDATES = {
     "min": "1996-01-01",
     "max": "2026-08-01"
   },
+  "ipea_producao_mineral.csv": {
+    "min": "1980-01-01",
+    "max": "2026-09-01"
+  },
   "ipea_macroeconomia.csv": {
     "min": "1940-07-01",
     "max": "2026-12-01"
@@ -71,31 +87,19 @@ window.PULSEFLAT_LAST_UPDATES = {
     "min": "1944-01-01",
     "max": "2026-10-01"
   },
-  "ipea_producao_mineral.csv": {
-    "min": "1980-01-01",
-    "max": "2026-09-01"
-  },
-  "cvm_fundos_informe_diario.csv.gz": {
-    "min": "2026-11-02",
-    "max": "2026-11-17"
-  },
-  "ipea_taxas_juros.csv": {
-    "min": "1966-12-01",
-    "max": "2026-11-01"
-  },
   "wikipedia_global_indices.csv": {
     "min": "2026-11-18",
     "max": "2026-11-18"
-  },
-  "ipea_mercados_diarios.csv": {
-    "min": "1900-01-02",
-    "max": "2026-11-17"
   },
   "bacen_parcelas_capital_basileia.csv.gz": {
     "min": "2026-06-05",
     "max": "2026-11-18"
   },
-  "debentures_mercado_secundario_precos_negociacao_api.csv.gz": {
+  "ipea_taxas_juros.csv": {
+    "min": "1966-12-01",
+    "max": "2026-11-01"
+  },
+  "debentures_mercado_secundario_precos_negociacao.csv.gz": {
     "min": "2020-01-02",
     "max": "2026-11-17"
   },
@@ -111,13 +115,9 @@ window.PULSEFLAT_LAST_UPDATES = {
     "min": "2015-01-01",
     "max": "2026-11-18"
   },
-  "b3_bdi_trades_acoes_2026_11.csv.gz": {
-    "min": "2026-11-03",
+  "ipea_mercados_diarios.csv": {
+    "min": "1900-01-02",
     "max": "2026-11-17"
-  },
-  "yahoo_acoes_brasileiras.csv.gz": {
-    "min": "2020-01-02",
-    "max": "2026-11-18"
   },
   "yahoo_renda_fixa.csv": {
     "min": "2026-05-29",
@@ -127,24 +127,24 @@ window.PULSEFLAT_LAST_UPDATES = {
     "min": "2026-05-28",
     "max": "2026-11-18"
   },
-  "onu_pacto_global.csv": {
-    "min": "2026-11-18",
-    "max": "2026-11-18"
-  },
-  "debentures_mercado_secundario_precos_negociacao.csv.gz": {
-    "min": "2020-01-02",
-    "max": "2026-11-16"
-  },
   "yahoo_etfs.csv.gz": {
     "min": "2020-01-02",
     "max": "2026-11-17"
   },
-  "yahoo_acoes_internacionais.csv": {
-    "min": "2026-05-29",
-    "max": "2026-11-17"
+  "onu_pacto_global.csv": {
+    "min": "2026-11-18",
+    "max": "2026-11-18"
+  },
+  "yahoo_acoes_brasileiras.csv.gz": {
+    "min": "2020-01-02",
+    "max": "2026-11-18"
   },
   "yahoo_fiis_fiagros.csv.gz": {
     "min": "2020-01-02",
     "max": "2026-11-18"
+  },
+  "yahoo_acoes_internacionais.csv": {
+    "min": "2026-05-29",
+    "max": "2026-11-17"
   }
 };
