@@ -25,17 +25,17 @@
   },
   {
     "label": "PTAX USD Venda",
-    "value": "5,8102",
-    "reference_date": "2026-11-18",
+    "value": "5,8889",
+    "reference_date": "2026-11-19",
     "type": "up",
-    "change": "+0,43%"
+    "change": "+1,35%"
   },
   {
     "label": "PTAX USD Compra",
-    "value": "5,8096",
-    "reference_date": "2026-11-18",
+    "value": "5,8883",
+    "reference_date": "2026-11-19",
     "type": "up",
-    "change": "+0,43%"
+    "change": "+1,35%"
   },
   {
     "label": "IBOVESPA",
