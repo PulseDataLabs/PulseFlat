@@ -45,7 +45,7 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "anbima_projecoes_inflacao.csv.gz": {
     "min": "2026-10-09",
-    "max": "2026-11-20"
+    "max": "2026-11-21"
   },
   "anbima_titulos_publicos.csv": {
     "min": "2026-02-23",
@@ -81,23 +81,23 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "b3_carteira_teorica_agfs_iagro.csv": {
     "min": "2026-06-03",
-    "max": "2026-11-20"
+    "max": "2026-11-21"
   },
   "b3_carteira_teorica_ibov.csv": {
     "min": "2026-06-03",
-    "max": "2026-11-20"
+    "max": "2026-11-21"
   },
   "b3_carteira_teorica_bdrx.csv": {
     "min": "2026-06-03",
-    "max": "2026-11-20"
+    "max": "2026-11-21"
   },
   "b3_bmf_taxas_juros.csv": {
     "min": "2026-06-03",
-    "max": "2026-11-19"
+    "max": "2026-11-20"
   },
   "b3_carteira_teorica_ibsd.csv": {
     "min": "2026-06-03",
-    "max": "2026-11-20"
+    "max": "2026-11-21"
   },
   "anbima_indice_imab.csv.gz": {
     "min": "2001-12-04",
@@ -105,39 +105,39 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "b3_carteira_teorica_ifnc.csv": {
     "min": "2026-06-03",
-    "max": "2026-11-20"
+    "max": "2026-11-21"
   },
   "b3_carteira_teorica_ibxl.csv": {
     "min": "2026-06-03",
-    "max": "2026-11-20"
+    "max": "2026-11-21"
   },
   "b3_carteira_teorica_isee.csv": {
     "min": "2026-06-03",
-    "max": "2026-11-20"
+    "max": "2026-11-21"
   },
   "b3_classificacao_setorial.csv": {
-    "min": "2026-11-20",
-    "max": "2026-11-20"
+    "min": "2026-11-21",
+    "max": "2026-11-21"
   },
   "b3_carteira_teorica_smll.csv": {
     "min": "2026-06-03",
-    "max": "2026-11-20"
+    "max": "2026-11-21"
   },
   "anbima_indices_carteira_teorica_ida.csv.gz": {
     "min": "2026-10-01",
     "max": "2026-11-19"
   },
   "b3_etfs.csv": {
-    "min": "2026-11-20",
-    "max": "2026-11-20"
+    "min": "2026-11-21",
+    "max": "2026-11-21"
   },
   "b3_bdi_etfrf.csv.gz": {
     "min": "2026-01-02",
     "max": "2026-11-19"
   },
   "b3_fiis.csv": {
-    "min": "2026-11-20",
-    "max": "2026-11-20"
+    "min": "2026-11-21",
+    "max": "2026-11-21"
   },
   "b3_indicadores_financeiros.csv": {
     "min": "2026-06-11",
@@ -145,11 +145,11 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "b3_carteiras_teoricas.csv.gz": {
     "min": "2026-06-01",
-    "max": "2026-11-20"
+    "max": "2026-11-21"
   },
   "b3_fundos_listados.csv": {
-    "min": "2026-11-20",
-    "max": "2026-11-20"
+    "min": "2026-11-21",
+    "max": "2026-11-21"
   },
   "b3_limites_garantias.csv": {
     "min": "2025-06-01",
@@ -164,12 +164,12 @@ window.PULSEFLAT_LAST_UPDATES = {
     "max": "2026-11-18"
   },
   "b3_isin_emissores.csv.gz": {
-    "min": "2026-11-20",
-    "max": "2026-11-20"
+    "min": "2026-11-21",
+    "max": "2026-11-21"
   },
   "b3_indicadores_economicos_fwf.csv": {
     "min": "2026-06-16",
-    "max": "2026-11-20"
+    "max": "2026-11-21"
   },
   "b3_valor_mercado_totais.csv": {
     "min": "2026-08-31",
@@ -184,8 +184,8 @@ window.PULSEFLAT_LAST_UPDATES = {
     "max": "2026-11-18"
   },
   "b3_titulos_negociaveis.csv.gz": {
-    "min": "2026-11-20",
-    "max": "2026-11-20"
+    "min": "2026-11-21",
+    "max": "2026-11-21"
   },
   "bacen_conglomerados.csv": {
     "min": "2026-08-01",
@@ -260,24 +260,24 @@ window.PULSEFLAT_LAST_UPDATES = {
     "max": "2026-11-19"
   },
   "cvm_cadastro_companhias_abertas.csv": {
-    "min": "2026-11-20",
-    "max": "2026-11-20"
+    "min": "2026-11-21",
+    "max": "2026-11-21"
   },
   "bcb_sgs.csv": {
     "min": "2020-01-01",
-    "max": "2026-11-20"
+    "max": "2026-11-21"
   },
   "debentures_emissoes_caracteristicas.csv.gz": {
-    "min": "2026-11-20",
-    "max": "2026-11-20"
+    "min": "2026-11-21",
+    "max": "2026-11-21"
   },
   "bacen_negociacao_tpf_extragrupo.csv.gz": {
     "min": "2020-01-02",
     "max": "2026-11-19"
   },
   "registro_fundo_classe.csv.gz": {
-    "min": "2026-11-20",
-    "max": "2026-11-20"
+    "min": "2026-11-21",
+    "max": "2026-11-21"
   },
   "fred_brazil_export_commodities.csv.gz": {
     "min": "2020-01-01",
@@ -300,8 +300,8 @@ window.PULSEFLAT_LAST_UPDATES = {
     "max": "2026-11-20"
   },
   "ibge_sidra.csv": {
-    "min": "2026-11-20",
-    "max": "2026-11-20"
+    "min": "2026-11-21",
+    "max": "2026-11-21"
   },
   "debentures_emissoes_caracteristicas_api.csv": {
     "min": "2026-11-19",
@@ -344,8 +344,8 @@ window.PULSEFLAT_LAST_UPDATES = {
     "max": "2026-11-19"
   },
   "wikipedia_global_indices.csv": {
-    "min": "2026-11-20",
-    "max": "2026-11-20"
+    "min": "2026-11-21",
+    "max": "2026-11-21"
   },
   "b3_bdi_trades_acoes_2026_11.csv.gz": {
     "min": "2026-11-03",
@@ -361,15 +361,15 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "yahoo_commodities.csv": {
     "min": "2026-05-28",
-    "max": "2026-11-19"
+    "max": "2026-11-20"
   },
   "yahoo_criptoativos.csv": {
     "min": "2015-01-01",
-    "max": "2026-11-20"
+    "max": "2026-11-21"
   },
   "onu_pacto_global.csv": {
-    "min": "2026-11-20",
-    "max": "2026-11-20"
+    "min": "2026-11-21",
+    "max": "2026-11-21"
   },
   "yahoo_indices_globais.csv": {
     "min": "2026-05-28",
@@ -377,7 +377,7 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "yahoo_renda_fixa.csv": {
     "min": "2026-05-29",
-    "max": "2026-11-19"
+    "max": "2026-11-20"
   },
   "yahoo_acoes_brasileiras.csv.gz": {
     "min": "2020-01-02",
@@ -389,11 +389,11 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "yahoo_etfs.csv.gz": {
     "min": "2020-01-02",
-    "max": "2026-11-19"
+    "max": "2026-11-20"
   },
   "yahoo_acoes_internacionais.csv": {
     "min": "2026-05-29",
-    "max": "2026-11-19"
+    "max": "2026-11-20"
   },
   "yahoo_fiis_fiagros.csv.gz": {
     "min": "2020-01-02",
@@ -401,6 +401,22 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "bacen_parcelas_capital_basileia.csv.gz": {
     "min": "2026-06-05",
-    "max": "2026-11-20"
+    "max": "2026-11-21"
+  },
+  "anbima_550.csv": {
+    "min": "2026-06-01",
+    "max": "2026-11-21"
+  },
+  "anbima_curvas_juros_parametros_svensson.csv.gz": {
+    "min": "2020-01-02",
+    "max": "2026-11-19"
+  },
+  "anbima_curvas_juros_ettj.csv.gz": {
+    "min": "2020-01-02",
+    "max": "2026-11-19"
+  },
+  "anbima_indicadores.csv": {
+    "min": "2026-04-01",
+    "max": "2026-11-19"
   }
 };
