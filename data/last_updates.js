@@ -342,5 +342,77 @@ window.PULSEFLAT_LAST_UPDATES = {
   "yahoo_acoes_internacionais.csv": {
     "min": "2026-05-29",
     "max": "2026-11-23"
+  },
+  "anbima_550.csv": {
+    "min": "2026-06-01",
+    "max": "2026-11-24"
+  },
+  "anbima_ima_completo.csv": {
+    "min": "2026-05-29",
+    "max": "2026-11-23"
+  },
+  "anbima_curvas_credito.csv.gz": {
+    "min": "2020-01-02",
+    "max": "2026-11-19"
+  },
+  "anbima_fidc_mercado_secundario.csv.gz": {
+    "min": "2021-10-18",
+    "max": "2026-11-23"
+  },
+  "anbima_curvas_juros_parametros_svensson.csv.gz": {
+    "min": "2020-01-02",
+    "max": "2026-11-23"
+  },
+  "anbima_curvas_juros_ettj.csv.gz": {
+    "min": "2020-01-02",
+    "max": "2026-11-23"
+  },
+  "anbima_debentures.csv.gz": {
+    "min": "2026-06-03",
+    "max": "2026-11-23"
+  },
+  "anbima_indice_ida.csv.gz": {
+    "min": "2020-01-02",
+    "max": "2026-11-19"
+  },
+  "anbima_indices_idka_resultados.csv.gz": {
+    "min": "2020-01-02",
+    "max": "2026-11-23"
+  },
+  "anbima_indices_carteira_teorica_ima.csv.gz": {
+    "min": "2026-09-30",
+    "max": "2026-11-23"
+  },
+  "anbima_indices_ima_resultados.csv.gz": {
+    "min": "2020-01-02",
+    "max": "2026-11-23"
+  },
+  "anbima_indices_carteira_teorica_ida.csv.gz": {
+    "min": "2026-10-01",
+    "max": "2026-11-23"
+  },
+  "anbima_projecoes.csv": {
+    "min": "2026-05-01",
+    "max": "2026-11-01"
+  },
+  "anbima_projecoes_inflacao.csv.gz": {
+    "min": "2026-10-09",
+    "max": "2026-11-24"
+  },
+  "anbima_titulos_publicos.csv": {
+    "min": "2026-02-23",
+    "max": "2026-11-23"
+  },
+  "b3_bdi_di_over.csv": {
+    "min": "2026-05-29",
+    "max": "2026-11-23"
+  },
+  "anbima_cri_cra_mercado_secundario.csv.gz": {
+    "min": "2020-01-02",
+    "max": "2026-11-23"
+  },
+  "onu_pacto_global.csv": {
+    "min": "2026-11-24",
+    "max": "2026-11-24"
   }
 };
