@@ -181,7 +181,7 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "bacen_negociacao_tpf_extragrupo.csv.gz": {
     "min": "2020-01-02",
-    "max": "2026-11-23"
+    "max": "2026-11-24"
   },
   "registro_fundo_classe.csv.gz": {
     "min": "2026-11-25",
@@ -241,11 +241,11 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "ipea_mercados_diarios.csv": {
     "min": "1900-01-02",
-    "max": "2026-11-23"
+    "max": "2026-11-24"
   },
   "cvm_fundos_informe_diario.csv.gz": {
     "min": "2026-11-02",
-    "max": "2026-11-23"
+    "max": "2026-11-24"
   },
   "wikipedia_global_indices.csv": {
     "min": "2026-11-25",
