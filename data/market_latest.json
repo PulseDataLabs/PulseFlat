@@ -2,7 +2,7 @@
   {
     "label": "CDI",
     "value": "13,65%",
-    "reference_date": "2026-11-23",
+    "reference_date": "2026-11-24",
     "type": "neutral"
   },
   {
@@ -39,15 +39,15 @@
   },
   {
     "label": "IBOVESPA",
-    "value": "164.796",
-    "reference_date": "2026-11-23",
+    "value": "164.090",
+    "reference_date": "2026-11-24",
     "type": "down",
-    "change": "-0,95%"
+    "change": "-0,43%"
   },
   {
     "label": "IMA-GERAL",
-    "value": "10.641,81",
-    "reference_date": "2026-11-23",
+    "value": "10.654,28",
+    "reference_date": "2026-11-24",
     "type": "neutral"
   }
 ]
