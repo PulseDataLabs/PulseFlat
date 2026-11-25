@@ -65,7 +65,7 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "b3_opcoes_posicoes_resumo.csv.gz": {
     "min": "2026-11-17",
-    "max": "2026-11-23"
+    "max": "2026-11-24"
   },
   "b3_indicadores_economicos_fwf.csv": {
     "min": "2026-06-16",
@@ -76,8 +76,8 @@ window.PULSEFLAT_LAST_UPDATES = {
     "max": "2026-11-25"
   },
   "b3_opcoes_posicoes_aberto.csv.gz": {
-    "min": "2026-11-23",
-    "max": "2026-11-23"
+    "min": "2026-11-24",
+    "max": "2026-11-24"
   },
   "b3_valor_mercado_totais.csv": {
     "min": "2026-08-31",
@@ -137,7 +137,7 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "b3_termo_posicoes_resumo.csv": {
     "min": "2026-09-04",
-    "max": "2026-11-23"
+    "max": "2026-11-24"
   },
   "bacen_lf_prazo_vencimento.csv.gz": {
     "min": "2010-03-01",
@@ -157,11 +157,11 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "b3_termo_posicoes_aberto.csv": {
     "min": "2026-09-04",
-    "max": "2026-11-23"
+    "max": "2026-11-24"
   },
   "bcb_ptax.csv": {
     "min": "2020-01-02",
-    "max": "2026-11-24"
+    "max": "2026-11-25"
   },
   "cvm_cadastro_companhias_abertas.csv": {
     "min": "2026-11-25",
@@ -193,11 +193,11 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "fred_brazil_macro_fx_and_cycles.csv.gz": {
     "min": "2020-01-01",
-    "max": "2026-11-23"
+    "max": "2026-11-24"
   },
   "fred_global_liquidity_credit_spreads.csv.gz": {
     "min": "2020-01-01",
-    "max": "2026-11-23"
+    "max": "2026-11-24"
   },
   "fred_us_macro_indicators.csv.gz": {
     "min": "2020-01-01",
@@ -257,7 +257,7 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "bacen_parcelas_capital_basileia.csv.gz": {
     "min": "2026-06-05",
-    "max": "2026-11-24"
+    "max": "2026-11-25"
   },
   "yahoo_commodities.csv": {
     "min": "2026-05-28",
@@ -289,7 +289,7 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "debentures_mercado_secundario_precos_negociacao.csv.gz": {
     "min": "2020-01-02",
-    "max": "2026-11-23"
+    "max": "2026-11-24"
   },
   "yahoo_etfs.csv.gz": {
     "min": "2020-01-02",
@@ -313,7 +313,7 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "anbima_curvas_credito.csv.gz": {
     "min": "2020-01-02",
-    "max": "2026-11-23"
+    "max": "2026-11-24"
   },
   "anbima_curvas_juros_parametros_svensson.csv.gz": {
     "min": "2020-01-02",
@@ -337,7 +337,7 @@ window.PULSEFLAT_LAST_UPDATES = {
   },
   "anbima_indicadores.csv": {
     "min": "2026-04-01",
-    "max": "2026-11-24"
+    "max": "2026-11-25"
   },
   "anbima_cri_cra_mercado_secundario.csv.gz": {
     "min": "2020-01-02",
@@ -418,5 +418,9 @@ window.PULSEFLAT_LAST_UPDATES = {
   "b3_bmf_taxas_juros.csv": {
     "min": "2026-06-03",
     "max": "2026-11-24"
+  },
+  "bacen_cadastro_instituicoes.csv.gz": {
+    "min": "2020-03-31",
+    "max": "2026-06-30"
   }
 };
