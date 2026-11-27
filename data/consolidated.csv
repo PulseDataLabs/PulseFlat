@@ -5,20 +5,20 @@ anbima_indicadores.csv,ANBIMA Indicadores,ANBIMA,Câmbio,indicador,Dólar Comerc
 anbima_indicadores.csv,ANBIMA Indicadores,ANBIMA,Taxa de Juros,indicador,Estimativa SELIC,"13,65",% a.a.,2026-11-27,2026-11-27,valor
 anbima_indicadores.csv,ANBIMA Indicadores,ANBIMA,Câmbio,indicador,Euro Compra,"6,3023",R$,2026-11-26,2026-11-26,valor
 anbima_indicadores.csv,ANBIMA Indicadores,ANBIMA,Câmbio,indicador,Euro Venda,"6,3041",R$,2026-11-26,2026-11-26,valor
-anbima_indicadores.csv,ANBIMA Indicadores,ANBIMA,FDS,indicador,FDS (registro 1),"0,0937",R$ cota,2026-11-26,2026-11-26,valor
-anbima_indicadores.csv,ANBIMA Indicadores,ANBIMA,FDS,indicador,FDS (registro 2),"0,0936",R$ cota,2026-11-25,2026-11-26,valor
+anbima_indicadores.csv,ANBIMA Indicadores,ANBIMA,FDS,indicador,FDS (registro 1),"0,0937",R$ cota,2026-11-27,2026-11-27,valor
+anbima_indicadores.csv,ANBIMA Indicadores,ANBIMA,FDS,indicador,FDS (registro 2),"0,0937",R$ cota,2026-11-26,2026-11-27,valor
 anbima_indicadores.csv,ANBIMA Indicadores,ANBIMA,Índice de Preços,indicador,IGP-M Número Índice,1.259,índice,2026-11-01,2026-11-27,valor
 anbima_indicadores.csv,ANBIMA Indicadores,ANBIMA,Índice de Preços,indicador,IGP-M Projeção,"0,8700",%,2026-11-01,2026-10-29,valor
 anbima_indicadores.csv,ANBIMA Indicadores,ANBIMA,Índice de Preços,indicador,IGP-M Var % mês,"1,24",%,2026-11-01,2026-11-27,valor
 anbima_indicadores.csv,ANBIMA Indicadores,ANBIMA,Índice de Preços,indicador,IPCA Número Índice,7.707,índice,2026-10-01,2026-11-12,valor
 anbima_indicadores.csv,ANBIMA Indicadores,ANBIMA,Índice de Preços,indicador,IPCA Projeção,"0,3800",%,2026-11-01,2026-11-13,valor
 anbima_indicadores.csv,ANBIMA Indicadores,ANBIMA,Índice de Preços,indicador,IPCA Var % mês,"0,1400",%,2026-10-01,2026-11-12,valor
-anbima_indicadores.csv,ANBIMA Indicadores,ANBIMA,Taxa de Referência,indicador,TBF,"1,05",% mês,2026-11-25,2026-11-26,valor
-anbima_indicadores.csv,ANBIMA Indicadores,ANBIMA,Taxa de Referência,indicador,TR,"0,1712",% mês,2026-11-25,2026-11-26,valor
-anbima_indicadores.csv,ANBIMA Indicadores,ANBIMA,Taxa de Juros,indicador,Taxa SELIC (BC),"13,65",% a.a.,2026-11-26,2026-11-26,valor
-anbima_indice_imab.csv,ANBIMA IMA-B,ANBIMA,IMA-B,indicador,IMA-GERAL,10.710,Número-índice,2026-11-26,2026-11-26,numero_indice
-anbima_indice_imab.csv,ANBIMA IMA-B,ANBIMA,IMA-B,indicador,IMA-GERAL,"0,34%",Variação diária,2026-11-26,2026-11-26,variacao_diaria
-anbima_indice_imab.csv,ANBIMA IMA-B,ANBIMA,IMA-B,indicador,IMA-GERAL,"475,00",Duration (d.u.),2026-11-26,2026-11-26,duration_du
+anbima_indicadores.csv,ANBIMA Indicadores,ANBIMA,Taxa de Referência,indicador,TBF,"0,9999",% mês,2026-11-26,2026-11-27,valor
+anbima_indicadores.csv,ANBIMA Indicadores,ANBIMA,Taxa de Referência,indicador,TR,"0,1691",% mês,2026-11-26,2026-11-27,valor
+anbima_indicadores.csv,ANBIMA Indicadores,ANBIMA,Taxa de Juros,indicador,Taxa SELIC (BC),"13,65",% a.a.,2026-11-27,2026-11-27,valor
+anbima_indice_imab.csv,ANBIMA IMA-B,ANBIMA,IMA-B,indicador,IMA-GERAL,10.771,Número-índice,2026-11-27,2026-11-27,numero_indice
+anbima_indice_imab.csv,ANBIMA IMA-B,ANBIMA,IMA-B,indicador,IMA-GERAL,"0,58%",Variação diária,2026-11-27,2026-11-27,variacao_diaria
+anbima_indice_imab.csv,ANBIMA IMA-B,ANBIMA,IMA-B,indicador,IMA-GERAL,"483,00",Duration (d.u.),2026-11-27,2026-11-27,duration_du
 anbima_titulos_publicos.csv,ANBIMA Títulos Públicos,ANBIMA,Títulos Públicos,indicador,100000 (LTN),"13,68%",Taxa indicativa,2026-11-26,2026-11-27,tx_indicativa
 anbima_titulos_publicos.csv,ANBIMA Títulos Públicos,ANBIMA,Títulos Públicos,indicador,100000 (LTN),"957,68",PU,2026-11-26,2026-11-27,pu
 anbima_titulos_publicos.csv,ANBIMA Títulos Públicos,ANBIMA,Títulos Públicos,indicador,210100 (LFT),"0,03%",Taxa indicativa,2026-11-26,2026-11-27,tx_indicativa
@@ -37,8 +37,8 @@ b3_indicadores_financeiros.csv,B3 Indicadores Financeiros,B3,Indicadores B3,indi
 b3_indicadores_financeiros.csv,B3 Indicadores Financeiros,B3,Indicadores B3,indicador,DOLAR SPOT BMF PARA 1 DIA,"5,5296",,2026-11-27,2026-11-27,valor
 b3_indicadores_financeiros.csv,B3 Indicadores Financeiros,B3,Indicadores B3,indicador,DÓLAR BMF SPOT - 2 DIAS,"5,5306",,2026-11-27,2026-11-27,valor
 b3_indicadores_financeiros.csv,B3 Indicadores Financeiros,B3,Indicadores B3,indicador,DÓLAR CUPOM LIMPO,"5,5259",,2026-11-27,2026-11-27,valor
-b3_indicadores_financeiros.csv,B3 Indicadores Financeiros,B3,Indicadores B3,indicador,TAXA CDI CETIP,"13,65",,2026-11-26,2026-11-26,taxa
-b3_indicadores_financeiros.csv,B3 Indicadores Financeiros,B3,Indicadores B3,indicador,TAXA SELIC,"13,65",,2026-11-26,2026-11-26,taxa
+b3_indicadores_financeiros.csv,B3 Indicadores Financeiros,B3,Indicadores B3,indicador,TAXA CDI CETIP,"13,65",,2026-11-27,2026-11-27,taxa
+b3_indicadores_financeiros.csv,B3 Indicadores Financeiros,B3,Indicadores B3,indicador,TAXA SELIC,"13,65",,2026-11-27,2026-11-27,taxa
 b3_indicadores_financeiros.csv,B3 Indicadores Financeiros,B3,Indicadores B3,indicador,TAXA SOFR,"3,95",,2026-11-27,2026-11-27,valor
 bacen_lf_emissoes.csv.gz,BCB LF — Emissões,BCB,Letras Financeiras,indicador,Letras Financeiras — Emissões Mensais,18.660.946.194,LF (R$),2025-12-01,2026-11-27,emissoes_lf
 bacen_lf_emissoes.csv.gz,BCB LF — Emissões,BCB,Letras Financeiras,indicador,Letras Financeiras — Emissões Mensais,9.174.513.902,LFS Subordinadas (R$),2025-12-01,2026-11-27,emissoes_lfs
@@ -977,7 +977,7 @@ bcb_sgs.csv,BCB SGS,BCB,Séries SGS,indicador,IGP-M,"5,54%",,2026-11-27,2026-11-
 bcb_sgs.csv,BCB SGS,BCB,Séries SGS,indicador,IGP-M (índice),"1,24%",,2026-11-01,2026-11-27,189
 bcb_sgs.csv,BCB SGS,BCB,Séries SGS,indicador,IGP-M 12m,"1,15%",,2026-10-01,2026-11-27,190
 bcb_sgs.csv,BCB SGS,BCB,Séries SGS,indicador,IPCA 12m,"0,14%",,2026-10-01,2026-11-27,433
-bcb_sgs.csv,BCB SGS,BCB,Séries SGS,indicador,SELIC (% a.d.),"0,05%",,2026-11-26,2026-11-27,11
+bcb_sgs.csv,BCB SGS,BCB,Séries SGS,indicador,SELIC (% a.d.),"0,05%",,2026-11-27,2026-11-27,11
 fred_brazil_export_commodities.csv.gz,FRED Commodities Exportação Brasil,FRED,Commodities Globais,indicador,Açúcar Global (US cents/lb),"38,30",,2026-09-01,2026-11-27,acucar_global_usd
 fred_brazil_export_commodities.csv.gz,FRED Commodities Exportação Brasil,FRED,Commodities Globais,indicador,Café Arábica Global (US cents/lb),"330,12",,2026-09-01,2026-11-27,cafe_arabica_global_usd
 fred_brazil_export_commodities.csv.gz,FRED Commodities Exportação Brasil,FRED,Commodities Globais,indicador,Minério de Ferro Global (USD/dmtu),"100,44",,2026-09-01,2026-11-27,minerio_ferro_global_usd
@@ -985,6 +985,7 @@ fred_brazil_export_commodities.csv.gz,FRED Commodities Exportação Brasil,FRED,
 fred_brazil_export_commodities.csv.gz,FRED Commodities Exportação Brasil,FRED,Commodities Globais,indicador,Soja Global (USD/mt),"481,72",,2026-09-01,2026-11-27,soja_global_usd
 fred_brazil_macro_fx_and_cycles.csv.gz,FRED Brasil Macro e Ciclos,FRED,Macroeconomia Brasil,indicador,Spread High Yield Emergentes OAS,"4,52",,2026-11-26,2026-11-27,spread_high_yield_emergentes_oas
 fred_global_liquidity_credit_spreads.csv.gz,FRED Liquidez e Spreads,FRED,Liquidez & Crédito Global,indicador,CBOE VIX Volatility,"26,80",,2026-11-26,2026-11-27,vix
+fred_global_liquidity_credit_spreads.csv.gz,FRED Liquidez e Spreads,FRED,Liquidez & Crédito Global,indicador,Fed Funds Effective Rate,"3,88%",,2026-11-26,2026-11-27,fed_funds_rate
 fred_global_liquidity_credit_spreads.csv.gz,FRED Liquidez e Spreads,FRED,Liquidez & Crédito Global,indicador,US Corp IG Spread,"0,9900",,2026-11-26,2026-11-27,credit_spread_corp_ig
 fred_global_liquidity_credit_spreads.csv.gz,FRED Liquidez e Spreads,FRED,Liquidez & Crédito Global,indicador,US High Yield Spread,"3,77",,2026-11-26,2026-11-27,credit_spread_corp_hy
 fred_us_macro_indicators.csv.gz,FRED US Macro,FRED,Macroeconomia EUA,indicador,US CPI Core,"339,90",,2026-10-01,2026-11-27,cpi_core
@@ -992,9 +993,9 @@ fred_us_macro_indicators.csv.gz,FRED US Macro,FRED,Macroeconomia EUA,indicador,U
 fred_us_macro_indicators.csv.gz,FRED US Macro,FRED,Macroeconomia EUA,indicador,US Nonfarm Payrolls (k),159.293,,2026-10-01,2026-11-27,nonfarm_payroll
 fred_us_macro_indicators.csv.gz,FRED US Macro,FRED,Macroeconomia EUA,indicador,US PCE Core,"131,31",,2026-10-01,2026-11-27,pce_core
 fred_us_macro_indicators.csv.gz,FRED US Macro,FRED,Macroeconomia EUA,indicador,US Unemployment Rate,"4,10%",,2026-10-01,2026-11-27,unemployment_rate
-fred_us_treasuries_yield_curve.csv.gz,FRED US Treasuries,FRED,Curva Soberana EUA,indicador,US Breakeven Inflation 10Y,"2,12%",,2026-11-25,2026-11-27,t10y_breakeven
-fred_us_treasuries_yield_curve.csv.gz,FRED US Treasuries,FRED,Curva Soberana EUA,indicador,US Breakeven Inflation 5Y,"2,13%",,2026-11-25,2026-11-27,t5y_breakeven
-fred_us_treasuries_yield_curve.csv.gz,FRED US Treasuries,FRED,Curva Soberana EUA,indicador,US Yield Curve Spread 10Y-2Y,"0,24%",,2026-11-25,2026-11-27,t10y2y_spread
+fred_us_treasuries_yield_curve.csv.gz,FRED US Treasuries,FRED,Curva Soberana EUA,indicador,US Breakeven Inflation 10Y,"2,15%",,2026-11-27,2026-11-27,t10y_breakeven
+fred_us_treasuries_yield_curve.csv.gz,FRED US Treasuries,FRED,Curva Soberana EUA,indicador,US Breakeven Inflation 5Y,"2,16%",,2026-11-27,2026-11-27,t5y_breakeven
+fred_us_treasuries_yield_curve.csv.gz,FRED US Treasuries,FRED,Curva Soberana EUA,indicador,US Yield Curve Spread 10Y-2Y,"0,25%",,2026-11-27,2026-11-27,t10y2y_spread
 yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,ABEV3.SA,"16,43",,2026-11-26,2026-11-27,ABEV3.SA
 yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,ALOS3.SA,"27,80",,2026-11-26,2026-11-27,ALOS3.SA
 yahoo_acoes_brasileiras.csv,Yahoo Ações Brasileiras,Yahoo Finance,Ações Brasileiras (B3),indicador,ASAI3.SA,"10,73",,2026-11-26,2026-11-27,ASAI3.SA
@@ -1100,25 +1101,25 @@ yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Açõe
 yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,WMT,"131,94",,2026-11-25,2026-11-27,WMT
 yahoo_acoes_internacionais.csv,Yahoo Ações Internacionais,Yahoo Finance,Ações Internacionais,indicador,XOM,"158,08",,2026-11-25,2026-11-27,XOM
 yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,ARSBRL=X,"0,0032",,2026-11-27,2026-11-27,ARSBRL=X
-yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,AUDUSD=X,"0,6649",,2026-11-27,2026-11-27,AUDUSD=X
-yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,BRL=X,"5,5481",,2026-11-27,2026-11-27,BRL=X
-yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,CHFBRL=X,"6,6359",,2026-11-27,2026-11-27,CHFBRL=X
-yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,CLPBRL=X,"0,0053",,2026-11-27,2026-11-27,CLPBRL=X
-yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,CNYBRL=X,"0,8306",,2026-11-27,2026-11-27,CNYBRL=X
-yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,COPBRL=X,"0,0016",,2026-11-27,2026-11-27,COPBRL=X
+yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,AUDUSD=X,"0,6651",,2026-11-27,2026-11-27,AUDUSD=X
+yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,BRL=X,"5,5582",,2026-11-27,2026-11-27,BRL=X
+yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,CHFBRL=X,"6,6471",,2026-11-27,2026-11-27,CHFBRL=X
+yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,CLPBRL=X,"0,0053",,2026-11-28,2026-11-27,CLPBRL=X
+yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,CNYBRL=X,"0,8351",,2026-11-28,2026-11-27,CNYBRL=X
+yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,COPBRL=X,"0,0016",,2026-11-28,2026-11-27,COPBRL=X
 yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,DX-Y.NYB,"101,3600",,2026-06-26,2026-06-28,DX-Y.NYB
-yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,EURBRL=X,"6,0683",,2026-11-27,2026-11-27,EURBRL=X
-yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,EURUSD=X,"1,0937",,2026-11-27,2026-11-27,EURUSD=X
-yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,GBPBRL=X,"7,2668",,2026-11-27,2026-11-27,GBPBRL=X
-yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,GBPUSD=X,"1,3095",,2026-11-27,2026-11-27,GBPUSD=X
+yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,EURBRL=X,"6,0775",,2026-11-27,2026-11-27,EURBRL=X
+yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,EURUSD=X,"1,0939",,2026-11-27,2026-11-27,EURUSD=X
+yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,GBPBRL=X,"7,2801",,2026-11-27,2026-11-27,GBPBRL=X
+yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,GBPUSD=X,"1,3099",,2026-11-27,2026-11-27,GBPUSD=X
 yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,JPYBRL=X,"0,0347",,2026-11-27,2026-11-27,JPYBRL=X
-yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,MXNBRL=X,"0,2819",,2026-11-27,2026-11-27,MXNBRL=X
-yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,USDCAD=X,"1,4246",,2026-11-27,2026-11-27,USDCAD=X
-yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,USDCHF=X,"0,8363",,2026-11-27,2026-11-27,USDCHF=X
+yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,MXNBRL=X,"0,2828",,2026-11-27,2026-11-27,MXNBRL=X
+yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,USDCAD=X,"1,4245",,2026-11-27,2026-11-27,USDCAD=X
+yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,USDCHF=X,"0,8357",,2026-11-27,2026-11-27,USDCHF=X
 yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,USDCNY=X,"6,6537",,2026-11-27,2026-11-27,USDCNY=X
 yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,USDINR=X,"92,9800",,2026-11-27,2026-11-27,USDINR=X
-yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,USDJPY=X,"159,5610",,2026-11-27,2026-11-27,USDJPY=X
-yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,USDMXN=X,"19,6652",,2026-11-27,2026-11-27,USDMXN=X
+yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,USDJPY=X,"159,5150",,2026-11-27,2026-11-27,USDJPY=X
+yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,USDMXN=X,"19,6270",,2026-11-27,2026-11-27,USDMXN=X
 yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,USDRUB=X,"75,1938",,2026-06-25,2026-06-28,USDRUB=X
 yahoo_cambio_moedas.csv,Yahoo Câmbio e Moedas,Yahoo Finance,Câmbio / Moedas,indicador,USDTRY=X,"46,5793",,2026-06-25,2026-06-28,USDTRY=X
 yahoo_commodities.csv,Yahoo Commodities,Yahoo Finance,Commodities Globais,indicador,BZ=F,"92,19",,2026-11-27,2026-11-27,BZ=F
@@ -1139,30 +1140,30 @@ yahoo_commodities.csv,Yahoo Commodities,Yahoo Finance,Commodities Globais,indica
 yahoo_commodities.csv,Yahoo Commodities,Yahoo Finance,Commodities Globais,indicador,ZR=F,"18,75",,2026-11-25,2026-11-27,ZR=F
 yahoo_commodities.csv,Yahoo Commodities,Yahoo Finance,Commodities Globais,indicador,ZS=F,1.244,,2026-11-25,2026-11-27,ZS=F
 yahoo_commodities.csv,Yahoo Commodities,Yahoo Finance,Commodities Globais,indicador,ZW=F,"565,50",,2026-11-25,2026-11-27,ZW=F
-yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,ADA-USD,"0,1490",,2026-11-27,2026-11-27,ADA-USD
+yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,ADA-USD,"0,1477",,2026-11-27,2026-11-27,ADA-USD
 yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,APT-USD,"0,000131",,2026-08-01,2026-08-01,APT-USD
 yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,ATOM-USD,"1,57",,2026-06-28,2026-06-28,ATOM-USD
-yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,AVAX-USD,"6,64",,2026-11-27,2026-11-27,AVAX-USD
-yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,BNB-USD,"552,96",,2026-11-27,2026-11-27,BNB-USD
-yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,BTC-USD,59.764,,2026-11-27,2026-11-27,BTC-USD
-yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,DOGE-USD,"0,0577",,2026-11-27,2026-11-27,DOGE-USD
-yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,DOT-USD,"0,6669",,2026-11-27,2026-11-27,DOT-USD
+yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,AVAX-USD,"6,58",,2026-11-27,2026-11-27,AVAX-USD
+yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,BNB-USD,"552,22",,2026-11-27,2026-11-27,BNB-USD
+yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,BTC-USD,59.680,,2026-11-27,2026-11-27,BTC-USD
+yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,DOGE-USD,"0,0574",,2026-11-27,2026-11-27,DOGE-USD
+yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,DOT-USD,"0,6624",,2026-11-27,2026-11-27,DOT-USD
 yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,ETC-USD,"7,03",,2026-06-28,2026-06-28,ETC-USD
-yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,ETH-USD,1.667,,2026-11-27,2026-11-27,ETH-USD
+yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,ETH-USD,1.655,,2026-11-27,2026-11-27,ETH-USD
 yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,FIL-USD,"0,7250",,2026-06-28,2026-06-28,FIL-USD
 yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,HBAR-USD,"0,0713",,2026-06-28,2026-06-28,HBAR-USD
-yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,ICP-USD,"1,99",,2026-11-27,2026-11-27,ICP-USD
+yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,ICP-USD,"1,98",,2026-11-27,2026-11-27,ICP-USD
 yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,IMX-USD,"0,004143",,2026-08-01,2026-08-01,IMX-USD
-yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,LINK-USD,"9,38",,2026-11-27,2026-11-27,LINK-USD
-yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,LTC-USD,"44,20",,2026-11-27,2026-11-27,LTC-USD
-yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,NEAR-USD,"3,05",,2026-11-27,2026-11-27,NEAR-USD
-yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,OP-USD,"0,0708",,2026-11-27,2026-11-27,OP-USD
+yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,LINK-USD,"9,30",,2026-11-27,2026-11-27,LINK-USD
+yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,LTC-USD,"44,36",,2026-11-27,2026-11-27,LTC-USD
+yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,NEAR-USD,"3,03",,2026-11-27,2026-11-27,NEAR-USD
+yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,OP-USD,"0,0710",,2026-11-27,2026-11-27,OP-USD
 yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,SHIB-USD,"0,000004",,2026-11-27,2026-11-27,SHIB-USD
-yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,SOL-USD,"71,93",,2026-11-27,2026-11-27,SOL-USD
-yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,TRX-USD,"0,3006",,2026-11-27,2026-11-27,TRX-USD
+yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,SOL-USD,"71,47",,2026-11-27,2026-11-27,SOL-USD
+yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,TRX-USD,"0,3007",,2026-11-27,2026-11-27,TRX-USD
 yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,UNI-USD,"0,000163",,2026-08-01,2026-08-01,UNI-USD
-yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,XLM-USD,"0,1266",,2026-11-27,2026-11-27,XLM-USD
-yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,XRP-USD,"0,9490",,2026-11-27,2026-11-27,XRP-USD
+yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,XLM-USD,"0,1256",,2026-11-27,2026-11-27,XLM-USD
+yahoo_criptoativos.csv,Yahoo Criptoativos,Yahoo Finance,Criptoativos,indicador,XRP-USD,"0,9426",,2026-11-27,2026-11-27,XRP-USD
 yahoo_etfs.csv,Yahoo ETFs,Yahoo Finance,ETFs & Setoriais,indicador,BND,"71,60",,2026-11-25,2026-11-27,BND
 yahoo_etfs.csv,Yahoo ETFs,Yahoo Finance,ETFs & Setoriais,indicador,BOVA11.SA,"174,49",,2026-11-26,2026-11-27,BOVA11.SA
 yahoo_etfs.csv,Yahoo ETFs,Yahoo Finance,ETFs & Setoriais,indicador,DIA,"501,27",,2026-11-25,2026-11-27,DIA
